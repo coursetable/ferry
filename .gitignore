@@ -4,3 +4,7 @@
 credentials/*
 databases/*
 logs/*
+api_output/course_infos/*
+
+**/*.ipynb_checkpoints/
+**/*__pycache__/
