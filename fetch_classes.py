@@ -1,8 +1,6 @@
 from tqdm import tqdm
 import json
 
-print("Test")
-
 from includes.class_processing import *
 
 terms = fetch_terms()
