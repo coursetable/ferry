@@ -4,7 +4,6 @@
 credentials/*
 databases/*
 logs/*
-api_output/*
 
 **/*.ipynb_checkpoints/
 **/*__pycache__/
