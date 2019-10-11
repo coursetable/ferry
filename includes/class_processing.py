@@ -11,6 +11,7 @@ import time
 from datetime import datetime
 import calendar
 
+
 def fetch_terms():
     """
     Get list of seasons
@@ -32,6 +33,7 @@ def fetch_terms():
     # Unsuccessful
     else:
         raise Exception('Unsuccessful response: code {}'.format(r.status))
+
 
 def fetch_term_courses(term):
     """
@@ -118,6 +120,7 @@ def fetch_course_json(code, crn, srcdb):
     # Unsuccessful
     else:
         raise Exception('Unsuccessful response: code {}'.format(r.status))
+
 
 def professors_from_html(html):
     """
@@ -262,6 +265,7 @@ def time_of_day_float_from_string(time_string):
 
     return time
 
+
 def course_times_from_fields(meeting_html, all_sections_remove_children):
     """
     Get the course meeting times from provided HTML
@@ -279,43 +283,39 @@ def course_times_from_fields(meeting_html, all_sections_remove_children):
         course meeting dates/times
     """
 
-    
     soup = BeautifulSoup(meeting_html, features="lxml")
-    
     meetings = soup.find_all("div")
-    
     found_htba = False
-        
     htba_course_time = {
         "days": ["HTBA"],
         "start_time": "1",
         "end_time": "1",
         "location": ""
     }
-    
+
     matched_meetings = []
-        
+
     for meeting in meetings:
         meeting_text = "".join(meeting.find_all(text=True))
-        
+
         if len(meeting_text) == 0:
             pass
-        
+
         if "HTBA" in meeting_text:
-            
+
             matched_meetings.append(htba_course_time)
-            
+
             found_htba = True
-            
+
         else:
             meeting_parts = meeting_text.split(" ")
-            
+
             days = days_of_week_from_letters(meeting_parts[0])
-            
+
             times = meeting_parts[1].split("-")
-            start  = time_of_day_float_from_string(times[0])
+            start = time_of_day_float_from_string(times[0])
             end = time_of_day_float_from_string(times[1])
-            
+
             location_matches = re.findall(' in ([^<]*)',meeting_text)
 
             if len(location_matches) > 0:
@@ -329,11 +329,12 @@ def course_times_from_fields(meeting_html, all_sections_remove_children):
                 "end_time": end,
                 "location": location
             })
-    
+
     if not found_htba and len(matched_meetings) == 0 and "HTBA" in all_sections_remove_children:
         matched_meetings.append(htba_course_time)
-        
+
     return matched_meetings
+
 
 # abbreviations for skills
 skills_map = {
@@ -445,7 +446,7 @@ def extract_course_info(course_json):
     Parameters
     ----------
     course_json: dict
-        JSON response from courses API 
+        JSON response from courses API
 
     Returns
     -------
