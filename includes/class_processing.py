@@ -189,7 +189,7 @@ def course_codes_from_fields(code, xlist, section, crn):
 
     return {
         "oci_id": crn,
-        "section": int(section),
+        "section": section,
         "listings": course_codes
     }
 
@@ -459,11 +459,9 @@ def extract_course_info(course_json):
     raw_description = BeautifulSoup(course_json["description"], features="lxml")
 
     # Course description
-
     course_info["description"] = raw_description.get_text()
 
     # Course prerequisites
-
     prereqs = raw_description.findAll("p", {"class": "prerequisites"})
     if len(prereqs) == 1:
         course_info["requirements"] = prereqs[-1].get_text()
@@ -471,13 +469,11 @@ def extract_course_info(course_json):
         course_info["requirements"] = ""
 
     # Add course meeting time to description field
-
     if course_json["hours"] != "1" and course_json["hours"] != "":
         course_info["description"] += "\n\n" + \
             course_json["hours"] + " Yale College course credits"
 
     # Course title
-
     if len(course_json["title"]) > 32:
         course_info["title"] = course_json["title"][:30] + "..."
     else:
@@ -486,7 +482,6 @@ def extract_course_info(course_json):
     course_info["long_title"] = course_json["title"]
 
     # Course status
-
     course_info["extra_info"] = course_json["stat"]
 
     if course_info["extra_info"] == "C":
@@ -495,7 +490,6 @@ def extract_course_info(course_json):
         course_info["title"] = "FULL:" + course_info["title"]
 
     # Instructors
-
     course_info["professors"] = professors_from_html(
         course_json["instructordetail_html"])
 
@@ -509,32 +503,27 @@ def extract_course_info(course_json):
     )
 
     # Meeting times
-
     course_info["sessions"] = course_times_from_fields(
         course_json["meeting_html"],
         course_json["all_sections_remove_children"]
     )
 
     # Skills and areas
-
     course_info["skills"] = found_items(course_json["yc_attrs"],
                                         skills_map)
     course_info["areas"] = found_items(course_json["yc_attrs"],
                                        areas_map)
 
     # Final exam info
-
     course_info["exam"] = exam_from_field(course_json["final_exam"])
 
     # Additional attributes
-
     course_info["extra_flags"] = []
 
     if len(course_json["ci_attrs"]) > 0:
         course_info["extra_flags"].append(course_json["ci_attrs"])
 
     # Course homepage
-
     matched_homepage = re.findall(
         'href="([^"]*)"[^>]*>HOMEPAGE</a>', course_json["resources"])
 
@@ -542,7 +531,6 @@ def extract_course_info(course_json):
         course_info["course_home_url"] = matched_homepage[0]
 
     # Link to syllabus
-
     matched_syllabus = re.findall(
         'href="([^"]*)"[^>]*>SYLLABUS</a>', course_json["resources"])
 
