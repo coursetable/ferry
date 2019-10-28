@@ -6,6 +6,13 @@ from includes.class_processing import *
 from os import listdir
 from os.path import isfile, join
 
+"""
+================================================================
+This script loads the class JSON files output by
+fetch_classes.py and formats them to be loadable into the
+current website.
+================================================================
+"""
 
 # get the list of all course JSON files as previously fetched
 course_jsons_path = "./api_output/course_json_cache/"
