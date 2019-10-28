@@ -17,7 +17,6 @@ Courses API, in JSON format:
     (3) Detailed information for each course, for each term
         (/api_output/course_json_cache/)
 ================================================================
-
 """
 
 # # list of all available terms
