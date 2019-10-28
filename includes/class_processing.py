@@ -25,8 +25,8 @@ def fetch_terms():
 
     # Successful response
     if r.status_code == 200:
-    
-        terms = re.findall('option value="(\d{6})"',r.text)
+
+        terms = re.findall('option value="(\d{6})"', r.text)
 
         return terms
 
@@ -70,6 +70,44 @@ def fetch_term_courses(term):
             raise Exception('Unsuccessful response: no results')
 
         return r_json["results"]
+
+    # Unsuccessful
+    else:
+        raise Exception('Unsuccessful response: code {}'.format(r.status))
+
+
+def fetch_previous_json(term, evals=False):
+    """
+    Get existing JSON files for a term from the CourseTable website
+    (at https://coursetable.com/gen/json/data_with_evals_<TERM_CODE>.json)
+
+    Parameters
+    ----------
+    term: string
+        The term to to get courses for. In the form of
+        YYYYSS(e.g. 201301 for spring, 201302 for summer,
+        201303 for fall)
+
+    Returns
+    -------
+    r: JSON-formatted course information
+    """
+
+    if evals:
+        url = "https://coursetable.com/gen/json/data_with_evals_{}.json".format(
+            term)
+    elif not evals:
+        url = "https://coursetable.com/gen/json/data_{}.json".format(
+            term)
+
+    r = requests.get(url)
+
+    # Successful response
+    if r.status_code == 200:
+
+        r_json = json.loads(r.text)
+
+        return r_json
 
     # Unsuccessful
     else:
@@ -316,7 +354,7 @@ def course_times_from_fields(meeting_html, all_sections_remove_children):
             start = time_of_day_float_from_string(times[0])
             end = time_of_day_float_from_string(times[1])
 
-            location_matches = re.findall(' in ([^<]*)',meeting_text)
+            location_matches = re.findall(' in ([^<]*)', meeting_text)
 
             if len(location_matches) > 0:
                 location = location_matches[0]
@@ -456,7 +494,8 @@ def extract_course_info(course_json):
 
     course_info = {}
 
-    raw_description = BeautifulSoup(course_json["description"], features="lxml")
+    raw_description = BeautifulSoup(
+        course_json["description"], features="lxml")
 
     # Course description
     course_info["description"] = raw_description.get_text()
