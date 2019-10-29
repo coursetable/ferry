@@ -15,9 +15,15 @@ CourseTable website and outputs the following into
 ================================================================
 """
 
-# get list of terms
-with open("./api_output/terms.json", "r") as f:
-    terms = json.load(f)
+# define list of terms
+
+middle_years = [str(x) for x in range(2010,2020)]
+
+spring_terms = [str(x) + "01" for x in middle_years]
+summer_terms = [str(x) + "02" for x in middle_years]
+winter_terms = [str(x) + "03" for x in middle_years]
+
+terms = ["200903"] + spring_terms + summer_terms + winter_terms + ["202001"]
 
 # get lists of classes per term
 for term in terms:
