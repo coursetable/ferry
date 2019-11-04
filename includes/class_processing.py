@@ -28,6 +28,10 @@ def fetch_terms():
 
         terms = re.findall('option value="(\d{6})"', r.text)
 
+        # exclude '999999' catch-all 'Past Terms' term option
+
+        terms = [x for x in terms if x != '999999']
+
         return terms
 
     # Unsuccessful
