@@ -45,24 +45,23 @@ for term in terms:
     pbar = tqdm(total=len(term_courses), ncols=96)
     pbar.set_description("Fetching class information for term {}".format(term))
 
+    # merge all the JSON results per term
+    aggregate_term_json = []
+
     for course in term_courses:
+
         course_json = fetch_course_json(
             course["code"],
             course["crn"],
             course["srcdb"]
         )
 
-        course_unique_id = course_json["code"] + "-" + \
-            course_json["crn"] + "-" + course_json["srcdb"]
-
-        # output JSON file
-        output_path = "./api_output/course_json_cache/{}.json".format(
-            course_unique_id)
-
-        # cache to JSON
-        with open(output_path, "w") as f:
-            f.write(json.dumps(course_json, indent=4))
+        aggregate_term_json.append(course_json)
 
         pbar.update(1)
+
+    # cache to JSON for entire term
+    with open("./api_output/course_json_cache/{}.json".format(term), "w") as f:
+        f.write(json.dumps(aggregate_term_json, indent=4))
 
     print()

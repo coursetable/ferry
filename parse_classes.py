@@ -14,31 +14,25 @@ current website.
 ================================================================
 """
 
+# folder to save course infos to
+parsed_courses_folder = "./api_output/parsed_courses/"
+
 # get the list of all course JSON files as previously fetched
-course_jsons_path = "./api_output/course_json_cache/"
-course_jsons = [f for f in listdir(
-    course_jsons_path) if isfile(join(course_jsons_path, f))]
-course_jsons = [x for x in course_jsons if x[-5:] == ".json"]
+with open("./api_output/terms.json", "r") as f:
+    terms = json.load(f)
 
-# keep track of JSON loading progress
-pbar = tqdm(total=len(course_jsons), ncols=96)
+# load list of classes per term
+for term in terms:
 
-course_infos_path = "./api_output/course_infos/"
+    print("Parsing courses for term {}".format(term))
 
-# load and parse course JSONs
-for course_json_file in course_jsons:
+    # load raw responses for term
+    with open("./api_output/course_json_cache/{}.json".format(term), "r") as f:
+        aggregate_term_json = json.load(f)
 
-    with open(course_jsons_path+course_json_file, "r") as f:
-        course_json = json.load(f)
+    # parse course JSON in term
+    parsed_course_info = [extract_course_info(x) for x in aggregate_term_json]
 
-    # parse the relevant info
-    course_info = extract_course_info(course_json)
-
-    # output parsed JSON file path
-    output_path = course_infos_path + course_json_file
-
-    # output parsed course info
-    with open(output_path, "w") as f:
-        f.write(json.dumps(course_info, indent=4))
-
-    pbar.update(1)
+    # write output
+    with open("./api_output/parsed_courses/{}.json".format(term), "w") as f:
+        f.write(json.dumps(parsed_course_info, indent=4))
