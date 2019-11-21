@@ -37,12 +37,12 @@ def fetch_questions(session, crn, term_code):
 
     page_index = session.get(url_index,params = class_info)
     if page_index.status_code != 200: # Evaluation data for this term not available
-        print("Evaluation data for term:",term_code,"is unavailable")
+        print("Evaluations for term:",term_code,"is unavailable")
         return 0,-2
 
     page_show = session.get(url_show)
     if page_show.status_code != 200: # Evaluation data for this course not available
-        print("Evaluation data for course:",crn,"in term:",term_code,"is unavailable")
+        #print("Evaluations for course:",crn,"in term:",term_code,"is unavailable")
         return 0,-1
     
     data_show = json.loads(page_show.text)
@@ -61,12 +61,12 @@ def fetch_questions(session, crn, term_code):
     numQuestions = len(questionIds)
 
     if numQuestions == 0: # Evaluation data for this course not available
-        print("Evaluation data for course:",crn,"in term:",term_code,"is unavailable")
+        #print("Evaluations for course:",crn,"in term:",term_code,"is unavailable")
         return 0,-1
     
     return questionText, questionIds
 
-def fetch_course_evals(session, questionIds):
+def fetch_eval_data(session, questionIds):
     """
     Get rating data for each question of a course
 
@@ -112,7 +112,24 @@ def fetch_course_evals(session, questionIds):
     return course_evals
 
 def fetch_comments(session,offset, _max):
+    """
+    Get comments for a specific question of this course
 
+    Parameters
+    ----------
+    session: Requests session
+        The current session with login cookie
+
+    offset: integer
+        The question to fetch comments for. 0-indexed
+
+    _max: integer
+        Always 1. Just passed into get function
+
+    Returns
+    -------
+    question,responses_text: string that holds question and list of strings that hold responses respectively
+    """
     # Website with student comments for this question
     url_comments = "https://oce.app.yale.edu/oce-viewer/studentComments/index"
 
@@ -123,8 +140,7 @@ def fetch_comments(session,offset, _max):
 
     page_comments = session.get(url_comments, params = comment_info)
 
-    if page_comments.status_code != 200:
-        #print("INVALID PAGE")
+    if page_comments.status_code != 200: # Question doesn't exist
         return -1,-1
 
     soup = BeautifulSoup(page_comments.content, 'lxml')
@@ -137,19 +153,74 @@ def fetch_comments(session,offset, _max):
         if tag.get_text() == "Q:":
             isQuestion = 1
         elif isQuestion == 1:
-            question = tag.get_text()
+            question = tag.get_text() # Find question in html
             break
-    if (question == None or question == ""):
+
+    if (question == None or question == ""): # Question doesn't exist
         return -1,-1
+
     question = question[0:question.find("\n")]
-    #print(question)
     responses = soup.find_all(id = "answer")
-    responses_text = []
+    responses_text = [] # List of responses
 
     for response in responses:
-        responses_text.append(response.find(id = "text").get_text())
-        #print(responses_text[-1])
-        #print("\n\n")
+        responses_text.append(response.find(id = "text").get_text()) # Append this response to list
 
-    return question,responses_text
+    return question,responses_text # Return question and responses
+
+def fetch_course_eval(session, crn_code,term_code):
+
+    """
+    Gets evaluation data and comments for the specified course in specified term
+
+    Parameters
+    ----------
+    session: Requests session
+        The current session with login cookie
+
+    crn_code: string
+        crn code of this course
+
+    term_code: string
+        term code of this course
+
+    Returns
+    -------
+    course_eval,term_has_eval: Dictionary with all evaluation data and integer that specifies 
+                               whether or not this term has eval data respectively
+    """
+
+    # Initialize dictionary
+    course_eval = {}
+    course_eval["crn_code"] = crn_code
+    course_eval["Evaluation_Questions"] = []
+    course_eval["Evaluation_Data"] = []
+    course_eval["Comments_Questions"] = []
+    course_eval["Comments_List"] = []
+
+    print("TERM:",term_code,"CRN CODE:",crn_code) # Print data to console for debugging
+
+    questionText, questionIds = fetch_questions(session, crn_code,term_code) # Get questions
+    if (questionIds == -2): # No evals for this term
+        return course_eval,-1
+    elif (questionIds == -1): # No evals for this course
+        return course_eval,1
+
+    course_eval["Evaluation_Questions"] = questionText
+    course_eval["Evaluation_Data"] = fetch_eval_data(session, questionIds) # Get evaluation graph data
+
+    offset = 0 # Start with first question
+    comments_questions = []
+    comments_list = []
+    while (True):
+        question,comments = fetch_comments(session,offset,1) # Get questions with their respective responses
+        if question == -1: # No more questions
+            break
+        comments_questions.append(question)
+        comments_list.append(comments)
+        offset += 1 # Increment to next question
+
+    course_eval["Comments_Questions"] = comments_questions
+    course_eval["Comments_List"] = comments_list
+    return course_eval,1 # Return all eval data in dictionary
         
