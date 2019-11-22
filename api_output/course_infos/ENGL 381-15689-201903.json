@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/52053/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This seminar examines key texts in the Toni Morrison canon that resonate as literary masterworks, innovative in narrative and aesthetic structure as well as content, and also as historical studies, expansive and probing in their interrogations of past struggles and future possibilities for African American communities and the American body politic more broadly.\u00a0We consider how her novels explore the ongoing disasters that were and are settler colonialism, the Middle Passage and the Atlantic slave trade, the systemic violence of Jim Crow segregation, the violence of patriarchy, the traumas of war and American empire, and the insidious presence of misogyny in the everyday lives of her characters. But, we also look closely at the richness of love and intimacy, the radical roots of self-fashioning, and the insurgent potentiality of mobility and aesthetic creativity coursing through the lives of her protagonists who cut a fugitive path out of slavery, ride the waves of Reconstruction, the Great Migration, Civil Rights era hope and organizing, and post-Soul searching. We read key scholarship in direct conversation with Morrison\u2019s oeuvre, and we examine her robust and demanding critical essays on American literature, on contemporary events, and on the topic of writing.", 
+    "title": "Toni Morrison & the Matter of ...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WALL81 201", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15689", 
+        "listings": [
+            {
+                "number": "381", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEN2\">YC English: 20th/21st Century</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENS\">YC English: Senior Seminar</a></li></ul>"
+    ], 
+    "professors": [
+        "Daphne Brooks"
+    ], 
+    "long_title": "Toni Morrison & the Matter of Black Life", 
+    "extra_info": "A"
+}

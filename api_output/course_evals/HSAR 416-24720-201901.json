@@ -1,0 +1,67 @@
+{
+    "crn_code": "24720",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [],
+        [
+            "\u00a0This was the first time this course was taught so I think the organization could use some work if it is taught again. We weren't able to cover all that we wanted in the time allowed. I think it would benefit highly from a different time, Friday morning probably hindered the number of people that would take it. However, the guest speakers were a strong point. I also think we would have benefitted more from less discussion of the readings and more time spent on lecturing. "
+        ],
+        []
+    ]
+}

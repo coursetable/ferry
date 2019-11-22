@@ -1,0 +1,128 @@
+{
+    "crn_code": "20639",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            3,
+            4,
+            11,
+            15,
+            2
+        ],
+        [
+            2,
+            1,
+            7,
+            20,
+            7
+        ],
+        [
+            2,
+            2,
+            11,
+            19,
+            2
+        ],
+        [
+            0,
+            6,
+            21,
+            7,
+            2
+        ],
+        [
+            0,
+            3,
+            17,
+            16,
+            1
+        ],
+        [
+            0,
+            8,
+            22,
+            6,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about the different techniques that computer scientists use to understand these problems, simplify them, and apply conventional computer science techniques to them (and later, more unconventional techniques). Reflecting on the role of randomness, optimizing maximization functions, and putting together programs was immensely helpful. ",
+            "\u00a0Combinatorics game theory(Nim, grundy number, Nash equilibrium)\r\nProgramming interesting game agents(American football game, Pig)\r\nMonte Carlo Tree Search for Kalah\r\nTraining neural networks to play Yahtzee ",
+            "\u00a0I gained a general foundation of knowledge about how we approach solving games like Go and chess. I got to build a neural net, which is pretty cool. ",
+            "\u00a0How to play Yahtzee! And other games, and how to design programs to play them too. ",
+            "\u00a0Combanitorial and general game Theory (rather mathy), search algorithms (minimax, alpha/beta pruning, Monte Carlo), genetic algorithms, and neural networks. I also became better at Python. ",
+            "\u00a0I learned principles of both general AI and game AI specifically. I learned strengths and weaknesses of different approaches, and got a better insight into what is easy and hard about coding game AI. ",
+            "\u00a0Game theory, AI & search strategies; practical applications of these in psets. ",
+            "\u00a0I learned a lot about how to implement game intelligence through efficient searching in a game's tree of positions. This course is mostly thatunderstanding how to do different types of tree search in order to find optimal strategies in games. ",
+            "\u00a0Good overview of some classical game theory and computational methods of playing games. There's some overlap with other AI classes, but this class goes way more in depth (you've probably done minimax and alpha-beta pruning before, but this class covers transposition tables, Scout, MTD-f). There's also a bit of neural networks at the end, but the focus is on using them as a practical tool instead of theory ",
+            "\u00a0Good overview of some classical game theory and computational methods of playing games. There's some overlap with other AI classes, but this class goes way more in depth (you've probably done minimax and alpha-beta pruning before, but this class covers transposition tables, Scout, MTD-f). There's also a bit of neural networks at the end, but the focus is on using them as a practical tool instead of theory ",
+            "\u00a0Implementing AI algorithms for game playing ",
+            "\u00a0Better practical programming\r\nLearned about various games\r\nPython shortcuts\r\nAlgorithms ",
+            "\u00a0Algorithms\r\nLearned about different games\r\nYahtzee ",
+            "\u00a0This course was a very interesting look at games and how to solve them! I thought it was a great variety of material as we covered both more mathy and logical parts of solving games and also more computational-based ways. It was a lot of fun!! ",
+            "\u00a0Game playing AI techniques ",
+            "\u00a0This course was a cool introduction into the methods behind \"solving\" games by finding optimal strategies and thereby training computers to be good opponents. It was really cool to see your implementation of a concept from lecture actually produce results, especially when it came to topics like neural networks. ",
+            "\u00a0I learned a lot about the logic behind games and how to build intelligence that can play them. It was very interesting to learn about concepts such grundy numbers, Monte Carlo Tree Search, and neural networks. ",
+            "\u00a0I learned some stuff about neural networks as a classifier, but really, I learned more about the game Yahtzee. Also, I learned a little bit about MCTS, which is pretty cool. Otherwise, I would not call what I did for the other psets \"learning\". ",
+            "\u00a0The course covered many forms of game-solving which are interesting, if somewhat domain-specific. Topics include combinatorial learning, backwards induction (which is broadly useful), classical game theory, tree searching with a/b pruning, monte carlo tree search, and a little bit of evolutionary algorithms and neural nets at the end. This was a new field of computer science for me that was fun to explore, and the 223/323-style problem sets were well-crafted to facilitate learning. (Unlike in 223/323, the problem sets build directly on the material covered in class, and the class notes posted online are an essential guide to completing them) "
+        ],
+        [
+            "\u00a0Very interesting problem sets that get progressively more advanced. Prof Glenn puts a lot of work into designing them to be fun and challenging. ",
+            "\u00a0The course had strong notes, good assignments, and a lot of helpful feedback from Professor Glenn on Piazza, but it lacked a strong class presence (often occurs in CS classes), and being there at 9 AM felt therefore particularly brutal. ",
+            "\u00a0Strength: combine both theory and coding together. I learned lots of game theory, genetic algorithms, and game techniques, as well as programming game agents to play optimal strategy.  Lectures very interesting at the first half. You spent 3 hours every two weeks to finish the homework except the last two hw (monte carlo and neural network). \r\n\r\nImprovement: The second half seems a little unorganized and too theoretical. Could have more games/more homework, each shorter to be more entertaining ",
+            "\u00a0The problem sets are always interesting and cool to think about as they are fairly mathematically based. More theory of games could be taught, which would have made the course more interesting to me. ",
+            "\u00a0This course has a lot of potential. The material is interesting and professor Glenn does a fairly good job explaining the technical details of different algorithms. However, simply, the assignments are just not rigorous enough. Even though we were given two weeks per assignment, I don't think any took more than 5 hours to complete. Adding more assignments and covering more material would seem very feasible and would make the course much better. ",
+            "\u00a0Strengths- interesting problem sets, thanks for posting the lecture notes online!\r\nWeaknesses- 9 am classes are impossible to wake up for ",
+            "\u00a0Material is interesting and gut CS elective, but it becomes pretty difficult to show up to class, especially because it is at 9am. I also felt that some of the problem sets were not super substantive, involving translating pseudo-code from lectures and learning about python packages (rather than developing the essential techniques oneself). Although these things made for an easy and not so time consuming class (although some of the debugging was a nightmare), they took out the excitement of developing something from scratch by oneself. ",
+            "\u00a0Strengths: excellent tie-in of content to psets. Glenn does not try to get you with edge cases like certain other cs professors are inclined to do. If you understand the concept, implement the algorithm correctly, you'll do well. This was a welcome change from the usual. Glenn was also very active on Piazza and email. Most psets took < 8 hr, though some were especially tricky and took on order the same amount of time as a 223/323 pset.\r\n\r\nLecture can be a bit slow at times, but this in part because Glenn really takes the time to explain everything in detail.\r\n\r\nAt times, grading was slow, but this was in part due to understaffing and in part due to computational resources (when psets took > 1 hr to test fully). ",
+            "\u00a0Honestly the only weakness was it being at 9am. I found the class interesting but over the course of the semester I lost all my willpower to show up. ",
+            "\u00a0Honestly the only weakness was it being at 9am. I found the class interesting but over the course of the semester I lost all my willpower to show up. ",
+            "\u00a0Strengths: No unnecessary edge-casing, which is good because allows students to focus on assignment at hand and optimizing that rather than thinking about odd cases that really have nothing to do with algorithmic functionality; Notes always posted; Example code given\r\nWeakness: Lectures very early in the morning ",
+            "\u00a0Strengths : Glenn, nice example code, no edge-casing\r\nWeaknesses : 9 am lectures, no clear-cut readings ",
+            "\u00a0I thought that this course was very good! It was a lot of fun and very interesting. However, some of the problem sets in the middle of the course we a little too easy I thought. ",
+            "\u00a0Professor Glenn was an engaging lecturer and that helped make this one of the more interesting CS electives. ",
+            "\u00a0Good problem sets, clarity of notes could have been improved, exams were fair ",
+            "\u00a0Professor Glenn was a strong lecturer (especially good for a computer science course). I was very grateful that he explained concepts thoroughly, and it made the homeworks easier to tackle. I think the course could benefit from more TF office hours in the future, but Piazza was very helpful this semester. ",
+            "\u00a0The course covered a wide range of topics, all of which were very interesting and engaging. I only wish the big topics such as neural networks got more attention and were covered in more depth. ",
+            "\u00a0The problem sets are excellent and James Glenn is very helpful in office hours. if you've thought about the problem and potential strategies in advance, he'll set you on the right track in 10 minutes However, he only sees students one at a time which can lead to a bit of a wait. It could perhaps be improved with group work sessions facilitated by ULAs like in 223 and 323. The colorful, hand-drawn lecture notes are nice but could use a bit more textual explanation, and lectures are easy to get lost in. Attendance dropped steadily over the course of the semester until only a dozen or so people attended class (out of 100+) "
+        ],
+        [
+            "\u00a0Yes. Make game AI that will beat your friends. ",
+            "\u00a0I'm in the situation where to finish out the Computer Science major, I just need to find some manageable and engaging electives, and this was certainly that -- nothing in the course was needless or redundant. If you're a strong coder, you'll be able to handle the lack of feedback on assignments (that's every CS class) and push forward. ",
+            "\u00a0If you love games, take the course! It's better than other game theory course in Econ or Math department because you not only learn theory but also write codes to play games. Very recommended!!! ",
+            "\u00a0If you like programming and like games, yes. If you have a decent math background, then the topics of this course are pretty interesting. Yes I would recommend. ",
+            "\u00a0Super interesting topic, learned a lot about designing programs to play games! Great class! ",
+            "\u00a0I would recommend this class to a student looking for a chill CS elective, although I heard from others that a lot of the material is covered in other CS classes. ",
+            "\u00a0Yes. Don't go into it thinking \"I'm going to learn how enemies work in the new Mario game;\" it's a course on fundamentals. But it does teach a lot of very useful principles. ",
+            "\u00a0Absolutely. It's a fun CS elective, not too stressful, especially if you stay on top of the psets. Glenn is a reasonable grader and good lecturer. ",
+            "\u00a0Yes. 100%. ",
+            "\u00a0No, James Glenn is awfully disorganized and does not give enough context/background to solving his problem sets. The private cases on most of his homework assignments are also random and poorly designed. ",
+            "\u00a0This is a great CS elective and you should definitely take it if you need a credit or you just like working with games. It's not a game programming course, and understanding these concepts helps outside of games (especially in general AI), so even if you aren't into games you will still enjoy it. Professor Glenn is also very nice and definitely knows what he's doing. Overall I'm very glad I took the course. ",
+            "\u00a0Very interesting material! If you want to know how Game AI works, take this course. ",
+            "\u00a0Yes; the psets are every two weeks and in Python. You can't beat that. This is one of those classes that is both interesting and not too grueling (everyone I talked to was getting 100 on most or all the psets. The only reason anyone didn't is if they started too late and ran out of time). One thing is that the psets do get harder and harder over the course of the semester, and the last two were substantially harder than the others. But if you start on time you still were able to get a perfect or near perfect score.\r\n\r\nAlso, the midterm was hard because the concepts this class covers are best understood through working on them with the psets, but taking a test on this stuff and having to have in depth understanding of all the concepts covered was challenging. Luckily he made the final optional, because I would've been really unprepared for it. ",
+            "\u00a0Yes; the psets are every two weeks and in Python. You can't beat that. This is one of those classes that is both interesting and not too grueling (everyone I talked to was getting 100 on most or all the psets. The only reason anyone didn't is if they started too late and ran out of time). One thing is that the psets do get harder and harder over the course of the semester, and the last two were substantially harder than the others. But if you start on time you still were able to get a perfect or near perfect score. Also, the midterm was hard because the concepts this class covers are best understood through working on them with the psets, but taking a test on this stuff and having to have in depth understanding of all the concepts covered was challenging. Luckily he made the final optional, because I would've been really unprepared for it. ",
+            "\u00a0YES! Really fun and good CS elective! ",
+            "\u00a0Yes! Great CS Elective and Glenn is so nice! Psets are pretty easy, and he had a great policy for the exams ",
+            "\u00a0I would definitely recommend this class to anyone looking for a CS elective. The class is just a lot of fun! You learn a lot of cool game and game theory related things, and you also have a lot of fun along the way! ",
+            "\u00a0Yes. Prof Glenn did a good job making the subject material interesting. ",
+            "\u00a0Yes, a good course in game playing AI if you are interested ",
+            "\u00a0I would definitely recommend this course to a computer science student. I took 323 last semester which was so discouraging but then this course restored my hope :') ",
+            "\u00a0If you are looking for an interesting CS elective and to learn more about the logic behind games and how to build intelligence that can play them then definitely go for it. ",
+            "\u00a0This class is slightly better than Drago's AI course. However, finding outside resources can be impossible, and his in-class notes are sometimes impossible to understand or read. There is also no textbook for the class (though that is suppose to change since a new book came out). Most of the psets consist of translating his poorly written notes (that he himself sometimes has trouble deciphering) into actual code. Sometimes, lecture is extremely dull, and it would consist of him playing a game for 20~30 minutes.\r\n\r\nGlenn's code is TERRIBLY documented. I have wasted so much time getting confused his code. For example, he gives his variables confusing names, and he doesn't explain what the numerical values mean in context of the problem. Sometimes, the arguments to the function would not be explained, which is especially annoying since Python is not statically typed. \r\n\r\nReading his posts on Piazza can be extremely exhausting. For whatever reason, it's extremely hard to figure out what he's saying. \r\n\r\nAlso, he did not hold additional office hours before the test. And since the ULAs don't know much about the test material, you can be left stranded to figure out stuff on your own. Furthermore, the solutions to the practice exams are posted about 36 hours before the actual test, so you really have little time to prepare. ",
+            "\u00a0The topics covered here are interesting, and if you're one of 100% of yale CS people who's into AI, this touches on that topic. Be prepared for problem sets in the style of 223 and 323. They're easier, written in Python and taking 7 to 15 hours on average, with the last two around 20. You will need to apply the same work ethic as in 223/323 - daily sessions, going to office hours. Currently there are no ULAs or help sessions which means you have to show up and wait in line at James's office. Lectures start strong and declined a bit, but notes are good and published online. Would recommend. "
+        ]
+    ]
+}

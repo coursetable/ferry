@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48870/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course aims to familiarize students with the principles and practice of innovation and entrepreneurship in the context of public health, as defined by the well-being of society, including social and environmental determinants of health. We examine a set of public health challenges within the context of the Sustainable Development Goals (SDGs), using a hybrid method combining case studies and assignments. Case studies provide an opportunity to analyze cross-cutting challenges faced by innovators and entrepreneurs in the field of public health. Assignments allow students to dig deeper into specific topic areas within public health innovation and entrepreneurship. The target audience for this course includes graduate and undergraduate students in the M.B.A., M.A.M., M.P.H., and other programs at Yale SOM, the School of Public Health, and across campus. It is a precursor, but not a prerequisite, for GLBL 612, where students design ventures tackling social challenges through new or existing organizations.", 
+    "title": "Public Health Entrepreneurship...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "EVANS 4430", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "13195", 
+        "listings": [
+            {
+                "number": "910", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Teresa Chahine"
+    ], 
+    "long_title": "Public Health Entrepreneurship and Intrapreneurship", 
+    "extra_info": "A"
+}

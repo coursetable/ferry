@@ -1,0 +1,97 @@
+{
+    "crn_code": "13522",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            6,
+            2
+        ],
+        [
+            1,
+            2,
+            2,
+            5,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            7,
+            1
+        ],
+        [
+            0,
+            0,
+            8,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            5,
+            5,
+            1
+        ],
+        [
+            2,
+            1,
+            5,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned basic equations for carbon footprinting. ",
+            "\u00a0- Matlab\r\n- Analyzing carbon footprints ",
+            "\u00a0I learned about carbon footprint modeling, input-output analysis, linear algebra, and some life-cycle analysis. ",
+            "\u00a0I learned the methods of carbon footprinting, and applied them to the EXIOBASE and USEEIO.  Also gained insights into novel applications of IO in the literature. ",
+            "\u00a0Carbon footprint calculation and analysis ",
+            "\u00a0I thought that the lectures were very thought provoking. I learned a lot of linear algebra, and how to think about problems with multiple inputs and outputs. Though the class focuses on carbon specifically, overall, I think that the lessons can be applied to many other topics. ",
+            "\u00a0Carbon footprint calculation of products and processes "
+        ],
+        [
+            "\u00a0I did not learn as much as I would have liked in this class. I really needed a text book or something more than the lecture to follow along and rely upon. ",
+            "\u00a0- Coding capabilities improved as expected\r\n- Enhanced knowledge on carbon footprint calculation ",
+            "\u00a0I expected to learn more. ",
+            "\u00a0The class aligned well with my expectations, I'm very glad I took it. ",
+            "\u00a0Very much. ",
+            "\u00a0The knowledge and skills aligned well with my expectations. Though it takes a while to get into the rhythm of understanding HOW to use and calculate with IOTs, the last few HWs/classes were really the most interesting because we got to grapple with difficult questions. ",
+            "\u00a0Well aligned. "
+        ],
+        [
+            "\u00a0- Strength: clear and succinct mathematical derivation and broad coverage of industries\r\n- To be improved: could accommodate more case studies and more implications of carbon footprint analysis; we have spent a lot of time performing the calculations, but what is the key merit of these analyses? Whether and how will they support policy-making? Considering the bulk of the audience is undergrad and master's student, it is highly appreciate that we have a balanced understanding of carbon footprint from both academic and real-world/cross-discipline perspectives ",
+            "\u00a0The strengths of this course are that it is a skill-based class and provides you with training to develop the skill of carbon footprint modeling. The other strength was the TA who was incredibly patient, available, and methodical in his explanation of the topics. \r\n\r\nUnfortunately, the weaknesses outweigh the strengths. Do not take this class if you do not have experience with linear algebra. It is a very technical class and the professor does not teach the topics, he discusses them with the assumption that students already know how to perform carbon footprint modeling. Your learning is also dependent on your experience with Matlab, and since I did not have experience with this platform, I had to learn this in addition to the course topics, which was very challenging. P-sets assume knowledge of Matlab and without coding experience, you will struggle. I wish I had been able to get more out of the problem sets but unfortunately, I felt like I spent half of the homework just guessing.  \r\n\r\nMy main source of angst with the class was I didn't feel the professor provided us with the resources to assist us. Professor Hertwich did not teach carbon-footprint modeling and analysis, he assumed we knew how to model already, and used lecture time to discuss the largest contributors to the world's carbon footprint--topics I already knew. I would encourage the Professor to think through a more methodical approach to teaching and to explain the tools that are necessary for the problem sets. It would also be helpful if there were more linear algebra resources and instructions for Matlab. ",
+            "\u00a0The format of a lecture and computer lab session weekly worked well.  \r\n\r\nI was already somewhat familiar with the content, but for others, likely need to spend more time going over the basics of IO. ",
+            "\u00a0Good contents. Maybe more explanation would be great! ",
+            "\u00a0I think that it is hard to balance both the math and the theoretical material. I think that this improved over the course of the semester, though I wish some of the theoretical material focused more on systems thinking and wider applicability. In the future, it would also be interesting to have a HW assignment that compares using EEIO in MATLAB with using one of the more common software programs that are used in professional practice. Another thing that may be useful would be an intro to MATLAB session or video watching. ",
+            "\u00a0Strengths: The assigned journal article readings were informative and interesting. The matlab tutorials were also very useful.\r\n\r\nWeaknesses: One weakness of the course was the frequency with which the homework problem statements were revised after they had been assigned. It was tough when the questions kept being updated, sometimes two or three times in one week.\r\n\r\nConsistent variable symbols would have also helped for this introductory course. While the meaning behind a symbol can sometimes be understood from context, the context is difficult to see when trying to learn something for the first time. Confusion over changing symbol definitions and symbols that were not clearly defined sometimes distracted from learning new material. "
+        ],
+        [
+            "\u00a0- Get ready for training in both reading comprehension and math ",
+            "\u00a0Do not take this course without experience with linear algebra or Matlab. ",
+            "\u00a0Do all the reading, take notes during lecture, study the notes to check for understanding / seek TA or professor help to clarify. ",
+            "\u00a0Very good class. Strongly recommended. ",
+            "\u00a0This class is really interesting and gives you a framework of how to think. In someways, it is Energy Systems Analysis and Industrial Ecology Lite + MATLAB and algebra. It may not be directly applicable, especially because in professional settings, one often uses other software for input/output analysis but the theoretical information is really interesting! ",
+            "\u00a0It is an  excellent course for those interested in understanding input output analysis of emissions from products. "
+        ]
+    ]
+}

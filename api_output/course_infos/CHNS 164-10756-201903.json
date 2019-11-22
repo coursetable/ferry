@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "requirements": "After CHNS 155, 162, or equivalent.", 
+    "description": "Selected readings in Chinese fiction of the 1980s and 1990s. Development of advanced language skills in reading, speaking, and writing for students with an interest in literature and literary criticism.\nAfter CHNS 155, 162, or equivalent.", 
+    "title": "Chinese for Reading Contempora...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "DOW 112", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10756", 
+        "listings": [
+            {
+                "number": "164", 
+                "subject": "CHNS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Wei Su"
+    ], 
+    "long_title": "Chinese for Reading Contemporary Fiction", 
+    "extra_info": "A"
+}

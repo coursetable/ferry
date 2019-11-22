@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "This seminar explores how anthropologists have theorized the category of youth and represented those considered to be young people in ethnographies. After the first two weeks of course orientation to the concepts of adolescence, paternalism, socialization, and rehabilitation, students read one ethnographic work a week that allows the class to interrogate these concepts as they appear in the scholarship of both anthropologists and non-anthropologists. Students discern how some of the same definitions and assumptions used to define \u201cyouth\u201d are mapped onto representations of those communities that have historically been dispossessed.\u00a0\u00a0", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [
+        "So", 
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10365", 
+        "listings": [
+            {
+                "number": "378", 
+                "subject": "AFAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Anthropology of the Young and the Dispossessed", 
+    "extra_info": "C"
+}

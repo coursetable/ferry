@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "An introduction to the biochemistry of animals, plants, and microorganisms, emphasizing the relations of chemical principles and structure to the evolution and regulation of living systems.", 
+    "title": "Biochemistry", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "OML 202", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12038", 
+        "listings": [
+            {
+                "number": "500", 
+                "subject": "MB&B"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Ronald Breaker", 
+        "Donald Engelman"
+    ], 
+    "long_title": "Biochemistry", 
+    "extra_info": "A"
+}

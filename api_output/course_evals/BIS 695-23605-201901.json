@@ -1,0 +1,87 @@
+{
+    "crn_code": "23605",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's provided students with helpful and timely feedback",
+        "The instructor established a positive learning environment",
+        "The instructor raised questions or problems that encouraged me to think critically"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            9,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            6,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            6,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            6
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            6
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            6
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0In summer, full time. ",
+            "\u00a040h ",
+            "\u00a050 hours ",
+            "\u00a0 "
+        ],
+        [
+            "\u00a0Good. ",
+            "\u00a0good ",
+            "\u00a0perfect ",
+            "\u00a0 "
+        ],
+        [
+            "\u00a0Good. ",
+            "\u00a0good ",
+            "\u00a0good ",
+            "\u00a0Great professor! Very nice person! "
+        ],
+        [
+            "\u00a0Good. ",
+            "\u00a0good ",
+            "\u00a0good ",
+            "\u00a0? "
+        ]
+    ]
+}

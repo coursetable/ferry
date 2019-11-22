@@ -1,0 +1,75 @@
+{
+    "crn_code": "10888",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Excellent introduction to labor economics through presenting foundational  models and research papers. Great review of microeconomic ideas and econometrics. ",
+            "\u00a0I learned the relevance of math in the study of economics. This class not only explained how to do the math but why it is necessary. ",
+            "\u00a0I learned about labor supply and demand, employment and wages in the US. I learned a lot of theoretical model to understand labor market. "
+        ],
+        [
+            "\u00a0All great, just need to change the time we meet. ",
+            "\u00a0Given the small number of students in the class, I thought it might have been if this was a seminar instead of lecture format. "
+        ],
+        [
+            "\u00a0I without a doubt would recommend this class. I am not someone who excelled in the intro and intermediate sequences, so I was nervous taking this class. However, Professor Lindenlaub explain difficult subjects extremely well. She also uses recently published papers to teach us the topics, which is something I found extremely cool. This class changed my opinion on economics. Ive come out of the class with a revived interest in the subject. ",
+            "\u00a0Definitely, I would recommend this course to you if you are interested in learning theoretical models of the labor market. It helps us understand the determinants of wages and employment. "
+        ]
+    ]
+}

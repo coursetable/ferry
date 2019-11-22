@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/52089/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course discusses how to effectively generate, design, evaluate, report, and present behavioral research. Topics include theory development, idea generation, increasing statistical power, internal vs. external validity, between vs. within-subjects designs, psychological measurement, survey research methods, the publication process, writing high-quality abstracts and journal articles, and presenting research findings.\n\nThis course offers a very practical, learning-by-doing approach. In addition to discussing the weekly readings, class sessions offer students ample opportunity to practice (1) generating appropriate and effective experimental designs, (2) generating high-quality survey questions, (3) critiquing and reviewing existing research, and (4) presenting research findings.\n\nThis course is primarily for Ph.D. students intent on pursuing an academic career conducting behavioral research in psychology, marketing, organizational behavior, or a related field.", 
+    "title": "Designing and Conducting Exper...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "EVANS 4260", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 19
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15254", 
+        "listings": [
+            {
+                "number": "757", 
+                "subject": "MGMT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Gal Zauberman"
+    ], 
+    "long_title": "Designing and Conducting Experimental Research", 
+    "extra_info": "A"
+}

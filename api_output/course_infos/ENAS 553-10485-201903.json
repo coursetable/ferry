@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "An advanced class that introduces immunology principles and methods to engineering students. The course focuses on biophysical principles and biomaterial applications in understanding and engineering immunity. The course is divided into three parts. The first part introduces the immune system: organs, cells, and molecules. The second part introduces biophysical characterization and quantitative modeling in understanding immune system interactions. The third part focuses on intervention, modulation, and techniques for studying the immune system with emphasis on applications of biomaterials for intervention and diagnostics.", 
+    "title": "Immuno-Engineering", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "HLH17 03", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10485", 
+        "listings": [
+            {
+                "number": "553", 
+                "subject": "ENAS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Tarek Fahmy"
+    ], 
+    "long_title": "Immuno-Engineering", 
+    "extra_info": "A"
+}

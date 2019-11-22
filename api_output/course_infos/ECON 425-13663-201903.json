@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49576/assignments/syllabus", 
+    "requirements": "Prerequisite: CPSC 365 or permission of the instructor. Familiarity with basic microeconomic\u00c2\u00a0theory is helpful but not required.", 
+    "description": "A mathematically rigorous investigation of the interplay of economic theory and computer science, with an emphasis on the relationship of incentive-compatibility and algorithmic efficiency. Our main focus is on algorithmic tools in mechanism design, algorithms and complexity theory for learning and computing Nash and market equilibria, and the price of anarchy. Case studies in Web search auctions, wireless spectrum auctions, matching markets, and network routing, and social networks.\nPrerequisite: CPSC 365 or permission of the instructor. Familiarity with basic microeconomic\u00c2\u00a0theory is helpful but not required.", 
+    "title": "Economics and Computation", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "WTS A60", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13663", 
+        "listings": [
+            {
+                "number": "425", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Yang Cai"
+    ], 
+    "long_title": "Economics and Computation", 
+    "extra_info": "A"
+}

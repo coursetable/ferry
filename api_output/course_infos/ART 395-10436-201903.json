@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49135/assignments/syllabus", 
+    "requirements": "Prerequisite: at least four courses in Art.", 
+    "description": "Ongoing visual projects addressed in relation to historical and contemporary issues. Readings, slide presentations, critiques by School of Art faculty, and gallery and museum visits. Critiques address all four areas of study in the Art major.\nPrerequisite: at least four courses in Art.", 
+    "title": "Junior Seminar", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 19, 
+            "location": "GREEN B03", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 20
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10436", 
+        "listings": [
+            {
+                "number": "395", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jonathan Weinberg"
+    ], 
+    "long_title": "Junior Seminar", 
+    "extra_info": "A"
+}

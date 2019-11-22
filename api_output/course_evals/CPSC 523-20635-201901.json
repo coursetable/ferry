@@ -1,0 +1,90 @@
+{
+    "crn_code": "20635",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            7,
+            10,
+            3
+        ],
+        [
+            0,
+            1,
+            4,
+            7,
+            9
+        ],
+        [
+            0,
+            0,
+            1,
+            9,
+            10
+        ],
+        [
+            0,
+            2,
+            2,
+            8,
+            9
+        ],
+        [
+            0,
+            3,
+            11,
+            4,
+            3
+        ],
+        [
+            2,
+            8,
+            8,
+            1,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0OS both basic and advanced knowledge. ",
+            "\u00a0many OS algorithms ",
+            "\u00a0OS ",
+            "\u00a0Operating system and computer system organization knowledge, some networking and distributed computing knowledge and some database design and structure knowledge. ",
+            "\u00a0understand basic principles of operating systems. ",
+            "\u00a0Operating System ",
+            "\u00a0OS ",
+            "\u00a0theoretical knowledge of the operating system "
+        ],
+        [
+            "\u00a0Strength: I really like Avi's teaching style and how his course is arranged. I took an OS course last semester by Zhong Shao. As much as I thought this semester's course would be similar, Avi taught it in an extremely different perspective. Really inspiring.\r\n\r\nWeakness: the slides are awful hahaha. ",
+            "\u00a0Clear explanation ",
+            "\u00a0Class is too early. ",
+            "\u00a0Good ",
+            "\u00a0Best course no weaknesses ",
+            "\u00a0Weakness: should have more homework regarding the lectures "
+        ],
+        [
+            "\u00a0Yes, if you want to know more about low level stuff but hates coding in C or assembly. ",
+            "\u00a0Maybe ",
+            "\u00a0No need to go to the lectures; can follow the materials just from the slides/ textbook. ",
+            "\u00a0Yes ",
+            "\u00a0Yes ",
+            "\u00a0Yes, learned a lot ",
+            "\u00a0Definitely ",
+            "\u00a0Yes! The instructor is very good "
+        ]
+    ]
+}

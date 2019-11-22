@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50376/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Survey of classical Persian literature in English translation, focusing on seven major writers: Firdawsi, Nizami, \u2018Attar, Sa\u2018di, Rumi, Hafiz, and Jami. No knowledge of Persian required.", 
+    "title": "Persian Literary Classics", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "CO493 103", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13491", 
+        "listings": [
+            {
+                "number": "311", 
+                "subject": "LITR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Samuel Hodgkin"
+    ], 
+    "long_title": "Persian Literary Classics", 
+    "extra_info": "A"
+}

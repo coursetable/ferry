@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Qualified students may write a two-term senior essay under the guidance of a faculty adviser. An appropriate instructor is assigned to each student by the director of undergraduate studies in consultation with the student. In the first term, selected readings compensate for individual deficiencies and help the student achieve a balanced overview. In the second term, students select a topic for research from any area of the literature, history, culture, or philosophy of ancient Greece, Rome, or Hellenistic Egypt, or a topic from the classical tradition.", 
+    "title": "Two-Term Senior Project for th...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10643", 
+        "listings": [
+            {
+                "number": "450", 
+                "subject": "CLCV"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Andrew Johnston"
+    ], 
+    "long_title": "Two-Term Senior Project for the Major in Classical Civilization", 
+    "extra_info": "A"
+}

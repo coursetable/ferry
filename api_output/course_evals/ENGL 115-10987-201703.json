@@ -1,0 +1,82 @@
+{
+    "crn_code": "10987",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            1,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            5,
+            0,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to better appreciate texts and how to write better. ",
+            "\u00a0In general, my literary analysis skills improved greatly. I found myself identifying controversial problems and proposing unique claims backed up with close evidence in a way that I would not have  been able to before taking this course. ",
+            "\u00a0My writing improved so much in this class! I can read and understand scholarly articles much better as well. I also now know more about Utopian thought and Utopian literature. ",
+            "\u00a0I feel much more confident now in writing about literature. ",
+            "\u00a0Strengthened writing skills, and also became better at participating in class discussions. "
+        ],
+        [
+            "\u00a0Felt like grading was very arbitrary, or at least I did not understand how it worked (instructor was not clear on that topic). ",
+            "\u00a0Many course readings are very interesting and engaging, but others are less interesting and harder to enter. General discussions after were usually interesting. ",
+            "\u00a0Some of the texts were not always the most interesting and the professor took a long time to grade, but overall I enjoyed the essay prompts and free-flowing discussion. The small class size provided intimacy, and I was always comfortable voicing my ideas in class. ",
+            "\u00a0Strengths: Read a wide variety of literary texts from poems to books to essays. I also appreciated the different genres.\r\n\r\nWeaknesses: There wasn't enough discussion of the actual concept of utopia, in my opinion at least. ",
+            "\u00a0The material was interesting and the small class size was nice, but the essay prompts were incredibly vague and it was very hard to get straightforward feedback on your writing. "
+        ],
+        [
+            "\u00a0Yes. ",
+            "\u00a0Anyone interested in english, literature, or analysis of the arts would benefit from taking this course. Don't take if you want a gut WC, but if you want to get something out of your writing course this definitely is worth it. ",
+            "\u00a0I would recommend this class to any first year who wants to gently be introduced to how to write essays at Yale. Your writing will improve no matter just due to the nature of the course. It may not be the most thrilling class ever, but it is a fun time to talk and discuss with fellow first years. ",
+            "\u00a0Yes, if you are interested in the reading list (I think being interested in the reading is an important part of choosing an English class).\r\n\r\nAdvice: always do the reading and be ready to participate in the discussion every day (you will be called on if you haven't spoken in a while). Start writing papers early so that you can take full advantage of office hours.. "
+        ]
+    ]
+}

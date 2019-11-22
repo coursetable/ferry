@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49876/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course introduces students to the history of the international climate change negotiations (from the UNFCCC to the Paris Agreement), discusses the ways in which negotiating differences are typically resolved, identifies the issues to be addressed at this year\u2019s Conference of the Parties, and concludes with a mock negotiation.\u00a0It meets on four evenings in Oct.\u2013Nov.,\u00a0each session lasting two hours. Dates: October 14 & 28, November 4 & 11", 
+    "title": "The Climate Change Negotiation...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 17, 
+            "location": "BOWERS AUD", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 19
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13647", 
+        "listings": [
+            {
+                "number": "590", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Susan Biniaz"
+    ], 
+    "long_title": "The Climate Change Negotiations:  A Practical Approach", 
+    "extra_info": "A"
+}

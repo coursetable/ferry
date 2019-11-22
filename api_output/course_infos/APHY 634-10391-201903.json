@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48954/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to the physics of nanoscale solid state systems, which are large and disordered enough to be described in terms of simple macroscopic parameters like resistance, capacitance, and inductance, but small and cold enough that effects usually associated with microscopic particles, like quantum-mechanical coherence and/or charge quantization, dominate. Emphasis is placed on transport and noise phenomena in the normal and superconducting regimes.", 
+    "title": "Mesoscopic Physics I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "BCT 408", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10391", 
+        "listings": [
+            {
+                "number": "634", 
+                "subject": "APHY"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michel Devoret"
+    ], 
+    "long_title": "Mesoscopic Physics I", 
+    "extra_info": "A"
+}

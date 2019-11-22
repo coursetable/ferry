@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49860/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The course prepares students to design and execute an intensive research project. It covers elementary principles and philosophy of science; research planning, including preparation, criticism, and oral presentation of study plans; communicating research findings; limitations of research techniques; the structure of research organizations; and professional scientific ethics.", 
+    "title": "Natural Science Research Methods", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "S 32", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13642", 
+        "listings": [
+            {
+                "number": "550", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "William Lauenroth"
+    ], 
+    "long_title": "Natural Science Research Methods", 
+    "extra_info": "A"
+}

@@ -1,0 +1,86 @@
+{
+    "crn_code": "20453",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            6,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            3
+        ],
+        [
+            0,
+            1,
+            4,
+            5,
+            0
+        ],
+        [
+            0,
+            0,
+            7,
+            3,
+            0
+        ],
+        [
+            0,
+            4,
+            4,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course certainly helps students to learn scientific critical thinking and exposes students to new fields, techniques, and methodologies over the course of the semester. ",
+            "\u00a0We learned how to critically assess the experiments published in papers. ",
+            "\u00a0Experimental techniques and design; good statistics ",
+            "\u00a0How to read primary literature paper and evaluate them critically ",
+            "\u00a0This course was instrumental to my development as a young scientist. I learned how to present findings of articles, gained appreciation for the different topics of cell biology, gained appreciation for the concepts behind different techniques, and how to think critically about findings presented in papers. ",
+            "\u00a0The most important skill I learned was to better critique the quality of research papers. "
+        ],
+        [
+            "\u00a0This course could benefit from having more emphasis on active engagement in discussion. Most classes, discussion of figures proceeded sequentially around the room, which doesn't always encourage students to participate of their own volition (though it forces basic participation). More directed discussion could perhaps let students dig into WHY a particular method was used or logical conclusion reached. The professors spent a lot of time helping students to look at such things with a critical eye, but this tended to cover more of \"I'm not convinced\" as opposed to \"X would have been better, why did they try Y?\" ",
+            "\u00a0I really like the way it was structured ",
+            "\u00a0The discussions are enjoyable. I also learned a lot from classmates from other fields. ",
+            "\u00a0I don't think the style of going around the room figure by figure always works. Although sometimes it is helpful to promote discussion. ",
+            "\u00a0A relatively good course, which was structured for students to grasp the concepts of cell biology from reading papers. I would like if the professors pushed the students to think more about the rational behind the experiment and findings of the paper. How do these findings align with the concepts presented? "
+        ],
+        [
+            "\u00a0This course is a great introduction to Cell Biology and the concepts and methods that accompany it. Additionally, I would recommend this course to students who want more experience reading scientific papers and gaining deeper understanding of research in these fields. ",
+            "\u00a0Yes, its a great way to improve your critical reading skills ",
+            "\u00a0Highly recommended. An enjoyable way to learn from other students. Also helps with planning journal clubs in the future. ",
+            "\u00a0Yes most definitely!! Awesome class ",
+            "\u00a0Yes. The course provides a good opportunity to learn interesting cell biology. ",
+            "\u00a0Yes, this course helps students to develop their reading and critical skills for journal articles. ",
+            "\u00a0Yes because its a good class for being introduced to papers from a wide variety of topics "
+        ]
+    ]
+}

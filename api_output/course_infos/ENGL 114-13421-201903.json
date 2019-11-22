@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49747/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Instruction in writing well-reasoned analyses and academic arguments, with emphasis on the importance of reading, research, and revision. Using examples of nonfiction prose from a variety of academic disciplines, individual sections focus on topics such as the city, childhood, globalization, inequality, food culture, sports, and war.\u00c2\u00a0Preregistration required; see under English Department.", 
+    "title": "Writing Seminars: The Racial I...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "LC 105", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 23, 
+        "oci_id": "13421", 
+        "listings": [
+            {
+                "number": "114", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Helen Rubinstein"
+    ], 
+    "long_title": "Writing Seminars: The Racial Imaginary", 
+    "extra_info": "A"
+}

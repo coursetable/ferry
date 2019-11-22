@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49489/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course examines various topics in the ecology and evolution of microbes, with an emphasis on prokaryotes (Eubacteria, Archaea) and viruses. Microbiology is an incredibly rich field, where microorganisms are studied from perspectives including the gene, genome, individual, population, community, and ecosystem levels. The course uses discussions of classic and contemporary journal articles to show how species interactions including competition, predation, parasitism, mutualism, and microbial communication influence these various levels of biological organization in particular, and evolutionary ecology of microbes in general. Sex and reproduction, genome architecture and reduction, novel evolutionary mechanisms, and challenges imposed by environmental change are examined from a microbial perspective. The result is an understanding of microbes in their natural habitats\u2014whether air, soil, aquatic, or host environments\u2014and of the power in using microbes to elucidate fundamental principles in ecology and evolution. Different discussion topics are emphasized in different years, and this year\u2019s course focuses on the following three areas: studying microbial adaptation in laboratory and natural microcosms, evolutionary ecology of emerging infectious diseases, and the role of microbes in biogeochemical cycling especially in the oceans.", 
+    "title": "Microbial Ecology and Evolution", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "OML 551", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12100", 
+        "listings": [
+            {
+                "number": "729", 
+                "subject": "E&EB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Alvaro Sanchez De Andres"
+    ], 
+    "long_title": "Microbial Ecology and Evolution", 
+    "extra_info": "A"
+}

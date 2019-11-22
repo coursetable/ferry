@@ -1,0 +1,53 @@
+{
+    "exam": {
+        "date": "2019-12-12", 
+        "group": 2, 
+        "day_of_week": "Thursday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48910/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The history of peoples of African descent throughout the Americas, from the first African American societies of the sixteenth century through the century-long process of emancipation.", 
+    "title": "The Rise and Fall of Atlantic ...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "WLH 207", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 11
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10277", 
+        "listings": [
+            {
+                "number": "184", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_PREI\">YC History: Preindustrial</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YGLE\">YC Global Affairs: Elective</a></li></ul>"
+    ], 
+    "professors": [
+        "Edward Rugemer"
+    ], 
+    "long_title": "The Rise and Fall of Atlantic Slavery", 
+    "extra_info": "A"
+}

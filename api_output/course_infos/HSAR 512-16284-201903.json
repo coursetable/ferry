@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "By arrangement with faculty.", 
+    "title": "Directed Research: Modern Arch...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 3, 
+        "oci_id": "16284", 
+        "listings": [
+            {
+                "number": "512", 
+                "subject": "HSAR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eeva-Liisa Pelkonen"
+    ], 
+    "long_title": "Directed Research: Modern Arch & the Baroque", 
+    "extra_info": "A"
+}

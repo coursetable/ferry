@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49093/assignments/syllabus", 
+    "requirements": "", 
+    "description": "", 
+    "title": "Space Time Form", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "RDH B07", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10265", 
+        "listings": [
+            {
+                "number": "1289", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eeva-Liisa Pelkonen", 
+        "Katherine Davies"
+    ], 
+    "long_title": "Space Time Form", 
+    "extra_info": "A"
+}

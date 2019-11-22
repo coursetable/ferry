@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49651/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introduction to the foundational works of ancient Chinese thought from the ruling ideologies of the earliest historical dynasties, through the Warring States masters, to the Qin and Han empires. Topics include Confucianism and Daoism, the role of the intellectual in ancient Chinese society, and the nature and performance of wisdom. This is primarily an undergraduate course; graduate students are provided readings in the original language and meet in an additional session to review translations.", 
+    "title": "Ancient Chinese Thought", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "PH 310", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12082", 
+        "listings": [
+            {
+                "number": "512", 
+                "subject": "EALL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Hunter"
+    ], 
+    "long_title": "Ancient Chinese Thought", 
+    "extra_info": "A"
+}

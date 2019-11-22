@@ -1,0 +1,75 @@
+{
+    "crn_code": "21489",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            1
+        ],
+        [
+            0,
+            1,
+            4,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about the algebraic numbers, the ring of integers of a number field, discriminant of a number field, integral basis, finiteness of the class group, Dirichlet's unit theorem, Witt vectors, p-adic numbers and the zeta function in this course. \r\nI realized that linear algebra and commutative algebra are very helpful tools in the development and understanding of algebraic number theory. ",
+            "\u00a0Algebraic Number Theory "
+        ],
+        [
+            "\u00a0The content of this course is very enlightening and enriching for students who have just taken courses in graduate algebra. \r\nAnd the interaction of algebra and analysis is also inspiring. ",
+            "\u00a0I particularly the emphasis on connections to other parts of mathematics, both in the lectures and the project and homeworks. I think the course would have been improved by having more homework assignments earlier in the course, and by including problems requiring us to perform computations on specific instances of general results we learned in lecture. "
+        ],
+        [
+            "\u00a0This course is definitely worthwhile to take for students of mathematics. \r\nIt illustrates the power and beauty of algebra, and its interactions with analysis. ",
+            "\u00a0Would strongly recommend this one, (for undergrads: after taking the rest of the undergraduate sequence, esp. algebra). ",
+            "\u00a0Goncharov is fantastic, he gives great motivation and insight into what is really going on. "
+        ]
+    ]
+}

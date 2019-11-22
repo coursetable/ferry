@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49911/assignments/syllabus", 
+    "requirements": "Prerequisites: basic math, Excel, and microeconomics. Those selecting technical projects should have basic R or other data manipulation skills.", 
+    "description": "This course delves into the relationship between energy use and economic development, at a household, national, and global scale. The course provides both a quantitative and qualitative understanding of poverty, energy demand, and the relationship between the two. Students grapple with different income and multidimensional poverty and standard of living indicators, and with GDP and its limitations as a human development measure. They learn about energy poverty in various parts of the world and about energy consumption patterns with rising income. Students study actual household survey and national statistics data on consumption and energy use, and are exposed to cutting-edge research on standard of living measures and their embodied energy needs. The course covers basic models for household energy transitions and appliance diffusion. This is a seminar course, wherein students are expected to present readings in class. The course involves one term project and presentation, which may be quantitative or qualitative.\nPrerequisites: basic math, Excel, and microeconomics. Those selecting technical projects should have basic R or other data manipulation skills.", 
+    "title": "Energy and Development", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "S 41C", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13733", 
+        "listings": [
+            {
+                "number": "789", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Narasimha Rao"
+    ], 
+    "long_title": "Energy and Development", 
+    "extra_info": "A"
+}

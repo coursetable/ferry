@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49730/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A study of the invention of the devotional lyric in English, with a focus on the work of the seventeenth-century poets John Donne, George Herbert, Richard Crashaw, Henry Vaughan, and Thomas Traherne. The impact of this experimental literary movement on such twentieth and twenty-first century critics and poets as T. S. Eliot, William Empson, Simone Weil, Elizabeth Bishop, Anne Carson, and Christian Wiman.", 
+    "title": "Early Modern Devotional Poetry", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LC 319", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10945", 
+        "listings": [
+            {
+                "number": "215", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENJ\">YC English: Junior Seminar</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENR\">YC English: Renaissance</a></li></ul>"
+    ], 
+    "professors": [
+        "John Rogers"
+    ], 
+    "long_title": "Early Modern Devotional Poetry", 
+    "extra_info": "A"
+}

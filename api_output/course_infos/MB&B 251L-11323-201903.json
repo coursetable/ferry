@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50413/assignments/syllabus", 
+    "requirements": "Prerequisite: BIOL 101.", 
+    "description": "An introduction to current experimental methods in molecular biology, biophysics, and biochemistry. Limited enrollment. Requires preregistration by e-mail to aruna.pawashe@yale.edu and william.konigsberg@yale.edu prior to the first week of classes. Please note: During the fall term, this course runs\u00a0as two sections, Tuesday or Thursday from 1.15pm-5.15pm, for the entire semester. During the spring\u00a0term it meets twice a week, Tuesday and Thursday, but only for the first half of the semester.\nPrerequisite: BIOL 101.\n\n0.5 Yale College course credits", 
+    "title": "Laboratory for Biochemistry", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11323", 
+        "listings": [
+            {
+                "number": "251L", 
+                "subject": "MB&B"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Aruna Pawashe", 
+        "William Konigsberg"
+    ], 
+    "long_title": "Laboratory for Biochemistry", 
+    "extra_info": "A"
+}

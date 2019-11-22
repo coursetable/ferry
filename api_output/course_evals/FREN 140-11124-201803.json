@@ -1,0 +1,83 @@
+{
+    "crn_code": "11124",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            1,
+            2,
+            1
+        ],
+        [
+            1,
+            0,
+            3,
+            2,
+            0
+        ],
+        [
+            1,
+            0,
+            1,
+            4,
+            0
+        ],
+        [
+            1,
+            3,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I further advanced my French language skills, including grammar, writing, and speaking. The course emphasized participation, which helped me practice speaking on a daily basis and increased my comfort level with participation. The Rdaction assignments required me to learn how to do analytical writing in French. ",
+            "\u00a0How to better speak, understand, and write in French ",
+            "\u00a0How to speak in french clearly and with more ease ",
+            "\u00a0I became far more  comfortable speaking fluidly and switching between tenses. My foundation in grammar was also strengthened. ",
+            "\u00a0I got somewhat more fluent at French. "
+        ],
+        [
+            "\u00a0Despite the relatively large workload, this course was very structured, which I felt helped me to complete the work in a timely manner with minimal stress. I liked how the syllabus was split pretty evenly between short stories and longer works, and that the literature and media we studied represented a wide range of Francophone experiences. The syllabus emphasized telling the stories of French-speaking people displaced by colonization and immigration, among other things. I can't think of any notable weaknesses of the course; I thought the tests were spaced out in a very manageable way, and I liked that every few days we got a day off from homework. ",
+            "\u00a0The instructor was engaging and the texts and movies were interesting ",
+            "\u00a0I think the stories we read were at the right level and pushed me in terms of my reading ability, also, the accompanying course packet was very helpful. However, I think the amount of work outside of class was excessive. ",
+            "\u00a0The strengths of this class included its consistent structure which made it possible to learn French in a more coherent way. I really enjoyed the stories we read and I think they were an effective way of learning vocabulary. The weaknesses of this class included its time and the amount of reading at the end of the semester made it difficult to understand all the material. Also, I did not understand the grading for any of the writing components of this class and did not receive adequate feedback to improve. ",
+            "\u00a0I did not like this course. The tests make no sense and do not help me learn French at all. The exercises for class are not helpful at all. No one really helps in class. It is an insane amount of work and the tests are still impossible. "
+        ],
+        [
+            "\u00a0I would recommend this course to someone who wants to develop a solid foundation in the French language and is willing to put in the effort to do so. Due to small class sizes and the emphasis on participation, this is not really the kind of class where you can get away with not doing homework or not reading the texts or watching the movies. It definitely requires a high level of engagement on the part of the student. ",
+            "\u00a0yes, it did a good job teaching French ",
+            "\u00a0If they were really committed to learning french, it is a good way to get closer to fluency. ",
+            "\u00a0Yes I would because I think it really strengthened my french skills and reinvigorated my liking of french. ",
+            "\u00a0Not at all. This class is an insane amount of work and it is still extremely hard to do well. Not to mention, I do not feel like I learned a lot. The class was so hard it was impossible to learn. "
+        ]
+    ]
+}

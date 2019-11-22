@@ -1,0 +1,75 @@
+{
+    "crn_code": "13150",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Knowledge of basic linear algebraic concepts as well as an introduction to linear system control. ",
+            "\u00a0Basic and fundamental linear algebra. Mathematical logic and proving skills. ",
+            "\u00a0This course provided knowledge regarding abstract linear algebra and an intro to systems and control "
+        ],
+        [
+            "\u00a0A lot of detail taken to introduce the framework for working with linear systems and control concepts. Pace of course was too fast towards end of semester. ",
+            "\u00a0very nice courses. However, the pace is too slow for the first half term and too fast for the second half where the course content became harder and harder. The lecturer should spend more time on the second half. "
+        ],
+        [
+            "\u00a0If the class is a requirement for department. ",
+            "\u00a0Yes because this is very important and fundamental mathematical tool. "
+        ]
+    ]
+}

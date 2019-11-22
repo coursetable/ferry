@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49567/assignments/syllabus", 
+    "requirements": "After CPSC 223.", 
+    "description": "Introduction to database systems. Data modeling. The relational model and the SQL query language. Relational database design, integrity constraints, functional dependencies, and normal forms. Object-oriented databases. Database data structures: files, B-trees, hash indexes.\nAfter CPSC 223.", 
+    "title": "Introduction to Database Systems", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WLH 119", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10694", 
+        "listings": [
+            {
+                "number": "437", 
+                "subject": "CPSC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Abraham Silberschatz"
+    ], 
+    "long_title": "Introduction to Database Systems", 
+    "extra_info": "A"
+}

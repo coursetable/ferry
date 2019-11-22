@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "For students who wish to investigate an area of Latin American Studies not covered by regular offerings. The project must terminate with a term paper or its equivalent. No more than one term of credit may be earned. To apply for admission, a student should present a prospectus and a bibliography to the director of undergraduate studies no later than one day before the course selection period concludes. Written approval from the faculty member who will direct the student's reading and writing must accompany the prospectus.", 
+    "title": "Directed Reading", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12493", 
+        "listings": [
+            {
+                "number": "471", 
+                "subject": "LAST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Directed Reading", 
+    "extra_info": "A"
+}

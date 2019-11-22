@@ -1,0 +1,78 @@
+{
+    "crn_code": "22088",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            6
+        ],
+        [
+            0,
+            0,
+            4,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            6,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course taught valuable information on the modern historical and political thought authors from Hobbes to Arendt. I also gained valuable writing skills. ",
+            "\u00a0I learned an incredible amount from this course. I gained valuable insights about each book and felt I had a good grip on understanding each of them. ",
+            "\u00a0Understanding of modern political philosophy "
+        ],
+        [
+            "\u00a0This course is strong in its authors and reading list, but the reading are almost excessively long, especially as professors send out extra pages to read before class. ",
+            "\u00a0This course is very strong. I have no suggestions on how it could be improved, because I thoroughly enjoyed and learned a lot from each class. ",
+            "\u00a0We should actually read Perpetual Peace by Kant "
+        ],
+        [
+            "\u00a0I would recommend this course to another student because of how key some of the ideas in the course are to today's political environment. ",
+            "\u00a0Yes! I loved this class because Professor Semmel traced the development of political and historical thought in the western tradition in an engaging and enjoyable manner. ",
+            "\u00a0I would definitely recommend this course to another student. This course is very engaging, and I learned so much, and also had a lot of fun! ",
+            "\u00a0I would recommend this class to any student taking Directed Studies "
+        ]
+    ]
+}

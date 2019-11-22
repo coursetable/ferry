@@ -1,0 +1,73 @@
+{
+    "crn_code": "21548",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course helped me gain exposure to a variety of research methods that can be utilized in clinical science. I appreciated the opportunities to practice teaching and presenting. I feel like I gained insight into building a program of research and evaluating the methods of others. ",
+            "\u00a0I learned so much about the principles of strong inference, statistical methods and presentation of material to a class. "
+        ],
+        [
+            "\u00a0Overall, I thought this was a very strong course. The final R01 assignment helped crystallize many of the topics we covered, however it may also be beneficial for students to write a grant that is more congruent with our stage in training. ",
+            "\u00a0The course is optimized to facilitate learning in a variety of domains that are typically not covered in other courses. "
+        ],
+        [
+            "\u00a0Definitely. I think any psychology student would benefit from taking this course. It complements the multivariate statistics requirement very well. "
+        ]
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "crn_code": "11183",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course was a useful discussion and literature review of relevant and recent work in respect to biogeochemical cycles. I gained a deepened understanding of ongoing work and research in my field, gained familiarity with some new and different isotope systems, in addition to becoming more comfortable engaging in scientific discussion. "
+        ],
+        [
+            "\u00a0I thought the paper-oriented discussions were incredibly useful, and added a deeper value and context to other courses I was enrolled in. I did wish we had more time to follow subjects through, but that may have been a byproduct of the various student research interests rather than course structure. "
+        ],
+        [
+            "\u00a0Yes- I think this is a useful course for a graduate level student in geochemistry. "
+        ]
+    ]
+}

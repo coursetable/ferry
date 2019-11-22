@@ -1,0 +1,78 @@
+{
+    "crn_code": "12002",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            5,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            0
+        ],
+        [
+            0,
+            0,
+            4,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned to look at empirical evaluations of how and whether different countries democratize. ",
+            "\u00a0We covered theories of how democracies are formed and why democracies turn more democratic. Overall, I developed a more nuanced and less idealized view of democracy thanks to the readings and discussion in the course. ",
+            "\u00a0I had a fantastic time in this class. I learned a great deal about the various theories of democratization as well as how to write a literature review paper on a case study. "
+        ],
+        [
+            "\u00a0I really liked the course! i thought that classes were structured well. ",
+            "\u00a0This course was taught extremely well. Professor Svolik was very engaging and the course material was very relevant to current events. ",
+            "\u00a0I like the data-based approach the class takes in discussing systems of governments, particularly democracy, that seems to lack in many other classes of the same fields. "
+        ],
+        [
+            "\u00a0Yes, if they were interested in politics or the concept of democracy. ",
+            "\u00a0Yes, highly recommended. ",
+            "\u00a0Students should take this course if they are interested in understanding democracy better and would like to learn more about how political scientists think and ask questions. The readings are interesting and Prof. Svolik is a great discussion leader. ",
+            "\u00a0I would definitely recommend this course. I learned a tremendous amount about democratic theory and Professor Svolik was a great help in improving my essay writing skills. "
+        ]
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "", 
+    "title": "Prep: Admission to Candidacy", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12453", 
+        "listings": [
+            {
+                "number": "999", 
+                "subject": "CAND"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Prep: Admission to Candidacy", 
+    "extra_info": "A"
+}

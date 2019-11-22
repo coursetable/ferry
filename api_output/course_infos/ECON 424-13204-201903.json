@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48663/assignments/syllabus", 
+    "requirements": "Prerequisites: Intermediate Microeconomics, Intermediate Macroeconomics, and Introductory Econometrics.", 
+    "description": "Introduction to the different roles and responsibilities of modern central banks, including the operation of payments systems, monetary policy, supervision and regulation, and financial stability. Discussion of different ways to structure central banks to best manage their responsibilities.\nPrerequisites: Intermediate Microeconomics, Intermediate Macroeconomics, and Introductory Econometrics.", 
+    "title": "Central Banking", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "EVANS 4210", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13204", 
+        "listings": [
+            {
+                "number": "424", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "William English"
+    ], 
+    "long_title": "Central Banking", 
+    "extra_info": "A"
+}

@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Required of all first-year Neuroscience track graduate students. Rotation period is one term. Grading is Satisfactory/Unsatisfactory.", 
+    "title": "Lab Rotation for First-Year St...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14131", 
+        "listings": [
+            {
+                "number": "511", 
+                "subject": "INP"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Charles Greer"
+    ], 
+    "long_title": "Lab Rotation for First-Year Students", 
+    "extra_info": "A"
+}

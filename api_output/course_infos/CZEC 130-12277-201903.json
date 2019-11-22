@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "2019-12-13", 
+        "group": 2, 
+        "day_of_week": "Friday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49423/assignments/syllabus", 
+    "requirements": "After CZEC 120 or equivalent.", 
+    "description": "Continuation of CZEC 120. Grammar and usage, with emphasis on idiomatic expressions, syntax, and stylistics. Readings in modern Czech history, prose, and poetry; discussion of economic, political, and social issues.\nAfter CZEC 120 or equivalent.\n\n1.5 Yale College course credits", 
+    "title": "Intermediate Czech", 
+    "skills": [
+        "L3"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "JE K22", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12277", 
+        "listings": [
+            {
+                "number": "130", 
+                "subject": "CZEC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Karen von Kunes"
+    ], 
+    "long_title": "Intermediate Czech", 
+    "extra_info": "A"
+}

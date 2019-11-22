@@ -1,0 +1,84 @@
+{
+    "crn_code": "20723",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            5
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            4
+        ],
+        [
+            0,
+            1,
+            1,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            4,
+            0
+        ],
+        [
+            0,
+            1,
+            4,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0An understanding of antitrust law and business competitive strategy ",
+            "\u00a0The course taught me about antitrust policies and the existing government and non-government instruments for enforcement, as well as important court cases and decisions. It gave me the tools to analyze the competitive effects and legality of mergers, cartels, and exclusionary conduct, in particular for current antitrust cases and potential cases. I also learned about strengths and weaknesses of U.S. antitrust policies in comparison to European competition enforcement. ",
+            "\u00a0I learned a lot about anti-competitive behavior in US firms, the legal challenges presented to government regulators, and the directions that anti-trust law has taken in other countries around the world. ",
+            "\u00a0I learned about the economics of antitrust enforcement. Disappointingly, I didn't learn as much about the actual laws as I'd have liked; we mostly just went through cases of antitrust action and analyzed the ways in which the parties were restricting competition and how that affected consumers. It's definitely an economics-focused course, and I feel like the coverage of the laws at hand was too cursory, even for a non-law class. ",
+            "\u00a0This course taught the mechanics of competition economics and competition economics policy, including antitrust law. This covers cartels, mergers, and other kinds of economic conduct that might be illegal. To do so, we analyzed a variety of cases in which anticompetitive conduct was alleged, and then discussed both the legal and economic consequences of certain actions by the government and private firms. "
+        ],
+        [
+            "\u00a0The lectures were incredible, sometimes readings were a little too long to be useful (long background that was covered concisely in lecture), final project was a good way to get deeper into a case study ",
+            "\u00a0The course was well-organized and had really interesting content, and the readings were interesting and relevant to lectures. Prof Scott Morton is a wonderful professor and very engaging lecturer, and it's really insightful having a professor who not only is an academic powerhouse but also has real-world experience in the antitrust sphere. I also particularly liked having case presentations because it was a good way to engage with the material and was really meaningful getting to work with people from other schools (YLS/YC/SOM).\r\n\r\nThe course could be improved by having more opportunities to engage with the material and implement many of the economic models and quantitative analysis methods that we discuss in class, like how we were able to calculate UPPI and diversion ratio with R problem sets earlier in the semester. I also wished we had gotten more feedback on our problem sets, especially the one that was graded. The presentations were really beneficial in getting us to think about arguments for and against current antitrust cases. ",
+            "\u00a0This was an amazing course. I really appreciated the depth to which we covered the readings in class because they were rather difficult for me to read on my own. ",
+            "\u00a0Strengths include interesting topics and guest speakers and fairly intuitive information that you can learn without scratching your head too much. And Fiona is very nice and a strong--if a bit overbearing, at times--lecturer, and clearly knows her stuff.\r\n\r\nThe biggest weakness was the amount of workload, especially at the end of the term, though really throughout if you were actually doing the readings. I barely ever did all of the readings, and I don't know if any others did either. It was too much to do. It already meets at 8:30 when I wasn't awake, and I would really have preferred more concise readings so that I could do them without feeling overwhelmed or tired out. The last four weeks of the class were nuts, with a big project, a paper to go along with that project, and an exam. One of those things needs to be eliminated. I liked the presentation of the projects, so I would vote for the paper or the exam to be cut. Maybe the exam could be cut, and we could each be asked to write an individual paper (instead of the group paper) displaying our knowledge of various topics covered in the course. That would be a better way to sum up that won't be so stressful, and which could cover both a summary of the project and the course material more generally. Just be prepared that this busy period will happen if you take the course.\r\n\r\nI also wish there had been one introductory lecture in which we really went over what laws covered what. If we did cover that, it was exceedingly brief, and we just jumped into cases from the get-go, which I felt hindered the cohesion of the course from lecture to lecture. An introductory lecture in which we get a roadmap of what is to come in the course would go a long way. ",
+            "\u00a0This course certainly thrives in the variety of the material covered. The concepts for each lecture can be taught by analyzing one or two cases, and Professor Scott Morton does a great job of highlighting the importance of each case (especially when a wrong decision was made by the government). In addition, the student presentations allow for us a better opportunity to go in depth on a specific case with a diverse group of students from the various Yale undergrad and graduate schools. This course could improve slightly in its format to encourage broader discussion, as it appeared as though discussion was monopolized by a select few students. "
+        ],
+        [
+            "\u00a0Definitely, very interesting class where you will learn a lot of useful info about illegal vs legal business practices ",
+            "\u00a0Absolutely, in particular to undergrads. It's definitely one of the best economics electives in the department and provides a great opportunity to think about the intersection of business, law, and consumer welfare  and the government's role in regulation of corporations, as well as explore a particular area of application of economics. It's great having a mix of MBA, law school, and undergrad students in the class to provide different perspectives on a very interdisciplinary field. It's a lot of work and might seem intimidating at first, but it's so worth it. Prof Scott Morton is an expert in her field, and you'll learn so much, both from her and the other students in the class. ",
+            "\u00a0Yes, if they are interested in anti-trust law, or just business in general. ",
+            "\u00a0It's a tough one to say yes or no to. There were definitely moments that I really enjoyed it, and I learned a lot, but it took a lot more out of me than it felt like it should have, given the material that we were covering. The bottom line is that this class is a good deal of work from start to finish--don't let the fact that it's an SOM class fool you. You'll learn interesting stuff,  but just make sure you're really into studying antitrust economics--emphasis on the economics--because if you aren't, then this will not be the course for you at all. I really wish there had been less work. The material was cool, but I felt so overwhelmed at some points that I couldn't even process what I was learning, instead having to try to memorize everything for the final or the midterm. I like the idea of the project, but to have that and the paper and the final exam is overkill. ",
+            "\u00a0This is a pretty law/court-reading heavy course. The readings are somewhat interesting but quite intensive. ",
+            "\u00a0I would definitely recommend this course to any economics student interested in learning more about the laws governing the conduct of larger corporations. It's also interesting to take an SOM course that is a mix of students from various schools, including SOM, Law, MPH, etc. Scott Morton is also a great professor to learn from, and makes the course more interesting. "
+        ]
+    ]
+}

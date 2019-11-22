@@ -1,0 +1,73 @@
+{
+    "crn_code": "10813",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to read Japanese Poetry, and also how to analyze it. "
+        ],
+        [
+            "\u00a0Very interesting material and scintillating discussions. No real weaknesses. ",
+            "\u00a0An amazing course--I have no comments on how it could be changed. It was organized and executed very well. "
+        ],
+        [
+            "\u00a0Yes! It's very interesting and eye opening. I think that this course is great because anyone, even if they aren't used to this sort of material, can really learn a lot and enjoy it. ",
+            "\u00a0This class was amazing! Kamens is incredibly insightful and amazing to listen to, and will make you interested in whatever you happen to be going over in class at the time. Definitely make sure you're prepared and awake for class--it makes discussions way more stimulating and cool. This class is also a rare occurrence--Kamens is a leading voice in his field, but the class is small and discussion-based. You really get to hear and think about a lot of interesting poetic topics in this class. "
+        ]
+    ]
+}

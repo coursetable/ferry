@@ -1,0 +1,47 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50195/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Is the demise of the trial at hand? The trial as cultural achievement, considered as the epitome of humanistic inquiry, where all is brought to bear on a crucial matter in an uncertain context. Truth may be hammered out or remain elusive, but the expectation in the court case has been that the adversarial mode works best for sorting out evidentiary conundrums. Inquiries into issues of meaning of the trial, its impartiality, and challenges to its endurability. The role of character, doubt, and diagnosis explored in Sophocles, Plato, Cicero, Burke, Jane Austen, Tocqueville, and Kafka, as well as in twentieth-century trials, films, documentaries, and twenty-first-century medical narratives.", 
+    "title": "Trials of Uncertainty", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "WLH 007", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12264", 
+        "listings": [
+            {
+                "number": "295", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSP\">YC Poli Sci: Political Phil</a>"
+    ], 
+    "professors": [
+        "Norma Thompson"
+    ], 
+    "long_title": "Trials of Uncertainty", 
+    "extra_info": "A"
+}

@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Much of the curriculum within the Sculpture Department circles around the studio, the seminar room, and the critique space. This course jumps that circle to focus on the lived experience of the artist outside of the educational institution. This four-meeting course will meet in the greater New York city area for visits to artist\u00e2\u20ac\u2122s studios, art fabrication spaces, and other art related places. Permission of instructor required and transportation to New York city will not be provided.", 
+    "title": "Field Study", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14986", 
+        "listings": [
+            {
+                "number": "679", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Joo"
+    ], 
+    "long_title": "Field Study", 
+    "extra_info": "A"
+}

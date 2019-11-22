@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50158/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Reading seminar. The course covers international\u00a0relations in the Americas, from the Age of Revolution to the present. It combines social, political, and intellectual\u00a0history\u00a0to focus on such concepts as sovereignty, individuation, self-determination, borders, citizenship, social rights and property rights, internationalism, and resource nationalism.\u00a0Among other topics, the course covers New World wars for republican independence; the Haitian Revolution; slavery and abolition; the Mexican-American War; the War of 1898; the founding of the League of Nations and the United Nations; the Cold War and the New International Economic Order.", 
+    "title": "America and the New Internatio...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "RKZ 06", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11137", 
+        "listings": [
+            {
+                "number": "805", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Greg Grandin"
+    ], 
+    "long_title": "America and the New International History", 
+    "extra_info": "A"
+}

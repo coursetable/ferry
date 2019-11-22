@@ -1,0 +1,88 @@
+{
+    "crn_code": "20748",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            3,
+            4,
+            4,
+            2
+        ],
+        [
+            1,
+            1,
+            1,
+            6,
+            5
+        ],
+        [
+            0,
+            4,
+            1,
+            5,
+            4
+        ],
+        [
+            0,
+            2,
+            3,
+            6,
+            3
+        ],
+        [
+            1,
+            2,
+            7,
+            3,
+            1
+        ],
+        [
+            3,
+            6,
+            4,
+            0,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about a number of famous, important topics in Game Theory ",
+            "\u00a0not much but the little I learned was useful as a way of thinking ",
+            "\u00a0Learned about fairness and stability of profit sharing methods, bargaining solutions, mixed strategy equilibria, etc. ",
+            "\u00a0Great ",
+            "\u00a0Learnt principles of cooperative game theory\r\nmathematical thinking with minimal use of symbols\r\n\r\nNeed more problem sets/ "
+        ],
+        [
+            "\u00a0It was a great Course and instructor was very in tune with what students wanted/didn't want to do. Really tailored the class to the students and made the material exciting and interesting ",
+            "\u00a0it is a seminar taught as a lecture. Be more interactive so people actually pay attention ",
+            "\u00a0This class should be offered as a lecture, there was no seminar style engagement ",
+            "\u00a0Very well taught, exams were reasonably fair. ",
+            "\u00a0Great class. Honestly loved it. ",
+            "\u00a0Great ",
+            "\u00a0The professor was the best; he really loves what he is doing. "
+        ],
+        [
+            "\u00a0This class is an awesome option if you need to fulfill an econ/applied math credit. It's quite chill, but you get a great understanding of a few key concepts of game theory. Pradeep is genuinely concerned with his students learning, not just making them do work. He's funny and highly enthusiastic about what he does. ",
+            "\u00a0Would absolutely recommend this course! Professor Dubey is an amazing Professor and truly cares about his teachings. Topics are very interesting. ",
+            "\u00a0Absolutely. I loved this course and the professor is awesome. ",
+            "\u00a0great easy senior seminar, you do have to show up though ",
+            "\u00a0This class is extremely low workload, but isnt really worth it. Interesting material, but painfully boring delivery in long Fri morn seminar. ",
+            "\u00a0Great senior seminar if you are interested in game theory. Even if you have taken game theory courses in the past, you will likely learn lots of new material in this class. ",
+            "\u00a0100% ",
+            "\u00a0Yes "
+        ]
+    ]
+}

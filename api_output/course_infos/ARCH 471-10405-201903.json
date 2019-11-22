@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "For seniors with DUS approval; meetings by appointment with DUS.", 
+    "description": "Special courses may be established with individual members of the department only. The following conditions apply: (1) a prospectus describing the nature of the studio program and the readings to be covered must be approved by both the instructor and the director of undergraduate studies; (2) regular meetings must take place between student and instructor; (3) midterm and final reviews are required.\nFor seniors with DUS approval; meetings by appointment with DUS.", 
+    "title": "Individual Tutorial", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10405", 
+        "listings": [
+            {
+                "number": "471", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Bimal Mendis"
+    ], 
+    "long_title": "Individual Tutorial", 
+    "extra_info": "A"
+}

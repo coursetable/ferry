@@ -1,0 +1,150 @@
+{
+    "crn_code": "10695",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            11,
+            17,
+            11,
+            5,
+            4
+        ],
+        [
+            5,
+            13,
+            23,
+            4,
+            3
+        ],
+        [
+            5,
+            13,
+            22,
+            5,
+            3
+        ],
+        [
+            7,
+            16,
+            21,
+            1,
+            3
+        ],
+        [
+            4,
+            17,
+            22,
+            4,
+            1
+        ],
+        [
+            14,
+            23,
+            9,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about how to read a textbook and regurgitate it on a test. The lectures were dry, the course material was interesting, but the course itself could have been taught in 100 better ways than what it was for this semester. The professor read material off the slide, class attendance dropped to about 10% for the entire semester, and there were only 3 homeworks, 1 midterm, and 1 final. ",
+            "\u00a0databases, SQL, systems organization ",
+            "\u00a0I learned more about sql and some about OS. ",
+            "\u00a0The project had a lot of new skills I learned of, but the professor didn't really teach them. ",
+            "\u00a0SQL, Memory Heirarchy, RAID, Database Systems and Theory ",
+            "\u00a0Learnt a little about how databases work and challenges that one may face in implementing database systems. ",
+            "\u00a0You learn SQL and database theory. ",
+            "\u00a0There is some SQL in this class, but the purpose of this class is not SQL. This is a mostly theoretical class covering database design, normalization (i. e. good relations in a database), physical and data storage for databases, and concurrency. ",
+            "\u00a0SQL, database schema design, failure recovery, transactions, concurrency, a lot of theory of databases ",
+            "\u00a0SQL, basic database structures, ER diagrams ",
+            "\u00a0Database ",
+            "\u00a0This course teaches you the basics of SQL and relational database design. This is useful information for industry and it's good to know SQL, but ultimately, like so many Yale courses, it just felt like a lot of theory. SQL is not difficult to pick up quickly, but I really don't know if I'll ever use any of the other information in my career/life. I wish that there had been more of an emphasis on doing, rather than simply absorbing material. Avi's lectures were pretty dry and you could learn the same amount by reading the textbook (which is very good and which he also wrote). ",
+            "\u00a0SQL basics, how to properly design a database, physical structure of databases, pretty much anything database related ",
+            "\u00a0Not much: a little bit of SQL and basic idea of how databases work ",
+            "\u00a0I learned about databases. ",
+            "\u00a0I learned how to write basic SQL queries and relational algebra. The second half of the course was more focused on the architecture of database systems, such as disk/hardware, concurrency access, and methods of storing and retrieving data. ",
+            "\u00a0Knowledge of databases and datebase design. We learned a bit of SQL as well. ",
+            "\u00a0Greater understanding of how databases were designed and how hardware works to support data storage/retrieval ",
+            "\u00a0We learn about relational algebra, SQL query, database design (ER model, normal forms), and databse memory management. ",
+            "\u00a0Interesting theory about Database design, file system, storage and recovery system. Very useful things to know if you are interested in data engineer position or any SWE position in a data-driven companies. ",
+            "\u00a0Learnt about SQL and database systems at a detailed level. ",
+            "\u00a0Introduction to SQL and basic to intermediate database concepts ",
+            "\u00a0I learned how to write sql queries. ",
+            "\u00a0Not much of anything at all. "
+        ],
+        [
+            "\u00a0Strengths: The course inherently is interesting material. Weaknesses: Very dry in the way it was taught. There could be more homeworks assigned to encourage engagement in the class, the professor could have taught in a much less dry manner than just reading slides in front of the classroom, and the exams could be more relevant to the material we were learning in class. ",
+            "\u00a0Strengths- professor is great\r\n\r\nWeaknesses- lack of availability at help hours to learn SQL, higher level concepts ",
+            "\u00a0I wish there were more TA's. ",
+            "\u00a0Not a high level of engagement, but also not a gut. There isn't a lot of work in terms of homework, but then the midterm, final, and final project were really rough. ",
+            "\u00a0Strengths: Material, Professor, Assignments\r\nWeaks: Lack of TA's ",
+            "\u00a0Strength: Not much homework, but midterm and in-class final exams force you to engage the material anyway. ",
+            "\u00a0I think lectures were a lot of fun and very interesting. I think the tests could have been better designed sometimes and the grading more clear. ",
+            "\u00a0Strength: introduces fundamental topics in DB systems, slides convey information well\r\nWeaknesses: no reason to go to lecture as professor reads off the slides mostly ",
+            "\u00a0This class has a relatively light workload and is very manageable. However, I do feel that the class was disorganized and unclear sometimes, especially when it came to the project and how to complete it. ",
+            "\u00a0The course material is actually pretty interesting and useful, and I did learn things from the course. Going to class was not necessary and more than half the people didn't go to lectures and just read lecture notes instead. This wasn't necessarily a bad thing, since I was able to learn by reading on my own at my own pace ",
+            "\u00a0The lectures are not very engaging, I stopped going after the 3rd week of class.  However, if you are looking for a gutty CS elective where you can brush up on SQL and databases, you can skim through the lectures pretty quickly. ",
+            "\u00a0Strengths: Nice instructor and great project ",
+            "\u00a0There were only three problem sets throughout this semester. They were vaguely helpful for learning material, but I wouldn't say they really helped with understanding of material for the exams except for the parts where you write SQL statements. I also wish there had been some kind of preparation/sample questions for the exams. I mean *anything*. Avi and the TAs were not able to give us any type of information about the types of questions that would be on the exams. For the first exam, this was not as much of an issue because we were obviously going to be tested on SQL and relational algebra. For the second exam, it was much more up-in-the-air what questions there would be because we covered so much content and all of it was theoretical.\r\n\r\nOne strength of this course is that you do not have to attend class in order to perform well on exams or problem sets. ",
+            "\u00a0Avi lectures straight from slides that are straight from a textbook. Most days that I attended, it felt like I could just be studying on my own, and I think that most of the class felt similarly. The problem sets were pretty chill, and learning SQL was interesting. ",
+            "\u00a0Strengths:\r\n- Having the final project was great and I learned a lot through it\r\nWeaknesses:\r\n- Not really sure what the practical relevance of a lot of the course material is. We spent a lot of time on the issue of what happens if the power shuts off and the database turns off in the middle of a transaction.\r\n- Should have spent more time on BCNF and 3NF. Still confused about what this is.\r\n- Javid is a truly awful TA and everyone in the course that interacted with him had a terrible experience with him.\r\n- The midterm exam was a disaster because Avi changed the test in the last minute and the TA's gave conflicting information about Avi's intent when writing questions. The exam also went over by 15 minutes because of all the confusion. ",
+            "\u00a0Good material; perhaps more enthusiasm could be better. ",
+            "\u00a0This class is not a lot of work compared to other CS electives--which could be a strength and a weakness. I didn't feel very academically challenged with the assignments, but it was a good course to take with a heavy schedule load. ",
+            "\u00a0The course focuses a lot on the theoretical aspects behind databases, and relatively minimally on executing efficient SQL queries or other, newer database schemas such as NoSQL. ",
+            "\u00a0Something that I liked was that the lectures were all posted online and were very detailed. It was pretty clear what we were going to be tested on and the general flow of the course was generally pretty good. Avi also never assigned too much work which was nice.\r\n\r\nThe lectures got a little dry and sometimes all of the discussion about different designs seemed a bit repetitive and unnecessary. ",
+            "\u00a0A lot of material was covered, but sometimes felt disorganized, lecture slides were often a bit sloppy. Assignments were very sparse and did not feel incredibly timely. Expectations and clarifications to course material were often not explained very clearly. ",
+            "\u00a0This class can be much better organized. The TAs don't know what will be on the midterm etc. It is clear that the professor has been teaching this class for years and has a preset lecture. When questions are asked, often they are not coherently answered. Many students do not come to class and get the same information off the slides. ",
+            "\u00a0Final project actually takes more time than you anticipate, heads up.  Maybe week or more of solid time. ",
+            "\u00a0Professor Avi is great and the course material was very interesting. ",
+            "\u00a0Strengths - Avi is a great professor and the content was very interesting\r\nWeaknesses - the course was immensely understaffed TA-wise, and the class was so large that it didn't lend itself well to discussions in class. It would be nice to have more courses, so that students hav ethe opportunity to interact with their classmates and professor. ",
+            "\u00a0It's kind of interesting but learning is very unorganized so you kind of have to teach yourself ",
+            "\u00a0Strengths: we had a pretty thorough introduction to SQL and workload was manageable and fair\r\nThis course could be improved in three ways: (1) rewarding attendance by giving test questions that reflect specific things discussed in class, (2) giving forward guidance on the test format (multiple choice/free response) and how best to study, (3) providing intermediate deadlines for the course project to keep students accountable and provide feedback (so the TA's aren't overwhelmed near the end of the semester with questions they may not have time to answer) ",
+            "\u00a0Weaknesses: There were not enough TAs for this sized class. There was also a lot of miscommunication. On the midterm, we were told that the exam would be multiple choice. Many of us prepared accordingly. On the actual exam there were no multiple choice, and the scores for the midterm reflect that. Often times there were not enough office hours offered to help with the homework. In short, the basic support that is expected from other cs classes (telling us the form of the exam, adequate office hours) was not in place. \r\n\r\nStrengths: the group project was fun. The lecture slides and textbook were also quite comprehensive. ",
+            "\u00a0The only vague strength of this course is the group project, and that just because there are too few group projects in the CS major classes.\r\nProfessor Silberschatz showed, from the very first day, that he was almost entirely apathetic about the class. The first thing he said was something along the lines of \"I hate teaching 9am classes,\" and it showed in his completely disinterested, boring, and downright disappointing lectures. 80% of the class never attended lecture after the first week or so, because the \"lectures\" actually consisted of Prof. Silberschatz merely reading the vague 100-slide presentations that are published with his textbook that the class uses. It's a complete waste of time to go to class, because his presentation actually makes the content more vague and hard-to-understand than simply reading the book for oneself.\r\nProblem sets were an absolute joke: the first was entirely \"multiple choice\" (when else have you seen that in the CS major??), and reminded me of a homework from my elementary school days. The second was just a bunch of questions that were simple SQL queries that you could write (and I did write) using the SQL one learns in CS50, not having looked at the class material at all. The third pset was mainly short response questions and was probably the best, though that's not saying much. To reiterate, yes, there were THREE homeworks in a one-semester class. I spent a total of two hours and 34 minutes on them, combined (I timed it).\r\nThe upshot is if you're looking for a gut, here you go.\r\nThe exams are even worse: the midterm was a complete joke because of some sort of miscommunication with the (relatively bad) TAs and Prof. Silberschatz, so it ended up being a copy of an old exam with content we didn't even cover in class (so we literally had no way of completing it). The final was much easier (almost as easy as the homeworks), and even included an elementary geometry problem about the area of concentric circles (???) on it, because that makes complete sense for a class on database systems!\r\nLastly, the TAs. From what I heard, one TA was relatively good with advising final projects. Our TA was a complete joke. We met with him once, and he barely glanced at our proposal before approving it, giving us absolutely no feedback. When we emailed him periodically through the semester asking to meet as we were TOLD to on the project assignment, he ignored our emails or simply provided completely cryptic answers.\r\nIn short, CPSC 437 is an utter joke of a class and a disgrace to the computer science major and field of study, if not to the institution of Yale as a whole. Shame on whoever is involved with allowing the class to continue. "
+        ],
+        [
+            "\u00a0If you're a CS major looking for a cool elective to enrich your CS education and truly expand your learning, I would NOT recommend this course. You learn some things about databases here and there, but you really don't gain any practical skills nor do you ever enjoy the class. Class attendance is about 10% for the entire semester after the first 3 classes, and the majority of students learned the material via reading the textbook on their own. Unless another professor besides Avi teaches the course, avoid at all costs. ",
+            "\u00a0Recommended for CS majors ",
+            "\u00a0The project was a good way to apply my technical skills and I enjoyed doing it. ",
+            "\u00a0It isn't a gut, but it also isn't the hardest thing in the world. Read the textbook and slides. Lectures were long, dull, and really early, but every now and then he mentioned something special in lecture that would be on the test, so its hard to avoid going to them. ",
+            "\u00a0Yes, it is a good introduction to Databases and they theory behind their organization and function ",
+            "\u00a0A light-workload course that still manages to teach you a few things about databases and how they work. ",
+            "\u00a0I think DB is very interesting. Avi is a great prof so definitely go to lectures. ",
+            "\u00a0I would recommend this course to a student who does not mind the 9 am class time. If one is willing to attend lecture, this class will be fair. However, it becomes very easy to start skipping lecture, especially due to the infrequent homework assignments (we only had 3 relatively short problem sets). And then when the midterm and final time comes, the cramming becomes stressful. ",
+            "\u00a0Recommended if you are interested in database architecture and design (lots of hardware-related stuff), or if you are looking for an easy elective ",
+            "\u00a0If you are looking for a gutty CS credit, then take it.  You don't have to go to class, there's only 3 easy psets, and a pretty easy final project.  It's not super rewarding, so I would keep that in mind if you are someone who feels totally unmotivated if you aren't intellectually challenged.  I think it's elective to take if you are simultaneously taking a difficult CS elective or core class. ",
+            "\u00a0Yes. Great to learn about database ",
+            "\u00a0I would only recommend this class to CS majors who are looking for a relatively low-workload class, or CS majors who are genuinely interested in the topic and will be committed to attending lecture and interacting with Avi/the TAs. I think there is a lot to be learned from this class, but unfortunately the lectures are wholly uninteresting and the work is not well structured for understanding of the material. That being said, SQL is good to know and good to have on your resume. ",
+            "\u00a0Maybe, depending on where your interests in Yale's CS electives lie. This class was low work, with material that was fairly interesting at times. Learning straight from slides quickly gets repetitive, though. ",
+            "\u00a0This class has a very low workload. Showing up to class for lecture is voluntary, the final was not very difficult, and the slides are clear. The course is not very well organized, the TA's are confused about databases, and the assignments are ambiguous.\r\nAlso, if Javid ever TA's for this course or any other, I would recommend avoiding him. ",
+            "\u00a0I mean, only if they want to learn about databases. ",
+            "\u00a0Sure, if you'd like to learn more about database systems. I think this course was more about the architecture of databases than how to write SQL queries and practical applications of databases. Also, yes if you do not mind waking up at 9am for lectures/exams. ",
+            "\u00a0This class is okay. Avi is a pretty good professor but he goes through the slides quickly and superficially so you end up having a lot of material for the two exams that you have to relearn. The project at the end was a nice because you have something at the end that you can put on your resume. ",
+            "\u00a0I would recommend this course for students who are looking for a theoretical understanding of how databases have been built in the past, and want a CS elective that is relatively little work during the year. However, be warned, the tests will sneak up on you and cover a large amount of material. Go to lecture so you know which slides you'll need to know and which weren't covered. That will cut down on your studying load. ",
+            "\u00a0Yes, I would recommend this to someone looking for a chiller CS class with almost no programming. Knowledge of databases is also a useful thing to have. It certainly wasn't anything to write home about however, pretty average course. Avi is funny but a bit hard to understand. ",
+            "\u00a0You could probably learn everything from a book, but if you want to learn about database design and theory in a classroom setting, this could do it. A very easy CS elective if that's what you're looking for. ",
+            "\u00a0This is a good 5th class computer science class. There are few classes in the computer science major that can serve this purpose. You do learn useful information about database design and get to do a project at the end. However, in all honesty, a lot of the information is self teachable. Avi just reads off the slides, and a lot of people don't end up coming to class. The class is sometimes disorganized as the TAs don't know what is going on. That being said there are two midterms, a project, and 3 problem sets (all pretty simple). ",
+            "\u00a0This class has a very low workload (that does not mean its easy necessarily). Its perfect if youre looking for a CS credit but want to have time to focus your energy on other classes or projects this semester. Be sure to study hard for the exams (use the slides) and communicate actively with your TA to figure out your final project. Professor Silberschatz is disorganized but a really nice guy. ",
+            "\u00a0Final project actually takes more time than you anticipate, heads up.  Maybe week or more of solid time. ",
+            "\u00a0Yes, Professor Avi is amazing and the material is interesting. ",
+            "\u00a0Yes, if you want to learn about databases! It's really interesting, though quite theoretical! ",
+            "\u00a0No, I would not recommend this course to anyone unless you are willing to teach yourself everything. ",
+            "\u00a0I did not take CS 223 and am not a CS major so a lot of concepts were new and difficult to understand at first. That being said, it's completely doable to teach yourself but you might have a harder time than your CS friends. Also, make sure you know people in the class for the final project ",
+            "\u00a0Here's the thing: the workload in this class is very reasonable and the material is useful. Knowing sql and having a finished group project at the end of semester are both things you could put on your resume. \r\n\r\nThat being said... this wasn't the most fulfilling class. Lectures were dry and I left feeling like I didn't actually learn that much. Sql and database organization are things you can learn on your own. The midterm was quite hard and a lot of people were just scraping by grade wise. This class is not necessarily an easy A as many reviews seemed to suggest. It is, however, very reasonable when it comes to time commitment (which is really saying something when you're talking about cs classes). \r\n\r\nBottom line: I would say take this class if you have a really high workload in other classes but you still need another cs credit. In pretty much all other situations seek out courses that are more fulfilling to you even if they have a higher workload. ",
+            "\u00a0No. Do not take this class for any reason, besides if you desperately need a credit to graduate and wish to completely waste a potential credit on this absolute joke of a \"class.\" ",
+            "\u00a0I think I showed up to 3 lectures total, just because I had a lot going on at the time. I got at least a B+. If I can do it, you can too. "
+        ]
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "crn_code": "12555",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Developed basic r skills mostly for data cleaning. Developed familiarity with the language that helped me teach myself afterwards ",
+            "\u00a0This class was my first introduction to programming. I learned a lot of useful information and I see how I can apply the skills I have acquired in the future. ",
+            "\u00a0Basic understanding of R scripts, workflows, functions, and data structures/types. "
+        ],
+        [
+            "\u00a0The class is great in getting your feet wet with programming. The class really sped up in the middle and spent a lot of time using loops. Knowing what I know now, I'm not sure if loops are a high enough priority to spend so much time on in this short class and so early in the course too. I think spending more time on apply functions and learning dplyr would have been more useful. I also didn't think spending class time working on problems together was very useful. That could have been done in office hours/discussion sections. I would have appreciated learning from Jay and doing a quick practice problem on our own or in groups, but not the entire class period. ",
+            "\u00a0The pacing of the course was a bit fast at the end. The skills we were developing were very useful. I would have liked to have had more opportunities to practice them. I enjoyed the format of the class. I was nice to practice the skills with others and learn as a team. However, I would have preferred a bit more guidance through the in-class examples. ",
+            "\u00a0For such a short course, it started off somewhat slowly. I would condense the first couple weeks into the first class after shopping period. \r\n\r\nThe course provided exactly what it said it would: a concise intro to the concepts needed to use R, so that I was able to continue using R for assignments in my statistics class I was taking concurrently. "
+        ],
+        [
+            "\u00a0Yes ",
+            "\u00a0When I registered for this class, the description said it was a half credit course. I was not prepared to add an additional three-credit course to my workload this fall. I would recommend the course to another student, but would stress that they block off enough time to adequately prepare for class and complete the homework exercises. ",
+            "\u00a0Yes - for those who are not familiar with R or programming and would like an introduction. "
+        ]
+    ]
+}

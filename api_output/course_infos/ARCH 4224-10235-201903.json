@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49099/assignments/syllabus", 
+    "requirements": "", 
+    "description": "What if the U.S. Army Corps of Engineers had developed \u201csoft infrastructures\u201d and \u201cliving systems\u201d for dealing with the changing flows of the Mississippi in and around New Orleans? What if Henry Ford had used soy protein for automotive parts and synthetic meats in the 1940s? Or what if South Asian nation states had adopted the Ganges Water Machine model in the 1970s to address critical water shortages in urban areas? What do these three, seemingly disparate examples all have in common? Each is based on a patent or series of patents that were never adopted for one reason or another. These are just a few of the questions that animate this course. Historians ask the why and the how, but they are rarely trained to visualize what a city, a meal, or a landscape might have looked like had a particular technology or living system been adopted. Rather than shy away from such counterfactuals, we will explore and seek to visualize these historical what-ifs by taking a comparative, global perspective on the history of patents as visual and textual artifacts. No prior knowledge of the history of science and technology or architecture is required to enroll in this course.", 
+    "title": "Out of Date: Expired Patents", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "RDH 211", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10235", 
+        "listings": [
+            {
+                "number": "4224", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Anthony Acciavatti"
+    ], 
+    "long_title": "Out of Date: Expired Patents", 
+    "extra_info": "A"
+}

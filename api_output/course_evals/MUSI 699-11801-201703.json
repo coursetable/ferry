@@ -1,0 +1,75 @@
+{
+    "crn_code": "11801",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Improved my critical thinking skills; learned about historiography and how to undertake a historiographical project; broadened the scope of my perspective and research interests beyond musicology ",
+            "\u00a0I have developed skills for thinking critically about music history, and I come away with many new insights into the various perplexities that are involved in writing about historical events. ",
+            "\u00a0This course gave me a very thorough grounding in european theories and philosophies of history from midcentury to around 2000. "
+        ],
+        [
+            "\u00a0The class was quite intense...Overall, I think the intensity could be toned down at times about 1015% without any real consequence. But we learned many things that are applicable to how we approach scholarship, within and outside of music. It's very clear why it's a staple of the curriculum. ",
+            "\u00a0Strengths include a good balance between breadth of topics and depth of engagement. I always came away from class meetings with a richer understanding of the material. ",
+            "\u00a0I appreciated that we read many texts outside the musical field. I appreciated the challenge of the ideas and topics of the course. The reading list was thorough though at times too demanding. I would skip the Taruskin or do a shorter excerpt. "
+        ],
+        [
+            "\u00a0Yes, though I would give them fair warning. "
+        ]
+    ]
+}

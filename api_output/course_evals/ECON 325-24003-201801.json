@@ -1,0 +1,81 @@
+{
+    "crn_code": "24003",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            6,
+            5,
+            0
+        ],
+        [
+            0,
+            3,
+            5,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            3,
+            6,
+            2
+        ],
+        [
+            0,
+            3,
+            3,
+            5,
+            1
+        ],
+        [
+            0,
+            1,
+            9,
+            2,
+            0
+        ],
+        [
+            0,
+            3,
+            8,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Understood the main points surrounding development economic theory and covered the primary drivers behind development. ",
+            "\u00a0Learned a lot about developmental econ, their certain theories on various topics and the research papers used to debunk or support those theories. Great class. ",
+            "\u00a0I learned a lot about econometrics in this class. As someone who has yet to take Econ 132, this class felt like Econometrics 1.5 me and a nice refresher from Econ 131 with some new concepts. But obviously, this class was much more than just a class on econometric techniques. I felt that I gained the tools needed to try an answer some of the hardest questions in development econ. Professor Keniston exposed us to a lot of new models. "
+        ],
+        [
+            "\u00a0This course was very well organized and served as a good survey course into the topic. I think it might have been interesting to have gone deeper into certain subjects, but that was not the idea of the class. I think it is clear that the professor is a practitioner in the field and very passionate about his work. Our TA, Paula, was also excellent throughout the semester, always available for help. ",
+            "\u00a0The exams in this class were out of 36 points. This made it hard to do well even if you knew the material. Also I think the exams should not include questions that ask about a derivation we didnt have time to go over in class and the notes on it were not posted as they were supposed to be. J ",
+            "\u00a0Really liked the structure of the course. We usually did theory on Tuesday and learned about actual research done on that theory on Thursday class. Keniston is a clear lecturer.\r\n\r\nWished that the psets could have been graded a little faster, but enjoyed the class overall. ",
+            "\u00a0The course's balance of theory and evidence is one of its strengths. I've taken several econ electives that focused on one or the others, but Professor Keniston does a great job bringing the two together. "
+        ],
+        [
+            "\u00a0maybe? I thought I would be interested in development economics but I didn't find the class that particularly interesting. Not necessarily the fault of the professor or TF, but maybe just the field of development economics itself. However, the class is great for teaching you the econometric and research design methods BEHIND popular research papers which is great in helping you understand any econ research paper you will read. ",
+            "\u00a0Yes definitely ",
+            "\u00a0I would certainly recommend this course to another student, even if not an economics major. This is because I think it is very important to understand these topics as we move forward in our lives and realize that there is much to the world beyond the Yale bubble, or even, the United States. There is a whole world out there with people who live very different lives to ours and this course does a good job reminding us of that. ",
+            "\u00a0I do not recommend this course because it moves very quickly and the material is not covered in great depth. ",
+            "\u00a0Yes. If you're interested in learning about developmental econ, this class is a great introduction and teaches you about the basic topics and research done in the field. ",
+            "\u00a0Yes, this was a great econ elective. "
+        ]
+    ]
+}

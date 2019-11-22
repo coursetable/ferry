@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50202/assignments/syllabus", 
+    "requirements": "Some art history recommended, but not required.\u00a0Enrollment is restricted and by application. Contact instructor for details.", 
+    "description": "Consideration of the art and visual culture of the \u201cLong 1960s,\u201d treating the art of this pivotal decade against the backdrop of the global Cold War. We consider the most significant art movements of the period (Pop, minimal art, conceptual art etc.) alongside debates on the relationship between art, revolution, and politics both within the United States and abroad. Topics include the rise of media culture and its impact on art; the global reception of Pop; Black Power and the Black Arts Movement; art and activism of the New Left; the counterculture and new media; the aesthetics of Third Worldism and the anti-war movement; 1968 and the Society of the Spectacle; and gay liberation at Stonewall.\u00a0Mandatory weekend field trip to Washington DC.\nSome art history recommended, but not required.\u00a0Enrollment is restricted and by application. Contact instructor for details.", 
+    "title": "The Long 1960s: Art, Revolutio...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LORIA 358", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12433", 
+        "listings": [
+            {
+                "number": "448", 
+                "subject": "HSAR"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHA2\">YC HistofArt: Post-1800</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHAM\">YC HistofArt: The Americas</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHAR\">YC HistofArt: Transregional</a></li></ul>"
+    ], 
+    "professors": [
+        "Pamela Lee"
+    ], 
+    "long_title": "The Long 1960s: Art, Revolution, Politics", 
+    "extra_info": "A"
+}

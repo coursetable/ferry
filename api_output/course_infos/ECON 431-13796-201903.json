@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49550/assignments/syllabus", 
+    "requirements": "Prerequisite: Intermediate microeconomics or by permission of instructor.", 
+    "description": "This course introduces the economic methodology used to write and test theories of behavior. It surveys evidence from psychology that refutes standard economic theories of behavior and introduces alternative theories. Topics include abstract choice, choice under uncertainty, judgment under uncertainty, and choice over time.\nPrerequisite: Intermediate microeconomics or by permission of instructor.", 
+    "title": "Economics and Psychology", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "HLH17 115", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13796", 
+        "listings": [
+            {
+                "number": "431", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jawwad Noor"
+    ], 
+    "long_title": "Economics and Psychology", 
+    "extra_info": "A"
+}

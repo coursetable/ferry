@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49500/assignments/syllabus", 
+    "requirements": "May not be taken after ECON 111. Prerequisite: ECON 108, 110, or 115.\u00c2\u00a0", 
+    "description": "An introduction that stresses how the macroeconomy works, including the determination of output, unemployment, inflation, interest rates, and exchange rates. Economic theory is applied to current events.\nMay not be taken after ECON 111. Prerequisite: ECON 108, 110, or 115.\u00c2\u00a0", 
+    "title": "Introductory Macroeconomics", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "LC 101", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10840", 
+        "listings": [
+            {
+                "number": "116", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Samuel Kortum"
+    ], 
+    "long_title": "Introductory Macroeconomics", 
+    "extra_info": "A"
+}

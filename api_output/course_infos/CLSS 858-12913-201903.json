@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49393/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introduction to techniques in papyrology, reading and discussing the structure and content of family archives, and stressing socioeconomic and legal aspects of the texts.", 
+    "title": "Problems in the Social History...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "PH 312", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12913", 
+        "listings": [
+            {
+                "number": "858", 
+                "subject": "CLSS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Joseph Manning"
+    ], 
+    "long_title": "Problems in the Social History of the Ancient World: Family Archives from Greco-Roman Egypt", 
+    "extra_info": "A"
+}

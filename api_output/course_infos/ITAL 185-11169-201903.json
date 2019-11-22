@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50276/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An examination of the major events in Italian history from 1945 to the present. Advanced grammar, writing, and speaking explored in the context of Italian history. Topics include World War II, the founding of the Italian Republic, postwar reconstruction, the major political parties, the protest movements of 1968, the collapse of the Left, and the rise of the Northern League and Berlusconi. Consideration also given to immigration, the environment, and cultural issues.", 
+    "title": "Italian History from 1945", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 004", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11169", 
+        "listings": [
+            {
+                "number": "185", 
+                "subject": "ITAL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Serena Bassi"
+    ], 
+    "long_title": "Italian History from 1945", 
+    "extra_info": "A"
+}

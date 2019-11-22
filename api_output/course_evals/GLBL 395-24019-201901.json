@@ -1,0 +1,110 @@
+{
+    "crn_code": "24019",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            9,
+            7
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            13
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            10
+        ],
+        [
+            0,
+            0,
+            3,
+            6,
+            7
+        ],
+        [
+            0,
+            0,
+            8,
+            8,
+            1
+        ],
+        [
+            0,
+            5,
+            10,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about the different frameworks and tools to go about analyzing and thinking about data governance issues that are prevalent across various parts of different industries. I also learned key terminology used in data governance and how those issues can have real-world consequences. ",
+            "\u00a0A very thorough understanding of data governance. Professor Raymond did an incredible job of facilitating learning, walking us through some of the watershed moments of data governance and allowing us the freedom to explore our own interests. ",
+            "\u00a0A new understanding of data as power and the ways in which questions over data protection and privacy have manifested themselves in law and contemporary culture.\r\n\r\nA deep understanding of present data governance regimes and pressing issues in questions concerning protection and privacy from a top person in the field! ",
+            "\u00a0Amazing class! I learned about the history of privacy as a right and the precedents for modern forms of data consent. I also learned much more about GDPR, what it tries to do and its gaps. Definitely a cutting edge class. ",
+            "\u00a0How to think about privacy! Complexity of every legislation and precedent ",
+            "\u00a0This class completely changed the way I think about data regulation, and technological progress as a whole. Focusing heavily on specific content before the midterm then making the class more creative afterward helped me learn about data and develop intellectual capacity for applying that knowledge. ",
+            "\u00a0This class provided students with a foray into one of the most important topics of our generation. It taught us to think deeply about consent when it comes to our data and asked us to think about the many holes that remain in policy, which unfortunately is something that many of us don't think deeply enough about. I'm glad this class is being offered as a lecture as more students should receive access to this topic in a formal, academic setting. ",
+            "\u00a0skills: to critically read and apply international data governance policies in concrete contexts\r\nto identify gaps in current governance regimes \r\nGained literacy on major ongoing debates for these issues at different policymaking levels ",
+            "\u00a0I learned how to apply an ethical framework to issues of privacy. ",
+            "\u00a0We learned the skills and language necessary to talk about the regulation of and issues around data in the 21st century. We discussed the history of regulation, the current state of affairs, and issues/dangers with the system. ",
+            "\u00a0You will learn about data governance structures in a clear, comprehensive way such that you will not realize how much you have learned until you try and explain it to someone and realize that you have been talking for like an hour.  This is a great class and Professor Raymond sets you up to be able to identify and tackle real-world data governance problems. ",
+            "\u00a0Tremendous knowledge into the world of data science, cyber conflict, privacy, etc. A tremendous amount of learning happened in this course. ",
+            "\u00a0This is the BEST class at Yale. I'm serious  in my three year's there's only ONE other class that compares to this one. Do yourself a favor and TAKE THIS CLASS. \r\n\r\nOkay, so Data Governance in the Digital Age (Data Gov) aims to identify how can we go about protecting people's data in today's increasingly digital age. This explores two dimensions (1) what is the precedent we can call on to fortify data protection laws (Nuremberg, Helsinki, GDPR, Tallin 2.0 etc) (2) how should data even be protected? (i.e. should regulation come from the private sector? From the public sector? How do we begin to regulate data if politicians passing the laws are data illiterate? if the public is data illiterate? How do we create an international data protection standard? Can we even do this?) Having some sort of grasp of these two questions is CRITICAL for anyone who hopes to do anything that involves technology or collecting people's data (which is probably everyone who is reading this post, so there you go take this class). \r\n\r\nI left every single class with my mind blown, having realized a new gap in data policy or data protection  or having realized how incentives are skewed in government and in the private sector. I now have a much more nuanced awareness of the problems that data governance must address and an urgency that this must be done now. This class has changed how I think of what I want to do with my life, and the impact I want to have in the world. That's really all I can ask for in a class at Yale (even though every class should have a similar impact). So I implore you. Do yourself a favor and TAKE THIS CLASS. \r\n\r\nWork in class: There are weekly readings, a midterm, two short essays (one to two pages) and a final essay. The readings are all manageable. The midterm will be absolutely fine if you review the study sheet. The two page essays are fascinating, and will help you engage the material. The final essay challenges you to select a data governance challenge and solve it. This for me was the culmination of the class and allowed me to prove to myself that I CAN contribute to the data governance solution. TAKE THIS CLASS. ",
+            "\u00a0I gained an in-depth knowledge of historical data protection standards as well as a strong analytical lens for identifying harm in data collection and use and for developing frameworks to mitigate and rectify such harm. "
+        ],
+        [
+            "\u00a0I enjoyed the smaller seminar style format as it allowed me to better engage with the professor and hear more opinions from all students within the class. ",
+            "\u00a0This class is basically perfect! The seminar structure was conducive to back-and-forth question and answer, and Professor Raymond is a great lecturer as well. He tells stories very well, and really makes sometimes-dry topics come to life. I was always engaged in class. ",
+            "\u00a0Strengths: the seminar format was amazing. I hear it'll be offered as a lecture in the fall, but for this iteration of the course, the opportunity to sit around a table and ask questions was immensely valuable. The short papers were great assignments, because they forced us to write concisely about huge and often nebulous topics. Although the midterm felt like a regurgitation of information at times, it was really intended to be that way -- a sort of \"bootcamp\" before the second half of the semester was devoted to current, cutting-edge issues and discussions. \r\nWeaknesses: none really! ",
+            "\u00a0Instructor is very knowledgeable and has a long history of doing interesting things that he brings to data protection. At times it felt like conversation got off topic and I would have loved it if we could have debated more. ",
+            "\u00a0the only weakness was that the instructor could have provided a general vocab of the tech things we were talking about a bit earlier. Otherwise 10/10 class ",
+            "\u00a0Strengths: Professor Raymond, compelling and important material, great format. No notable weaknesses. ",
+            "\u00a0In terms of strengths, I think the class did a great job of covering a number of different data protection-related topics--which is necessary for an introductory class of this sort. Classes were extremely engaging. In terms of weaknesses, I thought that sometimes our discussions were a little too off-the-cuff and we didn't stick to the readings as closely as I might have liked. Furthermore, the readings for class were sometimes sent to students the day before or two days before our meeting period, which made preparation more difficult than maybe it could have been. ",
+            "\u00a0Great course! Will be interesting to see how the course continues to develop as new topics in data governance emerge. ",
+            "\u00a0Strengths were Professor Raymond's engaging discussions and the readings.  The one weakness was that there could have been a bit more organization. ",
+            "\u00a0Honestly amazing course.  The midterm is easy and meant to be so--it will show you how much you have learned and set you up with the vocabulary and general data governance understanding to more critically analyze data policies among more specific disciplines and case studies. ",
+            "\u00a0It was perfect. Change nothing. ",
+            "\u00a0The curriculum was designed so that we learned the history of data protection, and the legal statures to call on in order to further fortify data. The way the syllabus was designed was great, and the material clearly built off of each other. The readings were all fascinating and directly applicableProfessor Raymond is NEVER assigned superfluous work, which meant that I knew I would get something from each of the readings. Overall, the strength of this course lies in the fact that the material discussed in each class always felt applicable to the 'real world'. This class was taught to equip students with the information and the skills necessary to identify data governance problems and to address them. \r\n\r\nThe three things that can be improved are:\r\n(1) the assignments and readings could have been posted in a more timely manner\r\n(2) I would have loved if at the beginning or end of each class, the main points of the class (the key word) were shared\r\n(3) I would have appreciated if we started the second class (the first one after shopping period) with introductions. Only by the second to last class did I feel that I knew everyone's name ",
+            "\u00a0The structure of the course, front loading historical precedent pre-midterm and diving into case studies and practical applications post-midterm, was great. It helped develop a common vocabulary and common ground from which we could discuss and debate murkier issues as a class and develop our own final projects based on our interests within the field. The readings and assignments could have been given with more notice. "
+        ],
+        [
+            "\u00a0I would strongly recommend this course especially if you are interested in considering data governance issues. ",
+            "\u00a0Highly highly recommended. Super relevant topic and excellent professor. ",
+            "\u00a0100%!!! I would recommend this course to any and all students. ",
+            "\u00a0Yes, definitely!! Data governance is a HUGELY pertinent topic that's only going to get more and more relevant. This is fundamentally a class about people and how we can preserve (or harm) human rights through our use of technology. ",
+            "\u00a0Yes. Data protection and privacy issues are going to define how everyone operates in contemporary life (even more than they do at present), and this course has granted me personally with a powerful lens through which to view how my personal information exists in relation to myriad interests in the private and public sectors alike. This class is applicable to anyone. ",
+            "\u00a0Yes!!! I don't think it'll be offered as a seminar anymore but Nathaniel Raymond is a really great instructor and there's nothing like this at Yale! ",
+            "\u00a0Yes. The content is necessary and fascinating, and Nathaniel is amazing. ",
+            "\u00a0I certainly would -- especially as data protection is a topic that touches all of our lives. In order to responsibly participate in the digital world, which 95% of young adults do, I think that considering the questions brought up in this class is crucial. ",
+            "\u00a0Absolutely! This course is great for all majors. It is such important material, I think it should be listed as a Yale requirement at some point. ",
+            "\u00a0I would recommend this class because it gives a comprehensive overview of the potential pitfalls of data collection and how it is relevant to human rights, but it is no longer going to be offered as a seminar. ",
+            "\u00a0Absolutely. Professor Raymond is an incredible professor, and the course material is so salient right now. ",
+            "\u00a0This is an awesome class.  Take it.  Professor Raymond is an amazing and fantastically interesting professor, and you will learn so much.  Don't worry about not having a data governance background.  The beginning of the course is a crash course in data governance.  It is fascinating, so important and timely.  You will be discussing the same things that are (or aren't and should) being dicussed from the UN to FaceBook and beyond. ",
+            "\u00a0Yes. One of the best courses I've ever taken. ",
+            "\u00a0YES. ABSOLUTELY. This is one of the two BEST classes I have taken at Yale. \r\n\r\nFirst, the learnings from this class are applicable to EVERYONE. If you will someday share your data with someone (you do this by accessing Canvas, Facebook or Waze... so tons of companies and government out there exploit your data) or if you will use other people's data (again, if you go into research, business, or do pretty much ANYTHING you will engage with data collected on others) this class applies to you. \r\n\r\nSecond, the way this class is taught ensures that each class has relevant content; each class will help build your understanding of how data is currently governed. Additionally, each class will challenged you to identify GAPS in governance and SOLUTIONS to the governance. \r\n\r\nThirdly, Professor Raymond is incredible. He cares deeply about his student's learning and wants to help you understand the material. He also believes that each of us will make an impact in this field, if we so choose. This is inspiring and made me feel the urgency and the hope in this field. \r\n\r\nIn short TAKE THIS CLASS. ",
+            "\u00a0This was a great course with a great professor and definitely worth taking if you are interested in privacy, surveillance, or human rights and want to learn more about how data protection is relevant for those fields. Also, the final projects give you the opportunity to do meaningful work that feels relevant and practical, not just a chore. "
+        ]
+    ]
+}

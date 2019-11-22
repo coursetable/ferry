@@ -1,0 +1,129 @@
+{
+    "crn_code": "12569",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            4,
+            13,
+            17
+        ],
+        [
+            1,
+            1,
+            7,
+            8,
+            19
+        ],
+        [
+            0,
+            1,
+            5,
+            12,
+            18
+        ],
+        [
+            1,
+            0,
+            6,
+            19,
+            10
+        ],
+        [
+            0,
+            1,
+            10,
+            19,
+            6
+        ],
+        [
+            0,
+            3,
+            13,
+            17,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned all about the details involved in linear regression that I did not know before. These included the connection between orthogonal projections and least-squares regression, ANOVA methods, multivariate distributions, added-variable plots, leverage, VIF's, various model selection criterion, mixed-effect models, and causality. ",
+            "\u00a0Model estimation, Model comparison and Idea of projection and causality ",
+            "\u00a0Rigorous derivation regarding linear model.\r\nWhere each components in R output comes from. ",
+            "\u00a0Mainly about linear models in statistics. The geometry perspective is insightful! ",
+            "\u00a0I learned a new way of looking at linear models in the form of matrices (compared to previously I had only learned about linear models in the form of summations across vectors/matrices and looking at a specific i observation in the model). I refreshed my knowledge in linear algebra and applied those skills to understanding linear regression in terms of projections and understanding different statistical tests in these terms. ",
+            "\u00a0Theories behind multiple linear regression and how they are applied. ",
+            "\u00a0This course provides a useful review of linear algebra and introduces fundamental concepts in linear models. Many examples of statistical application are included, which is very helpful. ",
+            "\u00a0This course helps me understand some common and seemingly straightforward techniques in more depth, and also, helps me review some of the knowledge in linear algebra which I have forgot... ",
+            "\u00a0Linear model ",
+            "\u00a0How to derive F and T test. Model selection. Linear mixed model. ",
+            "\u00a0The thoughts of using the matrix to solve regression problems. ",
+            "\u00a0Linear algebra\r\nRationale behind least square regression ",
+            "\u00a0I can now understand R's regression output, whereas previously it was more or less a mystery to me. I also understand how the chi squared, t, and F distributions originate, particularly within the context of linear regression, and the conditions under which they can be used. Overall, though, I wish I personally had had a more solid grounding in linear algebra and general statistics, so I could have gotten much more out of this course. ",
+            "\u00a0This class allows us to view linear models in a way that relies heavily on linear algebra, especially concepts about projection and subspace. ",
+            "\u00a0Linear Models explored exactly that: linear models. The course is taught with heavy emphasis on linear algebra and orthogonal projections. Other topics discussed include leverage, mixed effects models, R-output understanding, and multiple regression. ",
+            "\u00a0linear model ",
+            "\u00a0Linear models ",
+            "\u00a0higher level linear model theories. ",
+            "\u00a0I think I learn everything about linear models ",
+            "\u00a0I learned a lots on theory of linear regression model, and different distributions and mixed effect models. ",
+            "\u00a0Basis of linear model, especially the theory behind. ",
+            "\u00a0statistics theory ",
+            "\u00a0Some linear models selection such as AIC, BIC and so on. Some linear model concept such as projection matrix. "
+        ],
+        [
+            "\u00a0Very good course that combines statistics with linear algebra in a very intuitive way. ",
+            "\u00a0strength: very rigorous ",
+            "\u00a0Very clear slides; Humorous teaching style; Closely related to programming and application; a wide range of topics. ",
+            "\u00a0In the beginning of the semester, I found that the material followed a trend/story-line that I could follow and understand the direction in which the material was taking us. A few classes after the midterm, however, it was harder for me to follow a story-line concerning the material we were covering, which in turn made it more difficult for me to understand the material. It seemed like we were jumping from topic to topic, and it was difficult for me to find the relationship among all the material we were learning. ",
+            "\u00a0The lectures were really well organized. Assignments were closely related to course contents. Course workload was just about the right level. ",
+            "\u00a0Course contents are explained in detail for the first three fourths of the semester. However, due to lack of time, progress in the last few lectures were too fast, while some other important contents were not covered. Organization of the lectures could be improved. ",
+            "\u00a0The lectures are informative and the problem sets (as well as the exams) are more interesting than what I would expect for an ordinary linear model class. Also, the discussion on Piazza is super helpful. It's a bit hard for me to come up with further suggestions... maybe making the preliminary slides as close to the final version as possible (except the whiteboard writing part) will help the students who use laptops to take notes (like me) better organize their notes, so that they can write on the preliminary version and there's no need to transfer to the final version with added slides after class. ",
+            "\u00a0Good ",
+            "\u00a0Strength: teach the derivation of various concepts in linear regression in details, I will remember it for a long time \r\nWeakness: topics are hard, strong ability in linear algebra is assumed, which is not clearly mentioned in the sylllabus ",
+            "\u00a0As difficult as I found this class, I enjoyed it and how it was taught. My only real point of comparison for it is with my undergraduate linear models experience at Berkeley, and that course, in addition to the theory, offered many opportunities to apply what we learned to real data sets. This course was decidedly theoretical, and although I greatly appreciated the chance to learn this much valuable, foundational theory, some applications might have proven a nice enrichment. ",
+            "\u00a0The lecture notes sometimes could be better organized. ",
+            "\u00a0I found the course interesting and enjoyed the theoretical perspective of the various statistical methods we investigated. However, it was sometimes hard to understand how information learned in class might be applied to problems. ",
+            "\u00a0the lectures are well organized and very clear ",
+            "\u00a0the lectures are well organized and very clear ",
+            "\u00a0The course materials are too many to fully understand. Maybe more focus? ",
+            "\u00a0I think more exercise is better. ",
+            "\u00a0The course is relatively hard, so it is better to have a reference book which is very similar to what the professor talks in class. Hence we can learn better than just reading the slides. ",
+            "\u00a0Too theoretical, a little bit of difficult. ",
+            "\u00a0The homeworks can be more related to the concept which we have learnt in class. The PPT can be better organized. "
+        ],
+        [
+            "\u00a0Yes, I would recommend this course to almost anyone. ",
+            "\u00a0Yes if he/she is looking for challenge. ",
+            "\u00a0Yes ",
+            "\u00a0Yes, I would recommend this course to another student but recommend that they make sure that they understand linear algebra concepts very well beforehand. The beginning of the course does review some of these concepts, but they are very crucial for the understanding of the rest of the course. ",
+            "\u00a0I would definitely recommend this course. The course is very well organized that from which one can learn useful and important statistical skills. ",
+            "\u00a0Yes. It is very helpful for beginners on data science. ",
+            "\u00a0Yes. This will be a useful fundamental course for students interested in statistical techniques. It does help to consolidate my understanding on some seemingly basic concepts. ",
+            "\u00a0yes ",
+            "\u00a0Yes! Joe is a very intelligent instructor. He showed flashes of humor that delighted the students. The lecture notes are clear and helpful. I really appreciate what he taught in this class. ",
+            "\u00a0No, it is too theatrical and lecture notes give no examples ",
+            "\u00a0Yes, I would recommend this course to another student. But preferably only to a student with Theory of Stat and a linear algebra course fresh in his mind. Linear Models is a foundational course that grants the opportunity to build on other absolute fundamentals at the absolute heart of statistics, primarily stat 542 and linear algebra. Also, David Pollard says all students should take it. And I don't argue with David Pollard. ",
+            "\u00a0Very good course to gain knowledge about linear models, with the professor being excellent. So yes. ",
+            "\u00a0Yes, this is a very interesting class. ",
+            "\u00a0Yes, but students entering the class should have a strong understanding of Linear Algebra. ",
+            "\u00a0sure, it is really useful for students who are interested in statistics ",
+            "\u00a0sure! it is very useful for students who are interested in statistics ",
+            "\u00a0Absolutely yes. ",
+            "\u00a0If you have very strong knowledge on linear algebra and statistics, then it is a good course. ",
+            "\u00a0Yes very good course for learning linear model. "
+        ]
+    ]
+}

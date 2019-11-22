@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50161/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Focusing on the relationship between forms of the state and grassroots political culture, the course examines prevailing trends and controversies in historical writing on Mexico, with special attention given to the Mexican Revolution and its legacies.", 
+    "title": "Problems in Modern Mexican His...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 103", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13203", 
+        "listings": [
+            {
+                "number": "820", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Gilbert Joseph"
+    ], 
+    "long_title": "Problems in Modern Mexican History: People, State, and Nation in Historical Motion", 
+    "extra_info": "A"
+}

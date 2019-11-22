@@ -1,0 +1,97 @@
+{
+    "crn_code": "22612",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            3,
+            4,
+            4,
+            5
+        ],
+        [
+            0,
+            3,
+            3,
+            5,
+            5
+        ],
+        [
+            0,
+            1,
+            3,
+            6,
+            6
+        ],
+        [
+            0,
+            1,
+            6,
+            3,
+            4
+        ],
+        [
+            5,
+            6,
+            2,
+            0,
+            2
+        ],
+        [
+            10,
+            2,
+            0,
+            1,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a01. How to conduct research ethically and morally right.\r\n2. The procedure to apply for a patent, submitting paper and reviewing paper. \r\n3. Some case studying judging whether some actions are right. ",
+            "\u00a0The ethical and legal aspects of doing research, including when to take action and what sorts of malpractices to avoid. ",
+            "\u00a0How to conduct the research appropriately ",
+            "\u00a0The ethics of conducting scientific research. ",
+            "\u00a0How to avoid misconduct. ",
+            "\u00a0Learn a lot of things that relate to the responsible conduct of research. ",
+            "\u00a0Most useful information was probably the patent stuff ",
+            "\u00a0Not much. Except to learn more about how yale patents things. ",
+            "\u00a0Basic knowledge about doing research in a responsible manner. ",
+            "\u00a0Some knowledge of ethics, patents, etc. ",
+            "\u00a0I gained knowledge on intellectual property, fair advisor-student expectations, and the overall ethics of research. ",
+            "\u00a0Basics of patents\r\nResponsible conduct pertaining to plagiarism, correctly citing papers, methodology of experimental process "
+        ],
+        [
+            "\u00a0The lectures are given by DGS and they are very professional. \r\nIn the last lecture, the course is given interactively, so students can think and talk about what they believe. \r\nHowever, the lectures could made to be more interesting. ",
+            "\u00a0Could probably be made a bit more interactive, possibly focusing on case studies. ",
+            "\u00a0The contens were good. Maybe students could be more engaged. ",
+            "\u00a0great ",
+            "\u00a0Important course for incoming graduate students. ",
+            "\u00a0It's a required ethics course, so it's about what one would expect ",
+            "\u00a0The professors ranged from being very prepared to not prepared. Maybe have the coffee we were promised. ",
+            "\u00a0There should be more activities or breaks or something so that it's not just 2 straight hours of following a powerpoint. ",
+            "\u00a0The first two sessions could have had more interactive activities to keep more engagement. "
+        ],
+        [
+            "\u00a0Yes because students have to know these stuff in the course of doing academic research ",
+            "\u00a0Sure, everyone who work in the science fields should take this course. ",
+            "\u00a0Great, really necessary for graduate students ",
+            "\u00a0Yes! It's something that can't learn from the textbook. Very helpful. ",
+            "\u00a0Yes. it reminds us the way to do research. Things which we should be aware of yet are not taught elsewhere are well summarized and taught in this course. ",
+            "\u00a0Yes, it's mandatory ",
+            "\u00a0It is essential for anyone planning to do research. ",
+            "\u00a0Yes, as it is good background information on some of the conduct expected from us as PhD students. "
+        ]
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49663/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Water is essential for life, and yet unsafe water poses threats to human health globally, from the poorest to the wealthiest countries. More than two billion people around the world lack access to clean, safe drinking water, hygiene, and sanitation (WASH). This course focuses on the role of water in human health from a public health perspective. The course provides a broad overview of the important relationships between water quality, human health, and the global burden of waterborne diseases. It discusses the basics of water compartments and the health effects from exposures to pathogenic microbes and toxic chemicals in drinking water. It also covers different sanitation solutions to improve water quality and disease prevention and discusses future challenges and the need for intervention strategies in the new millennium.", 
+    "title": "Water, Sanitation, and Global ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "LEPH 103", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13557", 
+        "listings": [
+            {
+                "number": "537", 
+                "subject": "EMD"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Ying Chen", 
+        "Elsio Wunder"
+    ], 
+    "long_title": "Water, Sanitation, and Global Health", 
+    "extra_info": "A"
+}

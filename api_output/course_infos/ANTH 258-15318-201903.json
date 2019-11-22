@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/52100/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Thirty years after the Cold War ended talk of a 'new Cold War' has been placed on the agenda. Yet have we fully reckoned with the profound and multifarious effects that the original Cold War had on people's lives during the Twentieth Century? The diplomatic histories of great men and grand strategy tend to overlook the lived dimension of the Cold War. This upper-level seminar redresses this blind-spot by taking the Cold War from the first-person perspective and, through empirical case studies, looks at how the conflict manifested itself in ordinary lives across the political divide. The course examines such how taken for granted categories as identity, gender, family, sexuality, race, exchange, culture, were radically reformulated as Cold War worlds took shape; how everyday matters such as food, home, place, environment, and cosmos became bound up with new ideologically-saturated meanings; and how the conflict gave rise to new and harrowing experiences of risk, body, emotion, death, and temporality, as well as new possibilities for political and social thought and action.", 
+    "title": "Cold War in the First Person: ...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WTS B31", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15318", 
+        "listings": [
+            {
+                "number": "258", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Dominic Martin"
+    ], 
+    "long_title": "Cold War in the First Person: Anthropology of Everyday Life under the Superpowers", 
+    "extra_info": "A"
+}

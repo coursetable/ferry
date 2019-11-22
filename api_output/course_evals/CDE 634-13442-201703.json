@@ -1,0 +1,67 @@
+{
+    "crn_code": "13442",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's <b>sensitivity to students and ability to provide students with adequate feedback</b> was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a05-10 hours a week ",
+            "\u00a06 ",
+            "\u00a0I probably spent 10-15 hours on each homework assignment, and the homework assignments were weekly. I spent closer to 25 hours on the midterm and probably 30+ hours on the final. "
+        ],
+        [
+            "\u00a0This was an excellent course, probably one of my favorites this semester. Learned so much and loved applying lectures during the lab sections. ",
+            "\u00a0Strengths: provides useful information which I can reference in the future for future analyses (SAS code and macros, lecture notes which are clearly outlined).\r\n\r\nChallenges: it may be a consequence of the material itself, but at times it is hard to perform these analyses and I felt like I was working to reduplicate the steps that were done in class. I think that this is likely the only way to learn this material but if there is another way it would be good. Also, I would have liked to have learned more about indications for specific methods, and when to consider one test over another, based on characteristics of the associated data. If this can be discussed more in future classes I think it would really enhance the course. ",
+            "\u00a0Overall, the class was pretty good. \r\nStrengths: I enjoyed the small class size and I learned a lot of practical skills. It was a lot of work, but I also feel like I got a lot out of that work. I like that we went over the code in our lab sections and that we got a lot of guidance and feedback during that lab time. The slides were very good, and I will definitely save them as I think they will be useful in my future career.\r\n\r\nWeaknesses: Some of the topics were more interesting/useful than others. It would've been nice to have a choice of maybe one or two special topics that the class was particularly interested in. It took a long time to get feedback on homework assignments and the midterm, and while I wasn't penalized twice for mistakes, I think that feedback could've led to better grades on other assignments if I had received it sooner. During lecture, it would have been helpful to get more guidance on interpretations--some lectures had much more insight into how to interpret things, whereas other lectures did not. This is usually where myself and others lost points on assignments. Finally, there were a few glitches in the class towards the end of the semester, including a typo on the midterm that set me back a whole day, which was very frustrating during an already intense time of the year. "
+        ],
+        [
+            "\u00a0Dr.Shebl was absolutely amazing and knowledgeable!! She was always available for students and allowed the students to determine what topics they wanted to discuss. Dr. Shebl worked at a pace that was good for the students and did not hesitate to delay lectures and explain past material if needed. This was an awesome course. ",
+            "\u00a0Excellent communication, clear answers to students questions, responsive to feedback. ",
+            "\u00a0Dr. Shebl was very kind and was very flexible throughout the semester. She was usually good at responding to emails and took a lot of time to answer questions in lecture and during lab, which I appreciated and was very helpful for completing the homework assignments. This content area really seems to be her forte, and her passion for the material really shone through. "
+        ],
+        [
+            "\u00a0Strongly recommend!!! You gain a lot of knowledge about different methods and SAS. It is a small class so you build close relationships with your peers and the professor. It is a lot of work but the work strengthens your skills so it is beneficial. ",
+            "\u00a0Survey of methods to analyze data in SAS. Productive in that the methods will be useful in the future, and the slides/code are easily reference-able in the future when I want to look it up later. ",
+            "\u00a0If you want to strengthen your quantitative analytic skills and you're willing to put in the effort, I highly recommend this class. I think the skills I got from this class will be really useful in the future and I feel much more confident in my abilities to use SAS appropriately and effectively. "
+        ]
+    ]
+}

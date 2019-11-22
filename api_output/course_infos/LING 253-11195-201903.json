@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50330/assignments/syllabus", 
+    "requirements": "", 
+    "description": "If you knew all the words of a language, would you be able to speak that language? No, because you\u2019d still need to know how to put the words together to form all and only the grammatical sentences of that language. This course focuses on the principles of our mental grammar that determine how words are put together to form sentences. Some of these principles are shared by all languages, some differ from language to language. The interplay of the principles that are shared and those that are distinct allows us to understand how languages can be very similar and yet also very different at the same time.\nThis course is mainly an introduction to syntactic theory: it introduces the questions that the field asks, the methodology it employs, some of the main generalizations that have been drawn and results that have been achieved. Secondarily, this course is also an introduction to scientific theorizing: what it means to construct a scientific theory, how to test it, and how to choose among competing theories.\u00a0", 
+    "title": "Syntax I", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "HLH17 115", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11195", 
+        "listings": [
+            {
+                "number": "253", 
+                "subject": "LING"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Raffaella Zanuttini"
+    ], 
+    "long_title": "Syntax I", 
+    "extra_info": "A"
+}

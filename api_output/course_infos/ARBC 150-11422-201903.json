@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48991/assignments/syllabus", 
+    "requirements": "Prerequisite: ARBC 140 or\u00a0requisite score on a\u00a0placement test.", 
+    "description": "Further development of listening, writing, and speaking skills. For students who already have a substantial background in Modern Standard Arabic.\nPrerequisite: ARBC 140 or\u00a0requisite score on a\u00a0placement test.", 
+    "title": "Advanced Modern Standard Arabi...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "YK212 106", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11422", 
+        "listings": [
+            {
+                "number": "150", 
+                "subject": "ARBC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jonas Elbousty"
+    ], 
+    "long_title": "Advanced Modern Standard Arabic I", 
+    "extra_info": "A"
+}

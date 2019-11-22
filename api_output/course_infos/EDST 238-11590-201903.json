@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50985/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Exploration of the national conversation around education issues, and how to write smartly about them. Classes delve into top stories of the last few years\u2014diversity and desegregation, school choice and culture wars\u2014and their impact on policy. Students learn to develop strong, marketable ideas while crafting features aimed at publication. Journalists on the K-12 beat are frequent guests.", 
+    "title": "Policy, Politics, and Learning...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "YK212 004A", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11590", 
+        "listings": [
+            {
+                "number": "238", 
+                "subject": "EDST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSA\">YC Poli Sci: American Govt</a>"
+    ], 
+    "professors": [
+        "Jane Karr"
+    ], 
+    "long_title": "Policy, Politics, and Learning on the Education Beat", 
+    "extra_info": "A"
+}

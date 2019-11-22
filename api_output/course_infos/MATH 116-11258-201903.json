@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50424/assignments/syllabus", 
+    "requirements": "After MATH 112 or equivalent. May not be taken after MATH 115.", 
+    "description": "Introduction to topics in mathematical modeling that are applicable to biological systems. Discrete and continuous models of population, neural, and cardiac dynamics. Stability of fixed points and limit cycles of differential equations. Applications include Norton's chemotherapy scheduling and stochastic models of tumor suppressor gene networks.\nAfter MATH 112 or equivalent. May not be taken after MATH 115.", 
+    "title": "Mathematical Models in the Bio...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "ML 211", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11258", 
+        "listings": [
+            {
+                "number": "116", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "John Hall"
+    ], 
+    "long_title": "Mathematical Models in the Biosciences I: Calculus Techniques", 
+    "extra_info": "A"
+}

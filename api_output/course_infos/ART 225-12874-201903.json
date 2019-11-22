@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: ART 111", 
+    "description": "This course introduces students to a wide range of directions and legacies within arts publishing, including the development of fanzines, artists\u2019 books, small press comics, exhibition catalogues, \u201cjust in time\u201d publications, and social media. Students are given instruction in the Yale School of Art\u2019s Print Shop on various printing and binding methods leading to the production of their own publications both individually and in collaboration. Attention is paid to ways artists\u2019 publishing has been used to bypass traditional cultural and institutional gatekeepers, to foster community and activism, to increase visibility and representation, and to distribute independent ideas and narratives. Students explore the codex as it relates to contemporary concepts of labor, economics, archives, media forms, information technologies, as well as interdisciplinary and social art practices. Supplemental readings and visits to the Haas Arts Library, the Beineke Rare Manuscripts Library, YUAG\u2019s prints & drawings study room, and the Odds & Ends Art Book Fair provide case studies and key examples for consideration.\nPrerequisite: ART 111", 
+    "title": "Adventures in Self-Publishing", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "GREEN C014", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12874", 
+        "listings": [
+            {
+                "number": "225", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Alexander Valentine"
+    ], 
+    "long_title": "Adventures in Self-Publishing", 
+    "extra_info": "A"
+}

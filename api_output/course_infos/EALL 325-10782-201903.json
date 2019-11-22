@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49664/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Development of the classical Chinese poetic form by modern Chinese poets. The appeal and aesthetic concept of the classical form since the revivalist movement of the late fifteenth century. Emphasis on close critical reading, with attention to cultural and political contexts.\n\nReadings in Chinese; discussion in English. Prerequisite: a literary Chinese course or permission of instructor.\n", 
+    "title": "Chinese Poetic Form, 1490\u20131990", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "ELM143 106", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10782", 
+        "listings": [
+            {
+                "number": "325", 
+                "subject": "EALL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kang-i Sun Chang"
+    ], 
+    "long_title": "Chinese Poetic Form, 1490\u20131990", 
+    "extra_info": "A"
+}

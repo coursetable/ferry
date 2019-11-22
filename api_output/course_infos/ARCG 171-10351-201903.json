@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48908/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A survey of selected prehistoric and historical cultures through examination of archaeological sites and materials. Emphasis on the methodological and theoretical approaches by which archaeologists recover, analyze, and interpret the material remains of the past.", 
+    "title": "Great Civilizations of the Anc...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WLH 201", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10351", 
+        "listings": [
+            {
+                "number": "171", 
+                "subject": "ARCG"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANA\">YC Anthropology: Archaeology </a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANS\">YC Anthropology: Sociocultural</a></li></ul>"
+    ], 
+    "professors": [
+        "Jargalan Burentogtokh"
+    ], 
+    "long_title": "Great Civilizations of the Ancient World", 
+    "extra_info": "A"
+}

@@ -1,0 +1,96 @@
+{
+    "crn_code": "20832",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            8,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            5,
+            6,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            9,
+            3
+        ],
+        [
+            0,
+            0,
+            5,
+            6,
+            2
+        ],
+        [
+            1,
+            3,
+            3,
+            5,
+            2
+        ],
+        [
+            4,
+            7,
+            2,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This class focuses on a variety of cooperative games (one-sided matching, two-sided matching, side-payment games, etc.) and helped me to develop critical thinking skills through a very clear and concise explanation of the theory. Though I was worried I would need a stronger background in math, Professor Dubey was excellent in explaining the concepts/proofs/logic in words before representing them more mathematically in symbols. ",
+            "\u00a0A lot of math. If you are not good at math, do not take it. ",
+            "\u00a0I gained a lot of knowledge in how to solve interesting game theory problems. ",
+            "\u00a0I developed a basic understanding of game theory. ",
+            "\u00a0Good overview of cooperative game theory and exposer to many seminal papers. ",
+            "\u00a0I learned how to apply theory to practical uses of cooperative game theory. ",
+            "\u00a0It was very interesting to learn about cooperative game theory, with the course curriculum focused on Shapley for the first half, and Nash and more in the second. ",
+            "\u00a0Basic understanding of several interesting results in game theory. ",
+            "\u00a0I learned about strategic thinking and how cooperation is sometimes but not always beneficial "
+        ],
+        [
+            "\u00a0Strength: Material is clearly presented and self-contained.\r\nWeakness: We don't read any modern papers in the topic, so it is hard to feel that this course is particularly important either as preparation for graduate school or for reading modern papers in the field. In other words, the material is too self-contained. ",
+            "\u00a0Very relaxed. All about learning, but some concepts can be glanced over. Also no book or material to really reference except for difficult and dense term papers. ",
+            "\u00a0The problems presented in class were very interesting, but the proofs can be difficult to follow if you do not have a previous background in game theory. The workload was manageable, but the problem sets can be challenging without this background. ",
+            "\u00a0I did not have much of an economics background going into the class, but that is no problem. In fact, a stronger math background is probably more helpful for this class simply for understanding the lecture material. The problem sets were straightforward and gave good practice. I did get a sense that not many people in the class were engaged during the lecture since it's primarily a senior seminar and much of the material did not show up on either problem sets or assessments. The course probably would have benefited from more regular problem sets. ",
+            "\u00a0Not a lot of student contribution for a seminar, not a ton of direction on psets. ",
+            "\u00a0Perhaps adding a TA for this course would help because the professor is not always available on campus ",
+            "\u00a0The course is taught very well. The professor welcomes questions and is very knowledgeable in the material. A lot of material is provided to help you better understand the course. ",
+            "\u00a0The lectures were very interesting, the material was worth learning, and the psets/final paper not overly onerous. ",
+            "\u00a0Could be less mathy but thats the nature of the course "
+        ],
+        [
+            "\u00a0I enjoyed this senior econ seminar. Though I was worried I would need a stronger background in math, Professor Dubey was excellent in explaining the concepts/proofs/logic in words before representing them more mathematically in symbols. He has a passion for the subject, and it shows! His enthusiasm helped to make the ~2 hour discussions of game theory much more engaging. The workload was reasonable; problem sets had a good balance of questions derived directly from class lectures, and those that were more intellectually challenging (i.e. the homework was less frequent than I've had in other classes, but could at times be difficult to work through). ",
+            "\u00a0A fine econ elective, but not particularly \"modern\" or exciting. I took it as a senior as my 12th Econ course and it was painless, but if you are hungry to be inspired in economics take a different class. ",
+            "\u00a0Depends. ",
+            "\u00a0Yes, but only if you are very interested in following and solving proofs in class. 2 hours of following proofs on Friday morning can become tiring. ",
+            "\u00a0Yes, the class goes over some pretty interesting, and classic game theory situations. Having some familiarity with proofs would definitely help to get the most out of this class. ",
+            "\u00a0Yes, it was a solid class with a reasonable amount of work, plenty of reading for enrichment, and a very enjoyable professor. ",
+            "\u00a0Yes ",
+            "\u00a0Yes! Easy chill course and you leave feeling like youve actually learned something important and interesting. ",
+            "\u00a0I would recommend this course. The difficulty will vary depending on how familiar you are with proofs, I think. But overall the material is beautiful and the class itself a pretty relaxed experience. ",
+            "\u00a0Yes definitely, just prepare for some math "
+        ]
+    ]
+}

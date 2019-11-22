@@ -1,0 +1,80 @@
+{
+    "crn_code": "10918",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The course presents the main topics in public finance as well as several techniques ",
+            "\u00a0I learned about theoretical models of public finance, such as optimal taxation models (Ramsey and Mirrlees taxation), models and empirical methods in inequality and models and empirical methods in social security. I also learned how to solve numerically dynamic models. ",
+            "\u00a0Cormac's section of the course was much appreciated. His lectures were organized and engaging. The sample code he provided was instructive and well put together. "
+        ],
+        [
+            "\u00a0I think this course would have been better if it was not taught by three separate professors.  That resulted in three very different portions of the class with little cohesion among them.  Certain parts of the course I thought were very useful, but others weren't, and I was not left with any confidence that I understand the field of Public Finance. ",
+            "\u00a0The course provides a good combination of theory, application and exercises ",
+            "\u00a0The main advantage of this course is that it covers many topics in public finance, both theoretically and empirically.\r\n\r\nThe main weakness of this course is that the computational part of the course is small, relative to the topics that are covered. ",
+            "\u00a0Cormac's third of the course was great, unfortunately it was only a third of the course. The other two instructors for the course, Aleh Tsyvinski and Nicolas Werquin, are not listed on the course evaluation. The three sections were disjoint and no syllabus was provided for the course. The first third of the course was completely disorganized and came off as unplanned. I will abstain from answering likert scale questions since only Cormac is listed as the instructor and his section of the course was not at fault. ",
+            "\u00a0Cormac and Nick's parts of the course were very useful but Aleh's was not. "
+        ],
+        [
+            "\u00a0Yes ",
+            "\u00a0very practical and helpful class for dynamic programming. ",
+            "\u00a0Yes I would recommend the course to another student because it covers many topics in public finance both theoretically and empirically. ",
+            "\u00a0I would audit the parts of this course taught by faculty members who care and are interested in teaching it, like Cormac. I think 6 people were in the room for the first part of the course, and when Cormac lectured the class size nearly tripled. "
+        ]
+    ]
+}

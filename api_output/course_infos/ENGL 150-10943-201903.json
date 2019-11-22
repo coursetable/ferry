@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49715/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introduction to the language, literature, and culture of earliest England. A selection of prose and verse, including riddles, heroic poetry, meditations on loss, a dream vision, and excerpts from Beowulf, which are read in the original Old English.", 
+    "title": "Old English", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 210", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10943", 
+        "listings": [
+            {
+                "number": "150", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENJ\">YC English: Junior Seminar</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENV\">YC English: Medieval</a></li></ul>"
+    ], 
+    "professors": [
+        "Alexandra Reider"
+    ], 
+    "long_title": "Old English", 
+    "extra_info": "A"
+}

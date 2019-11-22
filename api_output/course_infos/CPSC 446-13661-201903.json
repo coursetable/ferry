@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49569/assignments/syllabus", 
+    "requirements": "Prerequiste: CPSC 223.", 
+    "description": "Visualization is a powerful tool for understanding data and concepts. This course provides an introduction to the concepts needed to build new visualization systems, rather than to use existing visualization software. Major topics are abstracting visualization tasks, using visual channels, spatial arrangements of data, navigation in visualization systems, using multiple views, and filtering and aggregating data. Case studies to be considered include a wide range of visualization types and applications in humanities, engineering, science, and social science.\nPrerequiste: CPSC 223.", 
+    "title": "Data and Information Visualiza...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "HLH17 05", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13661", 
+        "listings": [
+            {
+                "number": "446", 
+                "subject": "CPSC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Holly Rushmeier"
+    ], 
+    "long_title": "Data and Information Visualization", 
+    "extra_info": "A"
+}

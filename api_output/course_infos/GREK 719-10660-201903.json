@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Focus on the representation of Helen of Troy in Homer, Sappho, and other lyric poets. Readings from Gorgias\u2019s Encomium of Helen, Euripides\u2019 Helen, and Longus. Attention to problems of aesthetics, rhetoric, and poetics.", 
+    "title": "Helen after Troy", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "PH 310", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10660", 
+        "listings": [
+            {
+                "number": "719", 
+                "subject": "GREK"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Pauline LeVen"
+    ], 
+    "long_title": "Helen after Troy", 
+    "extra_info": "A"
+}

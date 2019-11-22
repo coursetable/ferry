@@ -1,0 +1,109 @@
+{
+    "crn_code": "10884",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            3,
+            4,
+            7,
+            7,
+            4
+        ],
+        [
+            6,
+            8,
+            5,
+            4,
+            2
+        ],
+        [
+            4,
+            7,
+            6,
+            3,
+            5
+        ],
+        [
+            6,
+            3,
+            7,
+            5,
+            4
+        ],
+        [
+            0,
+            0,
+            4,
+            10,
+            11
+        ],
+        [
+            0,
+            0,
+            6,
+            16,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a ton of probability theory and statistics through taking this course with Professor Andrews. Professor Andrews is a fantastic teacher with a fully developed curriculum for the course. Good theoretical introduction to the material. ",
+            "\u00a0Nothing much beyond AP Stats but with some confidence and regression thrown in. Required a lot more effort though because the professor made the class unnecessarily hard without giving us the tools ",
+            "\u00a0A mathematical and theoretical introduction to probability and statistics ",
+            "\u00a0I learned about probability theory, statistical methods, and finite and asymptotic sample theory.\r\n\r\nI also learned how to more clearly communicate quantitative material and give complete answers and found that verifying each step also helped me understand better the course material. ",
+            "\u00a0Course very much aligned with the syllabus. Solid introduction to probability and statistics. ",
+            "\u00a0I learned the theoretical basis of statistics/probability. As someone who hadn't taken a stats class before but really enjoys math, I found some of the topics covered interesting but left without an intuition for how they could be applied. And ultimately, everything I learned came from reading the textbook. I think if I hadn't taken this class but had instead gone a well-taught couple-hour math lecture on probability, the Central Limit Theorem, Law of Large Numbers etc etc I would be at the same place as I am right now. ",
+            "\u00a0The content of the class is tougher that in previous semesters as the syllabus departed from just the Hogg textbook. \r\n\r\nThat being said, Andrews is an excellent professor. \r\n\r\n\r\nHe has, frankly, perfected the art of lectures given the quality of his lectures and lecture notes, and bridges the gaps in the textbook very well. ",
+            "\u00a0You gain knowledge about statistics and probability. Not very introductory and is a very fast paced course. ",
+            "\u00a0Basics of probability and statistical theory. ",
+            "\u00a0All the knowledge I learned from this class was self-taught. The professor was not effective at all. ",
+            "\u00a0probability; discrete distributions; continuous distributions; bivariate distributions; distributions of functions of random variables; sample theory; point estimation; maximum likelihood estimation; information; properties of MLE; interval estimations; hypothesis testing; linear regression "
+        ],
+        [
+            "\u00a0This class is far too theoretical for the Econ/Math major. This can be evidenced in multiple ways. In the syllabus, it says that there will be computation assignments completed in STATA and other applications. This has not been the case: we haven't used STATA at all, and I feel largely unprepared for ECON 136 next semester due to this. Furthermore, too much time was spent during the statistics portion of the course on theoretical questions and drawn out proofs of the different types of testing. I would really have liked to learn more applications from this course. ",
+            "\u00a0Strengths: Yeah learnt some stats, maybe\r\nWeaknesses: Not well organized for learning, inadequate resources, notes were a mess to understand, book and notes used different notation and prof did nothing to reconcile them. We learnt many diff concepts but not once did he refer to an a real life example or do an applications based question in class. Did nothing to help us build intuition. His classes are basically him writing the notes out on the board. Idk why i went\r\nThis class has effectively dissuaded me from being an econ and math major ",
+            "\u00a0I think this course's mission is very good, to give students a more mathematical and theoretical approach to probability and statistics. In theory, someone with no statistical background could take this course, however they would probably struggle tremendously without a heavy mathematical background (at least calculus, and some linear algebra would help). The new professor also did an admirable job trying to increase the rigor of the class (I heard the old class was relatively easy) but I personally was confused by some of the concepts he was discussing. I also would appreciate some more practical applications of the theory to be discussed in class (and not just in our homework and exams). ",
+            "\u00a0Though the course material was challenging, I thought there were good resources available to help students. The lecture notes were very clear and helpful, and the textbook was also great. The problem sets were good applications of the material learned in lecture, and I found that I definitely grasped the course content better after doing the problem sets. In particular, I found the problems not from the HTZ textbook to be very helpful, though difficult, and I think that introducing these problems, which test more of the theory rather than textbook-type application problems, earlier in the problem sets, perhaps beginning in problem set 1, would be very helpful to students.\r\n\r\nI also enjoyed how the class was constantly adapting to meet students' needs and help students improve. For instance, the way that problem sets were graded changed to address a common issue apparent in the midterms.\r\n\r\nThe HTZ textbook doesn't really cover much of the asymptotic sample theory discussed in class, especially the information matrices, so I think it would be helpful to have additional/online resources available to students for those topics. I found that part of class most difficult. I also wasn't very comfortable with the use of matrices in relation to class content, in particular variance matrices and matrices in linear regression, so including more problems or dedicating more class time to that area might be helpful. I think I also would have wanted a greater discussion of the applications of some of the statistical techniques. This was discussed briefly in class, but I would have wanted to learn more about the function of information matrices.\r\n\r\nI think having peer tutors or more TF office hours, perhaps later in the week and not the night before the problem sets are due, would be helpful for students working on the problem sets. ",
+            "\u00a0The teaching was mediocre at times, because the material was not presented in class in a very organized manner, especially given that the professor would sometimes delve deeply into extensions of the basic models without necessarily explaining the intuition behind the original simple models in the first place. ",
+            "\u00a0This class is required for the Econ/Math Major, and given that fact, I think the topics covered should be far more focused on intuition and real-world applications. Obviously, mathematical proofs for ideas that warrant mathematical proofs should be covered. But I would have loved to see some examples of, say, when can we assume different probability distributions? What tests of statistical significance are relevant in different scenarios? And I'm sure this will be said by other students, but lectures were really quite weak. I feel bad writing this because it's clear Professor Andrews is a nice guy, but they just really were bad. Econ/Math students are by-and-large a devoted, academic crowd but by the end I would guess less than a quarter regularly attended class. I had never skipped a class consistently before taking this class. But seriously, dragging myself out of bed at 9am to watch a (well-intentioned, smart, nice) professor read off of lectures notes? ",
+            "\u00a0Initially,  there was some confusion between the content of the glass, given that there was a clear discrepancy in difficulty between lectures/notes and the textbook. This is cleared up in post-midterm where it is made clear that one needs to understand the challenging bits. \r\n\r\nThe 'challenging bits' are from parts of ECON 550. ",
+            "\u00a0This course is very interesting because of the material but it is very fast paced. Too many topics are covered too quickly and this makes it very difficult for students who haven't taken previous courses around this topic. ",
+            "\u00a0Lecture notes overall helpful, somewhat convoluted. ",
+            "\u00a0One weakness was that there was a discrepancy between the material taught in the lectures (with associated lecture notes) and the material assigned in the textbook. This made it a bit confusing, especially since almost all homework was assigned from the textbook. I also found the lectures themselves somewhat disorganized, and it was very hard to take notes in a useful way. More examples and problems, in addition to the theory, would have been very helpful in the lectures. ",
+            "\u00a0This class was very poorly taught. I didn't learn anything in lecture. We never even went over one single example in class. Prof. Andrews taught us as if we were graduate students, not students taking an undergraduate intro statistics class. ",
+            "\u00a0This class started out fine, but then starting the week right before Thanksgiving Break Andrews ramped up the difficulty like crazy. (We went from 0-100 real quick). Also, I felt like the final exam was a big surprise in terms of how much he expected us to prove on the exam since the midterm was mostly computational with one or two proofs thrown in. We also didn't get a formula sheet for any exam this year, whereas I understand that in previous years they got to bring in one (which would have been very helpful for all those statistic formulas). This class was interesting, but it got really hard really fast. ",
+            "\u00a0Even though the course title suggests that this is an intro course, there really should be a statistics prerequisite. This ended up being my hardest class, and it really shouldn't have been. If you didn't take AP Statistics (like me) I highly recommend that you study it before taking this class. For a subject like this, having the intuition of what's going on is so important, and this class just isn't going to give you that. \r\nMaybe this class would've been better if there were supplementary readings on the basics. The book for this class was not accessible. In fact, I found the book that the instructor had described as being at a \"higher level\" much easier to understand. I only wish I had gotten it earlier.\r\nThe sections and the office hours were all on the same day. The sections were also right next to each other so if you couldn't make one, you probably couldn't make the other. This was a huge issue that wasn't fixed despite complaints. ",
+            "\u00a0Donald Andrews is an excellent instructor! I highly recommend taking this course with him as you will learn a lot about probability and statistical theory. This is definitely not a course for people that want to gain any sort of practical knowledge or skills following its completion. If you're interested in learning theory however, it is probably one of the best taught classes available in the undergraduate curriculum. I think that the degree at which people understood the class was directly proportional to how much time they spent on understanding the proofs and reviewing things from previous lectures. The textbook is okay but useless for problem sets in the latter half of the course, particularly when it comes to things such as information matrices, and the asymptotic properties of MLEs. Donald Andrews' lecture notes are amazing -- super clear and super helpful. He posts them online on Canvas before the lectures so it is well worth glancing through them before class (time permitting of course!). Something that would improve this class, however, is having solutions to the problem sets -- particularly for questions that Donald Andrews writes himself. Often times it was difficult to learn from one's mistakes on the problem set since corrections were minimal at best. We also didn't touch STATA once over the course of the semester. ",
+            "\u00a0Strengths\r\n- lectures are well organised\r\n- fair examinations that relied on knowledge of proofs, but did not rely on making proofs\r\n- notes given were very helpful in understanding\r\n\r\nWeaknesses\r\n- clarity on how answers are expected is lacking. could have provided proper guidance or example answers that specify what is necessary.\r\n- could have tied in more to applications of the theory, instead of focusing solely on theoretical aspects "
+        ],
+        [
+            "\u00a0I would only recommend this course if one needs it for his or her major. You will learn a ton of probability and stat in only one semester, and it often feels a bit rushed. Tests and problem sets are graded extremely harshly, and it often feels like the course bites off a bit more than it should for an introduction to stats. The notes for the course are pulled straight from the PhD Econometrics course, with minor adjustments made. If you take this course, be ready to put in the work. ",
+            "\u00a0Don't do this to yourself unless you are a masochist or if you are infatuated by theoretical math. ",
+            "\u00a0Of course, you are probably required to take it for some majors, but I would say that it is similar to AP stats, but with all of the theory and mathematical proofs behind it explained. I would recommend if you believe you are a mathematical type who wants to learn more about probability and statistics. ",
+            "\u00a0no. grading is crazy and unfair. you can never really know what your grade will be. ",
+            "\u00a0Yes, I would definitely recommend this class to another student. It was challenging and quite a bit of work, but I definitely learned a lot and feel as though I have a stronger understanding of the theory behind sampling methods. I also learned a lot about constructing complete solutions from the class. ",
+            "\u00a0I would recommend this course to Math & Econ majors who want a more mathematical treatment of probability and statistics than what they would get in the ",
+            "\u00a0This was the worst class I have taken at Yale. Other evaluations will explain why it is so bad, I'm sure, so I'll offer you some alternatives. First, you could take STAT 241/242. This past year it was a different teacher than usual, so this might change, but that class was *so* much easier and better taught than 135. You will get more out of it, it will count for the Econ/Math major, it's higher course number (if this kind of thing matters to you), the curve is better/nonexistent, and it's colisted in the Math department. Second, if STAT 241/242 doesn't fit in your schedule, you could *seriously* think about whether you want to be an Econ/Math major. There are plenty of other majors/double majors that combine economics with quantitative skills and will look good to grad schools/future employers. You could double in Applied Math/Econ. You could double in Math/Econ. You could be just a plain-old Econ major. You could do Data Science and focus in Econ. Wait until you are 100% sure you want to be an Econ/Math major before taking this class. If decide not to be an Econ/Math major, you could take STAT 230 (you will actually learn how to use R and do ~real~ statistics) or ECON 131 (not a fantastic class, but more applied). ",
+            "\u00a0The teaching will almost certainly be better than ECON 131. However, unlike in previous semesters, the difficulty-quality of teaching dynamics are skewed as the course is now far more challenging than it used to be. Shopper beware. ",
+            "\u00a0I would only recommend this class if it is required for you. ",
+            "\u00a0Would recommend for any econ/math or applied math people looking to take econ 136 in the spring. ",
+            "\u00a0Yes, but I'd advice them to only take it if they're ready for some quite advanced material, and if they're interested in theory, more than applications. ",
+            "\u00a0Absolutely not. However it was taught by a guest professor so my experience will probably be very different from future students' ",
+            "\u00a0Don't take it if you don't need it. And if you do need it, make sure you learn some basic statistics first!! ",
+            "\u00a0Yes! Do take this class! ",
+            "\u00a0This is a very rigorous statistics class that covers MATH 241 and MATH 242 content in one fell swoop. This means that is it is fast-paced, but you learn the necessary theory and proofs quickly without going needlessly into arcane applications and making proofs. Highly recommend for any ECON major, but bear in mind that you will not be having any many actual econometric applications. ECON+MATH majors have to take this class anyway. "
+        ]
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51663/assignments/syllabus", 
+    "requirements": "Prerequisites: CPSC 570 and understanding of probability, differential calculus, linear algebra, and planning (in Artificial Intelligence). Programming assignments require proficiency in Python and high-level familiarity with C++. Students who do not fit this profile may be allowed to enroll with the permission of the instructor.", 
+    "description": "This advanced course brings together methods from machine learning, computer vision, robotics, and human-computer interaction to enable interactive machines to perceive and act in a variety of environments. Part of the course examines approaches for perception with different sensing devices and algorithms; the other part focuses on methods for decision-making and applied machine learning for control. The course is a combination of lectures, state-of-the-art reading, presentations and discussions, programming assignments, and a final team project.\nPrerequisites: CPSC 570 and understanding of probability, differential calculus, linear algebra, and planning (in Artificial Intelligence). Programming assignments require proficiency in Python and high-level familiarity with C++. Students who do not fit this profile may be allowed to enroll with the permission of the instructor.", 
+    "title": "Building Interactive Machines", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WTS A51", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14156", 
+        "listings": [
+            {
+                "number": "559", 
+                "subject": "CPSC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Marynel Vazquez"
+    ], 
+    "long_title": "Building Interactive Machines", 
+    "extra_info": "A"
+}

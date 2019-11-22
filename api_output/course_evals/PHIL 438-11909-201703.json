@@ -1,0 +1,80 @@
+{
+    "crn_code": "11909",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            4,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            0
+        ],
+        [
+            0,
+            1,
+            5,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course, in a sentence, makes you critically reappraise everything you thought you knew about the common conception of logical consequence. ",
+            "\u00a0I learned a lot about the Philosophy of Logic, specifically centered on the concept of logical consequence. I think the name of the course suggested it would be more broad than just logical consequence, but in effect we read one book called \"the concept of logical consequence\" and then read reviews of it. So, we didn't really end up covering much more than logical consequence, at least this semester. ",
+            "\u00a0I got a general sense of the process of constructing a logic, as well as the historical conversations that have shaped standard modern logic. The class focused on the Tarskian account of logical truth and consequence, something with which I was only vaguely familiar in the sense that I used this account in first order logic. This class was immersive in its exploration of what the account is, how it was defined, and whether or not it holds up. The class certainly helped me develop my critical thinking, how I approach definitions and consider them. ",
+            "\u00a0Learned a lot about different semantic accounts of logical consequence.  Namely, you learn a lot about the pitfalls of the Tarskian account of consequence, which is the traditionally accepted account.  Overall, a very interesting class. "
+        ],
+        [
+            "\u00a0Sun-Joo is an amazing professor and person; I cannot stress this enough, take any course you can with her. The discussions were fascinating, and the reading was well-paced. The only criticism I would have is just that I might have liked reading a couple other viewpoints while reading the Etchemendy book. ",
+            "\u00a0I think this class was very well taught: the weekly reading responses made sure you were doing the reading, and the in-class presentation of the material by a student (aided by Sun-Joo) helped reinforce the important parts of the class. I think Prof Shin did a good job steering the presentation of the reading, so we focused on the important parts, but I think she could've steered the discussion a bit better, or tried to involve students who didn't really participate. In particular, the discussion would often end up being (loudly) dominated by two male philosophy graduate students, and it would be very hard to get a word in edgewise. And these discussions -- better characterized as arguments -- would often be about issues that in my opinion were not at all important. But because both of them would continue arguing, we could lose 30 min of class time. ",
+            "\u00a0I think a serious strength was having a weekly report due on the readingthis not only held us accountable to the reading, but really helped me wrap my head around it by forcing me to synthesize and present the ideas in the book. There were few weaknesses, except that sometimes I felt that the discussion in class would run off course. While this was always interesting, I would sometimes leave unsure if we covered everything we needed to cover from the text. ",
+            "\u00a0It is hard to say. Many of the strengths of the course are owed to the teacher, while many of the weaknesses come from the graduate students, who sometimes dominate conversation. "
+        ],
+        [
+            "\u00a0Absolutely. The workload isn't bad and is basically designed to make sure you are engaging with the material. Sun-Joo is one of the best professors I have had at Yale; if you're interested in logic at all, take any of her courses. ",
+            "\u00a0I would *highly* recommend this course to another student, so long as they have a big interest in logic. The class is in effect not a course on \"philosophy of logic\" in its broadest sense but rather covering a book by the Prof's advisor called \"the Concept of Logical Consequence.\" So, the semester is just a close reading of this book, and reading reviews of the book. In doing so, you do gain insight into a host of thorny issues in philosophy of logic, but we never really explore them (though you can, I guess, read about them independently or as the final project). The pre-req, Mathematical Logic, isn't really required on a technical level (except for a few parts, but you can pretty easily Google them), but you really want to have taken it so you can appreciate what exactly we are discussing in the class, and the importance thereof. The workload is decent -- no more than other Phil seminars -- one reflection on the reading a week, one presentation, and a final paper. Seminar is quite fun, and Sun-Joo has a lot of personal anecdotes about the people we read about. Overall a real gem -- every Sun-Joo class is! ",
+            "\u00a0If you have a serious interest in logic, this is a very good class! But if you have no background, I'd suggest a more foundational class before taking this one on. ",
+            "\u00a0Yes, I would definitely recommend to other Math and Philosophy Majors or other quantitative majors. "
+        ]
+    ]
+}

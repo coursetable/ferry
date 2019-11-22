@@ -1,0 +1,90 @@
+{
+    "crn_code": "23307",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            4,
+            6
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            4
+        ],
+        [
+            0,
+            1,
+            3,
+            2,
+            4
+        ],
+        [
+            0,
+            1,
+            3,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            4,
+            4,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            4,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned some basic maya and unity, and about a lot of amazing contemporary artists. I made a couple of VR experiences and other modeling projects that Im fairly proud of. I think this course is less about 3D /modeling/ in particular and more about leveraging existing 3D software and assets to make artistic experiences, renders, and 3D prints. Its pretty light on technical modeling skills. ",
+            "\u00a0I learned how to model 3D objects in Maya, and create landscapes/scenes in Unity that could then be brought into VR. We learned a good deal about how modern artists work in these virtual mediums, not just to engineer or design objects, but to create completely new kinds of art. ",
+            "\u00a0I learned how to use Maya and Unity programs. ",
+            "\u00a0Through this class, I have become familiarized with Maya and Unity, both wonderful platforms for 3D Modeling and artistic practice. In addition, this class has taught me how these recent mediums for arts have the ability to transform how we perceive and act upon our own reality. This knowledge has piqued my interest in exploring video game design and virtual reality. ",
+            "\u00a0An amazing groundwork and firm understanding of core tools used in three dimensional creation and design, architecturally, environmentally, virtually, and in prints objects. ",
+            "\u00a0This class was an exploration of how to use the available tools in this medium to present a narrative or purpose. We learned how to use Autodesk Maya and Unity and applied these skills in virtual reality and 3D printing. This involved world building and object design. ",
+            "\u00a0I learned how to model using the software Maya and Mudbox, design environments for VR using the game engine Unity, and make models for 3D printing. "
+        ],
+        [
+            "\u00a0Strengths: its chill, its fun, making weird projects is highly encouraged. I got a lot of useful feedback during crits.\r\n\r\nWeaknesses: not much focus on developing a deep maya skillset, which may or may not be what you want. There was a pretty wide skill range going in and some favoritism toward the students that were already involved in ccam. ",
+            "\u00a0This class was a very general introduction to a wide range of software; I don't feel like I got particularly 'good' at using Maya or Unity or 3D printing. I essentially learned how to use certain aspects of these programs as I needed them. This could be seen as either a strength or a weakness, depending on your style of learning. I generally consider myself very self-directed, so this didn't particularly bother me -- though I worry that there are aspects of these programs that I remain unaware of that I would have found useful. ",
+            "\u00a0It could use more resources that maybe engages in the art school money we pay extra to take the course. ",
+            "\u00a0The course is strong in its progression through the skills students are taught to acquaint themselves with the software. However, the class lacked  structure in the scheduling of projects and visiting guests, specifically towards the end of the course. I believe the course would benefit from having visiting artists come earlier in the year as opposed to later, so that students have more time to work on projects and learn more skills from class that could help improve the quality of final projects. ",
+            "\u00a0I was very excited about having a 3D modeling class and enjoyed the discussion. We spent a long time teaching the programs, when learning the basics and then having teacher/TA availability for issues as a result of learning to use it on our own could have allowed more intellectual teaching time. I dont think our TA knew how to use the programs, though. ",
+            "\u00a0Great course that teaches exactly what it sets out to teach. However, perhaps an additional set of goals for the assignments could create a valuable pathway for students that wish to go beyond the traditional standards and expand into a more advanced take on the material. ",
+            "\u00a0A lot of it was teach yourself and the projects were very open. However, basic Maya and Unity skills were taught in the class. The discussions were insightful most of the time. ",
+            "\u00a0The course has some awesome projects and they are all evenly spaced out so it never gets overwhelming.  I think the only weakness with the course was that it needed more time because it would have been nice to learn more about rendering in Maya, but we never got a chance to cover it more. "
+        ],
+        [
+            "\u00a0I really like thinking about video games and this was one of the first courses Ive taken that allowed me to explore video games in an academic setting. I appreciated being able to make VR experiences with an artistic rather than technical focus. Im not sure this class will sell you on the importance of tech-focused art if you arent already on board, but if you are then you should take it. It also doesnt get very technical and was more about exploring conceptual challenges. Again, I personally liked this but I could see people being frustrated. ",
+            "\u00a0I would recommend this course to another student who enjoys teaching themselves new things, as Justin could not have possibly explained the entire Maya interface during class time. That said, there was a fairly steep learning curve, but if you are willing to put in the effort (and do a lot of troubleshooting on your own via online tutorials), it pays off in the end. ",
+            "\u00a0Though the time and effort it takes to created a completed project is taxing, it is certainly a course worth the devotion. ",
+            "\u00a0Yes, I would recommend this course to another student. 3D Modeling is a wonderful introduction to the practice of art that exists on a virtual medium, and changes the way one looks at art as a whole. It is the nuanced nature of the software students utilize in the class that makes this class stand out from others. ",
+            "\u00a0You learn how to 3D model and also render or print those models. We used Maya and Unity 3D. ",
+            "\u00a0Absolutely recommend this course not only is it an engaging topic, but the professor handles it in the context of novel technology and uses that to further engage students in the coursework and keep the class material covered relevant as well. ",
+            "\u00a0I would definitely recommend this course to another student.  As an artist or even just someone who has ever used to their hands to make something, it challenges you to approach building/sculpting in a whole new way and opens yours up to new ways to create digital works. "
+        ]
+    ]
+}

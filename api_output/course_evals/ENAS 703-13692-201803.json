@@ -1,0 +1,81 @@
+{
+    "crn_code": "13692",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0basic knowledge about nanomaterial ",
+            "\u00a0Nanoscale phenomena and related fundamental as well as empirical laws. ",
+            "\u00a0Learned a great deal about how to synthesize and characterize 0D, 1D, and 2D nanomaterials. Also learned about different applications for many types of nanomaterials. ",
+            "\u00a0I learned in depth of the important concepts about nanomaterials. "
+        ],
+        [
+            "\u00a0The professor should make it more interesting and appealing to students instead of just writing down equations and theory from notes. ",
+            "\u00a0greatly organized, well prepared ",
+            "\u00a0Less materials but more rigorous derivations ",
+            "\u00a0A lot of what I learned was useful for my own research. Homework assignments were relevant exercises. TA was great.\r\n\r\nAlthough I liked that there was only one test, another one may have been useful to reinforce what we learned in the second half of the semester. ",
+            "\u00a0Maybe try use board more often. "
+        ],
+        [
+            "\u00a0Yes. It is a very useful course to take if you are interested in nanotechnology. ",
+            "\u00a0great, I have learned a lot ",
+            "\u00a0Definitely! A great introduction to nanomaterials. Material was relevant for both graduate and undergraduate students. ",
+            "\u00a0Yes since the information covered are important for nanomaterials learning and research. "
+        ]
+    ]
+}

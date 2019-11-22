@@ -1,0 +1,84 @@
+{
+    "crn_code": "23956",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's <b>sensitivity to students and ability to provide students with adequate feedback</b> was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            5,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            6
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a08-10 ",
+            "\u00a05 ",
+            "\u00a0I spent approximately 8 hours a week working at the organization. You have to complete 100 hours before the end of the semester, so the organization I worked with was really flexible with my schedule. ",
+            "\u00a010-20 ",
+            "\u00a08 - 12 hours ",
+            "\u00a015 "
+        ],
+        [
+            "\u00a0Very helpful ",
+            "\u00a0Great ",
+            "\u00a0I really enjoyed this course! I think a student's experience is dependent on the organization that you work with. However, I worked with a great organization who allowed me to implement some ideas to improve their program. Overall, this was a wonderful way of transitioning out of YSPH and into public health practice. ",
+            "\u00a0Strengths include practical work with other organizations that not only develop your communication skills but also you also get to see the practical aspect of work in public health ",
+            "\u00a0The course is an excellent way to get public health practice. ",
+            "\u00a0depends of your practicum, choose the one you are interested in, it will be worth it. "
+        ],
+        [
+            "\u00a0She is an excellent instructor ",
+            "\u00a0Very nice ",
+            "\u00a0Diane was great in this course! She gave insightful feedback on our weekly journals, was very responsive to questions, and provided support throughout the semester. ",
+            "\u00a0Awesome teacher :) ",
+            "\u00a0Diane is awesome and extremely responsive. ",
+            "\u00a0Excellent! ",
+            "\u00a0Good ",
+            "\u00a0Very nice ",
+            "\u00a0Elaine was a good instructor -- I really enjoyed hearing her perspective on topics covered in our in-person class meetings! ",
+            "\u00a0Awesome teacher :) ",
+            "\u00a0Elaine is great. You can tell that she really enjoys her work. ",
+            "\u00a0Excellent! "
+        ],
+        [
+            "\u00a0Excellent ",
+            "\u00a0Fantastic ",
+            "\u00a0This course allows students can gain practice-based public health experience. I really utilized the skills I gained in my YSPH classes and applied them in a real-world setting.  I would highly recommend taking this course during your last semester at YSPH! ",
+            "\u00a0Excellent, need more courses like this at YSPH ",
+            "\u00a0EPH 500b is one of the best offerings at YSPH because it allows you to be truly engaged with public health and apply public health principles that you learn in the classroom. Most people do not know about it, but everyone should take it. "
+        ]
+    ]
+}

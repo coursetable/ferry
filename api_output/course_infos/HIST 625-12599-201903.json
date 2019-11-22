@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51141/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The late medieval and early modern periods saw a dramatic rise in religious violence and persecution. Heresies\u2014such as the Hussites, Waldensians, and Lollards\u2014unsettled religious and political authorities, leading to armed conflict and attempts to suppress movements with violence. Across northern Europe, the late Middle Ages witnessed increasing numbers of pogroms as Jewish communities continued to be eradicated. At the same time, the period saw a flourishing of the veneration of saints and the canonization of holy men and women. These conflicting trends were only heightened by the Reformation, in which martyrdom and sainthood played central roles. This course explores the willingness to die and kill for one\u2019s faith, and the extraordinary growth in religious heroes, both Protestant and Catholic, who defined emerging confessional identities. The course examines a broad range of texts and visual material considering martyrdom and sainthood in Europe, Asia, and the Americas. Also REL 757.", 
+    "title": "Martyrdom and Sainthood in the...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "SDQ BUSH-S200", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12599", 
+        "listings": [
+            {
+                "number": "625", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Bruce Gordon", 
+        "Carlos Eire"
+    ], 
+    "long_title": "Martyrdom and Sainthood in the Early Modern World", 
+    "extra_info": "A"
+}

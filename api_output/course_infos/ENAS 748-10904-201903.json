@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49609/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The derivation, analysis, and implementation of numerical methods for the solution of ordinary and partial differential equations, both linear and nonlinear. Additional topics such as computational cost, error estimation, and stability analysis are studied in several contexts throughout the course. ENAS 747 is not a prerequisite.", 
+    "title": "Applied Numerical Methods for ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WLH 207", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10904", 
+        "listings": [
+            {
+                "number": "748", 
+                "subject": "ENAS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Beth Anne Bennett"
+    ], 
+    "long_title": "Applied Numerical Methods for Differential Equations", 
+    "extra_info": "A"
+}

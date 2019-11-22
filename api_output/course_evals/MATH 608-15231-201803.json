@@ -1,0 +1,74 @@
+{
+    "crn_code": "15231",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            2,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            1
+        ],
+        [
+            1,
+            1,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The course really deepened my understanding of homological algebra, and made me feel a lot more comfortable with high-level Galois concepts. ",
+            "\u00a0I learned about topics including the Brauer group, Galois cohomology, Kummer theory, and the Hasse principle. "
+        ],
+        [
+            "\u00a0This was generally a very strong math class! A lot of time was spent discussing the finer points of proofs which could have been avoided and meant we soon lagged behind the schedule, but the material was really interesting and very well presented. "
+        ],
+        [
+            "\u00a0Yes. ",
+            "\u00a0Yes, this is a great high-level math elective for undergrads. Asher is a wonderful teacher and the material is challenging but well presented, so it's easy to grasp if you put in the time. This comes with the standard grad class warning: do the reading and keep up on your own, because the lack of psets means there's little hand-holding. ",
+            "\u00a0The topics we covered were all very important and I thought Professor Auel did a good job of explaining them clearly and making lectures interesting. However, I would have preferred some overview of how these topics fit into the subject of arithmetic geometry earlier in the semester, because it felt like we were discussing loosely related concepts for most of the semester until the very end when we turned back to applications to number theory. "
+        ]
+    ]
+}

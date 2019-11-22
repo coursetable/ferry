@@ -1,0 +1,96 @@
+{
+    "crn_code": "13418",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            3,
+            3,
+            4,
+            2
+        ],
+        [
+            1,
+            2,
+            2,
+            3,
+            4
+        ],
+        [
+            0,
+            2,
+            3,
+            3,
+            4
+        ],
+        [
+            1,
+            3,
+            1,
+            5,
+            2
+        ],
+        [
+            2,
+            4,
+            6,
+            1,
+            0
+        ],
+        [
+            1,
+            5,
+            6,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to conduct research; research methods; writing reviews, etc. ",
+            "\u00a0Lots of broad insight into all kinds of topics. Most notably the web scraping and MTurk sessions. ",
+            "\u00a0I learned a lot about causal thinking, how to write reviews for publications, best practices for publishing, Julia's session on qualitative research was really helpful. Marginally introduced to mTurk and text mining. ",
+            "\u00a0I got a broad understanding of the variety of research methods used in the social sciences. It was a good course to take as a first year student, because it gave an overview that will be useful baseline knowledge for other classes that go in depth into specific methods. It was also helpful that both sociology and management students took the course together; getting different perspectives was useful. ",
+            "\u00a0A survey of methods. ",
+            "\u00a0This was an excellent introductory research methods class. I was able to learn and apply to real-world scenarios concepts like causality, the limits of generalizability, and the importance of trying to prove your own hypothesis false. I also learned about the secret messiness of research that is often hidden behind crisp published articles. This class provided valuable information on what it it that makes research both interesting and credible, it also encouraged the kind of creative thinking that I believe is essential for significant research in any field. ",
+            "\u00a0Conceptual knowledge of methodological theoretical perspectives and practices. ",
+            "\u00a0I developed a more inclusive and coherent view of various research designs ",
+            "\u00a0different research methods "
+        ],
+        [
+            "\u00a0Strengths - a lot of breadth which was helpful for me; Balazs was a great instructor; he did a great job of making connections to his own research; really appreciated the smaller assignments throughout and no final paper\r\nWeakness - we read a lot of papers that we barely discussed; I think we really only need 2 readings a week ",
+            "\u00a0Strenght: its breadth and overview into all kinds of topics. Weakness: Lack of depth (probably on purpose), which sometimes makes it difficult to reach a higher level in class discussions. ",
+            "\u00a0The strengths of the course were the real-world, practical professional tips, like publishing and writing reviews. The review writing assignment was the most helpful assignment of the course, in my opinion. I also thought that the attempts Balazs made to foster collegiality in the course, like taking long breaks, going to dinner two times, etc... really helped us all engage with each other. The discussions on causality were helpful, as well, and added depth to what we are learning in our statistics courses.\r\n\r\nThe weaknesses were that there was no discussion of the epistemology of social science. I would have liked there to be a section at the beginning of the course on the philosophy of science, with a discussion of the assumptions behind causal thinking, and the methods reviewed in the course. I think that these assumptions were taken for granted, and for people who do more interpretive social science, it was marginalizing at times and difficult to apply the methods to what we are actually doing in our projects. I also think it would be helpful to add in a section on comparative-historical methods, and maybe invite someone like Julia Adams to come and speak on that topic. She is an expert, and an amazing educator. So positive! Yale's Sociology department is rated #1 for historical sociology, so it is a great strength to capitalize on and encourage students to be familiar with those methods. I find that the methods courses at Yale tend to favor quantitative methods, and it's so funny to me that they skirt around historical sociology because Yale is so respected in the field for its faculty who practice these methods. ",
+            "\u00a0A strength of the course was that it did a good job giving an overview of different methods. ",
+            "\u00a0It could be improved with a more rigorous course load. The course felt somewhat lacking, and could be made much more valuable. ",
+            "\u00a0I loved the assigned readings and the informative and accessible assignments, class activities, and guest lecturers. I feel the course offered a solid overview of important research methods and even looked into the future at data collection as a preview of what is coming, while also reminding us to be critical - \"BIG\" data is not necessarily better data. Very cool. The benefit of such a thorough overview is that one is more able to find the most appropriate research method, or question, for the problem being considered. \r\n\r\nWe could have had a class that re-capped the group activities and assignments to get an overview of particularly striking or confusing aspects. ",
+            "\u00a0Course is clear. Surveyed a wide range of different approaches. Useful for introducing students to the capacity of research and the approaches acceptable in the social sciences. ",
+            "\u00a0The course's main strength is the discussions taking place in class, Balazs gave a lot of added value and contributed from his experience. ",
+            "\u00a0The professor is a very nice and helpful person with a good personality. The professor also adjusted the course and focused more on readings or substantial knowledge points in the latter half of the semester based on students' feedback.\r\nweaknesses: 1. the reading load can be cut a bit. Some readings are not particularly valuable and useful to the issue at hand; 2. I don't know why but I have an impression of that the professor does not have very deep knowledge about the different research methods covered in the class, and he gives ambiguous answers to students' questions that does not effectively address the concerns. 3. For the first half of the semester, a lot of the discussion was free-floating and did not lead to anywhere; the professor has made improvement for the second half of the semester, but I still felt I didn't learn much. ",
+            "\u00a0The class discussions were not always the most focused, so I think the course could be improved by making the discussions relevant and on topic for both sociology and management PhD students "
+        ],
+        [
+            "\u00a0Yes, its required. ",
+            "\u00a0Yes, a great introductory course into all kinds of approaches to social research. ",
+            "\u00a0I would recommend this course to people doing more mainstream social science, especially quantitative methods. ",
+            "\u00a0I would recommend this course to another student, partially because it is required. I would recommend that students take it as early as possible, because it is a broad overview course. ",
+            "\u00a0I would recommend this course to anyone interested in conducting research, writing for journal publication, or interested in becoming an editor of academic works. This was one of the best courses I have taken at Yale.\r\n\r\nThis class provides an excellent overview of research methods while also discussing the limitations of each approach. Class exercises and course assignments provide opportunities to easily explore online research tools such as MTurk and R programming languages. The assignments were actually fun, made sense in a way that I could see their applicability to my own research, and made me want to learn more about coding and survey methods. \r\n\r\nAdditionally, the course was peppered with valuable advice on how to both critique journal articles and write solid articled of one's own. Guest speakers added their own experiences to the information we were reading and discussing in seminar, making the class a refreshingly active approach to research methods. ",
+            "\u00a0Yes. It is a good course if the student is looking for an introduction to a number of different methodological perspectives and the underlying logic. ",
+            "\u00a0This course is a required. ",
+            "\u00a0I would not, because the classroom is not engaging and I didn't feel I learned much. ",
+            "\u00a0I think the course would be better if it were more tailored to sociological research design rather than mixing the DSR course with sociology and management PhD students. "
+        ]
+    ]
+}

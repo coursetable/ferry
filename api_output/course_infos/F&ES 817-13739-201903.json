@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49924/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Our cities, towns, and regions represent the cumulative impact of planning policies implemented at\u00a0multiple scales over the past century. This course explores the dynamic trends facing the United\u00a0States and its communities and the evolution in planning practice that is occurring at the local and\u00a0regional scale to address them. It looks at both suburban and urban approaches. The recent deep\u00a0recession, climate change, and a lack of social cohesion call for a new triple bottom-line approach to\u00a0decision-making for our future. Existing policies and governance structures are not always well suited\u00a0for the new challenges and opportunities that we face. Local, state, and the national government\u00a0are, to varying degrees, crafting new solutions to the challenges of urban and suburban America.", 
+    "title": "Urban, Suburban, and Regional ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "KRN 319", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 19
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13739", 
+        "listings": [
+            {
+                "number": "817", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "David Kooris"
+    ], 
+    "long_title": "Urban, Suburban, and Regional Planning Practice", 
+    "extra_info": "A"
+}

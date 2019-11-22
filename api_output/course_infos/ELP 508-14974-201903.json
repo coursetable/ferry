@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "(Intermediate/high intermediate) This pronunciation course is designed to provide advanced level students with the tools they need to communicate clearly in English. The course focuses on the suprasegmental features of pronunciation: prominence, rhythm, and intonation as well as the discrete sounds of the English language. Using a communicative and interactive approach, the course provides extensive speaking practice that allows students to build their fluency, accuracy, and speaking confidence.", 
+    "title": "Pronunciation 1", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "DOW 215", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 18
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14974", 
+        "listings": [
+            {
+                "number": "508", 
+                "subject": "ELP"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Anna Moldawa"
+    ], 
+    "long_title": "Pronunciation 1", 
+    "extra_info": "A"
+}

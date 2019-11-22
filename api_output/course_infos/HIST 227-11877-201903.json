@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51419/assignments/syllabus", 
+    "requirements": "Open to students who have placed into L5 courses or who have successfully completed an L4 course in Spanish. Counts toward the Spanish major.", 
+    "description": "An introduction to the history and cultural-literary impact of the Spanish Civil War (1936\u201339) from national and international perspectives. Views both from within and from outside the war; women and the war; memory and the war. Authors include George Orwell, Ernest Hemingway, Javier Cercas, Alberto M\u00e9ndez, Merc\u00e8 Rodoreda, Ram\u00f3n J. Sender, W. H. Auden, and Stephen Spender.\nOpen to students who have placed into L5 courses or who have successfully completed an L4 course in Spanish. Counts toward the Spanish major.", 
+    "title": "The Spanish Civil War: Words a...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WLH 120", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11877", 
+        "listings": [
+            {
+                "number": "227", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Noel Valis"
+    ], 
+    "long_title": "The Spanish Civil War: Words and Images", 
+    "extra_info": "A"
+}

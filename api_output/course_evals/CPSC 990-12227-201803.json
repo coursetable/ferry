@@ -1,0 +1,105 @@
+{
+    "crn_code": "12227",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            3,
+            8,
+            8,
+            10
+        ],
+        [
+            1,
+            2,
+            3,
+            8,
+            14
+        ],
+        [
+            1,
+            2,
+            2,
+            8,
+            14
+        ],
+        [
+            1,
+            1,
+            5,
+            9,
+            10
+        ],
+        [
+            13,
+            6,
+            5,
+            2,
+            2
+        ],
+        [
+            19,
+            5,
+            2,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to conduct research and search for jobs ethically. ",
+            "\u00a0I learned a little about making ethics decisions in the realm of academia and computer science. ",
+            "\u00a0Honestly none, see (3). This is also why I didn't answer (6). ",
+            "\u00a0the importance of professional ethics ",
+            "\u00a0Ethics ",
+            "\u00a0Ethics ",
+            "\u00a0Learned what kinds of ethical issues I should pay attention to in my future research and career, which would be very helpful ",
+            "\u00a0I learned the proper way to behave to avoid ethical issues. ",
+            "\u00a0Ethical knowledge about research and job hunting ",
+            "\u00a0we discussed many ethical problems ",
+            "\u00a0Professional manner, ethics rules. ",
+            "\u00a0N/A ",
+            "\u00a0Ethical conducts of academics and jobs. ",
+            "\u00a0Ethics in engineering and research. "
+        ],
+        [
+            "\u00a0Cannot force student participation - I think in the future there should be a rule that laptops are not allowed during class, but reading out loud should not be required. ",
+            "\u00a0A more lively discussion would have been nice. The required reading did make sure that people were present and awake though! ",
+            "\u00a0NB: I am a PhD student taking this course due to a scheduling conflict with the normal doctoral ethics course. However, (a) most if not all incoming PhD students this semester were in this course; (b) the standard doctoral ethics course was being taught in conjunction with the math department and was not specific to computer science; and (c) this course was also unsuitable for industry training. As such, I consider this criticism relevant.\r\n\r\nEthical research and engineering is a serious problem right now in computer science for both academia and industry. The contempt shown for these concerns by the department in the size, scope, and seriousness of how education in relevant ethics is taught goes beyond disappointing to being disturbing. An ethics course should cover meaningful, practical questions likely to be faced by students in the coming years and decades. How do you handle collaboration and grant money originating from states with authoritarian governments? How to handle being asked to build facial recognition technology, or self-driving cars, or algorithms for making cash bail judgements, or content filters aimed at content deemed \"unseemly\"? These are not minor questions, and having a bunch of students (many with uncertain English fluency, which may be uncomfortable for them and/or mitigate effectiveness of the lesson) read off slides about Therac-25 and simple, trite examples of academic dishonesty serves no useful purpose. I've personally worked in industry as a security engineer and the company I worked for undertook some actions around vulnerability disclosure that I considered ethically questionable. This course would have provided no relevant guidance to that situation.\r\n\r\nAn ethics course should be a full semester, have readings and assignments (not to the extent of a full course perhaps, but not insignificant either), and be taught in conjunction with a relevant expert in scientific and engineering ethics (e.g., a historian, philosopher of science, or bioethicist), not exclusively by a research computer scientist. This course was frankly useless on the topic where it is perhaps most relevant for that not to be true. I'd strongly recommend the department take ethics more seriously. It's disturbing that I'm now considered to be \"educated\" on the topic from what was covered within this course. ",
+            "\u00a0Overall good ",
+            "\u00a0Okay ",
+            "\u00a0It is a good course. ",
+            "\u00a0Students are encouraged to be involved in the course and join the discussion. ",
+            "\u00a0This course has no weakness. ",
+            "\u00a0Holly provides a lot of examples to illustrate the professional ethic rules. I think there's no obvious weakness. ",
+            "\u00a0N/A ",
+            "\u00a0Strengths: detailed explanations regarding each knowledge points. The course gives very wide coverage and told us how to behave ourselves in different situations. "
+        ],
+        [
+            "\u00a0Yes, everyone should be aware of ethics in academia as a Yale student. ",
+            "\u00a0If the course was required, then I would recommend taking it. ",
+            "\u00a0It's required, but would never be recommended, which is a shame. Ethics courses should not just be necessary from a requirements standpoint, but necessary from a moral standpoint. This wasn't useful, and as such is not necessary, and as such cannot reasonably be recommended. ",
+            "\u00a0This is a required course. ",
+            "\u00a0It is required ",
+            "\u00a0Have to take it ",
+            "\u00a0Yes, they will learn something in this course. ",
+            "\u00a0Yes, because this course teaches how we should conduct ethically in various circumstances which are very important. ",
+            "\u00a0Yes because is mandatory ",
+            "\u00a0Yes, I enjoy this lecture! ",
+            "\u00a0N/A ",
+            "\u00a0Yes. It could help solve many questions both in school and in job markets. "
+        ]
+    ]
+}

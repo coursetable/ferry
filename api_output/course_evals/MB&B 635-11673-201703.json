@@ -1,0 +1,97 @@
+{
+    "crn_code": "11673",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            4,
+            3,
+            4,
+            0
+        ],
+        [
+            4,
+            3,
+            5,
+            0,
+            0
+        ],
+        [
+            4,
+            1,
+            3,
+            4,
+            0
+        ],
+        [
+            5,
+            1,
+            5,
+            1,
+            0
+        ],
+        [
+            4,
+            2,
+            3,
+            2,
+            0
+        ],
+        [
+            1,
+            3,
+            7,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Honestly I did not gain many skills or insight from this course. I thought I was going to learn Matlab, statistical testing and fourier transform -- all which would have helped me in my future research, but this was untrue. ",
+            "\u00a0I have a much better understanding of Fourier transform after taking this course which has proven useful in understanding other material. ",
+            "\u00a0This course reviewed the basics of Fourier transforms and some introductory statistical tests and terms. ",
+            "\u00a0Re: Fourier transforms, I learned the concepts behind them, which was useful for other courses.\r\n\r\nRe: statistics, I learned the purpose behind many of the major statistical tests that I had seen applied extensively to results and discussions of papers I have read and gave me a greater sense of their meaning. ",
+            "\u00a0Fourier transform and statistical methods ",
+            "\u00a0Skills to understand statistics and Fourier transforms. I had no knowledge of FT before this course. ",
+            "\u00a0Most of the MATLAB programming and statistics content was helpful review for me. I learned a lot from Yong's Fourier transform sections, which fit in very nicely with the Macro lectures. ",
+            "\u00a0Learned about stats and FT "
+        ],
+        [
+            "\u00a0I chose to take this course because it said we would not need any programming background as we would be learning how to code. This was the most false thing I have ever heard. We were immediately thrown into Matlab without more than a slight introduction, and the TA was completely unhelpful and assumed we knew how to code. Speaking to my peers, we agreed that the class was incredibly disorganized and there was no flow to the order of the lectures.\r\n\r\nOverall, the structure of the class needs to be improved and the lecturers need to slow down and articulate the information better. This was clearly at once a full-class which was condensed hastily into a half-class. ",
+            "\u00a0The topics are covered way to fast and seemed more like a review than a first time learning experience. Had I not had prior knowledge of certain topics I would have felt overwhelmed at the speed of the course. This is likely because it was reduced in length to a half term instead of a full term which I feel should not be the case. ",
+            "\u00a0The course overall felt kind of disorganized. The statistics material was paced very slowly and felt excessively repetitive, the Fourier transform material was paced slower but the repetition felt a little more reasonable. Problem sets were spaced pretty randomly it seems. Overall the course was pitched as worthwhile for people who had seen the material before, which I would say wasn't true; overall the course was pretty basic and as someone who had taken basic statistics courses/seen Fourier transforms in math classes before this class didn't feel like the best use of my time. I could see the course being helpful to people new to the material.The final project was extremely disorganized. A lot of the course seemed to require/rely on the TA from the previous year, which didn't make very much sense. ",
+            "\u00a0The class in general suffered from poor communication between the professors, the TA, and the students, in every combination possible. As students, we always felt very lost about what was actually demanded of us. We did not receive adequate feedback about our end-of-term projects while we were working on them. One session of vague suggestions from the TA for 10 minutes on the day after classes ended was not enough help. ",
+            "\u00a0The professors for this course are very knowledgeable in the sections that they teach. However, the course is very poorly organized and needs a lot of improvement to optimize student learning. Most of all, it needs much more student engagement that would allow students to actually practice problems relevant to the concepts being learned. ",
+            "\u00a0Course feels rushed and compressed. Technically it was also longer than half a credit. Both reasons make me feel that it should simply take the form of a whole credit course. ",
+            "\u00a0The material was covered too quickly to take anything away from it. Especially the statistics portion. ",
+            "\u00a0This class has a lot of important and valuable material, however the organization was not the greatest. ",
+            "\u00a0I really like the idea of this course, but I think it was limited by being only one-half credit. My understanding is that previously it was offered as a full credit, which would allow more programming and stats content to be integrated into the course.\r\n\r\nThe MATLAB assignment was a good intro to programming, but because there were no further programming tasks, I think most students didn't get much out of it. Novices did not have incentive to invest in the material, while more experienced programmers were not challenged. Having more in-depth programming assignments would be a priority if the class were expanded to a full credit.\r\n\r\nNikhil's stats lectures were good, but I think having more, better organized periods would be beneficial. For instance, discuss sample v. population FIRST, giving examples of how scientific experiments try to determine population characteristics (mean/SD/etc.) via different sampling strategies. To me, it doesn't make sense to talk about the mean and SD before discussing how we actually get samples to calculate these statistics. I liked the boxplot homework a lot. The Central Limit Theorem discussion was of appropriate depth. I would like to see more detail given to the meaning of hypothesis testing (maybe just with graphs?), since it is so crucial. I think a more detailed assignment covering parametric and nonparametric testing (e.g. t-test and U-test, or ANOVA and Kruskal-Wallis) would drive these concepts home, BEFORE the big final project. I also really liked the inclusion of the Points of Significance write-ups. Unfortunately, I think many students did not really read or understand these, as they require a strong foundation and passion for statistics. I would consider picking a couple of these topics to flesh out into the lectures, using simpler language than in the text. I loved how the final projects turned out, and I thought there was ample opportunity for feedback.\r\n\r\nI really liked Yong's lectures on Fourier transforms. There was a good balance of big ideas and smaller details. The homework assignments reinforced the concepts well. ",
+            "\u00a0There seem to be some disconnect between the two professors. Maybe next year organize the course a bit better. Also for the amount of information covered, it should be a semester long course instead of half a semester. "
+        ],
+        [
+            "\u00a0I would 150% NOT recommend this course to another student. It was completely disorganized and the amount of knowledge we were supposed to know during our homework and final projects were not taught in the lecture. ",
+            "\u00a0Not unless it is a full length class. The topics deserve more time than they currently have. ",
+            "\u00a0As someone who was hoping to get a review of and expand my understanding of the subject material covered by this course, I found that it wasn't in depth enough and was made artificially difficult/time consuming by poor organization, which was very frustrating. I wouldn't recommend this course to others. ",
+            "\u00a0No, I would not. Other than the Fourier transforms section, most of the material covered in the class were topics we could have easily looked up on our own. The way the class was organized and the lack of communication about what was expected of us was more headache than it was worth. ",
+            "\u00a0I would not recommend this course to another student. This course was poorly organized and greatly lacked in student engagement. I did not gain much from taking this course. A lot would need to be changed about the course for me to recommend it to another student. ",
+            "\u00a0Yes. Overall useful and enjoyable. ",
+            "\u00a0Only if the format was changed ",
+            "\u00a0Yes, this is imperative for developing an understanding of the FT. ",
+            "\u00a0I would definitely recommend this class to other students. Programming, statistics, and Fourier transforms are central concepts in quantitative science. This course covers all three in good detail, though improvements could be made if the course were a full credit. ",
+            "\u00a0This class was strongly recommended to me by an instructor, but I would not recommend this class to any other peers. The class was very poorly organized, and it felt as if the instructors as well as the TA cared very little about teaching the course. ",
+            "\u00a0Yes, the FT part will help in macro "
+        ]
+    ]
+}

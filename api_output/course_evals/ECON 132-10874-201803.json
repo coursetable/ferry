@@ -1,0 +1,95 @@
+{
+    "crn_code": "10874",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            4,
+            6
+        ],
+        [
+            0,
+            1,
+            5,
+            4,
+            4
+        ],
+        [
+            0,
+            1,
+            5,
+            5,
+            3
+        ],
+        [
+            0,
+            1,
+            4,
+            5,
+            4
+        ],
+        [
+            0,
+            0,
+            4,
+            7,
+            3
+        ],
+        [
+            0,
+            0,
+            5,
+            5,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learnt how to use stata ",
+            "\u00a0I learned about the basics of econometric analysis and how to put economic models into actual empirical papers. ",
+            "\u00a0This class does a fantastic job of teaching you how to perform advanced analysis on large data sets, which are often based on interesting and groundbreaking field research. The tools you use in this course are very applicable to actual research. ",
+            "\u00a0I learned a lot about how to perform empirical economics research and interpret economic research. This class will be extremely helpful in writing my senior essay. ",
+            "\u00a0Practical applications for econometric methods ",
+            "\u00a0Understanding how to look at the results of a regression, and be able to run my own data regressions with the provided data. ",
+            "\u00a0I learned different econometric techniques used to analyze data such as Ordinary Least Squares (OLS) linear regressions, discrete choice models, fixed effects model, treatment effects model, quasi-experimental approaches, etc. I also learned how to handle issues such as endogeneity, omitted variable bias, measurement error, heteroskedasticity, serial correlation, etc. I also learned how to use Stata to run regressions and analyze data. ",
+            "\u00a0I learned in some further depth about concepts that were covered at the surface level in Econ 131 (now no longer a course), such as heteroskedasticity, experimental methods, and data analysis. I was able to apply the methods learned to real data and make conclusions in the form of projects, though not much room was given to make any new conclusions. Rather, the class revolved around a series of examples and research done by Professor Meghir, and we were tasked with understanding the methods used and replicating the existing results from the raw data. "
+        ],
+        [
+            "\u00a0Strengths: learnt a lot\r\n\r\nWeaknesses: lot of work, time consuming, hard material ",
+            "\u00a0Professor Meghir was very passionate and invested in teaching! ",
+            "\u00a0The professor and TA are very accessible and easy to understand. The material is extremely interesting and the data you will work with is from really cool research!\r\nHowever, sometimes the problem sets are quite convoluted and need further explanation. ",
+            "\u00a0The class is quite tough but the grading was fair and I learned A LOT. Professor Meghir and Jaehee were both fantastic. ",
+            "\u00a0Maybe introduce pre-lecture quiz and learning materials? ",
+            "\u00a0will teach you a lot, the notes are better than lecture notes of many econ courses ",
+            "\u00a0Good that it had the theory, but also showed how to actually apply that-- good balance of proofs and case studies ",
+            "\u00a0Professor Meghir was a fantastic professor, and our TA was great as well. Really appreciated the fact that the answers for all the exercises and mid-term was uploaded for us to study for the exam. Would have wanted to have the exercises solutions up for the mid-term as well. \r\n\r\nClass was enjoyable, and I really, really appreciated the weekly exercise sheets (even though I would complain about it at the time). It was nice to get consistent feedback on how you were doing on the course, so we could make adjustments and reach out for help early on. ",
+            "\u00a0Strengths: midterm, projects, and final were all very straightforward. For each test, we were given a review sheet and not many practice problems, but I still felt prepared for the exams because the exams were much easier than the homework. The lecture slides that are posted on Canvas are also very thorough and helpful.\r\n\r\nWeaknesses: the problem sets were often very difficult, and I sometimes felt that I was not taught the necessary information to complete the homework. For example, the homework required Stata, and I had to google Stata commands to run different types of regressions because they were not necessarily taught in class. Additionally, the homework often involved proofs, and I definitely had to rely on residential college tutors and the TA to help me solve them. I did not anticipate that this course would involve theoretical material like proofs. The proofs made the homework much harder than the exams because the exams did not test us on theory/proofs. The exams focused more on reading Stata outputs and applying the concepts we learned in class, which I appreciated. ",
+            "\u00a0It was strong in how clearly passionate Professor Meghir was about teaching and researching the subject, so we ended up going into many interesting econometric examples from his real-world research, from experiments on compulsory schooling in Colombia to aggregate population data from Sweden. It was overall an interesting class, content-wise.\r\n\r\nThe weaknesses in the course came from the little things, but they did add up. For one, consistent technical difficulties during lecture, as well as very math-heavy slides that were run through too quickly to take thorough notes led to lectures that were not very useful for learning the material. These could be improved easily by streamlining the slides and by ensuring that the classroom equipment works with the professor's iPad-Apple Pencil combo before class. In addition, the class was taught largely based in theory, but many of the problem sets were empirical and required use of computer statistical packages. There was a slight issue for me personally because I chose to use R, but the professor and TA used Stata (even the tests had Stata outputs and functions as important information for many questions). Though of course I could have bought Stata, considering that it is quite expensive and limited, and the fact that Econ 131, 117, and 123 are all taught in R, I believe the course could benefit from being taught in R as well. "
+        ],
+        [
+            "\u00a0Yes, I would certainly recommend this course to anyone interested in econometrics and causal inference! ",
+            "\u00a0Definitely would recommend if you like working with data and have an interest in public policy research. ",
+            "\u00a0Absolutely! Take it if you are interested in empirical econ research. ",
+            "\u00a0Yes. The course is clearly applicable to real-life problems. ",
+            "\u00a0I would highly recommend this course to another student. ",
+            "\u00a0Yes! I thought a great approach to learning econometrics, I think I learned a lot more skills than the part 1 I took previously ",
+            "\u00a0Yes! Even if you haven't taken the pre-requisite course, I would still recommend you try it out. The Center for Teaching and Learning has residential college tutors for economics, so I would highly, highly recommend going to the tutor! They're very helpful, and honestly, I don't really know how I could have survived the course without their help. \r\n\r\nYou're going to learn a lot in this course, and it will challenge you, but in a way that is rewarding, once you look back at it. ",
+            "\u00a0I would recommend it only if you think you are interested in the field of data analysis/econometrics. I took ECON131 prior to this course, and this class definitely went way more in depth than ECON131 and is much more useful. I learned a lot about different tools and models that can be used to analyze data. I also learned how to recognize and solve issues that may arise in data analysis. This course gave me a better understanding of the power of data analysis. However, I did not find the course particularly interesting compared to my other classes of the semester. This probably just shows that I do not like data analysis as much as I thought. I think this class had too much theoretical material/proof-based math for a \"Applied Econometrics and Data Analysis\" course. However, the practical information I learned is very important for anyone who wants to pursue econometrics. You do learn how to use Stata as well, which is also very useful, but be prepared to do some learning on your own. ",
+            "\u00a0I would recommend this course if you are very interested in learning more about econometrics. I enjoy econometrics, though I largely took this course because of the two semesters of econometrics requirement to write a thesis, and now that Econ 131 has been replaced by 117 and 123, this course is no longer necessary to complete a two-semester sequence. So, take this course if you are very interested in learning a little more about the subject without going too far in depth in mathematics. If this is not you, there are very likely other better options. "
+        ]
+    ]
+}

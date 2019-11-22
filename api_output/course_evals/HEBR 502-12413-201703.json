@@ -1,0 +1,71 @@
+{
+    "crn_code": "12413",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0My writing and reading comprehension in Hebrew improved by leaps and bounds thanks to my participation in this course. "
+        ],
+        [
+            "\u00a0Shiri is a fantastic language instructor and is very effective in offering individualized feedback/assessment. One weakness of the course might be the final project-presentation. I thought it was unclear at times what the intended structure and content should be. In other words, I think it's wonderful that we partook in volunteering here in New Haven yet it was somewhat difficult for me to incorporate another organization in Israel in which I did not have the opportunity to volunteer in or gain a firsthand sense of its daily operation. "
+        ],
+        [
+            "\u00a0Definitely, Shiri is a fantastic language instructor. "
+        ]
+    ]
+}

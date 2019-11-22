@@ -1,0 +1,102 @@
+{
+    "crn_code": "21841",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            7,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            8
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            9
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            6
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            11
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a tremendous amount about research design, causal inference, how to design, conduct, and analyze experimental research. ",
+            "\u00a0I learned how to do experiments! ",
+            "\u00a0How to properly conduct and analyze data from experiments. ",
+            "\u00a0I learnt a lot in the class. I have not had time to digest all of it, but I can always go back to the chapters or my notes. Now I know what to look for and be cautious about when conducting an experiment. It was also a good way to keep improving my R skills. ",
+            "\u00a0I learned everything from the basic properties of experiments in political science, to quite complex matters which arise when experiments don't go as planned (which often occurs). The weekly problem sets forced me to grapple extensively with a wide range of methodological issues and mathematical techniques, most of which I had not encountered previously. Put simply, I would not have been comfortable designing an experiment prior to this course, but I learned so much in this class that I feel equipped to do so. ",
+            "\u00a0I learned in this course how to conduct field experiments, and perhaps more importantly, the different ways the field experiments can go \"wrong\" and how to account for these challenges. In addition to learned statistical methods using R, the two projects were a great introduction into creating and writing a field experiment. These two assignments aided in my \"professionalization.\" ",
+            "\u00a0This class provided a fantastic introduction to field experiments and randomized experiments in the social sciences. The course gives students numerous practical skills that can be immediately implemented into their own research designs, and gives them the tools to critically evaluate experimental research. ",
+            "\u00a0how to properly conduct experiments ",
+            "\u00a0The course was a great foray into the world of social science experiments. It was passionately taught, engaging and high on both, learning and workload ",
+            "\u00a0I learnt several concepts related to field experiments as part of this course. The course is designed well to make one understand what we can and what we cannot learn from field experiments. The key insights I gained from the course relate to how to design field experiments, and how to analyze them. Importantly, I also learnt how to carry out the replication analysis of a field experiment. ",
+            "\u00a0Fluency in experimental design and analysis, which serves as a benchmark for rigor even in areas where an experiment isn't possible. The course changed the way I think, and not just about social science research. Also improved my R skills. "
+        ],
+        [
+            "\u00a0At times the problem sets felt gratuitous. I often felt as if I were sacrificing conceptual understanding to just get an answer on the page. That said, I came in with an extremely low level of statistical knowledge. ",
+            "\u00a0Great class! It could be improved by there being less work. There is just the issue that by assigning so many problems each week, it's hard to really understand any one--you have to just work hard to get through it, so there isn't really time to make sure you're 100% getting the lessons. \r\n\r\nBut the class was pretty fun. The practice experiment was great. ",
+            "\u00a0This class is perfect the way it is, for the purposes it aims to achieve. There's a lot of work, but this is probably the one class where the gains from putting in the time are commensurate with the amount of time put in. ",
+            "\u00a0Strengths: \r\n- Very useful, clear applications. \r\n- Classes and sections were as clear and helpful as they could be. \r\n\r\nWeaknesses:\r\n- The quantity of problem sets often turned out to be counter-productive for me. I often did not take the time to fully understand what I was doing because I needed to move on. I obviously got a lot from it, but I would have benefited more from more targeted questions. I would have spent as much time on those, but I would have tried to understand what I was doing more deeply. ",
+            "\u00a0Strengths: \r\n\r\nincredibly difficult/time consuming workload forced me to learn the material to an extent not possible through any other channel; the professor presented the subject matter in an accessible way; the text was clear; overall, the course was very practically-oriented, which I appreciated\r\n\r\nWeaknesses: \r\n\r\nThe material is presented in such a one-sided way (i.e. from the perspective of Gerber and Green) that we didn't get a sense of whether there was any disagreement about methods *among experimentalists.* I suspect that the approaches to experiments taken by Gerber and Green aren't the only ones. It would have been nice to see different perspectives/viewpoints on core issues AMONG experimentalists so that when we try to implement our own experiments, we can anticipate how they will be received by different members of the academic community. \r\n\r\nThere needs to be an explicit discussion about ethics - perhaps for one class session. Yes, many experiments are ethical, but it'd be nice to explore the gray area where ethical issues aren't clear cut, rather than not discussing them at all. ",
+            "\u00a0The course's workload is both a strength and a weakness. Assigning every problem in the book forces students to remained engaged in the work. At time during this semester, the work load grew to be too difficult, especially during the weeks that had a problem set and project assignment due. ",
+            "\u00a0In the future it might be more effective for the instructor to pick fewer problems for problem sets, rather than assign all of the questions in the textbook. Picking only the most instructive problems would give students the ability to focus their attention on these problems. The workload in this course is also extremely demanding, to the point that it detracted from the ability to devote time to other courses and research projects. ",
+            "\u00a0strength: very clear lectures, problem sets were very useful as well ",
+            "\u00a0Strengths: \r\nAlex is a super passionate instructor who takes this topic seriously, and is excited about passing on his wealth of knowledge. As a result, this is an important course to add to the arsenal of quantitative training in the program. \r\n\r\nWeaknesses: \r\nSome of the questions on the problem sets were not as useful to learning and immensely frustrating to do. Learning would be better served if we focused on, say 80-85% of the questions, but on those that give us knowledge applicable to the course.  \r\n\r\nThe poster session was not a great addition to the course, given the timeline, the amount of work already put in, and the fact that the undergraduates whom it was presented for were not present to engage. I do agree that learning poster making in LaTex is an important skill to have, but this could have been done another way/ at a different time and not at one where we already have 3 things due for the course in the same week. ",
+            "\u00a0This is perhaps the most excellent course to understand all design and analysis-related concepts of field experiments. The course is very well-organized with specific concepts covered each week, and the weekly problem sets ensure regular practice with newly learnt concepts. Both the instructor and the teaching fellow for the course were excellent too and ensured that the teaching and learning happened in a very rigorous way.  The practicum experiment assignment and the replication project assignment also allowed for a perfect opportunity to apply the concepts learnt during the course. To gain most out of the course, however, one has to commit a significant amount of time to the readings and the course assignments. ",
+            "\u00a0No real weaknesses. Super well-taught, super well-organized, jam-packed without being overwhelming. Fun! Classic Coppock course. "
+        ],
+        [
+            "\u00a0Yes, with caveats. I would not recommend it to first years - I feel I could have gotten much more out of the course if I had a better background in statistics. ",
+            "\u00a0Yeah--especially if you are interested in experiments. I think Alex is a great person to learn from on this method. Really knows his stuff and cares about it. ",
+            "\u00a0Yes. It's good to have training in experimental methods and designs, if at the very least to better understand the logic behind causal inference, which can inform other types of research. ",
+            "\u00a0I would highly recommend the class for second year students. \r\nAs a first year, I was sometimes frustrated by my lack of statistical foundations that made me waste some time (balance test, F statistics, etc.) and prevented me to better grasp certain concepts. ",
+            "\u00a0Yes, definitely. The professor is incredibly engaging and helpful and wants everyone to learn. The material is clear, and students who take this course will subsequently be able to design and eventually implement their own experiments. ",
+            "\u00a0I would recommend this course to the rest of my cohort because thee value of field experiments and how to run them. ",
+            "\u00a0Yes, I would recommend this course to any students interested in using experimental methods in their own research. However, I would not recommend this course to students with only a passing interest in experimental methods due to the high workload. ",
+            "\u00a0I would recommend this course to anyone in the social sciences who is interested in research methodology in general.  In examining the virtues and pitfalls of the design and analysis of field experiments, you are better equipped to anticipate problems with inference both in experimental and observational work.  You also walk away with a better understanding of how to write, critique, and reproduce empirical papers. ",
+            "\u00a0Yes, I think it is an essential course to take for the quant sequence. ",
+            "\u00a0Definitely! This is a course well worth the time investment because it leaves one with a clear understanding of this important methodology. ",
+            "\u00a0Yes, I would certainly recommend this course to another student, especially those pursuing the Comparative Politics, Political Economy and American Politics sub-fields, within Political Science. Moreover, I would recommend it to him/ her, irrespective of whether he/ she intends to actually carry out a field experiment or not. This is because the concepts in this course enable one to critique field experiments carried out by others, as well as to understand which of these concepts can and cannot be used in observational studies. ",
+            "\u00a0Absolutely. It's a beautifully-taught course on a deeply important subject. I wish every Yale student, grad or undergrad, could take this course. Professor Coppock should make a MOOC (maybe collab with Donald Green?). "
+        ]
+    ]
+}

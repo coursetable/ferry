@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50029/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The discipline, theory, and practice of intelligence; the relationship of intelligence to American foreign policy and national security decision-making. Study of the tools available to analyze international affairs and to communicate that analysis to senior policymakers. Case studies of intelligence successes and failures from World War II to the present.", 
+    "title": "Intelligence, Espionage, and A...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WTS A51", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12199", 
+        "listings": [
+            {
+                "number": "392", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Edward Wittenstein"
+    ], 
+    "long_title": "Intelligence, Espionage, and American Foreign Policy", 
+    "extra_info": "A"
+}

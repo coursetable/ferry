@@ -1,0 +1,96 @@
+{
+    "crn_code": "11554",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            9,
+            2,
+            1
+        ],
+        [
+            2,
+            4,
+            8,
+            0,
+            0
+        ],
+        [
+            0,
+            3,
+            6,
+            5,
+            0
+        ],
+        [
+            0,
+            3,
+            6,
+            5,
+            0
+        ],
+        [
+            0,
+            1,
+            4,
+            7,
+            1
+        ],
+        [
+            0,
+            0,
+            8,
+            4,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained basic calculus skills and a general understanding of college level math. ",
+            "\u00a0More extensive knowledge of topics covered in high school. ",
+            "\u00a0I feel as if I did not gain a lot of knowledge in this course. ",
+            "\u00a0I learnt the basics of multi variable calculus and how to reason with quantative values to solve problems. ",
+            "\u00a0I feel like I adequately learned the material taught ",
+            "\u00a0By taking this course, I broadened my understanding of single-variable calculus concepts. ",
+            "\u00a0I learned how to calculate limits better than I had learned before and I learned how to take the antiderivative, which I had previously been confused about. ",
+            "\u00a0This course greatly improved my problem-solving skills. ",
+            "\u00a0I learned Calculus I, focusing on derivatives and definite integrals. ",
+            "\u00a0The basics of one variable calculus. "
+        ],
+        [
+            "\u00a0Often the homework problems were on topics not yet covered in class so there was a lot of self teaching, otherwise it was a well designed course with a reasonable workload. ",
+            "\u00a0The format of the classes was not very enjoyable, and disliked having a person that was not our teachers grade the homework. There was many times where the teacher had to retroactively fix a graded hw. I also feel like the course itself is not very engaging in terms of classroom learning, I often felt bored. I also felt often as if the methods we were taught were a waste of time as there was better ways to do it and we were being taught a more watered down approach. ",
+            "\u00a0The strengths were the math tutoring sessions and the office hours. The classes themselves were dull and the review sessions for the final only went over potential questions instead of actually reviewing the material so these two things could be improved upon ",
+            "\u00a0Strength-\r\nSmall class sizes \r\nLots of office hours or tutoring opportunities\r\n\r\nWeaknesses-\r\nI didnt like the order of topics taught. After derivatives, it wouldve made more sense to learn curve sketching and integrals then autonomous differential equations. Not learning it like that was weird and we jumped around in the book and talked about equations we didnt know how to solve with integrals yet.\r\n\r\nLots of homework for very little grade distribution. Should be like 20-30% or more for how many hours we put into it. ",
+            "\u00a0This course seems to be a little neglected by the faculty, perhaps. I had different instructors almost half the time and hardly any of the concepts were explained in ways that made sense both mathematics-wise and concept-wise. Also, the grading on the homework was very harsh compared to the grading on the midterms and it hurt my grade and the grades of other people I knew who also took the course. There seemed to a discrepency in the grading and it was hard to know what the faculty was looking for a lot of the time. Also, the final was significantly harder than either of the midterms and included many problem types that we had never learned in class, so must the people I know who took the exam feel like they performed very poorly on it. ",
+            "\u00a0My strengths are limits and derivatives and my weaknesses are optimization problems. ",
+            "\u00a0The web-assignments should be assigned after the topic is taught not before. There is no use trying to solve problems when no skills have been acquired in the particular area. ",
+            "\u00a0I think this class gives you a good background for higher level courses. However, the class feels rushed and at times one is unprepared. "
+        ],
+        [
+            "\u00a0It's an ok course if you need it for your major or enjoy math. It was just your basic calculus, similar to AP calculus AB but with more difficult problems using the same concepts, but required a much broader understanding of what each concept was for instead of just solving the same types of basic problems. ",
+            "\u00a0If there is no other option, Math 112 is an unavoidable and advisable course. I strongly discourse the class for students who did not take some form of AP or college-level calculus: your learning curve will be arduous. ",
+            "\u00a0No, unless required I would not recommend 112 to another student because as one of the lower maths available at Yale, fewer resources are put into 112 and the overall quality of instruction appears lower. ",
+            "\u00a0I would only recommend this to another student in so far as they needed it as a prerequisite for their major or if the already had some experience with calculus. The course moves quickly and so you have to put in a lot of time reviewing and understanding the material outside of classes. ",
+            "\u00a0Only if they need it for their major or QR credit ",
+            "\u00a0I would recommend this course to someone who feels like they need to review some basic calculus concepts before going on to high calculus classes. ",
+            "\u00a0If someone does not need to take calc for their major I would tell them to never take this course because it is a lot of work with very little pay off. ",
+            "\u00a0Yes I would. Improves creative problem solving. ",
+            "\u00a0Yes, I learned a lot in the course and have developed a proficiency in the course material ",
+            "\u00a0I would recommend to students who want to take a basic calculus class. "
+        ]
+    ]
+}

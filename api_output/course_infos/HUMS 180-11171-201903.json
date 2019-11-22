@@ -1,0 +1,51 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50279/assignments/syllabus", 
+    "requirements": "No knowledge of Italian required. Course conducted in English.", 
+    "description": "A critical reading of Dante's Divine Comedy and selections from the minor works, with an attempt to place Dante's work in the intellectual and social context of the late Middle Ages by relating literature to philosophical, theological, and political concerns.\nNo knowledge of Italian required. Course conducted in English.", 
+    "title": "Dante in Translation", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "PH 407", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11171", 
+        "listings": [
+            {
+                "number": "180", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Giuseppe Mazzotta"
+    ], 
+    "long_title": "Dante in Translation", 
+    "extra_info": "A"
+}

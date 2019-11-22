@@ -1,0 +1,117 @@
+{
+    "crn_code": "12575",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            3,
+            8,
+            9,
+            8
+        ],
+        [
+            0,
+            3,
+            6,
+            6,
+            13
+        ],
+        [
+            0,
+            0,
+            5,
+            6,
+            16
+        ],
+        [
+            2,
+            0,
+            5,
+            11,
+            8
+        ],
+        [
+            0,
+            2,
+            12,
+            10,
+            3
+        ],
+        [
+            0,
+            1,
+            10,
+            13,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Basics and ideas of machine learning. Language R. ",
+            "\u00a0I learned about classification and prediction problems with machine learning. ",
+            "\u00a0Increased skill in computational programming. ",
+            "\u00a0I learned lots of methods of machine learning as well as their principles. ",
+            "\u00a0introduction to machine learning ",
+            "\u00a0I learnt some very important machine learning concepts like classification algorithms, the bias-variance trade off and some advanced concepts like topic modeling and sparse coding. Overall, very useful course for my research. ",
+            "\u00a0So incredibly much ",
+            "\u00a0R programming, basic machine learning knowledge ",
+            "\u00a0The was by far my most fun course.  Though challenging, we learned a wide variety of material on how to process and use data to make predictions/make models. ",
+            "\u00a0I learnt how to use basic machine learning concepts in a very applied way through coding assignments. The assignments were challenging & unique. The assignments really made me learn the material. ",
+            "\u00a0Machine learning, statistics, and R. ",
+            "\u00a0Machine learning skills ",
+            "\u00a0Coding, comprehensive acknowledgement of machine learning ",
+            "\u00a0Many Machine Learning Techniques. This was an amazing useful course. ",
+            "\u00a0I learnt a lot of skills and knowledge about machine learning and data mining by taking this course. ",
+            "\u00a0I learn a lot of important machine learning methods. ",
+            "\u00a0I've improved my Machine Learning skills and knowledge and R coding a lot "
+        ],
+        [
+            "\u00a0The choice of materials is good, and is rigorous. It would be better if more examples, and sample solutions are provided. ",
+            "\u00a0The course is outstanding. The lectures truly do a great job of balancing accessibility and rigor. The downside is that the expectation of doing the math on the assignments feels a little disconnected from the instruction (though the connections are clearly there for us to make). I think Prof. Lafferty should keep teaching it exactly as he does, but the course would benefit from a weekly section that focused on math and coding. ",
+            "\u00a0Concepts taught in lecture did not reflect expectations on assignments. ",
+            "\u00a0Strengths: Covers lots of ground. Interesting homework.\r\n\r\nCons: Homework planning and logistics needs work. I usually start assignments very early. In this course, I generally left it until the last day or two, because when I worked on it early, I'd check PIazza and find out there were different corrections to the problems, or explanations of the best way to do it, or clarifications on what they asked for. So it felt like it was most efficient to wait until near the end fo do the assignment, because when it was first posted they were still figuring it out. ",
+            "\u00a0Strengths:\r\n- prof. is very knowledgeable about topic\r\n- good support from TAs\r\n- assignments are well-designed and cover a good breadth of material\r\n\r\nWeaknesses:\r\n- course moved slowly and covered many topics superficially because there were too many unprepared students in the course\r\n- no discussion of ethics\r\n\r\nImprovements:\r\n- Restrict enrollment on the basis of stats/math prerequisites\r\n- Greater focus on theoretical underpinnings in coursework and lecture\r\n- Group discussion/critical thinking. It's a little shocking to me that so many people are getting an introduction to this topic without being told how badly data science can be and is being misused. ",
+            "\u00a0The course is very well organized and covers many fields of machine learning. ",
+            "\u00a0Strength- Awesome professor ( totally mind-blowing), responsive TAs ( replied to every question in less than a day), good coverage of topics\r\n\r\nImprovement- For graduate students, may be replace the final exam with a final project so that we can get some early feedback from Professor about our machine-learning related research ideas ",
+            "\u00a0Strengths:Explain machine learning in an understandable way.\r\nWeaknesses: Too few mathematics and statistics ",
+            "\u00a0As stated about, this was easily my most fun course this semester.  The instructor did a fabulous job with making the material (both in class and on the assignments) relatable and engaging.\r\n\r\nMy only issue is that the doing of the PSets very strongly relied on one's mastery of RStudio.  While none of the actual concepts in the course were terribly difficult, it would take me hours to get the programming correct.  In effect, this was as much an \"RStudio\" class as a Machine Learning class.  \r\n\r\nNevertheless, I thoroughly enjoyed it! ",
+            "\u00a0Strengths - Assignment based evaluation; Unique nature of assignments; Not returning solutions as they get passed on to next year; faculty's expertise and in-depth understanding; applied nature of the course (rather than theoretical)\r\nWeaknesses - None ",
+            "\u00a0excellent course ",
+            "\u00a0SVM is not covered in the class,LDA and NLP are too hard for an introductory level class. Otherwise, it is very good for one who wants to learn about machine learning. ",
+            "\u00a0I think the course should have more theoretical exercise. It seems that the assignments focus too much on applications. ",
+            "\u00a0Very good teaching;\r\nVery clear class materials;\r\nHomework quality not good enough;\r\nNot enough feedback of homework. "
+        ],
+        [
+            "\u00a0Yes. Very useful and definitely accessible. ",
+            "\u00a0Highly recommend. There's no way you have a better option for learning this material. ",
+            "\u00a0Yes, if they have some basic programming background. ",
+            "\u00a0I would recommend this class to a student only if significant steps were taken to limit enrollment on the basis of prerequisites. I think it was taught well considering that the course is new. ",
+            "\u00a0Yes. The knowledge I learned from the course is very useful in my daily research. ",
+            "\u00a0It is a good course to explore the area of machine learning. ",
+            "\u00a0Yes , would strongly recommend! ",
+            "\u00a0Absolutely ",
+            "\u00a0Yes ",
+            "\u00a0Yes, the material in this course is invaluable.  However, I would make sure they had a good understanding of how to use RStudio. ",
+            "\u00a0Yes, since machine learning is becoming a very important method across domains, this is a must for any student interested in research or cutting edge work in industry. ",
+            "\u00a0I will, because it is very helpful. ",
+            "\u00a0Yes! Professor Lafferty is great! ",
+            "\u00a0Absolutely ",
+            "\u00a0Yes. Definitely. ",
+            "\u00a0Yes, highly recommend. ",
+            "\u00a0Absolutely yes. ",
+            "\u00a0Definitely.\r\nJohn is a great instructor. "
+        ]
+    ]
+}

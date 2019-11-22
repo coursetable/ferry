@@ -1,0 +1,89 @@
+{
+    "crn_code": "25058",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            0
+        ],
+        [
+            0,
+            4,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course was extremely helpful in learning how to think about metabolism at multiple scales and to construct a framework for thinking about how these different logics of scale interact to produce organismal homeostasis. This was extremely helpful in learning how to understand metabolism conceptually. \r\n\r\nPractically, the course was also extremely useful in learning how to critically evaluate the literature and particularly to evaluate the use of common techniques. ",
+            "\u00a0Having no background in metabolism, this class was a wonderful way to begin my understanding in the field. ",
+            "\u00a0A much deeper understanding of metabolism and common pitfalls of metabolism research. Also, this course was very effective at improving understanding of common techniques and how to design experiments. ",
+            "\u00a0I gained in-depth knowledge about in vivo and cellular metabolic pathways and learned tools to assess the function of said pathways. ",
+            "\u00a0Metabolism ",
+            "\u00a0I developed many skills and learned many concepts more in depth related to Biochemistry classes taken previously. ",
+            "\u00a0The metabolic pathway within the human body and how we study metabolism. "
+        ],
+        [
+            "\u00a0Strengths: I liked the seminar style, students were encouraged to participate and the size of the class made it easy to contribute\r\n\r\nWeaknesses: I think having guest lecturers was a real strength and I enjoyed it. However, during Dr. Rodeffer's guest lecture myself and other students found his attitude towards obesity to be problematic, offensive, and fat-phobic. During the lecture Dr. Rodeffer made statements that the venus of willendorf, an ancient statuette 'would never be considered attractive today' and told stories mocking an obese friend for overeating. I think this reflects a lack of sensitivity and a harmful anti-fat attitude that was not received well by students. ",
+            "\u00a0This course is beneficial in for those that are generally intimidated by metabolism research and find it to be an unapproachable field. I definitely leave this course with a certain level of confidence in my ability to be able to understand publications in the field when needed. Some aspects of the course, however, went too fast for me and thus hindered my benefiting fully from the class. We represent the first iteration of this class so I'm sure it will improve in this aspect in the years to come. I would encourage the instructors to further develop the basal knowledge at the beginning of the course. I think some more active exercises to help the students visualize, process and generate the information in this portion of the class would be beneficial. I think the sheet with isotope labelling was a great effort but I, at least, got a bit lost and didn't fully understand it until I went through it on my own again later on. Finally, the paper discussion section at the end of the class was beneficial in that it helped us apply some of the theoretical knowledge we had been exposed through in the class. However, the class received a clear, unintentional message that we should lean towards high scepticism when presenting the papers. I think learning to applaud other researcher's work is as important a skill as being able to see the shortcomings. I would like to encourage the instructors to promote the students to praise work well done in the field of metabolism too! Thank you for a great semester! ",
+            "\u00a0Very engaging, fairly low workload, interesting outside speakers. The discussion papers were always interesting because they typically looked at less common aspects of metabolism (tumor metabolism, role of inflammation, etc.)\r\n\r\nThe CNS lecture could have been reduced to one class instead of two. The beginning of the course started quickly for students who have not refreshed on biochemistry since undergrad. It might be interesting to have the student presentations on mito techniques encompass broader techniques (one group common mito techniques, one group in vivo clamps/infusions, etc.) ",
+            "\u00a0This class was strong it the breadth and depth of its material, especially for graduate-level researchers. However, assignments, to drill in the concepts, other than paper presentations and would have been very useful. ",
+            "\u00a0I thought it was structured sort of backwards. I felt like I learned more of the high level metabolism stuff, and learned more of the basics later in the semester. Although, this may have just been me because I did not have as great a metabolism background before taking the class. ",
+            "\u00a0A strength is definitely how papers and techniques were discussed. It definitely opened my eyes that the papers that are not out there are always true. You have to approach each paper with a critical mind.\r\n\r\nMaybe a minor weakness is giving more time to prepare for presentations. ",
+            "\u00a0I believe this course is very useful for the student who wants to study metabolism in their project. We learn the technique to study the metabolism and some critical concept in those study. I think it may better if the instructor can review the metabolic pathway before they talk about the concept. "
+        ],
+        [
+            "\u00a0Absolutely. I think it covers fundamentals in a way that's engaging, while not being overly challenging or too moving too quickly. ",
+            "\u00a0Yes! This course is great if you are already in the field of metabolism or just want to get comfortable with it! ",
+            "\u00a0Absolutely. Interesting lectures and very fair workload. ",
+            "\u00a0Yes, the amount and type of information passed-along in this course has been invaluable. ",
+            "\u00a0Absolutely! Metabolism is a part of every single cell-based experiment that is done. You always have to account for changes in metabolism, and this course taught me some of the primary mishaps that occur in mainstream journals that I should look out for. I think in time, it will become truly a great class. ",
+            "\u00a0Definitely yes. What I have learned in this course is very useful not just from the material and concepts but also on how to analyse papers in general. ",
+            "\u00a0I will recommend this course to the student who wants to study metabolism. "
+        ]
+    ]
+}

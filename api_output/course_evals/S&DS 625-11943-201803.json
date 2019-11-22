@@ -1,0 +1,82 @@
+{
+    "crn_code": "11943",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            5
+        ],
+        [
+            0,
+            1,
+            3,
+            1,
+            3
+        ],
+        [
+            0,
+            3,
+            1,
+            1,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Understanding of statistics and applying them to datasets; data cleaning and reporting; coming up with test statistics and significance levels. ",
+            "\u00a0Coding, data analysis ",
+            "\u00a0How approach real-world problem. ",
+            "\u00a0ability to understand data, handling data, and work with different techniques of data anlytics. The class was very helpful and infomative. I learned a lot about coding and dealing with real life research questions. ",
+            "\u00a0Developed statistical knowledge needed to solve practical problems. "
+        ],
+        [
+            "\u00a0More guidance on what tests to use and why to use those ones; peer review of reports ",
+            "\u00a0strengths: we are free to choose different approaches ",
+            "\u00a0The course was very small in size compared to other classes which enabled design of the courses to be very intimate and connected. We worked as teams and individuals in order to enhance our skills in data analytics. I really enjoyed the format of presentations because it allows students to be engaged and understand works of others. facilitates learning. ",
+            "\u00a0Could strengthen the ability to deal with real-world data and develop practical statistical knowledge. "
+        ],
+        [
+            "\u00a0Its good for people interested in Statistics, but note that its not Data Science and definitely leverages a large body of prerequisite knowledge. ",
+            "\u00a0Yes. ",
+            "\u00a0Yes. Improves your analytic skills. ",
+            "\u00a0this is a really great course for any students who are interested in data analytics and understanding data. however, there are some learning curve. If one is not familiar with R or programming it could be a difficult course. However, this course provide incredible amount of benefit and I would recommend it. ",
+            "\u00a0Yes! "
+        ]
+    ]
+}

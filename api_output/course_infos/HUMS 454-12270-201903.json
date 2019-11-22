@@ -1,0 +1,55 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50208/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Exploration of seven auteurs from Europe and Hollywood, 1937\u00e2\u20ac\u201c1967. Assessment of methods that deepen appreciation of the films and the medium.", 
+    "title": "Interpreting Film Masterpieces", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 18, 
+            "location": "", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 21
+        }, 
+        {
+            "start_time": 13, 
+            "location": "CO451 B-04", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12270", 
+        "listings": [
+            {
+                "number": "454", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEN2\">YC English: 20th/21st Century</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENJ\">YC English: Junior Seminar</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YFIC\">YC FILM Stud: Critical Studies</a></li></ul>"
+    ], 
+    "professors": [
+        "David Bromwich", 
+        "Dudley Andrew"
+    ], 
+    "long_title": "Interpreting Film Masterpieces", 
+    "extra_info": "A"
+}

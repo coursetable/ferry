@@ -1,0 +1,86 @@
+{
+    "crn_code": "11900",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            5,
+            1
+        ],
+        [
+            0,
+            1,
+            6,
+            1,
+            0
+        ],
+        [
+            0,
+            2,
+            4,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I developed a great initial understanding of statistical analysis that I can apply to future endeavors. Additionally, I now know the basics of R, which I can continue to practice and build upon. From the first portion of the class I also used Minitab, although I feel like this is less practical for everyday use. After this class, I feel like I can use what I learned for future projects and research. ",
+            "\u00a0I got a very thorough introduction to statistics, and now I feel as if I have a good basic understanding of fundamental techniques of statistical analysis. I got lots of opportunities to practice applying the principles on homework and feel like I gained knowledge I can use in the future to analyze research data. ",
+            "\u00a0A new way of thinking and how to code in R ",
+            "\u00a0I learned how to use r and statistical analysis. I also learned real life applications of the material ",
+            "\u00a0A more solid understanding of statistical principles and analytical techniques appropriate for research in the life sciences (especially relating to ecology). ",
+            "\u00a0I learned how to use ANOVA and regression analysis on a variety of biologically relevant data sets. I also received an excellent introduction to R programming for statistical tests. "
+        ],
+        [
+            "\u00a0I absolutely loved the second half of the course, the life sciences portion. The lectures were very engaging and straightforward with helpful examples to aide in my understanding. Also, I was thrilled to have the opportunity to learn R, which I know will be a useful skill for the future. Admittedly, the first half could have been better. The lectures were not very engaging for me, and while I like the professor, I feel like we jumped around the point a lot and that the examples were not as interesting and helpful as they could have been. Also, I was very annoyed with the grading of the problem sets because I worked really hard and followed the guidelines closely, but lost a lot of points for \"not showing enough work\" despite including all of my calculations. It is frustrating to get a low grade when all of my answers are correct, especially when I worked really hard and utilized class resources such as office hours. ",
+            "\u00a0Even though there was a lot of material and we had to go quickly, I never felt overburdened by the course load. I was happy to learn as much as possible, and I think the way the subjects in the course were ordered flowed well. The material was very digestible despite the abundance of material. I also thought the homeworks were very helpful in allowing us to apply concepts to practical scenarios and analyze real data. ",
+            "\u00a0I liked how the second half had smaller office hours ",
+            "\u00a0I think the course was fine, and helped me learn the material adequately. ",
+            "\u00a0The first half of the course, which was set in a large lecture hall, often felt impersonal. During the second half of the semester, my section was much smaller and it was easier to cultivate a relationship with both the professor and TF. I think that if both halves of the class were taught in smaller sections, the course would feel more accessible to students. ",
+            "\u00a0The strengths of this course are the fascinating biological applications of the statistical concepts we learned, the professor's enthusiasm and knowledge about the material, and the DataCamp website exercises for R programming. The weakness of this course is that it is too short to delve in-depth into higher level statistical concepts and also into R programming. "
+        ],
+        [
+            "\u00a0Yes, especially the Life Sciences section! Although the class description was a bit misleading (the topics are mostly ecology-based; we did not cover topics like genetics or epidemiology as promised), it turned out to not matter because I thought the information learned was generally applicable and very practical. Unlike other sections, we learn R, which is extremely useful to know, and was taught in a way that was not overwhelming. I thought the lectures of the second half were far more interesting and engaging than the first half. ",
+            "\u00a0I would recommend this course to any student who wants a really comprehensive introduction to statistics because that is what this course delivers. ",
+            "\u00a0Yes, I learned a lot ",
+            "\u00a0If you are genuinely considering a career in scientific research, knowing statistics is a must so you should definitely take a class. I was able to understand my lab meeting presentations much better after this course. ",
+            "\u00a0Yes, as an introductory course in basic statistical methods. If you have already taken AP Statistics, there will probably be a lot of review. The course is well-organized and all information is presented clearly, though fast-paced. ",
+            "\u00a0Yes, I would recommend this course to any student interested in learning about ecological applications of statistics and R programming. "
+        ]
+    ]
+}

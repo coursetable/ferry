@@ -1,0 +1,98 @@
+{
+    "crn_code": "21767",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            8,
+            5
+        ],
+        [
+            0,
+            1,
+            3,
+            6,
+            6
+        ],
+        [
+            0,
+            1,
+            4,
+            3,
+            8
+        ],
+        [
+            0,
+            0,
+            3,
+            6,
+            7
+        ],
+        [
+            0,
+            1,
+            5,
+            8,
+            2
+        ],
+        [
+            0,
+            1,
+            6,
+            5,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0One of the best labs on campus with advanced and really interesting labs. The one-on-one support from teachers particularly makes this lab stand out compared to 205L/206L. In addition, this lab is designed with a lot of flexibility for students to pursue their own directions within the lab. While this can make debugging issues challenging, it also very closely mimics actual research and provides a very interesting targeted learning environment. ",
+            "\u00a0I developed so many skills and obtains so much knowledge! I learnt many technical skills (mostly in simulation/data analysis) and became further acquainted with optomechanics. It was very cool to apply my theoretical understanding of physics to experiments which enabled me to see those theories describe observations in the real world. ",
+            "\u00a0Physics 382L was my favorite class this semester by far. I have spent the last two and a half years as a Physics Major rewiring my brain with mathematical formalisms. I took this class at a time when I started to think seriously about falsification and how empirical methodology accesses information about reality. My lab classes, and this class in particular, are how I keep myself and all my theoretical training tethered to reality. I can go back and look at data I took and say, yes, the models I have been taught do seems to accurately predict this is a way that previous models could not have. I can see in this data the results of structure at a scale far smaller than I can directly observe.\r\nIn 382L I did three labs with a lab partner: Pulsed NMR, Ising Model, and Laser Cooling and Trapping of Neutral Atoms. All three allowed me to directly take what I learned in Quantum I and II and see directly how it related to my data, or how simulating based on the theory I have learned predicts results and structure that could be observed.\r\nI also learned a lot of skills. I got better at coding, both building simulations and doing image processing to extract data. I got a lot better at LATEX. After this class I compared my final formal report to my first lab report from 205L and was shocked at how much my ability to communicate science has improved. ",
+            "\u00a0More insight into three physics experiments, as well as data collection and analysis skills. ",
+            "\u00a0I developed knowledge on many key experiments in physics: Bell's Inequality, the Ising Model, and Rubidium Spectroscopy. These labs helped develop my problem-solving and collaboration skills. The course pushed me to put in practice good documentation. Overall, it taught me to organize and present scientific information in a simple, understandable manner. ",
+            "\u00a0I gained experience with note keeping, writing well structured reports and various methods of data analysis. ",
+            "\u00a0Learned laboratory and data analysis skills. Learned how to write and present a lab report and presentation. ",
+            "\u00a0The course provided a really good opportunity to do laboratory experiments more independently than earlier courses. This was also my first exposure to writing reports in a journal format, which was really useful. ",
+            "\u00a0This class reinforces the planning-research-data analysis-report/presentation cycle for physics students. Having worked in research for most of my summers, I didn't anticipate learning much. However, repeating the cycle three times during highly-structured, relatively fast-paced labs with clear instructor support and feedback helped me learn to better organize my work, both on paper in my notes and writing, but also mentally, in my research-planning phase. "
+        ],
+        [
+            "\u00a0Strengths: Advanced level of labs, one-on-one time with instructors, challenging practical and theoretical aspects\r\nWeaknesses: Not sufficient number of instructors, ie, some profs are split between many labs and hard to locate. Error analysis, while important, is often not thoroughly discussed - the extra lecture on Chi-Squared is good, but perhaps some kind of systematic advanced statistical analysis book specific for regressions might be helpful. Sometimes, there isn't clear direction on the purpose of the lab until quite a bit in. Also, it always feels like there's not enough time. Maybe having some \"optional\" sections might be of use... ",
+            "\u00a0The Ising Model is a terrible lab. It is not meaningfully related to things we see in lectures and is such a tedious lab to go through. It assumes background knowledge in Python that was not mentioned as a pre-req for the class. It may be a good idea to provide students with a brief tutorial on how to fit with Python (it would have been so much easier for us if we had known right from the start that we could bound the fitted parameters). But again, such a tedious and boring lab. ",
+            "\u00a0I do not believe that the current structure of this course, in which all reports are pair-written and grades are assigned jointly, facilitates student learning, given that it is intended to improve students' ability to write scientific papers. There is little incentive for work to be distributed equitably between lab partners, and no clear mechanism for handling situations in one student fails to complete their portion of the work, in which case both are penalized. Additionally, if one of the goals is to improve students' ability to give scientific presentations, I would suggest that students present multiple times throughout the term instead of just once at the end, as gaining extensive experience in giving presentations is possibly one of the more effective methods to improve presentation skills. ",
+            "\u00a0The fact that you collaborate with your lab partner to write the final report is the best thing about the organization of this class (other than the actual science). Additionally, the focus on just three labs really allowed me to take the time to understand what I was doing in a way I absolutely did not in intro labs. The demand for high quality work felt reasonable in this context, and I happily spent significant time outside of class to make that happen. It was unfortunate that the class was at the same time as the physics club talks as I always try to go to those so I hope the class is rescheduled next year. Also while I enjoyed the Ising lab, I know not everyone did. As there are so many options and labs I wanted to do, it would have been nice to choose three experimental labs. ",
+            "\u00a0Strengths: The labs are cool, and you get to choose which ones you want to do. Having more time to complete each of the labs meant that you could actually get what was going on by the end, and think things through a lot more. There's a lot of support throughout, through the TAs and the professors, which is really effective as well. \r\n\r\nWeaknesses: Could use constructive feedback on the oral presentation, so we know how to improve our presenting skills in the future. Error analysis could also be approached more rigorously, because we got stuck on that sometimes. I would suggest submissions of Jupyter lab notebooks with markdown for the more data-analysis-heavy labs, rather than keeping a manual lab notebook. The data should be made available, and analysis methods super transparent, as these practices would be good to have should students pursue computational lab work in the future. Also, for Ising, giving the whole class a common platform and environment to work with (JupyterHub? Grace is good too tbh) would be very convenient. It cuts down on the time spent trying to work out the software downloads and compatibility issues, so more time can be spent doing/understanding the lab. ",
+            "\u00a0Strengths: very helpful and caring professors, very clear feedback, diverse set of laboratories. Formal Report and Presentation.\r\nWeaknesses: Ising Model was difficult and favored coding experience. I would not have that experiment be required for those reasons. ",
+            "\u00a0On the whole, the course was good. One main weakness for me was that while the course tried to teach us how to write scientific papers, there was surprisingly little guidance for writing the papers. Feedback was primarily about various corrections to grammar, sentence structure, minor mistakes, etc. I did not feel as though I was receiving clear feedback on whether I was writing a good report with appropriate structure and clear language. ",
+            "\u00a0A strength of the course is that it allows for students to choose lab according to their own interests and make it enjoyable for students to explore each lab on their own. ",
+            "\u00a0The labs themselves were very interesting with a fair bit of open exploration for some of them. ",
+            "\u00a0The student-driven approach to the lab experiments was definitely a strength of the course, as was the level and amount of feedback received on lab reports. ",
+            "\u00a0I think the variety of labs and autonomy permitted to students during the labs are both strengths of this course. I would encourage clearer feedback, especially during the first 4 weeks (before any written report has been submitted): perhaps student teams should have a sit down meeting with an instructor at the 2 week mark to report progress, discuss plans, and receive feedback. This initial period before any notebook, draft submission, or report writing was certainly the most uncertain period for my partner and I on each new lab.\r\n\r\nImportantly: I am a student who feels very comfortable with programming, both for data analysis and collection. It is not actually a requirement of the physics major right now that any physics student gain any programming skills, but this lab certainly requires a strong level of comfort (in particular, Bell's Inequality demands comfort with programming, as did Optical Tweezers as my lab partner and I experienced it). It would be good to either consider how to accommodate students who do not have programming experience, or advertise the strong suggestion that students take programming classes before this course. "
+        ],
+        [
+            "\u00a0Absolutely. Most likely, if you're taking this, you're in the physics major. However, I would strongly encourage people from all disciplines to check out this class. It really is a wonderful physics lab and you get to do really interesting work that typically isn't seen outside of an actual research laboratory. ",
+            "\u00a0I would recommend this course if the Ising Model was not required as a lab. This Ising Model is not interesting, not fun, and super tedious to go through. The other labs are however a lot of fun. You enjoy a greater amount of freedom in the lab and learn how to navigate the lab on your own. Some of the labs are have also really cool results (e.g. one of the lab consists in showing that Bell's Inequality does not hold, which is a very historical experiment). The class is however a lot of work (the lab reports were all around 20 pages single-spaced (with graphs and such, but still; our final report was 7000 words). There is a final presentation in front of the profs and the TAs, which I thought was a great idea (explaining stuff orally clearly and succinctly is much harder than it seems) ",
+            "\u00a0This is a really fun course. However, it also is 6 hours of lab per week. So if you are interested in doing some really cool labs and have enough time on your hands, go for it! ",
+            "\u00a0TAKE 382L! Don't just take it because you have to for the intensive major, take it because its the best class. Did you come out of Quantum thinking \"Oh boy I wish I could actually do the Bell Inequality experiment and show that hidden variables do not explain observed phenomena\"? You can do that. Do you want to actually put perturbation theory to work? Do you want to see Zeeman Splitting and Hyperfine Structure? Do you want to learn a lot more about Fermi Levels and junctions and superconductivity? All here. Have you started thinking seriously about falsification and how empirical methodology accesses information about reality? This class will keep you sane!\r\nYou only do three labs over the course of the semester and you get to write the reports with your lab partner. The quality of work that is expected is much higher, but you really have the time to do that and understand what you are doing. ",
+            "\u00a0You know why you're here, so we can get that out of the way. \r\n\r\nSecondly, of the labs you get to choose, I recommend quantum error correction, laser cooling, and superconducting tunnel junctions. They're very cool and well-taught. Also, Prof Lamoreaux is a force in the lab, and watching him repair your broken experiment is nothing short of magical. ",
+            "\u00a0Yes, this is great course to gain exposure to physics writing and collaboration. It also puts into practice good habits. ",
+            "\u00a0I would recommend this course to any student who is interested in exploring a small set of subjects in depth for the three experiments that are done during the semester.  If the time given during lab sessions are utilized well good progress can also be done in writing drafts for the experiment.  I'd recommend that any student who decides to take the course should treat the lab notebook seriously to keep track of their progress and next directions! ",
+            "\u00a0This is a mandatory lab class for the intensive physics major. Would be surprised if someone not majoring took this class. Would recommend taking other physics classes instead if interested in the subjects. ",
+            "\u00a0I would absolutely recommend this as an opportunity to work in a more student-driven lab setting outside of actual research. I definitely got a lot out of this lab course. ",
+            "\u00a0Despite not generally enjoying lab courses, I really felt this was an excellent lab class. The labs are far more interesting than any I've worked on before, and treating each one as a substantial project (3-5 weeks per lab) was a change in format that allowed me to better understand and get invested in the labs. I learned a great deal about formatting results, and feel much more comfortable preparing academic work in article format. "
+        ]
+    ]
+}

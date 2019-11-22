@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48665/assignments/syllabus", 
+    "requirements": "Prerequisite: ECON 122.", 
+    "description": "Changes in the contours of policy making by central banks since the turn of the twentieth century. Theoretical and policy perspectives as well as empirical debates in central banking. The recurrence of financial crises in market economies. Monetary policies that led to economic stability in the period prior to the collapse of 2007\u20132008.\u00a0Changes in Monetary Policies since the Great Financial Crisis.\nPrerequisite: ECON 122.", 
+    "title": "Evolution of Central Banking", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WLH 003", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12192", 
+        "listings": [
+            {
+                "number": "254", 
+                "subject": "EP&E"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEP4\">YC EP&amp;E Economics Core</a>"
+    ], 
+    "professors": [
+        "Rakesh Mohan"
+    ], 
+    "long_title": "Evolution of Central Banking", 
+    "extra_info": "A"
+}

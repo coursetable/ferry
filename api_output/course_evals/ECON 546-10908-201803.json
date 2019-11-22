@@ -1,0 +1,98 @@
+{
+    "crn_code": "10908",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            6,
+            9,
+            6
+        ],
+        [
+            0,
+            4,
+            4,
+            8,
+            5
+        ],
+        [
+            1,
+            1,
+            3,
+            11,
+            5
+        ],
+        [
+            1,
+            0,
+            9,
+            6,
+            5
+        ],
+        [
+            0,
+            0,
+            4,
+            13,
+            4
+        ],
+        [
+            0,
+            0,
+            9,
+            9,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to look at concepts through analytical models ",
+            "\u00a0macro techniques but from a growth/development perspective ",
+            "\u00a0knowledge of new macroeconomic models and pertinent mathematical skills ",
+            "\u00a0I learned lots of macroeconomics model and the ability to compare different models. ",
+            "\u00a0Growth models ",
+            "\u00a0I learned various models that were useful to understand macroeconomic phenomena. I especially enjoyed professor Zilibotti's explanation of growth in China. ",
+            "\u00a0concepts relevant to understand grand macro questions ",
+            "\u00a0Basic knowledge of Macroeconomics. ",
+            "\u00a0Developed skill in macroeconomics ",
+            "\u00a0advanced macro level understanding of productivity and the relative factors ",
+            "\u00a0Macro insights and knowledge about the professor's research in China ",
+            "\u00a0Macro econ concepts. "
+        ],
+        [
+            "\u00a0Strengths - Fabrizio is a great professor and he really tries to make concepts accessible to all levels of learners. \r\nImprovements - Not providing solutions to problem sets except in-person during TA sessions makes revision for exams really hard. With a limited time in the TA session to cover often lengthy problem sets, most solutions are glossed over and only areas where a majority of the class is confused get addressed. ",
+            "\u00a0Interesting topics\r\nGood mix of empirical evidence \r\nAnswers should be provided with problem sets - makes it very difficult to learn \r\nStructure of the final exam should be accurately communicated beforehand ",
+            "\u00a0More explanation/labeling of variables in the course powerpoints ",
+            "\u00a0Strengths: The material is very abundant ",
+            "\u00a0Very patient TA and professor ",
+            "\u00a0The strengths include professor Zilibotti's clarity and wilingness to answer questions without leaving any stone unturned. He also recommended a few papers that I found quite interesting. I would prefer that this course be less presentation-based, as it was sometimes hard for me to follow the quantitative content. I would also add more content on the study of growth in middle and low income countries. ",
+            "\u00a0The strength of the course was its broad coverage. I learned various topics regarding the development macroeconomics.\r\nHowever, at the same time , the course just covered the introductory part of each topic. Some important topics could be dug down deeper for more advanced understanding. ",
+            "\u00a0Useful course, deep survey of macroeconomic methods, strong teaching and TA ",
+            "\u00a0The instructor's slides are very sketchy. They are not detailed enough to enable a student to revise adequately. He has asked us to supplement with a book but then again, there are some topics which are there just in his slides and not the given books. "
+        ],
+        [
+            "\u00a0If you want to learn about macro theory and have a background in macro already, then this a good course to take but you will struggle with the analytical parts if you have not previously done some more advanced math classes ",
+            "\u00a0Yes if interested in subject matter ",
+            "\u00a0Yes! This course is really interesting! ",
+            "\u00a0Would appreciate more engagement than PS and lectures ",
+            "\u00a0I highly recommend this course. ",
+            "\u00a0Yes ",
+            "\u00a0I recommend this course for students who are interested in development economics and macroeconomics. ",
+            "\u00a0Certainly. ",
+            "\u00a0Would recommend only if interested in macro "
+        ]
+    ]
+}

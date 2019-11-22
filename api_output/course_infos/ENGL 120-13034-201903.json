@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49726/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Close reading of great nonfiction prepares students to develop mastery of the craft of powerful writing in the humanities and in all fields of human endeavor, within the university and beyond. Study of some of the finest essayists in the English language, including James Baldwin, Joan Didion, Leslie Jamison, Jhumpa Lahiri, George Orwell, David Foster Wallace, and Virginia Woolf.\u00a0Assignments challenge students to craft persuasive arguments from personal experience, to portray people and places, and to interpret fundamental aspects of modern culture.\u00a0Preregistration required; see under English Department.", 
+    "title": "Reading and Writing the Modern...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "YK212 004A", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 11, 
+        "oci_id": "13034", 
+        "listings": [
+            {
+                "number": "120", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Barbara Riley"
+    ], 
+    "long_title": "Reading and Writing the Modern Essay", 
+    "extra_info": "A"
+}

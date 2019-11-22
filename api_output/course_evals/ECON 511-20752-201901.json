@@ -1,0 +1,92 @@
+{
+    "crn_code": "20752",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            1,
+            9,
+            4
+        ],
+        [
+            1,
+            1,
+            2,
+            7,
+            4
+        ],
+        [
+            0,
+            1,
+            0,
+            7,
+            7
+        ],
+        [
+            0,
+            2,
+            2,
+            11,
+            0
+        ],
+        [
+            0,
+            2,
+            5,
+            6,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            11,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I do think the well--meant attempt of introducing continuous stochastic processes and stochastic calculus in a single 90 minutes lecture is misplaced. I would either spend more time on the material or cut it altogether. The presententation, in my opininon, was not helpful both to students who lacked knowledge about these topic and to students who had previous exposure to the material. While it is understandable that a rigorous treatment would require at least a one semester long course, handwaving about important conceptual issues and presenting proofs that are clearly wrong is --- in my opinion --- not a good way to teach. ",
+            "\u00a0We learned methods and the main models dealing with frictions in the market. ",
+            "\u00a0lots of macro models ",
+            "\u00a0I learned the core models of investment, employment, and money in macroeconomics. I also learned how to code vector autoregressions and stochastic dynamic programming problems. ",
+            "\u00a0investment theory, Stochastic process, diffusion process, labor search, monetary economics ",
+            "\u00a0Monetary economics.\r\nIto-s Lemma.\r\nHow to integrate tools from game theory to macro questions. ",
+            "\u00a0Learned a lot of fundamental and useful tools to study modern macroeconomics. ",
+            "\u00a0I learned a lot about solving dynamic problems with uncertainty "
+        ],
+        [
+            "\u00a0The course was very organized. ",
+            "\u00a0The material and problem sets are very helpful. Sometimes, the pace in the lecture is a bit too fast. ",
+            "\u00a0Clearly the \"world famous\" lecture notes and problem sets by the instructor are not as good as he claims. There are a lot of typos and no natural logical flow between slides. The course material needs to be more structured. ",
+            "\u00a0some parts are not crystal-clear, for instance when analyzing differential equation in q-theory.. ",
+            "\u00a0The core is very well organized and guides the student through the myriad models presented, taking care to force the student to understand the economic intuition behind each model. Along the way, different mathematical and programming techniques are introduced gradually to prepare the student for research. ",
+            "\u00a0I like the materials of the course. ",
+            "\u00a0Too many topics, maybe we can go deeper in some topics instead of briefly looking at several models. ",
+            "\u00a0I loved the breath that the course took to introduce us to various techniques. I would have loved to see more diffusion processes, perhaps in the summer math camp to better understand it. ",
+            "\u00a0The course is structured very well. "
+        ],
+        [
+            "\u00a0If anybody is interested in macroeconomics, this is a course they definitely should take. ",
+            "\u00a0I would recommend this course to people interested in how to model macroeconomic phenomena. ",
+            "\u00a0yes. ",
+            "\u00a0Yes. This is a must for people who want to do macro. ",
+            "\u00a0For the students that want to do some macroeconomic course later, this course is essential. ",
+            "\u00a0Yes. ",
+            "\u00a0Yes. I think one learns techniques and concepts that can be very useful for future work, as well as learning some monetary theory "
+        ]
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49462/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Fundamentals of screenwriting and the current dominant mode of the craft. Theories of story, structure, and character, including Aristotle's analysis of classical drama; screenwriting as both a craft and an art; film's role in the history of storytelling. Students develop an original story idea and write the first act of a feature-length screenplay. Send required writing sample to college.seminar@yale.edu.", 
+    "title": "Classical Storytelling and Mod...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LC 206", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 11
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11982", 
+        "listings": [
+            {
+                "number": "300", 
+                "subject": "CSPC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Brian Price"
+    ], 
+    "long_title": "Classical Storytelling and Modern Screenwriting", 
+    "extra_info": "A"
+}

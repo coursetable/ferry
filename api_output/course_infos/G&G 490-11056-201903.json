@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Two terms of independent library, laboratory, field, or modeling-based research under faculty supervision. To register for this course, each student must submit a written plan of study, approved by a faculty adviser, to the director of undergraduate studies by the end of the junior year. The plan requires approval of the full G&G faculty.", 
+    "title": "Research and Senior Thesis", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11056", 
+        "listings": [
+            {
+                "number": "490", 
+                "subject": "G&G"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Mary-Louise Timmermans"
+    ], 
+    "long_title": "Research and Senior Thesis", 
+    "extra_info": "A"
+}

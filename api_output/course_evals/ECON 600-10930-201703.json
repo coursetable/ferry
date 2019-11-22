@@ -1,0 +1,80 @@
+{
+    "crn_code": "10930",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Major topics for research in IO, methods used extensively in IO. ",
+            "\u00a0Learned to read papers about IO, and also to replicate some of the techniques used in those papers in Matlab. ",
+            "\u00a0Knowledge of techniques used in IO like BLP ",
+            "\u00a0BLP, auctions, horizontal mergers, endogenous product choice, production functions "
+        ],
+        [
+            "\u00a0This course is extremely well structured and there is a very clear flow in the topics. Even within a topic there is a clear flow as to how research has evolved. ",
+            "\u00a0Great at teaching you IO. ",
+            "\u00a0Strength - great professors , good coverage of papers , \r\nWeakness - none ",
+            "\u00a0It was perfect "
+        ],
+        [
+            "\u00a0Yes, especially if someone is interested in learning the frontier methods in IO, that can be used elsewhere as well. ",
+            "\u00a0Yes, take this course if the material is interesting to you and you have exhausted the undergrad micro theory/IO courses. ",
+            "\u00a0Yes ",
+            "\u00a0Absolutely, great professors "
+        ]
+    ]
+}

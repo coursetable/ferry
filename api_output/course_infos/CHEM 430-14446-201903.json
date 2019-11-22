@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51889/assignments/syllabus", 
+    "requirements": "Prerequisites: CHEM 328 or 332, and CHEM 333, or permission of instructor.", 
+    "description": "The fundamentals of statistical mechanics developed and used to elucidate gas phase and condensed phase behavior, as well as to establish a microscopic derivation of the postulates of thermodynamics. Topics include ensembles; Fermi, Bose, and Boltzmann statistics; density matrices; mean field theories; phase transitions; chemical reaction dynamics; time-correlation functions; and Monte Carlo and molecular dynamics simulations.\nPrerequisites: CHEM 328 or 332, and CHEM 333, or permission of instructor.", 
+    "title": "Statistical Mechanics and Ther...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "SCL 21", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14446", 
+        "listings": [
+            {
+                "number": "430", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Victor Batista"
+    ], 
+    "long_title": "Statistical Mechanics and Thermodynamics", 
+    "extra_info": "A"
+}

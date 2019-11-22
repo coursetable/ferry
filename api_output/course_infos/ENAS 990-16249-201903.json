@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Faculty-supervised individual projects with emphasis on research, laboratory, or theory. Students must define the scope of the proposed project with the faculty member who has agreed to act as supervisor, and submit a brief abstract to the director of graduate studies for approval.", 
+    "title": "Special Investigations: Magnet...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 41, 
+        "oci_id": "16249", 
+        "listings": [
+            {
+                "number": "990", 
+                "subject": "ENAS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Hong Tang"
+    ], 
+    "long_title": "Special Investigations: Magnetostrictive Fiber-Cavity", 
+    "extra_info": "A"
+}

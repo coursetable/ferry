@@ -1,0 +1,80 @@
+{
+    "crn_code": "10762",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            1,
+            2
+        ],
+        [
+            0,
+            1,
+            3,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            2,
+            4,
+            0,
+            1
+        ],
+        [
+            0,
+            1,
+            5,
+            0,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Basic knowledge of literary Chinese grammar, read some ancient texts, developed an appreciation for ancient Chinese. ",
+            "\u00a0Literary Chinese ",
+            "\u00a0Understanding of the grammar and vocabulary of literary Chinese. A sense of the scholarship of literary Chinese texts. ",
+            "\u00a0I learned the essential grammar of literary Chinese, was introduced to a basic vocabulary, and read several authentic materials. I also developed translation and interpretation skills across the course that will be incredibly useful for learning any language. "
+        ],
+        [
+            "\u00a0The course was very well structured to facilitate increasing familiarity with the classical Chinese grammar framework. Quizzes and tests were always very fair and straightforward. ",
+            "\u00a0It's a great class. ",
+            "\u00a0I enjoyed this class: the strengths were that the course material was interesting and the instruction very clear.\r\n\r\nThat said I wish I had the chance to read more. The way we went through each text word by word meant that it would have been infeasible to do any more (or at least it would have been a lot of work). Maybe decreasing the amount of translation/word-by-word analysis and increasing the amount of reading for comprehension would have helped me get a better \"sense\" of literary Chinese simply through exposure. ",
+            "\u00a0The course does an excellent job at introducing the basics of Literary Chinese. By the end, I feel comfortable reading most material if presented with a glossary for more obscure nouns. The textbook stories are all fascinating, and the grammar breakdowns were generally helpful, but the textbook definitely felt lacking in the second half of the semester, when sentence structures became much more complex. Professor Lin helped considerably in showing literal breakdowns of more difficult passages. Professor Lin structured the class well by having students do grammar homework alongside translations for the first half of the semester and focus on lengthier translations in the second. The class was extremely divided in terms of preparation, which almost half of the class being native speakers of Chinese who had previously been exposed to Literary Chinese, but Professor Lin did an excellent job considering the different backgrounds of everyone and even offered extra sessions for the more advanced students that were always open for auditing by anyone interested. "
+        ],
+        [
+            "\u00a0Yes, if you are interested in literary Chinese, either as a tool to read texts, or purely for linguistic interest. ",
+            "\u00a0Yes if you want to learn more about ancient Chinese grammar. ",
+            "\u00a0Would recommend this course to anyone interested in literary Chinese. The workload is reasonable and I learned a lot. ",
+            "\u00a0I would definitely recommend the course to someone who has just returned from a Light Fellowship or has an advanced-low command of Chinese or better. I was nervous about using traditional characters and not having enough character knowledge for the class, but glossaries are provided in the textbook for every character, and the only character writing required is for memorized proverbs that are announced ahead of weekly quizzes. The class won't improve your Chinese speaking abilities (since it's taught in English), although we had several sessions in Chinese that were a lot of fun (there should be more of those!) and I made a lot of great friends in the class with native fluency in Chinese to practice with. You'll read EXCELLENT ancient stories from the early period of China, and learning literary Chinese unlocks almost 3,000 years of literature, philosophy, history, and political theory from all across East Asia. Learning literary Chinese also helps tremendously with modern Chinese. You'll learn why certain words carry certain meanings, how words and grammar structures have changed over time, why  (sword and shield) means \"contradiction,\" and so much more. "
+        ]
+    ]
+}

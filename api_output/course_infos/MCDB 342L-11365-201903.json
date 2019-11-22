@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50477/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A project from a research laboratory within the MCDB department, using technologies from molecular and cell biology. Laboratories meet twice a week for the first half of the term.\nConcurrently with or after MCDB 202, 205, or 300. Enrollment limited. Special registration procedures apply; students should contact the instructor during January of the year you intend to take the course.\n\n0.5 Yale College course credits", 
+    "title": "Laboratory in Nucleic Acids I", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "SCL 148", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11365", 
+        "listings": [
+            {
+                "number": "342L", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kenneth Nelson"
+    ], 
+    "long_title": "Laboratory in Nucleic Acids I", 
+    "extra_info": "A"
+}

@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Enrollment limited to Literature majors.", 
+    "description": "Special projects in an area of the student's particular interest set up with the help of a faculty adviser and the director of undergraduate studies. Projects must cover material not otherwise offered by the department, must terminate in at least a term paper or its equivalent, and must have the approval of the director of undergraduate studies.\nEnrollment limited to Literature majors.", 
+    "title": "Directed Reading and/or Indivi...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11231", 
+        "listings": [
+            {
+                "number": "488", 
+                "subject": "LITR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Moira Fradinger"
+    ], 
+    "long_title": "Directed Reading and/or Individual Research", 
+    "extra_info": "A"
+}

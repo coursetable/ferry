@@ -1,0 +1,75 @@
+{
+    "crn_code": "21287",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            0
+        ],
+        [
+            1,
+            3,
+            1,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained a much deeper understanding of gene networks, along with a greater understanding of general elements involved in gene expression. The class is structured so that papers build upon each other, allowing the student to read and interpret contemporary literature in systems biology by the end of the class. Overall, a student will gain a solid background in understanding the aims and designs of studying gene networks. ",
+            "\u00a0I learned about systems biology! "
+        ],
+        [
+            "\u00a0The primary strength of the class is that a student will gain a solid background in systems biology, an area of study that may seem intimidating at first glance. The workload is low, but it is a sufficient means for students to digest the weekly material. The class also involves a student to lead a discussion on a specific piece of literature, and Professor Acar facilitates the discussion whenever a certain part of the paper is outside the scope of the presenter's understanding. ",
+            "\u00a0Strength: great professor and TA, lovely classmates, low-stress while still learning a great deal about systems biology\r\nWeakness: could be made more interactive "
+        ],
+        [
+            "\u00a0I would highly recommend this course to any student with a background in MCDB, statistics, physics or anyone interested in learning how quantitative approaches can be applied to biology. The course is NOT limited to students with strong backgrounds in quantitative biology, math, stats, etc. While the papers for this course can be challenging to read on the first go, the course is set up so that many of the mathematical models or functions are thoroughly explained by Professor Acar in class. The bulk of the workload consists of writing a one-page report after each weekly paper, and any lingering questions about the papers can be addressed to Professor Acar. The only downside to this class is that it is on a Friday afternoon, but Professor Acar's availability and personal investment in ensuring students are able to grapple with the material make up for the Friday class time. Would highly recommend the course, especially for any MCDB majors who are looking to take an upper level MCDB course. ",
+            "\u00a0Yes, it's a great way to learn about systems biology without any previous background the subject! ",
+            "\u00a0Yes, great class. "
+        ]
+    ]
+}

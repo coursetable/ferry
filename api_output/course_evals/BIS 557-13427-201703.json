@@ -1,0 +1,109 @@
+{
+    "crn_code": "13427",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's <b>sensitivity to students and ability to provide students with adequate feedback</b> was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            12,
+            5
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            14
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            14
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            16
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a012 ",
+            "\u00a020 hours per week ",
+            "\u00a04 ",
+            "\u00a020 ",
+            "\u00a07 hours. ",
+            "\u00a012 ",
+            "\u00a012 ",
+            "\u00a04.5 ",
+            "\u00a015 ",
+            "\u00a014 ",
+            "\u00a05 hours ",
+            "\u00a030 ",
+            "\u00a010-20 depending on the problem set ",
+            "\u00a024 ",
+            "\u00a010 ",
+            "\u00a010 "
+        ],
+        [
+            "\u00a0Very good course, much work but felt stills improving all semester. Would highly recommend to anyone interested in future work in statistics. ",
+            "\u00a0Strength: Wonderful lectures.\r\nWeakness: Hard homework without solutions, which makes it very hard to understand which parts go wrong. ",
+            "\u00a0Very good. You can definitely learn a lot. ",
+            "\u00a0could be improved by going through how to code the examples we go over in class ",
+            "\u00a0pros:introduced a lot of tools in computational statistics.\r\ncons: not very theoretical. ",
+            "\u00a0The lectures are well organized, informative and easy to understand. The lectures and the homework keep a good balance between theories and application (like programming), and maintain an appropriate workload. I actually don't have a very clear suggestion for improvements for now. ",
+            "\u00a0Very useful course! ",
+            "\u00a0Awesome! ",
+            "\u00a0This course is super good in terms of computational stat, it covers all the important algorithms, which is extremely helpful for the research. ",
+            "\u00a0This course helps me learn a lot about computational skills. I think it is perfect! ",
+            "\u00a0strengths: interesting/revelant materiel, weakness: sometimes tested on topics not covered in class. ",
+            "\u00a0This is an excellent course.  The instructor is an engaging speaker and is able to explain concepts that could be confusing in a very straightforward and clear way, such that they seem quite intuitive. The problem sets and exams are challenging but reasonable, and everything that one might need to know to solve them is included in the course.  The instructor and teaching fellow made themselves very available outside of class time so that we had every opportunity to ask the questions that we needed to.  I would highly recommend this course to another student. ",
+            "\u00a0Well organized \r\nSometimes hw is not related to learning materials "
+        ],
+        [
+            "\u00a0Instructor was very helpful and clear in lectures and available for office hours. ",
+            "\u00a0Strength: Good lecturing.\r\nWeakness: No typed notes and homework solutions, which makes this course inefficient. ",
+            "\u00a0Great instructor. Very patient and intelligent. Also funny. ",
+            "\u00a0Dr. Crawford explains everything clearly. He is patient and responsible. ",
+            "\u00a0Prof. Crawford is excellent. His class is very helpful. ",
+            "\u00a0Dr. Crawford gives the lectures in an interesting way. He is very accessible and responsive to our questions. And also, his hand-drawn 3D plots are impressing. ",
+            "\u00a0Very nice instructor! Very inspired for different approaches. ",
+            "\u00a0Awesome! ",
+            "\u00a0He is so good at explaining the ideas of different computational methods and so nice. ",
+            "\u00a0I really like Dr. Forrest's style! He's an intelligent and kind instructor. I appreciate his help! ",
+            "\u00a0great professor, helpful office hours, good at explaining theoretical topics. ",
+            "\u00a0The instructor's teaching style was great - his explanations of both concepts in the course and the expectations in the course were always very clear.  The course is well-designed in the sense that the problem sets ensured that we grasped the important ideas taught in the class and were able to use them. ",
+            "\u00a0Great instructor\r\nOrganized and knowledgeable ",
+            "\u00a0His explanation is very clear and easy understood "
+        ],
+        [
+            "\u00a0A lot of work and challenging, but will learn a lot. Would recommend to a serious student. ",
+            "\u00a0Great course if you want to enhance your computational skills. Very useful techniques and the homework problem settings are very realistic. ",
+            "\u00a0You can learn a lot by finishing assignments. Great course overall. ",
+            "\u00a0Great course! Yes. ",
+            "\u00a0An interesting and easy-to-understanding introduction to statistical computing theories and techniques. I would recommend it to students who are interested in, or who need, skills in related fields. ",
+            "\u00a0Great class! Useful Techniques ",
+            "\u00a0I think every computational guy should take this course, in the future, you will definitely use something from this course. ",
+            "\u00a0I would recommend this course to another student. It's helpful and interesting! ",
+            "\u00a0best class I've taken ",
+            "\u00a0See question 6. ",
+            "\u00a0Great course, learnt a lot of important topics "
+        ]
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "crn_code": "23385",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            3
+        ],
+        [
+            0,
+            2,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            5,
+            0
+        ],
+        [
+            0,
+            2,
+            4,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0how to think about the US healthcare system and reforms, how to critically analyze past reforms in the US sand other countries ",
+            "\u00a0Historical overview of American health care, analysis of the constraints of the current health care system, comparison to health care systems abroad and possibilities for universal health care. ",
+            "\u00a0Historial, political, and economic perspective on health care reform after the passing of the ACA "
+        ],
+        [
+            "\u00a0I think it may have been better suited as a lecture. Professor Aviles is SO knowledgeable about health care, so sometimes it was frustrating to not hear much from her. ",
+            "\u00a0Strengths:\r\n-Excellent spread of reading load and course plan/design\r\n-Engagement with Professor/mini-lectures\r\n-Structure of assignments ",
+            "\u00a0Could have used a better understanding of ACA before learning the historical perspective. I think the last book should have come first. Writing memos without the whole picture made me feel uninformed and distrust my own argument.\r\n\r\nHighlights of the class were the debates and team activities. "
+        ],
+        [
+            "\u00a0Yes! ",
+            "\u00a0Yes! I learned so much and feel like I can go to DC or state legislatures and discuss health care reform eloquently and with accurate info ",
+            "\u00a0Absolutely! Amazing course with a passionate professor. "
+        ]
+    ]
+}

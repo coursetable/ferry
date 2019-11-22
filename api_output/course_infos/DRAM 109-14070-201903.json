@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51553/assignments/syllabus", 
+    "requirements": "Open to nondepartmental and non-School of Drama students with prior permission of the instructor.", 
+    "description": "This course concurrently develops the precalculus mathematics and physical sciences requisite for advanced study in modern theater technology, and concentrates on the application of statics to the design of safe scenic structures. Assignments relate structural design principles to production applications.\nOpen to nondepartmental and non-School of Drama students with prior permission of the instructor.", 
+    "title": "Structural Design for the Stage", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 12, 
+            "location": "YK220 001", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 13
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14070", 
+        "listings": [
+            {
+                "number": "109", 
+                "subject": "DRAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Bronislaw Sammler"
+    ], 
+    "long_title": "Structural Design for the Stage", 
+    "extra_info": "A"
+}

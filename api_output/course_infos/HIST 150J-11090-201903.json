@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50196/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Exploration of the institutions, movements, and policies that have attempted to provide healthcare for the urban poor in America from the late nineteenth century to the present, with emphasis on the ideas (about health, cities, neighborhoods, poverty, race, gender, difference, etc) that shaped them. Topics include hospitals, health centers, public health programs, the medical civil rights movement, the women\u2019s health movement, and national healthcare policies such as Medicare and Medicaid.\u00a0", 
+    "title": "Healthcare for the Urban Poor", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "BM 013", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11090", 
+        "listings": [
+            {
+                "number": "150J", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHS1\">YC HSHM: Med &amp; Public Health</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHS3\">YC HSHM: Gender, Reprod and Body</a></li></ul>"
+    ], 
+    "professors": [
+        "Sakena Abedin"
+    ], 
+    "long_title": "Healthcare for the Urban Poor", 
+    "extra_info": "A"
+}

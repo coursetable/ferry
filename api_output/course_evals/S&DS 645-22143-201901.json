@@ -1,0 +1,79 @@
+{
+    "crn_code": "22143",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            5,
+            3,
+            1
+        ],
+        [
+            1,
+            0,
+            2,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            5
+        ],
+        [
+            0,
+            2,
+            2,
+            5,
+            0
+        ],
+        [
+            0,
+            0,
+            6,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how techniques in biostatistics could potentially be utilized in my research of astrostatistics. ",
+            "\u00a0This class both failed to teach me new statistical techniques instead choosing to focus more on the results of previous bio papers and applications of these techniques in bio but failed to achieve any degree of depth to make this knowledge useful ",
+            "\u00a0stat method in Bio ",
+            "\u00a0I learned a lot of new things I had never thought about before coming from less experience with Biology. ",
+            "\u00a0Computational biology. "
+        ],
+        [
+            "\u00a0It helps give practical insights into how statistics is commonly applied in biology. Perhaps it could include more real data rather than mostly simulated data. ",
+            "\u00a0The lectures themselves served nearly no purpose. Actually teaching us statistics would be a worthwhile addition. The homework assignments were mostly tedious but they did have a few interesting and challenging questions "
+        ],
+        [
+            "\u00a0Yes, if the student is looking to get more practice using already-known statistical methods. ",
+            "\u00a0No, I don't see any reason to take this course regardless of what you hope to learn or your background. The majority of the students were simply taking it to fulfill their biostats requirements which was clear by the general lack of motivation and interest ",
+            "\u00a0I would recommend this course to another student because it was very interesting and well planned out. ",
+            "\u00a0Yes. "
+        ]
+    ]
+}

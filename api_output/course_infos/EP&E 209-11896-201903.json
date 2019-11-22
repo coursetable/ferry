@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "requirements": "", 
+    "description": "Descriptive and inferential statistics applied to analysis of data from the social sciences. Introduction of concepts and skills for understanding and conducting quantitative research.", 
+    "title": "Introduction to Statistics: So...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "OML 202", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11896", 
+        "listings": [
+            {
+                "number": "209", 
+                "subject": "EP&E"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPST\">YC Poli Sci: Analyt Pol Theory</a>"
+    ], 
+    "professors": [
+        "Jonathan Reuning-Scherer", 
+        "Ethan Meyers"
+    ], 
+    "long_title": "Introduction to Statistics: Social Sciences", 
+    "extra_info": "A"
+}

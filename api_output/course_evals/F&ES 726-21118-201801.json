@@ -1,0 +1,118 @@
+{
+    "crn_code": "21118",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            6,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            8
+        ],
+        [
+            0,
+            0,
+            1,
+            10,
+            3
+        ],
+        [
+            0,
+            0,
+            4,
+            7,
+            3
+        ],
+        [
+            0,
+            0,
+            9,
+            5,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            6,
+            6
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0remote sensing ",
+            "\u00a0how to use ENVI\r\nhow to interpret satellite imagery ",
+            "\u00a0Gained new skills in satellite systems, satellite imagery, analysis of satellite images, remote sensing technology and application ",
+            "\u00a0I learned how to analyze satellite data using ENVI, and practiced some very useful skills and tools. ",
+            "\u00a0I managed to pick up many many tools and skills from this course. Also learnt that this is an emerging and powerful tool that can ease natural resources management effort. Learnt skills such as land cover change analysis, cloud masking, classification etc. ",
+            "\u00a0How radiation and satellite work\r\nHow to collect and process satellite images ",
+            "\u00a0remote sensing fundamentals and software skills ",
+            "\u00a0I gained a very thorough background knowledge of remote sensing and a working knowledge of how to use ENVI. ",
+            "\u00a0In the course I learned fundamentals of remote sensing physics, satellite and sensor technology, digital image analysis and other analytical skills. ",
+            "\u00a0Understanding physics behind satellite operation, imagery production and interpretation\r\nRemote sensing applications across several environmental fields\r\nNew knowledge of several remote sensing products (freely available) for landscape (cover and change) and atmospheric composition interpretation (spatial and temporal variations).\r\nNew program skill: Using ENVI 5.4 for satellite imagery analysis\r\nUsing GIS skills to support remote sensing analysis tasks. ",
+            "\u00a0Understanding of physics of radiation, proficiency with ENVI, understanding of applications of remote sensing technology today across several different domains, understanding of the future potential of remote sensing technology. ",
+            "\u00a0satellite picture interpretation ",
+            "\u00a0remote sensing and satellite imagery management "
+        ],
+        [
+            "\u00a0I would have preferred a greater emphasis on the software. ",
+            "\u00a0It is very much as expected. ",
+            "\u00a0quite well ",
+            "\u00a0Since, I work as forest officer, it can be put into use immediately upon my return to my home country. ",
+            "\u00a0Very well ",
+            "\u00a0this is a very good class, i wish the first half of the class could go slower, and maybe cut 2 guest lectures from the second half of the course. ",
+            "\u00a0The class exceeded my expectations in the amount of information covered, I really enjoyed the large breadth of topics. ",
+            "\u00a0The knowledge, skills, and insights gained in this class was beyond my expectations. ",
+            "\u00a0Greatly aligned with expectations. ",
+            "\u00a0Well. ",
+            "\u00a0aligned well ",
+            "\u00a0Very well "
+        ],
+        [
+            "\u00a0it is a very informative class and you will learn a lot about remote sensing and how to apply the skills in the final project of your choice ",
+            "\u00a0The course covers fascinating material and is taught by three invested professors. The lecture material does not always seem relevant to the labs. I would have preferred greater attention paid to ENVI during lecture. If the professors could demo some advanced techniques beyond the step-by-step labs that would have been exciting and promoted innovation and creativity in lab and final projects. ",
+            "\u00a0It is excellent.\r\nThe lab work is totally focused on the use of software ENVI, it would be useful if could be introduced to other software and resources ",
+            "\u00a0Strengths: The class provides lots of room for freedom and is quite useful\r\n\r\nWeaknesses: the students should get started on our projects earlier (in a formal lab setting with TA's) ",
+            "\u00a0Strengths - almost all tools and concepts seem to be equally important\r\nWeakness - Limited time and lot to to learn makes it stressful at times. \r\n\r\nImprovement - Perhaps, some topics may be dropped, though they are equally important. ",
+            "\u00a0The course was both technical and practical. The lectures and lab works were very effective and hands-on. ",
+            "\u00a0The class really makes you learn. ",
+            "\u00a0I think the class was well organized and followed a logical progression, where we were slowly building on our skills throughout the class. ",
+            "\u00a0The course was a good combination of theory and hand-on skills, and the lab sessions were very helpful. ",
+            "\u00a0This was an excellent course. ",
+            "\u00a0Strengths- really great team of professors and TAs.  It was great to have such a high instructor to student ratio- all of whom were highly engaged in the course and student learning.  I think labs can be improved a bit- I felt that it was easy to follow the lab like a cooking recipe, and not really digest the meat of what was going on.  The real ENVI learning didn't happen until we were forced to work on own own projects  (I almost wish there were 2 independent projects... a feeler project that replaces the labs and follows optional ENVI tutorials- and then a final project).  Also, I felt that some/most of the section regarding physics of radiation/orbit/etc was unnecessary for my learning goals (how to find/analyze satellite imagery?  What can it reveal?).  I would have preferred that this section be expedited with more time devoted to reading papers from academic literature that used techniques from remote sensing (which I only got into later with my project). ",
+            "\u00a0Great course. "
+        ],
+        [
+            "\u00a0work on the final project early ",
+            "\u00a0It is an excellent course to explore the capability of remote sensing and its application. If you are aligned towards conducting researches, this course would be of great application. ",
+            "\u00a0Choose a final project that you already know something about, and that you are passionate about. ",
+            "\u00a0Don't take more than 12 credits or 4 classes. ",
+            "\u00a0I take raster and remote sensing at the same time, they two complement each other well. I could recommend doing that. ",
+            "\u00a0I would advise identifying a final project you are interested in early on to maximize the scope of the project you can complete. ",
+            "\u00a0An excellent course for students with interest in building a geospatial and/or quantitative data skill set. Learning is geared to gradual but cumulative skill building with using the ENVI software for remote sensing analysis tasks (visualising and using different tools to analyse satellite imagery data), coupled with lectures geared to the conceptual basis behind remote sensing and its many applications across the environment sphere. ",
+            "\u00a0Start to think early about topics of interest for independent study.  Pay attention during satellite showcases! ",
+            "\u00a0do not take the course unless you know you need remote sensing in your research or career. The work load is not worth it unless you use this.... ",
+            "\u00a0Awesome course. Take it if you intend on working with satellite imagery. Would advise taking this class before geospatial software design so you know more about various satellite products and band math. "
+        ]
+    ]
+}

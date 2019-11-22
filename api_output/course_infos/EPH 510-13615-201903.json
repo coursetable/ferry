@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49851/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course provides an introduction to the making, understanding, and consequences of health policy. The design and performance of the health care system are assessed, with particular attention to the complex and often contested manner in which health care is organized, financed, and delivered in the United States. The course also considers the fundamental concerns\u2014such as cost, access, and quality\u2014that shape the development of health policy and health systems in all countries, and it looks to the health systems of other countries in order to understand the advantages and disadvantages of alternative approaches. An overview of the important actors in the health care and political systems is provided, and students are introduced to methods for understanding the behavior of these policy makers and stakeholders. Health issues are placed in the context of broader social goals and values.", 
+    "title": "Health Policy and Health Care ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "SHM", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13615", 
+        "listings": [
+            {
+                "number": "510", 
+                "subject": "EPH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Mark Schlesinger"
+    ], 
+    "long_title": "Health Policy and Health Care Systems", 
+    "extra_info": "A"
+}

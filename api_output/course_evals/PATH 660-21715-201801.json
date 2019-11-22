@@ -1,0 +1,73 @@
+{
+    "crn_code": "21715",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to avoid scientific misconduct. ",
+            "\u00a0Overview of some ethical questions in Biology "
+        ],
+        [
+            "\u00a0The strength is that different lectures were led by different PIs that are experts in the field. They can share their own experiences with us. ",
+            "\u00a0Strengths: Many classes were conversation based rather than just a professor talking.\r\n\r\nWeaknesses: Slow or stilted conversation in many classes. Professors could encourage students more to discuss between themselves.\r\n\r\nFrequently canvas notifications were not sent out when reading for classes was uploaded, leading to many classes where students did not know there was set reading and therefore came unprepared. Please always notify us via canvas or email when there is reading to do.\r\n\r\nFinal paper seems like a pointless exercise given that the students are not debating the topics of the papers after they are written. "
+        ],
+        [
+            "\u00a0Yes, I will. It is a must for us to know what is defined as scientific misconduct and how to avoid that. "
+        ]
+    ]
+}

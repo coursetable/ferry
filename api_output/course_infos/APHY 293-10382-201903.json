@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48930/assignments/syllabus", 
+    "requirements": "Prerequisites: Two terms of PHYS 170, 171, or PHYS 180, 181, or PHYS 200, 201, or PHYS 260, 261, or one term of any of these course with\u00a0permission of instructor.\u00a0", 
+    "description": "The first twenty-five years of the 20th century represent a turning point in human civilization as for the first time mankind achieved a systematic and predictive understanding of the atomic level constituents of matter and energy, and the mathematical laws which describe the interaction of these constituents. In addition, the General Theory of Relativity opened up for the first time a quantitative study of cosmology, of the history of the universe as a whole. Albert Einstein was at the center of these breakthroughs, and also became an iconic figure beyond physics, representing scientist genius engaged in pure research into the fundamental laws of nature. This course addresses the nature of the transition to modern physics, underpinned by quantum and relativity theory, through study of Einstein\u2019s science, biography, and historical context. It also presents the basic concepts in electromagnetic theory, thermodynamics and statistical mechanics, special theory of relativity, and quantum mechanics which were central to this revolutionary epoch in science.\nPrerequisites: Two terms of PHYS 170, 171, or PHYS 180, 181, or PHYS 200, 201, or PHYS 260, 261, or one term of any of these course with\u00a0permission of instructor.\u00a0", 
+    "title": "Einstein and the Birth of Mode...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "HLH17 YQI", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10382", 
+        "listings": [
+            {
+                "number": "293", 
+                "subject": "APHY"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "A. Douglas Stone"
+    ], 
+    "long_title": "Einstein and the Birth of Modern Physics", 
+    "extra_info": "A"
+}

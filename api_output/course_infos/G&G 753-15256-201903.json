@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "", 
+    "title": "Seminar in Petrology", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "KGL 226", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15256", 
+        "listings": [
+            {
+                "number": "753", 
+                "subject": "G&G"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jay Ague"
+    ], 
+    "long_title": "Seminar in Petrology", 
+    "extra_info": "A"
+}

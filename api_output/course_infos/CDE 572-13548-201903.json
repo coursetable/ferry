@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "This course reviews the methods and evaluation of obesity prevention and lifestyle interventions conducted in multiple settings (e.g., individual, family, and community settings, as well as policy-level interventions). Topics include physical activity, nutrition, and weight-loss interventions in various populations (children, adults, those who are healthy, and those with chronic diseases). The course combines didactic presentations, discussion, and a comprehensive review of a particular lifestyle intervention by students. This course is intended to increase the student\u00e2\u20ac\u2122s skills in evaluating and conducting obesity prevention and lifestyle interventions.", 
+    "title": "Obesity Prevention and Lifesty...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "LEPH 103", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13548", 
+        "listings": [
+            {
+                "number": "572", 
+                "subject": "CDE"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Melinda Irwin"
+    ], 
+    "long_title": "Obesity Prevention and Lifestyle Interventions", 
+    "extra_info": "A"
+}

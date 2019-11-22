@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "", 
+    "title": "Tech & Design of Tall Bldgs", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "RDH 706", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10188", 
+        "listings": [
+            {
+                "number": "2211", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kyoung Sun Moon"
+    ], 
+    "long_title": "Tech & Design of Tall Bldgs", 
+    "extra_info": "A"
+}

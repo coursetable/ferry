@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/52182/assignments/syllabus", 
+    "requirements": "Enrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "description": "The principles and practice of sustainable development explored in the context of Haiti's rich history and culture, as well as its current environmental and economic impoverishment.\nEnrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "title": "Sustainable Development in Haiti", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "MY 501", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "15601", 
+        "listings": [
+            {
+                "number": "020", 
+                "subject": "EVST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Gordon Geballe"
+    ], 
+    "long_title": "Sustainable Development in Haiti", 
+    "extra_info": "A"
+}

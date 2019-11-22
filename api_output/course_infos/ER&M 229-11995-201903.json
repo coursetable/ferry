@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "The history of Marxism and its relation to the labor, feminist, and anticolonial social movements since the great upheavals of 1919. Topics include the Leninisms of the Communist movement, the anticolonial Marxisms of national liberation struggles, the cultural and intellectual trajectory of Western Marxism, the New Left, and contemporary global justice movements.", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11995", 
+        "listings": [
+            {
+                "number": "229", 
+                "subject": "ER&M"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Marxism and Social Movements in the Twentieth Century", 
+    "extra_info": "C"
+}

@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50242/assignments/syllabus", 
+    "requirements": "Enrollment limited to freshmen. Preregistration required; see under Freshman Seminar Program.", 
+    "description": "Consideration of education and what it has to do with real life\u00e2\u20ac\u201dnot just any life, but a life worth living. Engagement with three visions of different traditions of imagining the good life and of imagining education: Confucianism, Christianity, and Modernism. Students will be asked to challenge the fundamental question of the good life and to put that question at the heart of their college education.\nEnrollment limited to freshmen. Preregistration required; see under Freshman Seminar Program.", 
+    "title": "Education and the Life Worth L...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LORIA B50", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13492", 
+        "listings": [
+            {
+                "number": "065", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Matthew Croasmun"
+    ], 
+    "long_title": "Education and the Life Worth Living", 
+    "extra_info": "A"
+}

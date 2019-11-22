@@ -1,0 +1,71 @@
+{
+    "crn_code": "21478",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course helped me strengthen my foundations in the basics of Complex Analysis. Furthermore, we covered a bunch of interesting advanced topics such as the Riemann-Zeta function, the prime number theorem, Weirstrauss elliptic functions and Dirichlet's theorem on arithmetic progressions to name a few. "
+        ],
+        [
+            "\u00a0I thought this was a great course overall. We covered interesting topics and professor Beals is an incredible teacher. His lecture notes are so clear and easy to follow with nice suggested exercises (This should not be a surprise if you have seen his textbook \"Analysis: An Introduction.\")\r\n\r\nI think one area for improvement is to have more mandatory assignments throughout the semester. It is easy to fall behind and not keep up with the material when you are not given external incentives to do so. I was able to keep up with the material for the first 2-3 months, but by the end of the course, since I knew we wouldn't be tested or given homework on the last month worth of material, I ended up falling behind and not making time to catch up and understand the last month worth of material. "
+        ],
+        [
+            "\u00a0If you are looking for a light workload math course covering some interesting, advanced topics this would be a great course to take. You do need to be self-motivated to keep up with material and go through the exercises given in the lecture notes, but you can still do well in the class if you do not keep up with the material (you just will enjoy lecture less) "
+        ]
+    ]
+}

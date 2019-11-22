@@ -1,0 +1,51 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49554/assignments/syllabus", 
+    "requirements": "Prerequisite: CPSC 223 or equivalent, or permission of the instructor.", 
+    "description": "Advanced applications of computer and data science in the humanities, including web technologies, visualization, and database design. Students work in teams to develop a variety of applications proposed by faculty and staff from the Digital Humanities Lab, the Institute for the Preservation of Cultural Heritage, and the Computer Science department.\u00a0Meets with CPSC 376.\u00a0Students may earn credit for CPSC 276 or 376; not both.\nPrerequisite: CPSC 223 or equivalent, or permission of the instructor.", 
+    "title": "Advanced Web Application Devel...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "DOW 100", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10690", 
+        "listings": [
+            {
+                "number": "376", 
+                "subject": "CPSC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Benedict Brown"
+    ], 
+    "long_title": "Advanced Web Application Development in the Digital Humanities", 
+    "extra_info": "A"
+}

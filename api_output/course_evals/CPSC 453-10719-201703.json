@@ -1,0 +1,67 @@
+{
+    "crn_code": "10719",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            0,
+            0
+        ],
+        [
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [],
+        [],
+        [
+            "\u00a0Concepts are fascinating and the class is a great introduction to the power of machine learning, but if you don't have a solid linear algebra background and/or exposure to computational biology, I wouldn't recommend this class. That being said, Smita and Chris are both great. They're clearly extremely passionate about the application of machine learning to biology, and have a ton of knowledge. However, there's very little transparency regarding what your grade is going into the final (3 psets total, a final project, and a final, with the first pset not being graded until after the last class). "
+        ]
+    ]
+}

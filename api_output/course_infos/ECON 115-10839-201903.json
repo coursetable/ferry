@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49498/assignments/syllabus", 
+    "requirements": "May not be taken after ECON 108 or 110.\u00c2\u00a0", 
+    "description": "An introduction to the basic tools of microeconomics to provide a rigorous framework for understanding how individuals, firms, markets, and governments allocate scarce resources. The design and evaluation of public policy.\nMay not be taken after ECON 108 or 110.\u00c2\u00a0", 
+    "title": "Introductory Microeconomics", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "YSB MARSH", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10839", 
+        "listings": [
+            {
+                "number": "115", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Steven Berry"
+    ], 
+    "long_title": "Introductory Microeconomics", 
+    "extra_info": "A"
+}

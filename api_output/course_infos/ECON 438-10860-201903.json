@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49553/assignments/syllabus", 
+    "requirements": "Prerequisite: One or two econometrics courses.\u00a0", 
+    "description": "This course has an applied econometrics focus. Topics include voting behavior, betting markets, and various issues in sports.\u00a0The aim of the course is to help students prepare original empirical research using econometric tools and to read empirical papers in economics and other social sciences.\u00a0Students write three empirical papers. The first can be an extension of an existing article, where some of the results are duplicated and then extended. The second is similar to the first with no example provided. The third is an original paper within the range of topics covered in the course, where data are collected and analyzed using relevant econometric techniques.\nPrerequisite: One or two econometrics courses.\u00a0", 
+    "title": "Applied Econometrics: Politics...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WTS A48", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10860", 
+        "listings": [
+            {
+                "number": "438", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Ray Fair"
+    ], 
+    "long_title": "Applied Econometrics: Politics, Sports, Microeconomics", 
+    "extra_info": "A"
+}

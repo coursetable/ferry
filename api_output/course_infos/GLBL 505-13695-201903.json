@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50057/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course examines how environmental, water, food, energy, and climate change have increasingly become linked to human and national security in the Middle East. It begins by exploring the state of the environment in the region and how the policies of the Middle East governments have led to serious environmental degradation and subsequent loss of jobs, migration, social tension, violence, and regional conflicts. Drawing on an in-depth analysis of contemporary case/country studies, students learn how these problems can serve as major human and national security threats. This interdisciplinary course is of interest to students with background/interest in environmental science/engineering, ecology, geography, geosciences, social/political sciences, public policy, security and peace building, international relations, diplomacy, and global affairs.", 
+    "title": "Environmental Security in the ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WTS B36", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13695", 
+        "listings": [
+            {
+                "number": "505", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kaveh Madani"
+    ], 
+    "long_title": "Environmental Security in the Middle East", 
+    "extra_info": "A"
+}

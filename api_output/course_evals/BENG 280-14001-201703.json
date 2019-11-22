@@ -1,0 +1,87 @@
+{
+    "crn_code": "14001",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            5,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            7,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            6,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            3
+        ],
+        [
+            0,
+            2,
+            6,
+            2,
+            0
+        ],
+        [
+            2,
+            5,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about what's going on in the Biomedical Engineering Department at Yale. ",
+            "\u00a0Learned about the most relevant topics today in BME ",
+            "\u00a0I learnt about biomedical engineering and what cool stuffs await me if i decide to become a BME major. ",
+            "\u00a0This course allowed me to have a comprehensive look at the biomedical engineering major at Yale, in addition to the various opportunities that it may present in terms of working in academia and industry. ",
+            "\u00a0I learned about the various different aspects of biomedical engineering and research being done by the faculty at Yale. ",
+            "\u00a0I got a better understanding of what the major Biomedical engineering means, what possible areas of investigation there are, and convinced me that I made the right choice. "
+        ],
+        [
+            "\u00a0Better engagement between sophomores and seniors in the course, also better engagement between sophomores and the professors giving talks, for better access to mentorship/ research opportunities. ",
+            "\u00a0I think that we should have read the papers that the seniors were reading because the textbook was kinda useless and didn't really help us that much to understand the lecturers. ",
+            "\u00a0The class was okay. However, I think since BME is a relatively new field, it would have been a bit better if there was a class by a BME in industry because all the lectures were very academic, but there are definitely other career paths than academia. ",
+            "\u00a0I would make the papers required reading so we would have a better understanding of the presentations and be able to ask better questions. I enjoyed the discussions with seniors because I was able to learn from what they knew. I think this course's strength was its ability to provide an overview of the field of biomedical engineering. ",
+            "\u00a0I really enjoyed this course because we had interesting speakers every week. The only weakness was that it was a new course, and a lot of it had not been tested before. I am sure this course will develop more and more. ",
+            "\u00a0I think this course was good exposure to the different opportunities in biomedical engineering research. However, I am not a huge fan of how the BME program at Yale is geared towards research instead of industry. It would have been nice to see industry opportunities as well. A majority of the presenters were engaging and truly sought to make sure that main ideas were communicated. However, quite a few of the faculty presenters were terrible. It seemed that they assumed it was our responsible to understand thier information, rather than thier responsibility to clearly communicate it. It didn't bode well for having some of these faculty as instructors later on. The paper assignments were great. They allowed us to choose what we found interesting and provided an outlet of researching and educating ourselves. For one of my papers, I choose a topic I found broing, but upon research, discovered many interesting aspects. I think the pairing with senior students could be more organized and intentional if the instructors are interested in also creating a slight mentoring experience. "
+        ],
+        [
+            "\u00a0It's an interesting class, you learn as much as you put effort into it- obviously, if you read the papers before class and pay attention in lecture, you'll learn a lot. However, you can just as easily google the answers to the pre-class quizzes and show up, sit in the back of the class and work on an assignment for another class and still get an A in the class. ",
+            "\u00a0If you need to take if for the major, obviously do it. You won't get much out of it if you have 0 interest in being BME. Also, take it if you aren't sure if you want to do BME or not. ",
+            "\u00a0It is a prerequisite so you don't have a choice. ",
+            "\u00a0I would recommend this course for people who are on the fence about majoring in biomedical engineering. ",
+            "\u00a0I would recommend this course to anyone thinking of majoring in biomedical engineering because you get to meet the professors in the department and get a good overview of the field. ",
+            "\u00a0Yes, it helps students understand the major in a much deeper level. ",
+            "\u00a0I would recommend if you are interested in BME research. But also, it is recommended. "
+        ]
+    ]
+}

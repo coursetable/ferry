@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49681/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course explores the epidemiology and biology of infectious agents and the diseases they cause. Through a theme-based, integrated approach, students learn about the epidemiology, pathogenesis, prevention, and control of bacteria, viruses, and eukaryotic parasites of public health importance. Emphasis is placed on epidemiological methods, routes of transmission, host-pathogen interactions, and mechanisms of virulence. The course also teaches skills for understanding and evaluating the published literature, specifically through class discussions and oral presentations of assigned readings by students. Topics covered include gastrointestinal, respiratory, and sexually transmitted pathogens.", 
+    "title": "Principles of Infectious Disea...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LEPH WINSL", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13565", 
+        "listings": [
+            {
+                "number": "517", 
+                "subject": "EMD"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Melinda Pettigrew"
+    ], 
+    "long_title": "Principles of Infectious Diseases I", 
+    "extra_info": "A"
+}

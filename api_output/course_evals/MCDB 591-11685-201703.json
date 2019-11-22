@@ -1,0 +1,85 @@
+{
+    "crn_code": "11685",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            4,
+            1
+        ],
+        [
+            1,
+            2,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned tons of matlab and was exposed to tons of methods. It was overwhelming at times but i really enjoyed it. ",
+            "\u00a0- some fractured knowledge about cell processes/migration/etc.\r\n- A lot about matlab and matlab functions\r\n- some basics about neural networks ",
+            "\u00a0I learned a great deal of programming as well as computational approaches to biological research. ",
+            "\u00a0I learned a lot about computational approaches to biological problems. I also became very comfortable with coding in MatLab and using other computational/coding programs/languages. I also gained valuable experience working in groups. ",
+            "\u00a0computer simulations of various biological structures and processes ",
+            "\u00a0I learned about a variety of research being conducted at Yale, where biology and physics/engineering intersect. I was exposed to multiple softwares like Matlab, pymol, and rosetta. "
+        ],
+        [
+            "\u00a0The content and modules are great in terms of content and engagement, but not a lot of time is spent introducing and framing material. I often learned the method more than the application or about the research, making it more like a technical than a conceptual class. ",
+            "\u00a0Strengths: A lot of hand on work\r\n\r\nWeakness: One of those four Assignments was a bit boring due to the fact that only one person had the right to use the computer cluster. ",
+            "\u00a0Strengths: The course used a variety of different platforms to teach us programming skills and in several areas of research. The overarching theme definitely helped keep us focused.\r\nWeakness: There was a bit of disorganization at the end but due to Corey's pneumonia this is not surprising. We never received feedback on our assignments until after the course completed so it was not possible to know exactly how to improve as we went. ",
+            "\u00a0This course is great because it introduced a lot of new computational methods to me. I think it is a great course for somebody coming from a more biological background. It may not be as valuable to somebody with a strong computational background as much of it would not be new to such a student. The biggest weakness of this course is that it was poorly organized at times. The level of difficulty of each assignment was very inconsistent. This was due to a combination of it being the first year this course existed and a lack of quality control on the assignments by the instructors. Another weakness is that feedback was never given to the students for any of the assignments. ",
+            "\u00a0The rosetta module was very helpful and perhaps a must for every BBSB student. The other modules were fun as well but I feel that there was too much overlap on the concept of MSD. Module Two (fish tail bud) felt rushed and there were too many typos in the assignment. Perhaps expanding this module over a longer period of time would help. ",
+            "\u00a0Strengths of this course: Being able to learn about a variety of topics and computer programs.\r\n\r\nWeaknesses of this course: I think the course could have benefited from more structured group work. The second assignment was structured well in terms of collaboration, but for the other assignments, working with a group would have helped. I think it would have been interesting to do some lab work, as opposed to only working on the coding/data analysis side. "
+        ],
+        [
+            "\u00a0Yes i would but i would warn them that it was very disorganized. ",
+            "\u00a0Yes. It offers a lot of practical skills to learn. ",
+            "\u00a0A brutal intro to programming if you are rusty but worth the experience ",
+            "\u00a0I would strongly recommend this course to a student with a strong biological background that is looking to get more experience with computational approaches in biology. I might not recommend this course to a student that already has a strong computational background as they would likely already be familiar with it. ",
+            "\u00a0I would recommend this course to another student because the research and tools we were exposed to was valuable. I am not sure if the course influenced my decision of professors I would want to rotate with. "
+        ]
+    ]
+}

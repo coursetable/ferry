@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Develop strategies for acquiring new vocabulary including word parts, word forms, word families and idioms according to notions (describing) and functions (purposes) of language. In this integrated and theme-based language skills course students will practice using newly acquired vocabulary in a variety of contexts", 
+    "title": "Academic Writing 2", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "DOW B-21", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 18
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14964", 
+        "listings": [
+            {
+                "number": "507", 
+                "subject": "ELP"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "James Tierney"
+    ], 
+    "long_title": "Academic Writing 2", 
+    "extra_info": "A"
+}

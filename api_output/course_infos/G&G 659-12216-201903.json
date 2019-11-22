@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50027/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introductory course in geoscience data analysis and time series methods, with emphasis on multiple-taper time series techniques. Examples drawn from seismological, paleoclimate, and historical climate data. Weekly computer assignments. Python proficiency helpful.", 
+    "title": "Time Series Analysis with Geos...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "KGL 116", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12216", 
+        "listings": [
+            {
+                "number": "659", 
+                "subject": "G&G"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jeffrey Park"
+    ], 
+    "long_title": "Time Series Analysis with Geoscience Applications", 
+    "extra_info": "A"
+}

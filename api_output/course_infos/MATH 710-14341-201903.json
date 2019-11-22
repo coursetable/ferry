@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "This class covers basic methods of classical harmonic analysis that can be carried over to graphs and data analysis. We cover the fundamentals of nonlinear Fourier analysis, including functional approximations in high dimensions. We intend to cover foundational material useful for data organization and geometries.", 
+    "title": "Harmonic Analysis on Graphs an...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LOM 206", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14341", 
+        "listings": [
+            {
+                "number": "710", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Ronald Coifman"
+    ], 
+    "long_title": "Harmonic Analysis on Graphs and Applications", 
+    "extra_info": "A"
+}

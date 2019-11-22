@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50125/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introduction to the professional study of history, which offers new doctoral students an opportunity to explore (and learn from each other about) the diversity of the field, while also addressing issues of shared concern and importance for the future of the discipline. By the end of the term participants have been exposed to some of the key methodological and theoretical approaches historians have developed for studying different time periods, places, and aspects of the human past. Required of and restricted to first-term History Ph.D. students.", 
+    "title": "Approaching History: Problems,...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LC 103", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11116", 
+        "listings": [
+            {
+                "number": "500", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jennifer Klein", 
+        "Noel Lenski"
+    ], 
+    "long_title": "Approaching History: Problems, Methods, and Theory", 
+    "extra_info": "A"
+}

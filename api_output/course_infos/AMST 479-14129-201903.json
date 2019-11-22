@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51636/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course examines a series of transnational literary texts and films that illuminate how the displaced\u2014migrants, exiles, and refugees\u2014 remake home away from their native countries. The twentieth and twenty-first centuries have produced massive displacements due to wars, genocides, racial, ethnic and religious conflicts, economic and climate change, among other factors. Our course focuses on several texts that explore questions of home, nation, and self in the context of specific historical events such as the Holocaust, civil rights movements in the U.S., internment, the Indian partition, African decolonization, and Middle Eastern/Arab ethno-religious conflicts and wars. We examine these events alongside the shifting legal and political policies and categories related to asylum, humanitarian parole, refugee, and illegal alien status. Exploring themes such as nostalgia, longing, trauma, and memory, we look at the possibilities and limitations of creating, contesting, and imagining home in the diaspora. Our objective is to debate and develop the ethical, political, geographic, and imaginative articulations of home in an era of mass displacements and geo-political crises. We examine how notions of home are imagined alongside and against categories of race, gender, and sexuality.", 
+    "title": "The Displaced: Migrant and Ref...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WALL81 401", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14129", 
+        "listings": [
+            {
+                "number": "479", 
+                "subject": "AMST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Leah Mirakhor"
+    ], 
+    "long_title": "The Displaced: Migrant and Refugee Narratives of the 20th and 21st Centuries", 
+    "extra_info": "A"
+}

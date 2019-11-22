@@ -1,0 +1,78 @@
+{
+    "crn_code": "11097",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            2
+        ],
+        [
+            1,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            2,
+            2,
+            0,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I really appreciate learning from the other senior EVST majors and their research! The class strengthens the EVST which has been so enjoyable. This course gives some structure to the thesis writing process which is good. ",
+            "\u00a0You have to take it, but it's fun! the community in EVST is nice and the colloquium is a good way to get your thesis moving along. ",
+            "\u00a0This course motivated me to actually work on my thesis via regular deadlines. "
+        ],
+        [
+            "\u00a0This course gives some structure to the thesis writing process which is good. Sometimes it is really low-energy because everyone has to be there. I wish the assignments were more lengthy at the beginning so that even before finals period we could have had most of our 20 pages done. ",
+            "\u00a0Make more reasonable deadlines for us. ",
+            "\u00a0Some of the assignments felt a bit like busy work. It might've been nice to have deadlines more tailored to each specific project. "
+        ],
+        [
+            "\u00a0Yes, you have to take it but you will enjoy it. ",
+            "\u00a0It's mandatory so it doesn't matter if I recommend it, but ya it's lit. Take it with Prof Doolittle, she's amazing! ",
+            "\u00a0It think this course has value, and would recommend. ",
+            "\u00a0I would encourage any EVST senior to pursue a thesis. It's a lot of work, but incredibly rewarding - you can really leave your undergrad career as an expert on a specific topic. "
+        ]
+    ]
+}

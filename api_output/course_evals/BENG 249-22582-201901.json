@@ -1,0 +1,109 @@
+{
+    "crn_code": "22582",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            10,
+            9,
+            2
+        ],
+        [
+            2,
+            6,
+            9,
+            3,
+            2
+        ],
+        [
+            1,
+            7,
+            5,
+            9,
+            1
+        ],
+        [
+            1,
+            6,
+            5,
+            8,
+            3
+        ],
+        [
+            1,
+            3,
+            5,
+            12,
+            2
+        ],
+        [
+            0,
+            3,
+            13,
+            6,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to do introductory coding in Matlab - all the syntax, plots, and data fitting things. ",
+            "\u00a0Great intro to data analysis tools and matlab. Take it if you study science of any kind. ",
+            "\u00a0This course taught me how to code in Matlab, statistical analysis, and how to simulate biological phenomena. ",
+            "\u00a0Picked up the fundamentals of MATLAB programming and running simulations, with especial insights into its biomedical applications. \r\n\r\nAlso learnt general coding principles, intermediate statistical analysis skills, and mathematical modeling. ",
+            "\u00a0Intro to coding ",
+            "\u00a0This course introduced me to the Matlab coding language. Most of the semester was spent learning about basic syntax, loops, and graph plotting. However, there was also a large focus on statistics/data analysis. ",
+            "\u00a0I learned a lot about how to code in MATLAB and a little bit about curve fitting and data analysis. ",
+            "\u00a0basic matlab skills, some statistical stuff as well ",
+            "\u00a0Learned Matlab enough to simulate basic biological phenomena ",
+            "\u00a0A basic knowledge of how to take a vector-based approach to calculating statistics and simulating stochastic events in MATLAB. ",
+            "\u00a0A general knowledge of MATLAB for biological purposes. ",
+            "\u00a0basic matlab knowledge. "
+        ],
+        [
+            "\u00a0Strengths- professor is extremely smart, and the class has Kevin, a great TA\r\n\r\nWeaknesses- definitely goes by fast if you don't have prior experience coding ",
+            "\u00a0Mak taught this course incredibly well. He broke it down into 4 clearly defined units, each with a specific goal. he explained things very clearly and all the way through. Anything bad you hear about this course being disorganized isn't true. Taught extremely well. Only thing is that when he would do equation derivations on the board they could be hard to follow, but a very small part of the course. ",
+            "\u00a0It was great as it covered a large variety of material. It can be improved as the pace of the class got super fast towards the end and it was hard to keep up at times. ",
+            "\u00a0I feel like I mostly just memorized code throughout it and did not always understand what was going on. ",
+            "\u00a0This course is a well structured, well taught, and well supported introduction to biomedical computation. The only weakness might be a perceived lack of lecture engagement at the beginning of the semester, but I feel that soon changes as the course progresses from mathematical basics to actual programming and simulation. ",
+            "\u00a0Instructor mostly just writes random code and doesnt really explain thought process or reasoning. ",
+            "\u00a0I think they should send students the codes before class so they can take notes during class ",
+            "\u00a0A good thing about this class is that it assumes everyone has no prior coding experience from the get-go. This is important for students like myself who are unaware of what a basic for loop is. The first 3/4 of the class is spent building upon the code weve learned. However, I thought there was a major jump at the end to tie the code into the biomedical applications. I.e, when learning how to model cell movement, the code examples suddenly got too complicated for me to intuitively understand how to write them myself. ",
+            "\u00a0Professor Mak was very difficult to keep up with when he coded in class. It would be better to have his example codes sent out before class so students could focus on understanding the code instead of frantically trying to copy down every line. ",
+            "\u00a0The applications of this class are really cool, but unfortunately you really only get into that in the final project, but when youre doing the final project, youre also worried about the exam. The class is poorly taught, but the material is useful. The final exam is a bad way to test the material and a project only would make more sense. ",
+            "\u00a0you definitely get a good base in Matlab, but most of this comes from getting hep from the tas (especially kevin!!) outside of class. Professor Mak types codes quickly while speaking quietly, so it can be very difficult to keep up and type the codes correctly while also commenting in about what certain lines are actually doing. would be super helpful if codes were uploaded before class ",
+            "\u00a0Psets are good\r\nLectures aren't always helpful, but could be if Professor Mak sent out the codes ahead of time for students to follow along. ",
+            "\u00a0Strengths: Learning in this course is very application based, where you learn by practicing creating various functions and simulations that use the concepts covered in class for the problem sets. This makes the problem sets pretty engaging, and though this might make work difficult at times, Professor Mak is always super helpful during office hours!\r\n\r\nWeaknesses: the pacing of the course can be unexpected at times. The start of the semester is super slow as you learn about pretty basic concepts (loops, conditionals, etc.) that should be familiar to anyone who's coded before. By the end of the semester, the pace speeds up drastically as you go over multiple simulations a day while justifying them mathematically. ",
+            "\u00a0I really liked doing the problem sets and learning Matlab; however, I wish more of the content was focused on the algorithms we learned in the last class and modeling biology rather than complex biophysical derivations of cell movement or easy statistical parameters (these could have been easily given in a reference sheet and everyone would have understood them better than doing them in class). I also wish that our project was given to us earlier so we could fully take two weeks to finish it. I wish we had done less work on surface plots and altering statistical parameters, which seem less computationally-relevant than modeling 3D tumor cells or something. Modeling like that is the most exciting part of computation and I wish there was more of this rather than the easy, low-level stuff! The midterm and the final were pretty predictable and I thought they were very fair. Kevin was a great TA. Generally enjoyed this class but it didn't feel like any of the class was paying attention during lectures. Work outside of class was rather enjoyable, though. ",
+            "\u00a0weaknesses: in-class exercises are useless, class is hard to follow, homework is so hard to do alone. ",
+            "\u00a0The introductory portion of this course was well organized to teach students the very basics of matlab, but once we got beyond defining basic coding concepts and into slightly more complicated simulations, the level of explanation for steps we were taking and the reasoning behind each step seemed to diminish. Most classes were spent copying code at a pace which barely allowed you to type things out before the examples disappeared. Because of this, it was difficult to think critically about what we were doing while in lecture, because stopping to think meant that you would miss large portions of the example or have code that was riddled with bugs. "
+        ],
+        [
+            "\u00a0Yes, definitely if you're interested in coding and using Matlab for research. ",
+            "\u00a0Take it. ",
+            "\u00a0Yes! ",
+            "\u00a0If you have to take it its not really THAT bad but I wouldnt take it just for fun. I feel like I only have a basic understanding of MATLAB and if someone asked me to model something I really wouldnt know where to start unless it was very similar to a code that he taught. ",
+            "\u00a0Yes, I would wholeheartedly recommend this course to another Yale student [regardless of class year or initial preparation level]. The academic journey from knowing barely anything regarding computational biological models at the beginning to feeling confident about running complex simulations of systems ranging from cancer metastasis to predator-prey relationships is quite rewarding. ",
+            "\u00a0No ",
+            "\u00a0I wouldnt really recommend this course unless you have to take it for the BME major or youre just interested in Matlab.The course did a good job of introducing me to Matlab and teaching me how to code more basic things. But it soon reached a point where it became much harder to follow whats going on if you werent as familiar with coding. Students with prior coding knowledge will have a way easier time in this course but that doesnt mean its not doable. The course was fairly weighted and the TFs (especially Kevin) devoted an insane amount of their time to help us during study halls so thats a plusespecially for a BME class. Overall I did learn a lot from this course but there are much better programs one could learn than Matlab. For non-majors, your time is better spent taking a proper CS course if youre purely interested. And for BME majors, this course is dry and can be a lot when combined with the sophomore math and onesies requirements but is still doable! ",
+            "\u00a0Take this class if youre BME. Otherwise, the material is cool but you could learn it on your own just as well. ",
+            "\u00a0only if you need it for bme ",
+            "\u00a0Yes, it's a helpful intro ",
+            "\u00a0The course is exactly what it says it is: an introduction to biomedical computation. I would recommend this course to anyone who's interested in computational biomedical engineering but not quite sure what it entails. And of course, to any BME majors, since it's a requirement. ",
+            "\u00a0If you're BME, take this, otherwise it probably makes more sense to take dynamical systems. If you've had any prior CS and statistics background this class shouldn't be a problem. Mak is a little slow as a lecturer, but he posts all the notes and if you go over them after class then you should be fine. ",
+            "\u00a0No - not great teaching and not a lot of biological application. "
+        ]
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "crn_code": "10904",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0An excellent review of macro labor workhorse models: search, matching and sorting with a lot of applications. ",
+            "\u00a0Broad range of papers and models, good in-depth discussion of the math behind the models. Research methods, how to approach question, datasets to use.  Good foundation for reading labor/macro papers in the future. ",
+            "\u00a0Lots of labor models. We read some nice papers and also practiced with hjb equations. "
+        ],
+        [
+            "\u00a0A well-organized course.\r\nAssignments challenge students for different skills.\r\nI received a lot of guidance from the professors. ",
+            "\u00a0Good lectures, good slides, nice to get really thorough treatment of theory.  I thought it was a shame we only spent 1-2 classes on applications in the 2nd quarter, the papers we discussed were some of the most interesting of the entire course to me and it would be nice to have more applications in both quarters.  Then again, time is limited and maybe it's more worthwhile to cover all the theory in class and we can read the applications independently later. "
+        ],
+        [
+            "\u00a0Every student interested in macro, labor should take this class ",
+            "\u00a0Yes, anyone interested in macro or labor would benefit, ideas also seem useful for trade. ",
+            "\u00a0If you want to do macro, you should take it. But the class is a big commitment if you are not considering macro. "
+        ]
+    ]
+}

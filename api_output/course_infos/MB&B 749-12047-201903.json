@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50428/assignments/syllabus", 
+    "requirements": "Prerequisite: biochemistry or permission of the instructor.", 
+    "description": "Consideration of examples of recent discoveries in basic science that have elucidated the molecular origins of disease or that have suggested new therapies for disease. Emphasis is placed on the fundamental principles on which these advances rely. Reading is from the primary scientific and medical literature, with emphasis on developing the ability to read this literature critically. Aimed primarily at undergraduates. May not be taken by MB&B B.S./MS. students for graduate course credit.\nPrerequisite: biochemistry or permission of the instructor.", 
+    "title": "Medical Impact of Basic Science", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "SHM C103", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12047", 
+        "listings": [
+            {
+                "number": "749", 
+                "subject": "MB&B"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Joan Steitz", 
+        "Sandy Chang", 
+        "Daniel DiMaio", 
+        "I. George Miller", 
+        "Karla Neugebauer", 
+        "David Schatz", 
+        "Scott Strobel", 
+        "Seyedtaghi Takyar"
+    ], 
+    "long_title": "Medical Impact of Basic Science", 
+    "extra_info": "A"
+}

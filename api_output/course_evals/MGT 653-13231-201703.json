@@ -1,0 +1,25 @@
+{
+    "crn_code": "13231",
+    "Evaluation_Questions": [
+        "What is your overall assessment of your instructor(s)",
+        "What is your overall assessment of the course"
+    ],
+    "Evaluation_Data": [
+        [
+            2,
+            1,
+            7,
+            2,
+            11
+        ],
+        [
+            2,
+            2,
+            7,
+            4,
+            9
+        ]
+    ],
+    "Comments_Questions": [],
+    "Comments_List": []
+}

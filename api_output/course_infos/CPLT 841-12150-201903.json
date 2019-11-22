@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49508/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The Danube is Europe\u2019s second longest river: it flows through or borders ten countries, while its watershed covers four more. From ancient Rome to the present, the Danube has served both as a connector and a contested terrain: from its beginnings in the German Black Forest to the Romanian and Ukrainian shores of the Black Sea, the Danube flows through a region that has emerged black and blue from imperial aspirations of domination, hostilities in the wake of the Cold War, and civil war. The southeastern portion of the river constitutes Europe\u2019s Other\u2014the \u201cBarbaropa\u201d within the continent\u2019s own geographic boundaries\u2014and faces the expansion of another super-political entity in the European Union. This seminar turns to the physical, historical, and metaphoric uses of the great river. At a time of tenuous unification in Europe, \u201cDanube studies\u201d seek to remap the region by focusing on the river\u2019s peoples and their cultural imaginaries and interactions from antiquity to the present, exposing the Danube as a quintessential site of cross-cultural engagement. We study the region\u2019s geography and history, engage theoretical paradigms for understanding cultural differences and their negotiation, draw on film theory and cultural studies, and examine transnational cinema, artwork, and literary texts from various Danubian cultural traditions. Through a focus on works of creative and imaginative culture\u2014primarily, on literature and film\u2014the course foregrounds the aesthetic mediation of actual and possible communities, in search of utopian promise even amidst and in the wake of historical atrocities.", 
+    "title": "The Danube in Literature and F...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "WLH 009", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12150", 
+        "listings": [
+            {
+                "number": "841", 
+                "subject": "CPLT"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YFIC\">YC FILM Stud: Critical Studies</a>"
+    ], 
+    "professors": [
+        "Marijeta Bozovic"
+    ], 
+    "long_title": "The Danube in Literature and Film", 
+    "extra_info": "A"
+}

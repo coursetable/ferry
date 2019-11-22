@@ -1,0 +1,106 @@
+{
+    "crn_code": "21416",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            4,
+            3,
+            6,
+            2
+        ],
+        [
+            2,
+            6,
+            5,
+            3,
+            0
+        ],
+        [
+            1,
+            2,
+            7,
+            4,
+            2
+        ],
+        [
+            1,
+            1,
+            7,
+            5,
+            2
+        ],
+        [
+            1,
+            5,
+            5,
+            5,
+            0
+        ],
+        [
+            0,
+            2,
+            3,
+            6,
+            5
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned to some extent basic laboratory techniques and learned error analysis pretty well. ",
+            "\u00a0Knowledge of various experimental techniques and equipment, various methods of measuring different quantities and being able to use equipment on our own ",
+            "\u00a0I can now confidently say that I am very comfortable with error propagation and error analysis. ",
+            "\u00a0Lab experience ",
+            "\u00a0I learned how to use basic tools present in a physics research lab ",
+            "\u00a0I learned statistical analysis and how to design experiments. ",
+            "\u00a0I learned how to determine uncertainty, how to manage my time in a lab, and how to keep a good lab notebook. ",
+            "\u00a0I learned how to use basic physics research instruments and how to apply the physics concepts we learned in class to experimental work. ",
+            "\u00a0I learned how to operate various devices, including a function generator, oscilloscope, and LoggerPro. I also learned some experimental techniques, including error propagation and curve-fitting. ",
+            "\u00a0How to conduct experiments in physics; how to make measurements; how to evaluate the validity of hypotheses ",
+            "\u00a0I developed critical thinking skills, experienced physics phenomena hands-on, and learned how to use fundamental physics apparatuses. ",
+            "\u00a0I developed my handwriting (somewhat) and my ability to work quickly through things that are long but not difficult (like the lab reports). ",
+            "\u00a0In PHYS 205L, I learned practical techniques to measure physical phenomena, including how to use a torsional oscillator, a oscilloscope, and other pieces of equipment. This class basically taught me how to measure things. "
+        ],
+        [
+            "\u00a0Frankly, there's not a lot of strengths. I learned how to operate basic laboratory equipment, most crucially an oscilloscope, but a lot of the labs felt like high school again but with a lot more work and a lot less purpose. I didn't really learn how to keep a good lab notebook or write a good lab report because no one really tells you personally or even shows you a good example. We were practically told to learn error analysis by ourselves from an online textbook and the grading could be very harsh and confusing at times. ",
+            "\u00a0Strengths: Very cool and interesting experiments, especially if taken along with an intro physics class. Clearly demonstrates applications of physics\r\nWeaknesses: Lab reports are way too excessive and take a lot more effort than they should for a 0.5 credit class. Also, the pre-labs were due the week after the lab was completed, which I found strange and counterproductive. ",
+            "\u00a0Very few times, if any, did any of the groups in my section finish any of the last five or six labs during the allotted three hours. Were it only a couple of groups that took some extra time to finish one lab, it wouldn't be that much of a problem, but the fact that so many groups stayed late for so many weeks in a row suggests that some of the later labs could be shortened a bit. ",
+            "\u00a0Strength: helpful TA\r\n\r\nWeakness: Chaotic, tedious, and not really useful ",
+            "\u00a0This course wasn't structured all that well. There seemed to be miscommunication on assignments and what exactly was required in many cases. This happened with lab reports, a \"final project\" that didn't really exist, and details about the final. ",
+            "\u00a0There were instances in which the labs were very confusing. For example, in the circuits lab, we were supposed to graph voltage and current, but the report changed which one it wanted on the x-axis and we were graded according to that. Also when it asked for current on the x-axis, it gave an example graph where voltage was on the x-axis. On the practice final which was the final administered last year, I noticed that it asked the student to draw the wave within an open tube, but the example image was for a tube closed on one end. There are small mistakes that simply need refining so as to not confuse students tremendously. ",
+            "\u00a0I thought that the content we covered in the class was interesting and how we were able to apply class physics concepts to experimental work was really cool. However, I also felt very frustrated with the lab protocols at many points. It felt like the instructors were not effectively able to troubleshoot our work at some times and didn't give us clear instructions about how to fix our circuits for example. They were apologetic when this situation did happen but it was incredibly frustrating and I felt really downtrodden. \r\nI wish the first few labs could be more diversified - the first time I felt like I enjoyed the labs were when we did radioactivity. A broader introduction to circuits would have been very useful; I had done no previous work with wiring circuits and I didn't even know the basics (for example, when a BNC clip was grounded) so even a 15-minute introduction using this would have been very useful to my general life and to this lab.\r\nI loved my TA! and I thought the class was very fairly graded. ",
+            "\u00a0This course was effective in teaching basic lab techniques and introducing students to operating lab equipment. However, there was very little guidance given to students during the lab. Students often had a hard time parsing the confusing directions and setting up the experiments. This lab could be improved if the professor goes over how to operate the equipment at the beginning of each lab and any relevant theory so that students are not left in the dark as to what to do. Further, answers to the labs could be given so that students know what they should be looking for rather than hoping they got the right results. ",
+            "\u00a0Strength: Clearly organized, good range of material for an introductory lab\r\nWeaknesses: Can be dull and boring at times. The lab can feel like a list of instructions that we have to go through in the allotted three hours instead of a fun and engaging session of learning. I feel like the TA and instructor can lead the students through the material and engage the class much more. That is to say, instead of simply giving a short 5 minute talk at the start of class and leaving the rest for students to figure out, they could lead the class through chunks of activity together and giving short lectures/instructional overviews interspersed throughout the three hours. The lab summaries also felt like a burden instead of something productive and meaningful; it simply was redundant, especially after we also had to fill out the lab notebook meticulously. ",
+            "\u00a0The strengths are that this course is set up to allow for comprehensive understanding of various physics fields, and the weaknesses are that there is an excessive amount of work for just a  credit class. ",
+            "\u00a0One main weakness is that many of the labs take longer than the time allotted. Many times I had two rush to finish the lab in time, meaning I had to leave large sections of my write-up to do later (and doing them later took a lot longer). Another big problem is the amount of busy work. There is so much work we have to do in the class that doesn't teach us anything. I don't learn anything from doing a lab summary, for example. I felt most of the time was spent making sure that we covered everything in the lab and in our write-up so we didn't lose any points. In this way, the class felt like is was mostly busy-work. I also wish we went into more depth on error correction, because I enjoyed that part of the course and I think we definitely could've gone more in depth into error correction when it comes to linear regression, for example. Another weakness of the course is that the physics seemed dumbed down compared to the stuff we were covering in our main intro physics course. One strength of the course was that the TA was nice and helpful, and went over our mistakes on assignments upon request. ",
+            "\u00a0This course is fantastic at the fact that it encourages mistakes and for you to learn from them. It also places heavy emphasis on uncertainties, and how each value you measure will have a certain \"error\" to go along with it. However, a big weakness of the course is that it is poorly structured: I did not know what was being asked of me for the first lab report, until one of the instructors asked the class if they had any questions about the course AFTER writing the first lab report. No one knew what to put in their lab notebooks, and no one knew how to format nor write the lab reports. This course could be improved by adding more structure to the assignments and to the curriculum: one piece of advice is for the instructors to look at CHEM 134/6L and to base their curriculum structure off of that (very organized, detailed, and to the point). "
+        ],
+        [
+            "\u00a0No. Don't take it unless you have to. ",
+            "\u00a0Take this if you're really interested in physics and are willing to put in a lot of work. Basically, think of this class as a 1 credit class even though it's a 0.5 credit class. Working is quite independent, but the instructors are always present to assist you. \r\nOne of the negatives is that there are four problem sets on uncertainties and stats and stuff, and then 1.5 hours of that same stuff during the final. Not really interesting although it is necessary for experimental physics. ",
+            "\u00a0I wouldn't recommend this course to anyone because I think they would like it, since there's nothing very fun about it, but I would recommend it to anyone pursuing a physics major, because, based on what I've heard about PHYS 165L, this course prepares students better for actual research. ",
+            "\u00a0Take it if you are a physics/engineering major otherwise not worth your time ",
+            "\u00a0I wouldn't recommend this class to another student because it isn't very engaging. ",
+            "\u00a0It's the only lab I've taken, so I don't really have much to go on. I think it's a pretty good intro lab, but it wasn't particularly great. It's obviously good for any physics student as a way to gain some experience in the lab and especially with a bit of statistical analysis, but this isn't a course I'd just recommend to anybody. ",
+            "\u00a0I'm sure you're taking this class if you have to; just be sure to do the pre-lab before the lab, and work hard to make sure your lab notebook looks good. Ask a lot of questions because you won't succeed in getting the right setups if you don't. Make sure your lab partner is good. And lastly, TALK TO OTHER PEOPLE IN YOUR CLASS. Most people did not know what was going on the majority of the time but there was always that one kid that did so find that kid.\r\n\r\nI'm happy I took this class over the lower-number lab class (I took the PHYS 200/201 sequence), I felt like it helped me apply class concepts to real life. ",
+            "\u00a0This course is required for the major, so I can't not recommend it. However, the experience could be improved if the professor or TF goes over how to operate the equipment at the beginning of each lab so that students are not left in the dark about going through the lab procedures. Also, the pre-labs and lab summaries were only graded for completion, which did not help facilitate student learning. ",
+            "\u00a0Only if you would want to become a physics major (it is required). ",
+            "\u00a0I would because it provides an excellent introduction to understanding physics phenomena, utilizing lab tools and techniques, and critically thinking about research and the experimental process. ",
+            "\u00a0I would definitely not recommend this course to any student unless they need it for the physics major. This course does not show the fun and interesting side of physics and does not really show what real physics research is like. ",
+            "\u00a0I would only recommend this course if you have to take it: I personally think this course was not that bad, and given the choice between this course and PHYS 165L, I think I would choose this course anyways. This course counts as a physics lab, and if you are still undecided on your major, you can use this lab for any major that requires physics lab. On the other hand, PHYS 165L (I believe) is not used for the physics major. Also, this course has (or may have) improved since there previous years, so these reviews being given now are more accurate than the ones from even last year. \r\nI would also recommend this course if you are interested in using different pieces of equipment and observing physical phenomenon. It truly is a cool course (besides the coursework), and it is helpful in all my other labs (and internships) when writing uncertainties and using new pieces of equipment. Don't be afraid to fail. ",
+            "\u00a0It is a reasonably large amount of work, but this course is certain to well prepare you for future lab-based work. "
+        ]
+    ]
+}

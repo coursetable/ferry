@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "By arrangement with faculty.", 
+    "title": "DirRsrch:Ethnology&SocAnthro: ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 5, 
+        "oci_id": "16383", 
+        "listings": [
+            {
+                "number": "951", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Richard Burger"
+    ], 
+    "long_title": "DirRsrch:Ethnology&SocAnthro: Amazonian Archaeology", 
+    "extra_info": "A"
+}

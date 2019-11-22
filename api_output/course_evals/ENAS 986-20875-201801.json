@@ -1,0 +1,78 @@
+{
+    "crn_code": "20875",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Semiconductor Fabrication skills, techniques, some key elements of integrated electronic circuits such as PN junction Diode, Schottky Diode, MOSFET. ",
+            "\u00a0Semiconductor device physics and fabrication skills of semiconductor devices. ",
+            "\u00a0Semiconductor and fabrication ",
+            "\u00a0Fundamental physics of semiconductor devices and fabrication skills of semiconductor devices based on silicon "
+        ],
+        [
+            "\u00a0The course is well organized. The lab sessions are really helpful. ",
+            "\u00a0Very specific and help us to  put what we learned into practice ",
+            "\u00a0It provides us a comprehensive understanding of semiconductor devices and it will be better if it consists of more advanced techniques in modern industry. "
+        ],
+        [
+            "\u00a0If anyone is interested in integrated electronics then this is a very helpful course. ",
+            "\u00a0Yes. Very interesting and useful ",
+            "\u00a0Yes. It offers basic knowledge of the physics and fabrication skills of semiconductor devices based on silicon. "
+        ]
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51612/assignments/syllabus", 
+    "requirements": "Open to nondepartmental and non-School of Drama students with prior permission of the instructor.", 
+    "description": "This course focuses on the fundamentals of commercial producing on Broadway. Among the topics to be covered: why produce commercially; who produces; Broadway and Off-Broadway; the relationships between commercial producers and nonprofits; and ethical issues in a commercial setting. Practical matters covered include optioning and developing work, raising money, creating budgets, and utilizing marketing/press/advertising to attract an audience.\nOpen to nondepartmental and non-School of Drama students with prior permission of the instructor.", 
+    "title": "Producing for the Commercial T...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "YK222 314", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14103", 
+        "listings": [
+            {
+                "number": "271", 
+                "subject": "DRAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Joey Parnes"
+    ], 
+    "long_title": "Producing for the Commercial Theater", 
+    "extra_info": "A"
+}

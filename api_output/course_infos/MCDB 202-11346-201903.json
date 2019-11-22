@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50488/assignments/syllabus", 
+    "requirements": "Prerequisite: BIOL 103 or equivalent performance on the corresponding biological sciences placement examination.", 
+    "description": "An introduction to classical, molecular, and population genetics of both prokaryotes and eukaryotes and their central importance in biological sciences. Emphasis on analytical approaches and techniques of genetics used to investigate mechanisms of heredity and variation. Topics include transmission genetics, cytogenetics, DNA structure and function, recombination, gene mutation, selection, and recombinant DNA technology.\nPrerequisite: BIOL 103 or equivalent performance on the corresponding biological sciences placement examination.", 
+    "title": "Genetics", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "OML 202", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11346", 
+        "listings": [
+            {
+                "number": "202", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Stephen Dellaporta", 
+        "Joshua Gendron"
+    ], 
+    "long_title": "Genetics", 
+    "extra_info": "A"
+}

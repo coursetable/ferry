@@ -1,0 +1,91 @@
+{
+    "crn_code": "12582",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            5,
+            11
+        ],
+        [
+            0,
+            0,
+            0,
+            7,
+            9
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            9
+        ],
+        [
+            1,
+            1,
+            1,
+            8,
+            5
+        ],
+        [
+            0,
+            0,
+            2,
+            8,
+            6
+        ],
+        [
+            0,
+            0,
+            2,
+            9,
+            5
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Inference and statistical theories. ",
+            "\u00a0This course gave me a general idea of statistical inference and decision theories. ",
+            "\u00a0Important topics and theories about statistical inference. ",
+            "\u00a0Inference ",
+            "\u00a0Knowledge about estimators and properties of estimators. ",
+            "\u00a0I systematically learnt statistical inference with popular methods and applications. ",
+            "\u00a0I learn a lot about important statistical inference topics, like min max rate, Bayesian, etc. "
+        ],
+        [
+            "\u00a0Absolutely great class. ",
+            "\u00a0Very clear lessons and notes. ",
+            "\u00a0The course was well organized. Course contents were really important and useful statistical topics. However, given the level of difficulty of the topics, I feel the course went to fast that it's hard to absorb the details. ",
+            "\u00a0Only cover a small part of the textbook ",
+            "\u00a0The challenging problem sets and take-home exams are, unquestionably, the best part of this course. While struggling to solve the problem sets, I learned many interesting ways to handle theoretical questions in Statistics. Moreover, both take-home exams were extremely challenging and exciting!\r\n\r\nWith respect to the problem sets, I have only one suggestion: providing solutions to the exercises would be very useful for the students' learning process.\r\n\r\nThe main weakness of this course is that, frequently, the lecture time was dedicated to solve very simple questions or to give multiple examples about one topic. Dedicating more time to complicated proofs and general examples may be more efficient than showing several simple cases. ",
+            "\u00a0This class is very well organized, and the material covered should be very good foundation for further study of statistics. I can't really think of any weakness of this class. ",
+            "\u00a0This course has good coverage of knowledge including theory and applications. It will be better if more cases of applications are introduced. ",
+            "\u00a0I think it's better to give official ans to the assignments. "
+        ],
+        [
+            "\u00a0Very useful and enjoyable! ",
+            "\u00a0Yes ",
+            "\u00a0I would recommend this course to PhD students or others with great interest in academia, since the course material are important and fundamental statistical topics. I would probably not recommend this course to others, because it was a hard course! ",
+            "\u00a0yes ",
+            "\u00a0If the student is interested in theoretical Statistics or Theoretical Econometrics (my case), this is a very useful course, because it covers many topics that are either very fundamental in Mathematical Statistics or not standard in Economics (e.g.: Bayesian methods). ",
+            "\u00a0I highly recommend this class to any student interested in theoretical statistics. Harry is a great instructor, too. ",
+            "\u00a0I think this is a suitable course for solidification of statistics knowledge. ",
+            "\u00a0Absolutely yes. "
+        ]
+    ]
+}

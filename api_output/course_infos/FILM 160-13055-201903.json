@@ -1,0 +1,55 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49877/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to the long history of media as understood in classical and foundational (and even more recent experimental) theories.\u00a0Topics involve the technologies of modernity, reproduction, and commodity, as well as questions regarding knowledge, representation, public spheres, and spectatorship. Special attention given to philosophies of language, visuality, and the environment, including how digital culture continues to shape these realms.\u00a0", 
+    "title": "Introduction to Media", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 102", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13055", 
+        "listings": [
+            {
+                "number": "160", 
+                "subject": "FILM"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YFIC\">YC FILM Stud: Critical Studies</a>"
+    ], 
+    "professors": [
+        "Robert Williams"
+    ], 
+    "long_title": "Introduction to Media", 
+    "extra_info": "A"
+}

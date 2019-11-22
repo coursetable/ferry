@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Only one term may be offered toward the major, with permission of the director of undergraduate studies; two terms may be offered toward the bachelor's degree.", 
+    "description": "Research projects for qualified students. The student must be supervised by a member of the Cognitive Science faculty, who sets the requirements and directs the research. To register, a student must submit a written plan of study to the director of undergraduate studies and the faculty supervisor. The normal minimum requirement is a written report of the completed research, but individual faculty members may set alternative equivalent requirements.\nOnly one term may be offered toward the major, with permission of the director of undergraduate studies; two terms may be offered toward the bachelor's degree.", 
+    "title": "Directed Research in Cognitive...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10667", 
+        "listings": [
+            {
+                "number": "471", 
+                "subject": "CGSC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Joshua Knobe"
+    ], 
+    "long_title": "Directed Research in Cognitive Science", 
+    "extra_info": "A"
+}

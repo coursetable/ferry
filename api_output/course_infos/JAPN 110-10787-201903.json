@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-13", 
+        "group": 2, 
+        "day_of_week": "Friday", 
+        "time": 14
+    }, 
+    "requirements": "", 
+    "description": "Introductory language course for students with no previous background in Japanese. Development of proficiency in listening, speaking, reading, and writing, including 50 hiragana, 50 katakana,\u00a0and 75\u00a0kanji characters. Introduction to cultural aspects\u00a0such as levels of politeness and group concepts. In-class drills in pronunciation and conversation. Individual tutorial sessions improve conversational skills.\n\n1.5 Yale College course credits", 
+    "title": "Elementary Japanese I", 
+    "skills": [
+        "L1"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "RKZ 06", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 5, 
+        "oci_id": "10787", 
+        "listings": [
+            {
+                "number": "110", 
+                "subject": "JAPN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Mika Yamaguchi"
+    ], 
+    "long_title": "Elementary Japanese I", 
+    "extra_info": "A"
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Fundamental aspects of microbiology and biochemistry, including stoichiometry, kinetics, and energetics of biochemical reactions, microbial growth, and microbial ecology, as they pertain to biological processes for the transformation of environmental contaminants; principles for analysis and design of aerobic and anaerobic processes, including suspended- and attached-growth systems, for treatment of conventional and hazardous pollutants in municipal and industrial wastewaters and in groundwater.", 
+    "title": "Biological Processes in Enviro...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "ML 104", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13593", 
+        "listings": [
+            {
+                "number": "641", 
+                "subject": "ENAS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jordan Peccia"
+    ], 
+    "long_title": "Biological Processes in Environmental Engineering", 
+    "extra_info": "A"
+}

@@ -1,0 +1,110 @@
+{
+    "crn_code": "20622",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            10,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            9
+        ],
+        [
+            0,
+            0,
+            2,
+            6,
+            7
+        ],
+        [
+            0,
+            2,
+            5,
+            7,
+            1
+        ],
+        [
+            0,
+            0,
+            6,
+            6,
+            3
+        ],
+        [
+            0,
+            0,
+            4,
+            9,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Different ways to parallelize algorithms theoretically (covered lightly) and in practice (covered heavily) ",
+            "\u00a0I learned technologies such as OpenMP, MPI, and CUDA while taking this course. More importantly, I gained a conceptual understanding for the design and analysis of parallel algorithms. ",
+            "\u00a0The ability to write programs using OpenMP, MPI, and CUDA; experience working with an HPC system; a better understanding of programming for performance to suit the computer's architecture; an overview of topics in parallel computing; and a better idea of how parallelism works. ",
+            "\u00a0I learned how to use different parallelizing frameworks to run on the Grace clusters to improve the performance of certain types of problems. ",
+            "\u00a0Learned all about what parallel programming is and different ways of utilizing it to program. Great elective - filled many holes in the knowledge I have right now in computer science about computer architecture and programming using threads. ",
+            "\u00a01. the importance, measures and concepts of parallel programming\r\n2. Using OpenMP, MPI, and CUDA ",
+            "\u00a0I learned about the basic structure of a cpu chip, about various parallel programming paradigms (multithreading, message-passing), and how to implement these using specific frameworks and packages like OpenMP, MPI, and CUDA for GPUs. ",
+            "\u00a0Cuda, OpenMP, MPI -- all useful parallel programming APIs. ",
+            "\u00a0You learn to think about computation at a much lower level than 323 and how to optimize it (e.g. taking into account cache behavior), and three nifty parallel programming APIs: OpenMP, MPI and CUDA. ",
+            "\u00a0I learned how to measure the performance of a computer / program on a task, how to program with Cuda for gpu, how to program using mpi and using openmp. I gained a greater understanding of performance limitations and computer architecture. ",
+            "\u00a0I learned a lot about how the computer chips work. We learned about a regular multicore chip, and GPUs. We learned instruction level parallelism (pipelining), Open MP, MPI, and GPU parallel programing techniques in c.  ",
+            "\u00a0I learnt to code and debug parallel programs, using different interfaces an devices such as OpenMPI, OpenMP, and CUDA. ",
+            "\u00a0How to program in parallel using three approaches/packages: OpenMP, CUDA, and MPI. How to think about problem-solving in parallel, how to recognize which problems are suited for parallelization, and how to spot common mistakes in parallel programming. You also get first-hand experience running jobs on a HPC computing cluster (for our year it's Grace. for previous years I heard it was Omega), so that's pretty cool. ",
+            "\u00a0I learned a lot about computer architecture. I also became familiar with OpenMP, MPI and CUDA. "
+        ],
+        [
+            "\u00a0This course was brilliantly taught. I cannot think of a way to improve it. ",
+            "\u00a0This course gave students a solid understanding of the material, and the assignments were engaging. Perhaps the lecture slides could be modernized. Maybe there could be C/C++ code instead of FORTRAN/C code. ",
+            "\u00a0Strengths: fun and exploratory assignments, a unique opportunity to use an HPC cluster, covers more topics than just parallel computing (computer architecture and scientific problem solving are also covered)\r\nWeaknesses: exams were weighted a bit too heavily, not enough emphasis was placed on either attending class or understanding the assignments ",
+            "\u00a0This course was very well taught and paced. I just wish that Prof. Sherman could have pointed that the material needed for some of the p-sets would come in later lectures closer to the deadline of the p-set. If he could post most of the lectures in advance, that would be really appreciated. ",
+            "\u00a0Great material - the course material was very engaging throughout the semester. The first two problem sets were pretty easy, but the second two were very challenging, though I learned a lot from them as I had to figure a lot out on my own. The only suggestion I would have is to have more TAs/office hour sessions as the schedule was a little disorganized and it was hard for me with my schedule to even attend 1 office hours session. Also, comments on graded psets were unclear or sometimes not even there. ",
+            "\u00a0By far the biggest strength is Professor Sherman!! He's just super helpful if you go to him with any questions or problems and on Piazza too. The course content itself is interesting, and I understand a lot more about performance issues and different approaches for different uses. Minor improvements: lecture notes could be uploaded before lecture, and it would be more intellectually challenging and helpful to have one or two more programming assignments and/or less of a focus on data collection, and the explanation questions are often helpful to make us think about underlying concepts, but sometimes they're repeated. ",
+            "\u00a0I found this course very well taught, it really felt like I was constantly getting new and useful information. My only gripes would be that I felt TA office hours were too sparse, and that the professor said the final exam was cumulative and it was almost comically not so. ",
+            "\u00a0The assignments are fantastic. Can't really think of how this course could be made all that much better. ",
+            "\u00a0This is a very dense course. Prof Sherman's expertise in the area shines through when he lectures, and you will learn a lot from him, assuming you can get up for it at 9am. ",
+            "\u00a0The homeworks strongly support the material learned in class and are very informative. One of the assignments (the third one) was much more time intensive than the others, and there were few TA office hours near the due date which was frustrating, but overall, good, manageable assignments that pair well with material learned in class. ",
+            "\u00a0The class was well taught, and assignments were very constructive and educational. The slides were very helpful! \r\nweakness: I think that this class did not have enough help resources and peer tutors. ",
+            "\u00a0Overall was a very good course with a fair amount of work and good coverage of content. Lecture slides were very comprehensive, and Professor Sherman was very helpful, knowledgeable, and approachable. ",
+            "\u00a0Strengths: You really get a good idea of how to parallelize code, what problems are parallelisable, what mistakes people commonly make, etc. Professor Sherman REALLY teaches you the material!\r\nWeaknesses: A bit dry, especially when the last two assignments were both about parallelizing matrix multiplication. Also the assignments actually get incrementally harder to be quite honest. I literally screamed as I debugged/thought hard about indexing in matrix multiplication for three days in a row, but on the plus side when you do figure it out, you actually learn it lol. But it's good for you! Like veggies. You don't wanna eat it but you know you should. ",
+            "\u00a0The course is well structured and I thing the slides are very good. Lectures are helpful. I think that some of the assignments require too much collecting data and that it might be better to focus on more theoretical questions rather than plugging in and getting many timings. "
+        ],
+        [
+            "\u00a0I would recommend this course to any and every computer science student and every student with a strong interest in computer science, even if they are not a CS major. ",
+            "\u00a0I would recommend this course to another student interested in the subject. I enjoyed the course, but probably would not have selected it if I could do this semester over again, as it focuses on algorithms and theory. I am not a CS major and would have preferred to take another project-based course in which students gain experience applying existing parallel algorithms on the Yale cluster to problems of interest. For example, students could use Tensorflow or solve a PDE on Yale's clusters. ",
+            "\u00a0Sure; 424 was a great introduction to a fascinating field that allowed me to explore how computing is applicable to scientific problem solving. You'll learn how to use some basic parallel tools (which you can probably leverage when writing programs on your own laptop, with the way technology is going) and will get an overview (or recap) of computer architecture. You'll also learn about programming for performance--how to write code to best suit the design of modern machines (i.e. leveraging caching, latency hiding, etc.), and you'll actually write programs that let you measure the improvement. You'll also learn to appreciate debugging serial programs, since parallel programs make the debugging nightmare exponentially worse. The course covers a lot of cool topics, from shared memory multithreading to message passing concepts to GPU programming, and the material is presented in a clear way at a manageable rate. Overall, I'd definitely recommend the course to anyone curious about how high performance computations are done, or about how computer science can be used to augment a variety of scientific disciplines. ",
+            "\u00a0Yes! Even if you don't use the frameworks that this course uses, the parallelization techniques that you learn and the insights that you get from coding can only make you a better programmer and problem solver. ",
+            "\u00a0Definitely take this CS elective. Although Professor Sherman is not the most engaging lecturer, he explains things very well and the class has great material which you will certainly learn a lot from. The psets are not too hard (except for 1), but there are only 4, so the class is not too time-intensive. ",
+            "\u00a0Yes if you're interested about parallel programming, overall it's a well taught class ",
+            "\u00a0I would highly recommend this course to anyone interested in programming and trying something new. The problems we had to solve were very interesting, and the tools we used felt really cool to learn. I also felt this course was the best bang for my buck of any course I've taken so far in that I constantly felt like I was learning new and useful information. It felt like a perfect survey course in that regard. The only issue with this course is that parallel programming, moreso than regualr programming, is hard to debug, so problem sets can take longer to debug and understand than most courses. That being said, the problem sets involve creating programs, running them yourself, and analyzing results, so it felt like I was learning more about what was actually happening than in most classes. This is a great CS elective. ",
+            "\u00a0Yes, Professor Sherman is very knowledgeable and this course is super interesting if you want to learn about how to run concurrent tasks. ",
+            "\u00a0Yes. It's easily one of the most legitimate CS electives we have in the department. Take it. ",
+            "\u00a0Yes! This is a very solid CPSC elective! prof. Sherman is a good lecturer and lectures are informative and well worth your time, as are assignments. ",
+            "\u00a0I would definitely recommend. I think the professor does a good job of teaching and definitely use him as a resource and schedule appointments with him etc. I think that  the second two assignments are very difficult and make sure to set aside time for that. The first two assignments are deceptively short compared to the second two which are incredibly incredibly long. Make sure to learn the slides well for the exams. This is a solid CS elective! ",
+            "\u00a0This is a solid class that will teach you the motivation, principles, paradigms and techniques of parallel programming. You will learn to write and debug parallel programs, as well as how to optimize them. There aren't many assignments, but they do take some time, so make sure to do some load balancing by spreading the work out over the ~2 weeks or so that you have to complete each assignment. Debugging parallel programs can be difficult and sometimes frustrating, but you'll appreciate it when it's done. All in all, a great CS elective that actually teaches you things. ",
+            "\u00a0If you're a CS student, take this course because understanding parallelization is useful and important. It may get increasingly dry as you get through the course, but on the bright side you really learn the material. And you would want that from your education at Yale, don't you? ",
+            "\u00a0This is one of the better CS electives at Yale. You will learn about OpenMP, MPI and CUDA. If you dont understand much about computer architecture or GPUs, this class will be worthwhile. Professor Sherman is great. If you ask any questions on Piazza, he will promptly respond with a detailed answer. He knows what he is talking about in this field. Yes, this class takes more work than other CS electives, but you will get much more out of it. I highly recommend it. "
+        ]
+    ]
+}

@@ -1,0 +1,114 @@
+{
+    "crn_code": "13474",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's <b>sensitivity to students and ability to provide students with adequate feedback</b> was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            11,
+            9,
+            0
+        ],
+        [
+            0,
+            0,
+            4,
+            6,
+            11
+        ],
+        [
+            0,
+            0,
+            2,
+            9,
+            10
+        ],
+        [
+            0,
+            0,
+            4,
+            6,
+            11
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a04 ",
+            "\u00a0When a problem set was due, I spent between 3-10 hours on this course. ",
+            "\u00a07 ",
+            "\u00a05-10 per problem set ",
+            "\u00a0The homework assignments probably took between 7-10 hours (but there were only 5). The take-home final exam took about 15-20. ",
+            "\u00a02 ",
+            "\u00a05-10 ",
+            "\u00a03 hours ",
+            "\u00a03 ",
+            "\u00a0On weeks that we had assignments due, I spent about 5 hours per week on them. ",
+            "\u00a08 hours ",
+            "\u00a04 hours. ",
+            "\u00a08~10 ",
+            "\u00a0Anywhere between 2 hours to 6 hours ",
+            "\u00a05 hours ",
+            "\u00a05 "
+        ],
+        [
+            "\u00a0This course is excellent. It brings together numerous (and very different( ways to look at infectious diseases and does it in a very holistic and thorough way. To my knowledge, this is the only course of its kind that does this. ",
+            "\u00a0The issue with this course is that it is a survey of challenging modeling topics that cumulatively do not get the attention they each deserve. An improvement would be to focus on just three of the methods presented so that students could become confident in a smaller number of techniques, rather than have a shaky understanding of 8 different ID epi models. ",
+            "\u00a0Excellent course for learning new methods being developed in mathematical modeling of infectious diseases. ",
+            "\u00a0I think that the class teaches a lot of interesting concepts and builds real quantitative competencies. I do think it would be useful to be more explicit in how the concepts relate to each other/contextualize each class throughout the course. ",
+            "\u00a0This course is very difficult but rewarding and offers many insights into technical quantitative methods used in epidemiology. ",
+            "\u00a0The course is great for learning advanced topics in infectious disease epi. The course is challenging, but I feel that I have learned more applicable skills in this course than in any other course I have taken at YSPH. ",
+            "\u00a0excellent course in studing the method of modeling work in solving infectious disease problems ",
+            "\u00a0This course is pretty difficult. The concepts went way over my head at times. The pace could be slowed and one or two topics eliminated so that students can fully grasp whats being taught ",
+            "\u00a0Strengths: Learned very interesting and very cool methods to analyze infectious disease data, learned more about coding in R, enhanced my understanding of infectious disease behavior, took away tangible skills I hope to apply to my future career, instruction was clear, assignments were reflective of course content, exam was difficult but fair, helpful feedback on assignments\r\n\r\nWeaknesses: Perhaps this is in the control of the registrar, but having two hour lectures plus a two hour lab made it difficult to concentrate for the entire lecture and lab. The professor attempted to help by giving us a couple minutes break at the hour mark. Sometimes it felt like there was too much content in one sitting. ",
+            "\u00a0The professor and TF were extremely helpful, but this is a difficult course. ",
+            "\u00a0Very useful and informative course. ",
+            "\u00a0I like how this class allowed us to utilize the knowledge we'd had from Ted's class and to practically build an infectious disease model based on different kinds of approach. I also really like every week's lab session.\r\n\r\nI hope there could be one lecture (probably the first?) reviewing basic concepts for infectious disease model (probably from Ted's class?)\r\nI hope during the lab session, we may have about 15 minutes to review the concepts during the lecture. ",
+            "\u00a0Strengths: This course is a great introduction to cutting edge methods in infectious disease modeling and quantitative methods. It is well taught. The lab sections were informative and fun. \r\n\r\nWeaknesses: Material introduced can be overwhelming or difficult to understand. I would recommend anyone taking this course to be a regular at office hours. ",
+            "\u00a0Very good course! Teach us cutting-edge knowledge on quantitative methods in infectious disease. I am amazed by what I learned from this class. This course is very helpful for study design. ",
+            "\u00a0I enjoyed this class far more than I had expected. The workload is reasonable. I appreciated working in small groups for the problem sets! "
+        ],
+        [
+            "\u00a0Ginny is nice, and handles conveying the material well. ",
+            "\u00a0Very good at explaining the material and designing the course ",
+            "\u00a0I think Ginny is a really intelligent person and approachable to those who ask. I do think it could be useful to have instructor office hours in addition to just TF office hours, since Ginny teaches in MATLAB and the TF teaches in R (and therefore can't always answer MATLAB-specific questions). ",
+            "\u00a0Ginny was a very good teacher and managed to get through lots of material over the course of the semester. ",
+            "\u00a0Dr. Pitzer is great and receptive to questions during class/outside of class. Class can be a little overwhelming sometimes but she does a good job of making sure everyone understands the material before moving on. ",
+            "\u00a0excellent! ",
+            "\u00a0Good feedback and very helpful in office hours ",
+            "\u00a0Wonderful. Knowledgeable. Engaging. ",
+            "\u00a0Dr. Pitzer is an excellent instructor. She was very receptive to questions and did a great job explaining quite difficult concepts. Her powerpoints are very clear and provided great information for us to look back on. She's also funny! I love that she incorporated recent research and real world examples. ",
+            "\u00a0She was very kind and helpful. I truly enjoyed her lecture. ",
+            "\u00a0Very attentive to students' needs/ concerns about the course. ",
+            "\u00a0Ginny is very helpful in making sure we understand the complicated concepts introduced during the lecture. ",
+            "\u00a0Ginny is a great lecturer. She is clear and knows what she is talking about, she has effective powerpoint slides, she even throws in jokes and cultural references for us, which is awesome. I appreciated it when she would slow things down and explain things thoroughly. I think it can be intimidating (personally) to speak up and ask questions in class, so group work or time to discuss the material in small groups would be an interesting activity to try. ",
+            "\u00a0Professor Pitzer is a great instructor. She explains everything clearly. When the concepts are complicated and difficult, she will explain them step by step and make sure that everybody get it. She is very patient on answering student's questions, and she always encourages us. ",
+            "\u00a0You can tell that Ginny is trying to be as accessible as possible. Any questions are welcomed. A friendly instructor! "
+        ],
+        [
+            "\u00a0I would recommend this course to everyone. I know I will use things from this course for everything I work on for the rest of my career. It was really helpful! ",
+            "\u00a0The course teaches a lot of interesting concepts pertaining to infectious diseases (estimating transmission, time series data, vaccine effects, etc.). It is difficult and quant-heavy, but problem sets are done in groups. The final ties everything together, and it is manageable by yourself. I would recommend the class to all EMD people. If possible, take Ted Cohen's transmission dynamics class first, but I know that people who are first years now won't be able to. ",
+            "\u00a0The more time you put into understanding the material, the more rewarding the course and the better your performance on homework assignments. ",
+            "\u00a0absolutely ",
+            "\u00a0Difficult but you get a good overview of different methods of analyzing data in R or Matlab ",
+            "\u00a0This course is good if you really want to go into modeling. Otherwise Id find something easier ",
+            "\u00a0I would absolutely recommend this course to a student who is interested in studying infectious diseases. I have gained a greater appreciation for infectious disease epidemiology and am walking away from this course with a handful of extremely applicable skills. ",
+            "\u00a0It is a very difficult course, but you will learn a lot. ",
+            "\u00a0A highly recommended course that will not disappoint you. ",
+            "\u00a0This is an excellent course if you are interested in infectious disease model building, and it will allow you to learn practical skills. In addition, this course also allow you t ",
+            "\u00a0I would recommend this course. Even though I am in no way versatile in the methodologies presented in this class, I think it's good to have an introduction to these methods as an infectious disease epidemiologist and to know about the unique challenges in studying IDs. I learned a lot in this course and I thought it was worth my time. It is challenging, but ultimately a good experience. ",
+            "\u00a0Strongly recommend it to everybody! ",
+            "\u00a0I would definitely recommend taking this class. While the problem sets can be challenging, they are well worth it. "
+        ]
+    ]
+}

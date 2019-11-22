@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49658/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A research course in Chinese studies,\u00a0designed for students with background in modern and literary Chinese. Students explore and evaluate the wealth of primary sources and research tools available in China and in the West. For native speakers of Chinese, introduction to the secondary literature in English and instruction in writing professionally in English on topics about China. Topics include Chinese bibliographies; bibliophiles\u2019 notes; specialized dictionaries; maps and geographical gazetteers; textual editions, variations, and reliability of texts; genealogies and biographical sources; archaeological and visual materials; and major Chinese encyclopedias, compendia, and databases.", 
+    "title": "Sinological Methods", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "SML 207", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12084", 
+        "listings": [
+            {
+                "number": "600", 
+                "subject": "EALL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Pauline Lin"
+    ], 
+    "long_title": "Sinological Methods", 
+    "extra_info": "A"
+}

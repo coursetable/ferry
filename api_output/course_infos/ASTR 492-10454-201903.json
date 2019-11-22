@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "A one-term independent research project or essay to fulfill the senior requirement for the B.A. degree. The project must be supervised by a member of the department and approved by the director of undergraduate studies.", 
+    "title": "The One-Term Senior Project", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10454", 
+        "listings": [
+            {
+                "number": "492", 
+                "subject": "ASTR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Gregory Laughlin"
+    ], 
+    "long_title": "The One-Term Senior Project", 
+    "extra_info": "A"
+}

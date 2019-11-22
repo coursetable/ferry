@@ -1,0 +1,148 @@
+{
+    "crn_code": "13552",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            8,
+            6,
+            10
+        ],
+        [
+            3,
+            4,
+            6,
+            7,
+            6
+        ],
+        [
+            0,
+            5,
+            6,
+            7,
+            8
+        ],
+        [
+            0,
+            0,
+            4,
+            12,
+            10
+        ],
+        [
+            0,
+            0,
+            15,
+            11,
+            0
+        ],
+        [
+            1,
+            4,
+            6,
+            8,
+            7
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I feel like I could use ArcGIS to do almost anything now. ",
+            "\u00a0I learned about particular GIS techniques and presenting results in form of reports. ",
+            "\u00a0I gained more experience and expertise with vector operations in GIS and learned more about data management in GIS. ",
+            "\u00a0This course provided me with technical knowledge on the application of ArcGIS software for geographic analysis. I came into the class with a working knowledge of GIS, having taken an Introduction to GIS class in undergrad and used ArcMap for work for the past few years. One of my goals in returning to graduate school was to advance my proficiency in GIS, and I feel I achieved what I was hoping to from this class. Specifically, I found it useful to learn about the application of TIN surfaces, spatial joins, and intersections. ",
+            "\u00a0I have learned the basics of using arcGIS for vector data, to the point that now I know where to look and what questions to ask to figure out more advanced use of the software. ",
+            "\u00a0I had no prior GIS experience before taking this class so I gained a great deal of knowledge about ArcGIS and vector based mapping. ",
+            "\u00a0I have learned how to use ArcGIS, specifically ArcCatalog, ArcScene, and ArcMap, to prepare, interpret, and present geographical data. I have also learned how to build models in ArcMap. ",
+            "\u00a0Arcgis. ",
+            "\u00a0GIS is very time consuming to learn. ",
+            "\u00a0I developed a foundational understanding of ArcGIS and its tools, including ArcScene and ArcMap. ",
+            "\u00a0I gained a basic understandings of how to use a variety of functions in ArcGIS. ",
+            "\u00a0High proficiency with GIS.  Got what I wanted from the course. ",
+            "\u00a0GIS, as both a knowledge and skill. ",
+            "\u00a0I came into this course without any GIS experience and little to no exposure to computer science in general, and I now have a very solid understanding of GIS vector. I understand many vector GIS operations and am able to combine them organically to answer questions and solve problems. Surprisingly, I also feel comfortable creating functional models that conduct a series of operations. ",
+            "\u00a0I feel that I am competent in the use of GIS. ",
+            "\u00a0GIS vector modeling. Basics in GIS data preparation, data analysis and data presentation. Visualization of data into spatial map. ",
+            "\u00a0Great practical, hard skill to learn! Very relevant to a lot of fields and research. ",
+            "\u00a0GIS, mostlyy vector ",
+            "\u00a0A greater understanding of some of elements of the ArcGIS GUI, frequently used tools and operations, and troubleshooting tips for solving technical issues related to use of the program. ",
+            "\u00a0I learned so much in this course. I had never done a second of GIS before taking this course, but came out of it with a detailed understanding of vector GIS and the confidence that I could do GIS in a job. I learned all about data gathering, data preparation, data analysis, and data interpretation. Dana manages to pack a lot into 13 weeks and take people who have never done GIS before and give them facility with ArcGIS. ",
+            "\u00a0Comfort with GIS and understanding of its power to create and analyze spatial data "
+        ],
+        [
+            "\u00a0Exactly what I expected. ",
+            "\u00a0I gained much experience in utilizing GIS to conduct analysis and presenting data more than I expected. ",
+            "\u00a0We were able to cover all of the main vector operations in the syllabus which is what I expected. ",
+            "\u00a0Basically, I gained the skills that I had hoped to from this class plus more. I do feel that the tutorials were more lacking towards the end of the class, namely on the application of ModelBuilder and performing spatial regressions. ",
+            "\u00a0The skills learned were well aligned. ",
+            "\u00a0I gained more knowledge and skills than I expected but wish there had been a hands on lab component as opposed to lecture based learning only. ",
+            "\u00a0I think this class is very informative and helpful. It fully meets my expectations in learning how to prepare, interpret, and present the geographical data for my research in the field of epidemiology. ",
+            "\u00a0Very well. I did learn a lot. ",
+            "\u00a0I gained a lot of knowledge but could have gained a lot more had I spent more time on the assignments or just messing around with GIS. ",
+            "\u00a0The knowledge, skills, and insights of this class aligned fairly well with my expectations. There was a significant amount of information packed into each class and the whole semester, and I feel that I have a grasp on how to utilize this platform of tools to create maps that respond to particular issues and requests. ",
+            "\u00a0This class fell below my expectations. I expected to learn how to use GIS effectively and learn many capabilities. Instead, I feel like I learned a lot about relatively few specific GIS functions. I recognize that deeper understanding of GIS comes through spending time using and practicing, but I hoped to come away from the course with a greater understanding of GIS than I have. ",
+            "\u00a0Yes. ",
+            "\u00a0Exactly as expected, the class was difficult but I learned a lot. ",
+            "\u00a0This course exceeded my expectations, in that I not only know how to use the GIS operations, but I also understand the underlying functions, and if problems arise, I would feel comfortable trying to figure out where the problems came from. As I've gone through the course, I've learned more about how GIS tools can be applied to the environmental field, and I grew more and more convinced that I will be using GIS in my future professional endeavors. ",
+            "\u00a0I emerged from the class with the skills that I had intended to gain. ",
+            "\u00a0Its is very well upto my expectation. ",
+            "\u00a0Strong alignment! ",
+            "\u00a0Well aligned. ",
+            "\u00a0This course definitely met my expectations, if not exceeded them in terms of what I learned. I expected to be pretty bad at GIS, and I wasn't really sure exactly what I was going to learn, but I was pleasantly surprised that it came more easily to me than I expected. ",
+            "\u00a0Well "
+        ],
+        [
+            "\u00a0The grading curve is terrifying and stresses a LOT of people out. ",
+            "\u00a0This course covers a wide range of topics. The weekly assignments were sometimes very playful  and very related to real practices in life. The reports developed in the course may also be good examples to show your GIS skills later to others. ",
+            "\u00a0This course is good at providing students with an understanding of the theoretical underpinnings of ArcGIS software and it's application for very applied real-world problem solving. It puts the application of the software and how it works into a very clear and descriptive context that makes it easy to understand and learn. It provides a technical foundation in the application of fairly sophisticated tools, and unique ways to apply them to solve a multitude of geographic questions and problems.\r\n\r\nThe location that the class was taught in this semester, Burke Auditorium, is really not the right location for the class to be taught. I think that many students, myself included, got the most out of lectures when we could follow along on our personal computers during class instruction and apply the tools we were learning in real time. Those of us who were lucky enough to have computers that could handle running ArcGIS software, had a difficult time given that the room has very few outlets to charge your computer, meaning you had to come with your computer fully charged or sit in the very back of the room where it is harder to see and hear. Really, this class needs to be in a computer lab where students can follow along on Yale computers, such as the one in CSSSI or Sage. \r\n\r\nAdditionally, the class doesn't seem to be well suited for people with no background in GIS. Given that there is no lab component, there's not an opportunity to work through the basics and gain a real understanding of software. Those who came into the class without a background in applying the software seemed to feel pretty frustrated. ",
+            "\u00a0The strength of this class is its cumulative nature, so that each week you build on and improve on the skills already learned. This class however also as several weaknesses. I found lectures to be very slow and uninteresting, I think the class would be better formatted as a lab where we can work on tutorials together as we learn, rather than just watching the professor use GIS on the screen. Another weakness of the class was that criteria for each assignment were often very unclear, and I often found myself guessing what the professor would be looking for. One last weakness of the course is that our project was actually split into several disjointed parts. I think it would have been a more valuable learning experience to work on one cohesive project throughout the semester with specific feedback from our instructor. ",
+            "\u00a0This course covered alot of material and Professor Tomlin is obviously extremely smart when it comes to all things GIS; however, i don't think this course is set up in the most effective way for students to gain the most knowledge possible. I think there needs to be a lab component to this class. Also, I think a clearly defined grading rubric BEFORE a project was due would be extremely helpful. Finally, I don't think the \"folder\" system is effective or helpful. ",
+            "\u00a0This course provides systematic knowledge about how to use ArcGIS, specifically ArcCatalog, ArcScene, and ArcMap, which is very useful in the epidemiological research. By taking this course, the students learned how to prepare, interpret, and present geographical data, as well as build models in ArcMap. ",
+            "\u00a0The assignments are there to help you learn. But I did not walk away with something that I could show my future employer. ",
+            "\u00a0I think Dana did a great job of teaching us how to use GIS as an analytical tool. I would have liked more instruction on how to make maps that look good. \r\n\r\nIt was incredibly difficult for me to stay awake in class. Something about the dim lighting and the timing of the course (3 hours, right after lunch). I really, really struggled to stay awake, and if it weren't for the break I'm sure I would have fallen asleep every class. I would suggest taking the break about 15 minutes earlier than it is currently scheduled. ",
+            "\u00a0The strength of the class is that it forces eventual comfort with the ArcGIS suite of tools. However, this comfort is obtained only through painstaking effort and time. Much of my time through the semester was . . . wasted . . . through the process of trial and error. While I acknowledge that learning should not come easily, there may be more effective ways at explaining how to use the tools of this suite than forcing students (i.e., me!) to fumble with these tools. ",
+            "\u00a0This course is not taught in a logical order. Rather than building on skills week to week, lectures and assignments jumped around from topic to topic. This course would be improved if lectures and assignments build on skills learned the week before, in order to steadily increase students' knowledge of and capabilities with GIS. ",
+            "\u00a0Strengths: Professor Tomlin is able to dissect technical subject matter into easily digestible parts.  I really appreciate his teaching style.  I also appreciate the immense amount of time Professor Tomlin devotes to his students.\r\n\r\nWeaknesses:  I question the value of of the data-modeling assignment. With the tool as glitchy as it is, I don't think I would ever rely on that in a professional setting.  (I am told that you need to know python for high-level modeling, which I look forward to learning). ",
+            "\u00a0The course moves at a manageable pace for someone with little to no GIS experience, and it teaches you about GIS both conceptually and functionally. ",
+            "\u00a0Strength- you learn the software.\r\n\r\nWeaknesses- not sufficient support for students engaging in the learning process. ",
+            "\u00a0Strengths are GIS skills development and its diverse application. Based on the teaching method, it was challenging for me as its my first time using GIS. More engaging teaching practice would better help gain more skills. ",
+            "\u00a0Sometimes expectation for assignments were not clear.\r\n\r\nThe professor is very engaging! I really enjoyed his teaching style. He is also very responsive and helpful with student questions. ",
+            "\u00a0The handouts the instructor gave us were great, but there were still times when he failed to mention something regarding GIS that were not in the handouts that would have been extremely helpful. ",
+            "\u00a0The course placed significant emphasis on practical skill development and interaction with the ESRI software to improve familiarity and comfort with using its different operations. The semi-flipped modality of the class was effective for this type of delivery. The lecturer also provided extensive reading resources for building student competency with the program, providing a troubleshooting backstop for students beyond the course's duration. ",
+            "\u00a0Strengths: You learn SO much in this course. Dana is a very thorough teacher. As I mentioned before, I went from barely knowing what GIS was to being able to create and interpret fairly sophisticated maps such that I feel that I could do GIS in a workplace. The weekly homeworks allow you to practice that week's topic, and the open nature of the semester project allows you to tailor the project to your interests. Dana is also extremely flexible about changing your project topic throughout the semester, and he encourages questions both during class and during the week via email and Piazza. Piazza is a hugely helpful resource  - I really appreciated the questions my classmates would ask and often, I would have a question and find that someone else had already posted and answered it on Piazza. It was nice to know we were all struggling together! \r\n\r\nWeaknesses: Depending on your frame of mind, the time commitment and workload of this class might be a weakness. For me, I had two classes this semester that I was unable to put the effort in that I wanted to because GIS took up so much of my time and energy. That is a regret of mine. Being up until all hours of the night at the lab because of GIS was rough. Another weakness is the grading system. Dana does not officially grade the homeworks, but he does rank you and your classmates on a Below Average to Well Above Average scale, and it's public, so it's pretty stressful. It took me about halfway through the semester to stop actually caring what grade I got on the homeworks, because they don't actually count toward your final grade at all. But I still got a jolt of panic each week when Dana would release the grades. A final weakness to me would be that the class is not held in a lab. I think Dana is a really good teacher, and he was always very thorough in his lectures, but I didn't have ArcGIS on my computer and sometimes I thought I would have had an easier time if we could all follow along on the computer together. ",
+            "\u00a0This course is a HUGE time commitment - to the point where it can become miserable if you don't understand the assignment and procedure.  Maybe more TAs/office hours would help?  Or if Dana gave the advice he gave a few times near the end of term: \"Set a time limit for the assignment and hand in what you have by the end of that time\".  If you don't do this, GIS will eat up your semester. "
+        ],
+        [
+            "\u00a0Really harsh grading.  You definitely know how to use ArcGIS by the end of the course, though. ",
+            "\u00a0Practicing and getting familiar with the tools are important. ",
+            "\u00a0Take this class if you want to learn vector GIS operations, in particular, if you are interested in collecting and handling data, which can be really useful for real-world (job, internship) applications of GIS. Vector rather than the spring raster class is better if you want to focus on one topic/theme throughout the semester. \r\n\r\nThe class is a lot of work. Grading is sometimes frustrating because you are graded in comparison to average, but Dana Tomlin is a really responsive and committed professor if you ever have questions and concerns. ",
+            "\u00a0If you have a moderate background in GIS but are interested in advancing your skills and knowledge further and understanding more of the theory and philosophy behind GIS, this class is great for you and you should take it. Recognize that it is not really a lab-based GIS course, and that you will work on most assignments pretty independently. \r\n\r\nIf this is the first GIS class you have taken, you will probably be frustrated and feel it's hard to grasp the concepts and learn. Unfortunately, there is not really a better option. ",
+            "\u00a0Don't take this class if you have an already stressful semester and ask yourself if the time and emotional commitment is really worth it. ",
+            "\u00a0I recommend this course to other students, especially those who would like to apply ArcCatalog, ArcScene, and ArcMap in their scientific research. This course is really useful and helpful. ",
+            "\u00a0Be prepared to challenge yourself and be proactive . ",
+            "\u00a0The class is necessary if you want to learn GIS--you will get the skills. I would suggest you drink a strong coffee before every class if you feel tired after lunch. ",
+            "\u00a0Proceed with caution! The class undoubtedly teaches you a great deal, but in its current structure it requires patience and perseverance. ",
+            "\u00a0Massive time commitment. Get comfortable with emailing Tomlin (and posting to Piazza) to ask questions. Email is the only way he is available, but he is really helpful over email if you have a specific question. ",
+            "\u00a0Make sure you have the time in your schedule to dedicate to learning GIS. This course is well worth the challenge. It can at times be frustrating, but it is just as rewarding and may be very useful in your future career. ",
+            "\u00a0Seek assistance from the TA, if you can. ",
+            "\u00a0If you are looking for mapping and spatial data analysis skills this is the best course. ",
+            "\u00a0This course is marked as 3 credits, but it's really like a 4 credit course. Be extremely careful about what other courses you decide to take along with it. Tomlin tells you to expect to be doing roughly 6 hours of GIS work a week, and he is not joking. \r\nAlso, I know Tomlin likes to rank students against one another, but don't pay too much attention to it. You will care in the beginning, but as the semester progresses you'll care less and less. You don't know what prior GIS experience those students have. Just focus on completing the homework/project's requirements. ",
+            "\u00a0A great introduction to GIS vector-focused capabilities. Workload and temperamental program operations will require significant patience and perseverance in some instances, but it comes with a significant portfolio of outputs/products at the end of the class that can be used potentially for marketing your (newly-acquired) GIS skills. ",
+            "\u00a0Beware the workload. I knew it was going to be heavy, but I didn't realize how much it would cost me in terms of sacrificing some of my other classes. The classes I had to sacrifice effort-wise were more along the lines of my interests and ones I really enjoyed, so that was unfortunate. Also, if you are prone to anxiety and stress, just realize this class will cause a lot of it. I spent a lot of late nights in the lab agonizing over my homework, and it's hard to be rational with yourself and tell yourself that it's not worth all that stress. There were definitely some tears and each week was a bit of an emotional rollercoaster waiting to find out how you did on your assignments. \r\n\r\nAll that said, you will learn so much, and Dana is a fantastic resource for all your GIS -related needs. This was one of those courses to me that you sort of hate while you're in it, but at the same time it can be really satisfying and you leave very happy that you took it. ",
+            "\u00a0Make sure you have the time for it.  Pair with courses with lighter workloads.  Go to TA office hours. "
+        ]
+    ]
+}

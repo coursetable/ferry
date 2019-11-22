@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49811/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introduction to classic twentieth-century Western and postcolonial Marxist theorists and texts focusing on historical and intellectual exchange between these critical formations. The course tracks how key Marxian-Hegelian concepts such as capital and class consciousness, reification, commodification, totality, and alienation have been developed across these traditions and considers how these concepts have been used to rethink literary and mass cultural forms and their ongoing transformation in a changing world system. Writers discussed may include G.W.F. Hegel, Karl Marx, Friedrich Engels, Georg Luk\u00e1cs, Mikhail Bakhtin, Theodor Adorno, Max Horkheimer, Walter Benjamin, Jean-Paul Sartre, Simone de Beauvoir, Toril Moi, C.L.R. James, Frantz Fanon, Am\u00edlcar Cabral, Edward Said, Antonio Gramsci, Raymond Williams, Fredric Jameson, Perry Anderson, Giovanni Arrighi, Pascale Casanova, David Harvey, and Melinda Cooper. The object of the seminar is to provide students with a secure intellectual foundation in these still-developing hermeneutic traditions.", 
+    "title": "Western and Postcolonial Marxi...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 319", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10981", 
+        "listings": [
+            {
+                "number": "915", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEN2\">YC English: 20th/21st Century</a>"
+    ], 
+    "professors": [
+        "Joseph Cleary"
+    ], 
+    "long_title": "Western and Postcolonial Marxist Cultural Theory", 
+    "extra_info": "A"
+}

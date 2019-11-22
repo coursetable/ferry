@@ -1,0 +1,47 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49221/assignments/syllabus", 
+    "requirements": "Prerequisites: BENG 351 and 352 or permission of instructor.", 
+    "description": "Basic principles and technologies for sensing the chemical, electrical, and structural properties of living tissues and of biological macromolecules. Topics include magnetic resonance spectroscopy, microelectrodes, fluorescent probes, chip-based biosensors, X-ray and electron tomography, and MRI.\nPrerequisites: BENG 351 and 352 or permission of instructor.", 
+    "title": "Physical and Chemical Basis of...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "HLH17 03", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10477", 
+        "listings": [
+            {
+                "number": "410", 
+                "subject": "BENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Fahmeed Hyder", 
+        "Richard Carson", 
+        "Douglas Rothman"
+    ], 
+    "long_title": "Physical and Chemical Basis of Bioimaging and Biosensing", 
+    "extra_info": "A"
+}

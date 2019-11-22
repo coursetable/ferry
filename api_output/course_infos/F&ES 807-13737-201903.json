@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51884/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This survey course focuses on understanding how adroit environmental management and strategy can enhance business opportunities; reduce risk, including resource dependency; promote cooperation; and decrease environmental impact. The course combines lectures, case studies, and class discussions and debates on management theory and tools, legal and regulatory frameworks shaping the business-environment interface, and the evolving requirements for business success (including how to deal with diverse stakeholders, manage in a world of transparency, and address rising expectations related to corporate responsibility).", 
+    "title": "Corporate Environmental Manage...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "BOWERS", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13737", 
+        "listings": [
+            {
+                "number": "807", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Marian Chertow"
+    ], 
+    "long_title": "Corporate Environmental Management and Strategy", 
+    "extra_info": "A"
+}

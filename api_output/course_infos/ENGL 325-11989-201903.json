@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49027/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The persistent impulse in Western culture to imagine the end of the world and what might follow. Social and psychological factors that motivate apocalyptic representations. Differences and constant features in apocalyptic representations from the Hebrew Bible to contemporary science fiction. Attitudes toward history, politics, sexuality, social class, and the process of representation in apocalyptic texts.", 
+    "title": "Modern Apocalyptic Narratives", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LC 204", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11989", 
+        "listings": [
+            {
+                "number": "325", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEN2\">YC English: 20th/21st Century</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENJ\">YC English: Junior Seminar</a></li></ul>"
+    ], 
+    "professors": [
+        "James Berger"
+    ], 
+    "long_title": "Modern Apocalyptic Narratives", 
+    "extra_info": "A"
+}

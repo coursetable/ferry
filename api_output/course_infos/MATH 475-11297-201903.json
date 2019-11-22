@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Highly qualified students may write a senior essay under the guidance of a faculty member, and give an oral report to the department. Students wishing to write a senior essay should consult the director of undergraduate studies early in the fall term.", 
+    "title": "Senior Essay", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11297", 
+        "listings": [
+            {
+                "number": "475", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Yifeng Liu"
+    ], 
+    "long_title": "Senior Essay", 
+    "extra_info": "A"
+}

@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50096/assignments/syllabus", 
+    "requirements": "", 
+    "description": "British politics, society, and culture in the long nineteenth century, a period of constitutional reform, industrial development, social dislocation, imperial expansion, and cultural criticism.", 
+    "title": "From Oligarchy to Democracy in...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WLH 120", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12328", 
+        "listings": [
+            {
+                "number": "229", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Stuart Semmel"
+    ], 
+    "long_title": "From Oligarchy to Democracy in Britain, 1780-1914", 
+    "extra_info": "A"
+}

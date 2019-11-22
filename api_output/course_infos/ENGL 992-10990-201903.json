@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: open only to graduate students teaching ENGL 114.", 
+    "description": "Training for graduate students teaching introductory expository writing. Students plan a course of their own design on a topic of their own choosing, and they then put theories of writing instruction into practice by teaching a writing seminar.\nPrerequisite: open only to graduate students teaching ENGL 114.", 
+    "title": "Advanced Pedagogy", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10990", 
+        "listings": [
+            {
+                "number": "992", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Heather Klemann"
+    ], 
+    "long_title": "Advanced Pedagogy", 
+    "extra_info": "A"
+}

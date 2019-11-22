@@ -1,0 +1,71 @@
+{
+    "crn_code": "10575",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0ASTR 450 (I believe) is a class to prepare graduate students for conducting stellar astrophysics research, and it hits the nail right on the head in that regard. We learned basically every equation necessary to model a star and its internal physics, along with very useful approximations such as homology, polytropes, and the mixing length approximation, among others. Also, we spent a good deal of time at the beginning of the course trying to construct the fundamental equations of stellar physics, which will come in handy later when you actually need to use them to construct stellar models. We spent roughly 6-7 lectures at the end of the year studying asteroseismology, which is a hot topic in stellar astrophysics. But probably the most practically important thing we learned was how to create stellar models using MESA, a Fortran-based modeling library for stellar astrophysics. "
+        ],
+        [
+            "\u00a0The lectures were a barrage of equations with a sprinkling of big picture ideas, which may be hard to grasp the first time you hear the lecture. However, Professor Basu posts most of her notes on Canvas, and she is very accessible if you ever feel overwhelmed with all of the material. The exams weren't too difficult, the problem sets pertained to the lecture material quite well, and the final project was overall enjoyable to work on. "
+        ],
+        [
+            "\u00a0If you're an undergrad looking to take this course, I would advise that you have a decent amount of physics background, especially quantum mechanics and thermodynamics. I took PHYS 420 concurrently with this course, and I felt prepared for the lectures. But the material we learned will be very helpful for a future career in astrophysics, and I am very happy that I took this course. So if you think you're ready, definitely take this class. "
+        ]
+    ]
+}

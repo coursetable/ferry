@@ -1,0 +1,77 @@
+{
+    "crn_code": "11625",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This class helped me to learn mostly presentation skills.  I felt like most of the assignments were geared towards oral presentation which I enjoyed because I felt like I really improved with those.  By the end of my thesis, fitting all my research and background and motivation into 12 minutes really helped me get a handle on what was important and how to communicate what I'm doing to someone else.  I also gained general confidence in answering others questions about my project. ",
+            "\u00a0I learned about how to present engineering work that I am doing. ",
+            "\u00a0The slidesets were great for learning! Everything was super useful. "
+        ],
+        [
+            "\u00a0The class sometimes feels like we don't need to spend as much time in class as we do.  We mostly use class time to work on various checkpoint assignments.  That's helpful, but sometimes your research just isn't to the point where you can effectively do the assigned task.  Like my project was designed based and I had to sit and make a fake plot for a 75 minutes because my project will never have any plots. ",
+            "\u00a0There were some weeks when class did not feel necessary.  We probably could have met every other week. ",
+            "\u00a0It felt unnecessary and tedious to be working on things like reading technical papers and creating presentations, especially as a senior. I think these are skills that should be incorporated into freshman-level courses--while I know that 471 can be taken at any level, it still feels unnecessary to make all students go through this sort of busy work. It also felt unrealistic to be getting graded so critically on things like presentation skills. While these are definitely important skills to have, it again does not seem to be adding anything to my learning. ",
+            "\u00a0A good course, pretty much as I expected. Everything was structured well "
+        ],
+        [
+            "\u00a0This is research so you probably don't need it recommended to you.  The course itself is secondary to what you're doing in lab.  That being said, the course isn't too much extra work and they cut it down to only one lecture a week which is super nice.  The checkpoints can feel a little annoying, but honestly now that I'm at the end, each one was fairly helpful in getting me ready for my final presentation and the write up. ",
+            "\u00a0If you have a project that you want to do, it is great. "
+        ]
+    ]
+}

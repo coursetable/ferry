@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "By arrangement with faculty and approval of DGS.", 
+    "title": "Tutorial", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14133", 
+        "listings": [
+            {
+                "number": "519", 
+                "subject": "INP"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Charles Greer"
+    ], 
+    "long_title": "Tutorial", 
+    "extra_info": "A"
+}

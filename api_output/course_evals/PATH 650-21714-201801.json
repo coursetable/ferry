@@ -1,0 +1,76 @@
+{
+    "crn_code": "21714",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about the basics of cancer biology, which is important as I will be completing my thesis research in a cancer biology laboratory. ",
+            "\u00a0Fundamental knowledge about the major hallmarks of cancer and about the therapeutic strategies that are being employed to target these hallmarks. ",
+            "\u00a0I learned about: Critical thinking, Current research on the field, analyzing scientific literature "
+        ],
+        [
+            "\u00a0Better communication by TA's about the content and format of quizzes. ",
+            "\u00a0Strengths: lecturers were great, professors were helpful, slides were useful\r\n\r\nWeaknesses: JC did not feel engaging and too much required reading material (should pick 1-2 best representative articles to make reading more feasible) "
+        ],
+        [
+            "\u00a0Yes, this course was fantastic and I really enjoyed learning about the basics of cancer biology. I think this course is pivotal for students interested in cancer biology. ",
+            "\u00a0Yes, it provides a good review of fundamental cancer biology, and good for any graduate student studying cancer. ",
+            "\u00a0yes. Great course to learn an overview on cancer bio. "
+        ]
+    ]
+}

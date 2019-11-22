@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50142/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Egypt was among the first centralized territorial states in the world, and, because Egyptian history offers us 4000 years of institutional development and change, the focus of this course is on the long-term development of the ancient Egyptian state, its institutions, and its culture. The course introduces students to the history and culture of ancient Egypt from the rise of the central state to the early Christian period. General historical trends, the relationship of Egyptian history to other contemporary ancient cultures, and the legacy of Egypt to the \u201cWest\u201d are also considered. At the end of the course, students have an understanding of the material culture and the historical development of ancient Egypt, and an appreciation for the relationship of the ancient sources to the construction of ancient Egyptian history.", 
+    "title": "Egypt of the Pharaohs", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "LORIA 351", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10642", 
+        "listings": [
+            {
+                "number": "311", 
+                "subject": "CLCV"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Joseph Manning"
+    ], 
+    "long_title": "Egypt of the Pharaohs", 
+    "extra_info": "A"
+}

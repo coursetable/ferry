@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Advanced language course with a strong focus on speaking and writing skills in formal style. Current affairs and issues in contemporary Chinese society explored through media forms such as news and blogs on the Internet, television, film, fine arts and so on.", 
+    "title": "Chinese for Current Affairs", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "TM432 102", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "10758", 
+        "listings": [
+            {
+                "number": "166", 
+                "subject": "CHNS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "William Zhou"
+    ], 
+    "long_title": "Chinese for Current Affairs", 
+    "extra_info": "A"
+}

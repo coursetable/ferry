@@ -1,0 +1,76 @@
+{
+    "crn_code": "21957",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            2,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Improved stat. theory knowledge, exposure to statistical concepts ",
+            "\u00a0General introduction to regression, multi-level models, fixed effects, matching, etc... A bit more Stata knowledge. ",
+            "\u00a0Intermediary and advanced skills in quantitative methods, including a range of statistical methods using Stata and R. A foundational focus in causal analysis. ",
+            "\u00a0I strengthened my ability to apply intermediate quantitative methods and theories to interrogate empirical social scientific research questions. Additionally, I enhanced my comfort level with statistical software. "
+        ],
+        [
+            "\u00a0Strengths: Exposure to a broad range of concepts useful to quant analysis \r\n\r\nWeaknesses: Focus on coding could be improved, section could've been more useful, self teaching is required. ",
+            "\u00a0It was nice to get a review of the various methods, and I understand the benefits of being able to choose Stata or R to work with. However, because we could choose, and the expectation was on the TA's to teach the program specifics, we only had 40 minutes each week to learn the commands, which is just not enough time. I was often told by my TA to \"google it\" and after awhile, I got pretty frustrated because I felt like Google was teaching me Stata. I had to rely on the StatLab a lot, but they often refuse to help with homework, so it would be awkward and difficult to get help from them. Sometimes it was pointless to even go. Also, the homeworks were often vague and written in a disorganized, difficult to understand way where I wasn't quite sure what the questions were asking and if the answers I gave were correct. There were times where I would put in 10-15 hours into a homework assignment, and then I'd get a meaningless \"check mark\" as a score, and then times where I'd only put in 2-5 hours, and I'd still get the same \"check mark.\" That was really defeating. The lectures were helpful, but I wish that we went over the specific program commands in depth more and practiced how to do the various models in lecture so that we could get some introduction before the lab sections. "
+        ],
+        [
+            "\u00a0I wouldn't recommend this course, because it was disorganized and pedagogically set up in such a way where, though we learned a lot in lecture, we didn't have much support during lab at all. ",
+            "\u00a0Yes. I would recommend this course for all graduate or doctoral students to get a strong understanding of how to use statistics to answer basic and complex research questions. "
+        ]
+    ]
+}

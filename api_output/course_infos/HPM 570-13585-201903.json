@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50346/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course introduces students to the methods of decision analysis and cost-effectiveness analysis in health-related technology assessment, resource allocation, and clinical decision-making. The course aims to develop technical competence in the methods used; practical skills in applying these tools to case-based studies of medical decisions and public health choices; and an appreciation of the uses and limitations of these methods at the levels of national policy, health care organizations, and individual patient care.", 
+    "title": "Cost-Effectiveness Analysis an...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 17, 
+            "location": "LEPH WINSL", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 18
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13585", 
+        "listings": [
+            {
+                "number": "570", 
+                "subject": "HPM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "A. Paltiel"
+    ], 
+    "long_title": "Cost-Effectiveness Analysis and Decision-Making", 
+    "extra_info": "A"
+}

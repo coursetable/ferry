@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48999/assignments/syllabus", 
+    "requirements": "Prerequisite: ARBC 151 or equivalent, or with permission of the instructor.", 
+    "description": "Works by influential Arab thinkers, leaders, and politicians who represent liberal nationalism, Arab nationalism, Islamism, and critiques of contemporary Arab society. Ways in which the authors use language both to portray their beliefs and to shape new social concepts in the Arab world.\nPrerequisite: ARBC 151 or equivalent, or with permission of the instructor.", 
+    "title": "Modern Arabic Political Thought", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "YK220 003", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11424", 
+        "listings": [
+            {
+                "number": "162", 
+                "subject": "ARBC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Sarab Al Ani"
+    ], 
+    "long_title": "Modern Arabic Political Thought", 
+    "extra_info": "A"
+}

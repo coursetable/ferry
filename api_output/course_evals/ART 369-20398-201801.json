@@ -1,0 +1,74 @@
+{
+    "crn_code": "20398",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0We covered all the basics of html, css, and java. The class also helped introduce artistic strategies employed by the web and the many different ways to produce art through the internet. I started to understand design better as well as the conceptual nature of many of these works. It was a great way to explore this side of art making as the class supported different approaches to the weekly prompts. ",
+            "\u00a0Interactive design concepts. On the technical side, HTML, CSS, JQuery, Javascript and depending on your projects, PHP. "
+        ],
+        [
+            "\u00a0Both the professor and the T.A. were super open to questions and offering help, no matter how small the issue was. I would say that the class support system and critique style helped foster an inclusive and open environment to create projects. It pushed me to explore different things within interactive design. \r\n\r\nOftentimes, the pace would be a little too fast, but I believe this was due to the big concepts we had to learn before we could make the work. ",
+            "\u00a0I wished there would have been fewer assignments so that we could focus on completing each assignment to its fullest. Often I felt pressed for time for the amount of work I wanted to do on an assignment. Additionally, with the addition of Javascript, I felt it difficult to accomplish what I had in mind for a project because I didn't know (or didn't know how to find) the necessary script to accomplish my goal. I wish the Javascript portion of the class were extended or that we went over a wider range of available Javascript commands in class rather than having students search through the documentation on their own. "
+        ],
+        [
+            "\u00a0I would definitely recommend this class! It was not only one of the most interesting courses I've taken at Yale, but also I actually learned so much. Laurel definitely pushes you to try new things while supporting your own ideas about each project. I feel that I've gained actual skills that I can take with me outside of the classroom. Each assignment was difficult, especially because we were all learning html, css, and java for the first time, but I promise it is highly rewarding. ",
+            "\u00a0Laurel Schwulst is a wonderful teacher and the class is very hands on, interactive and engaging. My one qualm was that, despite urging from Laurel and the TA, students, particularly MFAs were unwilling to engage deeply or critically in conversations around issues around the politics and theory of aesthetics, privatization and public space online which are obviously so important to the topic and the kind of work done in the studio component of the class. "
+        ]
+    ]
+}

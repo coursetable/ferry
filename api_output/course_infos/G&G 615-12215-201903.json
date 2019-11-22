@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "This course examines the fundamental principles of heat transfer, chemical mass transfer, and fluid-rock interaction in geologic systems.", 
+    "title": "Thermodynamics, Kinetics, and ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "KGL 119", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12215", 
+        "listings": [
+            {
+                "number": "615", 
+                "subject": "G&G"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jay Ague"
+    ], 
+    "long_title": "Thermodynamics, Kinetics, and Fluid Flow", 
+    "extra_info": "A"
+}

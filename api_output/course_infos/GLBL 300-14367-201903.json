@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51876/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course applies a comparative lens to the so-called \"Arab Spring\" uprisings beginning in late 2010. After establishing a baseline level of knowledge regarding the Arab World for all students, we explore the dynamics of these recent uprisings\u00e2\u20ac\u201dincluding different patterns of opposition across the region, the actions of both revolutionary and counterrevolutionary forces, and the varied outcomes of these rebellions in different Arab states", 
+    "title": "Rebellion, Repression, and Rev...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WTS A68", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14367", 
+        "listings": [
+            {
+                "number": "300", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSC\">YC Poli Sci: Comparative Govt</a>"
+    ], 
+    "professors": [
+        "Louis Wasser"
+    ], 
+    "long_title": "Rebellion, Repression, and Revolution: A Comparative Approach to the Arab Uprisings", 
+    "extra_info": "A"
+}

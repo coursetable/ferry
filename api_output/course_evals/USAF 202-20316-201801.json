@@ -1,0 +1,74 @@
+{
+    "crn_code": "20316",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            2
+        ],
+        [
+            2,
+            6,
+            0,
+            0,
+            0
+        ],
+        [
+            3,
+            5,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Understanding concepts of leadership and officership. ",
+            "\u00a0Air Force knowledge. ",
+            "\u00a0This course gave me a more in depth look at how the Air Force carries out its missions. "
+        ],
+        [
+            "\u00a0Good anecdotes relating material to the real world. ",
+            "\u00a0Tests should be longer because when they're only around 10 questions you can get lucky or unlucky on a question or two and end up with a grade that's not reflective of what you know. "
+        ],
+        [
+            "\u00a0This course is straightforward and doesn't have a lot of extraneous information. "
+        ]
+    ]
+}

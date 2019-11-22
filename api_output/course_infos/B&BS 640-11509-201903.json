@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50907/assignments/syllabus", 
+    "requirements": "Registration allowed by prior authorization from course directors only.", 
+    "description": "The course covers the intricacies of scientific writing and guides students in the development of a scientific research proposal on the topic of their research. All elements of an NIH fellowship application are covered, and eligible students submit their applications for funding. Enrollment limited to twelve. Required of second-year graduate students in Experimental Pathology.\nRegistration allowed by prior authorization from course directors only.", 
+    "title": "Developing and Writing a Scien...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "BML 137", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11509", 
+        "listings": [
+            {
+                "number": "640", 
+                "subject": "B&BS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Katarina Politi"
+    ], 
+    "long_title": "Developing and Writing a Scientific Research Proposal", 
+    "extra_info": "A"
+}

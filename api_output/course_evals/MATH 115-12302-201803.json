@@ -1,0 +1,93 @@
+{
+    "crn_code": "12302",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            3,
+            3,
+            8,
+            0
+        ],
+        [
+            2,
+            6,
+            3,
+            2,
+            1
+        ],
+        [
+            1,
+            3,
+            7,
+            3,
+            0
+        ],
+        [
+            0,
+            3,
+            9,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            10,
+            4,
+            0
+        ],
+        [
+            0,
+            2,
+            9,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned calculus concepts beyond the scope of BC Calc ",
+            "\u00a0How to integrate and determine if a series converges or diverges. ",
+            "\u00a0I learned some calculus. ",
+            "\u00a0This course teaches you a lot of integrating skills, series/sequences, and polar coordinators/parametric equations. ",
+            "\u00a0I got a better grasp of the calculus I already knew ",
+            "\u00a0This course helped me develop a good basis for knowledge in calculus which will be used as I continue to pursue STEM courses at Yale. ",
+            "\u00a0Calc 2 ",
+            "\u00a0A deeper understanding of integral calculus and methods to better study for math examinations. "
+        ],
+        [
+            "\u00a0I disliked the flipped classroom concept. I was never told about the videos you could watch on canvas so I was very confused for most of the semester ",
+            "\u00a0I disliked the flipped classroom format. For me, math is something I've always struggled with and was looking forward to taking it with a Yale professor who could explain concepts in a way that I could finally understand. Unfortunately, with the flipped format, my professor was unable to spend more time explaining and we spent more time doing problems instead. ",
+            "\u00a0I would say the only strengths of this course are that my prof wanted us to do well and that practice tests were provided before exams. The rest of the course was pretty disappointing. I hoped they'd get rid of the oh-so-beloved flipped classroom style this year but sadly. No. It doesn't work! I did not find the videos helpful in any way and I almost always ended up pretty confused 15 minutes into each lecture because my prof would assume we understood the concept behind whatever we were learning. Also, standardize the sections! Why should each section be taught differently and given different worksheets if we all end up taking the same exams? After the first exam, I realized that my in-class notes were pretty much useless for studying because our worksheets were rarely representative of what would be on the exams, which were often not that hard, but instead just weirdly tricky. To improve MATH 115: Get rid of the pseudo-flipped classroom format and just teach us! Make sure the sections are taught the same/similar way and then you won't have 60 students trying to register in two or three sections while others have barely ten! ",
+            "\u00a0I did not prefer the split classroom. ",
+            "\u00a0Strengths: the classes are relatively small and intimate so students can feel comfortable to participate in class and ask questions and get to know the professor more easily. There are a lot of materials supplies such as worksheets, peer tutors, review sessions, etc. Weaknesses: Each section is taught completely differently and there is no standardization between sections and what they do in class. Professors may or may not create worksheets for students to complete in class that may or may not be representative of exams. The online videos are not informative and depending on the professor, you may need to teach yourself all of the material from a textbook. ",
+            "\u00a0I appreciate the \"explorations\" we had to complete before each class as the helped me prepare for the upcoming class. However, the order in which we were taught the material seemed odd and non-flowing, especially in regards to not learning how to calculate the volume of various solids of rotation after finishing the unit on integration. ",
+            "\u00a0I feel as though the course may suffer from being taught by so many different professors, each with their own methods and schedules. From what I experienced in section 10, however, topics were covered at a very good pace. The explorations due before each class were also very helpful. ",
+            "\u00a0Professors did not prepare students well for exams. ",
+            "\u00a0The flipped classroom style made it difficult for me to effectively learn the material, but my professor made sure everyone was on the same page and helped if we had any questions. "
+        ],
+        [
+            "\u00a0not unless you really like math or need it for a major ",
+            "\u00a0No, unless the format was changed. ",
+            "\u00a0Absolutely not. Don't take this math class unless you have to. ",
+            "\u00a0This class isn't that interesting, and your experience is entirely based upon your professor. Aaron Clark was really nice but not the best teacher. ",
+            "\u00a0I would recommend this course since it has deepened my understanding of calculus and has aided me in other classes, mainly physics. ",
+            "\u00a0Yes. It was a good class ",
+            "\u00a0No, it is not a straight forward course and you never know if your teacher will be good and prepare you for the exams written by another teacher. ",
+            "\u00a0Yes - it is a comprehensive review of calculus and a good foundation for those looking to further their understanding of math. "
+        ]
+    ]
+}

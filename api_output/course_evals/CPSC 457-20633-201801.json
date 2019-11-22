@@ -1,0 +1,93 @@
+{
+    "crn_code": "20633",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            6,
+            3,
+            2
+        ],
+        [
+            0,
+            2,
+            5,
+            6,
+            1
+        ],
+        [
+            0,
+            1,
+            5,
+            6,
+            1
+        ],
+        [
+            4,
+            3,
+            5,
+            0,
+            0
+        ],
+        [
+            2,
+            4,
+            5,
+            2,
+            0
+        ],
+        [
+            1,
+            8,
+            4,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about the importance of security in relation to sensitive information. ",
+            "\u00a0What privacy we have and lack in society and how technology is taking away our ability to be private. How data breeches are becoming common and what we need to worry about. ",
+            "\u00a0Sensitive info and the loss of privacy. How things have changed to be where they are today. ",
+            "\u00a0Seminar skills and writing, rare in Computer Science ",
+            "\u00a0--knowledge about how to think about sensitive information \r\n--ability to speak and present on tech topics (something that isn't emphasized in the CS major and was great to practice) \r\n--exposure to many different forms of sensitive info and how it affects our daily lives ",
+            "\u00a0I learned to think more deeply about privacy, data security, and the legal, philosophical, sociological, and economic dimensions of data. ",
+            "\u00a0This course helped me engage with various legal, social, political, and technological issues related to technology, including privacy rights, IP law, electronic voting, net neutrality, etc. I developed stronger writing, presentation, and discussion skills. ",
+            "\u00a0I gained an awareness of the security vulnerabilities present in almost step of online interactions. I now realize that sensitive information is extremely valuable, both to the owner and for business. In light of recent events, I have become more critical of the world around me. "
+        ],
+        [
+            "\u00a0The course could be improved by less professor intervention and more time for the students to discuss their findings on the course's topics. ",
+            "\u00a0Presentations are useful but too long. Replacing them with more lecture or discussion time is not really useful. Class could probably be shorter or only meet once a week. ",
+            "\u00a0Having a CS seminar is SUPER SUPER SUPER needed, and I love that we have one. It allows us to talk about how our work is affecting the world and what issues might be there. Gives us a chance to speak instead of code. ",
+            "\u00a0Only CS seminar which is super needed. Could be a bit more structured, but great. ",
+            "\u00a0Feedback on work earlier in the semester would be very helpful. ",
+            "\u00a0strengths: I loved that this course was technical but also discussion based! It gave us a chance to talk about the implications of our engineering work, rather than just execute problem sets. \r\n\r\nweaknesses: i think the class could benefit from being a little bit smaller. It was a 20-25 person seminar and it would have been nice if it were a bit more intimate. ",
+            "\u00a0Strengths: I loved how this class was organize. The assignments were spaced out such that they were low-pressure, but still allowed me to think about these topics substantially. I liked that classtime was divided between lectures and student presentations. I enjoyed being able to present a topic to the class and learn about a single topic on a deep level.\r\n\r\nWeaknesses: I felt that lectures were not always engaging. I also wish that we received feedback/grades on our assignments earlier, as we had no information on our grades at all until after the term ended. ",
+            "\u00a0The discussion-centric nature of the course is definitely a positive, and I think is rare and valuable in the CS major in particular. However, I believe that student engagement in the course, compared to other discussion-based seminars I've taken, was relatively low. I wish there were more instructor-assigned readings, reading responses, or some method of ensuring that students did the readings and stayed involved in the course material. I also wish course feedback was provided more consistently throughout the term instead of solely at the end. ",
+            "\u00a0I think one of the strengths of this course is that our topics covered were driven by the student's desires to learn and current events. One of the weaknesses is that there was little feedback as far as grades. However, the value of the information we were learning heavily outweighed whatever grade we might have. "
+        ],
+        [
+            "\u00a0Yes, this course is particularly important for anyone in the CS and engineering disciplines to take, as it shows that the code written and systems built by engineers impact the lives of real people, relationships, communities, and countries. ",
+            "\u00a0It's an interesting alternative to most of the CS classes out there. ",
+            "\u00a0Yes. CS students need places to learn skills other than just memorization, and this class does it by teaching you about how to think about impact. ",
+            "\u00a0Yes! CS seminar that forces people to think about impact rather than just memorize. Really important to take. ",
+            "\u00a0YES -- if you're a CS major and you'd like an engaging, interesting class that isn't quite as demanding as some other CS electives to fit into your schedule, this is an excellent credit. I think every CS major should take this course, especially since it's important to learn about how our work influences the world around us. ",
+            "\u00a0Definitely would recommend to students in CS/Computing and the Arts who are looking for an elective that involves discussions/papers vs. problem sets. Also would recommend to non-majors looking to gain a more nuanced perspective on data privacy, human-computer interaction, and cybersecurity ",
+            "\u00a0This course is a good one if you're interested in engaging with non-technical issues relevant to technology. In my time taking the course, homework consisted of several essays (two three-to-five-ish pages) and an in-class presentation (45 mins), as well as a term paper (10 to 20 pages). As with all courses, you get what you put in this, but in this one especially, since there are no reading responses etc. ",
+            "\u00a0Yes, this is the most important information anyone who will pursue tech, finance, or policy needs to know for their career. "
+        ]
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "requirements": "Prerequisite:\u00c2\u00a0EENG 320 or permission of instructor.", 
+    "description": "Survey and review of fundamental issues associated with modern microelectronic and optoelectronic materials. Topics include band theory, electronic transport, surface kinetics, diffusion, materials defects, elasticity in thin films, epitaxy, and Si integrated circuits. Formerly EENG 408.\nPrerequisite:\u00c2\u00a0EENG 320 or permission of instructor.", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10883", 
+        "listings": [
+            {
+                "number": "400", 
+                "subject": "EENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Electronic Materials: Fundamentals and Applications", 
+    "extra_info": "C"
+}

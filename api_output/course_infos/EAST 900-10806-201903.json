@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Directed reading and research on a topic approved by the DGS and advised by a faculty member (by arrangement) with expertise or specialized competence in the chosen field. Readings and research are done in preparation for the required master\u2019s thesis.", 
+    "title": "Master\u2019s Thesis", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10806", 
+        "listings": [
+            {
+                "number": "900", 
+                "subject": "EAST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "DGS: Director of Graduate Studies"
+    ], 
+    "long_title": "Master\u2019s Thesis", 
+    "extra_info": "A"
+}

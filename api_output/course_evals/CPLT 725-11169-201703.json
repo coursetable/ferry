@@ -1,0 +1,78 @@
+{
+    "crn_code": "11169",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            2,
+            5,
+            1
+        ],
+        [
+            1,
+            2,
+            4,
+            2,
+            0
+        ],
+        [
+            1,
+            2,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            5,
+            1
+        ],
+        [
+            1,
+            1,
+            5,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            7,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0literature studies, critical reading, postcolonial discourse ",
+            "\u00a0The seminar offered an introduction to the major figures, movements, and concepts in postcolonial theory through critical engagement with its literature. \r\n\r\nThe course also allowed us to consider broader questions over the course of the semester-- how to read 'theory', what we might expect from it, and what it means to theorize the postcolonial as well as the literary. ",
+            "\u00a0Not sure that I developed any real skills; gained some insight into the question of essentialism. Definitely got a lot of feedback. ",
+            "\u00a0I walked away with a review of the Postcolonial theory I had previously read and having been exposed to some new texts. I also believe this course may have opened a new pathway for my own future research. "
+        ],
+        [
+            "\u00a0Strenght: professor mastered the material.\r\nWeakness: He didn't dedicate enough time to lecture us about his views on the materials. ",
+            "\u00a0I felt the syllabus was well-structured and I really appreciated the opportunity for student presentations, which both expanded our grasp on certain topics while providing insight into the diverse interests of our classmates. \r\n\r\nA weakness would be that class discussion occasionally felt unproductive and/or misguided. ",
+            "\u00a0I think the course would be better if it were more focused and if we spent longer on each text. Also, we should have done more literature. ",
+            "\u00a0This course was a good introduction to Postcolonial Theory for someone who has never seen any of the authors on the syllabus. I had previously read some of the authors on the syllabus, which left me wanting more from class discussions than reviewing the content of each theoretical text. I would have liked to walk away from this course with a stronger sense of where Postcolonial Theory is today and where it might be in the future.\r\n\r\nThe presentations and final papers, however, provided a nice opportunity to make the class personal to one's own interests. "
+        ],
+        [
+            "\u00a0Yes-- the course is foundational for anyone in French/Francophone studies or AFAM. ",
+            "\u00a0It would depend on the student. "
+        ]
+    ]
+}

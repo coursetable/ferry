@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50034/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The seminar covers advanced topics concerning physical and chemical processes in the mantle and core of the Earth and planets. Specific topic and hour are arranged in consultation with enrolled graduate students.", 
+    "title": "Seminar in Mantle and Core Pro...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "KGL 226", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12218", 
+        "listings": [
+            {
+                "number": "744", 
+                "subject": "G&G"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jeffrey Park"
+    ], 
+    "long_title": "Seminar in Mantle and Core Processes", 
+    "extra_info": "A"
+}

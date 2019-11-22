@@ -1,0 +1,147 @@
+{
+    "crn_code": "12331",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            6,
+            11,
+            22
+        ],
+        [
+            0,
+            0,
+            6,
+            16,
+            18
+        ],
+        [
+            0,
+            1,
+            5,
+            15,
+            19
+        ],
+        [
+            0,
+            0,
+            3,
+            19,
+            17
+        ],
+        [
+            0,
+            0,
+            2,
+            10,
+            28
+        ],
+        [
+            0,
+            0,
+            2,
+            14,
+            24
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A through introduction to group theory and ring theory. ",
+            "\u00a0Math ",
+            "\u00a0A thorough knowledge of basic concepts of abstract algebra, namely group theory and ring theory. This class also helped me become more mathematically independent and helped my proof-writing skills. ",
+            "\u00a0A strong foundation in group theory and a weaker foundation in ring theory ",
+            "\u00a0Proving math ",
+            "\u00a0I have learned the basics of algebra, including group theory and rings. ",
+            "\u00a0I learnt more proof writing skills related to abstract algebra, some solid group theory and some elementary ring theory. ",
+            "\u00a0Group theory, some ring theory ",
+            "\u00a0Pretty intensive intro to Algebra course. Covers a number of topics from groups, isomorphism theorems, group actions, fields, direct and semidirect products, rings etc. ",
+            "\u00a0Know a lot about groups and rings. ",
+            "\u00a0This course taught abstract algebra, focusing on group theory, put to the classification of finite abelian groups, Sylows theorem, ands semidirect products, and then on ring theory, leading up to the Chinese Remainder Theorem and different types of rings, domains, fields, etc. It provides a good foundation for upper level mathematics courses and the study of other subjects, such as physics and computer science, in which group theory is useful. ",
+            "\u00a0Abstract Algebra, basically Dummit and Foote up to Chapter 8 Section 3 + some RSA at the end ",
+            "\u00a0Algebra concepts and applications. ",
+            "\u00a0I became comfortable with algebraic concepts and typical proof methods. ",
+            "\u00a0Understanding of basic concepts in abstract algebra, ring theory. Improved proof-writing abilities. ",
+            "\u00a0This class helped me grow a lot in thinking about math and writing proofs. ",
+            "\u00a0I learned so much about groups, rings, and number theory. It was incredibly difficult, but I feel like I greatly improved my mathematical maturity and proof writing skills. ",
+            "\u00a0Tons. Group theory, ring theory. There is lots of great material covered, and I learned how to think in order to prove algebra-y things. ",
+            "\u00a0Groups, rings, proof based math. ",
+            "\u00a0A lot of knowledge about group theory and a bit on ring theory at the end. I'd also say that the ability to write proofs and do math was my main takeaway from this class (as well as being able to persevere through difficult material). ",
+            "\u00a0We learned the basics of group and ring theory, including classification of finite groups (direct/semi-direct products), polynomial rings, and the basics of RSA encryption. ",
+            "\u00a0The first 7 chapters of Dummit and Foote, covering group and ring theory. ",
+            "\u00a0I developed a very solid foundation of group and ring theory, which gave me good insight into the scope of abstract algebra. I also got better at forming proofs. ",
+            "\u00a0The course covered most concepts in the first eight chapters of Dummit and Foote -- group theory up to semidirect products and ring theory up to ascending chain of ideals. In addition to deepening my understanding of abstract algebra, the course also allowed me to increase my familiarity with proofs, by virtue of the number of problems assigned for homework each week. ",
+            "\u00a0Stronger proof writing techniques. Insight into the mathematical structures of groups and rings. ",
+            "\u00a0I gained a lot of knowledge about abstract algebra, and I gained a lot of experience coming up with and writing mathematical proofs. ",
+            "\u00a0I learned an immense amount about abstract algebra, running through tons of group theory all the way through some ring theory and into fields. It's also helped me with my proof construction, and let me see more about what actual mathematicians work on. ",
+            "\u00a0I gained a good understanding of abstract algebra. "
+        ],
+        [
+            "\u00a0It is well structured, but sometimes moves too fast and expects you to internalize the material between lessons, so if you don't then it is hard to follow the next class.\r\n\r\nOnly weakness is that there is not much feedback on psets. ",
+            "\u00a0Miki is a fantastic lecturer and definitely keeps the course fast-paced. While the pace is nice as it keeps things interesting and allows us to learn more material, it is very easy to get lost by missing a lecture or showing up five minutes late or spacing out for a minute or two. While concepts from the last lecture were reviewed for the first minute or two of every class, I found that it was still easy to get lost if I didn't review my lecture notes from the last class for a couple minutes before very class because the class was so fast-paced. ",
+            "\u00a0This course is super regular and makes sure that you stay on track with your understanding of the material which is great because the material is relevant to all algebra after ",
+            "\u00a0Covering more topics ",
+            "\u00a0Miki is a fantastic instructor. I felt the midterms were a bad evaluation of my understanding of course material, however - too many questions and not enough time. ",
+            "\u00a0I think this class is perfect. ",
+            "\u00a0Strengths: Miki is a terrific lecturer. The amount of time and effort she puts into preparing each lecture puts all of the professors I've had at Yale so far to shame. She cares deeply about her students, and is funny and approachable -- a rarity in the math department. Have you seen a professor bring a guitar to class and sing about the history of finite groups?\r\n\r\nWeaknesses: My sole complaint is that she didn't bring a guitar to class and serenade us with the history of rings to close the semester ",
+            "\u00a0It is a great class, the lectures move at a good pace and the class covers all important topics you need to know for higher level classes but is also a good class if you just want a taste of algebra and to see if you like it. ",
+            "\u00a0It'd be nice if the homework becomes harder and tests become easier. ",
+            "\u00a0The course is very well taught. It offers a solid foundation in algebra, and covers the subject in depth while with reasonable breadth. The course as it is designed, is oriented purely towards mathematics. However, in practice, in terms of the students who take the course, MATH 350 also caters to several other audiences. The course might be improved if it admitted more opportunities to see the applications of group theory in other subjects like physics and computer science. ",
+            "\u00a0Shorter PSets, harder problems (not from the textbook maybe)\r\ntoo much content at times ",
+            "\u00a0Very good teaching. No obvious improvements. ",
+            "\u00a0The course is rigorous and teaches a lot of algebra. I don't think it can be improved. ",
+            "\u00a0Miki is an exceptional lecturer. Concepts were explained clearly and concisely, and psets were well-designed to reinforce content from class. ",
+            "\u00a0Very rigorous ",
+            "\u00a0The pace of the class was pretty reasonable until after the second midterm and then picked up a lot, covering rings in only a couple of weeks. This was a little overwhelming and I wish we could've taken longer on that part. ",
+            "\u00a0Strengths: Miki is extremely helpful in lectures and office hours! The psets are long and difficult, but really help solidify understanding of the material. Weaknesses: it wouldve been helpful to have some solutions to pset problems and more practice problems to prepare for exams ",
+            "\u00a0Miki was amazing, the material is interesting, but the course is too hard. If you don't understand the material at some point, it is very hard to catch up later because it is very fast paced and challenging. ",
+            "\u00a0I'd say a strength of this course is that (if you're doing the work) you get exposed to a lot of algebra -- we cover a lot of topics, MUCH more so than similar intro algebra classes at other colleges, for instance. While this is nice for learning, it does have the side effect that it is easy to not realize when you don't understand something, because we cover so much so quickly. Not sure how this would be fixed, but I feel like spending just marginally more time on each topic or doing more examples and problems would go a LONG way in making the material more accessible. \r\n\r\nThis is especially true given how Dummit and Foote problems are, where a lot of the times it is simply citing the relevant theorem in DF without really having to understand the statement as fully as you could. ",
+            "\u00a0Strengths: Miki is an amazing instructor who clearly cares about us and the course. The class is well taught and Miki always makes time to host extra office hours for us. Ample time is given for problem sets.\r\n\r\nWeaknesses: TF office hours were useless. This will be dependent entirely on who your TF is, so don't let this influence your decision to take the class or not. The tests are harder than the homework and there is often a time crunch on the exams, so walking out of the midterms and the final really can feel downright depressing even if you did well (after grades are adjusted for the fact that everyone did poorly), so that can be hard. It can be very hard to find study material for the exams since the courses at other universities don't seem to be as challenging as this one; anecdotally, some exams I found from other schools asked students to \"list the Sylow theorems\" as an exam question....I wish the questions on Miki's tests were as easy as this. (In reality, I don't wish the class were easier since this just means that we are getting a better education, but it is hard to find study material). Be sure to check out Asher's previous exams for an idea of what to expect. ",
+            "\u00a0The strengths are that the topics are very interesting, and it has some real-world applications, though only in niche fields. The professor was also very caring, individually emailing every student after each exam, and always being sure to stop and take questions periodically during class. One weakness is that every topic builds upon the prior one, so it is so easy to fall behind and feel completely lost. Unfortunately, there are no TAs and only one peer tutor (the norm, it seems, for all advanced math courses), with limited office hours. The professor did make herself available several times throughout the week, but it would have been nice to have some office hours in the late afternoon, instead of mostly just the morning and early afternoon. ",
+            "\u00a0I thought the pacing of the course could be improved. The rate that material was covered in the first few weeks was not indicative of the course as a whole -- it substantially increased in the later weeks. We only spent two weeks on rings, which, compared to the ten that we spent on groups, was not enough for me to feel completely comfortable with them. \r\n\r\nI also wish the problem sets were slightly better designed. They primarily consisted of a list of exercises from Dummit and Foote, and while working through the exercises developed my familiarity with manipulating algebraic objects, they often felt tedious and relatively unenlightening. I would have preferred if a broader assortment of problems appeared on the homework; for instance, I think that many theorems proved in class would make challenging and interesting homework questions. ",
+            "\u00a0This course was very well-organized and well-planned. The content was quite difficult but was very engaging. I have no complaints. ",
+            "\u00a0This course goes by fast, but overall I think it's very well-run and it hits all the right beats at the right times. "
+        ],
+        [
+            "\u00a0Yes. ",
+            "\u00a0I would recommend this course only to the right type of student. This course is for the student who loves math and wants to see if Abstract Algebra is a branch of math they will love, not for a student deciding whether or not they love math. Miki makes herself very approachable and the lectures are engaging, but students have to put in a lot of effort and time into the class in order to get anything out of it. If you do not put in the work, you _will_ fall behind and very rapidly lose track of course concepts. I would not recommend this course to a student taking many other very hard/time-consuming classes. The class is organized well and follows the material presented in the book very well. ",
+            "\u00a0Yes!! It makes you think differently about patterns and sets by thinking about groups ",
+            "\u00a0Yes ",
+            "\u00a0Of course, Id recommend it to anyone who enjoyed 225. ",
+            "\u00a0TAKE IT. It's easily the best class in the math department. The workload is heavy but totally worth it. ",
+            "\u00a0Yes! It is a good class and Miki is an amazing professor. Her lectures are well structured and she is incredibly kind and ready to answer any questions in class and office hours alike. The material is important for anyone who is interested in math, to know if algebra is something you are interested in the very least. ",
+            "\u00a0Yes. ",
+            "\u00a0If you are interested in pure mathematics, definitely take this course. It really Cave, emptor, that you should not take it casually. It is a serious proof-based mathematics course, with the highest level of rigor. Students of other subjects such as computer science or physics should know that they may be better served by a less theory-focused approach to the subject, if one is offered. In principal I recommend this course to anyone interested in studying algebra. I would just append to that the point that if you are considering taking this course, know your reasons for doing so well. ",
+            "\u00a0Yeah - if you like math, take this course. ",
+            "\u00a0Only if you are a math major. ",
+            "\u00a0Absolutely - teaching was excellent and content was interesting. ",
+            "\u00a0The course requires a lot of time and effort, but it is essential for math majors, so yes. ",
+            "\u00a0I would recommend this class to any student who is interested in mathematics and would like to get more experience writing proofs. ",
+            "\u00a0If you are very keen on learning pure math ",
+            "\u00a0This is a great course but only if you're prepared to put a lot into it- the psets are time consuming and just require a lot of thought and effort. But the math is really cool and it's super rewarding, and it's always super well taught (Auel or Miki in recent years and both are great) ",
+            "\u00a0Yes! Abstract algebra is one of the most beautiful types of math Ive learned, and I think everyone should have the chance to take this class  especially with Miki ",
+            "\u00a0If you really like pure math and have the time, it is a great course, but it is too hard and too time consuming. ",
+            "\u00a0Yes, I would -- but with the warning that it requires immense immense effort, especially if, like me, you're coming in with less math background than a lot of other people in the class. Nonetheless, it really helps to develop a more mature mathematical mind and so I would overall recommend this class. ",
+            "\u00a0I would recommend this course to anyone interested in mathematics in general. It is an important and interesting topic. ",
+            "\u00a0I would absolutely recommend the course. It is extremely interesting subject material if you like mathematics and it is a very well taught course. Miki's class should be the model for how mathematics courses are taught. Be forewarned that the midterms and final will be rough, but the homework is always doable. Miki sang a song for us one day. It was honestly the highlight of the semester. Seriously, if you are a math, physics, or CS major, I really think you should take this course. You won't regret it. ",
+            "\u00a0I would recommend this course to anyone who enjoys math, especially proof-based math. However, it is a very difficult course, and it is so easy to fall behind, since every topic builds upon all the other topics that came before. Unfortunately, there are not a lot of opportunities to get individualized help, but if you are willing to put in the work outside of class to go to office hours, read the textbook thoroughly, and spend many hours a week on the psets, then definitely take the course. ",
+            "\u00a0Abstract algebra is a beautiful but challenging subject. Because so many of the concepts build upon one another, the course requires a consistent amount of work throughout the semester. I would recommend it to anyone willing to put in the time and effort required to develop a solid understanding of the topic, though, because you get to learn some super cool stuff!! ",
+            "\u00a0Yes. Great introduction into algebra. The heavy workload is worth it. ",
+            "\u00a0I absolutely would. The course was by far the hardest course I've taken, but it was also very engaging, and I feel like I've learned a lot. However, taking this course at the same time as other difficult courses would be very hard to balance. ",
+            "\u00a0If you are planning on going into mathematics, or even considering it, then I think taking this course would be a good idea to show you how some of the more advanced mathematics works. ",
+            "\u00a0Miki is great and the subject is very interesting. A lot of work though. "
+        ]
+    ]
+}

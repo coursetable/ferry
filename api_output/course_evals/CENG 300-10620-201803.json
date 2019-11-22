@@ -1,0 +1,98 @@
+{
+    "crn_code": "10620",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            3,
+            3,
+            5,
+            2
+        ],
+        [
+            1,
+            4,
+            5,
+            2,
+            2
+        ],
+        [
+            3,
+            2,
+            3,
+            4,
+            2
+        ],
+        [
+            3,
+            1,
+            3,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            6,
+            4,
+            4
+        ],
+        [
+            0,
+            1,
+            8,
+            5,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Good understanding of the basic theory of thermodynamics with applications to a few different subject areas relevant to chemical engineering ",
+            "\u00a0A good understanding of overall thermodynamics with an emphasis on solutions. ",
+            "\u00a0Thermodynamics of reactions, solution theory, chemical reaction theory to understand how composition of mixtures affects  things such as heat of a reaction etc. ",
+            "\u00a0I'm honestly not really sure; I don't feel that, walking out of this course, I learned very much. The majority of the material related to this course that I actually learned, I learned from pchem or my own studies. In theory, I learned about the fundamental relations and potentials of thermodynamics, classical problem solving related to the three laws (namely energy equation and calculating work and heat for different environments and constraints). The first half of the class is very math dense and theoretical. The second half of the course transitions to solution thermodynamics - energies of mixing, equilibrium, Gibbs Energy, activities, etc. ",
+            "\u00a0This course taught me a lot about thermodynamics, current engineering research, how to problem-solve, and how to study better for exams. ",
+            "\u00a0A lot of thermodynamics, and a lot of independent learning, since class was often confusing. ",
+            "\u00a0Basics of thermodynamics and a *rudimentary* understanding of solution theory, reaction equilibria, and multi-phase systems. ",
+            "\u00a0By the end of the semester I learned an overview of basic Thermodynamics in line with what I was learning in Physical Chemistry. ",
+            "\u00a0Learned about fundamental relations; equations of state; different types of processes; Carnot cycle; engine efficiency; solution theory; chemical reaction equilibria; and phase diagrams. ",
+            "\u00a0Learned thermodynamics primarily focused on chemical engineering applications. Delved a lot into theory and abstract concepts of the subject. "
+        ],
+        [
+            "\u00a0It was a good course, but problem sets were difficult as the problem solving method for problem sets was often not presented in lecture. This required a lot of outside study or help from the teaching fellow ",
+            "\u00a0I think the in class discussions were the best part. I would say more introduction to the format of problems on the problem set in class so we know where to start on the problem sets. ",
+            "\u00a0The strengths were Professor Shu Hu who really cares about his students and the TA for the class was also very helpful as she gave us useful hints to do the homework.\r\n\r\nThe weakness of this class is that it requires a certain level of prior or current exposure to some of the thermodynamics concept that one can only acquire by taking P-chem or a similar class. My journey in this class was significantly made harder by the fact that I had to learn these concepts on my own as they were not necessarily explained in class.\r\n\r\n I think it would be better to account for the fact that not all students have or are taking p-chem and go over somethings in detail such as eutectic reactions etc ",
+            "\u00a0This course needs a lot of work. The textbooks chosen are absolutely terrible - Callen and Van Ness are both graduate level textbooks that present material well outside the scope of the course and class notes. These texts assume the student has a working understanding of the intro to thermodynamics. Without having taken pchem, I would have been absolutely lost. They were absolutely my biggest qualm with the course. Material is presented very theoretically and there is no emphasis whatsoever on problem solving approaches or techniques, despite the need for this kind of work on exams. Lectures are not clear; often students will ask questions and the professor will respond in an ambivalent way, which often left me really confused as to what the right answer to the question actually was. For a clear cut, analytical subject, there should not be room for so much back and forth -- there should be direct, right answers to questions. Problem sets should be do-able without having to have the TA walk through every question. Much more time should be spent on problem solving and examples rather than the theoretical underpinnings. ",
+            "\u00a0This course was wonderful! It was very well organized, fair, and challenging in the best way. It was my favorite class I have taken at Yale. ",
+            "\u00a0The course touches on interesting subjects, but in a rather disorganized, incredibly unclear way. The professor often confuses himself and the students, and the expectations are not always communicated clearly. Assignments were fair, but lectures were often too slow, and did not begin to cover what we needed to know for homework assignments and tests. ",
+            "\u00a0The class and lecture notes could use some more organization and clarity. ",
+            "\u00a0Prof. Hu is the main weakness of this course. He is somewhat disorganized and can't really teach the material well at all (his note packets were awful and basically copy-pasted from the textbooks, which were also pretty terrible). Strengths were that the tests were fair and the class moved at a good pace. ",
+            "\u00a0First of all, please please please pleeeease use a different textbook. Neither of the books used in this course were at all relevant or appropriate for a Junior level undergraduate Thermodynamics course. The only reason I had any idea what was going on throughout most of the semester was because my Physical Chemistry textbook covered 95% of the topics we were supposed to be covering in this class. Just because \"we are Yale students\" (a phrase  Professor Hu used to justify his choice of dated, graduate level textbooks) is NOT a reason to use a textbook that goes into way more detail than is expected from an intro Thermodynamics course. My physical chemistry professor himself was even shocked that we were using this textbook (that he himself used in grad school ages ago) in this undergrad course. Nothing about this as a curriculum choice made any sense. The only reason I came away with this course knowing anything is because of pchem. The one good thing about this course is Prof Hu's enthusiasm for teaching, with practice and a revamp of the curriculum I think this has the potential to be a great course it just needs some changes to make it relevant to Juniors. ",
+            "\u00a0Strengths: course moves at a pretty good pace; professor is very reasonable with deadlines, grading, etc.; TA sections were very helpful. Weaknesses: textbooks were difficult to understand; lectures were often confusing because there were uncertainties/ambiguities about certain topics ",
+            "\u00a0Although the effort was great, class notes are not very helpful. If they provided relevant knowledge in a better way, the class would have been much better. "
+        ],
+        [
+            "\u00a0Yes, if you have to. But be ready to spend a good chunck of your time to study for this class especially if you are  not or have not taken p-chem as they supplement each other ",
+            "\u00a0I'm really mixed about this course. If you're taking it, you have to as a chemical engineering major, so I suppose this review doesn't really matter. In principle, this material is absolutely essential to your future work as an engineer. I just did not have a particularly pleasant experience with this course. A lot of people justified the lack of organization or the confusions that lingered because Professor Shu is an incredibly nice person who does seem to genuinely care about his students, and they grade relatively generously. Regardless, the material approach, teaching style and general pedagogy did not mesh will with me whatsoever, and for these reasons I lost respect for the course and often felt pretty lost. Its difficult to find material online to complement studies because this course exists in the weird intersection of undergraduate and graduate level study. Most resources I could find were far too simple for the conceptual needs of this class, and the rest were far too complex. ",
+            "\u00a0I would absolutely recommend this course to another student if Professor Hu is teaching. He is one of the best professors I have had at Yale. ",
+            "\u00a0Most students taking this course dont have a choice. ",
+            "\u00a0This is a required course for ChemE. If you're not ChemE and are considering this class, know that it is a lot of work to understand the material. The psets are doable, especially since the TA and professor help the students understand how to do the problems during discussion section. ",
+            "\u00a0I would not recommend to another student unless you're pursuing ABET chemE (in that case you know you have to take it, so suck it up and push through!). ",
+            "\u00a0Not really relevant because its required. ",
+            "\u00a0This course covers essentially the same material as P-Chem 1 (Chem 332), but it goes a little more into the theory behind each topic whereas P-Chem 1 focuses more on applications (i.e. solving problems given the equations). I would recommend either taking them concurrently or taking this class after P-Chem. Professor Hu is a really great guy and very reasonable with grading, but lecture can often get confusing so you will probably have to do a lot of studying by yourself. ",
+            "\u00a0There are probably more rewarding courses out there. Don't feel I learned or got as much out of the course as I might have in a different one. "
+        ]
+    ]
+}

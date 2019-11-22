@@ -1,0 +1,74 @@
+{
+    "crn_code": "10936",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0When I signed up for this class, I had never coded a program in my life. Now, I am comfortable with Matlab and how to problem solve coding problems. Additionally, the numerical methods provided throughout this class were all new information to me, and I hope to be able to apply them someday. ",
+            "\u00a0This course served an introduction to iterative methods to solve math problems that are either too complex or impossible to solve analytically.  Personally, I gained experience in programming in MATLAB, my choice of software, which help me identify what makes my codes inefficient (slow). "
+        ],
+        [
+            "\u00a0Strengths: Beth really knows how to teach this class efficiently and wonderfully! There are clear formats and examples in every easy-to-follow lecture. \r\nWeaknesses: The psets can take many hours to complete - although this isn't really a \"weakness\", it's just something that future students might want to know? I don't think the psets' length or quality were a problem or should dissuade anyone from taking the course. ",
+            "\u00a0Course is well structured and stresses computational cost, something that isn't necessarily possible to 'self-teach'.  An improvement I would recommend is to discuss applications.  This is done well on the second problem set  (e.g., the topic of systems of linear equations and giving the example for a electrical circuit), but I feel it fell short as an engineering course and I consider it a pure math course. "
+        ],
+        [
+            "\u00a0Yes! Especially if this student wants to get their foot in the door in regards to coding. The subject matter is taught in an accessible way with plenty of demonstration and clear instruction. It is an incredibly well-formatted course with tangible results. Taking this class will, without a doubt, improve your skills in a noticeable way. ",
+            "\u00a0Absolutely.  Numerical methods isn't restricted to those who plan to do heavy computational work/research. "
+        ]
+    ]
+}

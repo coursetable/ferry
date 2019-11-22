@@ -1,0 +1,52 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49220/assignments/syllabus", 
+    "requirements": "Prerequisites: BIS 623 and BIS 625; open to second-year Biostatistics doctoral, M.S., and M.P.H. students, or by permission of the instructors.", 
+    "description": "This first term of a yearlong course affords students the opportunity to gain experience and practical knowledge on how to work as a practicing biostatistician. Students learn how to collaborate with an investigator on a clinical problem; design and implement statistical approaches to further clinical research efforts under the supervision of an instructor; and communicate effectively with nonstatistical audiences. There is a strong emphasis on developing effective oral and written communication skills.\nPrerequisites: BIS 623 and BIS 625; open to second-year Biostatistics doctoral, M.S., and M.P.H. students, or by permission of the instructors.", 
+    "title": "Statistical Practice I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "CO47 106B", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 14
+        }, 
+        {
+            "start_time": 13, 
+            "location": "CO47 106B", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13545", 
+        "listings": [
+            {
+                "number": "678", 
+                "subject": "BIS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Peter Peduzzi", 
+        "Lisa Calvocoressi", 
+        "James Dziura", 
+        "Denise Esserman", 
+        "Tassos Kyriakides"
+    ], 
+    "long_title": "Statistical Practice I", 
+    "extra_info": "A"
+}

@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48925/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course explores the period beginning from 1964 through the emergence of the #blacklivesmatter movement in 2013. Key concepts covered in this course include the Black Panther Party and rise of the Black Power movement; political campaigns of Shirley Chisholm, Jesse Jackson, and Barack Obama. The seminar concludes with an examination of the #blacklivesmatter movement and broader efforts addressing mass incarceration, poverty, and opportunity gaps in education.", 
+    "title": "From the Voting Rights Act to ...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WALL81 201", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10284", 
+        "listings": [
+            {
+                "number": "349", 
+                "subject": "ER&M"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Ferentz Lafargue"
+    ], 
+    "long_title": "From the Voting Rights Act to #blacklivesmatter", 
+    "extra_info": "A"
+}

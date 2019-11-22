@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51061/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The purpose of this course is to provide students with an understanding of the biological factors underlying human cognition and behavior. Particular emphasis is placed on the mechanisms associated with individual differences in healthy functions (including emotion regulation, stress sensitivity, higher cognition, reward sensitivity, impulsivity, and social functions) and their relations with psychiatric and neurological disorders. Biological factors to be covered include genetic, neuroanatomical, neurophysiological, neurochemical, hormonal, and neuropsychological influences. Several of the initial sessions are devoted to basic topics (e.g., neurons, neuronal signaling, brain systems), before we begin our discussion of the neural basis of behavior and cognition. We also cover seminal work on animal models for mechanistic insights into the neurobiology of human behavior. Graduate students with any neuroscience research interest are encouraged to take this course. Required of Psychology Ph.D. students in the neuroscience area.", 
+    "title": "Foundations of Neuroscience: B...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "K 207", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11678", 
+        "listings": [
+            {
+                "number": "530", 
+                "subject": "INP"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Avram Holmes"
+    ], 
+    "long_title": "Foundations of Neuroscience: Biological Bases of Human Behavior", 
+    "extra_info": "A"
+}

@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Study of South Asia\u00e2\u20ac\u2122s nation building and economic development in the aftermath of war and decolonization in the 20th century. How it generated unprecedented stress on natural environments; increased social disparity; and exposure of the poor and minorities to environmental risks and loss of homes, livelihoods, and cultural resources. Discussion of the rise of environmental justice movements and policies in the region as the world comes to grips with living in the Anthropocene.", 
+    "title": "Environmental Justice in South...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "SA10 212", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10360", 
+        "listings": [
+            {
+                "number": "322", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YGLE\">YC Global Affairs: Elective</a>"
+    ], 
+    "professors": [
+        "Chandana Anusha"
+    ], 
+    "long_title": "Environmental Justice in South Asia", 
+    "course_home_url": "https://yale.instructure.com/courses/48937", 
+    "extra_info": "A"
+}

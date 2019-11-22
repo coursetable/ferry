@@ -1,0 +1,79 @@
+{
+    "crn_code": "20688",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Developed expertise within my specific research parameters, as well as more practice of how to conduct independent research. It's not a skill that develops overnight, and I'm glad I had a semester to get the hang of it. ",
+            "\u00a0I learned how to research independently and helped design a project. ",
+            "\u00a0Research, Identifying Invertebrates, Communication with faculty, experimental design, data analysis. ",
+            "\u00a0I learned how to independently manage elements of a research project, write grant proposals, and organize summer research. "
+        ],
+        [
+            "\u00a0Research for credit is entirely what you make of it; the structure is dependent on you and your PI. There is no guidance whatsoever, which allows for a lot of freedom. Don't forget the final paper -- there was no reminder of the paper's existence this year, so the turnaround was a bit quick. ",
+            "\u00a0More communication about when application for the course is due and when the final report is due. ",
+            "\u00a0The strengths and weaknesses of this course depend entirely on your mentor and their involvement in your project. "
+        ],
+        [
+            "\u00a0I'd definitely recommend taking research for credit if you've already established yourself in a lab and have a project in place, and if you're motivated enough to be the driving force behind your project in a course largely without structure. ",
+            "\u00a0Yes, definitely! ",
+            "\u00a0It is a great way to learn a lot about something you are interested in but can't find a class in which it is featured. ",
+            "\u00a0Yes, if you're interested in doing independent research and are motivated and self-driven. "
+        ]
+    ]
+}

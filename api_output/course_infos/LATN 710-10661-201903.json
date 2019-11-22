@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50396/assignments/syllabus", 
+    "requirements": "", 
+    "description": "We read Books 5 and 21 of Livy\u2019s Ab Urbe Condita in Latin and selected other books in English. Discussion focuses on close reading of passages selected from a larger weekly assignment and on discussion of interpretative and historiographical issues, including the nature of representation; Augustan elements in Livy\u2019s work; themes and plots of Livian history; Livy and other Roman historians.", 
+    "title": "Livy\u2019s Rome", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "PH 407", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10661", 
+        "listings": [
+            {
+                "number": "710", 
+                "subject": "LATN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Christina Kraus"
+    ], 
+    "long_title": "Livy\u2019s Rome", 
+    "extra_info": "A"
+}

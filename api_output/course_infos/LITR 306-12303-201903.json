@@ -1,0 +1,47 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49508/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The Danube River in the film, art, and literature of various Danubian cultural traditions, from the late nineteenth century to the present. Geography and history of the region that includes the river's shores and watershed; physical, historical, and metaphoric uses of the Danube; the region as a contested multilingual, multicultural, and multinational space, and as a quintessential site of cross-cultural engagement. Readings and discussion in English.", 
+    "title": "The Danube in Literature and F...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "WLH 009", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12303", 
+        "listings": [
+            {
+                "number": "306", 
+                "subject": "LITR"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YFIC\">YC FILM Stud: Critical Studies</a>"
+    ], 
+    "professors": [
+        "Marijeta Bozovic"
+    ], 
+    "long_title": "The Danube in Literature and Film", 
+    "extra_info": "A"
+}

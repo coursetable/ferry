@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49552/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A survey of the main features of current economic analysis and of the application of the theory to a number of important economic questions, covering microeconomics and demand theory, the theory of the firm, and market structures. For IDE students.", 
+    "title": "Microeconomics", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "LUCE 202", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12631", 
+        "listings": [
+            {
+                "number": "545", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Boozer"
+    ], 
+    "long_title": "Microeconomics", 
+    "extra_info": "A"
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49934/assignments/syllabus", 
+    "requirements": "Prerequisite: F&ES 840 is strongly recommended.", 
+    "description": "IOC focuses on UNFCCC COP 25, taking place in Chile in December 2019. This course and F&ES 590 are coordinated, and both are required in order to apply for F&ES funding and Yale badges. Both courses focus on being prepared to get the most out of the trip. Dates:\u00c2\u00a0Sept 4, Oct 21 & 28, Nov 11 & 18\nPrerequisite: F&ES 840 is strongly recommended.", 
+    "title": "International Organizations an...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "S 24", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13747", 
+        "listings": [
+            {
+                "number": "850", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Gordon Geballe"
+    ], 
+    "long_title": "International Organizations and Conferences", 
+    "extra_info": "A"
+}

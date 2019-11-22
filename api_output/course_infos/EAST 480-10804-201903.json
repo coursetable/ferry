@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Preparation of a one-term senior essay under the guidance of a faculty adviser. Students must receive the prior agreement of the director of undergraduate studies and of the faculty member who will serve as the senior essay adviser. Students must arrange to meet with that adviser on a regular basis throughout the term.", 
+    "title": "One-Term Senior Essay", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10804", 
+        "listings": [
+            {
+                "number": "480", 
+                "subject": "EAST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "DUS: Director of Undergraduate Studies"
+    ], 
+    "long_title": "One-Term Senior Essay", 
+    "extra_info": "A"
+}

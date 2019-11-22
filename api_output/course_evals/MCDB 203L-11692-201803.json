@@ -1,0 +1,97 @@
+{
+    "crn_code": "11692",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            5,
+            5
+        ],
+        [
+            0,
+            1,
+            5,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            3,
+            5
+        ],
+        [
+            0,
+            1,
+            4,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            7,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            7,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This was a great lab course that taught me a lot of standard lab protocols and techniques in general, as well as classic, timeless genetics experiments in particular. I learned a lot about how to carry out labs, as well as how to analyze data and craft reports. ",
+            "\u00a0This was a great supplement to the genetics lecture course. I didn't have any bio lab experience before, so I learned a lot about basic lab techniques like pipetting, PCR, running gels etc and I learned procedures that went well with lecture topics (e.g. complementation testing, contingency chi-square tests, linkage mapping, etc). Honestly, I wouldn't have learned how to do chi square tests if I didn't take the lab course, as it wasn't explained very well at all in lecture. ",
+            "\u00a0Lots of practice with chi-square tests. Also the opportunity to write a lab report from scratch, using our own judgment. ",
+            "\u00a0Learned to do complementation test and rescue experiments with yeast and how to set up crosses and find recombination frequencies in flies to map genes. ",
+            "\u00a0genetics laboratory skills ",
+            "\u00a0I learned how to write an extremely thorough lab report and use deductive reasoning with my classmates. ",
+            "\u00a0I learned about a variety of model organisms and many essential genetic concepts, including recombination mapping, standard and contingency Chi-square tests, and setting up fly crosses. ",
+            "\u00a0How to set up fly crosses, yeast genetics, and how to analyze genetic data (chi squared tests and the like) ",
+            "\u00a0You'll gain experience with typical genetic lab work, including mutagenesis and screening for certain phenotypes. You work with flies, yeast, and arabidopsis. You'll develop the ability to carry out several basic lab benchwork techniques, including gel electrophoresis and PCR. ",
+            "\u00a0Learned to cross different model organisms and conduct genetics testing. "
+        ],
+        [
+            "\u00a0I think its a great class overall and the lab reports are graded very fairly. But the quizzes were unnecessarily hard in my opinion. ",
+            "\u00a0The course is well organized and a good supplement to the lecture course. I never questioned why we were doing certain experiments. Professor Dawson also doesn't keep you there for a long time doing busy work: the labs generally ran pretty quickly and efficiently. The lab reports are long and a decent amount of work, but it's all necessary to understanding the experiments so I understand why we had to do them. The quizzes felt kind of superfluous after the lab report and were inconsistent across sections, so I'd say that was the major weakness. Overall, it was a great course. ",
+            "\u00a0The course is pretty back-end heavy. I felt as though the most difficult and time-consuming lab reports were at the end, so I wasn't used to having to start them so far in advance after the beginning of the class didn't set that precedent. ",
+            "\u00a0Strengths: Good experiments. \r\nWeaknesses; Pop quizzes ",
+            "\u00a0great class overall but lab reports were often unclear, professor did not give the clearest instructions ",
+            "\u00a0I learned a lot in this course, but the instructions for the reports were not very detailed. It was really challenging to get through the reports, which genuinely took more than 20 hours to complete to the standards of the TA. It was a ton of work and disproportionally weighted against the quizzes... Which were unnecessarily difficult and often didn't make perfect sense (no one did well on them). ",
+            "\u00a0The strengths of this course are that it is taught by Prof. Dawson, a patient and knowledgeable professor, and it provides an immersive introduction to working with several model organisms (Drosophila, Arabidopsis, and S. cerevisiae). The weakness of this course is that because it teaches about several organisms used in genetics research, it is really a very surface level introduction to working with each. There is no discussion of the literature on each organism but rather on the techniques and protocols used in working with each one in a lab setting. ",
+            "\u00a0I think the way the labs are set up chronologically is good, as we progress from easier to harder concepts and procedures. I also liked that we got to work with different organisms. ",
+            "\u00a0You gain a strong understanding of linkage mapping, though I'd warn that the lab reports are longer than you are led to believe. There are only five, but don't wait till the last minute to get started. "
+        ],
+        [
+            "\u00a0This was a great lab course that taught me a lot of standard lab protocols and techniques in general, as well as classic, timeless genetics experiments in particular. I learned a lot about how to carry out labs, as well as how to analyze data and craft reports. ",
+            "\u00a0Yes, it's a great lab, especially if you're a non-bio pre-med looking for a bio lab like me! Be warned though, there is a bit of a learning curve near the beginning of the course if you don't have basic science lab experience, but it's fairly simple to catch up. ",
+            "\u00a0This was a good introduction to genetic analysis in various model organisms. I enjoyed taking this class. ",
+            "\u00a0Sure, it is a good lab, but lab report take more and more time as the semester goes on. ",
+            "\u00a0yes ",
+            "\u00a0The lab reports took so much of my time and the overall workload was really disproportionate to it only being a half credit class. I learned a lot, but it really did make my life hard. I'm torn whether or not to recommend. ",
+            "\u00a0I would recommend this course to any pre-med interested in genetics and prepared to spend about 8-10 hours on lab reports (due every 2-3 weeks). ",
+            "\u00a0Yes, this is one of the best bio labs. It's fun and you get to grow plants, yeast (which doesn't sound like that much fun but it's cool), and breed fruit flies. It's a pretty low time commitment every week and it really helps with the concepts we learn in the lecture. I think your experience will vary based on your TF, but ours was great and was very willing to help us during lab and answer questions about the lab reports. The lab reports do take some time, especially the ones towards the end of the semester, so make sure to start them early. ",
+            "\u00a0I thought the course was well run and a good complement to the lecture course ",
+            "\u00a0Only if you have to. "
+        ]
+    ]
+}

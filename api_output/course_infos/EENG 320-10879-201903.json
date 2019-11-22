@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49631/assignments/syllabus", 
+    "requirements": "PHYS 180 and 181 or permission of instructor", 
+    "description": "An introduction to the physics of semiconductors and semiconductor devices. Topics include crystal structure; energy bands in solids; charge carriers with their statistics and dynamics; junctions, p-n diodes, and LEDs; bipolar and field-effect transistors; and device fabrication. Additional lab one afternoon per week.\nPrepares for EENG 325 and 401. Recommended preparation: EENG 200.\nPHYS 180 and 181 or permission of instructor", 
+    "title": "Introduction to Semiconductor ...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "HLH17 113", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10879", 
+        "listings": [
+            {
+                "number": "320", 
+                "subject": "EENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Mark Reed"
+    ], 
+    "long_title": "Introduction to Semiconductor Devices", 
+    "extra_info": "A"
+}

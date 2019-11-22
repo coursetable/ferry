@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49767/assignments/syllabus", 
+    "requirements": "Not open to freshmen.", 
+    "description": "A workshop that explores the sentence as the basic unit of writing and the smallest unit of perception. The importance of the sentence itself versus that of form or genre. Writing as an act of discovery. Includes weekly writing assignments.\nNot open to freshmen.", 
+    "title": "The Genre of the Sentence", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 105", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10968", 
+        "listings": [
+            {
+                "number": "474", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENW\">YC English: Creative Writing</a>"
+    ], 
+    "professors": [
+        "Verlyn Klinkenborg"
+    ], 
+    "long_title": "The Genre of the Sentence", 
+    "extra_info": "A"
+}

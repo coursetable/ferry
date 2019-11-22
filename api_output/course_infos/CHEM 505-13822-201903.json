@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49210/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Design principles for molecular components of alternative energy devices. Climate change and our alternative energy future. Light energy conversion, energy transfer, and charge separation in photosynthesis. Dioxygen evolution in photosystem II. Biofuels: bioethanol, biodiesel, hydrogenase. Interaction of light with semiconductors. Fast spectroscopy to probe interfacial electron transfer. Computational design and characterization. Solar cells for electricity, photo-catalysis, biomimetic water oxidation. Hydrogen economy. Team-taught.", 
+    "title": "Alternative Energy", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "CRB 123", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13822", 
+        "listings": [
+            {
+                "number": "505", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Charles Schmuttenmaer"
+    ], 
+    "long_title": "Alternative Energy", 
+    "extra_info": "A"
+}

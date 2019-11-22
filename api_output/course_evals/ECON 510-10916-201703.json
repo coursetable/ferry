@@ -1,0 +1,86 @@
+{
+    "crn_code": "10916",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            10,
+            7
+        ],
+        [
+            0,
+            1,
+            2,
+            11,
+            4
+        ],
+        [
+            0,
+            1,
+            4,
+            8,
+            5
+        ],
+        [
+            0,
+            1,
+            5,
+            6,
+            5
+        ],
+        [
+            0,
+            0,
+            8,
+            8,
+            2
+        ],
+        [
+            0,
+            0,
+            8,
+            8,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Macroeconomics ",
+            "\u00a0Analytical and quantitative skills. ",
+            "\u00a0Basic framework of macroeconomic analyses/what have been the issues in macroeconomics ",
+            "\u00a0Learned  a lot of models, dynamic programming, and Matlab skills. ",
+            "\u00a0I learned a lot about macro models and dynamic programming. ",
+            "\u00a0Arrow-Debreu versus sequential markets; recursive thinking; using first-order conditions and Envelope Theorem to solve for equilibria; quantitative methods to find equilibria; macro time series; vector autoregression; asset pricing formulas and models; spillover models. ",
+            "\u00a0I gained a basic understanding of some macroeconomic models and skills for analysing economic models. ",
+            "\u00a0Solving macro models, setting up problems, matlab programming. "
+        ],
+        [
+            "\u00a0The course should be better organized. ",
+            "\u00a0I felt that the textbook used in the second part was not very student-friendly. Although there are no many student-friendly graduate level macro-textbooks, there are notes available in the internet, like Krueger's notes that are much more helpful. ",
+            "\u00a0The course not only provided basic framework of macroeconomic analyses (e.g. recursive equilibrium) but also reviewed a few specific issues macroeconomists have been tackling (e.g. equity premium puzzle), which may help students get some research questions. ",
+            "\u00a0First quarter psets were too long. Didn't get the midterm back until December. No notes or slides in the second half. ",
+            "\u00a0More motivation for the material in the first half. ",
+            "\u00a0First half lecture difficult to follow, skips many steps and not very clear.  Problem sets were pretty out of the blue--lecture did not prepare students well to do the problem sets, but exam was fair.\r\n\r\nSecond half lecture great, engaging, relevant policy applications, and problem sets also challenging yet fair and manageable.  Maybe a bit more \"big picture\" info on why each model is important would be nice. "
+        ],
+        [
+            "\u00a0Yes. ",
+            "\u00a0This class will help student learn basic macroeconomic framework and a few specific issues, which interest even non-macroeconomic students. ",
+            "\u00a0I suppose it's necessary. ",
+            "\u00a0Yes, and especially to graduate students in economics and related disciplines. "
+        ]
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49529/assignments/syllabus", 
+    "requirements": "After introductory microeconomics.", 
+    "description": "Microeconomic theory brought to bear on current issues in natural resource policy. Topics include regulation of pollution, hazardous waste management, depletion of the world's forests and fisheries, wilderness and wildlife preservation, and energy planning.\nAfter introductory microeconomics.", 
+    "title": "Economics of Natural Resources", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "WLH 201", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13199", 
+        "listings": [
+            {
+                "number": "330", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YGLE\">YC Global Affairs: Elective</a>"
+    ], 
+    "professors": [
+        "Robert Mendelsohn"
+    ], 
+    "long_title": "Economics of Natural Resources", 
+    "extra_info": "A"
+}

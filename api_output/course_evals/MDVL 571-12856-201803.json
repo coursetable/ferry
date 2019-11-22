@@ -1,0 +1,71 @@
+{
+    "crn_code": "12856",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about the history of different writing hands, about the processes of manuscript production, and cultivated my paleography skills reading different scripts nearly each week. "
+        ],
+        [
+            "\u00a0The biggest strength of this course is that we got to work with and examine authentic examples each week from Yale's collection of what we were studying. I also found a very interesting make-up of students in the class. I think a weakness of this course was how the assignments reflected only a small part of what we were studying and also the expectations that were given for them were at times not entirely clear. "
+        ],
+        [
+            "\u00a0I would! When else will you have the chance to study properties of manuscripts alongside the actual objects?! So cool! "
+        ]
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50427/assignments/syllabus", 
+    "requirements": "May not be taken after MATH 120 or 222. Prerequisite: MATH 112.", 
+    "description": "A combination of linear algebra and differential calculus of several variables. Matrix representation of linear equations, Gauss elimination, vector spaces, independence, basis and dimension, projections, least squares approximation, and orthogonality. Three-dimensional geometry, functions of two and three variables, level curves and surfaces, partial derivatives, maxima and minima, and optimization. Intended for students in the social sciences, especially Economics.\nMay not be taken after MATH 120 or 222. Prerequisite: MATH 112.", 
+    "title": "Introduction to Functions of S...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "CO493 106", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11259", 
+        "listings": [
+            {
+                "number": "118", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Pamela Sargent"
+    ], 
+    "long_title": "Introduction to Functions of Several Variables", 
+    "extra_info": "A"
+}

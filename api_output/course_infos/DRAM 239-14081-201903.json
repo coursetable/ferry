@@ -1,0 +1,56 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51568/assignments/syllabus", 
+    "requirements": "Open to nondepartmental and non-School of Drama students with permission of the instructor.", 
+    "description": "This course provides students with the skills and vocabulary necessary to perform as projection engineers. Students are introduced to the paperwork to design, the equipment to implement, and the software to operate a successful video projection system while interfacing with a projection designer. Class format includes lectures and lab sessions that focus on equipment and software.\nOpen to nondepartmental and non-School of Drama students with permission of the instructor.", 
+    "title": "Projection Engineering", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "YK222 B1", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 12
+        }, 
+        {
+            "start_time": 9, 
+            "location": "YK222 B1", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 10
+        }, 
+        {
+            "start_time": 9, 
+            "location": "PK205 RCL", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14081", 
+        "listings": [
+            {
+                "number": "239", 
+                "subject": "DRAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eric Lin"
+    ], 
+    "long_title": "Projection Engineering", 
+    "extra_info": "A"
+}

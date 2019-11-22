@@ -1,0 +1,84 @@
+{
+    "crn_code": "21779",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            5,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            3,
+            6,
+            1
+        ],
+        [
+            0,
+            3,
+            1,
+            6,
+            1
+        ],
+        [
+            1,
+            1,
+            5,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            6,
+            2
+        ],
+        [
+            0,
+            2,
+            7,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Mechanisms ",
+            "\u00a0I developed knowledge of physical organic chemistry, molecular orbital theory, conformational preferences of molecules, reaction kinetics, and nucleophilic substitution by taking this course. Topics covered include A1,3 interactions, A1,2 interactions, syn-pentane interactions, ring strain, cyclopropane stability, cyclohexane conformational preferences, the anomeric effect, the method of initial rates, the same excess method, reaction progress kinetic analysis, the SN1 - SN2 reaction spectrum including coupled and uncoupled nucleophilic substitution, neighboring group participation in nucleophilic substitution, cyclopropyl methyl cation stability, inductive effects, effects of alpha-halo-substituents on nucleophilic substitution, carbocation rearrangements, and nonclassical norbornene cations. This course develops the skills of rationalizing organic reactions using all of these principles. The course also briefly touches on modeling and computational software (Spartan Student), which is very useful for research. ",
+            "\u00a0Elementary physical organic chemistry concepts, e.g. structure and bonding, stereochemistry, conformational and stereoelectronic effects, basic kinetics, nucleophilic substitution. ",
+            "\u00a0Learned about stereochemistry, molecular orbital theory, and stereocontrol of reactions in depth. ",
+            "\u00a0The course provided useful insights into some fundamental kinetics principles as well as more in depth overview of Sn1, Sn2 reactions. ",
+            "\u00a0Conformational analyses and substitution predictions were the main takeaways "
+        ],
+        [
+            "\u00a0Strengths: Many topics are covered in-depth. The information covered in this course allows rationalization of numerous complicated reactions based on physical organic principles. The answer keys prepared by the graduate students are very concise and to-the-point in their explanations.\r\n\r\nWeaknesses: The textbook is very out-of-date. It is so old that much of the information inside of it has been proven false already. For instance, its description of the molecular orbital structure of cyclopropane is wrong, and conflicts with Professor Herzon's modern explanation of it. The course could be improved by using the most recent edition of the textbook. Also, some topics are not explained fully in lecture. For instance, during the in-class explanation of the anomeric effect,  multiple examples of the effect were given, but Professor Herzon never said what the anomeric effect actually is. The course could be improved if Professor Herzon explained, in a sentence or two, what each principle he teaches actually means, instead of skipping straight to examples and leaving students to figure out the general principle for themselves. Because this was the first time this course was ever offered, the weaknesses are understandable. ",
+            "\u00a0Provided a very rigorous coverage of elementary organic chemistry, which will set one up very well for advanced mechanisms and arrow pushing. Concepts were always presented in the context of real problems, which was very much appreciated. The course examinations are designed to be highly challenging, and definitely improved my ability to think critically and consider multiple concepts when trying to explain observations. I have come to appreciate how many observations in organic chemistry demand very nuanced considerations of various chemical concepts. ",
+            "\u00a0Strengths - lectures are generally pretty clear and enjoyable. \r\nWeaknesses - lack of practice problems. Although practice exams were given, it was sometimes very hard to understand how one was suppose to arrive at the solutions. Last two psets were assigned near the very end of the term and it was very hard to determine what content was important. A lot more examples illustrating each type of consideration that one needed to make (like torsional steering, A1,3 interactions) would have be very useful. \r\nThe course website was also very confusing to navigate. ",
+            "\u00a0I really enjoyed the analysis of Sn1, Sn2 reactions at the end of the course. I learned a lot of interesting examples and concepts from there. \r\nSome issues with the course: \r\nThe course is not well organized: Spartan was introduced once and then forgotten; reading responses were not helpful because it was hard to identify relevant information from the whole chapter; having more directed questions focused on specific topics/concept/pages would make reading responses more useful. Homework assignments were not similar to exam questions. Exams were definitely hard and it was difficult to know how to prepare for them; having more exam-like questions in homework would have been helpful. \r\nEven though this course is designed to provide general background, sometimes I felt like the lectures were focused on some general concepts for much longer than needed while more challenging topics were briefly analyzed. ",
+            "\u00a0It started off a little too slow with material that really didn't need to be covered.  It seemed like the most important/useful material only started to be covered in the last couple weeks of the class.  \r\n\r\nI enjoyed getting to learn how to use Spartan, but then it was never brought up again in the course.  Some incorporation of it into the problem sets might be nice. "
+        ],
+        [
+            "\u00a0I would recommend this course to another student. A great deal of information with broad applications throughout organic chemistry is covered. The workload is very manageable, with only four problem sets. The tests are very difficult, but undergraduates are graded separate from the graduate students, so your final grade will not be destroyed by comparison to people who have been doing organic synthesis for years. Lectures are very interesting, and always looked forward to attending this class to learn something new and interesting. ",
+            "\u00a0Yes, this class was helpful in reinforcing basic concepts for mechanistic studies and introducing new models. ",
+            "\u00a0Definitely, if you are interested in organic chemistry. It will provide a very solid foundation to move forward in organic chemistry especially in research. ",
+            "\u00a0Yes, if you really enjoy the details of organic chemistry and learning about how to explain stereocontrol in reactions. ",
+            "\u00a0Yes it seemed useful, but I would rather take a course more specifically focused on synthetic methods or synthetic planning "
+        ]
+    ]
+}

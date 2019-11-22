@@ -1,0 +1,47 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49753/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This seminar examines the intersections of postcolonialism and ecocriticism as well as the tensions between these conceptual nodes, with readings drawn from across the global South. Topics of discussion include colonialism, development, resource extraction, globalization, ecological degradation, nonhuman agency, and indigenous cosmologies. The course is concerned with the narrative strategies affording the illumination of environmental ideas. We begin by engaging with the questions of postcolonial and world literature and return to these throughout the semester as we read the primary texts, drawn from Africa, the Caribbean, and Asia. We consider African ecologies in their complexity from colonial through post-colonial times. In the unit on the Caribbean, we take up the transformations of the landscape from slavery, through colonialism, and the contemporary era. Turning to Asian spaces, the seminar explores changes brought about by modernity and globalization as well as the effects on both humans and nonhumans. Readings include the writings of Zakes Mda, Aminatta Forna, Helon Habila, Derek Walcott, Jamaica Kincaid, Ishimure Michiko, and Amitav Ghosh.\u00c2\u00a0", 
+    "title": "Postcolonial Ecologies", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "LC 209", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13014", 
+        "listings": [
+            {
+                "number": "295", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENJ\">YC English: Junior Seminar</a>"
+    ], 
+    "professors": [
+        "Cajetan Iheka"
+    ], 
+    "long_title": "Postcolonial Ecologies", 
+    "extra_info": "A"
+}

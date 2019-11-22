@@ -1,0 +1,75 @@
+{
+    "crn_code": "23708",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            2
+        ],
+        [
+            0,
+            2,
+            1,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0the ability to engage deeply with philosophical texts without reducing them to truisms, to establish connection between philosophical concepts and real life issues. ",
+            "\u00a0I learned a lot about the context of 20th century continental philosophy, what Heidegger took from his predecessors, and what he did differently. "
+        ],
+        [
+            "\u00a0strengths: see question 1; \r\n\r\nweaknesses: more guidance should be provided concerning secondary literature reading; secondary literature was assigned without being discussed or mentioned in class. ",
+            "\u00a0The lectures were really great, but I felt like we went over the same material too much. I felt like we didn't ever really get into the second division of Being and Time because we kept just going over the same basic foundations of Heidegger's philosophy. That was helpful and was good for really getting Heidegger's project into my head, but I felt like the second half of the semester was kind of slow for that reason. ",
+            "\u00a0It would be helpful if there were a sectional seminar for graduates students, many of us met outside of class but scheduling made this very difficult. "
+        ],
+        [
+            "\u00a0Yes I would. Great lectures and interesting topic. ",
+            "\u00a0Absolutely. This class not only offers excellent insight into Heidegger's thought and philosophy at large, it also provides profound insight into living a worthwhile and fulfilled life. I could not recommend this class more highly. "
+        ]
+    ]
+}

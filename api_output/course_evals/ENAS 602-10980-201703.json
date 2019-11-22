@@ -1,0 +1,89 @@
+{
+    "crn_code": "10980",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            5,
+            3,
+            1
+        ],
+        [
+            1,
+            1,
+            4,
+            2,
+            2
+        ],
+        [
+            0,
+            4,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            3,
+            1,
+            6,
+            0
+        ],
+        [
+            0,
+            3,
+            5,
+            1,
+            1
+        ],
+        [
+            0,
+            4,
+            6,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0kinetics and reactors.\r\nalso some transport. ",
+            "\u00a0I have learned a lot of things and chemical kinetics and reactor design from this course. ",
+            "\u00a0kinetics knowledge in chemical engineering. MOre focus on understanding not memorizing. ",
+            "\u00a0Chemical reaction kinetics, ideal reactor, heterogeneous catalyst, enzyme, external and internal limit of solid-gas reaction. ",
+            "\u00a0Kinetics in chemical reactions, ideal reactors, catalytic reactions. For a specific chemical reaction, there are many factors which can have profound influences like temperature, catalyst. ",
+            "\u00a0I learn a lot about the chemical reactor and lots of knowledge about catalyst, which can facilitate my research. ",
+            "\u00a0Knowledge about the theories of kinetics which allowed for analysis of reaction processes. some measuring techniques and information on how to evaluate and read research papers ",
+            "\u00a0I learned the basic concepts regarding kinetics and modelling of reactors such as CSTR and plug flow. Also, the course was very helpful while giving the students more contact and familiarity with the literature. "
+        ],
+        [
+            "\u00a0the handout is sometimes not well organized. ",
+            "\u00a0Professor Lisa Pfefferle is a very good and responsible teacher. The lecture notes describe every point in detail. If Professor Lisa Pfefferle could recommend some reference books to us, that would be great. ",
+            "\u00a0This course needs clearer structure. A syllabus with the order of topics and grade distribution would be helpful so that we know what assignments to expect. Also, getting grades back on homework assignments would help us know how we are doing in the class. ",
+            "\u00a0Advantages: introduce more general stuff, cover a lot of topics. \r\nDisadvantages: some topics don't have details ",
+            "\u00a0Strength: The note covered almost all the information. A lot of topics about reactions is included.\r\n\r\nWeakness: Demonstration of some process is too fast and simple. ",
+            "\u00a0The course included many aspects about chemical engineering. But it could be better if some details were to be addressed. ",
+            "\u00a0weakness:\r\nit appeared disconnected and there was no continuous flow of ideas.\r\n\r\nstrength:\r\nthe way of evaluation was good and allowed for overall testing of the subject matter ",
+            "\u00a0Strengths: all the important concepts were exposed and the big picture of chemical reactions was well defined.\r\n\r\nWeakness: not many problem sets. "
+        ],
+        [
+            "\u00a0Yes ",
+            "\u00a0For students in chemical engineering and chemistry, I will highly recommend this course to them. ",
+            "\u00a0It was generally an easy class, and it's required. ",
+            "\u00a0I would only if I have at the beginning of the course a clear idea of what will be the organization of the subject matter ",
+            "\u00a0I would recommend this course to another student because it gives all the tools needed to learn the subject and the instructor has a very strong background and knowledge of the content of the course. "
+        ]
+    ]
+}

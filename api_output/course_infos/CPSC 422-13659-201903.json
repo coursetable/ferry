@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49559/assignments/syllabus", 
+    "requirements": "After CPSC 323.", 
+    "description": "The design and implementation of operating systems. Topics include synchronization, deadlock, process management, storage management, file systems, security, protection, and networking.\nAfter CPSC 323.", 
+    "title": "Design and Implementation of O...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "AKW 200", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13659", 
+        "listings": [
+            {
+                "number": "422", 
+                "subject": "CPSC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Zhong Shao"
+    ], 
+    "long_title": "Design and Implementation of Operating Systems", 
+    "extra_info": "A"
+}

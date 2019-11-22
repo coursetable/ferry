@@ -1,0 +1,103 @@
+{
+    "crn_code": "12423",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            13,
+            12
+        ],
+        [
+            0,
+            0,
+            4,
+            10,
+            13
+        ],
+        [
+            0,
+            1,
+            5,
+            10,
+            11
+        ],
+        [
+            0,
+            2,
+            10,
+            2,
+            13
+        ],
+        [
+            0,
+            0,
+            6,
+            18,
+            3
+        ],
+        [
+            0,
+            1,
+            12,
+            10,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Research research research ",
+            "\u00a0Research! ",
+            "\u00a0Learned how to code in C++ within a research setting. Learned how to effectively present and write up results of research. Learned how to propose projects, read literature, and find meaningful ways to contribute via simulation. ",
+            "\u00a0Clearly the knowledge and skills you learn from PHYS 471 will vary based on your advisor and project. In my case, I furthered my knowledge of atomic physics and furthered my skill set with simulation methods. The work was highly interesting and furthered my understanding of research methods and general research ability greatly. ",
+            "\u00a0This is entirely dependent on the project you choose, but you likely learn about some more advanced research that you would otherwise not be exposed to while in undergrad. ",
+            "\u00a0I was working on a theoretical project with an adviser who trusted me to work on my own time and present work to him when I had results to share. This meant that I had to practice time management and stay on top of my work, both for my research and for other courses so that I could devote the time I needed to make progress on the research. ",
+            "\u00a0I learned more about how to conduct independent research in mathematics -- how to find relevant research articles online, try different approaches, write a research paper, etc. There were several moments when I was able to make useful connections between distinct fields of mathematics -- applying techniques from finite field theory to solve a problem in graph theory, for example. I also learned a fair bit about coding theory. ",
+            "\u00a0I learned the basics of scientific research and presentation. In PHYS 471, one joins a research group, meaning that the skills you acquire are highly project-dependent. ",
+            "\u00a0Its an independent research course...so I uhh...learned a lot about research? ",
+            "\u00a0I practiced planning and conducting my own research at a sustainable pace throughout the semester. I gained deeper appreciation for the creative process required in designing and executing experiments, and the value of literature review. ",
+            "\u00a0Taking this course gave me the time to delve deeper into a specific research subject that interests me.  In the process, I have gained experience in independently acquiring the needed knowledge and skills. ",
+            "\u00a0Much of what it means to actually do physics one doesn't learn in classes. By doing independent research I learned so much of the technical detail of how to do experimental particle physics - from the context of why a certain experiment is interesting theoretically, to experiment design, simulation and optimization for commissioning, and individual and large scale collaborations. "
+        ],
+        [
+            "\u00a0research is life, research is all. despair against an eternity of endless research, searching over and over and over again. ",
+            "\u00a0I liked that there was freedom in pursing one's own projects without too many constraints/deadlines. \r\n\r\nI would have appreciated more feedback. I would like to improve my presentation skills throughout the course, but the only presentation was at the end. ",
+            "\u00a0Wish we had more meetups with other students in the course over the course of the term. ",
+            "\u00a0The course lacks any instruction from the central professor. An example of a past thesis would be great for understanding what is expected in both content and style. The guidelines for what to include in the report were not good, either. The end-of-term presentations were very helpful for learning how to present well (thanks to the instruction of my lab) and to see others' projects. ",
+            "\u00a0I thought the course was well-designed. I met with my advisor once a week for 1-2 hours, which felt like the right amount of contact time. I never felt that I had someone hovering over my shoulder, but I always felt that I could go to my advisor if I ran into a wall and needed help. I have no real suggestions for revising the course's structure. ",
+            "\u00a0I think PHYS 471 is well put together. I think the one thing that would be beneficial is mandating that a draft of the final report be turned in to one's PI two weeks before the final report is due. Mind you, there is nothing stopping you from doing this anyway, but it takes more organization. ",
+            "\u00a0I didnt have this problem, but there could be an easier method for helping students pick advisors than just you have until september to figure it out ",
+            "\u00a0It's a good structure as it is. ",
+            "\u00a0I think students would benefit from clearer guidelines and expectations set by the Physics Department, so that students would better understand what is expected of them. ",
+            "\u00a0The course has a very clear structure of what the students are expected to provide at certain points in the semester.  The midterm report serves a good way for the student to be aware of where the project is at the time and set clear goals. The final report and presentation are also very useful to compile together, in a presentable way, the work that the student has done over the semester. ",
+            "\u00a0I think the open format where students can do almost any research involving math and related to physics is good. I also like that the class requires progress reports. "
+        ],
+        [
+            "\u00a0I'd strongly recommend doing as much research as possible to any student in STEM; it's a very fruitful experience from which one learns a great deal. ",
+            "\u00a0At the beginning of the class, you may believe that there is lots of freedom in this life. By the end of the class, you will realize that research is life. Research is all. ",
+            "\u00a0Yes! Great class where you can pursue research and then get to share it with other students at the end of the course! ",
+            "\u00a0Yes, it's a senior req. ",
+            "\u00a0I would certainly recommend PHYS 471 to another student, regardless to if they are a physics major or not. Conducting research is a marvelous way to learn, and a very efficient way of doing so! The amount that you get out of this course is down to two things. One is the time that you put into the course. If you put in a lot of time, you are likely going to get a lot out of it. The other is your choice of advisor and project. I was lucky enough to find a wonderful pair of advisors. My advisors were great for a few reasons: 1) They were always willing to spend time with me to review theoretical concepts and my research progress. This is key, as you often need to look to your advisor for direction 2) They were able to find me a very interesting and involved project. If you arent initially excited about the topic of your project, at least try to make sure that the research will utilize skills you hope to expand (i.e. data analysis, simulation, engineering, electronics, etc.) 3) My advisors were fun to be around! I liked both of them and I think we all got along well. Work with people who you like!\r\n\r\nOf course it can be hard to find a group that satisfies all of these requirements, so I would suggest choosing one that you want to prioritize and finding a group that fits that priority. ",
+            "\u00a0If you like working on physics research, this is a great course. Find a good adviser who will meet with you regularly and is working in an area of research you find interesting. The workload is light in terms of what is required for the class. Research can take up much of your time, especially if you are doing work that interests you so be mindful of managing time with other courses. ",
+            "\u00a0If you have a project you're interested in and find an advisor you want to work with, then independent research is a great thing to do. The old adage that \"you get out what you put in\" applies doubly in this sort of course. If you want to learn a lot and make progress, then you'll need to put in work. ",
+            "\u00a0I would recommend the class. If you are at all keen on doing science professionally, undergrad research is important both so that you gain experience and so that you know that research is the life for you (it certainly isn't for everyone). ",
+            "\u00a0Yes, if youre a physics major its required. But also its a great opportunity to work in a real lab and do meaningful research. ",
+            "\u00a0Yes - the course is what you make of it. I spent many hours a week in the lab on a project I was interested in, so it was worthwhile. It also depends a lot on choosing a good project advisor. ",
+            "\u00a0I think this process was very beneficial to my confidence in the lab environment, and my understanding of PI/researcher relationships, and I would recommend it for anyone interested in research. ",
+            "\u00a0I would recommend taking this course to any student who would like the opportunity to focus on a specific research problem of interest.  Although there is freedom in when the work will be done during a week, the students will take the most out of the experience if they treat the course with consistent time commitment.  The presentation and final report at the end also help the students be more aware of their research experience during the term. "
+        ]
+    ]
+}

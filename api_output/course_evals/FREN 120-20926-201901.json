@@ -1,0 +1,79 @@
+{
+    "crn_code": "20926",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I don't really think I got a lot of new skills from this course. Instead, I would say this course gave me a good foundation for learning a new language. ",
+            "\u00a0A better grasp of the French language ",
+            "\u00a0I learned more vocabulary from the French in Action series and basic French grammar. "
+        ],
+        [
+            "\u00a0It goes so fast :(((( ",
+            "\u00a0I think the teacher did a very good job of addressing student confusion and was overall very clear about grammar and vocabulary. I think the teacher could have done better in encouraging participation as opposed to just waiting for people to speak. I think because it is a new language many people are embarrassed to speak so it would be more beneficial to foster a comfortable and safe environment. ",
+            "\u00a0More practice is always helpful! ",
+            "\u00a0The course could be improved by having exams every other week instead of every week; I feel like material was often rushed and more review of vocabulary and grammar concepts would be beneficial. ",
+            "\u00a0One strength of this course is its rigour. Unfortunately I did not find much of the content relevant to my interests. In addition the content was so much that it was difficult digest appropriately "
+        ],
+        [
+            "\u00a0I would recommend this course but just be prepared to venture outside your comfortability zone. ",
+            "\u00a0Yes ",
+            "\u00a0I would recommend this course to someone who really wants to learn the French language but not someone who wants an easy language for the language credit. "
+        ]
+    ]
+}

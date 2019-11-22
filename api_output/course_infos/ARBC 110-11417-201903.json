@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48973/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Development of a basic knowledge of Modern Standard Arabic. Emphasis on grammatical analysis, vocabulary acquisition, and the growth of skills in speaking, listening, reading, and writing.\n\n1.5 Yale College course credits", 
+    "title": "Elementary Modern Standard Ara...", 
+    "skills": [
+        "L1"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "LC 213", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 3, 
+        "oci_id": "11417", 
+        "listings": [
+            {
+                "number": "110", 
+                "subject": "ARBC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Muhammad Aziz"
+    ], 
+    "long_title": "Elementary Modern Standard Arabic I", 
+    "extra_info": "A"
+}

@@ -1,0 +1,71 @@
+{
+    "crn_code": "21982",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A thorough review of the fundamental elements of life history evolution. A practical knowledge of how to combine quantitative genetic predictions with age-structured demographic theory, and conceptual tools to apply that knowledge to the study of phenotypic adaptation and constraint. "
+        ],
+        [
+            "\u00a0Of the many strengths of this course, the strongest is the ability to work through a classic textbook with the help of the professor who wrote it. Once we learn the fundamental from this older textbook, we also had the opportunity to turn to more recent literature which helped supplement a conceptual approach with a better knowledge of more recent empirical methods. Although I didn't always look forward to answering every reading question for every class meeting, the weekly assignments were undoubtedly a strength to the course as well. These assignments meant that everyone was ready and willing for discussion in class, and obviously helped up understand the material better. I greatly appreciated the looser, \"big picture\" grading scheme of the writing assignments, which helped ease most my anxiety and allowed me to focus on engaging with the questions each week.\r\n\r\nMore a struggle than a weakness was the distribution of the workload throughout the week. Questions due Wednesday at midnight only seemed available after Monday at midnight. This timing meant that the workload was much more heavily distributed to the latter class meeting each week. Either the ability to work ahead on Thursday questions over the weekend, or shifting some number of questions from Thursday to Tuesday, would help fix this struggle. "
+        ],
+        [
+            "\u00a0Yes. I can't imagine much of a better opportunity to discuss difficult evolutionary concepts with capable fellow students and an accessible, engaged professor. "
+        ]
+    ]
+}

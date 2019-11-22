@@ -1,0 +1,74 @@
+{
+    "crn_code": "23389",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I developed a much better sense of where the rational choice debate in particular originated and how it has progressed. ",
+            "\u00a0This course was a survey of the development of the philosophy of science, particularly over the last ~150 years, with a particular focus later in the course on the social sciences. I found it useful in thinking about the foundational assumptions of social science research, particularly in light of recent methodological debates in political science. "
+        ],
+        [
+            "\u00a0I think the class was well-executed! ",
+            "\u00a0At times I found the philosophical and theoretical subject matter difficult to understand; I frequently felt that I was missing essential context for the readings. Some additional context, maybe at the end of class so the students would have understand the readings for next week, would have been helpful.\r\nAdditionally, the Wikipedia assignments, though a fun idea, seemed untethered from the classroom discussion and involved too much busy work (so much training) to make it worthwhile. Some of the students were unmotivated for the assignment and I spent weeks waiting for feedback from a colleague that never came. "
+        ],
+        [
+            "\u00a0Yes, I would! ",
+            "\u00a0I think I would only recommend this course to another student if they were concerned about how their research fits into broader methodological currents in social science. That's something that's important to me and I'm glad I took the course, but for others who are less invested in those debates, the theory and philosophy might be a lot to wade through. "
+        ]
+    ]
+}

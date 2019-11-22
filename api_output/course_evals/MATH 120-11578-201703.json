@@ -1,0 +1,90 @@
+{
+    "crn_code": "11578",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            7,
+            6,
+            1
+        ],
+        [
+            1,
+            5,
+            10,
+            0,
+            0
+        ],
+        [
+            0,
+            3,
+            7,
+            5,
+            1
+        ],
+        [
+            0,
+            5,
+            4,
+            6,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            9,
+            3
+        ],
+        [
+            0,
+            3,
+            11,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This class teaches you the fundamentals of multivariable calculus. The main points are aspects of vector calculus, partial derivatives, double and triple integrals, line integrals and surface integrals. ",
+            "\u00a0I learned, however haphazardly, how to deal with functions of two and three variables. 120 taught me better independent study habits, I'll say that, but only because lecture and psets never were sufficient to completely understand the material in the way that was necessary for success on tests. ",
+            "\u00a0Math 120 was my first math class at Yale, and while I learned the concepts of multivariable calculus, I believe that the more valuable lessons I'll take away from Math 120 are lessons on how to study for math and how to succeed on problem sets. These are lessons I've learned mostly by making mistakes the first time around. To prospective Math 120 students, I would say that if you give it your best, you will learn a lot, not just about math, but about yourself as a student. ",
+            "\u00a0I developed skills such as calculating volumes, surface areas, and other topics related to multivariable. ",
+            "\u00a0I Learned new math skills that i believe will help in future classes. ",
+            "\u00a0multivariable calculus ",
+            "\u00a0I continued my study of calculus and expanded it to multivariable. I learned how to keep up with a faster-paced QR class that I was not used to at the beginning of the semester. "
+        ],
+        [
+            "\u00a0I think this course does a good job of what it is meant for. I think the instructors are good but the material is sometimes tricky and there is a lot to get through. I think this course could be improved by possibly assigning more frequent practice sets(maybe not for a grade). I think I would have benefitted from more frequent practice in a lot of the topics. ",
+            "\u00a0This course's TFs are not all created equal (I mean, the TFs for most courses aren't, but the gross differences between 120's seemed unique). I have friends in other sections who enjoyed lecture and felt that their TF made the material super accessible, whereas my TF was never really engaging and never really seemed to care about whether or not we were learning. The raw academics of the course were fairly standard for a general math course, so I don't really have critiques or endorsements in that department. ",
+            "\u00a0Math 120 was face paced, but with the right amount of work and by reaching out to resources like peer tutors, it is doable. ",
+            "\u00a0The strengths of this course include the selection of topics discussed in this course since they are very connected and explain a certain topic in depth. The weaknesses include the papers or extra problems that one instructor provides and the other one doesn't. The course would improve if the professors hold more review sessions that explain the topics and steps of approaching a problem rather than only solving questions. ",
+            "\u00a0The course was WAY too slow during the beginning and way to fast at the end. We spent so long on properties of vectors -- which are very simple, and then ran out of time, never finishing lectures during class periods, for complicated integral theorems. It was not Sasha's fault. I think the class was just poorly organized all together. Also the exams are much, much harder than any of the examples in class or on the homework. ",
+            "\u00a0The structure of the class was generally good. I did most of my learning through the practice sets rather than during the lecture, which often felt foreign to me. I liked that there werent too many people in my section, which made it easier to engage with the class. However, it was very different from high school. We covered a lot more material in a shorter amount of time. ",
+            "\u00a0Srrength is that it covers many topics but the weakness is that it noves very quickly. "
+        ],
+        [
+            "\u00a0This course is a necessity for many STEM majors but many people have told me that it is a pretty soft prereq and that as long as you can teach yourself some of the core topics that are vital to other courses (double integrals and partial derivatives in the case of S&DS) then I wouldn't recommend it. Otherwise, I say that this is a good course and that you'll come out knowing what you need to know for later courses. ",
+            "\u00a0I never felt like I was really enjoying the class, so I don't think I would recommend it. In terms of workload, it's not too bad, but if you only do what is assigned when it's assigned you'll be more or less screwed for the midterms and final. ",
+            "\u00a0Yes, but only if you're prepared to put in the work. You cannot learn math under a time crunch, so to handle a course like Math 120 requires active diligence throughout the week, not just the night before your problem set is due. ",
+            "\u00a0I would recommend this course to another student if they are independent enough to learn on their own and be able to figure out which topics they need help with. A student who takes this course should be able to spend time outside of the class for the purpose of understanding the course materials. ",
+            "\u00a0Only if it is required for their major. ",
+            "\u00a0Your experience in Math 120 really depends on what section you are in. Generally I would not recommend it unless you need to take it for a major. ",
+            "\u00a0I would recommend this course to a student interested in expanding their calculus knowledge. As a first year, however, there is a lot to get used to. You have to do a lot more learning on your own. ",
+            "\u00a0Yes if you are interested in math. "
+        ]
+    ]
+}

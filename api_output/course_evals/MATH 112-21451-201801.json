@@ -1,0 +1,94 @@
+{
+    "crn_code": "21451",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            12,
+            7,
+            2
+        ],
+        [
+            0,
+            5,
+            9,
+            6,
+            2
+        ],
+        [
+            0,
+            0,
+            6,
+            12,
+            4
+        ],
+        [
+            0,
+            1,
+            6,
+            11,
+            4
+        ],
+        [
+            0,
+            1,
+            14,
+            5,
+            2
+        ],
+        [
+            0,
+            1,
+            7,
+            11,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I had learned a proportion of what this class claimed to teach and I only took it to satisfy a requirement, but honestly, I found much better context for the skills I already, which in itself, helped me to improve these skills. ",
+            "\u00a0Calculus ",
+            "\u00a0As someone who didn't take calculus in high school, I learned a decent amount--though it was hard. ",
+            "\u00a0I have learned basic calculus that is applicable in other parts of my life besides math class ",
+            "\u00a0Better understanding of calculus concepts ",
+            "\u00a0We went through limits, derivatives, related rates, differential equations, integrals, and probably some other smaller things I'm forgetting about at the moment. ",
+            "\u00a0I learned basic calculus such as the IVT and the MVT. I learned how to calculate derivatives as well as basic integrals ",
+            "\u00a0I learned a lot ",
+            "\u00a0A basic understanding of calculus and its applications. "
+        ],
+        [
+            "\u00a0I like the grading policy and distribution, but I think widespread appeal and interest in the class could be improved. ",
+            "\u00a0I would have liked to do more work in class rather than so much lecturing ",
+            "\u00a0It feels very hard to do well on the exams because they are not similar to the practice exams ",
+            "\u00a0I thought the course was great, generally. The problem sets were fair, as were the exams, and lectures were good. My only complaint would be the fact that we used webassign. Webassign sometimes took off points for really frustrating simplification reasons, and I also had to pay a ridiculous amount of money to access those homework questions. ",
+            "\u00a0Good course but have more similar types of problems shown in class as to the exam questions. ",
+            "\u00a0I got a lot better at math ",
+            "\u00a0Strengths are that material needed for the tests are clearly presented in class. Weaknesses are that the test material is much harder than what is generally studied in class and the examples worked with throughout the course. Also the textbook is not easy to read or understand. "
+        ],
+        [
+            "\u00a0Yes ",
+            "\u00a0good refresher course if you took AB calc in HS but are worried about 115. Would definitely recommend taking before 115 if you need a calc refresher ",
+            "\u00a0Not unless you have to take it ",
+            "\u00a0I would if the student needed it for their major or an intended major ",
+            "\u00a0No, the lectures arent very interesting ",
+            "\u00a0Yes. I'm not the kind of person that would take a math course for fun, and even though I took it because it's a prerequisite, I thought it was alright. ",
+            "\u00a0I mean it's math. There isn't much to say. ",
+            "\u00a0I would a great calc base ",
+            "\u00a0Not unless it was a required for another class. ",
+            "\u00a0A good recap if you haven't taken AP calc in a while (or at all). "
+        ]
+    ]
+}

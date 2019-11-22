@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49901/assignments/syllabus", 
+    "requirements": "Prerequisite: previous experience in GIS.", 
+    "description": "This course introduces computer programming tools and techniques for the development and customization of geospatial data-processing capabilities. It relies heavily on use of the Python programming language in conjunction with ESRI\u2019s ArcGIS and on JavaScript in conjunction with Google\u2019s Earth Engine geographic information systems (GIS). Three hours lecture, problem sets.\nPrerequisite: previous experience in GIS.", 
+    "title": "Geospatial Software Design", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "KRN G01", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13727", 
+        "listings": [
+            {
+                "number": "754", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Charles Tomlin"
+    ], 
+    "long_title": "Geospatial Software Design", 
+    "extra_info": "A"
+}

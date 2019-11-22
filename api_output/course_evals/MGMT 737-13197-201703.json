@@ -1,0 +1,74 @@
+{
+    "crn_code": "13197",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Survey of commonly used empirical methods in management research; learned how to conduct different analyses and also learned about the sorts of problems to look out for when doing these analyses. ",
+            "\u00a0Introduced to various estimation choices and practical issues that arise in analyzing data "
+        ],
+        [
+            "\u00a0Very helpful course overall and it got me exposed to the applied nature of the stats we learn in other courses. Some of the material was a bit difficult to understand so a brief lecture on the basics might be good in orienting students quicker to the material. ",
+            "\u00a0- covered practical issues that are not covered by other quant method classes\r\n- learning by dyoing nature of the class "
+        ],
+        [
+            "\u00a0Yes! Very helpful for getting experience in applied research through assignments and the professor is very helpful in answering questions. ",
+            "\u00a0Yes "
+        ]
+    ]
+}

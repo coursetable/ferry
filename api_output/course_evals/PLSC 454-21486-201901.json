@@ -1,0 +1,103 @@
+{
+    "crn_code": "21486",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            7,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            9
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            10
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            9
+        ],
+        [
+            0,
+            0,
+            5,
+            9,
+            1
+        ],
+        [
+            0,
+            0,
+            10,
+            5,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0You learn about prediction, causality, probability, and discovery techniques using R. Very useful and practical class. ",
+            "\u00a0This course is an excellent way to gain a deeper understanding of applied data science -- not just what steps to go through, but WHY you do those steps. ",
+            "\u00a0Good theoretical data science background and applications in R ",
+            "\u00a0A really useful interdisciplinary course on how policies are quantitatively evaluted. Fantastic credit-wise for PLSC/S&DS majors. ",
+            "\u00a0Learned the applications of data science for social sciences. Class projects and the final project was very instructive and useful! ",
+            "\u00a0How to approach causal inference, prediction methods, how to critically read research papers. ",
+            "\u00a0I learned about the concepts and practice of political science in a quantitative sense. Particularly, how many concepts in data science can be applied to topics in political science and policy making. ",
+            "\u00a0I learned both about the conceptual foundations of data science methods and how to apply them to scenarios in politics and policy. ",
+            "\u00a0The nuances of causality, measurement, causal inference as applied to PLSC academia with rigourous R. ",
+            "\u00a0I learned various statistical tools used in data science for policymaking, better understanding both the underlying mechanism of these techniques and how to implement them on real datasets. I improved my coding in R, learning about practices and tenets of good R coding, and I gained insight into the challenges of using quantitative tools and data to try to answer social science questions. I left the course feeling like I had a much better grasp on how data science is theoretically and empirically used in political campaigns and policymaking and became much better at navigating the difficult multidisciplinary field of data science. "
+        ],
+        [
+            "\u00a0The class met once a week. It would have been better if we were meeting two times a week. ",
+            "\u00a0Strengths: the professor is very kind and intelligent, super willing to help students and leads very interesting lectures/discussions. He clearly puts in a ton of time and effort to help you improve your coding skills, too! He gave some of the most thorough and helpful comments I've received at Yale. Weaknesses: the final project was very interesting but relatively hard; it could have been a semester-long project but we had about 2 weeks for it. Another area for improvement is that it would have been helpful to have more lectures with lecture slides posted online. ",
+            "\u00a0I liked the format with alternative style weeks.  I think it could have been good to have a little more connection between class and the homework problems. ",
+            "\u00a0Strengths: the Imai textbook and projects are really engaging and fun to work with.\r\n\r\nWeaknesses: some of the lectures are difficult to stay engaged with for 110 minutes, and I also have some criticisms of how discussions were structured. While Savj did well in guiding questions, I think there should have been greater efforts to make discussions more inclusive. ",
+            "\u00a0This is one of the best courses I have taken. Strengths: VERY organized, Professor cares a lot about students' learning, great class projects! ",
+            "\u00a0Great professor, good coding practice, could have greater focus on underlying theory. ",
+            "\u00a0Perhaps more theory ",
+            "\u00a0The problem sets are very interesting and the final project was a lot of fun. The 2 hour seminar format on Fridays can get a bit long sometimes. ",
+            "\u00a0This course is really unique, and allows us to get an idea of many different data analysis techniques in a really hands-on way that ends up being really useful. I think it could be better if there was more of a common theme throughout the course, where we felt like we are building on what we learned in previous weeks rather than moving on to completely new things. Also, maybe it would be better if we switched partners throughout the course, or if the final project was in a slightly larger group of 3-4 people -- it ended up being that there was way too heavy of a load on one member of our pair because the other person did not feel as comfortable in R. ",
+            "\u00a0The strengths of the course were in its small seminar format. I felt that it really helped engage further learning, beyond what I could have gotten in a large lecture setting. However, because the course was so small, the support for the course wasn't as comprehensive as it could have been. With a TF or TA helping to support the coding portion of the course, that would have made things smoother. ",
+            "\u00a0The back-and-forth between theory and application wasnt always the smoothest (partially because of the textbook), and there were some concepts (like model selection) where it would have been helpful to try in application. ",
+            "\u00a0Strength: Professor Svje is phenomenal. Seminars are alternate between lecture-ish sessions and discussion-based seminar sessions with the former being more didactic and the latter more of a free-form discussion about the papers. This format worked particularly well. There were some hiccups about a 'quiz' portion but that was cleared up after the midterm review. If anything it shows he's dynamic and improves his course following feedback. The problem sets are well chosen and OH are helpful-- it should be noted here than S&DS Majors outnumber PLSC majors by a lot, and that's reflected in the quality of problem sets, discussions, and final projects. The final project is absolutely insane (in the best way possible), Professor Svje models a town and you create a campaign strategy to win a mayoral campaign-- the attention to detail is great . \r\n\r\nWeaknesses: Discussions were a bit weak, but that wasn't so much an issue with the Professor. My hunch is that students (including myself) spent more time studying for the quiz than reading the papers (that were necessary for discussion), which hampered the quality of the discussion sessions. ",
+            "\u00a0The strengths of the course were the structure, content, problem sets, and Professor Svje's extensive feedback and willingness to meet and answer questions. The content and papers discussed in the course were really interesting. I really liked the interdisciplinary nature of the course and the level of application of concepts that we were able to achieve through the problem set and final project. In particular, the problem sets really allowed us to understand how statistical analyses and concepts translate to policy outcomes. The course could be improved by having more interaction during the lecture-style classes -- it's sometimes really hard to keep students engaged for a 2 hour seminar class, and these lectures could benefit from more engagement with students. I really enjoyed the seminar-style classes, though I wish that there were more student-led discussions or questions posed. The difficulty level of the problem sets also drastically increased in the second half of the semester, so it might be beneficial to warn students so that they can plan ahead. "
+        ],
+        [
+            "\u00a0Yes, this is an interesting class. You learn both the theory as well as practical coding skills. \r\nThe psets are long and hard. If you be fine if you have at least two semesters of Data analysis experience in R. Otherwise, coding for psets will be tough. ",
+            "\u00a0Yes, if you can get in, absolutely take this class. ",
+            "\u00a0Yes, not to much of a workload, but everything is really practical!  Professor Savje is really nice and makes the class quite fun. ",
+            "\u00a0Savj is a fantastically thoughtful and communicative professor, but the discussions should be designed to be more open access to people without as much rigorous theoretical backgrounds in statistics. ",
+            "\u00a0Yes. I would easily recommend. Especially for students with some stats/data analysis background. If you know very little or if you know too much, this may not be the best class for you. ",
+            "\u00a0Yes if you want to improve in R and practice applying your skills to real life problems. ",
+            "\u00a0Absolutely--Fredrik has a wonderful ability to distill and explain tough concepts ",
+            "\u00a0Definitely, Fredrik is brilliant and the discussions this class initiated were really interesting. ",
+            "\u00a0Yes! ",
+            "\u00a0I would recommend this course to another student, if they are interested in the topics where political science and data science collide. Much of the course is about how researchers choose to tackle data science problems, so if that sounds like an exciting intellectual endeavor, the course is right for you. ",
+            "\u00a0Yes, take it. The students who get tend to have a very heavy S&DS bent, so prepare accordingly. ",
+            "\u00a0Definitely! It's a really great intersectional class that pulls from a lot of different disciplines -- statistics, computer science, social sciences, etc. -- and is difficult to find in any other classes. It will definitely challenge you a novel way and make you realize how hard it is to be an intersectional thinker. You'll gain so much valuable insight into social science research, data science methods, and coding in R. Regardless of your background in data science, coding, or statistics, Professor Svje tailors the class such that he meets you where you are and then raises the bar so that you always feel like you're learning. However, I would recommend knowing at least some R, otherwise it may be difficult to catch up during the course, and the class is very focused on statistics and methodology. I think it's a great complement to someone who studies political science but is interested in methodological questions or someone who studies statistics but is interested in application to the social sciences and policy world. "
+        ]
+    ]
+}

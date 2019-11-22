@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: HEBR 140 or permission of instructor.", 
+    "description": "An advanced Hebrew class focusing on changing ideology and politics in Israel. Topics include right and left wing political discourse, elections, State-Religion dynamics, the Jewish-Arab divide, and demographic changes. Materials include newspapers, publications, on-line resources, speeches of different political and religious groups, and contemporary and archival footage. Comparisons to American political and ideological discourse.\nPrerequisite: HEBR 140 or permission of instructor.", 
+    "title": "Israel in Ideology and Practice", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11444", 
+        "listings": [
+            {
+                "number": "319", 
+                "subject": "JDST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Israel in Ideology and Practice", 
+    "extra_info": "A"
+}

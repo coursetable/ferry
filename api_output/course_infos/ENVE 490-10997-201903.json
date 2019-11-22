@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Individual research and design projects supervised by a faculty member in Environmental Engineering, or in a related field with permission of the director of undergraduate studies.", 
+    "title": "Senior Project", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10997", 
+        "listings": [
+            {
+                "number": "490", 
+                "subject": "ENVE"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "John Fortner"
+    ], 
+    "long_title": "Senior Project", 
+    "extra_info": "A"
+}

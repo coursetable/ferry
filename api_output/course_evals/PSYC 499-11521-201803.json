@@ -1,0 +1,75 @@
+{
+    "crn_code": "11521",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            6
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            7
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to program a study, analyze results, and write up an official Psychology paper. ",
+            "\u00a0This semester was a great opportunity to practice research skills, techniques, and experimental design. ",
+            "\u00a0Through my Senior Essay I was able to focus in on the research I have been doing in the lab. Through writing my thesis I was able to synthesize my research and analyze it in the broader context of memory and drug research. "
+        ],
+        [
+            "\u00a0The course was organized very well, and I had a lot of guidance from my advisors. ",
+            "\u00a0The course was great for gaining practice in research skills and was very highly individualized to meet my needs and research goals. "
+        ],
+        [
+            "\u00a0I would recommend doing research in order to fulfill the BS requirement of the psychology major. ",
+            "\u00a0I recommend this course to anyone who wants experience in research. "
+        ]
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50004/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course is an introduction to statistics and their application in public policy and global affairs research. Throughout the term we cover issues related to data collection (including surveys, sampling, and weighted data), data description (graphical and numerical techniques for summarizing data), probability and probability distributions, confidence intervals, hypothesis testing, measures of association, and regression analysis. The course assumes no prior knowledge of statistics and no mathematical knowledge beyond calculus.\u00a0 \u00a0\u00a0", 
+    "title": "Applied Quantitative Analysis", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "LUCE 101", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12176", 
+        "listings": [
+            {
+                "number": "121", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEPC\">YC EP&amp;E Intro Econometrics</a>"
+    ], 
+    "professors": [
+        "Justin Thomas"
+    ], 
+    "long_title": "Applied Quantitative Analysis", 
+    "extra_info": "A"
+}

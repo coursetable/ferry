@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50834/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Exploration of Arabian Nights, a classic of world literature. Topics include antecedents, themes and later prose, and graphic and film adaptations.", 
+    "title": "The Arabian Nights, Then and Now", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WTS A74", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11456", 
+        "listings": [
+            {
+                "number": "191", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Shawkat Toorawa", 
+        "Ayesha Ramachandran"
+    ], 
+    "long_title": "The Arabian Nights, Then and Now", 
+    "extra_info": "A"
+}

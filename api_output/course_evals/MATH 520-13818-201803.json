@@ -1,0 +1,83 @@
+{
+    "crn_code": "13818",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            3,
+            2
+        ],
+        [
+            1,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            1,
+            0,
+            3,
+            2
+        ],
+        [
+            1,
+            0,
+            4,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0That sometimes it is better to read a book than to audit a course ",
+            "\u00a0Better understanding of the mathematics of measure theory and some applications to other disciplines. Improved my proof skills, got a full other understanding of this topic and nice links with probabilities, algebra. Very good follow up courses to my other analysis classes. Nice to have a greater level of abstraction and see the beauty of math. ",
+            "\u00a0I went from zero understanding of measure theory to having a good introduction on how to approach topology, measure theory, and advanced probability theory. I also learned elementary group theory.\r\n\r\nMy skills in analysis have really improved. After 7-8 weeks of this course, I found my other courses become easier, and not because of measure theory - mostly because of the connections the professor drew between subjects. ",
+            "\u00a0This course covered a really broad range of subjects in not just core measure theory, but topological groups and probability. A really great selection of content. ",
+            "\u00a0Measure theory at graduate level. "
+        ],
+        [
+            "\u00a0The course was very disorganized. ",
+            "\u00a0Lectures were very clear, and the homework were very relevant to the class material. Able to understand it better with problem solving and see some topics not seen in class. I did wish there was less algebra in the course, because it was hard to follow at some point. But nice to see the links between measure theory and other topics. And Professor Levit did give good references when we asked him. ",
+            "\u00a0Strengths: quality of lectures is superb.\r\nProfessor Levit is really a world class lecturer. He is able to draw connections between various fields in mathematics which is incredibly enlightening.\r\nHe also is very good at teaching a class with a mixed level of students, which I really appreciated. \r\n\r\nHe is very good at summarizing prior lectures, and providing a roadmap for why we're doing something.\r\n\r\nThese \"roadmaps\" were incredibly valuable - they gave me an idea how all the different topics related to one another, and gave me a sense for the significance and utility of the theorems we studied. It also made keeping up with the course much easier. ",
+            "\u00a0The course was very clearly taught, the material was well chosen and the problem sets really helped learning. ",
+            "\u00a0We went over a lot of interesting material. Maybe sometimes a slower pace on some proofs would be welcome. ",
+            "\u00a0The lectures are good, but it would be great if we have a grader to give feedback on our psets. "
+        ],
+        [
+            "\u00a0No ",
+            "\u00a0I'd recommend this course to students interesting in understanding the math fully behind some topics like in probability, economics, math... But this is a very challenging course, intellectually. Need some good foundations of analysis. ",
+            "\u00a0Yes, I think I'd recommend any course Professor Levit taught. His approach to this subject is very unique, and I'm unaware of any textbook (or even course) with the same organization. His approach was really superb and I'm very glad I took this course.\r\nI have trouble imaging this course being taught better. ",
+            "\u00a0Definitely. Knowledge of real analysis is crucial in many fields of maths and, with this professor at least, this is the best real analysis course I have taken at Yale. "
+        ]
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51009/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Study of the rise of fascism in Europe in the 1930s and its deployment during the Second World War as a road map to understanding the resurgence of nationalism and populism in today\u00e2\u20ac\u2122s political landscape, both in Europe and the United States.", 
+    "title": "The Politics of Fascism", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "RKZ 06", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13530", 
+        "listings": [
+            {
+                "number": "244", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSC\">YC Poli Sci: Comparative Govt</a>"
+    ], 
+    "professors": [
+        "Lauren Young"
+    ], 
+    "long_title": "The Politics of Fascism", 
+    "extra_info": "A"
+}

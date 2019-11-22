@@ -1,0 +1,91 @@
+{
+    "crn_code": "21459",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            7,
+            3,
+            2
+        ],
+        [
+            3,
+            4,
+            7,
+            1,
+            0
+        ],
+        [
+            3,
+            1,
+            6,
+            4,
+            0
+        ],
+        [
+            3,
+            2,
+            5,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            9,
+            3
+        ],
+        [
+            0,
+            0,
+            7,
+            6,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Multi-variable calculus which will help me in further courses in Economics. ",
+            "\u00a0Lots of calc 3 and 3D visualization ",
+            "\u00a0This class taught me the methods and strategies to evaluate line and surface integrals and what conceptually those strategies mean. ",
+            "\u00a0I believe that I have developed advanced skills of quantitative reasoning, as well as skills related to advanced calculus techniques. ",
+            "\u00a0none ",
+            "\u00a0I developed a greater knowledge of multi variable calculus ",
+            "\u00a0This  course aimed at teaching calculus in three dimentions ",
+            "\u00a0This class offered a fairly thorough overview of multivariable calculus, including vectors, double and triple integrals, and the accompanying theorems. ",
+            "\u00a0I learned about various aspects of multivariable Calculus and how to differentiate and integrate objects containing volume. "
+        ],
+        [
+            "\u00a0The professor did not explain the material very well and rushed through the course. ",
+            "\u00a0Its just a difficult class to teach because the content is hard. The classes should be more standardized and more worksheets should be provided. ",
+            "\u00a0not good teachers except for sudesh, too fast, too confusing, too easy problem sets, too hard tests ",
+            "\u00a0This course was extremely difficult and confusing. ",
+            "\u00a0This course had a coaching group that was great at solidifying concepts but overall teaching was unfortunately lacking. I would have preferred explanations that incorporated more conceptual definitions of the mathematical calculations we carried out. ",
+            "\u00a0The content of this course was relatively interesting and I find the problems presented to be very good mental exercises when solving. However, I do find the course to move very quickly. So it was difficult to absorb the information. I feel that giving homework involving what was learned during the week at the beginning of the week, on Monday for example, instead of towards the end (on Friday) would be more helpful. During the week, as students are learning the material, they would be able to practice through the homework and assess what they know and don't know. That would make it harder for students to fall behind. "
+        ],
+        [
+            "\u00a0Yes, but only if you are very interested in math or need the course as a prerequisite. ",
+            "\u00a0Take it only if you have to ",
+            "\u00a0I most likely would not recommend this course to another student. The workload and difficulty of material made the class unenjoyable, and certainly did not make me glad that I took this course. ",
+            "\u00a0no, take enas 151 it satisfies same requirements and has harder psets but easier tests and the stuff makes sense that they learn lmaaao ",
+            "\u00a0No. ",
+            "\u00a0No I think this course was hard to follow and graded harshly ",
+            "\u00a0This course is required for a bunch of stem majors, higher level math classes, etc., but it's not too bad if you do have to take it. Parts can feel like a slog, but if you have a good professor the math can be really interesting and cool. ",
+            "\u00a0Don't take it if you don't have to. "
+        ]
+    ]
+}

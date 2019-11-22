@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49516/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Key films and topics in British cinema. Special attention to the provincial origins of British cinema; overlaps between filmic, literary, and visual modernism; attempts to build on the British literary and dramatic tradition; cinema\u2019s role in the war effort and in redefining national identity; postwar auteur and experimental filmmaking; \u201cheritage\u201d films and alternative approaches to tradition. Accompanying readings in British film theorists, film sociology (including Mass Observation), and cultural studies accounts of film spectatorship and memories. Films by Mitchell and Kenyon, Maurice Elvey, Anthony Asquith, Len Lye, John Grierson, Alfred Hitchcock, Alberto Cavalcanti, Humphrey Jennings, Michael Powell, Carol Reed, David Lean, Karel Reisz, Lindsay Anderson, Richard Lester, Peter Watkins, Stanley Kubrick, Laura Mulvey, Ken Loach, Mike Leigh, Terence Davies, Terry Gilliam, Peter Greenaway, Michael Winterbottom, Patrick Keiller, Steve McQueen.", 
+    "title": "British Cinema", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 208", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }, 
+        {
+            "start_time": 19, 
+            "location": "", 
+            "days": [], 
+            "end_time": 22
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12142", 
+        "listings": [
+            {
+                "number": "751", 
+                "subject": "FILM"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEN2\">YC English: 20th/21st Century</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YFIC\">YC FILM Stud: Critical Studies</a></li></ul>"
+    ], 
+    "professors": [
+        "Katie Trumpener"
+    ], 
+    "long_title": "British Cinema", 
+    "extra_info": "A"
+}

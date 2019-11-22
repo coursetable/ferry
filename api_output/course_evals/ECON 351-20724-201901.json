@@ -1,0 +1,103 @@
+{
+    "crn_code": "20724",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            6,
+            7
+        ],
+        [
+            1,
+            1,
+            3,
+            6,
+            6
+        ],
+        [
+            1,
+            2,
+            3,
+            7,
+            4
+        ],
+        [
+            0,
+            5,
+            5,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            11
+        ],
+        [
+            0,
+            0,
+            2,
+            7,
+            8
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to represent competitive interactions as games with sets of information, optimal strategies, equilibria, and payouts. The concepts were presented more rigorously than in 159, and the intuitions are more advanced. I developed my ability to intuit about what should happen in certain competitive situations. ",
+            "\u00a0I learned a whole bunch of game theory - Nash equilibria, repeated games, truly SO many refinements of Nash equilibria, auctions, and more. I also got some exposure to microeconomics applications. ",
+            "\u00a0This course is a great introduction to mathematical game theory. While we did not learn any tools we can readily apply, we rigorously covered the basic building blocks of Game Theory that would allow us to study it further in various contexts. I would also say that this course encouraged me to be more creative in my problem-solving techniques, as the homeworks and exams felt a bit like competition math. I should mention that it might be very helpful to have taken intro theoretical probability/stats before this course. I didn't, and I think it ended up costing me in the second half of the course. ",
+            "\u00a0Game Theory! Pretty wacky stuff if you haven't taken regular game theory. Beyond that we learned about the more theoretical constructions/definitions that allow us to study game theory in the more high level sense. What I took away the most was the notion of higher order beliefs, which I think can dictate all that we learn in game theory. It all comes down to what you think the other person is thinking. ",
+            "\u00a0SO MUCH! had both a holistic and deep overview of the field of game theory ",
+            "\u00a0I learnt game theory ",
+            "\u00a0I \"learned\" how to solve for Nash Equilibria, Subgame Perfect Nash Equilibria, Correlated Equilibria, Bayes Nash Equilibria, Perfect Bayes Equilibria and Sequential Equilibria. ",
+            "\u00a0I have been looking forward to writing this evaluation for the whole semester. I HATED this course. There is nothing worse than working the hardest of alll your Yale courses and this being your worst grade BY FAR. I learned nothing in this class despite doing every problem set, taking diligent notes, reading over his lectures, and going to office hours. This class is difficult to an extent that makes it impossible to learn because you aren't given enough time or practice material for you to master any concepts and the problem sets have very little to do with lecture and even less to do with the exams. I am not better at econ, math or game theory after this course. ",
+            "\u00a0An overall survey of different topics in Game Theory, including different solution concepts, theorems, proofs. Course was very intensive and dug deep into the material, and Problem sets and Exams were extremely difficult. A big insight I took away: Game theory is not supposed to model reality; instead, it is meant to model different situations as tractable games, and thereby identify the important factors and outline strategies. ",
+            "\u00a0I learned several topics in the theoretical foundation of game theory and how to apply these concepts in solving an assortment of problems. I became more familiar with the application of mathematics to the social sciences and with the creativity of economic modeling. ",
+            "\u00a0I honed my analytical abilities and deepened my understanding of mathematical economics. I became a better problem solver and acquired an understanding of game theory concepts. "
+        ],
+        [
+            "\u00a0Strengths include Prof. Horner, who is very smart and very thorough and knows the answer to every question. His lectures (which he posts online in LaTeX PDF form, almost like a rough textbook) are clear, though they move quickly, owing to the amount of material in the course. Satoshi, the TA, was also a big strength. He was very helpful and always answered our questions very well. Another strength is that the course is accessible to people not necessarily coming from econ+math (in that he doesn't use much econ).\r\nMain weakness was Prof. Horner's (lack of) commitment to the course at some points... posting (very long) psets just 5 days before they were due, having to cancel four classes (and then make them up over the course of two 3-hour sessions), and giving the TA almost all of the other responsibility. Also I think the psets were too long; we have other classes. The exams were difficult, but I actually didn't mind that. Some people hated the final and thought it was really hard. The median for the midterm was 60 I think, and the mean was actually higher than that, which should tell you something about the difficulty. But if you grasp the material well then it is possible to do just fine.\r\nAlso I did feel like we got a bit lost in the weeds sometimes with some things like analysis results. Probably could have repurposed some of that time to other stuff. But Horner would probably be very sad not to get to present his Hex-based proof of NE ;) ",
+            "\u00a0The lectures are very interesting and engaging, and I enjoyed the choice of material. Some of the problem sets were ABSURDLY long - e.g. an 11 question problem set, due the same week as our midterm AND a three hour makeup lecture. I think these psets should be shorter, so that students focus more on the questions. And the longer questions should have more parts (a,b,c,...) , as the solution sets were often quite long. Same with exams - some of the required computation felt a bit unreasonable, given the amount of time available. In general, the course moved very fast, and including a greater variety of questions on problem sets - i.e. more easy questions, and more hints for the hard questions - would be helpful, since solving the problems was often the first time you'd really understand the content properly. ",
+            "\u00a0Professor Horner is a strength of this course. He has a great understanding of the material and is a clear lecturer. However, toward the end I did feel that the course was a bit ambitious about how much we could learn in a few weeks. Moreover, it may be helpful to follow a textbook more closely. The Psets were generally good, but some were also completely impenetrable. ",
+            "\u00a0The problem sets were fun, however we received no feedback about them, which definitely hurt my understanding of how much I understood the material. Furthermore there was a clear disconnect between problem sets and exams. Exams had much more computation, whereas the problem sets were filled with proofs. Solutions posted were clunky and long that took a long time to get to the main idea of the proofs.\r\n\r\nProf. Horner is an engaging lecturer. This course is fun if you spend all your time with it. It tries hard to be like a maths course, but is so far from it because of the material and us students. ",
+            "\u00a0Strength: lectures are so fun!! small class size really fascinates learning because you feel comfortable asking questions.\r\nWeakness: Prof. and Tutor could have arranged their office hours to better provide students with help with homework, i.e. move them to close to the deadlines so that students will actually have stuffs to ask. ",
+            "\u00a0The T.A, Satoshi, was honestly a life saver. Most of the time, I didn't understand what was going on in class; Satoshi really broke things down/ explained it in a way student would better understand. ",
+            "\u00a0No weakness. Prof is strength ",
+            "\u00a0Horner is probably the biggest strength of the course. He is a really great lecturer and always flawlessly delivers his lectures without notes. He is super patient as well, and is very happy fielding questions from his students in a way that did not interrupt the flow of the overall lecture. Satoshi, the teaching fellow, was amazing as well. I really don't think I could have made it through to the end of the course without his immense patience, resilience, and aptitude for teaching. The content is definitely interesting as well, and arguably is about as hard as an undergraduate Game Theory class can get. Real Analysis is definitely a co-(if not pre)-requisite for the class as the level of abstraction in the material is great. Most of the class was comprised of econ/math, math, computer science and applied math majors, so having a diverse set of classmates was really great as well. There aren't that many weaknesses in the class -- structurally or otherwise. Sometimes the problem sets were too long and literally had *nothing* to do with the subsequent exam for the class in the same week (*cough* *cough* *repeated games* *cough* *cough* *midterm one* *cough* *cough*) but other than that, were super useful in deepening our \"understanding\" of the material (though I doubt anyone in the class ~truly~ had a clue what was going on most of the times). ",
+            "\u00a0This class is too difficult. And no, I am not complaining. Everybody in the entire class will agree that it was impossible to learn or master any material because the professor moves so quickly and wants to trick you at every chance possible. The problem sets are very difficult and he often did not even give us a week to do it, office hours are minimal given how hard the material/problem sets are, and the exams were wildly difficult. I cannot think of a single strength of this course. It was too hard, moved too quickly, and it seemed like we were set up to fail from day one. ",
+            "\u00a0Strengths: Very thorough lecture notes provided by the professor. Professor has excellent knowledge of the material. Material is overall very interesting and unique, unlike any other Economics class I've taken. The course represents an application of some very complicated math, including analysis, and fixed point theorems, and it is quite interesting to see these applications put in practice. \r\n\r\nWeaknesses: The lectures and notes might put too much emphasis on the theoretical aspect (proofs, existence, theorems) and not enough on the computational aspect of solving games. Thus, problem sets and particularly exams were extremely difficult, since we were basically left to our own devices in solving actual problems. It is very difficult to truly internalize the notation heavy definitions into an actual example, and then learn a way to apply that generally. ",
+            "\u00a0Strengths: lectures and course notes were detailed and clear. Material is interesting and aesthetically pleasing. Concepts built upon one another and felt comprehensive. Problem sets were challenging but enjoyable.\r\n\r\nWeaknesses: problem sets were sometimes too lengthy, and there was little feedback on problem sets. Examinations tested for the ability to solve problems quickly and perhaps did not assess understanding of class material as well. ",
+            "\u00a0The class is taught very well. It is well organized and engaging. The problem sets are incredibly challenging but rewarding. The exams are extremely difficult and I'm not sure if that's a strength or weakness. Regardless, the course is fantastic. "
+        ],
+        [
+            "\u00a0I would. It was a bit too logistically disorganized for me to rate it excellent (like the long psets coming out just 5 days before they were due), but I found the class rewarding in the end, and I thought a lot of the concepts were quite cool. Horner is a joy to hear lecture, just because he's so smart and it's really on display when he talks about the subject he's clearly passionate about. \r\n\r\nYou definitely need to be prepared for a time commitment and a study commitment. The material is intuitive to some and quite a struggle for others. If you're one of the others, you'll need to spend a lot of time learning stuff, and the exams will be very difficult. Just know that if you aren't understanding things after a week or two, things are certainly not going to get easier, but if you are, then you might really enjoy it. \r\n\r\nAMTH people: It could be a good breadth course for you, and you'll certainly learn a lot, but you're biting off a pretty big hunk of meat here, so you better be ready to chew it. ",
+            "\u00a0It appears to be a more rigorous version of the other game theory classes, but I think you cover much of the same material (though this class will have more rigorous and formal mathematical notation, I'm not sure how helpful that it). The topics covered were often interesting. The problem sets were sometimes long though the grading is very generous. The midterm and final were...very hard. ",
+            "\u00a0I would recommend this course to another student - game theory is fascinating, and was very appealing to me as a math student (no econ background required, just mentally replace \"first order conditions\" with \"first derivative\" and you'll be fine). It gives you a new perspective on how to make decisions in life -- not necessarily a very practical one, but a new perspective nonetheless -- and the problems are a really cool mix of intuition and computation. There's not usually a clear algorithm for how to solve something, which made it quite difficult, but you could also get to some impressive solutions/results by following your nose and intuition. It is definitely a LOT of work, so make sure you're really in it for the breadth and rigor before you take this instead of one of the easier game theory course offerings. ",
+            "\u00a0I don't think I would recommend this course. While the material is fun due to the challenge, I am still pretty unconvinced that game theory is at all a good way of thinking about the world and most interactions. Some of the concepts seem useful, but concept such as perfect Bayes equilibria, where players are generally uninformed but somehow know the beliefs of others, seem so idealistic that they can hardly be proposed as 'solution concepts' to any real-world scenario, however stylized. In my view, this course will be of more interest in someone looking for a challenging applied math course than someone looking to gain another tool for understanding the social world. ",
+            "\u00a0If you don't really care about grades and have a penchant for maths (ie are a math major) this course is good. Also apparently counts as a CS credit? I would not recommend taking it after taking regular game theory as we do a lot of the same things, just in greater theoretical depth ie proving derivations. ",
+            "\u00a0definitely! this class will make you love economics. game theory is so fun. This class and Prof. Horner single-handedly convinced me to apply to graduate school in economics. ",
+            "\u00a0Don't take it unless you have to or unless you are really good at analytical/ conceptual/ proof based math. This class was really difficult; unless you were great at Math, the Psets took hours [a lot of all-nighters] to do. ",
+            "\u00a0Yes because you learn how to think better ",
+            "\u00a0DO NOT TAKE THIS CLASS. I wish that when I looked at the evaluations for this course when I was a freshman/sophomore that I had listened and CHANGED MY MAJOR. This was the last class left in the major besides the senior requirements and wow I still wish I had not taken it. When I read the evaluations for this course, I figured I would do fine with the curve. I don't even care what grade I get in this course--it is entirely too difficult and a horrible class that teaches you nothing given how fast the professor moves, how long the problem sets are, how theoretical lectures are, and how challenging the exams were. IF YOU ARE INTENDING TO MAJOR IN ECON & MATH YOU SHOULD THINK LONG AND HARD ABOUT YOUR DECISION BECAUSE THIS PLACE HAS MADE ME HATE THE MAJOR. MAJOR IN APPLIED MATH INSTEAD. There is no flexibility in the major and NO CREDIT/D/FAIL option and wow this course should not be required for anyone at Yale. Ridiculous class that I can't believe is still offered at Yale and is being taught this way. I learned nothing and I hope that no one ever enrolls in this course again. And, to be clear, I am not complaining. I have excelled in and enjoyed my other econ & math classes. They challenge you but you learn so much. This class wrecks and you leave with no new knowledge. ",
+            "\u00a0If you want a course to really challenge you, this is it. The problem sets are difficult, and the exams, though not as difficult, are still difficult due to the unrealistic time constraint the professor gives. Regardless, if you are very motivated and like being challenged, then this is a good course. The subject itself is quite interesting, and understanding different solution concepts as well as some of the theorems are quite rewarding. Being able to understand the framework under which Game theorists think is very valuable, since this style of thought is used throughout and will probably be very useful in life. ",
+            "\u00a0I would recommend this course to students interested in a mathematically rigorous introduction to game theory or in a challenging course that exercises rationality (useful for analytical philosophy, perhaps). I appreciated the applications of various mathematical concepts to realistic scenarios---the qualitative aspect of game theory anchored intuition in these concepts. ",
+            "\u00a0I would definitely recommend this course to any student interested in game theory. Students who like puzzles and interesting problems will also enjoy it. Horner is an incredible instructor and the course really pushes you. "
+        ]
+    ]
+}

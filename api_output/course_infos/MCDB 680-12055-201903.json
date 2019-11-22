@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50490/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The study of basic processes in plant growth and development to provide a foundation for addressing critical agricultural needs in response to a changing climate. Topics include the latest breakthroughs in plant sciences with emphasis on molecular, cellular, and developmental biology; biotic and abiotic plant interactions; development, genomics, proteomics, epigenetics, and chemical biology in the context of plant biology; and the current societal debates about agrobiotechnology.", 
+    "title": "Advances in Plant Molecular Bi...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "YSB 442", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12055", 
+        "listings": [
+            {
+                "number": "680", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Vivian Irish", 
+        "Joshua Gendron", 
+        "Yannick Jacob"
+    ], 
+    "long_title": "Advances in Plant Molecular Biology", 
+    "extra_info": "A"
+}

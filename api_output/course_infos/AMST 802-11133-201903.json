@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50154/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introduction to the early national period and its scholarship, exploring major themes such as nationalism, national identity, the influence of the frontier, the structure of society, questions of race and gender, and the evolution of political cultures.", 
+    "title": "Readings in Early National Ame...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "BRW35 221", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11133", 
+        "listings": [
+            {
+                "number": "802", 
+                "subject": "AMST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Joanne Freeman"
+    ], 
+    "long_title": "Readings in Early National America", 
+    "extra_info": "A"
+}

@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/52017/assignments/syllabus", 
+    "requirements": "Priority given to non-science majors and first-year students interested in electrical engineering.", 
+    "description": "Smart devices, robots, and communication systems rely mainly on digital technology in this information age. This course examines the path that information takes from sensors in smart devices, through processors that digitize and process data, communication networks that transmit data packets, and the actuators that inform the human at the receiving end. Basic ideas from probability and signal theory describe how binary data are reliably transmitted over wireless networks and from probes on Mars. Theory is illustrated with projects using Excel with Visual Basic for Applications (VBA).\nPriority given to non-science majors and first-year students interested in electrical engineering.", 
+    "title": "The Digital Information Age", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "BCT", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15182", 
+        "listings": [
+            {
+                "number": "101", 
+                "subject": "EENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Roman Kuc"
+    ], 
+    "long_title": "The Digital Information Age", 
+    "extra_info": "A"
+}

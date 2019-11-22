@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49257/assignments/syllabus", 
+    "requirements": "Prerequisite: CHEM 222L. After or concurrently with CHEM 175, 221, or 230.", 
+    "description": "Second term of an introductory laboratory sequence covering basic synthetic and analytic techniques in organic chemistry.\nPrerequisite: CHEM 222L. After or concurrently with CHEM 175, 221, or 230.\n\n0.5 Yale College course credits", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10512", 
+        "listings": [
+            {
+                "number": "223L", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Laboratory for Organic Chemistry II", 
+    "extra_info": "C"
+}

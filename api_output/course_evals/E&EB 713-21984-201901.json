@@ -1,0 +1,86 @@
+{
+    "crn_code": "21984",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            5,
+            0,
+            1
+        ],
+        [
+            0,
+            3,
+            4,
+            0,
+            0
+        ],
+        [
+            1,
+            1,
+            4,
+            1,
+            0
+        ],
+        [
+            1,
+            3,
+            3,
+            0,
+            0
+        ],
+        [
+            0,
+            5,
+            0,
+            2,
+            0
+        ],
+        [
+            1,
+            5,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course provided an overview of some tools in R that are useful in addressing questions about species distribution, movement, and resource use. ",
+            "\u00a0I learned how to use R for spatial analysis and some basic knowledge regarding migrations, home ranges, distributions etc. ",
+            "\u00a0I learned how to do all sorts of new modeling in R. All the different guest lectures exposed me to a lot of new concepts and methods in biodiversity. ",
+            "\u00a0While the intention of this course was to develop an understanding of big data in global biodiversity change, the course left much wanting. The lectures assumed base knowledge of statistics and R-coding that much of the class did not have, making a lot of the material unaccessible. Even for those who are comfortable in R, because the code was simply provided and not very well explained, it was hard come away with useful skills or knowledge. In fact, most of the codes provided had chucks of necessary data manipulation that were not explained, making it very difficult to use in other circumstances. \r\n\r\nEach post doc did a great job presenting their work, however. While I did not learn much in terms of how they did their work, this is of no fault of the instructors. With only one class, it is near impossible to explain both what you do and how you do. I did learn, however what each post doc does and the importance of their work. This will make it easy to contact any of them with questions or ideas for collaboration moving forward. ",
+            "\u00a0This course introduces students to new ways to consider and visualize biodiversity data at a large scale. ",
+            "\u00a0This course gives you a direct introduction to the coding and computational techniques used by contemporary biodiversity and biogeography researchers. I gained familiarity with a variety of these techniques at a higher level of sophistication than in most undergraduate ecology courses. "
+        ],
+        [
+            "\u00a0The strength of the course were the postdocs who actually taught the class, however, it also provided a \"too many cooks\" situation. The course lacked a clear overall vision and departed significantly from the initial syllabus in content and purpose. Halfway through the course, assignments were devised. These usually involved re-running the provided code and writing four sentences. I'm not sure what the goals of the assignments  were. Feedback was, for the most part, late and scarce. Some assignments have yet to be evaluated. If the course were to be offered in the future, I would recommend consultation with the Center for Teaching and Learning and the designation of a lead instructor who is present in all class sessions.It is clear that the post-doctoral scholars assembled and executed most of the machinery for the course. But with six of them (plus guest speakers), the course ended up being poorly organized. The \"meat\" of the modelling was usually swept under the rug in both the assignments and in-class sessions. ",
+            "\u00a0The class seemed a bit disorganized at times because of the way each week brought in a new lecturer, and sometimes I felt as if I didn't understand the code I was mindlessly running (although that was probably my fault for not taking a R class before). Some of the assignments haven't been graded yet, and I didn't receive much feedback. ",
+            "\u00a0Strengths: lots of cool material. Weaknesses: sometimes the material didn't quite connect from lecture to lecture; the class didn't feel totally cohesive. ",
+            "\u00a0It was great to provide Post Docs with the opportunity to teach, and many of them did a good job explaining their research. However, this made for a very disjunct course. No skills were built upon others, and it was clear that there was no overall organization to the course. It left the students often very confused and with no practical take away. \r\n\r\nIf, however, there were an opportunity for the post docs to develop the course together and build off one another, there is potential for this course to be wonderful. This would require a bit of a shift in the course, either focusing on the methods used to analyze big data (and thus requiring R already), or a course on how to code in r. Also, this would require funding the post docs for this particular position and providing adequate support. ",
+            "\u00a0This course offered exposure to a lot of new methods and ways of considering ecostatistics, but it did not actually teach how to do many of the analyses. Much of the course is simply members of the Jetz Lab sharing their work and students following along (but not understanding any of the code scripts). If we did less (and simpler work) but actually learned new code and methods, it'd be more useful. ",
+            "\u00a0Being a grad course, this is dissimilar to most undergraduate biology courses. This was not so much a lecture as it was a regular series of workshops and guest lectures on relevant and up-to-date biogeography and biodiversity techniques. That isn't intended as a criticism; this is exactly how the course presents itself, and it's enjoyable and useful as long as you know what you're signing up for. Not particularly tough or stressful, and not the most fascinating at all times; the quality undoubtedly varied depending on the guest lecturer. You could probably get away without understanding much, but if you put in more effort than is required to get by, this course can be quite compelling. "
+        ],
+        [
+            "\u00a0I would not recommend this course if it is offered in the same format. The course was loosely organized and poorly taught. It was more of a \"seminar plus assignments.\" If you are looking to either brush up on technical skills and coding OR learn about biodiversity, I would recommend taking specialized courses in either of those two areas. ",
+            "\u00a0I would only recommend this course if you are truly interested in spatial analysis and willing to put in the time and effort to understand all the lines of code. ",
+            "\u00a0Yes, if you're interested in learning new applications of R. ",
+            "\u00a0In its current state, I would not recommend this course. I simply did not learn much in terms of ways to approach big data. The course was often confusing because it jump around so much and seemed more like a seminar series that a course. ",
+            "\u00a0The class seems heavily tailored to advanced coders and graduate students who are already familiar with much of the inner workings of R and want to see the ways other advanced coders have combined coding commands to produce new visuals. I would not recommend to novice or intermediate coders or undergraduates. ",
+            "\u00a0I'd recommend this course to driven and engaged undergrads who are interested in the material. It's a good fifth credit and not very time-consuming, but it's probably mainly worth the time if you make an effort to understand the material, which will largely be on you. But if the subject seems interesting to you, then go for it! "
+        ]
+    ]
+}

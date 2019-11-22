@@ -1,0 +1,108 @@
+{
+    "crn_code": "23153",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            7,
+            11,
+            2
+        ],
+        [
+            1,
+            4,
+            5,
+            6,
+            5
+        ],
+        [
+            0,
+            2,
+            4,
+            9,
+            5
+        ],
+        [
+            0,
+            1,
+            6,
+            9,
+            4
+        ],
+        [
+            0,
+            0,
+            8,
+            10,
+            3
+        ],
+        [
+            0,
+            0,
+            13,
+            7,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to process 1D signals and 2D images. ",
+            "\u00a0I developed an understanding of image processing and analyzing signals, and how to use Matlab to apply these lessons. ",
+            "\u00a0I learned about the mathematics behind signals and images in a biological context. ",
+            "\u00a0developed a new skill set - how we take signals and interpret them and how we take images and interpret them - I think these are both incredibly useful as a biomedical engineering major and as someone who is premed. ",
+            "\u00a0Learned how to process images, and 1D and 2D analysis of signals in the frequency domain through Laplace and Fourier Transforms. we also learned how to apply these to model biological functions like the heart. ",
+            "\u00a0I learned a baseline knowledge of signals and signal processing (Fourier transforms, Laplace transforms, convolution) and to take those signals into more dimensions to understand images and what effect changing the frequencies displayed and convolution has on those images. ",
+            "\u00a0UM. ",
+            "\u00a0I learned a ton about signals, matrices, images and how they are processed. I also learned about mathematical concepts such as Fourier Transforms ",
+            "\u00a0I learned a lot of hard mathematical skills and matlab. ",
+            "\u00a0This class develops a great understanding of 1D and 2D signals and how you can operate on these signals with linear, time/shift-invariant signals. ",
+            "\u00a0basics to signals and systems, with biomedical applications. Great class, fun material, and is one of the first BME classes in which you see real-life applications to the things that we study. both professors are very knowledgeable! ",
+            "\u00a0This class provided a basic foundation for analyzing and processing biomedical signals and images, as well as applying these techniques to real-life applications. ",
+            "\u00a0Analysis of continuous and discrete signals through transformations between time and frequency domains, how to create a simplified model of a cardiac system, analysis of images "
+        ],
+        [
+            "\u00a0Not the most engaging course, but the material itself is neat. ",
+            "\u00a0Great course overall! Learned quite a bit.\r\n\r\nSome of the homework questions are outdated and need to be fixed. Other than that, no real improvements. ",
+            "\u00a0I think the material isn't hard, but it is pretty conceptually dense, so it requires clear and straightforward instruction. The lectures would give derivations of concepts and the problem sets would have us actually do the math, but most of the time it wasn't clear how to do the problems right off the bat because we didn't have enough information from our notes. I would have appreciated straightforward examples and an explanation of the thought process of approaching each kind of problem. ",
+            "\u00a0Content is dry. Professors were unengaging. Overall, the class was uninteresting and the professors were poor. I think different professors would make it a lot better. If not that, then more examples of applications would be good or trying to make it more interesting in some way. ",
+            "\u00a0strengths - interesting subject\r\nweaknesses - dry, Duncan and Staib have different teaching styles, homework is too easy compared to exams ",
+            "\u00a0The material was taught by knowledgeable professors. the exams were fair and based upon the homework we completed throughout the semester. Notes were all posted online. So all the resources were set up to do well. ",
+            "\u00a0I think having two professors was good in engaging with all of the information in depth. The TAs and their sections were also super important in understanding the material. I think a weakness in the class is that the depth to which topics are covered varies widely--some topics are skimmed over quickly, while others are taken in huge detail, without much meaning assigned to it or rhyme/reason to why some topics were emphasized more than others, beyond that they could be easily tested. ",
+            "\u00a0This class was pretty badly run. Both professors were extremely kind but not very good at teaching. It was hard to stay engaged in lecture. Strengths were Prof. Staib's lecture slides and Prof. Duncan's sense of humor.  They were both very understanding, helpful, and approachable. ",
+            "\u00a0The strengths were availability of the TAs, clarity of materials presented and accessibility of resources to learn the material. It should be emphasized to students that it is really easy to fall behind though! ",
+            "\u00a0I think the problem sets were very helpful to learning the material. I also appreciated that the midterm and final were open notes, so we didn't have to memorize any methods or equations. This made it easier to focus on how to apply the material from lecture to problems. ",
+            "\u00a0The class was clear, and the course content was not too difficult. It would have been helpful to have a set of notes or book references compiled for Dr. Staib's lectures. Else, both instructors were great! ",
+            "\u00a0Strengths: I appreciated the straightforwardness of the course. The lectures were relevant to the problem sets, and the professors clearly outlined their expectations for the exams (which are open note!) during their review sessions. It was also pretty cool to actually see the quantitative basis for many of the qualitative aspects of signals and images. Weaknesses: the material is somewhat dry, so I wish there had been more of an effort made to show the relevance to real-life applications beyond the simple examples worked out in class. "
+        ],
+        [
+            "\u00a0Only take this course if it is required of you. ",
+            "\u00a0Great class! Definitely worth taking, especially if you are interested in an introduction to cardiovascular modeling and imaging. ",
+            "\u00a0Only if required or specifically interested in the material. ",
+            "\u00a0The professors are both poor at teaching and the material is very dry and uninteresting. I would not recommend this course. But, it is required so if you are BME you have to take it. ",
+            "\u00a0You have to take this class and it's a good class. ",
+            "\u00a0Yes. The exams are open note and fair (not necessarily easy) they ask you to apply the concepts that you learned in class but all the material on the exams has been gone over in class. Homework is also fair, but you need to know some matlab to do them. ",
+            "\u00a0In all likelihood, all of those students reading this review have to take the course. It's definitely a manageable course, but some of the grading and communication regarding grades leaves a lot to be wanted. The material itself isn't too crazy difficult, if not always clear why it might be applicable to anyone who's not planning on going into bioimaging. Overall, it's a pretty good class in the major, although you might just have to swallow that it might not have huge bearing on what you want to do in the future. ",
+            "\u00a0You probably have to take it for BME, but this class was painful for me. ",
+            "\u00a0I would! After seeing that it was easy to fall behind, I began to engage with the material each day in class and it was actually very interesting. Make use of the TA sessions though! ",
+            "\u00a0Most students taking this class are probably taking it because they have to. It's not too bad of a class, you start to have a better understanding of how signals can be convolved and manipulated. The problem sets are not too bad, there's about 9. The midterm and final are about 3-4 problems and they are open note exams. ",
+            "\u00a0Yes I would! it's a fun class, and allows you to learn some more of the \"engineering\" side of biomedical engineering. Glad to have learned a variety of topics from both professors, though the class would benefit from a little more structure. ",
+            "\u00a0The class is fine I guess. If you're taking it, it's probably because you have to. The lectures can be pretty dull, and it can be frustrating because the lectures seem kind of disconnected from the homework and exam problems sometimes. ",
+            "\u00a0Yes! ",
+            "\u00a0yee ",
+            "\u00a0You are probably taking as a requirement, it is a good course, although sometimes dry. Professors are really open to questions, make sure to approach them if needed! "
+        ]
+    ]
+}

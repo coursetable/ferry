@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50321/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The course is an introduction to language structure and processing as a capacity of the human mind and brain. Its purpose is to bridge traditional domains in linguistics (phonetics, morphology, syntax) with cognition (developmental psychology, memory systems, inferential reasoning). The main topics covered are morphosyntax and lexical semantics, sentence composition and sentence processing, first- and second-language acquisition, acquisition under unusual circumstances, focal brain lesions, and language breakdown.", 
+    "title": "Language and Mind", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "SML 118A", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11205", 
+        "listings": [
+            {
+                "number": "617", 
+                "subject": "LING"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Maria Pinango"
+    ], 
+    "long_title": "Language and Mind", 
+    "extra_info": "A"
+}

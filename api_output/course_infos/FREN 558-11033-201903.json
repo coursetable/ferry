@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49951/assignments/syllabus", 
+    "requirements": "Prerequisite: advanced reading knowledge of French. Discussion and papers are in English.", 
+    "description": "The course considers major authors of twentieth-century France whose work has given rise to fierce debates over translations and re-translations into English. Authors include\u00a0 Proust, C\u00e9line, Camus, Beauvoir, Fanon, and, in a reversal of the issues, the French Faulkner. Theoretical questions include untranslatability; the task of the translator; re-translation and the historicity of the literary text; translation and symbolic capital; and the postcolonial turn in Translation Studies. Seminar work entails close readings of the primary texts, literary history, and translation workshops.\nPrerequisite: advanced reading knowledge of French. Discussion and papers are in English.", 
+    "title": "Translation Controversy in Twe...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "SML 177", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11033", 
+        "listings": [
+            {
+                "number": "558", 
+                "subject": "FREN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Alice Kaplan"
+    ], 
+    "long_title": "Translation Controversy in Twentieth-Century French Literature", 
+    "extra_info": "A"
+}

@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50432/assignments/syllabus", 
+    "requirements": "Enrollment limited to MB&B majors. Prerequisite: MB&B 251L or permission of the instructor.", 
+    "description": "Individual laboratory projects under the supervision of a faculty member. Students must submit an enrollment form that specifies the research supervisor by the date that course schedules are due. Students are expected to commit at least ten hours per week to working in a laboratory. Written assignments include a research proposal, due near the beginning of the term, and a research report that summarizes experimental results, due before the beginning of the final examination period. Students receive a letter grade. Up to 2 credits of MB&B 470/471 may be counted toward the MB&B major requirements.\nEnrollment limited to MB&B majors. Prerequisite: MB&B 251L or permission of the instructor.", 
+    "title": "Research in Biochemistry and B...", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11336", 
+        "listings": [
+            {
+                "number": "470", 
+                "subject": "MB&B"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kai Zhang", 
+        "Karla Neugebauer"
+    ], 
+    "long_title": "Research in Biochemistry and Biophysics for the Major", 
+    "extra_info": "A"
+}

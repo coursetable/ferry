@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49818/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Identification of the major temperate plant families, with a focus on North American forest species; integration of morphology, phenology, ecology, biogeography, and the natural history of tree species. Course work includes field identification of woody plants, and phylogenetic systematics as the structure for understanding the evolutionary history and relationships between species.", 
+    "title": "Temperate Woody Plant Taxonomy...", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "MARSH R", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12872", 
+        "listings": [
+            {
+                "number": "231", 
+                "subject": "EVST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Marlyse Duguid"
+    ], 
+    "long_title": "Temperate Woody Plant Taxonomy and Dendrology", 
+    "extra_info": "A"
+}

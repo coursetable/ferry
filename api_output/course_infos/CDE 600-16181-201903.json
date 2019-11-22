@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Independent study or directed readings on a specific research topic agreed upon by faculty and student. By arrangement with faculty.", 
+    "title": "Directed Readings CDE: Modelin...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 5, 
+        "oci_id": "16181", 
+        "listings": [
+            {
+                "number": "600", 
+                "subject": "CDE"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Julie Womack"
+    ], 
+    "long_title": "Directed Readings CDE: Modeling Suicide Risk", 
+    "extra_info": "A"
+}

@@ -1,0 +1,84 @@
+{
+    "crn_code": "23076",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            5,
+            2
+        ],
+        [
+            0,
+            1,
+            2,
+            3,
+            2
+        ],
+        [
+            1,
+            0,
+            2,
+            4,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            6,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            5,
+            2
+        ],
+        [
+            0,
+            1,
+            5,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course is an interesting premise. It largely explores the mathematics behind several processes in molecular biology. However, I would not say I actually derived any useful skills or knowledge. ",
+            "\u00a0represent cell networks mathematically, understand cell signaling, etc. ",
+            "\u00a0I think the most fundamental component of this class was learning how to view biological systems from a network point of view.  Some of the lectures were superb, and most were quite good.  I felt very lucky to take this class, and to get a window into cellular systems from a combined quantitative/engineering/molecular point of view. ",
+            "\u00a0I learned how to develop a really informative yet simple system based on a complicated system. ",
+            "\u00a0Various methods to analyze biological systems "
+        ],
+        [
+            "\u00a0The greatest strength of the course is that the material is interesting. However, the organization of the course is incredibly poor. No proper syllabus is provided, making planning around deadlines incredibly difficult. Homework was assigned randomly, with different periods of time between assignment and due date. Classes were periodically cancelled, and not consistently rescheduled, making predicting if sessions were going to be rescheduled difficult. Materials useful to homework were regularly uploaded after homework was assigned, and were not regularly uploaded after the class met, ensuring a delay between teaching and ability to review information. The due date for the final paper was given with less than a week to deadline, making planning its completion around other final assignments stressful. If the course is going to be taught again, it needs substantial structural overhaul. Furthermore, as the homework assignments are computationally and mathematically heavy, and the experience level of students entering the class is not equal, the class would heavily benefit from the addition of regular office hours. ",
+            "\u00a0lots of interesting content in lecture, but sometimes it's hard to track with it all. i would encourage more explicit forms of student engagement. ",
+            "\u00a0The course could do with better organization: the homeworks seemed like a haphazard addendum to the class.  That said, the lectures were fantastic, and Andre was a brilliant lecturer.  The final two weeks of class did seem a bit disorganized, however. ",
+            "\u00a0The homework assignments were helpful in allowing us understand the materials. ",
+            "\u00a0Strength: comprehensive covering of different aspects of system biology "
+        ],
+        [
+            "\u00a0If organizationally restructured, yes. ",
+            "\u00a0Yes, very interesting topics and lectures. ",
+            "\u00a0yes, if you're interested in cell signaling or the fundamentals of systems biology. Levchenko is very knowledgeable and seems to know a bit about everything. ",
+            "\u00a0Absolutely.  I think anyone in the biological sciences should understand this material/ ",
+            "\u00a0Yes. ",
+            "\u00a0Yes. Very useful course for students from both biology and BME "
+        ]
+    ]
+}

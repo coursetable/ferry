@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Independent work that would not ordinarily be accomplished within existing courses, designed by the student in conjunction with a School of Art faculty member. A course proposal must be submitted on the appropriate form for approval by the director of undergraduate studies and the faculty adviser. Expectations of the course include regular meetings, end-of-term critiques, and a graded evaluation.", 
+    "title": "Independent Projects", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15857", 
+        "listings": [
+            {
+                "number": "471", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Lisa Kereszi"
+    ], 
+    "long_title": "Independent Projects", 
+    "extra_info": "A"
+}

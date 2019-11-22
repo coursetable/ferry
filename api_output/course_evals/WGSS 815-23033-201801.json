@@ -1,0 +1,77 @@
+{
+    "crn_code": "23033",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            2,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to critically analyze monuments. I learned more about the industry of conservation of sculptures and the impact in our communities. ",
+            "\u00a0I learned about memory theory, reading sculpture, and the preservation of cultural heritage. I was introduced to agisoft and arcgis. ",
+            "\u00a0How to think critically about public art, and the importance of restoration. I additionally learned how to use StoryMaps and how to do photogrammetry. "
+        ],
+        [
+            "\u00a0I loved the class. The field trips made the class more hands on and created a positive atmosphere for conversations. ",
+            "\u00a0Earlier start on the final project, more focus on art history, emphasis on memory. There were a lot of good things in this course but it felt a bit disjointed. ",
+            "\u00a0I enjoyed the readings, but I wish there were less required readings. I also enjoyed the field trips. It would have been great to have an incorporated hands-on lab. "
+        ],
+        [
+            "\u00a0It gives you a chance to learn about how monuments shape our communities and the investment that goes into preservation of pubic art. ",
+            "\u00a0Good fifth class, gets you thinking about an discipline you so often pass by. ",
+            "\u00a0Yes, my view on public art has been shaped with this course. "
+        ]
+    ]
+}

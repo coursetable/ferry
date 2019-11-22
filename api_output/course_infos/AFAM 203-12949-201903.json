@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50897/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The parallel careers of John Coltrane and Jimi Hendrix in different genres of black music explored through biographical, music-analytical, and sociocontextual approaches. The stylistic evolutions in each musician's work; the music of Coltrane and Hendrix as embodiments of, and reactions to, the dominant musical and social issues of the 1960s.", 
+    "title": "Coltrane and Hendrix", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "STOECK 106", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12949", 
+        "listings": [
+            {
+                "number": "203", 
+                "subject": "AFAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Veal"
+    ], 
+    "long_title": "Coltrane and Hendrix", 
+    "extra_info": "A"
+}

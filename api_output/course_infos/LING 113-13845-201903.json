@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50313/assignments/syllabus", 
+    "requirements": "Prerequisite: some knowledge of at least one ancient Indo-European language, such as Latin, Greek, or Sanskrit.", 
+    "description": "Introduction to the inner workings and prehistory of the Indo-European languages both as a language family and in its individual branches. Emphasis is on using the theoretical framework obtained by this knowledge, especially through practical applications for readers of ancient languages such as Greek, Latin, Hittite, Sanskrit, Avestan, and Middle Persian.\nPrerequisite: some knowledge of at least one ancient Indo-European language, such as Latin, Greek, or Sanskrit.", 
+    "title": "Indo-European Linguistics", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "DOW 112", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13845", 
+        "listings": [
+            {
+                "number": "113", 
+                "subject": "LING"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Chelsea Sanker"
+    ], 
+    "long_title": "Indo-European Linguistics", 
+    "extra_info": "A"
+}

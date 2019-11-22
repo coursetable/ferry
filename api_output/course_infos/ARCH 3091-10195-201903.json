@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "", 
+    "title": "Methods & Research Workshop", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "RDH 212", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10195", 
+        "listings": [
+            {
+                "number": "3091", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Mary McLeod"
+    ], 
+    "long_title": "Methods & Research Workshop", 
+    "extra_info": "A"
+}

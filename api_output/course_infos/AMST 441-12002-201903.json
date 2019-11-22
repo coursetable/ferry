@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48945/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The experiences of Native Americans during centuries of relations with North America's first imperial power, Spain. The history and long-term legacies of Spanish colonialism from Florida to California.", 
+    "title": "Indians and the Spanish Border...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "HLH28 B-1", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12002", 
+        "listings": [
+            {
+                "number": "441", 
+                "subject": "AMST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Ned Blackhawk"
+    ], 
+    "long_title": "Indians and the Spanish Borderlands", 
+    "extra_info": "A"
+}

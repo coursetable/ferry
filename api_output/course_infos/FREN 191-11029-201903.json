@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 9
+    }, 
+    "requirements": "Readings in French and in English.\u00a0After FREN 150 and 151 or with permission of instructor. Preference to juniors and seniors.", 
+    "description": "An introduction to the practice and theory of literary translation, conducted in workshop format. Stress on close reading, with emphasis initially on grammatical structures and vocabulary, subsequently on stylistics and aesthetics. Translation as a means to understand and communicate cultural difference in the case of French, African, Caribbean, and Qu\u00e9b\u00e9cois authors. Texts by Benjamin, Beckett, Borges, Steiner, and others.\nReadings in French and in English.\u00a0After FREN 150 and 151 or with permission of instructor. Preference to juniors and seniors.", 
+    "title": "Translation", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WLH 115", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11029", 
+        "listings": [
+            {
+                "number": "191", 
+                "subject": "FREN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Alyson Waters"
+    ], 
+    "long_title": "Translation", 
+    "extra_info": "A"
+}

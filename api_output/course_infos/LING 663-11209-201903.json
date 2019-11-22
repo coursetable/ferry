@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50333/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to truth-conditional compositional semantics. Set theory, first- and higher-order logic, and the lambda calculus as they relate to the study of natural language meaning. Some attention to analyzing the meanings of tense/aspect markers, adverbs, and modals.", 
+    "title": "Semantics I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "DOW 100", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11209", 
+        "listings": [
+            {
+                "number": "663", 
+                "subject": "LING"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Veneeta Dayal"
+    ], 
+    "long_title": "Semantics I", 
+    "extra_info": "A"
+}

@@ -1,0 +1,83 @@
+{
+    "crn_code": "20757",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            4,
+            5,
+            1
+        ],
+        [
+            0,
+            0,
+            6,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            8,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            6,
+            2
+        ],
+        [
+            0,
+            3,
+            7,
+            0,
+            1
+        ],
+        [
+            0,
+            4,
+            6,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about the theory behind some of the most common estimation techniques in economics. I learned how to code these estimation procedures. ",
+            "\u00a0OLS, IV GMM and methods of panel data analysis ",
+            "\u00a0more econometrics models ",
+            "\u00a0Understand the rigorous foundation of common econometric tools ",
+            "\u00a0I became more confident working with basic linear regressions as well as using instrumental variables and other techniques ",
+            "\u00a0With limited econometric background, almost all the material was new (save for a bit of the OLS introduction which was review). The topics that I think will be most valuable that we learned were:\r\n-Panel data estimation\r\n-Bootstrapping \r\n-IV Estimation\r\n-Limited dependent variable MLE "
+        ],
+        [
+            "\u00a0A relatively large portion of this course overlaps material in Econometrics I last semester. For most students, Econometrics I is considered very challenging while Econometrics II is a bit too easy. The department should structure this sequence better. ",
+            "\u00a0Very good. ",
+            "\u00a0the lecture is straightforward but it can cover more materials than what we learned now ",
+            "\u00a0It could be more applied, i.e. we could have had more coding and data related homework. ",
+            "\u00a0Strengths:\r\n-Fall metrics is a total whirlwind, so it is great that this course revisits some of the topics and allows students to solidify their understanding of key topics. \r\n-The textbook choice is great and problem sets are helpful with learning material and evaluating your understanding\r\n-TA sessions were fantastic for material review and clarifying some of the math behind the theorems, etc. \r\n\r\nWeakness:\r\n-It would be great to do some more estimation/interpretation "
+        ],
+        [
+            "\u00a0Yes, I would 100% recommend this class. ",
+            "\u00a0Yes, this is useful for people who want to do empirical research. ",
+            "\u00a0yes ",
+            "\u00a0Yes. If a student is interested in empirical work, this is a particularly helpful class. However, it will also be helpful for those students that decide to pursue econometrics because it is one more chance to solidify an understanding of extremum estimation, asymptotic theory, etc. before continuing on with the advanced metrics courses. "
+        ]
+    ]
+}

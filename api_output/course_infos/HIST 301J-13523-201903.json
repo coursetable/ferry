@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49685/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This seminar examines debates in the history of modern Korea, beginning with the Chos\u00c5\ufffdn Dynasty and building to the division of the country into North and South Korea. Major themes include the nature of modernity and modernization, the history of imperialism and colonialism in East Asia, the emergence of Korean nationalism, the rise of the Cold War order and the outbreak of the Korean War, histories of guerilla warfare and popular resistance, and histories of gender, sexuality, and self-expression in Korea throughout the twentieth century.", 
+    "title": "The Two Koreas: North and Sout...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WALL81 401", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13523", 
+        "listings": [
+            {
+                "number": "301J", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Russell Burge"
+    ], 
+    "long_title": "The Two Koreas: North and South Korea in Historical Perspective", 
+    "extra_info": "A"
+}

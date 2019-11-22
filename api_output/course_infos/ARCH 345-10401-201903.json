@@ -1,0 +1,50 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49083/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to the history, analysis, and design of the urban landscape. Principles, processes, and contemporary theories of urban design; relationships between individual buildings, groups of buildings, and their larger physical and cultural contexts. Case studies from New Haven and other world cities.", 
+    "title": "Civic Art: Introduction to Urb...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "RDH HASTINGS", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10401", 
+        "listings": [
+            {
+                "number": "345", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Alan Plattus"
+    ], 
+    "long_title": "Civic Art: Introduction to Urban Design", 
+    "extra_info": "A"
+}

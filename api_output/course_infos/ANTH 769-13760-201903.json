@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49007/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This seminar explores how museums convey various meanings about ethnographic, art, and archaeological objects through the processes of collecting, preparing exhibitions, and conducting research. Participants also discuss broader theoretical and methodological issues such as the roles of museums in society, relationships with source communities, management of cultural heritage, and various specializations valuable for careers in art, natural history, anthropology, history, and other museums.", 
+    "title": "Landscapes of Meaning: Museums...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "YUAG 054", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13760", 
+        "listings": [
+            {
+                "number": "769", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANA\">YC Anthropology: Archaeology </a>"
+    ], 
+    "professors": [
+        "Anne Underhill", 
+        "Lisa Brody", 
+        "Jennifer Reynolds-Kaye"
+    ], 
+    "long_title": "Landscapes of Meaning: Museums and Their Objects", 
+    "extra_info": "A"
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "The relation between modular functions and sporadic groups has been known as monstrous moonshine since its discovery at the end of the 1970s.\u00c2\u00a0During the 1980s, this link was partly explained in the context of vertex operator algebras and their symmetries. However, many mysteries remain. A revival of the monstrous moonshine has happened in the past decade with the discoveries of new relations to the theory of K3 surfaces and three-dimensional quantum gravity. Many problems have been resolved but many new ones have emerged. This course is a survey of old and new constructions in this fascinating subject.", 
+    "title": "Modular Functions, Sporadic Gr...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LOM 206", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14370", 
+        "listings": [
+            {
+                "number": "743", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Igor Frenkel"
+    ], 
+    "long_title": "Modular Functions, Sporadic Groups, and Vertex Operator Algebras", 
+    "extra_info": "A"
+}

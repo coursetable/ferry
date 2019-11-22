@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49691/assignments/syllabus", 
+    "requirements": "Prerequisite: EMD 518.", 
+    "description": "Malaria, tuberculosis, and HIV account for more than five million deaths worldwide each year. This course provides a deep foundation for understanding these pathogens and explores the public health issues that surround these infectious diseases in resource-limited settings. Emphasis is placed on issues in Africa, but contrasts for each disease are provided in the broader developing world. The course is divided into three sections, each focusing in depth on the individual infectious disease as well as discussions of interactions among the three diseases. The sections consist of three to four lectures each on the biology, individual consequences, and community/public health impact of each infectious disease. Discussion of ongoing, field-based research projects involving the diseases is led by relevant faculty (research into practice). The course culminates with a critical discussion of major public health programmatic efforts to tackle these diseases, such as those of PEPFAR, the Bill & Melinda Gates Foundation, the Global Fund, and the Stop TB Partnership.\nPrerequisite: EMD 518.", 
+    "title": "Tackling the Big Three: Malari...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "LEPH 102", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13571", 
+        "listings": [
+            {
+                "number": "567", 
+                "subject": "EMD"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Sunil Parikh"
+    ], 
+    "long_title": "Tackling the Big Three: Malaria, TB, and HIV in Resource-Limited Settings", 
+    "extra_info": "A"
+}

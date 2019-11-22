@@ -1,0 +1,75 @@
+{
+    "crn_code": "21780",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0About basic quantum many body theory ",
+            "\u00a0I learned many useful topics relevant to my research and gained more mathematic skills "
+        ],
+        [
+            "\u00a0The course is well organized. But it's kind of repetitive for the beginning of the class. ",
+            "\u00a0The course covers many good topics and professor Alhassid's derivations in class are very helpful. The notes sometimes are too concise so I think it would be helpful if we know more clearly where to read for each chapter. "
+        ],
+        [
+            "\u00a0Detailed explain basic theories about manybody system. ",
+            "\u00a0Yoram taught a decent basic course in quantum many-body theory, but we didn't get to as many applications as I would have liked. His treatment of second quantization was excellent, but for the rest of the course I struggled to gain intuition from his lectures. ",
+            "\u00a0Yes it covers many important topics for those who do theoretical work "
+        ]
+    ]
+}

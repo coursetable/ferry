@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48968/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to the analysis of chipped and ground stone tools, including instruction in manufacturing chipped stone tools from obsidian. Review of the development of stone tool technology from earliest tools to those of historical periods; relevance of this technology to subsistence, craft specialization, and trade. Discussion of the recording, analysis, and drawing of artifacts, and of related studies such as sourcing and use-wear analysis.", 
+    "title": "Analysis of Lithic Technology", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "HLH51 101", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10371", 
+        "listings": [
+            {
+                "number": "450", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANA\">YC Anthropology: Archaeology </a>"
+    ], 
+    "professors": [
+        "Oswaldo Chinchilla Mazariegos"
+    ], 
+    "long_title": "Analysis of Lithic Technology", 
+    "extra_info": "A"
+}

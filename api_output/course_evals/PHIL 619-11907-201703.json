@@ -1,0 +1,71 @@
+{
+    "crn_code": "11907",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Through class discussion, the great feedback on papers and meeting with Dr. Della Rocca during his office hours, I was challenged to grow as a philosopher and writer. By the end of the semester, I know that I was more careful and more nuanced in my writing as a result of this class. "
+        ],
+        [
+            "\u00a0The topic selection was terrific but I wish that we could have covered Descartes' mind/body dualism at some point for one of the class discussions, especially since this seems to be one of Descartes greatest contributions to philosophy and is still widely discussed today. "
+        ],
+        [
+            "\u00a0Yes, I would. I learned a lot about Descartes through this course. The reading selection, class discussion, and professor were all excellent. "
+        ]
+    ]
+}

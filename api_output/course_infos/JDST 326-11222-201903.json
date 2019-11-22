@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50377/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The role of Marxist thought in understanding literary institutions and texts in the twentieth century. Marx's theory of ideology; Lukacs's theory of literature as the basis for development of Marxist literary theory; the Frankfurt and materialistic schools. Readings include works by Raymond Williams, Catherine Belsey, Walter Benjamin, Pierre Macherey, and Frederic Jameson.", 
+    "title": "Marxist Theory of Literature", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WLH 013", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11222", 
+        "listings": [
+            {
+                "number": "326", 
+                "subject": "JDST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Hannan Hever"
+    ], 
+    "long_title": "Marxist Theory of Literature", 
+    "extra_info": "A"
+}

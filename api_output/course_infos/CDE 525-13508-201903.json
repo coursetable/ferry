@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49161/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This seminar is conducted once a month and focuses on speakers and topics of particular relevance to CDE students. Students are introduced to research activities of the department\u2019s faculty members, with regular presentations by invited researchers and community leaders. The seminar is required of first-year CDE students. Although no credit or grade is awarded, satisfactory performance will be noted on the student\u2019s transcript.", 
+    "title": "Seminar in Chronic Disease Epi...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 12, 
+            "location": "LEPH 115", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13508", 
+        "listings": [
+            {
+                "number": "525", 
+                "subject": "CDE"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Leah Ferrucci"
+    ], 
+    "long_title": "Seminar in Chronic Disease Epidemiology", 
+    "extra_info": "A"
+}

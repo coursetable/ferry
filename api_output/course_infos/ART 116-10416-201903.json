@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49054/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Study of the interactions of color, ranging from fundamental problem solving to individually initiated expression. The collage process is used for most class assignments. Materials fee: $75.", 
+    "title": "Color Practice", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "GREEN G01", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10416", 
+        "listings": [
+            {
+                "number": "116", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Halsey Rodman"
+    ], 
+    "long_title": "Color Practice", 
+    "extra_info": "A"
+}

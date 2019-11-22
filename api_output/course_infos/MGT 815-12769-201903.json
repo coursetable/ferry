@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "", 
+    "title": "Managerial Controls", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "EVANS 4400", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "12769", 
+        "listings": [
+            {
+                "number": "815", 
+                "subject": "MGT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Thomas Steffen"
+    ], 
+    "long_title": "Managerial Controls", 
+    "extra_info": "A"
+}

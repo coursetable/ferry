@@ -1,0 +1,92 @@
+{
+    "crn_code": "21450",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            2,
+            8,
+            6,
+            1
+        ],
+        [
+            3,
+            5,
+            4,
+            4,
+            2
+        ],
+        [
+            0,
+            5,
+            3,
+            5,
+            5
+        ],
+        [
+            0,
+            4,
+            6,
+            5,
+            3
+        ],
+        [
+            1,
+            2,
+            8,
+            5,
+            2
+        ],
+        [
+            0,
+            2,
+            12,
+            3,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Very comfortable with calculus ab ",
+            "\u00a0You learn derivatives until the last two weeks or so when you learn integrals. ",
+            "\u00a0This course went over the AP Calculus AB curriculum. Started with limits, then moved onto derivatives, and culminated with integrals. Learned basic theorems and equations. ",
+            "\u00a0I developed a greater understanding of the foundations behind intro calculus. ",
+            "\u00a0I reacquainted myself with calculus concepts with which I first familiarized myself in high school. ",
+            "\u00a0By the end of the course felt pretty knowledgable about single variable calculus. ",
+            "\u00a0This course somewhat reinforced what I learned in AP Calc AB in high school. ",
+            "\u00a0Great understanding of calculus ",
+            "\u00a0The best skill that I developed through the course was an ability to apply my knowledge to unfamiliar concepts. I was not expected to memorize how to solve a formula or complete a task; instead, we were expected to take what we learned and think about the meaning behind what we were doing. I was also given the opportunity to understand the theory behind certain concepts that we covered in class and the real-world applications. "
+        ],
+        [
+            "\u00a0Ian was a great lecturer ",
+            "\u00a0In this course there is a large gap in levels of difficulty between the problems and content presented or covered in lecture vs. that which is presented in the problem sets and online assignments. While it is understood that the homework is made to challenge us and get practice with harder problems, this reaches a point where it is no longer productive if weve never seen a problem in class that is on the homework and cannot solve it. A strength of this class was the amount of peer tutoring and coaching sessions that were provided. ",
+            "\u00a0The class is not very engaging. ",
+            "\u00a0Professor Adelstein was extremely kind but the structure of the course itself could be improved. Things seemed to be taught in a weird order and small tricks that had been taught in high school (for example, and when taking limit of infinity, look at highest powered term) were never mentioned. Thus, lots of concepts were way more complicated than they should have been. ",
+            "\u00a0This course could have had more professor to student interaction. He lectures had good content but it was very surface level and didn't get into the roots of calculus. ",
+            "\u00a0This course's strength was its comprehensive coverage of differential calculus concepts.  Then again, that was also its purpose; it did not exceed expectations.  I felt that spending more time on individual topics would facilitate more learning, but I do understand that there is a designated curriculum that all must fit within a semester's worth of classes.  \r\n\r\nThe WebAssign biweekly assignments given in this course were nothing more than exercises in frustration.  While the website offered helpful practice quizzes and study techniques, the homework assignments often did not match the content covered in class and provided no feedback whatsoever on why particular responses may have been incorrect and how they could be fixed.  While these assignments did not constitute a huge percentage of students' overall grades for the semester, I felt that I unnecessarily wasted many hours of time in an effort to successfully complete them. ",
+            "\u00a0The course goes too fast ",
+            "\u00a0The strength of the course lies in the problem sets. The homework gave me the opportunity to explore the concepts in a manner that resembled questions that I could expect to see on the exams. The peer tutors also supported me through the course as well. They gave me the opportunity to think about the material in a different way. Having another person explain the information to me often made a difference. A weakness in the course lies in the practice exams. Sometimes I had a hard time identifying what I didn't completely understand because some of the practice exams from previous years seemed to be beyond the scope of what we covered in the course. "
+        ],
+        [
+            "\u00a0Yes, but I feel like you dont have much of a choice when it comes to taking calculus. ",
+            "\u00a0I would not recommend unless required. ",
+            "\u00a0Only take it if you have to, otherwise, get your QR credit elsewhere. ",
+            "\u00a0I would, seeing how it is the only course of math offered for this level. A good course to take before more advanced classes. ",
+            "\u00a0No.  I took this course as it was a prerequisite for my desired major. I am not a math major but enjoyed calculus in high school. Frankly, this class was boring. It was pretty monotonic in nature. ",
+            "\u00a0Yes a very good calc class ",
+            "\u00a0I would recommend this course to another student, especially those who have taken Calculus I in high school. While the material is similar to what you would expect to cover in high school, the way in which you are expected to apply the material is completely different. You are given the opportunity to stretch yourself and understand Calc I concepts is a deeper and richer way. "
+        ]
+    ]
+}

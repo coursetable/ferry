@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49634/assignments/syllabus", 
+    "requirements": "Prerequisite: prior exposure to probability/linear algebra/matrix operations at basic undergraduate level is expected. Prior knowledge of programming language like Python NumPy is useful. Familiarity with digital system design with basic understanding of logic, memory, and related design components is expected.", 
+    "description": "Neural networks (NNs) have become all-pervasive, giving us self-driving cars, Siri voice assistant, Alexa, and many more. While deep NNs deliver state-of-the-art accuracy on many artificial intelligence tasks, it comes at the cost of high computational complexity. Accordingly, designing efficient hardware architectures for deep neural networks is an important step toward enabling the wide deployment of NNs, particularly in low-power computing platforms, such as mobiles, embedded Internet of Things (IoT), and drones. This course aims to provide a thorough overview of deep learning techniques, while highlighting the key trends and advances toward efficient processing of deep learning in hardware systems, considering algorithm-hardware co-design techniques.\nPrerequisite: prior exposure to probability/linear algebra/matrix operations at basic undergraduate level is expected. Prior knowledge of programming language like Python NumPy is useful. Familiarity with digital system design with basic understanding of logic, memory, and related design components is expected.", 
+    "title": "Neural Networks and Learning S...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "BCT CO31", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13004", 
+        "listings": [
+            {
+                "number": "940", 
+                "subject": "ENAS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Priya Panda"
+    ], 
+    "long_title": "Neural Networks and Learning Systems", 
+    "extra_info": "A"
+}

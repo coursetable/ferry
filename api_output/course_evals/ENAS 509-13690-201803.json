@@ -1,0 +1,74 @@
+{
+    "crn_code": "13690",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            0,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            0,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Electronic materials and their electrical properties as well as material growth ",
+            "\u00a0New knowledge about material science. "
+        ],
+        [
+            "\u00a0One of the strength is that one can learn about thermal dynamics in material growth. ",
+            "\u00a0Maybe can be more explicit in theory part. "
+        ],
+        [
+            "\u00a0Yes, some parts of this course, for example, defects and crystallization of materials are essential to not only material science but also device physics. ",
+            "\u00a0strongly recommend "
+        ]
+    ]
+}

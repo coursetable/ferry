@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: ARBC 120 or requisite score on a placement test.", 
+    "description": "Intensive review of grammar; readings from contemporary and classical Arab authors with emphasis on serial reading of unvoweled Arabic texts, prose composition, and formal conversation.\nPrerequisite: ARBC 120 or requisite score on a placement test.\n\n1.5 Yale College course credits", 
+    "title": "CANCELLED", 
+    "skills": [
+        "L3"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11418", 
+        "listings": [
+            {
+                "number": "130", 
+                "subject": "ARBC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Intermediate Modern Standard Arabic I", 
+    "extra_info": "C"
+}

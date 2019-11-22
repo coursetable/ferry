@@ -1,0 +1,79 @@
+{
+    "crn_code": "21919",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            5
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            5
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            5
+        ],
+        [
+            0,
+            1,
+            1,
+            5,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Developed my Mandarin skills at an intermediate level ",
+            "\u00a0I made significant advancement in all four fundamental skills. (reading, listening, writing, speaking) ",
+            "\u00a0I better understood the Chinese culture as well as the Chinese language. ",
+            "\u00a0This course furthered my skills in speaking, listening, reading, and writing. "
+        ],
+        [
+            "\u00a0Strengths: Basically everything - teacher, coursework, homework amount, tests\r\n\r\nWeakness: Location (Watson Center is a bit far from my dorm) ",
+            "\u00a0The course is exceptional. \r\n\r\nI am worried that the textbook might be out of date, and I'd prefer a textbook written by a person from mainland China. \r\nFurthermore, the \"word usage section\" is not usable. \r\nFortunately, the professors make their own slides which cover this in depth, but I feel that the professors' slides would be a far better reference than the textbook! ",
+            "\u00a0I liked the constant upkeep of grammar structures and vocabulary. It helped build upon my understanding of the language. "
+        ],
+        [
+            "\u00a0Yes, it is a great class with a great teacher and great resources to help you. ",
+            "\u00a0Yes, without a doubt. The course is very well organized, the professors are fantastic. ",
+            "\u00a0I would recommend Chinese 140 to another student. I think the course does a good job in facilitating student learning and understanding of another culture. ",
+            "\u00a0I would recommend taking this course because it pushes you to really learn the language. There is no \"cutting corners\". "
+        ]
+    ]
+}

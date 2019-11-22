@@ -1,0 +1,76 @@
+{
+    "crn_code": "21430",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            4,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            3,
+            0
+        ],
+        [
+            0,
+            1,
+            4,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            5,
+            1,
+            0
+        ],
+        [
+            1,
+            3,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            4,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Introductory particle physics! We learned about the standard model, the Higgs mechanism, and beyond the stand model research. ",
+            "\u00a0I learn a little bit about the standard model and three of the four fundamental forces (gravity was not covered). Emphasis on the weak force. ",
+            "\u00a0I learned more than I thought I would taking this course! I thought it would be hard to cover any material effectively without having QFT, but it turned out okay. I came into the class knowing nothing about fundamental particles. I couldn't have told you what the weak force was at even the most basic level. Now I'm going to study it in grad school. "
+        ],
+        [
+            "\u00a0Strengths: Discussion into current experiments and experimental techniques, one page reports on current research topics were good assignments\r\n\r\nWeaknesses:  Too many undergrads in class that the material seemed to be geared more towards them then the grad students the class is supposed to be for.  Given the existence of an undergrad particle class at the same time, they should be strongly encouraged to take that one instead.  The easier material was explained in detail, while some of the harder concepts, like the scattering problems and the Higgs mechanism were covered too fast.  I found the powerpoints as a negative when learning.  Not enough time to digest (or write down) the material before the pages were moved. ",
+            "\u00a0In my opinion, this was a very weak course. I felt that I failed to gain a deep understanding of any of the content covered. Physical theories should have been discussed with more mathematical rigor and the problem sets should have been more time consuming. ",
+            "\u00a0Professor Baker heard that Powerpoint presentations improve student engagement, as opposed to blackboard lectures. In no physics lecture course has this ever been true, and it was not true now. "
+        ],
+        [
+            "\u00a0What you learn from this class is greatly derived from the effort one puts in.  If someone is willing to take extra time to fully understand the material then I would recommend it.  It gives a brief overview of a lot of topics without really focusing on anything, so it takes initiative to read extra textbook chapters. ",
+            "\u00a0No, not unless there are serious revisions to the course syllabus and problem sets. "
+        ]
+    ]
+}

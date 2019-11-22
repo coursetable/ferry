@@ -1,0 +1,81 @@
+{
+    "crn_code": "21511",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            3
+        ],
+        [
+            2,
+            0,
+            3,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            4,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            4,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about research topics that I wasn't familiar with. Also, I learned to critically evaluate papers. ",
+            "\u00a0I learned how to quickly summarize a paper and describe its figures. ",
+            "\u00a0Paper discussion and analysis \r\nReading many papers critically in a timely fashion "
+        ],
+        [
+            "\u00a0Assigning two papers and not going over them both in class is extremely frustrating. I think a more manageable assignment would be one paper per week, unless the professor is dedicated to discussing each at length and can manage their time effectively so we actually get to both papers. ",
+            "\u00a0Strengths: Good selection of topics. Interactive journal discussions. ",
+            "\u00a0I think it was great that the papers were available the week before. I think something that would be nice is if the instructors sent us their questions at the end of the week, and then we could send them back after like two weeks. It would be nice to have that ongoing feedback instead of a final, but that's just me personally. ",
+            "\u00a0The subject variety was good because of the team-taught structure. I think there could have been more feedback throughout the course, and practice answering questions that would be similar to the test. For me, there was a disconnect between what we learned in the lecture portion, the paper discussion portion, and the exam question for many of the topics. ",
+            "\u00a0Discussion of papers was a great strength, lack of feedback was unfortunate. Greater integration with coding would be of benefit, but I understand that is not the purpose of the class. ",
+            "\u00a0Strengths: \r\nGood organization \r\nInteresting topics\r\n\r\nWeaknesses: \r\nMore feedback on summaries "
+        ],
+        [
+            "\u00a0Yes ",
+            "\u00a0Yes. ",
+            "\u00a0Yes, I thought it was helpful. ",
+            "\u00a0Depends on the students interest, the course was not challenging with a fair workload. "
+        ]
+    ]
+}

@@ -1,0 +1,153 @@
+{
+    "crn_code": "21465",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            2,
+            4,
+            18,
+            12,
+            5
+        ],
+        [
+            5,
+            11,
+            14,
+            8,
+            4
+        ],
+        [
+            2,
+            9,
+            11,
+            15,
+            5
+        ],
+        [
+            2,
+            12,
+            17,
+            10,
+            1
+        ],
+        [
+            0,
+            4,
+            19,
+            16,
+            3
+        ],
+        [
+            0,
+            2,
+            25,
+            12,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned matrix and vector operations ",
+            "\u00a0Basic Linear Algebra and its application. ",
+            "\u00a0Learned a lot of basic linear algebra methods ",
+            "\u00a0Definitely learned to think and conceptualize same concept in many different ways ",
+            "\u00a0I don't know if I learned anything of use. ",
+            "\u00a0Good \"basis\" of linear algebra XD ",
+            "\u00a0I feel like I gained a very thorough understanding of all the principles of Linear Algebra. I'm coming out of this class feeling like I have a very strong foundation in the topic, and that I will be able to build on what I have learned in the future. ",
+            "\u00a0I learned how to solve linear systems of equations efficiently using matrix based methods. I also gained an intuitive understanding of the underlying geometry. ",
+            "\u00a0We learned about general linear algebra concepts, though I did not become a better critical thinker by taking this course. ",
+            "\u00a0Matrices, vector spaces, determinants, eigenvalues, etc. Not many insights, though. ",
+            "\u00a0I learned about the different topics of linear algebra, including matrix manipulation, solving systems of linear equations, determinants, and different types of decompositions. ",
+            "\u00a0Learned a new way of perceiving all math! ",
+            "\u00a0i have learned a TON about matrices and matrix operations ",
+            "\u00a0Quantitative reasoning and applications of linear algebra ",
+            "\u00a0I learned the fundamentals of Linear Algebra. ",
+            "\u00a0While I did learn some aspects of linear algebra, most of that was learned through outside research and extensive studying. ",
+            "\u00a0A good introduction to the basics of linear algebra. ",
+            "\u00a0I learned how to analyze systems with linear equations via the application of matrix-based mathematics and operations. I learned a great deal about how to organize complex problems from a linear algebra perspective, and then apply matrices and their properties to solve difficult processes. ",
+            "\u00a0This is a practical course, so I developed practical skills on how to apply Linear Algebra principles. ",
+            "\u00a0Learned a LOT of linear algebra. We got all the way to Singular Value Decomposition. Makes you think about a lot of math you may already know from a different view. ",
+            "\u00a0I got an introductory understanding of elementary linear algebra concepts. ",
+            "\u00a0The fundamentals of linear, with a few, though interesting, applications. Mostly cut and dry stuff without fluff. ",
+            "\u00a0This course attempted to teach the basics of linear algebra. ",
+            "\u00a0In this class I learned about vector spaces, sub spaces, and various decompositions. ",
+            "\u00a0I gained a solid intuition of how equations and matrices can be represented geometrically, as well as how to solve systems of linear equations. ",
+            "\u00a0Deeper understanding of Linear Algebra. ",
+            "\u00a0Basically, I learned the fundamentals of linear algebra. \r\n\r\nAs the class focused on applications, I learned five different ways to solve linear equations (Gaus-Jordan, Q-R decomposition, etc.) while also learning the bare bones of the concepts behind those methods (linear independence to subspace orthogonality). ",
+            "\u00a0This is an elementary course in linear algebra (not a formal proof based course). We learned about various methods to solve systems of equations (i.e. Gaussian elimination, LU decomposition, etc.), vector spaces, subspaces (and the fundamental subspaces), orthogonality, projections onto lines and planes (and applications), Gram-Schmidt, QR decomposition, dot products, determinants (and applications), SVD, etc. "
+        ],
+        [
+            "\u00a0This course has some very useful elements. Things like matrix operations, orthogonality, eigenvalues and determinants are useful in other subjects as well. However this course goes very in depth on other much less useful topics and can at times be incredibly tedious. ",
+            "\u00a0Less homework problems. I do not think it is necessary to repeat the same type of problem numerous times. Make those problems optional since only 10 are graded every week anyways. ",
+            "\u00a0The distribution of time on different topics is not even. ",
+            "\u00a0Thought it was great, maybe make homeworks more proof based and less computations ",
+            "\u00a0This course had poor teaching and poor feedback. The course material was difficult and inadequately explained by the textbook. ",
+            "\u00a0Teacher is extremely good at simplifying concepts and at explaining things in a way that is easy to understand.\r\nThe material is taught through examples, which makes it much easier to grasp.\r\nThe textbook, however, is overly complicated and hard to understand.\r\nThe last exam is worth 50%, which puts a lot of pressure on students. ",
+            "\u00a0I really enjoyed the classroom dynamic. I was in the smaller of the two sections and it seemed like that made a huge difference. I think some of the psets where unneceraily long. Furthermore, I found it frustrating that most problem sets where around 30 questions long but only 10 of them were graded. I feel like I would have learned more from my mistakes if I was able to see more of the questions graded. ",
+            "\u00a0We move pretty slowly, which I would consider a weakness rather than a strength. The material may seem dry at times, and the problem sets, unnecessarily long. ",
+            "\u00a0The strengths of the course was that t was straightforward. The weakness was the bad pacing. Too much material was crammed into the end, while the first month was very basic. ",
+            "\u00a0This is a great course! There was not much interaction between teacher and students besides answering questions in class but the professor is great and very clear. ",
+            "\u00a0Psets were long and seemed to focus more on theory than applications, but they were a lot practice of problems. The textbook was hardly helpful, but lectures made the material understandable. It was quite surprising that the final was worth half the grade. ",
+            "\u00a0Definately loved how much extra help there was and would reccomend taking full advantage of peer tutors and TA's. Weaknesses would be that the final was really hard! ",
+            "\u00a0I enjoyed the applications section and think the class could be improved with more frequent review sessions ",
+            "\u00a0The course is well structured, and the workload is reasonable.  The main weakness was that the material for each problem set was often half covered two days before the due date.  It also would have been nice to have focused slightly more on applications. ",
+            "\u00a0This was not a well run course. The pace the material was covered at was fair, but the professor was not particularly helpful if you had trouble/ weren't following everything completely. The midterm was of fair difficulty but poorly timed (too long). The final was far beyond what should have been expected after this course. It barely touched on much of what we learned, presented materials in completely new and confusing ways, and had some problems so difficult that the professor felt the need to give a hint mid-exam because it was so difficult. ",
+            "\u00a0It was great that we didnt have to do a ton of really time consuming proofs. ",
+            "\u00a0The tests were heavily weighted. 30% midterm and 50% final. I recommend adding a 2nd midterm. Great class though! ",
+            "\u00a0The strengths of this course is it applicability and the quality of teaching. The teacher was clearly very passionate about the subject, and he taught every lesson clearly and effectively; having never taken linear algebra before, I had a very positive experience with the professor in the classroom. A weakness of the lesson would be that not much time is invested in exploring complex applications, such as Fourier transforms; I would have loved to study them in the classroom from a linear algebra context. ",
+            "\u00a0The course lacks essentially all conceptual background, and the textbook does a pretty bad job of explaining it.  That being said, if you like math, the material is still interesting ad it is still possible to connect with the course. ",
+            "\u00a0Psets were often long but fairly easy. The examinations tested much more proof-based material than is advertised in the class, which is important for understanding concepts comprehensively, but not helpful when you were expecting a more applications based course. ",
+            "\u00a0The professor is very good but i wished there were more practical applications vs theory. ",
+            "\u00a0This course is a structured in a fine way. Nothing too objectionable. The greatest weaknesses were the TAs and the weight of the grade towards the final. ",
+            "\u00a0This course is horrific in pretty much every way. Everything about this course was done so poorly, I am not even sure where to begin to fix it. There were no answer keys to anything posted, and the answer keys to the practice exam for the midterm and final only had very not helpful numeric answers and no explanations or walkthroughs. The professor was very confusing in class. The textbook was horrific and possibly the most confusing thing I have ever read. The classroom in Watson that this class was located was not suited for MATH 222 and the class should be relocated. The curve on this class is abysmal for no reason other than the math department wants to discourage students in every way possible. Some of the problem sets would take 10+ hours for literally no reason other than the professor blindly picked out a handful of problems without even thinking how long they would take or if they were even helpful (they were not). The exams were complete tricks in every way. These are just some of the many horrible things about this class but I could go on. ",
+            "\u00a0I think the greatest strength of this course was that the calculations were made very clearly so we could follow certain operations. I think that this course could be improved by emphasizing the meaning behind what we learned, because it all felt very mechanical and it was difficult to apply the knowledge without understanding well how it worked. ",
+            "\u00a0Strengths: Jinwei Yang is great, and so are the peer tutors! \r\nWeaknesses: The psets could be kinda funky and weirdly worded (and long!), there is only a single midterm and a final and the final is worth half your grade (which was super stressful!), and Professor Yang's office hours were not a great time for me personally but I heard super helpful. ",
+            "\u00a0Strengths: Great Lecturer\r\n\r\nWeaknesses: Fast paced at times ",
+            "\u00a0The lectures of this course are good. I found the lectures to be quite useful, and usually they provided all of the conceptual introduction and equation familiarity I needed to complete problem sets. However, I do think that it's important to note that many students simply read sections of the textbook, and thus never needed to (or did) attend lectures. Whether this speaks to the quality of the textbook (Linear Algebra by Gilbert Strang) is quite good, or the instruction, I don't know. \r\n\r\nThe main weakness of this course is that, in attending study halls, I've met a fair number of students who seemed to have very little idea understanding of the concepts they covered or the operations (on P-sets) that they performed\r\n\r\nI think that it might be worthwhile to look into how undergraduates structure their study for MATH 222. ",
+            "\u00a0The course does a good job teaching how to manipulate matrices but does little to nothing to explain why these matrix manipulations are practical, making the entire course material seem useless. Also, the exams are completely unrepresentative of the material on the problem sets, making practicing for them extremely difficult, not to mention making them an unreasonable test of our knowledge. ",
+            "\u00a0I think this course is fine if you're an engineering major or if your major is not directly math related. The course focuses on processes and less on theory (though we did some elementary proofs). As a potential applied math/stats major, I regret taking this instead of 225 and I don't really feel like I have a solid foundation for higher level courses without doing some further reading. I wish there was more of an emphasis on understanding concepts instead in class. I felt that some of the problem sets were also unnecessarily long and repetitive. We also don't focus that much on applications. "
+        ],
+        [
+            "\u00a0If you do not want to put in the time and effort to take 225 then you likely have to take this course. 222 is not very difficult material but at times can be pretty boring and homework can be very repetitive and tedious. If you are at all interested in math and are willing to struggle more then take 225, I've heard it's a more rewarding course. ",
+            "\u00a0No. Please take 225 if you want to take a linear algebra class. You don't learn that much about linear algebra in 222. At the same time, the workload is not necessarily low and the grading is not friendly. ",
+            "\u00a0Yes ",
+            "\u00a0No. This course was stressful and not particularly useful. I would not recommend this class to any student at Yale. ",
+            "\u00a0Definitely. I think Linear Algebra is a basic math class that any STEM/math major should take. \r\nThe teacher is very good and the workload is manageable. ",
+            "\u00a0Not recommended unless you know the professor is going to be phenomenal. Unfortunately the math department seems unable to find a good 222 instructor  everyone who can teach linear algebra well seems to teach 225 instead. Take 225 with Auel instead of 222 if you want to actually learn linear algebra. ",
+            "\u00a0Yes, the topic is very cool, the workload is manageable, and Jinwei is a good professor. However, the structure of the course with 1 midterm worth 30% and the final worth 50% of the grade makes the class quite stressful and unforgiving. ",
+            "\u00a0I think that linear algebra is pretty cool. If you want to take a math class with interesting applications and geometric representations then u might really enjoy it. ",
+            "\u00a0No I would not recommend this course. It's tedious and dry. If it's required for your major, then take it (it's not the end of the world). But if you want to learn more about math and think this would be an engaging, fun course, maybe reconsider. ",
+            "\u00a0I would recommend this course because the content is applicable to many fields, not necessarily because the course was great itself. ",
+            "\u00a0Yes! Great introduction to Linear Algebra! ",
+            "\u00a0Yeah - linear algebra is so cool. ",
+            "\u00a0I would! Loved the teacher and the material was presented in an easily digestible manner. ",
+            "\u00a0Yes I believe I learned a lot in the class ",
+            "\u00a0Yes, I would recommend this course because it is not overwhelmingly intense and covers straightforward but interesting concepts in Linear Algebra. ",
+            "\u00a0I would not recommend this course. I have heard it was better with other professors, and the material is very critical for many engineering applications, but as it is, I had to try and teach myself basically everything outside of class on my own to understand it at all. ",
+            "\u00a0This is a good class if you need linear algebra but dont need to spend a semester doing proofs. ",
+            "\u00a0Yes Professor Yang is a very good teacher. You just have to apply yourself and go to office hours and listen in class. The tests are a bit hard, but you will do well if you work with Prof. Yang. ",
+            "\u00a0For someone who likes math, it is probably a better idea to take 225, but if you just need to get the credit, then this class gets the job done. ",
+            "\u00a0Depends on the professor. Prof Yang was an EXCELLENT lecturer, but his tests were difficult. I enjoyed learning the material! ",
+            "\u00a0This is a good course that won't take that much of your time. You wont be inspired but you wont hate it! ",
+            "\u00a0DO NOT TAKE THIS CLASS. This course is the worst class I have ever taken at this university without a doubt. Everything about this course was done so poorly, I am not even sure where to begin to fix it. There were no answer keys to anything posted, and the answer keys to the practice exam for the midterm and final only had very not helpful numeric answers and no explanations or walkthroughs. The professor was very confusing in class but there were no class notes posted to clarify anything. The textbook was horrific and possibly the most confusing thing I have ever read. The classroom in Watson that this class was located was not suited for MATH 222 and the class should be relocated. The curve on this class is abysmal (average via the professor's own email to students is a C/C+) for no reason other than the math department wants to discourage students in every way possible. Some of the problem sets would take 10+ hours for literally no reason other than the professor blindly picked out a handful of problems without even thinking how long they would take or if they were even helpful (they were not). The exams were complete tricks in every way. If this class doesn't convince you that the math department at Yale is one of the most YIKES things ever seen, then I don't know who will. These are just some of the many horrible things about this class but I could go on. If anyone tells you that this class is great, they are most likely rich, white males who learned linear algebra in high school and thought this class was *cute.* But for people who are learning this for the first time, it is nearly impossible to do well. It's a true wonder why the math department/math majors have very few women/POC? Anyways, don't take this class unless you absolutely have to, Credit/D it if you can, and pray to whoever you believe in that you can pass because many students didn't. Not sure how it's humanely possible to get an A in this course unless you've learned linear algebra before but even still, it seems impossible. Good luck and I have never been so happy to have ever been done with a class so quickly in my life. This class makes MATH 120 look like a 5 star course. ",
+            "\u00a0I think most students taking this course are taking it because they need to for their majors or as a prereq. to another course. I've been told that what we learn in this class should be very applicable but I really don't know to what, and I don't see how I can really apply what I learned in this class because I feel like the explanation behind why we learned decompositions or the importance behind certain properties was not well-explained. ",
+            "\u00a0I've heard some people say they want to take Linear Algebra just \"for the fun of it\" because they like math. I would say if this is you, think carefully about how much time and effort you're willing to put into the class, because unless you're fully engaged (attending lecture, reading the textbook, completing the psets, etc.) you're not going to get anything out of the class. It is a really cool math class in how everything kinda fits together at the end, but as someone who isn't in love with math it was more something I needed to take for my degree than something I was passionate about, although I did find it fascinating at times. There were plenty of students who genuinely loved the class and the material. ",
+            "\u00a0Yes - challenging but provides much deeper understanding of the subject. ",
+            "\u00a0Linear algebra is an extremely useful set of mathematical concepts, and I think most STEM majors would be well served by having an understanding of it.\r\n\r\nMany students take this course thinking that, when compared with MATH 225, MATH 222 will be the easier, less time-consuming way to learn linear algebra. They're right; for the most part, it is.\r\n\r\nHowever, I would only recommend this class with the caveat that MATH 222 may not take up as little time as students may think. At least as Professor Yang taught it, the length of problem sets would vary dramatically from week to week (think 10 versus 25 multi-part, many-operation math questions). Worse is that he would often perform these variations with little notice.\r\n\r\nSo, students hoping to see some (though from what I've heard, FAR less) of Linear Algebra should take MATH 222. They just shouldn't expect it to be super quick. ",
+            "\u00a0Don't take this unless you have to ",
+            "\u00a0If you have to take it for your major, you don't have much of a choice. If you are thinking of taking higher level math courses (vector analysis, real analysis, etc.) take 225 instead. "
+        ]
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Modern China's use of the past in state-sponsored narratives of nation, in attempts to construct heritage by elites and intellectuals, and in grassroots projects of remembrance. Theories on history and memory; primary sources in English translation; case studies from twentieth-century China. Interdisciplinary readings in art history, anthropology, cultural studies, and history.", 
+    "title": "Uses of the Past in Modern China", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "RKZ 241", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12358", 
+        "listings": [
+            {
+                "number": "309J", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHI4\">YC History: Asia</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIA\">YC History: Cultural History</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIE\">YC HIST: International History</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIF\">YC History: Politics &amp; Law</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIJ\">YC HIST: Soc Chng &amp; Social MVMN</a></li></ul>"
+    ], 
+    "professors": [
+        "Denise Ho"
+    ], 
+    "long_title": "Uses of the Past in Modern China", 
+    "extra_info": "A"
+}

@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50310/assignments/syllabus", 
+    "requirements": "Prerequisite: reading fluency in ancient Hebrew.", 
+    "description": "Close study of the earliest rabbinic commentary to the Book of Deuteronomy, focusing on its interpretations of laws dealing with the responsibilities of courts and public figures: judges, kings, priests, and prophets. Particular attention is paid to the interrelation of rabbinic legal rhetoric and the hermeneutics of scriptural commentary, with comparisons to other corpora of ancient Jewish and non-Jewish laws.\nPrerequisite: reading fluency in ancient Hebrew.", 
+    "title": "Midrash Seminar: Sifre Shofetim", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "SML 335B", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11180", 
+        "listings": [
+            {
+                "number": "391", 
+                "subject": "JDST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Steven Fraade"
+    ], 
+    "long_title": "Midrash Seminar: Sifre Shofetim", 
+    "extra_info": "A"
+}

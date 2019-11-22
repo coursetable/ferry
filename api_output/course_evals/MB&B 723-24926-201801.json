@@ -1,0 +1,82 @@
+{
+    "crn_code": "24926",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            4,
+            0,
+            1
+        ],
+        [
+            0,
+            2,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I really liked the organization of this course and the way Lynne emphasizes skepticism and critical thinking. ",
+            "\u00a0I learned to think about the information we obtain from the literature and to judge whether it is credible or lacking. ",
+            "\u00a0I found this course very useful for establishing reference points which will allow me to self-check my own data in a biological context. In addition, every class was fun. I think the small class size contributed to this. ",
+            "\u00a0Learned about many techniques that could be used in my research, information availability, and knowledge about my own 'thesis' project ",
+            "\u00a0This course taught me how to really think critically about the data I am presented with and how strong it really is. It also taught me weaknesses in certain methods to look out for. "
+        ],
+        [
+            "\u00a0Wish it was a semester course! ",
+            "\u00a0This course could easily become a full term course as it felt like much more could be covered than what is possible for a half term course. It is a good course that was not rushed nor condensed with too much information. It had a very natural progression for the type of questions being sought. ",
+            "\u00a0I wanted to learn more about the biology of macromolecular interactions but i t felt like we spent a lot of time talking about ways to measure and observe the interactions. ",
+            "\u00a0small class size led to great discussions and group projects.\r\nThe lack of exams allowed for a better focus and general understanding rather than cramming and memorizing little details. "
+        ],
+        [
+            "\u00a0Yes! I loved it. Maybe out of personal interest and the class size was small which facilitated better interactions, but still very good. ",
+            "\u00a0Yes. The approach to this class is flexible and can cover topics of interest to the current group in the class. ",
+            "\u00a0Absolutely ",
+            "\u00a0YES. Solid course, 10/10 would take again. Learned so many valuable techniques and resources that have continued to help with my research. ",
+            "\u00a0Definitely. The small class size really allows you to engage with both the professor, TA, and other classmates. I believe this is a course that will teach you valuable skills that can be applied in a research career. "
+        ]
+    ]
+}

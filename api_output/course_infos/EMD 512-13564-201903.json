@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49678/assignments/syllabus", 
+    "requirements": "Prerequisite: two terms of college biology.", 
+    "description": "This course is designed to introduce students to the fundamentals of immunology including antigens, antibodies, methods for detecting antibodies, cells of the immune system, products of such cells, and immune mechanisms. Experience is gained in the analysis of primary research papers with relevance to immunologic aspects of epidemiologic studies.\nPrerequisite: two terms of college biology.", 
+    "title": "Immunology for Epidemiologists", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LEPH 101", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13564", 
+        "listings": [
+            {
+                "number": "512", 
+                "subject": "EMD"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Peter Krause"
+    ], 
+    "long_title": "Immunology for Epidemiologists", 
+    "extra_info": "A"
+}

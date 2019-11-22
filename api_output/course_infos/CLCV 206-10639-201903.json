@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49374/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The origins, development, and expansion of Rome from the earliest times to the deaths of Caesar and Cicero. Cultural identity and interaction; slavery, class, and the family; politics, rhetoric, and propaganda; religion; imperialism; monumentality and memory; and the perception and writing of history. Application of literary and archaeological evidence.", 
+    "title": "The Roman Republic", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "LC 317", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10639", 
+        "listings": [
+            {
+                "number": "206", 
+                "subject": "CLCV"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Andrew Johnston"
+    ], 
+    "long_title": "The Roman Republic", 
+    "extra_info": "A"
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49956/assignments/syllabus", 
+    "requirements": "No previous study of Old French necessary, although a knowledge of French is essential. Conducted in English.", 
+    "description": "An introduction to the Old French language, medieval book culture, and the prose romance via study of manuscript Yale Beinecke 229, The Death of King Arthur, along with a book of grammar and an Old French dictionary. Primary and secondary materials are available on DVD. Work consists of a weekly in-class translation and a final exam comprised of a sight translation passage, a familiar passage from Yale 229, and a take-home essay.\nNo previous study of Old French necessary, although a knowledge of French is essential. Conducted in English.", 
+    "title": "Old French", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WALL81 401", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11034", 
+        "listings": [
+            {
+                "number": "610", 
+                "subject": "FREN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "R. Howard Bloch"
+    ], 
+    "long_title": "Old French", 
+    "extra_info": "A"
+}

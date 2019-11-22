@@ -1,0 +1,75 @@
+{
+    "crn_code": "14025",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Queuing theory and dynamic programming ",
+            "\u00a0Learned a lot about queueing system and dynamic programming both are potentially useful for my further research. "
+        ],
+        [
+            "\u00a0Instructor is especially nice and patient! ",
+            "\u00a0This course is a good balance of introductory content regarding queuing and dynamic programming as well as more advanced topics that are challenging for everyone including those who might already be familiar with some of the basic content. I think the interactive nature of lectures (and being a small sized class) is good because it lets everyone work with the material more than in a standard lecture and to ask questions when something may not be clear. However, this is also one of the biggest challenges with the course - students are from a variety of different backgrounds. This can lead to issues if too much class time is spent addressing the questions of one or two people. \r\n\r\nOverall I thought the assignments were fairly effective in testing the core concepts of the course material, but some of the more computational questions may have been harder than anticipated just because there were not a whole lot of computational examples covered during lectures. I feel like the final presentation could be a good project for students but there should be some expectation of the students watching each presentation, otherwise students tend to just think about their own presentation and then tune out afterwards. ",
+            "\u00a0Professor prepared a lot of materials and delivered pretty well, very good course overall. "
+        ],
+        [
+            "\u00a0Yes! Besides the nice instructor, the class helps me learn knowledge that could be used on my own research field. ",
+            "\u00a0Yes definitely, if he is interested in related field. "
+        ]
+    ]
+}

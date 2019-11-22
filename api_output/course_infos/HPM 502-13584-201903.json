@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Distinguishing value creation from redistribution is a key problem faced by any economy. Modern accounting practices are focused on this problem, and knowledge of them is extremely useful. Further, value creation activities in a modern society can become complex and abstract, and accounting practices have developed accordingly. While worthy of a lifetime of study, the purpose of this course is to enable the student to gain a foundation upon which a deep understanding of accounting can be built. One cannot have a sensible discussion of accounting as assessing value without having some idea of what value means and how to think about it. Therefore, this course begins by exploring the basic determinants of value and the techniques used to assess it: discounting cash flow and risk/return analysis. These techniques are based on the timing and statistical properties of cash flow. With this introduction, the course then turns to the more fundamental processes of generating cash flow by creating value through the production and delivery of goods or services and then converting that value into cash flows. The basic financial statements, balance sheets, income statements, and cash flow statements as well as the accounting mechanics with which they are built are introduced in this context.", 
+    "title": "Foundations of Accounting and ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "EVANS 4400", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13584", 
+        "listings": [
+            {
+                "number": "502", 
+                "subject": "HPM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Stanley Garstka"
+    ], 
+    "long_title": "Foundations of Accounting and Valuation", 
+    "extra_info": "A"
+}

@@ -1,0 +1,150 @@
+{
+    "crn_code": "11913",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            3,
+            9,
+            21,
+            9
+        ],
+        [
+            0,
+            3,
+            10,
+            19,
+            11
+        ],
+        [
+            0,
+            1,
+            7,
+            25,
+            10
+        ],
+        [
+            0,
+            2,
+            9,
+            21,
+            10
+        ],
+        [
+            0,
+            3,
+            9,
+            21,
+            10
+        ],
+        [
+            0,
+            1,
+            16,
+            21,
+            5
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Probability and Statistics, R ",
+            "\u00a0This is a great introduction to probability and statistics course. I learned a lot about Bayesian Statistics and the power it has, and also some very cool probability techniques. ",
+            "\u00a0I had never taken a statistics class before and honestly this course was mind opening/blowing. I think that this is a great course for people who want to understand the foundations of statistics and the possibilities of its application but who do not necessarily plan on going further into theoretical statistics. This class does not just teach operations; it teaches the rational behind those operations and their theoretical grounding. ",
+            "\u00a0I learned about how Bayesian inference works, and what people really mean when they talk about \"statistics.\" I also learned how to apply models like linear regression and Markov Chains to the real world. ",
+            "\u00a0I learned so much about probability theory, bayesian reasoning, and their application to statistical inference. I got great practice using R to solve problems and simulate datasets. ",
+            "\u00a0I learned so much. Probability Theory, Statistics Theory, Bayesian statistics, coding in R, Markov Chains, Moarkov Chains Monte Carlo, Metropolis-Hastings. In terms of concepts covered and new knowledge learned, I might have learned more in this class than any I've ever taken before. It was that new and comprehensive. ",
+            "\u00a0The course is an intro course to probability theory, and, by extension of that theory, statistical analysis. This is not a data analysis class, but equips you with all the skills you need to take such a course. ",
+            "\u00a0Learn about very cool statistical algorithms and about Bayesian statistics. You gain familiarity in r programming too. ",
+            "\u00a0I gained a solid foundation of statistics, probability, and statistical programming. I learned how to approach applied and theoretical problems as well as interpret data. As an introduction course, this class was intensive yet rewarding, and I became interested in statistics and data science even more. ",
+            "\u00a0nothing ",
+            "\u00a0Bayesian approach to Probability and Statistics. The class topics included fundamental probability and statistics, as well as Markov Chains Monte Carlo and Metropolis Hastings. ",
+            "\u00a0This is a high-level intro/intermediate class for potential and declared Statistics and Data Science majors, and it offered a great overview of both probability and statistics. We learned a lot of theory, but also an equal amount of coding skills in R. ",
+            "\u00a0I learn so much abt how to blend R with probability and statistics concept ",
+            "\u00a0Bayesian Statistics !!!  I learned about many distributions, convolutions, and models of Markov Chains to which we applied Bayes Rule. ",
+            "\u00a0Great introduction to probability distributions, some fundamental probability theory and theorems, Markov chains, and Markov chain Monte Carlo simulations (both manual and using JAGS) in RStudio. ",
+            "\u00a0Working through problems, using R, and much probability and statistics. ",
+            "\u00a0I actually learned a lot in the class - the highlights were definitely learning JAGS models, understanding Markov processes more, and playing around with the Metropolis-Hastings algorithm. ",
+            "\u00a0This course is an introduction to theoretical and computational Bayesian statistics. The approach differs slightly from other statistics courses, which may focus solely on frequentist statistics. ",
+            "\u00a0I developed a deeper understanding of statistics through a Bayesian approach, as opposed to a classical approach. I learned skills in R through RStudio and in different algorithms such as Markov Chain Monte Carlo. ",
+            "\u00a0Probability theory and Bayesian statistics, Markov chains, R, JAGS ",
+            "\u00a0A lot of statistics and applications for said statistics. I feel comfortable with basic statistical and probability theory and have a good idea of how to apply those ideas towards real-world analyses. I also learned a lot of R-based statistical programming, which ended up being extremely useful. ",
+            "\u00a0A light intro to Bayesian inference, and a good review of statistics concepts like expectation, probability distributions, etc. Markov chains are super fun! ",
+            "\u00a0As my first statistics class, I learned general probability theory for the first time as well as computing with R. ",
+            "\u00a0Bayesian statistics, including mean, variance, law of total probability, markov chains, markov chain monte carlo, linear regression, and simulations in R. ",
+            "\u00a0In this course, I learned about how to use  Statistics and Probability to solve real world problems. We did this through learning theoretical concepts, and then applying them on problem sets. ",
+            "\u00a0Probability, statistics, and especially Bayesian statistics and their use in estimation and Monte Carlo methods. ",
+            "\u00a0I learned all about Bayesian Statistics and how to code in R "
+        ],
+        [
+            "\u00a0No weaknesses, just strengths, much love for Joe Chang. ",
+            "\u00a0The notes (a work in progress) are less complete/clear/concise towards the end of the course which made studying for the final. However, otherwise the course was clear and informative. Also, sometimes the psets asked questions in roundabout ways that were more confusing than complicated. ",
+            "\u00a0This course has no weaknesses. It is well-organized and well-led. The information is clear and interesting. The assignments are fair and engaging. The grading was transparent, consistent, and helpful. No complaints! ",
+            "\u00a0I thought for the subject material it was taught very well and fairly. It was difficult, but good. I think Professor's Chang mixture of writing the code in class and drawing diagrams kept the lecture engaging. ",
+            "\u00a0Improved: slower lectures ",
+            "\u00a0Information was really interesting, psets were hard but I gained a lot from them. However, some of the problems on the midterm and the final were not indicative of the rest of course. Lectures tended to review the same material over and over in painstaking detail. I would improve lectures by discussing how to approach real data and problems even more. ",
+            "\u00a0i dont think the way this was taught was suitable for my learning ",
+            "\u00a0Strengths: Wide variety of topics. Great lecture notes and course book provided by the instructor. \r\n\r\nWeakness: Because the class covers many different topics, it is possible to not have time to fully digest all the topics. Students should be ready to put considerable amount of time outside of the class to really understand the topics. ",
+            "\u00a0The sequence of the course was very good, it made a lot of sense, as everything built on each other. A lot of times, though, I felt like the homeworks weren't really related to what we were learning in class, especially the proof-based questions. ",
+            "\u00a0The information we learn is really interesting and Prof. Chang is great. I feel like you can really learn the information without going to the lectures though. ",
+            "\u00a0Too boring the lectures. The lecture notes are good ",
+            "\u00a0My only negative comment would be that some pset problems seemed very distant from what we were covering and were simply impossible to solve without help from instructors. ",
+            "\u00a0*Strengths:* Nearly everything. This course is extremely well structured. The material is difficult but very interesting and well presented, and the coursenotes written by the professor are ~260 pages long and are excellent -- everything you are expected to know to do well in the class is covered clearly and comprehensively with lots of illustrative examples along the way. The problem sets are very challenging but very interesting, humorous, and really help you learn and practice the material. The office hours by the professor were held at a good time (Thursday 5-7:30, psets due Friday at 12) and Professor Chang is very patient and great at explaining the material. He really makes an effort to help everyone understand, and took time after hours to answer additional questions on Piazza. This year the ULAs were amazing too (shoutout to Neil, Tuan, and Daniel!) and really helped carry everyone through the course. They also set aside time to hold a really helpful 2 hour long review session before the midterm, which basically the whole class showed up for. The midterm and final were difficult but fair (new questions, but no curveballs and all the material tested on the exams were covered in the psets), and the take-home midterm in R was very reasonable. Pset and exam grading was also very fair and not nitpicky about notational semantics. This was easily my favorite class all semester.\r\n\r\n*Weaknesses:* The lectures presented the material well, but examples used in lecture were a bit simplistic and didnt really prepare you for the difficulty of the psets (its ok though because there were better examples in the coursenotes and you could ask questions during office hours). Thats not to say the psets should be made easier, since I thought working through them was a really good, hands-on way of learning, just please do harder examples during lecture. I also wish the JAGS syntax and formatting was given better coverage and more examples in the coursenotes (though they were great for everything else). Pset grading could be a bit slow later in the semester. ",
+            "\u00a0Having multiple office hours was very very helpful. The posted notes, powerpoints, and R code were also very nice to have. An improvement would be to comment the code more. ",
+            "\u00a0The problem sets were really great and reinforced the material and concepts very well.  The lecture could be a bit dry at times, but I don't think that was much of a weakness given how much support there was through office hours and piazza. ",
+            "\u00a0I really loved the class! The thing that could be improved is probably that the pacing seemed a little strange - means/standard deviations are pretty easy material and were covered at the same rate as some of the much harder concepts (ex, Markov towards the end.) ",
+            "\u00a0This course was very challenging. I would not recommend it as a first suare with statistics. Most of the students have some sort of statistical background that I think would provide a good foundation for understanding the material in this class. It was easy to feel very lost a lot of the time. \r\n\r\nThe lectures were often difficult to follow and dry. I really think it would make a huge difference if prof Chang wrote on the board. I know he thinks that slideshows do the same thing, but requiring him to write on the board means we get more time to process the information. If not, it comes at us really quickly. \r\n\r\nProf Chang is very kind and supportive. ",
+            "\u00a0The strengths of this course include the high level of support provided by the ULAs and TAs in the course. They were incredibly helpful in clearing up the sometimes very confusing statistics concepts as part of the course, answering questions about the problem sets, as well as providing review for the final exam. The course could be improved in that its description perhaps shouldn't be as an introductory level course. As someone who had taken statistics courses before, I felt better about it, but many of my undergraduate classmates who had not taken statistics before struggled with the concepts. ",
+            "\u00a0The strengths of this course were that it built up an understanding of statistics from scratch, which meant that you needed no prior statistics experience. Furthermore, the course gave experience in computation with the language R. \r\nI didn't think that there were any glaring weaknesses. ",
+            "\u00a0Strengths: Professor Chang really cares about his students and is always willing to help out on Piazza/during office hours. The homework is fairly reasonable and doesn't take much longer than 5-7 hours a week.\r\nWeaknesses: There seems to be a tough learning curve for students who aren't as strong quantitatively. ",
+            "\u00a0Really interesting material, and I liked the overall structure of the class. The Psets are pretty hard, but they are worthwhile, and I personally felt that I learned a lot from them. Also, Prof. Chang has provided a plethora of course resources at your disposal, including a textbook-like PDF he wrote by himself. These end up being really useful. If I had to single out one area for improvement, I would say that the lectures could be made a bit more accessible. I found it difficult to follow the proofs often given in the slides, and it was also really hard to follow R code presented on screen (although I'm not sure if there's a better way to present code). Overall though, I really enjoyed this class. ",
+            "\u00a0Well taught by Prof Chang. ",
+            "\u00a0Perfectly fine stats course. The weekly psets are doable if you get started early and go to office hours, and the exams are fair. ",
+            "\u00a0Strength: I really like the intention of the course to learn statistics and probability and then solidify the understanding through application. Additionally, the textbook he has written for the class is very clear, and communicated the concepts very well. \r\n\r\nWeakness: The problem sets were often incredibly difficult to understand. I also often felt that Professor Chang did not spend enough time in lecture discussing transitions from one topic to another. We would move very fast from different topics, and I wouldn't understand how they all built on each other. ",
+            "\u00a0How to code in R. The class could be improved by moving at a lower pace. "
+        ],
+        [
+            "\u00a0This class is not easy and has a heavy workload. I took this as a senior (who had never taken a stat class before). The weekly psets, although interesting, took around 5-7 hours per week. Lectures were not that helpful but Prof Chang truly cares about his students. ",
+            "\u00a0Joe Chang really does a fantastic job in explaining probability techniques to you, and making it very simple. He even steps through code examples in class, is very helpful on Piazza, and even if you don't attend classes, the homework assignments are straightforward enough that by doing them, you'll basically learn the material that you missed. ",
+            "\u00a0I would give my wholehearted recommendation for this course. I did not really know anything about statistics before this course-- I only took it for pre-med requirements. Walking out I am truly fascinated by the amazing different things that could be done with this type of thinking. There are so many things that I understand now from distant perspective that I would not have understood before: how google websearch works or what a developer could do with all the 'big data' we read about in the news. Truly eye-opening without being bogged down with excessive details. ",
+            "\u00a0This is a great course to learn about statistics and probability and a good introduction to the major. Math is involved, but the outcome is applicable and relevant. ",
+            "\u00a0Yes! Take this course! You've gotta get your Bayes on, or else your never learn how to really do statistics. ",
+            "\u00a0I would recommend this course. I think this is an excellent statistics course to get a semester long, but in-depth overview of Probability and Statistics Theory and to learn how to use R for computation (not for data analysis). This class is a considerable amount of work. Think 10-15 hour psets depending on how comfortable you are with the material. I took this course as a Humanities major (but I have a significant QR background)  I was an extreme exception. The people taking this course are STEM majors in some way or another and there are also a number of grad students. Don't let this stop you!  However, if you are looking for a course to teach you stats that you need to apply in your field AND you are a humanities/social science major then Bayesian style might not be the way to go. It is intellectually fascinating, but probably not as easy to apply to what you'll be doing. This course is styled as \"introductory.\" It is only insofar as there are no prerequisites (you don't actually need Math 120), but do not mistake \"introductory\" for elementary. In fact, one of my biggest concerns is that this course was too advanced for me and I will lose all the knowledge I gained. Still, Professor Chang teaches the material very well and his notes on the course are fabulous. The tests can be hard, but the class is fair. ",
+            "\u00a0Absolutely would recommend to another student. The class is very challenging - think 10-15 hours of effort on the problem set each week - but you come out of it with a huge wealth of knowledge, all of which was acquired in an intuitive way that really makes you understand why statistical methods are done the way they are. Dr. Chang is also a great lecturer, has super helpful class notes that are clear and oftentimes entertaining, and he is always willing to help. ",
+            "\u00a0Yes this was a reasonable class and interesting topic ",
+            "\u00a0Yes-very interesting, applies to most courses of study, Joe Chang is a great lecturer, TA's and office hours were super helpful. I somehow managed to make a few good friends from the class even though it was a lecture. ",
+            "\u00a0do it only if you have to. ",
+            "\u00a0Yes, a great course. If you put in a lot, you can learn so much more than just S&DS 241. ",
+            "\u00a0Yes, it's a great course that teaches a lot about statistics and probability, which is applicable to so many fields. Although it's not intuitive for a lot of people, this course is absolutely doable. ",
+            "\u00a0Yes! You learn the intuition behind stats theories/methods, which often does not happen in Yale lecture classes. The psets are hard though. ",
+            "\u00a0Yes. Good for entry level probability and statistics ",
+            "\u00a0If you are stuck between taking S&DS 241 or taking this course (as I was) you absolutely must take this course.  If you are looking for a more relaxed course on probability and statistics, though, consider taking another course because this is probably more rigorous than you are looking for. ",
+            "\u00a0I absolutely would recommend S&DS238. Professor Chang has been teaching this course for 10+ years, and has had more than a decade to perfect the structure of this course in a way that makes this difficult material approachable to someone with no statistics or coding background (though AP Stats was surprisingly helpful for this course). Hes clearly very knowledgeable, patient, witty, and knows how to not let statistics get dry. ",
+            "\u00a0I would recommend this course if and only if you have a strong background in Probablity. THIS IS NOT AN INTRO COURSE. ",
+            "\u00a0Yes. ",
+            "\u00a0Would recommend, with the only caveat that it really helps if you are at least a little familiar with R. It would probably have taken me twice as long to do some of the assignments if I didn't know basic programming (and I think some people in the class would agree!) Overall, a really solid class to learn the fundamentals in statistics and I think the problems in the psets, while sometimes hard, were well-chosen to facilitate learning ",
+            "\u00a0Dont take it as an intro stats course. Maybe for people that had intro stats, they got a lot out of it but I had a really hard time following what was going on. \r\n\r\nMake sure to go to lots of office hours. They make a huge difference. The course is pretty much impossible without it ",
+            "\u00a0If you are an SDS major, or are a declared major in a related field (many types of biology and BME also make use of bayesian statistics, for drug trials for example), then this class is right for you. If you don't fit into any of those categories, perhaps another introductory statistics course may better suit your purposes. ",
+            "\u00a0Yes, especially if you haven't taken statistics before. You learn statistics in a much more interesting and engaging way. If you are unsure of taking the class, I also recommend talking to the professor. Joe Chang went over the differences between this course and other statistics courses, which help make the decision. ",
+            "\u00a0Yes! This course is a really fun introduction to statistics. Professor Chang's lectures are really well-constructed, and the problem sets are well-designed. Almost everything you learn in this course is practical, unlike many other classes at Yale. ",
+            "\u00a0Absolutely! It is a difficult class, but if you have any interest in statistics this class teaches you a lot of fundamentals that will be applicable regardless of your major. I really felt that I picked up a number of tangible skills from this class, and it's honestly worth it to take the class just based on the statistical knowledge you will gain. If you're a math/stats kind of person you might enjoy the proofs and theory as well, but it doesn't end up being a huge part of the class. ",
+            "\u00a0Yes, the Bayesian framework is coherent and elegant. ",
+            "\u00a0Great class with a great professor! The TAs were incredible and going to office hours is extremely helpful ",
+            "\u00a0Yes, absolutely! The course was an amazing introduction to statistics and probability. ",
+            "\u00a0Yes. It's a somewhat different and interesting perspective for those who have taken other stats courses (or AP Stats in high school). R was challenging but at times very rewarding to learn, and I found it to be a good introduction to programming. ",
+            "\u00a0Not really. I don't feel like I came away from the course with a significantly deeper understanding of Statistics and Probability. I don't think that the way Professor Chang designed problem sets built off of the material we most recently learned, so they often didn't feel like I was solidifying my learning. Additionally, I also did not find the way that lectures were designed to be vey helpful. However, I did find Professor Chang's textbook very effective. ",
+            "\u00a0Sure, stats is very handy and it's probably good to have some kind of background with it. "
+        ]
+    ]
+}

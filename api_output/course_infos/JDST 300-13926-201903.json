@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51446/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course examines public debates and controversies over the appropriate response to the Holocaust over the past half century. We begin by looking at the context of the beginnings of Holocaust consciousness, paying special attention to the trial of Adolf Eichmann, the Six Day War in Israel, and the Civil Rights Movement. We explore the works of popular authors who attempted to draw particular or universal lessons from the history of the Holocaust, such as Hannah Arendt and Emil Fackenheim, as well as major representations of the Holocaust on TV and film, such as the NBC miniseries \u201cHolocaust\u201d and Claude Lanzmann\u2019s documentary \u201cShoah.\u201d We then move to a study of the controversies surrounding Holocaust education, including debates around the Holocaust museum in Washington, DC, the memorial to murdered Jews in Berlin, and Jewish tourist sites in post-communist Eastern Europe. The final part of the seminar is dedicated to the most recent scholarly arguments about the \u201cuniqueness\u201d of the Holocaust, the relationship of the Holocaust to other genocides and of Jews to other victims, and the parallels between contemporary and historic antisemitism.\u00a0 \u00a0 \u00a0 \u00a0", 
+    "title": "The Holocaust in Contemporary ...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 115", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13926", 
+        "listings": [
+            {
+                "number": "300", 
+                "subject": "JDST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eliyahu Stern", 
+        "Noah Strote"
+    ], 
+    "long_title": "The Holocaust in Contemporary Culture and Politics", 
+    "extra_info": "A"
+}

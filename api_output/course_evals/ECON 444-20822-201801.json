@@ -1,0 +1,115 @@
+{
+    "crn_code": "20822",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            6,
+            8,
+            9
+        ],
+        [
+            1,
+            1,
+            2,
+            8,
+            13
+        ],
+        [
+            0,
+            2,
+            5,
+            10,
+            6
+        ],
+        [
+            0,
+            0,
+            11,
+            5,
+            7
+        ],
+        [
+            0,
+            1,
+            8,
+            13,
+            1
+        ],
+        [
+            0,
+            1,
+            14,
+            7,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0We learned a lot of different ways to create replicating portfolios or price things using options and try to find arbitrage. It was somewhat similar to a scaled back version of the Capital Markets course at SOM. \r\n\r\nThe guest speakers Prof. Pascutti brought in were incredible. We were introduced to professionals from a wide range of rolls within the buy side ecosystem who talked through both the technical aspects of what they do as well as career path advice. Prof. Pascutti's own stories of career path and his time in the industry were also great. ",
+            "\u00a0I got a better understanding of the different ways that investors calculate the best investments to make in different asset classes ",
+            "\u00a0I learned about inefficiencies in markets! ",
+            "\u00a0This course gave a great overview of the hedge fund industry and the market arbitrage skills they utilize to take advantage of different opportunities. Professor Pascutti was very good at bringing in outside material and even using modern day topics, ie Bitcoin, to explain more complex concepts. ",
+            "\u00a0Learned about how markets arbitrage works in the real world, to a very limited extent ",
+            "\u00a0Some practical knowledge about hedge fund investing ",
+            "\u00a0We learned a lot about different financial securities and different scenarios in which financial markets did not work as expected. ",
+            "\u00a0I definitely learned a lot about specific areas of economics - options, bond pricing, merger arb, and related topics to hedge funds and market inefficiencies. ",
+            "\u00a0I learned a lot about hedge funds as an industry, both in terms of breadth across the different types of hedge funds, and depth into the specific strategies that each type uses. I also heard from a multitude of interesting guest speakers. ",
+            "\u00a0Understanding different types of market inefficiencies and the arbitrage opportunities they offer ",
+            "\u00a0This class teaches you about the hedge fund industry, the different players and the arbitrage trades that you can make/have worked out or not in real cases. ",
+            "\u00a0I gained insights into basic financial instruments and financial problem solving. I also feel that I am more prepared to interpret financial news and events. ",
+            "\u00a0The course had some fascinating material in arbitrage strategies, the limits to arbitrage, as well as hedge fund strategies. I developed very applicable real-life finance skills which I thoroughly enjoyed. ",
+            "\u00a0Course covers options, futures, CDS, bonds, and a ton of other financial instruments. A lot of emphasis on the current state of the industry too. Readings for the class are great academic papers on hedge funds and debunking some of the myths related to them. ",
+            "\u00a0Great class, great instructor and a wide variety of info on various ways arbitrage can happen as well as view of what happens when things go wrong. ",
+            "\u00a0I learned a lot more about the theory of market inefficiencies and arbitrage opportunities. It was a great course to take to solidify my knowledge from a risk management course I had taken previously. "
+        ],
+        [
+            "\u00a0The course could be improved if it focused more on actual portfolio management. I know that that's not the mandate, but it felt like we generally gained a theoritical view of how to make a specific bet, but rarely had to tackle important questions such as how large of a position we would be able to take based on portfolio size, liquidity, and risks of short term losses or withdrawals. We talked about all those risks, but never had to actually make choices regarding how to value those vs. the potential profits from the trade. ",
+            "\u00a0We could stand to spend more times analysing guest lectures and incorporating them into the quizzes ",
+            "\u00a0Cool professor, material with real-world implications. Not much to improve! ",
+            "\u00a0Strengths of the course were the clarity with which Professor Pascutti taught and simply having course material that was interesting. The guest lectureres were also a great change of pace for the course. If there were any flaws to the course, it would probably have to be the section of the binomial options model, which was too quantitative and mundane to really be relevant. ",
+            "\u00a0Theres no overall narrative to this class, and each class feels randomly jumbled with the rest. Guest lectures were good. Honestly not sure what I can say I took away from this class. ",
+            "\u00a0The prof is very responsible and I love the guest lectures the most. ",
+            "\u00a0It was a great course and I wouldn't change a thing! ",
+            "\u00a0Strengths - I loved the emails we needed to do, so we could keep up and give feedback. I loved the problem solving aspect of the course, and the hands-on skills and lessons we learned.\r\n\r\nWeaknesses - Readings were burdensome and unnecessary (could be gotten rid of altogether in favor of strategic news articles and chapters of textbook-like \"how-to\" material). Class got disorganized after quiz 3 and bond math ended. Seemed just like a \"special topics\" course and therefore it was very very hard to study for the final exam for things that weren't quizzed on / came in the second half of the course. ",
+            "\u00a0While I did learn a good bit during this class, I think that it was very poorly organized. The lectures swung from topic to topic in an illogical order, the readings were often irrelevant to class, and we had so many guest speakers that the class barely ever had consecutive lectures that were on similar topics. I think that this class could be greatly improved by trimming down the readings and making the lectures flow in a theoretically consistent order. I also think that throughout the class, the lectures were overly example-driven, as opposed to building a strong theoretical base first and only then relating it to the real world. ",
+            "\u00a0The workload was manageable, the guest speakers and readings were really interesting and Professor Pascutti did a great job at explaining the terms and mechanisms of arbitrage. ",
+            "\u00a0A major strength of this course is how engaging Professor Pascutti is. His enthusiasm really made me look forward to going to class every day. I also liked how the wide variety of assignments meant that we were receiving grades throughout the semester. ",
+            "\u00a0The course material was absolutely fascinating and I appreciated how real-life it was. The course could be improved by making it the material more organized and separating the weeks into clearer units of materials. Also I wish we had gotten some more feedback and guidance on the final paper. Otherwise, it was an overall incredible course. ",
+            "\u00a0Professor Pascutti is extremely motivated to make this class the best class at Yale. He has the knowledge and experience on his side. The big minus was that the class ended up being a lecture style and not a seminar. ",
+            "\u00a0The weekly emails were a drag and I kept forgetting to do them. Other than that, nothing really, course was great, lectures were fun and readings were super informative. One thing is feedback, could have received better feedback and how to improve. ",
+            "\u00a0I really enjoyed the guest speakers, though it felt like they weren't super related or connected to the topics being learned. Relatedly, I feel like Pascutti could have taught the course in a way more conducive to learning had we not had the guest speakers. In order to fit it into the schedule, it felt like topics were very rushed. "
+        ],
+        [
+            "\u00a0Yes - you get a broad survey of different ways to take advantage of inefficiencies in the market but the workload isn't too overbearing. ",
+            "\u00a0Yes, I think it serves as a good overview of the financial market from the perspective from the perspective of someone going to work in them after graduation. ",
+            "\u00a0Take it! One of the best senior seminars. ",
+            "\u00a0Absolutely. Great course if you want to exposed to other side of finance ",
+            "\u00a0Its not terrible as a way to meet the senior req but its not ideal either. This class might work better as a seminar, but it turned into a lecture this semester, which was less than ideal. Psets are long and repetitive but dont really teach you much after the first 25%. ",
+            "\u00a0Yes for those who are interested to go into buy-side financial industry. ",
+            "\u00a0Course was fantastic and I would wholeheartedly recommend it ",
+            "\u00a0Yes, if you want to go into the world of finance, this is a great way to gain exposure to different industries and themes. ",
+            "\u00a0If you're interested in what kinds of problems hedge funds and institutional investors face, this is an excellent class. In my experience, as someone who was merely taking the course to learn (and didn't have predisposed interest), it was hard to get \"hyped\". The first half of the course is very directed and well-structured, but the course gets muddled a bit and becomes confusing - as the course loses its problem-solving focus and jumps around pretty wildly.\r\n\r\nMichael Pascutti is a wonderful instructor, cares immensely, and due to his experience and expertise knows just about all there is to know about hedge funds and problems facing investors. If you'd like to work in the industry one day, I can't think of anyone better there could be to learn from. ",
+            "\u00a0I would not recommend this course to anyone who isn't already destined for finance and immensely interested in it. In order to get the most from this class, you need to have a lot of background knowledge in finance, and have a strong internal drive to learn the material yourself even when the lectures and readings don't properly teach it. ",
+            "\u00a0This class did a great job at exposing you to the hedge fund industry, and teaching you about essential financial instruments like options and special instances where investors can make an arbitrage trade (carve outs, mergers, etc).  The guest speakers and the readings were really interesting. There are a few quizzes and problem sets, a paper and some weekly emails. Generally a low workload and low-stress class, it's as good as you make it! ",
+            "\u00a0I would definitely recommend this course to another student. This was my favorite Economics class that I've taken at Yale. Highly recommend even if you're not planning on going into the finance field. ",
+            "\u00a0One of the most relavant finance and econ courses you can take with applications in real life. Professor Pascutti is a very engaging lecturer and found awesome real life examples to make the material very interesting. He also brings some awesome guest speakers from the hedge funds industry. The class could be more organized, but its very fun overall. ",
+            "\u00a0Absolutely if youre into finance and want to learn more about what hedge funds actually do. Great guest speakers who work in the industry. If youre into finance just take it! ",
+            "\u00a0Yes absolutely, for anyone with interest in finance and hedge funds/fixed income should for sure take this class. ",
+            "\u00a0This was definitely a very interesting course and I learned a lot. If you want to learn from a very excited professor, Pascutti is your guy. It may be hard to match his level of interest and excitement in the topics at hand, but he's always excited to talk. "
+        ]
+    ]
+}

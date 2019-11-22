@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50345/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Development of skills in linguistics research, writing, and presentation. Choosing a research area, identifying good research questions, developing hypotheses, and presenting ideas clearly and effectively, both orally and in writing; methodological issues; the balance between building on existing literature and making a novel contribution. Prepares for the writing of the senior essay.", 
+    "title": "Research Methods in Linguistics", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "CO493 103", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11199", 
+        "listings": [
+            {
+                "number": "490", 
+                "subject": "LING"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Raffaella Zanuttini"
+    ], 
+    "long_title": "Research Methods in Linguistics", 
+    "extra_info": "A"
+}

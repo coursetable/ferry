@@ -1,0 +1,95 @@
+{
+    "crn_code": "11571",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            9,
+            3,
+            0
+        ],
+        [
+            2,
+            3,
+            4,
+            4,
+            1
+        ],
+        [
+            1,
+            4,
+            4,
+            5,
+            0
+        ],
+        [
+            1,
+            1,
+            3,
+            8,
+            1
+        ],
+        [
+            0,
+            6,
+            5,
+            3,
+            0
+        ],
+        [
+            1,
+            8,
+            4,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0You learn essentially linear algebra and multivariable before it gets too difficult. ",
+            "\u00a0Learned a lot about 2 topics previously foreign to me: linear algebra and multivariable calculus. ",
+            "\u00a0Beginning multi variable calculus and linear algebra ",
+            "\u00a0I became well-versed with the basics and some applications of both linear algebra and multivariable calculus. ",
+            "\u00a0We studied basic linear algebra and multi, but since Ive learned both in high school, Im not really sure I learned anything at all. The breadth of 118 is much larger than its depth. We also never learned anything about the connection between math and economics/social sciences. Its good arithmetic practice I guess. ",
+            "\u00a0I learned the basics of linear algebra and filled in some of the gaps in my calculus skills. ",
+            "\u00a0I adequately learned the material the course consisted of. ",
+            "\u00a0You learn how to do computational linear algebra, but no proofs. You also learn how to do the first layer of multivariable calculus (derivatives only - no integration). ",
+            "\u00a0I learned a lot about reasoning out problems; for someone who is math-averse I enjoyed the way this class teaches you to think out math problems. "
+        ],
+        [
+            "\u00a0There are weekly quizzes to help for review but there is little room for error. ",
+            "\u00a0Strengths- get a taste of both linear algebra and multi so you can decide what topics are most interesting to you, weekly quizzes help to keep you on top of the material, pace is manageable\r\n\r\nWeaknesses- Did not see that much application to econ for a math class designed for econ majors ",
+            "\u00a0More organized format ",
+            "\u00a0It is just an introduction to both linear and multivariable. It certainly helps for this type of math problems in Econ courses, but it isnt an all-encompassing course. ",
+            "\u00a0This is definitely a terminal math course: take it if you hate math like I do. Dont expect it to be very engaging though; its just a way to get the math you need and then be done with it. Weekly quizzes are kind of a pain. ",
+            "\u00a0I didnt feel incredibly pressured to complete the homework assignments, and would have benefitted from having to complete hw assignments as well as having quizzes. ",
+            "\u00a0It's a pretty straightforward course and a decently easy math credit if you need one. It definitely won't provide you with the depth of knowledge that 120 will give you, but it is definitely not as painful. If you read the textbook and do the psets the material will be easy to grasp. ",
+            "\u00a0I think that sometimes Professor Rosenthal went through the material a bit quickly at times. "
+        ],
+        [
+            "\u00a0I would recommend if you simply do not want take more advanced math. If you do then this course is a waste of time - you could take 120 and review the linear algebra material on your own. ",
+            "\u00a0I would recommend this course if you feel as though you aren't prepared yet for 120, but are above the 115 level. ",
+            "\u00a0Do it if you need it for another class. Otherwise, dont take 118 expecting to come out with a greater appreciation of mathematics. ",
+            "\u00a0For an economics major looking to do minimal mathematics classes, this is the right class ",
+            "\u00a0If you want to learn about both multivariable and linear without taking Math 120 then yes! ",
+            "\u00a0This was my least favorite class so far. Maybe its Prof. Rosenthal, maybe its how the course is designed, maybe its just because I dont really like math that isnt applied. ",
+            "\u00a0I would recommend this course as an easier entry into linear algebra and multivariable that might better help them prepare for their major than perhaps math 120. ",
+            "\u00a0I would recommend if you plan to use math mostly for social sciences/economics; if you plan to major in anything STEM, this course will put you in an odd place. ",
+            "\u00a0Would definitely recommend if you need the credit/just need to be more confident in your math skills! This is taught at a pace that isn't too dragging-your-feet but also doesn't leave you super dumbfounded if you don't pay attention in class. I actually came out of it thinking linear algebra and multi are pretty cool and useful, and will be more comfortable taking other math courses in the future if I choose to. It's not a big time commitment and you learn a decent amount. ",
+            "\u00a0If you hate math, I think that you should take this class for your social science math requirement; if you like math go take 120. "
+        ]
+    ]
+}

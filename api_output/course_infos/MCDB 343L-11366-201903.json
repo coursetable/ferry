@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Enrollment limited. Special registration procedures apply; students should contact the instructor during January of the year you intend to take the course. Prerequisite; MCDB 342L or permission of\u00c2\u00a0instructor.", 
+    "description": "Continuation of MCDB 342L to more advanced projects in molecular and cell biology, such as microarray screening and analysis, next-generation DNA sequencing, or CRISPR/Cas editing of genes. Laboratories meet twice a week for the second half of the term. 0.5 Yale College course credit(s)\nEnrollment limited. Special registration procedures apply; students should contact the instructor during January of the year you intend to take the course. Prerequisite; MCDB 342L or permission of\u00c2\u00a0instructor.\n\n0.5 Yale College course credits", 
+    "title": "Laboratory in Nucleic Acids II", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "SCL 148", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11366", 
+        "listings": [
+            {
+                "number": "343L", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kenneth Nelson"
+    ], 
+    "long_title": "Laboratory in Nucleic Acids II", 
+    "extra_info": "A"
+}

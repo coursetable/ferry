@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48989/assignments/syllabus", 
+    "requirements": "Prerequisite: ARBC 120 or permission of instructor. May be taken concurrently with ARBC 130 or 150.", 
+    "description": "Introduction to classical Arabic, with emphasis on grammar to improve analytical reading skills. Readings include Qur'anic passages,\u00a0literary material in both poetry and prose,\u00a0biographical entries, and\u00a0religious texts.\nPrerequisite: ARBC 120 or permission of instructor. May be taken concurrently with ARBC 130 or 150.", 
+    "title": "Intermediate Classical Arabic I", 
+    "skills": [
+        "L3"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WLH 015", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11421", 
+        "listings": [
+            {
+                "number": "136", 
+                "subject": "ARBC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kevin Butts"
+    ], 
+    "long_title": "Intermediate Classical Arabic I", 
+    "extra_info": "A"
+}

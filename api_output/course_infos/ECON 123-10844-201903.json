@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49509/assignments/syllabus", 
+    "requirements": "Prerequisites: ECON 108, 110, 115, or equivalent; ECON 117; and familiarity with single variable calculus.", 
+    "description": "Comprehensive and theoretical examination of econometrics, with further exploration of topics covered in ECON 117. A term\u00c2\u00a0research project addresses a research question chosen by the student, and involves the application of learned methods to a relevant data set.\nPrerequisites: ECON 108, 110, 115, or equivalent; ECON 117; and familiarity with single variable calculus.", 
+    "title": "Intermediate Data Analysis and...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WTS B60", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10844", 
+        "listings": [
+            {
+                "number": "123", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Konstantinos Meghir"
+    ], 
+    "long_title": "Intermediate Data Analysis and Econometrics", 
+    "extra_info": "A"
+}

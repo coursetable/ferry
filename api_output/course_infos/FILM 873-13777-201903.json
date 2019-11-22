@@ -1,0 +1,51 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49653/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A critical inquiry into the myth of a homogeneous Japan through analyzing how Japanese film and media historically represent \u201cothers\u201d of different races, ethnicities, nationalities, genders, and sexualities, including blacks, ethnic Koreans, Okinawans, Ainu, undocumented immigrants, LGBT minorities, the disabled, youth, and \u201cmonstrous\u201d others like ghosts.", 
+    "title": "Japanese Cinema and Its Others", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 203", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }, 
+        {
+            "start_time": 18, 
+            "location": "", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 21
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13777", 
+        "listings": [
+            {
+                "number": "873", 
+                "subject": "FILM"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YFIN\">YC FILM Stud: World Cinema</a>"
+    ], 
+    "professors": [
+        "Aaron Gerow"
+    ], 
+    "long_title": "Japanese Cinema and Its Others", 
+    "extra_info": "A"
+}

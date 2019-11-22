@@ -1,0 +1,74 @@
+{
+    "crn_code": "20318",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            2,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            2,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Wide general knowledge about military force structure, leadership and legal responsibilities. ",
+            "\u00a0I learned a good deal about preparation for active duty and more of a broad overview of many of the components of the US Air Force's command structure. "
+        ],
+        [
+            "\u00a0The powerpoints are extremely dry for the most part. The virtual leadership walkthrough was great. ",
+            "\u00a0A relaxed class that covers interesting material, but it is taught in 3 hour segments which can be a little taxing at times. "
+        ],
+        [
+            "\u00a0AFROTC Senior Active Duty Prep. ",
+            "\u00a0You are likely taking this course because you are about to commission as a 2nd Lt in the USAF, and if so, congrats to you! Otherwise, the scope of the course may be a little irrelevant to your studies. "
+        ]
+    ]
+}

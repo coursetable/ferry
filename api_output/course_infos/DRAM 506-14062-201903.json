@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51596/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course looks at exemplary instances of mass performance\u00e2\u20ac\u201dmoments in which a society orchestrates thousands of people to do the same thing at the same time. Performances examined range in time and place, including the festivals of the French Revolution, mass gymnastics, religious revivals, Russian Revolution performances, people's theaters, and the contemporary phenomenon of flash mobs. The course is framed by conceptual categories including psychological and religious impulses, ideals of community formation, political revolutions, and the invention of tradition.", 
+    "title": "Mass Performance", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "PK205 102", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14062", 
+        "listings": [
+            {
+                "number": "506", 
+                "subject": "DRAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kimberly Jannarone"
+    ], 
+    "long_title": "Mass Performance", 
+    "extra_info": "A"
+}

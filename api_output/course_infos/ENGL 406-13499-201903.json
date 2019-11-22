@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49788/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introduction to reading and writing poetry. Classic examples from Shakespeare and Milton, the modernist poetics of Stein, Pound, Moore, and Stevens, and recent work in a variety of forms and traditions. Students develop a portfolio of poems and write an essay on the poetic craft of poets who have influenced their work. Formerly ENGL 135.", 
+    "title": "Reading Poetry for Craft", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "LC 203", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13499", 
+        "listings": [
+            {
+                "number": "406", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENW\">YC English: Creative Writing</a>"
+    ], 
+    "professors": [
+        "David Gorin"
+    ], 
+    "long_title": "Reading Poetry for Craft", 
+    "extra_info": "A"
+}

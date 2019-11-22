@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: ARBC 503.", 
+    "description": "This course combines both analysis and production of literary texts. Students study modern Arabic literary texts as a vehicle for generating their own creative prose and to engage with prose, personal essay, and other literary genres, attending particularly to how authors evoke experience through character, setting, dialog,\u00a0etc. The class looks to popular fiction in Arabic and focuses upon the writer\u2019s craft to create vivid and engaging narratives. This analysis provides inspiration for students writing their own unique creative pieces and encourages them to polish their ability to express themselves in Arabic.\nPrerequisite: ARBC 503.", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11476", 
+        "listings": [
+            {
+                "number": "526", 
+                "subject": "ARBC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Creative Writing in Arabic", 
+    "extra_info": "C"
+}

@@ -1,0 +1,76 @@
+{
+    "crn_code": "21564",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            1,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Gained an appreciation of the theory behind x-ray crystallography on a more rigorous level than the introductory macromolecular structure and biophysical analysis in the same department. ",
+            "\u00a0I learned about x-tay crystallography in more depth than previously learned form the Macromolecular Interactions course that was offered in the Fall. ",
+            "\u00a0I learnt a lot of crystallography knowledge in this class. "
+        ],
+        [
+            "\u00a0Prof. Steitz's notes are hard to decipher, as were his lectures. However, by providing the texts he based the course off of, I was able to follow along. ",
+            "\u00a0This class is really good, but I really want some slides or printed words, instead of the manuscripts of the lecturer. ",
+            "\u00a0The order of topics was natural which was a strength. A weakness is that the class felt rough. A way to improve this is to provide better notes, if at all, as a lot of time was taken trying to read what was given to us. "
+        ],
+        [
+            "\u00a0Yes, if they are looking to do research using x-ray crystallography and need a crash course in how it actually works and how to understand what you're actually doing in your experiments. ",
+            "\u00a0Yes, because it introduce lots of things about crystallography. "
+        ]
+    ]
+}

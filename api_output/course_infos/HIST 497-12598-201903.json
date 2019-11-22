@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50122/assignments/syllabus", 
+    "requirements": "", 
+    "description": "All senior History majors should attend the mandatory senior essay meeting in early September at a time and location to be announced in the online Senior Essay Handbook.\nThe senior essay is a required one- or two-term independent research project conducted under the guidance of a faculty adviser. As a significant work of primary-source research, it serves as the capstone project of the History major. Seniors writing a two-term senior essay do not register for HIST 497; instead, they register for HIST 495 and HIST 496 (see description). History majors may choose to write a one-term independent senior essay in the first term of their senior year and register for HIST 497; however, students who choose the one-term senior essay option are not eligible for Distinction in the Major. The one-term essay must include a substantial research paper of no more than 6,250 words (approximately twenty-five pages) based on primary sources, along with a bibliographic essay and bibliography. Seniors enroll during the fall term of senior year; only History majors graduating in December may enroll during the spring term (or seventh term of enrollment). In rare circumstances, with the permission of the adviser and the Senior Essay Director, a student enrolled in HIST 497 during the fall term may withdraw from the course according to Yale College regulations on course withdrawal and enroll in the spring term. Each student enrolled in HIST 497 must present a completed Statement of Intention, signed by a department member who has agreed to serve as adviser, to the History Department Undergraduate Registrar by the dates indicated in the Senior Essay Handbook. Blank statement forms are available from the History Undergraduate Registrar and in the Senior Essay Handbook, available on the History department Web site. Additional details about the senior essay, including the submission deadlines are included in the Senior Essay Handbook. Essays submitted after 5 p.m. on the due date will be considered as having been turned in on the following day. If the essay is submitted late without an excuse from the student's residential college dean, the penalty is one letter grade for the first day and one-half letter grade for each of the next two days past the deadline. No essay that would otherwise pass will be failed because it is late. All senior departmental essays will be judged by members of the faculty other than the adviser. In order to graduate from Yale College, a student majoring in History must achieve a passing grade on the departmental essay. Permission of the departmental Senior Essay Director and of the student\u00e2\u20ac\u2122s faculty adviser is required for enrollment.", 
+    "title": "One-Term Senior Essay", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12598", 
+        "listings": [
+            {
+                "number": "497", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Fabian Drixler"
+    ], 
+    "long_title": "One-Term Senior Essay", 
+    "extra_info": "A"
+}

@@ -1,0 +1,138 @@
+{
+    "crn_code": "22053",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            5,
+            12,
+            13
+        ],
+        [
+            2,
+            1,
+            8,
+            9,
+            10
+        ],
+        [
+            0,
+            4,
+            4,
+            17,
+            5
+        ],
+        [
+            0,
+            7,
+            9,
+            10,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            9,
+            19
+        ],
+        [
+            0,
+            0,
+            2,
+            12,
+            16
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot of real analysis. Much of the course focused on developing a rigorously understanding of calculus. ",
+            "\u00a0Fundamental ideas of real analysis, big picture themes and concepts that are important for further study in the field. ",
+            "\u00a0I learned about basic concepts in analysis building up from defining the reals to convergence to integration/differentiation to broader more applicable theorems (Contraction Mappings etc...) and all  of this was done (mostly) rigorously. ",
+            "\u00a0A rigorous, thorough, proof based course in real analysis - starts with the axiomatic description of numbers and concepts of cardinality/sets and works through sequences, convergence, continuity, integration, differentiation, and sequences and series of functions, with lots of challenging bonus topics thrown in by the professor (ODE theory, integral equations, some complex analysis, topics in multivariable calculus, etc.). I got a lot better at writing detailed proofs and my mathematical ability honestly grew a lot from this course. ",
+            "\u00a0Better understanding of real analysis and proofs in general - proved every relevant facet of calc, multi variable calc, and linear algebra encountered along the way ",
+            "\u00a0You learn about continuity, convergence, and theoretical proofs. I found the materials very hard. Professor Schlag was super helpful. He was flexible with office hours and was always willing to help students. ",
+            "\u00a0Learned a lot of proof based mathematics associated with calculus. ",
+            "\u00a0Basic analysis tools and techniques: convergence, continuity, epsilon-delta arguments, rigorous definition of differentiation and Riemann integration. We also covered Markov chains to some degree. The latter part of the course also introduced metric spaces, differential equations and a few aspects of multivariable calculus such as implicit/inverse function theorem. Most of these topics were introduced with proofs in one dimension until the second half of the course. ",
+            "\u00a0I developed the ability to use mathematical tools to prove the foundations of various calculous concepts. ",
+            "\u00a0A better handle at the introductions to analysis and a better grasp on proof-based thinking. ",
+            "\u00a0A good understanding of analysis and greater mathematical maturity ",
+            "\u00a0I gained a fundamental understanding of calculus and limits. Also got to practice brainstorming math proofs. The course uses several important ideas to construct a beautiful world of analysis  understanding of those building blocks is crucial. ",
+            "\u00a0Proofs of theorems used in calculus and studies of functions ",
+            "\u00a0I learned the fundamentals of real analysis, seeing how its ideas can be applied to various mathematical fields like differential equations and complex analysis. ",
+            "\u00a0I learned analysis for various mathematical structures. ",
+            "\u00a0I learned fundamental topics in analysis and methods used to construct and prove these topics. I developed a greater intuition for proofs and appreciation for detail. ",
+            "\u00a0Analytical skills,  Markov chains, rigorous proof of calculus theorem. Strengthened linear algebra intuition. ",
+            "\u00a0Learned about sequences, convergence, continuity, differentiability, integration, uniform convergence, a little bit of functional analysis, differential equations, multivariable calculus. \r\nBuilding mathematical intuition and practice writing proofs. ",
+            "\u00a0Various topics in mathematical analysis ",
+            "\u00a0Introduction to real analysis (mostly single variable): convergence, continuity, integration, differential calculus, contraction mapping, intro to ODEs, some multivariable calculus at the end (entirely proof based) ",
+            "\u00a0Math 300 focuses on the standard topics in analysis: continuity (epsilon delta, sequences), convergence, series, Cauchy spaces, etc. -- but as I have found for many math classes at Yale, the content, difficulty, and quality of a specific course depends largely on the professor. During 300 this semester, we also covered stochastic matrices and differential equations, among topics that I think are not \"conventionally\" analysis. ",
+            "\u00a0We talked about continuity of functions, convergence of sequences, differentiation, Riemann sums and integration, contraction mappings, ordinary differential equations, and the inverse and implicit function theorems. This was a proof-based course with exams mostly made up of proofs. ",
+            "\u00a0I learned a LOT about real analysis, specifically about the foundations of one-variable calculus. We also discussed some multi-variable calculus and relied on linear algebra fairly heavily throughout the course (I would not take this course without first taking linear algebra). ",
+            "\u00a0This class was supposed to be a beginning course in analysis. I'd say half of it was about what one would expect and followed the textbook. The other half was basically at Professor Schlag's discretion. Coming in with no experience in analysis, I now have a decent understanding of what it is and the main tools used. However, I can't say I have any idea how to apply what I learned to my other coursework and research. "
+        ],
+        [
+            "\u00a0Strengths: Professor Schlag is a wonderful guy, and lots of fun to have as a lecturer. The class is really foundational for any further studies in analysis, and a pretty thorough introduction to the field.\r\n\r\nWeaknesses: The pace of the class spun a bit out of control towards the end, where it felt like Prof Schlag was trying to jam as much content into every lecture as possible and we studied a lot of random tangential subjects (last two weeks were like differential equations, vector analysis, multivariable/linear algebra type of stuff). ",
+            "\u00a0This course was generally very very good, the lectures are great and everything is well organized to fit together. It felt a little scattered in the last maybe two weeks when the class darted between topics. ",
+            "\u00a0Some strengths: detailed course that teaches you the necessities from real analysis in one dimension (and many of those from R^d), lots of opportunities to get help between professor office hours and peer tutor hours, easy to read textbook. Some weaknesses: problem sets were very challenging and time consuming, the first midterm and the final exam were absurdly difficult (the final had six questions, no one finished after 3.5 hours). My biggest complaint is the lack of solutions for problem sets: the graders would offer very little commentary on what parts of proofs were incorrect, and there were never any posted solutions for the problem sets. This made reviewing extremely challenging and inconvenient. I liked a lot of the bonus topics that we covered, but I think that the professor expected a bit more mathematical maturity from the class than we had (some topics were pitched way above an intro level and no one ever understood them). ",
+            "\u00a0A bit hard in the exams with a tough curve. It would also be helpful to have pset solutions posted after psets have been turned in, perhaps even just posting some students work as examples of correct methods (since having multiple ways to doing a proof may make posting definite solutions difficult). ",
+            "\u00a0Problem sets were very long and very challenging. Exams were also very challenging. Another peer tutor would have been very helpful. ",
+            "\u00a0This is definitely a great class for being introduced to higher-level arguments in proof-based mathematics. Schlag is an amazing professor who explains these concepts and the proofs of theorems with unusual clarity. However, some did seem to find the course a bit fast-paced. I would definitely recommend that one take Math 250 before this course to feel a bit more comfortable. ",
+            "\u00a0Overall, the class was great. While rigorous and difficult in nature, it was a great introduction. \r\n\r\nI think there was a lot of material to be covered in a short amount of time. I think cutting some of the material in lieu of additional examples and slowing down the class would make it even better. ",
+            "\u00a0It wouldve been nice to have more resources to study for the midterms ",
+            "\u00a0Strength: Prof. Schlag is extremely clear in lectures and very available in office hours. Problem sets take more than 10 hours every week, but they are very well designed that they provide important complement to the class. ",
+            "\u00a0Could be much better organized and at a more manageable pace. Instead, we covered way too many topics ",
+            "\u00a0This course has a great instructor and it is a good introduction to analysis. It is however ridiculous that Math 250 is a pre-requisite to this course. Also, perhaps some more structure might have given me more of an idea of in which direction we were going. Having the answer keys to the problem sets (which sometimes included material that had not yet been discussed in class at all) would also have been useful. ",
+            "\u00a0Strengths are that its a great professor. No weakness. ",
+            "\u00a0Strengths: valuable material, comprehensive problem sets.\r\n\r\nWeaknesses: problem sets were often too lengthy. The amount of material was perhaps too ambitious. ",
+            "\u00a0It doesn't have a clear structure, so it was difficult to fully planning ahead a schedule for the year. ",
+            "\u00a0Strengths - Professor Schlag is a very engaging and very entertaining lecturer. He really cares about the motivation behind the theorems and making sure the theorems are proven rigorously. \r\nWeaknesses - sometimes the lectures are not super well organized. Related ideas are often not physically connected on the blackboard - would be better if sequential ideas were written left to right. Lectures can be kind of fast and hard to follow near the end. ",
+            "\u00a0Taught too fast for the level of introductory course it was labeled as. ",
+            "\u00a0Professor Schlag is a good lecturer and cares about teaching (approachable in office hours, willing to re-explain), he is very fair (but has high expectations, which makes the course hard), the textbook is not bad. I suppose the weakness is that the course is hard (but not in an unfair way). I also wish this course had more teaching staff (i.e. a graduate TA) to hold more office hours and have more clear grading. ",
+            "\u00a0As is the case for many math courses at Yale, the quality and difficulty of courses depends largely on the professor. Last year, Math 300 was taught by Andrew Casson at an apparently painfully slow pace, but high teaching quality and very manageable difficulty. This semester, however, the course was taught by Wilhelm Schlag, a new professor from UChicago. While he is undoubtably brilliant, he maybe is a bit excessively so, as the course was occasionally difficult to keep up with and the difficulty was much greater than it seemed to be in previous years. ",
+            "\u00a0This course was pretty tough. A strength was that Prof. Schlag is a pretty good lecturer--especially towards the beginning of the semester, I found his explanations of epsilon delta proofs and some of the other concepts that we learned in Math 250 to be far clearer than what I received in 250. However, the pace of the class picked up significantly as the semester went on. While I found the lectures relatively accessible at the beginning of the semester, by the end I and my friends in the course had a lot of difficulty keeping up in class because Schlag was lecturing so quickly. I think that the course could be improved by cutting some of the material towards the end that is covered by other courses, so that the lectures can focus on the rest of the material in the course and move at a slightly better pace (perhaps some of the work with complex numbers, or some of the time that we spent on ODEs). \r\n\r\nI also thought that the grading on psets was a bit uneven, and this made it difficult to know when a solution was sufficient or correct. When I compared past problem sets with a friend, I found that one of the graders marked off some problems on one of our psets but the other gave credit for the same method on another pset. I wasn't too concerned about the points, but it made it difficult to figure out how to correctly solve the problem when we were studying for exams. I think that having answer keys or something similar to look at after we've all turned in the psets would help. \r\n\r\nThe grading on exams and for the course was also pretty tough. About two weeks from the end, Prof. Schlag said that he would give the bottom quartile of the class Cs, and this really stressed us all out leading into the final exam. I don't think that this matches with the rest of the Math Department, and it may deter people from the course in the future; since we all worked really hard in this class, I hope that the professor teaching it in the future reevaluates the curve. ",
+            "\u00a0The strengths of this course is the sheer amount we learned. With Schlag, this class is a whirlwind tour of analysis, you will go through A LOT. It really isn't an intro course though. You will be expected to work and learn a lot, and it could be difficult to keep up with the pace of this class (but of course, that's just one person's opinion). ",
+            "\u00a0The last week of class was insane, i felt like the professor was trying to fit in everything he couldn't do before into that just one week, which made studying even harder. While yes, he did assign homework for us to review the material, that was during reading period and it was a lot to manage. ",
+            "\u00a0The main strength of this course is that Professor Schlag is a good lecturer and was able to explain concepts clearly. Other than that, this class was unnecessarily painful and a glaring reminder of how little Yale does to support all its students. For a beginning course in analysis, this class was set up very poorly. The lectures largely didn't follow the textbook, there was a peer tutor in place of a TA, and there were no outside resources. The homework was extremely long and difficult, so peer tutor and Professor office hours were almost always entirely dedicated to working on them. Basically, if you didn't understand the material in lecture, there was no way to get extra help. As someone who took this class as a requirement and has not taken much proof based math, I found myself lost and unable to catch up even when I did my best to seek out resources. Furthermore, there were no homework solutions or practice problems given so I had a really hard time preparing for the exams (which were very difficult). Finally, there was very little feedback or expectations given. We were given almost no information until the day classes ended, when the professor announced that he was planning to give 25% of the class a C or below. For a class that is a requirement for several majors and not an elective, it is critical that the department do its best to provide more support to students. I also believe that there should be more effort to standardize practices and create continuity across the department so students have a better idea of requirements and how to look for help. "
+        ],
+        [
+            "\u00a0Yes, I would recommend this class. I was one of the few people in the course who wasn't taking it for my major, and although it was challenging, I enjoyed it and felt like I learned a lot. Especially with Professor Schlag, I felt like I got a lot out of it. ",
+            "\u00a0Yes! But be warned that this is not an easy class if you are not genuine about your love for math. It takes work and time and effort, and you will have many frustrating evenings trying to finish psets on time. If you work hard, though, you can and will succeed! ",
+            "\u00a0Yes, absolutely, even if you are on the fence or just taking it for interest, take this class. Professor Schalg is great and does great job of lecturing on the material. ",
+            "\u00a0If you're reading this, you probably need to take this course. For me, it was a fitting capstone math course for the major: you will suffer, you will compete against a curve full of geniuses, and you will get tired of writing the letter epsilon for the 1000th time, but you will become very adept at analysis and be equipped with the tools necessary to take on many problems in applied fields. Seriously, be prepared to sink a lot of time in to the problem sets and studying for the exams - this class is advertised as the \"easy\" alternative to Math 301/305, but it was actually extremely challenging. ",
+            "\u00a0Yes, if you are committed to it! This is one you may actually have to go to class and work on psets in a timely manner (start early if you can) and visit office hours regularly to get the most out of. But its a very interesting class that you can learn tons from if you have the energy for it. Schlag has such an in-depth and complete understanding of these topics and is constantly trying to impart his skills and intuition. If you really want to you can learn so much ",
+            "\u00a0Take it only if you have to. It is not an easy class. ",
+            "\u00a0If you are interested in rigorously learning core concepts in analysis I would recommend this course. ",
+            "\u00a0I would absolutely recommend this course to another student, but that mostly has to do with Professor Schlag. Simply put, he is the best math instructor I have ever had. His lectures are enthralling, and his depth of understanding means that he can answer all questions with precision. ",
+            "\u00a0I would highly recommend this class to anyone needing a real analysis class! I would also highly recommend attending office hours. ",
+            "\u00a0Yes ",
+            "\u00a0Absolutely. I recommend it especially to students who have taken the proof-based linear algebra class. ",
+            "\u00a0Really difficult class. Helps you appreciate the beauty of math, but the problem sets at least with WS took 20ish hours a week if not more and were often used to fully introduce ideas rather than run through topics wed really covered. ",
+            "\u00a0Take it if you are interested in analysis. You absolutely do not need to take 250 before, that course is actually harder. ",
+            "\u00a0Yes. It is a very interesting class. ",
+            "\u00a0I would recommend this course to any student who wishes to engage with higher-level mathematics, or who wishes to gain an appreciation for analysis. ",
+            "\u00a0Yes it is amazing. ",
+            "\u00a0Yes! The ideas in analysis are really cool and powerful (fixed point theorem, inverse and implicit function theorem, metric spaces) and Schlag really cares about the math. Lectures, though sometimes a bit hard to follow, are quite enjoyable and the homework is also not too bad. Exams are not easy but fair. Also would say this is the most accessible analysis class for someone who wants to learn some cool math (Math 246 diffeq is quite boring) and enjoys proofs but doesn't want to major in math. One of my friends took this without taking 250 or 225 and did fairly well. ",
+            "\u00a0No, at least not with this professor. Schlag is great but if you're just looking for a chill introduction to real analysis, this might be too fast-paced and difficult. ",
+            "\u00a0It depends. If you did well in 250 (which should be a course in multivariable real analysis based on who is teaching it), then you should go and take 305 instead. Also, you do not need 250 for this course (though linear algebra would be good if you take it with professor Schlag). You learn a lot about proof based math and logical thinking and you actually understand the ideas you learn in Calc 1 so it is a valuable course (and a big time commitment). ",
+            "\u00a0I would cautiously recommend this course to another student -- the quality of teaching and difficulty of the course will depend heavily on who teaches. While Schlag is a brilliant mathematician, he will by no means \"hold hands\" and guide you step by step through the course -- to give a concrete example, his day was ruined when someone divided by a vector. Because proof-based math classes depend so much on the quality of teaching/how well the difficulty matches the student's background/potential, I think I would just be mindful of who is teaching the course when choosing whether or not to take it. ",
+            "\u00a0I would recommend this course to a student who is very interested in the material, motivated to work hard, and willing to face difficult exams. I feel that the instruction that I received in this course was better than what I have received in many other math courses at Yale. Prof. Schlag is also willing to elaborate on topics if you go to see him during office hours. At the same time, the pace of this class was very fast, the material is very challenging, and Schlag writes tough exams. The problem sets were also difficult and longthey often took perhaps 15 hours or more. I definitely learned a lot in this class, but there were also things that I stayed confused about, and I did work really hard throughout the semester. ",
+            "\u00a0Oh boy. If you take it with Schlag, you have to know what you're getting into. You'll learn a lot, but the class will (probably) kick your ass, so you need to know that going in. Schlag will also definitely make you feel stupid multiple times. So, if you don't mind taking a knock to your confidence and a ton of work, and you want to learn a ton of math, take this class with Schlag. ",
+            "\u00a0I would say don't take it unless you have to. and You have to be ok with failing. ",
+            "\u00a0No, I cannot recommend this class. Of all the math classes I've taken at Yale, it was by far the one least designed to facilitate student learning. As someone taking this class for an Econ/Math requirement and not as a math major, I found didn't have enough preparation. The material was much more difficult than I anticipated, and if you don't understand it in lecture, there's no way to learn outside of class since we didn't follow the textbook and there was no TA. In order to require a class at this level, there needs to be more prereqs or more resources provided during the course. And as a minority student, I found that I didn't have the network available to me when it came to advising, working on homework with other students, studying, etc. Under the right conditions, I could have succeeded in this class. But given the lack of support, I found myself struggling much more than necessary. "
+        ]
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Enrollment limited. Priority given to those who are able to present their work early in the term; please come to the first class ready to discuss the work you propose to show. Permission of the instructor required.", 
+    "description": "A critique course focusing on time-based and other ungainly works. Students present their work during class time and have the opportunity for an in-depth critique and discussion about their pieces. There is no singular focus in this critique, as the balance of pragmatic and conceptual considerations surrounding the work is examined and discussed in a fluid way depending on the work at hand and the intent of the artist.\nEnrollment limited. Priority given to those who are able to present their work early in the term; please come to the first class ready to discuss the work you propose to show. Permission of the instructor required.", 
+    "title": "X-Critique", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 18, 
+            "location": "EDG36 204", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 21
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12714", 
+        "listings": [
+            {
+                "number": "666", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Martin Kersels", 
+        "Sandra Burns"
+    ], 
+    "long_title": "X-Critique", 
+    "extra_info": "A"
+}

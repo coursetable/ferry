@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49018/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A consideration of theories and methods developed by archaeologists to recognize and understand complex societies in prehistory. Topics include the nature of social differentiation and stratification as applied in archaeological interpretation; emergence of complex societies in human history; case studies of societies known ethnographically and archaeologically.", 
+    "title": "Early Complex Societies", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "HLH51 101", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13765", 
+        "listings": [
+            {
+                "number": "771", 
+                "subject": "ARCG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Richard Burger"
+    ], 
+    "long_title": "Early Complex Societies", 
+    "extra_info": "A"
+}

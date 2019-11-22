@@ -1,0 +1,122 @@
+{
+    "crn_code": "10694",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            4,
+            16
+        ],
+        [
+            0,
+            1,
+            1,
+            5,
+            14
+        ],
+        [
+            0,
+            0,
+            5,
+            8,
+            8
+        ],
+        [
+            1,
+            2,
+            7,
+            6,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            14
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            14
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I got a big-picture overview of how the internet works. I developed an appreciation for the various design choices that went into creating the internet, as well as its complexity. ",
+            "\u00a0A thorough overview of network protocol design and computer networking layer-by-layer: application, transport, network, link layer. Second half of the course contains some distributed systems content. Learned a lot about principles of system design. A very interesting, thought-provoking, and insightful combination of math and programming and system design!!! ",
+            "\u00a0Great intro course for Networks in CPSC.\r\nCovered everything from basics of TCP/UDP to application level implementation. ",
+            "\u00a0Introduction to networks terminology (transmission/propagation delay, queuing theory), layers of the Internet: application layer (SMTP, FTP, HTTP), along with high performance servers (multithreading and event-driven), distributed networks (TOR, Blockchain), transport layer (UDP/TCP), network layer + link layer. ",
+            "\u00a0how the internet works! super cool and complex, talked about the top 4 layers of the internet and their various protocols and applications. ",
+            "\u00a0I learned the most in this course through implementing TCP and HTTP. I also learned about a number of other internet protocols, the layers of the internet and how the work together, and countless other small technical details. Throughout the semester Professor Yang stressed several overarching themes, such as breaking down large problems and the emergence of complexity in design. ",
+            "\u00a0I learned more in this class than in any other Computer Science class I've taken at Yale. This includes the architecture/protocols underlying the internet (which is so cool), but also how to think about large-scale systems and other design problems in CS. ",
+            "\u00a0You learn all about networks and how they are architected. This includes learning a bit about distributed computing, blockchain, and all of your favorite network protocols such as HTTP, SMTP, etc. You also learn work with Java. ",
+            "\u00a0I learned a lot about computer networks. ",
+            "\u00a0learned A LOT about networks and the internet ",
+            "\u00a0Knowledge about how various protocols on the different levels of the OSI model work, insight into how industry servers are implemented, and more in-depth understanding about concurrency and parallelism. ",
+            "\u00a0I got lots of great insights into how computers communicate, how the internet is structured, and how multi-threading can be taken advantage of. ",
+            "\u00a0I learned about the fundamentals of computer networks, routing protocols, networked applications and protocols, and how to program network systems. ",
+            "\u00a0You learn a ton about networks and how they are implemented! You also glean a lot from this course in software architecture lessons, since networks are some of the most complex systems. You get experience debugging networks, which is can be much harder than debugging a single program. ",
+            "\u00a0How the internet evolved, how it works, PROTOCOLS, how they are designed to be extensible, scalable, etc. (literally word for word things repeated by Yang every class) ",
+            "\u00a0In-depth discussion of the layers and protocols of computer networks ",
+            "\u00a0An understanding of the application layer, transport layer and network layer, including technologies like email, Tor, file transfer and DNS.\r\n\r\nNot just the experience of designing and implementing software, but also the intuition behind software design. ",
+            "\u00a0I have a much better understanding of how the internet works from the application layer down to the link layer (we didn't get a chance to go over the physical layer). "
+        ],
+        [
+            "\u00a0You will learn a lot from this course and it will blow your mind, over and over again. The only weakness is perhaps that there is quite a lot of content covered and a lot of work. Also, the slides are mostly in comic sans, but make no mistake - the content is not to be taken lightly. ",
+            "\u00a0Strengths: Very thorough. Yang Yang covers the material very quickly but very clearly. You will LEARN a lot from this course. Very applicable to real life networking. ",
+            "\u00a0It's a sporadically allocated workload - some weeks have no work and some have a lot. ",
+            "\u00a0Yang is a very good lecturer, and covers a lot of material every class which I liked, though it can be very dense at times. The server and TCP assignments are very challenging, but you learn a lot and feel very accomplished when you finish them. Workload is concentrated in 3-4 weeks in the middle of the semester, but material is very good. ",
+            "\u00a0problem set specs are too vague and cryptic, just figuring out what needed to be done often took several hours. problem sets are also grueling, but ultimately rewarding. but then after you spend dozens of hours doing the problem sets, the TAs dont even have the manpower to really grade everything, so they barely look at it!\r\n\r\nthere are definitely some organizational issues with the class ",
+            "\u00a0The content of this course is interesting and is presented in a way that is possible to follow along with, even for students who have no experience with networks. The greatest strength of this course is the thoughtful summarization and organization of the content Professor Yang chose to include. The biggest weakness of the class is that the classroom it was in was too small and I had to sit on the floor several times. This was pretty frustrating and distracting and I'm not sure why nothing was done to fix this. ",
+            "\u00a0Fascinating material, Yang Yang is a pretty solid professor, and super intellectually challenging problem sets. However, the specs could be clearer (closer to 323 level clarity)there were so many holes and unanswered questions on Piazza. ",
+            "\u00a0This course was great! The lectures are a lot to take in and sometimes you can feel a little lost, especially when Yang Yang thinks everything is \"so simple.\" However, they are very interesting and exciting, and time flies during class time. The problem sets are really great for building an understanding of how network protocols are implemented. ",
+            "\u00a0Strengths: You learn a lot in a semester. I didn't know anything about networks before this class, and afterwards I know so, so much. Prof. Yang is also a pretty good lecturer, although at times he moves really quickly.\r\nWeaknesses: The problem sets are really, really time consuming, basically to an unnecessary degree. ",
+            "\u00a0Strengths: one notoriously difficult assignment has a very high barrier for entry--that is, it's conceptually above some students' abilities to complete and as a result significantly benefits few students in the class while preventing (most?) other students from deriving even moderate benefit in terms of understanding the protocol it's meant to implement. ",
+            "\u00a0The assignments could have been released more quickly so that we would have more time to complete them. There was a crazy amount of work for this class, and each day counted. Also, getting help for assignments is a bit hard - I would rarely get answers to Piazza posts and emails!\r\n\r\nThe strength is that Professor Yang is highly knowledgeable and his high-level overviews on how to tackle his assignments are highly useful. ",
+            "\u00a0There's a ton of content in the course, but Professor Yang does a great job of teaching it thoroughly and making it accessible. Programming assignments are demanding but by far the highlight of the course for me. I'd say the programming itself is not as hard as say CPSC 323, but the concepts you're covering and linking from the topics in lecture to the programming implementation is challenging and extremely rewarding. ",
+            "\u00a0The homeworks are very strong, and really teach you how many networks are designed from the ground up. Yang yang is a great lecturer, and keeps everyone going at a brisk pace so you feel like youre learning a lot every class. One weakness is less guidance from office hours and TAs than other computer science courses. Some of the specs were also not clearly defined, causing us some early frustrations. ",
+            "\u00a0Strengths: an amazing course, the best way to learn about networks. In previous iterations of the class, the problem sets were mammoth-like. They still are, but Yang has broken them into parts with deadlines which makes them more manageable. Still, however, each part is incredibly hard.\r\nWeaknesses: Yang talks so fast!!! He also tries to pack an impossible amount of content in 1 hr and 15mins. This causes him to rush the entire lecture. There's no time to write anything down because you'll miss everything! ",
+            "\u00a0Oh man this course needs a disclaimer before you begin - the first two problem sets do not in anyway prepare you for the rest of the semester. the problem sets are simply so gargantuan it is unbelievable that students are expected to complete them in their entirety. the course is dense, so the problem sets do a great job elucidating the material, but really it is so difficult to complete even if you start early. you certainly learn the ins and outs of computer networks, though, so if you are prepared for the workload then you will learn the material. the pset specs could also use some clarification as well. ",
+            "\u00a0Strengths: Assignments are well-designed to build intuition. Lectures make students think and come up with solutions. Homework grading is very lenient, which means that students can focus on learning and implementing the most important parts, rather than edge casing. \r\n\r\nWeaknesses: We couldn't cover all the topics in time, and so many were left off as supplementary slides. Maybe expand the course into a 2-semester course or a 1-semester-2-credit course?\r\n\r\nThe TA was not familiar with the course material. He taught us the wrong solution for one of the PSETs.\r\n\r\nOutside-office-hours support was not ideal. Many Piazza posts went unanswered. \r\n\r\nThe two problems above could be solved by hiring multiple ULAs? ",
+            "\u00a0I learned a lot from the psets, but the workload is concentrated into a brief period instead of being spread out throughout the semester. "
+        ],
+        [
+            "\u00a0I fully recommend this course to anyone who wants to learn anything about how the internet works. Even if you don't, take it anyway and maybe you'll come away with a greater appreciation for the engineering marvel that is the world wide web. This class is painful while it lasts, but you will come out stronger and a lot more knowledgeable for having taken it, and you certainly will not regret doing so. This is probably the best class I've taken at Yale. ",
+            "\u00a0Yes, PLEASE take this course!!! This course is a rare gem in the CS department, in terms of how insightful, thorough, organised, and well-taught it is. I literally walked away from lectures feeling mindblown (in a good way.) One of my greatest regrets, besides not taking this course earlier, is there are not more classes like this at Yale CS. You will learn SO much about networks and system design, it will 100% be useful for your career. Also as a CS major you should probably know how the internet works, and not just in a superficial way. Yang Yang is one of the BEST instructors in the CS department, and he's extremely engaging. His passion for the field just shines through! So take it!!! You will miss out if you don't! While the workload is high, it's still manageable. (Probably don't take this with 323.) Note that the assignments are heavy in the middle of the semester. The first two psets are deceptively lighter compared to the next two psets, which are gigantic. You have ample time and late days to finish them though, just be disciplined. ",
+            "\u00a0I would, Professor Yang is a great professor and kept the lectures entertaining and engaging. ",
+            "\u00a0Definitely recommend this course to anyone who wants to gain a lot of knowledge but is also willing to work hard when necessary. I learned a ton in this class, and had very little background in this field. The 3rd and 4th assignments take a very long time to do however, so make sure you're willing to put in the work. ",
+            "\u00a0definitely- one of the best CS electives ",
+            "\u00a0Take networks! The workload for this course is... strange. I completed the first two assignments relatively quickly and then got DESTROYED by the next two (HTTP and TCP). Though assignments were really time consuming, they were actually pretty fun to work on and I felt like a learned a lot from them. One thing I wish I knew is that these huge assignments are graded extremely generously (if it even barely fulfills the requirements on the spec you'll get a 100). Just to get to the point of \"functional\" takes a ton of time, but you're not wasting time edge casing or anything like that. I'm really glad I took this class and totally recommend it. ",
+            "\u00a0I urge any serious CS major to take it, because the material is so interesting and Yang Yang's style of thinking about problems will serve you in whatever field you go into. IT'S A LOT OF WORK, but don't worry too much about gradesI think everyone ends up okay if they do the work, and there's generous partial credit. ",
+            "\u00a0Yes! Best CS elective by far. Yang Yang is an amazing lecturer and all-around person, and you will feel very supported throughout the course. His enthusiasm for networks is infectious and makes the material really interesting. The problem sets are challenging but definitely manageable if you conceptually understand the material, and you come out of them feeling so accomplished and proud! ",
+            "\u00a0I guess you can take it if you like sitting for an entire weekend and coding multiple times throughout the semester. This class is really, really time consuming, and you never know your grades until the very end, but you definitely learn a lot. I'd take it in a lighter semester. Debugging is not as painful as it is for some courses, and the grading overall is a bit sketchy so don't worry if your stuff doesn't work 100% because you'll probably be fine grade-wise. Lecture is sometimes a bit bland. ",
+            "\u00a0YES - this course will challenge you because the material is sometimes difficult to grasp + there's A LOT of work but the grading is fair and rewards hard ",
+            "\u00a0Yes. People should definitely know the ins and outs of the networking protocols and infrastructure that make up the modern Internet. ",
+            "\u00a0Take this course if your schedule is fairly free! On the psets, sometimes you feel as though you won't gain much knowledge from the 30+ more hours it will take to finish the assignment. You certainly do learn a lot about computer networks through this course. If your schedule is not so free but want to learn similar material, I recommend taking the EE version of this course instead. I would say the worst part of the class was that it was very hard to get responses from the professor/TF over Piazza and email. ",
+            "\u00a0I would highly recommend CPSC 433 to any student in the major, especially those who enjoy programming and/or are interested in the internet. That being said, the course covers topics and will teach you so much beyond the scope of networks: techniques for proofs and optimization in distributed systems and complex machines, for instance, are a core component of the latter part of the course.\r\nProfessor Yang is outstanding as both a lecturer and one-on-one during office hours. More importantly, though, he constantly and actively seeks student feedback on the course (at the beginning of every class, he asks how the pset is going [if we need an extension, clarification, etc.], asks about pacing of lecture, recaps the last lecture, and more). So even though the class is perhaps one of the most challenging the major offers, I think Professor Yang makes it also the best class I've taken in computer science. It's very accessible but expect to put in a lot of work. Would recommend having exposure to Java (especially using IDEs like IntelliJ can help a lot) before taking, though definitely possible without! ",
+            "\u00a0I would definitely recommmend networks - its one of our best, most challenging computer science courses. It provides a good mix of theory and implementation. If you enjoyed 323 and systems programming assignments, this is an awesome course to take. ",
+            "\u00a0I wouldn't particularly recommend networks, but it wasn't a particularly bad experience either. The material covered isn't particularly interesting -- it's mostly the inner details of systems like TCP networking, routers, DNS, etc.  The problem sets are not super fun either: the specifications are very vaguely written, making them really unfulfilling to work on. It's unclear what is expected in order to get points for the assignment, and debugging is a pain but not very enlightening. While the workload overall is not terribly large --  there's only two big psets -- I don't feel like I learned much from either of them or from lecture. ",
+            "\u00a0Yes! But this should be your hardest CS course in the semester. Don't play yourself and take this with another difficult CS course. Make sure you have the time in the semester to complete the massive problem sets. ",
+            "\u00a0lol just brace yourself for the work. you will learn the material but you may suffer trying ",
+            "\u00a0Absolutely. This is my favorite CS class at Yale. The lectures really force you to think. This class is also the most practical class I've taken. Everything I learned was very applicable to the things I had to do in my tech internship. \r\n\r\nThe grading is lenient so you can really focus on learning the concepts well. ",
+            "\u00a0If you want to have a good idea of how the Internet works, take this course! Professor Yang is very kind and patient, especially when he's explaining things in office hours. Writing a server and the sockets that allow the servers to communicate is a lot of work. There are a lot of protocols to learn, but it's worth it. "
+        ]
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "crn_code": "14344",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            0,
+            2,
+            0
+        ],
+        [
+            1,
+            2,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ],
+        [
+            1,
+            3,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            3,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            2,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about the labor market from both the supply and demand sides. I learned how to model the dynamics of the labor market and gained insights into some of the current policy debates in the field of labor economics. ",
+            "\u00a0I learned about labor economics models and the various forces behind  labor demand and supply. I also got a better understanding of how to solve micro-economic utility problems regarding labor. "
+        ],
+        [
+            "\u00a0I think too much of the class was spent on easier review concepts that were learned in intermediate micro and more could be spent on inequality and some of the other later topics. ",
+            "\u00a0Strengths:\r\nThe class itself had interesting material and usually gave plenty of space for discussion and debate, while still providing enough theoretical background in lecture slides.\r\n\r\nWeaknesses:\r\nThis class's psets, midterm, and final had little or nothing to do with what was taught in class. Most of class was qualitative in nature, while the exams were very quantitative.\r\n\r\nAdditionally, the grading policy was quite ridiculous, forcing a grade curve on a 7-person seminar class. Part of this was due to how easy the midterms were, which meant 1 or 2 points were the difference. On the other hand, the final was a huge jump in difficulty, which I assume was an overcorrection by the professor.\r\n\r\nI think largely this is due to Prof. Thomas misjudging the level of the class. If this was a large introductory seminar, than the midterms were at the right level. If this was a small senior seminar, than more advanced material in class would have prepared us for the final. But since it was neither, I felt both coddled and ignored. "
+        ],
+        [
+            "\u00a0I would not recommend this course to anyone. Professor Thomas was poorly organized, clearly inexperienced, and often rude to students. The tests were completely unrelated to the course material and only involved tricky math that did not in any way facilitate student learning; studying for the tests taught me nothing except how to do tricky calculus. ",
+            "\u00a0Reviews for this class will probably be all over the place due to anger over the grade distribution, but I thought the content of the course was good overall and was taught decently well. Lectures were interesting and we had good discussions about current debates in labor economics, like the impact of robots and immigrants on wages. However, the exams and problem sets were all very mathematical and model-specific, which was good to learn, but a little frustrating, because only ~20% of lecture was spent on modeling. Also the professor was intent on breaking up the distribution of test scores in our 7-person class and made the final ridiculously hard. I would recommend the class, especially if you are interested in wages, inequality, discrimination in the job market, etc. ",
+            "\u00a0I don't think I can safely recommend this course to others without major revisions by the professor. If you already have some knowledge of the subject, then chances are you'll find the class tedious and easy. If you don't and are merely interested, then you'll probably be screwed by the final.\r\n\r\nThis class needs to lay out its purpose, level, and difficulty at the beginning, rather than oscillate wildly. "
+        ]
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "crn_code": "23135",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I felt like I left the course with a deep understanding of the natural experiment methodology, but more importantly with a broader understanding of the nature of causal research in general. By the end of the course, I began to be able to discern between well-executed studies that present convincing theories and evidence and weaker studies. I feel like I could now come up with experimental designs on my own and evaluate them. I also appreciated the practical focus of the course. The GIS assignment and the text analysis tutorials were hugely helpful. "
+        ],
+        [
+            "\u00a0I really liked the way the syllabus was divided up. Reading several different approaches to one subject was a really effective way to teach us how to evaluate research designs. It also made it so you could see the evolution of the field and understand the current important questions. I also appreciated the practical focus of the course. The GIS assignment and the text analysis tutorials were hugely helpful. ",
+            "\u00a0I really liked this course but I would have liked to have learned about qualitative methods in more detail, especially how to incorporate qualitative data into a quantitative project. We did cover this in terms of text analysis, and it would have been great to have hands on experience with other examples. "
+        ],
+        [
+            "\u00a0Yes, I would definitely recommend this course. One helpful aspect was that it gave such a broad overview of different subjects and research questions. While focusing on a particular set of tools, we were able to see how they would apply to questions from all over the field. This left me feeling like I had a real sense of what the important questions are in the field, something that usually takes years to start to understand. I would also recommend it because it helped me think of several projects I want to undertake on my own and made me believe I could accomplish them. ",
+            "\u00a0Yes, definitely. "
+        ]
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49640/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This required course for students in the PEB graduate program involves a series of modules, co-taught by faculty, in which students from different academic backgrounds and research skills collaborate on projects at the interface of physics, engineering, and biology. The modules cover a broad range of PEB research areas and skills. The course starts with an introduction to MATLAB, which is used throughout the course for analysis, simulations, and modeling.", 
+    "title": "Integrated Workshop", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "ML 104", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10914", 
+        "listings": [
+            {
+                "number": "591", 
+                "subject": "MB&B"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Corey O'Hern"
+    ], 
+    "long_title": "Integrated Workshop", 
+    "extra_info": "A"
+}

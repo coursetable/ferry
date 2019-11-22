@@ -1,0 +1,51 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49532/assignments/syllabus", 
+    "requirements": "Enrollment limited. Prerequisite: two terms of introductory economics.", 
+    "description": "The essentials of energy and environmental economics, with applications. Analysis of core topics in public goods, intertemporal choice, uncertainty, decision theory, and exhaustible resources. Applications include energy security, nuclear power, the relationship between nuclear power and nuclear proliferation, and climate change.\nEnrollment limited. Prerequisite: two terms of introductory economics.", 
+    "title": "The Economics of Energy and Cl...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WTS A53", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10850", 
+        "listings": [
+            {
+                "number": "331", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "William Nordhaus"
+    ], 
+    "long_title": "The Economics of Energy and Climate Change", 
+    "extra_info": "A"
+}

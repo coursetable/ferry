@@ -1,0 +1,82 @@
+{
+    "crn_code": "30026",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            4
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            5
+        ],
+        [
+            1,
+            1,
+            3,
+            1,
+            1
+        ],
+        [
+            1,
+            0,
+            2,
+            2,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Good lab skill ",
+            "\u00a0Lots about orgo lab! ",
+            "\u00a0Organic chemistry II lab skills. ",
+            "\u00a0I developed many of the core skills necessary to perform syntheses in an organic chemistry laboratory. ",
+            "\u00a0I strengthened my lab skills and learned a lot more about my academic processes and which studying methods work best for me. "
+        ],
+        [
+            "\u00a0Strength: good organization, good learning curve\r\nWeaknesses: EPs were really annoying to do, not enough focus on the chemistry theory ",
+            "\u00a0Good guidance by TAs. ",
+            "\u00a0The sheer number of post laboratory assignments, and the crunched time frame made it difficult to devote the necessary time to the actual organic chemistry class that accompanies this laboratory course. With that said, the setup--the experiments, the course packet descriptions, etc. were great. ",
+            "\u00a0Clearer feedback on reports. ",
+            "\u00a0The only weakness is that the procedures were sometimes vague. This was a minor issue, because most of the procedures were very well laid out. Overall, the class took a difficult subject and made it understandable. "
+        ],
+        [
+            "\u00a0Sure, it's a good course to become more familiar with orgo lab techniques. They really become second nature to you. ",
+            "\u00a0Yes! I love organic chemistry lab. ",
+            "\u00a0Yes, this was a very fun, albeit time-consuming course to take. A necessary class for anyone going into STEM fields, in my opinion. ",
+            "\u00a0Yes, this class was amazing and very interesting. "
+        ]
+    ]
+}

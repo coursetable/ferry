@@ -1,0 +1,101 @@
+{
+    "crn_code": "20617",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            9,
+            4
+        ],
+        [
+            0,
+            1,
+            6,
+            7,
+            3
+        ],
+        [
+            0,
+            3,
+            5,
+            6,
+            3
+        ],
+        [
+            0,
+            3,
+            4,
+            6,
+            3
+        ],
+        [
+            0,
+            2,
+            5,
+            8,
+            2
+        ],
+        [
+            0,
+            1,
+            6,
+            8,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Full-stack software development plus entrepreneurial practices were the focus of this course. I learned concepts in JavaScript, HTML, CSS, SQL, MongoDB, as well as best-practice software development methodologies. On the business end we learned about lean start-up methods, how to finance entrepreneurial endeavors, and how to decrease the risk of failure. I definitely learned a lot and I really enjoyed this course. ",
+            "\u00a0Half of the class is learning full-stack web development, the other half is a class project where you launch/build a startup idea and learn business concepts. ",
+            "\u00a0Learned front and back end development, which is a very realistic and applicable cs skill. Also learned about the basics of entrepreneurship and starting a business. ",
+            "\u00a0I learnt about the models, views, and controllers architecture of web development. I also learnt about relational databases, server side and client side javascript and how all these elements come together in the full stack web development framework. Aside from the technical elements, I also learnt about the financial metrics which are used to measure the success of a startup, the lean startup methodology, and how to experiment with a business idea. ",
+            "\u00a0Learned a lot of practical development skills. ",
+            "\u00a0Website development and business methodologies (mostly the lean startup framework) ",
+            "\u00a0Ability to make a website from scract ",
+            "\u00a0Learned the basics of some practical CS (web apps, SQL, servers, etc) and entrepreneurship. Was an interesting class especially if new to any of these fields. ",
+            "\u00a0How to think about startups and approaching customers, and some software skills as well. ",
+            "\u00a0I gained a pretty decent understanding of how web apps fit together. ",
+            "\u00a0Coding in javascript and SQL; using version control like Git; teamwork; intro to business models, pitching, funding, entrepreneurship "
+        ],
+        [
+            "\u00a0Strengths: We cover a lot of ground, and it's all very practical. A common complaint of Yale's CS department is how theoretical it is, but this class is like the response to that. This class effectively gives you the tools to actually make something and get it on the web, which is an invaluable skill.\r\nWeaknesses: We cover a lot of ground, and it's all very practical. In order to get us to where we need to be, we go at a breakneck pace for the first half of the semester, spending hours on topics that you could devote a semester to. However, it's all super practical so you really got to get it down and know it in the short time it's being discussed. This is an unavoidable issue in my opinion, since the breadth of knowledge you need to develop software is simply too great to expect any significant depth in each area, considering this class is open to people with no computer science background. Perhaps this course could be improved with a basic CS requirement so that the first half of the class isn't so hectic, but in the spirit of having it be accessible to SOM students and other CS beginners, I don't honestly feel this would be the best option. By its design this is just a hard class. ",
+            "\u00a0The curriculum is solid - maybe start the project earlier? I understand some students need more time to study web development though. ",
+            "\u00a0A lot of the learning is done one one's own time, and sometimes I felt like things were a little too open ended and ended up being frustrating. I wish there was a better interface to submit stuff through as well. ",
+            "\u00a0I think this course is very fast paced and given the amount of coding required, the resources were inadequate. The office hours of peer tutors were always very crowded when there was a big assignment and most of the time there was only one peer tutor available at one time. There were some unnecessary complications for example having to submit the homework through the terminal. For someone with minimal computer science experience, this was challenging because even the simplest tasks (submitting quizzes and assignment) required going to office hours to figure out. I enjoyed the initial few assignments because they dealt with small pieces which were not easy for me but I could grapple with one at a time. However, I don't think I was adequately prepared to make the jump to a big assignment like the social to do. The only hackathon for that assignment was held one day before the it was due. In class, we did practice with a small to-do app which we were supposed to build but I struggled with it and I couldn't finish it. The problem is that it can be quite intimidating to ask for help when you don't want to sound dumb. Oftentimes I would go home, try to figure it out, fail and then give up. I didn't have this problem with the first few assignments because they were small pieces of the puzzle but I think we skipped a few steps before going to social to do. We needed more experience dealing with the MVC architecture, creating a simple one our own homework assignment, and linking it up with a database. ",
+            "\u00a0The steepness of the learning curve of software development makes students very hard to thoroughly understand the concepts. Rather, most students just try to play with the distribution code and hope for the best. The course and the instructor are very ambitious (which is good), but it seems to me that it is a one-year course. ",
+            "\u00a0This course promises a lot, and while a lot of information was covered it's definitely too much for one class (especially if you're unfamiliar with the languages taught in the course). It was fairly overwhelming. Also, I felt like I was doing a looooot of googling and independent learning, and while it's expected to put in extra work for any class I don't know how much I actually learned from lectures. Kyle is great though, and is clearly passionate about the subject. I think this course may be better off it was split up between two semesters, with one semester focusing more on actually learning how to code and the other on the business aspect. ",
+            "\u00a0A little disorganized ",
+            "\u00a0Course seemed imbalanced for those who had previous computer science background. Also was difficult to have group projects with some students cr/d-ing the class. ",
+            "\u00a0A ton of knowledge crammed into one course, and not much depth. Make this class into a two-term class and go deeper into each topic. ",
+            "\u00a0The first half was greatI felt like I was actually learning how to build real web applications.  The second half seemed very rushed and disorganized, and honestly less interesting.  I think the focus should primarily stay on the computer science portion of the class, with an occasional lecture on sales or finance, instead of devoting half and half to each.  It also felt rushed because team selection for our groups was incredibly disorganized, basically taking place in the span of a couple hours, and only a month for the project seemed kind of unhelpful. ",
+            "\u00a0Strength - great opportunity to pick up a new coding language or develop a skill like app development or database interaction in a short amount of time and get help from real people (TAs at office hours, professor, teammates in final project) rather than just on Google all the time.  Weakness - wish there were more time to delve into the entrepreneurship, since this was the first time I ever took a management class (like case studies into different start-ups--that could teach the entrepreneurial law and finance concepts in a more practical way), but there just isn't enough time to do everything in one semester. "
+        ],
+        [
+            "\u00a0I would recommend this course to anyone with a background in CS who's interested in gaining more practical skills. If you have no background, I would strongly encourage you to look elsewhere if you're looking for an \"intro to code\" class, but if a highly focused curriculum centered on full-stack development and entrepreneurship is what you're looking for, and if you're prepared to put in a little extra work on the technical side of things, then I would also recommend this class. Just keep in mind it may feel like a lot of work at times. ",
+            "\u00a0Yes! This is the ONLY computer science class at Yale that teaches a) web development, b) building, marketing, and selling software products that people actually use (vs. toy assignments) ",
+            "\u00a0If you want to do software development this isn't a bad class to take. But there are less frustrating cs classes out there. ",
+            "\u00a0I would recommend this course to students with some prior web development experience. It is very fast paced and you are required to have built a full product by the end and gain traction. This means you can't waste too much time learning how to build. ",
+            "\u00a0Yes, it's a great way to apply CS to real world applications. ",
+            "\u00a0I believe that there are better ways of learning how to model a business and programme a website ",
+            "\u00a0If you feel comfortable building web apps already then go for it--there's a lot to be learned from the course. If not, prepare to be really overwhelmed. ",
+            "\u00a0Yes, it was a good course ",
+            "\u00a0I would recommend this for students interested in both CS and entrepreneurship or as an excuse to take a class that promotes doing a group side project. Unfortunately, this class does not count for a CS credit. ",
+            "\u00a0Yes but be ready to work. Really interesting class regardless of whether or not you plan to start a company. ",
+            "\u00a0YES. Best class I have ever taken at Yale!  Course material was so useful, and it's great to get practical coding experience learning from real humans (lots of office hour time) rather than just relying on Google.  Also the professor is really funny and experienced, encourages everyone to participate, and is really helpful at office hours.  Definitely do the pre-class readings because they are super helpful and provide a framework to understand not just class but the whole rest of the real world and how the internet and apps work.  I wish it were longer and there were more time to go into examples of some start ups and the issues they faced in depth. "
+        ]
+    ]
+}

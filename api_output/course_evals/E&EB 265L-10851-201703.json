@@ -1,0 +1,79 @@
+{
+    "crn_code": "10851",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            3,
+            0,
+            0
+        ],
+        [
+            0,
+            2,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course was a very positive supplement to the lecture. It allowed you to see and touch and interact with the fish we were learning about in the lecture course, and also to learn about more fish. ",
+            "\u00a0Closer look at fish anatomy, fish diversity. Field trip exposes you to real experience of ichthyologists. ",
+            "\u00a0Hands-on understanding of the diversity of most fish families. Practice identifying anatomical structures. ",
+            "\u00a0Gained an ability to identify a fair number of fish species as well as give some background information on various fish orders. "
+        ],
+        [
+            "\u00a0This course was a lot of fun, and the laid-back structure of the lab was appreciated. I wish there was a way to coordinate the lab and lecture a bit better. Also, the field outing was one of my favorite parts of the course, and I wish we'd been able to do more of that (i.e. a field trip to an aquarium). ",
+            "\u00a0Very interesting, fun, and helpful. The course could be a little more fast-paced and efficient-- it felt like we often could have moved faster through looking at fish specimens, leaving room to cover more material or greater depth. ",
+            "\u00a0The field trips were great. The identification of species made a lot of sense. It would've been great to have the note sheets on canvas. "
+        ],
+        [
+            "\u00a0Would highly recommend. I really think you don't get as much out of the lecture if you skip the lab. ",
+            "\u00a0Yes, if you're looking for an interesting biology lab this is a good one to pair with the lecture ",
+            "\u00a0If you're interested in biodiversity and fishes, this is a great foundational course! ",
+            "\u00a0If you are taking the lecture course, take this also. It helps with that and is generally a pretty fun way to spend the afternoon. "
+        ]
+    ]
+}

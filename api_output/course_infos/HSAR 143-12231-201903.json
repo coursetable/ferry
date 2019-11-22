@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50174/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Buddhist art and architecture of East Asia, Southeast Asia, and Tibet from the tenth century to the early modern period. Emphasis on cross-regional engagements including the impact of Islam.", 
+    "title": "Introduction to the History of...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "LORIA 351", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12231", 
+        "listings": [
+            {
+                "number": "143", 
+                "subject": "HSAR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Mimi Yiengpruksawan"
+    ], 
+    "long_title": "Introduction to the History of Art: Buddhist Art and Architecture, 900 to 1600", 
+    "extra_info": "A"
+}

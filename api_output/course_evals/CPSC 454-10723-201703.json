@@ -1,0 +1,78 @@
+{
+    "crn_code": "10723",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course is a deep dive into the fairly niche subject of formal software verification. In additional to learning the industry-standard techniques of formal methods, I was able to strengthen my math and logic skills. It also provided me with a different perspective for considering the correctness of my code, which I believe is applicable in any field of computer science. ",
+            "\u00a0You learn to think about coding in a way that really isn't taught to you in any other CS class here -- how to write truly foolproof software. ",
+            "\u00a0You will implement a program-verifier and a SAT-solver. So incredibly useful. "
+        ],
+        [
+            "\u00a0No problem set answer keys. Thats just wrong. ",
+            "\u00a0This course is very applied and you leave with a great understanding of techniques in formal methods. The projects really helped improve my understanding of the material. On the other hand, some of the homework problems towards the end of the semester were very tedious, and I think it would have been more helpful to have several small problems on a topic (like the ones we had on our final exam -- 2-3 line programs) rather than having to apply a method to an 8-12 line function. Moreover, I found it difficult to bear in mind the overarching takeaways from the course, especially in the beginning of the semester. For example, I found it difficult to keep track of the various program semantics (operational semantics, Hoare logic, guarded commands, FOL, etc) and often lost sight of the purpose of each one. ",
+            "\u00a0Great class and great professor. Could use much more structure (for example, actually having a syllabus!). The lecture slides are extremely helpful -- more so than most classes, but you do have to really parse them to understand. ",
+            "\u00a0Programming assignments are unbelievably helpful. I wish there were more programming, and fewer P-Sets. "
+        ],
+        [
+            "\u00a0Solid CS elective, especially for the mathematically inclined. It's a pretty specific topic so I'm not sure how transferable the material is to other fields, but it does provide you with the opportunity to practice and strength your logic and programming skills. ",
+            "\u00a0Take it if you like more theory-oriented computer science courses. ",
+            "\u00a0Here's the skinny - Verification is tough. It's pretty theoretical, handles a lot of topics in first-order logic, and is occasionally more math-y than CS-y. Most of the homeworks reflect this, as they are more proof-based (but not to the extent CPSC 365 is) than programming based.\r\n\r\nIf that's your thing, good for you chap. Otherwise - fear not, as the two programming assignments more than make up for it. In the first, you implement your own verified language, similar to Microsoft's Dafny. In the second, you implement a SAT-solver using DPLL with several optimizations. The programming assignments are tough, but you have a month for each so it's not too bad. The professor (Ruzica) is incredibly lenient, and enjoys meeting with each student to make sure they have a firm grasp for the concepts. She is one of the most enthusiastic professors I have ever had, and much appreciate her for it. "
+        ]
+    ]
+}

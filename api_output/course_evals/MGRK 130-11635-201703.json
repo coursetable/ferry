@@ -1,0 +1,71 @@
+{
+    "crn_code": "11635",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            2,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The course helped me develop Modern Greek through a very practical and conversational approach while also providing an enriching background in cultural comparisons. "
+        ],
+        [
+            "\u00a0One strength of the course is that with a smaller class size, we are able to work a lot on speaking and conversations, which is the most important, and often most difficult, part of learning a language. The work load is effective and very manageable. The only weakness I can think of is the way the course book sometimes teaches grammar, and would benefit from a slightly less usage based approach and more of a chart and rule based one. "
+        ],
+        [
+            "\u00a0I would recommend the course as it fostered very comfortable development and use of the language, and I left every class very engaged and happy. "
+        ]
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49761/assignments/syllabus", 
+    "requirements": "The core course for Yale Journalism Scholars. No prerequisites.", 
+    "description": "Examination of the practices, methods, and impact of journalism, with focus on reporting and writing; consideration of how others have done it, what works, and\u00a0what doesn\u2019t. Students learn how to improve story drafts, follow best practices in journalism, improve methods for obtaining, skeptically evaluating, and assessing information, as well as writing a story for others to read.\nThe core course for Yale Journalism Scholars. No prerequisites.", 
+    "title": "Journalism", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LC 103", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10965", 
+        "listings": [
+            {
+                "number": "467", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENW\">YC English: Creative Writing</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSA\">YC Poli Sci: American Govt</a></li></ul>"
+    ], 
+    "professors": [
+        "Steven Brill"
+    ], 
+    "long_title": "Journalism", 
+    "extra_info": "A"
+}

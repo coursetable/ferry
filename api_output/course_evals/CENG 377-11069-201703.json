@@ -1,0 +1,94 @@
+{
+    "crn_code": "11069",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            5,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            8
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            4
+        ],
+        [
+            0,
+            0,
+            4,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            7,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I became very familiar with mass balances. Having already took Chemical Kinetics and Reactors as well as the Intro to Chemical Engineering course, Water quality control had very similar concepts to these two courses. The main lesson I learned (that I will probably remember more clearly than how to solve mass balance equations) is how drinking water and waste water is treated. ",
+            "\u00a0I have a good overview of how modern drinking water and waste water systems work. ",
+            "\u00a0Practice thinking as a systems engineer, doing math correctly, and handling complicated concepts by breaking them down into simpler pieces/steps. ",
+            "\u00a0I learned a lot about how to apply different mass balance techniques to water treatment processes. Part of this includes manipulating differential equations and its a good application of math skills that you learn previously in college. In the class you learn about a variety of systems associated with water treatment including aeration,  filtration, and sedimentation. ",
+            "\u00a0I learned a lot about how actual systems work and why they are designed the way they are, but I think most importantly I learned how to set up mass balance and to think in terms of systems. ",
+            "\u00a0I developed excellent engineering problem solving skills for tackling the major design challenges and theoretical problems behind water treatment. I also gained a great fundamental knowledge of the water quality control industry. This is a fantastic elective course for rounding out your engineering education and applying your math and engineering skills to interesting, relevant issues! ",
+            "\u00a0This course covers in detail water and wastewater treatment systems, including many of the calculations involved with processes for each system. I became very familiar with completely mixed and plug flow reactors, as well as how to perform calculations for different water treatment processes in each type of reactor. I also learned a lot about the qualitative aspects of water treatment, as we were able to take a tour of a water treatment plant at the end of the semester. ",
+            "\u00a0Although the class focuses a lot on mathematical concepts simply due to the nature of the material, I learned a lot about more of the overarching \"big picture\" engineering concepts and ways to solve problems. ",
+            "\u00a0I learned about the processes involved in water treatment as well as about the design of different water treatment plants. I learned to use mathematical models, chemistry, and diagrams to understand and describe the each step of water treatment. "
+        ],
+        [
+            "\u00a0The strength of this course is Professor Kim, and also our TF. Professor Kim took the time to explain concepts slowly as well as put them in laymen's terms so that we not only understood how to solve problems, but also understood the overall goal that water quality engineers are trying to achieve. Our TF was extremely helpful during office hours for our PSETS. She was very responsive to questions asked through emails, very clear about grading, and it normally only took me one office hour session to understand how to go about doing the homework. ",
+            "\u00a0A really great class! We went at a very reasonable pace, and Prof Kim made sure that everything was clearly laid out. The class was very well organized and I learned a ton. One of my favorite classes! ",
+            "\u00a0It was really great. Learned a lot. Jaehong is an excellent and brilliant teacher. The practice problems were really good preparation for the exams, which was much much appreciated. ",
+            "\u00a0The strength of the class was that the lecture notes were very helpful when it came to studying for the tests. On the other side of that, the textbook was not very helpful with anything in the class because was a little too dense for what we were learning. The class also takes a trip to a water treatment plant which made it really easy to apply what we were learning in class to the real world. ",
+            "\u00a0I think the course takes a while to reach a good pace but once it does it's very engaging. The material can be weird to grasp at times but it's approached in a way that makes sense and paced so that we have enough time to understand it. ",
+            "\u00a0This course features a great, well-organized lecture and fantastic supplemental material/activities. The concepts are engaging and the exams and homework are fair and didactic. There are no major weaknesses in this course. Also, the mini-seminars and the water treatment facility tour are great pluses! ",
+            "\u00a0Strengths - Dr. Kim is a really engaging professor and makes a subject - that is not exactly naturally fascinating - pretty interesting. The subject material is presented in a way that seems to follow a natural progression - one concept seems to build on the previous, etc.\r\n\r\nWeaknesses - The course runs through material pretty quickly, which is understandably due to the large amount of material that has to be covered, but it does feel like a lot of material is squeezed into a very short time frame. It would be helpful to review some of the material before going on to the next, although that is probably something student should also being doing on their own. ",
+            "\u00a0The course is very organized to facilitate student learning, and students leave the course with applicable knowledge about water treatment. The lectures are clear and organized, and the workload for the course was fair. The three midterms and no final format was great because it allowed both studying and the tests themselves to delve deeply into the most recent concepts. Prof Kim really cares about his students' learning progress as well as each student as a person, and he was always willing to answer questions in class. Prof Kim's review sessions were very helpful before tests. A lot of people come to TA office hours each time they are held (this past semester office hours were held mostly based on student requests, which reasonable given the moderate number of psets that we had), so I would recommend that the class have regular weekly office hours next fall, or at least office hours every week that a pset is due. Our TA, Minjeong, was a huge help in understanding the homework and broader concepts during office hours. "
+        ],
+        [
+            "\u00a0Yes! If you are a chemical engineer looking for an elective, this course has similar concepts to the intro chemE course and CENG 300, kinetics and reactors. But, if you're like me, and don't need an elective but are very interested in ENVE courses, you should also take this! \r\n\r\nThe exams are very fair, with occasional twists beyond what we've learned in class. Professor Kim provides sample problems always a week or more before the exam. He includes one questions in the exam that is the exact question from the sample problems or homework. Studying for these exams are pretty straight forward. Memorizing key equations (which are sparse) then understanding how to go about solving it by looking at example problems and lectures is all you need to do. Also, v important, the text book is NOT necessary for the class. DONT BUY IT. Everything you need to know is in the lectures. that being said, if you miss more than a couple lectures, it would be very hard to catch up. ",
+            "\u00a0A really really great class! Would highly recommend if you have the required math background and are interested in these topics. Professor Kim is the best - so organized and passionate, but also very funny and engaging. I looked forward to class every day and feel like I left the class with a good understanding of how our modern drinking water and waste water systems work. ",
+            "\u00a0Yes definitely! You probably are only taking it because you're CENG/ENVE, obviously it's unsuitable for someone without any interest in engineering or math. The PSETS/practice exams are super helpful. I recommend trying them yourself and checking/working through if you're stuck with other students. ",
+            "\u00a0If youre not in the environmental/chemical engineering major, it can definitely be a lot of work especially if you have no interest in the topic. ",
+            "\u00a0I wouldn't recommend it if you're not interested in the material but if you're interested in water it's as good a class you can take at Yale. ",
+            "\u00a0I strongly recommend this course to Yale students, especially engineering majors of all disciplines. The course is a fantastic way to learn how to take fundamental engineering principles and mathematical skills and apply them to readily solve any engineering problem that is thrown at you (with water treatment being the focus in this case). The course is extremely fun and is taught by a great lecturer. Take this if you have the chance; it is a diamond in the rough of other STEM courses at Yale. Enjoy it! ",
+            "\u00a0If you're taking this class, it is most likely a requirement for you, but it is definitely one of the better taught ENVE requirements, so you have that to look forward to. I'd also recommend this course to anyone interested in working with water/wastewater treatment, it very thoroughly covers the basics (and then some). I will warn that the course can be a little misleading, as the first unit is much more qualitative than the rest of the course material - don't be fooled, it gets a lot more difficult and quantitative as the semester progresses. ",
+            "\u00a0This class is mostly so great because of Dr. Kim. The subject material on its own is not really that fascinating, but Dr. Kim does a really great job of getting students excited and engaged with the material. He does this by discussing the real-life applications of the subject matter, as well as clearly defining what his main goals are in this course: to teach long-term problem-solving approaches and build better engineers. He recognizes that most of the detailed math he teaches will be forgotten at some point, but really wants students to leave with a much better idea of how to tackle problems in the future. He is also very invested in each student, and makes a point to get lunch one-on-one with every student in his class.\r\nThe class itself is pretty good too - 3 non-cumulative exams, each 25%, and biweekly problem sets, also 25%. Don't get me wrong though, it's a challenging course and requires a decent amount of work. If you're an environmental/chemical engineering major though, you're probably used to this workload and it's pretty manageable. ",
+            "\u00a0The course is specific and does what it says--you will learn about water quality control, i.e. water treatment processes and water treatment plants. You will come out of it knowing what it takes to produce drinkable water as well as how we deal with wastewater. Although you do not need too much math to be able to take the course, you do need an understanding of basic calculus to be able to follow the derivations and solve some of the problems.If you want to learn about industrial water treatment or see yourself getting involved in water resource management at some point in your career, then I recommend this course. If you are more interested in the policy side of water quality, then this is not the course for you. To EnvE: this course is a requirement for the major, but it's a good one and Prof Kim is a great professor. The material will fit in well with what you learn in water chemistry. "
+        ]
+    ]
+}

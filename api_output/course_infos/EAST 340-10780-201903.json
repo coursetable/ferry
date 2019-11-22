@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49658/assignments/syllabus", 
+    "requirements": "Prerequisite: CHNS 171 or equivalent. Formerly CHNS 202.\u00a0", 
+    "description": "A research course in Chinese studies,\u00a0designed for students with background in modern and literary Chinese. Explore and evaluate the wealth of primary sources and research tools available in China and in the West. For native speakers of Chinese, introduction to the secondary literature in English and instruction in writing professionally in English on topics about China. Topics include Chinese bibliographies; bibliophiles\u2019 notes; specialized dictionaries; maps and geographical gazetteers; textual editions, variations and reliability of texts; genealogies and biographical sources; archaeological and visual materials; and major Chinese encyclopedias, compendia, and databases.\nPrerequisite: CHNS 171 or equivalent. Formerly CHNS 202.\u00a0", 
+    "title": "Sinological Methods", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "SML 207", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10780", 
+        "listings": [
+            {
+                "number": "340", 
+                "subject": "EAST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Pauline Lin"
+    ], 
+    "long_title": "Sinological Methods", 
+    "extra_info": "A"
+}

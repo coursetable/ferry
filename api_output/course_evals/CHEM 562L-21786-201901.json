@@ -1,0 +1,84 @@
+{
+    "crn_code": "21786",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            5
+        ],
+        [
+            3,
+            1,
+            3,
+            0,
+            0
+        ],
+        [
+            3,
+            1,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to use all parts of the lathe & mill, how to indicate / zero, how to use a micrometer, threading, tapping, tolerances, and I developed a great mechanical intuition. I feel very comfortable in all parts of the machine shop. ",
+            "\u00a0Learned how to use various machines and techniques in using them. ",
+            "\u00a0Learned machining and fabrication techniques on the mill and lathe.  Mostly small parts.  We had one short lesson on CNC milling. ",
+            "\u00a0Knowing how to read the blueprint and operate heavy machinery. ",
+            "\u00a0precision machining ",
+            "\u00a0Basic/fundamental machining skills (measurement/band-saw/milling/lathe) "
+        ],
+        [
+            "\u00a0This has been my favorite class at Yale so far. There are really no weaknesses. You get to spend 4 hours a week in the beautiful wright lab shop with Dave who is a funny, fantastic professor with a ton of good stories to tell. He makes sure that everyone makes a steam engine that you get to take home. The walk to wright lab and the fact that this class isn't for credit aren't great, but so worth it for this class. ",
+            "\u00a0The class is instructive by nature and Prof. Johnson is great at what he does.  I really can't say the class has any weaknesses because I learned all I expected to learn ",
+            "\u00a0This course was taught well and well designed. No improvements needed. ",
+            "\u00a0BEST COURSE EVER! ",
+            "\u00a0Overall course was great, and very rewarding. Also super cool to take home operating engine that you built yourself. "
+        ],
+        [
+            "\u00a0SO MUCH YES. If you've ever wanted to make something with your hands and be proud of it, TAKE THIS CLASS. I took it as an undergrad sophomore and loved it. Even if you aren't a MechE / STEM student, everyone I know who took it loved it. ",
+            "\u00a0Yes. It was fun to work with your hands. It was a nice 4 hour break each week from the difficult course work. ",
+            "\u00a0Yes.  The class is a great way to learn machining techniques, not to mention a break from the general stress of Yale. ",
+            "\u00a0Yes. This course offers a variety of applications on many fields: from art to architecture to science and engineering. ",
+            "\u00a0Yes, definitely feel confident in my ability to machine basic parts now. "
+        ]
+    ]
+}

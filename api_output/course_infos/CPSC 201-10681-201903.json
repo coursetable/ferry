@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49531/assignments/syllabus", 
+    "requirements": "After CPSC 112 or equivalent.", 
+    "description": "Introduction to the concepts, techniques, and applications of computer science. Topics include computer systems (the design of computers and their languages); theoretical foundations of computing (computability, complexity, algorithm design); and artificial intelligence (the organization of knowledge and its representation for efficient search). Examples stress the importance of different problem-solving methods.\nAfter CPSC 112 or equivalent.", 
+    "title": "Introduction to Computer Science", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "DAVIES AUD", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10681", 
+        "listings": [
+            {
+                "number": "201", 
+                "subject": "CPSC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Stephen Slade"
+    ], 
+    "long_title": "Introduction to Computer Science", 
+    "extra_info": "A"
+}

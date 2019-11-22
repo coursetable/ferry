@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50102/assignments/syllabus", 
+    "requirements": "Conducted in Hebrew. Prerequisite: HEBR 140 or equivalent.", 
+    "description": "An examination of major controversies in Israeli society. Readings include newspaper editorials and academic articles as well as documentary and historical material. Advanced grammatical structures are introduced and practiced.\nConducted in Hebrew. Prerequisite: HEBR 140 or equivalent.", 
+    "title": "Advanced Modern Hebrew: Daily ...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WLH 004", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11441", 
+        "listings": [
+            {
+                "number": "213", 
+                "subject": "JDST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Orit Yeret"
+    ], 
+    "long_title": "Advanced Modern Hebrew: Daily Life in Israel", 
+    "extra_info": "A"
+}

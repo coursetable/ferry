@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49248/assignments/syllabus", 
+    "requirements": "After college-level general chemistry. Students who have earned a grade lower than C in general chemistry are cautioned that they may not be sufficiently prepared for this course. Usually followed by CHEM 221 or 230.", 
+    "description": "An introductory course covering the fundamental principles of organic chemistry. The laboratory for this course is CHEM 222L.\nAfter college-level general chemistry. Students who have earned a grade lower than C in general chemistry are cautioned that they may not be sufficiently prepared for this course. Usually followed by CHEM 221 or 230.", 
+    "title": "Organic Chemistry", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "SCL 110", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10509", 
+        "listings": [
+            {
+                "number": "220", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Seth Herzon"
+    ], 
+    "long_title": "Organic Chemistry", 
+    "extra_info": "A"
+}

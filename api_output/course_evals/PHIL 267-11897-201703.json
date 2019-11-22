@@ -1,0 +1,88 @@
+{
+    "crn_code": "11897",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            4,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            9
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            8
+        ],
+        [
+            0,
+            1,
+            2,
+            7,
+            1
+        ],
+        [
+            1,
+            4,
+            4,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Logic! And a slightly more rigorous way of approaching proofs. ",
+            "\u00a0Completeness theorem! ",
+            "\u00a0Rigorous examination of the foundations of first-order logic. Very well organized ",
+            "\u00a0I learned many different proof based methods and a basic understanding of Godel's completeness theorem. ",
+            "\u00a0I was introduced to the methods behind proofs. ",
+            "\u00a0Introductory mathematical logic was learned. ",
+            "\u00a0This course built toward a proof of the completeness of first-order logic. Over the semester, I developed familiarity with using sentential and first-order languages while also examining how each system functions at the metalogical level. I also gained experience writing proofs, especially proofs by induction and by contradiction. "
+        ],
+        [
+            "\u00a0This is the most structured class I have ever had! ",
+            "\u00a0Very interesting material especially for math students. ",
+            "\u00a0The course material is sequential and the problem sets reinforced the material.\r\n\r\nI would have preferred more frequent, shorter problem sets. ",
+            "\u00a0The course is very structured, in a helpful way. The material is covered with ruthless efficiency, while office hours are helpful in filling in any gaps left by the pace of instruction. ",
+            "\u00a0The particular strength of this course is its structure: the semester has a clear focus toward the proof of the completeness of first-order logic. Individual pieces may feel disparate as they fall into place, but Professor Shin emphasizes how each element becomes important to the final proof in the last few weeks. Professor Shin's teaching was a highlight as well. I was glad to have a small lecture, with Professor Shin running the sections and grading the problem sets. She is an excellent teacher. "
+        ],
+        [
+            "\u00a0Yes! Sun-Joo is great and the psets are enjoyable and not too hard. ",
+            "\u00a0Excellent class. One of my favorite classes and professors in my now 7 semesters here. Take this class (or at least take a class with Sun Joo). Great decision. ",
+            "\u00a0This will be an easy yet interesting QR credit! I really enjoyed it! ",
+            "\u00a0This course is ever well organized and taught. I never thought I would feel so comfortable doing proofs! This course improved the way I think. ",
+            "\u00a0Definitely recommend. ",
+            "\u00a0I would; this course introduced useful ways to think about philosophy. ",
+            "\u00a0An intellectually difficult, but rewarding introduction to the formal system of first-order logic. Highly recommend to anyone who might be interested. ",
+            "\u00a0I highly recommend this course to anyone with experience in proof-based math. This course is challenging without being overwhelming, and Professor Shin is an excellent teacher. "
+        ]
+    ]
+}

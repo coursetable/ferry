@@ -1,0 +1,49 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Painting techniques paired with conceptual ideas that explore how painting holds time both metaphorically and within the process of creating a work. Use of different Yale locations as subjects for observational on-site paintings. Materials fee: $75.\n\nPrerequisite: ART 130, 230, or 231, or with permission of instructor.\n", 
+    "title": "Painting Time", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "GREEN 211", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }, 
+        {
+            "start_time": 15, 
+            "location": "", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 19
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10428", 
+        "listings": [
+            {
+                "number": "332", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Sophia Naess"
+    ], 
+    "long_title": "Painting Time", 
+    "extra_info": "A"
+}

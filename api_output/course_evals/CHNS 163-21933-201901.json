@@ -1,0 +1,72 @@
+{
+    "crn_code": "21933",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            2,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Increased knowledge of Chinese politics and societal issues. Significant practice in listening, speaking, reading and writing Chinese. "
+        ],
+        [
+            "\u00a0Very strong course overall, though the textbook could be updated. Many articles in the textbook were written a decade ago. "
+        ],
+        [
+            "\u00a0Absolutely. The course content is very interesting and Professor Su is one of the best instructors Ive had at Yale. ",
+            "\u00a0Yes! Su Laoshi is great -- even after a bad time with Chinese at boring Sunday Chinese school growing up, his stories and energy made me love it again. "
+        ]
+    ]
+}

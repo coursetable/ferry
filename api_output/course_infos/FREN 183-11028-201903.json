@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49977/assignments/syllabus", 
+    "requirements": "Prerequisite: FREN 150 or a satisfactory placement test score, or with permission of instructor. May be taken concurrently with or after FREN 160 and FREN 170.", 
+    "description": "An advanced language course emphasizing verbal communication and culture.\u00a0 Designed to foster the acquisition of the linguistic and cultural skills required to evolve within a Francophone medical environment. Discussions, in-class activities, and group projects in simulated professional situations, with a focus on ethical questions. Topics such as public health policies, the doctor-patient relationship, medicine in Francophone Africa, humanitarian NGOs, assisted reproductive technologies, end-of-life care, organ donation are explored through films, documentaries, articles, excerpts from essays and literary texts.\u00a0Conducted entirely in French.\nPrerequisite: FREN 150 or a satisfactory placement test score, or with permission of instructor. May be taken concurrently with or after FREN 160 and FREN 170.", 
+    "title": "Medical French: Conversation a...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WLH 205", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11028", 
+        "listings": [
+            {
+                "number": "183", 
+                "subject": "FREN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Leo Tertrain"
+    ], 
+    "long_title": "Medical French: Conversation and Culture", 
+    "extra_info": "A"
+}

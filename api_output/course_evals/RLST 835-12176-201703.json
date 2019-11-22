@@ -1,0 +1,76 @@
+{
+    "crn_code": "12176",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            1,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0One primary thing I learned was about the standard resources for epigraphic work. ",
+            "\u00a0Facility with Old Aramaic script and language, as well as basic familiarity with the corpus of inscriptions in that dialect. ",
+            "\u00a0I feel that I have a working understanding of the grammar of the language, as well as some of the typical forms that early inscriptions. "
+        ],
+        [
+            "\u00a0More grammatical resources would be useful. The opportunity to work with real inscriptions (at least in pictures) was a benefit. ",
+            "\u00a0Selection and variety of inscriptions was good. Discussion of epigraphic and paleographic issues was good. Could use a bit more discussion of grammatical issues and topics. ",
+            "\u00a0A strength of the course was the way that we went through the inscriptions, usually word by word, to discuss the meaning and significance.  Going through the grammar like this is helpful for me to understand how the grammatical aspects work in context. \r\nI do think that the class could initially benefit from either a grammar text book, or some references to early grammar/how it changes throughout time. "
+        ],
+        [
+            "\u00a0Yes. ",
+            "\u00a0Yes. "
+        ]
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "crn_code": "23158",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            3,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            6
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            7
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            6
+        ],
+        [
+            0,
+            1,
+            4,
+            5,
+            0
+        ],
+        [
+            0,
+            1,
+            5,
+            4,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course? (Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)",
+        "What are the strengths and weaknesses of this course and how could it be improved? (Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)",
+        "Would you recommend this course to another student? Please explain. (Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course instilled a thorough sense of the current cyber policy landscape within the U.S. government . ",
+            "\u00a0Understanding of some of the major issues surround cybersecurity, especially as it relates to US National security ",
+            "\u00a0I learned about the international issues surrounding securing cyberspace and the upcoming threats that cyberissues will pose to international relations. I also learned a lot about cyberweaponry and cyberwarfare. ",
+            "\u00a0Learned a lot about various different topics in security especially relating to China and cyber security. ",
+            "\u00a0I developed knowledge of and insights into the major contemporary challenges in nexus of the fields of cybersecurity and international relations. I learned how international relations problems translate into cyberspace, and how cyberspace poses particular challenges for the conduct of international relations. In general, I learned how to merge law, technology, and policy when constructing and analyzing solutions for problems in cyberspace. "
+        ],
+        [
+            "\u00a0This course was fantastic. It balanced examining case studies and policy with theory and technical background. ",
+            "\u00a0Good readings, I liked all of the assignments. Sometimes it felt like class sessions were more focused on reviewing the readings though rather than having discussion ",
+            "\u00a0The class was a brilliant overview of the issues surrounding cyberspace. I thought the cyberbreifing and the cybermemo assignment were fantastic and actually really fun to complete. However, I thought the class could've been a little bit better structured in terms of drawing greater conclusions as to what to do within the issues. I felt very much like there were few correct answers which was kind of annoying. Although a lack of bias is good, I would've liked to hear more of Professor Wittenstein's opinions. ",
+            "\u00a0I wish there was a bit more debate/opinions rather than just discussion of the topics. I liked the briefings at the end! ",
+            "\u00a0Strengths: The syllabus covered a wide range of issues in cybersecurity and international relations, and the readings were informative and relevant. Professor Wittenstein encouraged us to think critically, to separate the reality of cyber challenges from the hype, to move away from buzzwords and into serious content, and to consider issues from multiple international perspectives, not just through a U.S. lens. I found the policy memo and briefing useful for practicing government writing and communication, and the final paper provided a means to explore a topic in more depth. I also appreciated that Professor Wittenstein focused on making sure we really understood the technology before diving into policy debates, as I think too often students are able to brush over the technical content without really understanding the problems and opportunities posed by the technology. \r\n\r\nWeaknesses: I would have appreciated if Professor Wittenstein gave his opinion on certain questions or topics, as I often left class knowing the fundamental questions, but wondering what he, as someone who has worked extensively on these issues, thought about the answers to those questions. "
+        ],
+        [
+            "\u00a0Yes, highly recommended! Prof. Wittenstein is great. ",
+            "\u00a0I would absolutely recommend this course to another student. This course gives a great overview of the current world of cyberwarfare and other related aspects of cyberspace. It is the perfect introduction to this complex topic. ",
+            "\u00a0Definitely if interested in the subject ",
+            "\u00a0I would absolutely recommend this course. It is very interesting, very topical material and Professor Wittenstein is excellent at leading discussion and creating a friendly environment, even for those who don't come in with a Global background. Watch out for the final paper as it is a pretty serious paper and worth starting early. Also talk to Professor Wittenstein about your topic - he is incredibly knowledgeable about sources and experts in the field. ",
+            "\u00a0Absolutely. This class was super interesting and engaging. It brought to light issues I had no idea were relevant. Professor Wittenstein is also super interesting and friendly; he does a fantastic job of facilitating discussion during the seminar and has a lot of experience to share. ",
+            "\u00a0Yes! A great intro to cyber issues. Take if you are cs major or interested in security. ",
+            "\u00a0I would absolutely recommend this course to any Yale College student -- it was perfect for both CS and social science majors, as well as anyone interested in how cybersecurity impacts today's world. Students' writing and public speaking skills will improve, and the readings on the syllabus are perfectly designed to facilitate knowledge of the topic. I highly recommend taking Professor Wittenstein's fall lecture on general security topics before taking this class; it was an excellent intro to some of the assignments used in this class and a great background on topics explored in more depth here. ",
+            "\u00a0I would recommend this course to any student who is interested in the intersection of cybersecurity and international relations, and in learning how cyberspace is changing the conduct of war and international relations today. Professor Wittenstein is an enthusiastic and knowledgeable professor who encouraged us to think critically, to separate the reality of cyber challenges from the hype, to move away from buzzwords and into serious content, and to consider issues from multiple international perspectives, not just through a U.S. lens. The course provides an interesting and engaging way to merge law, technology, and policy to construct and analyze solutions for problems in cyberspace. "
+        ]
+    ]
+}

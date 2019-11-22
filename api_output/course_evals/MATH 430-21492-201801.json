@@ -1,0 +1,92 @@
+{
+    "crn_code": "21492",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            7
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            8
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            8
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            7,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a great deal of topology, a lot of spatial reasoning, and some cool ways to apply algebra to spatial objects. The topology is great; so much more and so much better than 230/231/301. You really learn how to construct arguments about things you've constructed and imposed various conditions on. The fundamental groups are also cool, since you can apply group theory to reason about these weird spacial objects. ",
+            "\u00a0Lots of topology! More confidence in my own problem-solving skills, although it was still a struggle ",
+            "\u00a0I learned so much! Really opened my mind to a new way of thinking about math... I hadn't really had any exposure to topology before taking this course and I really learned how to think about shapes and spaces in a whole new way. Very cool! ",
+            "\u00a0I finally understood why a donut is a coffee cup. I also came to understand that the complement of a donut in a 3-sphere is a donut. All while furthering my study of mathematics and getting introduced to a new (and very interesting!) branch of mathematics called topology. ",
+            "\u00a0This course covered point-set topology with some algebraic topology mixed in. Key theorems included Urysohn's lemma, Tychonoff's theorem, and the Seifert-van Kampen theorem; a few other topics we spent substantial time discussing were the fundamental group of the circle, knot complements, and the classification of surfaces. ",
+            "\u00a0Rigorous proofs. ",
+            "\u00a0Lots of fun point set & algebraic topology, general mathematical maturity "
+        ],
+        [
+            "\u00a0Very well taught. Intuition is conveyed well, and then textbook gives the corresponding formalism.\r\nWeaknesses: unlike in most other math classes, it was difficult to feel good about the proofs, because they relied so much on intuition. Sometimes a fundamental theorem like the pasting lemma wasn't proved in class, so I didn't feel satisfied when applying it. ",
+            "\u00a0The course was well structured and covered a very interesting material. ",
+            "\u00a0Strengths - v interesting, fair exams, engaging lectures. Weaknesses - there was definitely a lot of material left to cover. ",
+            "\u00a0Can't really think of too many weaknesses, honestly! Course was great.. psets were fair and interesting, often applications of theorems in class to other types of spaces. They were very hard, but the small size of the class fostered a community to work together on them. Minsky was super helpful both in class and outside of class at office hours and very available to meet to answer questions and discuss material. He is also a very clear lecturer and I liked how the course was somewhat interactive, with Minsky stopping every so often for us to think about an example or the next step in a proof and then having us discuss with someone next to us. The take home exams were very hard, but more doable than the psets and also less stressful than in class exams, so I liked that. ",
+            "\u00a0This class is taught well and gives a fair amount of homework. Office hours are in short supply since there are no peer tutors, but Professor Minsky tries to make himself available to everyone, which is great. Not much in the way of weaknesses. ",
+            "\u00a0This course was generally interesting and well-taught. I think the strengths and weaknesses would vary significantly depending on the instructor. ",
+            "\u00a0Its a wonderful course, each lecture was just really good and interesting. The material at the beginning is definitely challenging, but prof Minsky is very willing to help you and in his lectures his explanation always gets the intuition across. This is a class with a solid workload, be prepared! ",
+            "\u00a0I loved this course! Professor Minsky was incredible, it was a lot of fun and incredibly interesting all the way through "
+        ],
+        [
+            "\u00a0Absolutely, take algebraic topology. It's a better way to think about all of the spaces you learn about in 300/301. You learn a ton of topology, and then move on to covering spaces and fundamental groups which are great ways to reason about topological spaces. Discover that within the shelter of the real numbers your intuition has been skewed, but that many theorems still apply (but are much harder to prove) even when you drop most of the preconditions. ",
+            "\u00a0Any course with professor Minsky is definitely worth taking. ",
+            "\u00a0Absolutely! This is a great math elective. Topology is very very cool. ",
+            "\u00a0Yes, definitely! Especially if Minsky is teaching. It was a hard course and you definitely do need to put in the time, put I got so much out of it and really learned how to see math in a new and beautiful way. ",
+            "\u00a0I would highly recommend this course to any math major.  Algebraic topology is a fascinating subject and Professor Minsky teaches it beautifully. ",
+            "\u00a0This is by no means an easy class - problem sets can get long sometimes, and some of the problems can be pretty challenging. The material will be somewhat alien most of the time, since it only bears vague resemblance to the things you do in class the more familiar branches of mathematics such as analysis or algebra. The two take home exams are doable, but take a significant amount of time. Yet if you stick through all this, it will be a rewarding experience and you will come away having learnt a lot from the class. ",
+            "\u00a0I would definitely recommend this class for someone interested in higher-level mathematics. This course provides an introduction to algebraic topology, which is a very broad area of study. Someone with an advanced background might be able to take the graduate algebraic topology class in the fall without having taken 430; however, for most people, I think it's better to take 430 first. ",
+            "\u00a0Absolutely if Minsky is teaching it. \r\nAlso probably if any other prof teaches it since the material is just beautiful and v different from algebra or dry analysis. ",
+            "\u00a0Absolutely, I found it to be fun, interesting, and really useful to my general understanding of math "
+        ]
+    ]
+}

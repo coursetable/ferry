@@ -1,0 +1,79 @@
+{
+    "crn_code": "11546",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            1,
+            0,
+            4,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Greatly enhanced my understanding of research designs -- usual critiques of them (not accounting for selection effects, not acknowledging measurement error and likely bias direction, etc.) and types of good ones (regression discontinuities, in appropriate context, within-unit change pre-/post-treatment). Papers were a chance to explore some ideas to potentially use in research one day. ",
+            "\u00a0I significantly improved my familiarity with the core American Politics literature. This class also strengthened my ability to critique scholarship while motivating my own research questions for future inquiry. ",
+            "\u00a0The course is great! Got to learn a ton about the various ways Americanists go about research. Really think I developed my capacity to critique in this course. More so than in any academic environment I've been in, I think, I really felt like we all had smart feedback on the papers/books we discussed. ",
+            "\u00a0I gained a comprehensive understanding of many foundational aspects of American political science. I became a much better critical reader because of the depth required for a good reading response. "
+        ],
+        [
+            "\u00a0Combo of Greg's bit of lecture with mostly discussion seemed quite effective. Not too much reading, though sometimes a serious amount (but never too much). I like the 5-paper model (and not having a final is pretty nice...). ",
+            "\u00a0The structure of the course was excellent. I recommend mostly keeping it as it is. ",
+            "\u00a0Hard to come up with any weaknesses. Greg did a phenomenal job! ",
+            "\u00a0More direction for student discussion leading. "
+        ],
+        [
+            "\u00a0Absolutely. Really challenges students to think through research designs. ",
+            "\u00a0Absolutely. Greg Huber's expertise in American politics is exceptional. It was an honor to be able to critically analyze academic work with him and the other students. ",
+            "\u00a0Absolutely! "
+        ]
+    ]
+}

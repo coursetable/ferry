@@ -1,0 +1,83 @@
+{
+    "crn_code": "11191",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            1,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about a number of different radiogenic and stable isotope systems and their pros, cons and uses; how isochrons work, where our ideas about the age of the Earth and its oxygenation come from, mass dependent and independent fractionation, Rayleigh distillation, and kinetic and equilibrium isotope effects. Insights were mostly in practicing systems thinking. ",
+            "\u00a0Stable isotope and radiogenic isotope theory ",
+            "\u00a0I learned a lot about isotope geochemistry - from the basics to the most up-to-date research in the filed. The knowledge that I acquired in this course will be very useful for my research. ",
+            "\u00a0The fundamentals of isotope geochemistry, such as theory and application of different isotope proxies. We also learned the methods required to apply isotope geochemistry. Both stable and radiogenic isotope systems were reviewed in depth. ",
+            "\u00a0Great shotgun blast of isotope concepts and tools-pretty much what I was hoping. I came out with various ideas about what was possible & the state of the field and better able to understand isotope literature "
+        ],
+        [
+            "\u00a0Strengths: This has been my favorite class I've taken at Yale so far, because I felt like I made leaps and bounds in my knowledge of isotope systems and ability to think like a geochemist. The selection of material was great. Good powerpoints, professors were passionate and encouraged questions, class engagement actually happened regularly and was productive, problem sets and short essay assignments were useful for learning the material, the assigned textbook was helpful. The greatest strength I found was actually the way the lectures were repeated or returned to when we didn't get it the first time -- the class was structured around our understanding. \r\n\r\nWays it could be improved: It could have been more organized. Assignments could have been clearer -- a few minutes more time spent on the problem set and test wording to make sure there weren't mistakes and ambiguous typos could have saved us time trying to interpret them. The midterm was an odd hybrid of take-home and not and I'm not sure that worked. Going over the test the way we did in class was useless, and meant that if you didn't know something you just continued to not know it. Assigning the take-home tests to fall during conferences many in the class were attending was an interesting choice. ",
+            "\u00a0Very knowledgeable professors, with a great range of topics/techniques covered. \r\n\r\nCould use some variety from standard lecture structure. ",
+            "\u00a0The strengths of this course are that it covers a wide range of isotope systems and their applications and that it is taught by the experts in the fields both in stable and radiogenic isotope geochemistry. One could really sense how the instructors thoroughly understand all the tiny bits in the field. I also liked that at least some of the systems were presented with the whole evolution that they had undergone - from what was largely accepted in the community for many years and how things have changed with recent research. ",
+            "\u00a0Strength: the knowledge both professors provided from the stable and radiogenic side of the isotope geochemistry realm.\r\n\r\nWeakness: sometimes each topic was presented too quickly. ",
+            "\u00a0Strengths-content was great\r\n\r\nWeaknesses-IMHO needed more time to explain the fundamentals, or if things were presented that weren't important, they needed to be summarized better. The later lectures were easier to follow but the first few lectures were kind of underexplained and overloaded\r\n\r\nThe exams have the most incentive to cheat I've ever seen-it's open-note but you would have to have extremely good notes to actually answer some of the questions honestly (reaction rates of isotopes that were mentioned only in passing etc.) so it's kind of testing people's honesty and note-taking rather than knowledge of the subject. Better IMHO would be to have a totally open-everything exam (so you're just testing understanding, like a larger pset) or at least make it more clear what kinds of things people should keep notes on. "
+        ],
+        [
+            "\u00a0Yes. You'll have a good time and walk away with a lot of useful knowledge and a new way of thinking about things. ",
+            "\u00a0Yes ",
+            "\u00a0Yes, definitely! See my response to question #3. ",
+            "\u00a0Yes, I would. Professors have excellent background in a field that has grown tremendously in the past few years. ",
+            "\u00a0Yes, but with some caveats-i.e. take good notes and be aware the lectures might be confusing and need out-of-class review. "
+        ]
+    ]
+}

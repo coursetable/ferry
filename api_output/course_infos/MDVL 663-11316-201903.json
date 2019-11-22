@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51162/assignments/syllabus", 
+    "requirements": "Prerequisites: basic knowledge of Christian history and familiarity with the Bible.", 
+    "description": "This course examines the art associated with, or related to, Christianity from its origins to the end of Gothic. It analyzes major artistic monuments and movements in a variety of regions, paying particular attention to how art shapes and is shaped by the social and historical circumstances of the period and culture. The class considers art in diverse media, focusing on painting, sculpture, architecture, and decorative arts. Trips to the Yale Art Gallery and the Beinecke Rare Book and Manuscript Library are included. The course aims to familiarize students with key monuments of Christian architecture, sculpture, painting, and related arts, analyzing each within its particular sociocultural and theological perspective. The course stresses the importance of looking at works of art closely and in context and encourages students to develop skills of close observation and critical visual analysis. Additionally, students are encouraged to examine the ways parallel developments in Christian theology, dogma, and liturgy are influenced by art.\nPrerequisites: basic knowledge of Christian history and familiarity with the Bible.", 
+    "title": "From House Churches to Medieva...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "PR406 203", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11316", 
+        "listings": [
+            {
+                "number": "663", 
+                "subject": "MDVL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Vasileios Marinis"
+    ], 
+    "long_title": "From House Churches to Medieval Cathedrals: Christian Art and Architecture to the End of Gothic", 
+    "extra_info": "A"
+}

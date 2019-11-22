@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51486/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introductory exploration of possession as a core concept of the colonial and postcolonial West.\u00a0What kind of a relation is possession? What are the range of things it can mean to say that something is \"yours\" or \"mine\" or \"its\"?\u00a0\u00a0Students practice critical reflection on the diverse and at times conflicting ideas of possession that animate modern social life, learning to synthesize concepts at the intersection of culture and discipline. From\u00a0historical cases of demonic possession to contemporary consumer practices, from philosophical and theological debates about the nature of property to linguistic theories of possessive relation, as well as anthropological studies of the relation between migration, empire, land, and labor.\u00a0Readings may include: Montaigne, Octavia Butler, Karl Marx, Annette Weiner, John Locke, Frantz Fanon, Aldous Huxley, Joan Dayan, Ursula Le Guin, Nancy Jay, Martin Luther, Helena Blavatsky, Simone Weil, David Scott, Marisol de la Cadena.\u00a0", 
+    "title": "Possession", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WLH 204", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15319", 
+        "listings": [
+            {
+                "number": "207", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Noreen Khawaja"
+    ], 
+    "long_title": "Possession", 
+    "extra_info": "A"
+}

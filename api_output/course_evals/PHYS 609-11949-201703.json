@@ -1,0 +1,85 @@
+{
+    "crn_code": "11949",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            4,
+            3
+        ],
+        [
+            0,
+            1,
+            2,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            3,
+            4,
+            2
+        ],
+        [
+            0,
+            1,
+            2,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            5,
+            3,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0None. ",
+            "\u00a0My knowledge of quantum mechanics where particle number isn't conserved and causality needs to be taken into account has greatly grown because of this course. My knowledge and understanding of group theory has heavily expanded as well. ",
+            "\u00a0Basics of the development of quantum fields, relativistic quantum mechanics, Greens functions, and Noethers theorem. Free scalar (real and complex) fields, phi^4 theory, Yukawa theory, and other examples treated. Calculation of Feynman diagrams in terms of cross-sections and experimental measurable connected the class to the real world well. ",
+            "\u00a0I learned everything I wanted to learn about introductory QFT. I wish I had gotten more insight as to, for instance, what a field is, but that will come with taking field theory for the 100th time I guess. "
+        ],
+        [
+            "\u00a0Weakness: another typical undergraduate course. Unnecessary in a graduate program. ",
+            "\u00a0I would have liked to have spent more time on fermions and sped up scalar fields a little. ",
+            "\u00a0I wish more time was spent introducing representation theory and building a familiarity with it before going straight to its applications.  \r\n\r\nI wish class notes were released ahead of lecture so I could follow along, and I wish they were released ahead of the HWs so I could use the notes. ",
+            "\u00a0This is the best QFT course I've seen. Every topic was properly motivated and connected to concepts that we had seen in previous classes. The homework was at an appropriate level for a first course in QFT (nontrivial, but not too difficult). ",
+            "\u00a0This course is very relevant to anyone working in high energy and particle physics, and is also quite interesting. The downside is it is very hard to keep up with the material. ",
+            "\u00a0Strengths: Quick pace, interesting material, knowledgeable professor, reasonable psets, and detailed notes published by professor.\r\n\r\nWeaknesses: Very linear and regimented. Resists asking questions out of order, which inhibits curiosity slightly.\r\n\r\nI think clear textbook readings to accompany the already wonderful notes would significantly improve the class. ",
+            "\u00a0Strengths: Goldberger's lectures are incredibly clear and his lecture notes are even clearer. The problem sets are hard but not incredibly time consuming - you'll bash your head into a wall for 5 hours then solve a problem in 1 hour.\r\n\r\nWeaknesses: Field theory is inherently a difficult subject to teach. Goldberger does an incredibly good job but some parts of the material are still difficult to understand/unclear due to the nature of QFT. "
+        ],
+        [
+            "\u00a0Yes if they didn't do that stuff before. ",
+            "\u00a0Yes! It is a great way to learn QFT no matter the field of the student taking it. ",
+            "\u00a0I would recommend taking this course if you are very interested and don't expect to have many research obligations and can consistently dedicate several hours every few days and the majority of most weekends to learning the material and doing the homework. Otherwise I would suggest either taking another course or saving this one for a different year. ",
+            "\u00a0Yes because QFT is necessary for every physicist to know. ",
+            "\u00a0Well organized and taught. Not a ridiculous workload. A gem of the physics department. ",
+            "\u00a0Take this course if you want to learn what modern physics actually is, and don't mind sitting there thinking \"I have no idea how to solve this problem\" for hours on end every week. "
+        ]
+    ]
+}

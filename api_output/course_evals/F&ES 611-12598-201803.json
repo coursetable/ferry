@@ -1,0 +1,114 @@
+{
+    "crn_code": "12598",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            7,
+            5,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            8,
+            5
+        ],
+        [
+            1,
+            3,
+            4,
+            5,
+            2
+        ],
+        [
+            2,
+            6,
+            4,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            12,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            6,
+            6
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I love the workshops that is very practical in real work data utilization. ",
+            "\u00a0Insights in data and the skills needed to conduct particular types of research\r\nInteresting speakers ",
+            "\u00a0I was introduced to a slew of data software that can be leverage to solve emerging problems in environmental science. This was really great, because I have become cognizant of available state-of-the-art tools that can be very useful in solving not just environmental problems, but challenges in other disciplines. ",
+            "\u00a0Lots of exposure to new data resources, and new techniques and software to handle various types of data visualization and computing ",
+            "\u00a0A big-picture view of when to use what types of data analysis tools ",
+            "\u00a0Great introduction to the world of quantitative social science ",
+            "\u00a0This course gave me a great overview of different data science techniques, resources, coding practice/actual code, and ideas for future research and coursework. I am very glad I took this course the first semester of my PhD, because (now that I have taken FES 611) I have a better understanding of what data science techniques are out there, I will be able to dive deeper into ones that are more specific to my own research as I continue with my education. ",
+            "\u00a0I gained a much better understanding of what is possible in data science research.  A lot of the methodology was new to me and I feel I have a much better understanding of different types of analyses and the tools out there to perform them. ",
+            "\u00a0I gained a broad overview of the types of tools and environments that are available to data scientists, and the wide range of potential applications of these methods to social science and many other important questions. ",
+            "\u00a0I learned different softwares to analyze data and learned more about what data is in general. ",
+            "\u00a0How to obtain data from different sources such as the web scrapping social media and different social analysis software ",
+            "\u00a0An introduction/conceptual understanding of the range of data science applications that exist or are emerging, particularly in the context of big data;\r\nIntroductory skills in using some data analysis and presentation/visualisation programs: Tableau, SPSS, Python Scripting, LaTex Scripting;\r\nSome of the benefits and challenges (based on experiences, perspectives) of the data analysis techniques/fields that we covered in class;\r\nInsights into jobs/fields that are data-intensive, particularly provided by some of the external guest speakers. "
+        ],
+        [
+            "\u00a0It aligned with my expectations pretty well. I liked the workshops that I needed to attend during the semester ",
+            "\u00a0knowledge, skills, and insights gained in this class aligned extremely well with my expectation expectations. ",
+            "\u00a0It was pretty clearly outlined in the syllabus and covered exactly what I was expecting. ",
+            "\u00a0I like the class discussion, the bootcamp, and the guest lecturers. The instructor and TA give us a good balance of structure and flexibility. ",
+            "\u00a0It aligns well with my expectation ",
+            "\u00a0Very well, I learned a lot about data science techniques that I did not even know existed. ",
+            "\u00a0The course content was very in line with my expectations. ",
+            "\u00a0This class was pretty much exactly what I expected - very interesting high-level overview with some good discussions. ",
+            "\u00a0I thought the class aligned well with my expectations. ",
+            "\u00a0It was helpful, it enabled me thinking through my social science research work open my mind to different approaches to analyse social data ",
+            "\u00a0Very well. Justin outlined the course's intentions early and the course very much kept in line with those. "
+        ],
+        [
+            "\u00a0Strength - great material overall, liked the exposure to various topics. Liked the flexibility of the course!\r\nWeaknesses - some of the readings were not really interesting\r\nSome discussions could be better moderated ",
+            "\u00a0I feel like the boot camps were awesome, it provided an opportunity to try my hands on some of the software discussed in class. The only weakness I see is the time for the lecture, it was late. ",
+            "\u00a0I really liked the workshop aspect of the class. It gave the class some hands-on technical experience that contrasted nicely with the spoken lectures. I also liked the wide range of speakers we had; I would actually say that I would've preferred more speakers or demos as opposed to student presentations. ",
+            "\u00a0This is a pretty good course, everything is great! ",
+            "\u00a0The flexible workload and bootcamps are probably the best part about this course. However, I wish the class could improve its time management ",
+            "\u00a0Incorporating a final project might help apply some of the techniques we learned in class -- that is the only suggestion for improvement I can think of. Everything else was great. ",
+            "\u00a0A strength is that the course covers a large variety of topics and serves as a good introduction to what analyses and tools are available for data science for social research.  A weakness is that it is hard to know which topics you are interested in exploring further in workshops because many of the workshops occur at the beginning of the semester before a large chunk of the material is covered. ",
+            "\u00a0The only thing I would change about the course is it would be great to hear a little more from Professor Farrell - the group presentations and guest speakers were all good, but I think the group presentations could have been shortened in order to give more time for us to hear from Professor Farrell ",
+            "\u00a0I wish that there had been more bootcamps suited to qualitative data analysis. ",
+            "\u00a0The course offered a great opportunity to learn different software to analyze data although not enough time to learn how to use the software well but one has an idea that triggers the interest to learn more ",
+            "\u00a0The course was a good mix of conceptual/theoretical instruction and reading, as well as flexible, practical instruction (flexible in the sense that students chose which areas of data science they wanted to engage with, and chose training sessions accordingly). "
+        ],
+        [
+            "\u00a0Great as an intro class but might be a bit too general for those who are deep into data science ",
+            "\u00a0I really recommend this course to people who want to have an overview of what data science is all about and how it can be leveraged to solve emerging environmental problems. ",
+            "\u00a0Do the readings! They're very helpful for a good background on what the speaker's work relates to. Oftentimes, they also include interesting links and tools to play around with, too. ",
+            "\u00a0Take this course if you are curious about big data and real world application ",
+            "\u00a0This class would be great to complement your social science focus since it is practically scratching the surface and it doesn't take too much time investment ",
+            "\u00a0Do a little research on all of the topics covered at the beginning of the class so you know which ones you would like to dive deeper into through the workshops ",
+            "\u00a0This class doesn't have any busy work - it is a lot of interesting readings, exposure to great resources, and high-level discussions about data science applications. If you are looking for a hands-on data science class, this is not it, although the professor does provide a lot of in-depth coding resources if you choose to take advantage of them. ",
+            "\u00a0take advantage of the boot camps and the stat lab staff to learn more on social science at CSSSI ",
+            "\u00a0A great conceptual introduction to data science and various techniques, applications and fields of work and study that could be explored. Much more beneficial if you're already working with a data set for a project/research (typically encouraged in any case). "
+        ]
+    ]
+}

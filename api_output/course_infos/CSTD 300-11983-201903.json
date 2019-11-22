@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49418/assignments/syllabus", 
+    "requirements": "", 
+    "description": "\u00c2\u00a0In this course, we address the role of uncertainty in medicine, and the role that narrative plays in capturing and humanising that uncertainty. We focus our efforts on major authors and texts that define and redefine the modern medical humanities, and medicine as it is practiced today. Readings include works by Anton Chekhov, Mikhail Bulgakov, Atul Gawande, Lisa Sanders, Rivka Galchen, Jerome Groopman, and shorter pieces by many others. A field trip to the Yale Medical Historical Library is planned.", 
+    "title": "Medicine and the Humanities: C...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WALL81 401", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11983", 
+        "listings": [
+            {
+                "number": "300", 
+                "subject": "CSTD"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Matthew Morrison"
+    ], 
+    "long_title": "Medicine and the Humanities: Certainty and Unknowing", 
+    "extra_info": "A"
+}

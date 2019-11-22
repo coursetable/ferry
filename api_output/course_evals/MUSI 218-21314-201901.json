@@ -1,0 +1,73 @@
+{
+    "crn_code": "21314",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            1,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Basic skills - sight reading, ear training, dictations for harmonic progressions and melodies, etc. ",
+            "\u00a0Ear training exercises like harmonic dictations, common chord progressions, interval and seventh chord identification, basic understanding of rhythmic patterns. "
+        ],
+        [
+            "\u00a0The class is great but would probably be more helpful if it was more intense (e.g. workload, evaluations) and counted for a full credit. ",
+            "\u00a0The strength is that it really helps you approach and analyze new music in a critical and educated way. You leave a lot more confident with sight reading, rhythms, common chord progressions used in all types of music. Another strength is that examples are drawn from all genres of music - so please consider the class even if you are not a \"classical\" musician. We spent equal amount of time of pop music, jazz, piano/instrumental/electronic, classical music. \r\n\r\nThe major weakness is that in order to succeed at these skills, you really have to practice. You go to class (2x per week) to learn practice skills, but if you are really putting in the practice time outside of class, it ends up being way more than a 0.5 credits worth of work and time. "
+        ],
+        [
+            "\u00a0I would definitely recommend this class to anybody seeking to improve their musicianship, e.g. how to improvise or transcribe music. "
+        ]
+    ]
+}

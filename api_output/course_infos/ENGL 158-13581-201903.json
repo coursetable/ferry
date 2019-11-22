@@ -1,0 +1,55 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49722/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A lively and wide-ranging introduction to the plays of William Shakespeare: comedies, histories, tragedies, and romances, in print, on stage, and as adapted for television, film, and other media, from the early modern period to the present. In addition to giving novices and Shakespeare buffs alike a thorough grounding in the content and contexts of the plays themselves, this course aims at developing students' abilities to analyze, interpret, and take pleasure in linguistic complexity, to think critically and creatively about the relationship between text and performance, to experiment with reading like an actor, a director, a costume designer, a queer theorist, an anti-theatrical Puritan, or a sixteenth-century playgoer, and to explore enduring issues of identity, family, sexuality, race, religion, power, ambition, violence, and desire. Lectures are complemented by weekly discussion sections, conversations with practicing theater artists, a trip to the Beinecke Rare Books Library, and opportunities to see plays in performance.", 
+    "title": "Shakespeare: Page, Stage, and ...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "LC 211", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13581", 
+        "listings": [
+            {
+                "number": "158", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENR\">YC English: Renaissance</a>"
+    ], 
+    "professors": [
+        "Catherine Nicholson"
+    ], 
+    "long_title": "Shakespeare: Page, Stage, and Screen", 
+    "extra_info": "A"
+}

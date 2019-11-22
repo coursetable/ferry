@@ -1,0 +1,81 @@
+{
+    "crn_code": "20630",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            7
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            6
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            7
+        ],
+        [
+            0,
+            4,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            2,
+            3,
+            4,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I developed a deeper understanding of how to appropriately conduct and communicate cognitive science research, as well as skills in how to design and carry out my own cognitive science study. ",
+            "\u00a0Independent research in a lab. ",
+            "\u00a0I learned how to conduct research from A to Z. ",
+            "\u00a0I gained an insight into research methods in the social sciences and got the chance to learn from other students and faculty in the Human Nature Lab while starting my own project. ",
+            "\u00a0Greater familiarity with the methods of experimental philosophy "
+        ],
+        [
+            "\u00a0The strength of this course is the fact that I could conduct research that truly interested me and also learn from my research. There are no weaknesses. ",
+            "\u00a0Depends on your advisor, but I highly recommend taking this course to get credit for outside lab work. ",
+            "\u00a0The biggest strength of this course is that it gives you a good amount of flexibility to do what you want to do with it. You can work on a research topic you are very passionate about, so even though the workload can be a lot sometimes (i.e. the crunch I went through to get the stimuli ready before starting testing), it doesn't feel like meaningless effort. Seeing how much you can do, you really feel confident in your abilities. ",
+            "\u00a0Strength: Working with Joshua Knobe\r\nWeaknesses: None "
+        ],
+        [
+            "\u00a0Yes, I would definitely recommend this course to any student who'd like to pursue cognitive science or psychology research while simultaneously earning Yale credit. ",
+            "\u00a0Yes- if you're working in a lab in a cogsci field, take this course. ",
+            "\u00a0Yes, I would especially recommend this course to a student who wants to pursue research in the future. It exposes you to what that is and how it would look like in the purest way possible. ",
+            "\u00a0Absolutely! "
+        ]
+    ]
+}

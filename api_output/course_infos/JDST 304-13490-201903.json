@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50334/assignments/syllabus", 
+    "requirements": "", 
+    "description": "What is the relationship between national ideology and its political collective? How does a nationality construct its territory? How does history shape the narratives that a nation tells itself and other nations? What are the symbolic systems that make it possible for one nation to claim victory in its struggle against others? These questions are central to any discussion of the connections between national politics and their symbolic framework.\u00a0This course examines the way in which literature helps to construct Jewish nationality. Our test case is Zionism. Established as the national movement at the first Zionist congress, in Basel in 1897, Zionism is unique among modern political movements. It proposed Eretz Israel (Palestine) as the territorial solution to the problems of Jewish existence. Zionist literature is an important source of Jewish imagination about its historical persecution. The main role of Zionist literatures was the creation\u2014in Hebrew, Yiddish, and Ladino\u2014of a discourse that shaped Zionist subjectivity as the \u201cNew Hebrew.\u201d The main purpose of Zionist Literature is to confirm the Zionist dictum, \u201cThe Negation of Exile,\u201d and to persuade the Jewish people to immigrate (by Alya) to Eretz Israel (and later to the state of Israel).\u00a0The course traces the Zionist narrative from the end of the 19th century up to the present time. We study literary works by T. Herzl. N. H. Imber, M. Y. Berdychevski, Y. H. Brenner, N. Alterman, Y. Amichai, and others. We also discuss theoretical essays on Zionism, helping us to understand its cultural and the political context.", 
+    "title": "Zionism and Literature", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WLH 003", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13490", 
+        "listings": [
+            {
+                "number": "304", 
+                "subject": "JDST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Hannan Hever"
+    ], 
+    "long_title": "Zionism and Literature", 
+    "extra_info": "A"
+}

@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50308/assignments/syllabus", 
+    "requirements": "", 
+    "description": "We all know that languages have different regional dialects, and American English is no exception. But what are the dialects of American English, and how are they determined? Does every town have its own dialect, or are there broader patterns across larger regions? Are the patterns different for different demographic categories? Are there different dialect regions depending on gender? Race? How do we know where one dialect region stops and another begins? It turns out that there is no one answer to these questions. Moreover, the answers we find depend greatly on what aspect of language we are looking at. This hands-on seminar explores different ways of visualizing how language varies across geographical space, with a focus on dialect variation. Students study recent research discussing new techniques for analyzing geographic patterns of linguistic variation, and apply those techniques to survey data collected in recent years by the Yale Grammatical Diversity Project. Students develop their own mapping projects based on these data, and discover novel ways to visualize and analyze regional dialect variation. The course involves an introduction to some basic concepts in linguistics, as well as an introduction to Geographic Information Systems (GIS) software.", 
+    "title": "Mapping the Dialects of Americ...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "DOW 314", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11186", 
+        "listings": [
+            {
+                "number": "077", 
+                "subject": "LING"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jim Wood"
+    ], 
+    "long_title": "Mapping the Dialects of American English", 
+    "extra_info": "A"
+}

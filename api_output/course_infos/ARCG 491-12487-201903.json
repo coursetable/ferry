@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Required of all students majoring in Archaeological Studies. Supervised investigation of some archaeological topic in depth. The course requirement is a long essay to be submitted as the student's senior essay. The student should present a prospectus and bibliography to the director of undergraduate studies no later than the third week of the term. Written approval from the faculty member who will direct the reading and writing for the course must accompany the prospectus.", 
+    "title": "Senior Research Project in Arc...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12487", 
+        "listings": [
+            {
+                "number": "491", 
+                "subject": "ARCG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Senior Research Project in Archaeology", 
+    "extra_info": "A"
+}

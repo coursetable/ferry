@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51674/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course examines the U.S. history of incarceration through the lens of health and medicine, covering the late eighteenth century to the present. Across this period, incarcerated populations have been subject to extensive health risks and harms; since 1976, they also comprise the only group in the U.S. with a recognized constitutional right to health care.\u00a0In this seminar, we explore how medical practices and institutions have been involved in establishing, structuring, and challenging historical systems of incarceration. In the modern United States, incarceration has played a major role in the formation of racial disparities, the regulation and surveillance of marginalized communities, and the delineation of the state\u2019s relationship to its subjects. Within this history, health and medicine have been central to debates over the harms of the prison system, the extent of institutional authority over vulnerable bodies, and the state\u2019s obligations to provide care.", 
+    "title": "Health and Incarceration in U....", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LORIA B51", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14161", 
+        "listings": [
+            {
+                "number": "195J", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHS1\">YC HSHM: Med &amp; Public Health</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHS2\">YC HSHM: Sci, Tech &amp; Society</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHS3\">YC HSHM: Gender, Reprod and Body</a></li></ul>"
+    ], 
+    "professors": [
+        "Miriam Rich"
+    ], 
+    "long_title": "Health and Incarceration in U.S. History", 
+    "extra_info": "A"
+}

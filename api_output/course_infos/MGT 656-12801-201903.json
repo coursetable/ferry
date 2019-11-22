@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "", 
+    "title": "Management of Software Develop...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "EVANS 4400", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12801", 
+        "listings": [
+            {
+                "number": "656", 
+                "subject": "MGT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kyle Jensen"
+    ], 
+    "long_title": "Management of Software Development", 
+    "extra_info": "A"
+}

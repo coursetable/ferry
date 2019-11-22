@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50191/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A wide-ranging introduction to the methods of the art historian and the history of the discipline. Themes include connoisseurship, iconography, formalism, and selected methodologies informed by contemporary theory.", 
+    "title": "Critical Approaches to Art His...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LORIA 358", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12244", 
+        "listings": [
+            {
+                "number": "401", 
+                "subject": "HSAR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kishwar Rizvi"
+    ], 
+    "long_title": "Critical Approaches to Art History", 
+    "extra_info": "A"
+}

@@ -1,0 +1,85 @@
+{
+    "crn_code": "20459",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            6,
+            4
+        ],
+        [
+            1,
+            1,
+            4,
+            4,
+            2
+        ],
+        [
+            0,
+            2,
+            1,
+            7,
+            1
+        ],
+        [
+            0,
+            2,
+            4,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            7,
+            5
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to perform separations analyses of complex chemical systems. ",
+            "\u00a0I learned about separations and the importance of this science in the world. ",
+            "\u00a0I learned important technical skills related to separating chemical components in systems. ",
+            "\u00a0Learning to program, really understanding and applying concepts ",
+            "\u00a0Insights into Chemical Separations. "
+        ],
+        [
+            "\u00a0The course could be improved by splitting material more evenly throughout the semester. ",
+            "\u00a0Lots of material to cover, both a strength and weakness. Didn't like the textbook, very hard to decipher. ",
+            "\u00a0It was a good course ",
+            "\u00a0This course was pretty useless in the grand scheme of chemical engineering courses. It was also catered to graduate level and required way too much Matlab. ",
+            "\u00a0The workload was a bit too much ",
+            "\u00a0A lot of material "
+        ],
+        [
+            "\u00a0You should take this course in the senior year of your chemical engineering degree. ",
+            "\u00a0I would recommend this course to another student.  It is very interesting and intellectually stimulating. ",
+            "\u00a0Only if you need it to graduate ",
+            "\u00a0No - only take it if you have to for the major. ",
+            "\u00a0Yes. ",
+            "\u00a0Have to take it for Chem E major. "
+        ]
+    ]
+}

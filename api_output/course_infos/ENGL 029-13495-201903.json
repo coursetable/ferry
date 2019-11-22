@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 1, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Enrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "description": "Henry Thoreau played a critical role in the development of environmentalism, American prose, civil rights, and the politics of protest. We read his writing in depth, and with care, understanding it both in its historical context and in its relation to present concerns of democracy and climate change. We read his published writing and parts of the journal, as well as biographical and contextual material. The class makes a field trip to Walden Pond and Concord, learning about climate change at Walden as revealed by Thoreau\u2019s unparalleled documentation of his biotic surroundings. Student's consider Thoreau\u2019s place in current debates about the environment and politics, and are encouraged to make connection with those debates in a final paper.\u00a0\nEnrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13495", 
+        "listings": [
+            {
+                "number": "029", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Henry Thoreau", 
+    "extra_info": "C"
+}

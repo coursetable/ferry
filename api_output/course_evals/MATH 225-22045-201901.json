@@ -1,0 +1,121 @@
+{
+    "crn_code": "22045",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            10,
+            7
+        ],
+        [
+            0,
+            3,
+            7,
+            6,
+            6
+        ],
+        [
+            0,
+            2,
+            9,
+            6,
+            5
+        ],
+        [
+            0,
+            3,
+            8,
+            5,
+            6
+        ],
+        [
+            0,
+            0,
+            2,
+            10,
+            10
+        ],
+        [
+            0,
+            0,
+            6,
+            12,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Proof-based math ",
+            "\u00a0How to write proofs. How to read the textbook. ",
+            "\u00a0I learned the foundations of linear algebra, from vector spaces to linear transformation to eigenvalues and eigenvectors. ",
+            "\u00a0I learned how to write proofs and the fundamental concepts of linear algebra ",
+            "\u00a0I was introduced to linear algebra, but perhaps more importantly, to the field of proof-based mathematics. ",
+            "\u00a0Linearity, subspaces, matrix properties and matrix transformations, eigenvalues/eigenvectors, and diagonalizability of matrices ",
+            "\u00a0I learned a great deal about both methods and ideas in Linear Algebra. I learned how to write proofs and started to get an intuition about the patterns for approaching any proof I'm faced with. I got an intro into the theoretical concepts of Linear Algebra while also seeing many ways that they can apply to other fields of study. I also learned how to do some of the fundamental mechanics, like diagonalization. ",
+            "\u00a0I learned about vector spaces, subspaces, linearly independence, span, bases, linear transformations, systems of linear equations, determinants, eigenvectors/values, diagonalization, inner product spaces, and the spectral theorem. ",
+            "\u00a0I gained practical linear algebra skills as well as a greater understanding of proof-based mathematics ",
+            "\u00a0I learned how to write proofs, specifically on linear algebra topics. ",
+            "\u00a0I learned how to read a bunch of mathematical notation and to deal with a class in which I was miserably behind all of the time. ",
+            "\u00a0Math 225 is a proof-based version of linear algebra. We discussed a broad range of topics, starting with vector spaces and ending with the Spectral theorem. ",
+            "\u00a0I learned how to think about math in a proof based way. I finally learned what math looks like at advanced levels ",
+            "\u00a0I learned the basics of proof-based mathematics and an in-depth knowledge of linear algebra from a theoretical perspective. ",
+            "\u00a0A strong proof based approach to Linear Algebra. We learned the basics of Linear Algebra, including vector spaces, linear transformations, eigenvalues, diagonalization, etc. ",
+            "\u00a0This course began with vector spaces, which we used to define linear transformations and understand their correspondence with matrices. In the second half of the course, we moved to applications of these concepts including linear systems, determinants, eigenvectors, eigenvalues, and diagonalization. Applications outside of pure math were discussed very briefly. Along the way, I became much more proficient with constructing proofs by using smaller results to prove larger ones, and with writing these proofs coherently. ",
+            "\u00a0linear algebra & matrix theory ",
+            "\u00a0I improved my proof-writing skills and learned linear algebra. "
+        ],
+        [
+            "\u00a0Strength:\r\n- Material is very interesting\r\nWeakness:\r\n- Material is poorly explained (in both sections). I think the teachers (I went a few classes of each professor) are so smart to the extent that they don't understand that they need to explain proofs in more detail. ",
+            "\u00a0The course covers a good amount of material that gives you a solid foundation in linear algebra. Being proof-based made it more enjoyable as well as more engaging. It helped solidify understanding of the material. ",
+            "\u00a0While I thoroughly enjoyed the course, I was left without a good understanding of how various concepts fit together. There also seemed to be a lack of organization, as psets were posted several days late multiple times without an extension, although the syllabus clearly says they should be posted a week before they are do. ",
+            "\u00a0This course is difficult and I feel like it could be improved if more time was spent going over how to prove things. Maybe spending a little time each day going over one practice problem/proof could go a long way to improving students' learning. ",
+            "\u00a0This was a frustrating class.  The assignments just made us prove a bunch of obscure theorems and then when it came time for quizzes or exams we had no idea what was actually important for us to know.  We were offered \"review problems\" for our exams which were also literally just a list of obscure, very difficult proofs that would never be on the test that we were never even given the answers to to know if we were doing them right. ",
+            "\u00a0I would have liked a little more big-picture discussion of the concepts of the course--making connections to other fields of math, science, philosophy, discussing why these ideas matter and their impact. Nevertheless, I felt like the structure was successful: lectures were interesting, psets were valuable to solidify understanding, the textbook was well-written, and the instructors and peer tutors were very helpful! ",
+            "\u00a0When 25 percent of your grade is based on 2 proof-based questions on the midterm. ",
+            "\u00a0Professor Velozo was very helpful and cared a lot about his students. ",
+            "\u00a0It was sometimes hard to follow the lectures and what was written on the board, especially during the first two weeks ",
+            "\u00a0The problem sets were very challenging but rewarding. Having such difficult problem sets made me patient. I think it was somewhat unclear what topics/theorems we were responsible for. ",
+            "\u00a0There are a great number of resources available for people struggling, thankfully. Honestly, a lot of my trouble with the class came from my inability to keep up with the pace, which could be a weakness for the class. ",
+            "\u00a0The teaching leaves something to be desired and the first topics take too long to be explained. I ended up having to learn a lot from reading the book. I also felt the tests and problem sets could have been more difficult. ",
+            "\u00a0The course could have helped students more in learning how to actually write proofs. I feel like the course was great for students who already knew the lesson and could already write, but for students like me who didn't know how to write proofs and learned linear algebra for the first time, the class was very difficult. ",
+            "\u00a0The psets did a good job of teaching the material and reinforcing and building on what we learned in class, and the exams were very doable based on what we learned in class. There were also abundant resources for help if needed, and the professor was very understanding and helpful. ",
+            "\u00a0This class did a good job providing a clear justification for each result without spending too much time on the most tedious proofs, and helped me see how even the most complicated results followed from chains of simple logical steps. I would have liked some more review of the connections between chapters, which I found the most difficult part of preparing for the exams. While I understand that this isnt an applications-based course, I think that a little more discussion of applications would have provided a clearer intuitive basis for some concepts. I appreciated the through review sheets and sessions, and the exams clearly based on the material wed covered without much focus on time pressure. ",
+            "\u00a0Strengths: length of psets reasonable, exams not too hard, excellent textbook, excellent professor ",
+            "\u00a0Strengths: Starts from the definitions and builds up; Prof. Velozo was great overall; Many proofs are covered in class; Exams were fair and there were review sessions.\r\n\r\nWeaknesses: Some theorem memorization is expected; The material was rushed and less intuitive at the end of the semester; Homework takes a while, and it's possible to get stuck; My class was early in the morning. "
+        ],
+        [
+            "\u00a0Yes. Proof-based math is a very important skill in thinking in a certain way. ",
+            "\u00a0Yes. Although it was tough at times, and required a lot of textbook reading, at the end, after I figured out that you needed to read the textbook BEFORE going to class, it was actually an enjoyable class. I now have a great appreciation for abstract math (very different from the application based math of MATH 120). ",
+            "\u00a0I would recommend this course if you have a solid foundation in mathematics. Definitely not an easy course. ",
+            "\u00a0Yes, if they want to learn proof-writing for future courses. ",
+            "\u00a0I would recommend this course if you would like an introduction to proof-based mathematics. Definitely take it over 222 if you care about learning the actual math and are interested in how everything manages to fit together. The Psets are graded really generously, and are heavily weighted. Even if you get an entire question wrong, you should still be able to receive some credit. This course will challenge you, but if you read the book and follow along, you should be able to do well. ",
+            "\u00a0I mean linear algebra is a class that every STEM major should take at some point.  You will learn more from this class than 222, but it's hard to say which will be more frustrating. ",
+            "\u00a0I would definitely recommend this course to a student interested in math or philosophy, or who cares about how the mathematical methods of fields like biochemistry actually work. The material was interesting and very satisfying to gain mastery of over the course of the psets. I like that proofs force you to be very precise about every claim, every \"causal\" connection, and to know where every single assumption you make is coming from. You get to go down to the fundamentals of the system you're using, then build back up to see the emergence of profound and useful theories. It takes work, but very worth it if you're interested, and it didn't feel like a grind. ",
+            "\u00a0If you really love proofs, then sure, if not, just don't take this course. ",
+            "\u00a0I definitely recommend this as an intro to proof-based mathematics and linear algebra. ",
+            "\u00a0Yes, if you want to learn linear algebra and have interest in proof-based math. It Is worth it for the understanding ",
+            "\u00a0You should probably learn linear algebra before taking this class. That's not a joke; it will lead to an easier time. Learning linear algebra while also trying to prove things and moving at the pace that the class does can be tough for some people (such as myself). ",
+            "\u00a0I would recommend this course if you are looking for a more theoretical foundation in linear algebra. This course is not for everyone; some people would be much better off taking Math 222. However, I enjoyed this course and recommend taking it with Anibal Velozo if possible. ",
+            "\u00a0I would recommend this course to anyone who has not taken linear algebra before especially over 222 because it is so different. I would say the teaching could be better and it requires a lot of self motivation ",
+            "\u00a0I would recommend this course over the other linear algebra option, MATH222, for most students, but I would advise students to shop both classes and see which perspective and professor suits them better. I personally found that MATH225 was more interesting and more engaging for myself, but others might find it the other way around. ",
+            "\u00a0Yes, if you want a deeper understanding of Linear Algebra than just how to do some matrix manipulations take this class. It offers a very solid basis to the concepts of linear algebra, and is very doable if you put in the time to do the psets well. Anibal is also a great professor; his lectures are very solid, and beyond that he makes class entertaining and is very understanding and helpful in regards to the psets. ",
+            "\u00a0Yes, if youre interested in an approach to linear algebra thats focused on proofs and helps you really understand why each technique works. This class was definitely difficult, but with only a little background in proofs (CPSC 202) I felt fairly well prepared. Multivariable calculus isnt really necessary at all. As an engineering major, I was somewhat disappointed by the lack of discussion of applications, but I found I could think of application examples on my own and I benefited from the increased focus on deriving every result. If you understand the readings and problem sets, and review the results that you can use in your proofs, youll be very well prepared for the exams. ",
+            "\u00a0Yes, but only if they enjoy mathematics or did to take this course for their major. I do not recommend taking this course out of interest or fun as it is hard. ",
+            "\u00a0Between MATH 222 and MATH 225, I chose the latter because it includes the theory behind what is taught in MATH 222. I am happy with my choice, and would recommend this course to others who are interested in knowing underlying theory. "
+        ]
+    ]
+}

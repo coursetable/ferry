@@ -1,0 +1,74 @@
+{
+    "crn_code": "30008",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Basic drawing skills--lots of objective, observational drawing. Measurement, proportion, line, value, etc. ",
+            "\u00a0I learned about the basic tenants of drawing and how to use different skills and materials. "
+        ],
+        [
+            "\u00a0It's a really great class, definitely a lot of work, and probably the most time intensive class I've taken at Yale (I'm entering my third year). As long as you can have the time to really dedicate to the class outside of the actual class hours, it's amazing. ",
+            "\u00a0I really liked how this class focused on the core skills of drawing. I really appreciated that it had a clear topic for each class and was clear and concrete about which skills we were supposed to be learning. I think that this approach not only improved my drawing during the class, but also gave me the tools to continue improving on my own in the future. "
+        ],
+        [
+            "\u00a0Yes, take the class. If you're taking this class because you think \"drawing is easy\", then please reconsider. Drawing is hard. Very, very hard. If you're up for the challenge and you have the time to really dedicate to the homework assignments, do it. \r\nYour drawing skills are guaranteed to improve, but if you're taking multiple classes or have an intense life/schedule outside of ART S115, just know that balancing everything may become difficult pretty early on, and it is difficult to catch up. ",
+            "\u00a0I would definitely recommend this course with Edgar Serrano--it is engaging and will really improve your drawing, and he is a very good teacher. Taking it in the summer is a mixed bag--on one hand the class is far smaller, which is great, but on the other hand all of the homework is packed into only 5 weeks and can get overwhelming. "
+        ]
+    ]
+}

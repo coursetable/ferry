@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 1, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: CHEM 333 or permission of instructor.", 
+    "description": "An integrated treatment of quantum mechanics and modern spectroscopy. Basic wave and matrix mechanics, perturbation theory, angular momentum, group theory, time-dependent quantum mechanics, selection rules, coherent evolution in two-level systems, line shapes, Bloch equations, and NMR spectroscopy.\nPrerequisite: CHEM 333 or permission of instructor.", 
+    "title": "CANCELLED", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10523", 
+        "listings": [
+            {
+                "number": "440", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Molecules and Radiation I", 
+    "extra_info": "C"
+}

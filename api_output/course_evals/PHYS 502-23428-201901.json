@@ -1,0 +1,99 @@
+{
+    "crn_code": "23428",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            3,
+            10,
+            4,
+            2
+        ],
+        [
+            3,
+            7,
+            7,
+            1,
+            2
+        ],
+        [
+            4,
+            2,
+            7,
+            5,
+            2
+        ],
+        [
+            2,
+            2,
+            7,
+            7,
+            2
+        ],
+        [
+            0,
+            1,
+            9,
+            6,
+            4
+        ],
+        [
+            0,
+            0,
+            7,
+            11,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Can't say I learned much compared to undergrad, but we saw new things at least. ",
+            "\u00a0Electrostatic\r\nMagnetism\r\nElectrodynamics ",
+            "\u00a0I learned more about electricity and magnetism, mostly just more details about things I already knew, which was helpful. ",
+            "\u00a0Some new skills and insights I developed during this course:\r\n\r\nMultipole expansion. Green functions. EM Radiation. Solving Laplace and Possion equation. Quasi static approximation. ",
+            "\u00a0Learned about E&M through Zangwill, ranging from statics to electrodynamics and radiation. ",
+            "\u00a0Basics in EM ",
+            "\u00a0Learned the most important concepts in Electromagnetic Theory from Maxwell equations to EM waves ",
+            "\u00a0- a better appreciation for the wide scope of problems addressed by electromagnetic theory\r\n- a better understanding for how to approach boundary value problems in general ",
+            "\u00a0Calculus, spherical harmonic functions, antenna radiation calculation ",
+            "\u00a0Math methods for em ",
+            "\u00a0greens functions, multipole ",
+            "\u00a0Helped develop a decent understanding of EnM "
+        ],
+        [
+            "\u00a0Strength: textbook is very good; plenty of office hours and feedback.\r\nWeaknesses: Lectures were a bit disorganized, seemed that they were not practices before being given; Homework problems out of the book. ",
+            "\u00a0The first part about electrostatic and magnetism was too specific and took too long, I would have enjoyed more electrodynamics ",
+            "\u00a0This should be a two semester class.  There's no way you can cover statics and dynamics in one semester, and do that well. ",
+            "\u00a0Strengths: a lot of physics pictures and examples are provided to help learning.\r\nWeakness: progression of the course is slowed down by the abundent topics covered in electrostatics. Really interesting topics in electrodynamics such as scattering theory are unfortunately not able to be covered. ",
+            "\u00a0Strengths: Covers a fair amount of material, a few interesting and useful topics.\r\nWeaknesses: Too slow at the beginning, too rushed at the end. Could be better split into two semesters such that the hard/interesting topics are given more time. Spent way too long on electrostatics, not enough time on dynamics. \r\nIt is still unclear to me what topics are important. ",
+            "\u00a0The teaching of the theory is clear, but not many reasoning and examples were provided. ",
+            "\u00a0The lecture notes were rather scattered, and it felt like the exams didn't really represent what we did in class. The homework assignments were beneficial. ",
+            "\u00a0A course you can rely on. Homeworks, office hours are regularly scheduled, and review sessions arranged before exams. Professor clearly passionate about the topic too. ",
+            "\u00a0-- Strengths: \r\n\r\n ::1. Covers a lot of content\r\n\r\n-- Weaknesses: (ordered from least sever to most)\r\n\r\n ::1. Textbook: Zangwill is a great text IFF you actually spend enough time going over the extreme depth it provides. This book is around 1000 pages in total, and we covered around 750 of those in a single semester. 20 Chapters/750 pages is too much for a single semester given the extreme depth of the content. This led to a persistent question common among all of the students in the class: \"What are we actually focusing on?\"\r\n\r\n ::2. Problem Sets: Directly coupled with the above statement, there was not nearly enough actual practice and application of the content discussed. 10 total problem sets with 5 problems on average each is not anywhere near enough practice to grasp the immense amount of content covered. I ended up doing many, many, MANY practice problems before the midterm and final exams in an attempt to prepare myself and still did horrible on both exams. \r\n\r\n ::3. Exams: It is hard to decouple the above points (1) and (2) from this one, but the exams were terrible. If a concrete thing can be said about them, they were far too long. 4-5 questions each with many, inter-dependent parts is far from acceptable for an exam of this length. I understand that this is a direct result of the immense content covered, but it made it impossible to finish the exams, and if you made minor mistakes in the beginning that you discover later on, you had to go back and re-propagate that correction through all components of the problem--much time was lost due to this. Relating to that point, little-to-no partial credit was given when a mistake was made. Regardless if you understood many fundamental principles that the problem relied upon, a small algebra mistake lead to nearly zero credit for a problem, as the grader interpreted that algebra mistake as a vast conceptual error, ignoring the variety of nuances that are presented in this subject. The average on the first midterm was around a 50%, and instead of recognizing that 'hey, maybe this exam was too hard if a class full of Physics PhD students failed it', we were scolded for 'not understanding basic fundamental physics.'\r\n\r\n ::4. Lectures: I have a hard time determining if this should be listed before or after the exams, but I felt very uninformed by attending these lectures. Often the content was pulled directly from Zangwill while opting to ignore the rhyme or reason behind the instruction. This needs to be massively reworked. You should set out with a clear goal at the beginning of the lecture, and make sure that that is accomplished by the end of the lecture. It is incredibly important during instruction that the point of what is happening is clear at all times, or the audience is easily left to confusion in a sea of vague algebra and calculus. NO MORE POWERPOINTS. The powerpoints in their current form are unanimously useless to everyone in the audience. They are just illogical, unlabeled collages of equations, very obviously copy-pasted from texts, and it does absolutely nothing for students to just see some equations without derivation or reason. You might be able to make an argument for posting such content online after the lectures to summarize what was key to understand from a content, but during the lecture, it serves no purpose to just put slides up and talk about them. Students cannot possible hope to copy all the content down fast enough or absorb anything from briefly viewing them. Even in the exception mentioned above, these slides would need to be majorly reworked to provide useful information, such as actually discussing the significance of their contents. A student is much better off just Googling and looking for another institution's presentations at this point. ",
+            "\u00a0Maybe the pace can be adjusted a little, 'cause it's a bit rushing close to the end. ",
+            "\u00a0Very vaguely taught, I mostly understood the material while going through the textbook to solve the assignments "
+        ],
+        [
+            "\u00a0I would recommend the course if they need to learn E&M here at Yale, but this should be taught in two semesters.  If the faculty is so set on reducing the course requirements, then make the class just on dynamics. ",
+            "\u00a0You don't really need to take this course or go to the class if you are already familiar with the material. However, I would recommand this course to other students because the physical picture and intuition the lecturer provided during the class is invaluable for a physicist. ",
+            "\u00a0Required course. Covers a fair amount of E&M which is probably good enough for most people. Quite difficult if you have not seen it before, especially towards the end. Homework schedule was quite inconsistent until the end, in which there was a lot of homework every week.\r\n\r\nMidterm exam questions were very strange/hard but the final seemed fair. ",
+            "\u00a0Yes. The materials covered give the foundations of Electromagnetic theory. ",
+            "\u00a0Yes. Gives a solid grounding in EM. ",
+            "\u00a0I normally opt-out of this question because these courses are required for the students taking them, but here I want to say I would absolutely would not take this course if I did not have to. I would recommend any student who is thinking about taking this course electively to consider any other option. ",
+            "\u00a0only if he or she is very interested in this field ",
+            "\u00a0Not unless you require it, perhaps if taught by a different instructor "
+        ]
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "crn_code": "13194",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Due to the emphasis on theory, I was introduced to many new ideas and perspectives concerning the spatiality of literature. I believe that the theory aspect of this course was particularly strong, and provided a theoretical base from which I can pull for subsequent research papers. Additionally, I found that the way we approached texts by focusing on space to be unique and productive. I thoroughly enjoyed the course. "
+        ],
+        [
+            "\u00a0The course is really great in theory. \r\nBut, there was too much material. This made seminar discussion feel disorganized and, often, unproductive. ",
+            "\u00a0Strengths: -Lots of theory\r\n           -Exposure to a wide variety of authors, both theoretical and literary\r\n           -Productive and engaging discussions in class that engaged directly with the texts\r\n\r\nWeaknesses: -At times the reading load was too much, and I sometimes felt that I could not thoroughly absorb the material in a week's time. "
+        ],
+        [
+            "\u00a0Yes. ",
+            "\u00a0I would recommend this course, particularly if the student is interested in spatiality of the text and would like to an introduction to many significant theoreticians and authors of the Russian canon. "
+        ]
+    ]
+}

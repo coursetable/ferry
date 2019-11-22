@@ -1,0 +1,51 @@
+{
+    "exam": {
+        "date": "2019-12-12", 
+        "group": 2, 
+        "day_of_week": "Thursday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49603/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Exploration of some fundamental scientific principles underlying the engineering of material works of art. The origins of appearance and physical properties, the materials science involved in the fabrication of art works, and the technical analysis of these properties, are discussed in lectures, demonstrated in labs, and illustrated with objects in the Yale museums. This course may be of interest to Art and Architecture majors.", 
+    "title": "The Materials Science of Art", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "BCT CO37", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 11
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13134", 
+        "listings": [
+            {
+                "number": "221", 
+                "subject": "ENAS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Katherine Schilling"
+    ], 
+    "long_title": "The Materials Science of Art", 
+    "extra_info": "A"
+}

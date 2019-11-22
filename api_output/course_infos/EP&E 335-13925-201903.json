@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50976/assignments/syllabus", 
+    "requirements": "Prerequisite: PLSC 116.", 
+    "description": "This course provides an introduction to the political science literature studying the economic and social policy institutions of contemporary capitalism. In the first part of the course, we introduce the literature examining \u2018varieties of capitalist economies\u2019 and examine the most significant factors that explain why the organization of firms, interest groups, and socials policies varies significantly across advanced industrialized economies. In the second part of the course, we turn to the study of change in these institutions in recent decades. We examine how external economic factors (such as globalization) or endogenous economic transformations (such as slowdown in growth, demographic aging) have constrained the policy choices available to labor market actors (such as unions or employers associations) and political parties. We examine the resulting policy choices made in different countries in response to these new economic constraints.\nPrerequisite: PLSC 116.", 
+    "title": "Parties, Interest Groups and P...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "RKZ 202", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13925", 
+        "listings": [
+            {
+                "number": "335", 
+                "subject": "EP&E"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEP3\">YC EP&amp;E Politics Core</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEPA\">YC EP&amp;E: Advanced Seminar</a></li></ul>"
+    ], 
+    "professors": [
+        "Isabela Mares"
+    ], 
+    "long_title": "Parties, Interest Groups and Public Policies in Advanced Industrialized Economies", 
+    "extra_info": "A"
+}

@@ -1,0 +1,79 @@
+{
+    "crn_code": "25103",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            2
+        ],
+        [
+            0,
+            3,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I was able to develop as a critical thinker. This course challenged me to think deeply about a given body of work. To really evaluate what the presenters are showing me and to ultimately form an opinion on the work that is evidence-based. It also taught many of the tenants of different research topics. ",
+            "\u00a0The class provided a broad exposure to various neurological disorders, both degenerative and developmental. The material covered in the course ranged from basic method/techniques used in biomedical research today, to clinical therapeutic development/application, along with everything in between. The structure of the course was very helpful for anyone interested in studying neurological disorders. ",
+            "\u00a0Excellent survey of neurological diseases and the methodology used in their diagnosis and modeling. ",
+            "\u00a0The basics of neurodegenerative diseases\r\nThe ability to read and criticize scientific papers "
+        ],
+        [
+            "\u00a0Strengths:\r\nBroad range of topics, small class size (facilitated small group discussions with faculty and classmates).\r\n\r\nWeaknesses: \r\nNone ",
+            "\u00a0Terrific curation of guest lecturers to give a well rounded survey of different types of neurological diseases. More opportunities for feedback on assignments would have been appreciated. ",
+            "\u00a0Strength: very interesting lecturers "
+        ],
+        [
+            "\u00a0I would 100% recommend this course to another student. During my two years at Yale University, this course has been the only course where I have felt challenged to learn. Both instructors were invested in the development and growth of the students. ",
+            "\u00a0Yes. Not too much of a time commitment (with regards to out-of-class homework), while having the opportunity to learn a tremendous amount from world leaders in their respective fields of research. ",
+            "\u00a0Yes ",
+            "\u00a0Yes, I would recommend this course to young (1st or 2nd year) researchers interested in neurodegenerative diseases "
+        ]
+    ]
+}

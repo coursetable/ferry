@@ -1,0 +1,113 @@
+{
+    "crn_code": "20868",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            6,
+            9,
+            4
+        ],
+        [
+            2,
+            1,
+            8,
+            6,
+            4
+        ],
+        [
+            2,
+            0,
+            4,
+            9,
+            6
+        ],
+        [
+            3,
+            3,
+            10,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            6,
+            13,
+            2
+        ],
+        [
+            0,
+            1,
+            14,
+            5,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned nothing. ",
+            "\u00a0I gained more insight into circuit design and PCB design. ",
+            "\u00a0I worked a lot more with breadboarding and soldering in lab, but other than that this class ends up just bringing a lot of stuff you've already learned together. ",
+            "\u00a0I gained insight into the frequency responses of various circuits and experience with Laplace transforms, Fourier series, and Fourier transforms. ",
+            "\u00a0Advanced analog circuit analysis; laplace & fourier transforms. ",
+            "\u00a0This course made me a lot more proficient in analyzing circuits, especially as someone coming from a non-EE background. I learned about filters and resonance more than anything else, and also Laplace and Fourier transforms. ",
+            "\u00a0I learned more about the theoretical side of circuits including: bode blots, impedances, circuit analysis, and mostly about Laplace and Fourier transforms. ",
+            "\u00a0Got really good at circuits analysis and solidified stuff taught in EE200. Learned a lot of EE math like Fourier and Laplace. ",
+            "\u00a0Fourier and Laplace are the greatest things to have ever been discovered in the era of humans. ",
+            "\u00a0I learned about circuit analysis, transfer functions, and Laplace transforms. The labs weren't too bad and I enjoyed some of them, especially the ones in which we got to solder. ",
+            "\u00a0I learned about Fourier and Laplace transformations, and my life has been transformed. The beauty and power of transforming higher order differential equations into simple algebra amazes me, especially since these transformations make analyzing complex circuits so much easier. This class filled in the gaps left uncovered in EE 200. ",
+            "\u00a0I was able to use equipment in the lab without relying on a partner, including the soldering iron, oscilliscope, and power source. We also learned different ways to solve circuits. ",
+            "\u00a0Some basic circuitry concepts and differential equations. ",
+            "\u00a0I learned advanced knowledge of circuit systems (first and second order), as well as how to build actual circuits in the lab! "
+        ],
+        [
+            "\u00a0Homework:  The length of homework assignments was manageable, but assignments were not posted on a set schedule.\r\n\r\nLabs:  The lab notes distributed ahead of lab sessions were unclear, self-contradictory, and often revised multiple times before lab. This meant that students were unsure what was expected of them.\r\n\r\nLectures:  The professor simply lectured directly from the textbook, but he often made mistakes.\r\n\r\nExams:  The difficulty of the midterm did not match the difficulty of homework assignments. Students were not well-prepared. ",
+            "\u00a0I enjoyed the labs once Hong redid them.  Although they weren't related to the content in lecture, they provided a marketable skillset (designing a PCB, soldering, etc).  The TAs were very friendly and helpful.  The worst part of this class (by far) was the lectures.  They just weren't exciting, engaging, and Hong felt disconnected from the class.  In the future, I'd enjoy seeing more passionate lectures.  Also, graded work (notably labs) took forever to be returned, and comments were sparse (if any).  Additionally, solutions to PSETs were not posted and corrections were not made to work, either, making it hard to understand what was done wrong in problems.  Increased feedback would be greatly appreciated for this course. ",
+            "\u00a0Better office hours would help, also more feedback on homeworks labs and tests. ",
+            "\u00a0Strengths: lecture was very good. Homework assignments were reasonable. Weaknesses: Class, and especially labs, were a bit disorganized. Exams were perhaps unfairly difficult (especially in grading; small mistakes that would constitute 2 or 3 points off on homework were 10-20 off on exams). Labs were generally fun but not planned out well enough to streamline the lab session; TAs did not seem to be knowledgable with the lab materials. Class often seemed rushed class probably needs to be 75m, not 50m long.\r\n\r\nGrading was also inappropriately non-transparent. To get back lab comments, we had to email our TAs. To pick up our exams, we had to set up a *meeting* with the TA. To get back homework, we had to find it in a folder in Becton. This is unacceptable. All work must be returned in class (or in lab, as it were), with full comments. TAs are here to help us learn, and to be so non-transparent with grading creates a very difficult learning environment. ",
+            "\u00a0I think the pacing of the lectures and psets was really fair. The labs were fairly disorganized which was frustrating at times-- lots of typos mostly. ",
+            "\u00a0The class material was very good and I liked the amount of math that was used throughout. The amount of work was also very fair. However, the class was a little disorganized as Professor Hong had to poll the class several times to schedule certain events which were hard as not everyone was in the class on certain days. The labs were also ok: the first 5 labs were simply to construct multiple circuits on the computer and then, construct them on a breadboard which got very tiring. The last few labs were more fun as we began to solder circuits together and build more real-life applications. ",
+            "\u00a0I really likes the labs. But I think the whole \"simulated then build\" approach to circuits was a bit dry. I think it's good practice to learn how to use simulation software, but I think there's a better way of doing it . I.e, simulate a more complicated circuit, then build something else. No need to build and simulate the same circuit. ",
+            "\u00a0Very mathy for better or worse. Loved Professor Hong Tang. ",
+            "\u00a0Hong is so funny but the grader is so anal like cmon. ",
+            "\u00a0This course was well structured and very closely followed the textbook which made it easy to follow along with the course. The problem sets were pretty fair as well and came from the textbook also. Some of the lab instruction handouts could be improved however because some of the instructions were confusing, unclear, or inaccurate. ",
+            "\u00a0The biggest issue I had with this course would be the beginning few labs.  They felt overly tedious and complicated, especially because no one knew how to work the software being used.  A demonstration and some tinkering in the beginning could be valuable rather than jumping right into it.  Also, I think they can be simplified / shrunken a bit and still get the same point across. ",
+            "\u00a0The main strength of the course were the circuit kits we were given. With these tools at my disposal, I actually felt like an EE major. Labs were easier since the kits for them were ours, and we were familiar with each component of them. The last three labs, designing, printing, and soldering our very own PCBs, creating a radio transmitter, and setting up a motor controlled by light, were very engaging, encouraged us to focus on three very cool applications of what we'd learned. The textbook was also a very handy tool, especially since Prof. Tang taught in the same order as each chapter. ",
+            "\u00a0I would have preferred more feedback and to get our psets and lab reports returned to us. ",
+            "\u00a0The course content is ok and the textbook is helpful.\r\n\r\nThe labs are very poorly organized. The first lab had unclear instructions that led most of the class to receive very poor grades. The rest of the labs were very focused on just making circuits rather than understanding them. Because of this, we learned very little from them.\r\n\r\nThe last three labs involved soldering and those were interesting.\r\n\r\nAlso, the tests were graded very unfairly, the professor didn't give any partial credit and took points off unfairly. ",
+            "\u00a0The course has fun labs with very helpful TAs as well as a professor who is very good at explaining and teaching the material. I actually don't have much to say in the way of weaknesses or improvements. The only thing would be to return homework grades (and possibly the homeworks themselves?) a week or so after we hand them in and not at the end of the semester. "
+        ],
+        [
+            "\u00a0No. This course is disorganized, and the professor does not care about teaching the subject matter. ",
+            "\u00a0I cannot recommend this course.  Hong is very kind in assigning short, meaningful PSET problems, but this course lacks too many elements of a successful course for anyone to take this for fun (or as an elective if you're going for the BA).  The lecturing of this course needs improvement -- classes were dry and not exciting.  Additionally, labs were returned without comments, and PSET solutions were not posted.  It's also hard to know how you're tracking in this course -- there was such a small standard deviation for PSETs (like less than a point in some cases), but a HUGE variation in exams. ",
+            "\u00a0If you are taking this you are either EE or EECS, either way you have to but Hong is nice (just a bit disorganized). ",
+            "\u00a0Yes, of course as part of EE sequence. Make sure you start psets and labs early, and don't let yourself be fooled by exams. ",
+            "\u00a0I think this course is required for most students who take it, but if you're a physics/math student interested in EE, this is a good course to take. It covers several interesting topics, namely Bode Plots (in association with filters), Laplace Transforms, and Fourier Transforms/Series. ",
+            "\u00a0Yes, I would recommend it to anyone in the EE major, or anyone who really likes math and the application of it to physics/circuits. The course was very math intensive (second half focused almost exclusively on Laplace and Fourier transforms), so take it if you like that stuff. ",
+            "\u00a0Most people take it because they have to. Given the dry topics, Professor Hong Tang makes everything very clear and engaging. ",
+            "\u00a0I mean if you need it for your major you will take it regardless. Heavy on the math (Laplace and Fourier Transforms) but a solid ending course for the intro series. Wraps many of the concepts from 200 into a higher level of math. Hong explains things well and has the most beautiful chalkboard writing you will ever see. ",
+            "\u00a0I mean if you're EE, you have to take it. ",
+            "\u00a0I would recommend this class to other electrical engineering majors. If it's not a required class there is not much of a reason to take it, however it is very helpful for learning Laplace transforms. ",
+            "\u00a0Highly recommend ",
+            "\u00a0Very interesting to me as an EECS major (also required). Perhaps non-EE and non-EECS should shop the class. The class followed very similar to the first two weeks. ",
+            "\u00a0It's a difficult course, but I enjoyed it because the lab accessible and I felt that the concepts delved deeper into the topics glossed over in EENG 200 ",
+            "\u00a0Never. This is a terrible course. ",
+            "\u00a0Yesand its probably required for you anyways if youre looking to take it. Prof. Tang is great. ",
+            "\u00a0I would recommend this. Well, if you're EE or EECS, you have to take this anyway, so let me use this to just prepare you. First off, it's a great, well-taught course by Professor Hong. It deals with circuits but this time there are more inductors and capacitors, so you just learn how to deal with circuits that have those in them. By doing this we go over radios, speakers, motors, and other cool electronics, which we actually experiment with in the weekly lab. The weekly problem sets are just a few problems in the textbook that you can usually solve pretty quickly once you read the examples in the chapter of the textbook (and looking at your class notes, which Hong also posts online). The weekly lab is a 3-hour lab session, but depending on the lab you can finish even as early as 1-and-a-half hours. There are also make-up lab hours if you don't finish in time. Fortunately, the lab \"reports\" are really just sentence answers to questions and screenshots that you can usually fill out in a quick sitting. Be warned, though, that some of the labs can be difficult and/or time consuming so I do recommend getting there early and also asking your classmates and the TAs (who are super helpful) for help! Anyway, you learn how to solder electronic components if you didn't know how to do that already (I didn't!), which is pretty awesome. For the midterm and final exams which are both an hour or so long, you can bring in 3 sheets of notes! Anyway, I hope this provided some insight. I thought it was a great course- just get your hands on the textbook and use it in tandem with lecture and you'll be fine. Also, it is usually a smaller class so definitely get to know your peers and use them as support! Also, don't be afraid to speak up in class- Professor Hong is great at answering questions! "
+        ]
+    ]
+}

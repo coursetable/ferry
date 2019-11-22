@@ -1,0 +1,125 @@
+{
+    "crn_code": "12087",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            8,
+            9
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            17
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            14
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            15
+        ],
+        [
+            0,
+            2,
+            11,
+            5,
+            1
+        ],
+        [
+            0,
+            5,
+            13,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course allowed me to build practical analytic skills in R, which I employ every day in my research. I feel far more equipped to run my own analyses and engage with the analyses that I read in papers. ",
+            "\u00a0I was able to learn both the fundamental statistics, and some advanced statistics, required for doing human neuroscience research. I also was introduced to R programming and have gained familiarity and comfort with using this platform. ",
+            "\u00a0I developed statistical and coding skills in this course. I had very limited knowledge of either coming into the semester, but I now feel like I know a great deal of information on these topics and have build an impressive number of skills throughout the course of the semester. ",
+            "\u00a0I developed the skill of coding in R; I also learned vital information about statistical tests and what contexts are appropriate for certain tests, what assumptions underlie each test, and how the test is actually manipulating the data to answer your question. ",
+            "\u00a0I learned basic and some advanced R skills to help process, visualize, and analyze data in meaningful ways using statistical tests that are appropriate given the data at hand. I also learned how to critically evaluate statistical methods used by others in writing and to move towards more advanced and applicable statistical methods than ones that are used in research now. ",
+            "\u00a0How to use R in a more efficient way. Crucially--I already knew R going into the course, but taking this class equipped me with more efficient ways of cleaning, arranging and working with data so I can more easily visualize and analyze results. Absolutely a helpful class! ",
+            "\u00a0a lot about statistics and r ",
+            "\u00a0Feel more comfortable thinking about the statistics that are available for me ",
+            "\u00a0I'm able to conduct all the analyses i used to do in SPSS in R. I feel confident that I can use R for all of the statistical analyses I plan to do in the near future. ",
+            "\u00a0For years I have been running different statistical tests on my data without understanding what any of it meant, and now I feel like I get what I am doing. ",
+            "\u00a0-being thoughtfully critical in understanding the assumptions and limitations underlying NHST, both for my own work and in reading research articles\r\n-how to use statistical software to analyze data from initial graphing to understand the structure of the data to selecting the statistical test to ask my questions\r\n-how to use more sophisticated methods like bootstrapping and permutation tests to analyze my data\r\n-coding basic functions in R ",
+            "\u00a0I learned the actual math behind various statistical tests and why we use ones over others in various situations, which had never been well explained to me before! ",
+            "\u00a0Broad knowledge of statistics; learned to implement standard statistical tests, as well as more advanced stats, in R ",
+            "\u00a0I learned how to plot, perform different statistical analyses in R and how to apply the proper analyses based on data type and features of the dataset. ",
+            "\u00a0I learned how run a number of statistical tests in R, which was extremely useful because this is the language that I will do most of my analyses in. ",
+            "\u00a0After taking this course, I think that I have a very proficient understanding of how to use R for statistics, which has already been quite helpful for my research! In addition, I learned about topics that I knew quite little about before taking this course, such as regressions, linear models (including GLM and mixed effects models), bootstrapping, and permutations. ",
+            "\u00a0Statistical knowledge and application as well as the use of R. ",
+            "\u00a0Knowledge of which statistical tests to use when and how to implement them in R. ",
+            "\u00a0Learned an amazing amount of stats and programming! I thought this class was really useful. "
+        ],
+        [
+            "\u00a0This course is extremely well-designed and informative. My only wish is that I would have wanted to cover more content (without sacrificing depth of explanation, though). What would be fantastic would be having the course spread over two semesters--the first being NHST, and the second, the Bayesian content we didn't get to cover. ",
+            "\u00a0The biggest strength is definitely the professor's engagement during lecture. He's very energetic and enthusiastic, and this contributes to my desire to learn more about statistics. Furthermore him and Rosie the TA put together very well-constructed, detailed, helpful notes packages for students. That was my saving grace in this class to do the problem sets! I also am a big fan of the post-class attendance sheet that gives us the space to share feedback - Julian uses this feedback and applies it to subsequent lectures and I think that's great.\r\n\r\nThe only weakness is the timing of the class and how long we do or do not spend on material. I recognize at the beginning things need to move slowly so everyone is on the same page and that definitely helped me since my programming level was 0 entering into the class. But, if we would have sped up a bit in the middle of the semester/not spent as much time answering certain questions, we may have been able to get through more material by the end of the semester. ",
+            "\u00a0This is an incredibly well-taught class, thus, I would say that Julian is the biggest strength of the course. While I understand the need to learn about a variety of statistical tests and methods to give us a robust understanding of statistics, I do wish that we could have spent more time focusing on the more important and widely used methods rather than learn a little bit about many different methods. Additionally, I think the class could strengthen by creating a chance to analyze our own data, or data characteristic of our specific fields. In general though, the class is very well-done and there is not much that I would change about it. ",
+            "\u00a0Strengths: I really appreciated that this course was really catered to the students in the class- the professor would make a point to always answer questions we submitted after class about the previous lecture. It was also really good that the professor often gave examples of times in which he used the different tests in a real-world psychology experiment. The TA and Professor were both extremely responsive and helpful. The enthusiasm for the class and level of engagement by the professor was amazing! I think this class was the most directly useful class I have taken in grad school (as a second year). \r\n\r\nWeaknesses: At times things were a bit disorganized but this is expected with a class being taught for the first time. And the professor always made sure to clarify any confusions asap. ",
+            "\u00a0The class provided a great background and introduction to statistical methods and R that was balanced and appropriate for the diverse needs of the students. Both statistical methods and R coding was taught in a clear, concise way that was only ever convoluted by student questions that often lost sight of the issue at hand. I do wish that we had gotten feedback more quickly initially on problem sets, but this was fixed during the second half of the semester. Overall, it was an extremely enjoyable and rewarding class! ",
+            "\u00a0I think the class can be more oriented towards working with analysis tests that are most commonly used--t-tests, ANOVAs, power analysis. The class took awhile to build up to these more useful tests. We spent quite a while just going through binomial tests, probabilities and so on, that by the time we got to more useful tests, we were often rushing through them.\r\n\r\nNonetheless, I think it was helpful that we used real datasets to learn the different tests. Helps us apply whatever we learn which is ultimately what's important. ",
+            "\u00a0strengths: learnt a lot about statistics and r--improved my skills and confidence a lot\r\nweaknesses: it could be helpful if we got to cover more stuff... ",
+            "\u00a0I hate the language of R. It's so inconsistent and awkward to type. Aside from that it seems like a valuable tool box. \r\n\r\nThings at times felt very unplanned and kind of spur of the moment. I would have preferred if the classes were better planned out. The topics felt incredibly rushed at times too. ",
+            "\u00a0Strengths: we packed a lot into the semester, the notes and code were extremely helpful, we got really competent at something the department and psychology as a whole is increasingly recognizing as important.\r\n\r\nWeaknesses: It was too short. Make this a year long course. The p-sets and final could maybe have been a bit more challenging, and we could maybe have dived into a few more practical applications (how would you write up these tests in a paper? how should we prepare our code to post it online along with our data? etc) ",
+            "\u00a0There were no weaknesses of the course except that I wish it went a full year instead of only one semester. ",
+            "\u00a0I loved the course material and the resources that the instructor provided were outstanding!! I also appreciated how frequently the instructor and TA sought out feedback to build up the class. I'll go more into depth about the strengths for why I would recommend this class later.\r\n\r\nI think two general weaknesses was in technical support in real-time and better management of the quality of questions during lecture. I feel like we were not able to cover as much material because several students asked questions that were not helpful for the general learning of the class. I appreciate how open and supportive the instructor was of all questions, yet I think giving feedback privately to some students about the timing of their questions could have helped us cover more material efficiently. ",
+            "\u00a0I thought Julian did an amazing job of explaining everything and only wish we had been able to stick with the syllabus so that we could have covered more topics! ",
+            "\u00a0I really appreciated the thorough notes available the course website, it really allowed me to focus on the content of the lecture without worrying about writing everything down. The lectures were well structured, but it always felt like we were rushing towards the end (but again, the thorough notes meant this wasn't a huge issue). ",
+            "\u00a0As far as introductory graduate-level statistics courses go, I thought this one was easy to follow, while still covering a lot of useful material. I think the pace of the class was good, although at the beginning of the semester, more time than I think was necessary was dedicated to answering individual questions, which made the material covered towards the end of the course a little rushed. Still, I'm very grateful that I was able to take this class with Julian because now I feel confident in my foundation, and was able to analyze data from my first study using that software and without any help from my professor. ",
+            "\u00a0Strengths: I think this course was designed and taught exceptionally well. In particular, using R made the course very relevant and helpful, and Julian's examples in class made the material very easy to understand. The problem sets for homework were designed well, and made it easy to learn and apply the material. And last but certainly not least, Julian's class notes were immensely helpful! I've downloaded them and plan on referencing them in the future, because I think that they explained the material better than any textbooks or references I've been able to find online. \r\n\r\nWeakness: In my opinion, the only weakness was that the class sometimes got derailed by certain individuals asking questions that were tangential, irrelevant, or clearly explained in the class notes that Julian provided. This problem might go away in future semesters just based on the individuals in the class. Also, since computers are used in class, perhaps a system such as a Slack thread where individuals can post questions during the lecture for the TF to answer (or for Julian to answer at the end) would be helpful. ",
+            "\u00a0The course was very applicable to research however felt very rushed. I would recommend this course be spread out over a year rather than a semester. ",
+            "\u00a0The strengths: the professor who is clear and very interactive in lectures, the content of the lectures included a good balance of explanation of statistical tests and implementation in R, the assignments, which in contrast to some other introductory statistics courses are not made lengthy by assumption of certain degree of R proficiency, and the TA who gave very specific feedback on assignments.\r\n\r\nThe weaknesses: only thing that might make this course better would be the ability to somehow use one's own data for assignments or exams or projects or extra credit perhaps. ",
+            "\u00a0I think we got distracted a few times with people asking questions during class that weren't particularly important and that set us back  ultimately it probably impacted how much material we were exposed to. Questions should probably be saved until after class unless they directly pertain to lecture material. ",
+            "\u00a0Time management was a problem with this course, although it is understandable given it is being overhauled. I think an optional tutorial/meeting time for questions/clarity issues would help.\r\n\r\nNot being given solutions to problem sets was a little frustrating as well, since we often received no feedback. "
+        ],
+        [
+            "\u00a0Absolutely. I think every early-mid stage psychology graduate student would benefit from taking this course, as Julian has designed it. ",
+            "\u00a0Absolutely would recommend!! I hear that this class was previously focused on doing a lot of hand-written versions of statistical tests. While this is helpful for learning the theory behind it, I think Julian's approach is a lot more relevant to our needs in research and he makes the material seem very approachable/not intimidating (which stats can often be to folks with no prior experience). ",
+            "\u00a0Absolutely. It is the single best opportunity to learn R and stats methods. ",
+            "\u00a0100% yes! A basic understanding of statistics is vital for any scientist, and this class does a great job of providing a very practical and fundamental understanding of the most common statistical tests used. This class has made me a better scientist. ",
+            "\u00a0I would absolutely recommend this class (and professor!) to anyone who is interested in learning basic R coding and/or statistical methods. The material is accessible and comprehensive, and the class is designed to promote student learning. ",
+            "\u00a0Yes! Absolutely, especially to a student of the social sciences. So much time is often spent just trying to clean and arrange huge data sets and this class will save you so much time in the future. Throughout the semester, I was already applying so many things I picked up in the class to the actual analysis I was doing as a researcher. ",
+            "\u00a0I'll definitely recommend it--it is extremely helpful ",
+            "\u00a0Yes ",
+            "\u00a0Well, it's the only required course. But even if it weren't, this is something all new up and coming researchers should be able to do. It's really important skills, I couldn't do anything in R going into this class and now I can run all of my analyses on it, which is something pretty special and cool. Seriously, make this a year long class we only have to take four classes make it 5 and gives us 2 semesters of stats. ",
+            "\u00a0Every psychology student, graduate or undergraduate, should have to take this course. ",
+            "\u00a0Absolutely. This is the most helpful stats class I've ever had--both in the right amount of theory for me to build upon what I know (and correct misconceptions and continue to take more advanced, specialized classes in the future) and to actually have a computational tool to run data analysis at a graduate level. ",
+            "\u00a0I can't recommend this course more because of how well Julian explained statistical concepts! ",
+            "\u00a0Yes ",
+            "\u00a0I would definitely recommend the course! The content is super relevant and Julian did a great job of going through the basics of R and getting everyone on the same level. The psets were challenging, but doable and the take home exams were very fair. ",
+            "\u00a0I would highly recommend this class to anyone who is looking to learn to use R to analyze their data. ",
+            "\u00a0Yes, absolutely! This course was well-taught and immensely helpful. I think that my understanding of statistics is much stronger than when I started the semester, and I am very grateful that I was able to take this course. ",
+            "\u00a0Yes, it is very helpful for understanding statistics and R. ",
+            "\u00a0Would definitely recommend to anyone looking to develop a basic proficiency with statistical tests for psychology, cognitive science, and neuroscience and with R. ",
+            "\u00a0Yes it was fantastic. "
+        ]
+    ]
+}

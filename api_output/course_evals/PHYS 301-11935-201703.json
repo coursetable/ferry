@@ -1,0 +1,87 @@
+{
+    "crn_code": "11935",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            6,
+            2,
+            1
+        ],
+        [
+            1,
+            2,
+            3,
+            2,
+            3
+        ],
+        [
+            0,
+            1,
+            3,
+            5,
+            2
+        ],
+        [
+            1,
+            1,
+            2,
+            4,
+            3
+        ],
+        [
+            1,
+            5,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            6,
+            4,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Its mostly math you need to do physics ",
+            "\u00a0I learned many mathematical concepts that are applicable to physics, which will surely benefit me in my future physics education. ",
+            "\u00a0A broad understanding of upper level physics math concepts. ",
+            "\u00a0I developed some skills to critically think about math and physics but overall this course is not very well taught and you have to take a lot of things for granted rather than truly understanding them. ",
+            "\u00a0Basic Dif Eq, linear algebra ",
+            "\u00a0I really do not think I developed any new skills in this course. It was not well structured and actually served to put me behind in my mathematics education. ",
+            "\u00a0If you've taken math up to Math 120/ENAS 151, the first half of this class enhances your knowledge of all of those concepts and applies them to Physics. We learned about Complex Numbers and were also taught a general overview of important concepts in  Linear Algebra and Differential Equations. "
+        ],
+        [
+            "\u00a0I think it gives a good overview of many math topics, and how they are applied to Physics. I think the content and teaching were strengths, and one area for improvement is the organization of notes online. I think typing the notes instead of handwritten scans would make it easier to learn for students. But, it was nice to have the notes posted overall, which I would say was a strength of the class. ",
+            "\u00a0More explanations on how what we are learning applies to certain physics concepts ",
+            "\u00a0The professor is a great guy, but not great at teaching. We all know those genius professors who are so far removed from undergraduate level courses. Like one day he'll teach us something that would be taught in a high school physics course and a minute later something from an advanced grad students classes, it's all over the place. He also can't introduce concepts in terms that we understand. ",
+            "\u00a0This course provides a relatively low-stress environment within which to learn the material. Beyond this, the course has an incredible number of flaws. It managed to cover an incredible number of fields of mathematics, attempting to teach the basics of each and then incorporate applications to physics. This system failed completely as we were never able to get into each subject deeply enough to actually see the applications. Entire fields of mathematics, for example differential equations and vector calculus, were covered in single lectures. It was a honestly a complete waste of time. ",
+            "\u00a0Strengths: 1) Professor Baker is absolutely an amazing teacher, accessible and kind (a rarity in Physics)-- you will not have to stress about your grades and can focus on learning the material 2) The class is typically <20 people so you can easily work together with other classmates on problem sets 3) The grading distribution puts a lot of emphasis on the homework so if you really sit down and set aside time to tackle the problems, which are difficult but not impossible, you will be fine. 4) Professor Baker will help us do extremely hard problems in class if everyone was stuck on it. 4) Baker is very enthusiastic and teaches to help us learn, not just to hear himself. Ask questions-- he is very friendly\r\n\r\nWeaknesses: 1) The TA isn't really present, so if you need outside help I recommend seeing the QR tutors in CTL. This makes the homework a pain because some of the problems are extremely difficult to solve, and the TA won't give you much help. This is fair though because the grading places so much emphasis on homework. 2) Baker has acknowledged that we tend to speed through most of the hard stuff near the end of the semester, but this really can't be helped because not everyone is at the same level (some have taken 120/151 and others have not). I suggest cutting down more of the intro material that most people have seen ie. what is a function etc. "
+        ],
+        [
+            "\u00a0This course gives a great overview of concepts that are especially relevant to physics majors, but I would recommend it to anyone looking to polish their calculus/linear algebra skills without having to write formal proofs. ",
+            "\u00a0I would definitely recommend this class to physics students who need more work on mathematical topics. ",
+            "\u00a0Yes. If you can take this instead of a regular math class for a major requirement do it. It wont be comprehensive in any of the topics covered but it gives you a solid foundation for a lot ",
+            "\u00a0Yes! ",
+            "\u00a0If you're taking this as a fun elective, I might recommend it, but it is extremely frustrating. ",
+            "\u00a0I absolutely do not recommend taking this course. It put me behind in terms of the mathematics that I need for my physics major, and I genuinely can not think of a concrete thing that I took away from it. ",
+            "\u00a0I would! This is a great course to learn Math for Physics in without having to spend half of the time anxious about your grades. The homework is difficult, but if you work with your classmates (our class had a group chat) it's fine, and the exams are fair and straightforward (easy if you go over his lecture notes well). You learn a lot of valuable concepts in Physics. "
+        ]
+    ]
+}

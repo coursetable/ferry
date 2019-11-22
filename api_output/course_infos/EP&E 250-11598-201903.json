@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50962/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Origins and development of the European Community and Union over the past fifty years; ways in which the often-conflicting ambitions of its member states have shaped the EU; relations between member states and the EU's supranational institutions and politics; and economic, political, and geopolitical challenges.", 
+    "title": "The European Union", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "RKZ 102", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11598", 
+        "listings": [
+            {
+                "number": "250", 
+                "subject": "EP&E"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEP3\">YC EP&amp;E Politics Core</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEPA\">YC EP&amp;E: Advanced Seminar</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YGLE\">YC Global Affairs: Elective</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSC\">YC Poli Sci: Comparative Govt</a></li></ul>"
+    ], 
+    "professors": [
+        "David Cameron"
+    ], 
+    "long_title": "The European Union", 
+    "extra_info": "A"
+}

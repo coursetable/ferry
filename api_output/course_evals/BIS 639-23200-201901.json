@@ -1,0 +1,91 @@
+{
+    "crn_code": "23200",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's provided students with helpful and timely feedback",
+        "The instructor established a positive learning environment",
+        "The instructor raised questions or problems that encouraged me to think critically"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            5,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            7
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            6
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a05 ",
+            "\u00a05 ",
+            "\u00a02 hours ",
+            "\u00a06 hours ",
+            "\u00a05hours ",
+            "\u00a06 hours per week "
+        ],
+        [
+            "\u00a0Wonderful, the course taught the practical application of statistical knowledge to conduct epidemiology research.\r\n\r\nThe course required programs that were not natively available to Macs, requiring a bit of work around. This may be improved by installing all necessary programs on a library computer on campus. ",
+            "\u00a0This course equips you with a unique skill set in descriptive and temporospatial biostatistics and epidemiology.  This should be required for doctoral students whose work can directly impact public health policy.  Major strengths include the use of real public health database data, the direct relevance of lecture material to its application in the assignments, and the amazing professor (as instructor and person).  The only weakness is that we did not get a chance to practice with GIS applications, but the professor (at our request) instead chose to use this lecture time to teach us another valuable skill (counterfactual analysis). ",
+            "\u00a0I think, overall this class is great. But it's not very friendly for students not in statistical major. ",
+            "\u00a0good, interesting "
+        ],
+        [
+            "\u00a0The instructor is clear and concise. He is very willing to explain questions via email or in person and is truly a great mentor. ",
+            "\u00a0Prof. Holford is very knowledgeable, approachable, and open to student ideas, discussion, and feedback.  The way he structured the course was logical, and the material (lectures, application examples) was easy to digest and then apply in the homework assignments.  He also made himself available outside of the course for additional guidance on homework and the final project.  Truly, no suggestions for improvement! ",
+            "\u00a0Wonderful instructor. Very quick to explain concepts again. ",
+            "\u00a0Professor Theodore is very patient and nice. He will repeat every point that might be confusing. ",
+            "\u00a0Amazing and supportive professor! He created a safe environment for me to ask questions and was always willing to meet if I had any questions, ",
+            "\u00a0very supportive professor "
+        ],
+        [
+            "\u00a0Here, you learn how to analyze disease from a populational level using excel, SAS, and other statistical programs. I recommend the course as it is a true application of public health work in health sciences. ",
+            "\u00a0I would ABSOLUTELY recommend this course to anyone in public health (and especially PhD students) whose work has policy implications.  The readily applicable skills acquired through the course in descriptive and temporospatial epidemiology as well as in data visualization and interpretation are second to none.  Prof. Holford is also very kind, approachable, and open to tailoring class structure and discussions to the students' interests and needs.  To anyone considering taking this class: DO IT, and thank me later! ",
+            "\u00a0I think this class is highly recommended for student with solid statistical basic and SAS basic. ",
+            "\u00a0maybe students need some background on SAS training experience before choosing this course "
+        ]
+    ]
+}

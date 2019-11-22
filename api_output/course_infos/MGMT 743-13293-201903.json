@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50531/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This is a doctoral-level course in the empirical analysis of financial data. The course covers some of the more important works in empirical asset pricing, beginning with the early development and tests of the efficient market paradigm, but focuses on modern evidence and research on market efficiency, trading profits, and information-based arbitrage. The course also covers common empirical methods and databases used in asset pricing. The course requires the reading of three to five research papers per week, presentations and class participation in discussions, referee reports, and a final empirical paper.", 
+    "title": "Continuous Time Finance", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "EVANS 2210", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13293", 
+        "listings": [
+            {
+                "number": "743", 
+                "subject": "MGMT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jonathan Ingersoll"
+    ], 
+    "long_title": "Continuous Time Finance", 
+    "extra_info": "A"
+}

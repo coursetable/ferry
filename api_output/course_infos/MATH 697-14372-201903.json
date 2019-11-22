@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "In this two-term course, we discuss the arithmetic theory of elliptic curves, modular curves, and modular forms. The course serves as an introduction to modern aspects in the study of algebraic number theory and arithmetic algebraic geometry: for example, the Birch and Swinnerton-Dyer conjecture. The basic references are GTM 106, 151, 228.", 
+    "title": "Topics in Algebraic Number The...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WTS A46", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14372", 
+        "listings": [
+            {
+                "number": "697", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Yifeng Liu"
+    ], 
+    "long_title": "Topics in Algebraic Number Theory I and II", 
+    "extra_info": "A"
+}

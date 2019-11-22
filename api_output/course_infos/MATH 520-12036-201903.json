@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50453/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Construction and limit theorems for measures and integrals on general spaces; product measures; Lp spaces; integral representation of linear functionals.", 
+    "title": "Measure Theory and Integration", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "LOM 202", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12036", 
+        "listings": [
+            {
+                "number": "520", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Arie Levit"
+    ], 
+    "long_title": "Measure Theory and Integration", 
+    "extra_info": "A"
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49469/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This seminar studies geo engineering, defined as technologies to intervene in the global climate system to countervail climate change or its impacts. The seminar first establishes the relevant background, reviewing climate change status, physics, economics, and negotiations. However, we thereafter bypass the (essential) consideration of emissions reduction strategies and instead focus on the toolbox of potential interventions being considered to contend with such climate change as proves unavoidable. These tools include solar radiation management, carbon removal and sequestration, cloud modifications, forestation, bio-energy, and other negative emissions technologies. After exploring the technological, economic, and political feasibility of these potential interventions, we close by considering their ethical implications and the impact of public perception on policy options.", 
+    "title": "Geo Engineering in Response to...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "PH 312", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11979", 
+        "listings": [
+            {
+                "number": "300", 
+                "subject": "CSES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Wake Smith"
+    ], 
+    "long_title": "Geo Engineering in Response to Climate Change", 
+    "extra_info": "A"
+}

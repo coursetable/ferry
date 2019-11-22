@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48984/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This interdisciplinary seminar, in collaboration with the Center for Race, Indigeneity, and Transnational Migration (RITM), is open to graduate students and pre- and postdoctoral fellows. In it, we examine the central importance of family, kinship, and domestic and reproductive labor to the cultural and social reproduction of racial colonialisms. Settler colonialism, colonial slavery, overseas empire, and globalization depend not only on the brute force of war, captivity, and occupation; they are also sustained and contested through culture, language, forms of family and household, education, and the social reproduction of race, gender, intimacy, and filiation. We trace a genealogy that considers the long history of colonial impositions of domesticity and family separations: from the violation and separation of enslaved women from their children, to compulsory boarding schools for Native Americans, racialized gendered divisions of care labor and reproductive surrogacy, transnational adoption, and migrant detention. This genealogy simultaneously includes less acknowledged yet longstanding alternative forms of kinship and relation, amalgams of domestic sociality, and nonbiological generation and affiliation. Readings include historical and anthropological studies of household and reproduction under various colonialisms (Ann Laura Stoler, Alys Weinbaum, Jennifer Morgan, Dorothy Roberts, Brenda Child, Kendra Field, Cathleen Cahill, Lisa Brooks, Amy Kaplan, Arissa Oh, Kalindi Vora, Rachel Buff), debates on social reproduction (Tithi Bhattacharya, Silvia Federici, Maria Mies, Ruha Benjamin, Laura Briggs, Alyosha Goldstein, Chandan Reddy, Evelyn Nakano Glenn, Mary Romero), materials on alternative kinship and social relations (Saidiya Hartman, Kyla Schuller, Elizabeth Freeman, Fred Moten), and literary works (Mary Prince, Toni Morrison, Louise Erdrich, Patricia Powell, Patricia Park, Octavia Butler).", 
+    "title": "Colonial Domesticity and Repro...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "BRW35 215", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10338", 
+        "listings": [
+            {
+                "number": "687", 
+                "subject": "AMST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Lisa Lowe"
+    ], 
+    "long_title": "Colonial Domesticity and Reproductive Relations", 
+    "extra_info": "A"
+}

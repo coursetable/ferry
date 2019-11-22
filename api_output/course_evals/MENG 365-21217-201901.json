@@ -1,0 +1,82 @@
+{
+    "crn_code": "21217",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about chemical rocket and jet propulsion. ",
+            "\u00a0Learned how to apply laws of thermodynamics to air breathing engines and rockets. ",
+            "\u00a0In this course my knowledge of fluid mechanics and thermodynamics became more solidified, and I learned about the fundamentals of different kinds of jet engines and rocket propulsion systems. ",
+            "\u00a0We covered mainly air-breathing and rocket engines with a bit at the end about electric propulsion. Air-breathing engines also covered rotating machinery such as compressors and turbines in greater detail. It helps to have an aerodynamics background and is essential to have a fluids and thermo background as much of this class is those two subjects applied to chemical propulsion systems. ",
+            "\u00a0An understanding of how air-breathing engines and rocket engines work. Learned various methods for calculating performance parameters of these engines using idealized flows (such as isentropic flow, Raleigh flow, shifting equilibrium flow). Benefits/costs for using each type of engine. "
+        ],
+        [
+            "\u00a0This course had a lot of work but I definitely learned a great deal. ",
+            "\u00a0This course is good in that it is easy to follow, as the course material mirrors the book material. It was difficult to understand some of the material in lecture, and a significant amount of consultation with the book is needed in order to really engrain the material in your memory. ",
+            "\u00a0Strengths:\r\nGood progression from simpler to more complicated topics (ramjets to turbojets to specific components). \r\nInteresting and engaging content (application and not just thermo and fluids theory).\r\nSmall class size made it easy to ask questions and for Prof Gomez to read the class if we were confused.\r\nWeaknesses:\r\nSome sections are easy while others are very challenging so workload can be quite variable week to week. ",
+            "\u00a0Very interesting course material and Professor Gomez is an engaging lecturer. However, he generally moves a little too quickly, and I had difficulty understanding some of the concepts behind the topics. The book is also a little difficult to understand, and the homework problems were too difficult for the level at which we were learning the material. "
+        ],
+        [
+            "\u00a0Only if you're very interested in the subject matter and very good with fluids and thermodynamics. ",
+            "\u00a0I wish I hadn't taken this class, because now I know that no class I will ever take will fascinate me as much as this class did.\r\n\r\nQuite easily the best class I'll ever take at Yale. If you're interested in rockets and airplanes you MUST take this class. It goes without saying that this class is kind of difficult but it is SO worth it. Even as you are taking the final you will say to yourself: \"Wow. This is pretty hard, but I've learned SO MUCH about such cool stuff!!!!\".\r\n\r\n<3 ",
+            "\u00a0I would highly recommend this course to anyone who is interested in a career in aerospace engineering or the aerospace industry. The material is quite thorough and I feel well prepared to discuss chemical propulsion systems with professionals in the industry. ",
+            "\u00a0I would recommend this course to anyone who is looking to use chemical propulsion concepts in their work/research. It is an extremely challenging class, even as electives go, so I would only take this if you have a strong interest in the topics and/or want to have the coursework under your belt for a job. That being said, if you do have a reason to take it, go for it--what you pay in hard work you get back in really solid knowledge of propulsion systems. ",
+            "\u00a0Very interesting material but very difficult if Gomez is teaching, so take only if you are ok with not getting an A, or Credit/D. "
+        ]
+    ]
+}

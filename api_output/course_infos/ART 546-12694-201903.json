@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49039/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A course required of all incoming M.F.A. students in the painting/printmaking department to unpack, denaturalize, and slow down our making and speaking practices as a community. The course hopes to bridge the intensities characteristic of our program: the intensity of the private studio with the intensity of the semi-public critique. We ask crucial questions about the relationships between form and content, between intents and effects, between authorship, authority, and authenticity, between medium specificity and interdisciplinarity, and between risk and failure. How can our ideas and language be tested against the theories of the past and present? Existential, spiritual, and market-based goals (both internal and instrumental motivations) for art making are explored. Meetings alternate between group critique and reading discussion, supplemented by a series of short writing exercises. Enrollment is limited to incoming students in the department, but readings and concepts are shared widely.", 
+    "title": "Painting Process: Round Trip: ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "GREEN C220", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12694", 
+        "listings": [
+            {
+                "number": "546", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Anoka Faruqee", 
+        "Molly Zuckerman-Hartung"
+    ], 
+    "long_title": "Painting Process: Round Trip: 1st-yr Crits", 
+    "extra_info": "A"
+}

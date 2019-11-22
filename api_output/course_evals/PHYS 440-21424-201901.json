@@ -1,0 +1,126 @@
+{
+    "crn_code": "21424",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            3,
+            2,
+            9,
+            10,
+            10
+        ],
+        [
+            4,
+            7,
+            9,
+            9,
+            7
+        ],
+        [
+            3,
+            5,
+            8,
+            14,
+            5
+        ],
+        [
+            2,
+            6,
+            9,
+            12,
+            5
+        ],
+        [
+            1,
+            1,
+            5,
+            21,
+            8
+        ],
+        [
+            0,
+            4,
+            18,
+            12,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Shankar is incredibly smart so he occasionally says something that blows my mind, but the course is pretty rudimentary QM until the last couple of weeks. ",
+            "\u00a0I learned Dirac notation for linear algebra, which was used throughout the course. There was a review of relevant classical mechanical topics (e.g., Lagrangians and Hamiltonians, physical measurement, wave properties, and light experiments). These topics were then extended into the language of linear algebra and quantum mechanics. ",
+            "\u00a0Introduction to Quantum Mechanics. ",
+            "\u00a0Pretty good overview of QM for someone with some experience in linear. ",
+            "\u00a0Very good introduction to quantum mechanics. \r\nCourse starts by introducing all the math that is needed later (classifying different operators/matrices), does a brief overview of classical mechanics and then moves into solving the wave function of simple quantum systems. Goes over harmonic oscillator/scattering/ and probability currents. ",
+            "\u00a0Postulates of Quantum Mechanics, and applications to problems with one and multiple particles, including problems with Bosons and Fermions. ",
+            "\u00a0I was introduced to the world of quantum mechanics. ",
+            "\u00a0Schrodinger's Equation, taking eigenvalues and bras/kets. So many physics things as well as the math that builds it up. Not a lot of mechanics, which it assumes, but learned some cool quantum theory like tunneling. ",
+            "\u00a0I learned the fundamentals of quantum mechanics, I suppose. ",
+            "\u00a0Learned a ton about the basics of quantum mechanics, and finally solidified my linear algebra ",
+            "\u00a0I gained a knowledge of quantum mechanics, as well as its history and development in the early 20th century. ",
+            "\u00a0Basic understanding of Quantum Mechanics, less so on the conceptual side and more on the physics and calculation. Very cool to understand that our world is really quantum mechanical even though it appears classic Newtonian. Also nice to see some practical applications of math (linear algebra, Hilbert spaces, differential equations) into the physical setting, you get a cool feeling that human knowledge is one cohesive structure, building towards some ultimate truth ",
+            "\u00a0I learned a lot about the notation and techniques useful in quantum mechanics. There were also a lot of satisfying proofs of concepts that Id heard about before (uncertainty, symmetries, parity symmetry violation). ",
+            "\u00a0I didn't truly know anything about quantum mechanics before taking this course, so everything I learned in this course was new, which is a cool feeling. ",
+            "\u00a0Linear algebra of infinite-dimensional vector spaces, bra-ket notation, Schrodinger's equation and bound-state solutions (e.g., particle in a box, particle in a finite well, scattering off a barrier), derivation of the uncertainty principle, the operator version of quantum mechanics taught in Shankar rather than the wave version taught in Griffiths, the classical limit, symmetries and conservation laws. At the end of the day, most of the class was spent solving the Schrodinger equation (similarly to how most of high school physics is spent solving Newton's Second Law). ",
+            "\u00a0Quantum Mechanics - Shankar ",
+            "\u00a0I learned some basics of quantum mechanics. "
+        ],
+        [
+            "\u00a0The strength is that Shankar is really intelligent, but that is also the weakness because he thinks the students are idiots. He doesn't want to teach the course so he isn't very passionate about the material. ",
+            "\u00a0Great course; exactly what should be expected from the course description. Follows the textbook perfectly, which is great if a class is missed, but lectures were very engaging and well worth the trek to SPL. ",
+            "\u00a0Too much time spent on review of mathematics which is a prerequisite for the course. ",
+            "\u00a0Pretty systematic approach, building off of prior concepts. I wish we got more problems like those on the midterm and final, rather than just proofs for psets. ",
+            "\u00a0The main weakness of this course is the ineffective lecture style of the professor, Shankar. Shankar does not know how to meaningfully organize his thoughts into a lecture and as a result, his lectures often feel like ramblings as opposed to a clear and structured way to present course materials. He also does not use the board wellhe didnt write a word on the board all year, only equations, and much of the important content was conceptual stuff that could not be learned just by equations. He generally just keeps writing and often doubles back on himself and changes things hes previously written in a way that makes it very hard to take notes for the class. Overall, his lectures are hard to take notes from and dont teach the material in a way that is understandable. \r\n\r\nIn addition to having a lecture style with much left to be desired, Shankar also creates an environment of terror when it comes to asking questions in class. He will often point to random people in the class and ask them a question instead of presenting a question and leaving it open to the class. He also on one occasion asked a student sitting near the back to repeat to me what I just said and after a short silence he said see, you cannot, which created an environment that is not conducive to learning. Moreover, after talking to other students after the incident, students said it made them feel uncomfortable and that even though they were often paying full attention to class and to the lecture, it would be hard for them to repeat exactly what Shankar had said simply because the lectures are ill-presented and obviously the course material is challenging. Overall, Shankar does not create a supportive learning environment. ",
+            "\u00a0Lectures were incredible. I would have liked even more office hours with the TAs. ",
+            "\u00a0This class has a good, logical progression of material, but as a math major, I felt very confused by all the different notation and relaxing of definitions (such as a basis for an L_2 function space consisting of improper delta functions at each one of the x-values). Sometimes, some of the consequent results felt a little mysterious because of this hand-wavyness. Nevertheless, the material is super cool and really messes with your mind and physical intuition, and it is definitely something worthwhile to learn. ",
+            "\u00a0Its structured well an the information is definitely interesting. However, it was not easy at all to keep up with the class in-season, especially considering I had to miss 3 or 4 classes because of traveling for baseball. Missing even just one class made the weeks that followed much more difficult and undoubtedly made my grade suffer. I guess this isnt as much a weakness of the class as it is an lack of compatibility with my own schedule. I guess the best way to describe this as a weakness is in the sense that information was not easily accessible or learnable outside of the class setting. ",
+            "\u00a0The textbook at first is very difficult to read, but once you get used to Shankar's lectures, his book will become easier to understand. The book ended up being very helpful in learning anything you missed in lecture.\r\n\r\nShankar is a good lecturer, however his board-work is a little messy making it hard to take reasonably notes (rely on textbook). Problem sets and TAs are great. Exams are fair. Not much to be improved, Quantum is just hard. ",
+            "\u00a0Overall this is a fine course. The homeworks I think could be reworked to better represent exam material, or at least to cover a wider difficulty range of problems (Often the homework problems were prohibitively difficult). ",
+            "\u00a0There could to be a lot more student interaction, I was often lost but the culture of cold-calling and inaccesibility of office hours made it very difficult to ask for help. ",
+            "\u00a0The textbook for this course is graduate level and very difficult to understand, so I ended up using Griffith's and YouTube for most of my studying. The lecture style of this course did not work for me personally, but I was still able to glean something from lectures. ",
+            "\u00a0The lectures were very coherent and even if I didnt understand every step and needed to review by the end of the lecture, I always felt like I had gotten the general important themes. A weakness was the way steps were skipped or vague, or sometimes the board was messy and disorganized. When youre learning a subject like QM for the first time I feel those little things are extremely important to facilitate learning. ",
+            "\u00a0I found Shankars lectures somewhat difficult to follow. He would often half-write equations on the board, and it was difficult to tell what the complete equation was supposed to be or what it meant. ",
+            "\u00a0I thought the course was moving well and I was getting a basic understanding, but then I thought the final was a lot more in depth than we had been expected to go the rest of the semester. ",
+            "\u00a0Strengths: Problem Sets really drill in the concepts, professor is extremely knowledgeable and TA's were wonderful in offering help, course material advances in a way that makes sense\r\nWeaknesses: Professor goes a bit fast, does not always understand students' questions, and for an introductory (but not an intro level) class on quantum mechanics  there is not a ton of drilling of the conceptual stuff and empirical results (a lot of stuff we are just supposed to take as given) ",
+            "\u00a0I think Professor Shankar is a good lecturer but is not very organized. Having a more clear structure during classes would be helpful. ",
+            "\u00a0Professor Shankar is a very good lecturer, and that is what you get from this course. The only drawback is that he lectures following his own textbook, so the information is only presented one way from those two main sources of the class. This was a little difficult for me, but could be rectified with more access to practice problems or referencing a supplemental textbook. ",
+            "\u00a0Not many weaknesses in my opinion, it's just fascinating material taught by a great professor. ",
+            "\u00a0Great Professor\r\nGreat Content ",
+            "\u00a0This course was very poorly organized. Shankars book is very hard to understand without reading literally every word, and his lectures were just error-riddled rptitions of what is in the book. This course could be improved by clearer module designations, more detailed examples given in class, and not using Shankars textbook. ",
+            "\u00a0One very simple way in which this course could be improved is if Professor Shankar could write a final exam with questions that were related in some way to the material we covered in lecture. I understood every main topic we covered in lecture, but I was clueless when it came to many of the questions on the final. One other note regarding the final: I'm not sure if Professor Shankar realizes this, but we live in the 21st century and often have the sum total of human knowledge available within a few feet of us via the internet. One would think that a good professor would acknowledge this and not force his or her students to memorize formulas that they will always be able to look up in a matter of seconds. Even back when Professor Shankar learned quantum mechanics for the first time, I'm sure there were always textbooks close at hand that he could reference if he forgot a small piece of the wave function for the quantum harmonic oscillator. "
+        ],
+        [
+            "\u00a0To take more interesting courses you need to take this one. It isn't very hard but it can be interminably boring. Shankar doesn't want to teach it so he doesn't try to make the material interesting. Occasionally though he says something that blows your mind. ",
+            "\u00a0Definitely. If you have the relevant linear algebra and physics background (even just light exposure) and are interested in understanding the mathematical framework of quantum mechanics, then this is the course for you. ",
+            "\u00a0Yep, it's required and it's an interesting introduction to the world of QM. ",
+            "\u00a0This was a terrible, terrible class. The lectures consisted of Shankar walking back and forth at the front of classroom saying things and then occasionally writing symbols on the board. He didn't write an English word on the board until the forth class, when he said \"the dimension of a vector space is n if it has a basis of size n\" and then wrote \"is n\". The problem sets were long and didn't improve my understanding of the material. Additionally, he gave us a practice exam for the midterm from one year where he taught the grad version of this class, and then the actual midterm was much harder (than the grad class)! Stay far away if Shankar is teaching it. ",
+            "\u00a0I would not recommend this course to any student who was not absolutely required to take it for their major. ",
+            "\u00a0This course is great. Shankar is a fantastic lecturer and the textbook assigned for the class (his own) is excellent. TA's were also super helpful. I took this after 401 and 402 and I think it might be a bit easier. Still very interesting and I think the class teaches the topics deeply. I got the impression some students wanted more mathematical rigor than Shankar provided but I liked his method: stating a theorem/part of the quantum formalism and then justifying it roughly before moving into examples. ",
+            "\u00a0I would totally recommend this course to someone curious about the mysterious consequences of quantum mechanics. I would warn, however, that a student should spend a lot of time outside of class focusing on understanding the material, given that it takes some wrestling with to internalize its craziness. ",
+            "\u00a0Id recommend this course to another student, especially if they know they wont have to miss any classes! ",
+            "\u00a0Yes to both physics and none physics majors. I think if you're at all mathematically inclined and interested in quantum this is good. Make sure you have a background in physics otherwise you will get lost in the motivations behind problems. You also might lose interest lol. Take it with friends and ask questions. ",
+            "\u00a0This is a fine course. Shankar is a nice guy and an amazing physicist, but his teaching ability is average at best. Often, what he actually puts on the board is only the equations (with no explanations and no reasoning to how things progress from one to the next), which makes it difficult to stay keep up with his pace, and very difficult to catch up if you fall behind. He makes an effort to answer questions, though. ",
+            "\u00a0Yes, the content is very interesting, and its a must if you're a physics major. If you're a math major and heard that its an easy science credit, it's not ",
+            "\u00a0I would recommend this class to another student if they are curious about the material, keeping in mind that you need to do the reading and put time into reviewing the material regularly. ",
+            "\u00a0We had one makeup lecture with Skiba this semester, and I thought it was a lot more clear and engaging. If possible, you would probably be better off taking the course with Skiba. ",
+            "\u00a0As a non-physics major who took this course out of interest, I'd recommend it if you find yourself to generally be good at quantitative thinking, with a genuine interest in the subject. You definitely come out of the course with a basic understanding of the framework of quantum mechanics (wave functions, probabilities, and the like), which, at the end of the day, is all you can really ask for. Problem sets can be annoying and tedious though, with little relevance to the exam or the subject matter. ",
+            "\u00a0Yes I would. I think quantum is an interesting subject and has a lot of cool concepts that are worth learning about in depth. ",
+            "\u00a0Yes! If you want to learn about quantum, no matter your general STEM background, this is a good course. ",
+            "\u00a0I absolutely recommend that physics majors prepared for a challenge take this course - there are also a couple math majors who make their way into the class, so even if you don't study physics, try it out! You will learn a new view of the world that gets even more interesting once you delve past the pop-sci description of QM and get involved with the math. You will also learn how to approach difficult problems with an eye for approximation. ",
+            "\u00a0Yes. While a background in classical mechanics is preferred, anyone with a taste for linear algebra can do well in this course. The material, if taken the time to appreciate, is truly interesting. This course will teach you a new way to think about the world at its most fundamental level. ",
+            "\u00a0If you can avoid taking this with Shankar, please do. He is a terrible instructordisorganized, and an unclear and unengaging lecturer. His textbook is also extremely badpick up another one to self-study from if you do end up in Shankars class. "
+        ]
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "crn_code": "11538",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            6,
+            2
+        ],
+        [
+            1,
+            2,
+            0,
+            5,
+            4
+        ],
+        [
+            0,
+            2,
+            1,
+            7,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            4,
+            6
+        ],
+        [
+            0,
+            0,
+            4,
+            7,
+            1
+        ],
+        [
+            0,
+            0,
+            9,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Greater understanding of multiple concepts, useful new (non-experimental) perspectives on a lot of them. \r\nThis class provided me with a very useful framework and foundations to look at quantitative questions. ",
+            "\u00a0Learned a lot about quantitative methods and theory. ",
+            "\u00a0Causal Inference ",
+            "\u00a0I feel like I have a significantly better understanding of \"identification\" after having taken this course, and developed the skills to make such identification myself. ",
+            "\u00a0I gained a better appreciation for theoretical mathematics ",
+            "\u00a0This course provided me with a much deeper theoretical understanding of causal inference, particularly in complex observational settings. ",
+            "\u00a0I learned basic concepts and structural logical flow in addressing a causation problem. ",
+            "\u00a0I learnt about the theoretical scaffolding of quantitative methods commonly used in political science. I learnt some points to look for when engaging with quantitative arguments. I found the focus on assignment mechanisms clear and compelling. ",
+            "\u00a0I deepened my knowledge of advanced econometric techniques and the assumptions behind those techniques, so I feel more able to understand when a method will not work and critically evaluate academic research. ",
+            "\u00a0Great course to learn causal identification. "
+        ],
+        [
+            "\u00a0I really enjoyed the theoretical framing of the class, and it helped me understand concepts better, in new and different ways. More concrete examples might sometimes have been useful as complements. \r\n\r\nIt was a class that required a high intellectual focus and engagement, therefore it would be much better to have 2 weekly classes rather than 1 long one. The break helped, but it was still hard to maintain a high engagement for 2+ hours on this material. \r\n\r\nThe problem sets were very useful, and the right amount of work. ",
+            "\u00a0N/a - very good. ",
+            "\u00a0Very informative ",
+            "\u00a0This class is helpful if you want to work as a methodoligist. I will not be a methodologist and I long for a statistics class that will allow me to work with empirical data and know why some research designs are better suited for some questions than others. I appreciate how carefully Frederick took the time to go through proofs and assumptions, but ultimately I still don't know how to use statistics on real-life data. ",
+            "\u00a0The course had a very clear purpose and always managed to incorporate this into the lessons/homework. The only weakness was that sometimes the homework could feel slightly disconnected from the lectures and readings. ",
+            "\u00a0the professor's style of lecture was difficult to follow and infrequently seemed connected to instruction in previous quantitative methods sequence courses ",
+            "\u00a0Much of this class seemed to repeat the same theoretical material of the previous course in the quant sequence, though from a slightly different perspective. It may have been helpful for people interested in becoming statisticians or methodologists, but it was not helpful for students trying to learn quantitative methods for application in political science research. Key tools of political science research, like regression discontinuity designs and instrumental variables, were glossed over only at the end of the course and no assignments were given to demonstrate these concepts -- they were clearly afterthoughts to the course. I would have preferred a course that focused on applied methods rather than theory. I feel severely underprepared for quantitative analysis after having taken the three-course quantitative sequence. I kept signing up for classes expecting that practical, applied methods would be taught in the next course; they never were. Something is clearly wrong when the TA recommends that you take an undergrad econometrics course to get useful knowledge at the end of the third graduate level quant class. ",
+            "\u00a0The strengths of the course were in providing deep theoretical introductions to causal inference, including experiments, quasi-experiments, and observational studies. Very few \"shortcuts\" were taken when introducing and explaining methodological concepts, which was a plus for students interested in gaining a deeper theoretical understanding. \r\n\r\nOne possible improvement could be made on the practical application side. While understanding that this is not the primary focus of the course, it may have been beneficial to have problem sets on weeks with applied methods such as instrumental variables and regression discontinuity. In addition, it would be helpful for problem sets to be assigned after all lectures on which they are based, so as to give students more time to engage with material prior to beginning problem sets. ",
+            "\u00a0Lectures were very well organized. Lab sessions are also very helpful. ",
+            "\u00a0I think the course could be improved with problem sets in the last 3 or 4 weeks, which is when the material moves to observational work (rather than experimental). I think students should have the choice of additional problem sets till the last week of the course, or a final paper. Personally, I would have preferred the former. The lectures unfortunately had to be condensed into 2hrs 15 mins on  a single afternoon - this is far too long for a quant lecture, and in the future 2 lectures followed by section would be a more fruitful format. ",
+            "\u00a0It could be improved if there was a final exam rather than a paper, I feel like that would be a more helpful review of topics to make sure I knew the material. ",
+            "\u00a0The material is extremely relevant and helpful. If we were able to cover more of the latter part of the class that would have been helpful too. "
+        ],
+        [
+            "\u00a0Yes, it might even come a bit late in the quant sequence. ",
+            "\u00a0Definitely. I learned a lot and there was good instruction. ",
+            "\u00a0Absolutely ",
+            "\u00a0Yes I would. Everyone wanting to do casual inference should take this. ",
+            "\u00a0only if you're a phd student taking the quant methods comp ",
+            "\u00a0No. This course was not helpful for someone aspiring to do practical political science research. ",
+            "\u00a0I would absolutely recommend this course to anyone interest in statistical methods - and in particular causal inference - within the social sciences. In particular, I would recommend this course to those interested in causal inference outside of experimental settings, as it requires students to deeply engage with the assumptions and knowledge required for credible causal inference in observational settings. ",
+            "\u00a0Yes. Great course to get introduced to approaches to analyze causal questions. ",
+            "\u00a0This is a good course for deepening one's understanding of experimental methods and some observational methods. However, the focus is theoretical rather than applied. The problem sets give some insight into how one would apply the concepts discussed in lecture, but the course does not really teach applied skills. ",
+            "\u00a0Yes, because it's necessary information, but I feel like Fredrik's lectures often went very fast and were very confusing -- I feel I learned almost all of the material from the TAs during section and office hours. ",
+            "\u00a0Yes I would. ",
+            "\u00a0I think give the class twice a week is better than taking 2-hour lecture at once. "
+        ]
+    ]
+}

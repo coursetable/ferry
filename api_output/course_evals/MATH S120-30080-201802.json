@@ -1,0 +1,77 @@
+{
+    "crn_code": "30080",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course helped me further my calculus knowledge by introducing me to mathematics in 3D space and vector calculus. ",
+            "\u00a0I learned Multivariable and Vector Calculus ",
+            "\u00a0Calculus of several variables, which helped us to know more about differentiation. "
+        ],
+        [
+            "\u00a0I thought this course was very well designed and clear. ",
+            "\u00a0The greatest strength of this course was the small class size and the frequent office hours scheduled. ",
+            "\u00a0Strength is that it is really suitable for those who want to have math as their major in the future. Weakness maybe the course is a little bit too quick(but that may also because it is an intensive course in five weeks) "
+        ],
+        [
+            "\u00a0If you are planning to take higher level math or are a STEM major of any sort, I would highly recommend taking this comprehensive course. ",
+            "\u00a0Absolutely. This class was well-taught and provides essential information and knowledge for anyone wishing to pursue a STEM major. ",
+            "\u00a0Yes, I would recommend. Because it is very useful, and instructor is knowledgable. "
+        ]
+    ]
+}

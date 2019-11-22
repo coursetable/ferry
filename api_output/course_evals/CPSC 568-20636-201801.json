@@ -1,0 +1,83 @@
+{
+    "crn_code": "20636",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            1,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            6
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            6
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Many complexity classes;\r\nWhat kinds of problem is NP-complete or NP-hard; ",
+            "\u00a0I learned a great deal about complexity theory. ",
+            "\u00a0it helps me have better understanding on computational complexity, skills on proof! ",
+            "\u00a0A survey overview of the field of complexity theory. Beyond the basic ideas of time and space complexity as well as the polynomial hierarchy, the course covered boolean circuits, complexity of randomized algorithms, complexity of interactive proof systems, and complexity of cryptography. The course was a good opportunity for me to brush up on my (pure) mathematical skills. ",
+            "\u00a0Knowledge on common complexity classes, a bit of history on the development of said classes. I gained insights into recent advances in complexity theory and its applications. "
+        ],
+        [
+            "\u00a0Excellent ",
+            "\u00a0The course conveyed the material well and had a good pace. ",
+            "\u00a0this courses perfect  except the exam is quite difficult ",
+            "\u00a0Lectures were clear and concise, and problem sets were just challenging enough so that I could finish them within a reasonable time and also engage with the material and practice my skills. We did end up being a little bit behind on our schedule, but I didn't see that as a major problem. "
+        ],
+        [
+            "\u00a0This is a very good course for students in computer science. ",
+            "\u00a0I would recommend this class to another student if they are interested in the subject area. The class is difficult and should only be taken if you are interested in the area. ",
+            "\u00a0Yes!  I will strongly encourage this course to every student!  It is very well-organized and challenging! ",
+            "\u00a0YES - especially with Dana Angluin. ",
+            "\u00a0I would definitely recommend this course. Complexity theory is a beautiful and interesting topic, and its study would be beneficial to students in all disciplines. ",
+            "\u00a0Yes. An excellent overview in computational complexity and the relevance of such work. "
+        ]
+    ]
+}

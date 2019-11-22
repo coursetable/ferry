@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50064/assignments/syllabus", 
+    "requirements": "To be followed by GMAN 130. Enrollment limited to 14 per section. Students must preregister through Preference Selection during the online preregistration period. Details and a link to Preference Selection are provided on the German department Web site at http://german.yale.edu.", 
+    "description": "Continuation of GMAN 110. A content- and task-based course that focuses on the acquisition of communicative competence in speaking and writing and on the development of strong cultural awareness. Topics such as multiculturalism, food, childhood, and travel; units on Switzerland and Austria. Course materials include a variety of authentic readings, a feature film, and shorter video clips. Tutors are available for extra help.\nTo be followed by GMAN 130. Enrollment limited to 14 per section. Students must preregister through Preference Selection during the online preregistration period. Details and a link to Preference Selection are provided on the German department Web site at http://german.yale.edu.\n\n1.5 Yale College course credits", 
+    "title": "Elementary German II", 
+    "skills": [
+        "L2"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "WTS B36", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12161", 
+        "listings": [
+            {
+                "number": "120", 
+                "subject": "GMAN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Marion Gehlker"
+    ], 
+    "long_title": "Elementary German II", 
+    "extra_info": "A"
+}

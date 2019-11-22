@@ -1,0 +1,51 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50201/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An interdisciplinary study of Rome from its legendary origins through its evolving presence at the crossroads of Europe and the world. Exploration of the city's rich interweaving of history, theology, literature, philosophy, and the arts in significant moments of Roman and world history.", 
+    "title": "The City of Rome", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "WALL81 101", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12269", 
+        "listings": [
+            {
+                "number": "444", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Virginia Jewiss"
+    ], 
+    "long_title": "The City of Rome", 
+    "extra_info": "A"
+}

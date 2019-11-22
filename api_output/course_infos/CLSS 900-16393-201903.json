@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "By arrangement with faculty.", 
+    "title": "Directed Reading: Barbarians, ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 4, 
+        "oci_id": "16393", 
+        "listings": [
+            {
+                "number": "900", 
+                "subject": "CLSS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Noel Lenski"
+    ], 
+    "long_title": "Directed Reading: Barbarians, 4th-6thc. CE", 
+    "extra_info": "A"
+}

@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49404/assignments/syllabus", 
+    "requirements": "Prerequisite: CPSC 112 and MATH 120, or with permission of instructor.", 
+    "description": "An overview of computational vision with a biological emphasis. Suitable as an introduction to biological perception for computer science and engineering students, as well as an introduction to computational vision for mathematics, psychology, and physiology students.\nPrerequisite: CPSC 112 and MATH 120, or with permission of instructor.", 
+    "title": "Computational Vision and Biolo...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "DL 220", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10700", 
+        "listings": [
+            {
+                "number": "475", 
+                "subject": "CPSC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Steven Zucker"
+    ], 
+    "long_title": "Computational Vision and Biological Perception", 
+    "extra_info": "A"
+}

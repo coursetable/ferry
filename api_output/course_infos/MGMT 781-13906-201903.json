@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "781-01, Accounting/Finance Workshop; 781-03, Marketing Workshop; 781-04, Organizations and Management Workshop; 781-05, Operations Workshop.", 
+    "title": "PhD Seminar: PhD Seminar: Oper...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "EVANS 4200", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 5, 
+        "oci_id": "13906", 
+        "listings": [
+            {
+                "number": "781", 
+                "subject": "MGMT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Vahideh Manshadi"
+    ], 
+    "long_title": "PhD Seminar: PhD Seminar: Operations", 
+    "extra_info": "A"
+}

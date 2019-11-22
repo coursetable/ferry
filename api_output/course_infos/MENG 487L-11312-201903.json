@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50498/assignments/syllabus", 
+    "requirements": "Prerequisites: MENG 280 and MENG 361. MENG 185 and MENG 325 are strongly suggested.", 
+    "description": "This course is the first half of the capstone design sequence (students take MENG 488 in the spring semester of the same academic year) and is a unique opportunity to apply and demonstrate broad and detailed knowledge of engineering in a team effort to design, construct, and test a functioning engineering system. The lecture portion of the class provides guidance in planning and managing your project, as well other topics associated with engineering design. This course sequence requires quality design; analyses and experiments to support the design effort; and the fabrication and testing of the engineered system; as well as proper documentation and presentation of results to a technical audience.\nPrerequisites: MENG 280 and MENG 361. MENG 185 and MENG 325 are strongly suggested.\n\n0.5 Yale College course credits", 
+    "title": "Mechanical Design: Process and...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11312", 
+        "listings": [
+            {
+                "number": "487L", 
+                "subject": "MENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Joran Booth"
+    ], 
+    "long_title": "Mechanical Design: Process and Implementation I", 
+    "extra_info": "A"
+}

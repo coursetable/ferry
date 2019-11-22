@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Upon completion of course work, students are required to participate in at least one term of the prospectus workshop, ideally the term before the prospectus colloquium is held. Open to all students in the program and joint departments, the workshop serves as a forum for discussing the selection of a dissertation topic, refining a project\u00e2\u20ac\u2122s scope, organizing research materials, and evaluating work in progress. The workshop meets once a month.", 
+    "title": "Prospectus Workshop", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10344", 
+        "listings": [
+            {
+                "number": "902", 
+                "subject": "AMST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Prospectus Workshop", 
+    "extra_info": "A"
+}

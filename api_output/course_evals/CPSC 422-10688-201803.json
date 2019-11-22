@@ -1,0 +1,89 @@
+{
+    "crn_code": "10688",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            7
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            6
+        ],
+        [
+            0,
+            0,
+            3,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            5
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned the usual CS skills: critical reasoning, finding documentation, thinking about algorithms and CS-type problems. I learned about important ideas at this level of the computer, right below CS323/systems programming  various abstract concepts used in OSes. I learned how to implement those ideas in mCertiKOS (which is not the same thing as implementing an OS from scratch or even implementing those ideas in all OSes, but does develop the relevant CS skills for those ideas). ",
+            "\u00a0I learned about the various functions that an operating system serves in a computer, and how those functions are implemented in code.  I learned the various challenges that come along with writing kernel code no access to standard libraries (and sometimes entire drivers), printing state information is hard, concurrency is hard, debugging is hard, and there's nothing to save you when your code has a memory leak.  No segfault or stack trace, just a kernel panic and a fiery end for your running OS.  I learned general OS principles and paradigms which apply not just to operating systems but to computer science and to life. ",
+            "\u00a0I learned how to code many things in an OS at a kernel level. We learned about memory management, concurrency, the file system, and more ",
+            "\u00a0Knowledge: core OS topics including physical and virtual memory management; processes, threads, concurrency and synchronization; file systems.\r\nSkills: You program, with some scaffolding, all of the key topics. You work within a big, well-built system and also get to do some design of your own.\r\nInsights: Building in layers is key to verify software and avoid bugs. Networked and distributed systems are only minor extensions of OS topics; core ideas are reused: Use of illusion and abstraction, refereeing shared resources, and coordinating / glueing things together. ",
+            "\u00a0I feel like I greatly improved my programming skills in C. I also feel like I have a much better understanding of how computers actually work from a low level. ",
+            "\u00a0You learn how to build an operating system from the bottom-up. You are working on Shao's OS, so it's not as intense as starting completely from scratch. This course blew my mind a few times and it will blow yours too. It's also an ***extremely*** well-organized course, so the only thing that would work against you in doing well is your own work ethic. The TAs and professor are always happy to help and the problem sets are very well outlined. "
+        ],
+        [
+            "\u00a0Strengths: efficient, organized, relevant. Weaknesses: poorly documented specialized OS, time-consuming assignments because of that lack of documentation (students could not figure out what to do or things broke in parts of the OS that students could not find and use in debugging). ",
+            "\u00a0Problem sets were impeccably designed to be challenging but fair and to facilitate learning, and lectures were engaging and informative.  The midterm, which was worth 30% of the final grade, was unlike any midterm I've taken.  Most questions were ripped directly from the psets (like literally, \"re-implement this function you wrote on pset2\"), but some questions were extremely open-ended and high level.  I'm not sure whether I like how it was designed. ",
+            "\u00a0The psets were definitely the strength of this course for me. They are absolutely time-consuming, but they teach you a lot about the details of operating systems. The lectures contained important material, but I didn't think the material was always presented in the most compelling way, especially after the midterm it was sometimes tough motivating myself to go to lecture. ",
+            "\u00a0The lectures were okay. The homeworks were very hard (and that was the point). A weakness could be the course grading; it was very generous, but it also gave very little weight to the hardest parts of the assignments. That meant that the parts I spent the most time on (and often couldnt get to work) were worth the least points, which from my grades perspective was good but was also very frustrating. ",
+            "\u00a0Lectures stay high-level and then in the assignments you understand everything. A bit more effort to synchronize high level and low level concepts would be nice. Typically, lectures preceded assignments, which is better than the other way around.\r\nIt would be awesome if this course could include more mcertikos lab topics such as formally verified software in the assignments themselves. A final assignment could be proving the validity of an earlier layer. ",
+            "\u00a0The class is very well organized. I thought that sometimes the assignments turned into too much of just reading the TODO statement and filling in code without understanding the big picture. It would be nice to always maintain a clear understanding of where everything we do in assignments fits into the OS as a whole. ",
+            "\u00a0Strengths: most organized CS course I have ever taken at Yale.\r\nWeaknesses: It's hard because OS is hard but just start the problem sets early! "
+        ],
+        [
+            "\u00a0Absolutely. The class is modern and very well taught. The assignments offer a lot of practical reinforcement of the material that is taught. ",
+            "\u00a0If you are interested in digging a little deeper into how some CS323 concepts work, this class will help. (If you have taken CPSC338/EENG348 Digital Systems with Rajit Manohar, this class will be easier - though not easy - as you will have some familiarity with the concepts and how each of the concepts work.) In this class we implemented paging, forking, and basic shell commands, and it was cool to see how those work. However, mCertiKOS, the OS used for assignments, is not (publicly?) documented and has idiosyncrasies that make implementing new features harder than it needs to be. All OSes are different, but it can be hard to connect abstract models that make conceptual sense to the reality of what is happening in mCertiKOS. That said, it was highly enjoyable to build up mCertiKOS from barely being able to load and run all the way to having a shell interface. There is a midterm and no final exam the last problem set is a project of your choosing. ",
+            "\u00a0If you liked 323 for the long psets in C, the nitpicky bit-blasting, and the low-level systems programming, take OS because it's more of the same.  OS however, is a FAR better designed course than 323.  If you liked 323, you will like OS more, and it will teach you more than 323 did.  The problem sets are very time-consuming but incredibly well designed.  Implementing an OS from scratch in one semester is too much to ask, so the problem sets very carefully decide and explain what is already implemented for you, so that you can focus on the parts of the OS which are most important, and which will teach you the most.  What's more, the problem specs are so long you'll have flashbacks to cs50 unlike 323, where the spec is basically a statement of the problem and a list of edge-cases, problem specs in OS offer detailed breakdowns of each thing you need to implement and how you should do it.  This doesn't mean the problem sets are easy  you will never think as hard about how, precisely, to write a three line function as you will in this class but it DOES mean you don't feel lost and adrift as you complete them.  Professor Shao is an engaging and funny lecturer and the material comes across very well in class, and he is at the front of his field, so you can be sure that his advice on OS design is both sound and relevant.  I found 323 to be reasonably fun, and this class is one of the best I've taken in the department.  If you're a CS major who DIDN'T like 323, it's hard to recommend this class.  While operating systems are a super cool, relevant, and valuable topic, and the class is better designed, there's still a lot of 323-esque coding going on here. ",
+            "\u00a0I think this is a very worthwhile class to take, provided you're at least somewhat interested in low-level systems programming. The time consuming but instructive psets are the strength of the class. It's essential though that you find a good partner to do the psets with (you're allowed to completely work with a partner). I think if I didn't go into the class with a partner I liked and whose skills I trusted my perception of the class could have been very different. ",
+            "\u00a0I would if you wanted to learn about how computers work! But a fair warning is this class is a lot of work! ",
+            "\u00a0This course is fundamental to CS education, and it does not have to kill you. I don't think I got an awesome grade / everything I could have out of the assignments, owing to treating it as not that much more than a typical CS elective. ",
+            "\u00a0Yes. If you are a CS major, you should take this course. There are six assignments and one midterm. You work with a partner of your choice on all assignments and they are in C. There is one late midterm and no final. Yes, it is a lot of work, but most of the good electives are a lot of work. If you start the assignments early and have a good partner, they are very manageable. Professor Shao is an excellent professor, and you should try to take at least one class with him. Pairing this course with Networks is ambitious but still possible. ",
+            "\u00a0Yes!! You NEED to take OS before you graduate if you are a CS major to BE a CS major, since it's such an important topic! "
+        ]
+    ]
+}

@@ -1,0 +1,136 @@
+{
+    "crn_code": "13430",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's <b>sensitivity to students and ability to provide students with adequate feedback</b> was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            13,
+            13,
+            6
+        ],
+        [
+            4,
+            4,
+            18,
+            2,
+            6
+        ],
+        [
+            2,
+            9,
+            11,
+            7,
+            5
+        ],
+        [
+            4,
+            3,
+            12,
+            7,
+            6
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a07H ",
+            "\u00a04 ",
+            "\u00a05 ",
+            "\u00a04-6h ",
+            "\u00a015 ",
+            "\u00a015 ",
+            "\u00a0more than 10 ",
+            "\u00a04.5 ",
+            "\u00a06-10 hours, depending on difficulty of the problem sets ",
+            "\u00a03 hours ",
+            "\u00a08 hours ",
+            "\u00a05-10 depending on the problem set. ",
+            "\u00a04 ",
+            "\u00a05-6 hours ",
+            "\u00a0Spent my entire semester on this course, way too much work if previous background was not predominantly statistics. ",
+            "\u00a05 ",
+            "\u00a0about ten hours ",
+            "\u00a0On average, I spent 8-9 hours per week on this course. ",
+            "\u00a08 ",
+            "\u00a010-16 hours ",
+            "\u00a03 hrs ",
+            "\u00a0Because of my lack of SAS background, it often took me 10 hours each week to complete assignments as I was often learning both code and concepts while completing the assignment. ",
+            "\u00a06 hours ",
+            "\u00a04 ",
+            "\u00a010h ",
+            "\u00a0Over 12 hours. "
+        ],
+        [
+            "\u00a0good ",
+            "\u00a0The was my least favorite class of the semester due to lack of intellectual stimulation, homework didn't seem to reflect what was covered in lecture, and a lack of enthusiasm from the professor. ",
+            "\u00a0The course is useful in analyzing categorial data. \r\n\r\nHowever, no much assistance on the programming of SAS was introduced. ",
+            "\u00a0Applicability of the materials is very poor. No feedback on homework assignments/ lack of feedback look. ",
+            "\u00a0It's a slow class, covering very basic mathematical knowledge. Problems sets are really helpful if you work really hard, but can be frustrating sometimes. ",
+            "\u00a0I do learn a lot from this course regarding basic idea of generalized linear models and statistics. ",
+            "\u00a0The material taught in the course is clearly very useful and important, and the professor was really excellent about being available to answer questions outside of class time, which greatly improved the learning experience.  The only suggestion that I have is that there were a couple of problem sets in which the material covered in the problem set was presented in lecture after the problem set was due - ensuring that the problem sets closely follow lecture material might have been helpful. ",
+            "\u00a0Interesting information and useful for someone with a research background/future. ",
+            "\u00a0It is a good course ",
+            "\u00a0Poor teaching, did not learn a thing, self-taught myself literally everything. Not at all what I expected. ",
+            "\u00a0Should have provide more support in coding ",
+            "\u00a0I have learned a lot from the course. ",
+            "\u00a0This course provides systematic knowledge about categorical data analysis, which is very useful in the epidemiological research. By taking this course, the students could obtain both theory and applied knowledge about categorical data analysis. ",
+            "\u00a0I recommend that the lectures and lab sessions should be scheduled to be closer to each other. Lectures on Mondays and lab sessions on Fridays make it difficult to recall lecture contents in lab sessions, which causes less and less students to present in the lab sessions. ",
+            "\u00a0Course was okay in the sense that the material was easy to understand. The homework took too much time because too many problems were given and the code was not taught adequately at the start of the semester. \r\nThe course did not teach SAS to students who had not taken the pre-requesite at Yale, although the description indicated that no prior experience was needed. The final project was okay. ",
+            "\u00a0Overall, the course was below average. \r\n\r\nStrengths:\r\nThe course was strong in how it was laid out, with material building in a logically sequential manner. The professor and TAs were all approachable and helpful in one-on-one interaction. Homework assignments took a reasonable amount of time to complete. There was some effort to amend the class based on participant feedback.\r\n\r\nWeaknesses:\r\nThere were unclear expectations as to the pre-requisites for students. It was not specified that prior SAS experience was required, and yet the course was structured as if all students were proficient. This should have been explicitly stated in the course description. The lectures were overly theoretical, with little application of concepts outside of the homework assignments. The lab sessions were often not useful outside of the slide deck, which contained the SAS code needed to complete homework assignments. Questions during class were not encouraged given the lack of clear responses and the tone of responses, which seemed to question why we did not know the answer already. Feedback on homework assignments were vague, often without any comments.\r\n\r\nBased on the comments above, I think the course could be improved in the following three ways:\r\n1) Specify that prior SAS knowledge is a pre-requisite in the course description. \r\n2) Provide more examples of application of concepts in class and in the lab sessions.\r\n3) Provide more detailed feedback in graded homework assignments. ",
+            "\u00a0Great course, and the knowledge is very useful for data analysis. Everything was taught systematically and clearly. ",
+            "\u00a0TA was often not on time. ",
+            "\u00a0The material is useful. "
+        ],
+        [
+            "\u00a0nice professor ",
+            "\u00a0Dr. Wang clearly was not interested in teaching the course, was not dynamic in lectures, did not provide relevant examples, was unresponsive to emails, and overall was not a good fit for the course material. ",
+            "\u00a0She is being careful and organized. ",
+            "\u00a0The instructor is very responsive to emails and questions in general. Her teaching style was not easy to follow and makes things sound more complex that they are. Not enough emphasis on the actual implications of the biostatistical thinking ",
+            "\u00a0patient to take questions\r\nbetter if can explain things clearer in class ",
+            "\u00a0Professor Wang is rigorous in academia. ",
+            "\u00a0She is patient and nice. ",
+            "\u00a0The instructor is very good at teaching and she is very patient to answer questions from students. ",
+            "\u00a0Really smart professor and very approachable with questions. ",
+            "\u00a0Very good ",
+            "\u00a0The class can be more engaging ",
+            "\u00a0Prof. Wang delivers  very clear classes and instructions. ",
+            "\u00a0Dr. Wang is a really helpful and nice instructor. She always considers for the students. She is responsible and has tried her best to teach the students theory and applied knowledge about categorical data analysis. ",
+            "\u00a0I did not like the instructor. She was difficult to understand and for someone not in Biostats, the concepts were not very applied to public health. ",
+            "\u00a0I really appreciated Dr. Wang's attempts to alter the course based on student feedback. I also found her to be very helpful during office hours. That said, I think that her lecture style was often overly theoretical, leaving basic concepts unexplained. Additionally, there was a gap between these lectures and the practical application of the concepts we were expected to be able to do in homework assignments.\r\n\r\nI don't have nay additional feedback on how the teaching style can be improved aside from what was mentioned earlier. ",
+            "\u00a0Professor Wang has an insight into complex problems. She taught us not only the basic concepts, but their backgrounds too. She is good at connecting those concepts and shows important differences and similarities among them. ",
+            "\u00a0Great knowledge. Nice person. ",
+            "\u00a0The slides are well-organized and the instructor adds more detailed explanation during lecture. "
+        ],
+        [
+            "\u00a0well, if you like, just take it ",
+            "\u00a0the textbook is really helpful ",
+            "\u00a0Would not recommend. ",
+            "\u00a0No I would not recommend this class because it is poorly designed and taught. ",
+            "\u00a0Won't learn much from this course, don't worth the time. ",
+            "\u00a0Linear regression / generalized linear regression for categorical variables\r\nmaybe ",
+            "\u00a0Pros:\r\n1. Basic Stats knowledge\r\n2. Categorical data is very important in the field of healthcare\r\n3. Useful homework assignments\r\n\r\nCons:\r\n1. Slow progress in class\r\n2. Not many coding skills learnt\r\n3. Can be frustrating to do homework assignments ",
+            "\u00a0The course is tedious but useful. ",
+            "\u00a0I strongly recommend this course to other students. ",
+            "\u00a0Great class, would have taken it even if it wasnt a requirement. ",
+            "\u00a0Good ",
+            "\u00a0No unless you have a lot of friends in statistics that you can collaborate with on the assignments. I believe most people did since we were allowed. I did not since my background is not statistics and it was hard to get to know people in the class so it was extremely tough. ",
+            "\u00a0Teach systematic Ways of model building and checking for categorical variable ",
+            "\u00a0Yes, I recommend this course to other students, especially those who would like to engaged in epidemiological research. This course provides systematic knowledge about categorical data analysis, which is very useful in the epidemiological research. By taking this course, the students could obtain both theory and applied knowledge about categorical data analysis. ",
+            "\u00a0A useful course for MPH students who are going to apply statistics knowledge to real health issues. ",
+            "\u00a0Course was okay. Too much work for homeworks. This course took most of my time. ",
+            "\u00a0Do not take unless you have a strong SAS background. This course is recommended if you have solid basic statistics knowledge. Otherwise, be prepared to dedicate a significant amount of time to the course. ",
+            "\u00a0Strongly recommend it to everybody! "
+        ]
+    ]
+}

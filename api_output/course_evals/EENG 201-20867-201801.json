@@ -1,0 +1,148 @@
+{
+    "crn_code": "20867",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            3,
+            15,
+            11,
+            8
+        ],
+        [
+            2,
+            10,
+            16,
+            9,
+            2
+        ],
+        [
+            3,
+            9,
+            13,
+            13,
+            1
+        ],
+        [
+            3,
+            14,
+            15,
+            6,
+            1
+        ],
+        [
+            0,
+            4,
+            18,
+            15,
+            2
+        ],
+        [
+            0,
+            3,
+            16,
+            17,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned the basics of electrical engineering, in skills ranging from electrical schematics to logic gate construction and state machine creation. ",
+            "\u00a0I sort of learned how computers are built from the ground up. ",
+            "\u00a0I learned how to code a soda machine!  I also learned how to decode a credit card.  I learned the basics of how and why computers work. ",
+            "\u00a0I developed the knowledge of how a basic processor works, and the fundamentals of computer engineering such as boolean algebra and logic gates ",
+            "\u00a0General foundations of EE, combinatorial and sequential circuits ",
+            "\u00a0You get to learn how a computer is built from the ground up, starting with binary and boolean logic to processor architecture. ",
+            "\u00a0You get to learn how a computer is built from the ground up, starting with binary and boolean logic to processor architecture. ",
+            "\u00a0We learned binary, hexadecimal, and techniques for boolean logic, as well as about the layout and functions in a simple processor and hardware components like cmos transistors. We covered a lot of topics that were fairly simple to understand in the classroom. Labs were engaging albeit frustrating as I personally needed to spend extra hours outside of lab time to complete them, especially when Quartus was used (Quartus takes a long time to compile), but it just offered more time to really understand the project and appreciate the effort put into technology. ",
+            "\u00a0This course taught the basics of how computers work. It was very interesting to see how the 1s and 0s within a computer do what we see at a macroscopic level, as well as what is behind the programming in a class like CS50. ",
+            "\u00a0I learned about logic and the basics of computers ",
+            "\u00a0Learned about the processes and hardware that make up a computing device ",
+            "\u00a0The makeup of a simple computer processor and all of the components and theory used to assemble it. ",
+            "\u00a0I learned the basics of Computer Engineering. ",
+            "\u00a0This course further developed my knowledge of digital communications and computer architecture, that I had originally been introduced to in EENG 200. ",
+            "\u00a0Knowledge of basic computer engineering skills including binary, analog and digital signals, logic gates, combinatorial circuits, state machines, sequential logic, and basic machine architecture. ",
+            "\u00a0I developed the ability to understand how common operations such as addition, subtraction, or even vending machine operation may be broken down into circuity that operates on certain given inputs. This course has greatly expanded my insights and understandings of the far-reaching consequences of computer engineering. ",
+            "\u00a0This class gives a great overview of the very basics of computer architecture, starting with transistors and logic gates and working all the way up to a simple CPU. Along the way you work on boolean algebra, learn the difference between sequential and combinational logic, and build state machines. We also use the Verilog hardware description language (albeit in a pretty rudimentary way) to implement some of these concepts on hardware. The lab projects are especially worthwhile: we learn how to read and decode a credit card, build a four-bit adder circuit, address and make animations on LEDs, and program a soda machine. ",
+            "\u00a0This class taught me the basic underpinnings of computers. We learned the basics of digital logic, especially how information and processes are tuned to a binary clock. Starting with the transistor setup of logic gates, we learned components bit by bit until we could build a simple processor at the end of the course. The lab associated with this class introduced breadboard designing and coding in Verilog (a hardware description language) with an FPGA board. ",
+            "\u00a0Bltopics covered included: binary encoding; logic gates; Boolean algebra; k maps; Quine mcclusky; transistor diagrams; combinational and sequential logic; state machines, simple computer processors; basics of verilog hardware coding language. ",
+            "\u00a0I learned about the basics of digital logic with Boolean algebra and how this logic can be applied to build a simplified computer. Through this, I gained a better understanding of how to build and analyze a complicated system from simpler parts. ",
+            "\u00a0I learned about how logic gates work and how a processor functions. ",
+            "\u00a0I learned a lot about how computers work on a physical level, such as how information is stored, or how a computer takes inputs and turns them into outputs. ",
+            "\u00a0I learned the basics of NMOS/PMOS transistor diagrams, implementing logic operations, sequential circuits and flip-flops, state machines, and the structure of a computer processor. I also gained some experience using an FPGA and Verilog. ",
+            "\u00a0Knowledge about the concepts and hardware used in computers. Boolean operations / algebra, K-maps, gates, logic, states and state machines, buses, memories, processors. "
+        ],
+        [
+            "\u00a0This class needs an introduction to Verilog. There was no guidance on it short of asking the TF where to begin and what to do next. Most students could not make progress until the TF was free to answer their questions. Overall awful learning experience for the labs. ",
+            "\u00a0This class had several issues, all surrounding the general disorganization. We never learned what we needed to in time to complete the homeworks, which routinely were not posted on schedule. The labs were ridiculous and fruitless, and I often left them in a flurried state of frustration because we were asked to do things that we simply hadn't learned. The lectures were fine, but never seemed to hit the topics that we needed to complete the work or succeed on the exams. I never got a response to an email once throughout the semester, never got an assignment back in a timely matter, and had points deducted for seemingly random reasons. ",
+            "\u00a0This course has no strengths to speak of.\r\n\r\nProfessor Szefer's lectures, while interesting, did not pertain whatsoever to the assignments or the labs.\r\nThe assignments had problems that were not about topics covered in class.\r\nThere were frequent errors in the PSETs that make them either impossible or incredibly difficult to complete.\r\nOn one PSET, I worked on two problems for all of 20 hours. I understand that problems are supposed to be challenging and stretch my mental abilities, but that was ridiculous. Most of it was busywork--not actual thinking.\r\n\r\nLabs took weeks to complete.\r\nCoding was done in an undecipherable language called Verilog. Prof Szefer gave no lessons on how to use Verilog, which is already a highly obtuse and frustrating language. Lab assignment deadlines frequently had to be extended by weeks because none of the class had finished by the original deadline. Not for lack of understanding the underlying principles or laziness: Nobody understood how to write the code.\r\n\r\nFurthermore, only Prof Szefer or one TA would show up to any lab session, so it took a long time for them to get around to people's questions, of which there were a great number because nobody understood the language.\r\n\r\nThe difficulty of midterms did not track with the difficulty of assignments or even practice midterms. I would study for a long time and feel confident after seeing the practice midterm and then the actual test would totally blindside me. Furthermore, the tests were too long to fit into a single class period. On every test, Prof Szefer ended up not counting the last question because people either wouldn't have time to complete it or wouldn't get to it at all. ",
+            "\u00a0The strengths were that community of EE's was great and that the material was engaging.  The weaknesses were that the teaching staff appeared distant and disorganized at times.  It could be difficult to get information to the professor and one weak in lab was literally spent doing nothing. ",
+            "\u00a0I think the labs are interesting, but assume too much from the students. From how a breadboard works to basic programming, if I student had no knowledge in these skills, there is very little that can be done for a student to catch up. The TA's and Professor Szefer were extremely supportive, however as an introductory class many students felt left-behind. I also wished I learned more about microprocessors and computer functions and less concerning logic gates and other fundamentals. ",
+            "\u00a0Administration of the course and support staff could be drastically improved by hiring more people as TAs ",
+            "\u00a0I think more emphasis can be placed on learning Verilog.  I felt it was a bit unrealistic to have a lab were we essentially had to teach ourselves how to program in Verilog without any prior teaching.  Other than that, I found the course material interesting and thought everything built on previous topics well. ",
+            "\u00a0The lectures have a lot information and the psets are challenging yet doable. The labs, however, were often extended and I felt that the whole class was often very lost and didn't know where to begin. We were expected to learn Verilog on our own, and it was often extremely unclear as to what direction we were supposed to go in. The labs were definitely interesting, but a better introduction to each one would have improved the class. ",
+            "\u00a0The labs are tedious but you do learn some useful things. Jakub doesn't explain Verilog clearly before throwing you into it. ",
+            "\u00a0Labs are tedious. Jakub doesn't really explain Verilog before throwing you in. ",
+            "\u00a0I thought the early-on labs and topics were very good, but the later-on labs were difficult to understand without prior programming knowledge. ",
+            "\u00a0It was well done except for the labs which were ridiculously complicated and required us to use Verizon, a coding language that is never once mentioned in class and is never taught whatsoever. ",
+            "\u00a0Verilog is not treated as an important part of the course theory, but it is completely expected to be an asset the students may call upon in lab. ",
+            "\u00a0Strengths: Prof. Szefer is nice, and he was willing to allow midterm corrections and lab extensions. He and the Teaching Fellows were helpful during the labs, and those labs and the material were interesting.\r\n\r\nWeaknesses: Prof. Szefer writes small and illegibly. The textbook isn't great, and the course requires a lot of memorization. The online class notes are not well-written, they leave out a lot, and after a while they stopped being posted. Sometimes the homework was extremely difficult, and the textbook and notes didn't help much. Prof. Szefer isn't the best at explaining concepts, and he didn't have regular office hours. The midterms were way too long (the class average on the first midterm was 50%), the Teaching Fellows took off lots of points for small errors, and the second midterm wasn't returned until after its corrections were due, which makes no sense. Homework assignments also took a while to be returned, and little or no feedback was provided. Although the labs were interesting, they were very tedious, and the later ones relied on the hardware description language Verilog, which was never taught in class and took several minutes to compile. The course topics were disjointed, and the electrical aspect of Computer Engineering was glossed over. All grades were initially set out of 1 point on Canvas, so it was difficult to gauge how the course was going overall. ",
+            "\u00a0This may have been due to new coding language used, but it seemed like the labs had too ambiguous of instructions. I understand that the instructor nor teaching fellows should 'do the work for us', but many times throughout the labs many students were left staring at a screen, or worse, at the teaching fellow, until they provided better guidance about the program. Even codes that had been pre-designed were difficult to understand. I feel that a small introduction to the coding language would have facilitated this. ",
+            "\u00a0The lectures were sometimes hard to follow because th ediagram on the board would often be erased or modified before I had time to write it down. The lecture notes that were posted online were great, but they were posted really late, sometimes past the date when they were even useful. In fact the notes for all of the content, after the second midterm were not posted till the night before the exam. Although I enjoyed the content, the logistics of the class could be greatly improved. ",
+            "\u00a0The class was interesting, but the organization of it was poor. ",
+            "\u00a0One strength of this class was the diverse array of applications, and its potential to explain and be effectively used in the real-world. I also felt that the course's workload and content were very well curated and delivered to the students by the professor. \r\n\r\nOne weakness of the course was that, it being an introductory course, intensive/extensive applications were not discussed within the class. I was very curious to see how the concepts we learned tied together with overarching ideas/functions, and including in the class structure would greatly improve it. ",
+            "\u00a0The lectures in the course are good, the homeworks are the right length, and the lab projects are fun and well thought out. Things that could be improved: assign the homework at least a week before it is due so students have the opportunity to get ahead on it over the weekend. Include a more systematic introduction from Verilog, which is really inaccessible, even for those of us with some programming experience. Perhaps a few YouTube tutorials by the professor would help. Grade homeworks and exams more quickly so that we have feedback as we move along in the course. Also, I thought the textbook was pretty weak and unhelpful. I also found no use in having the FPGA checked out, and I wish they just stayed in the lab classroom so we could use them there. ",
+            "\u00a0The most difficult aspect of the course was coding using Verilog. This year in particular we received very little briefing on how to use the language, which made the soda machine very hard, resulting in multiple extensions and general frustration for the entire class. We were essentially thrown into coding with next to no prep (apart from a very general overview) and forced to learn it through brute force trial and error. Overall, while the lectures might not be the most engaging, I thoroughly enjoyed the material, which provides a great intro to most aspects of computer engineering that come together very nicely in the end (as we begin to study microprocessors). ",
+            "\u00a0The main strength of the course was the creative, interesting and well designed labs. Although learning about transistors can occassionally seem dull (especially for non-EE majors) the labs took the topics we were learning in class and applied to awesome things we use or see in our daily lives. It was easier to be interested in the daily lectures given that what we covered could be immediately applied in lab. The labs we completed involved credit card readers, computer addition, LED displays, and a vending machine). One weakness of the course this semester were the extensions of lab due dates. Although I was grateful for the extra time to complete the third and fourth labs, the delay in the course schedule meant that we did not get to the fifth lab, which historically has been creating a mini processor. As an EECS major, I found our last unit on processors the most fascinating and exciting portion of the class and I was bummed to not get a chance at creating one. That said, I was grateful that the class lent out FPGA boards to all the students for the semester so that I could tinker and experiment on my own, outside of class. ",
+            "\u00a0Theblecute information covers a lot of area in a short time. It was interesting and challenging in a good way to apply lecture material to problem sets. However, the lecture did not seem to prepare students enough for many of the labs. A prerequisite course or crash course lecture in coding is necessary to get the most out of lab projects 3 and 4. ",
+            "\u00a0The material covered by this course is very interesting, and especially toward the end, it fits together very neatly. However, the homework assignments often felt like busywork, and the problems were sometimes poorly specified. The exams seemed more focused on meeting time limits than synthesizing the material. I think both homework and exams could have been improved by problems that slightly extended what we learned in lecture, instead of repeating it on larger cases. ",
+            "\u00a0I believe that the labs were somewhat difficult. It would help if Verilog was covered in class. ",
+            "\u00a0The biggest strength of this course was the ability to present the relatively complex info of how computers work on a physical level in a manner that was easy to understand. That kind of material can be kind of intimidating, but Prof. Szefer and the TAs were able to teach it all to us sufficiently. One weakness, though, was that there seemed to be some key holes in some of our information. In particular, the labs could be improved a lot if students were given a tutorial on hardware description languages before having to use them in a lab setting. ",
+            "\u00a0This course was a solid basic introduction to transistor logic and its applications, including in a computer processor.\r\n\r\nUnfortunately I found that the course this semester had a number of weaknesses -- the problem sets were often long and repetetive, and were not the most helpful for practicing topics from class; the exams, especially the first midterm, were not fair tests for skills learned in class because they were too long and  there was not enough exam time to address all of the questions; the lab projects were often difficult to complete because we were not taught how to code the structures in Verilog to implement them. The course could be improved if the assessments and problem sets were re-tuned to focus more fully on skills; if feedback on assessments could be more detailed; and if more time in the course or in class was devoted to explicitly teach how to program Verilog. ",
+            "\u00a0This course was SOO disorganized!! \r\n\r\nFirst of all, in lab, we were expected to program in Verilog, but we were not taught how to use the language. I think in the future Jakub should set aside at least two lectures JUST FOR VERILOG. The labs were supposed to be fun, but they ended up being unnecessarily stressful. But also, major shout out to Kevin Ryan, who helped us through all the labs. \r\n\r\nAnother issue was that we didn't have that many psets. There was some content that we never had a chance to practice until the midterm. The content from class often wasn't covered in the textbook, so I couldn't even find practice problems that way. Jakub was pretty inaccessible, and the TFs usually did not know what was going on. \r\n\r\nWe also didn't get our graded homeworks or midterms back for a long long time, so we couldn't even learn from those. \r\n\r\nFor the most part, Jakub's lectures were pretty good, although sometimes he used abbreviations without ever saying what they stood for! "
+        ],
+        [
+            "\u00a0Required for EE ",
+            "\u00a0I would not recommend this course. It had interesting material at its core, but the execution and general state of disorder made my semester so much more difficult than it had to be. I came away frustrated with what was asked of us, how long it took us to touch relevant topics, and how much was assumed of us as students for an introductory level course. ",
+            "\u00a0It taught some interesting things.\r\nBut unless the course undergoes some major overhauls, I would not recommend it to another student. ",
+            "\u00a0I came in wanting to learn more about computers and I got it!  I would recommend this class to someone else GENUINELY interested in learning about the makeup of computers.  THAT SAID.  If you are not required to take this class and do not have interest in this topic it is NOT worth it.  The workload and turbidity of the course do not make it worth it if you don't have to take it and it's not interesting. ",
+            "\u00a0I would recommend the course if the student is genuinely interested in the basic functions of a computer, and if they are not an electrical engineering major, if they have the time. Labs were more time consuming than anticipated, and learning skills such as Verilog programming were done outside of class. ",
+            "\u00a0Only if you are seriously considering majoring in EE ",
+            "\u00a0I would recommend this course to anyone interested in learning about applied circuitry.  It didnt have a huge focus on circuit analysis, but rather learning about common components that make our everyday devices run, which I found interesting.  If a CS major is looking for something different outside the typical core classes, take EENG 201. ",
+            "\u00a0Yes, it was very interesting and the labs were very cool, and the workload was quite manageable. ",
+            "\u00a0Take it if you want to understand how computers work from the basics. ",
+            "\u00a0Yes. Learn how computers work from the ground up. ",
+            "\u00a0Yes; the in-classroom lessons are interesting but fairly easy to grasp (with some practice) although the labs required a lot of effort and time. Even so, they were interesting and satisfying to complete. For labs, we analyzed the strip of a credit card, programmed an animation on an LED cube, programmed an adder (which uses logic gates to \"add\" binary numbers and display it with LEDs, and programmed a vending machine. ",
+            "\u00a0Yes. Great elective for mechanical engineers. ",
+            "\u00a0It is an interesting class, but it isnt worth it for the lab, so if its not a requirement I wouldnt take it. ",
+            "\u00a0Yes, good course ",
+            "\u00a0Yes ",
+            "\u00a0I would recommend this course only to students interested in Computer Engineering. Those students will appreciate the material, but unfortunately the course is very frustrating. ",
+            "\u00a0Unless one is planning on majoring in EE probably not ",
+            "\u00a0Not unless you have to. ",
+            "\u00a0I would only recommend this class to someone who is passionate about the subject material, otherwise they might find the class frustrating and unrewarding. ",
+            "\u00a0I would highly recommend this course to another student; its applications, content, and problem-solving strategies are amazing to learn about and to study in the context of the real-world. ",
+            "\u00a0Important foundations for anyone looking to further study EE or CS. ",
+            "\u00a0I am a mechanical engineering major who was looking to branch out, and I really enjoyed EE201. Prof. Szefer gives good lectures and is willing to stay after class to explain things. The lab projects are fun, although Verilog is very tedious/abstruse. It's not easy by any means but if you keep up with the homework and labs you will do fine on the exams. Definitely no EE experience required for this one, although some basic programming knowledge will help with Verilog. ",
+            "\u00a0I loved this course. Would recommend to EE, EECS, CS, and MechE majors. ",
+            "\u00a0Yes, but with the understanding that coding is a large part of the lab projects and it may not be taught in class. ",
+            "\u00a0Yes. Though the topics are sometimes disconnected and the work can be tedious, this course should be very interesting for anyone interested in understanding how a computer works from the bottom up. The exams have short time limits, so finishing them takes good preparation. The labs are a great part of this class, but budget some time to work on them outside of the official lab sessions. ",
+            "\u00a0No, because labs are pretty time consuming. ",
+            "\u00a0Very much so. The material is very interesting, and Prof. Szefer presents it in a way that's relatively easy to understand. Students also get hands-on experience with computer hardware, such as using hardware description language and building adder circuits from logic gates and transistors. ",
+            "\u00a0I'd recommend this only to students that are reasonably sure they want to major in electrical engineering or a related field. ",
+            "\u00a0If it were restructured, yes. The content is really cool, and Jakub is really nice. But for now, it was just way too chaotic for my taste. "
+        ]
+    ]
+}

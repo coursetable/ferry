@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51753/assignments/syllabus", 
+    "requirements": "Open to nondepartmental and non-School of Drama students with prior permission of the instructor. Limited enrollment.", 
+    "description": "This course explores composition as a fundamental component of sound design, focusing on developing an aural imagination through advanced digital tools. Students are assigned projects based on a variety of specialized techniques within a theatrical framework. Students present their projects on assigned dates followed by discussion and critique. During the fall term, students realize six compositional \u00e9tudes that explore topics of investigation. The nature of the \u00e9tudes is negotiated with each individual to accommodate production schedules. Due dates are agreed upon by week two (allowing for some flexibility in terms of content). Students must complete at least four \u00e9tudes by the end of the fall term in order to progress to DRAM 258b. Required of all second-year sound designers. Two hours a week.\nOpen to nondepartmental and non-School of Drama students with prior permission of the instructor. Limited enrollment.", 
+    "title": "Composition for Sound Design I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "PK205 SEMINAR", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14243", 
+        "listings": [
+            {
+                "number": "258", 
+                "subject": "DRAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Frederick Kennedy"
+    ], 
+    "long_title": "Composition for Sound Design I", 
+    "extra_info": "A"
+}

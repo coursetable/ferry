@@ -1,0 +1,77 @@
+{
+    "crn_code": "24182",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            2,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a great amount about the theory and application of developmental economics. The final paper in the class allowed me to apply what I had learned in class to an actual idea that hadn't been implemented yet. ",
+            "\u00a0I'm not sure I developed any skills ",
+            "\u00a0I learned about why countries are poor and the gap in current economic literature to identify the casual differences in developed versus developing countries. I learned about studies that are underway to change behavior to encourage technology adoption, investment and savings, education and other interventions thought to aid in economic development. "
+        ],
+        [
+            "\u00a0Strengths of the class included the class size which allowed for a half seminar lecture style. Additionally, the class was organized very logically and clearly, first with the theory that was then applied to different subjects within developmental economics. The Economics major does not have a ton of developmental economics courses (except sometimes with the senior Econ seminars) so it was nice to have this option. ",
+            "\u00a0The class reinforced a lot of the concepts I've learned in other Economics classes and was a good addition to the material.  However, one weakness I would say is that this class is relatively similar to a lot of the other developmental economics classes being offered and I felt like it didn't add anything incredibly different. ",
+            "\u00a0I thought the studies and material presented were good, but I wish it was more specific to Latin America. It covered a broad range of studies in many areas of development economics which I thought was good. "
+        ],
+        [
+            "\u00a0I would recommend this course to any student interested in learning more about developmental economics. Yale does not have a significant number of developmental economics courses outside of senior Econ classes. This class is good in that you learn first about the theory behind developmental economics and the statistical methods used. After that, each week focuses on a different unit within developmental economics which is very interesting. The final paper then allows you to apply everything you've learned in class but to your topic of interest. ",
+            "\u00a0I did not love this class and would therefore not recommend it to anyone because I feel like I didn't learn anything and I was constantly frustrated with the course. The final project/research paper was painful. I felt like I was required to write an economic research paper when I was not prepared (when the course did not at all prepare us to do that).  just don't take it. ",
+            "\u00a0This class examined many important questions in development economics. However, the scope of the class was much larger than Latin America, and much of the time, we discussed southeast Asia. Much of the class was based on a final paper that had you come up with your own study and how you would implement it and gather and analyze data to make a conclusion. I would recommend this class if you plan on studying economics at a higher level in the future. "
+        ]
+    ]
+}

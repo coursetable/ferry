@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50063/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course examines how to identify, interview, and document human rights violations in the field. It is aimed at students who want to work as journalists, advocates, or policy makers, and at those who want to work as practitioners during a conflict or humanitarian crisis or under extreme circumstances. The instructor brings twenty-five years as a field reporter in war zones into the classroom: the goal is to make the learning functional. The course teaches students how to compile their findings in the form of reports and articles for newspapers and magazines as well as advocacy letters, op-eds, and blogs. We develop skills for \u201ccrunching\u201d talking points for presentations and briefing papers. Each week focuses on a theme and links it to a geographical conflict. Students emerge with practical research, writing, and presentation skills when dealing with sensitive human rights material\u2014for instance, victims\u2019 evidence.", 
+    "title": "Reporting and Writing on War a...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "RKZ 02", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 13
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11065", 
+        "listings": [
+            {
+                "number": "537", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Janine di Giovanni"
+    ], 
+    "long_title": "Reporting and Writing on War and Humanitarian Disasters", 
+    "extra_info": "A"
+}

@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 1, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Reading and analysis of selections from the canon of Latin lyric poetry. Focus on Horace's Odes, with some attention to his Epodes and to works by Catullus and lesser-known Republican poets. Emphasis on literary interpretation.", 
+    "title": "CANCELLED", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10656", 
+        "listings": [
+            {
+                "number": "424", 
+                "subject": "LATN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Latin Lyric", 
+    "extra_info": "C"
+}

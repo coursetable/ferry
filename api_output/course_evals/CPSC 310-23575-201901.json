@@ -1,0 +1,124 @@
+{
+    "crn_code": "23575",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            2,
+            3,
+            12,
+            10,
+            4
+        ],
+        [
+            1,
+            4,
+            10,
+            11,
+            5
+        ],
+        [
+            1,
+            6,
+            7,
+            13,
+            4
+        ],
+        [
+            1,
+            7,
+            10,
+            11,
+            2
+        ],
+        [
+            4,
+            12,
+            10,
+            5,
+            0
+        ],
+        [
+            1,
+            11,
+            13,
+            5,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Fascinating look into the set of problems that require political and technical expertise (cryptography, electronic voting, bias in machine learning, etc). ",
+            "\u00a0I learned a good deal about cyber security, cryptocurrency, and a lot about India. ",
+            "\u00a0General applications of computer science to other fields like political science, or for purposes like voting, polling, etc. ",
+            "\u00a0An understanding of the political implications of new technologies in the modern era: eg how technology impacts democracy, international peace and security, and peoples rights to privacy ",
+            "\u00a0Discussion of various technologies like internet of things, cryptocurrency, internet architecture, etc. and how they relate to international and/or governmental topics. ",
+            "\u00a0I learned a bit about the history of the internet and some of the ethical issues of tech's impact on politics. ",
+            "\u00a0I gained a broad range of knowledge covering topics throughout the areas where computer science and emerging technologies affect our society. ",
+            "\u00a0Comprehensive overview of the major issues at the intersection of technology, democracy and policy. Developed a working knowledge of what the current discussion looks like for each of the topics we covered. ",
+            "\u00a0I learned a lot of interesting topics regarding the interplay of politics and technology. I think technological security is very important and I was really drawn to that topic. ",
+            "\u00a0I learned a lot about privacy and data handling in the US vs Europe, the issues that come with trying to rely on technology to fix political problems (e.g., voting) and what it doesn't fix. Pretty interesting class overall. ",
+            "\u00a0I gained a cursory understanding of various topics in the intersection of politics (& policsci) and technology (& cs), e.g. electronic voting, cyber warfare, blockchain and its uses, etc. Especially through the problem sets, I gained an understanding of many controversial or newsworthy technologies, like blockchain, Twitter bots, electronic voting schemes, and big data analysis. ",
+            "\u00a0Implement a P2P blockchain network, intersection of security and political science, important and landmark security case studies, law, and court decisions around the world, privacy. ",
+            "\u00a0This course was a cool overview of some major technology-related political issues in the world today. Some great topics were election \"hacking,\" Big Data, anti-trust law, and blockchain. ",
+            "\u00a0A wide breadth of knowledge in how technology is impacting security and politics. ",
+            "\u00a0this class will give you a sweeping overview of different issues and cases revolving around technology, power and security. You'll get some basic info about Stuxnet, the Russian election hacking, the Sony hack, etc. \r\nYou'll also get random information about war/surveillance, which didn't really relate to the course. ",
+            "\u00a0The ways in which politics and government intersect with specific security/technical questions. ",
+            "\u00a0Tech usage towards democratization vs. authoritarianism in case studies in India, China, middle east, and others.\r\n\r\nYou program blockchain, secure voting, data science exploration case study, and a twitter bot. ",
+            "\u00a0This class was so cool! I learned about a whole bunch of really cool applications of computer science at the intersection of policy and tech. I feel relatively up to date now on a lot of things that are being talked about in the news having to do with the government and tech. "
+        ],
+        [
+            "\u00a0Strengths: great problem sets, interesting lectures\r\nWeaknesses: could be better integrated between the CS/political science sides, both in lecture and section ",
+            "\u00a0Strengths: topic that not many courses teach, good at incorporating political science aspect of the course\r\nWeaknesses: psets seemed a bit arbitrary, didn't feel like they directly related to the class ",
+            "\u00a0Professor Feigenbaum seems to want to teach one course, while Professor Wilkinson, another. Little apparent coordination between the two lecturers left the room stale and boring. This course was more of an overview of privacy and control, rather than an intense treatment of the complicated ethical and legal issues that are currently brewing. More personal commentary and development of current scholarly perspectives on these issues could have helped. Additionally, CS majors should have had one essay opportunity to receive feedback and improve their writing, or a different standard should have been used to grade their writing. ",
+            "\u00a0Strengths: interesting content, great slides, combines the fields of political science and computer Science very well\r\n\r\nWeaknesses: exams are heavily biased towards Political science majors and grades rather harshly, exam multiple chock equestrian are designed to trick you rather than consolidate your understanding of course concepts/ content. \r\nThere is very little guidance/ TA help in office hours on problem sets, and the last problem set on blockchain required a lot of prior knowledge of HTTP / sockets. ",
+            "\u00a0Topics are intrinsically interesting and lectures aren't hard to follow. Psets were honestly very interesting and engaging to do, and gave me a working knowledge of fundamental CS topics I hadn't really done much with before, like data mining and blockchain/\r\n\r\nThe dual nature of this course makes section nice. A pretty steep difficulty/work curve after the midterm, though. In terms of international lectures, I felt like we did spend a lot of time just talking about India. ",
+            "\u00a0This course had a really strong start that got a lot of students excited about the material but a month or two in, it just became too disorganized. I felt like I gained nothing from the lectures or the CS section. The CS psets all mostly take under 3 hours to complete and don't provide much helpful experience. Also the tests only cover nontechnical material so the PLSC majors are at a large advantage even though there are no PLSC prereqs. ",
+            "\u00a0The course could go more in depth into certain topics, and the psets could be more standardized into terms of length and difficulty (the first two psets took about 30 mins whereas the last pset took a good 10 hours). ",
+            "\u00a0Strengths: (1) subject matter is fascinating (at least for me it was) and is unique to this class. (2) Professors Feigenbaum and Wilkinson were enthusiastic about the class and knew what they were talking about. (3) Sections were lead by very knowledgeable TAs (mine had studied both computer science and law) and were worth attending even though they were totally optional.\r\n\r\nWeaknesses: (1) a little rough around the edges -- probably because it was the first time this class had been taught. In particular I think the two exams could have been better designed to more comprehensively test our knowledge of the material. (2) Didn't really take advantage of having both CS and PoliSci students in the same class. There was no cross over work. ",
+            "\u00a0The problem sets and midterm essay format should obviously be clearer. It took time just to try to understand what the problem set is asking. But other than that it was a great course overall, I really enjoyed it. ",
+            "\u00a0The course material was great; however, the problem sets would be fairly difficult for a younger CS student that has not worked with Python, HTTP Server, HTTP Client, or Flask before. This course is a poli-sci course in the classroom, and then has students model/simulate what they learn about in class as their psets. But this class does not teach you the skills/technologies you need to implement the psets. So either there needs to be more focus in section on making sure everyone is up to speed, or the course should explicitly list that this course expects students to have some familiarity/exposure to certain Python libraries, etc. ",
+            "\u00a0The psets are by far the biggest strength of this class. Every pset was interesting, unique, and for the most part, all were fairly challenging as well. They're not difficult, but they do require you to think in interesting ways, and due to the nature of the class, the theme for each pset is always sort of cool. The weaknesses of the class for me were the section and lectures, to be frank. Section never was very interesting, and so I stopped going after about 3 meetings because there was no discussion and the TA found it hard to be interesting--I think it's partially because there's such a wide range of backgrounds of students in the class that it's hard to tailor section materials to everyone. For instance, for my friends and I who have taken networks, cryptography, and other higher level electives which were relevant, we needed to introduction to those concepts, but because the only prereq is 223, often times section time had to be spent covering topics we already knew very well (same thing happened early in lecture). Basically, you will learn some cool things in the psets, but if you have already taken a few CS electives, then the lectures & sections aren't great--the poli sci lectures were perhaps a bit better, but ultimately I was a bit underwhelmed by Prof. Wilkinson, to be honest. ",
+            "\u00a0Strengths: SECTIONS!!! Holy cr*p sections really do a great job of facilitating student learning and I was always sad that my CS courses didn't ever have a lb or section component since the department is so under-resourced. Another strength is that the problem set instructions were clear and there was always a rubric provided. It's also a great intersectional course for those interested in politics, government, and privacy but also in the computer science major. It really shows how applications of security and privacy, and other CS concepts, have real implications in government, voting, and government programs.\r\n\r\nWeakness: An incredibly misleading syllabus and onset of the course. Apparently, students were doing \"too well\" on the problem sets so the course was made 3000% harder, where the last two problem sets were insane if you didn't have a background in S&DS or Computer Networks, where the latter problem set consisted of implementing a P2P blockchain network (we never even covered implementing P2P in Yang's Networks course). The course did not have prerequisites for these courses which is completely unfair to the students. ",
+            "\u00a0The professors and TFs were strong for this course, and I think we covered a great breadth of topics and just enough depth to really understand and be able to hold conversations about them, even thought it could have gotten far more technical if we wanted. ",
+            "\u00a0The content was great but the assessment strategies and standards were often ambiguous and needed clarification ",
+            "\u00a0Strengths - the problem sets were REALLY fun! It was great to have assignments that took a classic buzzword, like \"blockchain,\" \"bot,\" or \"machine learning\" and actually do something with it. We don't get a chance to do this in traditional CS courses.  The TAs could have provided a bit more structured guidance, however, like walkthroughs of how the tech we were using worked, or links to helpful sites. I also loved how open-ended they were - rather than conforming to test cases, we had to build it in a way that we thought could work, which was fun. \r\n\r\nWeaknesses -  the cohesion between the plsc/cs lectures and courses could be strengthened. Prof Wilkinson's lectures often felt widely removed from Prof Feigenbaum's and also didn't feel relevant all the time (for example, talking about welfare in India in great detail is really only tangentially related to tech, power, and security, while many topics that were only briefly mentioned like Stuxnet were far more relevant). Also, I wished the CS/PLSC students got to interact more, in joint sections or group projects. I wish I could have learned from their deeper knowledge of political issues, and I expected this to be the beauty of a cross-listed class that wasn't fully taken advantage of. ",
+            "\u00a0As a computer science major, I think a huge weakness of this course was that students taking the political science version of the class and students taking the computer science version of the class had to take the same exam. This disadvantaged CS students because the exams did not cover the CS material of the class. The time spent on CS assignments for the class did not at all contribute to preparing for these exams, while the poly sci assignments were directly related to the material on the exam. ",
+            "\u00a0The lectures were pretty interesting and sections were useful. I wish the expectations for the last two problem sets were clearer, though. ",
+            "\u00a0I think the homeworks could be a bit better organized, but they were still really fun to implement. I loved the dual lectures. It kept things fresh and fun. The exams were fair and the homeworks were fine, if a bit hard to understand at first. Pacing was good and section was relaxed yet informative. I truly enjoyed this class. "
+        ],
+        [
+            "\u00a0Definitely, and especially for CS majors -- we don't write code in a vacuum, and this, more than any other CS elective, makes you think long and hard about the ramifications of your work. ",
+            "\u00a0I would recommend this course as it does have a lot of interesting topics it covers, professor Feigenbaum and Wilkinson are both good lecturers and it was definitely more engaging than other lecture classes, but beware the psets are not the most interesting (and the last two were intentionally made difficult to make up for the relatively easy first two psets). Exams were relatively fair. ",
+            "\u00a0It's a lukewarm class to take, especially if you're someone whose taken Brad's class. But it's probably one of the easiest CS credits you can get. CS explanations, especially of blockchain and encryption were unnecessarily complicated for CS majors and political science majors alike. Last two problem sets were not well designed and were only vaguely related to the class. ",
+            "\u00a0Sure if you want a CS credit with a relatively light workload. You dont get mind-blown by the concepts presented in the class, but the topics are generally interesting to discuss. ",
+            "\u00a0Yes, it's a really good and generally non-stressful way to explore the many connections from technology to our society. Really shows tech's real life impact in a way I haven't seen in any other course. ",
+            "\u00a0Nope. You don't really come out of the course with a lot of helpful knowledge and it's not fun after the first few weeks. ",
+            "\u00a0I would absolutely recommend to any student in either political science or computer science. The course does a fantastic job of educating students in both areas: very little knowledge is assumed and everything is explained very well. This was my favorite course I have taken to date at Yale, and really exemplified that \"interdisciplinary\" education that the admissions office sells. ",
+            "\u00a0If you are a computer science student with an interest in policy/policy/democracy/law/etc then this class is a no brainer for you. Definitely take it. ",
+            "\u00a0Yes, definitely. ",
+            "\u00a0Dude, take this course if you are a CS major. EASY intermediate credit, you can take it as a 5th class. 3/4 of the problem sets were easy money. EASY. 3rd pset took longer and required a lot of self-learning, but was kind of fun to figure out. I thought intro to database systems was an easy, credit, but this blows it out of the water. After the midterm I didn't go to any lectures - before I went to < 5. You can wait until the night before to study for the tests too. I would have gotten an A had I turned in the psets on time. \r\n\r\nExcellent material though, highly recommend and glad we have this. ",
+            "\u00a0If you're interested in the subject and you need a pretty easy elective credit, why not! Low commitment as lecture and section are optional (I skipped probably about 30% of lectures and 90% of sections and aced both exams, so don't worry about attendance), and if you're good at programming, the psets are fun and take less than 10 hrs each (first pset: 1hr, second: 5hrs, third: 10hrs, fourth: 5hrs). ",
+            "\u00a0I would recommend this course to another student as long as Feigenbaum doesn't throw any more curveballs at the students. As long as expectations are clear before taking the course, and you know what you're getting into, it's a good time. ",
+            "\u00a0I would highly recommend this course to other students! It is the best CS course I've taken, but even non-CS people (esp political science people) should be interested in these topics that have huge impact on society. For example it feels cool to understand what blockchain even is, and it was great to be able to think critically and discuss ethical implications of machine learning, Big Data, etc. ",
+            "\u00a0Yes, but if the assessment does not change, it is imperative to be proactive about finding out what the graders are looking for. ",
+            "\u00a0YES! I think there is a lot of room for this course to grow, but that's what happens in a first-round of a class being taught. I think it's important to encourage these kinds of interdisciplinary courses, especially in the CS/policy sphere!! ",
+            "\u00a0I'm not sure if I would recommend this class.. As a CS major, I really enjoyed Feigenbaum's lectures and wish she taught the entire class. Professor Wilkinson's lectures were consistently uninteresting to me. The assignments for this class were pretty interesting and fun. It's not a terrible class, but I wish I would have taken a more technical CS elective. ",
+            "\u00a0100%. A rare class for cross-disciplinary learning between Computer Science and social science/concrete humanistic issues. ",
+            "\u00a0No. Homework was pretty much unrelated to course content and due dates were at 10 pm not 11:59 for some reason. ",
+            "\u00a0Later two psets are harder. ",
+            "\u00a0Yes! 1000x yes. I loved this course. Interesting and engaging CS courses can be few and far between; this one should be recognized for that. If you're at all interested in policy and tech, and need a 5th credit (or a CS elective!), this is a FANTASTIC choice. "
+        ]
+    ]
+}

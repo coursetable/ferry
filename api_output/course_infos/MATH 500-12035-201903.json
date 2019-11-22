@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50464/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A survey of algebraic constructions and theories at a sophisticated level. Topics include categorical language, free groups and other free objects in categories, general theory of rings and modules, artinian rings, and introduction to homological algebra.", 
+    "title": "Modern Algebra I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LOM 205", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12035", 
+        "listings": [
+            {
+                "number": "500", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Ivan Loseu"
+    ], 
+    "long_title": "Modern Algebra I", 
+    "extra_info": "A"
+}

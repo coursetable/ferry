@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "(High-intermediate) Develop oral English fluency and listening skills in a variety of contexts: academic, workplace and everyday life through functional use of language in practical scenarios and discussions presented in theme-based units. Improve pronunciation and develop familiarity and accurate usage of American colloquial and idiomatic language.", 
+    "title": "Speaking Fluently 1", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 18, 
+            "location": "DOW B-21", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 20
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "14967", 
+        "listings": [
+            {
+                "number": "504", 
+                "subject": "ELP"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jaime-Erin Parry"
+    ], 
+    "long_title": "Speaking Fluently 1", 
+    "extra_info": "A"
+}

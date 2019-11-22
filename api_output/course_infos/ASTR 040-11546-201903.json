@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50939/assignments/syllabus", 
+    "requirements": "Enrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "description": "Discussions on astronomy, and the nature of time and space. Topics include the shape and contents of the universe, special and general relativity, dark and light matter, and dark energy. Observations and ideas fundamental to astronomers' current model of an expanding and accelerating four-dimensional universe.\nEnrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "title": "Expanding Ideas of Time and Sp...", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WLH 209", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11546", 
+        "listings": [
+            {
+                "number": "040", 
+                "subject": "ASTR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "C. Megan Urry"
+    ], 
+    "long_title": "Expanding Ideas of Time and Space", 
+    "extra_info": "A"
+}

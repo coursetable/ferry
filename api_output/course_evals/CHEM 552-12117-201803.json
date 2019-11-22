@@ -1,0 +1,95 @@
+{
+    "crn_code": "12117",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            8,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            6,
+            3,
+            3
+        ],
+        [
+            0,
+            4,
+            2,
+            4,
+            2
+        ],
+        [
+            0,
+            4,
+            4,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            6,
+            5,
+            0
+        ],
+        [
+            1,
+            7,
+            4,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How fundamental organometallic transformations occur. In what ways it can be applied to other areas like organic chemistry and green chemistry. ",
+            "\u00a0It was very interesting, especially learning about the blunders and other insight into how the chemistry research world works. ",
+            "\u00a0Basics of organometallic chemistry as well as some history of the field ",
+            "\u00a0General organometallic chemistry principles and applications to synthetic chemistry. ",
+            "\u00a0I now have a deeper appreciation for the role of transition metals as they apply to catalytic cycles. Additionally, I learned a lot about the scientific community through Prof. Crabtree's anecdotes. ",
+            "\u00a0I learned a lot about the history and development of the organometallic field ",
+            "\u00a0In-depth fundamentals of organometallic chemistry and an introduction to a wide spread of applications. ",
+            "\u00a0Electron counting and organometallic reaction mechanisms. ",
+            "\u00a0lots of knowledge about organometallic chemistry and advanced research area about catalyst ",
+            "\u00a0Knowledge of organometallic chemistry "
+        ],
+        [
+            "\u00a0Very homogenous course: it was simply lecture, which you didn't need to go to because he reads off slides that he posts. No other assessments besides 2-3 exams. ",
+            "\u00a0Interesting course, and fair exams ",
+            "\u00a0The lectures were interesting and engaging, if sometimes a bit wandering and unfocused. ",
+            "\u00a0Strength/weakness: The lecture slides were very long but sometimes lacked detail. It could easily be augmented by following along with the book. ",
+            "\u00a0I would like to have problem sets to practice and get feedback on answers. ",
+            "\u00a0This course was very thorough. I would have liked to have had more opportunities to get feedback throughout the semester. Perhaps in future years problem sets could be assigned. ",
+            "\u00a0It was really easy to not do anything for the course until it was time to study for the exam. Some graded problem sets would have been helpful. ",
+            "\u00a0The course gets a little dry after the second exam, but otherwise was informative and entertaining. Maybe have extra example questions or optional but recommended problem sets other than those from the book, especially for the later chapters. ",
+            "\u00a0strengths: Prof. Crabtree is knowledgeable. He knows almost everything in organometallics. He is a great instructor, not only imparting knowledge, but also telling us how to do research. ",
+            "\u00a0Far too much course material, exams didn't feel entirely representative of book problems or the material discussed in class. "
+        ],
+        [
+            "\u00a0Yeah, probably. Didn't love it because it was simple lecture and 2 exams. Little opportunity to practice concepts. ",
+            "\u00a0Yes. If you think you'll be working with metals in your research (even tangentially), this course provides useful information ",
+            "\u00a0Yes.   Essentially for anyone wanting to do synthetic chemistry. ",
+            "\u00a0I would recommend this course simply because it is taught by Bob. ",
+            "\u00a0Yes, the course is very fair in its grading scheme, organometallic chemistry has ingrained in other subdivisions of chemistry, and the course has a good instructor. ",
+            "\u00a0Yes, it is a very fundamental course for chemistry. ",
+            "\u00a0Yes. It is a good class for graduate student who wants to learn something about organometallics. After learning this course, I can understand the literature in this area. "
+        ]
+    ]
+}

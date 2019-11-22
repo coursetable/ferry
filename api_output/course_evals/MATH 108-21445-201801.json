@@ -1,0 +1,91 @@
+{
+    "crn_code": "21445",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            6,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            5,
+            3,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            7
+        ],
+        [
+            0,
+            0,
+            4,
+            4,
+            5
+        ],
+        [
+            1,
+            4,
+            6,
+            1,
+            0
+        ],
+        [
+            0,
+            4,
+            6,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The most valuable skill was how to approach real life problems without specific mathematical formulas, but with different ways to approach the problems. ",
+            "\u00a0I learned how to execute large-scale estimation problems, and honed skills in similar areas of mathematics. ",
+            "\u00a0This class was extremely useful in learning real-world math as applied to interviews, personal finance, and making educated guesses in the world. ",
+            "\u00a0I further honed my analytical skills, how to analyze data, and how to apply mathematics to real life (something professors do not do often)! ",
+            "\u00a0This course is a good QR course and teaches you about the math of estimation within the real world context. ",
+            "\u00a0I really liked the part where we learned different ways of approximaing e. ",
+            "\u00a0I learned critical thinking processes to utilize when evaluating real world issues.\r\n\r\nWhat sort of questions should I ask to break a problem into smaller pieces. How might rounding making an overwhelming problem suddenly much more approachable? ",
+            "\u00a0I learned how to estimate different things, which have helped me with everyday life, and to ask questions when I am stuck on a larger problem. I have been able to apply these skills to all of my other classes. "
+        ],
+        [
+            "\u00a0It's a pretty low stress way to fill a QR with topics that are relevant outside of the classroom. ",
+            "\u00a0The worksheets coinciding with the lectures were really helpful! I appreciated how they worked through the process of the problem-solving, and didn't just give formulas. I think this course accomplishes what it sets out to do. ",
+            "\u00a0The strength of this course is that it moves at a really good pace and each skill comes together at the end when you discuss concepts such as fermi questions, probability, combinations, and permutations. ",
+            "\u00a0I loved this course. I think Professor Vigliotta is one of the most amazing professors. I am so thankful I took her class. ",
+            "\u00a0Its a good course, the psets often did not correlate to what was taught in class. ",
+            "\u00a0I liked the idea: good intro to math. I liked almost everything about it. Homework, however, seemed to be unecessariliy strictly graded. ",
+            "\u00a0I would say that the only weakness with this course was not being able to go more in depth in class and focus on less problems; however, any questions or confusions were always thoughtfully and carefully explained during office hours. "
+        ],
+        [
+            "\u00a0Yes ",
+            "\u00a0Yes! A great way to get a QR that's both managing and engaging. ",
+            "\u00a0Yes, I would recommend this course if you are looking for a basic QR credit. ",
+            "\u00a0I would 100% recommend this class. You will learn things that are actually valuable to everyday life. You will also learn how to analyze data results, which is key when reading the newspaper, journal articles etc. ",
+            "\u00a0If you need a QR, its a good class to take, Professor Vigliotta is very nice and the workload is fair. ",
+            "\u00a0Yes. Great QR for people with little math background. ",
+            "\u00a0Basically intro to the mathematical way of thinking. Interesting class with a lot of group work, but not really a challenge for anyone with any knowledge of probabilities and combinations/permutations. Problems sets are pretty easy, but sometimes take time. Exams can hardly get easier. Just go to class or read lecture handouts (exam questions are often the same). ",
+            "\u00a0Definitely because of its content being so useful and so applicable to everyday life. "
+        ]
+    ]
+}

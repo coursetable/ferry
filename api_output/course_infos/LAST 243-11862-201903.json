@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51378/assignments/syllabus", 
+    "requirements": "Enrollment limited to 18.\u00c2\u00a0", 
+    "description": "A comprehensive, in-depth study of grammar intended to improve students' spoken and written command of Spanish. Linguistic analysis of literary selections; some English-to-Spanish translation.\nEnrollment limited to 18.\u00c2\u00a0", 
+    "title": "Advanced Spanish Grammar", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WLH 003", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11862", 
+        "listings": [
+            {
+                "number": "243", 
+                "subject": "LAST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Maria Pilar Asensio-Manrique"
+    ], 
+    "long_title": "Advanced Spanish Grammar", 
+    "extra_info": "A"
+}

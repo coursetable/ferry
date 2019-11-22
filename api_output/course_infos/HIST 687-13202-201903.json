@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50152/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Political and economic relations of Russia/Soviet Union with Europe, the United States, and Asia from tsarism to socialism.", 
+    "title": "Russia, the USSR, and the Worl...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "BASSLB L73", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13202", 
+        "listings": [
+            {
+                "number": "687", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Paul Bushkovitch"
+    ], 
+    "long_title": "Russia, the USSR, and the World, 1855\u20131945", 
+    "extra_info": "A"
+}

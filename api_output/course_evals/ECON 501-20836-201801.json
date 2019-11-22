@@ -1,0 +1,102 @@
+{
+    "crn_code": "20836",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            7,
+            12,
+            8
+        ],
+        [
+            0,
+            4,
+            11,
+            8,
+            5
+        ],
+        [
+            0,
+            4,
+            8,
+            9,
+            7
+        ],
+        [
+            1,
+            3,
+            8,
+            11,
+            5
+        ],
+        [
+            0,
+            1,
+            8,
+            8,
+            11
+        ],
+        [
+            0,
+            1,
+            10,
+            10,
+            7
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Important microeconomics tools ",
+            "\u00a0A whirlwind tour of game theory and its applications. You begin to formalize game theoretic concepts in a rigorous manner, and analyze topics ranging from incomplete information to moral hazard.\r\n\r\nAlmost certainly the most difficult class I've taken at Yale (although game theory is also a relative weakness of mine). Still, the range of topics covered - auctions to contracts - makes it worth it, if you're willing to put in the work. ",
+            "\u00a0Principles of game theory and mechanism design, including analysis in problems such as auctions, public goods, nonlinear pricing, and moral hazard. ",
+            "\u00a0Knowledge:  Everything listed in the syllabus plus some\r\n\r\nSkills:  Economic analysis, persistence\r\n\r\nInsights:  Behavior in competitive scenarios ",
+            "\u00a0I have learned how realistic social situations can be modeled and analyzed using game theory. ",
+            "\u00a0game theory; mechanism design ",
+            "\u00a0A lot, I learned lots of micro theory which was very useful. ",
+            "\u00a0Game theory, mechanism design, applications to variety of subfields ",
+            "\u00a0Game theory and mechanism design ",
+            "\u00a0Knowledge about game theory and mechanism design. ",
+            "\u00a0Strong math/economic analysis background skills "
+        ],
+        [
+            "\u00a0The first part was really badly organized. ",
+            "\u00a0The lectures need to be improved. The use of slides makes more difficult to follow the lecture ",
+            "\u00a0Good lectures, but would have preferred PDFs lecture notes during Dirk's portion of the class. (Makes following along easier.) ",
+            "\u00a0The very beginning of the course didn't feel very well organized. ",
+            "\u00a0Organizationally there were some challenges with this course. I think some of this has to do with trying to coordinate multiple different profs, but they should still be addressed. Students weren't made aware of when the midterm was -> Prof said \"We have a midterm next week\" and the TA had to point out that the syllabus only said \"Midterm: TBA\"\r\n\r\nTA section/office hours could have been adjusted to better assist students with the assigned work. The course had the only scheduled office hours happening immediately AFTER the assignment was due, making them more or less worthless for asking questions about the problem sets. ",
+            "\u00a0Strengths:  Wide coverage of game theory\r\n\r\nWeaknesses:  Slight disconnect between types of problems covered in class and one homework versus the exam.  Doing even a few problems that resemble the exam questions would really help to nail down what is going on ",
+            "\u00a0Strength: Problem sets are good complements of classes. We can strengthen our understanding by tackling problem sets every week. ",
+            "\u00a0The marking scheme should be 40/40/20 like in micro 1. Having 50% of the mark be on the first 3 weeks of material that Ryota taught is very odd indeed (or at least have the final be 3 hours so questions on mechanism design and moral hazard aren't completely left out -seems to me that was the most important part of the class) ",
+            "\u00a0Q3: Good broad overview of topics, repeated games were very well taught, but it seems we focused too much on basic Nash equilibrium and then sequential and trembling hand perfect were covered quickly at the end. Problem sets were sometimes so challenging that no one could get them, so maybe recalibrate. Q4: Fair exam, problem sets mostly reasonable, but class could be more engaging. ",
+            "\u00a0Juuso and Dirk's part was underwhelming from an instructional point of view. ",
+            "\u00a0too many instructors, too little continuity ",
+            "\u00a0The strength of the course was that many notions were covered.\r\n\r\nThe weakness was that there were three professors for one course, and this made things a little bit confusing. ",
+            "\u00a0Just giving slightly more intuition and application of the concepts learned, and motivating some of the topics could have made a huge difference in interest and engagement. "
+        ],
+        [
+            "\u00a0Yes. The topic is really interesting and helps a lot to understand other topics ",
+            "\u00a0Yes, it teaches important tools ",
+            "\u00a0Almost certainly the most difficult class I've taken at Yale (although game theory is also a relative weakness of mine). Still, the range of topics covered - auctions to contracts - makes it worth it, if you're willing to put in the work.\r\n\r\nDo be aware that if you haven't taken game theory in the past, this class will be extremely challenging at times. I've taken game theory, and I still found it very challenging. ",
+            "\u00a0Yes I would, if they were up to the level of math required to do well ",
+            "\u00a0Economics students should take this course. It provides insights on how to model interactive situations in society. ",
+            "\u00a0Yes. I learned lots of economic intuition. ",
+            "\u00a0Yes, if you're an economist. ",
+            "\u00a0Only other econ PhD students. ",
+            "\u00a0Yes I would recommend it since it covers very important topics. ",
+            "\u00a0Basically you have to take it to gain the fundamentals of econ, but I think that's a pity because it could be taught in a much more interesting and engaging way. "
+        ]
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "crn_code": "23310",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            3,
+            2,
+            0
+        ],
+        [
+            1,
+            0,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            4
+        ],
+        [
+            1,
+            3,
+            1,
+            1,
+            0
+        ],
+        [
+            1,
+            0,
+            4,
+            2,
+            0
+        ],
+        [
+            1,
+            0,
+            2,
+            2,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I did gain some tidbits of spatial statistics, which I think is generally a very interesting topic, taking this class. But overall, very little. ",
+            "\u00a0I learned about some basic tests and modeling procedures for use with spatial data. ",
+            "\u00a0A basic overview of spatial statistics and how R is a powerful tool for it. ",
+            "\u00a0We learned how to analyze different types of spatial data using various packages in R. Techniques include tests for random distribution, spatial autocorrelation, point pattern analysis, regression with spatial weights, kriging, etc. ",
+            "\u00a0Greater understanding of concepts behind spatial interpolation and corresponding R skills "
+        ],
+        [
+            "\u00a0Not very well in the sense that I did not feel like I took away much from this class, even though I tried to stay engaged to the best of my ability. \r\n\r\nI think the biggest misalignment between this class and my expectations for it was the opportunity to apply skills learned in class with some guidance. The course syllabus canvas page says: \"During the semester, we'll ask you to regularly apply methods we discuss to your data as appropriate. Once or twice you'll be asked to present spatial statistical results on your dataset in class. We'll have 'loaner' datasets you can use if a particular topic isn't appropriate for your data.\" \r\n*This did not happen.*\r\nHomeworks were very simple exercises that used a toy dataset provided, with very specific right/wrong answers. A few students talked about their data of interest or research questions, but not about any spatial statistics techniques they had used, so there wasn't an opportunity to learn from other students' real-world examples. ",
+            "\u00a0They pretty much aligned with my expectations, but my knowledge is not as in-depth and theoretical as I expected. ",
+            "\u00a0It was pretty well aligned. I thought we might do more worked examples or take more about specific types of data sets and how to look at them but it was just an intro class. ",
+            "\u00a0The course emphasized theory a little more than I expected for an applied stats class. However, this changed a bit halfway through the semester due to feedback from students. By the end of the course, I felt confident using all of the techniques that we learned, except kriging, which I still find difficult to implement and interpret. ",
+            "\u00a0They aligned well with my expectations "
+        ],
+        [
+            "\u00a0The biggest weakness of this class is that the professor seemed to spend about as much time teaching the material as he spent telling the class he either was not terribly familiar with the material, did not think it was particularly useful, was not sure why the examples made specific decisions in their analysis, what the implications were for making small but important analysis decisions, or was not sure when one would apply this technique. The result was an entire semester of material presented as not useful, or at least no clear guidance regarding when a given technique could be useful or mastery of the seemingly small but important decisions one would have to make when conducting the analysis in real life. ",
+            "\u00a0More homework or problem sets would be helpful to practice the techniques, and something other than programming homework might help to understand the material more conceptually. I kind of feel like the main thing I learned from this class was how to program this stuff in R, and I don't know a whole lot about the material itself. I know this is an applied class and FES likes to keep things that way, but a little more thorough investigation of the theory behind the concepts would help me understand better. ",
+            "\u00a0More examples! More overview lectures and then separated lectures on different topics. ",
+            "\u00a0I really think this course need to actively incorporate ArcGIS. ",
+            "\u00a0Tim's lecture notes are very thorough and a great resource; I imagine I will continue to use them as a reference outside of class. The lectures themselves can be difficult to follow because the material is very complicated and dense. Going through examples in R was helpful, however I think this part of the course could be improved with more emphasis on reinforcing concepts from lectures and less emphasis on coding. For the most part, R has sufficient reference material for the functions we used. The notes in Tim's example scripts also help with coding. I liked all of the assignments and would have appreciated a few more since they didn't cover all the techniques. ",
+            "\u00a0Strengths are the clarity of instruction and the patience of the professor and TA. Breadth of the material covered was outstanding. Understanding the concepts could probably be reinforced by doing some computations by hand, for example, calculating the covariance matrix for a small dataset. "
+        ],
+        [
+            "\u00a0Take this class if you're looking for a light workload to balance out other heavier classes and don't mind a bit of boredom. Or take this class if spatial statistics specifically could really help your academic/career goals, but be prepared to do most of the learning on your own outside of class, and try to use the class just to identify techniques that could be applicable to your needs. Otherwise, as a general interest course or a course that is only tangential to your academic/career goals, I would not recommend taking this class. ",
+            "\u00a0Be familiar with r before the course. ",
+            "\u00a0Come in with a project and goal. ",
+            "\u00a0Tim encouraged us (many times!) to find a dataset early on and practice the techniques using this data (in addition to assignments). I didn't do this until the end of the semester when I started working on my final project. I regret that decision. Finding a dataset early will help you learn the material and spread out the workload for the final project. ",
+            "\u00a0You would get the most out of this class if you have prior knowledge of elementary statistics and matrix algebra. "
+        ]
+    ]
+}

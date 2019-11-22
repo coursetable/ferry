@@ -1,0 +1,124 @@
+{
+    "crn_code": "13875",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's provided students with helpful and timely feedback",
+        "The instructor established a positive learning environment",
+        "The instructor raised questions or problems that encouraged me to think critically"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            3,
+            12,
+            7,
+            3
+        ],
+        [
+            4,
+            3,
+            10,
+            7,
+            1
+        ],
+        [
+            1,
+            4,
+            7,
+            10,
+            3
+        ],
+        [
+            1,
+            2,
+            5,
+            9,
+            8
+        ],
+        [
+            2,
+            3,
+            2,
+            12,
+            6
+        ],
+        [
+            2,
+            2,
+            4,
+            9,
+            8
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a04 ",
+            "\u00a05 ",
+            "\u00a03 ",
+            "\u00a02 hours ",
+            "\u00a03h ",
+            "\u00a04-5 ",
+            "\u00a03 ",
+            "\u00a03 ",
+            "\u00a05hr ",
+            "\u00a03-4 hours ",
+            "\u00a05 or 6 hours ",
+            "\u00a01.5 ",
+            "\u00a05 "
+        ],
+        [
+            "\u00a0very useful and good designed ",
+            "\u00a0boring ",
+            "\u00a0strength: perfect for students pursuing a career as traditional biostatistician working with investigators.\r\n\r\nweakness: the content is too narrow, restricted and not as valuable for majority of students who are not pursuing a career as traditional biostatistician working with investigators.\r\nthe course seems to come out to just scratch the surface of epidemiology and clinical trial combined.\r\n \r\nmay consider to make this course only a core requirement for PhD/MD students. ",
+            "\u00a0Very helpful for students who want to be biostatisticians. \r\nBut the class schedule is not well organized. ",
+            "\u00a0Strengths: helpful in improving communication skills\r\nWeaknesses: too much contents ",
+            "\u00a0A useful and interesting course. Just want to thank all four instructors, they really prepared a lot and want to teach us some real things. \r\nThe course is actually very helpful to bridge somewhat gap between school and real work situation with useful methods/ guidelines.\r\nLook forward to the next semester :) ",
+            "\u00a0The course is not structured well. It doesn't provide much useful information. It could be improved by including more materials related to skills required for a job in industry. ",
+            "\u00a0strength: know the whole page of statistical consulting ",
+            "\u00a0strength: a great introduction to biostatisticians and their career life\r\nweakness: this course might have nothing to do with some students' future life ",
+            "\u00a0This class was terrible. The focus was very limited (only clinical trials and observational studies and nothing about health informatics, computational biology, collaborating with biologists, or machine learning). The workload was tedious and not helpful. Most of the material was repetitive and already covered in Epidemiology and Clinical Trials. Prof. Peduzzi was also not a very nice teacher and his lectures and explanations never made any sense. Overall this class was a waste of time and I hope they get rid of it. ",
+            "\u00a0some topics are not necessary to learn, such as communication skills ",
+            "\u00a0The course is not suitable for students from the US and with work experience. It would be more valuable to substitute this course for one more challenging and/or make this class optional. "
+        ],
+        [
+            "\u00a0Good ",
+            "\u00a0She is very logical and clear ",
+            "\u00a0The instructor is good and helpful. ",
+            "\u00a0Denise is funny! ",
+            "\u00a0Excellent ",
+            "\u00a0knowlegeable and clear ",
+            "\u00a0The instructor is good and helpful. ",
+            "\u00a0Excellent ",
+            "\u00a0Very nice and helpful professor. ",
+            "\u00a0knowlegeable and clear ",
+            "\u00a0The instructor is good and helpful. ",
+            "\u00a0Lisa is nice and always there to help. ",
+            "\u00a0Excellent ",
+            "\u00a0Very nice and helpful professor. ",
+            "\u00a0not knowlegeable in some topics ",
+            "\u00a0He is approachable for questions ",
+            "\u00a0The instructor is good and helpful. ",
+            "\u00a0Peter is respected. ",
+            "\u00a0Excellent ",
+            "\u00a0Not a nice professor. His answers to questions were often snide and a little obnoxious, and his explanations and lectures did not make much sense. ",
+            "\u00a0experienced, but not straightforward in teaching, sometimes unclear "
+        ],
+        [
+            "\u00a0Not recommended ",
+            "\u00a0yes for students pursuing a career as traditional biostatistician working with investigators\r\nno for other students ",
+            "\u00a0The course is not practice in a sense for students who want to work in industry. ",
+            "\u00a0This course takes a lot of time and I have no idea what I learned in this class. If this course is not required, I will not take it for sure. ",
+            "\u00a0Yes, I would like to recommend this course ",
+            "\u00a0This class was terrible. The focus was very limited (only clinical trials and observational studies and nothing about health informatics, computational biology, collaborating with biologists, or machine learning). The workload was tedious and not helpful. Most of the material was repetitive and already covered in Epidemiology and Clinical Trials. Prof. Peduzzi was also not a very nice teacher and his lectures and explanations never made any sense. Overall this class was a waste of time and I hope they get rid of it. ",
+            "\u00a0could teach more technical skills "
+        ]
+    ]
+}

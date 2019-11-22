@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50993/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Overview of classic and contemporary approaches to the question of why some countries have done better than others at reducing poverty. Emphasis on the role of politics.", 
+    "title": "Political Economy of Poverty A...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "RKZ 102", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11612", 
+        "listings": [
+            {
+                "number": "423", 
+                "subject": "LAST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEP3\">YC EP&amp;E Politics Core</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEPA\">YC EP&amp;E: Advanced Seminar</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSC\">YC Poli Sci: Comparative Govt</a></li></ul>"
+    ], 
+    "professors": [
+        "Ana De La O"
+    ], 
+    "long_title": "Political Economy of Poverty Alleviation", 
+    "extra_info": "A"
+}

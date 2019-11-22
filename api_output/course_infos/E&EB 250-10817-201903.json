@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49431/assignments/syllabus", 
+    "requirements": "To be taken concurrently with E&EB 251L.", 
+    "description": "Evolutionary history and diversity of terrestrial arthropods (body plan, phylogenetic relationships, fossil record); physiology and functional morphology (water relations, thermoregulation, energetics of flying and singing); reproduction (biology of reproduction, life cycles, metamorphosis, parental care); behavior (migration, communication, mating systems, evolution of sociality); ecology (parasitism, mutualism, predator-prey interactions, competition, plant-insect interactions).\nTo be taken concurrently with E&EB 251L.", 
+    "title": "Biology of Terrestrial Arthrop...", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "BASS 305", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10817", 
+        "listings": [
+            {
+                "number": "250", 
+                "subject": "E&EB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Marta Wells"
+    ], 
+    "long_title": "Biology of Terrestrial Arthropods", 
+    "extra_info": "A"
+}

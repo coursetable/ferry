@@ -1,0 +1,71 @@
+{
+    "crn_code": "22165",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learning how to interpret poetry and their histories, literary themes. How to critically analyze and thoroughly dissect literature "
+        ],
+        [
+            "\u00a0Incredibly bright instructor, great material, can't think of weaknesses that are worth calling out "
+        ],
+        [
+            "\u00a0Yes - you cannot miss a chance to learn with Prof. Ramachandran!! "
+        ]
+    ]
+}

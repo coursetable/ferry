@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "(High-intermediate) Develop your written academic English language and critical thinking skills with focus on coherency through word choice, structure and organization. Write, critique, and edit a variety of academic essays focusing upon the sentence and essay level in this integrated, workshop-based course. In addition to standard work on writing mechanics, special attention will be paid to issues of formality in writing, developing academic vocabulary, the importance of genre, and the development of cohesion. The course will assist students in becoming better editors of their own work", 
+    "title": "Academic Writing 1", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "DOW B-21", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 18
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14963", 
+        "listings": [
+            {
+                "number": "506", 
+                "subject": "ELP"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "James Tierney"
+    ], 
+    "long_title": "Academic Writing 1", 
+    "extra_info": "A"
+}

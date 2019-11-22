@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Type design is distinct from \u201clettering\u201d in that it necessarily calls for a systematic approach, not just a concern for individual forms. The course focuses on a clear, systematic procedure to building the design of a typeface, as well as the aesthetic issues presented by single letters. The class is taught with RoboFont, a type-design program for the Macintosh\u00ae that allows designers to digitize letterforms on screen and turn them into usable fonts. Students learn the software, together with the principles of designing and spacing type. Fully fledged type designers are not made in one term; the object is to \u201cdemystify\u201d the subject and teach users of type an increased appreciation of it. Students work on individual projects, chosen in consultation with the instructors. Individual projects should be carefully chosen, so that the availability of the student\u2019s new font makes a real contribution and serves a clear purpose. With the problems of type design so deeply interconnected, a clearly defined project is necessary to establish solid criteria for subsequent work. The nature of the project determines the route each student takes in researching the design. If appropriate to the project, students spend time rendering letterforms by hand, investigating historical sources, or starting immediately on screen.", 
+    "title": "Letterform Sequence: Letterform", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "GREEN 109", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 13
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12887", 
+        "listings": [
+            {
+                "number": "743", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Tobias Frere-Jones"
+    ], 
+    "long_title": "Letterform Sequence: Letterform", 
+    "extra_info": "A"
+}

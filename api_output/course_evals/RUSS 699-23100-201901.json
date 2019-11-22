@@ -1,0 +1,73 @@
+{
+    "crn_code": "23100",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I engaged with readings about early Russian 20th cent drama, deepening my knowledge of Stanislavksy's and Meyerhold's methods. I was also introduced to more work by Kharms, Shostakovich, and Blok, among others. ",
+            "\u00a0The course taught me a great deal about performing arts in Silver Age Russia. I especially liked the primary sources we have read, as well as the discussion of major theatrical theories of the time. "
+        ],
+        [
+            "\u00a0The syllabus of the course is incredibly rich. I would spend more time on literature than ballet personally, investigating the history of the theater from 1900-1930 a bit more closely. ",
+            "\u00a0The course strength is its interdisciplinary approach that covers many art form often neglected in other courses. The course weakness was its vast time scope, which made it difficult to equally engage with all the materials. "
+        ],
+        [
+            "\u00a0Definitely. The materials are fascinating and Prof. Clark is a great professor. "
+        ]
+    ]
+}

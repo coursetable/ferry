@@ -1,0 +1,120 @@
+{
+    "crn_code": "13868",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's provided students with helpful and timely feedback",
+        "The instructor established a positive learning environment",
+        "The instructor raised questions or problems that encouraged me to think critically"
+    ],
+    "Evaluation_Data": [
+        [
+            13,
+            14,
+            8,
+            1,
+            2
+        ],
+        [
+            1,
+            2,
+            16,
+            11,
+            8
+        ],
+        [
+            0,
+            1,
+            14,
+            12,
+            8
+        ],
+        [
+            0,
+            1,
+            17,
+            10,
+            5
+        ],
+        [
+            0,
+            2,
+            8,
+            18,
+            8
+        ],
+        [
+            0,
+            2,
+            10,
+            16,
+            7
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a01 ",
+            "\u00a0almost zero. ",
+            "\u00a00 hour ",
+            "\u00a02h ",
+            "\u00a00 ",
+            "\u00a02 ",
+            "\u00a01 hour ",
+            "\u00a00 hour ",
+            "\u00a00 ",
+            "\u00a01 hours ",
+            "\u00a01 hr ",
+            "\u00a01 hour ",
+            "\u00a03 ",
+            "\u00a00 ",
+            "\u00a01 ",
+            "\u00a0Not applicable. ",
+            "\u00a01 "
+        ],
+        [
+            "\u00a0Weaknesses: The food was never enough for all the listeners of the lectures. ",
+            "\u00a0I listened to many talks of scholars from different fields, and it really broadened my horizons. However, the arrangement of the topic might be not so friendly for the first year students. ",
+            "\u00a0I think the seminar gives us a good way to get to know the up to date research in biostatistics field, but for master student sometimes it is difficult to understand the whole report and we are easily distracted. There are many professors also come to listen, for them it will be much easier. ",
+            "\u00a0good ",
+            "\u00a0helpful to build knowledge. ",
+            "\u00a0strength: help me broaden my horizon and learn more about the fields in Biostatistics. ",
+            "\u00a0not much gains ",
+            "\u00a0It's during lunch time and it's a requirement for all biostat students, but the food is bad and usually not enough to serve the students...Topics are interesting and good for students to learn from other exports in the biostat filed. ",
+            "\u00a0Sometimes the topics are too esoteric ",
+            "\u00a0I like learning about the different types of research that the speakers are doing, I find this to be valuable exposure. ",
+            "\u00a0well organized ",
+            "\u00a0I was interested in listening about different presentations as they provide us with knowledge of different fields in biostatistics. However, the presentations are so dense  and technical that no one really knows what the presenters are talking about, and the seminars really end up being a waste of time. ",
+            "\u00a0To be frank, this is a waste of time specially for MPH students.  For a good portion of MPH students, this is our semester learning probability and linear methods formally.  And most of the seminars are simply too advanced for us first years MPH students.\r\n\r\nWhat I would recommend is moving this to second year AFTER we've all taken courses in Probability, Theory of Statistics and the core BIS courses in the curriculum.  Has a lot of potential for this course. ",
+            "\u00a0I have enjoyed the seminar so far. ",
+            "\u00a0It establishes a good environment, but the research topics are most of the time too arcane for students to understand. It feels more like a platform for lecturers/professors to project themselves or practice for their job interview. "
+        ],
+        [
+            "\u00a0A good organizer for the seminar. ",
+            "\u00a0Good. ",
+            "\u00a0good ",
+            "\u00a0good ",
+            "\u00a0very responsible ",
+            "\u00a0He has selected very interesting speakers. "
+        ],
+        [
+            "\u00a0I think this course helps a beginner like me learn about different fields in biostatistics. ",
+            "\u00a0It is good. ",
+            "\u00a0maybe more suitable for sophomore students ",
+            "\u00a0good ",
+            "\u00a0No...it's kinda boring. ",
+            "\u00a0No. I am not sure whether it is useful for master students, maybe it is more useful for PhD students. ",
+            "\u00a0no ",
+            "\u00a0Yes I will recommend. It's a good way to learn from experts. ",
+            "\u00a0well organized ",
+            "\u00a0Would recommend to 2nd years.  Not to 1st years.  Too advanced for 1st years. ",
+            "\u00a0Interesting weekly seminar. I would recommend to another student. "
+        ]
+    ]
+}

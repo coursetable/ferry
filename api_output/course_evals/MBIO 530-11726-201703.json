@@ -1,0 +1,94 @@
+{
+    "crn_code": "11726",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            5,
+            10,
+            1
+        ],
+        [
+            0,
+            2,
+            0,
+            9,
+            6
+        ],
+        [
+            0,
+            1,
+            0,
+            10,
+            6
+        ],
+        [
+            0,
+            2,
+            3,
+            8,
+            2
+        ],
+        [
+            0,
+            1,
+            6,
+            9,
+            0
+        ],
+        [
+            0,
+            0,
+            11,
+            3,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Great overview of immunology! I feel like a stronger foundational understanding of the subject, which will definitely help my PhD work. ",
+            "\u00a0Learned the basics of how the immune system works ",
+            "\u00a0By taking this class I learned fundamental concepts in immunology, especially the framework that the innate immunity initiates the adaptive immunity. ",
+            "\u00a0I learned about the basic concepts of how the immune system is organized and functions in response to infection. ",
+            "\u00a0Further refining of my immunology knowledge. ",
+            "\u00a0I came away from the course with a much better understanding of the overall organization of the human immune system. More specifically, I gained a much more nuanced understanding of patterns of immune cell trafficking throughout the body. ",
+            "\u00a0Solid overview of the innate and adaptive immune system with some lectures focused specific application i.e. vaccines, cancer immunology. \r\n\r\nI feel much more comfortable with understanding basic immune biology after this course. ",
+            "\u00a0I learned a lot about immunology ",
+            "\u00a0General overview of immunology and an understanding of current thought in the field "
+        ],
+        [
+            "\u00a0Despite being taught by multiple professors, the course was well integrated.\r\nThe course was a little slow to start - there were too many \"intro\" lectures. ",
+            "\u00a0I really like how 1) lectures are recorded 2) TA sessions are held regularly 3) written assignments force you to keep up ",
+            "\u00a0Strengths:\r\n1) The topics are very wide-ranging but at the same time up-to-date (e.g. recent discoveries in the novel transcription factor Fezf2 that regulate the ectopic expression of tissue-specific antigens).\r\n2) The quality of classes taught by different instructors are consistently high. All instructors were articulate and used chalk board, maximizing the amount of knowledge the student can absorb.\r\n3) The review session was very necessary and helpful. The papers assigned were informative and fun-to-read.\r\n\r\nWeaknesses:\r\n1) The quality of the audio recording could be improved.\r\n2) The homework seems a bit extraby doing the homework, I did not learn much. There might be other ways where one can be tested and evaluated. ",
+            "\u00a0The strength of this course were the lectures about VDJ recombination, lymphocyte development and MHC/peptide loading. The lectures about germinal centers and tolerance were also very good. \r\n\r\nOverall, I wish the course went into more in depth concepts and the current questions that are still being asked in the field. ",
+            "\u00a0I think the course was excellent. My only critique was that some of the material was redundant between lectures, and I think this could be avoided if the professors were informed about the content of previous lectures. ",
+            "\u00a0Maybe the flow of material could be improved for the beginning sections. But that's a maybe. For the most parts, the lectures do a good job of presenting material that is used in subsequent lectures. ",
+            "\u00a0I think that the recordings need to be better to be actually helpful. If the person typing the notes could sit further away from the video, it would be really helpful. Also, if the people would wear their mics so that we could here, that would also be useful. ",
+            "\u00a0Great to have rotating lecturerers "
+        ],
+        [
+            "\u00a0Definitely! Take this course if you are an advanced undergrad or a 1st year grad student interested gaining a foundation in immunology. ",
+            "\u00a0This was great, but that might have just been my TA ",
+            "\u00a0Yes, I would highly recommend this course to students who are interested in immunology. It is truly amazing to learn from the best. ",
+            "\u00a0Yes. The course is a good introduction to students that have not taken immunology before. ",
+            "\u00a0Definitely, especially if the student has a great work ethic and is particularly interested in immunology or other related topics in biomedicine such as microbiology. ",
+            "\u00a0Absolutely! This is probably the best-taught course I've taken at Yale. ",
+            "\u00a0Would definitely want to recommend if you are doing anything bioscience related because of the importance of the immune system ",
+            "\u00a0Yes, though probably only if they have a little immunology background, even just a basic understanding of terms. ",
+            "\u00a0yes "
+        ]
+    ]
+}

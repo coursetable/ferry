@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Does not count toward the fourteen courses required for the major when taken in conjunction with FILM 455, 456 or FILM 483, 484.", 
+    "description": "For students making a film or video, either fiction or nonfiction, as their senior project. Senior projects require the approval of the Film and Media Studies Committee and are based on proposals submitted at the end of the junior year. An interim project review takes place at the end of the fall term, and permission to complete the senior project can be withdrawn if satisfactory progress has not been made. For guidelines, consult the director of undergraduate studies.\nDoes not count toward the fourteen courses required for the major when taken in conjunction with FILM 455, 456 or FILM 483, 484.", 
+    "title": "The Senior Project", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12148", 
+        "listings": [
+            {
+                "number": "493", 
+                "subject": "FILM"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YFIP\">YC FILM Stud: Production</a>"
+    ], 
+    "professors": [
+        "Charles Musser"
+    ], 
+    "long_title": "The Senior Project", 
+    "extra_info": "A"
+}

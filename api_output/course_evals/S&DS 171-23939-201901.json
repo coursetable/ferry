@@ -1,0 +1,79 @@
+{
+    "crn_code": "23939",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            3
+        ],
+        [
+            1,
+            1,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            4,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learnt about the practical application of different toolkits I can use in Python to analyze text data, potential issues with applying those analytics and how to interpret certain output. ",
+            "\u00a0I learned about how to use code to analyze texts. ",
+            "\u00a0I learned how to search through certain types of data sources and get analyze bits and patterns. Though we didnt learn as much at all about web scraping, we learned how to structure code to analyze pieces of text, what theyre about, how to make conclusions about them, and what biases they give off. ",
+            "\u00a0A great introduction to python with a heavy emphasis on practical applications in the field of text analysis and basic statistics. Utilized some higher-level machine learning techniques in the latter part of the course, but focus was always on the main takeaways, rather than the more technical mechanics under the hood. Everything in the course was very practically oriented, and I feel that this course has made me a better programmer as well as taught me how to approach a variety of text datasets and extract meaningful results. "
+        ],
+        [
+            "\u00a0The course is very interesting and I enjoyed the practical application of the analytical tools to real data sets and the ability to draw out useful and interesting insights. I enjoyed the small seminar style class and the ability to interact directly with the professor and to be able to ask questions. I really enjoy the enthusiasm of the professor in teaching the subject material and how he puts in the effort to try to simplify the explanation of the techniques applied. \r\nIt would be nice if we were introduced to what we needed to do for the final project earlier in the semester (e.g. halfway through the semester) so we can start thinking about potential data sets and analysis we could carry out. However, being able to work on real-world datasets and being introduced to certain concepts before we started thinking about our project scope was very useful in helping me frame up my project. ",
+            "\u00a0More should be done with this course, it is a great subject and an amazing professor, but can be expanded upon and made into a full credit. I thought one lab per week was not much and this was the class I did the least work in. I would rather have invested much more and been able to really dive deeper into the topic, especially considering the other related courses at Yale are nowhere near as accesible for non computer science majors. ",
+            "\u00a0*Strengths:* Lafferty is a great, approachable, and knowledgeable professor and picks interesting and practical examples to work on during class and for the homeworks. Theres a great balance between theory in the first half of class and practical dataset analysis/code in the second half of class. the weekly homework Jupyter notebooks and exams were super manageable, engaging, and enhanced my understanding of the material which we began working through during class. Everything was graded quickly and office hours with the ULA were very helpful. The structure, progression, and organization of the course was excellent -- everything we learned each week was built upon the following week, and even some of the more abstract concepts that were introduced felt accessible and well motivated.\r\n\r\n*Weaknesses:* There were times we glossed over what I felt may have been some interesting math/underpinnings, that were prohibitive to a really solid foundational knowledge. When asked about it in class, professor Lafferty tended towards more general restatements of what we had discussed previously, rather than delving more into the areas that could use some more elaboration. I definitely understand 171 is meant as a first introduction and survey course aimed at getting less STEM-focused students interested in statistics (and I believe he was very successful in this respect!). Lafferty took the pragmatic approach, frequently plugging the more advanced 365 machine-learning course as a path for future study. Perhaps in the future, posting links to Piazza that go more in-depth into the statistical methods would serve as a healthy middle-ground to satiate motivated students. "
+        ],
+        [
+            "\u00a0Definitely would recommend taking this course if interested in text data analysis and a practical application of the toolkits you hear about. ",
+            "\u00a0I would absolutely recommend this course! Prof Lafferty was very, very helpful and understanding. This course legitimately assumed no prior knowledge. Although it's only half a credit, I think it's more than a half a course's worth of work. But that said the workload was very manageable. ",
+            "\u00a0I do because it is an interesting topic and very important for the future, but mainly just for professor Lafferty, a very special professor and a genuinely great, honest person. He also keeps lectures interesting, and is very clear in explaining things. ",
+            "\u00a0I would highly recommend this class to other students. Im very STEM-oriented, but in our section many other students interests were in more humanities-focused disciplines. The seminar form is really great in this respect, as professor Lafferty would frequently stop to answer questions to make sure everyone was able to follow. I took this class as a low-stress introduction to python programming in conjunction with S&DS361 to gain practical experience employing statistical methods on variety of different datasets (after learning to program for the first time in R in S&DS238 the previous semester -- also highly recommended!). I also took this class as a chance to take a class with Professor Lafferty, since he is prominent in the field of machine learning and came highly recommended by other students as a great professor -- and he did not disappoint! Professor Lafferty is extremely helpful and always puts in the extra work to make sure everyone is in a position to succeed. The course is very well structured and easy to follow along with, as well as focusing on problems that are both practical and interesting. However, make sure you have your expectations at a reasonable level, since this is really meant as an introductory course, and a more nuanced understanding of the some of the advanced topics introduced in this course are held off until S&DS365. "
+        ]
+    ]
+}

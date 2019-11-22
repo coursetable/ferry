@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49094/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This class explores the signature formal properties and possibilities of video and provides critical frameworks for understanding moving image work. A series of hands-on projects introduces video production techniques, with a focus on accessible approaches over technically complex ones. Screenings from various cinema and video art traditions provide context for these explorations and help guide critique of the students\u00e2\u20ac\u2122 own work. One thematic focus is on framing the everyday, the overlooked, and the incidental, providing a useful bridge to some of the key concerns of graphic design practice: how to direct attention, create emphasis, make manifest the latent and the liminal. In addition to production strategies, the course offers exercises that focus attention on the act of attention itself, to investigate how video can augment and transfigure the act of observation and uniquely represent what is observed. These exercises build toward the completion of a larger video project incorporating the approaches introduced throughout the term. Students gain the technical and critical facility to incorporate moving image work thoughtfully in their own design practices.", 
+    "title": "4-D Sequence: Moving Image Met...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "GREEN 107", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12888", 
+        "listings": [
+            {
+                "number": "744", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Neil Goldberg"
+    ], 
+    "long_title": "4-D Sequence: Moving Image Methods", 
+    "extra_info": "A"
+}

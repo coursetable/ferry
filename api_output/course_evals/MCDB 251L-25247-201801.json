@@ -1,0 +1,79 @@
+{
+    "crn_code": "25247",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            3,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            7
+        ],
+        [
+            0,
+            1,
+            0,
+            4,
+            5
+        ],
+        [
+            0,
+            4,
+            6,
+            0,
+            0
+        ],
+        [
+            2,
+            7,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to do basic laboratory techniques as well as how to analyze results from such techniques, such as immunohistochemistry and Western blotting. I also learned about reproductive biology (structures and hormones) using human and animal models. ",
+            "\u00a0We used various lab techniques, including immunohistochemistry, Western blot, and other tissue staining methods, to visualize human and mouse tissue samples and learn about expression levels, tissue structure, and more. ",
+            "\u00a0Reproductive systems, immunohistochemistry, western blots, learned about development ",
+            "\u00a0I learned how to stain human and mice tissues to observe specific structures and proteins, in addition to learning how to perform Western blots. "
+        ],
+        [
+            "\u00a0This is one of the best lab courses at Yale. Each lab session is well-organized, and the professors/TAs are always ready to help. One weakness of the course is that there is a lot of time spent waiting (since the techniques usually have long incubation times), but the techniques have been streamlined already by the professors so I'm not sure how this could be improved. ",
+            "\u00a0There should be more courses like this at Yale, where you are excited to learn something cool and new without having to worry about giving in a perfectly written lab report. As long as you understand the content of what you learned, and can appreciate biology without worrying about grades, you are in the perfect class ",
+            "\u00a0I think the order of the labs was a strength because performing the stains and Western blots on human tissue before switching over to mice tissue and performing the stains and Western blots ensured that we were practicing these bench skills. If the labs were organized around the bench techniques, they would not be as easily remembered. I wonder if it would be possible to examine the mouse tissues first and the human tissue second in order to align with research practices of using mouse models for human diseases. It would also be helpful to use more of the incubation time to learn how to read and interpret figures in scientific papers, including determining whether or not a figure or data set are believable. "
+        ],
+        [
+            "\u00a0I highly recommend this course to another student, especially if they are looking for a lab credit to fulfill their major. This lab is one of the best labs I have taken at Yale: you learn a lot, your work seems meaningful, and the ones organizing the course are extremely kind and ready to help. ",
+            "\u00a0I would definitely recommend this lab. I was very interested in every topic we learned about, and it is very low-stress so the learning is actually fun. The things we studied in lab also often complemented the lecture course well. ",
+            "\u00a0Absolutely take this lab. ",
+            "\u00a0YES, TAKE THIS COURSE "
+        ]
+    ]
+}

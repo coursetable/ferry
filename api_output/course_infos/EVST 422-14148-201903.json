@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51661/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Discussion of the major currents of thought\u2014both historic and contemporary\u2014regarding climate, climate change, and society; focusing on the politics of knowledge and belief vs disbelief; and drawing on the social sciences and anthropology in particular.", 
+    "title": "Climate and Society from Past ...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "RKZ 241", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14148", 
+        "listings": [
+            {
+                "number": "422", 
+                "subject": "EVST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Dove"
+    ], 
+    "long_title": "Climate and Society from Past to Present", 
+    "extra_info": "A"
+}

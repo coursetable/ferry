@@ -1,0 +1,150 @@
+{
+    "crn_code": "23303",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            6,
+            9,
+            11
+        ],
+        [
+            1,
+            1,
+            2,
+            13,
+            8
+        ],
+        [
+            2,
+            5,
+            9,
+            7,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            14,
+            11
+        ],
+        [
+            0,
+            0,
+            10,
+            15,
+            1
+        ],
+        [
+            1,
+            2,
+            4,
+            10,
+            10
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0-Ability to recognize which perspective/lens I am (subconsciously) using when looking at a problem\r\n-Ability to toggle among many different perspectives during the course of a conversation\r\n-Articulation of the beliefs and values that drive my decision-making and thought processes around what outcomes are \"good\" and desirable\r\n-Allowed me to take a step back, at the end of my grad school career, and look at environmental issues from a set of lenses (anthropology, political science, history, indigenous knowledge, etc.) that are downplayed at FES\r\n-Provided a space to think deeply about difficult, intersecting issues in which a difference in perspective opens up a whole new way of thinking about a problem ",
+            "\u00a0This course not only taught me about basic skills needed for using ArcGIS, it taught me a lot about critical thinking and being creative in how I conduct analyses. The assignments did a great job of building off of old material in a very natural way. ",
+            "\u00a0Basic raster skills ",
+            "\u00a0A lot of raster GIS tools! ",
+            "\u00a0Modeling skills and understanding the concept around design. It seems simple to think up something that you would like to model for specific results, however, getting there, with tools that are limiting, can be a frustrating challenge. If you allow yourself to look just beyond the frustration, that is where designing and plan take to divergent paths. ",
+            "\u00a0So much knowledge about GIS raster skills, data analysis, data interpretation, and thinking critically about how to solve problems. ",
+            "\u00a0In addition to basic knowledge and skills in ArcGis, I think the most important thing I've learnt is how to deconstruct problems and think effectively (e.g. like a worm vs. like a bird, descriptive vs. prescriptive). ",
+            "\u00a0Analytical skills in GIS. ",
+            "\u00a0I learned some interesting ideas about raster statistics and had strengthened my ability to use GIS to help with my research. ",
+            "\u00a0I learned a lot about raster based data and many analysis techniques that are commonly used for practical purposes. ",
+            "\u00a0I feel like my critical thinking and problem solving skills improved. I also feel much more comfortable employing certain skills in Arc GIS ",
+            "\u00a0I learned an enormous amount about raster data, GIS, and critical thinking. ",
+            "\u00a0I learned a ton about geospatial mapping. Much more than just a GIS class, it's a fascinating and data driven way of thinking. ",
+            "\u00a0-Solving Spatial Problems \r\n-Better understanding of how to use ArcMap \r\n-More proficient in Map Algebra ",
+            "\u00a0I now know what raster GIS is, what it can be used for, and how to use ArcGIS10 ",
+            "\u00a0Using GIS from scratch. By the end of the course I was able to use most of the tools without third party assistance! ",
+            "\u00a0I began this course with very basic knowledge of Geographic Information Systems and left with a proficient knowledge and ability to use ArcMap as a mapping tool. In addition to learning ArcMap, this course was highly effective in developing strategic problem solving skills. Each week a problem set forced me to think outside the box and truly contemplate a difficult objective through strategy, trail and error, and creative thinking.  As the semester progressed, it became clear that these skill were incredibly valuable not only for this class by in my other work. ",
+            "\u00a0This course covered not only the mechanics of performing raster GIS analysis, but also the logical principles that inform effective analysis. ",
+            "\u00a0Working with ArcMap software, creative problem solving with geospatial data ",
+            "\u00a0Not only how to use the software (ArcGIS) but also a unique way of thinking about environmental problems and how to bring about solutions, \"as the crow flies\" and \"from the worm's perspective\" ",
+            "\u00a0I think it's fair to say that this course gave me a comfortable handle on ArcGIS's raster-relevant functions. Prof. Tomlin did a great job of introducing and exemplifying new material during class, and then the weekly assignments that followed were really just puzzles. More often than not, I found it fun to work at solving each puzzle using the tools we'd learned up to that point. Also, the quality of my work (and the depth of my learning) definitely benefited from the fact that Prof. Tomlin wanted our HW submissions to demonstrate a better-than-superficial understanding of the appropriate context in which to apply each tool and the significance of its output. "
+        ],
+        [
+            "\u00a0I wasn't really sure what to expect -- and I don't know that Amity or Ben or Melaina did, either! :-) But I was expecting a heady \"typical\" grad school course that involved lots of discussions and open-ended conversations, and I got that. ",
+            "\u00a0Aligned very well! I feel very comfortable with using ArcGIS for raster purposes now. ",
+            "\u00a0Did not align at all. I wanted to come out of this course knowing how to use operations practically. ",
+            "\u00a0Very well. ",
+            "\u00a0Very well. I am going into a PhD and will be attempting to map the dispossession of land from African American small landowners over the past 140 years.  I even met with Dana to discuss a committee position. GIS can be very nuanced and I believe this course helps to provide comfort and guidance to  those who earnestly work with the software and cannot achieve their intended result over and over again. ",
+            "\u00a0It aligned well, and since I took Modeling Geographic Objects in the fall, I knew generally what to expect out of this course, and it did fulfill my expectations. ",
+            "\u00a0The same ",
+            "\u00a0The skills I developed were more focused than I expected, but this is also a good thing because it allowed me to go more in depth into the spatial analytical skills. ",
+            "\u00a0very well ",
+            "\u00a0They exceeded my expectations ",
+            "\u00a0Excellently. ",
+            "\u00a0I got more out of this class than I expected. Thought it was just GIS, but it's really about processing data in a spatial way. ",
+            "\u00a0It aligned well with my expectations. The homeworks were challenging, but I learnt a lot from completing them. ",
+            "\u00a0I had pretty high expectations for this class. Now that it's over, I can say that they were mostly met, but I didn't feel this way throughout the course. ",
+            "\u00a0Very much. The course will be useful for my future plans and career particularly landscape planning. ",
+            "\u00a0The knowledge, skills, and insights gained exceeded my expectations. See above. ",
+            "\u00a0This course exceeded my expectations. Learning how to perform raster GIS analysis was extremely valuable. The lectures in \"brainteasers\" also challenged us to think deeply about our analysis methods. ",
+            "\u00a0I didn't know what to expect and I know I learned a lot. But it was really, really hard. ",
+            "\u00a0learning a new computer program is always daunting. My expectation was to learn how to think  in the way the  software does, and in that way be able to apply that knowledge to solve problems in a particular situation. ",
+            "\u00a0Very well having already taken \"Modeling Geographic Objects,\" I was familiar with Prof. Tomlin's style of teaching and the general operating procedure of his courses. I've not been around Prof. Tomlin very long, but I'd venture to guess that he is exceedingly consistent in the quality of his courses from semester to semester. Because I got so much out of MGO, I wasn't surprised that I also got a lot out of this course. "
+        ],
+        [
+            "\u00a0Strengths: pedagogical approach that emphasized connecting what we learned/talked about in class with other experiences and ideas\r\n\r\nWeaknesses: I loved the breadth of the course, but I felt the connections/overlaps/contradictions among all of the perspectives was missing. I would have appreciated the last lecture or discussion to be some sort of mapping exercise in which we made those connections more visually explicit. ",
+            "\u00a0I think the course was great, it was a lot of work as I had expected (about 10/hrs a week) but that time is really necessary for understanding how to use ArcGIS and understanding why you are doing things the way they are done. I would have liked to learn a bit more about using python with ArcGIS in class, but Dana provides very thorough handouts on all things GIS related. ",
+            "\u00a0Weaknesses: Yale has the ability to have EVERY student in a computer lab to learn this material - ONE step at a time. Instead, we have a theoretical lecture on these operations, when they have been created into a programming system, so that they can be used pragmatically. For the students who will WORK for hours on end to figure out the professor's puzzles - they have no lives. For those of us with lives, this course added nothing for me. It's a shame. If I wanted to work on a puzzle, I'd open up a newspaper and work on a puzzle. These assignments were not practical. We needed to have a setting where we are having lecture and then having a lab on GIS. There are people who are YOUNGER and live NEARBY who have the qualifications to teach this course in such a setting. I'm just confounded how antiquated this course is taught. ",
+            "\u00a0I think this is a great course to learn GIS. I took two GIS courses in undergrad and learned absolutely nothing. Dana is patient and really explains the material well. Also, for people (like me) who need to learn by doing, his worksheets are a god sent. The one thing that didn't really resonate with me was the slightly competitive nature of the class (which was really just through grading), but I think F&ES students are cooperative enough that this was not really an issue. ",
+            "\u00a0Strengths start with Dana Tomlin, the professor and Bhartendu Pandey the PhD student and TA. They keep you from settling on something that can seem rote and strictly algorithmic in the progressively more difficult assignments.  Weaknesses are the ramping up intensity and challenge. It can be a lot to manage, but that is the nature of FES. ",
+            "\u00a0The strengths are Dana's interesting and engaging teaching styles and the help from Piazza, the TF, and other classmates in solving homework problems. I think sometimes the homework assignments didn't seem to line up with the skills we learned in class and also sometimes were a much greater challenge and time commitment than I think was appropriate. I also think there could more formal structures for receiving feedback on homework assignments, such as a mid-semester feedback document given to each student that discusses things that they could improve upon for the future. ",
+            "\u00a0The only thing I'm not satisfied is the poor course recordings. ",
+            "\u00a0I think the weekly assignments could be slightly more guided. For example, perhaps weekly group office hour sessions where students work on their projects and ask open questions to the TA. This will allow students to get an idea of how others are approaching the task, as well as the common stumbling blocks people face. Alternatively, this session could be to cover the ideal solution to the past week's homework, so that students who struggled can catch up and avoid falling behind on those skills, especially since the tasks tend to be cumulative in their expectations of the skills to be employed. More feedback could be given to the homework tasks to allow students to grow from week to week. ",
+            "\u00a0strength: sometimes we don't always have to go arcpy since some operation on raster data can be done with a few clicks in Arcmap. This class made me more comfortable using GIS. The most strongest feature of this class is that we have Prof. Dana Tomlin.\r\n\r\nweakness: For most of the weekly homework there were some explicit criteria of grading, which sometimes limited my creativity as I knew that there would always be a \"one answer\" to the question. ",
+            "\u00a0I wish that we were given more direction about how our assignments would be graded and what the proper steps were to achieve a good grade -- not from a current student in the class. ",
+            "\u00a0The lectures were sometimes hard to follow. Too many metaphors. More practical demonstrations could be useful. \r\n\r\nHowever, I appreciated that Prof. Tomlin prioritized us fully understanding the functions we were using rather than just showing us how to use them. ",
+            "\u00a0This course is amazing. Dana is up front with how demanding it will be time wise, but the amount of learning that happens is remarkable. I really appreciated the readings; they helped augment our more hands-on learning with a higher level cerebral approach. ",
+            "\u00a0The subject matter and the lectures were excellent. The biggest weakness is that you need way more TAs. Could get a lot more done if you could have more office hours. ",
+            "\u00a0The weekly homeworks are a strength and the TA (Bhartendu) was very kind and eager to help. I think more personalized feedback would have been more helpful. ",
+            "\u00a0The strengths are that Dana created Map Algebra and he's an expert in GIS. Thus, you can ask him anything about the software and its uses. The weaknesses are that since Dana is an expert and so well-versed in spatial analysis, he has a hard time transferring the knowledge from his brain to a brain that is untrained or unfamiliar with GIS. Although this course doesn't require any prior knowledge of GIS, I was definitely very lost for the first several weeks. ",
+            "\u00a0Strengths\r\n1. Great faculty and TAs\r\n2. Piazza was very useful in terms of getting help efficiently\r\n\r\nWeaknesses\r\n1. I think Yale students should be graded differently from Penn.\r\n2. The assignments tend to be complex and consume so much time to complete. They could be simplified eg by focusing on specific tools/ products ",
+            "\u00a0The pedagogy was exceptional. Each week we were able to build on previous weeks. Many time the lessons were fairly short but had significant implications for a broad array of applications. The weekly assignments forced us to explore those applications and master them through trial and error and creative approaches. ",
+            "\u00a0Strengths: challenging problem sets, engaging lectures, extremely knowledgeable instructor\r\nWeaknesses: would it be possible to hold this class in a computer lab? ",
+            "\u00a0I appreciate Dana's teaching approach of giving us the basics and then throwing us in the deep end to do creative problem solving. But it was really, really hard. I don't think that walking through more examples would be too much hand holding; I think it would make learning more effective. The class definitely had an impact on my mental health, and I don't think it has to be that way. The saving grace of the course is Bhartendu, the TA, who is incredible. But all the burden of rescuing bewildered students should not fall on him. ",
+            "\u00a0Although the course structure is very clear, I would suggest that the class \"library\" be structured differently\", because trying to browse around different document or guides to find a particular item may result in a very frustrating task\r\nThe way in which the feeback of the course is given can also be improved. I would suggest, at the beginning of each class, solving the problem of the previous class in order to reinforce the knowledge of the tools acquired through the homework ",
+            "\u00a0The strength is the professor; everything else I could list is just a by-product of his being the instructor. For example: thoroughness of explanatory handouts he provides; his freakish (?!) eloquence when speaking and writing (seriously, his sentences could come straight out of a perfectly edited book), and the clarity it affords his explanations; the fairness of the grading system and Prof. Tomlin's willingness to listen to dissent; the impressive dedication of the professor (and his TAs) to answering students' questions as soon as possible (particularly on Piazza); the break he always gave us halfway through the three-hour class (!); and lots of others. \r\nI can't really think of a weakness... Maybe just that Prof. Tomlin also works at UPenn and can therefore only come to Yale once a week. It makes for a long weekly class and also means he's not on campus for us to visit/pester. It's not the end of the world, though  I'm happy if we just take what we can get! "
+        ],
+        [
+            "\u00a0Make sure you take the time to start your assignments early and try to really understand what a tool does and why you would use it. Having this understanding will make the homework way easier. Also take advantage of all the help offered through piazza and meeting with the TA. ",
+            "\u00a0If you like to spend days on an assignment, receive poetic and cryptic answers to questions, learn about the theory of GIS operations, figure out which piece of food is different from other woods, by all means - TAKE THIS COURSE. If you want to learn GIS, download ArcGIS, go to Youtube, and learn from a tutorial. It's a waste of time to take it at Yale. ",
+            "\u00a0This is a bit of a time commitment but the best GIS class you will get. ",
+            "\u00a0Be open to the process and never settle for the easiest solution to the weekly assignments. ",
+            "\u00a0Be prepared to commit to the class and dedicate a lot of time and patience to it, because only then will you be able to get enough out of the course and be able to take some of those skills on with you. ",
+            "\u00a0Be consistent and set aside time to work on the homework tasks early in the week, so that you can seek help in office hours if needed. ",
+            "\u00a0Take this class if you don't have any experience in GIS but you still are interested in it. Consider taking other classes of Prof. Dana Tomlin if you want to do a final project of your selection. ",
+            "\u00a0It is a large time commitment. If you want to understand how to improve your skills you have to meet one-on-one with the professor. Getting feedback is difficult. ",
+            "\u00a0Take it. Know that you're likely going to struggle a little bit, and that it will take much of your time. Focus on the content, not the grade; going for the highest grade every week is likely not the best use of your time. ",
+            "\u00a0Definitely take it, but realize that it is a heavy workload. ",
+            "\u00a0Make sure you have 10-15 hours per week to work on the assignments and go for office hours. ",
+            "\u00a0Given that GIS is widely used today, I would definitely recommend taking this class. However, know that you will be confused if you have never used the software before. It's a good idea to become friends with the people who have had prior experience and be sure to work with them on homework assignments. Completing one of these assignments alone is very frustrating and challenging. ",
+            "\u00a0Students wishing to take the class should plan to spend some extra hours engaging with computer/GIS ",
+            "\u00a0This course is a lot of time and work but well worth it. Be forewarned, frustration will ensue :)   That said, I would take it again in a heartbeat. The knowledge is focused in the realm of raster GIS but the skills for creative thinking and problem solving will be valuable for all aspects of life moving forward. ",
+            "\u00a0The class will tax you in a way that no other FES class does, and may really impact your mental health. Be aware of this and decide whether it's really worth your while. You will learn how to do stuff in GIS, but you will also have to figure out a lot on your own that should probably be taught in the class. The saving grace of the class is Bhartendu, the TA, who is incredible. Definitely work with him, work with others, and be willing to walk away from a problem set if you have to. ",
+            "\u00a0Even if you are not interested in dedicating your life to GIS is a tool definitely worth knowing. And taking the class with Dana is a guarantee that you will learn from the best. Beware, however, of the time that you'll need to spend in the homeworks. Definitely make good use of the office hours ",
+            "\u00a0I'm not going to lie, this course won't be much fun if you're uninterested in spatial analysis and have no motivation to learn it. But if you are/do, or if you even just want to GET interested in it, then this course is probably worth your while. Granted, that \"while\" is kind of substantial  almost all students in this class (myself included) spent more hours per week on these assignments than we would've liked. But the simple fact is that you get out of this course what you put into it, so the time you spend on the assignment every week is by no means wasted time. (Unless, of course, you're wasting time.) In other words, the amount of work you'll do for this course isn't trivial, but if you want or need to learn raster GIS, then it'll almost definitely be worth your while. "
+        ]
+    ]
+}

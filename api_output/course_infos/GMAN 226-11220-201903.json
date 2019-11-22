@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50373/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The development of the Faust motif through time, from the period of the Renaissance and the Reformation to the twentieth century. Readings from the English adaptation of the original German chapbook and from works by Marlowe, Ben Johnson, Goethe, Wilde, Bulgakov, and Thomas Mann. Screenings of films with a Faustian theme.", 
+    "title": "The Faust Tradition", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "CO451 B-04", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11220", 
+        "listings": [
+            {
+                "number": "226", 
+                "subject": "GMAN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jan Hagens"
+    ], 
+    "long_title": "The Faust Tradition", 
+    "extra_info": "A"
+}

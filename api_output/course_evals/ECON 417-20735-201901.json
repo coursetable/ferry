@@ -1,0 +1,74 @@
+{
+    "crn_code": "20735",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about basic computational methods (Newton's Method, Numerical Differentiation, etc..) and also solving dynamic optimization problems and general coding procedures. ",
+            "\u00a0I learned how to reframe problems in economics as dynamic programming problems and solve them using various techniques like value function iteration and policy function iteration. I also learned a lot about various numerical methods including root-finding algorithms, function minimisation algorithms, interpolation (linear, cubic spline and Chebyshev) and numerical integration (Monte Carlo and Quadrature). We had the choice to implement all of these algorithms in whatever programming language we wanted to, but the class was heavily built around the use of Fortran90 to solve these problems. "
+        ],
+        [
+            "\u00a0The class is great - fortran can be frustrating but both Professor Smith and the TA were always willing to help. ",
+            "\u00a0This course has many strengths. I really enjoy Prof. Smith's teaching style -- it is informal but incredibly informative at the same time. He is a giant of the field of Computational Economics and is always keen on interspersing his lectures with cool anecdotes from his (long) career in economics. The teaching fellow, Shiva, was amazing as well. He was probably the most patient TA I have encountered in an upper level economics class and was a really good teacher. I really feel like he carried  the undergraduates through the class; his office hours were incredibly helpful especially towards the end as the problem sets started becoming more and more challenging. "
+        ],
+        [
+            "\u00a0Yes, if you are interested in the topics. The coding can be frustrating but you will most likely leave grateful for the experience. ",
+            "\u00a0Yes I would, though probably not as a fifth credit. As with anything that is vaguely computational, problem sets in the class can take a lot of time to complete as Fortran, while great for explaining compile-time errors,  was pretty garbage when it came to elucidating run-time errors. I also didn't realize that I did not know what truly was going until I started completing the final project because it really forced me to frame a concrete question in such a way that I had to understand the course material beyond just doing it for a problem set to finish the project on time. "
+        ]
+    ]
+}

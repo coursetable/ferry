@@ -1,0 +1,76 @@
+{
+    "crn_code": "14384",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to think about ancient history - you can't apply the same filters to understanding certain markers because they don't translate, and you have to figure out how and why all the texts made it to the modern day. I also built a working sundial!! You can't beat actually getting to follow along with the the historical development of technologies. I learned how to rebuild timekeeping and civilization if everything goes really south too. ",
+            "\u00a0I learned ancient methods for computation of the positions of celestial bodies (which was sometimes tedious, but necessary to make the knowledge stick and convey a true sense of how hard anicnet astronomy was), along with how to read that system in its context (and what context is relevant). I also happily learned a learn about the history of science and ancient astronom ",
+            "\u00a0I learned about the history of the practice of astronomy from ancient Babylon to the renaissance. This was done through readings and reproductions of ancient experiments. Moreover, the discussions and readings during actual class time taught be about the philosophy of science, the history of scientific thought in the ancient world, and the process of endowing meaning to the universe in antiquity. "
+        ],
+        [
+            "\u00a0There's a lot of homework that is somewhat unrelated to your understanding of the history. I wish Professor van Bladel decided ahead of time which would matter a little more - but I also know this was his first time teaching it and he told us that he would do it differently in the future. ",
+            "\u00a0I thought the course did a fantastic job of teaching the content. We had varied sources to read and I always looked forward to class. I think the only improvement could be lightening the workload during the first half of the semester, although even then I do not think it was a major issue. "
+        ],
+        [
+            "\u00a0Please take this class! As a STEM major, it let me put some of my other coursework into its historical context and taught me some new ways of thinking mathematically. It was a small seminar so it was engaging and really very fun. Touch a Babylonian tablet! Play with different models of the heavens! Challenge yourself to prove Aristotle wrong! (pro tip - he's wrong) ",
+            "\u00a0Highly. The material was fascinating and the instructor was fantastic in his knowledge and his teaching, despite the workload and material being challenging. ",
+            "\u00a0I would absolutely recommend this course to another student. The content is fascinating and by the time you leave the class you really feel like you have sound knowledge on the entire topic. More so than that, professor van Bladel is a brilliant guy, so in class you will always learn something crazy about the ancient world or launch into a discussion on the nature of science or something else of that vein. This class is ultimately a study of the philosophy and development of science in antiquity, and anyone who is interested in learning something new by reading and recreating experiments from thousands of years ago should take this class. "
+        ]
+    ]
+}

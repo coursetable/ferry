@@ -1,0 +1,94 @@
+{
+    "crn_code": "11944",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            6,
+            6,
+            3
+        ],
+        [
+            4,
+            2,
+            5,
+            3,
+            2
+        ],
+        [
+            1,
+            3,
+            7,
+            3,
+            2
+        ],
+        [
+            2,
+            2,
+            5,
+            6,
+            1
+        ],
+        [
+            0,
+            0,
+            9,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            7,
+            4,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0None whatsoever: the content is either already part of the undergraduate curriculum, or, when it goes beyond that, else entirely useless for the subfield of physics I'm interested in. ",
+            "\u00a0This course attempted to introduce advanced mathematical topics often not taught in any undergraduate mathematics courses. I had learned nearly all of these things in undergraduate from better instructors, so I didn't learn much. I only had to re-learn things on my own in a more frustrating manner. ",
+            "\u00a0I definitely learned new math concepts that I had not encountered before, which may or may not be useful to me later on. ",
+            "\u00a0Boundary value problems. ",
+            "\u00a0Knowledge on linear algebra, real& complex analysis, and differential equation solving. ",
+            "\u00a0I had fun learning about asymptotics and differential equations. The homework assignments on complex integration were a good refresher. \r\n\r\nThe instructor often had a condescending attitude, making it difficult for students to answer and ask questions. This put a wedge between the professor and the students and definitely got in the way of learning on many occasions. ",
+            "\u00a0Good review of many topics that I had seen before. ",
+            "\u00a0Linear Algebra, Real analysis, asymptotic analysis, complex analysis, differential equations, operators ",
+            "\u00a0Use maths knowledge in physics ",
+            "\u00a0Important concepts in linear algebra, asymptotic analysis and complex analysis. "
+        ],
+        [
+            "\u00a0This course was pretty much terrible. The lectures were basically worthless because Nick moves through the material too quickly and skips the mathematically rigorous steps, assuming that everyone understands what is going on. His course notes are so extraordinarily cursory that they're basically worthless as well. The recommended textbook from Vaughn is awful. We had to use other textbooks and self-study, which made it even more frustrating that I wasted all of my time in class. If I could take this course again, I would have never gone to class a single day and just did the homeworks. These homeworks took nearly double the length of time that our QM/CM homework sets took...\r\n\r\nThe course could be improved by having a different person design and teach it. ",
+            "\u00a0I thought that the structure of the course was fairly cohesive, although many of the lectures were difficult to understand if you had not previously taken a class on the topic. Additionally, some of the concepts in the homework were not addressed until the day that the homework was due, which made the homework much more difficult. The exams were very fair, though, and very clearly tested material that was emphasized both in the lectures and in the homework. ",
+            "\u00a0This course straddles the boundary between math and applied math.  As such there is an uneven distribution of emphasis on rigorous proof (e.g. we spend a great deal of time on proof in the beginning of the course, but very little at the end).  This has the effect of our spending more time on things most of us find intuitive (e.g. manipulating matrices) and less on brand-new material (Laplace's method for integral approximation). ",
+            "\u00a0The instructor should stress less on linear algebra. Few of the audience will have the chance to apply this part of the knowledge to this level. ",
+            "\u00a0Less time on linear algebra, more time on complex analysis and asymptotics of differential equations. ",
+            "\u00a0Some lectures weren't tested on or on the homeworks. The tensors lecture seemed to put us behind a week and wasn't on \"physicist's tensors.\" ",
+            "\u00a0Not focused enough on techniques on physicists ",
+            "\u00a0I wish we spend more time on analysis ",
+            "\u00a0None of the topics are actually that difficult but are often introduced in a daunting, confusing way. ",
+            "\u00a0The course is very well-organized and the course material/homework is very helpful. "
+        ],
+        [
+            "\u00a0Absolutely not. My undergraduate mathematics experience made this course seem like the worst thing I've ever done in my life. There surely has to be a better way to learn mathematical methods at a school like Yale than through a class taught by Nick Read. ",
+            "\u00a0I would recommend this course to students with the caution that the professor can be mean, and tell them not to take it personally. ",
+            "\u00a0Yes. Covers a lot of topics in as rigorous a mannner as time allows. ",
+            "\u00a0Yes, as a general overview on advanced math topics useful for a physics graduate student to know. ",
+            "\u00a0Yes ",
+            "\u00a0It covers mostly what a graduate student in physics related fields should know. Definitely recommend. "
+        ]
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "crn_code": "21307",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            4,
+            3
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            3
+        ],
+        [
+            1,
+            3,
+            3,
+            1,
+            0
+        ],
+        [
+            2,
+            3,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0You learn the basics of music, from sheet music reading to harmony/melody to basic music analysis. Really gives you a better understanding/appreciation for music to listen to/play in day-to-day life. ",
+            "\u00a0I learned the basics of music theory and composition. ",
+            "\u00a0I developed basic music theory knowledge and became somewhat proficient with music making software. ",
+            "\u00a0By taking this course I learned to read music and gained a fundamental understanding of the core of pop music chord progression and the idea of intentional music choices. ",
+            "\u00a0Major minor keys, chords, chord progression and song structure. ",
+            "\u00a0I learn to train my ear, to analyze a music piece with basic music theory principles ",
+            "\u00a0Basic level music theory. The clefs, Roman numeral analysis, song structure. Super fun! "
+        ],
+        [
+            "\u00a0Weaknesses are that each section has a different instructor that does things differently- my class only got to do one composition during the entire semester. However, it is also nice that each instructor can tailor the class to their particular interests. ",
+            "\u00a0Begins very basic, so I felt like I had a foundation to build upon. It was a little quick towards the middle of the semester, but slowed down sufficiently so that we could go over everything we didn't know. ",
+            "\u00a0The strengths are that it is a small class and so you are able to engage better with the material and the professor really is understanding. ",
+            "\u00a0Good selection of material. Could have spent more time on developing melody lines. ",
+            "\u00a0I didn't pass the placement test to get placed in higher level courses, but the first half of the course was too easy. I wish there would be more ear training and less going over the principles mechanically because a lot of them were just simple calculations of the same stuff. ",
+            "\u00a0The course is intro level but there are people who take it that know more and make the pace a bit fast. "
+        ],
+        [
+            "\u00a0Yes! Great course if youre a beginner in music or want to get a better background in the concepts you already know. ",
+            "\u00a0Yes! If you are interested in music theory at all (I had no previous experience- but it is helpful to go into the class knowing the names of the notes). ",
+            "\u00a0Yes! It is a great class to take even for people with no musical background. ",
+            "\u00a0Yes i would, music surrounds us and plays a big role in our lives as human beings and it is important and interesting to understanding how this almost mysterious concept works. ",
+            "\u00a0Yes! Nice intro to music theory that will prepare you well for higher level classes. ",
+            "\u00a0Not to people who already have some background but it is a fun course. "
+        ]
+    ]
+}

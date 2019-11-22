@@ -1,0 +1,86 @@
+{
+    "crn_code": "20702",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            5,
+            4
+        ],
+        [
+            0,
+            2,
+            1,
+            6,
+            4
+        ],
+        [
+            0,
+            1,
+            1,
+            6,
+            4
+        ],
+        [
+            0,
+            1,
+            3,
+            6,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            8,
+            4
+        ],
+        [
+            0,
+            0,
+            5,
+            7,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned the foundations of macroeconomics, including business cycles, money, profit/utility maximization, GDP, etc. This class helped me develop a deeper, more conceptual understanding of a lot of topics I might have heard of before. ",
+            "\u00a0We studied general equilibrium between consumers and firms in an economy and how each party attempts to maximize their profits. We analyzed the Solow model and the effects of endogenous growth. Later, we examined these effects using two-period consumption and investment models to further analyze decision-making and optimality. We introduced the money market and the Phillips curve. We focused on Real Business Cycle theory as well as New-Keynesian Business Cycle theory. ",
+            "\u00a0I learned how to think critically and mathematically about macroeconomics in a way that isn't taught in introductory courses nor in the standard intermediate macroeconomics course, ECON122. Throughout, we developed simplified models of those that are used in graduate work and published academic work. This course was very comprehensive  we started off with measurement then covered static competitive general equilibrium (consumer and firm theory, first and second welfare theorems) and economic growth (Solow, endogenous growth) before spring break. After getting back, we set up a formal two-period, intertemporal model and used that to analyze consumption and investment over time. Last was money, business cycle models, sticky prices, and inflation. ",
+            "\u00a0I gained an understanding of important models of macroeconomics. ",
+            "\u00a0We heavily studied the one-period static model (variations of Solow) in the first half of the term and the two-period real intertemporal model, all framed in a general equilibrium context. We also studied money and its neutrality (in Real Business Cycles) and the New Keynesian model with nominal price rigidities that the Central Banks use. We dissected the Phillips Curve to understand how inflation-expectations can affect real quantities in the economy. I developed a strong understanding of the fundamental models of Macroeconomics, and most importantly, how they tie-in to the real-world economy today. ",
+            "\u00a0Macroeconomic theory builds on the basic concepts covered in intro macro by building off of microeconomic foundations. While the concepts of macro can be less technical and more \"bigger picture\" than those of micro, this class focused a lot on how we build/understand the concepts of macro by building off of the foundational ideas of micro. "
+        ],
+        [
+            "\u00a0This course had very clear lecture slides. I wish the slides themselves could have been explained more clearly at times, but overall, teaching was clear. The problem sets were very challenging, but not impossible. ",
+            "\u00a0I think that lecture notes do well to introduce models and equations necessary for the homework. We analyzed many different situations and described the circumstances describing each model. The applications of the models though and their real economic implications were less evident and explained to us. For instance, we worked through equations on the problem sets but we were less prepared to answer true/false questions on the exam. I believe that more discussion of these topics should have been included more in lecture notes and lecture discussion. Also, sections mostly reviewed homework problems rather than reviewed relevant material. ",
+            "\u00a0A huge strength of this course was that it was difficult yet accessible. It was the latter because it was very, very well taught by Professor Moscarini (who was the biggest plus of the semester). Problem sets were challenging but totally doable if you gave them enough thought, visited his office hours, and/or went to discussion section (during which Lus, the TF, would review the past week's topics and provide hints for the assignments). The exams were approachable and fair. The material itself was incredibly interesting and fundamental to the study of macroeconomics; I also really enjoyed how we \"microfounded\" all of the models and approaches we used in the course. I have no complaints and absolutely no regrets from taking ECON126 instead of ECON122, even though my grade may have suffered because of it. ",
+            "\u00a0Despite the fact that some of the content is hard to grasp the first time around, I really thought the class was highly worth while if you put in the effort. ",
+            "\u00a0This course, led by Prof. Moscarini, was an excellent course with no weaknesses, but I believe that students' experience in this course is heavily dependent on the professor. Particular strengths were great lectures, with active blackboard-teaching beyond the slides, insightful problem sets that resembled exams, and Office Hours that helped prepare you for the problem sets and exams. ",
+            "\u00a0I think the main strength of the course is Professor Moscarini -- as the professor for the graduate level macro course, he is an expert in the field and his lectures are extremely engaging and conducive to student learning/understanding. The problem sets and exams are very manageable, and the topics, while theoretical, are very interesting. "
+        ],
+        [
+            "\u00a0Yes, I would definitely recommend this course to another student! It will give you a lot more intuition than just intermediate macro. ",
+            "\u00a0I believe that this is a challenging economics course that was well-taught and organized for instruction.You would explore different models each week or so on the problem sets and work through solving the optimization problem or other type of problem to understand relationships between different variables and the decisions made by individuals whether they are consumer, firms or other. It could get challenging at certain parts on the problem sets. I believe that you would have to pay attention well during class to also have a strong grasp on these new concepts beyond just doing algebraic manipulations. This would be more imperative for exam true/false questions later on. It was an intellectually challenging class that will prepare you for difficult economics courses in the future, but if you do not plan on taking such higher economics classes then perhaps intermediate macro could also teach you everything you need to know. ",
+            "\u00a0Absolutely. If you're committed to learn economics for the sake of learning, definitely try this instead of the standard intermediate macroeconomics course, especially if Professor Moscarini is teaching the former. ECON126 has developed my economic intuition more than any other course I've taken so far, and it was great approaching issues from a mathematical perspective. Its curriculum is comprehensive, hitting just the right amount of depth and breadth. I finally feel like I'm beginning to understand the work that economists do and the way they think about problems. ",
+            "\u00a0Yes. Even though this class is no longer required, it is truly a great learning experience. Plus you get to know a small group of motivated people really well. ",
+            "\u00a0I would definitely recommend this course to a student interested in really extending their understanding of Macroeconomics. This course had many challenging concepts, but it was rewarding to be begin to understand the exciting field of Macroeconomics. For the first time, I felt like the theoretical math models that we learned are directly applicable to understanding policy and the Economy! ",
+            "\u00a0I would definitely recommend this course to another student, especially if there is even a slight possibility that they are considering graduate school. Unlike the intermediate micro vs. micro theory course choice, I think the intermediate macro vs. macro theory choice has much less discrepancy in the difficulty/workload of the course, and especially if taught by Giuseppe, the macro theory course may be taught better. However, though I would highly recommend this course to someone even slightly considering graduate school, I would caution those who have no interest in the more theoretical aspects of economics, as application is less of a focus of the course. "
+        ]
+    ]
+}

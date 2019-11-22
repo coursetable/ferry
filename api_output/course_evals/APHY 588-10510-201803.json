@@ -1,0 +1,71 @@
+{
+    "crn_code": "10510",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0photonic bands, the local density of states and that in radiations, equivalence principles, reciprocity, temporal coupled mode theory, quasinormal modes, as well as computational methods in photonics. "
+        ],
+        [
+            "\u00a0The lectures are well-organized and cover important topics in photonics. Problem sets are helpful. Some important research articles are introduced and so students can immediately see the significance or the usefulness of things just learned.\r\nOn certain topics, especially some in the computational methods, only conclusions are given. I was wondering if there are quick explanations. "
+        ],
+        [
+            "\u00a0Yes. It's an advanced course in electrodynamics and in modern photonics. The lectures and problem sets greatly help develop analytical and computational techniques. "
+        ]
+    ]
+}

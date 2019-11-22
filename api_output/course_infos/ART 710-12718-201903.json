@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "For students entering the three-year program. This preliminary-year studio offers an intensive course of study in the fundamentals of graphic design and visual communication. Emphasis is on developing a strong formal foundation and conceptual skills. Broad issues such as typography, color, composition, letterforms, interactive and motion graphics skills, and production technology are addressed through studio assignments.", 
+    "title": "Preliminary Studio: Graphic De...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "GREEN 107", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12718", 
+        "listings": [
+            {
+                "number": "710", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Barbara Glauber", 
+        "Scott Stowell"
+    ], 
+    "long_title": "Preliminary Studio: Graphic Design", 
+    "extra_info": "A"
+}

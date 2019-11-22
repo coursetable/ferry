@@ -1,0 +1,73 @@
+{
+    "crn_code": "15605",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            4,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            4,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course successfully explored the concept of cities, specifically after colonization. The class proved the influence of colonization in urban landscapes, and especially in American cities. The class taught me how to critically analyze literature and film. "
+        ],
+        [
+            "\u00a0The syllabus is amazing--all the readings and viewings come together really interestingly. ",
+            "\u00a0This class is very strong in the amount of time dedicated to close analysis - we spent about 2 hours straight every week just discussing our ideas. "
+        ],
+        [
+            "\u00a0Yes! Really fun and interesting material. ",
+            "\u00a0I would definitely recommend this class to another student. The course covered socially relevant topics that are often overlooked by other American Studies classes. "
+        ]
+    ]
+}

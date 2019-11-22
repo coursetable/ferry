@@ -1,0 +1,71 @@
+{
+    "crn_code": "11943",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Some of this is review and some of this is pretty intense. A good introduction to Hilbert space and operator theory. The complex analysis complements the math department's class very well. You learn asymptotic analysis of integrals which is probably the most foreign (hardest) subject. "
+        ],
+        [
+            "\u00a0This should not be an undergraduate course. "
+        ],
+        [
+            "\u00a0This is a graduate course. All of the first year physics grad students take this course and it will probably have only a few undergrads in it (if any). There are probably other courses you can take which are more useful (take a real math class, take lie theory, it'll be more useful). If you do take it know that the primary text for the course is only marginally useful. About half of the problems on the psets come directly from it (though you do NOT need a copy). Be sure to look at some of the other recommended texts esp. Bender and Orszag -- the other half of the questions tend to come from here. "
+        ]
+    ]
+}

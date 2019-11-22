@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "By arrangement with faculty.", 
+    "title": "Directed Reading: New World Pe...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "16151", 
+        "listings": [
+            {
+                "number": "880", 
+                "subject": "AFAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Daphne Brooks"
+    ], 
+    "long_title": "Directed Reading: New World Performance Theory", 
+    "extra_info": "A"
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49661/assignments/syllabus", 
+    "requirements": "Prerequisite: one year of classical/literary Chinese or equivalent, or permission of the instructor.", 
+    "description": "Readings in ancient and middle-period Chinese poetry, from the beginnings of the tradition through the Song dynasty.\nPrerequisite: one year of classical/literary Chinese or equivalent, or permission of the instructor.", 
+    "title": "Ancient and Medieval Chinese P...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "ELM143 106", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12085", 
+        "listings": [
+            {
+                "number": "601", 
+                "subject": "EALL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Lucas Bender"
+    ], 
+    "long_title": "Ancient and Medieval Chinese Poetry", 
+    "extra_info": "A"
+}

@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49666/assignments/syllabus", 
+    "requirements": "Prerequisites: EPH 508 and either BIS 505 or CDE 534. Other equivalent classes would require permission of the instructor. Programming experience is also required.", 
+    "description": "This course introduces the theory and applications of causal inference methods for public health research, tailored for analyses of epidemiologic data. The practice of epidemiological and public health research requires causal thinking. The rapid development of both the theoretical frameworks and applications of causal inference methods in recent years provides opportunities to improve the rigor of epidemiological research. The course starts by introducing the principles of causal logic including counterfactuals and probability logic. Next, it reviews epidemiological study designs and sources of biases, including misinterpretations of statistics. A significant amount of time is dedicated to the applications of causal diagrams in epidemiology, a powerful tool that can provide a basis for identifying variables that must be measured and controlled to obtain unbiased effect estimates. Students learn to apply specific common causal modeling techniques in epidemiological research using real-world and simulated data. Novel study designs that could strengthen causal inference in epidemiological research are discussed. Students leave the course with a basic knowledge of causal inference methods to apply in their own research and the ability to further explore the causal inference literature.\nPrerequisites: EPH 508 and either BIS 505 or CDE 534. Other equivalent classes would require permission of the instructor. Programming experience is also required.", 
+    "title": "Causal Inference Methods in Pu...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "LEPH 101", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 11
+        }, 
+        {
+            "start_time": 11, 
+            "location": "CO47 6", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13559", 
+        "listings": [
+            {
+                "number": "566", 
+                "subject": "CDE"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Zeyan Liew"
+    ], 
+    "long_title": "Causal Inference Methods in Public Health Research", 
+    "extra_info": "A"
+}

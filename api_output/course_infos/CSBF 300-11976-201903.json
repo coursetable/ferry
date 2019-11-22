@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49458/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This composition workshop-style course is a generative laboratory to make rigorous, experimental works that open reflection on socio-political issues. Topics include a study of other artists' work and ways they engage with wide-ranging political matter through performance, animation, sculpture, and other media; an embodied exploration of compositional elements at different sites on Yale\u2019s campus; and creative assignments that employ various methods to interrogate sociopolitical material of your own choosing.\u00a0", 
+    "title": "Making Performance on Socio-Po...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "BF S-29", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 18
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11976", 
+        "listings": [
+            {
+                "number": "300", 
+                "subject": "CSBF"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eryn Rosenthal"
+    ], 
+    "long_title": "Making Performance on Socio-Political Questions", 
+    "extra_info": "A"
+}

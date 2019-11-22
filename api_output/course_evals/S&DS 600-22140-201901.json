@@ -1,0 +1,84 @@
+{
+    "crn_code": "22140",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            3
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            3
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I relearned many concepts and interdependencies of probability theory, most of which I already knew. Results were presented in a different style than ususal. ",
+            "\u00a0Measure Theoretic Probability, Law of Large numbers, Central Limit Theorem, Martingales. Proof-based class, rigorous, deal with abstract notions. Great to understand the roots of probability, go very deep in details with measure theory, understand the main results. And also a beautiful history of the mathematics and the mathematicians who did the theory. I really enjoyed this course. ",
+            "\u00a0measure theoretic treatment of probability ",
+            "\u00a0We learnt how to deal with rigorous, measure theoretic probability ",
+            "\u00a0Graduate level probability, measure theory, writing rigorous proofs. ",
+            "\u00a0Amazing course. We learned measure theoretic probability. "
+        ],
+        [
+            "\u00a0The course could provide more rigorous proofs instead of merely giving the intuition for some of the results. ",
+            "\u00a0This class was great, great lectures and helpful TAs as well.  This course is based on a book by Professor David Pollard. He has his own way to look at probability, so his notion is not be standard and it takes time to get used to it. Previous exposure to measure theory is helpful for the class, and is not considered as a requirement, but I think it is helpful. \r\nThe strengths of the class is that there is no exams. It is challenging weekly homework and a final project on a topic of interest, applying what we learned, which is a great way to make sure we understood the material. ",
+            "\u00a0I wish characteristic function was covered in this class. Also the pace is a little bit fast as most of time I find it hard to follow the proof presented on the board, which is typical for a math heavy course. But I have no problem doing my homework. ",
+            "\u00a0The professor is a great lecturer, but sometimes goes too fast. ",
+            "\u00a0Homeworks were reasonable, with the right amount of questions that facilitated understanding of course material. We also got to do a paper report at the end to see if we could apply the knowledge to read research papers. "
+        ],
+        [
+            "\u00a0I would recommend student who have already had some formal exposure to measure  and probability theoryto buy a good textbook and work through it by themselves instead of taking this course. The course is well suited for students which lack a formal background. ",
+            "\u00a0I would recommend this course to math majors, who are interested in learning the core results of probability, in a rigorous and proof-based approach, with measure theory. But this class is not for everyone, and students should be aware that it requires a lot of work. ",
+            "\u00a0I would recommend the course to anyone who wish to learn rigorous probability ",
+            "\u00a0Yes, for any student that wants to learn graduate level probability. ",
+            "\u00a0I would recommend it enthusiastically! I loved it. "
+        ]
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49891/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A survey of the history and theory of animation. Examples from around the world, from various traditions, and from different periods.", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12125", 
+        "listings": [
+            {
+                "number": "705", 
+                "subject": "FILM"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YFIC\">YC FILM Stud: Critical Studies</a>"
+    ], 
+    "professors": [], 
+    "long_title": "Film History and Theory of Animation", 
+    "extra_info": "C"
+}

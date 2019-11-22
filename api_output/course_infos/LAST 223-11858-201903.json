@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51371/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Development of proficiency in Spanish through analysis of critically acclaimed Latin American films. Includes basic vocabulary of film criticism in Spanish as well as discussion and language exercises. Enrollment limited to 18.", 
+    "title": "Spanish in Film: An Introducti...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 114", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11858", 
+        "listings": [
+            {
+                "number": "223", 
+                "subject": "LAST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Margherita Tortora"
+    ], 
+    "long_title": "Spanish in Film: An Introduction to the New Latin American Cinema", 
+    "extra_info": "A"
+}

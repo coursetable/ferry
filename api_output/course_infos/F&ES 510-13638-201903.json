@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49839/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introduction to statistics and data analysis with emphasis on practical applications in the environmental sciences. Includes graphical analysis, common probability distributions, hypothesis testing, confidence intervals, and linear regression. The second part of the course introduces the topics of multiple regression and ANOVA that are typically not covered in an introductory class such as AP statistics. There are weekly problem sets using MINITAB, SPSS, or R, as well as a final project. This course is a prerequisite for other statistics courses offered through F&ES, and it presents statistical methods used in many Yale courses in both the natural and social sciences. Three hours lecture.", 
+    "title": "Introduction to Statistics and...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "KRN 301", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13638", 
+        "listings": [
+            {
+                "number": "510", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jonathan Reuning-Scherer"
+    ], 
+    "long_title": "Introduction to Statistics and Data Analysis in the Environmental Sciences", 
+    "extra_info": "A"
+}

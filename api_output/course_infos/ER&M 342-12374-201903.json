@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50094/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Analysis of revolutionary movements in Latin America against the backdrop of the Cold War. Critical examination of popular images and orthodox interpretations. An interdisciplinary study of the process of revolutionary change and cold war at the grassroots level.", 
+    "title": "Revolutionary Change and Cold ...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 103", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12374", 
+        "listings": [
+            {
+                "number": "342", 
+                "subject": "ER&M"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YGLE\">YC Global Affairs: Elective</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHI3\">YC History: Latin America</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIE\">YC HIST: International History</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIF\">YC History: Politics &amp; Law</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIJ\">YC HIST: Soc Chng &amp; Social MVMN</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIK\">YC History: War &amp; Society</a></li></ul>"
+    ], 
+    "professors": [
+        "Gilbert Joseph"
+    ], 
+    "long_title": "Revolutionary Change and Cold War in Latin America", 
+    "extra_info": "A"
+}

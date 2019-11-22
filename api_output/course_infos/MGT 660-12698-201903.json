@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "", 
+    "title": "Adv Mgt of Software Developmnt", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "EVANS 2230", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12698", 
+        "listings": [
+            {
+                "number": "660", 
+                "subject": "MGT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kyle Jensen"
+    ], 
+    "long_title": "Adv Mgt of Software Developmnt", 
+    "extra_info": "A"
+}

@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50211/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This seminar examines women\u2019s and men\u2019s reproductive health in the United States from the 19th century to the present. How have gender norms and social power structures shaped medical knowledge, scientific investigation, political regulation, and private reproductive experiences? What do the lessons of the history of reproductive health tell us about contemporary policy, legal and economic debates? Topics include abortion, activism, childbirth, contraceptives, eugenics, feminism, fertility, medicalization, pregnancy, reproductive science and technology, sexual health, social justice, and sterilization.", 
+    "title": "Reproductive Health, Gender & ...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "SML 177", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13063", 
+        "listings": [
+            {
+                "number": "176J", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHS1\">YC HSHM: Med &amp; Public Health</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHS3\">YC HSHM: Gender, Reprod and Body</a></li></ul>"
+    ], 
+    "professors": [
+        "Ziv Eisenberg"
+    ], 
+    "long_title": "Reproductive Health, Gender & Power in the U.S.", 
+    "extra_info": "A"
+}

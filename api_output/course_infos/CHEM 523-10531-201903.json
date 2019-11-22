@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49178/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course surveys practical methods in synthetic organic chemistry with an emphasis on learning how to acquire new information and understand chemical reactivity from a fundamental and mechanistic perspective. Memorization is deemphasized. Undergraduates are encouraged to enroll.", 
+    "title": "Synthetic Methods in Organic C...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "SCL 19", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10531", 
+        "listings": [
+            {
+                "number": "523", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jonathan Ellman"
+    ], 
+    "long_title": "Synthetic Methods in Organic Chemistry", 
+    "extra_info": "A"
+}

@@ -1,0 +1,75 @@
+{
+    "crn_code": "10639",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            2,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            4,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Basic physical organic chemistry (strain, stability, thermochemistry), noncovalent forces, host-guest chemistry, linear free energy relationships, pericyclic reactions. ",
+            "\u00a0This course taught me concepts in adavanced organic chemistry. "
+        ],
+        [
+            "\u00a0For me, the first part of the course, introducing basic concepts (e.g. strain energy, stability, cyclohexane) could be much more condensed. The real learning points in the course came from the latter part (after the midterm), when host-guest chemistry, noncovalent forces, pericyclic reactions etc. were introduced. The course is quite successful in teaching concepts and frameworks to approach problems in physical organic chemistry, by means of numerous examples from literature. Prof. Jorgensen's vast experience in the field allowed him to provide a lot of first- or second-hand experience dealing with key problems in the field. The section on pericyclic reactions, which should have been a key focus, was covered in the two final weeks, somewhat undermining the importance of this section in the course and in the final exam. ",
+            "\u00a0Professor Jorgensen is very knowledgeable, and I learned a lot. I wish there were more psets though because I felt like more feedback throughout the course would have helped me learn at a more even pace. ",
+            "\u00a0the strengths are that the psets and exams aren't too difficult but a lot of the questions are weird/tricky. class was mostly dry and not very engaging. feedback in psets/exams were really quick though and sections were great. "
+        ],
+        [
+            "\u00a0Definitely, especially as a prospective organic chemist. This course will introduce you to many of the concepts and tools that enable current approaches to problems in organic and physical organic chemistry. ",
+            "\u00a0the class mostly consists of the prof drawing structures and putting numbers next to them (without explanation of what is going on) and the prof talking about papers. but our TA was great and provided us clear explanations/examples for what was going on in class and let us know what was actually important to learn. it gets confusing when you talk about MO diagrams, so be prepared to learn that because they were a big part of the final exam. PSETs/exams are relatively easy but there are a lot of tricky/history/random questions (i.e. draw the structure of..., know the pKa of...). i didn't really enjoy the class, but i still think it was one of the better chem electives offered, so i'd reccomend it. "
+        ]
+    ]
+}

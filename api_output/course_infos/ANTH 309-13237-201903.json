@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48931/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The relations between language, culture, and cognition. What meaning is and why it matters. Readings in recent and classic works by anthropologists, linguists, psychologists, and philosophers.", 
+    "title": "Language and Culture", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WTS A48", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13237", 
+        "listings": [
+            {
+                "number": "309", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Paul Kockelman"
+    ], 
+    "long_title": "Language and Culture", 
+    "extra_info": "A"
+}

@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50426/assignments/syllabus", 
+    "requirements": "After or concurrently with MATH 120. May not be taken after MATH 222.", 
+    "description": "An introduction to the theory of vector spaces, matrix theory and linear transformations, determinants, eigenvalues, and quadratic forms. Some relations to calculus and geometry are included.\nAfter or concurrently with MATH 120. May not be taken after MATH 222.", 
+    "title": "Linear Algebra and Matrix Theory", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WTS A51", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11276", 
+        "listings": [
+            {
+                "number": "225", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YMAT\">YC Math: Algebra/Number Theory</a>"
+    ], 
+    "professors": [
+        "Kalina Mincheva"
+    ], 
+    "long_title": "Linear Algebra and Matrix Theory", 
+    "extra_info": "A"
+}

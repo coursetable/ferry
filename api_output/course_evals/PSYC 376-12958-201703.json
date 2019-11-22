@@ -1,0 +1,83 @@
+{
+    "crn_code": "12958",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            5,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            3,
+            0
+        ],
+        [
+            0,
+            3,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            4,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Understanding of psychological and neuroscience processes underlying learning/memory systems. ",
+            "\u00a0You learn a lot about how learning/memory works and their brain substrates. ",
+            "\u00a0This course provides you with a wonderful overview of the important aspects of neuroscience and neurobiology, such as social, cognitive and behavioral neuroscience. The neurobiological underpinnings of learning and memory were especially interesting to me. ",
+            "\u00a0I learned facts about learning and memory. "
+        ],
+        [
+            "\u00a0Standard learning and memory course. Good mix of computational and psychological perspectives. ",
+            "\u00a0This is a small class, but doesn't require discussion. Professor Brown is very attentive. The lab assignments are fun to do. Weakness: you need to memorize every little detail to do well on the exams. ",
+            "\u00a0Some lectures were a little dry but overall it was interesting. Could use some more interactive activities especially since it was such a small class. A few seminar style discussions, especially at the end regarding free will would've been really neat. ",
+            "\u00a0The lectures were for the most part very interesting - I think it would help to maybe limit the breadth of material covered in the slides and instead dig deeper into a few concepts, because it sometimes felt a little bit like a list of facts to memorize when studying for the exams. I really enjoyed the format of the exams, as they are straightforward to study for and cover exactly the material presented in lecture. However, while the CogLab labs were great, I think I learned little from writing the 2 lab reports for them and wish they were replaced with more interesting homework assignments like Memento. ",
+            "\u00a0The course itself was a little too basic for its numbering. It should have probably been an introductory psychology course. Also, the tests were based on minute details, rather than bigger concepts. "
+        ],
+        [
+            "\u00a0Yes, if you want an overview of learning and memory seminal studies. ",
+            "\u00a0Yes, I would take this course. It is interesting and challenging. I think I've also been tailoring the way I study based on what we learned. ",
+            "\u00a0This course is interesting and not too much work. There is no final, only three midterms which are easy as long as you look at the lecture slides carefully. Professor Brown is also an awesome person and really invested in making sure you understand the material and gives you opportunities to do well in the class. If you ask questions you will do very well in the class. ",
+            "\u00a0I would definitely recommend this course for anyone interested in neuroscience - a little background may be required but the material is explained clearly. The exams are pure memorization, but it is very manageable compared to other courses. ",
+            "\u00a0A really interesting course and supportive, passionate professor! The exams were sometimes overly detail-oriented, and the volume of material was high, but the content and homework assignments were very engaging. ",
+            "\u00a0I would probably not recommend this course to another student. It is not particularly challenging, nor do you learn a lot. However, there are a lot of assignments that take up quite a bit of time. "
+        ]
+    ]
+}

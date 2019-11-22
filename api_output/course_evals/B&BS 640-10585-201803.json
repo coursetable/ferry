@@ -1,0 +1,77 @@
+{
+    "crn_code": "10585",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to write an effective and persuasive grant proposal. ",
+            "\u00a0This course was very helpful in writing my F31 application! I really appreciated the multiple stages of feedback and instruction on different components of the application ",
+            "\u00a0In depth and concise overview of all components of an NIH F31 grant. Many insights into what aspects of an application are given greater weight during the grant review process. "
+        ],
+        [
+            "\u00a0It is very good in its inducement to write the proposal on a set schedule. I have no complaints! ",
+            "\u00a0I liked that we were able to read and critique our peers' research strategies in this course - however, I think this process could be somewhat improved. It was difficult to engage deeply with 6 research strategies in the course of a weekend, and I know my critiques could have been more in-depth with more time. \r\n\r\nOne idea I had was for students to critique one paper at a time, perhaps over the course of a week, where a student has 24 hours to give feedback on a research strategy before returning it to the student, who can then edit their paper before sending it to another student to critique, and so on. There may not be time for each student to read every research strategy in this case, but it might give more focused, targeted feedback, and avoid the inefficiency of multiple students pointing out (and getting distracted by) the same edits in a given research strategy. \r\n\r\nOverall I really enjoyed this class and thought it was organized well! ",
+            "\u00a0Strengths: Peer review as well as TA and instructor feedback was exceptionally important. Faculty feedback was of high value; course organization/ application breakdown was well organized; opportunity to practice presentation skills also highly valued. \r\nWeaknesses: Very few. One limitation might be the scope of fields available for faculty review component, although I understand this a consequence of the fields of students enrolled. "
+        ],
+        [
+            "\u00a0Definitely! Everyone should take this course! ",
+            "\u00a0Absolutely! Especially if they were in the process of applying for the F31 ",
+            "\u00a0Yes, not only for those interested in applying for an F31, but anyone interested in applying for NIH grants in the future. Skills developed could be applied to any future grant as well as for improving science communication in general. "
+        ]
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Students gain experience in preparing and delivering seminars and in discussing presentations by other students. A variety of topics in molecular, cellular, developmental, and population genetics are covered. Required of all second-year students in Genetics. Graded Satisfactory/Unsatisfactory.", 
+    "title": "Graduate Student Seminar: Crit...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13007", 
+        "listings": [
+            {
+                "number": "675", 
+                "subject": "GENE"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Valentina Greco"
+    ], 
+    "long_title": "Graduate Student Seminar: Critical Analysis and Presentation of Scientific Literature", 
+    "extra_info": "A"
+}

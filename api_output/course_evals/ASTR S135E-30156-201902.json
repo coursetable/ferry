@@ -1,0 +1,77 @@
+{
+    "crn_code": "30156",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            1
+        ],
+        [
+            1,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            1,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to analyze the sky and its patterns. ",
+            "\u00a0overview of astronomy in knowledge and skillset ",
+            "\u00a0Observation, general Astronomy knowledge, understanding of solar system, use of Stellarium, writing skills "
+        ],
+        [
+            "\u00a0The course was great overall. ",
+            "\u00a0Well paced, well organized introduction of astronomy that has a good balance between quantitative and humanities-oriented knowledge ",
+            "\u00a0Dr. Faison is an excellent professor, he is engaging, has fantastic course materials and the lecture videos are informative. The class discussions were good, software was easy to use, interface simple. "
+        ],
+        [
+            "\u00a0Yes, I would. The course was very interesting. ",
+            "\u00a0Yes, especially for the summer term. The five weeks is perfect for the level of the course. ",
+            "\u00a0Absolutely! The topics covered are unique and the professor is great. "
+        ]
+    ]
+}

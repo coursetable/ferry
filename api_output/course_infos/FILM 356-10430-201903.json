@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Limited enrollment. Priority to majors in Art and in Film & Media Studies. Prerequisites: ART 141 or 142, and FILM 150.", 
+    "description": "Students explore the storytelling potential of the film medium by making documentary art. The class concentrates on finding and capturing intriguing, complex scenarios in the world and then adapting them to the film form. Questions of truth, objectivity, style, and the filmmaker's ethics are considered using examples of students' work. Exercises in storytelling principles. Materials fee: $150.\nLimited enrollment. Priority to majors in Art and in Film & Media Studies. Prerequisites: ART 141 or 142, and FILM 150.", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10430", 
+        "listings": [
+            {
+                "number": "356", 
+                "subject": "FILM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Intermediate Documentary Filmmaking", 
+    "extra_info": "C"
+}

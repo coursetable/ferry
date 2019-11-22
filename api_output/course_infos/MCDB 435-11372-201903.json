@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Students should contact the instructor prior to the first week of classes.\u00a0 Prerequisites:\u00a0 courses in cell biology, biochemistry, and genetics, or permission of instructor.", 
+    "description": "Discussion and critical evaluation of selected research papers that were important in determining the directions of modern cell biological research. Emphasis on the nature of the problem, evaluation of the experimental approaches and results, and the authors' interpretation of the results. Grade dependent on weekly discussion by all participants.\u00a0 Seniors only.\nStudents should contact the instructor prior to the first week of classes.\u00a0 Prerequisites:\u00a0 courses in cell biology, biochemistry, and genetics, or permission of instructor.", 
+    "title": "Landmark Papers in Cell Biology", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 19, 
+            "location": "YSB", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 20
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11372", 
+        "listings": [
+            {
+                "number": "435", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Joel Rosenbaum"
+    ], 
+    "long_title": "Landmark Papers in Cell Biology", 
+    "extra_info": "A"
+}

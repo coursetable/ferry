@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49910/assignments/syllabus", 
+    "requirements": "Prerequisite: F&ES 578 or permission of the instructor.", 
+    "description": "Understanding the tools used in financial analysis is an important component of successful investment in\u00a0the emerging field of ecosystem services. This course provides students with a basic suite of financial\u00a0tools used in the acquisition and management of ecosystem investments. It includes an overview of\u00a0traditional financial analysis metrics as well as an exposure to the established and emerging markets and\u00a0financing schemes in the field of ecosystem investments. Concepts are reinforced through\u00a0spreadsheet-based exercises, case studies, and guest speakers. Each week, one class session is devoted to concepts; the second session is devoted to applying these concepts by analyzing a\u00a0real-world deal, case study, or investment strategy, often presented by a guest speaker who is a professional in the field.\nPrerequisite: F&ES 578 or permission of the instructor.", 
+    "title": "Ecosystem Finance", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "MARSH R", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13653", 
+        "listings": [
+            {
+                "number": "680", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Dominick Grant", 
+        "Deborah Spalding"
+    ], 
+    "long_title": "Ecosystem Finance", 
+    "extra_info": "A"
+}

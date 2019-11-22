@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50204/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to the discipline of architecture through the elusive concept of space. This course traces key shifts in the conceptualization of space in aesthetics and architectural theory from the eighteenth century through to the present.", 
+    "title": "Conceptualization of Space", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LORIA 360", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12247", 
+        "listings": [
+            {
+                "number": "455", 
+                "subject": "HSAR"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHA2\">YC HistofArt: Post-1800</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHAR\">YC HistofArt: Transregional</a></li></ul>"
+    ], 
+    "professors": [
+        "Craig Buckley"
+    ], 
+    "long_title": "Conceptualization of Space", 
+    "extra_info": "A"
+}

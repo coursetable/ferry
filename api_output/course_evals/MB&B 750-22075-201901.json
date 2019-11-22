@@ -1,0 +1,77 @@
+{
+    "crn_code": "22075",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained a better instinct for how proteins interact with membranes and the general properties of lipids. ",
+            "\u00a0principle about biological membrane, and membrane protein ",
+            "\u00a0I learned a lot about membrane proteins. "
+        ],
+        [
+            "\u00a0The small class size is a big strength of the class. The homeworks are fair and help to solidify concepts from the course. The course is good the way it is, no need for improvement. ",
+            "\u00a0strength: the course is well organized, the assignment is good\r\nweakness: I wish we could have paper discussion in the class ",
+            "\u00a0This course provides a lot of knowledge but I feel it doesn't really correlate enough with literature and real-life scientific researches. "
+        ],
+        [
+            "\u00a0I would recommend this course to another because most students end up working with membranes either transiently or as a focus of their work and it is good to get exposure to the basics which are normally skipped in other courses or don't get as much attention. The relaxed environment of the course is a good contrast to those that stress on exams and final projects, without sacrificing the valuable information conveyed in the course. ",
+            "\u00a0yes, i think the course deepened my understanding on biological membrane a lot. ",
+            "\u00a0Yes. I would recommend it. You get to know a lot of stuffs and you don't get pressured by homework grades or exams. "
+        ]
+    ]
+}

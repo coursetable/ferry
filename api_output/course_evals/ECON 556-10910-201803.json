@@ -1,0 +1,81 @@
+{
+    "crn_code": "10910",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            2
+        ],
+        [
+            0,
+            2,
+            2,
+            3,
+            1
+        ],
+        [
+            1,
+            1,
+            4,
+            1,
+            1
+        ],
+        [
+            1,
+            2,
+            3,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I reviewed the theory and application of 2sls, selection models, and panel data estimation.   I was also exposed to examples of structural and experimental methods of answering policy questions, and how the two methods contrast and at times can be used together. ",
+            "\u00a0Treatment effects, Panel data, and hybrid methods ",
+            "\u00a0Variety of new econometric methodologies and models, intersections with machine learning, structural vs reduced form, interesting hybrids of the two. ",
+            "\u00a0I learned about empirical methods in economics and how to use them for public policy. ",
+            "\u00a0Knowledge: This course improved my knowledge of contemporary approaches to estimation in economics.\r\nSkills: This course honed my skills in conducting empirical research in economics. "
+        ],
+        [
+            "\u00a0I like that this course fleshes out certain econometric topics that are commonly useful in applied research but not emphasized in the core metrics courses.   I also like that it provides a little more structure to the second-year paper assignment, even though there is no real bridge between that assignment and the rest of the course. ",
+            "\u00a0I really enjoyed getting to see more recent/\"frontier\" methods rather than just the usual textbook models. Lectures were engaging in general. In all quarters, it would be nice to have more time spent on applications of the methods - in particular, in what situations are these models most commonly applied, when are they useful or likely to provide interesting results, where has the empirical literature used them, what are the data requirements in terms of sample size etc.  For example, with many of the panel models, it was not clear to me when it would be appropriate or important to use them, as compared to standard FE/RE.  Thus, especially in parts 1/2, perhaps less time on theory, equivalencies between different approaches and such theoretical results, and more time talking about papers that use these, when in your research should you think about using these models, etc. ",
+            "\u00a0The main strength of the course is that it is taught by three professors and covers many topics. ",
+            "\u00a0Strengths: Good choice of topics. Excellent instruction. "
+        ],
+        [
+            "\u00a0I would recommend this course to a student who wanted to review/deepen their knowledge of applied econometric techniques.  I would also recommend this course to a student who wanted to get their second-year paper out of the way but did not have much of an idea of how they were going to do so.  To a student who already has an idea to work on for their paper and a faculty member to work with, the additional structure of the class probably wouldn't be very helpful, and may impose unnecessary timing restrictions. ",
+            "\u00a0Yes, any economics student should go beyond the 1st year classes in metrics and see some newer stuff.  Especially the 3rd part of the class was a nice synthesis of recent work and approaches in econ. ",
+            "\u00a0Yes I would recommend it, because it is important to know about empirical methods in economics. ",
+            "\u00a0I would recommend the course to 2nd year economics PhD students. "
+        ]
+    ]
+}

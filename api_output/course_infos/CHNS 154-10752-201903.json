@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-13", 
+        "group": 2, 
+        "day_of_week": "Friday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49340/assignments/syllabus", 
+    "requirements": "After CHNS 151 or equivalent.", 
+    "description": "Fourth level of the standard foundational sequence of modern Chinese, with study in speaking, listening, reading, and writing. Readings in a wide range of subjects form the basis of discussion and other activities. Students consolidate their skills, especially speaking proficiency, at an advanced level. Materials use both simplified and traditional characters.\nAfter CHNS 151 or equivalent.", 
+    "title": "Advanced Modern Chinese III", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "LORIA B50", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10752", 
+        "listings": [
+            {
+                "number": "154", 
+                "subject": "CHNS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "William Zhou"
+    ], 
+    "long_title": "Advanced Modern Chinese III", 
+    "extra_info": "A"
+}

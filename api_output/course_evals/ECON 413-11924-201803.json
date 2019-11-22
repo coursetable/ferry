@@ -1,0 +1,104 @@
+{
+    "crn_code": "11924",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            5,
+            8,
+            4
+        ],
+        [
+            0,
+            2,
+            5,
+            6,
+            5
+        ],
+        [
+            0,
+            2,
+            5,
+            5,
+            6
+        ],
+        [
+            0,
+            1,
+            3,
+            7,
+            6
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            12
+        ],
+        [
+            0,
+            0,
+            2,
+            10,
+            6
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about the fundamentals of convex optimization, how to approach these types of problems, the trade-offs in strategies, and generally about a whole branch of mathematics that I had never previously considered. ",
+            "\u00a0Convex optimization, gradient descent and Newton's method, duality theory. ",
+            "\u00a0I developed an understanding and intuition for the theory behind optimization methods. ",
+            "\u00a0I learned about a very variety of different optimization algorithms, and some techniques and proofs of convergence/rates associated with them. ",
+            "\u00a0An introduction to the various optimization algorithms, when to use them, and their convergence rates. ",
+            "\u00a0Optimization techniques for both convex and non-convex functions. To be honest, I'm quite lost after gradient descent (which is barely halfway through the semester) so I understand the remaining materials on a quite superficial level, just enough to do the homework... ",
+            "\u00a0Newton's Method vs Gradient Descent, Duality Theory, Subgradient Methods, and other Convex Optimization stuff ",
+            "\u00a0I got a surface-level view of current methods in convex optimization and the theory behind them. ",
+            "\u00a0A LOT of algorithms and linear algebra knowledge. This class could really benefit from a cross-listing under the MATH department. It is all proofs. There are maybe 3-5 application/coding-based questions in the entire semester's homework load (which is a LOT of questions). ",
+            "\u00a0I learn a lot about convex optimization and some important algorithm in optimization. We learn not only how to use algorithms but also the derivations of the algorithms. ",
+            "\u00a0Various optimization techniques and subroutines "
+        ],
+        [
+            "\u00a0I thought that the course was well-taught but occasionally moved a little fast: I agree with the philosophy of not having notes online, because some of the students might not show up -- but better references to where math occured in the textbook might have been helpful in following. ",
+            "\u00a0This is a theoretical mathematical course, and is advertised as such, but for a topic that has so many applications to other fields I was a little disappointed that we did not discuss examples coming from a variety of different fields and disciplines more frequently, even if only to guide our thinking about a particular mathematical method.  At times I felt very disconnected from the math I was learning and how I might apply it, which I do not think should be the case with a class of this nature, especially because it's currently the only one that covers topics of this nature. ",
+            "\u00a0The course is structure nicely with respect to problem set difficulty and frequency. The fact that there are no exams reduces a lot of stress and the final project is fun if one picks a topic one is interested in. That being said, there is a lot of autonomy in this class, and one really does get what one puts into this class. ",
+            "\u00a0This class has a very, very high workload. Psets are very time intensive -- I spent 12-20 hours a week on the psets in general, including on the supposedly \"half-length\" psets given during the end of the course when we were supposed to be simultaneously working on the project. I didn't find the material that difficult to understand, but found understanding what was asked on psets, and figuring out the tricks to solving them very very difficult. While the more applications based problems I felt increased my understanding of the optimization techniques, I felt many of the more convoluted ones were more suited to a pure math class, and didn't help me understand the underlying material that much.\r\n\r\nSekhar is a wonderful lecturer, however he moves very fast. He checks for student understanding but often moves on before people have processed enough to know what questions to ask. Ask questions to slow him down! Everyone will be grateful. He cares about students very much and is very helpful at office hours. I would recommend talking to him. ",
+            "\u00a0The topics are interesting and well-organized, and the problem sets do a good job of reinforcing material. Lectures were fast but well-organized, if a tad try on occasion (although varying a lot by topic - Sekhar was generally very good about keeping things interesting, and including the right level of algebra/proofs, history, diagrams, intuition, etc.) It was sometimes hard to remember the big picture of optimization algorithms and how they all relate to each other - although Sekhar did sometimes tie everything together, giving even more \"big picture\" timelines/motivations in lectures would not hurt. Regarding the final project, I think it would be useful to have a mandatory progress report somewhere between the proposal deadline and the due date to force students to at least get engaged early on. ",
+            "\u00a0While the materials are interesting and Sekhar really cares about the students, the lectures are WAY TOO FAST. I can't keep up with Sekhar's train of thoughts. Sometimes he would stop and ask if anyone had a question, for 2 seconds, while we were still trying to digest what was written on the board, but moved on immediately even before I could finish thinking. I thought that was my own problem and that I was a slow learner, but over the semester I talked to other students who I thought were very good at math and stats, and they themselves were confused the whole time, too. Sometimes Sekhar would also stop to ask us to finish the derivation he was writing on the board, and no one could answer, but he took it as no one was engaging with the lecture, while in fact, we were just all so confused. He would say \"I'll pretend that you said this\" then finish the derivation on the board, and of course, no one knew how he got there. I really really wish he would slow down or make the derivation steps clearer.\r\n\r\nOur TA, Xinyang, is amazing though. If he continues to TA the course, take it for sure! I learned a lot from him.\r\n\r\nPREPARE FOR >10-HOUR WEEKLY PSETS, THOUGH!!! Sometimes took me 15-20 hours... ",
+            "\u00a0A little too theoretical (which is a strength or weakness depending on what you want) ",
+            "\u00a0Perhaps it is not meant to be the focus of the course, but the near complete lack of applications made it hard to stay engaged with the course. Optimization theory is a rich field with abundant applications, but we very rarely strayed from theory and proofs. The course moved very quickly through a lot of content, so I think the course could be improved by removing some of the later content to make room for discussion of real-world context.\r\n\r\nThe biggest strength, however, is in the project, which was very rewarding because of the flexibility it afforded to explore these applications if you wished. ",
+            "\u00a0Strengths: Sekhar is really nice and is willing to meet with you if you have questions. The TA (Xinyang) is very helpful and kind during office hours. The grading on homework can be a little tough, but it is always fair and serves to point out errors. ",
+            "\u00a0Sekhar is very engaging and cheerful. The lectures are amazing, very nice summary and intuitions are given.  He covers a lot during the lectures. It may be a bit hard to follow if we miss some of the knowledge taught before. Asking questions have always been encouraged. Assignments are not easy and TA sessions definitely worth going. ",
+            "\u00a0The problem sets for this course can take up to 20 hours per week and are extremely difficult and frustrating. The material is very theoretical (with good reason, as it makes the course more versatile) but I came out of the class with little to zero idea of how to use any of the techniques. ",
+            "\u00a0The course pace is really fast, so we got to cover a lot of materials. This helped me to improve my speed for learning and not waste time on irrelevant stuff. But the pace is also a downside of this course. I feel like I didn't get enough time to contemplate on the materials and we are already going in to the next technique. "
+        ],
+        [
+            "\u00a0This certainly wasn't an easy course, but you get what you put in, and this is a whole new branch of mathematics that's worth exploring and that will shape your approaches to difficult problems in general. ",
+            "\u00a0I would recommend this course to a student who is really very interested in the field of optimization and has a solid math background. ",
+            "\u00a0If you are interested in machine learning problems / optimization comes up in a lot of papers you read, take this class. But make the other classes you take easy so that you can focus on this class. I made the mistake of taking other challenging courses and found I cut as many corners as possible in terms of readings and studying early on in the term rather than cramming for finals so that I could finish the assignments for this class and my other challenging class. ",
+            "\u00a0If you are interested in optimization or are in a field that takes advantage of optimization, I would recommend the course. There's a lot of useful linear algebra floating around, it gives a good overview of a lot of different techniques, and you get the chance to explore a topic in-depth in the final project. The psets are not too bad. ",
+            "\u00a0Sekhar is a great professor and the material is really interesting. It is difficult though, so make sure you go to lecture and really try hard on the homework. ",
+            "\u00a0Yes, if you're prepared for the math, which is quite difficult, and the workload, which is insanely high. You will end up learning a ton, or at least get to review linear algebra. ",
+            "\u00a0This is probably the most difficult class I've ever taken. Only take if you're a math wiz. ",
+            "\u00a0I probably would not recommend it unless you have a compelling interest in the material, are okay with not learning practical applications, and are adept with linear algebra and multivariate calculus. Sekhar is a good lecturer, but this course covers an insane amount of material so I became quickly disengaged. ",
+            "\u00a0with caution. You need to have the math background. Lots of linear algebra and maybe an analysis course. Definitely a background in algorithms. Even then it can still be difficult (the last homework involving a lot of singular value stuff was a brutal assignment). But the course is graded based on effort, so if you work hard at understanding new concepts, even if you aren't perfect, you can still do very well (I suspect, I haven't gotten my grade back yet). You probably will not absolutely love the course. It's too high-workload. But you can still enjoy it. ",
+            "\u00a0Yes. Sekhar is an amazing teacher. If would be even better if you have some projects related to optimization in hand. He will be the best people to ask for advise and his course is also the best course to learn about convex optimization. However, this course need a lot of work. Finishing assignments is not enough, extra times and efforts need to be made to understand the materials. Since there is no midterms or finals, self-disciplines is very important. ",
+            "\u00a0I wouldn't recommend it unless you're ready for it to take over your entire semester. I don't think it's really appropriate for undergrads. ",
+            "\u00a0I would recommend this course to another student if, like Sekhar says at the beginning of the course, you have a reason to take it. I.e. if the methods you learn will help you in the future. ",
+            "\u00a0Not really unless you need it. The professor said it himself that it's better to have something(e.g. your own research) you want to optimize in mind, which I did not take it seriously. Without the need to use these techniques I find it hard to find motivation digesting the materials because compared to other math courses here we only care about runtime/correctness etc which is kind of boring. "
+        ]
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 14
+    }, 
+    "requirements": "", 
+    "description": "A study of works of primary importance to political thought and intellectual history. Focus on the role of ideas in shaping events, institutions, and the fate of the individual. In the fall term, Herodotus, Thucydides, Plato, Aristotle, Augustine, and Aquinas. In the spring term, Machiavelli, Hobbes, Locke, Rousseau, Burke, Tocqueville, Emerson, Marx, Nietzsche, and Arendt.", 
+    "title": "Directed Studies: Historical a...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "MY 401", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }, 
+        {
+            "start_time": 11, 
+            "location": "WHC AUD", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 4, 
+        "oci_id": "10725", 
+        "listings": [
+            {
+                "number": "005", 
+                "subject": "DRST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEPP\">YC EP&amp;E: Intro Political Phil</a>"
+    ], 
+    "professors": [
+        "Stuart Semmel"
+    ], 
+    "long_title": "Directed Studies: Historical and Political Thought", 
+    "extra_info": "A"
+}

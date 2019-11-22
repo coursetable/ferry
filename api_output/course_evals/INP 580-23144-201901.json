@@ -1,0 +1,82 @@
+{
+    "crn_code": "23144",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ],
+        [
+            0,
+            3,
+            2,
+            0,
+            1
+        ],
+        [
+            0,
+            3,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I deepened my understanding of current issues in bioethics. ",
+            "\u00a0I learned a lot about topics that I have been to shy to ask about before - in particular, learning the process of study sections, review panels, grant applications, etc. was particularly helpful. I also gained many insights about niche or even 'taboo' topics from experts in the field! ",
+            "\u00a0Developed an understanding of current ethical issues in biomedical research, and appropriate methods to handle such concerns. ",
+            "\u00a0Bioethics provided a great basic overview and discussion of various ethical concerns a graduate student might run into. "
+        ],
+        [
+            "\u00a0I thought this course was great, but I noticed that some of my classmates were reluctant to share their ideas in front of the visiting professors.  I wonder if the professors could join only for the second half of the class, or some other arrangement, so that all of the students can build confidence discussing the topic of the day first. ",
+            "\u00a0Strengths - very appropriate course load for a pass/fail class. Loved the rotating professors and the topics selected were very appropriate for our level. I enjoyed learning in a style that was primarily discussion- and activity-based.\r\n\r\nWeaknesses - Small detail, but for group activities within the course it might have been nice to be forced to form groups with different members of our cohort each time to be able to hear more specifically from a range of perspectives. ",
+            "\u00a0A major strength of the course was the presence of faculty members, who provided wisdom and experience to the discussion. Another strength which overcame a weakness was that if we were dissatisfied with the day's discussion, we could always talk to a TA about it. ",
+            "\u00a0The strengths of the course was in some of the better discussion and some excellent faculty guests who really had expertise. The course was less successful when discussion seemed to not really be generated or when students felt unsure about sharing their opinions with some of the faculty guests. ",
+            "\u00a0The TF's in bioethics were great at providing weekly feedback and organizing engaging topics for the class to discuss. I also liked the discussion based format of the class. "
+        ],
+        [
+            "\u00a0Yes, understanding bioethics is vital to being a good scientist.  Furthermore, discussing these topics in a small class with one's peers can help you understand how different issues are pertinent to different people. ",
+            "\u00a0Yes - it is important for the training grant but also covered many topics that are very relevant for the field and where it is going! ",
+            "\u00a0Yes, I would even recommend this to undergrads, postdocs, and RAs. ",
+            "\u00a0Yes, the course was a good overall summary into key issues in bioethics. ",
+            "\u00a0I would recommend this course. "
+        ]
+    ]
+}

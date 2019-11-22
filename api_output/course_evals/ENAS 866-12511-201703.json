@@ -1,0 +1,74 @@
+{
+    "crn_code": "12511",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0An understanding of the current state of complimentary metal oxide semiconductor technology for computational applications. Through my individual project, a deep understanding of two-dimensional materials and their application to CMOS. ",
+            "\u00a0This class gave me a comprehensive background in the previous, present, and future CMOS technologies used in industry, and the physics behind how each device functions. Additionally, much emphasis was put on practical considerations such as price to manufacture, compatibility with existing Si technologies, and reliability when discussing what future directions are going to be undertook by industry. I felt I developed a good understanding of CMOS devices and how their future potential is judged while taking this course. "
+        ],
+        [
+            "\u00a0I thought that the style of the course was excellent for graduate school, providing a good overview of the field, and allowing for individual exploration of a specific topic. ",
+            "\u00a0I thought this course was very strong in both the level of detail that went into each section. Each device was given a full treatment in terms of underlying physics, pros and cons of implementing over an existing technology, along with future potential. Additionally, having expert guest lecturers come in and teach sections was also very useful. "
+        ],
+        [
+            "\u00a0Yes. It is a fun look at CMOS technology and allows students to explore a subject that is of interest to them. It also is excellent practice for delivering long presentations. ",
+            "\u00a0I would absolutely recommend this course to anyone who wants a comprehensive background in CMOS device technologies. "
+        ]
+    ]
+}

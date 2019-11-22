@@ -1,0 +1,77 @@
+{
+    "crn_code": "12333",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A whirlwind overview of elementary commutative algebra: a quick review of introductory ring theory, an introduction to category theory, constructions in module theory such as the tensor product and localizations, chain conditions, and an introduction to homological algebra.\r\n\r\nA comfort with advanced algebraic lingo and a newfound ability to persist in the face of terrifyingly abstract symbols and concepts. ",
+            "\u00a0Modules, Category Theory, Tensor Products, Localization of Rings and Modules, Spectrum of a Ring, Noetherian and Artinian Rings and Modules, Homological Algebra ",
+            "\u00a0I learned a lot about rings, modules, category theory, tensor products, commutative algebra and a little homological algebra. I feel much more comfortable with algebraic structures after taking this course. "
+        ],
+        [
+            "\u00a0If Professor Liu is teaching this course, and you're ready for a serious undertaking, definitely take the course. As an undergraduate, you will probably be challenged like never before. (This is coming from a seasoned veteran of 230/231, 305, etc.). I had to think in ways I never knew were possible, and dipped my toe in a reservoir of mathematical abstraction unlike anything I had experienced before. At some level, introductory commutative algebra is largely grunt work required to prepare yourself for future coursework in algebraic geometry, topology, etc. But Professor Liu somehow made it all very exciting, and regularly gave us indications of why we should care about the very abstract material at hand. He is a true gem and the Yale Math department is lucky to have him.\r\n\r\nMy suggestions for improvement would be: spend a little more time on category theory, and really emphasize how utterly foreign it ought to seem at first. (By contrast, I found homological algebra unit much more approachable after Prof. Liu assured us that, without an algebraic topology background, there is no reason the concepts should seem natural or sensible a priori). I was hopelessly lost at the outset of the category theory unit, but throughout the semester began to appreciate just how ubiquitous categorical constructs and formalisms were throughout mathematics. And perhaps include some more surface-level questions on the homeworks - even just as optional questions - to reinforce the new concepts and get the mathematical gears turning before we take on the more challenging problems. It was easy to feel lost at first, even if the questions ended up being quite fair and approachable at the end.\r\n\r\nBeyond that, as a student in the course, just make sure you do not fall behind. Because you will quickly fall really, really behind. And have to spend your entire Thanksgiving break hammering away at commutative algebra. ",
+            "\u00a0The class is very well-taught and the problem sets do a good job of reinforcing understand of the course material. However the material is conceptually very difficult, and I think the class could benefit from recommended readings to go with the class material. That is, a list of certain pages of the textbook that correspond with what was covered in class. Otherwise, it is very difficult to understand the material in one go just from sitting in lecture, especially for undergrads. ",
+            "\u00a0It was a wonderful course, I liked it a lot. "
+        ],
+        [
+            "\u00a0Wholeheartedly, for the right type of student. This was probably the most challenging course I will ever take at Yale, and the most daunting conceptual leap I will ever have to clear. No other math course I have taken compares. If this year was any indication, prepare to be outnumbered by PhD students who have already taken the course, but don't be too intimidated.  I spent more time on this course than on my other 4 courses combined this semester. Maybe that was just me and a function of having fallen a bit behind early on. If you're planning on putting the course on the backburner for weeks at a time, choose a different class. If you decide to stay, be ready to struggle and to be hopelessly lost at points. But you will be buoyed throughout by Professor Liu's charming classroom manner and his impeccably well organized lectures, and you will hopefully come away with a true sense of accomplishment and a newfound readiness to take on previously out-of-reach mathematical disciplines. You might not realize it until the end of the semester, but you are in for a treat. ",
+            "\u00a0I would recommend this course to a student who is interested in pursuing graduate-level mathematics. This course does a good job of introducing machinery that is used in fields such as Algebraic Geometry and Algebraic Topology. Otherwise, the class may seem too pure and inapplicable, even for a pure math major like me. ",
+            "\u00a0Yes! Professor Liu was an excellent teacher and the material of the course was very interesting and useful for higher level math. "
+        ]
+    ]
+}

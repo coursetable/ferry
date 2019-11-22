@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51775/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Positioned at the intersection of design, technology, and entrepreneurship, students are introduced to the many facets of product design and development while simultaneously working to conceive and develop a marketable product and business.", 
+    "title": "Making it", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "BCT 107", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14264", 
+        "listings": [
+            {
+                "number": "400", 
+                "subject": "ENAS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Joseph Zinter"
+    ], 
+    "long_title": "Making it", 
+    "extra_info": "A"
+}

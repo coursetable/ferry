@@ -1,0 +1,78 @@
+{
+    "crn_code": "20643",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            5,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            1
+        ],
+        [
+            0,
+            3,
+            4,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Applied math, statistics, and differential geometry. ",
+            "\u00a0Differential geometry concepts learnt in the class were very useful. ",
+            "\u00a0Many algorithms used in Computer Vision. This is definitely a non-traditional computer vision class, though. It is quite different from what you find can find online, which is a great thing because if you can find the materials online, why go to Yale? "
+        ],
+        [
+            "\u00a0I like the wide range of topics that professor offered, but it'll be better if there is a way to connect them instead of a scattered fashion. ",
+            "\u00a0The strength of the course is its seminar-like organization. The lectures are not information heavy, but leave you with enough information and knowledge to go look up the material in the provided notes or online. A lot of the things we discussed in class are active research fields, which made it even more interesting to me. \r\n\r\nI liked the organization of the course, but I wish there were fewer topics, and more time dedicated to each one. The homework assignments in this course were great too. However, I would also have liked more frequent and regular homework, because the quantitative nature of a lot of the material made most sense to me when I did the psets. Honestly, I would have been very lost without them. ",
+            "\u00a0Amazing problem sets that provide so much intuition to everything. The lectures could be a bit messy sometimes and could definitely be improved. "
+        ],
+        [
+            "\u00a0Yes. A good course to get a flavor of various techniques being applied in vision. ",
+            "\u00a0Yes, absolutely. The course assumes a fairly solid background in linear algebra. Knowledge of graph theory would help too. Take the intro course in Fall first, before you take the advanced course. What you learn from this course is a very solid function of the amount of time you are willing to spend outside of the class. The lectures are fine, but not information heavy, and so you need to find your own way through. ",
+            "\u00a0Yes. ",
+            "\u00a0Totally. "
+        ]
+    ]
+}

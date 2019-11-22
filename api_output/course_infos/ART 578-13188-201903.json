@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Post-Modernism and related discourses are getting long in the tooth. Fifty years ago, or more, most arose as challenges to the settled social and cultural wisdom of the postwar era. Now Post-Modernism IS the settled academic wisdom of our unsettled \u201cpost-everything\u201d era. Much of the \u201ctheory\u201d elaborated in the course of this intellectual revolt staked out territory by artfully speculating about matters excluded or insufficiently explored by the existing critical literature, often deploying purposefully exaggerated logical gambits to call into question or undermine established views. Eventually, many of these polemical propositions \u2013 that the museum was dead, that painting was dead, that painting was inherently masculine \u2013 became orthodoxy and articles written by young scholars and commentators devolved into a genre of catechism in which catch phrases were simply strung together. With Gustave Flaubert\u2019s Dictionary of Received Ideas and Jenny Holzer\u2019s Truisms as working models, this seminar will examine and critique such rote critiques and attempt to foster dialogue about the continued usefulness and abiding traps of categorical (name-it-and-nail-it) as distinct from dialectical thinking with relation to contemporary art practice.", 
+    "title": "Truisms & Falsisms", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "GREEN C220", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 13
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13188", 
+        "listings": [
+            {
+                "number": "578", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Robert Storr"
+    ], 
+    "long_title": "Truisms & Falsisms", 
+    "extra_info": "A"
+}

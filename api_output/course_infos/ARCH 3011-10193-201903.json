@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49146/assignments/syllabus", 
+    "requirements": "", 
+    "description": "", 
+    "title": "Modern Architecture", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "RDH HASTINGS", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10193", 
+        "listings": [
+            {
+                "number": "3011", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Anthony Vidler"
+    ], 
+    "long_title": "Modern Architecture", 
+    "extra_info": "A"
+}

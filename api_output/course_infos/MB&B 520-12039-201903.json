@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50439/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An intensive introduction to biological nomenclature, systems, processes, and techniques for graduate students with previous backgrounds in non-biological fields including physics, engineering, and computer science who wish to perform graduate research in the biological sciences. Counts as 0.5 credit toward MB&B graduate course requirements.", 
+    "title": "Boot Camp Biology", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "BASS 205", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12039", 
+        "listings": [
+            {
+                "number": "520", 
+                "subject": "MB&B"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Corey O'Hern"
+    ], 
+    "long_title": "Boot Camp Biology", 
+    "extra_info": "A"
+}

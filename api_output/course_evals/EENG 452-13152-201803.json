@@ -1,0 +1,87 @@
+{
+    "crn_code": "13152",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            5,
+            5,
+            0
+        ],
+        [
+            0,
+            1,
+            4,
+            3,
+            3
+        ],
+        [
+            0,
+            1,
+            3,
+            4,
+            3
+        ],
+        [
+            0,
+            1,
+            2,
+            5,
+            3
+        ],
+        [
+            0,
+            1,
+            5,
+            4,
+            1
+        ],
+        [
+            0,
+            3,
+            6,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0OSI layers, routing protocols, HTTP/UDP protocols, ",
+            "\u00a0I learned basics of Internet architecture and protocols ",
+            "\u00a0How the internet works on a highly technical level. Routing, networking, switching, etc. ",
+            "\u00a0All about Networks, without implementation in software except by a couple of psets. If you want implementation, then you take networks CPSC 433. ",
+            "\u00a0Learned about internet protocols and the internet stack. ",
+            "\u00a0I gained a deep understanding of what the Internet is and how it works as well as familiarized myself with the architectures and algorithms used by the Internet. "
+        ],
+        [
+            "\u00a0Leandros is knowledgeable and Nick is great ",
+            "\u00a0Strength: material is generally interesting if you invest yourself\r\n\r\nWeakness: easy to space out and miss stuff if not engaged, workload is VERY end heavy so be prepared ",
+            "\u00a0You get to learn about the internet, but it was organized poorly and is boring to listen to ",
+            "\u00a0I wish that the work was more evenly distributed in terms of workload and difficulty. There were some psets that were very straight forward and others that took forever to complete one problem even with office hours. ",
+            "\u00a0Great gut, but you learn a lot of useful stuff. The class that I put the least compared to what I got out of it. ",
+            "\u00a0It was not very difficult and provided a broad overview of the internet. We learned specifics about protocols but didn't need to implement them. ",
+            "\u00a0Great professor and TA, small class size formed community in the classroom. Material and assessments were predictable and fair. Professors and TAs were understanding. This was a great class. "
+        ],
+        [
+            "\u00a0Yes to learn about the internet ",
+            "\u00a0Yes if your interested in material or want some general knowledge about something you use every day. Be super aware of the weird distribution of workload. It went from one simple pset a month to a longer pset a week plus a midterm and project due in very close proximity. ",
+            "\u00a0No. Bland and more work than it is worth ",
+            "\u00a0Big yes! Tassiulas is amazing, and, though lectures are boring at times, the material is awesome and super relevant. I honestly think everyone should have a basic understanding of networks since it's the reason we can do so many things today, so this class is awesome for that. You don't need to be an EE major (I am Poly Sci) to keep up in the class, just have a basic understanding of programming and be genuinely interested in the topic. Go for it! ",
+            "\u00a0It's very interesting learning about something everyone uses everyday and is a near-invisible experience. ",
+            "\u00a0This course is amazing. I gained a deep understanding of what the Internet is and how it works as well as familiarized myself with the architectures and algorithms used by the Internet. HTTP, TCP, SMTP, FTP, all that jazz. It's not like Computer Networks so it won't be very code-heavy, but more conceptual. I liked this as it gave me a break from my other CS classes (I'm an EECS major). You don't need to know much math either- they'll teach everything you need to know (for the scope of this course it's pretty much all basic probability, algebra, etc.) Professor Leandros was great and so was the TA. There's homework from the textbook every two weeks or so which you can usually write on paper. And let me tell you about this textbook, so modern and so easy to read- the author knows the subject is tough but he makes it interesting and understandable. It's a great supplement to Professor Leandros' slides in class (which are what I learned the most from anyway). Each of the two midterms are open notes and open textbook, so make sure to take decent notes! The final project, if it's like this year, will be in Python and a virtual Linux environment that you'll install on your computer, so there's your code portion. There are other, smaller coding tasks in some of the later homeworks, though, as well. If you're straight EE and don't know how to code, don't fret, the TA will help you learn what you need to learn. TL;DR Take this course if you're looking for a nice, more conceptual and chill EE elective about probably one of the most interesting and practical topics to date: the Internet. "
+        ]
+    ]
+}

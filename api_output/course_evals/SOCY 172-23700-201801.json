@@ -1,0 +1,77 @@
+{
+    "crn_code": "23700",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Great overview of political science scholarship on the relationship between religion and politics. Emphasis on empirical analysis, experimental design, while not forgetting importance of qualitative factors like theology. Also, great experience in designing and carrying out a research project. ",
+            "\u00a0I was exposed to articles that used multiple-regression tables, and quantitative analysis, and got some familiarity with it. In general the articles and the themes of the course were very relevant and interesting. ",
+            "\u00a0Learned how to write a long research paper in political science. \r\n\r\nReally useful for understanding the ways in which studies are conducted in political science, the models political scientists use, the way they manipulate data. "
+        ],
+        [
+            "\u00a0Wonderful syllabus and great class discussions. ",
+            "\u00a0More teaching specifically on quantitative analysis. ",
+            "\u00a0There was a lot of reading, some of which was difficult to understand. Thoroughly understanding the reading will take a lot of time but will be worth it because they are always very interesting.  \r\n\r\nOne of the strengths of the seminar was definitely the class size. There were only six of us, which meant that we could have really engaging discussions each week, and had a lot of personal interaction with the professor. "
+        ],
+        [
+            "\u00a0Yes! Solid upper-level seminar for undergraduates who are interested in reading and writing in the field. ",
+            "\u00a0Yes ",
+            "\u00a0Yes. You will come out of this course having learned a substantial amount about the relationship between religion and politics in governments around the world, an incredibly pertinent subject. I took it as a non-political science major and still found the material very interesting and accessible. "
+        ]
+    ]
+}

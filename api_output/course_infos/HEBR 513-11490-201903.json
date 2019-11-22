@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: HEBR 510 or equivalent.", 
+    "description": "A two-term review and continuation of instruction in grammar and vocabulary, supplemented by readings from the Bible.\nPrerequisite: HEBR 510 or equivalent.", 
+    "title": "Intermediate Biblical Hebrew I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "LC 207", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11490", 
+        "listings": [
+            {
+                "number": "513", 
+                "subject": "HEBR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Emilie Amar-Zifkin"
+    ], 
+    "long_title": "Intermediate Biblical Hebrew I", 
+    "extra_info": "A"
+}

@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49227/assignments/syllabus", 
+    "requirements": "Prerequisite: CHEM 165 (or CHEM 113 or 115); organic chemistry recommended.", 
+    "description": "Introduction to the major classes of biomedical materials: ceramics, metals, and polymers. Their structure, properties, and fabrication connected to biological applications, from implants to tissue-engineered devices and drug delivery systems.\nPrerequisite: CHEM 165 (or CHEM 113 or 115); organic chemistry recommended.", 
+    "title": "Biomaterials", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "HLH17 05", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10479", 
+        "listings": [
+            {
+                "number": "434", 
+                "subject": "BENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Anjelica Gonzalez"
+    ], 
+    "long_title": "Biomaterials", 
+    "extra_info": "A"
+}

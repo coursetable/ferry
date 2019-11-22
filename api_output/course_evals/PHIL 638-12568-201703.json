@@ -1,0 +1,72 @@
+{
+    "crn_code": "12568",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I developed a better appreciation of the nature of logic through an investigation of the concept of logical consequence. ",
+            "\u00a0This course greatly improved my understanding of what logic is and how it functions. We covered a very controversial text that attempts to expose the flaws in nearly universally accepted doctrine. "
+        ],
+        [
+            "\u00a0I think this course was brilliant. The only thing I would change is to add some discussion of more contemporary developments in the lineage of Etchemendy and Barwise (and Shin) to show how profound the book has proven to be. "
+        ],
+        [
+            "\u00a0Yes, I would definitely recommend this course. I do not think enough people spend time thinking about the logic of their work and ultimately function assuming they're correct. "
+        ]
+    ]
+}

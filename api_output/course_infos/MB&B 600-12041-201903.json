@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50418/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Discussion of the physical, structural, and functional properties of proteins, lipids, and carbohydrates, three major classes of molecules in living organisms. Energy metabolism, hormone signaling, and muscle contraction as examples of complex biological processes whose underlying mechanisms can be understood by identifying and analyzing the molecules responsible for these phenomena.", 
+    "title": "Principles of Biochemistry I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "LC 102", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12041", 
+        "listings": [
+            {
+                "number": "600", 
+                "subject": "MB&B"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Matthew Simon", 
+        "Michael Koelle", 
+        "Candice Paulsen"
+    ], 
+    "long_title": "Principles of Biochemistry I", 
+    "extra_info": "A"
+}

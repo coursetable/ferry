@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50827/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Study of the period of the Egyptian pharaoh Akhenaton (reigned 1353\u00e2\u20ac\u201c1336 B.C.E.), often termed the Amarna Revolution, from historical, literary, religious, artistic, and archaeological perspectives. Consideration of the wider Egyptian, ancient Near Eastern, African, and Mediterranean contexts. Examination of the international diplomacy, solar theology, and artistic developments of the period. Reading of primary source material in translation.", 
+    "title": "The Age of Akhenaton", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WLH 011", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11450", 
+        "listings": [
+            {
+                "number": "244", 
+                "subject": "ARCG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "John Darnell"
+    ], 
+    "long_title": "The Age of Akhenaton", 
+    "extra_info": "A"
+}

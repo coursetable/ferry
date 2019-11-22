@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50478/assignments/syllabus", 
+    "requirements": "Prerequisite: AP Biology or equivalent. Enrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.\u00a0", 
+    "description": "Study of the basic\u00a0virology and immunology of HIV/AIDS, along with its extraordinary historical and social effects. Issues include the threat of new epidemics emerging from a changing global environment; the potential harm of conspiracy theories based on false science; and how stigmas associated with poverty, gender inequality, sexual preference, and race facilitate an ongoing epidemic. For all first-year students regardless of whether they are considering a science major.\nPrerequisite: AP Biology or equivalent. Enrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.\u00a0", 
+    "title": "The Science and Politics of HI...", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "WLH 210", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11340", 
+        "listings": [
+            {
+                "number": "065", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Robert Bazell"
+    ], 
+    "long_title": "The Science and Politics of HIV/AIDS", 
+    "extra_info": "A"
+}

@@ -1,0 +1,82 @@
+{
+    "crn_code": "23472",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            4,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            1,
+            1
+        ],
+        [
+            0,
+            3,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            4,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained a much greater understanding of control of nonmaterial properties through synthetic techniques, separation, surface modification, and relevant applications. ",
+            "\u00a0I gained an overview of nanomaterials. ",
+            "\u00a0I learned various methods for synthesizing nano materials with a heavy emphasis on carbon based nanomaterials ",
+            "\u00a0Learned an enormous amount of new information that will be relevant to my research ",
+            "\u00a0Synthesis methods for nanomaterials, novel topics on their application and different characterization techniques. "
+        ],
+        [
+            "\u00a0I like how the course covered a variety of material types (carbon-based, metals, and polymers) and demonstrated how certain themes were relevant regardless of material. I think the one small weakness was that occasionally some of the material could be a bit repetitive but this wasn't too common. ",
+            "\u00a0The course is supposed to focus on synthesis of nanomaterials; however, the course spends significant time on carbon nanotubes. This is the research area of the instructor; however, more focus on other nanomaterials would better fit the course's description. ",
+            "\u00a0Improvements:\r\n-Greater emphasis on preparation and purification of nanomaterials\r\n-Comparing synthetic techniques for preparing similar materials\r\n-Learning about the challenges associated with scaling up reactions to prepare nanomaterials\r\n-Emphasis on green chemistry for preparing nanomaterials\r\n-Maybe learning about reactor design for nanomaterials? ",
+            "\u00a0A strength was that the course was comprehensive in discussing methods for synthesizing nanomaterials, particularly carbon based nanomaterials. The main weakness of the course was that it was more of a literature review of current methods used to synthesize these nanomaterials. This would be very useful for those working with Carbon based nanomaterials or in a tangentially related field, but as a general course discussing \"synthesis of nanomaterials\" it seemed like a narrow discussion. What would be better is to introduce different methods for synthesizing nanomaterials and have assignments that allow students to think critically about which methods would be used to synthesize a particular material, why they would be used, and to give pros and cons of those methods. This could be done in class or out of class. Either that, or possibly make it clear before students register for the class, what the overall format will be. ",
+            "\u00a0The homeworks could have been more thought-provoking. "
+        ],
+        [
+            "\u00a0Yes - I don't think there are really any other classes that do what this one does and it's a great way to get an understanding of nano materials ",
+            "\u00a0-probably not ",
+            "\u00a0If that student is in the field of nanomaterials and works with either carbon based nanomaterials or biomaterials, then yes that student would benefit from taking this course. ",
+            "\u00a0Yes, if they were going into the nanomaterials field. This class was actually recommend to me by another student and I am glad I took the class. "
+        ]
+    ]
+}

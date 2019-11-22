@@ -1,0 +1,87 @@
+{
+    "crn_code": "21539",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            5,
+            2,
+            2
+        ],
+        [
+            1,
+            2,
+            6,
+            2,
+            0
+        ],
+        [
+            1,
+            3,
+            4,
+            3,
+            0
+        ],
+        [
+            1,
+            2,
+            5,
+            3,
+            0
+        ],
+        [
+            0,
+            3,
+            4,
+            3,
+            1
+        ],
+        [
+            1,
+            5,
+            3,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0wide survey of biological data mining techniques ",
+            "\u00a0Honestly this was unclear at times. The class had a meandering focus where I was never quite sure what we were trying to accomplish. Individual modules were fascinating, but I never really felt that we got from the individual lectures to a cohesive whole. ",
+            "\u00a0I learnt more about analyzing genome sequencing results, as well as SNP variants. I also learnt a bit more about protein modelling and how to construct Ramachandran Plots myself. ",
+            "\u00a0A better understanding of biological data collection and analysis. How to think like a scientist and model/approach problems. "
+        ],
+        [
+            "\u00a0This course is a bit of a mess. There are two main problems. First, students in the course come from dramatically different backgrounds which causes the lectures to be a bit all over the place. As someone from a computational background, I liked learning biological applications while the overly technical bio lectures (of which there were WAY too many and we were not expected to know for homework or tests) went over my head and the computation/machine learning lectures were boring (and poorly explained, thankfully I already knew that material). Second, the course was disorganized. The professor only gave about half the lectures so there was no continuity and we only had one assignment and one quiz until the last week of class (which was not the original plan, but the course staff was disorganized and kept pushing things back). ",
+            "\u00a0The class is very unstructured. The TAs tried their best but there's not much to do. Lectures were just a mix and match of guest lecturers teaching different things. Assignments are arbitrary and we were not really taught the ways to do the homeworks. Midterm and finals are multiple choice that don't really test our understanding of the course. Also, assignments were piled up at the end of the year so by the end 70% of your grade is in assignments, homeworks, projects and test that are all due in the last week of class. It is a hard course to design but they should really break this class into multiple courses, one for undergrad, one for grad, and start teaching from the fundamentals. ",
+            "\u00a0Section was helpful for the classes that were not paper presentations. However, I think the class lacked focus. Different instructors and a severely delayed problem set schedule meant that the takeaway from each lecture was not clear. The work is in class is severely backloaded; in the last week of class, we had our final, one of our two psets due, and presented our final project twice. The TAs were kind enough to push one of the deadlines, but we basically had nothing but one problem set and the midterm quiz before the last week. ",
+            "\u00a0good: broad overview, interesting speakers\r\nbad: somewhat scattered, might be hard for someone not well-versed in math to understand the singular value decomposition, eigengene analysis etc. ",
+            "\u00a0The lectures were excellent and the readings were very helpful. But I never felt that the class came into a cohesive whole. ",
+            "\u00a0The course strives to cover a lot of information, from types of sequencing, to analysis, to protein modelling. However, due to the large number of topics covered, and the constant switching of instructors, the course seemed very disjointed at times. \r\n\r\nIt could also be better if we had more consistent homework assignments, which would probably be a better evaluation of our learning than the two quizzes that we have now, which were really broad, and so could only test us on superficial facts that students memorized. ",
+            "\u00a0A lot of cool topics were covered by people who are actually doing revolutionary work in the field. Expectations were very clear. The environment was really casual. The lectures were rather disorganized; expectations were kind of low. "
+        ],
+        [
+            "\u00a0This course is a bit of a mess. There were two main problems. First, students in the course come from dramatically different backgrounds which causes the lectures to be a bit all over the place. As someone from a computational background, I liked learning biological applications while the overly technical bio lectures (of which there were WAY too many and we were not expected to know for homework or tests) went over my head and the computation/machine learning lectures were boring (and poorly explained). Second, the course was disorganized. The professor only gave about half the lectures so there was no continuity and we only had one assignment and one quiz until the last week of class (which was not the original plan, but the course staff was disorganized and kept pushing things back). ",
+            "\u00a0I would not recommend this class until there is massive improvements. A dedicated professor must be found to teach one undergrad course and another for a graduate course. There must be more focus on building the understanding and techniques, and not just a survey of ALL the techniques on a very superficial level. ",
+            "\u00a0This course is trying to reach a lot of different people but maybe doesnt reach any single target group particularly well. Its not a hard class, and its a good way to get an overview of how genomic and protein research is conducted, but honestly I dont think I came away with much knowledge that I couldnt have learned better by taking genetics and machine learning as separate classes. ",
+            "\u00a0Yes, would recommend, with the added condition that I think linear algebra should be a prereq. Not really possible to understand eigengene array analysis or Principal Component Analysis, etc without having at least some basic understand. I think also since this course is taught by many different people, you should expect that most lectures will be fun, but some will boring just because the material/speaker is not really that engaging. ",
+            "\u00a0Good course if you need to know more about bioinformatics. Not an easy course. ",
+            "\u00a0This class teach you how to analyze genomic data, and provides some hands-on experience on working with the cluster. It strives to fit many target audiences: from biologists to computer scientists, and so goes indepth into neither the biology or the informatics. However, the lectures can be dry at times. It does cover a broad scope of ideas which can be a good introduction to the field of bioinformatics, though you might have better luck taking another class if you want to learn the fundamental concepts well. ",
+            "\u00a0The class has some interesting material but is pretty disorganized. We were supposed to have three homework assignments but only ended up having two because the first one didn't come out until Spring Break. Most of the work ended up being due in the last week of class (final project, final assignment, and second midterm/quiz). Still, it's a relatively easy class though. ",
+            "\u00a0If you're a bit interested in bioinformatics and have some background in both biology and computer science, the class should introduce you to some interesting ideas/topics without too much work. "
+        ]
+    ]
+}

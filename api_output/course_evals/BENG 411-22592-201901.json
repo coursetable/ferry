@@ -1,0 +1,74 @@
+{
+    "crn_code": "22592",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            2,
+            2,
+            0,
+            0
+        ],
+        [
+            1,
+            2,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned a ton about microfluidic devices "
+        ],
+        [
+            "\u00a0Lectures are very boring. You probably don't have to go. However, the final presentation and NIH format paper were quite fun to work on ",
+            "\u00a0Awesome professor! ",
+            "\u00a0Would be more interesting if it was a lab course! "
+        ],
+        [
+            "\u00a0Would recommend for someone who is interested in BioMEMS and would wanna know more about it. You will learn a lot and most likely get an A. Lectures can be very boring, you can choose to skip them. Only one assignment all semester. The midterms are fine as long as you memorize a ton the night before. Overall, I think people should take this class. Prof Fan is a great professor. ",
+            "\u00a0Good elective "
+        ]
+    ]
+}

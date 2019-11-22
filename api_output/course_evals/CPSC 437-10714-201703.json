@@ -1,0 +1,95 @@
+{
+    "crn_code": "10714",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            4,
+            4,
+            8,
+            2,
+            0
+        ],
+        [
+            1,
+            5,
+            7,
+            4,
+            1
+        ],
+        [
+            1,
+            4,
+            5,
+            7,
+            1
+        ],
+        [
+            2,
+            3,
+            8,
+            4,
+            1
+        ],
+        [
+            0,
+            8,
+            7,
+            3,
+            0
+        ],
+        [
+            3,
+            12,
+            2,
+            0,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How do database systems work? It's all in the title. ",
+            "\u00a0SQL ",
+            "\u00a0I learned a lot about Database management in this course. I also was able to teach myself how to build a web app from scratch for the final project. ",
+            "\u00a0writing SQL queries\r\nhow database systems are built\r\nhow to design database schema ",
+            "\u00a0I gained a solid understanding of database systems and how to use databases to build useful applications ",
+            "\u00a0Knowledge of all parts of database systems. ",
+            "\u00a0Database design, normalization, storage, implementation details of database management systems, and implementation of SQL queries ",
+            "\u00a0I learned a bit about SQL and MySQL, but overall the class was incredibly disorganized. "
+        ],
+        [
+            "\u00a0It's a good intro to SQL if that matters to you at all. ",
+            "\u00a0Weird course. I would like more regular problem sets with a better summary of the material being covered. ",
+            "\u00a0strengths - final project, great TAs, relevant content\r\nweaknesses - lectures aren't engaging, the final project is too open ended and sucks if you don't know people in the class to find a group ",
+            "\u00a0Strength: Teaches very practical skills i.e. SQL and databases\r\n\r\nWeaknesses: Doesn't cover the recently introduced database trends like non relational/document based databases like MongoDB\r\n\r\nThe final project should have more concrete and milestones ",
+            "\u00a0Course was great! No complaints ",
+            "\u00a0The course is well organized, but the level of engagement is pretty low. ",
+            "\u00a0More emphasis on the project- more checkpoints ",
+            "\u00a0Better outline of material: there was no syllabus. "
+        ],
+        [
+            "\u00a0It's a fine CS elective. None of them are great and this one is mostly painless if you don't mind getting up at 9am. ",
+            "\u00a0Sure. It's easy. ",
+            "\u00a0Yes, definitely a chiller computer science elective. the Final project is a great way to add something to your resume! ",
+            "\u00a0Yes, it is a reasonable workload to learn some important database skills ",
+            "\u00a0Not much work was required for this class; we only ended up having 3 psets with an optional fourth. I went to maybe four lectures all semester, and did fine on the final; the slides are very comprehensive, and the textbook written by the professor contains actual explanations of the slides prove opaque. I also knew nothing about databases going in, so I learned a lot for the time I spent. This was definitely my neglected class this semester, but I found it a worthwhile investment of the probably total 35 hours I spent on it. The TAs did a good job of being available and making the tests more fair than they seem to have been in previous years. ",
+            "\u00a0Definitely! Great course overall ",
+            "\u00a0You should learn this as a computer scientist. ",
+            "\u00a0It's a good course to teach you a lot of the relational database fundamentals that are widely applicable in industry. Material isn't too challenging and the exams are pretty fair. The project was by far the best part of the course, but there aren't any checkpoints so you have to self-pace. All in all, a well-organized course that teaches you important material. ",
+            "\u00a0Took it as a CS gut, but turned out to be pretty interesting. Definitely more interesting than Principles of OS with Avi. Avi is a good lecturer if you can wake up for the lecture and this material is relatively interesting. You have to take a bunch of electives,  I'd take this one if you have any interest. TFs this semester were not the best so we only had 3 assignments and with a good group the project is very easy. ",
+            "\u00a0Knowing the basics of database systems is pretty important for any computer science major. That being said, this class doesn't really challenge you or ask you to understand the underlying structure for building a database (or DBMS)-- there are a couple multiple-choice/short answer problem sets and one that involves writing SQL queries. The TF's for this course were great, but the material was perhaps less than exciting. If you're looking for an easier CS elective, take this-- but otherwise maybe look for database knowledge elsewhere. ",
+            "\u00a0In order to get anything worthwhile out of this class, you have to be incredibly diligent and motivated to facilitate your own learning. There is essentially to structure or organization provided by other Avi or the TAs. "
+        ]
+    ]
+}

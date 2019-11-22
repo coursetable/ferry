@@ -1,0 +1,75 @@
+{
+    "crn_code": "10932",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            1,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            1,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about applied methods in labor econ. I could improve my previous knowledge and extend it to new methods and models both empirically and theoretically, whereby there was a slight focus on the empirical methods. \r\n\r\nI liked the selection of topics, going beyond the usual labor topics of taxation, labor supply, and education. ",
+            "\u00a0Topics covered in labour economics, methods used in advanced structural estimation "
+        ],
+        [
+            "\u00a0Strength:\r\n- Reading group: It really helped to read papers on the various topics which highlighted different aspects than the ones discussed in class\r\n- Knowledgeable professor: Always pointed out the strengths and weaknesses of papers which helped to assess what can be done and what is beyond the paper\r\n- Reasonable overview of various topics\r\n\r\nWeaknesses:\r\n- Should impose more structure on discussing the theoretical and empirical derivations. Discussion of results should not take up that much time\r\n\r\n- Maybe proceed at a slower pace. Sometimes it was a little bit too fast\r\n\r\n- End on time ",
+            "\u00a0This course could be improved by ensuring the common objective among topics and outlining a structure in which the literature has evolved. "
+        ],
+        [
+            "\u00a0Yes at it is a reasonable course for learning the up-to-date methods in research even if you are not interested in labor econ.\r\n\r\nIf you are interested in labor econ, obviously you have to take the class! Costas is a brilliant instructor and he puts forth a lot of effort to teach this course which can be seen in his slides and his engagement in class. ",
+            "\u00a0Especially if someone is interested in structural estimation. ",
+            "\u00a0I would recommend this course to another student because it is a well-balanced course, covering theoretical models, econometric tools and applied topics. Summing up, it is a very complete course. "
+        ]
+    ]
+}

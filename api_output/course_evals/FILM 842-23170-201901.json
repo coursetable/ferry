@@ -1,0 +1,77 @@
+{
+    "crn_code": "23170",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            2,
+            1
+        ],
+        [
+            1,
+            0,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course asked us to think broadly and generously about the screen as an object and as a set of practices. ",
+            "\u00a0I engaged with a new definition of the screen medium that will stay with me on future excursions into media studies. ",
+            "\u00a0An interesting course on the environmental aspects of the screen. "
+        ],
+        [
+            "\u00a0This course was disorganized. It is clear that Professor Buckley and Professor Casetti have spent a long time thinking about and theorizing the screen as an object and as a set of practices. But this course is not designed for students approaching these questions for the first time. In their over-enthusiasm to dismantle the screen, they refused to spend time defining or describing common conceptions of the screen. Part of the work of this course should have been to come up with a definition of the screen and practices of screening, which the class could challenge and rethink together. Not doing this work meant that at the end of the semester I was struggling to come up with a working definition of the screen by myself. The syllabus was also organized strangely. For example, the first four weeks of the class were devoted to outlining an \"archaeology\" of the screen. But I wish there had been more room for theoretical discussion on the terms and practices of Foucauldian archaeology vs. genealogy, which was not explained until the final week. ",
+            "\u00a0This class was clearly formulated around a single idea, but the level of engagement with said idea seemed to ebb and flow. Perhaps it would have been a good idea to read the book introduction at the beginning of the semester to have a common reference point? ",
+            "\u00a0I enjoyed the class, but felt that there was a disconnect between the two professors; it also felt scattered until the middle of the semester. ",
+            "\u00a0The amount of reading was reasonable and I enjoyed the format of having students bring in their image/ passage for the day. Wish there were more in-depth engagement with readings. "
+        ],
+        [
+            "\u00a0I would not recommend this course as it is currently designed for the reasons noted above. ",
+            "\u00a0I would recommend this course because I find the readings of the class applicable to most studies of contemporary (media) art and architecture. And although I would have often appreciated more close readings of texts, the image-based style of teaching was original and useful. "
+        ]
+    ]
+}

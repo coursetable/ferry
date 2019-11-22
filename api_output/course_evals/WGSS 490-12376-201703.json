@@ -1,0 +1,74 @@
+{
+    "crn_code": "12376",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            4,
+            1,
+            0
+        ],
+        [
+            0,
+            2,
+            4,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The collaborative structure of the course was nice, although we didnt learn much concrete skills. ",
+            "\u00a0I learned how to make a schedule to work on a big project like my thess. "
+        ],
+        [
+            "\u00a0Great opportunity to become familiar with and learn from the senior projects of other WGSS majors. Good way to structure different steps in the early senior essay writing process. I found that there were a few too many reflective writing assignments about the senior essay, and not enough assignments relating to actually writing the senior essay itself. Similarly, the senior presentation was a great experience, but I think having two presentations prior to working on and practicing the final one was one too many. ",
+            "\u00a0It was very helpful in thinking through the big ideas of my thesis, but I wish we spent more time writing and peer editing, as advisors work at variable paces. ",
+            "\u00a0Someties it felt like the activities were unncessary for actully writing my thesis and took away from the time I could spend on my thesis. However, the class did help me get more focus on how to approach my thesis. "
+        ],
+        [
+            "\u00a0If you're a WGSS major you have to take it...so yes. "
+        ]
+    ]
+}

@@ -1,0 +1,109 @@
+{
+    "crn_code": "21214",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            7,
+            14,
+            6
+        ],
+        [
+            0,
+            1,
+            16,
+            8,
+            1
+        ],
+        [
+            0,
+            2,
+            5,
+            18,
+            1
+        ],
+        [
+            0,
+            1,
+            10,
+            14,
+            1
+        ],
+        [
+            0,
+            0,
+            4,
+            17,
+            5
+        ],
+        [
+            0,
+            0,
+            15,
+            10,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about thermodynamic cycles and general processes ",
+            "\u00a0Knowledge of thermodynamics, analyzing cycles and systems. Very good description of the material. ",
+            "\u00a0I learned a lot about the basic principles of thermodynamics and how to apply them to cycles specifically. ",
+            "\u00a0This class teaches you how to reason through figuring out energy states at different points in a cycle, calculating efficiencies, and gives a basic understanding of enthalpy and entropy. Also good for understanding mass balance and dimensional analysis. ",
+            "\u00a0I learned the 3 laws of thermodynamics, thermodynamic properties, thermodynamic cycles, and thermodynamic relations ",
+            "\u00a0I gained a general understanding of thermodynamic principles with a focus on power cycles and efficiency.  The class is focused on teaching different methods for solving problems involving these cycles/processes. ",
+            "\u00a0I learned different thermodynamic concepts and cycles and how to apply them to problems ",
+            "\u00a0thermo from mechanical engineering perspective--thermo cycles mostly ",
+            "\u00a0General understanding of how to analyze the energy and work of thermodynamic systems. ",
+            "\u00a0Learned about a variety of thermodynamics including an array of power cycles, and was fascinated to learn how power plants function. ",
+            "\u00a0I gained useful skills of control volume and energy analysis that should help me in future mechanical engineering studies. ",
+            "\u00a0Fundamentals of engineering thermodynamics. Analyzing cycles. Understanding the laws of Thermodynamics. "
+        ],
+        [
+            "\u00a0The exams were not very consistent with what we learned in class and what the problem sets asked. I think class was structured reasonably well for the most part although sometimes it was difficult to follow all the way through derivations. Having a test be 3/5 content we haven't explicitly covered was frustrating. ",
+            "\u00a0Very good instructor, towards the end the material seemed a bit tacked on, perhaps keeping good transitions between topics through the end would be good. ",
+            "\u00a0Lecture is good, it's your typical engineering lecture. Judy is pretty funny at times though! I think the lectures are helpful, especially when we go through examples. ",
+            "\u00a0I thought the problem sets were very reasonable and well-balanced for this course, although giving a double-length problem set over spring break was frustrating. I think the thermodynamic relations section needs to be revisedit was very hard to develop intuition for why we were doing the things we were doing. I also think approaches for ideal gas/cp/cv problems could have been better explained. The power plant tour was great. ",
+            "\u00a0More practice exams for the finals. Better TA sessions. More practice problems during class that relate to PSET problems. ",
+            "\u00a0The material was easy to understand in class and for the homeworks but there was a big jump to the application on the exams. ",
+            "\u00a0The lectures can feel a little repetitive and monotonous but on the whole I learned what I would have expected. ",
+            "\u00a0This course is well structured. The lectures and PSETs correspond with each other well. ",
+            "\u00a0While the materials are great, the exams are quite arbitrary and depend on a lot of materials taken from sections not covered in class or psets. The performance throughout the semester is not an accurate indicator of your performance since the final exam holds such a high percentage of your grade and the exams are inconsistent with the material covered. ",
+            "\u00a0I think the course covers a lot of valuable information, and in general sets up and progresses through the material quite well. I think that there were few external hep sessions at times that are available to all students. ",
+            "\u00a0The exams did not seem matched to the problem sets. Prof. Cha is a pretty good lecturer, available for questions, and funny. ",
+            "\u00a0I think it would be nice to have a bit more application to real world problems and examples, instead of just the book examples. ",
+            "\u00a0psets are fine, exams are pretty hard. there could maybe be more context as to why this stuff is important ",
+            "\u00a0The main concern I have with this course is that it seemed like it was always taught such that we would be able to do pset problems. For that reason I don't really feel prepared for any real-world-stuff. Some of the exams had material that tested our conceptual understanding of it all, which was good, except we weren't taught to think that way and so I was always discouraged when I didn't know those underlying concepts. So yeah, I wish it were taught with more of a focus on the concepts behind it all, and how to think about it all more abstractly. I did think that the psets were reasonable and there was plenty of support, though. ",
+            "\u00a0I wish there were less direct teaching to the textbook, and better integration with other courses in the major and outside of it. This is a complaint I have about pretty much every Yale College STEM course I've taken. ",
+            "\u00a0it was pretty strong i just really struggled "
+        ],
+        [
+            "\u00a0Yes, the instructor is good, the problem sets are (for the most part) reflective of the content learned. ",
+            "\u00a0I would say only to take it if its required. Its very application heavy, so it's only interesting if you care about thermodynamic cycles. ",
+            "\u00a0I would recommend you take this before fluids (and even materials science) if at all possible, because both classes make lots of references to enthalpy etc. without stopping to explain. Prof. Cha is pretty good and is refreshingly not overly intense. Make sure you have a good concept of how things were derived for the examsdon't just learn equations. ",
+            "\u00a0Judy is an AMAZING teacher and really funny. Take her class! Thermo is a difficult subject in general but Judy makes it much more bearable and easier to understand. ",
+            "\u00a0Yes, thermodynamics is very important for engineers ",
+            "\u00a0If you are truly interested in thermodynamics it might be best to take CENG 300, but if you need it for your major, this class is definitely sufficient for learning the material. ",
+            "\u00a0Yes, this is a very important part of MechE, and it is taught well. ",
+            "\u00a0This is a useful course, very important to MechE. You don't have a choice but to take it because it's a requirement.. ",
+            "\u00a0yes, if you think you'll need thermo. psets are fine but exams are tough, and Judy doesn't curve the class much, so it's a hard A. not the most interesting material ",
+            "\u00a0I would recommend it if you have to take it. It became a drag near the end of the semester, and it wasn't easy by any means. But it can be interesting if you make it interesting for yourself. The homework problems are kind of like puzzles, which could be fun and rewarding. The lectures were pretty boring a lot of the time :( but they weren't too bad and they taught me what I needed to know. Read the textbook though! that's really helpful ",
+            "\u00a0Yes, if they find the material interesting and are not afraid of tedious calculations. ",
+            "\u00a0Yes, because among mechE classes it's pretty good and not too difficult. ",
+            "\u00a0If you are trying to become an engineer, absolutely take this class. Thermodynamics is very fundamental to mechanical engineering, and it is the prerequisite of a number of classes. "
+        ]
+    ]
+}

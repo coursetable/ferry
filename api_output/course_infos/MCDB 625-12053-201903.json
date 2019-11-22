@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50422/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The universal principles of genetic analysis in eukaryotes are discussed in lectures. Students also read a small selection of primary papers illustrating the very best of genetic analysis and dissect them in detail in the discussion sections. While other Yale graduate molecular genetics courses emphasize molecular biology, this course focuses on the concepts and logic underlying modern genetic analysis.", 
+    "title": "Basic Concepts of Genetic Anal...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "TAC N107", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12053", 
+        "listings": [
+            {
+                "number": "625", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jun Lu"
+    ], 
+    "long_title": "Basic Concepts of Genetic Analysis", 
+    "extra_info": "A"
+}

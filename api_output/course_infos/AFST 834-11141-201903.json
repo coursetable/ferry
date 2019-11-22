@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50269/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This readings course considers the cultural history of African communities, focusing on the nineteenth and twentieth centuries. Topics include art and the colonial encounter; popular culture and nationalism; histories of health and healing; performance, music, and writing in city life; and other subjects. Students read one monograph or selected articles per week, offer short response papers weekly, lead a class session, and present one historiographical essay at the end of the term.", 
+    "title": "Culture, Community, Nation in ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 212", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11141", 
+        "listings": [
+            {
+                "number": "834", 
+                "subject": "AFST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Daniel Magaziner"
+    ], 
+    "long_title": "Culture, Community, Nation in African History", 
+    "extra_info": "A"
+}

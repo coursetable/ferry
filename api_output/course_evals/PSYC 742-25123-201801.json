@@ -1,0 +1,74 @@
+{
+    "crn_code": "25123",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            1,
+            1,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0learnt about works that happened in and out of the lab\r\npracticed first-year talks ",
+            "\u00a0There were some really great presentations. "
+        ],
+        [
+            "\u00a0it's always engaging and informative\r\nmaybe it could be better organized and have more contents\r\nfood is great ",
+            "\u00a0I think this lab group could do a really good job of coming up as a group with interesting experiments to run if we started out some meeting with a broad question relevant to our shared interests - \"Suppose you think X; how would you test it?\", and then started trying to break all of the experiments we proposed. "
+        ],
+        [
+            "\u00a0yes ",
+            "\u00a0Absolutely, Julian has a great lab set up, and has interesting outside speakers coming in. The lab group is very friendly and has produced some cool research. "
+        ]
+    ]
+}

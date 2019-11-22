@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50301/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course approaches modern and contemporary Italian literature through the prism of translation studies and critical multilingualism studies. In order to consider the role of translation and linguistic diversity in the formation of a national canon, we focus on texts that come from Italy\u2019s contested and linguistically hybrid borderlands such as Trieste and Sicily, on the literature of the Italian diaspora, on postcolonial italophone literature, and, finally, on the transnational circulation of literary texts. Students learn to examine the place of multilingualism in the construction of a national culture; consider the role of literary translation in national canon formation; and rethink translation as a continuum of cultural and linguistic practices\u2014including migration, self-translation, and translingualism\u2014which the class situates and interrogates in their historical context.", 
+    "title": "Translation and the Politics o...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WALL81 101", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13658", 
+        "listings": [
+            {
+                "number": "945", 
+                "subject": "ITAL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jane Tylus"
+    ], 
+    "long_title": "Translation and the Politics of Language in Italy\u2019s Borderlands", 
+    "extra_info": "A"
+}

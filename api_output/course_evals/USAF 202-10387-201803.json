@@ -1,0 +1,78 @@
+{
+    "crn_code": "10387",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            3
+        ],
+        [
+            2,
+            3,
+            2,
+            0,
+            1
+        ],
+        [
+            4,
+            3,
+            0,
+            0,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned important concepts related to becoming an Air Force officer. ",
+            "\u00a0I learned about a variety of topics that will be important in the future as an Air Force officer, ranging from problem solving skills to the types of leadership. ",
+            "\u00a0I better understood what some of the skills are that make up a good leader. ",
+            "\u00a0General Air Force information "
+        ],
+        [
+            "\u00a0It is well organized and covers relevant concepts for what our future careers entail. I think the weakness is that it leaves the majority of the work in the students' hands and therefore, is not as well-taught. ",
+            "\u00a0The course was very interesting and the topics were very applicable. I liked how we had to give the presentations about the topics of the course because this system gave us the opportunity to practice public speaking. ",
+            "\u00a0Nice that cadets teach each other, but more input from cadre would have been good. ",
+            "\u00a0It's a good class, I liked how students presented the information every lecture instead of the same cadre member. "
+        ],
+        [
+            "\u00a0Yes, I would recommend the course to another student because it well-structured and taught us very applicable information. ",
+            "\u00a0If you are in AFROTC, yes! "
+        ]
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49783/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Students wishing to undertake an independent senior essay in English must apply through the office of the director of undergraduate studies in the previous term; deadlines and instructions are posted at english.yale.edu/undergraduate/applications-and-deadlines. For one-term senior essays, the essay itself is due in the office of the director of undergraduate studies according to the following schedule: (1) end of the fourth week of classes: five to ten pages of writing and/or an annotated bibliography; (2) end of the ninth week of classes: a rough draft of the complete essay; (3) end of the last week of classes (fall term) or end of the next-to-last week of classes (spring term): the completed essay. Consult the director of undergraduate studies regarding the schedule for submission of the yearlong senior essay.", 
+    "title": "The Senior Essay I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10972", 
+        "listings": [
+            {
+                "number": "490", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Benjamin Glaser"
+    ], 
+    "long_title": "The Senior Essay I", 
+    "extra_info": "A"
+}

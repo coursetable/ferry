@@ -1,0 +1,71 @@
+{
+    "crn_code": "21664",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            3,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course helped me to work on my writing craft and to encounter some productive friction with my intellectual arguments. "
+        ],
+        [
+            "\u00a0Strengths:\r\n\r\n-Everyone is treated the same way regardless of where they are in the program/writing process.\r\n-The discussion is generally very supportive and constructive, with a focus on everyone helping to improve each other.\r\n-The collaborative nature of the course made it feel like one's own work is not just a solitary effort, but the product of a supportive intellectual community.\r\n\r\nWeaknesses:\r\n\r\n-It's abundantly clear who reads and who does not. This not only impoverishes the kind of feedback given (since it all comes from the same one or two people), but it also risks making the presenter feel that their work is undervalued or undersupported by their peers. This seems especially one-sided given the fact that we all present something at one point in the semester or another: it's clear that some students are far more willing to take support/feedback than they are to give it. "
+        ],
+        [
+            "\u00a0It's generally required of us if we're in residence, but I don't see why anyone wouldn't take it. It's a rare opportunity in our field to have an entire room of people read through your work very carefully and to challenge the way you're thinking about things in a productive way. "
+        ]
+    ]
+}

@@ -1,0 +1,81 @@
+{
+    "crn_code": "11423",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            5,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This is a huge question for a four month-long course. Of course, I learned a lot, but one of the most important skills was how to make the distinction between discussing actual architecture and discussing the architectural discourse. ",
+            "\u00a0The required readings for the class offered a variety of information and insight into a multitude of topics that ultimately tied together into the overarching theme of the course. The thought-provoking class discussions forced me to digest and analyze these readings, which were applicable to other classes I was taking. ",
+            "\u00a0Got a great overview in texts in media studies and was pushed to think cross-disciplinarily in exciting ways ",
+            "\u00a0I gained a lot of knowledge about the history of film and film technologies, as well as an overview of theoretical approaches related to the intersections of film and architecture. ",
+            "\u00a0- Expanded my knowledge of architecture\r\n- Interesting insight on how the kinetic image has influenced architecture "
+        ],
+        [
+            "\u00a0One of the strengths of the course is how intense the student participation was. We ended up going over the allotted time slot during each session. I think this is partly due to the fact that most of the readings were very good, and that the class was dominated by student presentations, which provided a lot of material for discussion. Although I thought that the student presentations were helpful (to the class as a whole and to the individual students), there were so many of them (three per student) that the readings sometimes got short shrift. If the class had been smaller, perhaps three presentations per student would have been fine, but because the class was comparatively large for a seminar, two presentations probably would have sufficed. ",
+            "\u00a0In-class presentations were helpful in understanding specific topics and objects. Visual presentations are particularly helpful, so it might be good to require them for reading presentations, in addition to object presentations. ",
+            "\u00a0- Student presentations added to discussions each week\r\n- Readings were fitting and helpful\r\n- Very interesting examples and material were covered by the seminar\r\n- Sometimes the discussion of certain topics could have been framed a little more into a specific direction "
+        ],
+        [
+            "\u00a0Absolutely. I really liked the course, and it sounds like the other students in the course liked it, too. Also, I would recommend students take a class with Craig because he instills three good habits: 1. insuring the accuracy of historical information; 2. carefully reading and re-reading a text before criticizing it or calling it \"problematic\"; 3. preparing polished, written-out final presentations ",
+            "\u00a0I would recommend this course to other students, particularly if they are interested in film, architecture, and art theory. The course does an excellent job of integrating a wide variety of topics. ",
+            "\u00a0yes, would recommend ",
+            "\u00a0Yes, fascinating course with a clear progression from topic to topic. ",
+            "\u00a0I would recommend this class to other students, because the material was very interesting, the seminar was well-organized and I feel like it added to my overall knowledge of architecture and its connection to cinema. "
+        ]
+    ]
+}

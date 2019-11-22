@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50233/assignments/syllabus", 
+    "requirements": "Open to undergraduates with permission of the instructor.", 
+    "description": "A research seminar focused on methodological questions of geography and geographic analysis in historical scholarship. We consider approaches ranging from the Annales School of the early twentieth century to contemporary research in environmental history, history of science, urban history, and more. We also explore interdisciplinary work in social theory, historical geography, and anthropology and grapple with the promise (and drawbacks) of GIS. Students may write their research papers on any time period or geographic region, and no previous experience with geography or GIS is necessary.\nOpen to undergraduates with permission of the instructor.", 
+    "title": "Geography and History", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "SML 177", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11111", 
+        "listings": [
+            {
+                "number": "913", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "William Rankin"
+    ], 
+    "long_title": "Geography and History", 
+    "extra_info": "A"
+}

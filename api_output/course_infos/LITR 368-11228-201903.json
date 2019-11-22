@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50329/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Close study of the intersection of aesthetics and ethics with regard to how German films, since 1945, have dealt with Nazi history. Through the study of German-language films (with subtitles), produced in postwar East, West, and unified Germany through 2007, students consider and challenge perspectives on the Third Reich and postwar Germany, while learning basic categories of film studies.", 
+    "title": "The Third Reich in Postwar Ger...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 204", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11228", 
+        "listings": [
+            {
+                "number": "368", 
+                "subject": "LITR"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YFIN\">YC FILM Stud: World Cinema</a>"
+    ], 
+    "professors": [
+        "Jan Hagens"
+    ], 
+    "long_title": "The Third Reich in Postwar German Film, 1945-2007", 
+    "extra_info": "A"
+}

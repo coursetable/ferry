@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49583/assignments/syllabus", 
+    "requirements": "After CPSC 365 or 366; a solid background in probability is desirable.", 
+    "description": "A study of randomized algorithms from several areas: graph algorithms, algorithms in algebra, approximate counting, probabilistically checkable proofs, and matrix algorithms. Topics include an introduction to tools from probability theory, including some inequalities such as Chernoff bounds.\nAfter CPSC 365 or 366; a solid background in probability is desirable.", 
+    "title": "Randomized Algorithms", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WTS A60", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10697", 
+        "listings": [
+            {
+                "number": "469", 
+                "subject": "CPSC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "James Aspnes"
+    ], 
+    "long_title": "Randomized Algorithms", 
+    "extra_info": "A"
+}

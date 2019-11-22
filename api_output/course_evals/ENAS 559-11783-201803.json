@@ -1,0 +1,78 @@
+{
+    "crn_code": "11783",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0- How to set up models for kinematic chains, including modeling the relationship between forces and torques\r\n- How to choose an appropriately defined and scoped research question\r\n- How to non-dimensionalize equations\r\n- From my personal course project, how to model continuaa in presence of gravity and piecewise constant curvature\r\n- Introductory use of tensors\r\n- Knowledge of a couple common models of muscle activation, force-velocity characteristics, etc.\r\n- Knowledge of a few constrained optimization tools ",
+            "\u00a0Coming into the course, I expected to leave with a knowledge of neuromuscular biomechanics, and this indeed has been the case; I can now read and evaluate literature in the field.  However, I was pleasantly surprised that I also gained new perspectives on how to think about research and scientific questions.  As a graduate student, I expected this to come mostly from my own advisor but not from a course. ",
+            "\u00a0The most important concept the course taught was the synthesis of a good research question. To this extent, the course engaged the students in critically examining the literature in the field of neuromuscular biomechanics. In terms of topics, I learned much about mechanics, dynamics, and the current understanding of muscles. "
+        ],
+        [
+            "\u00a0The course covers lots of topics pretty quickly. This is a good thing.\r\n\r\nIf there were less diversions early on, that would make the course more efficient. I often had difficulty figuring out why we went so deep into some of the side-topics, when they weren't useful relative to other topics including muscle modeling, constrained optimization, and discussion of Jacobians. ",
+            "\u00a0The project was a strength, as it allowed us to apply what we learned.  The flexibility of the course in adapting to questions we had and directions we were interested in was also a strength.  Another strength was the detailed paper dissections. ",
+            "\u00a0Strengths:\r\n   - I thoroughly enjoyed lectures. I found that they were thoughtful and engaging. It was clear to all students that the lecture material was complied from multiple sources and structured to fit the academic backgrounds of the 8 or so students present.\r\n   - The homework assignments were also worthwhile to do. Each problem was obviously designed to re-enforce concepts; there was never a sense of solving it just for the sake of doing so.\r\n   - The instructor was actively seeking feedback for all elements of the course and was always receptive of feedback given. \r\n\r\nWeaknesses:\r\n  - One of the requirements of the course was a final project assignment. Each student (or team) were to formulate a question, perform a literature search, and present an preliminary analysis. I personally find such class projects to be unduly stressful with minimal intellectual gain. I would rather spend that time on lectures and problem sets. ",
+            "\u00a0The strengths of the course are that it acclimated the students to reading papers and posing questions to ascertain its validity. "
+        ],
+        [
+            "\u00a0Yes. It is a decent course. The instructor is very intelligent and can analyze problems at a detailed level, from multiple perspectives. ",
+            "\u00a0Take this class.  Just do it. ",
+            "\u00a0Yes! Any student interested in Biomechanics and seek the mathematical \"language\" of the topic should take this class. "
+        ]
+    ]
+}

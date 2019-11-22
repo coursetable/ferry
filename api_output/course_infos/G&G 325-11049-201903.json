@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49994/assignments/syllabus", 
+    "requirements": "Prerequisite: E&EB 225, or with permission of instructor.", 
+    "description": "Phylogeny and evolution of the major clades of vertebrates from Cambrian to Recent, as inferred mainly from the fossilized remains of the musculoskeletal system (cranial, axial, and appendicular skeletons).\u00c2\u00a0Special attention given to the evolution of vertebrate feeding, locomotor, and sensory systems.\nPrerequisite: E&EB 225, or with permission of instructor.\n\n1.5 Yale College course credits", 
+    "title": "Vertebrate Paleontology", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "KGL 122", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11049", 
+        "listings": [
+            {
+                "number": "325", 
+                "subject": "G&G"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jacques Gauthier"
+    ], 
+    "long_title": "Vertebrate Paleontology", 
+    "extra_info": "A"
+}

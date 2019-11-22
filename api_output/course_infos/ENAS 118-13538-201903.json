@@ -1,0 +1,50 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49595/assignments/syllabus", 
+    "requirements": "Priority to freshmen.", 
+    "description": "An introduction to engineering, innovation, and design process. Principles of material selection, stoichiometry, modeling, data acquisition, sensors, rapid prototyping, and elementary microcontroller programming. Types of engineering and the roles engineers play in a wide range of organizations. Lectures are interspersed with practical exercises. Students work in small teams on an engineering/innovation project at the end of the term.\nPriority to freshmen.", 
+    "title": "Introduction to Engineering, I...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "BCT 107", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 10
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13538", 
+        "listings": [
+            {
+                "number": "118", 
+                "subject": "ENAS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Vincent Wilczynski", 
+        "Lawrence Wilen"
+    ], 
+    "long_title": "Introduction to Engineering, Innovation, and Design", 
+    "extra_info": "A"
+}

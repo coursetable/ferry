@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49764/assignments/syllabus", 
+    "requirements": "Application required in advance; see the English website for deadline and instructions.", 
+    "description": "A seminar and workshop with the theme \"At Home in America.\" Students consider the varied ways in which modern American literary journalists write about people and places, and address the theme themselves in both reportorial and first-person work.\nApplication required in advance; see the English website for deadline and instructions.", 
+    "title": "Advanced Nonfiction Writing", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "LC 212", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10967", 
+        "listings": [
+            {
+                "number": "469", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENW\">YC English: Creative Writing</a>"
+    ], 
+    "professors": [
+        "Anne Fadiman"
+    ], 
+    "long_title": "Advanced Nonfiction Writing", 
+    "extra_info": "A"
+}

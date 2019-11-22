@@ -1,0 +1,71 @@
+{
+    "crn_code": "15453",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            3
+        ],
+        [
+            0,
+            2,
+            0,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [],
+        [
+            "\u00a0As with any graduate topics class, the material moves quickly and often is very specialized (thus difficult to find references). I think if the class had had more regular(incremental) written assignments I might have been a bit less lost. But the subject is very rich and Prof. Minsky brings it to life. "
+        ],
+        [
+            "\u00a0This was a fascinating and beautiful class. The story of hyperbolic 3-manifolds and Kleinian groups is deep and cool. Professor Minsky is a fantastic professor, and he really makes geometry beautiful. ",
+            "\u00a0Hyperbolic geometry! Minskys classes are always a blast. Take a class with manifolds (complex II, probably) and have a basic idea of topology before this one, if you are an undergrad. ",
+            "\u00a0Yes. "
+        ]
+    ]
+}

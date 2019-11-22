@@ -1,0 +1,107 @@
+{
+    "crn_code": "23201",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's provided students with helpful and timely feedback",
+        "The instructor established a positive learning environment",
+        "The instructor raised questions or problems that encouraged me to think critically"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            11,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            8,
+            7,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            7,
+            6
+        ],
+        [
+            0,
+            0,
+            2,
+            9,
+            6
+        ],
+        [
+            0,
+            0,
+            2,
+            6,
+            8
+        ],
+        [
+            0,
+            0,
+            2,
+            6,
+            8
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a015 hours. ",
+            "\u00a08-10 hours. I don't know. This course is so hard. ",
+            "\u00a010 ",
+            "\u00a04-6 ",
+            "\u00a020h ",
+            "\u00a0Seven to ten hours. ",
+            "\u00a04 hours ",
+            "\u00a010 ",
+            "\u00a04-6 hours ",
+            "\u00a08 ",
+            "\u00a04 "
+        ],
+        [
+            "\u00a0The course provides theoretical basis of survival analysis, it is useful ,but it is also very difficult to understand. The notations in slides and textbook are different, probably they could be changed to the same, and slides could include more details. ",
+            "\u00a0GREAT. HIGHLY RECOMMENDED. ",
+            "\u00a0Great course for learning fundamental theory of survival analysis. ",
+            "\u00a0good ",
+            "\u00a0This course focused more on theoretical basis of survival data analysis. Sometimes it's demanding for you to understand the materials. ",
+            "\u00a0Hard tests ",
+            "\u00a0recommended if you are in a biostats program and want to refresh yourself about some theoretical stats ",
+            "\u00a0The course is extremely difficult and theoretical. I think it required a solid background in statistical theories to begin with. It might be better if Dr. Ma could make it very clear about the expectation on each part of the material. For example, which part requires a solid understanding and you should be able to derive that by yourself. ",
+            "\u00a0Great! I learned a lot of things. "
+        ],
+        [
+            "\u00a0He is humorous and very nice, and he always talks jokes in class. But it would be better if he posts homework related to exams. ",
+            "\u00a0GREAT INSTRUCTOR ",
+            "\u00a0He was good at illustrating theoretic concepts by simple examples. But his handwritings on the blackboard could be cleaner and tidier. ",
+            "\u00a0good ",
+            "\u00a0Dr. Ma introduced many theories behind the methods, but often times it's in an intuitive way. I hope more detailed information can be provided. ",
+            "\u00a0Nice professor ",
+            "\u00a0Humorous, have high standard for us, could be maybe a little bit more organized in the teaching content ",
+            "\u00a0Dr. Ma is very responsive and approachable. For a torturing course, he is still a great instructor! ",
+            "\u00a0Prof. Ma is great! "
+        ],
+        [
+            "\u00a0The course is a little bit hard to learn, but it is helpful if you are a PhD. ",
+            "\u00a0RECOMMEND ",
+            "\u00a0This course focuses more on theoretic part of survival analysis. It is good course for PhD students. ",
+            "\u00a0good ",
+            "\u00a0A good course if you want to get some flavors of the theory of survival analysis. Yes, I would recommend it. ",
+            "\u00a0Recommended if you want a refresh on theory stats ",
+            "\u00a0Yes, I would. "
+        ]
+    ]
+}

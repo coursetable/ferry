@@ -1,0 +1,86 @@
+{
+    "crn_code": "12608",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            1
+        ],
+        [
+            1,
+            1,
+            5,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to turn a biological questions into a mathematical model and how to interpret a model. ",
+            "\u00a0I learned not some much about how to use math in models, but more so how to ask questions that can be answered with models.  The whole class was really good for making me think about how to approach problems and frame questions. ",
+            "\u00a0This course gave a great exposure to applying mathematical modelling in evolutionary and ecological systems. Most importantly, I learned how to think about theoretical models. I also gained practical skills in building, simplifying, and assessing mathematical models. ",
+            "\u00a0A good overview of some of the basic models in ecology & evolution, along with approaches to analyze them. ",
+            "\u00a0A tour of quantitative modeling for Ecology/Evolutionary Biology, following the structure of the great Otto & Day textbook. We began the course by learning some basic modeling skills, as well as some basic models, and then transitioning into deriving the handful of classic models in Ecology and Evolution. The course then moved to focus on some outstanding issues in modeling (e.g., stochasticity). The final part of the course was dedicated to final course projects, in which each student modeling a system of their choosing. ",
+            "\u00a0Building models "
+        ],
+        [
+            "\u00a0I think it's a great course. It would be better if we could learn Mathematica from the beginning of the course and actually apply it for our final project. ",
+            "\u00a0It was great! No improvement needed. ",
+            "\u00a0The course was a very strong introduction to the topic, and the textbook was a great resource. Reviewing the models and questions from the book was usually very helpful, though at times this could be repetitive if it was already explained clearly in the book. I think some problem sets using Mathematica would have made the transition into using that easier. ",
+            "\u00a0I think the textbook is a huge strength, and thought the course could've been improved by cutting some of the discussion of papers and working through other models in detail in order to get through a few more chapters from the book. This also could've reduced the workload on Alvaro, who probably spent a lot of time preparing to directly analyze & derive the models in-class with us. This also, I think, could've improve the generality of the course. As-is it was good, but a lot of the models we directly worked on (or that Alvaro derived on the board with us) were pretty microbial-focused (which makes sense, given his background), but I think incorporating more content from the book could've helped us cover material relevant to everyone and gain some more skills for model building and analysis\r\n\r\nI also thought that when we were working through the problem sets, we could've just focused on the problems we found challenging. Later on in the course we moved to more of this model, but early on we went through a few problems without finding out whether any of us had struggled with those particular problems. ",
+            "\u00a0This was an incredibly useful course. It not only introduced us to key topics in and of themselves, we were also able to walk through the fundamental models in our discipline, and my deeper knowledge of\r\n\r\nWhile a few individual lectures in the middle of the course could have used slightly more context (our Poisson distribution discussion comes to mind), basically everything was not only directly useful, but also enjoyable.  \r\n\r\nMuch of the course was bolstered by the excellent textbook used for the course, which is one of those textbooks that you actually buy (!) and then actually keep (!!) and then actually use for reference (!!!) later one. ",
+            "\u00a0Very strong all around "
+        ],
+        [
+            "\u00a0Yes. Especially when you already have a question in mind to tackle. ",
+            "\u00a0Yes, absolutely.  I don't even like math, but I really enjoyed the classes and working on the final project. ",
+            "\u00a0Yes, I think this is a really important course for most EEB graduate students to experience. ",
+            "\u00a0Absolutely! Helps with learning model building and analysis in ways that few other courses can. ",
+            "\u00a0Yes! I would recommend this course to anyone who didn't study mathematics directly before beginning graduate school, as it gave a key set of basic skills for approaching modeling. ",
+            "\u00a0Highly recommend, incredible professor "
+        ]
+    ]
+}

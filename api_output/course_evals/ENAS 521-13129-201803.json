@@ -1,0 +1,75 @@
+{
+    "crn_code": "13129",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0learn lots of about thermodynamic and statistical mechanics. ",
+            "\u00a0Micharl did very impressive introduction on statistical thermodynamics, as well as MC simulation. Really enjoyed it! "
+        ],
+        [
+            "\u00a0A little too abstract. Too many conceptual stuffs ",
+            "\u00a0learned lots of stuff about thermo, which is really important for my research.\r\n\r\nweakness: too short about statistical mechanics ",
+            "\u00a0Very systematic.\r\n\r\nThe HWs can be posted earlier before due and recitation "
+        ],
+        [
+            "\u00a0Yes. it is interesting to learn. both professor and TF are really helpful. ",
+            "\u00a0Yes\r\nGood to build the fundamentals "
+        ]
+    ]
+}

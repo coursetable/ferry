@@ -1,0 +1,148 @@
+{
+    "crn_code": "23640",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's provided students with helpful and timely feedback",
+        "The instructor established a positive learning environment",
+        "The instructor raised questions or problems that encouraged me to think critically"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            13,
+            16,
+            1,
+            1
+        ],
+        [
+            0,
+            2,
+            8,
+            14,
+            7
+        ],
+        [
+            0,
+            2,
+            5,
+            8,
+            16
+        ],
+        [
+            0,
+            0,
+            2,
+            8,
+            21
+        ],
+        [
+            0,
+            1,
+            2,
+            4,
+            24
+        ],
+        [
+            0,
+            0,
+            5,
+            8,
+            18
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a03 ",
+            "\u00a02 hours ",
+            "\u00a05 ",
+            "\u00a03 ",
+            "\u00a01, about 4 on exams ",
+            "\u00a01 ",
+            "\u00a02 ",
+            "\u00a00-2 ",
+            "\u00a0< 2 on average; more than that during homework or exam weeks. ",
+            "\u00a04 ",
+            "\u00a03-5 ",
+            "\u00a02 ",
+            "\u00a02 hours ",
+            "\u00a01 hour ",
+            "\u00a04-5 ",
+            "\u00a02 ",
+            "\u00a01 hour ",
+            "\u00a05 hours ",
+            "\u00a05 ",
+            "\u00a05-10 ",
+            "\u00a02 ",
+            "\u00a03 hours per week for readings and lecture review\r\n5 hours for each homework assignment\r\n10-12 hours for each exam "
+        ],
+        [
+            "\u00a0very interesting topics and methods but poorly organized and difficult to follow along with coding \r\nwould be helpful to include more coding info in the lectures ",
+            "\u00a0Overall, I really enjoyed this class. I think the information was fascinating and I was introduced to a topic I knew nothing about. I left the class feeling pretty confident in some of the surveillance techniques we learned. I would say that I wish the teacher stayed more on track with the syllabus. We ended up only having 1 or 2 homework assignments and I feel like if we had had all 4 I could have practiced some of the methods more before the exams. As someone who does not really know how to code in R, I would have liked more instruction on the coding aspects than just sitting there and watching them run through the code. I appreciated what they did teach about R and know this is not an R class but I liked when they gave the R code with missing pieces because that actually required us to think through what the code was doing than just running the chunks. They should do more of that in the future. ",
+            "\u00a0Really enjoyed the class - think it covered a good range of topics! I would have enjoyed more hands on coding rather than filling in the blanks, but overall, I loved the course! ",
+            "\u00a0Strengths: Learn about surveillance and modeling, and actual applications of what we learn. Weaknesses: As someone without R knowledge, I was hoping to learn more R coding but it's very difficult to actually learn basics in this class when all the code is written out for you. I can definitely read some code and understand it better now, but if asked to write it, then I would have no idea. ",
+            "\u00a0This class was a bit of a mess.  We basically just sat there and watched Dan fumble with R code.  I felt the class had no active learning.  I did not learn any R though this course like I hoped.  You just click \"run\" on R markdowns.  I felt very unengaged during lectures and found the course boring to just watch R output in class. ",
+            "\u00a0I learned so many new skills during this course. The lectures and assignments are super interesting and I felt as though I could apply what I learned to my research or a career. Very useful! ",
+            "\u00a0Though it wasn't what I expected, I enjoyed the course and feel like I learned a lot. ",
+            "\u00a0This was my favorite class I have taken at YSPH!!! As a graduating second-year, I am so happy my schedule allowed me to take this class.  Especially as an EMD student, this course was tailored to surveillance methodologies I know I will rely on throughout my career, such as aberration detections, modeling trends, and creating cluster maps.  Dan even showed us how to make an interactive web app for clustering given various factors that I know I'll try to utilize in the future.  The subjects we discussed every class period were all so fascinating and I loved being able to follow along in R as Dan or Kayoko explained the code and how each portion worked.  Not only was the material fun and engaging, the course work was relatively light.  Given that half of the students were drowning in thesis work, this class provided a great respite from other stressors.  In every way, this was a class focused on getting students to actually learn and engage with the material, and not just do busy-work to get grades.  I can't say enough great things about this class and Dan; I hope the school continues to offer this course! ",
+            "\u00a0Overall, I felt that the course was not terribly engaging. Dan is a really nice person and engaging lecturer, but the course structure and material leaves a bit to be desired. We did not do much coding ourselves (a bit here and there during the homeworks and exams), and we mostly followed along pre-written code during class. I did not feel like I have a solid grasp of R despite this course heavily focusing on it. I felt that I learned R more in other classes not emphasizing it as much, such as Ted's transmission dynamics models course. It could be improved by the students doing a little more coding on the homework and/or exams. Maybe the class can be divided into 1 day for the lecture and 1 day for a lab \"tutorial\" to better facilitate this. ",
+            "\u00a0Very well organized. Thought the work was worth doing and gave space to learn something new. \r\n\r\nThe course could use a little more explanation of the code from labs as translations of concepts. Labs could be made more useful if we had to code more of it to ensure that we understand how to implement the methods. ",
+            "\u00a0I really enjoyed this course.  I learned a lot of surveillance methodology that I did not know before.  The material was presented clearly and the assignments/tests were more than fair. ",
+            "\u00a0Overall, the class was a great introduction to methods to identify aberrances and use of health systems data to evaluate public health interventions. ",
+            "\u00a0More straightforward lecture material? I really appreciated the in-class exercises and the format of the homework assignments and exams, however, I feel like without those things I had no grasp of what was really being taught in the lectures. ",
+            "\u00a0probably my favorite class this semester! Both concept and methods driven with hands on components and labs. great! Maybe give more homework assignments that allows for us to do hands on coding rather than just manipulating code. ",
+            "\u00a0I think it would be helpful to break down the R code a bit more; it was sometimes hard to interpret the code in the Rmd files. ",
+            "\u00a0good ",
+            "\u00a0Extremely useful class, may need introductory skills in R prior to taking the class even though the class instructor said it was not necessary. ",
+            "\u00a0strength: hands-on analysis ",
+            "\u00a0Overall, I really enjoyed this course and I learned a lot of concepts that will be valuable in my future career. While I felt that I did not get to learn R as well as I would have liked, I appreciated the effort the instructor and the TFs put in to explain the meaning and purpose of the code. At the very least, I can understand what the code is saying, which I can build off of. \r\nStrengths:\r\n-instructor and TFs were amazing, very helpful, and greatly conveyed their desire to help out students\r\n-concepts and topics were very relevant and have definite future applications\r\n-in-class activities were helpful for hands-on learning\r\n-notes will be helpful for future reference\r\n-Enjoyed the last series in the course, working with PCVs and understanding what information to give different stakeholders and organizations\r\n\r\nWeaknesses: \r\n-While I do have some confidence in reading and evaluating R code, I don't feel confident using R or writing code on my own; while I understand the purpose of the class was not to learn R specifically, it's difficult to not compare to classes like AAME where I not only learned to read and evaluate the code, but to also be able to write out the code on my own, understand the basics of the program, and troubleshoot most issues. I also acknowledge the programs are not equivalent, but I was looking forward to be more adept at R through class ",
+            "\u00a0The course was very good. I learned a lot about different surveillance methods. I liked how applied the class was and that worked with real-life datasets to practice methods. There was a little bit of a learning curve to using R, but I got the hang of it pretty quickly. The course started out slow, but I definitely enjoyed it. ",
+            "\u00a0The course was good but it felt a bit rushed. ",
+            "\u00a0Great class, I learned a lot! Definitely very useful skills if you are interested in surveillance. Would have been nice to have some coding practice (rather than going through existing codes), but I understand that this might not be feasible within the scope and time frame of the course. ",
+            "\u00a0This is very interesting and valuable course on surveillance methods. The material is excellent and presented in a very understandable way. The organization of methods taught in the latter third of the course felt somewhat confusing though. Some of the guest lectures were well-intentioned but did not add a great deal to the course because they lacked focus or failed to emphasize methods and rationales. "
+        ],
+        [
+            "\u00a0Daniel Weinberger was a great teacher. He is very thorough in explaining concepts and does not mind repeating himself over and over until we understood the material. Like I said above, I just wish he had kept to the syllabus more and maybe offered more practice with the actual coding of the techniques we learned. Overall, I thought he was a great professor and very much enjoyed learning this new topic from him. ",
+            "\u00a0thank you!! ",
+            "\u00a0He is very kind and approachable and patient whenever questions are asked. No suggestions for improvements. ",
+            "\u00a0Dan is very smart, but this class needs work.  The class should be more engaging rather than just running through R code. ",
+            "\u00a0Great professor! He breaks complicated concepts down very easily and allows students plenty of time and opportunity to troubleshoot assignments. I appreciated that his lectures are a nice mix of concepts and applied skills. ",
+            "\u00a0Dan is the best!  He is genuinely vested in trying to get students to actually learn the material and it shows.  His passion for the subjects are infectious and his lecture style is very engaging.  There wasn't a class the entire the semester that I was bored in at one point or another.  Dan was receptive to comments from students and is clearly always trying to improve the course.  For example, about halfway through the semester I had mentioned wanting the equivalent SAS code to what we were doing in R, just so I could more easily apply these methods in the future should my career require the use of SAS.  Sure enough, the very next class he had created a file in which he would continue to post both the SAS and R codes.  By far one of the kindest and intelligent professors at YSPH; take any class you can with him! ",
+            "\u00a0Dan is far and away the best part about the course. He's extremely nice and his sense of humor is great. The issues with the course are more with the course structure than his teaching methods. ",
+            "\u00a0Dan is a great professor.  He made this material engaging, and I appreciate his use of real-world scenarios/data in our activities. ",
+            "\u00a0I appreciated going through the R code together in class. In addition to walking through the implementation of the methods, it was nice to pick up some new techniques to manage/view/edit data in R. Very approachable to ask deeper questions about the material. ",
+            "\u00a0Very knowledgeable about the material and receptive to student feedback and concerns. Felt very comfortable with him as a professor. ",
+            "\u00a0The professor was great at explaining concepts and always happy to help. Kayoko was also an amazing TF. ",
+            "\u00a0good ",
+            "\u00a0Dan was an amazing professor ",
+            "\u00a0Very informative ",
+            "\u00a0Dan was a great instructor who was very engaging and really supported students through the concepts and R learning. I appreciated the effort he put in to engage students with the concepts and doing R code, such as the in class activities. I felt the exams and homework were appropriate and tested on concepts and materials taught in class. ",
+            "\u00a0Dan was very helpful and knowledgeable. He was good at thinking on his feet and definitely had a strong command of the course material. ",
+            "\u00a0Great lecturer! ",
+            "\u00a0Daniel is an expert in infectious disease surveillance methodologies and I learned a lot from him. He is also very patient, kind and helpful. The first in-class exercise was not a success due to a lack of proper organization but Daniel listened to our feedback and made adjustments so that the remaining in-class exercises were much more beneficial. "
+        ],
+        [
+            "\u00a0I would say this course is definitely feasible for someone with very little R background. I would also say that it is a very interesting course where you can learn some cool new methods. I liked that it took a different view of many of the public health courses I have taken prior that have focused on interventions. This really got you to think about how do you evaluate the success of an intervention. ",
+            "\u00a0Foundational knowledge course for surveillance methods and its applications. Yes I would recommend this to a student since it can be very helpful. ",
+            "\u00a0I would not recommend this course.  It was not engaging.  If the course was re-vamped, then it would have potential.  Exams were very fair and reflected the material taught well, but I felt as though most of my learning was done through taking exams.  The class needs to be more engaging than watching R code be run. ",
+            "\u00a0Take this course if you thin you are remotely interested in surveillance.  You'll learn so many hard skills that will look good on your resume and you'll have a better idea of how public health works on the ground level. ",
+            "\u00a0I'd recommend this class to anyone and everyone.  It absolutely was one of my favorite classes I've ever taken, not only at YSPH but throughout my entire academic career.  The material and methodologies were fun and engaging, there was never any busy-work, and Dan and Kayoko literally gave you all the code you could need and then also went through it line by line explaining how it worked.  It was great following along with them and being able to do some small-group exercises that were never stressful or a waste of time, but rather a way for us to engage with the subject at hand better.  Also, the selection of speakers for the first few weeks of the semester was great.  The topics were interesting and it also provided students a way to ease into their potential last semester of school without any readings/homework for the first month (a major bonus for all of us stressing over our thesis).  All in all, I truly looked forward to class sections every week and am sad to see this course come to an end.  I can't recommend it enough! Take it if you're even only slightly considering it, you won't regret it! ",
+            "\u00a0I would only take it if you are really into modeling or learning more PH surveillance. As someone who wanted to take it for fun, it wasn't my favorite. There are some nuances with coding that only certain people would appreciate, and I didn't feel like I developed a solid grasp of R after the course. ",
+            "\u00a0I would recommend this course.  It teaches a lot of practical skills, and is very helpful for anyone in the field of public health. ",
+            "\u00a0I think this is an interesting class to learn about different kinds of methods and sources of data that can be used in surveillance to answer public health questions. There aren't regular assignments, which is nice, but the exams certainly require thoughtful meditation on the lecture material, so it is worth it to attend all lectures and especially implementation of the R code. ",
+            "\u00a0need more detailed course lecture ppt for self-learning ",
+            "\u00a0Highly recommend ",
+            "\u00a0recommend. learn methods that we will use in CDC ",
+            "\u00a0I would recommend the course to other students. Students interested in public health surveillance, want to know more about surveillance, and those who want more experience using R should take the class. The class teaches the basics of public health surveillance, how to evaluate and analyze associated surveillance data, how to collect data, and invites guest speakers to share their stories and experience with starting and running different types of surveillance systems. ",
+            "\u00a0I would recommend this course but it is not an introductory course to R. ",
+            "\u00a0This is a very interesting and worthwhile class on infectious disease surveillance methods. I'd say it is an essential course if you hope to work in public health epidemiology, in health departments, or in any line of work involving surveillance. "
+        ]
+    ]
+}

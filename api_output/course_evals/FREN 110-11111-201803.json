@@ -1,0 +1,75 @@
+{
+    "crn_code": "11111",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            0
+        ],
+        [
+            0,
+            2,
+            1,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to think in french. I also learned the basic techniques for conversation. ",
+            "\u00a0I have developed some skills in forming some basic tenses in French and have become more confident in forming short sentences and using different grammar rules. "
+        ],
+        [
+            "\u00a0I think they should incorporate  more english into the class to help understand more. ",
+            "\u00a0I appreciated the rigor of the course. However, I found that is had a disproportionate focus on a video and in that did not address the students interest in learning utilize the language. While it seems valuable to have content from the video, this should be reduced to allow the students to interact more with the language itself ",
+            "\u00a0I quite liked the way the course was laid out with the frequent tests which helped me to keep up with the content.  I think the immersion aspect of the course is good as it gets you used to hearing French. But for learning some of the more complex grammar rules I think it would have been useful to switch for English for just a small section of the class to avoid lots of confusion. "
+        ],
+        [
+            "\u00a0I think so yes. Though it was hard, I learned quite a bit about the french language. ",
+            "\u00a0I would recommend this course as it really does throw you straight into French and even though it is a lot of work it does teach you a lot in a short space of time. "
+        ]
+    ]
+}

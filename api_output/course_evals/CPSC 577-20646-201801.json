@@ -1,0 +1,92 @@
+{
+    "crn_code": "20646",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            6,
+            11,
+            4
+        ],
+        [
+            1,
+            1,
+            7,
+            7,
+            8
+        ],
+        [
+            0,
+            1,
+            5,
+            9,
+            8
+        ],
+        [
+            0,
+            0,
+            5,
+            11,
+            8
+        ],
+        [
+            0,
+            1,
+            9,
+            11,
+            3
+        ],
+        [
+            0,
+            0,
+            14,
+            7,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Exposure to many tasks in NLP and practical applications through the assignments. ",
+            "\u00a0Board knowledge from the natural language processing! ",
+            "\u00a0Basic NLP knowledge and algorithms and Deep learning application for NLP ",
+            "\u00a0dependency / lexicalized parsing, sequence tagging, HMM, Naive Bayes, EM, RNN, LSTM, GRU, semantic parsing, text classification ",
+            "\u00a0NLP ",
+            "\u00a0get a better understanding of all the NLP tasks, including HMM, naive bayes, neural networks, and so on. ",
+            "\u00a0Basic skills on NLP. The class was intriguing also for the lectures on the linguistics. ",
+            "\u00a0I have learned the basics of Natural Language Processing. "
+        ],
+        [
+            "\u00a0The course covers a broad spectrum of topics, which is good for exposure. I feel the course would have been better if it had chosen to focus on tensorflow or pytorch rather than switch from one to the other between assignments. ",
+            "\u00a0Exam overwhelming. Ask about random person. ",
+            "\u00a0The homework of this course is interesting and I can learn a lot from the homework. ",
+            "\u00a0strength: broad topics, clear content and helpful assignment to help better understand.\r\nweakness: perhaps a final project will be helpful too. ",
+            "\u00a0strength: interesting and cover a lot of material\r\nweakness: survey class so not dive into detail ",
+            "\u00a0The class covered a wide range of topics and it was interesting even for non-CS backgrounds. The homework was strongly correlated to the class, and it was very helpful for understanding the topics.\r\n\r\nWeakness may be that it covered a lot of topics so that some didn't have enough examples to understand, although the reading list was pretty helpful. ",
+            "\u00a0This course is a survey of the main areas and algorithms used in Natural Language Processing. It provides very limited knowledge. It has some broadness, but lacks depth. "
+        ],
+        [
+            "\u00a0Yes, good introduction to a very popular area. ",
+            "\u00a0Exam too ridiculous. ",
+            "\u00a0Highly recommended! ",
+            "\u00a0I would recommend this course to another student because it can help students to learn more about both language itself and techniques for language processing. ",
+            "\u00a0Yes. The course is vsery helpful ",
+            "\u00a0Kind of. If you are interested in NLP you should definitely choose it. But if you are not it is hard to drive yourself into a large number of readings ",
+            "\u00a0Yes, if you want to learn some NLP knowledge, this course is good for you. ",
+            "\u00a0Yes, totally. As long as students know how to code Python, the class should be very stimulating and insightful. ",
+            "\u00a0No. A student can just learn the same stuff by himself/herself with some open materials on the Internet. "
+        ]
+    ]
+}

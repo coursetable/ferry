@@ -1,0 +1,119 @@
+{
+    "crn_code": "13432",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's <b>sensitivity to students and ability to provide students with adequate feedback</b> was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            10,
+            7,
+            8
+        ],
+        [
+            3,
+            3,
+            10,
+            8,
+            3
+        ],
+        [
+            2,
+            4,
+            6,
+            9,
+            6
+        ],
+        [
+            3,
+            3,
+            5,
+            5,
+            11
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a04-6h ",
+            "\u00a05 ",
+            "\u00a03 ",
+            "\u00a03-4 hrs ",
+            "\u00a010-15 ",
+            "\u00a020 ",
+            "\u00a06 hours ",
+            "\u00a010 ",
+            "\u00a05 ",
+            "\u00a06 ",
+            "\u00a03 ",
+            "\u00a015hours ",
+            "\u00a010 hours ",
+            "\u00a0ABOUT FIVE TO SIX HOURS ",
+            "\u00a0five days. honestly. especially when there is a project ",
+            "\u00a0Anywhere between 5 hours to over 24 hours (looking at you, SAS project) ",
+            "\u00a05 hours ",
+            "\u00a04 ",
+            "\u00a0Over 15 hours. "
+        ],
+        [
+            "\u00a0It is a good introductory course to programming with SAS and R. Workload is not heavy. But the projects are a bit tedious. The grading of this course is not so generous though. ",
+            "\u00a0I think this was a great class. One comment that I have is that I felt that there was a stark difference between the difficulty of the SAS section and the difficulty of the R session. Obviously this is just my opinion but I have about the same level of familiarity with the two programs. I found that for the R assignment I had to spend a lot more time learning functions that weren't in the notes than I did for the SAS assignments. I guess one recommendation I have would be to spend more time covering basic R functions and leave out the final lecture (which was interesting but I would have appreciated front-loading with more information that would help us do the assignments). Also, I felt that the difficulty of the homeworks escalated dramatically from the lectures - going from simulating coin tosses (pretty clear, very intuitive) in class to simulating election results felt like a dramatic jump in complexity. Perhaps the lectures could cover material that is more closely the same level of complexity as the homeworks (for the R section)...\r\nOtherwise this was a great course!! ",
+            "\u00a0Strength: you get to learn the details of working in SAS and R that are not really useful unless you plan to go into biostatistics\r\n\r\nWeakness: Poorly taught, assignments/projects are poorly worded, grades are very inconsistent with directions given, instructor assumes students know how to work with R and assigns things that were not covered in class ",
+            "\u00a0productive skills in learning SAS and R programming.\r\n\r\nStrength: organized programming notes which allowed self-learning if I missed something in class. Also good explanation during class of logic in code.\r\n\r\nChallenges: homework assignment and examinations not necessarily directly related to skills learned in programming class. A lot of it required some element in ingenuity to figure out what was desired and thus resulted in much time being spent working on homework assignments. ",
+            "\u00a0The course could be structured more clear. Some of the concepts are hard and the instructor should give students more time to learn. The difficulty level of each homework is also very different. Some assignments are really hard. ",
+            "\u00a0The course is very helpful for learning to program in SAS. The R portion could be improved as it was much more difficult and some students had less background in R than SAS. The projects were massive and difficult and grading was pretty harsh ",
+            "\u00a0strengths: covered a lot of information,\r\nweaknesses: hard to see the programming code, should not be called \"advanced,\" level was like for beginners/intermediate ",
+            "\u00a0The grading is weird ",
+            "\u00a0Teach Basic SAS and R systematically \r\nThere are still a lot more we didnt learn ",
+            "\u00a0Strengths: Learned many essential skills to be a basic programmer in SAS and R \r\n\r\nWeaknesses: grading felt arbitrary and harsh, assignment prompt was very general but points were taken off for such specific things that were not mentioned in prompt, for the R portion of the class, the assignments did not reflect what we learned in class\r\n\r\nSuggestions: provide a grading rubric for each assignment, allow some room to code in a different way the professor might code something if the outcome is correct. ",
+            "\u00a0Strengths: Exposure to a variety of features and functions of SAS and R.\r\n\r\nWeaknesses: Class may be difficult for those who do not already have experience in SAS and R. ",
+            "\u00a0The class is useful for learning programming.\r\n\r\nspend too much time on homework ",
+            "\u00a0Strengths: I liked the format of this class. It differed from AAMIE in that the code was right in front of me (to run and annotate), as we were in lecture. This vastly improves learning these statistical programs. I also think there is value in learning to code efficiently, and to know the basics of more than one program. \r\n\r\nWeaknesses: I felt that the second half of the class (R) was rushed, and focused on different things. Rather than learning the same methods, but in R, we did a lot more simulations and the second project was much more ambiguous than the first. To aid in faster grading, maybe it would be better to have the projects be in groups. \r\n\r\nAlso, the assignments could have benefited from a rubric. You could complete an assignment according to the instructions, but still get an arbitrary number of points off for efficiency or something else unexpected. ",
+            "\u00a0This course systematically taught us all the programming knowledge about SAS and R.  It is very conducive class for learning big data cleaning and analysis. ",
+            "\u00a0The course material is well-organized and helpful. "
+        ],
+        [
+            "\u00a0Strength: she is very clear and well-organized. I could understand everything in the lectures. She is approachable for questions as well. \r\n\r\nWeakness: the grading is a bit strict. ",
+            "\u00a0Denise was great! Very responsive and helpful and flexible with office hours. I really enjoyed working with her. ",
+            "\u00a0The instructor's delivering was fine, but the grading was late, so timely feedback was hopeless. I think the instructor should be more clear on what she expects from the student. I was often getting points off for things not stated in the assignment. It was obvious that students will discuss the approach towards writing the code but you can get many points off for a really small mistake, which is understandable but is a poor reflection of what students actually learn from the course. The amount of points taken off should reflect the fixability of the error. \r\nAdditionally, the instructor stated that she will only accept universal codes, meaning there should be no error in the code when she ran it. However, the class note code that was prepared by the instructor was also prone to error. There had been many times that I could not run her code and could only saw her doing it on her computer. And I was not alone. If that's the case, it seemed unfair for her to ask the students to provide universal code. I understand that if the code didn't run on her computer, she couldn't grade. But it's only fair that she show some empathy and understand that this was not the student's intention, and it actually ran perfectly well on the student's computer. ",
+            "\u00a0Nice in person, office hour setting\r\n\r\nHer teaching needs to improve to actually cover the materials that she will assign to students for big projects\r\n\r\nDirections given in projects/assignments are very vague and poorly worded with no sense of detail/guidance; this leads to students having to make corrections (we get 6-8 updates per project) by the deadline time nears, which is very inefficient use of our time\r\n\r\nGrading is very slow and we got our \"midterm\" project graded back by the end of semester (when we had to turn in our \"final\" project)\r\n\r\nGrades inconsistently and docks chunks of points for things(coding) that she deem \"inefficient.\" Since there are no clear directions given in each assignment, students do not know how her grading guideline can be so strict\r\n\r\nIf you do not have experience in R and plan to learn it through this class, do not! ",
+            "\u00a0effective in explanation of programming logic ",
+            "\u00a0Her teaching is very fast. And the office hour is short. The instructor could be more patient and learn to understand student's need. Also, the grading is too strict. It's not understandable to take off 20 points for just a typo. It's a way of denying student's actual work and only focusing on code style. Some of the homework took a lot of time to write. And if a simple typo can cost 20 points deduction, it's like if I did the homework for nothing. The instructor should really learn to understand students and improve her teaching and grading. ",
+            "\u00a0Super nice in office hours, class demeanor could be improved a little. ",
+            "\u00a0strengths: very knowledgable, great office hours, helpful over email as well\r\nweaknesses: would have liked to spend more time on advanced concepts ",
+            "\u00a0The grading is weird ",
+            "\u00a0Explain concepts clearly \r\nSAS and R projects she gave were poorly formulated, require repetitive explanation and confirmation ",
+            "\u00a0Professor Esserman was a good teacher in the class room and helpful in office hours one-on-one. Everything she taught in class was taught clearly, and her notes in the code were thorough. However, my issue comes in with the assignments and the grading. In the R portion of the class, the assignments were well beyond what was ever taught in class. For instance, the class lecture would go over a simple example of simulations but the assignment would ask for something so much more complicated than what we learned in class. Furthermore, the assignment would be so much more complicated that it wasn't something we could apply the class notes to as we could for the SAS portion of the class. The grading was very confusing as we often got points off for things that were never expressed in the actual assignment. Although I learned a lot in this class, I think my grade unfairly suffered because of the points I mentioned above. ",
+            "\u00a0Lecture is pretty dry, just following along with the code she has previously written. More open and willing to help in office hours. ",
+            "\u00a0Strength: Instructor prepare clear slides and class notes. Office hour is very useful.\r\n\r\n \r\nweakness: she is a very tough grader. We work so hard to generate the coding. She took 30points on a little mistake. She took the spelling mistake for 25 points. The full points is 100. Homework is so hard for programming beginner. The difficulty level is much higher than the class notes especially for the project. ",
+            "\u00a0Denise is overall a good lecturer. She has clearly annotated notes and projects her voice well in lecture. Everything was well organized and neat. During office hours, she was very helpful and nice if we didn't understand how to move forward with an assignment. \r\n\r\nHowever, I would suggest a quick break in the middle of lecture. It is difficult to sit through 2 hours of lecture without losing focus. It would be great if we took five minutes or if there was two shorter lectures a week.\r\n\r\nAlso, the console in R studio can be moved so that it is not at the bottom of the screen. It is virtually impossible to see if you are anywhere besides the front. Speaking of which, it is really hard to get a seat and get situated with all the files when there is a class exactly before ours and people don't leave. Five minutes grace period  to get logged in (or just getting a temp check \"are you guys ready?\") would also be great. ",
+            "\u00a0Professor Esserman is very good at explainning and teaching coding. We really like that she put notes into the codes, which helps us to review the codes for our homework and projoct. She is very patient for answering our questions. ",
+            "\u00a0I love the instructor. She is every organized and logical when preparing for the course material and answering questions. The assignments are described clearly in detail. The feedback is clear and reasonable. "
+        ],
+        [
+            "\u00a0Good course. ",
+            "\u00a0Unsure if the instructor will curve for the grade. \r\n\r\nThe content is useful, but the grading sucks. \r\n\r\nTake the course if you want to learn SAS and R. \r\n\r\nDon't take the course if you care about the grade. ",
+            "\u00a0There are things you learn about SAS and R here and there, but I would not recommend this class to someone outside of biostats or someone experienced with using R ",
+            "\u00a0Class for learning advanced SAS and basic R skills. Useful for learning programming languages but not for running statistical testing (we do not cover stats in this class). Homework assignments can take a long time, they are difficult and require some element of ingenuity to figure out sometimes. ",
+            "\u00a0This course is useful but you have to learn all by yourself. ",
+            "\u00a0Its fine if youre willing to put a decent amount of effort/ work in ",
+            "\u00a0good class if you are new to programming ",
+            "\u00a0Useful programming course ",
+            "\u00a0I am not sure how to recommend this course to a fellow student. My gut is to recommend this course to a student who has advanced skills in R so that they would be able to get through the assignments, but then again the student would probably be too bored in class. Overall, the class itself was useful, but the assignments and grading were very frustrating to deal with. ",
+            "\u00a0Intermediate level SAS and R programming class. Helpful, but you will end up just looking things up on StackOverflow, as some of the things required to complete assignments are not gone over in class. ",
+            "\u00a0Yes I will recommend to other student. It is still useful for doing internship in the future. ",
+            "\u00a0As a non-biostats student taking this course, I think that this was a good exercise at being better at programming in SAS/R. You did not need an extensive amount of biostats knowledge (except for the R project).  I would recommend this course, but only if you have time. Your code may not always work out, so it is important not to do the assignments last minute. Overall, good class, glad I took it. ",
+            "\u00a0Strongly recommend to everybody! ",
+            "\u00a0I would recommend this course to others, because I think the material is useful and students can learn a lot from this course. "
+        ]
+    ]
+}

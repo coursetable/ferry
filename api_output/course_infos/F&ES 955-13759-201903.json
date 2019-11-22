@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49869/assignments/syllabus", 
+    "requirements": "Prerequisite: F&ES 659 or permission of the instructor.", 
+    "description": "Students work through the peer-review publication process on data sets and projects in applied forest ecology. Discussions involve rationale and hypothesis testing for a project, data analysis techniques, reporting and interpretation of results. It is expected that manuscripts developed in the course are worthy of publication and that oral presentations are of a caliber for subject area conferences and meetings. Three hours lecture. Enrollment limited to twelve.\nPrerequisite: F&ES 659 or permission of the instructor.", 
+    "title": "Seminar in Research Analysis a...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "MARSH 12", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 18
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13759", 
+        "listings": [
+            {
+                "number": "955", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Mark Ashton"
+    ], 
+    "long_title": "Seminar in Research Analysis and Communication in Forest Ecology", 
+    "extra_info": "A"
+}

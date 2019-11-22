@@ -1,0 +1,47 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49737/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to the work of Blake, Coleridge, Wordsworth, Shelley, and Keats, with some attention to Byron, to the poets\u00e2\u20ac\u2122 own problematic revisions, and to the minor poets of this rich period of poetic innovation and revolutionary spirit.", 
+    "title": "Romantic Poetry", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "LC 103", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10948", 
+        "listings": [
+            {
+                "number": "250", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEN1\">YC English: 18th/19th Century </a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENJ\">YC English: Junior Seminar</a></li></ul>"
+    ], 
+    "professors": [
+        "Leslie Brisman"
+    ], 
+    "long_title": "Romantic Poetry", 
+    "extra_info": "A"
+}

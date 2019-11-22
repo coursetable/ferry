@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49520/assignments/syllabus", 
+    "requirements": "After ECON 115 or 121, and ECON 116 or 122.", 
+    "description": "European economic growth and development from the late seventeenth century through the first stages of the British industrial revolution. The role of institutional development, trade and imperialism, agricultural improvements, and industrialization. Particular attention to comparisons between Britain and other parts of Europe.\nAfter ECON 115 or 121, and ECON 116 or 122.", 
+    "title": "European Economic History, 170...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WTS B60", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10848", 
+        "listings": [
+            {
+                "number": "186", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Timothy Guinnane"
+    ], 
+    "long_title": "European Economic History, 1700\u20131815", 
+    "extra_info": "A"
+}

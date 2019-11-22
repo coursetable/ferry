@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Major topics in public finance including externalities, public goods, benefit/cost analysis, fiscal federalism, social insurance, retirement savings, poverty and inequality, taxation, and others. Applications are provided to crime, education, environment and energy, health and health insurance, housing, and other markets and domains. The course covers a variety of applied methods including sufficient statistics, randomized control trials, hedonic models, regression discontinuity, discrete choice, spatial equilibrium, dynamic growth models, differences-in-differences, integrated assessment models, applied general equilibrium, event studies, firm production functions, learning models, general method of moments, and propensity-score reweighting estimators.", 
+    "title": "Public Finance I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "HLH28 108", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12650", 
+        "listings": [
+            {
+                "number": "680", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Cormac O'Dea", 
+        "Aleh Tsyvinski"
+    ], 
+    "long_title": "Public Finance I", 
+    "extra_info": "A"
+}

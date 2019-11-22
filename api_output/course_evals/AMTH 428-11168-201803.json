@@ -1,0 +1,93 @@
+{
+    "crn_code": "11168",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            5,
+            5,
+            0
+        ],
+        [
+            0,
+            2,
+            5,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            5,
+            6,
+            0
+        ],
+        [
+            0,
+            3,
+            3,
+            5,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            5,
+            2
+        ],
+        [
+            0,
+            3,
+            7,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned about how scientists deal with seemingly insurmountably complicated problems, learned a lot about deterministic chaos, some thermo/stat mech, and cellular automata. ",
+            "\u00a0Its a survey course about system modeling using Matlab. Things like Bifurcation, chaos theory, fractals... ",
+            "\u00a0analysis of system stability, and also broad introductions to types of complex systems like deterministic chaos, cellular automata ",
+            "\u00a0This course allowed me to develop a lot of interest in interdisciplinary thinking surrounding complexity. Coming from a hard science background, it was a lot of fun to work outside of my traditional field ",
+            "\u00a0This course covers a wide variety of different systems that display chaotic and critical phenomena. It is a good introduction to mean field approximations and renormalization groups. ",
+            "\u00a0Sandpiles; renormalization; bifurcation theory; sandpiles; the Ising model and phase transitions; sandpiles; sandpiles; sandpiles. ",
+            "\u00a0This course course teaches basic skills on how to deal with systems of many variables. It exposes one to a lot of different examples of such systems including ideal gas behavior, ferromagnetism, the sandpile model, and the Lorenz equation. The course is a survey course of the different mathematical methods that have been used in the passed to deal with complex systems. It teaches through examples - little emphasis is placed on going in depth into the general theory of things discussed. ",
+            "\u00a0Actually, what I learned most from this class was about how to be critical of science and pseudo-science and generally not trust things I read. "
+        ],
+        [
+            "\u00a0Really liked the material, although it was a bit scattered and it was sometimes hard to see when it would be useful outside of the few examples we did. I didn't really like having reading section though, most of the readings didn't add much. ",
+            "\u00a0strengths: Jun is a charismatic professor. I enjoyed his lectures. The homeworks are always new content and a doable challenge. The open ended project allows every student to engage with their own ideas.\r\n\r\nWeakness: The only issue with this class is the sense of continuity. None of the topics build on each other, so every day is sort of new and surprising, but information is forgotten quickly too ",
+            "\u00a0strengths: this class is really cool. I've never felt the need to show my homework to anyone before, but the ones for this class just ended up being so cool that I did.  Korenaga is cool and nice. Also puskar was a great TA\r\n\r\nweakness: there isn't enough time to go past an intro in a lot of the topics, but that's understood in a class like this. The final project was a little unclear i think ",
+            "\u00a0This course provides a shallow overview of a lot of topics, but goes deeply into very litttle. While it is interesting to see the scope of complexity studies, it occasionally felt like the course had little direction ",
+            "\u00a0This course covers an interesting array of information, but it is not always the most engaging. It can often get quite repetitive. The biggest weakness of this course were the discussion sections, where we would be required to read excerpts mainly from popular science books. This was fine for maybe the first one or two discussions, but quickly got very repetitive and useless. I'm not sure why we wasted so much time on these readings instead of reading actual papers in the field. Also, there is really no guidance on the final paper and nobody really understood what was expected. ",
+            "\u00a0This class surveys the field that is the science of complex systems, but none of the course's topics are covered in great detail. Because there is no midterm or final, I'm not sure anything really stuck me with a result. This is also the first time that the course comes with a discussion section that covers various readings, which was eye-opening and interesting -- New Age-y science is a wild ride. I hope that the discussion section stays in future iterations of the course. ",
+            "\u00a0A big strength of the course was that it covers some really interesting examples of  complex systems. For example, one derives the ideal gas law using statistical mechanics or learns about basic cellular automata such as the lattice-gas model. That being said, I feel like the course taught me more about specific examples rather than general theory. I do not feel like I would be able to apply any of the skills we learned in class to new examples (except for the bifurcation stuff at the beginning of the semester) - I simply don't have a general understanding of the concepts. Part of this may also be due to the fact that the class never had a midterm. This meant that I never had to fully learn all of the materials in lecture and didn't always follow up on things when I was confused.  Finally, I did not like the readings we did in this class. Reading introductions to text books is not very informative and I often felt the readings confused me more than they helped my understanding. I would have preferred to read the original publications of stuff we covered in class (Lorenz equation, Sandpile model etc.) because it would have helped my understanding of class concepts. ",
+            "\u00a0The main weakness was organization. I didnt always find the discussion section classes to be particularly helpful, and in regular lectures it was sometimes hard to follow what were definitions/broad topics versus examples. The strength is the interesting material that the class covered, and that Professor Korenaga is so approachable. "
+        ],
+        [
+            "\u00a0Yes, but not too enthusiastically. If you need a elective for your major this is a fine one. ",
+            "\u00a0Its neat if youre interested in things like fractals, phase changes, chaos theory, avalanche models, etc... but you only scratch the surface of each. ",
+            "\u00a0Absolutely! This class is so cool. Korenaga is really nice and organizes discussions in class about like the philosophy of science. Puskar, the TA, is incredibly helpful on the psets too. Also, I had exactly ZERO matlab experience before this but now just as a result of doing the homeworks I feel very proficient ",
+            "\u00a0Yes I would recommend this course. Its more of an application of differential equations. But I learned so many different interesting concepts! A breath of fresh air from other STEM courses that are so focused on forcing a rigid curriculum and testing it harshly. ",
+            "\u00a0This course gave me a much stronger understanding of critical phenomena and Professor Korenaga is a good teacher, but if you are looking for a good physics elective, I would look elsewhere. It's rather repetitive and not particularly challenging. ",
+            "\u00a0Complex systems is a case study in understanding fads in science. In the 1980s -- \"when the future looked bright,\" Korenaga says -- it was hailed as the next big thing, as \"a new kind of science,\" and here we are, distributing grains of sand to our four nearest neighbors and wondering why we do it. The class sustains interest as you examine various, scattered approaches within the field of complex systems. All the while, just exactly what a complex system is goes deliberately undefined. It helps if you come in already knowing what you're looking for; in particular, having an idea in mind for the final project would be helpful because you're free to choose whatever paper you'd like and recreate its results. ",
+            "\u00a0It definitely improves your applied math skills; but, I can't totally define what I have learnt. ",
+            "\u00a0I would not necessarily recommend taking this course.  I didn't leave this course with as strong of a understanding of complex systems as I had hoped at the beginning of the semester. The course went through a lot of examples of complex systems but didn't do a great job generalizing methods used to treat them. The math/logic employed in these examples often felt a little bit vague/ unrigorous and I don't think I would be able to apply it to new examples. That being said, the course did cover some really cool applications of math (e.g. the derivation of the ideal gas law). If you're willing to put in the effort to keep up with examples and accept that you're not going to learn much general theory, this course could be fun. ",
+            "\u00a0Maybe? It was definitely interesting, but also sometimes confusing. Depends on what you want to get out of the class: if you want to think, yes. If you want a really solid grasp on complex systems, then maybe not. "
+        ]
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "crn_code": "22494",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            5,
+            6,
+            0
+        ],
+        [
+            0,
+            3,
+            2,
+            5,
+            2
+        ],
+        [
+            1,
+            2,
+            2,
+            5,
+            0
+        ],
+        [
+            0,
+            3,
+            5,
+            2,
+            0
+        ],
+        [
+            1,
+            1,
+            5,
+            4,
+            0
+        ],
+        [
+            0,
+            2,
+            7,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about the physics of solar cells. ",
+            "\u00a0Developed knowledge in the aspects of photovoltaics and renewable energy from a historical, microscopic, and industrial level. Also solar cells are tested and measured in terms of cost and efficiency. ",
+            "\u00a0Similar to EENG 320 ",
+            "\u00a0I learned about the physics about photovoltaics with an emphasis on silicon but exposure to other solar materials. ",
+            "\u00a0Introduction to semiconductor and specifically photovoltaic device physics. "
+        ],
+        [
+            "\u00a0It gives a good overview of the technology and goes into a lot of depth with the physics. My two main suggestions for improving the course would be to expand the lab portion to be more hands-on and engaging (not just wiring cells together in series and parallel) and find a better textbook resource. Often completing the homework assignmentd was difficult because so much of the information was so specific that it took a long time to find online. ",
+            "\u00a0Most of the problem set questions were too ambiguous to be completed without help. Rephrasing some of the wording would be beneficial. Additionally sometimes questions were asked regarding later classes which caused difficulty. ",
+            "\u00a0Very disorganized, though we got out of class early a lot which I appreciated. ",
+            "\u00a0Strengths: Very accessible material, lecture notes are especially helpful. Professor Xia also makes a point make the workload as light as possible for an engineering course, which I appreciated. The psets needed time and effort invested in them, but I never really questioned the purpose for certain questions.\r\n\r\nWeakness: I felt that the lectures were a bit dry. While it was well-structured, I was always overwhelmed because the equations were presented as \"this and this and this\" rather than \"this because of this. And when you combine these...\" \r\n\r\nI think that I would have liked to have more labs in the course. The theoretical stuff got a little dry when we couldn't really apply it until the one lab we had which occurred a little past halfway through the semester. I was under the impression that it would be something conducted outside (hence why we waited until after spring break) but it ended up being conducted indoors with artificial light anyway. ",
+            "\u00a0This course generally was a good introduction to the material, but sometimes I felt it focused too much on the mathematics without bringing it back to the implications embedded therein, which is important. "
+        ],
+        [
+            "\u00a0I really liked this course a lot.  Its essentially a continuation / review of EENG 320, but just with a focus on photovoltaic devices.  If you like solar cells and want to learn about how they work, take this class. ",
+            "\u00a0Yes, but only if they had a decent physics background and a lot of motivation to learn about the topic. ",
+            "\u00a0I would recommend this course to any student who desired to learn about the solar branch of renewable energy. Although having some backgroung knowledge in the calculation aspect, having taken EENG 320, I feel like any student could take this class and enjoy it. ",
+            "\u00a0eh... ",
+            "\u00a0Yes, if you're interested in photovoltaics. It was a lot of similar material that was a bit difficult to keep straight, but the resources available including Professor Xia himself make the course very manageable. ",
+            "\u00a0This is really the only course that really teaches you how solar power works, so it's great for students interested in the topic. "
+        ]
+    ]
+}

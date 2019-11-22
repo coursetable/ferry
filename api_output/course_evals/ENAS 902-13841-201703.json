@@ -1,0 +1,83 @@
+{
+    "crn_code": "13841",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            4,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            1
+        ],
+        [
+            0,
+            2,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            5
+        ],
+        [
+            0,
+            0,
+            4,
+            1,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This was a great course for solidifying your knowledge in Linear Algebra. ",
+            "\u00a0Better familiarity with linear algebra as well as some understanding of control theory. ",
+            "\u00a0Analytical skills of analyzing a linear system. ",
+            "\u00a0I learned a lot from this course, albeit through sheer willpower, and supplemental linear algebra/analysis/control theory from the web. ",
+            "\u00a0I learned to analyze the properties of a linear system, examining for the key attributes \"observability, controllability, and stability\", by looking at eigenvalues of some matrices which describe that system. "
+        ],
+        [
+            "\u00a0Weaknesses: The homework comes to a point where it's impossible to do with just the notes and other resources. You will need to seek help for problems. The TA was very helpful for this. \r\n\r\nStrengths: Review of LA is great. ",
+            "\u00a0I thought the organization was strong and the problems were well crafted. I think adding in more examples/applications to motivate why we are doing the linear algebra would be helpful. ",
+            "\u00a0Class notes are super math-y in terms of notation. So, some concepts can be confusing upon first read. ",
+            "\u00a0Strength: \r\nThe course gives good theoretical background to begin reading algorithms (control systems, some types of machine learning) papers. \r\n\r\nWeakness:\r\nThis course is very abstract. Nobody knows how to use this information, so people had limited motivation to learn beyond \"studying for the test.\" The professor mentioned many cases where controls are used, but it is very unclear how the specific course content is useful.\r\n\r\nImprove:\r\nThe course should present some more algorithms, at least as optional reading which we can then use during a discussion day in class time or in a review session with the TA's. I know students can bring in some random algorithm and discuss with the TA, but it is much more efficient if there is a shared knowledge base where we know the TA has familiarity with the paper we want to learn about. This could be as simple as choosing three popular algorithms that every controls person should know, and a few from the other popular majors of students who take this course. "
+        ],
+        [
+            "\u00a0This is a slippery slope. Some things in the class were very useful, other things were certainly useless. If you would like to suffer for a semester with assignments every week that take up to 15 hours (a few were much shorter), then this class is what you need to understand linear systems. I would recommend given certain situations. This is not really a class you take for 'fun', but one you can see yourself utilizing the concepts with later on. ",
+            "\u00a0It depends on what they're interested in. Honestly, I think much of what we did does not apply all that well to my area of study. ",
+            "\u00a0I won't recommend this course to students who will not be doing analytical work in the future. ",
+            "\u00a0Take this course only if you have a decent background in linear algebra, or if you are willing to learn it in tandem with the class. The problem sets take a significant amount of time and are very challenging. The tests are straightforward and much easier than the problem sets. ",
+            "\u00a0No. I have no idea how the material is useful. I'll tell them to directly take the course which motivated them to take the course. Such as an algorithms, machine learning, robotics, etc. course. These involve linear systems and/or controls, and the course description recommends the course for people with those interests.\r\nI spent a lot of time learning about eigenvalues, but can't use the course to produce a single thing that is useful for my research. ",
+            "\u00a0Yes "
+        ]
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "First term of a yearlong research project completed under the direction of a ladder faculty member in the Department of French and resulting in a translation of considerable length (roughly 60 pages), from French to English, with a critical introduction of a length to be determined by the student in consultation with the advising ladder faculty member. Materials submitted for the\u00a0translation\u00a0track\u00a0cannot be the same as the materials submitted for the\u00a0translation\u00a0courses.\u00a0For additional information, consult the director of undergraduate studies.", 
+    "title": "The Senior Essay in the Intens...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12917", 
+        "listings": [
+            {
+                "number": "495", 
+                "subject": "FREN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Morgane Cadieu"
+    ], 
+    "long_title": "The Senior Essay in the Intensive Major\u2014Translation Track", 
+    "extra_info": "A"
+}

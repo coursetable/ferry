@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/52139/assignments/syllabus", 
+    "requirements": "", 
+    "description": "In 1991, the arts organizations Visual AIDS and The Kitchen collaborated with video artist and filmmaker Charles Atlas to produce the live television broadcast \"We Interrupt this Program.\" Part educational presentation, part performance piece, the show was aired in millions of homes across the nation. The program, in The Kitchen\u2019s words, \u201csought to feature voices that had often been marginalized within many discussions of AIDS, in particular people of color and women.\u201dThis course builds upon and is inspired by this aspect of Atlas's visionary presentation, an aspect that used the show to produce a critically multicultural platform that could activate cultural histories and critical traditions from various communities. In effect, the course uses this aspect as a metonym for the racial, gender, sexual, and class heterogeneity of queer art and organizing.\u00a0It conducts its investigation by looking at a variety of primary materials that illustrate the heterogeneous makeup of queer and trans politics. The course also draws on more recent texts and visual works that arose from the earlier contexts that the primary texts helped to illuminate and shape.\u00a0", 
+    "title": "\u201cWe Interrupt this Program:  T...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15931", 
+        "listings": [
+            {
+                "number": "115", 
+                "subject": "AFAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Roderick Ferguson"
+    ], 
+    "long_title": "\u201cWe Interrupt this Program:  The Multidimensional Histories of Queer and Trans Politics\u201d", 
+    "extra_info": "A"
+}

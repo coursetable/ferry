@@ -1,0 +1,52 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49895/assignments/syllabus", 
+    "requirements": "Prerequisite: FILM 150.", 
+    "description": "The goal of this intensive seminar is to develop tools of close analysis of film as a significant art form by learning to identify elements of cinematic representation (mise-en-sc\u00c3\u00a8ne, cinematography, editing, sound, and the basic vocabulary associated with each aspect) and to demonstrate how these constituents combine to create meaning. Through developing a deeper understanding of a particular film, we transition from specific instances to broader considerations such as aesthetic and historical context or ideological critique. The course also traces the history of the close analysis method from structural semiotics and neoformalist analysis to digital humanities. We study films ranging from Hollywood and American filmmaking (Alfred Hitchcock and David Lynch) and European modernism (Robert Bresson and Jean-Luc Godard) to films that use expressive codes and cultural conventions less familiar to us (Lars von Trier and Hou Hsiao-hsien). Topics include genre, the digital image, landscape, body and face, gesture and screen performance, and cinematic atmosphere.\nPrerequisite: FILM 150.", 
+    "title": "Close Analysis of Film", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 19, 
+            "location": "", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 22
+        }, 
+        {
+            "start_time": 13, 
+            "location": "CO493 103", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13047", 
+        "listings": [
+            {
+                "number": "490", 
+                "subject": "HSAR"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHA2\">YC HistofArt: Post-1800</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHAR\">YC HistofArt: Transregional</a></li></ul>"
+    ], 
+    "professors": [
+        "Oksana Chefranova"
+    ], 
+    "long_title": "Close Analysis of Film", 
+    "extra_info": "A"
+}

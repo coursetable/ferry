@@ -1,0 +1,94 @@
+{
+    "crn_code": "12326",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            7,
+            7,
+            1
+        ],
+        [
+            2,
+            2,
+            4,
+            4,
+            3
+        ],
+        [
+            1,
+            3,
+            1,
+            6,
+            4
+        ],
+        [
+            1,
+            0,
+            4,
+            6,
+            3
+        ],
+        [
+            0,
+            1,
+            7,
+            4,
+            3
+        ],
+        [
+            0,
+            0,
+            11,
+            3,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot of different statistical techniques, inferences, and some programming to do some statistical analysis. ",
+            "\u00a0Different types of statistical analyses, how to use different experimental setups, and how to use different statistical analysis software packages ",
+            "\u00a0This is a fast-paced, extensive introduction to stats. Most people who took this seemed to have background knowledge from AP Statistics, but as someone who came in with no experience, I definitely felt challenged (especially after the first midterm and onwards) to keep up. We covered topics such as confidence intervals, t-tests, null hypotheses/p-values/hypothesis testing, linear regressions, normal probability plots, and probability (the worst part) during the Professor JRS-taught portion of the class. This first portion consisted of two midterms - these exams were definitely fair, but do require reviewing a lot of information. During the second portion of the class (I took 101 Life Sciences), Professor Jetz taught about general linear models, including ANOVA, single- and multi-predictor regressions, interactions (factorials), and their corresponding F-tests. We also covered a bit on non-parametric tests and generalized linear models. There was a large spread of all of this information on the final exam, which was much more difficult that JRS's midterms. ",
+            "\u00a0Introductory Statistics for Life Sciences provided a very accessible and comprehensive understanding of statistical analysis, and how these techniques as tools can be practically used and applied for future experimental knowledge. ",
+            "\u00a0The content in 101, especially the last 5 weeks, is very useful content for someone interested in biological research and utilizing statistics for their research. As someone who had never taken statistics before, I found the content to be extremely relevant and interesting. ",
+            "\u00a0Very thorough overview of introductory statistics and statistics applied to the biosciences. Useful skills of how to analyze data, what techniques should be used. "
+        ],
+        [
+            "\u00a0Pretty good course overall. The beginning 2/3 was structured pretty well and I felt as if I was learning important material. The last section seemed like we were learning techniques that could actually be used in real research, so that was nice. ",
+            "\u00a0Easy to comprehend most of the time, however, the professor for the first half went very quickly so it was difficult to understand at times. The homework, although sometimes challenging, prepared me well for the exams. ",
+            "\u00a0Prof. Jetz did not seem as invested in teaching as the other professors I've had. Never posted lecture slides until the day of, and often seemed like he hadn't looked at the slides since the time that he made them (presumably not this year). ",
+            "\u00a0The second portion of the class is very unevenly spread in terms of difficulty across the many different sections. I had friends in the 105 Medicine section who had a lot easier of a time getting through the second half (short p-sets, a take-home final that wasn't actually the information the studied during the semester but was instead a critique on statistics done in a specific medical paper) than me and my friends in the 101 Life Sciences section. The biggest problem with 101 Life Sciences was its fast pace and Professor Jetz's assumption that you can quickly understand or even already know about the things he's teaching, which makes it so difficult to keep up in class when you have no experience with the material. The p-sets are long and challenging, and I spent a lot of time in office hours (thank goodness for Siyang - he's an amazing TA!) with the same set of students every week trying to figure things out. ",
+            "\u00a0I understand that the first half of the course has to be fast-paced but I cannot help but think that it was much too fast.  That being said, Professor Reuning-Scherer does a very good job with the allotted time he has and does his best to make the material interesting.  However, the portion taught by Professor Jetz needs significant improvement.  His slides were not very well organized nor informative.  He was also not very helpful in teaching the material. ",
+            "\u00a0A great strength of this class was that the problem sets and questions were very pertinent to our studies and understanding how we could use the techniques for future courses or experiments we could undertake. A main weakness was that the first half of the course went quite fast through the slide material and I would have appreciated if there were more opportunities for questions and student discussion, which I did see with Professor Jetz. ",
+            "\u00a0The first 8 weeks of the course were a hot mess. JRS was an extremely unclear lecturer, and he needs to slow down or someone else needs to teach the course. The majority of people (not me) had already taken AP stats so JRS's section was unnecessary to them, which is why they still do fine. This was all new material to me, and JRS's lectures were incomprehensible and lightning-fast, and the homework was confusing. The last 5 weeks were better structured, however Jetz's psets were a bit confusing at times. The final was ridiculously hard. Overall, the course is very poorly structures, and it really hurts the course. The lecture notes for the first part need to be spit up into chunks, taught better, and the class overall needs to be revamped. ",
+            "\u00a0JRS was a wonderful professor and he made it so that even though the lecture was very large it was engaging and interesting.  I really liked the small seminar structure of the 101 breakout class. This was a great structure as it allowed us to interact much more with our professor and ask questions about the more advanced applications of stats. It would have been in some ways preferable to have the whole year be a small seminar such as this. ",
+            "\u00a0The first part of this course was very good; the second horrible. ",
+            "\u00a0surprisingly delightful class! "
+        ],
+        [
+            "\u00a0Pretty good class. Psets are at a good level of difficulty and I felt they facilitated learning. Tons of office hours early on for help on them too. ",
+            "\u00a0It is a very useful subject, especially if you are a STEM major, and it is much more enjoyable than other QR courses. I highly recommend it if you plan on doing research or want to take something useful out of a QR class. ",
+            "\u00a0I would recommend this course ONLY if you are interested in ecology research. If you are premed, I would look into one of the other intro stats classes (some of which I've heard have take-home finals as opposed to our traditional final). Generally good as a fifth credit, but not a gut by any means. Material from the second half was exponentially more difficult than the first half with JDRS, but thankfully we had a great TA (Siyang Xia) who made the content much more digestible. ",
+            "\u00a0I recommend this class if you're prepared to keep up with the fast pacing (especially after the first midterm and onwards). Think carefully and read through reviews for the section you plan on attending after the first portion of the class, as your decision can really determine how hard of a time you have post JRS's teaching. ",
+            "\u00a0Looking back at this semester, I would not take this course again. Even despite the fact that I had taken statistics before, I still felt completely overwhelmed by the fast pace of the first half of the course and by the lack of teaching in the second half (Life Sciences with Professor Jetz).  The first half of STATS was much better than the second half as in the latter, you basically have to teach yourself the more complicated statistical tests and piece it together from the poorly organized slides Professor Jetz provides.  That being said, if you have to take Statistics for your major or for pre-med, I would highly recommend NOT taking the Life Sciences section.  The material itself and the statistical tests can be interesting but I would have immediately switched sections if given the opportunity simply because of the lectures (they were extremely dry and boring to say the least) and because Professor Jetz was very unapproachable and just in general, not a good teacher for the material.  If you do take this section, know that you will have to rely on your TA and your textbook (do buy it as you will need it; would recommend \"The Analysis of Biological Data\" for Life Sciences).  But, comfort yourself with the fact that you will walk away having learned quite a bit about statistics. ",
+            "\u00a0Yes, this was a very useful and insightful course where I learned a lot of meaningful practical knowledge that I will take out of this course, and use through the both the manual calculations and calculations on MiniTab software. ",
+            "\u00a0I would not recommend this course to another student. Let me explain in detail:\r\n\r\nThis course overall is a complete train wreck in terms of organization and facilitation. The content is great and not that difficult (with the exception of difficult stuff at the end of the semester with Jetz), but the poor organization of this course leads to it being extremely frustrating. Let me break everything down to give you specifics.\r\n\r\nThe first 8 weeks are taught by JRS. You will be in the same class as everyone in S&DS 101-106, the lecture is huge, and it very poorly taught. Before you believe all the other reviews that say \"omg JRS is SOOO funny and great,\" you need to understand that all of those people are people who have taken AP stats before and should be in this class anyways. The majority of this course (especially the large lecture setting for the first 8 weeks) is just babysitting for humanities/social science kids that need a QR credit and have taken the class before. They know all the material and so JRS's excessive humor is just a distraction for them (especially if they are in 102/103). As someone who had not taken AP stats before, it was nearly impossible to understand what was happening in lecture. JRS goes lighting-fast, and he spends way too much time making jokes rather than just teaching the material (I'm not even going to comment on whether or not he is funny because that's irrelevant to the quality of the course). I have taken though multivariable calculus, as well as many other QR and advanced SC courses, and this course was one of the most frustrating I have ever taken.\r\n\r\nThe problem sets and exams during the first 8 weeks are stressful as well. The problem sets are very poorly worded and your TA may be harsh on grading (mine was). The majority of the homework require the software Minitab, which is the single most annoying program to ever get installed on your computer and the Yale ITS really has no clue what they are doing to install this. JRS is aware of this and doesn't seem to care much. Use your residential college computer labs instead to use the software. But good luck! Because you will receive essentially no guidance on how to use Minitab, and you will waste a ton of time trying to figure out which button to push the perform the correct data analysis. Again, JRS seems to be aware of this and not care. Since the homework is so weirdly graded, then the only way you can do it is by going to the TA review sessions or JRS's sessions. The ONLY good thing about the first 8 weeks is that the teaching staff has lots of office hours. However, I was taking a busy semester of classes and couldn't really make most office hours. This is my issue; however, to do well on the psets, you need to essentially spend as much time in office hours as you do in lecture (if you even go), which in my opinion is just poor teaching by JRS. The exams were harder than expected and the averages are really high because (surprise) 90% of the class took AP Stats and knew everything in advance.\r\n\r\nAfter the first 8 weeks, the course switches to Jetz, who is a much, much better professor than JRS. He taught the (much more) difficult topics with clarity and precision. He tried to save the course, but, unfortunately, your grade was already trashed by then. His psets were hard and very confusing at times, which made it difficult. 101 is by far the hardest of all the intro stats modules, so be aware if you take it that the other sections will be much easier and less-time consuming, although the content at the end of 101 is fantastic and really worth it if you can survive that long. Be warned though, the final was insanely hard and super-specific (which might not necessarily be true every year).\r\n\r\n\r\nI'm not trying to sound jaded by this class (because I was). I just want to warn the next set of people that are considering this course to prepare of a wild ride. ",
+            "\u00a0Yes! This was a great course and it really had a very manageable workload, was well taught and allowed you to learn all of the introductory statistics material and then some. I had a stats background going into this course and still found it a useful refresher. The 101 section was really great and gave meaningful application to the skills we had learned and was a great learning environment. ",
+            "\u00a0Do not take the life science section! Take 105 instead, or 100 in the spring. ",
+            "\u00a0surprisingly delightful class! "
+        ]
+    ]
+}

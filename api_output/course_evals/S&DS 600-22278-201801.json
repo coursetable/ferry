@@ -1,0 +1,87 @@
+{
+    "crn_code": "22278",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            1,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            3
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            3
+        ],
+        [
+            0,
+            1,
+            3,
+            4,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Probability theory ",
+            "\u00a0I now understand that when attempting to prove a result in measure theoretic probability, a good starting point is to ask oneself, \"Is this a generating class argument? monotone convergence? dominated convergence? a lambda class argument? how about Fubini or Tonelli?\" ;) Oh, David would not be happy with me for saying that. Oh, dear...\r\n\r\nIn seriousness, through this class I have tasted the first glimmerings of understanding of what's beneath the surface of 241/541-level probability theory. There is still more, so much more, to learn about those below-the-surface things, so much in the analysis and measure theory that I can't say I've grasped well enough this time around. I am encouraged by two former TFs, who claim that their deep understanding of the material comes from having been in the course \"three or four times.\" I hope this isn't my last brush with the material, but I will always be grateful that I was able to start my journey with David and Elena. ",
+            "\u00a0Probability theory under a rigorous, measure theoretic framework. ",
+            "\u00a0Measure theory ",
+            "\u00a0Basic probability stuff ",
+            "\u00a0Probability "
+        ],
+        [
+            "\u00a0Very good course. Maybe include mid-term exam. ",
+            "\u00a0The class is notoriously difficult, and I wouldn't be comfortable claiming that I've absorbed as much of it as I'd have liked. I appreciated the no-exams aspect of it---this is Prof. Pollard's personal preference, rather than a necessary facet of the course itself---which could be argued to put an emphasis on understanding the material, rather than learning to a test. However, on the flip side, I did notice a tendency in myself to prioritize classes that had exams, when it came down to worrying about my grades: I am disappointed in myself for it, but I admit sometimes the incentive just wasn't there as strongly as it was when a letter grade was on the line. The homework assignments were time-consuming and pushed me to really recall what had been taught in lecture: a good thing, to be sure, but undeniably painful. This may all change next year, as David will no longer be teaching the course in his signature style, so I'm not sure what further good my feedback will be. ",
+            "\u00a0There could be more homeworks! ",
+            "\u00a0The most theoretical course in stat department i have amonst the ones I have taken till now, and I LOVE it. I wosh there were more courses like this in stats department. ",
+            "\u00a0It's quite hard, but interesting ",
+            "\u00a0Very good instructor "
+        ],
+        [
+            "\u00a0Yes. Professor David is very excellent. Coursework is very helpful ",
+            "\u00a0I would recommend this course most strongly if it were taught by the treat that is Prof. Pollard---or perhaps, as has been the case in years past, if it were taught by my favorite human being, Prof. Joe Chang. It is too bad for the next generation that David is retiring, and I feel some sadness for the students who will not get to experience him. As for the course itself, I would still very much recommend it for the limits it teaches you to push: how much harder, and how differently, you need to think, if you're not used to it (as I wasn't!). However, I'd recommend an otherwise \"easy\" course load when taking this class. To give it the proper time, it'd be a good idea to have little else on the schedule. ",
+            "\u00a0Yes, this is an important class, and the teaching is fantastic. ",
+            "\u00a0Yes ",
+            "\u00a0Yes. If you are interested in theretical statistics this is a must. ",
+            "\u00a0Yes, but the weekly assignment is really a big workload ",
+            "\u00a0Yes "
+        ]
+    ]
+}

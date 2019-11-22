@@ -1,0 +1,87 @@
+{
+    "crn_code": "20689",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            12
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            6
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            8
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            10
+        ],
+        [
+            0,
+            0,
+            1,
+            10,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            9
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot from doing my thesis. It was the longest academic exercise of my college career in a good way. I particularly learned a lot of data analysis skills. ",
+            "\u00a0The answer to this question will be different for every person depending on the project you're working on, but the most important take-away from this course is that it's absolutely necessary to learn (or try to learn) to do long-term planning. This is the second semester of a year-long thesis, and a lot of my work got done in the last month and a half of the spring semester. (I had a whole year to write this thesis!) For some people, that can't be helped if they're running experiments, but this situation definitely could have been avoided for my project. This is the first year-long project I've really done; it can be hard to set benchmarks for yourself on a weekly or even monthly basis, but it's important to try. Otherwise, there's always a bit of disappointment (e.g. I could have analyzed more variables if I started earlier or I could have gotten more feedback on this section of the paper if I wrote it earlier, etc.) ",
+            "\u00a0Learning how to develop your own research project and then carry it out! Writing up a senior thesis. ",
+            "\u00a0On depth knowledge of mosquito biology, stochastic python modeling, and carbon cycle trophies dynamics ",
+            "\u00a0How to be a good science researcher, how to do scientific research at a level approaching academia ",
+            "\u00a0A fuller understanding of the role that TCP family transcription factors play in determining plant architecture. Additionally, EEB 476 gave me more practice in scientific writing and in making presentations about my work in front of an audience. ",
+            "\u00a0I learnt research techniques as they apply to population genetics research. "
+        ],
+        [
+            "\u00a0I wish it was less backloaded, it feels like we have a billion things to do at the end of the year, like poster, thesis, symposium, lab meetings, etc that come all at once ",
+            "\u00a0It's very self driven so make sure you have a good relationship with your advisor and go for it. ",
+            "\u00a0I think this REALLY depends on who your advisor is. I did like the progress report though, as it forced you to get started on some of your intro and methods! Marta was always helpful and present. ",
+            "\u00a0Not a course- independent research ",
+            "\u00a0Perhaps making this course like all other two-term theses, where the grade you get in the first semester is only given to you once you complete both. ",
+            "\u00a0I loved that the research and corresponding paper was able to be tailored to students' individual interests. "
+        ],
+        [
+            "\u00a0Yes if you have a good advisor. ",
+            "\u00a0Definitely! Really great to be able to do in undergrad. ",
+            "\u00a0Yes do itttt ",
+            "\u00a0I mean you probably need to take this for the major, so make sure you do research in something you find stimulating! ",
+            "\u00a0Yes, absolutely. Doing research is one of the best opportunities available to learn more about (1) a specific part of the field that you are interested in and (2) how scientific research works generally. Both of those are very fulfilling and they also provide useful knowledge that improves your grasp of biology (as well as skills that are helpful even outside EEB). I would recommend senior research to anyone in the major. ",
+            "\u00a0Yes, I would recommend this to anyone who would like experience in research and writing research papers. "
+        ]
+    ]
+}

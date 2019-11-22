@@ -1,0 +1,83 @@
+{
+    "crn_code": "15267",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            2,
+            3,
+            0,
+            1
+        ],
+        [
+            0,
+            3,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            2,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            4,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Insights - Generally, seeing real projects. Was cool to see how urban design frameworks are applied in real projects. Felson's work on the HUD grant areas is extensive and seeing a real application helped ground the class. \r\n\r\nSkills - Learned GIS, but maybe not at a level that would have required a course. Could have learned it through the online tutorial and messing around. Got practice in presenting to public officials. Learned to think about urban ecology in a few themes - public health, economic factors, green infrastructure, flooding prevention, emergency prep. \r\n\r\nKnowledge - how public health is affected by climate change or storms and emergency response plans. and how economic analysis is done for projects like seawalls. ",
+            "\u00a0I learned about the strategies and considerations necessary to create resilient and sustainable spaces, especially in zones like coasts where sea level rise and flooding are a major risk. We learned from various speakers along with Prof. Felson, and worked on interesting projects that we presented to each other. There was a lot of great information but at times it was difficult to take it in because the course and the subject material were a bit disorganized. ",
+            "\u00a0This course is very nebulous in the material it covers. You will learn very little from the lectures. The readings are for the most part quite abstract and you won't get a lot from them either. Most of what I learned was from the assignments. The first couple require you to learn how to make maps on ArcGIS, which I thought was quite useful if you're interested in urban planning. The economic analysis assignment is an interesting idea but the model was very buggy for us, which made it frustrating. Also, you will learn to work on a team--most groups have a combination of engineering undergrads, forestry, and architecture students. ",
+            "\u00a0I learned about urban planning, urban public health, the economics of climate change, public engagement, and project staging. I didn't get a comprehensive overview of any of these topics; this course engages with through the lens of projects that you are actively working on. I found this approach refreshing, but others may prefer more structure. "
+        ],
+        [
+            "\u00a0Strengths - Alex is incredibly nice, very intelligent, and really knowledgeable. He has a ton of passion and conviction about the importance of the field. He tries to instill this in us. He really cares and has real life experience that brings parts of the course to life. He was the best part of the course. When he lectures things made a lot more sense than when we had guest lecturers. It's also really helpful to connect with him because he has so many projects you  can learn about. \r\n\r\nThe guest lecture by the Water Management Official was great, and the Green Infrastructure lecture was great. The NOIA lecturer was good too. \r\n\r\nWeaknesses - The class felt fragmented. Really broad, with not a deep enough dive to make things stick. This was due to the performance of the guest lecturers, who are often the top of their field but dont know how to frame things to a different audience. Not exactly Alex's fault but it could have been vetted better. \r\n\r\nUnequal group work: I was assigned to a group where one of our group members barely did any work. This was frustrating as the rest of us had to scramble. We had to work with this person the entire semester. The only feedback that Prof Felson solicited from the class was once, asking in public (during class, with a raise of hands) if people liked their groups or wanted to switch. Everyone felt uncomfortable and said that things were fine out of pressure of shaming oneself or the bad team member.  A more anonymous survey method would have been better. I know at least 3 other groups that were very upset with a member who did not do work. \r\n\r\nLots of lectures were too broad an overview. This was mostly the lectures by the Public Health CEO/COO guy who lectured on hoarding instead of public health due to climate risk and adaptation. Some of the lecturers were really off-topic or rambly. Would be nice if Alex maybe vetted their presentations ahead of time.  Some modules were less helpful/applicable than others: The water quality lecture was great, as were the public emergency response one, the green infrastructure one, and some of the ones by Felson. \r\n\r\nThe duedates felt unorganized, maybe because of the TF not emailing us updates until an hour or two before each class? It was unclear what was due, because the times mentioned in class would be moved or changed. ",
+            "\u00a0The strengths of this class was the course material, which was great to learn more about. The weakness was the organization and the assignments. The lectures did not seem to coordinate with the lecture material and sometimes became confusing. The lectures also seemed a bit disorganized and disjointed, possibly due to the guest speakers not really knowing how to tie into previous guest speakers. ",
+            "\u00a0The strong part of the course is its assignments, especially the first mapping assignment and the final project. I thought the economic model assignment had potential but the bugs in the model really made it tough to enjoy. The public health assignment (and related guest speakers/lectures) felt tacked on and kind of irrelevant. However, all the assignments would benefit from more concise and specific instructions, especially the final project.\r\nThe lectures were by far the weakest part of the course. 3 hours is an insanely long class time, and more should have been done to break this upnot just into two lectures, as was usually the case, but into different activities. I liked the day where we did the CEID workshop on building sensors for part of the class. The lecture content itself was best when we were looking at case studies. I would do more of this and focus more on practical engineering/design considerations and best practices, with less theory/abstraction. Some of the guest speakers were good (Dawn Henning and the 20/50 SLR guy come to mind) but some felt kind of pointless, especially in the public health segment.\r\nThe readings varied in quality; I appreciated that they weren't too long for the most part. I think more readings evaluating specific case studies would be helpful (even in popular news/magazine literature). ",
+            "\u00a0The readings were interesting, and I enjoyed the lectures and class discussions. However, class was really long, and sometimes I wish it was split up into two days a week. The project assignments were generally interesting, and Professor Felson was flexible about letting students explore their interests. ",
+            "\u00a0The course should give a better overview of the principles of ecological urban design. It feels very disorganized. ",
+            "\u00a0I think this course had very high aspirations and goals set. I do not think that the course met those goals. I think that it could be greatly improved by providing a lot more basic information for individuals who have no background in coastal design and resilience. "
+        ],
+        [
+            "\u00a0I wish I could recommend this course more strongly, because Alex Felson is a great guy. He's really nice, really intelligent, and ALWAYS available to students. He's a huge asset. The topics are interesting ones, and really important to the field today. In theory, it was a great idea to put together engineering/design/env. However, in practice, the course tried to do too much and be too many things. It wasn't really Alex's fault, it felt like it was partially due to the outside lecturers and how they wanted to frame their day. In practice, it would have been better if Alex taught all the modules. \r\n\r\nIt was hard to know if our projects were meant to be design, engineering, or environmental studies ones. It was a lot of work to pull all these parts together, especially if your group members did not have certain skills. I wish it was more strongly framed to help us understand the deliverables.  I had a rough time in the course due to a group member not working on our projects, leaving us with a ton more work to do. The projects were really, really time-consuming, but maybe that was self-inflicted since some groups/members did not do much work. \r\n\r\nThe class was also a little crazy at times, with one of our projects requiring us to apply concepts we didn't learn, since the lecture on economic analysis did not actually teach us the skills to evaluate cost of a seawall. We ended up messing with a spreadsheet that was cool but we didn't fundamentally understand and would not have been able to apply this elsewhere. \r\n\r\nFinally, some engineering students took the class to skip the senior project. They slacked off and it was frustrating to groups with them. ",
+            "\u00a0If this course was organized in a way that better aided learning and understanding, I would definitely. ",
+            "\u00a0Would I recommend this course? Maybe, but it definitely hasn't been one of my favorites. It's too bad because I'm actually hoping to go into (sustainable) urban planning after graduation. Unfortunately, the class feels pretty disorganized and it's difficult to achieve effective collaboration between the mechanical engineers, architects, and forestry students. I just didn't feel like I came away with a lot of practical skills relating to urban design (except getting a feel for ArcGIS, which was great). ",
+            "\u00a0This is a good class if you are willing to take it seriously. It's very interdisciplinary, which has both advantages and disadvantages. Be prepared to be on teams with people with very different skill sets and perspectives. That being said, I found the class very valuable, and I learned a lot of useful skills. ",
+            "\u00a0Not unless you already have a background in this subject, because I felt kind of lost. "
+        ]
+    ]
+}

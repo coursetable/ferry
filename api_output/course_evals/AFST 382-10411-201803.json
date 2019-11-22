@@ -1,0 +1,73 @@
+{
+    "crn_code": "10411",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            1,
+            0,
+            1,
+            0,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            1
+        ],
+        [
+            1,
+            1,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            3,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I developed useful research and writing skills, in addition to significant knowledge about the current situation and tactics for improvement of child health and development in Africa. "
+        ],
+        [
+            "\u00a0Professor Alipui is super knowledgeable and a really great person. Unfortunately, he is not a great teacher. Most days were spent reading from slides or having us present group projects - an interesting time where we would receive feedback that seemed unrelated to the original guidelines he had provided. Class could be improved by making into an actual seminar or providing guidelines that would promote learnings. Readings are related, but re-capped in class. ",
+            "\u00a0The course workload is easily balanced with other courses, and the work is relevant. The course could be improved if assigned readings were discussed more in class. "
+        ],
+        [
+            "\u00a0There are so few classes on Africa that yes, just take it if you're interested, but no if you have any way to avoid it. ",
+            "\u00a0I would 100% recommend this course to another student. It was one of my favorite courses at Yale. I learned so much about a very interesting topic - plus, we visited the UN! "
+        ]
+    ]
+}

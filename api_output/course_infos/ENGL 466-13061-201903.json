@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "A seminar and workshop in the contemporary essay. Public versus private voice, the responsibilities of the essayist, and the evolution of writing in the first person. Readings include essays by Joan Didion, Jonathan Lethem, Jenny Diski, Zadie Smith, M.\u00a0F.\u00a0K. Fisher, Bruce Chatwin, John Berger, and Oliver Sacks.", 
+    "title": "Writing the Contemporary Essay", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "JE L23", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13061", 
+        "listings": [
+            {
+                "number": "466", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENW\">YC English: Creative Writing</a>"
+    ], 
+    "professors": [
+        "Cynthia Zarin"
+    ], 
+    "long_title": "Writing the Contemporary Essay", 
+    "extra_info": "A"
+}

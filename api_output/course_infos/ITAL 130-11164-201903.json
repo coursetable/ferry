@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "2019-12-13", 
+        "group": 2, 
+        "day_of_week": "Friday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50266/assignments/syllabus", 
+    "requirements": "ITAL 120 or equivalent.", 
+    "description": "The first half of a two-term sequence designed to increase students' proficiency in the four language skills and advanced grammar concepts. Authentic readings paired with contemporary films. In-class group and pairs activities, role-playing, and conversation. Admits to ITAL 140.\nConducted in Italian.\nITAL 120 or equivalent.\n\n1.5 Yale College course credits", 
+    "title": "Intermediate Italian I", 
+    "skills": [
+        "L3"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "DOW 112", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "11164", 
+        "listings": [
+            {
+                "number": "130", 
+                "subject": "ITAL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Sarah Atkinson"
+    ], 
+    "long_title": "Intermediate Italian I", 
+    "extra_info": "A"
+}

@@ -1,0 +1,123 @@
+{
+    "crn_code": "23225",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            7,
+            17
+        ],
+        [
+            0,
+            0,
+            1,
+            8,
+            15
+        ],
+        [
+            0,
+            0,
+            2,
+            8,
+            15
+        ],
+        [
+            0,
+            0,
+            3,
+            9,
+            13
+        ],
+        [
+            0,
+            0,
+            1,
+            9,
+            15
+        ],
+        [
+            0,
+            0,
+            2,
+            11,
+            12
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0greedy algos, divide and conquer, FFT and DFT, Network Flow, approximation algos, randomized algos, and P/NP ",
+            "\u00a0I studied many useful algorithms that I would need to know if I wanted to improve my problem-solving abilities. I learned how to prove correctness of algorithms and their runtimes, as well as the different techniques in approaching a problem. ",
+            "\u00a0fundamentals of algorithms ",
+            "\u00a0How to design and analyze algorithms to solve problems ",
+            "\u00a0The ability to analyze and construct algorithms and the algorithmic complexity of problems. ",
+            "\u00a0I learned about greedy, dynamic programming, linear programming, P vs NP, etc. I learned the mindset of a computer scientist (as a mathematician who hadn't done the CS prereqs, this was a big part of the class for me): running time, storage space, and elementary operations. ",
+            "\u00a0Different algorithms and proofs. ",
+            "\u00a0Creative problem solving, some algorithms paradigms, insight into the field of theoretical computer science. Problem sets are due every 3 classes, and we had three problems to solve. It felt like I was thinking about the problems every waking minute of my week. I improved my proof writing significantly, since most of the grade comes from problem sets. The problem sets are graded carefully, so you really have to demonstrate a rigorous proof of each problem to score well. Working on such a few number of problems for such a long time really built up my endurance for thinking about problems like these. I think it made me a more patient problem solver. ",
+            "\u00a0How to design and analyze algorithms. ",
+            "\u00a0I learned about how to write algorithms, and how to analyze their correctness and runtime. ",
+            "\u00a0All the knowledge needed for coding interviews. ",
+            "\u00a0A deep understanding of fundamental algorithm techniques, including dynamic programming, divide and conquer, network flow, and others. We also learned about basic computational complexity theory (P vs. NP), and spent some time on randomized and approximation algorithms. ",
+            "\u00a0It was a very comprehensive algorithms course covering all of the basic topics to be covered (e.g. greedy algos, dynamic programming, network flow, randomized algos, reductions, etc) ",
+            "\u00a0Algorithm design and analysis techniques for various kinds of algorithms and significant algorithms for certain problems. Additionally, we learned about NP-completeness and complexity categorization. ",
+            "\u00a0Analysis of algorithms, formal proofs, and more indepth time complexity ",
+            "\u00a0A very comprehensive introduction to all aspects of algorithms. ",
+            "\u00a0I learned and got confidence on how to design algorithms, and prove that they work, as well as how efficient they are. ",
+            "\u00a0I learned about algorithm design and how to prove the correctness and run time of algorithms. I learned various common design techniques (greedy, DP, divide and conquer, network flow). I then learned about NP completeness and reductions, approximation algorithms, and randomized algorithms. "
+        ],
+        [
+            "\u00a0Lectures were pretty interesting and reasonable to follow (some 365 students actually started coming bc the lectured were much better than theirs). Most of this class is based on the psets; the first 4 or so were pretty time consuming, taking 15-20 hours to complete, as they required coming up with some pretty involved algorithms and proofs. The last 4 were much more reasonable, and only took 5-10 hours each.  Grading seems to be pretty generous, as done without a curve for the most part, with psets counting for 80% ",
+            "\u00a0Shoutout to the ULAs! Since the course is difficult and due to the emphasis on individual problem-solving, there are lots of times when you know a general idea of how to solve a homework problem but are unsure of how exactly to fit the parts together, and I think the ULAs this semester did a great job of offering guidance/hints without giving the problem away. ",
+            "\u00a0I really like the fact that collaboration is not allowed in the problem sets, since it encourages students to really think and understand the ins and outs of each problem. I had to pull an all-nighter for nearly each one of them, despite having worked ahead, yet the process of solving these problems and arriving at the solution is always rewarding. \r\n\r\nI also liked the use of GradeScope, since it is really easy to check scores, comments, and ask for regrading. ",
+            "\u00a0theoretical, challenging, could have more simulation exercises for the algorithms ",
+            "\u00a0The class taught me so much but the office hour scheduling wasnt the most positive experience ",
+            "\u00a0Psets were interesting and diverse. The final examination, by contrast, was bland repetition of material already discussed. It would have been much better if it required critical thinking or analysis skills. ",
+            "\u00a0Strengths: the psets were challenging, but short and consistent (every 3 classes). The final exam covered only material learned in class.\r\nNo weaknesses to report. ",
+            "\u00a0The difficulty of the problem sets was well-calibrated. We rigorously kept to the syllabus schedule: two weeks on a concept, a problem set due every 3rd class. I spent easily 20-30 hours on each problem set. Yang Cai almost always lectured from the proofs in the textbook, but the textbook is pretty helpful, so that was not frustrating. From what I have heard, Dan Spielman diverged from the textbook more than Cai. The material is pretty inherently interesting, although I felt lectures were sometimes very dry.\r\n\r\nUnfortunately, since collaboration is prohibited, we had to sign up for 1-on-1 office hour slots in 10 minute intervals. It sometimes felt like the ULAs themselves did not know how to do the problems, which made trying to get help during office hours pretty difficult. The final exam was much much easier to do well on than the assignments. ",
+            "\u00a0+ Great overview of different topics in algorithms design\r\n- TAs sometimes gave away too much information during OH slots. ",
+            "\u00a0I really enjoyed this class. The material was very well-organized, the lectures were very clear, the expectations were laid out neatly, and the grading was very reasonable. Furthermore, there were plenty of resources for us to use and we benefited greatly from being able to chat with TAs consistently. The material was incredibly interesting, and this was by far one of the most interesting classes I have taken at Yale. ",
+            "\u00a0Draw more pictures. Picture always helps. ",
+            "\u00a0The lectures were extremely clear, well-organized, and served as a great starting point for the problem sets. The problem sets offered a great exposition on the topic for the week, and the no collaboration policy forced you to sit and think about a problem (often for hours) until you can build intuition and a deeper understanding. I felt by the time I submitted each problem set that I understood that week's technique at a much deeper level than after just hearing about it in class. Another strength that I have to point out is the timeliness of assignment grading: Professor Cai and the TAs made it a point to give back the previous assignment (graded with detailed feedback and comments) before the next assignment was due, and were patient with regrade requests as they came up. This was extremely helpful in helping me improve and made sure I was always aware of how I was doing in the class.\r\n\r\nIt's hard for me to come up with any weaknesses at all if I had to put something, I would say that the TAs were at times inconsistent with their advice or would not know the answer themselves, so perhaps more TA training and coordination could have helped. (Overall, the TAs were extremely helpful each week, and their advice generally walked the line between giving you something to go off of and not giving away the entire answer quite well). ",
+            "\u00a0The class was very well taught and Prof. Cai did a great job covering a lot of material in a short amount of time. ",
+            "\u00a0The course material is good, office hour scheduling could be improved. ",
+            "\u00a0Strength: Introduction to algorithms with rigorous proof and challenging problem solving. \r\nWeakness: I think it would be better to have some programming exercise or sample code. ",
+            "\u00a0Weaknesses - Very intense office hours, where you have 10 minutes on the clock five times a week to ask mostly clarification questions about the pset. This could be made better with more office hours.\r\nStrenghts - No hand-holding. It makes you grow confident on the topic as you're solving thing absolutely on your own. If you can make this class, you can pretty much solve most coding interview questions. ",
+            "\u00a0I thought the class was a very good class. It provides a very good overview of the topic. I don't think there were any significant weaknesses with the class. "
+        ],
+        [
+            "\u00a0Yeah, if you like the more math/proof based side and are willing to put a bit more time into the class vs 365 ",
+            "\u00a0Great course but make sure you have the math background for it. 100% recommend for any Computer Science and Math major (like myself). Thoroughly enjoyed it! ",
+            "\u00a0Yes, especially if they are into mathematics and enjoy proofs. However, expect to put a lot of work into this class. ",
+            "\u00a0I would highly recommend this class to those interested in studying the topic at an advanced level.  It was a very enjoyable class, well-taught, with helpful TAs and clear feedback on problem sets. ",
+            "\u00a0If you want a rigorous course in algorithms, this is the one. ",
+            "\u00a0Yes! Very challenging in a good way ",
+            "\u00a0Yes--interesting content. ",
+            "\u00a0I would recommend this course to any math major interested in theoretical CS. ",
+            "\u00a0Recommend for those who come from strong proof math background. The grading of psets are harsh and ULA sometimes is not that helpful. That said, the lectures are clear and interesting. The psets are carefully designed and really fun to think about. ",
+            "\u00a0Absolutely take this course if you have the time to devote to it. This course feels like one that I will remember for a long time because of the sheer challenge that it posed. I became a much better and more confident computer scientist because of it. ",
+            "\u00a0Yes. Good overview of many different types of algorithms. ",
+            "\u00a0Absolutely - although technically intensive, the class was taught with such clarity and care that it was very easy to follow along the intended path. I found myself often times getting lost in lecture, but being able to return later on to synthesize those ideas. The course was one that presented ideas in a very intuitive way, and made the material and difficult problem sets worth understanding. ",
+            "\u00a0Absolute. This class should be mandatory. ",
+            "\u00a0This class is absolutely required for anybody who is serious about computer science. Much of computer science is about creative problem solving, and the only way to learn this skill is to practice breaking down and solving unique problems. This course does a fantastic job of that. Even for those (like myself) who may not pursue theoretical computer science, this skill is essential in the workforce (especially at interviews). ",
+            "\u00a0Yes, definitely take it with Prof. Cai. If you want a better understanding of algorithms, definitely take this over CPSC 365 (Algorithms). ",
+            "\u00a0I would recommend this course over 365 because this course is much more rigorous but simultaneously it is very time consuming and immensely difficult. ",
+            "\u00a0Yes ",
+            "\u00a0Absolutely for those interested in pursuing a graduate degree. ",
+            "\u00a0If you are willing to spend 20 hours a week per pset, which is made of three algorithm questions, yes. It will make you a very confident problem-solver in algorithm design. ",
+            "\u00a0If the student liked proofs and math puzzles, I would recommend this class. If they did not like the math heavy side of CS, I would not. "
+        ]
+    ]
+}

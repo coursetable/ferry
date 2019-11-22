@@ -1,0 +1,75 @@
+{
+    "crn_code": "12603",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I was provided with a comprehensive overview of major works from the Italian Renaissance, which equipped me with a deepened understanding of how the social, political, and economic organizations and events of the period emerged and progressed. ",
+            "\u00a0I learned about a very specific moment in Italian history and furthered my education in art history and Renaissance studies. My skills in literary analysis improved through class discussions as well. "
+        ],
+        [
+            "\u00a0I was quite satisfied with the course. ",
+            "\u00a0The course was very well organized. Each reading was discussed in class and many discussions were accompanied by photographs of certain artwork we were discussing. This helped create a more interesting discussion. "
+        ],
+        [
+            "\u00a0Absolutely. This is required course for anyone who wants to know anything about the Italian Renaissance. ",
+            "\u00a0I would recommend this course to those who study the Renaissance, but also to those who have a passing interest in this period and in art history. ",
+            "\u00a0Yes, I would definitely recommend it. "
+        ]
+    ]
+}

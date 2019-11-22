@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48918/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The goal of the course is to encourage students to consider whether we should all \u201cstop working and start thinking.\u201d We use the title of the book by J. Cohen and G. Medley as a premise to read and discuss issues related to research design, data analyses, and interpretation of results. We focus on foundational topics in science that we think are not getting enough attention early enough in the process of doing scientific research. Some of the specific topics addressed are: (1) articulation of clear hypotheses and predictions; (2) considerations of study feasibility, sample size, selection of proxy variables, and data organization; (3) a priori statistical protocols; (4) data-sharing plans; (5) interpretation of statistical vs. biological significance of results; and (6) broader impacts.", 
+    "title": "Research Methods in Biological...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12019", 
+        "listings": [
+            {
+                "number": "806", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANB\">YC Anthropology: Biological</a>"
+    ], 
+    "professors": [
+        "Claudia Valeggia", 
+        "Eduardo Fernandez-Duque"
+    ], 
+    "long_title": "Research Methods in Biological Anthropology", 
+    "extra_info": "A"
+}

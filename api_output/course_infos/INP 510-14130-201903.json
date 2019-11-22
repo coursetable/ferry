@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "An integrative overview of the structure and function of the human brain as it pertains to major neurological and psychiatric disorders. Neuroanatomy, neurophysiology, and clinical correlations are interrelated to provide essential background in the neurosciences. Lectures in neurocytology and neuroanatomy survey neuronal organization in the human brain, with emphasis on long fiber tracts related to clinical neurology. Lectures in neurophysiology cover various aspects of neural function at the cellular and systems levels, with a strong emphasis on the mammalian nervous system. Clinical correlations consist of sessions applying basic science principles to understanding pathophysiology in the context of patients. Seven two-hour laboratory sessions are coordinated with lectures throughout the course to provide an understanding of the structural basis of function and disease. Case-based conference sections provide an opportunity to integrate and apply the information learned about the structure and function of the nervous system in the rest of the course to solving a focused clinical problem in a journal club format. Variable class schedule; contact course instructors. This course is offered to graduate and M.D./Ph.D. students only and cannot be audited.", 
+    "title": "Structural and Functional Orga...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14130", 
+        "listings": [
+            {
+                "number": "510", 
+                "subject": "INP"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Schwartz"
+    ], 
+    "long_title": "Structural and Functional Organization of the Human Nervous System", 
+    "extra_info": "A"
+}

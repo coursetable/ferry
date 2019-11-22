@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Introduction to the poetic genres of lyric, epic, and pastoral in the European Renaissance. Focus on questions of desire, love, and gendered subjectivity. The historical contexts and political uses of discourses of eroticism and pleasure in Italy, Spain, France, and England. Written exercises include poetic imitations of Renaissance texts.", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11216", 
+        "listings": [
+            {
+                "number": "149", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Gender and Genre in Renaissance Love Poetry", 
+    "extra_info": "C"
+}

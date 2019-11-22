@@ -1,0 +1,84 @@
+{
+    "crn_code": "22040",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            3,
+            2
+        ],
+        [
+            1,
+            3,
+            3,
+            0,
+            1
+        ],
+        [
+            1,
+            2,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            2,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            1
+        ],
+        [
+            0,
+            1,
+            5,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned multivariable calculus. ",
+            "\u00a0How to do calculus with multiple variables. ",
+            "\u00a0I gained a much better understanding of calculus in three dimensions. This course greatly improved my critical thinking skills and also how to navigate through a course where I struggle at times to grasp the concepts during lecture. ",
+            "\u00a0I learned that I had to teach everything to myself. ",
+            "\u00a0Advancement of skills in multivariable calculus; improved skills in logical/quantitative reasoning. ",
+            "\u00a0Multivariable Calculus. All the basics. "
+        ],
+        [
+            "\u00a0I was not a fan of my teacher. ",
+            "\u00a0The main strength is that the small class sizes allow for very close student-professor relationships. However, I found the pace to be very quick and at times I struggled to keep up with the material in lecture. ",
+            "\u00a0There are no strengths to this course, only weaknesses. This course is notorious for poor instruction and for lack of communication between sections. ",
+            "\u00a0Strengths included the review resources offered, such as online videos and practice problems through Ximera. In terms of weaknesses, the course was somewhat poorly organized; the biggest weakness by far was the drastic difference in teaching styles between the different instructors. To be frank, nearly everyone who takes this course knows that, if they are not fortunate enough to be assigned a certain instructor over another, they will have to work twice as hard over the course of the semester in order to understand the same material simply because it is not taught as well/clearly. ",
+            "\u00a0There is a lot of help available if needed. It can sometimes be hard to follow in lecture. Ximera is great for help, though. "
+        ],
+        [
+            "\u00a0Only if they absolutely have to take it. Don't take it for fun. ",
+            "\u00a0Yes, because it does teach a very important concept. ",
+            "\u00a0Do not take this course unless you absolutely have to. ",
+            "\u00a0Although I personally found the material in this course very interesting, I would only recommend this course to another student if they were assigned one of the instructors with stronger teaching skills. ",
+            "\u00a0If you have to take it, do so. It may not be exciting, but they do have things in place for you to succeed. "
+        ]
+    ]
+}

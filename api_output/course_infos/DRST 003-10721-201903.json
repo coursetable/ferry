@@ -1,0 +1,52 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "An examination of major figures in the history of Western philosophy with an aim of discerning characteristic philosophical problems and their interconnections. Emphasis on Plato and Aristotle in the fall term. In the spring term, modern philosophers include Descartes, Berkeley, Hume, Kant, and Nietzsche.", 
+    "title": "Directed Studies: Philosophy", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WHC B-02", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }, 
+        {
+            "start_time": 11, 
+            "location": "WHC AUD", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 7, 
+        "oci_id": "10721", 
+        "listings": [
+            {
+                "number": "003", 
+                "subject": "DRST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Andrew Werner"
+    ], 
+    "long_title": "Directed Studies: Philosophy", 
+    "extra_info": "A"
+}

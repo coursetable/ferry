@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48664/assignments/syllabus", 
+    "requirements": "Prerequisite: introductory macroeconomics.", 
+    "description": "Economic development in China since the late 1970s. Emphasis on factors pushing China toward a transition from its modern export- and investment-led development model to a pro-consumption model. The possibility of a resulting identity crisis, underscored by China's need to embrace political reform and by the West's long-standing misperceptions of China.\nPrerequisite: introductory macroeconomics.", 
+    "title": "The Next China", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "LC 102", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12186", 
+        "listings": [
+            {
+                "number": "318", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Stephen Roach"
+    ], 
+    "long_title": "The Next China", 
+    "extra_info": "A"
+}

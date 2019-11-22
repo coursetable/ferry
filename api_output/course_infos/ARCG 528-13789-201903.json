@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/52146/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to ancient Egyptian and Near East magic and rituals with an overview on the use of magic and discussion of the different rituals and festivals.", 
+    "title": "Magic and Ritual in Ancient Eg...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "YK220 001", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13789", 
+        "listings": [
+            {
+                "number": "528", 
+                "subject": "ARCG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "John Darnell"
+    ], 
+    "long_title": "Magic and Ritual in Ancient Egypt and the Near East", 
+    "extra_info": "A"
+}

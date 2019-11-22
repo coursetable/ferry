@@ -1,0 +1,74 @@
+{
+    "crn_code": "10697",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned the basics and foundation in software analysis&verification. Definitely learned more about logic, and about reasoning about a piece of program and what it can do. Looking back, the material all makes a lot of sense, and I am grateful to have taken the course with Prof Piskac -- there is no way I would have learned this knowledge by myself just for fun. ",
+            "\u00a0The course was kind of a survey on formal verification techniques which means you learn the basic about a whole number of topics in verification, all of which were completely new to me.  It's hard to even enumerate them all, but they're all cool! "
+        ],
+        [
+            "\u00a0Strengths: very interesting material, and good assignments, reasonable workload. \r\nWeakness: some parts of the material aren't covered in great depth. ",
+            "\u00a0The lectures are engaging and you learn a lot about verification, which is an extremely important field of computer science that you'll scarcely hear about in any class besides this one.  For students without strong mathematical and formal reasoning skills, it's likely to be very challenging, but I wouldn't say the course has any real weaknesses. "
+        ],
+        [
+            "\u00a0I would definitely recommend this course to another student. It's a really important field of studies within computer science, and also, like philosophically, it's just something important to know and to think about. ",
+            "\u00a0Yes  if you are a CS major, please take this course.  The field of verification is not only lucrative, it's quickly becoming one of the most important fields in computer science, and this is the ONLY class in the department which offers an intro to verification.  As programs get bigger, more complicated, and more critical, it's important that they DO NOT fail, and verification is the ONLY way to reliably ensure this happens.  You need to mathematically prove that programs will ALWAYS work anything less is no guarantee, not even the strictest possible unit testing.  Airplane control, medical systems, and so much more need to be utterly failsafe, so in my opinion this is one topic that every CS major needs to learn.  More than that, the class is fun, challenging, and engaging, and the material is like nothing you've ever seen before (unless you've taken a lot of math/logic classes).  Ruzica's lectures are good and she's a very smart, approachable, and funny professor both in class and in office hours.  As for the workload, it's hard but not oppresive, when you compare it to the CS core and some of the other challenging electives here.  There were only 5 problem sets my year, and on average I'd say they took about 10 hours each.  The two projects were very fun, but a LOT of work.  There was no midterm and the final was straightforward.  Definitely try to attend all of the lectures and take notes, since the material is hard to learn on your own just using the slides.  Overall, this is one of the best classes I've taken in Yale's CS department.  If you're considering the class, go for it. "
+        ]
+    ]
+}

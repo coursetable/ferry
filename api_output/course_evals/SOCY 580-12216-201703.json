@@ -1,0 +1,80 @@
+{
+    "crn_code": "12216",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained a more nuanced perspective of statistical theory and the application of that theory which is relevant for the execution of empirical social science research. I also learned how to effectively use the new STATA15 software application for the conducting statistical analyses. ",
+            "\u00a0Fundamentals of calculus and statistics, with application to the social sciences ",
+            "\u00a0This course shaped my knowledge of statistical analysis and the mathematics behind it, providing me with an important skill set that enables me to understand and criticize research that uses quantitative methods. ",
+            "\u00a0I gained such a great amount of knowledge about quantitative statistics, calculus, and how to use calculus to use Stata and interpret statistical findings. It was really great to gain insight on how quantitative methods are seen in the larger discipline of sociology, and how they're used. I learned how to use Stata, but the main contribution was how to incorporate calculus into using stata. "
+        ],
+        [
+            "\u00a0One strength of this course is that it used conceptual tools from calculus to ground our understanding of statistical concepts in practice. Another strength of this course is that it helped students garner an understanding of statistical concepts that can be applied to various research endeavors. ",
+            "\u00a0This class is AMAZING for math lover and non math lovers. The strength is the mix of calculus and statistics, and applying all work to real world data ",
+            "\u00a0This course is absolutely perfect as it is! ",
+            "\u00a0This is one of the best classes I've ever taken - ever. I'm not a quantitative sociologist, but I learned so much, and now feel like I can participate confidently with my peers who do specialize in that methodology. The strength of this class was the time spent on calculus at the beginning of the course. I also liked that it was two times a week. The weakness was that I wish there would have been more specific documents for Stata commands, like a handbook for each class with the key strokes that we used. I also didn't think that the teaching fellow discussion sections were helpful at all. They were disorganized at times, and didn't leave time to ask questions on specific homework problems. I felt like the only person I could rely on for help was Lloyd, which I know puts a huge amount of work onto his shoulders. So perhaps the TF facilitation could be reviewed. "
+        ],
+        [
+            "\u00a0Yes, I would definitely recommend this course to other undergraduate or graduate students interested in developing an ability to consume or produce statistical analyses. ",
+            "\u00a0Yes, this class is appropriate for anyone pursuing quantitative research on the social sciences. ",
+            "\u00a0While there is a lot of drilling and homework for this class, it all comes together after about half the semester when you really start to understand how calculus and statistics is connected. I would highly recommend this course to anyone who is interested in the subject but is not necessarily a \"natural\" in maths. Here, you will learn everything from scratch in a way that is both effective AND fun. ",
+            "\u00a0Absolutely. This course was phenomenal. Lloyd is one of the best teachers I've ever had - ever. "
+        ]
+    ]
+}

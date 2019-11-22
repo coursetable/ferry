@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Readings directed by members of the faculty on topics in the history of science, medicine, or public health not covered by regular course offerings. Subjects depend on the interests of students and faculty. Weekly conferences; required papers.", 
+    "title": "Directed Reading", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11097", 
+        "listings": [
+            {
+                "number": "471", 
+                "subject": "HSHM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Directed Reading", 
+    "extra_info": "A"
+}

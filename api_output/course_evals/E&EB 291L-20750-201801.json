@@ -1,0 +1,79 @@
+{
+    "crn_code": "20750",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            0
+        ],
+        [
+            0,
+            1,
+            4,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This class was a good addition to the class and helped me visualize the anatomy of the different systems we were learning about. ",
+            "\u00a0I learned to analyze vertebrate body plans. ",
+            "\u00a0How to use a microscope to analyze tissue and how to dissect several organisms. "
+        ],
+        [
+            "\u00a0More guidance in dissection techniques ",
+            "\u00a0The dissections were sometimes a bit confusing, and it was difficult to know if we were actually seeing all that we were supposed to be seeing. This could maybe be improved by having instructional throughout the dissection to make sure everyone is on the same page. ",
+            "\u00a0The strengths are getting to work with different species. Some of the labs could have used more structure. ",
+            "\u00a0The tests counted for way too much of the course, given that almost everyone got a 100% on the homeworks/labs. One missed question on a midterm meant a letter grade drop. Ouch. ",
+            "\u00a0Strengths include easy to follow lab manuals. Improvements: difficult to study for exams as most of what was done in class was identification and not learning about the systems in depth. "
+        ],
+        [
+            "\u00a0Pretty cool class ",
+            "\u00a0Yes, it was a fun lab with opportunity to work with great specimens. ",
+            "\u00a0Yes "
+        ]
+    ]
+}

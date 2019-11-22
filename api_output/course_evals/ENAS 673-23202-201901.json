@@ -1,0 +1,77 @@
+{
+    "crn_code": "23202",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Air pollution as it relates to ",
+            "\u00a0I learned a lot about air quality and how we study it. The chemistry was well explained and was very helpful to have the class background information taught to us and then read relevant papers to better understand how it relates to air quality research. The tie in to cars and emissions was well done and relevant and the explanations of biogenic vs anthropogenic clarified a lot about air quality policies and public perception. ",
+            "\u00a0Overview knowledge - together with some specifics - of the complexity of the chemistry and physics involved in air quality. "
+        ],
+        [
+            "\u00a0The structure of the course could be augmented to reflect the progressing idea of aerosol dynamics , chemistry and characterization ",
+            "\u00a0The course was a good combination of lecture and interactive activities such as chemistry pathways, journal clubs, and brainstorming activities. This kept the student engagement high and allowed us to better interact and learn the material. Everything was clearly explained and Drew was always happy to go slightly off topic and answer students questions which meant we covered a lot of additional material as well. The only thing that could be improved on would be to tie the homework questions a little more to a specific reading to help clarify things, but even this wasnt really an issue except for maybe 2 problems through the semester. ",
+            "\u00a0This course was a great mix of lecture, discussion, and active participation. I think Prof. Gentner did a phenomenal job fitting it all in. I would have liked more \"journal club\" days - I think they lead to really interesting discussions. "
+        ],
+        [
+            "\u00a0Yes it is very thorough and encourages student participation ",
+            "\u00a0Yes! Especially if they are interested in air quality as Yale is lacking courses in general on the subject but this course is an excellent intro/deeper dive into the topic at a graduate level. ",
+            "\u00a0Absolutely. If you have any interest in the factors contributing to air quality - urban or otherwise - this is a great course. "
+        ]
+    ]
+}

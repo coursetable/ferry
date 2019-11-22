@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48686/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Launched in 2008 at the Yale School of Management, the Global Social Entrepreneurship (GSE) course links teams of Yale students with social enterprises based in India. GSE is committed to channeling the skills of Yale students to help Indian organizations expand their reach and impact on \u201cbottom of the pyramid\u201d communities. Yale students partner with mission-driven social entrepreneurs (SEs) to focus on a specific management challenge that the student/SE teams work together to address during the term. GSE has worked with thirty leading and emerging Indian social enterprises engaged in economic development, sustainable energy, women\u2019s empowerment, education, environmental conservation, and affordable housing. The course covers both theoretical and practical issues, including case studies and discussions on social enterprise, developing a theory of change and related social metrics, financing social businesses, the role of civil society in India, framing a consulting engagement, managing team dynamics, etc. Enrollment is by application only. Also MGT 529.", 
+    "title": "GSE India: Global Social Entre...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "EVANS 4230", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13165", 
+        "listings": [
+            {
+                "number": "929", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Tony Sheldon"
+    ], 
+    "long_title": "GSE India: Global Social Entrepreneurship", 
+    "extra_info": "A"
+}

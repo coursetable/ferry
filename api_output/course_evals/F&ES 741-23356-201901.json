@@ -1,0 +1,101 @@
+{
+    "crn_code": "23356",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            2,
+            3,
+            1
+        ],
+        [
+            1,
+            1,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            3
+        ],
+        [
+            0,
+            2,
+            4,
+            1,
+            1
+        ],
+        [
+            2,
+            0,
+            4,
+            2,
+            0
+        ],
+        [
+            1,
+            1,
+            1,
+            2,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a bit of R, how to use camera traps, how to do soil sampling and analysis and a number of other technical skills. ",
+            "\u00a0Gained insight into how ecology sampling, especially for aboveground and belowground carbon storage plays out on the ground. ",
+            "\u00a0I was forced to use R with measurements I myself had actually taken. This was a really cool experience. I also got to practice a lot of skills around the environment and ecosystem measurements that I have heard about only in my textbooks, so that applied science component was really cool. In general, the opportunity to do fieldwork with such a kind and the patient expert professor was super special. I feel more prepared to be an environmental manager with the skills I will need at a conservation NGO. ",
+            "\u00a0We learned to do some plot layouts, learned some tree ID, some steps in how to assess soils through lab work, and a bit about above ground storage of carbon in trees. ",
+            "\u00a0I had the chance to learn about camera trapping, measuring aboveground and belowground biomass, soil carbon stocks, and diameter at breast height of trees (review from MODs). ",
+            "\u00a0I learned the basics of GIS, R studio, soil analyses, carbon stock analyses, wildlife camera trapping, and the strengths and limitations of common methodologies and statistical analyses for all of those. Some of this was a review for me, but even those were useful refreshers of skills that I haven't used for a while. ",
+            "\u00a0Analysis with R on tree biomass and soil carbon. ",
+            "\u00a0Applied and developed previously learned skills in GIS and geospatial data, biophysical soil parameter measurements, statistical analysis, use of the R statistical software, sampling methods, temperate tree identification: all towards a new rapid ecological appraisal skill set. "
+        ],
+        [
+            "\u00a0Very well. ",
+            "\u00a0I was a bit disappointed with some aspects of this class. I was hoping that the rapid ecological assessment with the New Haven Land Trust would be more integrated from the beginning and it seemed quite rushed at the end of the semester. Although our class truly worked well together to get a sampling project and thorough report completed. ",
+            "\u00a0I thought that the class would have more of a learning component for the labs. I learned a lot but it was mainly from doing and trial and error. I felt a bit blindsided by the lab reports, they involved working through a lot of stuff on our own that we hadn't covered in class and didn't really hold a lot of the qualitative aspects of the course that we practiced in the field, if I hadn't been able to come to office hours, I think that I would have been a little lost on the reports because -I don't have that background. That is tough. But they were meaningful. I think maybe a smaller dose? A problem set with just one aspect of the field project at a time. This week your homework is to calculate diversity, this week your homework is to calculate biomass... Would have been more useful, it was too much to chew on for me. I don't know if I will remember all that. ",
+            "\u00a0Not well. The lessons and content for this class were very cursory and poorly organized. There was a lot of time wasted in this class. ",
+            "\u00a0I think the knowledge, skills, ad insights gained in this class exceeded my expectations. ",
+            "\u00a0My expectations were met ",
+            "\u00a0Very much aligned - a very much appreciated field/practical course! "
+        ],
+        [
+            "\u00a0This was the first year this course was offered so there was obviously some experimentation, but it was generally a really great course. I learned a lot of important and exciting field and analysis skills in a very short time. ",
+            "\u00a0Strengths include experiencing on the ground an intact upland forest and coastal marsh areas along the Connecticut coast to experience how ecosystems are changing and how historical land uses have affected these ecosystems. Weakness was that the course felt unorganized at times, and piles of work arose out of seemingly nowhere with minimal context for some of the concepts required to complete assignments. ",
+            "\u00a0The time in the field with Marlyse was incredible! She taught us so much and really helped me understand so much. I also liked working with my teammates who were very helpful and kind. I learned a ton, and Marlyse is super flexible with the weather for example.\r\n\r\nThat being said, I do feel that the course needs a guiding focus. A case study. This is different from statistics, since it is place based. Even if it is measurements... If it's on coastal forests then we learn a lot about that. If it is on the restoration of urban degraded areas that are post-cleared for example then we learn that. The learning felt diffuse at times and I think that a case-study focus could help. The measurement skills were great for me as a non-scientist. But I don't know if I will walk away understanding them because of the lack of context. Were we comparing a healthy forest to a degraded one? I know that we were but that didn't feel like what the goal of the course was. I think centering the course on that could like help with that issue. ",
+            "\u00a0This course introduces a lot of field measurement skills to students. Even if the amount of time during the semester doesn't enable a very in-depth look at all of these skills, it's still a useful introduction. I also thought the practicum was a good idea. Even if it was time-consuming, it enabled us to practice the skills we learned. I also thought the class size was good; not too big, but also not too small, which enabled us to work and communicate well on the practicum. ",
+            "\u00a0I thought the iterative projects were very useful for helping me build on and solidify my knowledge. I find I retain information about programs like R and QGIS best when I have a little bit of background and then have to problem solve and troubleshoot myself, and I think this course really facilitated that kind of project-based learning. When I had trouble, Marlyse and Eli were very available to provide support at office hours. ",
+            "\u00a0The strength was the final project. I found it very helpful and enjoyable to just do the thing that we say we do at FES: make a rapid management plan with recommendations. The weakness was the disorganization of the entire semester and the very surface-level quality of the few lectures we had. I know this was a broad survey class, but there needed to be more to it then just quick explanations of some basic methods. ",
+            "\u00a0This class aptly combined academic/classroom, field and real-word project management and delivery elements that few classes have done as successfully and impactfully. "
+        ],
+        [
+            "\u00a0This is a great course, but expect to put in work outside of class. It is not just a field course it also teaches you a lot of technical skills and you have to be willing to put in the time to gain those. ",
+            "\u00a0I would suggest having a conversation with Marlyse about whether the insight gained from this course aligns with your interests. ",
+            "\u00a0Make sure to go to office hours, they were super helpful. ",
+            "\u00a0Look elsewhere. Unless there are serious changes this course is not worth taking. ",
+            "\u00a0Because the lab/field trip component was removed from the Ecosystems and Landscape course, this class provides a good follow-up to that course. Dr. Duguid is also a great instructor, and students should take the opportunity to take a class with her. The practicum is largely student-driven (although Dr. Duguid is available for questions), so it's important to stay engaged in the class discussion and to keep one another on task if people get distracted. ",
+            "\u00a0Do it! I would especially recommend this class to students in the Ecosystem and Landscapes Conservation and Management concentration like myself who want an overview of the skills covered in Management Plans but don't want to dedicate 6 credits to it. I think this fills a very important niche as a survey of field-based skills. ",
+            "\u00a0Only take this course, if you don't have any exposure of field methods. ",
+            "\u00a0This is an EXCELLENT class! Strongly recommended for students interested in ecological conservation / restoration but not necessarily in the Forestry cohort. Excellent combination of field, classroom and project management components! Excellent teaching and support! Great way to get out of the classroom! "
+        ]
+    ]
+}

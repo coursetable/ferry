@@ -1,0 +1,75 @@
+{
+    "crn_code": "23350",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            3
+        ],
+        [
+            0,
+            1,
+            0,
+            4,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            2
+        ],
+        [
+            0,
+            0,
+            6,
+            3,
+            0
+        ],
+        [
+            0,
+            1,
+            7,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Presentation skills ",
+            "\u00a0This class allowed me to become more familiar and comfortable with understanding the material in research papers related to both economics and behavioral economics. It also honed my public speaking skills as we had to present on these papers twice during the semester. ",
+            "\u00a0An overview of the main ideas in behavioral economics "
+        ],
+        [
+            "\u00a0I enjoyed how much freedom we had to dive into the topics that we were interested in. I now have a relatively good understanding of five behavioral economics paper and a topic within behavioral economics. On the other hand, I did not learn very much from the other students' presentations. Since we never really discussed the papers, there was little incentive to read the papers before class. In the future, I think the presentations should be maybe 10 - or even 5 - minutes long followed by a 30-minute discussion. Then the students would be forced to read the papers for each class and think critically about them. ",
+            "\u00a0Strengths: Student presentations forced students to really engage with specific ideas and papers in the class.\r\n\r\nWeaknesses: Very little professor involvement, everything was mostly self taught. The professor did organize a comprehensive syllabus. "
+        ],
+        [
+            "\u00a0If you are looking for an interesting gut class where you get to learn something at the same time, this is a great class. Be aware that the class is all student presentations, though. ",
+            "\u00a0Would recommend. Pretty easy/light workload senior seminar. It is pretty fun and you learn interesting theories that can facilliate a more complete and nuanced view of economic models. "
+        ]
+    ]
+}

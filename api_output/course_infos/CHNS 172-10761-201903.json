@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49368/assignments/syllabus", 
+    "requirements": "Prerequisite: CHNS 155, CHNS 162, placement results equivalent to L5, or permission of instructor.\u00c2\u00a0", 
+    "description": "This course aims to bring students to advanced competence in all aspects of modern Chinese, and prepare students for advanced research or employment in a variety of China-related fields. Materials include readings on contemporary social, cultural, and political issues, which are written by prominent scholar writers in related fields. This level is suitable for students who have had four years of college Chinese prior to attending, or who have taken three years of an accelerated program meant for heritage speakers.\nPrerequisite: CHNS 155, CHNS 162, placement results equivalent to L5, or permission of instructor.\u00c2\u00a0", 
+    "title": "Chinese for Scholarly Conversa...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "TM432 102", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10761", 
+        "listings": [
+            {
+                "number": "172", 
+                "subject": "CHNS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Yongtao Zhang"
+    ], 
+    "long_title": "Chinese for Scholarly Conversation", 
+    "extra_info": "A"
+}

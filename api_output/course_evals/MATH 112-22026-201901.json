@@ -1,0 +1,86 @@
+{
+    "crn_code": "22026",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            7,
+            5
+        ],
+        [
+            0,
+            1,
+            9,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            7,
+            4
+        ],
+        [
+            0,
+            1,
+            3,
+            9,
+            2
+        ],
+        [
+            0,
+            0,
+            6,
+            8,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            9,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about limits, derivatives, and integrals. I also developed better math study skills. ",
+            "\u00a0Better calculus skills! ",
+            "\u00a0I learned a lot about math ",
+            "\u00a0Calculus skills ",
+            "\u00a0Necessary foundation of calculus ",
+            "\u00a0I became more familiar with calculus and its applications "
+        ],
+        [
+            "\u00a0More practice and less exam content on things that were just learned. ",
+            "\u00a0I thought the course was good ",
+            "\u00a0Lots of work ",
+            "\u00a0I thought the course had a strong curriculum. The webassign made it very difficult to get feedback on problems that I didn't understand. ",
+            "\u00a0It is very well planned out and taught however when it came to the final its difficulty was unlike that of anything beforehand from the classwork to the psets or the midterms. "
+        ],
+        [
+            "\u00a0I would recommend this course if Sarah Vigliotta is teaching. ",
+            "\u00a0If you must. But the final was not representative of the study material of previous years so I and many others found it to be much more difficult than expected. ",
+            "\u00a0Yes, I would say to take it with Prof. Vigliotta! ",
+            "\u00a0Yes because i had a good teacher ",
+            "\u00a0If they need to take math yes. ",
+            "\u00a0I would recommend it for a qr requisite. ",
+            "\u00a0For those who don't have it as a requirement for their major or other classes but need a QR credit I would suggest going in another direction. "
+        ]
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "crn_code": "30175",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            5,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            2
+        ],
+        [
+            0,
+            0,
+            5,
+            3,
+            0
+        ],
+        [
+            0,
+            1,
+            4,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Statistics methods and how to use stata ",
+            "\u00a0The professor described it as about 2/3 of an intro Stats class and 2/3 of intro Econometrics, and that seemed about right. I feel pretty equipped to read a good bit of economic research. The class definitely leans practical rather than theoretical - probably good for everyday use in a variety of fields. ",
+            "\u00a0I learned how to interpret the significance, limitations, and assumptions behind a few statistical methods. I also gained skills in generating mathematical models of economic or social situations through the combination of theory and data. ",
+            "\u00a0A whole new way to look at numbers and tables! ",
+            "\u00a0This course helps me to consolidate my knowledge basement about statistics and basic econometrics. It's both informative and practical. ",
+            "\u00a0Learned about statistics and econometrics as well as learned how to use Stata.  We also learned about the subjective challenges involved in statistics. "
+        ],
+        [
+            "\u00a0I really enjoyed this class. One of few weaknesses I can think of: the reading assignments seemed somewhat disjointed from the lectures/homework in the latter part of the class. Not a huge deal, and there are many other things to appreciate about the class (mainly the instructor). I also loved the structure of the material, starting with statistics and moving to regression from the ground up. ",
+            "\u00a0Obvious strengths include the seminar-size of the summer course which allowed for plenty of questions and useful discussion during live sessions ",
+            "\u00a0Group project is tough, especially since we couldn't meet with our team members in person. ",
+            "\u00a0It's really remarkable for the abundant content and practical assignments. ",
+            "\u00a0Well taught flipped classroom, really good professor, problem sets were manageable but long, "
+        ],
+        [
+            "\u00a0Yes. It's helpful and inspiring! ",
+            "\u00a0I do recommend if you're looking for a practically useful foundation in regression and stats. ",
+            "\u00a0Yes. Many decisions regarding government, business and individuals are--and more ought to be-- data-driven or data-facilitated in the modern age. As our capacity to process the vast amounts of data today increase, I think it's really important that everybody should have a good background in the mechanics of statistical methods and data analysis so that they can, at the least, become better-equipped citizens. The way this course is presented allows you to gain this foundation. After, taking it you might feel a little more confident in approaching in the complexity of the world. ",
+            "\u00a0Yes. I do not think I would have learned/gotten as much out of this course if I took the regular semester version. I had much more time to do the readings and interact with the lectures. ",
+            "\u00a0Yes. It really informative and practical. ",
+            "\u00a0Good econometrics class, Professor McKee is a great professor.  You leave class with an understanding of statistics and the ability to critically understand these basics in statistical papers.  Take it if you need to learn econometrics ",
+            "\u00a0Yes, the skills learnt in this class are crucial for any serious scientific study. "
+        ]
+    ]
+}

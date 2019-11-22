@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Probability: concepts and axiomatic development. Data: tools of descriptive statistics and data reduction. Random variables and probability distributions; univariate distributions (continuous and discrete); multivariate distributions; functions of random variables and transformations; the notion of statistical inference; sampling concepts and distributions; asymptotic theory; point and interval estimation; hypothesis testing.", 
+    "title": "Econometrics I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "WTS A30", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12633", 
+        "listings": [
+            {
+                "number": "550", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Donald Andrews"
+    ], 
+    "long_title": "Econometrics I", 
+    "extra_info": "A"
+}

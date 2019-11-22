@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49000/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Examination of narratives of gender in India. Folkloristic and anthropological approaches to gendered performance in story, song, and theater. Recent feminist examinations of television, film, advertising, and literature. Topics include classical epic (Ramayana, Shilapathigaram).", 
+    "title": "Medical Anthropology at the In...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "HLH51 101", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12853", 
+        "listings": [
+            {
+                "number": "548", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANB\">YC Anthropology: Biological</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANS\">YC Anthropology: Sociocultural</a></li></ul>"
+    ], 
+    "professors": [
+        "Marcia Inhorn"
+    ], 
+    "long_title": "Medical Anthropology at the Intersections: Theory and Ethnography", 
+    "extra_info": "A"
+}

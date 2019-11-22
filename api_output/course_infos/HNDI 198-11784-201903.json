@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: HNDI 150 or equivalent.", 
+    "description": "For students with advanced Hindi language skills who wish to engage in concentrated reading and research on material not otherwise offered by the department. Work must be supervised by an adviser and must terminate in a term paper or the equivalent. Permission to enroll requires submission of a detailed project proposal and its approval by the language studies coordinator.\nPrerequisite: HNDI 150 or equivalent.", 
+    "title": "Advanced Tutorial", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11784", 
+        "listings": [
+            {
+                "number": "198", 
+                "subject": "HNDI"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Swapna Sharma"
+    ], 
+    "long_title": "Advanced Tutorial", 
+    "extra_info": "A"
+}

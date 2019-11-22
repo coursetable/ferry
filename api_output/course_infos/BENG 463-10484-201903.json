@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: A basic understanding of biochemistry, biophysics, cell biology; calculus and differential equations.", 
+    "description": "Introduction to immunoengineering, a field combining immunology with the physical sciences and engineering. Focus on biophysical principles and biomaterial applications for understanding and engineering immunity against diseases such as cancer, autoimmunity and development of new vaccines.\nPrerequisite: A basic understanding of biochemistry, biophysics, cell biology; calculus and differential equations.", 
+    "title": "Immunoengineering", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "HLH17 03", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10484", 
+        "listings": [
+            {
+                "number": "463", 
+                "subject": "BENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Tarek Fahmy"
+    ], 
+    "long_title": "Immunoengineering", 
+    "extra_info": "A"
+}

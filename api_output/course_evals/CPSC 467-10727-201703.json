@@ -1,0 +1,90 @@
+{
+    "crn_code": "10727",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            2,
+            8,
+            1,
+            0
+        ],
+        [
+            1,
+            2,
+            8,
+            3,
+            0
+        ],
+        [
+            1,
+            2,
+            3,
+            6,
+            1
+        ],
+        [
+            0,
+            2,
+            4,
+            6,
+            1
+        ],
+        [
+            0,
+            1,
+            8,
+            4,
+            0
+        ],
+        [
+            1,
+            3,
+            9,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Computer security and other encryption mechanisms. ",
+            "\u00a0I learned about different cryptographic methods and the mathematical basis they are founded on. ",
+            "\u00a0Some number theory and nothing else ",
+            "\u00a0I learned some of the number theory behind cryptographic systems, some important algorithms ",
+            "\u00a0Cryptography systems for encryption, authentication, hashing, integrity, and several number theory concepts ",
+            "\u00a0In this course I learned some of the main crypto-systems both symmetric and public. I learned different types of cyber-attacks and how to prevent them if possible and how to check the level of security and if can be improved. ",
+            "\u00a0I learned more about cryptography and how computer security works. The process of encoding a message, encrypting it into a ciphertext, decrypting the ciphertext, and decoding it. I learned a lot about different security protocols and how to analyze a protocol and find loopholes as well as all the different sophisticated algorithms that rely on number theory that have been used to secure our computers and networks. "
+        ],
+        [
+            "\u00a0Lectures are super super dry. Everything else is manageable though. ",
+            "\u00a0Strong: Organization, handouts, slides, TA and Professor responses to student questions\r\n\r\nCould be improved: I'm going back and forth on whether I would have wanted to have more homework than we received for the course. I think there were large parts of the course that I engaged in only by reading the slides/textbook, and found that without any problems \r\nchallenging me to work with these parts, I was a little ill-equipped to think about them during exam time. \r\n\r\nThen again, if I really had wanted to, I could have searched for relevant problems in the text. Maybe future students could benefit from a list of problems in the textbooks they could use to practice reasoning about certain topics further, even if these aren't required as extra homework. ",
+            "\u00a0The course is well-structured and the assignments are instructive. Prof Fischer also prepares great slides. His teaching is a little dry though. ",
+            "\u00a0Lecture was very dull and he called people out if they weren't paying attention on their laptops. However, it felt necessary to come to class because there was a sign in sheet. The assignments were easy. If it was coding assignment which only 3 were 90% of the difficulty was just remembering how to code in C or C++. The exams were fair I guess. ",
+            "\u00a0Strengths- good problem sets\r\nWeaknesses- not enough examples in class ",
+            "\u00a0Very good survey of cryptographic tools, but maybe not enough emphasis on the number theory, making following lectures more difficult ",
+            "\u00a0The main weakness that I could think of and that affected my understanding throughout the semester is the lectures. I really enjoyed the material it was very interesting but the lectures were very boring. It was incredibly hard for me to follow what the professor is saying and I had to study some of the material by myself. This course has also needed some basic understanding of C++ but that was not stated as a course requirement. It would have saved a lot of time if I had known some C++.\r\nThe homework was very clear however, and I really enjoyed solving the homework questions and studying for the tests. ",
+            "\u00a0I think the course covers really interesting material and strikes a good balance between teaching the concepts and number theory necessary to make each concept work. "
+        ],
+        [
+            "\u00a0It's a fine CS elective, as there aren't really any great ones. I'd take it. ",
+            "\u00a0Really interesting material. Wish I had spent more time learning the ins and outs of it. Professor Fischer does a great job of making sure we see the big picture of things...what the GOAL of all the number theory protocols are in terms of who has access to what kinds of information....before we actually learn what computations are happening. I recommend you put way more time into the course than the homework requires in order to leave the course an expert (and to get a much better grade on the exams than I got, I'll bet) ",
+            "\u00a0You get a good foundation in different methods in cryptography. The material is well-organized and the slides are easy to follow. Lectures are a little dry though. ",
+            "\u00a0I don't think you actually learn much crypto. You understandably learn some number theory, but I didn't think people know much more than if they had spent a few hours on wikipedia. ",
+            "\u00a0If you're interested in security, you should take this class. You will learn a lot of different tools for ensuring privacy and integrity of messages. There is quite a bit of math involved, but the professor does a good job of introducing number theory concepts from the basics. ",
+            "\u00a0Yes, if one is interested in cryptography this course covers a wide range of cryptography-related topics and builds a solid foundation in the field. I have learned some basic C++. It was very rewarding. ",
+            "\u00a0If you are interested in cryptography or looking for a cool computer science elective, then go for it. "
+        ]
+    ]
+}

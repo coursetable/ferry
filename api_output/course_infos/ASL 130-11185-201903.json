@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "2019-12-13", 
+        "group": 2, 
+        "day_of_week": "Friday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49136/assignments/syllabus", 
+    "requirements": "Prerequisites: ASL 120 or a placement evaluation by professor.\u00a0", 
+    "description": "Building on ASL 120, this course covers in depth the structure of ASL grammar, fingerspelling, narratives, and visual communication. Students develop expressive and receptive skills in storytelling and dialogue.\u00a0\nPrerequisites: ASL 120 or a placement evaluation by professor.\u00a0\n\n1.5 Yale College course credits", 
+    "title": "American Sign Language III", 
+    "skills": [
+        "L3"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "DOW B-21", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11185", 
+        "listings": [
+            {
+                "number": "130", 
+                "subject": "ASL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Barrett"
+    ], 
+    "long_title": "American Sign Language III", 
+    "extra_info": "A"
+}

@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49537/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Heterogeneous agent economics, investment, scrapping and firing, nonquadratic adjustment costs, financial constraints, financial intermediation, psychology of decision making under risk, optimal risk management, financial markets, consumption behavior, monetary policy, term structure of interest rates.", 
+    "title": "Advanced Macroeconomics I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "HLH28 108", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 19
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12626", 
+        "listings": [
+            {
+                "number": "525", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Ilse Lindenlaub", 
+        "Michael Peters"
+    ], 
+    "long_title": "Advanced Macroeconomics I", 
+    "extra_info": "A"
+}

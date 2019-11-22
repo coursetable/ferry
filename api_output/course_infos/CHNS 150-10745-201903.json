@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-13", 
+        "group": 2, 
+        "day_of_week": "Friday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49310/assignments/syllabus", 
+    "requirements": "After CHNS 140 or equivalent.", 
+    "description": "Third level of the standard foundational sequence of modern Chinese, with study in speaking, listening, reading, and writing. Use of audiovisual materials, oral presentations, skits, and longer and more frequent writing assignments to assimilate more sophisticated grammatical structures. Further introduction to a wide variety of written forms and styles. Use of both traditional and simplified forms of Chinese characters.\nAfter CHNS 140 or equivalent.", 
+    "title": "Advanced Modern Chinese I", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "BASSLB L73", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10745", 
+        "listings": [
+            {
+                "number": "150", 
+                "subject": "CHNS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jianhua Shen"
+    ], 
+    "long_title": "Advanced Modern Chinese I", 
+    "extra_info": "A"
+}

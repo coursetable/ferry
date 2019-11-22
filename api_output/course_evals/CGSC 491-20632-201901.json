@@ -1,0 +1,91 @@
+{
+    "crn_code": "20632",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            4,
+            5,
+            6
+        ],
+        [
+            2,
+            0,
+            3,
+            10,
+            2
+        ],
+        [
+            1,
+            1,
+            5,
+            8,
+            2
+        ],
+        [
+            1,
+            2,
+            2,
+            5,
+            7
+        ],
+        [
+            0,
+            2,
+            9,
+            3,
+            2
+        ],
+        [
+            2,
+            3,
+            2,
+            5,
+            5
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about a variety of different CogSci topics through the presentations, and how to write a complete empirical senior thesis. ",
+            "\u00a0I learned about statistics, project management, dealing with email communications with occasionally unresponsive advisors, literature research, experimental design, and the value of starting things early. Overall, I learned a lot, and I found the experience very valuable. ",
+            "\u00a0This course informed me all about the cognitive science senior thesis process. I developed skills such as peer reviewing and presenting. ",
+            "\u00a0I learned how the research process works ",
+            "\u00a0How to plan and write the second half of my senior thesis. Also got to learn about others projects which was cool. ",
+            "\u00a0Mark is a good guy, but seemed kinda checked out by the end of the semester. ",
+            "\u00a0I learned about the process of doing real research in cognitive science. "
+        ],
+        [
+            "\u00a0Weakness: Mark is leaving :( Strengths: peer review process was very helpful, but I wish we knew that it was okay to have less than complete versions of our drafts. It felt like a waste of time writing parts for the sake of having a draft when I didn't have the right data or feedback from my advisor and needed to eventually rewrite them. ",
+            "\u00a0Overall, I think the structure of this course was a good one. ",
+            "\u00a0Having to submit a full draft in March is not efficient, some people dont have results yet and having to submit a full draft (not just whatever you have at that time) is stressful and not too useful! ",
+            "\u00a0Very good and streamlined to get through everyone's theses. ",
+            "\u00a0Weakness is that it feels a bit unnecessary ",
+            "\u00a0I wish we could have a class like this first semester too, or at least some help with the timeline of our project during the fall. ",
+            "\u00a0We don't need this. It's a bit of a waste of time. ",
+            "\u00a0It really sucks that this class meets at 9:25AM for such a long time on Science Hill. These two things contribute to a setting where no one wants to be present, so I think it detracts from people's desire to contribute to discussion. One way that the senior thesis process can be improved is if there were some brief check-in points throughout the fall semester. People could meet with other cognitive science students to get more feedback and ideas about what other people are doing early on instead of during the spring semester as everyone is scrambling to finish. ",
+            "\u00a0Would benefit from multiple opportunities to present and revise "
+        ],
+        [
+            "\u00a0would recommend if you intend on being a Cognitive Science major. ",
+            "\u00a0Well, you have to take it if you're a CogSci Senior so... Have fun and best of luck! ",
+            "\u00a0If you're allowed in, it's mandatory, so it doesn't really matter if I recommended. Having said that, I do recommend it; it was a great capstone for my cognitive science studies here at Yale. ",
+            "\u00a0It's mandatory ",
+            "\u00a0Yes! But you have to as a cogsci major. ",
+            "\u00a0I just don't think cogsci needs this colloquium, there is nothing real to be gained from this. People just sleep through the Thursday morning, and feedback would be better if people opted-in. Because it is mandatory, people just want to do the bare minimum and scrape by this course while writing their theses. ",
+            "\u00a0While the idea of learning to do real research sounds cool in theory, it can be quite painful to find an advisor, and then find a topic of research, and then actually conduct the research. Professors are busy people, and much of your experience will be determined by your advisor. "
+        ]
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50460/assignments/syllabus", 
+    "requirements": "After MATH 225, 231, or 222, with additional experience writing mathematical proofs.", 
+    "description": "Group theory, structure of Abelian groups, and applications to number theory. Symmetric groups and linear groups including orthogonal and unitary groups; properties of Euclidean and Hermitian spaces. Some examples of group representations. Modules over Euclidean rings, Jordan and rational canonical forms of a linear transformation.\nAfter MATH 225, 231, or 222, with additional experience writing mathematical proofs.", 
+    "title": "Introduction to Abstract Algebra", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "WTS A60", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11288", 
+        "listings": [
+            {
+                "number": "350", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YMAA\">YC Mathematics: Core Algebra</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YMAT\">YC Math: Algebra/Number Theory</a></li></ul>"
+    ], 
+    "professors": [
+        "Marketa Havlickova"
+    ], 
+    "long_title": "Introduction to Abstract Algebra", 
+    "extra_info": "A"
+}

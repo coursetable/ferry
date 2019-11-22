@@ -1,0 +1,86 @@
+{
+    "crn_code": "23096",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            6,
+            3
+        ],
+        [
+            0,
+            1,
+            0,
+            3,
+            5
+        ],
+        [
+            0,
+            1,
+            0,
+            3,
+            5
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            6
+        ],
+        [
+            1,
+            0,
+            6,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            7,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course provided me a better understanding of the legal systems at both national and international levels, with a particular emphasis on legal systems that interact with the technological advancements and related happenings across the globe. It was also enlightening to see the gap that exists between theoretical proven results or constructions (ex: Bitcoin and encryption) and their usage in the real world. This course provided me a perspective on how to look at each technological solution from the viewpoint of its cultural and social impact, and what implications it might have for the available legal frameworks. ",
+            "\u00a0I learned a great deal about the current conflicts between technology, computer science, and law. ",
+            "\u00a0I learned how to examine the law through the lens of a computer scientist and vice versa. ",
+            "\u00a0Better understanding of how the legal system works, current efforts to deal with technological issues in terms of legal improvements ",
+            "\u00a0This course provided me a better understanding of the legal systems at both national and international levels, with a particular emphasis on legal systems that interact with the technological advancements and related happenings across the globe. It was also enlightening to see the gap that exists between theoretical proven results or constructions (ex: Bitcoin and encryption) and their usage in the real world. This course provided me a perspective on how to look at each technological solution from the viewpoint of its cultural and social impact, and what implications it might have for the available legal frameworks. ",
+            "\u00a0This was my first course in the intersection of computer science and another field. I found our discussions quite engaging especially on how developments in the computer science field affects wider society. "
+        ],
+        [
+            "\u00a0The course was excellent and very enjoyable, no weaknesses. ",
+            "\u00a0The topics are very interesting but it was too tech-heavy and it was not very organized. ",
+            "\u00a0It was a really amazing course. Originally, the format was a little disorganized, but it improved a lot over the semester. ",
+            "\u00a0Students choose topics to discuss throughout the semester. Freedom to explore anything of interest in final project. Because a lot of the course is student-oriented, students are able to bring a lot of enthusiasm to the discussions ",
+            "\u00a0This course was built around discussions and benefited from a small engaged set of students. It would have been helpful to know the readings/topics for the next weeks discussion sooner. "
+        ],
+        [
+            "\u00a0I would recommend this course to anyone interested in better understanding the cultural and social impact that technology has had in the past. The course basically has seminar styled discussions with an emphasis on the laws in the current legal system that interacts with these modern advancements, along with a discussion on possible improvements and suggestions for the technologists and the law makers. ",
+            "\u00a0This course was incredibly interesting. Having a small seminar where we could discuss so many exciting topics in depth was fantastic. Both the professor and the TA were also excellent at moderating discussions. Definitely recommend! ",
+            "\u00a0I would definitely recommend this course to another student. It was a very enjoyable course. ",
+            "\u00a0Yes! Take this course - one of my favorite computer science courses ever. ",
+            "\u00a0Highly recommend. With the rapid changes in technology, more people should be aware of the legal implications ",
+            "\u00a0I would recommend this course to anyone interested in better understanding the cultural and social impact that technology has had in the past. The course basically has seminar styled discussions with an emphasis on the laws in the current legal system that interacts with these modern advancements, along with a discussion on possible improvements and suggestions for the technologists and the law makers. ",
+            "\u00a0Yes. The course was engaging without having a ton of work. The small class size lead to productive discussions. "
+        ]
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "crn_code": "11163",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            5,
+            3,
+            0
+        ],
+        [
+            2,
+            3,
+            2,
+            1,
+            0
+        ],
+        [
+            1,
+            2,
+            4,
+            1,
+            0
+        ],
+        [
+            1,
+            2,
+            4,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            1
+        ],
+        [
+            0,
+            2,
+            5,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Methods of analyzation, lots of derivations, and and overall the history of clime/how it changes ",
+            "\u00a0Realized how much math and physics goes into the study of the atmosphere ",
+            "\u00a0Some physics background and insights into the structure, motion and dynamics of the atmosphere. ",
+            "\u00a0I learned about the theory behind the physics that drives earth's weather and climate patterns. The material was interesting, but I found the teaching to be somewhat theoretical. ",
+            "\u00a0Knowledge of atmospheric phenomena like climate history, atmospheric energy balance, atmospheric circulations, El Nino, etc. "
+        ],
+        [
+            "\u00a0This was honestly not a great course. Expectations were never clear, problem sets were incredibly confusing, and neither the teaching fellow nor the professor were ever helpful in the slightest. Definitely could be made more conducive to student learning ",
+            "\u00a0This course is engaging when conceptual, but the computational side of the course involves tedious proofs. ",
+            "\u00a0This course was poorly organized and I felt that I didnt have the resources to do well.  I wasnt sure what material we were supposed to be learning.  We also didnt receive enough feedback; for example, we didnt receive graded problem sets in time to use them to study for exams. ",
+            "\u00a0This course covers some really interesting topics, but I found Prof. Fedorov's lecturing lacking sometimes. Oftentimes he would just describe graphs on the or derive equations instead of spending more time on application and really physical concepts. ",
+            "\u00a0The problem sets involved a lot of guessing in terms of what assumptions to make, what math we had to use. Would have been useful to have more office hours/study hall in the day or two before the psets were due. (Sometimes the office hours would be right after they were due.) The second half of the course was based in printed notes that detailed a lot of complicated derivations. It would have been helpful to focus less on the derivations and more on the implications of the results. I did not think I had a good understanding of the physical meaning of the results because we did not talk about them enough to begin to understand (particularly about topics like potential vorticity). Also, a problem set required Matlab even though it was not a prerequisite. "
+        ],
+        [
+            "\u00a0Yes; it is a great way to learn a lot of the climate without knowing where some derivations come from. ",
+            "\u00a0I would not recommend this course unless you are required to take it for some reason. It's extremely hard to learn anything with a professor and teaching fellow as unhelpful as these two were. ",
+            "\u00a0This course seems to only be accessible for G&G majors, and some physics or applied math majors. If that is the case, I recommend taking this course as an elective. ",
+            "\u00a0No, the material was interesting but the course was not well organized. ",
+            "\u00a0I would recommend this course if someone's really interested in the subject, but overall the class was only okay. ",
+            "\u00a0If you want to learn in a very detailed way about the physics of climate, then yes. "
+        ]
+    ]
+}

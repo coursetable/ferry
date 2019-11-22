@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Application of continuum mechanics approach to the understanding and prediction of fluid flow systems that may be chemically reactive, turbulent, or multiphase.", 
+    "title": "Energy, Mass, and Momentum Pro...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "HLH17 03", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10901", 
+        "listings": [
+            {
+                "number": "603", 
+                "subject": "ENAS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Amir Haji Akbari Balou"
+    ], 
+    "long_title": "Energy, Mass, and Momentum Processes", 
+    "extra_info": "A"
+}

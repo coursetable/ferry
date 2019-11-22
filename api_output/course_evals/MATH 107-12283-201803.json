@@ -1,0 +1,98 @@
+{
+    "crn_code": "12283",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            3,
+            6,
+            5,
+            1
+        ],
+        [
+            0,
+            10,
+            4,
+            1,
+            1
+        ],
+        [
+            0,
+            3,
+            8,
+            5,
+            0
+        ],
+        [
+            1,
+            5,
+            6,
+            4,
+            0
+        ],
+        [
+            0,
+            4,
+            9,
+            3,
+            0
+        ],
+        [
+            0,
+            3,
+            12,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned interest rates and how to do applications that I can use in real life. ",
+            "\u00a0I learned how not to ask \"how do I solve this\" and started looking at questions as \"what do I know?\" ",
+            "\u00a0I learned how to problem solve a lot better and different more efficient ways to go about a problem. ",
+            "\u00a0Using math skills and applying them to real world situations. ",
+            "\u00a0I developed the ability to put the use of different math concepts into real-world problems. ",
+            "\u00a0I learned how to do some good calculations that will be helpful with my adulthood such as mortgage payments and compound interest. ",
+            "\u00a0A lot of the material we learned about was unlike anything I had learned about in math in high school. It gave me a new perspective about the use of math. ",
+            "\u00a0Learning how I can apply certain mathematical concepts to real world issues ",
+            "\u00a0reinforced a lot of fundamental concepts I had learned in the past. ",
+            "\u00a0I learned how to think through problems better and set them up in a way that makes them easier if you don't know how to attack it "
+        ],
+        [
+            "\u00a0More open to questions ",
+            "\u00a0Strengths was that I found the review sessions before the tests very helpful. ",
+            "\u00a0I loved taking the course and would recommend it. ",
+            "\u00a0The course material is very manageable but the course instructor was often lost and would not explain things very well. ",
+            "\u00a0The ability for the teacher to guide students could be improved. His usual response to questions is I dont understand what you are asking.  ",
+            "\u00a0I think the material was not that difficult but the way we were taught made it very complicated and make it hard to learn. I think the way the Professor conveyed the ideas was fun and engaging sometimes but he would get confused and it was hard to volunteer. ",
+            "\u00a0I think it would be useful to cover less topics and focus better on some of the more intricate and confusing ones. ",
+            "\u00a0textbook/communication was a little tough ",
+            "\u00a0Class just sits there and watches, no engagement. "
+        ],
+        [
+            "\u00a0Yes. Helps in life ",
+            "\u00a0Yes it is a very reasonable lower level math class. ",
+            "\u00a0Yes, I liked how it was real world application type math. ",
+            "\u00a0It is a gut QR credit. If you have a general understanding of math and just want the credit without putting much time and acquiring much from the class, then take this one. ",
+            "\u00a0I would recommend this course to others. ",
+            "\u00a0Most likely no. The teachers style is scary for people scared of the QR credit. ",
+            "\u00a0I would recommend it as a quantitative reasoning credit. ",
+            "\u00a0If they have minimal mathematical knowledge and enjoy applied mathematics I would ",
+            "\u00a0i would if someone is looking for a QR credit but is not confident in taking the higher level maths. ",
+            "\u00a0Yes, not too hard if you are not a math major ",
+            "\u00a0This is a good course for non majors "
+        ]
+    ]
+}

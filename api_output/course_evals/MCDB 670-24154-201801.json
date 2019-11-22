@@ -1,0 +1,88 @@
+{
+    "crn_code": "24154",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            5,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            4
+        ],
+        [
+            1,
+            1,
+            1,
+            0,
+            3
+        ],
+        [
+            0,
+            1,
+            2,
+            4,
+            0
+        ],
+        [
+            1,
+            3,
+            2,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to critically evaluate primary literature ",
+            "\u00a0Ability to critically read scientific papers. ",
+            "\u00a0I really learned how to critically analyze subjects I am not familiar with. I learned to humbly and confidently speak to my understanding and questions of a study. ",
+            "\u00a0how to critically analyze various publications ",
+            "\u00a0Paper reading and critical thinking/critical analysis of presented data and models were the main things I developed, with a side effect of me learning a lot about techniques, approaches, and fields of research I wasn't especially familiar with. ",
+            "\u00a0I learned a lot  about the world of RNA that I did not know before. "
+        ],
+        [
+            "\u00a0Possibly the range of paper topics could be expanded ",
+            "\u00a0I think the course was great. ",
+            "\u00a0strengths: great professor involvement and steady cycle of classes\r\n\r\nweaknesses: not enough support for those outside the field ",
+            "\u00a0strengths: in-depth dicussions of papers, critiquing publications\r\n\r\nweaknesses: no variety of paper topics covered ",
+            "\u00a0I think writing paper summaries before class would be a useful way to make sure everyone comes to class prepared. ",
+            "\u00a0As the general message I loved this course. Just getting together to talk about interesting papers that aren't things I would necessarily read otherwise is fun, engaging, and makes me think about things in slightly new ways, which is great going into a grad program where I'm trying to do new an innovative research. Journal clubbing is a hard format to improve in some ways. Maybe having students be responsible for some sections of papers would be useful in some instances, where technical details of an experiment schema make it less likely that a read through will give enough info and can lead to confusion. ",
+            "\u00a0I did not like having multiple instructors because I felt some were better than others. "
+        ],
+        [
+            "\u00a0Most definitely! Great class to help you learn how to critically read papers ",
+            "\u00a0Yes. It will help students who are not used to reading scientific papers. ",
+            "\u00a0Yes I would. I would suggest having taken biochem or genetics. As I have not it was quite difficult. ",
+            "\u00a0Yes, we were required to go over papers in much more detail compared with other classes. Writing our own reviews for a paper was a helpful assignment, and helped improve my understanding of what is required to write a manuscript ",
+            "\u00a0Yes! ",
+            "\u00a0I absolutely would. ",
+            "\u00a0I would. I thought it was interesting to read papers ranging from fundamental to modern day. "
+        ]
+    ]
+}

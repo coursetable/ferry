@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50983/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Forms of civil conflict and political violence and theories about reasons for and\u00c2\u00a0implications of these types of violence. Natural and philosophical foundations of political violence; the potential roles of ethnicity, economic factors, territory, and political institutions and structures in the onset and dynamics of civil conflict; problems of conflict termination.", 
+    "title": "Civil Conflict", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "RKZ 02", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11604", 
+        "listings": [
+            {
+                "number": "261", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSC\">YC Poli Sci: Comparative Govt</a>"
+    ], 
+    "professors": [
+        "Bonnie Weir"
+    ], 
+    "long_title": "Civil Conflict", 
+    "extra_info": "A"
+}

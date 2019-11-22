@@ -1,0 +1,111 @@
+{
+    "crn_code": "12761",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            8,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            7,
+            6
+        ],
+        [
+            0,
+            2,
+            2,
+            2,
+            8
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            6
+        ],
+        [
+            0,
+            0,
+            5,
+            8,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            9
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0earth engine and arcpy ",
+            "\u00a0Use of Python and Java. ",
+            "\u00a0I learned JavaScript and Python. Learned all about a new side of GIS that opens up methods of analysis I never considered before. ",
+            "\u00a0I learned about using Google Earth Engine and ArcPy to write spatial analysis tools. ",
+            "\u00a0Great introduction to several coding languages used to conduct geospatial analysis ",
+            "\u00a0arcgis api, earth engine api, python arcpy, numpy, javascript, spatial analysis, programming, remote sensing ",
+            "\u00a0JavaScript, python, general reasoning ",
+            "\u00a0I have developed skills to process geospatial data in a programming way on two platforms, ArcGIS and Google Earth Engine. I have also gained a basic knowledge of how the geospatial software work, and learned to optimize my script to perform better. ",
+            "\u00a0I've learned how to break a big problem into small targets. I've also learned how to design toolbox with ArcPy and how to use Earth Engine, which really strengthen my research ability. ",
+            "\u00a0I learned important computer programming skills related to two important geospatial analysis platforms: Google Earth Engine and ArcPy (for ESRI ArcMap). The weekly homework assignments ensured that we continued to employ these skills, and the final project where we develop a geospatial analysis tool on our own enabled us to demonstrate that we can apply these skills to questions and topics we're interested in for our professional careers. ",
+            "\u00a0-Google Earth Engine\r\n-Python\r\n-ArcGIS\r\n-Javascript "
+        ],
+        [
+            "\u00a0this course exceeds my expectations. ",
+            "\u00a0Very much. ",
+            "\u00a0Met my expectations ",
+            "\u00a0Aligned pretty much exactly with my expectations. ",
+            "\u00a0Very well. ",
+            "\u00a0Very well ",
+            "\u00a0very well and the final projects were exciting ",
+            "\u00a0Very well ",
+            "\u00a0My knowledge, skills, and insights gained in this class are exactly what I expected. ",
+            "\u00a0They aligned with my expectations very well. ",
+            "\u00a0These knowledge and skills exceeded my expectations. "
+        ],
+        [
+            "\u00a0strengths: very flexible in terms of deliverables, great introduction to earth engine and arcpy. \r\nweakness: personally I have little motivation to learn arcpy. ",
+            "\u00a0I would love more feedback on the homework, if possible. That being said, it's already a lot of work and getting feedback on homework would only increase that workload. I appreciated how Dana required us to work on project from time to time (proposals etc), I learned a lot more and advanced a lot more because of it. ",
+            "\u00a0I appreciated the flexible structure of the course- it was nice not to have graded assignments but get to work on substantial term projects instead.  I looked forward to the class every week.\r\n\r\nI think it could use 2 teaching fellows or more office hours.  I would love to have learned about open-source python libraries for GIS software.  I would have loved the opportunity to present my projects, and learn about the projects that others were pursuing (orally, instead of the poster contest). ",
+            "\u00a0The format and structure of the course is very good I think. The open-ended homework gave me a chance to apply what I learned in ways that are interesting and relevant to me, which I really appreciated. However, I sometimes felt as if the class was a little too open-ended, as I was somewhat unclear on expectations sometimes. For example, I wasn't super sure what to do for the final project other than the fact that it needed to be more in depth than the weekly homeworks. Also, honestly I'd skip the Python API stuff and just do more Desktop ArcPy. ",
+            "\u00a0strengths: great online support, up to date tools and applications, flexible weekly assignments\r\nweaknesses: people without a background in spatial analysis can still find it challenging (from what I heard but I wasn't one of them) ",
+            "\u00a0More in depth dive into the scripting languages would be nice ",
+            "\u00a0The major strengths of this course: it offers a hands-on experience of programming and processing data to complete course projects. The knowledge and skills learned in this process is practical and will continue to be useful in the future. And the professor and TA are very helpful in helping answer questions. ",
+            "\u00a0The course is very useful. No weakness! ",
+            "\u00a0The course has sufficient resources for self-teaching the tools needed to do homework assignments and final project. However, there is a very steep learning curve to excel in this course, and everyone comes in with a different level of computer programming experience. This makes it difficult to optimize the course for all students. From the perspective of someone with little to no computer programming experience, the lectures were good for understanding what you can do with geospatial software development conceptually. However, I would have appreciated spending more time on the fundamental techniques (such as the language and mechanical structure of the code). ",
+            "\u00a0This course provides good exposure to Google Earth Engine and ArcMap and Professor Tomlin is an excellent instructor. However, I think it's important to evaluate your goals before taking the course since the materials can be kind of intangible if you don't have a clear application in mind. I wish the instructor or TF provided more feedback throughout the course instead of providing little feedback throughout and having all of the course grade be assigned to the final projects. "
+        ],
+        [
+            "\u00a0It is the best if you have raster knowledge and a project that you are passionate to work on. ",
+            "\u00a0Be prepared to work your butt off. Don't go in it for just the grade, but do it for the skills you will acquire. ",
+            "\u00a0Be prepared to put in some work when final projects roll around, but it is an essential class for anyone who is serious about GIS and geospatial analysis in general. ",
+            "\u00a0Take this if you're interested in spatial analysis and do that in an automated way. ",
+            "\u00a0Start learning the scripting languages earlier so you can do more advanced and fun final projects! ",
+            "\u00a0Students who want to do researches with GIS platform must take this course. The homework and the project are time-consuming, which I think should be known in advance by the students whoever consider to select the course. ",
+            "\u00a0You will get the most out of this course if you dedicate the time (especially early on) to learn the basics of the computer coding languages. This course is a significant time commitment, particularly if you have little to no computer programming experience, so make sure you have the time to give the course the time and effort it deserve. That being said, this opens new doors into the geospatial analysis field (or in the professions that benefit from heavy geospatial analysis skills). The more of yourself that you put into this course, the more Professor Tomlin will support you in this course and beyond. ",
+            "\u00a0Begin developing ideas for your final projects early on, use the weekly assignments to develop them and ask the professor or TF for feedback. "
+        ]
+    ]
+}

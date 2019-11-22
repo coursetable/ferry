@@ -1,0 +1,81 @@
+{
+    "crn_code": "10700",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            3,
+            0
+        ],
+        [
+            0,
+            2,
+            2,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            0
+        ],
+        [
+            0,
+            4,
+            1,
+            1,
+            0
+        ],
+        [
+            1,
+            5,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A bit of everything about cyber security ",
+            "\u00a0Cryptography, security, network protocols ",
+            "\u00a0An introduction to cryptology, protocols, and the security of software. We learned how to create codes to safely transmit info, and how to think from the perspective of an intruder to break the codes. ",
+            "\u00a0A basic overview of: private and public key cryptography, stream and block ciphers, cryptographic hash functions, authentication protocols, real-world protocols like SSL, IPSec, and more, viruses and malicious code design, and principles behind building secure software. ",
+            "\u00a0This course provides a good introduction to the concepts of information security. It is much more on the conceptual side, so don't expect much programming. If you want to learn more about various cryptosystems and security protocols it's a good intro "
+        ],
+        [
+            "\u00a0Although the material was very interesting, the course was taught directly from slides and a textbook, which made the lectures a little dry. The case study of a security breach was very interesting, and one of my favorite assignments of the semester. ",
+            "\u00a0This course provided an incredible insight for me into how the \"magic of computer security\" works. I think its major strength is its emphasis on applications and modern issues in security which make the material very relevant. \r\n\r\nThis course would have benefitted from not shying away from mathematics or programming as much as it did. I believe the lack of technical work required was a weakness of the course, as it didn't require students to engage as deeply with the material. ",
+            "\u00a0Everything is mostly based on the textbook. Thus I feel like one could learn to a similar extent simply by reading it and doing the questions involved. Not to say the instruction doesn't offer anything but I think that mostly provides more history/background whereas the technical can pretty much just be read. "
+        ],
+        [
+            "\u00a0Absolutely ",
+            "\u00a0Good survey course into cryptography and Security. ",
+            "\u00a0The material was very interesting and the class opened my eyes to a field of computer science that I had always been interested about, the class structure was very rigid. Not much work, and the tests were fair. ",
+            "\u00a0If you're looking for a course that will throw you headfirst into the mathematics of modern computer security, this isn't the course for you. Instead, this course will provide you with a broad overview of the ideas and principles in computer security in an entertaining and low key way. In other words, if you're looking for a basic introduction to computer security at a level where you won't get caught up in the technical details, then this is the perfect course for you. There isn't a ton of work and the class is quite low-stress overall, but the material is very interesting if you don't put it off and neglect to put in the work. In short, you'll get out what you put in, which can be a lot of fun if security interests you. ",
+            "\u00a0I think it really depends what someone is looking for. This isn't an incredibly challenging class and as a programmer it doesn't really push you, but it does serve as a decent introduction to some of the issues in infosec. "
+        ]
+    ]
+}

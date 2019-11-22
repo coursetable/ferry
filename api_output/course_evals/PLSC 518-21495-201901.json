@@ -1,0 +1,85 @@
+{
+    "crn_code": "21495",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned the basics of game theory and IR ",
+            "\u00a0I learned a broad array of key solution concepts for game theory. ",
+            "\u00a0Primarily the ability to solve for a few kinds of equilibria (Nash, Subgame Perfect, Perfect Bayesian). Secondarily the ability to do a bit of the \"art\" of game theory, involving writing down games for original cases/concepts. Third, some content knowledge about IR game theory cases. ",
+            "\u00a0Excellent into to basic concepts of modeling, bargaining, signaling. ",
+            "\u00a0I developed fundamental game-theoretic concepts as well as some of advanced topics, and I believe this course is very helpful in preparing for the formal theory field exam. "
+        ],
+        [
+            "\u00a0Strength: Clarity of instruction, manageable workload \r\n\r\nWeakness: One of the (male) students in the class would ask overcomplicated and somewhat irrelevant questions about the math that took away from the accessible learning environment a bit, but Alex did a great job of getting us back on track. ",
+            "\u00a0This class was extremely well done. Sometimes I felt that the math in the examples during section and during class were too fast. ",
+            "\u00a0No clear weaknesses, one of the best courses I've take at Yale. ",
+            "\u00a0Strength: very well taught between classes/TA sessions for the ability to do the HW; Alex's clarity and kindness and patience\r\nWeakness: too much reading (I didn't do much of it, just skimmed some) for a class that seemed primarily about technical skillsmaybe it was just too daunting to be in a problem set mental mode and then see 40-50pg articles to read; I do wish we read some more published papers with actual game theory models in them, all together ",
+            "\u00a0More available exercises/solutions (esp. for signaling models) ",
+            "\u00a0This course is very well-organized in terms of substantive matters and historical accounts associated with game theory tools. Also, pre-uploaded slides helped students prepare for the next day's class and discussion. "
+        ],
+        [
+            "\u00a0Yes. ",
+            "\u00a0I would recommend this course to any student seeking to develop a strong handle on game theory. ",
+            "\u00a0Yes, it's an extremely effective course at teaching both the foundations of game theory as well as how it can be applied in real life. ",
+            "\u00a0Yes absolutely. Was a fantastic course that didn't require too much time to give a rigorous intro to the \"science and art\" of game theory. ",
+            "\u00a0Very helpful for anyone hoping to use advanced models, but also generally useful for clarifying thinking. ",
+            "\u00a0Yes I would definitely recommend this course to any student who are interested in game theory and its implications for diverse political science subfields because the problem sets and discussion are very organized in ways that could improve students learning. "
+        ]
+    ]
+}

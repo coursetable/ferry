@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50186/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Taking advantage of the extensive collection of turned American objects in the Yale Art Gallery\u00e2\u20ac\u2122s Furniture Study, this seminar focuses on the impact of circular motion on the creation of clay and wooden objects. Beginning with an introduction to materials and techniques of hewing, modeling, or turning vessels, students develop firsthand experience in and knowledge of the different ways to make a vessel, including the suitability of different processes to different economic systems or uses. The class then turns to the functions of vessels and their deeper symbolic meanings within different cultures.", 
+    "title": "Circular Logic: Investigation ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LORIA 360", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12034", 
+        "listings": [
+            {
+                "number": "826", 
+                "subject": "HSAR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Edward Cooke"
+    ], 
+    "long_title": "Circular Logic: Investigation of Ceramic and Wooden Vessels", 
+    "extra_info": "A"
+}

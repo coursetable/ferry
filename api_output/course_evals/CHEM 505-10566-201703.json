@@ -1,0 +1,93 @@
+{
+    "crn_code": "10566",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            7,
+            6,
+            1
+        ],
+        [
+            1,
+            2,
+            6,
+            3,
+            3
+        ],
+        [
+            1,
+            2,
+            2,
+            8,
+            2
+        ],
+        [
+            0,
+            2,
+            9,
+            4,
+            0
+        ],
+        [
+            0,
+            1,
+            12,
+            1,
+            1
+        ],
+        [
+            1,
+            1,
+            11,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The synthetic solar cells and how this cell inspired by the nature. ",
+            "\u00a0I really enjoyed learning about DSSCs and different solar cells and methods of analysis.  I had seen some of the diagrams we covered before but didn't quite understand them before.  I liked starting with an overview of climate change to give a big picture reminder of why this matters so much. ",
+            "\u00a0Information about photosynthesis, charge separation, dye-sensitized solar cells and photovoltaics devices. ",
+            "\u00a0Ways to address current energy scenario. ",
+            "\u00a0A survey of the state of research into synthetic photosynthesis for the production of biofuels through the mimicry of photosynthetic systems from a computational, spectroscopic/solid-state physical, and biochemical perspective. An additional understanding of climate change and other alternative energy technologies was acquired. ",
+            "\u00a0Many aspects about solar energy. ",
+            "\u00a0insights about the changing climate scenario and the possibilities of various alternative energy sources. knowledge about dye-sensitized solar cell and the use of plant photosynthesis chemistry in developing novel solar harvesting cells ",
+            "\u00a0Lots of great information about photovoltaics, alternative energy, and biomimetic processes! "
+        ],
+        [
+            "\u00a0The course has four professors. But the order of professors is a mess. After I took the third section, I just knew what's the second section talking about. students take the course should know the quantum mechanics well and have the chemistry background. I didn't take the advanced chemistry before, which makes the class more difficult to understand. ",
+            "\u00a0It's great to have 4 experts in the field talk about their expertise and give us insight on future energy methods and research.  The biggest weakness is lack of continuity. Each professor spent a decent amount of time going over DSSCs in a similar manner.  While some repetition is great, perhaps the professors could talk about what materials each plans on covering. ",
+            "\u00a0Strength: Different professors from different fields. They are all knowledgeable and humorous. \r\n\r\nWeaknesses: Since the section of each of the professors is kind of short, they cannot go into details about some of their research. Other topics could be included, such as lithium-ion batteries. ",
+            "\u00a0Taught by the experts, but some of the material was repeated between the different segments. ",
+            "\u00a0Great topic and material! Love the 4 professors each having individual take. There could have been more unity between sections. ",
+            "\u00a0even though the 4 sections of the class are disjointed we managed to re-learn things in multiple sections! The other professors really need to confer to make sure they don't repeat the same things. All of the slides for each section were on canvas...all you had to do was check. \r\nHomework assignments were very different from what was covered in class, and frequently required extensive outside input (from google). ",
+            "\u00a0Interesting breadth of material covered in the 4 sections. Perhaps less of a broad overview of global warming / alternative energies and a little more focus of design considerations for organometallic catalysts. ",
+            "\u00a0Strength: various perspectives given of the problem and its possible solution\r\nweakness: more material on other alternative energy schemes would have been better ...only dye-sensitized solar cells were discussed ",
+            "\u00a0Taught in four parts by four different professors gives interesting insight and variation at the expense of consistency and structure. "
+        ],
+        [
+            "\u00a0No ",
+            "\u00a0I thought it was really interesting material and enjoyed it. I would recommend it. ",
+            "\u00a0Yes. There are a lot of energy-related issues and frontier of their research. If you're interest in energy and further outlook, the course is the one! ",
+            "\u00a0Absolutely. ",
+            "\u00a0Yes!!! ",
+            "\u00a0probably not. it wasn't the worst class, but it certainly wasn't good. ",
+            "\u00a0Yes. Very interesting course that gives insight into the Yale Solar Fuels collaboration. ",
+            "\u00a0yes. "
+        ]
+    ]
+}

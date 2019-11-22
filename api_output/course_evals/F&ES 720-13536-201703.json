@@ -1,0 +1,147 @@
+{
+    "crn_code": "13536",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            10,
+            14,
+            2
+        ],
+        [
+            3,
+            0,
+            3,
+            8,
+            12
+        ],
+        [
+            1,
+            0,
+            2,
+            10,
+            13
+        ],
+        [
+            0,
+            5,
+            10,
+            8,
+            0
+        ],
+        [
+            0,
+            0,
+            24,
+            0,
+            1
+        ],
+        [
+            0,
+            1,
+            7,
+            7,
+            12
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0R, swirl ",
+            "\u00a0I learned from general coding to how to actually analyze data using statistics. ",
+            "\u00a0I gained many more skills related to programming and writing code for my research. ",
+            "\u00a0RStudio ",
+            "\u00a0Basic proficiency using the R programming language and insight about topics for further exploration. ",
+            "\u00a0This was a great hands-on introduction to using R for ecological research. ",
+            "\u00a0Everything from the ability to assign a variable to the ability to identify the appropriate statistical methods to analyze my data. But more than that how to use open source code, fully understand how it works, and manipulate it to answer the questions or visualize the models I want. ",
+            "\u00a0Good working knowledge of basic R. This class is ideal for an absolute beginner. ",
+            "\u00a0Learned an introduction to my first computer language, R. ",
+            "\u00a0I learned how to code in R, the many features of R, and the variety of statistical approaches one can take when analyzing data in R. ",
+            "\u00a0(Almost) all of the  of the R skills ",
+            "\u00a0Picked up many basics R programming skills that are going to be useful in my work. Some of the skills that I learnt are; reading data into R, subsetting, plotting, etc. ",
+            "\u00a0I developed skills in programming in R, including importing data, processing data, statistical analysis, and plotting. I also gained practical knowledge in data management and statistical research in ecology. ",
+            "\u00a0I learned a lot about how to read data into R, process it in various ways, and perform statistical analyses. ",
+            "\u00a0I feel conversant in the usage of R ",
+            "\u00a0coding and conducting analysis in R. Some insights on statistical analysis ",
+            "\u00a0Basic coding in R. ",
+            "\u00a0Skill, knowledge and confidence with R, which was exactly what I was looking for! ",
+            "\u00a0Data preparation\r\nData analysis using R software "
+        ],
+        [
+            "\u00a0Above and beyond! I learned R very effectively and feel I have a mastery for what I need to do. ",
+            "\u00a0Way too much statistics at the expense of other programming tools. I feel like there are significant gaps in my knowledge of R tools after finishing the course. ",
+            "\u00a0The knowledge aligned with my expectation very well. This is specifically the case for students from the school of public health. ",
+            "\u00a0It was a little bit easier than I expected, but I am still happy with what I learned. ",
+            "\u00a0I dont think I have walked away thinking that I understand R very well. ",
+            "\u00a0Exactly what I was hoping to get out of the course. ",
+            "\u00a0It aligned very well. My only suggestion would be to start the statistics portion earlier in the semester. ",
+            "\u00a0Better. I have been a code dunce my whole life. This course helped me get over the hump where missing commas and can completely shut you down and pods you off. It got me to the point where I could trouble shoot which seemed pretty impossible. ",
+            "\u00a0Yes and no. I gained plenty of new skills in R, but also expected the class to move a bit faster - I hoped to learn for loops, programming, and some more exciting packages. That said, I do feel incredibly prepared now to teach myself those skills since I have a functional knowledge of R. ",
+            "\u00a0They aligned fairly the same as expected. ",
+            "\u00a0This class exceeded my expectations in learning how to code and analyze data. I definitely feel more confident in coding with R. ",
+            "\u00a0Course delivery met my expectations. ",
+            "\u00a0The knowledge, skills, and insights gained in this class were beyond my expectations. ",
+            "\u00a0Very well. I learned just about everything that I wanted to and the timing of the learning worked well with the data analysis that I am carrying out. ",
+            "\u00a0My expectations for R and data analysis were met and exceeded in certain cases. ",
+            "\u00a0On a scale on 1 to 5, 4. I would have expected the \"conducting analysis in R\" to be heavier than the \"coding\" part, since a more applied knowledge would have better suited my personal needs. ",
+            "\u00a0Very well. ",
+            "\u00a0It met my expectations "
+        ],
+        [
+            "\u00a0Course ramps up very rapidly (difference between first lessons/labs and the ones towards the end of the course is huge). Unclear value added of the lessons in class. ",
+            "\u00a0The R package used to teach the course interactively was fantastic. It was perfect to submerge you into programming and writing code immediately. Additionally, the course moves at an appropriate pace and content is organized well.\r\n\r\nHowever, I did not like that we did not have a syllabus that included the dates that lessons/labs were released or due. I often found myself confused about when these things were assigned or due and this could have been easily remedied by having a clear syllabus from the start that included these dates. I was not able to plan ahead with my other coursework and this became a little challenging to deal with. ",
+            "\u00a0Course started too slow and accelerated too much at the end.  The workload should be evened out across the semester. It was almost impossible to keep up with labs, lessons, AND the final project in the end. Especially since you had to learn all the statistics if you didn't already know it. The project expectations were very high- essentially we were asked to complete a publishable article which was not out lined early enough in the course. By the time we got the rubric, it was too late to really do a good job. ",
+            "\u00a0The strength was swirl and labs assignments that challenged students' knowledge. I also learned a lot of data analysis skills working on the final project. \r\nI think the course could improve by teaching statistics a little earlier perhaps. Statistics is sort of hard but most needed concept. Learning to plot is equally important. I think the first basic skills could be taught a little faster and make more time for \"explore\" and \"statistics\" ",
+            "\u00a0Because this is an intro course it is a little slow at the start. It would be great if there was a more advanced course offered. Otherwise, I appreciated the freedom that the class offered to learn on our own time. ",
+            "\u00a0The lectures are not really helpful but Swirls are. Some swirls need to be updated to reflect the correct answers. The pace is very slow and this class does not challenge you to advance your R skills. ",
+            "\u00a0Strengths: Amazing instructor support and TA support.  Both Simon and Andrew were extremely willing to provide personal assistance to students- which was essential for learning.  Additionally, I appreciated the flexibility with due dates, and lab hours. \r\n\r\nWeaknesses: I don't think lectures at the beginning of class were very helpful.  Maybe increase workload at the beginning of course and cove statistics in greater depth later on. ",
+            "\u00a0Strength: Hands-on component\r\nWeakness: Lectures\r\n\r\nReally this course needs to span two semesters- one for intro to R and one for data analysis in R ",
+            "\u00a0Class is run pretty well. It would have helped me to get the hard stats sooner but I was behind in the course work at that point as it was. I think I started with denser stats and the. Learned to understand them much better right at the end.\r\n\r\nThats my only suggestion. The flipped classroom and flexible structure were great for maintaining research and learning at my own pace. Swirl is a great idea. Labs were manageable but still puzzling. Project structure is great for grad students with research goals. ",
+            "\u00a0Strengths: SWIRL! Swirl is fantastic. Great TA help. Simon is a great teacher.\r\n\r\nWeaknesses: Class time for users with any R experience (even light) is not very helpful, class moves slowly. ",
+            "\u00a0Strengths- Simon and Andrew are incredible instructors. They have a very relaxed approach to the class and encourage you to make mistakes and learn from them. I loved both of their approaches to teaching. Swirl and Simon's website were so helpful throughout the course and the Friday boot camps were awesome. Finally a graduate school class that treats us like adults with appropriate grading and projects that challenge us! ",
+            "\u00a0Simon was so nice and wonderful, just very very hard to hear and struggled to keep class engaged during lecture. Interactive lectures maybe? ",
+            "\u00a0SWIRL - interactive learning/teaching was perhaps one of the strengths of the course plus both instructors and TA were an excellent teacher. ",
+            "\u00a0A major strength of this course is that we mostly learn by doing. I thought the SWIRL lessons were useful and helped me walk through the material.\r\n\r\nI suggest refining some of the lessons that come at the very end of the course. Especially the Statistics section. Although I don't expect this course to be a statistics course, it would be helpful for those of us that are a little rusty on statistics if there were a little more information on interpreting the results or the output of the tests. ",
+            "\u00a0The course covered a lot of piratical skills, as well as some best practice. ",
+            "\u00a0I'd like to see some of the earlier topics be covered a little bit faster so that more time can be spent on statistical analyses. ",
+            "\u00a0The strengths of the course include the instructor and TA's knowledge and time/willingness to help and work through problems. ",
+            "\u00a0Strengths: the class is organized, the professor and TF are very receptive and available which is very conducive to your learning process.\r\nWeaknesses: sometimes assignment prompts (or questions) are not very clear and it can take an unnecessary amount of time to do the labs because of it. Some labs were also extremely long, and it was hard to keep up with that, the project, and the lessons per week. It would be great if you could work on your project instead o the labs, for the analysis part. That way you can conduct all types of analysis on your data, and learn while working on your project. Lastly, while swirl is very conducive, learning through a little more interaction with the professor would've been ideal, since students are hoping to learn from them, who have been working with R for a long time (i.e. learn different tricks and ways that make your life easier, otherwise every time I did learn something like this from them, I wished I knew it sooner). ",
+            "\u00a0SWIRL IS AMAZING ",
+            "\u00a0The course moved very slowly at first and then rapid fire the last couple of weeks. I also think having the students self teach themselves advanced stats and coding at the same time is a huge mistake. It made the end of the course kind of miserable, and I felt like I was just doing the work to get a complete assignment in, and not to actually learn. ",
+            "\u00a0I think the course was well and thoughtfully designed.  For those of us that kept pace with lessons and labs, the material was logically developed, and the pace was appropriate - fast enough to be challenging, and slow enough not to scare us off. ",
+            "\u00a0The course is well designed "
+        ],
+        [
+            "\u00a0Keep up with your work! ",
+            "\u00a0It is a great opportunity for students from school of public health to learn the necessary R skills for the field of study. Greatly recommended! ",
+            "\u00a0Excellent if you need to work on your R code, or if you have little no experience with programming. ",
+            "\u00a0Take it ",
+            "\u00a0Come in to the course with a dataset/project you want to work on. ",
+            "\u00a0If you have any inclination to get better at r, or begin to learn coding, take this class. Full stop. ",
+            "\u00a0good for an absolute beginner. ",
+            "\u00a0It's important to not fall behind in this course. ",
+            "\u00a0Attend Friday boot camps! They are so helpful and the one on one attention you receive is a game changer. If you go above and beyond in this class, you will feel the benefits towards the end when you are coding extensively in R and replace your other stat programs with it. R is challenging but really rewarding and Andrew and Simon encourage you to experiment with it! ",
+            "\u00a0Go to bootcamp! ",
+            "\u00a0If you want to learn how to use R, this is a great way to go about doing it. ",
+            "\u00a0This course is a great primer into the world of R. There is so much more! ",
+            "\u00a0Although the work load is high, the professor and TF are receptive and flexible which makes the workload more manageable and feasible. It is also the type of class where what you get out of it is proportional to what you put in; and it is a nice, fun class to attend to (which is always a nice addition) ",
+            "\u00a0Do not fall behind on weekly assignments. ",
+            "\u00a0Make more time in your schedule for this course at the end of the semester. ",
+            "\u00a0Take it!  This course will serve you well, especially if you have data to analyze and expect to be running statistics in the future. ",
+            "\u00a0The course is interesting and the lecturer quite accessible but the learning will be dependent on you. "
+        ]
+    ]
+}

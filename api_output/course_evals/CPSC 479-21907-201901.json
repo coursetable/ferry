@@ -1,0 +1,86 @@
+{
+    "crn_code": "21907",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            4,
+            4,
+            0
+        ],
+        [
+            0,
+            2,
+            4,
+            3,
+            0
+        ],
+        [
+            0,
+            2,
+            4,
+            3,
+            0
+        ],
+        [
+            0,
+            2,
+            5,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            5,
+            2,
+            1
+        ],
+        [
+            0,
+            4,
+            2,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about procedural modeling and animation ",
+            "\u00a0This course introduced me to the basics of using Maya and Blender, as an illustrative modeling tool and as a programmatic modeling tool. We read a ton of papers, and I got a broad survey-level introduction to the graphics field. ",
+            "\u00a0This course taught me techniques of procedural generation in computer graphics. We covered important concepts like parametric surfaces, particles systems, L-systems, and crowd modelling systems. We also learned the very basics of using software like Blender and Maya to model these techniques. ",
+            "\u00a0Learned how to model in 3D and how to do all that in code. ",
+            "\u00a0Insight into the historical and contemporary design and function of procedural modeling systems and the software environments that support them. This was supplemented by practical knowledge of how to apply these systems and to what ends in the field today. "
+        ],
+        [
+            "\u00a0Most of the grade comes from the grades for your midterm and final projects, but there isn't much guidance as to how to properly complete those or what's expected. ",
+            "\u00a0Strengths: Very manageable coursework with a mix of programming assignments that I felt confident tackling. Really amazing TF who walked us through our confusions.\r\n\r\nWeaknesses: Writing three weekly reading responses was sometimes a bit labor-intensive. ",
+            "\u00a0The strength of this course was that the material was quite interesting. Some papers, especially the mathematically heavy ones, were dense, but I understood why they were necessary to understand the later material. I especially liked the topic of this semester, procedural modeling and animation, and felt like I was leaving the course with a solid grasp on the basics of many important concepts in commercial animation.\r\n\r\nI felt the course had several weaknesses. The first is that the class was on very different footing from the beginning. While Computer Graphics was not a prerequisite for this course, nearly all of the concepts we covered had some grounding in the content of Computer Graphics, and it was clear that students who hadn't taken it were able to get less from this semester's material. Relatedly, despite the class being a seminar, there was next to no discussion. We were required to submit discussion questions for each reading, but seminar was mostly just watching other students present readings one after another. I found reading the papers more useful than hearing them from my classmates. Perhaps had we all been equally prepared there might have been more discussion. ",
+            "\u00a0I think too much of the classes focused on student presentations of papers. ",
+            "\u00a0We don't really learn the stuff that we're graded on, Julie and Sherry don't know how to write in the languages we program our homework and final projects in, plus we never quite got a clear definition of what counts as procedural ",
+            "\u00a0Super cool course, projects are all fun. BUT you should know that you have to learn everything by yourself. In class you learn about techniques used by computer graphics scientists, and you then have to figure out how these techniques are implemented yourself. You read many papers that give you some instruction, but it's usually vague and hard to understand. Fortunately the internet has many great resources and tutorials. \r\n\r\nCourse could use some more specific instruction. ",
+            "\u00a0The course drew mainly from technical literature which students presented on a weekly basis. This was both a strength and a limitation. While this model allowed students to delve into the course material and develop their own understandings, it often hampered more in-depth and critical discussions that a more advanced reading might have offered. Additional contextual literature to supplement the technical focus would add an historical dimension to the course that might help students understand the programs, their implications, and the decisions made regarding them more fully. "
+        ],
+        [
+            "\u00a0Yes, but the topic of the class changes every year. I took this class because I like graphics, but also because a friend of mine who took it last year said it was no work. This semester, the class topic was procedural modeling and animation, so there was a lot of scripting assignments and projects. This class actually ended up taking a lot of my time, which didn't match the description I heard from my friend who took it previously at all. Even though it was much more work than I thought it would be, it was still super fun and I learned so much from this course! ",
+            "\u00a0This is a very manageable course for Computing and the Arts majors (this is an elective option). I briefly took the other graphics class (CPSC 478) and dropped because it was incredibly mathematically demanding and the workload was intense. This class was a nice alternative because I still gained exposure to modeling and to the academic field of graphics, but the workload was comfortable. ",
+            "\u00a0This course, as far as I understand it, changes topic every semester. I really enjoyed reading about Procedural Modeling and Animation. The structure of the class isn't anything special (every seminar is a select few students presenting on a reading everyone has already read), so it really seems like it depends on the topic as to whether or not this class is worth it. I also would recommend taking this after taking Computer Graphics, as a lot of the papers we read built off of the fundamental concepts in that class. This class wasn't terribly high workload, 2-4 pretty short readings per week with short summaries, two projects and a final project. ",
+            "\u00a0Yes, it was an interesting application of CS that was super creative! ",
+            "\u00a0Only if you have a good amount of programming experience already and like learning on your own! It is a really unique and fun course. ",
+            "\u00a0This course has great potential to bridge between technical and design concerns, and would be good for a self-motivated student interested in exploring issues of computational modeling in a guided manner. "
+        ]
+    ]
+}

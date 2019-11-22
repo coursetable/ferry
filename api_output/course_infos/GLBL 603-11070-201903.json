@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49997/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course explores the interaction of two central global challenges: terrorism and development. It interrogates the causal cycle of development and terrorism. Are political and economic underdevelopment a \u201croot cause\u201d of terrorism? And under what conditions does terrorism cause or further underdevelopment? The course considers whether international development policy can improve security outcomes, and vice versa. Topics include foreign aid, democracy promotion, failed states, and civil war. Paper required.", 
+    "title": "Terrorism and Global Development", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WHC B-04", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11070", 
+        "listings": [
+            {
+                "number": "603", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Nicholas Lotito"
+    ], 
+    "long_title": "Terrorism and Global Development", 
+    "extra_info": "A"
+}

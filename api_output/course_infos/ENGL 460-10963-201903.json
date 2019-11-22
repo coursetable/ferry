@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "May be repeated for credit with a different instructor.", 
+    "description": "A seminar and workshop in the writing of verse.\nMay be repeated for credit with a different instructor.", 
+    "title": "Advanced Poetry Writing", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "LC 206", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10963", 
+        "listings": [
+            {
+                "number": "460", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENW\">YC English: Creative Writing</a>"
+    ], 
+    "professors": [
+        "Louise Gluck"
+    ], 
+    "long_title": "Advanced Poetry Writing", 
+    "extra_info": "A"
+}

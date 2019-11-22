@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51399/assignments/syllabus", 
+    "requirements": "Open to students who have placed into L5 courses or who have successfully completed an L4 course in Spanish. Counts toward the major in Spanish.", 
+    "description": "An introduction to Spanish prose, drama, and lyric poetry from their medieval multicultural origins through the Golden Age in the seventeenth century. Readings include El Cid, La Celestina, Conde Lucanor,\u00a0and works by Miguel de Cervantes and Calder\u00f3n de la Barca.\nOpen to students who have placed into L5 courses or who have successfully completed an L4 course in Spanish. Counts toward the major in Spanish.", 
+    "title": "Studies in Spanish Literature I", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WLH 211", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11872", 
+        "listings": [
+            {
+                "number": "261", 
+                "subject": "LAST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jesus Velasco"
+    ], 
+    "long_title": "Studies in Spanish Literature I", 
+    "extra_info": "A"
+}

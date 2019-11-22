@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50083/assignments/syllabus", 
+    "requirements": "", 
+    "description": "American politics and grassroots social movements from 1945 to the present explored through women's activism and through gender politics more broadly.\u00c2\u00a0Ideas about gender identities, gender roles, and family in the shaping of social movements; strategies used on the local, regional, national, and international levels. Connections between organizing and policy, public and private, state and family, and migration, immigration, and empire.", 
+    "title": "Women, Gender, and Grassroots ...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "LC 105", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12320", 
+        "listings": [
+            {
+                "number": "191J", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHI2\">YC History: United States</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIA\">YC History: Cultural History</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIG\">YC HIST: Race Gender &amp; Sexuality</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIJ\">YC HIST: Soc Chng &amp; Social MVMN</a></li></ul>"
+    ], 
+    "professors": [
+        "Jennifer Klein"
+    ], 
+    "long_title": "Women, Gender, and Grassroots Politics in the United States after World War II", 
+    "extra_info": "A"
+}

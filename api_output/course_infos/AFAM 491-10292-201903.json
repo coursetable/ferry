@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Independent research on the senior essay. The senior essay form must be submitted to the director of undergraduate studies by the end of the second week of classes. The senior essay should be completed according to the following schedule: (1) end of the sixth week of classes: a rough draft of the entire essay; (2) end of the last week of classes (fall term) or three weeks before the end of classes (spring term): two copies of the final version of the essay.", 
+    "title": "The Senior Essay", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10292", 
+        "listings": [
+            {
+                "number": "491", 
+                "subject": "AFAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Aimee Cox"
+    ], 
+    "long_title": "The Senior Essay", 
+    "extra_info": "A"
+}

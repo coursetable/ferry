@@ -1,0 +1,94 @@
+{
+    "crn_code": "22138",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            5,
+            5,
+            5
+        ],
+        [
+            1,
+            0,
+            1,
+            4,
+            9
+        ],
+        [
+            0,
+            1,
+            1,
+            4,
+            9
+        ],
+        [
+            0,
+            1,
+            3,
+            3,
+            8
+        ],
+        [
+            0,
+            2,
+            6,
+            6,
+            1
+        ],
+        [
+            0,
+            1,
+            8,
+            6,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to use statistical programming language including SAS, R, SPSS to conduct multivariable statistical analysis. ",
+            "\u00a0Developed theoretical basis on Multivariate statistics ",
+            "\u00a0A lot ",
+            "\u00a0Several multivariate methods. ",
+            "\u00a0Several useful data analysis ",
+            "\u00a0I developed a deeper understanding of SEM and factor analysis ",
+            "\u00a0New statistical methods\r\nlearnt R language\r\nLearnt how to use SPSS\r\nStrengthened my knowledge of SAS ",
+            "\u00a0Big ideas of multivariate data analysis ",
+            "\u00a0ZERO.\r\n\r\nJust kidding. I became much more proficient with SAS, and now I have many more tools to help me navigate R, SPSS, and Minitab! Working with large datasets to explore how variables are related is going to be much more fun, now that I have these statistical methods to tease out the more nuanced relationships. ",
+            "\u00a0I learned R. "
+        ],
+        [
+            "\u00a0Strength: A practical course which taught us how to use four statistical programming language to conduct multivariate statistical analysis. An advanced course for data analysis. It has video recording, which helped us to go through the course materials. Homework assigned with detailed illustration also make it easy to understand and use the knowledge. ",
+            "\u00a0Can strengthen theoretical basis on Multivariate statistics ",
+            "\u00a0Very interesting course and great teaching style. ",
+            "\u00a0Recording the videos and putting them online has many obvious advantages...but I think overall it's not really worth the lower levels of engagement it tends to encourage. I'd be surprised if even half the class ended up watching the SEM videos. ",
+            "\u00a0Hope lecture notes could contain more interpretation of the examples. Sometimes I cannot catch up with the instructor's thoughts. I hope I could learn more from the lecture notes, especially about the interpretation, but not just from the lectures. ",
+            "\u00a0I really appreciated that JDRS allowed students to watch lectures online. He is THAT good! ",
+            "\u00a0Strengths: Video recording\r\nWeakness: Video recording (seems like a detached way of learning) class to far from my primary location ",
+            "\u00a0Homework assignment deadlines kept changing, and it really threw me off. Things worked out, but it was a tad disorienting. ",
+            "\u00a0I think the best thing about this course is it is very well structured and organized. Also, class materials are extremely helpful, even after the completion of the course. "
+        ],
+        [
+            "\u00a0I strongly recommend this class to other students no matter which specific subject you are major in. Since data based analysis is fundamental for each area today. What's more, the content and methods taught by this class are practical, i.e. ,you can directly use the method on your data analysis. ",
+            "\u00a0Yes ",
+            "\u00a0Yes ",
+            "\u00a0I would recommend it if the methods that the class covers is likely relevant to the person, especially if they're a student in the forestry/environmental studies department. ",
+            "\u00a0Absolutely! ",
+            "\u00a0Yes, definitely recommended to everyone with or without statistical background. Learned a lot! ",
+            "\u00a0Yes! JDRS was a great lecturer (even if you just read the lecture notes, you wouldn't fully understand the material until he walked you through it in lecture). And because I had a scheduling conflict, the fact that it was live-streamed CHANGED MY MIND. If they do that again next year, I would recommend all students who want to learn more advanced statistical methods to take this class. "
+        ]
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "crn_code": "24229",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            0
+        ],
+        [
+            1,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            1,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            1,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A very broad understanding of the spatial consequences (and non-spatial theory) behind migration. ",
+            "\u00a0Complicating my view of the world and trying to create a project in which there are no contradictions "
+        ],
+        [
+            "\u00a0Very self-driven, which was both a strength and a weakness. The direction of the class was sometimes hard to pinpoint, particularly once we ended the reading-based class schedule. Sometimes we spent so much time reading quotes that we didn't get to robustly discuss. ",
+            "\u00a0Need more specific instructions highly reliant on student development "
+        ],
+        [
+            "\u00a0Yes, as a project-based class that enables a very broad field of research. Not for everyone, but great for the people it is for. ",
+            "\u00a0I would not. Class was not well organized no one knew what the point of everything really was "
+        ]
+    ]
+}

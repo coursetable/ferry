@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49908/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The language of mathematics is an important leg in the stool of interdisciplinary research and analysis, and many graduate courses at F&ES involve mathematical content. However, many graduate students have not taken a math course in years, and their math skills are rusty. Furthermore, many graduate-level mathematical concepts may be entirely new. Experience suggests that many students either opt out of taking courses they are truly interested in or muddle through, struggle with the math, and miss important concepts. AMES is meant to help students refresh or acquire new math skills and succeed in content and \u201ctoolbox\u201d graduate-level courses. AMES provides a structured opportunity to learn a range of mathematical concepts used in environmental studies. The course assumes that, at a minimum, students took college algebra and perhaps a semester of calculus (but might not really remember it). Concepts are presented heuristically in a \u201chow to\u201d and \u201cwhy\u201d approach with examples from environmental studies. The goal is for students to be conversant and have intuition about (i.e., to demystify) why logs, exponents, derivatives, integrals, linear algebra, probability, optimization, stability analysis, and differential equations show up throughout environmental studies. Students learn (review) how to use these techniques. Also covered is a bit of history of math and an introduction to computer programming.", 
+    "title": "Applied Math for Environmental...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "KRN G01", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13730", 
+        "listings": [
+            {
+                "number": "762", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eli Fenichel"
+    ], 
+    "long_title": "Applied Math for Environmental Studies", 
+    "extra_info": "A"
+}

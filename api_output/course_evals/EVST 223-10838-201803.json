@@ -1,0 +1,101 @@
+{
+    "crn_code": "10838",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            10,
+            7,
+            4
+        ],
+        [
+            0,
+            2,
+            11,
+            7,
+            1
+        ],
+        [
+            0,
+            4,
+            3,
+            10,
+            3
+        ],
+        [
+            0,
+            4,
+            3,
+            12,
+            2
+        ],
+        [
+            0,
+            1,
+            6,
+            13,
+            1
+        ],
+        [
+            0,
+            2,
+            14,
+            4,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I have a greater understanding of ecological and environmental processes that affect the interaction between and distribution of organisms around the globe. I also learned about key developments in ecological theory, as well as determinants of ecosystem properties, population characteristics, and species coexistence. ",
+            "\u00a0This course is very math based. Very math-based. A big portion of this course is learning how to work with the math and figure out how to understand the ecology through it, and vice versa. So, one of the major skills your walk out with is at least a basic familiarity with working with basic models. You also do a fair bit of lab report writing, and there is a big emphasis on on learning how to write the reports, read scientific literature and build from it for your own investigations. In the same vein, you read quite a bit of reports. Friday lectures were treated as discussions and you had to come prepared having read a paper. The professor(s) would then help you walk through the findings and lead a discussion on it. So, you also gain a lot of familiarity with reading ecology papers and thinking about their applications. ",
+            "\u00a0I gained a greater knowledge of basic Ecology principles. We learned more biological information, but we also focused a lot on the models needed to analyse data. ",
+            "\u00a0Broad overview of ecology, not much calc basis which was surprising ",
+            "\u00a0EEB 220 provides a good foundation in the basic topics of ecology, primarily concerning population sizes, competition, etc. It also includes some content on nutrient cycling, niches, etc. It also teaches you some basic skills in Excel or R. ",
+            "\u00a0This course contextualized my understandings of nature with the analytics underpinning ecological processes. I gained most from the quantitative and systems analysis components of the course, as the more descriptive ecology lectures overlapped considerably with other environmental courses I have taken. ",
+            "\u00a0Overview of earth system and ecosystem functioning, including nutrient cycling and species interactions. Basic models for various ecosystem interactions including exponential and logistic growth, competition, predation, species rarefaction, maintenance of diversity, island biogeography, metapopulations, disease, greenhouse gas modeling, and more ",
+            "\u00a0A general understanding of how ecosystems function, the abiotic and biotic factors that affect their populations, individuals, and landscapes. A great survey of the field. ",
+            "\u00a0Learned a huge amount about ecological systems, mathematical modeling, and translating between concepts and mathematical representations. "
+        ],
+        [
+            "\u00a0It was incredibly math intensive and did not feel at all like an introductory course to ecology ",
+            "\u00a0This class covers A LOT of material. I almost think we could really benefit from having two different Ecology courses. While Professors Staver and Vasseur are a wonderful teaching team and there's definitely a strong connection between the material each of them was teaching, I often felt like we could have benefitted from going more in-depth with either section of the course. ",
+            "\u00a0Better problem sets that are more applied to the material ",
+            "\u00a0Professor Staver and Professor Vasseur were both excellent lecturers who were knowledgeable and enthusiastic about the course material. I believe the lecture slides could have some more words written on them, since that made it difficult to review. ",
+            "\u00a0One of the strengths was definitely the math, which although difficult and tedious sometimes, it actually did provide a new perspective and skill for studying ecology. To this I would add that the professors, both Vasseur and Staver, are very good at helping you walk through the models and difficult concepts, as are both TAs. \r\nBut, I do think this course could benefit from more structural organisation. The exams, problem sets and lab reports often felt a little disconnected material wise. Especially the problem sets and exams. Supposedly, the problem sets were supposed to serve as practice for the kind of math/problems we would have to do on the exams. This really was not the case, and there was very little opportunity for practice for the exams, because the textbook only had three of our problems per chapter, and the professors did not provide that much opportunity. So the exams were always a bit of a wing-it situation, because, although you could (and most of us did) study the material conceptually very thoroughly, and did the practice available to us, there was no real way to prepare for some of the questions on them. I think this class wold benefit a lot from providing more practice for the exams, which I know are supposed to make you expand on your understanding of the material, but that act of expanding, especially with the kind of model material we looked at, requires more than just one question on the problem sets for practice. ",
+            "\u00a0The strenghts of this course are that Professor Vasseur was very excited about his lectures and you could tell that he really cared about the material. I liked having the Friday discussions and it was nice to actually talk about issues that are relavant to today. Some of the weaknesses were that sometimes the problem sets seemed really difficult and the TAs were not always the most helpful. Another weakness is that Professor Staver would purposely make her lecture entirely on white board and not focused on the slides if she thought that not enough people had shown up to lecture that day. This makes it difficult to look back on your notes and try to figure out what she was saying. ",
+            "\u00a0Vasseur's lectures had enough words, Staver's could have more. The psets were fair, the \"labs\" associated with the course would be better aligned with a scientific writing course and did little to help me understand the concepts of the course. The papers were interesting. The test writing could be improved. ",
+            "\u00a0Strengths:\r\nThe topics are consistently interesting and relevant.\r\n\"A Primer of Ecology\" by Gotelli is a good textbook that explains the math in the course pretty clearly.\r\nProf Staver and Prof Vasseur are both good lecturers. They explain the content helpfully and they want the students to succeed.\r\nThe TFs are also helpful and prepared to answer questions.\r\nThe homework encourages you to learn in Excel or R, which is useful.\r\nWeaknesses:\r\nThe lab reports are pretty time-consuming.\r\nThe class tries to cover too much ground. It might have been more informative to leave out a few topics and cover the remainder in more depth. ",
+            "\u00a0This course seems to struggle with the tension between  analytical and descriptive methods of explaining ecology. I found the analytical elements most valuable, as they solidified mathematically the biological intuitions gained throughout the E&EB or EVST major. I thought that both lecturers were great, but I benefitted little from section or the assignments, as they felt disconnected from the course or test material. I wished that the problem sets were more mathematical rather than elementary excell excercizes. If they were all more like problem set 5, it think it would better complement the curriculum. While I liked the bird lab, I thought that having a second similar assignment (the movements lab) did not improve my learning. Overall I think the course struggled to find the right balance of analytics, and I wished there was more ecological math, as few other courses at Yale fill this niche. I think that fewer assignments would be better as well, enabling us to focus on the more difficult concepts in section rather than preparing for the homework of the week. Overall, a great syllabus, but I felt that some of the material was too dumbed down and instead exhanged for more mindless excell homework (this is however the perspective of an E&EB senior). ",
+            "\u00a0Strengths: material was often interesting, textbook was FANTASTIC (but only covered about half of the topics), workload was consistent and pretty low throughout, the two lab report/research papers were interesting but needed more guidance, great curve.\r\nWeaknesses: exams were reasonable but the type of questions were often unexpected, the lab report assignments were very unclear on the amount of statistical rigor expected, on the whole the class was not super well organized. Super model oriented but no math prerequisite, so they never quite went in depth enough to fully back up/explain them. ",
+            "\u00a0The teaching is good, but there needs to be a study guide for exams. There is too much potential material to cover with 0 guidance whatsoever. ",
+            "\u00a0Strengths- the two professors with specialized focuses, a small class size, great TA's, etc.\r\nWeaknesses- tests were absolute wildcards ",
+            "\u00a0Strengths: having two professors with different teaching styles was often helpful in getting at the material from different angles. Course did a good job covering quantitative material and also delving into the concepts behind it. \r\n\r\nWeaknesses: sometimes hard to adapt to the different teaching styles. Importantly, there was very little practice: the problem sets often didn't feel very closely related to what we were doing in class, and I felt like I was given very little opportunity to put into practice the concepts that we learned in class, with the result that when I was asked to apply the concepts on the exams, I didn't understand them nearly as much as I could have if I had worked with them more. This class feels like it was designed to have a separate, half-credit lab class attached to it, and I think it would benefit from that. As it was, what we would have done in lab got squished into discussion section, including lab reports and problem sets that were divorced from the course content, and there was little time for actual review or *discussion* in section. "
+        ],
+        [
+            "\u00a0Yes. As far as having required courses for the major, the EEB department really has some good ones and the teaching team is amazing! ",
+            "\u00a0I would recommend this course to another student because I feel like I learned a tremendous amount from an intro level course. ",
+            "\u00a0This is a requirement for both Ecology and EVST, and honestly, for being a requirement, it is actually an enjoyable course. The lecture is small enough that questions flow very smoothly and the professors feel very available and approachable. ",
+            "\u00a0I would recommend this course to another student if they were genuinely interested in Ecology and if it was required for their major. This is definitely not an general course like the name implies. It requires a lot more work than other intro classes. However, I did learn a lot of useful skills and was able to turn in a variety of work that will help me with my future endeavors. ",
+            "\u00a0If you need it for the major. Otherwise, no. Not bad, but not great. Not much worth it to be gained. ",
+            "\u00a0Yes for anyone who wants a good introductory understanding of ecology. It is a fair amount of work. But even if you're not required to take it, it will cover material that is interesting and relevant, and although the examples in class are quite simplified compared to real-world problems, it's interesting to learn the basics of how ecologists think. ",
+            "\u00a0Ultimately most people take this for a requirement. I would recommend it to any student interested in quantitative analyses of biological systems. The lectures are great, but the assignments can be somewhat arduous. ",
+            "\u00a0Interesting class if you really care about ecology and want to learn the nitty-gritty's of ecological modeling. Very manageable but far from your traditional biology course due to the focus on modeling with very little math beyond algebra ",
+            "\u00a0No. The exams were a mess because no one knew what to study, and that killed our grades ",
+            "\u00a0Definitely! My favorite class so far, it was a good intro to the field of ecology and leaves with an innate understanding of how they function. Good mix of theory and mathematics. ",
+            "\u00a0This class is on its way to being great, but it's not there yet. On the positive side, both professors really really know their stuff and are very good teachers/lecturers. I found the lectures interesting, relatively easy to follow, and appropriately broad in their scope while also giving plenty of specific examples. The problem sets and lab reports were a reasonable difficulty level and were relatively fun to do. I feel like I got some great exposure to a lot of fundamental concepts in ecology.\r\n\r\nOn the other hand, there were some things about this course that I found very challenging. There is a mismatch between what you learn in class and the opportunities you are given to practice applying the concepts. I don't think there is any shame in needing a couple rounds of practice to really understand how a mathematical model works, or in needing to be quizzed on several scenarios before really getting the hang of a concept. But this class did not provide that sort of practice. The problem sets were only sometimes related to the course content, and other times they diverged wildly from it: I felt like I was doing problems related to ecology, but they bore little resemblance to what we had learned in class, and I was left with no opportunities to practice many of the concepts in class. When those concepts were then tested on the midterm and final exams, I didn't feel prepared at all, despite having reviewed the readings and lectures, talked through confusions with other students, and generally put effort into studying. \r\n\r\nThis class feels like it was designed to have a separate, half-credit lab class attached to it, and I think it would benefit from that. As it was, what we would have done in lab got squished into discussion section, including lab reports and problem sets that were divorced from the course content, and there was little time for actual review or *discussion* in section. \r\n\r\nMaybe someone with a different learning style or a huge amount of time to devote to this class would have had a better time of it, but I really struggled, and I wish that this foundational class had had better support. "
+        ]
+    ]
+}

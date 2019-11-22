@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "The course reviews several modern valuation studies that are central to the estimation of the economic damages from climate change. The aim is to train students to deal with quantitative economic analysis and modeling. Students form teams of two and choose a study; gather the data and methods of that study from the authors or a journal; and then reproduce the published results. The teams study the theory and empirical analysis, gather the data and modeling to replicate the results, and determine how sensitive the results are to the assumptions and specifications. The course meets every other week for the entire year to give students time to analyze their studies and present their results. Prerequisites: econometrics and relevant courses in economics.", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12657", 
+        "listings": [
+            {
+                "number": "739", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Climate Change Economics", 
+    "extra_info": "C"
+}

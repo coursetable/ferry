@@ -1,0 +1,53 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49719/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to medieval English literature and culture in its European and Mediterranean context, before it became monolingual, canonical, or author-bound. Genres include travel writing, epic, dream visions, mysticism, the lyric, and autobiography, from the Crusades to the Hundred Years War, from the troubadours to Dante, from the Chanson de Roland to Chaucer. Formerly ENGL 189.", 
+    "title": "The Multicultural Middle Ages", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LC 211", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 10
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13049", 
+        "listings": [
+            {
+                "number": "216", 
+                "subject": "FREN"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENV\">YC English: Medieval</a>"
+    ], 
+    "professors": [
+        "Ardis Butterfield"
+    ], 
+    "long_title": "The Multicultural Middle Ages", 
+    "extra_info": "A"
+}

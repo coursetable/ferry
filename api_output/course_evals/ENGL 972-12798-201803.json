@@ -1,0 +1,77 @@
+{
+    "crn_code": "12798",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I drew connections to poets in other eras that I really enjoyed. I also read more literary criticism than I have before, and that will definitely benefit my research. ",
+            "\u00a0Professor Glaser's course offered me a wonderfully various and engaging overview of modern poetry, and strengthened my background in the modernist era. It enabled me to develop a more criticism-centered approach to reading and writing about poetry, and it provided me with many sources with which to enrich my understanding of the way poetry works within context, rather than simply on the page. ",
+            "\u00a0A nuanced overview of critical trends in the 20th Century. ",
+            "\u00a0Greater command of key concepts in lyric theory, modernist poetics, and especially black and indigenous modernist poetics and secondary scholarship. Learned about archival resources at Yale also. "
+        ],
+        [
+            "\u00a0The weekly responses helped me get to know my classmates. I enjoyed the visit to the Beinecke. The final MS style seminar really helped me think through my final paper. I think, because half of us ended up writing about black poets, it might be interesting to weave black poets throughout the semester. ",
+            "\u00a0I found the course's curriculum to be extremely interesting. It was expansive, yet offered enough time and space for careful consideration of each poet and body of work. I particularly enjoyed our session at the Beinecke. ",
+            "\u00a0Weekly Canvas posts were an extremely helpful way to synthesize course material. As a class I wish we had been better at focusing our discussion and responding to one another's observations; sometimes I felt we lost the thread. "
+        ],
+        [
+            "\u00a0I would if his research aligned more with the content covered in the class. ",
+            "\u00a0Yes, I would recommend this course to another student. Professor Glaser's course offered a solid and interesting background in modern poetry, which could be extremely helpful to those wishing to become better acquainted with modernist poetics. Simultaneously, due to its seminar format, it provided a lot of space for in-depth discussion about specific works, for those already familiar with the poetry of the period. "
+        ]
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49354/assignments/syllabus", 
+    "requirements": "Prerequisites: PSYC 130, 140, 180, or equivalent, or with permission of instructor.", 
+    "description": "Study of developmental psychopathology during childhood and adolescence, team taught by a child psychiatrist and three psychologists. Topics include: aspects of normal development, assessment methods, clinical disorders, treatment, and legal and social policy issues.\u00a0Review of normative development, followed by discussion of theoretical approaches to understanding developmental aspects of common mental health conditions in childhood.\u00a0Attention to treatment models as well as relevant issues of culture and ethnicity in the expression of psychopathology.\nPrerequisites: PSYC 130, 140, 180, or equivalent, or with permission of instructor.", 
+    "title": "Developmental Psychopathology", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "CSC SENN", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12941", 
+        "listings": [
+            {
+                "number": "334", 
+                "subject": "CHLD"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Fred Volkmar", 
+        "Eli Lebowitz", 
+        "Denis Sukhodolsky"
+    ], 
+    "long_title": "Developmental Psychopathology", 
+    "extra_info": "A"
+}

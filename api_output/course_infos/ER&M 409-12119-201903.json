@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49883/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Consideration of ethnography within the genealogy and intellectual traditions of Latinx Studies. Topics include: questions of knowledge production and epistemological traditions in Latin America and U.S. Latino communities; conceptions of migration, transnationalism, and space; perspectives on \u201c(il)legality\u201d and criminalization; labor, wealth, and class identities; contextual understandings of gender and sexuality; theorizations of affect and intimate lives; and the politics of race and inequality under white liberalism and conservatism in the United States.", 
+    "title": "Latinx Ethnography", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 011", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12119", 
+        "listings": [
+            {
+                "number": "409", 
+                "subject": "ER&M"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Ana Ramos-Zayas"
+    ], 
+    "long_title": "Latinx Ethnography", 
+    "extra_info": "A"
+}

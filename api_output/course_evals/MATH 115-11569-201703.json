@@ -1,0 +1,107 @@
+{
+    "crn_code": "11569",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            11,
+            10,
+            1
+        ],
+        [
+            1,
+            4,
+            10,
+            8,
+            1
+        ],
+        [
+            1,
+            3,
+            8,
+            12,
+            0
+        ],
+        [
+            1,
+            3,
+            2,
+            13,
+            5
+        ],
+        [
+            0,
+            3,
+            11,
+            7,
+            1
+        ],
+        [
+            0,
+            3,
+            13,
+            6,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained a pretty solid basis of Calculus II. My deriving, integrating, graphing, and calculating skills have all improved and I feel as if I could confidently move on to Math 120 (I'm not going to, but I could). ",
+            "\u00a0I learned how to do a lot of things that I could have done on the calculator or ways to estimate things that have a easier and more accurate way now. ",
+            "\u00a0I gained a good knowledge of Calc II content: integrals & integral applications, sequences & series (including convergence/divergence tests, powers series, Taylor/Maclaurin series), parametric equations, polar coordinates, separable differential equations, etc. In addition to gaining knowledge of the content, I think I also gained a deeper insight into math in general and how to think more analytically, as many of the class worksheet, p-set, and exam questions demanded. ",
+            "\u00a0Established basic grounding in calculus ",
+            "\u00a0I'd already taken BC calculus, so this class was a good refresher. I was previously unclear on differential equations and some other specifics, so now I feel like I know them quite well compared to the rush of learning during senior year. ",
+            "\u00a0Though I took IB math in high school, this course really developed my knowledge of calculus in a much deeper way. I felt that I truly understood integrals, series, parametric functions, and differential equations. ",
+            "\u00a0This class effectively reviewed my knowledge of integral calculus and expanded my comprehension of new material, such as parametric functions and series. ",
+            "\u00a0Integral calculus, sequence and series ",
+            "\u00a0The ability to do calculus effectively. ",
+            "\u00a0I developed many basic skills related to integral calculus that will be very helpful to me throughout the rest of my academic career. ",
+            "\u00a0My knowledge of calculus increased, especially in regards to polar functions and series, neither of which I had felt with before. ",
+            "\u00a0I learned a lot more about Calculus BC than I had in the AP class. It taught me more than just how to solve problems in math but to look deeper and understand the math I am using. "
+        ],
+        [
+            "\u00a0Strengths: SARAH VIGLIOTTA!! The homework and exam schedules were also understandable, as well as the general course organization\r\n\r\nWeakness: The structure of a flipped course was actually very detrimental to my learning, especially with the way the videos are presented now. I can think of many concepts I learned on my own and in class, but don't recall being taught a single thing by the videos. Also, other professors did not have very helpful review sessions. ",
+            "\u00a0Strengths: the instructor, for sure. I've heard that one's Math 115 experience can be veeeery dependent upon the person who's teaching it, and Prof. Sarah Vigliotta is amazing. Take her section!! The class is \"flipped\" (meaning we had to watch a video about the topic we were covering & answer some prep problems before we came to class), but she basically re-explained everything in a much more understandable way. I really appreciated her organization and uniformity in how she presented notes and examples, and she was very clear in most of her explanations and always willing to answer questions in the cases where she wasn't. She was also very accessible and had a ton of office hours - I only really went before the midterms and during reading period before finals when I had specific questions & her office hours were extended, but she always held plenty of office hours throughout the semester. I also think that this class overall encourages analytical thinking and learning how to manipulate mathematical concepts to do what you want them to do, which I found very interesting and cool.\r\n\r\nWeaknesses: there seemed to be dramatic jumps in the difficulty from the prep problems that accompanied the video to the examples in class to the worksheet problems to the p-set problems to the exam problems. The prep problems could get a little bit annoying when they were due the same day as p-sets, and also when the videos didn't explain things well.\r\n\r\nAlso, it seemed like a lot of people in the class had already had taken calc BC in high school (I know a couple of people who placed into 120 and took 115 instead, and people who placed into 115 and took 112 instead) which can be both intimidating at the beginning of the semester, and a little bit harmful to the learning process when people asked questions in class about material we hadn't covered yet or used terms that people who hadn't taken calc BC were unfamiliar with. It also strikes me as unfair that people are allowed to take a class that they've essentially already taken and essentially get a free GPA boost from it. I guess everyone could do the same thing, but that isn't exactly in the spirit of learning and intellectual curiosity. I understand that some high school teachers may not have been the best at explaining a subject and it could be beneficial to some people to repeat it at the college level, but I find it extremely hard to believe that was the case with all of the people who took the class after placing into 120. ",
+            "\u00a0Flipped course is pointless in my opinion, as instead of learning at home and doing in class, everyone is still confused after watching the at-home videos, so we just end up learning in class as well. ",
+            "\u00a0more practical applications ",
+            "\u00a0I do not enjoy the flipped style of class, but I feel like it may be an acceptable way to learn. I found myself with some questions from watching videos that I wanted to ask the professor, but sometimes I forgot what I wanted to ask because the gap between doing the video and going to class was quite long. ",
+            "\u00a0Strengths of the course: I really liked my professor (Sarah Vigliotta). Also, as mentioned above, I felt that I really deepened my understanding of calculus in almost all of the target areas. \r\n\r\nWeaknesses of the course: The videos used for the flipped classroom were not helpful. Also, though this is probably a personal weakness, I'm still very confused about polar functions. That's an example of where we could have been taught some \"tricks\" to solve the problems faster but we weren't. Eg cos3x will create a rose with 3 loops but cos4x will create a rose with 8 loops. ",
+            "\u00a0I found that the flipped learning wasn't as effective as it could have been. The videos tended to focus on easier examples, so I had fewer questions, but when going through problem sets, questions were more complicated. I found that I learned the best during class, as the instructor was thorough and you were able to get questions answered immediately. I think that the videos could be used as a supplementary resource, but they shouldn't be the focal part of the learning experience. ",
+            "\u00a0Disconnect between the videos and the tests ",
+            "\u00a0Flipped classroom weird\r\n\r\nOrganized syllabus ",
+            "\u00a0This class had one strength: a kind professor. All else are weaknesses. The reverse classroom is a terrible idea. The videos do not teach any analytical skills that could not be taught via a brief skim of the textbook pages. There is a resultant divide between the difficulty of exams and problem sets, and the actual material taught. Furthermore all problem set answers are available online, to those who know where to look. This creates stratification between students who work hard to achieve problem sets earning lower grades than those who, in the know, copy down answers that they did not come up with. I strongly believe that neither my time nor my engagement with the material were respected by taking this course. ",
+            "\u00a0Strengths - manageable workload, good resources. Weaknesses - not all review sessions of same quality. ",
+            "\u00a0Honestly, and I know this is a pretty common answer here, but the flipped classroom really, really needs to be evaluated from the standpoint of how the students are interfacing with it. I imagine that it is a tool that is very useful to some students, based on their specific learning styles, but it really fundamentally alters the way some engage with the material, often for the worse. ",
+            "\u00a0The flipped classroom format was not as bad as I had originally thought it would be. With that said, I think there are some specific aspects that could be improved. For example, in the prep problems, there was always a final question asking if there was anything that we were still confused about, and that we wanted to discuss in class. However, the reality is that many students do not have the time to do the homework that far in advance, so oftentimes the professor does not get a chance to see our comments before the class period. It would be helpful if the professor looked through those questions the morning before the class period. Also, it would be extremely beneficial to students' homework grades if the online prep problems were DUE AT THE TIME THEIR CLASS PERIOD STARTS, because many students do not have the time in their schedule to do it the NIGHT BEFORE--especially for those students whose section is held at 2:30pm in the afternoon. I know that I often did the online homework the morning before the class period, and I always got zero credit for the work I did--just because it was not completed the night before. On another note, students should get some amount of credit for late homework--even if it's one day late, I think half-credit would be reasonable. ",
+            "\u00a0I think the strengths of the course were the problem sets and the worksheets after every class. I think the weaknesses were some of the videos for the flipped classroom. I felt there were several that completely confused many of the students and the problems weren't always related to the practice problems after. "
+        ],
+        [
+            "\u00a0Not recommended unless you need to take the course. If you don't feel confident about calculus, stick to 114. If you're confident but don't know if you could thrive in 120, you're still better off in 120. ",
+            "\u00a0Yes, if you need it for your major. ",
+            "\u00a0Yes, especially if you can take Prof. Vigliotta's section. ",
+            "\u00a0Yes, because it is a prerequisite for many things. I believe it depends on how well the instructor teaches and responds to student inquiry for the individual sections. ",
+            "\u00a0Yes, I would absolutely recommend this course to another student. It's a great first math course to take at Yale and will prepare me for other math courses. ",
+            "\u00a0Most students would likely take this as a prerequisite course, but I found that it was very enjoyable despite taking it just as a prerequisite. ",
+            "\u00a0Decent math  class ",
+            "\u00a0No, I would not. This course was unnecessarily time consuming and I do not feel that my comprehension of the material was to any degree improved. The difficulty of problem sets and exams did not reflect the difficulty of the material taught. ",
+            "\u00a0Yes, good introductory math course, lots of support from instructors and peer tutors. ",
+            "\u00a0Its a calculus class... people should take it. The instructor was what made it amazing. ",
+            "\u00a0Yes, because it was both fascinating, and extremely beneficial to my general knowledge of calculus. I know I will use this knowledge throughout my academic career. ",
+            "\u00a0Yes, this math course is required to have a solid basis for later math based courses. ",
+            "\u00a0I think this was a great course to take to building up the calculus needed for furthering education. Yes I would recommend it to another student. "
+        ]
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51997/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An examination of case-studies of Jewish ritual practices and prohibitions which may be investigated archaeologically. Topics to be surveyed include: ritual bathing and ritual baths (miqwa\u00e2\u20ac\u2122ot), use of chalk vessels and avoidance of imported pottery, tefillin (phylacteries) and mezuzah, avoidance of figural art, the dietary laws, and the four species ritual.", 
+    "title": "Ancient Jewish Ritual Law (Hal...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 209", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15139", 
+        "listings": [
+            {
+                "number": "242", 
+                "subject": "JDST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Yonatan Adler"
+    ], 
+    "long_title": "Ancient Jewish Ritual Law (Halakhah) and Archaeology", 
+    "extra_info": "A"
+}

@@ -1,0 +1,80 @@
+{
+    "crn_code": "10667",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            5,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            7,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about various different subjects/areas of research within cognitive science, as well as the methods and tools used to learn more about them. ",
+            "\u00a0This class strikes the right balance between broad overview and depth within topics. Every week was different, and I learned a lot of things about a lot of things. I feel like I have much more confidence in speaking and thinking critically about various fields within cognitive science. ",
+            "\u00a0A great survey of cognitive science "
+        ],
+        [
+            "\u00a0Strengths: writing a senior project proposal, writing a paper draft, presenting to the class, and producing a final paper. This process really prepared me for what I will be tackling next year as a senior in the major. Another strength was the class discussions--it was really interesting to hear other students' opinions on topics they were passionate about. ",
+            "\u00a0Strengths: students are very involved in their own learning and the learning process. Weaknesses: we didn't get much regular feedback. I think the seminar discussion often dove into the nitty-gritty details of uninteresting or irrelevant topics and student engagement was lost at this time ",
+            "\u00a0Strengths: weekly topic, reasonable amount of reading with suggested and recommended papers made available, high student involvement during class\r\nWeaknesses: disconnect between topics, more time spent on some branches of cogsci (like psych, econ) than others ",
+            "\u00a0This is a strong course, very focused on active learning. I enjoyed that immensely! ",
+            "\u00a0Active learning meant really high engagement and great discussions "
+        ],
+        [
+            "\u00a0Yes! As a CogSci major, it gives you a level of understanding and credibility in talking about the different domains of cognitive science as a field, rather than just the topic you are interested in. ",
+            "\u00a0I would recommend this to juniors in the cognitive science major. I had very high hopes for this seminar, and it wasn't as fun or as interesting as I expected it to be, so I guess just go in with the right expectations. Still very useful to me, and I have no regrets about taking it. ",
+            "\u00a0To all cognitive science majors -- YES! A great way to learn a LOT about the field we are studying. ",
+            "\u00a0Absolutely to all cog sci majors. A lot of work but so worth it "
+        ]
+    ]
+}

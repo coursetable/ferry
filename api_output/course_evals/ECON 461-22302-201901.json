@@ -1,0 +1,85 @@
+{
+    "crn_code": "22302",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            6
+        ],
+        [
+            0,
+            2,
+            3,
+            0,
+            5
+        ],
+        [
+            0,
+            1,
+            2,
+            4,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            5
+        ],
+        [
+            0,
+            2,
+            6,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            7,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Before taking this course, I had a much less nuanced knowledge regarding the complexities that come into play when attempting to design and implement public policy to combat addiction. Remaining cognizant of paternalistic policies, aware of potential regressive outcomes for certain subgroups, and sensitive to aggressive and immoral marketing tactics are all things I learned to look out for through Professor Sindelar's class. Further, the class discussion inherent in each week's meeting provided an excellent setting for debate, as well as the brainstorming of novel ideas and solutions. ",
+            "\u00a0Learned a lot about super relevant issues as well as how to create policy that could potentially positively affect the issues. ",
+            "\u00a0The skills we were supposed to ",
+            "\u00a0This class was great and we learned about all types of addictions and how to read economics papers and research ",
+            "\u00a0This course offers a detailed overview of various addictions and the related crises. In particular, the opioid crisis was emphasized. "
+        ],
+        [
+            "\u00a0One weakness of the course was the relative size of the class. Because of the rather large number of students in the class, Professor Sindelar often had to rush through her prepared slides in order to ensure ample time for discussion and participation of all peers in the latter portion of the allotted class time. Other than that weakness, I feel that the remained of the course was spectacular. The readings were interesting and extremely informative, Professor Sindelar's breadth of knowledge on the subject is thought provoking, and the writing assignments made you think about contentious issues without cut and dry answers, which ultimately set the stage for great class discussions. ",
+            "\u00a0The lectures were sometimes disorganized, but the content was great. Overall a nice, chill senior seminar/lecture to take where you can learn a lot about relevant topics. ",
+            "\u00a0A little large for seminar but I liked the size ",
+            "\u00a0strengths: interesting reads and good class discussions\r\nweaknesses: such tedious homework assignments that felt nitpicky ",
+            "\u00a0Great overview of different policy issues and epidemics. Prof. Sindelar is very knowledgeable and a great instructor. ",
+            "\u00a0the lectures were a bit all over the place, I understand there is so much material to cover, but it may be better to cut down, so we don't get off track and confused. "
+        ],
+        [
+            "\u00a0I would definitely recommend this course to another student, especially if the student were interested in understanding how economics plays a role in designing, informing, and implementing public policy that directly targets a number of addiction-driven epidemics that are deeply relevant in today's world. The readings, writing assignments, and class discussions are incredibly rewarding, and have definitely helped to change my perspective on some health issues plaguing the world today. ",
+            "\u00a0I would take it if you're actually interested in the material and willing to do the readings and add to the discussions we had every class. ",
+            "\u00a0Yes ",
+            "\u00a0This is a great course ",
+            "\u00a0Yes. It's a great chill econ lecture for seniors. ",
+            "\u00a0I highly recommend this course if you are interested in public policy and healthcare. Even as someone who may not have a career in these areas, it is very important to know about these topics. "
+        ]
+    ]
+}

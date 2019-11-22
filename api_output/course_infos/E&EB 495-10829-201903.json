@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "One term of intensive research fulfills a portion of the senior requirement for the B.S. degree.", 
+    "description": "One term of intensive original research during the senior year under the sponsorship of a Yale faculty member. Similar to other research courses except that a more substantial portion of a student\u00e2\u20ac\u2122s time and effort should be spent on the research project (a minimum average of twenty hours per week). A research proposal approved by the sponsoring faculty member must be submitted to the director of undergraduate studies; forms are available from the office of undergraduate studies. For research in the fall term, approval is encouraged during the spring term of the junior year. Proposals are due no later than the first day of the second week of the term in which the student enrolls in the course. The final research paper is due in the hands of the director of undergraduate studies by the last day of reading period in the term of enrollment.\nOne term of intensive research fulfills a portion of the senior requirement for the B.S. degree.\n\n2 Yale College course credits", 
+    "title": "Intensive Senior Research", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10829", 
+        "listings": [
+            {
+                "number": "495", 
+                "subject": "E&EB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Marta Wells"
+    ], 
+    "long_title": "Intensive Senior Research", 
+    "extra_info": "A"
+}

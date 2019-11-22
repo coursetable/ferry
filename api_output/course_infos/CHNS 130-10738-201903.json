@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "2019-12-13", 
+        "group": 2, 
+        "day_of_week": "Friday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49384/assignments/syllabus", 
+    "requirements": "After CHNS 120 or equivalent.", 
+    "description": "An intermediate course that continues intensive training in listening, speaking, reading, and writing and consolidates achievements from the first year of study. Students improve oral fluency, study more complex grammatical structures, and enlarge both reading and writing vocabulary.\nAfter CHNS 120 or equivalent.\n\n1.5 Yale College course credits", 
+    "title": "Intermediate Modern Chinese I", 
+    "skills": [
+        "L3"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WTS B30", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "10738", 
+        "listings": [
+            {
+                "number": "130", 
+                "subject": "CHNS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Peisong Xu"
+    ], 
+    "long_title": "Intermediate Modern Chinese I", 
+    "extra_info": "A"
+}

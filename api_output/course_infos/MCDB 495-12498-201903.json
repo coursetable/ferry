@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Individual two-term directed research projects in the field of biology under the supervision of a faculty member. For MCDB seniors only. Before registering, the student must be accepted by a Yale faculty member with a research program in experimental biology and obtain the approval of the instructor in charge of the course. Students spend approximately twenty hours per week in the laboratory, and make written and oral presentations of their research to students and advisers. Written assignments include a short research proposal summary due at the beginning of the first term, a grant proposal due at the end of the first term, and a research report summarizing experimental results due at the end of the second term. Students must attend a minimum of three research seminar sessions (including their own) per term. Students are also required to present their research during both the fall and spring terms. A poster session is held at the end of the spring term. Guidelines for the course may be obtained at\u00c2\u00a0http://mcdb.yale.edu/forms and on the course site on Canvas@Yale. Written proposals are due by the end of the second week of classes. Fulfills the senior requirement for the B.S. degree with an intensive major.\n\n2 Yale College course credits", 
+    "title": "Senior Research Intensive", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12498", 
+        "listings": [
+            {
+                "number": "495", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Joseph Wolenski", 
+        "David Breslow", 
+        "Jing Yan"
+    ], 
+    "long_title": "Senior Research Intensive", 
+    "extra_info": "A"
+}

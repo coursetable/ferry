@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50405/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A number of mathematical topics are chosen each term\u2014e.g., differential topology, Lie algebras, mathematical methods in physics\u2014and explored in one section of the seminar. Students present several talks on the chosen topic. One section each year is devoted to topics of interest to Economics and Mathematics majors, and is co-taught by a member of the Economics department.", 
+    "title": "Senior Seminar: Mathematical T...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LOM 205", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11298", 
+        "listings": [
+            {
+                "number": "480", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Van Vu"
+    ], 
+    "long_title": "Senior Seminar: Mathematical Topics", 
+    "extra_info": "A"
+}

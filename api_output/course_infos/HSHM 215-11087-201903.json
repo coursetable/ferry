@@ -1,0 +1,53 @@
+{
+    "exam": {
+        "date": "2019-12-12", 
+        "group": 2, 
+        "day_of_week": "Thursday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50193/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A survey of public health in America from the yellow fever epidemic of 1793 to AIDS and breast cancer activism at the end of the past century. Focusing on medicine and the state, topics include quarantines, failures and successes of medical and social welfare, the experiences of healers and patients, and organized medicine and its critics.", 
+    "title": "Public Health in America, 1793...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "WLH 201", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 11
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11087", 
+        "listings": [
+            {
+                "number": "215", 
+                "subject": "HSHM"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHS1\">YC HSHM: Med &amp; Public Health</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHS3\">YC HSHM: Gender, Reprod and Body</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHS4\">YC HSHM: Global Health</a></li></ul>"
+    ], 
+    "professors": [
+        "Naomi Rogers"
+    ], 
+    "long_title": "Public Health in America, 1793 to the Present", 
+    "extra_info": "A"
+}

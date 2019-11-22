@@ -1,0 +1,75 @@
+{
+    "crn_code": "22065",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            2,
+            2,
+            0,
+            0
+        ],
+        [
+            3,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            3,
+            0,
+            1,
+            2,
+            0
+        ],
+        [
+            3,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            1,
+            1,
+            1,
+            3,
+            0
+        ],
+        [
+            3,
+            2,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned the proofs for some cool theorems in random walks theory. ",
+            "\u00a0Very few "
+        ],
+        [
+            "\u00a0There is very little engagement with he material since you are only required to learn your own portion. ",
+            "\u00a0please assign pure math texts in the future, not data science ",
+            "\u00a0Horrible class, students have no choice over material taught. Professor Van Vu routinely missed class without letting us know. In total he canceled 6 classes. "
+        ],
+        [
+            "\u00a0It's required for the math major.  I can't imagine anyone else taking it. ",
+            "\u00a0NO. I think its the worst course I have taken at Yale. "
+        ]
+    ]
+}

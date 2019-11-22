@@ -1,0 +1,73 @@
+{
+    "crn_code": "24541",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0My rotations with Dr. Spiegel and Levine were brilliant. ",
+            "\u00a0Experiment skills, group collaboration, presentation ",
+            "\u00a0Learn how to do the experiment in the lab that I worked in. "
+        ],
+        [
+            "\u00a0Strengths: gives students the opportunity to experience the lab research and environment, also expose students to diverse research topics if they want.\r\n\r\nWeaknesses: the duration of the rotation differs a lot. "
+        ],
+        [
+            "\u00a0It is better if we start our third rotation 1 week later. "
+        ]
+    ]
+}

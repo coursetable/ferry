@@ -1,0 +1,74 @@
+{
+    "crn_code": "25819",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            3,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a great deal of ecological principles and how they can be applied to studying the past. ",
+            "\u00a0This course provided an overview of the discipline of palaeoecology through a series of case studies organized by topic. Thus, I have developed numerous insights that potentially enable me to independently explore further those topics that are relevant for my research. The course also included three sessions aimed at developing actual research skills (stats, database use), although these are introductory in nature. "
+        ],
+        [
+            "\u00a0I think more of a lecture component would be helpful. ",
+            "\u00a0Strengths: overview of a diverse discipline, informal and relaxed setting.\r\nWeaknesses: case studies tend to focus on a limited range of topics, not enough conceptual background.\r\nPossible improvements: more variety in the choice of case studies, more conceptual introductions. ",
+            "\u00a0I think 30 minutes of lecture per week to either prepare us for the next week's readings or reinforce that week's topic would have been valuable. As it was, the discussions were valuable and most of the student questions were good for summarizing the important parts of each paper. "
+        ],
+        [
+            "\u00a0I would recommend this course only to students with a strong interest in palaeoecology, since the topics covered are very specific. "
+        ]
+    ]
+}

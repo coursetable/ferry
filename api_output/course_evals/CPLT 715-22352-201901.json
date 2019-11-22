@@ -1,0 +1,72 @@
+{
+    "crn_code": "22352",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Methods for reading and analyzing literary works and finding connections between them "
+        ],
+        [
+            "\u00a0The materials covered were in depth with great discussions. Nevertheless, I sometimes felt like we spent too much time on one material while we could have included more or discussed the other assignments at an equal depth. "
+        ],
+        [
+            "\u00a0Yes!! Its a great class- the literature is all really interesting, and while the course doesnt center around colonialism in America, I am glad that we spent a few weeks on it ",
+            "\u00a0Absolutely, it was a fantastic course with a good selection of literary works that are essential to understand not only the start of globalism in the Renaissance but also to understand our own world. "
+        ]
+    ]
+}

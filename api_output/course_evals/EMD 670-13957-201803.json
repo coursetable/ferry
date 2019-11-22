@@ -1,0 +1,81 @@
+{
+    "crn_code": "13957",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's provided students with helpful and timely feedback",
+        "The instructor established a positive learning environment",
+        "The instructor raised questions or problems that encouraged me to think critically"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0On average, 18- 20 hours per week but it fluctuated depending on what I was doing in lab that week. ",
+            "\u00a020 hours ",
+            "\u00a030 ",
+            "\u00a010 "
+        ],
+        [
+            "\u00a0I like that it's an immersive lab experience and I learned a lot about a subject that was new to me. Doug Brackney is a great PI and very knowledgeable. ",
+            "\u00a0This rotation is very useful. I learned a lot in the rotation include wet lab work and bioinformatic programming. However, if I can have the chance to learn coding work hand in hand by the bioinformatic researcher, that will be much helpful. Or if he can provide me with some learning resource, I can also learn it by myself. By doing that, I will save a great amount of time to do other meaningful stuff. "
+        ],
+        [
+            "\u00a0Dr. Tschudi is great and takes student feedback very seriously. ",
+            "\u00a0Professor Tschudi provides me detailed information about how to choose professors to rotate with. He is an amazing instructor. Not only gives you advice on academic life but also daily life. He cares about students a lot. Professor Pettigrew also gives me a lot of opportunities to learn. She supported every decision I made(like what I want to learn in her group) and met with me every Monday morning to give me detailed instruction. I appreciated a lot. "
+        ],
+        [
+            "\u00a0I think all PhD students (even non-EMD) should consider doing at least one rotation. It helps broaden horizons. ",
+            "\u00a0Highly recommend. You will get into a specific research group and you will know if you fit with this realm or not, like the instructor or not etc. "
+        ]
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "", 
+    "title": "Secured Transactions", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "SLB 121", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12721", 
+        "listings": [
+            {
+                "number": "667", 
+                "subject": "MGT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "George Brunstad"
+    ], 
+    "long_title": "Secured Transactions", 
+    "extra_info": "A"
+}

@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49186/assignments/syllabus", 
+    "requirements": "Prerequisite: MATH 120 or ENAS 151 or permission of instructor.", 
+    "description": "Analysis of equilibrium systems. Topics include energy conservation, entropy, heat engines, Legendre transforms, derived thermodynamic potentials and equilibrium criteria, multicomponent systems, chemical reaction and phase equilibria, systematic derivation of thermodynamic identities, criteria for thermodynamic stability, and introduction to statistical thermodynamics.\nPrerequisite: MATH 120 or ENAS 151 or permission of instructor.", 
+    "title": "Chemical Engineering Thermodyn...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "ML 104", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10499", 
+        "listings": [
+            {
+                "number": "300", 
+                "subject": "CENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kyle Vanderlick"
+    ], 
+    "long_title": "Chemical Engineering Thermodynamics", 
+    "extra_info": "A"
+}

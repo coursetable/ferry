@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49765/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Issues of faith examined through poetry, with a focus on modern Christian poems from 1850 to the present. Some attention to poems from other faith traditions, as well as to secular and antireligious poetry.", 
+    "title": "Poetry and Faith", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "BF S-28", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10956", 
+        "listings": [
+            {
+                "number": "346", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENJ\">YC English: Junior Seminar</a>"
+    ], 
+    "professors": [
+        "Christian Wiman"
+    ], 
+    "long_title": "Poetry and Faith", 
+    "extra_info": "A"
+}

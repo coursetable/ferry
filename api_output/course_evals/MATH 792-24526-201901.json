@@ -1,0 +1,71 @@
+{
+    "crn_code": "24526",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            1,
+            0,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0We learned about group stability and invariant random subgroups in the first half of the semester.  In the second half of the semester, we learned some hyperbolic geometry and talked about \"flexible stability\" in the context of surface groups. "
+        ],
+        [
+            "\u00a0This is a very interesting subject.  The presentation of material in the second half of the course was sometimes difficult to follow, though.  I think that even though this was a grad course, having a few sets of suggested exercises throughout the semester could have helped us consolidate our understanding of the material as we went. "
+        ],
+        [
+            "\u00a0This course covered interesting material.  I would recommend it if and only if (1) you have finished taking the core math sequence and have moved on to focusing on electives and (2) you are good at learning a bit independently and following up on confusing details from class even if nobody is forcing you to hand in psets. "
+        ]
+    ]
+}

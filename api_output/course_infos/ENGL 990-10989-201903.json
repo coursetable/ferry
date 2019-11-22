@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49817/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introduction to the teaching of literature and of writing with attention to the history of the profession and to current issues in higher education such as the corporatization of the university, the role of the state in higher education, and the precarity of the humanities at the present time. Weekly seminars address a series of issues about teaching: guiding classroom discussion; introducing students to various literary genres; addressing race, class, and gender in the teaching of literature; formulating aims and assignments; grading and commenting on written work; lecturing and serving as a teaching assistant; preparing syllabuses and lesson plans.", 
+    "title": "The Teaching of English", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 319", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10989", 
+        "listings": [
+            {
+                "number": "990", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jill Campbell", 
+        "Margaret Homans"
+    ], 
+    "long_title": "The Teaching of English", 
+    "extra_info": "A"
+}

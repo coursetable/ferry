@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51845/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Diversion of waste from disposal has been a long-standing issue in environmental policy and management. It has gained renewed salience as the notion of the circular economy (CE) has captured the imagination of policy makers, business leaders, and environmental advocates around the world. The CE has also been challenged as to its environmental goals, scientific foundations, and economic feasibility. In a circular economy, resources are kept in circulation for as long as possible, the maximum value is extracted from them while in use, and products and materials are recovered at end of life for continued productive usage. The core conception of closing material cycles and key strategies in the circular economy\u2014reduction, reuse, recycling, extension of product lifespans, product-service systems, systems analysis\u2014have been proposed and examined for more than two decades in industrial ecology.\u00a0This seminar will start with an introduction to solid waste management systems as they exist in developed countries. In the second half of the semester, the seminar will explore the environmental and resource premises and possibilities of the circular economy through examination of the core literature followed by a deeper dive into several elements of the CE. The goal of this 3-credit seminar is twofold: (1) to develop a sophisticated understanding of the circular economy in order to assess its potential in contributing to sustainability and (2) to apply the concepts and methods of industrial ecology.", 
+    "title": "Advanced Seminar on Industrial...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "EDW380", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14331", 
+        "listings": [
+            {
+                "number": "609", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Reid Lifset"
+    ], 
+    "long_title": "Advanced Seminar on Industrial Ecology: Waste Management and the Circular Economy", 
+    "extra_info": "A"
+}

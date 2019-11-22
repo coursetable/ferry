@@ -1,0 +1,81 @@
+{
+    "crn_code": "21429",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            7,
+            1
+        ],
+        [
+            0,
+            0,
+            6,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            7,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            6,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Despite my grades, I think I learned a lot more of statistical mechanics than what I saw in undergrad. ",
+            "\u00a0Thermodynamics\r\nStatistical mechanics (ensembles)\r\nQuantum Statistical mechanics\r\nFermi Gas\r\nBose Gas ",
+            "\u00a0I feel like this class was taught well, but I was immune to learning the subject material.  Time and time again I have realized that I fail to grasp what's going on with statistical mechanics.  When presented a problem I will have very little idea of how to answer it, but once I'm presented with the solution it's not hard to understand. ",
+            "\u00a0A greater appreciation for the meaning of statistical mechanics models and the scope of their predictive power. "
+        ],
+        [
+            "\u00a0Strengths: Lecture notes provided in addition to the very terse textbook; custom homework problems.\r\nWeaknesses: grades and HW solutions took a long time to come; rather inconvenient office hours (but I often was too busy to attend). ",
+            "\u00a0Very good course ",
+            "\u00a0I think the class was taught well.  It was well organized and covered a lot of material without going too fast.  The biggest weakness of the class in my opinion is that it was taught at too high of a level for me, but I think that I would have done better in the undergrad version of the class. ",
+            "\u00a0Very helpful and clear lecture notes ",
+            "\u00a0Strengths:\r\n- Covers many fundamental derivations that are important for a good understanding of statistical mechanics\r\n- Online notes are great when they're posted\r\n- Did a good job of emphasizing what components of the course were important\r\n\r\nWeaknesses:\r\n- I don't think Kardar is a good book for this; I think Pathria or a more comprehensive text would be more useful.\r\n- The course in terms of problem sets could do with an increased density. There was at least one problem for every topic discussed, but having multiple problems that are only slight variations, and making it explicit how these problems relate to each other (something not always obvious to someone attempting a problem for the first time) would further develop our appreciation for the nuances between them, making problem sets more productive. I suppose you could also ",
+            "\u00a0The homework was very helpful for learning material. The notes were also really good. "
+        ],
+        [
+            "\u00a0Yes, if they're interested in stat mech. ",
+            "\u00a0Yes ",
+            "\u00a0I would recommend this course to another student. It was very well structured for learning. "
+        ]
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50375/assignments/syllabus", 
+    "requirements": "After KREN 142 or 151, or with permission of instructor.", 
+    "description": "An advanced course in modern Korean. Reading of short stories, essays, and journal articles, and introduction of 200 Chinese characters. Students develop their speaking and writing skills through discussions and written exercises.\nAfter KREN 142 or 151, or with permission of instructor.\n\n1.5 Yale College course credits", 
+    "title": "Advanced Korean for Advanced L...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WLH 210", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10800", 
+        "listings": [
+            {
+                "number": "152", 
+                "subject": "KREN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Angela Lee-Smith"
+    ], 
+    "long_title": "Advanced Korean for Advanced Learners", 
+    "extra_info": "A"
+}

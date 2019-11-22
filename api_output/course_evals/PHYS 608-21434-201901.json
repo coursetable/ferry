@@ -1,0 +1,96 @@
+{
+    "crn_code": "21434",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            3,
+            7,
+            4,
+            1
+        ],
+        [
+            2,
+            1,
+            9,
+            3,
+            0
+        ],
+        [
+            2,
+            2,
+            6,
+            3,
+            1
+        ],
+        [
+            2,
+            2,
+            6,
+            4,
+            1
+        ],
+        [
+            0,
+            2,
+            3,
+            7,
+            3
+        ],
+        [
+            0,
+            3,
+            4,
+            4,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Angular momentum\r\nPerturbation theory\r\nScattering theory\r\nIdentical particles ",
+            "\u00a0I learned about angular momentum, time dependent perturbation theory, and a little bit about scattering. ",
+            "\u00a0How to learn Quantum Mechanics by myself. ",
+            "\u00a0Learned some quantum mechanics from Sakurai, ranging from angular momentum to perturbation theory and scattering. ",
+            "\u00a0Advanced QM ",
+            "\u00a0perturbation theory ",
+            "\u00a0Review of some concepts I already knew and introduction to some new topics like Tensor Operators ",
+            "\u00a0time-dependent perturbation theory\r\nscattering theory, sort of ",
+            "\u00a0I developed a detailed understanding of the topics in quantum mechanics that were taught, but perhaps not completely due to the instructor "
+        ],
+        [
+            "\u00a0More examples in class ",
+            "\u00a0The strength of the course was that it covered quite a bit of material that I needed to know.  The weakness of the course is that it was incredibly focused on the math of quantum mechanics, as opposed to gaining an intuitive understanding of what's really going on. ",
+            "\u00a0Professor Read taught this course at a very high level, way beyond the textbook we use. You can learn a lot if you are familiar with the material. However, most of the time, students in his class just don't know what he is talking about since he basically assumed that you already knew the textbook well. ",
+            "\u00a0Strengths:\r\nThe homework problems Prof Read came up with were very interesting. Covered fair amount of material for Grad QM 2 class. Lectures were very rigorous, and questions were answered well.\r\n\r\nWeaknesses: \r\nSome sakurai problems are unnecessarily long, not sure why we did them. A few lectures had a lot of hard-to-follow math, which did not seem useful. Homework grading was somewhat slow, which was annoying when reviewing for the midterm/final. Hard parts of the class (i.e. scattering) were shoved towards the end, which made things more difficult. ",
+            "\u00a0The materials have much emphasis on the maths than on the intuitions. ",
+            "\u00a0Lectures were very methodical. The course could be improved by assigning shorter, more frequent homework assignments, to keep pace with the lectures. ",
+            "\u00a0More time should spent on topics covered at the end of the course.  The main strength of the course is that Nick Read either writes good problems, or picks good problems from Sakurai. ",
+            "\u00a0Gives a solid grounding in the mathematics of these topics in Quantum Mechanics. I personally got a bit lost in the math at times, and would perhaps have preferred if in class, it could be made more transparent where the mathematics is heading before we start. ",
+            "\u00a0Maybe lectures slown down a little ",
+            "\u00a0Some too slow, some too fast. Maybe you could do a survey of the students to find out what you could go faster through so you could spend more time on e.g. wigner-eckart and scattering theory. ",
+            "\u00a0It covers a lot of material, going in to details at a number of places I did not think were necessary "
+        ],
+        [
+            "\u00a0If they need to know a lot about quantum mechanics then yes.  If not there are better things to do at 9 a.m. two days a week. ",
+            "\u00a0Material covered in this course is important for students to learn, but I would think twice if it is taught by Professor Read. ",
+            "\u00a0This is a required class, for a good reason. The material is very important in the context of modern physics, so everyone should take this class. ",
+            "\u00a0Yes. Helpful for understanding the perturbation and scattering problems. ",
+            "\u00a0Yes - especially if they are a mathematically-minded physicist. ",
+            "\u00a0Yes ",
+            "\u00a0Maybe. It was a more mathy than needed for most applied physics students I think. ",
+            "\u00a0Maybe, not unless you require it "
+        ]
+    ]
+}

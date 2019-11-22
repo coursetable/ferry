@@ -1,0 +1,93 @@
+{
+    "crn_code": "12294",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            5,
+            6,
+            0
+        ],
+        [
+            1,
+            6,
+            4,
+            3,
+            0
+        ],
+        [
+            0,
+            1,
+            7,
+            4,
+            1
+        ],
+        [
+            1,
+            3,
+            6,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            7,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            10,
+            3,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to integrate, create series, and calculate volumes of 3D shapes. ",
+            "\u00a0I obviously learned a great degree about calculus from taking this course, but more than that I learned a lot about how I best learn. I really struggled with the lecture-style math course, and found it extremely difficult to actively engage with the material when it was just presented to me on a blackboard. Towards the end of the semester I  learned that most people enrolled in math 115 had previously taken BC calculus, and as a result seen the majority of the material we covered. Because I, alternatively, never took BC calc, all of the material was knew to me and it was made clear why I   was struggling through this class, although I   really enjoyed math in high school. It seems as though the course is geared toward those who are already familiar with the material, and left me feeling quite lost for a good portion of the course. ",
+            "\u00a0I effectively learned the material that constitutes Calc 2. ",
+            "\u00a0I developed my skills in calculus 2 ",
+            "\u00a0I took AP Calculus BC last year in high school and this was a great refresher of all of that information, but at a speed that is MUCH faster. I learned how to solve calculus problems by applying multiple calculus concepts to one problem. ",
+            "\u00a0maths ",
+            "\u00a0I learned more about integrals, derivatives, and what series and sequences are. ",
+            "\u00a0I learned about integrals, series and sequences, and volumes "
+        ],
+        [
+            "\u00a0The strengths of this course is the very consistent structure throughout. Some weaknesses are the fast pace and the need to really review concepts on your own after learning. Another weakness is that the instructor did not mention the videos posted under Modules that teach the concepts, so most people were attempting to learn from either reading the textbook or doing the explorations. ",
+            "\u00a0I  placed into this class, upon the basis that this material was the next step in my math career. Loads of other people, I found out, placed above 115 but chose to take it anyways. I   think the course could be improved if it moved a little bit slower through the material and chose to assume that the students hadn't seen the material before. ",
+            "\u00a0My professor was a great teacher who stayed on task and taught us all of the material that appeared on the exam. I found the exams to be a reasonable representation of what we did in class. Overall, my experience was enjoyable. ",
+            "\u00a0The course spend a lot of time on some topics but then speeds through others- additionally different sections receive badly different experiences ",
+            "\u00a0I really liked how this course covered so much material, but at the same time, I had a little bit of trouble keeping up, but everything turned out just fine at the end. ",
+            "\u00a0lay out of class is backwards. All teaching should be done in class and practice problems at home ",
+            "\u00a0The material was delivered very quickly, which was a bit difficult to grasp. Also, many students in my class had taken this class already in high school, which I think added to the speed of the course. The peer tutors and problem sets were helpful. ",
+            "\u00a0I struggled a lot with this course especially on the exams, as the material on the exams was a lot more difficult for me than what we learned in class. However there is a lot of extra help that can be taken advantage of. "
+        ],
+        [
+            "\u00a0If they need to take the course to complete requirements, I would take it. However, other math classes might be a better choice depending on what majors needed. ",
+            "\u00a0Not unless absolutely necessary. Way too much work for an ok grade. ",
+            "\u00a0I  would only recommend it because it's kind of necessary to take. I    didn't really find the class particularly exciting and was disappointed by the lack of support I felt as I traversed new material. ",
+            "\u00a0Sure. Good balance of work. Doable. Not too hard. ",
+            "\u00a0No, I took it as a necessary requirement for my major. However, I would recommend my particular professor to those who need to take Math 115. ",
+            "\u00a0Dependent on their history with calculus 2 ",
+            "\u00a0Yes! Most definitely! This is a wonderful course for understanding calculus concepts and being able to use them and apply them! ",
+            "\u00a0nope, but many have to take it ",
+            "\u00a0I am not sure, simply because of how quickly it moved. "
+        ]
+    ]
+}

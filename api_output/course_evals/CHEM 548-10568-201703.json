@@ -1,0 +1,83 @@
+{
+    "crn_code": "10568",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            1,
+            2,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Of all my classes this semester, I learned the most from this one. Partly because I came in with only a minimal understanding of the topic, but also because the course was taught well. \r\n\r\nI originally was expecting to learn applications for NMR spectroscopy, but ended up learning the theory behind NMR - including the physical events happening at each stage of an NMR pulsing sequence. ",
+            "\u00a0product operator formalism,\r\nbasic NMR methods: INEPT, phase cycling, gradient selection,\r\nNMR methods for protein dynamics ",
+            "\u00a0I gained a basic understanding of the theoretical underpinning of solution NMR experiments. ",
+            "\u00a0By taking this course I learned that NMR can have many more applications than I have previously thought to be the case. I learned the underlying theory behind NMR. One example is that I learned that NMR can be thought of in a quantum and a vector model. The quantum model is a lot more accurate while the vector model makes it easier to understand. I was able to learn how to read pulse sequences and understand what is occurring in the nuclei magnetization in the form of rotation operators and density matrices. Overall I learned how to understand the underlying theory of NMR especially in the case of larger moleceules, such as proteins. ",
+            "\u00a0I gained valuable insight into NMR on a very detailed level "
+        ],
+        [
+            "\u00a0Understanding the course is difficult if you do not have a deep understanding of linear algebra. ",
+            "\u00a0might need to slow the pace and make sure everyone is following ",
+            "\u00a0The course is well organized and the lectures are good, however I wish there had been more ways to test my own understanding, e.g., practice problems or similar like suggested early on in the course. Especially considering the recommended textbook doesn't have anything like that, I found it hard throughout the course to know if the level of understanding of the material that I had was on par with what was expected. ",
+            "\u00a0The course description could mention that it is a very math heavy interpretation of NMR which came as a surprise to me. ",
+            "\u00a0Professor Loria was great, though I think being assigned practice problems through the semester would have been helpful. "
+        ],
+        [
+            "\u00a0Yes. I would recommend this class to anyone interested in protein NMR. ",
+            "\u00a0this is a fairly specific course, I would suggest people assess their interest before they decide to take it ",
+            "\u00a0I would recommend this course to others. Coming into the course with mostly a structural biology background, I did expect the course to be more practically/experimentally focused and to be less based on theoretically understanding NMR experiments, pulse sequences, etc. however in hindsight I think the course was a good introduction to protein NMR experiments and gives me a good foundation to understand such experiments. ",
+            "\u00a0I would recommend this course for anybody who is serious in pursuing NMR as a research tool. ",
+            "\u00a0Yes "
+        ]
+    ]
+}

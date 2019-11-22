@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50207/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An exploration of Chartres Cathedral as a meeting point of various artistic, technological, ritual, literary, intellectual, and social trends in the High Middle Ages. We study what went into building this \"chief sanctuary of the Virgin in Western Europe,\" how the cathedral fit into and changed the world around it, Gothic design and construction, and the literature connected to Chartres as well as to the urban centers of northern France in the twelfth and thirteenth centuries. Topics include: the pre-history of the present cathedral; royal, noble, and local patronage; sculptural programs of the west fa\u00c3\u00a7ade and northern and southern portals; stained glass programs of the west wall, nave, transept (great rose windows), and choir; relics; liturgical and affective experiences of Chartres; the cathedral as a physical, sacred and social space; the cult of the Virgin; new learning and the cathedral school; literary works attached to the Charlemagne window (The Song of Roland, The Pilgrimage of Charlemagne, The Pseudo-Turpin), to the cathedral more generally (The Miracles of Our Lady of Chartres), to the towns of medieval France (Fabliaux); renovation and restoration of post-medieval Chartres.", 
+    "title": "The Worlds of  Chartres Cathed...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 002", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12249", 
+        "listings": [
+            {
+                "number": "400", 
+                "subject": "FREN"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHA8\">YC HistofArt: 800-1500</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHAE\">YC HistofArt: Europe</a></li></ul>"
+    ], 
+    "professors": [
+        "Jacqueline Jung", 
+        "R. Howard Bloch"
+    ], 
+    "long_title": "The Worlds of  Chartres Cathedral", 
+    "extra_info": "A"
+}

@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50425/assignments/syllabus", 
+    "requirements": "Prerequisites: MATH 120 and MB&B 600 or equivalents, or permission of the instructors.", 
+    "description": "The course offers an introduction to quantitative methods relevant to analysis and interpretation of biophysical and biochemical data. Topics covered include statistical testing, data presentation, and error analysis; introduction to dynamical systems; analysis of large datasets; and Fourier analysis in signal/image processing and macromolecular structural studies. The course also includes an introduction to basic programming skills and data analysis using MATLAB. Real data from research groups in MB&B are used for practice.\nPrerequisites: MATH 120 and MB&B 600 or equivalents, or permission of the instructors.", 
+    "title": "Quantitative Approaches in Bio...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "BASS 405", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12042", 
+        "listings": [
+            {
+                "number": "635", 
+                "subject": "MB&B"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Julien Berro", 
+        "Nikhil Malvankar", 
+        "Yong Xiong"
+    ], 
+    "long_title": "Quantitative Approaches in Biophysics and Biochemistry", 
+    "extra_info": "A"
+}

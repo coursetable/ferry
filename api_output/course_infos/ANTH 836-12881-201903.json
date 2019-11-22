@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48916/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The goal of this course is to provide an interdisciplinary approach to learning about obesity as a biological and social phenomenon. We use biology as a scaffolding to understand obesity, yet also discuss the social, cultural, and psychological elements that shape our relationship with food and body size. The course focuses on three perspectives: the biological pathways over the lifetime that lead to obesity, the evolutionary origin of obesity, and the cross-cultural and societal meanings of obesity. Briefly, topics include adipose tissue as a regulatory and endocrine organ, human body composition variation in differing ecologies, the developmental origins of obesity, efficacy of obesity interventions, and political economies\u2019 influence on obesity. This class has a \u201cleminar\u201d format, in which lectures are mixed with active, student-centered, in-class discussions.", 
+    "title": "Obesity: Biology, Evolution, a...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "WTS A74", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12881", 
+        "listings": [
+            {
+                "number": "836", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Claudia Valeggia"
+    ], 
+    "long_title": "Obesity: Biology, Evolution, and Society", 
+    "extra_info": "A"
+}

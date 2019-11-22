@@ -1,0 +1,79 @@
+{
+    "crn_code": "12509",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            1,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            2,
+            2,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned the basic grammar, syntax, and vocabulary of biblical Coptic. ",
+            "\u00a0I'm still amazed by how much we covered in the first semester. I went from not knowing anything about the language to reading full sentences from the New Testament. A main lesson from throughout the course was the inherent ambiguities within the language's structure and its effect on Biblical translations. ",
+            "\u00a0I learned how to read basic Sahidic Coptic. Tom effectively taught us the first 12 chapters of Layton's textbook. I was able to translate part of the Gospel of Phillip on my own for my own research. ",
+            "\u00a0I developed skills in the Coptic language, primarily in sentence construction and other grammatical issues. "
+        ],
+        [
+            "\u00a0The strengths of this course are the careful attention to detail, the straightforward structure, and the application of steps and strategems to our linguistic concerns. The course could be improved by making unseen translation a component in our classtime as opposed to spending the majority of the time on prepared translations. However, I recognize that this wasn't possible when we were first starting with the language and that the textbook doesn't lend itself towards this suggestion. ",
+            "\u00a0I believe Tom organized the class effectively and taught the material well. He integrated students feedback well and adapted the class structure to accommodate several different learning styles. \r\n\r\nI appreciated the pace of the course. Between the several ESL students and students with learning challenges, this course moved slowly enough to feel like we had time to grasp the material but not so slowly that we weren't challenged. ",
+            "\u00a0The course was great. "
+        ],
+        [
+            "\u00a0After taking this course, you will be able to read the Bible in Coptic. ",
+            "\u00a0I would absolutely recommend this class to any of my colleagues. It is structured in a way that fosters success, encourages the careful solution of linguistic problems, and allows for ambiguities. ",
+            "\u00a0I would absolutely recommend this course to another student, especially if Tom was teaching it. ",
+            "\u00a0Yes, if they wish to diversify their early Christian resume. "
+        ]
+    ]
+}

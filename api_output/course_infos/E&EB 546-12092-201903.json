@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49424/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to the major plant groups and their evolutionary relationships, with an emphasis on the diversification and global importance of flowering plants.", 
+    "title": "Plant Diversity and Evolution", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "ESC 110", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12092", 
+        "listings": [
+            {
+                "number": "546", 
+                "subject": "E&EB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Erika Edwards"
+    ], 
+    "long_title": "Plant Diversity and Evolution", 
+    "extra_info": "A"
+}

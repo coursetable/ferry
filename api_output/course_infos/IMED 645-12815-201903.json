@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48627/assignments/syllabus", 
+    "requirements": "Consent of instructor required.", 
+    "description": "The course provides an introduction to statistical concepts and techniques commonly encountered in medical research. Previous course work in statistics or experience with statistical packages is not a requirement. Topics to be discussed include study design, probability, comparing sample means and proportions, survival analysis, and sample size/power calculations. The computer lab incorporates lecture content into practical application by introducing the statistical software package SPSS to describe and analyze data. Two weeks, July 8\u00e2\u20ac\u201cJuly 19, 2019.\nConsent of instructor required.", 
+    "title": "Introduction to Biostatistics ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 8, 
+            "location": "", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12815", 
+        "listings": [
+            {
+                "number": "645", 
+                "subject": "IMED"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eugene Shapiro", 
+        "Veronika Shabanova"
+    ], 
+    "long_title": "Introduction to Biostatistics in Clinical Investigation", 
+    "extra_info": "A"
+}

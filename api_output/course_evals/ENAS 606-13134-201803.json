@@ -1,0 +1,85 @@
+{
+    "crn_code": "13134",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            5
+        ],
+        [
+            0,
+            2,
+            0,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            3,
+            4,
+            1
+        ],
+        [
+            0,
+            6,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Basics of polymer physics (thermodynamics, kinetics). ",
+            "\u00a0basic ideas of polymer physics, including polymer chain configurations, polymer thermodynamics, and polymer solutions, and so on. ",
+            "\u00a0Learned about the physics of polymers, why they are how they are, and methods of characterizing them. ",
+            "\u00a0Various theories and methods for characterizing the size and molecular weight of polymer chains (e.g. osmotic pressure, light scattering); thermodynamics of polymers (Flory-Huggins theory); behaviors of polymers in solution; methods and models for determining the viscoelastic behavior of polymers; different types of polymers and their uses. ",
+            "\u00a0I gained a large amount of knowledge on the thermodynamics, physical chemistry, and mathematics behind polymer physics. "
+        ],
+        [
+            "\u00a0I think it would be better if this class was about Polymer Chemistry instead of Polymer Physics. I think the class would be much more applicable to additional students. \r\n\r\nBiggest weakness: Time of class. Having class in the middle of lunch time made it difficult to concentrate and I had to miss meetings that were only held at lunch time. ",
+            "\u00a0Without tests I was not forced to try to retain the information being taught. At the same time I still learned a good amount and the class was more an overview course of polymers for graduate level research. ",
+            "\u00a0The free flowing nature of this course was both a strength and weakness. I was interested in a lot of the material, but I would often question why I was learning it and where it was useful. More real life examples would be useful to motivate learning in this less structured course. ",
+            "\u00a0I thought that this course was excellent. All of the subject matter was very interesting and covered in a very understandable way, even for undergraduates. My only criticism would be that the course is probably better suited to be covered in two semesters instead of one, so the topics can be covered in more depth. ",
+            "\u00a0Course lectures and topics are well organized.\r\n\r\nThe pace of the course is rather fast and it can be easy to get lost in the math at times. "
+        ],
+        [
+            "\u00a0I would recommend this course only if it was switched to Polymer Chemistry. ",
+            "\u00a0Only would recommend if you are interested in materials science and polymer research. Otherwise, this course will be irrelevant for you. ",
+            "\u00a0yes ",
+            "\u00a0Yes, but only if really interested in materials science or polymers. ",
+            "\u00a0Yes, it was quite interesting and not very stressful. Generally quite enjoyable. ",
+            "\u00a0I would definitely recommend this course if you have any interest in polymers. The course provides a comprehensive overview of the field of polymer physics, and you get to learn about a lot of interesting topics that you probably have never seen before. Also, Professor Zhong is awesome! ",
+            "\u00a0Yes, it is an important course to take to gain fundamental understanding of polymer physics and is taught by a very knowledgeable instructor. "
+        ]
+    ]
+}

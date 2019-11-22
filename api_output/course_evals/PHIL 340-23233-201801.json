@@ -1,0 +1,88 @@
+{
+    "crn_code": "23233",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            5,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            6,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            5,
+            5,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            7,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            4
+        ],
+        [
+            0,
+            1,
+            8,
+            0,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Understanding of Critical Theory, contemporary theories of aesthetics. Reading and writing about philosophy and aesthetics. ",
+            "\u00a0Read so many cool philosophy texts. ",
+            "\u00a0The course introduces major concepts in 20th century aesthetics and shows how they are applied in 21st century aesthetic theory i.e. race and gender theory ",
+            "\u00a0I developed the skills to write an analysis on the works of multiple philosophers. I also gained insight into many philosophical ideas. ",
+            "\u00a0The course traces aesthetic theory from Lukcs, Benjamin, and Hedeigger to contemporary Butler, Moten, and Munoz. I gained an understanding of central concepts in critical theory: non-conceptuality, negative dialectics, reification, performance, etc, as well as an understanding of how theories race, gender, and sexuality have complicated aesthetic theory in the history of philosophy. ",
+            "\u00a0broader knowledge of continental philosophy, writing skills, etc. "
+        ],
+        [
+            "\u00a0One of the strengths of the course was the level of class participation expected of the students and class presentations which makes the class lively as well as interesting even for those just auditing the course. ",
+            "\u00a0This course was really interesting. The readings were often quite confusing but that can't really be helped and ultimately I think most of the readings were still worth trying to understand. ",
+            "\u00a0The syllabus was amazing, and student presentations were a great way to start each week.  I liked the inclusion of art and films. ",
+            "\u00a0The course has one of the best syllabi and all the readings were intersting and well connected. However class itself needed much improvment. Often there was too much lecturing and the lecturing was done at too introductory of a level. I really wanted to get into the details on the arguments of the texts. ",
+            "\u00a0The course's syllabus is fantastic -- probably the most interesting one I've read as a student here. At times, the seminar format felt overbalanced in terms of lecturing, and might have benefited from more discussion. ",
+            "\u00a0broad sweep of continental philosophy, etc. ",
+            "\u00a0I feel the major weakness in this class was the various apathy of the students. It was clear many of them were there for the material at the end of the course, and weren't very interested in the philosophical history that established the ground for the end material. If there's a way to reiterate that essential relationship, and get them more engaged, I would recommend. But I doubt that's something the professor can do. "
+        ],
+        [
+            "\u00a0Fascinating course with a lots of strange, confusing readings by the likes of Lukacs, Benjamin, Adorno, Butler, etc... Angermann wants to connect the early 20th century marxist theory of the Frankfurt School to a lot of the work on aesthetics of race, gender happening today, and this course successfully does that. Even with very dense reading Angermann is really good at breaking them apart into ideas and concepts you can begin to wrap your head around. ",
+            "\u00a0Yes! I loved the readings and discussions. ",
+            "\u00a0Only for the syllabus. Class itself isn't that great and needs improvement. ",
+            "\u00a0I would, because I learned an immense amount ",
+            "\u00a0I would certainly recommend this course to any student interested in aesthetic theory or critical theory. With that being said, while the course does occasionally examine works of art, the focus is much more on aesthetic theory than on artworks themselves. If you are interested in a course about \"political\" artworks, this might not be the best fit. ",
+            "\u00a0This was a good course. ",
+            "\u00a0Absolutely; touches both upon our history and our contemporary issues and delineates their distinguished character amidst their inseparability. For anyone interested in gender and race, alongside metaphysics, ontology, and epistemology, should consider this course. "
+        ]
+    ]
+}

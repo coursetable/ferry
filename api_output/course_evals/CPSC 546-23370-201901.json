@@ -1,0 +1,74 @@
+{
+    "crn_code": "23370",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Visualization and using d3, which is very powerful ",
+            "\u00a0Process data and visualize with web applications to better understand trends in data "
+        ],
+        [
+            "\u00a0Overall good ",
+            "\u00a0Lectures very clear, assignments reflect knowledge learned in class. "
+        ],
+        [
+            "\u00a0yes, very interesting if ur interested in visualization ",
+            "\u00a0Yes. Working with real-world data is an important skill to learn, and there are not many opportunities to work with this type of data in a classroom setting. Being able to present data is also an important skill as a computer scientist. "
+        ]
+    ]
+}

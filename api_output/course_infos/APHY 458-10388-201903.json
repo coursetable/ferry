@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48943/assignments/syllabus", 
+    "requirements": "Prerequisite: PHYS 430.", 
+    "description": "Introduction to the principles of optics and electromagnetic wave phenomena with applications to microscopy, optical fibers, laser spectroscopy, and nanostructure physics. Topics include propagation of light, reflection and refraction, guiding light, polarization, interference, diffraction, scattering, Fourier optics, and optical coherence.\nPrerequisite: PHYS 430.", 
+    "title": "Principles of Optics with Appl...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "BCT 508", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10388", 
+        "listings": [
+            {
+                "number": "458", 
+                "subject": "APHY"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Hui Cao"
+    ], 
+    "long_title": "Principles of Optics with Applications", 
+    "extra_info": "A"
+}

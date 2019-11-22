@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50955/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course aims to explore the politics, history, and ethical claims of the Wahhabi Islamic movement, from its origins on the Arabian Peninsula in the 18th century to today.", 
+    "title": "Wahhabism: Politics, History, ...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "RKZ 08", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13301", 
+        "listings": [
+            {
+                "number": "381J", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSP\">YC Poli Sci: Political Phil</a>"
+    ], 
+    "professors": [
+        "Jeffrey Macris"
+    ], 
+    "long_title": "Wahhabism: Politics, History, & Ethics", 
+    "extra_info": "A"
+}

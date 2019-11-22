@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50001/assignments/syllabus", 
+    "requirements": "", 
+    "description": "China\u2019s return to its traditional role as a regional\u2014and, increasingly, global\u2014power has implications for the political, security, and economic structures that have been the foundation of the international system since the end of the Second World War. This course looks at the impact China\u2019s ascent has had, the challenges a rising China will pose for policy makers in the years ahead, and the internal issues China will need to address in the years ahead. It does so from the perspective of a practitioner who spent nearly three decades working on U.S. foreign policy and U.S.-China relations.", 
+    "title": "China\u2019s Rise and the Future of...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 203", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11071", 
+        "listings": [
+            {
+                "number": "616", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "David Rank"
+    ], 
+    "long_title": "China\u2019s Rise and the Future of Foreign Policy", 
+    "extra_info": "A"
+}

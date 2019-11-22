@@ -1,0 +1,131 @@
+{
+    "crn_code": "23601",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's provided students with helpful and timely feedback",
+        "The instructor established a positive learning environment",
+        "The instructor raised questions or problems that encouraged me to think critically"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            4,
+            16,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            9,
+            5,
+            11
+        ],
+        [
+            1,
+            0,
+            6,
+            6,
+            12
+        ],
+        [
+            1,
+            0,
+            4,
+            7,
+            13
+        ],
+        [
+            0,
+            0,
+            5,
+            6,
+            14
+        ],
+        [
+            0,
+            0,
+            4,
+            8,
+            11
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a06 ",
+            "\u00a02h ",
+            "\u00a03-4 ",
+            "\u00a0About six hours. ",
+            "\u00a03hours ",
+            "\u00a06 ",
+            "\u00a05-20 hours per week. ",
+            "\u00a0Five to eight hours. ",
+            "\u00a03 ",
+            "\u00a08 ",
+            "\u00a0About 4 to 5 hours per week ",
+            "\u00a03 ",
+            "\u00a010 hours per week ",
+            "\u00a06 hours ",
+            "\u00a05 hours ",
+            "\u00a04 "
+        ],
+        [
+            "\u00a0Strength: Topic very helpful; facilitate my understanding in machine learning\r\nWeakness: Programming not covered in lectures ",
+            "\u00a0Great! ",
+            "\u00a0It covered many useful nonparametric methods. But sometimes the pace of teaching was a little bit slow, so some slides at the end were not covered. ",
+            "\u00a0Strength: This lecture provides an overview to Non-parametric methods and encourages students to explore the topic they are interested in.\r\nWeakness: Some statistical methods are not described in detail. ",
+            "\u00a0We can learn a lot of useful knowledge during the class and the homework assignments are practical. ",
+            "\u00a0useful knowledge! ",
+            "\u00a0Maybe a little bit superficial in terms of the coverage ",
+            "\u00a0This is an enjoyable class that allows me to gain knowledge in non-parametric methods with sufficient depth. ",
+            "\u00a0Useful knowledge. ",
+            "\u00a0This course was a huge learning curve for me, it gave me many opportunities to excel myself. ",
+            "\u00a0Great class on really important statistics topics, and a great continuation of BIS 557: Computational Statistics. Some of the lectures are a little hard to follow, but overall great class without too much work. ",
+            "\u00a0good ",
+            "\u00a0Really useful topics. Great structured course. ",
+            "\u00a0good "
+        ],
+        [
+            "\u00a0The instructor is very clear in his explanation ",
+            "\u00a0He is always enthusiastic and often raised real life examples to help me understand complicated concepts. ",
+            "\u00a0Dr. Zhang's teaching is very instructive, easy to understand. ",
+            "\u00a0nice professor ",
+            "\u00a0Good instructor with humor and very organized ",
+            "\u00a0Strength: Dr. Zhang is an excellent instructor and provides high-quality lectures.\r\nWeakness: Dr. Zhang can speak a little faster. ",
+            "\u00a0Prof. Zhang gives very clear lectures. It would be better if he could involve more practice using R. ",
+            "\u00a0enthusiastic instructor ",
+            "\u00a0Passionate ",
+            "\u00a0Professor Zhang has a great teaching style. He is really good at simplifying complicated ideas and explaining abstract concept in a way that students can easily follow. ",
+            "\u00a0Teaching style is really interesting, but some slides in powerpoint were not covered in class. ",
+            "\u00a0The instructor needs to speak louder and more clearly. I had a hard time hearing him sometimes at the back. He always seemed to be unavailable and left all of his work to his TA. ",
+            "\u00a0Overall a good teacher who seemed very supportive and caring. Some of his lectures were a little hard to follow, and he should have given more than 2 days to write the prospectus for the final project. ",
+            "\u00a0good ",
+            "\u00a0Professor Zhang has the unique ability to enlighten us the advanced topics in the clearest and simplest way. Excellent teaching. ",
+            "\u00a0very good "
+        ],
+        [
+            "\u00a0A great course with great topic and helpful lecturer ",
+            "\u00a0It is a great course to learn some basis concepts of nonparametric statistics. Besides, it could help you learn to use the methods instead of just proving the theorem. ",
+            "\u00a0A very good course for students who want to get some ideas on nonparametric statistics. I would recommend it. ",
+            "\u00a0Good; would recommend ",
+            "\u00a0I highly recommend this course for students who may want to know more about non-parametric methods. ",
+            "\u00a0interactive class with useful knowledge. Recommend ",
+            "\u00a0An overview of nonparametric, somewhat superficial, more on the application side ",
+            "\u00a0I recommend this class to other students. The class provides the right amount of intellectual challenges. ",
+            "\u00a0I will recommend it.  Useful knowledge. Interesting class. ",
+            "\u00a0Both the instructor and the TA of this course for Spring 2019 seemingly lacked the motivation to teach and to help students excel. The TA once said to me that she does not have time to \"coach\" me as I was unable to accommodate to her office hour schedule. This so-called \"coaching\" only happened twice, less than 10 minutes each, inside her office. I felt extremely degraded as a student. Unless the department changes both the instructor and the TA for this course, I would not recommend students taking it. ",
+            "\u00a0Great class on really important statistics topics, and a great continuation of BIS 557: Computational Statistics. Some of the lectures are a little hard to follow, but overall great class without too much work. ",
+            "\u00a0good ",
+            "\u00a0Great course to learn many useful and advanced techniques. ",
+            "\u00a0good "
+        ]
+    ]
+}

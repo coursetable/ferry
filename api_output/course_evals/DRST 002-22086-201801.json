@@ -1,0 +1,80 @@
+{
+    "crn_code": "22086",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            7
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Close reading, critical thinking, specific writing ",
+            "\u00a0The course was a good introduction to an incredibly broad sweep of modern literature, and there was a good mix of texts in translation as well as texts in their own language. The course followed the development of ideas in literature. ",
+            "\u00a0Critical thinking skills and the ability to bs seminar discussion with a minor knowledge of a text acquired by rapid skimming. "
+        ],
+        [
+            "\u00a02 or 3 fewer books, so to engage with the better 8 or 9 books for longer. ",
+            "\u00a0I would love it if there were a theme we could follow, or a guiding principle, like how love or morals or something like that evolves through time. ",
+            "\u00a0The course is very demanding and engaging, of course. I feel like the faculty has done a great job! ",
+            "\u00a0Its tough but fair. Please get rid of Proust. ",
+            "\u00a0I loved the literature, but honestly it's just too much to adequately cover in a semester. "
+        ],
+        [
+            "\u00a0Absolutely, especially with Professor Lindskog. ",
+            "\u00a0Yes, if that's what you're interested in :) ",
+            "\u00a0Only if they are a masochist. ",
+            "\u00a0If you're a skilled reader, go for it. I simply wasn't satisfied with the depth at which I was able to engage each work. "
+        ]
+    ]
+}

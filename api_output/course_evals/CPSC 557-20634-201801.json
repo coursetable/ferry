@@ -1,0 +1,77 @@
+{
+    "crn_code": "20634",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            4,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about how technology impacts the way we and our society handle sensitive information. In particular, I became very aware of the state of my own data privacy and why I should care. ",
+            "\u00a0Paper writing. Communication. Presentation skill. ",
+            "\u00a0How we can better protect our data privacy in the world today "
+        ],
+        [
+            "\u00a0This course is engaging because it is a seminar with capped enrollment - everyone in the course was there because they wanted to be there. Much of the course is taught by students, so there is variability in the quality of individual lectures, but overall, the material and discussions were interesting and relevant. ",
+            "\u00a0Strength: Prof. Fischer is awesome, willing to provide help to us. ",
+            "\u00a0I enjoyed the discussion-based class. Student presentations as a foundation for discussion were very interesting. Freedom to research and write about anything you want to. "
+        ],
+        [
+            "\u00a0I would recommend this course to all computer science majors. I found that this course changed the way I think about technology and has influenced how I act on the Internet and in my software engineering processes. I suspect students will consider this course a gut since it's a computer science course with no coding, and that alone is a major problem. I am shocked that we don't require students to learn about the ethical implications of their computer science endeavors. ",
+            "\u00a0Yes. Awesome CS course, critical thinking all the time. ",
+            "\u00a0Highly recommend, especially with recent events involving data privacy -- more people should be aware "
+        ]
+    ]
+}

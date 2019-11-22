@@ -1,0 +1,111 @@
+{
+    "crn_code": "21543",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            3,
+            5,
+            8,
+            3
+        ],
+        [
+            4,
+            3,
+            6,
+            6,
+            1
+        ],
+        [
+            5,
+            3,
+            4,
+            7,
+            1
+        ],
+        [
+            3,
+            1,
+            7,
+            7,
+            2
+        ],
+        [
+            2,
+            2,
+            9,
+            6,
+            1
+        ],
+        [
+            1,
+            1,
+            11,
+            5,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I enjoyed learning how to analyze sequencing data. ",
+            "\u00a0Learned a fair deal about presenting to the public and a great deal about protein packing. ",
+            "\u00a0I acquired some basic knowledge about variant calling, a bit of the background regarding  sequence alignment and supervised/unsupervised learning. ",
+            "\u00a0I learned a broad variety of knowledge about computational biology and biological data, and gained a general idea about the cutting-edge progresses and future directions of several fields of research. ",
+            "\u00a0I learned different concepts, useful techniques and methods of conducting a bioinformatics research. ",
+            "\u00a0A general understanding of methods and algorithms used in analyzing, predicting, and extracting biomedical data. ",
+            "\u00a0I learned bash scripting in slurm, some basics to population genetics of rare diseases and a lot about stable conformations of amino acids. ",
+            "\u00a0I learned numerous topics that fall under the umbrella of biomedical data science, such as genomics, data mining, and protein structures. I have a much better sense of the field as a whole, and have gained a good amount of knowledge about various subjects. ",
+            "\u00a0Very few. ",
+            "\u00a0Learn basic molecular biology and biochemistry of sequencing and proteins. Learned the basic ideas behind sequence analysis and going through large biomedical datasets, mostly sequences. Learned the ideas behind computationally modeling proteins, specifically as hard spheres. Learned a little bit of coding and algorithm's used for protein and sequence analysis. ",
+            "\u00a0A wide range of knowledge in biomedical data mining ",
+            "\u00a0General knowledge about data mining and data analysis, and a few techniques in large-scale DNA sequencing. ",
+            "\u00a0I have learnt something new about protein structure prediction. ",
+            "\u00a0The course served as an introduction to bioinformatics but I didn't pick up any new skills. "
+        ],
+        [
+            "\u00a0Strengths- lots of material covered and hands on work. Chances to improve presentation/writing skills. Weaknesses- although materials were available online, course was incredibly disorganized in the fact that the assignments, material was not spaced evenly and 80% of the work came in the last two weeks. ",
+            "\u00a0Dr. Gerstein was charismatic and energetic, but his lectures could be disordered and his slides need a bit of work. He is very obviously an expert and did a great job at bringing in experts to talk about things he was less comfortable with. The class was also back-loaded to an incredible degree--barely any deliverables for the first 1/2 of the course followed by everything else being due the last week (and not all assigned well in advance). ",
+            "\u00a0This is by far the most disorganized course I have taken in my academic career which includes my undergrad, postbac, masters and PhD studies. In fact, for a course that has been running for 20 years, it raises multiple questions as to why it has not been optimized. \r\n\r\nMy suggestions are: split this course into two semester-long courses that address specific audiences and target different goals, as CBB752 currently is all over the place. This course aims to teach the same material to 4 different populations (grads with coding experience, grads without coding experience, undergrads and auditors). I think these populations are different enough that they can have their specific needs met separately. For example, CBB752 is primarily a grad course yet we see sophomores and humanities students taking it. Thus, it raises the question as to whether those students have the relevant skills and knowledge required to master the topics covered.\r\n\r\nI propose the following courses:\r\n\r\n1) A General Dating Mining where students learn the basics of data modelling, read relevant papers and HAVE WEEKLY SESSIONS LEARNING HOW CODE (book a computer room and design a clear pipeline of what you want to teach and what students are aimed to know by the end). This would be open to both undergrads and grad students, and could an starting point for data mining. Please follow the example set up the Dr. Noonan and his Genomics course (lectures, PROPER CODING LEARNING SESSIONS with relevant and timely-set computational assignments).\r\n\r\n2) A more SPECIFIC/APPLIED course targeted towards students with a coding experience where more challenges questions are asked, and students are expected to learn other programming languages. This could be a good place for students to familiarize with publicly available datasets such as GTEX, 1000 Genomes, ExAC and the incoming 100,000 Genomes England and CT Biobank Project. This course would also include weekly PROPER CODING LEARNING SESSIONS.\r\n\r\nThe strength of the course is that the lecture material is important and relevant for computationally-oriented students like myself,  yet skills that I am getting from this course are questionable or non-existent. ",
+            "\u00a0The course covers a great variety of topics and offers a decent level of details. Students could learn a lot of new things, but it would be better if the topics have better cohesion with each oter. ",
+            "\u00a0I think maybe some chapters need more time for us to learn, for example, methods for identifying structural variants, analysis of chip-seq data. Analysis procedure of Hi-C data can also be included since it is extremely helpful for a bioinformatics researcher. ",
+            "\u00a0I really like the class, course pace, and the scope of the content, but I wish there was more implementation in the lecture where we can see real-time analysis. We did something similar in the section once. I would love to see more of that. ",
+            "\u00a0Poorly organized all around and made little to no effort to specifically design the modules for the students in them as advertised. ",
+            "\u00a0I think the lectures were not very consistent. Honestly I think Gerstein's lectures were the weakest, I know he has a very functional understanding of machine learning but he waved his hands at a lot of things. Now I don't expect a whole course on the details of these methods but I think the slides could have been better and the time better spent.\r\n\r\nCorey's lectures went, I think, slightly too in depth, however they were presented in a way such that it was easy to follow.\r\n\r\nI think the assignments were strengths, they were thought provoking and engaging. \r\n\r\nAlso, I really think moving away from the class website and to the canvas system would make things SO much easier for all parties involved. ",
+            "\u00a0Some people say that it's very fast-paced and that it covers maybe too many topics in too superficial a manner. I think that's only mildly arguably true. ",
+            "\u00a0Strengths: teaching fellows were great.\r\nWeaknesses: Mark is a terrible teacher. He often made me more confused (e.g. about SVD, BWT, Smith-Waterman) about a topic than I was before I went to class. He sounds both boring and bored. Mark's inability to use Canvas is frustrating as hell. Clearly none of the teaching staff gave a shit about the course, since all assignments were handed out weeks behind schedule. Additionally, the course covered nothing I either a) didn't already know or b) couldn't care less about. There was no substantial data science or biomedicine in the course. It should be renamed 'Introduction to Bioinformatics and Protein Modeling'. ",
+            "\u00a0I think that the lectures can sometimes be confusing and not go in depth enough on the topic, especially the mining portion of the course. I think that a strength was the readings and in discussion section when important topics or concepts were reviewed. I enjoyed the final project and the guest lectures. I think those were a strength, but more guidance could have been given in general during the whole course. A more defined syllabus would have been helpful. ",
+            "\u00a0The content is sufficient, but the work load is a bit more. Too many sections. ",
+            "\u00a0The topics covered are very relevant. But, the material is not well presented to people who have limited computational/programming background. Also, the organization of this course is not good. It needs to be more clear where to find lectures/homework assignments, and the calendar needs to be updated. Finding the correct lecture is VERY difficult. ",
+            "\u00a0The course need to be re-organized. There are four levels of students in the course and it was taught as if everyone could code or knew biophysics. "
+        ],
+        [
+            "\u00a0Yes ",
+            "\u00a0I would recommend this course to any student without a background in the subject matter already. ",
+            "\u00a0NO. Although, the material covered is exciting and interesting Dr. Gerstein is a very disorganized professor and his lectures are hard to follow. The course is badly structured where most of the assignments are crammed in the last 3 weeks of classes.\r\n In fact, what students get out of this course is not really worth it. For example, my completion of  the final project relied on my previous knowledge from my masters and current PhD research, and not on the computational tools taught in the course (variant calling). In fact, if we look at the projects presented, most teams addressed this assignment using external resources, so it leads me to question what the point of this course is if students did not learn much programing skills? \r\n\r\nI am expecting high quality education from Yale, and this course does not represent that. ",
+            "\u00a0The course is helpful to new students who wish to have a broader view of computational biology and biological data, and students who are looking for a specific field to work on. ",
+            "\u00a0Yes. ",
+            "\u00a0Of course! It is a great survey class to get introduced to bioinformatics. ",
+            "\u00a0No, a class with more practical and better organized lessons would be more advantageous. ",
+            "\u00a0Yes, I think it is a very interesting spread of computational problems in the field, while demanding a respectful amount from its students. ",
+            "\u00a0Yes, especially if they are interested in biomedical sciences. ",
+            "\u00a0Certainly not. It's a waste of everyone's time. ",
+            "\u00a0I think that the course has a very interesting set of topics that I enjoyed learning about, however I think that they could have been done in a better, more coherent way. I think that the idea of the class is good, but the organization was lacking at times. I think that if improvements are made in this regard, I would recommend the class to another student interesting in this continually growing field. ",
+            "\u00a0Yes, this course is helpful for people interested in bioinformatics. ",
+            "\u00a0Not for a student with no programming or calculus knowledge. ",
+            "\u00a0No. The contents are either too easy or too hard. ",
+            "\u00a0No with exception. I would only recommend this course to students who already know the material and who want an easy class (for them) to take. The class was run in a poor manner this semester. "
+        ]
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50484/assignments/syllabus", 
+    "requirements": "Prerequisite: permission of the instructor.", 
+    "description": "Study of epigenetic states and the various mechanisms of epigenetic regulation, including histone modification, DNA methylation, nuclear organization, and regulation by noncoding RNAs. Detailed critique of papers from primary literature and discussion of novel technologies, with specific attention to the role of epigenetics in development and its impact on human health.\nPrerequisite: permission of the instructor.", 
+    "title": "Epigenetics", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WTS A32", 
+            "days": [
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 12
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12054", 
+        "listings": [
+            {
+                "number": "650", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Yannick Jacob", 
+        "Nadya Dimitrova"
+    ], 
+    "long_title": "Epigenetics", 
+    "extra_info": "A"
+}

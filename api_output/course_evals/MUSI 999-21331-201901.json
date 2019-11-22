@@ -1,0 +1,71 @@
+{
+    "crn_code": "21331",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        [
+            1,
+            0,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I always find this forum to be very productive. You get to learn what peers are working on, crowd-source solutions to common research obstacles, and get in-depth feedback on your work. "
+        ],
+        [
+            "\u00a0Strengths: a positive, collaborative atmosphere; engaged participation from readers; an explicit expectation that this is NOT a forum for finished work, but for work in progress. That last point is really important, because it creates an environment that foregrounds discussions of research/writing strategies while dissertators are in the trenches. Polished writing often has a way of--shall we say--concealing the means of its own production. By setting an expectation for work in progress, it's easier to see the different strategies people develop to tackle common research obstacles. That has the added benefit of both reducing imposter syndrome (since all polished writing starts as drafty prose) and giving everyone a shared, crowd-sourced toolbox of research/writing strategies for surmounting those common obstacles if/when they encounter them.\r\n\r\nImprovements: none. I think this went really well this year. "
+        ],
+        [
+            "\u00a0Sure. It's more or less required for us if we're ABD and in residence. "
+        ]
+    ]
+}

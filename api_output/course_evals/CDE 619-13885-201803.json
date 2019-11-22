@@ -1,0 +1,87 @@
+{
+    "crn_code": "13885",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's provided students with helpful and timely feedback",
+        "The instructor established a positive learning environment",
+        "The instructor raised questions or problems that encouraged me to think critically"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a05-10 hours per week. ",
+            "\u00a0About 4-5 ",
+            "\u00a03 ",
+            "\u00a08 "
+        ],
+        [
+            "\u00a0Strengths: This course is very useful to learn more about advanced EPI methods and help students think critically about study design and data analysis.\r\nWeakness: Answers to questions are not posted in canvas. ",
+            "\u00a0The topics on homework assignments are good and thought-provoking but lectures are convoluted and spend a tremendous amount of time going over equations and derivations rather than proper application of the models. I wish the homeworks were actually graded and that the course focused more on them. The statistical programming language used is GLIM which is challenging to read/interpret so I really wished there was a TA or someone to translate or review homework assignments in R or SAS. The lecture material just does not translate well to actual assignments or applications and the final reflected very little of the material. ",
+            "\u00a0It was really cool to see how a lot of things I took for granted in Epi I and Epi II were \"proven\" in Epi III using biostatistical methods, and then evaluating those results with a grain (okay, more like a bucket) of salt. But I think a lot of the material went over my head, especially since the premise of the course was that most of the material wouldn't crystallize until months in the future... And I wish our homeworks gave us more space to be skeptical about data analysis and interpretation. ",
+            "\u00a0Strengths: more reinforcement of epidemiology\r\nWeakness: no office hours, need time between discussion and lecture "
+        ],
+        [
+            "\u00a0Strengths: Dr. Risch is an excellent instructor and gives in-depth creative ideas to EPI study and research.\r\nWeakness: some handwriting in lectures' PDF is hard to recognize. If possible, PDF made by keyboard input is helpful. ",
+            "\u00a0Dr. Harvey is extremely knowledgeable but I wish he upgraded the course to make the topics a bit more modern, used R or SAS, or assigned more applied work throughout the semester. ",
+            "\u00a0I liked the end-of-class tangents, as it brought real-world experiences to the admittedly rather dry biostats. ",
+            "\u00a0Hes incredibly knowledgeable and a great source to learn further epidemiological methods from. "
+        ],
+        [
+            "\u00a0This course is great and extremely useful to students whose career goal is to be academia. I highly recommend it. ",
+            "\u00a0Would not recommend unless you've been dying to know the underlying derivations and every single equation for epi models. ",
+            "\u00a0If you care about why epi works the way it does, this could be a worthwhile class. But if you're not interested in methodology and just want to apply the basics, then maybe this might not be a good use of your course registration. ",
+            "\u00a0Its difficult but very good for students who want to pursue epidemiology. "
+        ]
+    ]
+}

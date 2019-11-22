@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Offered by arrangement with the instructor and permission of DGS to meet special requirements.", 
+    "title": "Directed Research: Issues in T...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 4, 
+        "oci_id": "16279", 
+        "listings": [
+            {
+                "number": "999", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Valerie Hansen"
+    ], 
+    "long_title": "Directed Research: Issues in Tang. Song & Yuan", 
+    "extra_info": "A"
+}

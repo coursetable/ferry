@@ -1,0 +1,80 @@
+{
+    "crn_code": "22035",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            4,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            1,
+            3,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course helped me develop insight into multivariable mathematics techniques. From introduction to 3D space to learning how to solve work and flux integrals, I have been able to develop a pretty comprehensive understanding. ",
+            "\u00a0further knowledge of calculus, now in the three dimensional space ",
+            "\u00a0I developed three-dimensional calculus skills, including work, vector line integrals, three-dimensional calculations. ",
+            "\u00a0I've learned how to do triple integrals and partial derivatives, how to find line integrals of scalar functions and vector fields, and how to apply green's theorem, stokes' theorem and divergence theorem. "
+        ],
+        [
+            "\u00a0I wish there were more summaries and help of all the concepts. ",
+            "\u00a0I think the course is taught in a very logical timeline. It first introduces the mechanics of the material and then turns back to applications of these mechanics. One weakness of the course is that it rushes through a bit of how some of the concepts overlap. ",
+            "\u00a0strengths: good foundation for multivariable calculus\r\nweaknesses: seems like most students begin the course with some exposure or experience to the content, may be imbalanced for those who haven't had exposure yet ",
+            "\u00a0Strengths: the ximera's are extremely helpful (videos + practice problems you can use when you don't understand something / can't make it to class) \r\nWeaknesses: Differences across professors in how they teach and what's on the test, psets are too easy compared to the tests "
+        ],
+        [
+            "\u00a0Only if they are interested/required to take it. ",
+            "\u00a0I would absolutely recommend this course. It is filled with new, fun mathematics topics. As someone who was a bit discouraged after 115, Math 120 helped reignite my passion for math. ",
+            "\u00a0only if they need it for a prereq ",
+            "\u00a0Depends on what you are looking for. In retrospect, as an econ major, Math 118 would have been a better choice, but if you are looking into the field of engineering or physics yeah. "
+        ]
+    ]
+}

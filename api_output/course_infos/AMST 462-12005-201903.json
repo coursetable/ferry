@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48949/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Examination of inequality, not only through experiences of the poor and marginal, but also through institutions, beliefs, social norms, and everyday practices of the privileged. Topics include: critical examination of key concepts like \u201cstudying up,\u201d \u201celite,\u201d and \u201cprivilege,\u201d as well as variations in forms of capital; institutional sites of privilege (elite prep schools, Wall Street); living spaces and social networks (gated communities, private clubs); privilege in intersectional contexts (privilege and race, class, and gender); and everyday practices of intimacy and affect that characterize, solidify, and promote privilege.", 
+    "title": "The Study of Privilege in the ...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "YK212 004", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12005", 
+        "listings": [
+            {
+                "number": "462", 
+                "subject": "AMST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Ana Ramos-Zayas"
+    ], 
+    "long_title": "The Study of Privilege in the Americas", 
+    "extra_info": "A"
+}

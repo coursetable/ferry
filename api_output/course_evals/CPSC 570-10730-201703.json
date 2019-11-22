@@ -1,0 +1,121 @@
+{
+    "crn_code": "10730",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            2,
+            3,
+            6,
+            10,
+            12
+        ],
+        [
+            1,
+            11,
+            4,
+            9,
+            7
+        ],
+        [
+            2,
+            5,
+            7,
+            10,
+            8
+        ],
+        [
+            1,
+            1,
+            12,
+            11,
+            7
+        ],
+        [
+            0,
+            3,
+            8,
+            14,
+            7
+        ],
+        [
+            0,
+            0,
+            6,
+            13,
+            13
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned a lot on how to read uninformative ppt by ourselves to understand concepts. ",
+            "\u00a0An overview of AI including its history and current advances ",
+            "\u00a0Knowledge of several state-of-the art learning algorithms, ranging from those relevant in data science such as CNN's and Rnns to more AI/behavior-oriented algorithms like Q-learning and minimax. ",
+            "\u00a0Learned a lot about AI. ",
+            "\u00a0Not a ton, some formal stat/first order logic stuff. ",
+            "\u00a0A broad knowledge about different kinds of AI problems, and ideas about how to solve them. ",
+            "\u00a0we learned many things! really! ",
+            "\u00a0Obtain knowledge about Game Theory, Natural Language Processing, Machine Learning, Neural Networks etc, everything I wanted! ",
+            "\u00a0I better understood AI models as they are used in industry and research, rather than simply textbook theory. I also gained knowledge of how to program these advanced models. ",
+            "\u00a0This course will let you know of the existence of some broadly used techniques in the vast field of AI. Youll be made aware of the formulas and the tools people use. Everything is skimmed over and is practically linear algebra and probability theory in disguise. ",
+            "\u00a0knowledge about AI and implementation of various AI technologies such as cluster and neural network ",
+            "\u00a0Reinforcement learning, tensorflow and theano, logic, agents and game playing. ",
+            "\u00a0we learned a lot of knowledge on traditional AI, deep learning, and applications! ",
+            "\u00a0A beginning knowledge of artificial intelligence and search algorithms. ",
+            "\u00a0basic AI ",
+            "\u00a0I've learnt a lot about AI and python coding. "
+        ],
+        [
+            "\u00a0This course was trying to cover a lot information with limited depth, and we are not sure how much we shall master each concept. ",
+            "\u00a0The course is very broad, which can be both a good thing and a bad thing. For one, we get exposed to many areas which are developing today. However, we don't dwell on them enough to truly understand them. ",
+            "\u00a0Strength:\r\n-Lots of algorithms, many of which are highly relevant to huge numbers of applications\r\n-Useful and mostly meaningful homework\r\n\r\nWeakness:\r\n-A few homeworks had sections which were mostly implemented by the instructors, and the students were supposed to fill in a few lines of code. Those didn't lead to much learning\r\n-The lectures and homeworks were often disorganized (irrelevant information sometimes, not enough other times)\r\n\r\nImprove:\r\n-Have a TA read through the slides and get rid of redundant information, and provide feedback on how to improve slides. They were really disorganized (often containing redundant information from multiple different other [properly-cited] sources, the order was not always very well-planned, they contained more information than the instructor could possibly cover, and even contained entire topics which were irrelevant to the course assignments, exams, and future lectures. If those topics were moved to the end in \"optional reading\" or labeled as \"optional\" in the slides, it would lead to less wasted time and stress on the students' part.).\r\n-Try the homework prior to having students do it. This will help find bugs in the implementation, or errors with dependencies etc. ",
+            "\u00a0Broad survey course with interesting topics. Too much material, however. I would prefer less of an emphasis on logic. ",
+            "\u00a0weakness: this course covered too much that is hard to totally understand ",
+            "\u00a0There should be a closer alignment between homework and class material. ",
+            "\u00a0My only problem was about the structure of lessons. Because the number of students who take the course was huge, it was hard to be in communication with the professor. But I'm not sure how this could be solved given this crowd. ",
+            "\u00a0very useful class ",
+            "\u00a0Strengths: the professor and TAs are al very responsible and helpful. The assignments are well organized.\r\n\r\nWeakness: there are too many topics and students may feel overloaded. ",
+            "\u00a0There was a lot of material (especially over piazza), and even when it it's said it isn't required, it makes me uncomfortable not to have read it. ",
+            "\u00a0The course, as is, doesnt make sense. The prerequisites are CSPC 201 and CSPC 202, yet the course requires an understanding of linear algebra and probability theory, neither of which are covered well in the prerequisites. The lectures skim over far too many topics, yet the problem sets expect us to know all the topics in great detail. The course would be much stronger if only a few topics were covered in greater depth. ",
+            "\u00a0Lecture was overly rushed, and the slides taken together were not the most coherent. I would prefer to focus on fewer things and go over them in depth with examples. \r\n\r\nI thought most of the homeworks were interesting, but sometimes confusing given that they were taken from different sources and inconsistent in the amount of work required as well as their relationship with lecture. ",
+            "\u00a0This course covers lots of knowledge but I think the workload is too heavy ",
+            "\u00a0It covers many materials in the area AI, however, it is too much for one semester. And the homework is not very well represent the materials we learnt in class. For final exams, it is also not well related to the materials and homeworks we did for the course.. ",
+            "\u00a0Kind of unorganized and there were big gaps between lectures and assignments (especially the deep learning and CV one). It feels like this course simply combined separate parts of other courses from UCB and Stanford.\r\nThe exams are very off-topic. ",
+            "\u00a0Some homework needs more clear explanation. The better part is that it includes much knowledge. ",
+            "\u00a0Strengths are the topics covered. Weaknesses are that the lectures could have been more practical and not just using the slides. ",
+            "\u00a0Strength: a good scope of AI topics\r\nWeakness: should have better homework design ",
+            "\u00a0strengths: good contents, homework and topics\r\nweaknesses: the qualities of ppt files and preparation of the course were poor. "
+        ],
+        [
+            "\u00a0If you want to learn AI from this course, better work on course at Berkeley and Stanford instead, since most of the slides are a joint from these two university's courses/ And because of a splicing of these material, some prior information is missed in the slides. I feel confused about the connection among different concepts, and why are we learning all these concepts. It actually lacks a big picture or a logic flow to lead us understand and link all the knowledge together. ",
+            "\u00a0Yes I think it's an important class to take considering the research being done in Ai today. ",
+            "\u00a0I will definitely recommend this course to others! The material and assignments were practical, relevant, and satisfying. I will definitely use knowledge gained through this course in my research, and suspect that huge numbers of other researchers will find it useful also.\r\n\r\nThe headaches and stress caused by the course organization were well worth sorting through. I hope those issues are resolved before next time the course is taught. If so, I'm sure this will become one of the most popular SEAS courses at Yale. ",
+            "\u00a0Yes, if you want to learn about AI. ",
+            "\u00a0This class is a deceptive amount of work. It's 50% statistics, with the remainder being a combination of first order logic, machine learning, natural language processing, and random homework assignments taken from the Berkeley class on AI.\r\n\r\nOne of the homeworks was unreasonably long, and some others were pretty hefty. There is almost no overlap between them (which focus on neural networks and search algorithms) and the class material, which only touches on neural networks in a few slides.\r\n\r\nWhat will you learn? Lots about search algorithms (A*, DFS, BFS, Uniform Cost Search, Beam search), constraint-satisfiability (DPLL/SAT-solvers, genetic algorithms), Markov Chains, Markov Decision Processes, Bayesian networks, and some intermediate statistics. ",
+            "\u00a0Yes, they will definitely learn some new things in this course. ",
+            "\u00a0yes of course\r\nit is very good course ",
+            "\u00a0The course covers a wide range of topics for AI and helps broaden students' horizon. ",
+            "\u00a0Yes, you will learn a lot ",
+            "\u00a0Not unless someone reformed this course. This course skims over everything without teaching anything. The lectures are unengaging and the assignments are unrelated and at times unreasonable. ",
+            "\u00a0The topics are very interesting, and the professor and TAs are pretty dedicated which is always great! I think the course could do with better organization, coordination among the teaching team (many  TAs/peer tutors were confused about HW requirements and unsure about how to do problem), and refinement of lectures. ",
+            "\u00a0I would recommend this course to another student, because the instructor is nice and I can learn a lot from this course. ",
+            "\u00a0Not recommend for people who don't know anything about AI. ",
+            "\u00a0You cannot miss the only AI course. ",
+            "\u00a0yes! It's the only deep learning application course at Yale! ",
+            "\u00a0I recommend this for CS students. ",
+            "\u00a0Good contents, broad views. ",
+            "\u00a0AI is a great topic and definitely necessary to learn. "
+        ]
+    ]
+}

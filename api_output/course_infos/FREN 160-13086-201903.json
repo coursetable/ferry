@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49970/assignments/syllabus", 
+    "requirements": "Conducted entirely in French. Prerequisites: FREN 150, 151, or a satisfactory placement test score, or with permission of the course director. May be taken concurrently with or after FREN 170.", 
+    "description": "Intensive oral practice designed to further skills in listening comprehension, speaking, and reading through the use of videos, films, fiction, and articles. Emphasis on contemporary French and francophone cultures.\nConducted entirely in French. Prerequisites: FREN 150, 151, or a satisfactory placement test score, or with permission of the course director. May be taken concurrently with or after FREN 170.", 
+    "title": "Advanced Culture and Conversat...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "BASSLB L71", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "13086", 
+        "listings": [
+            {
+                "number": "160", 
+                "subject": "FREN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "FranASSoise Schneider"
+    ], 
+    "long_title": "Advanced Culture and Conversation", 
+    "extra_info": "A"
+}

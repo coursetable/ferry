@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49269/assignments/syllabus", 
+    "requirements": "Prerequisites: introductory physics, college-level general chemistry, and single-variable calculus, or permission of instructor; MATH 120 or ENAS 151 suggested. May not be taken after CHEM 328.", 
+    "description": "A comprehensive survey of modern physical and theoretical chemistry, including topics drawn from thermodynamics, chemical equilibrium, electrochemistry, and kinetics.\nPrerequisites: introductory physics, college-level general chemistry, and single-variable calculus, or permission of instructor; MATH 120 or ENAS 151 suggested. May not be taken after CHEM 328.", 
+    "title": "Physical Chemistry with Applic...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "SCL 160", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10517", 
+        "listings": [
+            {
+                "number": "332", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Patrick Vaccaro"
+    ], 
+    "long_title": "Physical Chemistry with Applications in the Physical Sciences I", 
+    "extra_info": "A"
+}

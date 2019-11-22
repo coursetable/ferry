@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48904/assignments/syllabus", 
+    "requirements": "Enrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "description": "This course deals with scientific questions of what we know about human origins and human evolution. It presents evidence from evolutionary and life history theory, geochronology, paleontology, paleoenvironmental reconstruction, phylogenetic analysis, genetics, archaeology, and functional morphology.\u00c2\u00a0It also tackles the issue of how we know what we think we know of our own ancestry over the past 6 million years. In other words, what constitutes evidence for human evolution and how is that evidence interpreted? Students are introduced to basic milestones in human evolution and learn how they have shaped us into the species we are today, using diverse lines of evidence from evolutionary and life history theory, geochronology, paleontology, paleoenvironmental reconstruction, phylogenetic analysis, genetics, archaeology, and functional morphology. We critically examine key debates that have taken place over the last century of exploration in human evolutionary research, learning how unconventional thinking and spectacular discoveries have shaped current knowledge of our origins. Students meet strange and fascinating historical characters, and then meet our fossil ancestors via the cast collection. Students also receive hands-on and interactive learning about the morphology, life history patterns, locomotion, social behavior, and diet of our nearest fossil relatives; observe living primates to assess what they can tell us about our own deep past; dive into data collection by locating real archaeological and fossil sites; and learn how molecular techniques such as ancient DNA have transformed understanding of the origins of our own species. By formally debating controversial issues with classmates, students learn what a surprising amount of information scientists can discern from fragmentary fossils, and are brought up to date with the most current discoveries in human evolution.\nEnrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "title": "Understanding Human Origins", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "SA10 16", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10348", 
+        "listings": [
+            {
+                "number": "061", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANA\">YC Anthropology: Archaeology </a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANB\">YC Anthropology: Biological</a></li></ul>"
+    ], 
+    "professors": [
+        "Jessica Thompson"
+    ], 
+    "long_title": "Understanding Human Origins", 
+    "extra_info": "A"
+}

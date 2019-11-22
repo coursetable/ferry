@@ -1,0 +1,131 @@
+{
+    "crn_code": "12347",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            2,
+            2,
+            6,
+            7,
+            8
+        ],
+        [
+            3,
+            10,
+            7,
+            3,
+            2
+        ],
+        [
+            5,
+            4,
+            6,
+            6,
+            4
+        ],
+        [
+            4,
+            3,
+            8,
+            8,
+            2
+        ],
+        [
+            1,
+            2,
+            5,
+            8,
+            9
+        ],
+        [
+            0,
+            0,
+            7,
+            10,
+            8
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Knowledge of broad concepts and techniques in Molecular Biophysics. ",
+            "\u00a0A lot of info about macromolecules, info about different techniques like x-ray, microscopy, and cryo-em. Also, learned a good bit about pymol. ",
+            "\u00a0I learned a lot about fourier transforms and various forms of microscopy. ",
+            "\u00a0During this course I learned a lot about structural biology and Biophysics. Concepts such as NMR, Cryo, Xray and optics. ",
+            "\u00a0I learned the principles of cryo-EM, X-ray crystallography, NMR, super-resolution microscopes and many other modern structural biology techniques. ",
+            "\u00a0I have applied what I learned to research for two of my rotations. This has made me appreciate the course. Amidst the challenges of this course, I have developed a thick skin, and gained the ability to think deeper about the material to understand the key concepts rather than just memorizing. Although the learning curve was steep, I definitely value this course for what it is worth. Painful but of good worth. Challenging but positive reflections. ",
+            "\u00a0Structure of protein and nucleic acid. Techniques for structural determination. ",
+            "\u00a0Interactions within the protein and DNA/RNA, X-ray crystallography, CryoEM, microscopy, NMR, and transition state analysis were covered. ",
+            "\u00a0I gained insight to many biophysical tools that are available. I thought this course provides a nice overview of many instrumebts that are on the cutting edge of research. ",
+            "\u00a0knowledge about protein/nucleic acids structures and interactions; X-ray crystallography and Cryo-EM; microscopy and single molecule biophysics; principle of NMR ",
+            "\u00a0I gained insight to many biophysical tools that are available. I thought this course provides a nice overview of many instrumebts that are on the cutting edge of research. ",
+            "\u00a0This course was very informative. I gained a deeper understanding of concepts that were often \"hand-waved\" in undergrad, such as Fourier transforms in Xray crystallography and Cryo-EM. In addition, I learned how to use Pymol for the first time. \r\n\r\nHaving to teach a section on a specific topic was also very instructive - and helped us learn how to teach concepts in an interactive manner. ",
+            "\u00a0I learned a lot of techniques and their underlying concept ",
+            "\u00a0I actually learned biochemistry! Honestly, for all of the seemingly useless work, I actually feel like I can converse in biochemistry now! Particularly, X-ray crystallography and microscopy were great. ",
+            "\u00a0I learned a lot about x-ray crystallography and Fourier Transforms. This course helped me to incorporate structure information into the biological concepts that I am interested in. ",
+            "\u00a0Fourier Transform, optics, microscopy ",
+            "\u00a0I feel much more confident with X-ray crystallography, cryo-EM, and light microscopy techniques. I had previous experience with crystallography, but this enhanced my prior knowledge. I had more general understanding of cryo-EM and light microscopy, but I am more confident now. ",
+            "\u00a0I gained knowledge of theoretical concepts behind current biophysical techniques used in the field. I also gained a better understanding of what techniques and biological phenomena are exciting and new for the field. ",
+            "\u00a0The basic knowledge of microscope, cryo-EM, X-ray diffraction and NMR and the cutting-edge study for each method. ",
+            "\u00a0I learned how to use PyMOL, and how complicated X-ray diffraction is ",
+            "\u00a0crystallography,Electron Microscopy ",
+            "\u00a0I got a introduction into biophysics and learnt about protein, RNA, DNA interactions, X-ray crystallography, Cryo-Em, NMR and light microscopy. I had never learnt any of the material before so it was good to be exposed to it. "
+        ],
+        [
+            "\u00a0Strengths - exposure to a great deal of material that could potentially be accessible and beneficial in graduate school. Variety of instructors teaching on their expertise. \r\n\r\nWeaknesses - Almost instructed that we had to memorize material (crossing out slide, giving lists of everything you need to know, saying \"such and such is fair game for the exam\"). Felt rushed through many lectures. I thought this course would \"feel\" like a graduate school course when it was more of an extension of coursework from undergraduate. NMR lectures left a fair amount to be desired. ",
+            "\u00a0This class was very disorganized, and it seemed as if the person who wrote the tests had never even stepped in the class. I really thought we were learning cool things in the class, but the tests REALLY missed the mark. We would spend a ton of time focusing on something in class, but then when it came to the test we would have a huge question on something that wasn't even talked about in the lecture. My biggest recommendation would be that if you want something to be tested on heavily emphasize that topic in class. For example, on the final there was a whole page on FCS, but we barely talked about that in class and we definitely did not talk about it on the level it was tested on. If you want the class to know something deeper but don't have time to go into it, then give us some resources to read outside of class. We spent so much time studying by googling all the things in the slides, but it would have been so much more effective if we had outside resources. Having a textbook for the first half of the course was really helpful, but once we didn't have that the class kind of tanked. ",
+            "\u00a0Pymol activities were not very organized, but I do think it was good to learn how to use it.\r\n\r\nOften, topics were presented in a 'rapid fire' manner and as a result there was more breadth as opposed to depth in learning. As a consequence, it is quite difficult to learn 'everything' for an exam. ",
+            "\u00a0Cryo and Xray are well structured and online resources are great. Optics needs to improve because the full message wasn't very clear. NMR felt easy but some questions such as NOESY and COZY should be better explained. ",
+            "\u00a0Strength: the introduction of the structural biology techniques was very interesting and helpful.\r\nI hope the content of the courses could be more well-organized. ",
+            "\u00a0Organize the lectures\r\nSummarize key points at the end of every slide\r\nKeep lectures concise and on point to avoid rushing through slides when out of time\r\nPut titles to capture the content on every slide\r\nTeach microscopy before crystallography and Cryo-EM ",
+            "\u00a0Feedback was not provided in a timely manner. Not clear with expectations. ",
+            "\u00a0The course is well-organized and definitely a level 700 course. ",
+            "\u00a0The light microscopy lectures need to be refined a little bit. Do not change the material, just focus on clarifying the key themes. The lectures taught by Yong are fantastic. ",
+            "\u00a0strengths: combine different topics and methods\r\nweakness: some of lecturer don't have well-prepared slides and didn't explain some details very well ",
+            "\u00a0The light microscopy lectures need to be refined a little bit. Do not change the material, just focus on clarifying the key themes. The lectures taught by Yong are fantastic. ",
+            "\u00a0strengths: Group work is encouraged, allowing us to discuss problem sets in detail. There is ample opportunity to ask questions, and review sessions and weekly sections are useful. Allowing us to teach a section is also a good way to get us involved in the material. The availability of practice exams and Andrew's NMR \"need to know\" sheet was helpful for studying. \r\n\r\nweaknesses: Not enough desk space in the room for everyone, and occasionally there were not enough printed notes for the whole class. In general, there was a lot of confusion in what the expectations were for a specific grade - it was hard to know where we stand grade-wise until right before the final (too late!). When we received grades on the homework and the lesson, there was very minimal feedback so it was difficult to know what exactly we did wrong. ",
+            "\u00a0Joe could really give us a clearer outline about what he wants us to learn ",
+            "\u00a0Replace Miranker. Answer keys should be posted so we can actually learn from our mistakes. Shawn never told us what we did wrong in our psets, so we had no idea what we didnt know ",
+            "\u00a0should be more organized ",
+            "\u00a0I felt that the best taught section of this course was the x-ray crystallography section. Additionally, I thought that NMR was understandable. However, I had a much more difficult time understanding the microscopy section and the TAs frequently focused on different topics during their session. \r\nI did have some issues with organization - sometimes we would go over something twice or not at all because there wasn't enough communication between instructors. ",
+            "\u00a0Professors inferred previous knowledge, go slower with some topics ",
+            "\u00a0This course is very disjointed. There doesn't appear to be much agreement between the professors on how to approach it, which isn't necessarily a bad thing, but it was noticeable in this case, particularly in the apparent interactions between the professors and the TAs. In the lectures, Dr. Xiong appeared rushed in all of his sections, while Dr. Miranker, especially,  floated along without much driving force. However, I did learn a lot in this course - I think the amount of material is sufficient - I just think time should be reallocated. Additionally, while I think the homework is sufficiently challenging to be meaningful, we need better explanations of the answers to the homeworks afterwords. That way we can correct things we didn't figure out. Here, the TAs were woefully under-equipped despite what appeared to be significant effort on their behalfs.\r\n\r\nFurther, despite the NMR section being the weakest in my opinion, I think the course would flow better with NMR first. The use of Fourier transform within NMR is more straightforward and while I didn't find Dr. Xiong's approach to be particularly lacking, it may be helpful to have an easier introduction to Fourier transformation first. ",
+            "\u00a0The class attempts to pack in a lot of content during the semester. I think this is a strength and makes the class reasonably challenging. I also appreciated the level of organization in X-ray crystallography, cryoEM, and macromolecular structure lectures, however, I thought that the other lectures could have been organized in a more cohesive manner. The overall structure of the class also could have allowed for more time to complete the NMR lectures, as they felt rather rushed for such a challenging subject matter. ",
+            "\u00a0the strengths is that it cover all the basic method which will be used in future biochemistry/biophysics study, it can give us a brief idea about what should do and how we do it. the weaknesses is the connection in each subtitle is kind of weak. ",
+            "\u00a0This course is very disorganized. The microscopy lectures are terrible, and completely ineffective. The NMR material, and most of the stuff Andrew presents is pretty good however. ",
+            "\u00a0I would like to start by saying this course made me question my decision to come to yale as a grad student. This program was very highly ranked and I was really disappointed by the quality and engagement of the professors that taught this course. \r\n\r\nBig things that stand out that need to be fixed:\r\n\r\n\r\nHaving 6 courses of basic biochemistry in the beginning of the course is a waist of time. It was taught really poorly by (AM) using only lengthy power points that were not well rehearsed.  With a focus on undergraduate level concepts from a undergraduate textbook. this was really boring and did not engage the student body to think at a grad student level. \r\n\r\nTrying to teach the fundamentals of NMR in 2 or 3 classes is not a functional method to learn it. It was so rushed it was almost a waist of time. (AM) really really needs to practice teaching this material. Again flashing hundreds of ppt slides then calling it teaching is not effective. \r\n\r\n-Course organization: The course as it stands is very hard to follow because it jumps around a lot and overlaps with the quantitative course a lot. It seems that one of the courses should be a quantitive course and one should be a spectroscopy course. \r\n\r\n-Answers to home work should be provided in depth after the due date. If the TA's don't write comments on the graded work ( which happened a lot) one is left wondering what was wrong. This is not conducive to learning the material because you are always second guessing. I would like to clarify that this is not really the TA's fault because often the answers they were given to grade were only a word or two for very complex problems. \r\n\r\n -Consistent grading by the TA's: 1 TA would take 40 or 50 points off with no description of errors while the other would take of 5 points with engaged descriptions.\r\n\r\n-The final covered many topics that were literally only covered for a slide or two and left out some major topics that were covered way more in depth. This course also needs significantly more journal reading and less undergraduate level true and false answers. ",
+            "\u00a0Strengths: Good introduction into various topics, that are essential to understand to succeed in the MBB department. \r\nWeaknesses: The organization of the class could be improved. Some topics seemed a bit random. I wasn't clear on whether we needed a background in the material prior to coming to the class, or not. If it we were not expected to have known this material prior, then we should have gotten more background on all the topics. It is fair to assume that the students had been exposed to this material beforehand, but a lot of people had not so it was difficult. The feedback given on the first test was a little vague and the answer key was posted really late. "
+        ],
+        [
+            "\u00a0Only if they don't have experience / coursework in molecular biophysics. Prior exposure to this material might be enough to start further building upon some of the concepts presented. Those wanting more physics and math centered biophysics may be dissatisfied. ",
+            "\u00a0Probably not unless this course became a lot more organized and focused. ",
+            "\u00a0If they enjoy structural biology yes, if not then no ",
+            "\u00a0Yes. The introduction of the structural biology techniques was very interesting and helpful. ",
+            "\u00a0DEFINITELY, if students' feedback are incorporated to improve the course ",
+            "\u00a0Yes. I think this course is a nice introduction to the MB&B department. I have never learned about crystallography or cryo-em or any biophysical tools and this class was an appropriate place to start. ",
+            "\u00a0Yes. I think this course is a nice introduction to the MB&B department. I have never learned about crystallography or cryo-em or any biophysical tools and this class was an appropriate place to start. ",
+            "\u00a0I would recommend this course, but only if the student was in a position to take on a heavy load and commit the time. \r\nWe learned a lot of useful information in the class, which makes it worth the effort. ",
+            "\u00a0Yes. Its the fundamentals ",
+            "\u00a0Not unless they hated themselves. The idea of the course is good, but its so disorganized that its lectures were often lost on its students. Combine that with terrible lecturers, and you have a terrible course. ",
+            "\u00a0I think that if that student were interested in BQBS this is a course that should be taken, however, I do not think that all the material was covered well enough for me to recommend it to another student. As there is really no other comprehensive option that fulfills the biophysics requirement I would have to recommend this course. ",
+            "\u00a0Yes ",
+            "\u00a0I would, but not because I believe the course is currently well-designed. Instead, I think the material is just too important to not know fully which makes this class valuable. ",
+            "\u00a0Yes, though I believe the class needs refining and consistency from year to year, I think it is an important class for MB&B students. It exposes students to a variety of experimental techniques and does incorporate current review papers and seminars. I very much enjoyed the extension of the class material into some of the seminar speaker's lectures. ",
+            "\u00a0Yes, this class is extremely useful for the student like us who just go to the graduate student so that we can know which tool we have and what problem need to be solved. ",
+            "\u00a0No ",
+            "\u00a0No.  It was so poorly taught that the minimum amount of knowledge that the class was able to pull from it was shadowed by the amount of potential information that we could have learned! I think I got a honors grade in this class but it feels very hollow because I feel like i could have learned so much more. ",
+            "\u00a0Yes, because the topics covered are essential to the understating the field, and learning about new breakthrough techniques. "
+        ]
+    ]
+}

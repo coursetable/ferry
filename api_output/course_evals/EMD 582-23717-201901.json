@@ -1,0 +1,94 @@
+{
+    "crn_code": "23717",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's provided students with helpful and timely feedback",
+        "The instructor established a positive learning environment",
+        "The instructor raised questions or problems that encouraged me to think critically"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            6,
+            0
+        ],
+        [
+            1,
+            1,
+            5,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            5,
+            1
+        ],
+        [
+            0,
+            2,
+            3,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            5
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a05 ",
+            "\u00a04 ",
+            "\u00a010 ",
+            "\u00a03-10 hours per week ",
+            "\u00a04-8 ",
+            "\u00a04 ",
+            "\u00a05 ",
+            "\u00a012 "
+        ],
+        [
+            "\u00a0The course could use more organization and the problem sets could fit the lectures more clearly. Weekly reflection assignment should be removed. ",
+            "\u00a0Strengths: One of the most unique courses at YSPH.  It covered a different branch of epi that no other course at the school really went into.  Since the field is so new, Gregg did a great job creating a course that highlighted different aspects of political epi.  The skills learned here apply not only to this field but in all other areas of epi as well, which I appreciated.  \r\n\r\nWeaknesses: Given that this was the first time that this course was being offered, there were some aspects of it that need improving.  For example, I wish more class time was spent showing students how to actually solve the problems that were put forth theoretically from the readings.  Also, I wish more class time was dedicated to showing students how to use R for the specific questions that would later show up in the problem sets.  Many of us had never used R before, so the first time we not only try to tackle this application of theory at all but also in R should not be in a graded homework assignment! ",
+            "\u00a0I think that this course has great potential.  However, we spent a great deal of time on the quantitative aspects of the course, and not a lot on different facets of political epidemiology itself.  This is a relatively new field of epidemiology, but it would have been helpful to frame the class around the different areas political epi may be growing into (and then discuss different modeling techniques to address these areas), rather than framing the course around around the modeling methods themselves.  Also, if the heavy modeling emphasis of this class continues, I would recommend spending much more time going through the in-class presentations.  They were at times difficult to follow, and it would be really helpful to go through examples slowly.  This may not be feasible, but if we could pick one example for each model and go through it methodically as a class, I think the class may benefit greatly.  Lastly, our in-class discussions of our weekly readings seemed somewhat unproductive.  We had already written a response on the readings before class, and going through paragraph by paragraph to explain what the authors were doing in the paper was not very helpful.  I would suggest starting the class with a general question on what everyone thought of the paper, ask about any issues people saw with it, then delve into the lecture and explain there how it related to the example readings, and point out any places where the methods we learn in class could improve the quality of the study we read. ",
+            "\u00a0The course broadened my perspective on public health! I was convinced of the strength of statistical and economic models to reveal hidden threats to health and to both shape and evaluate public health policy. It was really cool to read papers at the intersection of economics and public health, and the course convinced me to study more economics in the future. The readings were a great mix of theory and application, and there were both good examples and bad examples of those applications that were useful to learn from. The coverage of each model was relatively cursory. The problem sets helped in learning to implement the models we learned, but on the whole it felt more introductory than upper-level. ",
+            "\u00a0A strength is that the topic is new and interesting and that Gregg has a fantastic wealth of knowledge and experience. However, lectures werent engaging and some of the class exercises (re-reading and summarizing papers) were unhelpful. ",
+            "\u00a0The course definitely had some speed bumps because it was the first year it was being taught. I had expected more of a topics class, but it was more of a methods class, which I came to appreciate. We read some very interesting articles, and I definitely learned a lot. The problem sets could be difficult and definitely required a level of experience with R I did not have. They often were applications of what we learned in class, which was more theoretical. "
+        ],
+        [
+            "\u00a0Gregg was a great instructor and is clearly knowledgeable about the subject matter.  He seemed very open to discussions and was eager for us to engage with the material. ",
+            "\u00a0Gregg was energetic as a professor, and he was very passionate about the growing field of political epidemiology.  His lectures may be more effective if the presentation slides were less crowded with information, and if he slowed down a bit when explaining mathematical concepts. ",
+            "\u00a0Professor Gonsalves is smart, passionate, and extraordinarily capable. He is an excellent mentor. But this was his first semester teaching, and his skills in the teaching department could use some development. Lectures tended to be reviews of readings rather than explorations of their applications. Rather than take examples from the readings, I think it could be really useful to make up examples and have the class work through them together. There were a lot of slides of text and mathematical equations that were hard to internalize from the lectures. The discussion of papers was also more summary than critical discussion. Weekly reading responses meant that we had to read the readings quite in depth, so I felt that I got a good understanding from the readings and that the lectures rarely added much depth. It would be great to have some more personal narrative from Prof. Gonsalves and to hear how he thinks some of these methods might be extended beyond the academic settings (as this is where some of his strengths lie!) Lecture would significantly benefit from really thinking about how to add to or interpret readings rather than regurgitating their content. ",
+            "\u00a0Less reading from slides, more discussion of why Political Epidemiology should exist and what it should do. A lab with walk-throughs of problem sets would have been awesome. ",
+            "\u00a0Gregg was incredibly knowledgeable and open to meeting and discussing the class with students. He is an incredible resource of students. You can definitely tell he was nervous about this being his first teaching, but that would definitely dissipate as he teaches the class more "
+        ],
+        [
+            "\u00a0Its much more quantitative than it is marketed as. Its also still in development (and likely will be for another year or two). ",
+            "\u00a0I would recommend this course to other students, even given the short-comings of trying to get it off the ground this semester.  Clearly, our class was the first to really see what worked and didn't with the format of the class, but I believe that Gregg is very receptive to our comments and that next year's course will be all the more improved.  Therefore, I recommend this class for anyone who wants to get more into epi theory/modeling and the impact that policies can have on health outcomes. ",
+            "\u00a0I would recommend a future iteration of this course for a fellow student.  As I said before, I really think the course has great potential, and Gregg is a fantastic person to learn from. ",
+            "\u00a0The course is a great introduction to applying statistical and economic methods in public health to politics and policy! You cover a different statistical method each week, and the methods are usually reinforced by a problem set in R. It's a good idea to go into the class with at least a cursory understanding of R. I would absolutely recommend it and expect it will only get better with time as Professor Gonsalves develops his teaching skills. "
+        ]
+    ]
+}

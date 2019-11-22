@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49401/assignments/syllabus", 
+    "requirements": "After CPSC 201 and 202 or equivalents. May not be taken after CPSC 473.", 
+    "description": "Introduction to the construction of intelligent, autonomous systems. Sensory-motor coordination and task-based perception. Implementation techniques for behavior selection and arbitration, including behavior-based design, evolutionary design, dynamical systems, and hybrid deliberative-reactive systems. Situated learning and adaptive behavior.\nAfter CPSC 201 and 202 or equivalents. May not be taken after CPSC 473.", 
+    "title": "Intelligent Robotics", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "WLH 119", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10698", 
+        "listings": [
+            {
+                "number": "472", 
+                "subject": "CPSC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Brian Scassellati"
+    ], 
+    "long_title": "Intelligent Robotics", 
+    "extra_info": "A"
+}

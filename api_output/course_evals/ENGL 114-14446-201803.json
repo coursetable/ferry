@@ -1,0 +1,83 @@
+{
+    "crn_code": "14446",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            5,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            5,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            4,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Writing different types of papers and providing sufficient evidence, reading and analyzing sources, and contributing to discussion with other students. ",
+            "\u00a0Basic writing background ",
+            "\u00a0I definitely improved my writing skills because there is so much writing in this course. I also learned how to better analyze sources and how to integrate them into my writing. ",
+            "\u00a0I learned the structure of an academic paper and how to write concisely ",
+            "\u00a0Academic writing structure, style, and research "
+        ],
+        [
+            "\u00a0Many readings on a very interesting topic. Teaches necessary writing skills. ",
+            "\u00a0Strengths are interesting material and course, but very time consuming. ",
+            "\u00a0The strengths of this course would be that although there was so much writing, it was a really interesting subject to it was interesting to do research and write papers. ",
+            "\u00a0It felt somewhat disjointed at times, like we were jumping from topos to topic with no clear direction ",
+            "\u00a0Strengths: it makes you write a lot, forces you to do comprehensive research, and you build strong bonds with your peers\r\n\r\nWeakness: slow grading "
+        ],
+        [
+            "\u00a0Yes, it is a very interesting topic so it is easy to participate in discussion and write research papers about. ",
+            "\u00a0Yes I had fun ",
+            "\u00a0I would definitely recommend this course because I felt like it really made writing interesting and I improved as a writer. ",
+            "\u00a0If they like the topic and really have no idea on how to write a paper, I would recommend it ",
+            "\u00a0Yes! Take ENGL 114, despite what grade you receive, itll prepare you to thrive in writing-oriented classes in the future "
+        ]
+    ]
+}

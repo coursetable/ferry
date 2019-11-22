@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49686/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The course presents a core topic in global health and development that is at the intersection of science, society, and policy. The course familiarizes students with leading approaches to analyzing the causes of malnutrition in countries around the world and to designing and evaluating nutrition interventions. It covers micronutrient and macronutrient deficiencies; approaches to reducing malnutrition; the cultural, economic, environmental, agricultural, and policy context within which malnutrition exists; and the relationships between common infections and nutritional status.", 
+    "title": "Global Aspects of Food and Nut...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 8, 
+            "location": "LEPH 115", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 9
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13779", 
+        "listings": [
+            {
+                "number": "628", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Debbie Humphries"
+    ], 
+    "long_title": "Global Aspects of Food and Nutrition", 
+    "extra_info": "A"
+}

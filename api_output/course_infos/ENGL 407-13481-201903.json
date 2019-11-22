@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49794/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An intensive introduction to the craft of fiction, designed for aspiring creative writers. Focus on the fundamentals of narrative technique and peer review. Formerly ENGL 245.", 
+    "title": "Introduction to Writing Fiction", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "LC 103", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "13481", 
+        "listings": [
+            {
+                "number": "407", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENW\">YC English: Creative Writing</a>"
+    ], 
+    "professors": [
+        "Amity Gaige"
+    ], 
+    "long_title": "Introduction to Writing Fiction", 
+    "extra_info": "A"
+}

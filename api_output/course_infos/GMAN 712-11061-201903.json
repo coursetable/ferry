@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50073/assignments/syllabus", 
+    "requirements": "Prerequisite: reading knowledge of German. Open to advanced auditors and graduate students from adjacent fields with a concentration in German. Open to undergraduates intending to apply to graduate school in German or related fields, with permission of the instructor.", 
+    "description": "Field-specific introduction to the history and methods of the field of German in a comparative and interdisciplinary context, with emphasis on project design and professionalization. Specific topic(s) in the form of case studies chosen by proseminar participants and first- and second-year graduate students in German. Focus on cornerstone works of literature and emerging fields in the context of established critical approaches. Proseminar participants and the faculty proseminar leader collaboratively teach and design individual meetings. Strongly encouraged for first- and second-year graduate students in German. May be taken twice for credit. Graded Satisfactory/Unsatisfactory. The fall 2019 topic is Critical Methodologies of Literature and Theory.\nPrerequisite: reading knowledge of German. Open to advanced auditors and graduate students from adjacent fields with a concentration in German. Open to undergraduates intending to apply to graduate school in German or related fields, with permission of the instructor.", 
+    "title": "Graduate Proseminar in German ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 18, 
+            "location": "WLH 112", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 20
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11061", 
+        "listings": [
+            {
+                "number": "712", 
+                "subject": "GMAN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kirk Wetters"
+    ], 
+    "long_title": "Graduate Proseminar in German Literature", 
+    "extra_info": "A"
+}

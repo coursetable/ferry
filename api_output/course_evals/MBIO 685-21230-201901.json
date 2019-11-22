@@ -1,0 +1,77 @@
+{
+    "crn_code": "21230",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            1,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0By taking this course, I think I can read/identify main points in a paper faster. ",
+            "\u00a0Through covering a range of current important topics in microbiology along with key historical experiments that drove their progression, this course served as a valuable synopsis of challenges faces as well as foundational knowledge that they are built upon or that are being redefined. I gained mechanistic knowledge of bacterial pathogenesis the ability to critically assess the evolutionary relevance of a gene(s) or virulence/survival factor. I also gained an alternative perspective of entire host-occupying microbial systems that actually contain mostly non-pathogenic organisms, and that the pathogens the exceptions despite the field focusing almost wholly on this subset. ",
+            "\u00a0I learned about how bacteria exist in their environment. "
+        ],
+        [
+            "\u00a0A strength is the speediness in which we received the required reading (as opposed to the Fall class). Another is the coding course at the end, I think it benefited a lot of the students to have exposure to a programming language. \r\n\r\nA weakness is that we did not receive much feedback. I know the midterm was added as mid-semester feedback and it helped a lot, but we write summaries weekly and kind of feel like they are sent off into an abyss. I, personally, feel like I got lazy with the summaries and didn't critique the paper as I should, because it seems like most professors don't open them/read them.\r\n\r\nA big weakness is the choice of papers by the professors. Some choose papers that they are too close to (either their lab, or their PhD lab). When students ask questions or have a discussion, the professor jumps in with the \"correct\" answer so there is no real discussion. I expect the professor to choose a paper in their field, but it shouldn't be their own/or from their PhD lab.\r\nOne professor chose a paper he didn't read (until the night before), then during discussion he said we wouldn't be going over the paper because he read it last night and realized it was too involved. The paper was already assigned and the expectation is to discuss *that* paper, so as a student who spent a lot of time pouring over the paper to understand it, I felt cheated and that I had wasted my time. \r\n\r\nAnother weakness was the timing of the final. I think this was an unexpected change, but moving the final up burdened the workload with the Virology exam and rotation talks was not ideal and if we had known ahead of time, we could have planned accordingly. ",
+            "\u00a0Strengths - collections of field leaders presenting first-hand accounts of their specialty. Twice a week format allowed time for discussion of literature that prompted critical engagement with the material.\r\n\r\nWeaknesses - some continuity issues with each subsequent lecturer not knowing exactly what the previous ones have covered. This seems to be an issue with all courses of this general format. ",
+            "\u00a0The course is strong in that it has professors teaching about what they research. The course needs improvement in that it is badly managed. We received no feedback on our weekly assignments, despite repeated requests for it from the students. The paper discussions were poorly run, and some weeks we did not even discuss the papers assigned. Discussions frequently devolved into professors lecturing on their own work or how they themselves interpreted the paper. Because of this, it was difficult to gain much from these discussions. This class has a lot of potential. However, in its current state it is falling short of expectations. I think the class could benefit greatly from having a TA and from having the course coordinator and individual professors meeting outlined teaching expectations. "
+        ],
+        [
+            "\u00a0Yes, I think overall it is a great course that requires you to read papers you may not have thought to read. ",
+            "\u00a0I would recommend it to a student with a relatively strong microbiology and molecular biology background. Otherwise, I think this would be a little advanced. ",
+            "\u00a0I would recommend this course for its content. However, the learning experience was marred by poor management. "
+        ]
+    ]
+}

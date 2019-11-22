@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "For third-year students in microeconomics, intended to guide students in the early stages of theoretical and empirical dissertation research. Emphasis on regular writing assignments and oral presentations.", 
+    "title": "Prospectus WrkshpIndustrialOrg...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 12, 
+            "location": "HLH28 B-8", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 13
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12642", 
+        "listings": [
+            {
+                "number": "606", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Prospectus WrkshpIndustrialOrg: Prospectus Wrk in IO", 
+    "extra_info": "A"
+}

@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Workshop for students doing research in development to present and discuss work.", 
+    "title": "Prospectus Workshop in Develop...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 12, 
+            "location": "HLH28 106", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 13
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12659", 
+        "listings": [
+            {
+                "number": "756", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Prospectus Workshop in Development", 
+    "extra_info": "A"
+}

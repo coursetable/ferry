@@ -1,0 +1,92 @@
+{
+    "crn_code": "20843",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            10,
+            8,
+            1
+        ],
+        [
+            1,
+            2,
+            7,
+            8,
+            3
+        ],
+        [
+            0,
+            2,
+            4,
+            11,
+            4
+        ],
+        [
+            1,
+            3,
+            7,
+            7,
+            3
+        ],
+        [
+            0,
+            1,
+            14,
+            3,
+            3
+        ],
+        [
+            0,
+            1,
+            16,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Econometric theory and models, lots of GMM, sense of what options are out there for further reading. ",
+            "\u00a0Econometrics ",
+            "\u00a0GMM - so much GMM! ",
+            "\u00a0GMM in particular ",
+            "\u00a0I developed skills that have to do with the computation of econometric models and theoretical knowledge about them. ",
+            "\u00a0Matrix algebra for metrics ",
+            "\u00a0GMM framework. Idea of bootstrap estimation. ",
+            "\u00a0I thought this course gave me an outline of common econometric tools. Following Econometrics I, this course picked up on the knowledge we learned, like the Delta method, and employed this knowledge to develop useful results. "
+        ],
+        [
+            "\u00a0Grading for midterm did not, in my opinion, reflect understanding of material, no partial credit in many parts so making minor math mistakes causes you to lose 20+ points. Also, the GMM section was a bit abstract at times, would be nice to cover more applications.  Overall though, solid overview of econometric theory, well taught, clear presentation. ",
+            "\u00a0Class was generally good.  Exams could be a bit clearer at times.  Also, it would help to get a bit more of an outline of how the topics fit together. ",
+            "\u00a0I liked the coverage of topics and the style of exam questions.\r\n\r\nI wish we had not introduced GMM right before the midterm because we weren't focusing on that material but it turned out to be very important. ",
+            "\u00a0It would be great if the prof can teach more intuition and empirical topics rather than just copying notes and proofs. ",
+            "\u00a0could have spent less time on OLS and more time on topics (GMM, time series, panel etc.) ",
+            "\u00a0Strength: It covers many topics from linear regression to non-parametric estimation. ",
+            "\u00a0More shorter practice questions on the problem sets. ",
+            "\u00a0The course was well organized ",
+            "\u00a0I suggest standardizing the coding language folks use for the empirical parts of the homework (at least per assignment). That way, we can learn the applied methods together and consistently, and, perhaps develop some intuition about the limitations and advantages of different software packages. "
+        ],
+        [
+            "\u00a0Good class for first year grad students. ",
+            "\u00a0Yes ",
+            "\u00a0Not for people looking to learn anything applied. ",
+            "\u00a0yes ",
+            "\u00a0Yes I would recommend it because of the interesting topics. ",
+            "\u00a0Yes. ",
+            "\u00a0Yes.  I thought it was a good introduction to commonly-used applied metrics techniques. "
+        ]
+    ]
+}

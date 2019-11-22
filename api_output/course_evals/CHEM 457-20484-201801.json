@@ -1,0 +1,79 @@
+{
+    "crn_code": "20484",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course provided a good review and refresher of many concepts we had seen in inorganic chemistry (point groups, d-orbital splitting, pi-donors and acceptors, etc.) We built on that knowledge and went into more detail. I think I learned the most about spectroscopy. Before I took this course, I needed IR or NMR tables to work with spectra; now, I can use character tables, MO theory, and Orgel/Tanabe-Sugarno diagrams to predict the IR, Raman, and electronic spectra of any coordination compound. ",
+            "\u00a0This course taught me the insight behind molecular orbital diagrams and character tables for symmetry point groups. It also focused a little bit on various ligand behaviors, but many of these were in the context of d-orbitals and molecular orbital diagrams. ",
+            "\u00a0how to assign point groups and construct MO diagrams ",
+            "\u00a0The most important skill that this course taught was how to use group theory to derive molecular orbital diagrams. "
+        ],
+        [
+            "\u00a0Nilay is a wonderful instructor and cares deeply about his students. He explains concepts clearly, is very helpful during office hours, and is just generally a great guy. I have learned a lot of chemistry from him, and also a good deal about life. His stories are great, too; if anything, he should tell more of them. They help me refocus on the material and I learn a lot more when he tells them.\r\n\r\nThe biggest weakness of this class is out of Nilay's control-it's somewhat of a survey course, and everyone comes in with different levels of background knowledge. The first half of the course was great, since none of us really knew representation theory or character tables and we were able to go into some depth. The second half felt a little bit shallow: we skimmed the surface of many topics.\r\n\r\nI think it would be nice if we ditched some of the topics that are mostly a rehash of orgo (parts of the unit on ligands, for instance) and focused on spectroscopy of coordination compounds. I don't think most of us really understood in depth how spectroscopy works, and it was absolutely fascinating to see spectra start to emerge from character tables and d-orbital splitting diagrams.  \r\n\r\nThe one other suggestion I would make is that Nilay post his class notes, especially before an exam. In Chem 252 it was fine that he didn't do that, since we had a textbook; but in this class (especially for the last unit, for which there were no problem sets) the lack of solid reference material made it difficult to study. ",
+            "\u00a0The strongest part of this course was the first half, where the entire first half of the class was spent building up knowledge and skills to fully learn and understand the steps behind one skill (constructing a molecular orbital diagram from scratch). The exam simply tested this skill, and learning this material felt satisfying and enlightening. The second half of the course, while still fairly good, felt more rushed and skimped on material more, feeling more like a survey course throwing examples at us. This was probably necessary, but it didn't feel as though we were learning as much as effectively. Also, many of the problem sets had problems where the answer involved some intuition we were expected to know but hadn't been taught, and it would be excruciating trying to discover this. ",
+            "\u00a0Nilay was an engaging and clear lecturer, but sometimes things got way too abstract and people got lost along the way (e.g. when talking about irreducible representations and matrix operations), which we didn't really use in the rest of the course. Therefore perhaps those could be taken out and more inorganic chemistry included earlier in the course (the last section seemed like an afterthought). ",
+            "\u00a0Learning how to derive MO diagrams but just considering geometry was very useful for understanding chemical phenomena. It was also just really cool. The section on group theory was taught clearly and these lessons were back up by well-designed problem sets. I would say that the more qualitative parts of this class felt slightly disorganized at times. When discussing ligands and electronic spectroscopy, I thought the material was sometimes too surface-level and I didn't really feel like I understood the concepts well enough to apply them to situations other than those discussed in class. Having said this, the problem sets were really well-designed throughout. They were tough but fair. They made me think hard and it was through this that I learned the most. "
+        ],
+        [
+            "\u00a0I would recommend this course. The material taught is very interesting, and it's the first time I felt like I truly understood molecular orbital diagrams and transition metal chemistry during my time here. The first half of the course is really interesting but very confusing, as you're essentially learning how to construct an MO diagram from scratch. The second half is far more scattered, focusing on breadth rather than depth, but still annoyingly covering lots of quirks about each topic. Overall, it's a good course that builds lots of intuition about transition metal chemistry, I would highly recommend it. Be warned that the way Nilay ran the course, with a term paper and presentation due in the first half of the semester, caused the workload of the class to be really lopsided towards the first half. ",
+            "\u00a0Yes. Nilay is great and I never found it a struggle to get to SCL at 9am twice a week. You learn a ton of coordination chemistry and its applications to spectroscopy, which is always useful, as well as how to construct proper MO diagrams (the organic chemists have been lying to you all along). The workload is pretty front-loaded, which is intentional, and problem sets run long but are doable. ",
+            "\u00a0If you want to learn how to use group theory to derive molecular orbitals and to predict things like IR stretches, definitely take this course. Learning how to do this was very satisfying and useful. This class also gives a good survey on transition metal chemistry. This class also has some of the better designed problem sets that I've seen for any class. They really help you learn the material and go further with your understanding. In addition to problem sets, a midterm, and a final, there is a paper with a presentation added on. These assignments take a while, but are rewarding. Nilay is very approachable and he is willing to help when needed or give feedback. Overall, I enjoyed this course and found it to be engaging. "
+        ]
+    ]
+}

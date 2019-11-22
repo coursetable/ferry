@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49984/assignments/syllabus", 
+    "requirements": "Prerequisites: high school chemistry, mathematics, and Earth science.\u00c2\u00a0Recommended preparation: G&G 110 or 205.", 
+    "description": "The origins, geologic settings, exploration, distribution, and extraction of coal, oil, and natural gas as finite Earth resources. The role of fossil fuels in the world's energy systems; environmental impacts of fossil fuels, including climate change; the transition to low-carbon energy sources.\nPrerequisites: high school chemistry, mathematics, and Earth science.\u00c2\u00a0Recommended preparation: G&G 110 or 205.", 
+    "title": "Fossil Fuels and World Energy", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "KGL 123", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11045", 
+        "listings": [
+            {
+                "number": "274", 
+                "subject": "G&G"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Oristaglio"
+    ], 
+    "long_title": "Fossil Fuels and World Energy", 
+    "extra_info": "A"
+}

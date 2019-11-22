@@ -1,0 +1,71 @@
+{
+    "crn_code": "23500",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course provided an introduction to two short Medieval genres, the Old French fable and fabliaux. \r\nStudents were invited to attend to the particularities of each genre in its own right but also to consider parallels between the two as well as their relationship to adjacent genres and traditions (animal literature, Aesop, Chaucer, etc.). "
+        ],
+        [
+            "\u00a0The course was well organized and clearly structured. At times, I would have appreciated more discussion of the different reading paradigms or theoretical approches that have been brought to bear on the fables/fabliaux, but admittedly Professor Bloch impressively surveys the extant literature in his books on the genres. "
+        ],
+        [
+            "\u00a0Yes-- Professor Bloch has written extensively on both the fables and fabliaux and manages to bring these texts to life, demonstrate their humor but also their complexity and relevance to literary studies more broadly. His deep knowledge of the genres, Old French literature, and the social/historical backdrop make this seminar a sort of master-class and I came away with a new appreciation for the fabliaux genre in particular. "
+        ]
+    ]
+}

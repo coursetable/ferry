@@ -1,0 +1,84 @@
+{
+    "crn_code": "20637",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            3
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            4
+        ],
+        [
+            0,
+            1,
+            5,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0software engineering basics. \r\ncoding styles.\r\ngroup work. ",
+            "\u00a0code ",
+            "\u00a0working in a team to develop software ",
+            "\u00a0How to cooperate ",
+            "\u00a0I gained extensive experience working in teams to develop a software engineering from start to shipping in a start-up like environment / setup. ",
+            "\u00a0Software engineering "
+        ],
+        [
+            "\u00a0The course gives a straightforward idea of what it feels like to work in a team and cooperate to finish something you can be proud of. There is so much to learn from the ones you work with.\r\nHowever, there are too many document-style tasks. Although I know it's inevitable in real life software engineering practice, I still feel it's too much. ",
+            "\u00a0project was useful, class lectures could have been more informative ",
+            "\u00a0The quiz is frustrating. ",
+            "\u00a0The course is well-structured, with timely feedback and reviews to help the team stay on track. \r\n\r\nOne way to improve is probably release the peer-review feedbacks to students after course ends so that we can reflect back and improve our team working skills. ",
+            "\u00a0Great course. "
+        ],
+        [
+            "\u00a0If you want to accomplish a project, you should choose this course, because it's pretty pushy.\r\nIf, however, you want to know basic ideas of SE, then you should probably avoid this, because this course emphasizes coding more than concepts. ",
+            "\u00a0Yes it was a good class but mostly for the project aspect. However I found the content to be a bit unorganized/dry and don't feel like I learned that much in the lectures ",
+            "\u00a0Yes, can learn Software development cycle, which is important. ",
+            "\u00a0Definitely would. This course provides a really nice opportunity for anyone who wants to gain some real software development experience using agile. It is super fun to be able to cook your cool idea to completion. (It gives a lot of sense of achievement as well! ) ",
+            "\u00a0Yes please please take the class "
+        ]
+    ]
+}

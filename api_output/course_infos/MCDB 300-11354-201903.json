@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 19
+    }, 
+    "requirements": "Prerequisites: BIOL 101 or equivalent performance on the corresponding biological sciences placement examination; one term of organic chemistry; or with permission of instructor.", 
+    "description": "An introduction to the biochemistry of animals, plants, and microorganisms, emphasizing the relations of chemical principles and structure to the evolution and regulation of living systems.\nPrerequisites: BIOL 101 or equivalent performance on the corresponding biological sciences placement examination; one term of organic chemistry; or with permission of instructor.", 
+    "title": "Biochemistry", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "OML 202", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11354", 
+        "listings": [
+            {
+                "number": "300", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Ronald Breaker", 
+        "Donald Engelman"
+    ], 
+    "long_title": "Biochemistry", 
+    "extra_info": "A"
+}

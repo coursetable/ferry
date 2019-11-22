@@ -1,0 +1,135 @@
+{
+    "crn_code": "21418",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            13,
+            14
+        ],
+        [
+            0,
+            1,
+            5,
+            7,
+            17
+        ],
+        [
+            0,
+            0,
+            4,
+            17,
+            9
+        ],
+        [
+            0,
+            1,
+            7,
+            15,
+            7
+        ],
+        [
+            0,
+            1,
+            3,
+            19,
+            7
+        ],
+        [
+            1,
+            4,
+            11,
+            12,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0First half is E&M while second half is basic quantum computing.\r\nE&M: Electrostatics, electric fields, electric potential, capacitance, gauss's law, ampere's law, lorentz force, magnetic fields, inductors, faraday induction, basic circuits, maxwell's equations, electromagnetic waves\r\nQuantum: Stern-Gerlach measurements and state collapse, qubits, bloch sphere, hilbert space, matrix operations, bra-ket notation, pauli matrices, hermitian operators, CNOT gate, bell states, quantum entanglement ",
+            "\u00a0An introduction approximately equivalent to Physics C in depth in E&M and a terrific introduction to Quantum Computing! (Note: After E&M, the professor teaches whatever is his or her specialty, so if Professor Girvin is no longer teaching this course, this review is irrelevant.) ",
+            "\u00a0While previous physics courses taught me how to approach problems mechanically, 261 gave me a much more nuanced and intuitive understanding to how fundamental electric and magnetic structures generate the phenomena from electromagnetic waves to motors. However, I learned the most from the quantum unit as, in contrast to the conceptual lessons I'd learned on my own, Prof. Girvin's approach broke down quantum computing into its constituent mechanisms and showed the power of linear algebra models to explain quantum paradoxes. ",
+            "\u00a0Through Physics with Steve Girvin, I learned how to do vector calculus, and I learned how to think through physical problems both mathematically and intuitively. Through E&M, I learned about induction and general forms for finding electric fields and potentials. I also learned a great deal about quantum mechanics and linear algebra. I have a solid basis for how complex vector spaces work and what it means to make a quantum measurement. ",
+            "\u00a0An in-depth explanation of electricity and magnetism and their major laws (and the derivations), and a brief (but fun!!) overview of parts of quantum mechanics and quantum computing. ",
+            "\u00a0The course went through E&M in the first half of the semester, and then moved on the quantum mechanics. It developed a mathematical framework to explain many quantum effects without delving into the physics of why or how those effects came about. ",
+            "\u00a0Knowledge of E&M and theoretical quantum information theory. ",
+            "\u00a0Learned a lot in this second installation of Physics 260 - E&M and quantum information and processing. Especially enjoyed the second half of the semester, which covered quantum information and processing (really cool stuff!) ",
+            "\u00a0Learned a fair amount about physics, and in particular quantum mechanics. ",
+            "\u00a0This course was great for sharpening my understanding of E&M further, but it was even better for the introduction to quantum through the lens of quantum computing. I learned a completely new realm of physics through the second half of this course, and more mathematical problem solving tools. ",
+            "\u00a0Electricity and Magnetism; Quantum Information basics; a grasp for more advanced mathematical thinking and abstract reasoning ",
+            "\u00a0I learned more about classical mechanics, and then a lot about quantum mechanics and quantum computing. ",
+            "\u00a0I gained problem solving skills, critical thinking, and an awareness of a broad range of physics ",
+            "\u00a0I learned vector calc basics and a lot of content from E&M, most of which was familiar from Physics C in 11th grade. The treatment in this class was slightly more in-depth and gave the proper* presentation of Maxwell's equations. The second half of the semester, we learned quantum physics. It was entirely new to me and I greatly enjoyed the focus on theory, ignoring more or less the historical and experimental background. Very fun. ",
+            "\u00a0I learned how to think in fundamental physics. We learned many techniques for modeling our world: Mechanics, E&M, and Quantum. The latter subject explored quantum computing as well, which was a useful and engaging to learn quantum. ",
+            "\u00a0I learned the fundamentals of electricity and magnetism, including Maxwell's Equations and their derivations. I also learned the fundamentals of quantum computing. ",
+            "\u00a0I developed the skill of making sure I understand concepts on my own because a lot of the lectures weren't that useful in actually learning the material. Also, I did learn a good amount of physics, especially quantum mechanics which was pretty interesting. ",
+            "\u00a0This course taught me how to use math to represent a variety of different physical phenomena while applying a set of assumptions about the world to produce a depiction of the different forces in the world. ",
+            "\u00a0I reviewed important topics from Electricity and Magnetism (E&M) from AP Physics and learned about quantum computing. I was able to improve my understanding of E&M by reading Griffiths and working through the problems in it. Also, I gained a better insight into how quantum computers work by reading Professor Girvin's well-written notes, which I highly recommend to anyone. ",
+            "\u00a0I learned the fundamentals of University level physics and also the basics of quantum computing. This class was wonderfully organized and a great first science class at Yale. ",
+            "\u00a0In the first half of the semester, I learned how to apply intensive vector ideas to my previous knowledge of electricity and magnetism, namely through the formalization of Maxwells equations. When we switched to quantum computing, I learned so many ideas in such a short period of time: Stern-Gerlach experiments, Hilbert spaces, hermitian matrices, unitary transformations, and all about qubits. While I was most excited to learn entirely new skills like using the IBM quantum simulator and a real understanding of quantum error correction, I also learned a lot about applying the linear algebra techniques learned in Math 230/231; in fact, doing so much quantum mechanics gave me a better understanding of linear algebra in general. Overall, I learned a lot about both interesting physics and math topics, while also learning how to take advantage of all the teaching, tutoring, and lecture resources at Yale as well. ",
+            "\u00a0We learned about E&M (kinda like AP Physics C but w/ more math/multivariable), and most excitingly, we learned about basic quantum mechanics! ",
+            "\u00a0I deepened my knowledge of electromagnetism, while learning of the wonderful world of quantum mechanics. "
+        ],
+        [
+            "\u00a0There was too much content to cover comprehensively, and the problem sets were not long enough to ensure a good understanding. The topics were however interesting and class time was mostly derivations. The exams were also easy. ",
+            "\u00a0Honestly, I think that this course is about as well taught as can be. Explanations were crisp and clear, and Professor Girvin was extremely energetic and enthusiastic. A topic as complex as QM was deconstructed in such a way that it was easily understandable for first-year students. ",
+            "\u00a0Strengths: Very useful office hours to support complex but well-organized lectures. Interesting pset questions that give more complicated mathematical examples of phenomena studied in class. Engaging subject material presented enthusiastically and clearly.\r\nPoints of improvement: Pset questions were often difficult to parse either because they were mechanically more complicated than we expected, even by peer tutors. ",
+            "\u00a0This course was strong in introducing students to a wide range of what physics has to offer. We also learned a lot of important mathematical methods for used in physics, like linear algebra and vector calculus. However, the electricity and magnetism portion of the class felt rushed, and quantum mechanics was difficult to grasp at times. Overall, the course was very strong and gave an excellent foundation for future studies in physics. ",
+            "\u00a0This is a great course; Girvin does a great job of engaging students and making the material enticing and exciting. ",
+            "\u00a0I really enjoyed this course. ",
+            "\u00a0Strengths were definitely the course notes, which followed the class content very closely and gave students ability to catch up on anything they missed or had trouble understanding. The lecture itself was kind of hard to follow sometimes though, since the derivations often seemed to appear out of nowhere without much insight as to where the professor was going. ",
+            "\u00a0The strength was the second half of the semester on quantum. I think E&M could be done even faster, to make some more room for the new material. ",
+            "\u00a0Strength: Prof Girvin, the sophisticated level of the course, the rigor and engaging nature of the material, especially the second half of the semester. Prof Girvin's notes on Quantum was also a lifesaver and extremely clear and useful.\r\nWeaknesses: sometimes lecture might not correspond exactly with what will be tested on the exam. ",
+            "\u00a0The course is interesting, but sometimes Girvin goes a little fast in class. However, the notes he posted when we started doing quantum mechanics were extremely helpful in that regard. The course is fast-paced, but you feel as though you learn a lot. ",
+            "\u00a0It was wonderful! The lectures were super engaging. ",
+            "\u00a0Honestly, special relativity was very confusing, and needs better visual aid. People can visualize spacetime, Im sure of it. But we need to be taught to, and that wasnt adequate. Everything else was taught excellently, though. ",
+            "\u00a0The strengths of this class lay in the content and level of complexity. This is a hard freshman course, but the quantum exploration at the end is incredibly worth it. However, I think sometimes the class can move a little quickly and I found myself struggling to learn (mostly E&M) concepts at home. The weakness of this course is definitely earlier on and I felt that I did not have enough preparation for doing E&M problems like were on the midterms. More example problems in class would be useful. ",
+            "\u00a0It movefs very fast, and doesn't spend much time on explanation.  Some more examples about how the information is used in the real world would be helpful ",
+            "\u00a0Strengths of the course include the depth that the material goes to and the challenging nature of the course. It was hard but you learn a good amount of higher level physics. A weakness was the lectures. Professor Girvin wasn't that great of a lecturer as in he was kind of boring and sometimes went through things without explaining everything fully which made certain concepts confusing. I think if he just started off every lecture with a roadmap of what we were doing that day, it would've been helpful. ",
+            "\u00a0The strengths included the teaching and the office number of extra help session including office hours. The only thing I would change would be to spend less time on mechanics as some of it felt like review. ",
+            "\u00a0The biggest strength of this course is the well-written notes - if you don't understand a concept, you can always refer to Griffiths or Professor Girvin's notes for help. \r\n\r\nThis course could have been improved by going over more problems in class rather than simply discussing theory. I had to do a majority of the problem-hunting on my own, and while this was very instructive, it would have helped if the instructor had gone over problems in class. ",
+            "\u00a0This course could be improved with more course/lecture notes. The quantum section was great because of the included notes, and those notes would really assist the mechanics and E and M portions. ",
+            "\u00a0The strengths of this class included the very fun and engaging lectures, the interesting topics covered, the generally well-designed problem sets (especially in the quantum section), and the reasonable exams. The main weaknesses were the sometimes confusing derivations in lecture (mostly E&M) and the unclear wording/objectives in some of the pset problems. Honestly, the coursewhile good beforeimproved tremendously once we switched to quantum, when it quickly became my favorite class. So if some of the excitement and organization of the quantum section could be brought to the E&M section, that would make the course even more amazing (or just teach a full intro to quantum computing). ",
+            "\u00a0Quantum was super interesting and super fun. If we could spend even more time on it, that'd be great. I like the way Professor Girvin taught it too, with not too much math, so it felt like anyone could understand it. I also felt more free to ask questions in class because there was no assumption that I should already know about it from prior knowledge (since no one has prior knowledge on that stuff). But lectures in E&M (and also mechanics in 260) could sometimes be kind of boring, with Professor Girvin just writing all these complicated formulas on the board and us writing them down without understanding.  A big strength of this course is professor Girvin's office hours - definitely go to them, there are usually only 2-3 people there and they're super helpful. The difficulty of this course was just right - not easy, definitely, but not impossibly hard. It was challenging at a good level. "
+        ],
+        [
+            "\u00a0If you are interested in theoretical physics and enjoy derivations, than yes. If you want a more practical, broad understanding (that may be more comprehensive), PHYS 181 or 201 may be better. ",
+            "\u00a0YES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Way too many people dropped the course after first semester. Anyone who took 260 should without a doubt take 261. This is not only a great learning experience, but also an experience that renews one's love of science. Furthermore, Professor Girvin's teaching is much better in E&M and QM, topics about which he genuinely cares, than classical mechanics (which, for reference, I still believe he taught very well). ",
+            "\u00a0Lol if you took 260, I will say just go ahead and take this too ",
+            "\u00a0If the student has enough background knowledge to follow the lectures, then absolutely. This is an excellent introduction to quantum mechanics in a practical context, and our unit of electromagnetism likewise complemented previous studies well while providing novel and insightful material. ",
+            "\u00a0Yes, I would recommend this class to another student. The content is advanced but accessible, and Professor Girvin makes the class a fun experience. ",
+            "\u00a0If you really like physics and are willing to put in time to understanding it, then yes. I learned a lot from this course and enjoyed it a lot (especially quantum - it's so cool to learn quantum from Girvin!) but I had to dedicate a lot of time outside of class to feel like I had a good understanding of it. ",
+            "\u00a0Yes!! Professor Girvin is amazing and kind, and the quantum information/processing/computing material covered in this class is so cool. For this class, I would recommend taking it along with Math 231 or at least have a relatively strong background in multivariable calculus and linear algebra, so you wont get so caught up on some of the math technicalities and enjoy the underlying physics implications. ",
+            "\u00a0If you are interested in majoring in physics or enjoy physics, take the course. You will probably find out whether it's something you want to pursue - I realized that I am not as interested in it as expected, but other classmates enjoyed the content a lot. ",
+            "\u00a0Yes. This was a great introductory course to refresh some of the physics I had learned in high school and then offer a quick introduction into an entirely new field. ",
+            "\u00a0Yes, it will teach you another way of looking at the world and the counterintuitive nature of reality in a rigorous way. Quantum Information is also something that I've never done before and eager to explore further. ",
+            "\u00a0Perhaps. Only if you are a physics major I think. Otherwise, lower level courses will be better for you. The class is interesting, but hard to justify otherwise. ",
+            "\u00a0Yes! It was such a great course that really foster a love for physics. ",
+            "\u00a0Hell yeah, physics is awesome.& ",
+            "\u00a0I would recommend this course (assuming Professor Girvin were teaching it) to anyone interested in multivariable calculus-based E&M and the basics of quantum computing. Getting to see Girvin lecture about area of expertise was awesome. However, if you are are looking for a more lax second semester of intro to physics, do 201 instead. Also, the quantum part will be easier if you have had some exposure to linear algebra. ",
+            "\u00a0Very much so, if taught by the same professor. Girvin chose to focus heavily on quantum, which ended up being the redeeming feature of my experience for both semesters. The course outline does not call for any treatment of quantum, and it's my opinion that someone who took Physics C in high school and performed well would be fairly bored and frustrated, as I often was, with the standard fare in this course ",
+            "\u00a0I would recommend this class to anyone with a strong physics background already. It would be very difficult if one has not taken calculus-based physics before taking the course. Otherwise, the class is rigorous and inspirational. You will leave the class feeling like a better student and thinker guaranteed. ",
+            "\u00a0I would. It is a lot of work, but the community that grew in the class, between working on PSET's together and laughing at Professor Girvin's physics-themed jokes was really worth it. Professor Girvin is brilliant, and a genuinely good guy to learn from. ",
+            "\u00a0Yes I would recommend this course to a potential physics major or someone interested in a higher level physics class. If you feel like you have a very solid physics background, then you should take this course. It is challenging and if you like that then that's good, but just know that the lectures won't be that useful. ",
+            "\u00a0If you have the background to take this course and you are looking to take physics, this course is by far the best and definitely worth the challenge. ",
+            "\u00a0I would recommend this course to another student who is interested in learning the basics of quantum computation and wants to interact with other prospective physics majors. I would not, however, recommend this course to another student who has a high background in physics and is interested in delving deeply into the material. ",
+            "\u00a0I would recommend this course to any student who had the requisite background knowledge (2 years of high school physics). The course was enjoyable, engaging, and let students get a real feel for what future physics classes will be like. ",
+            "\u00a0I would recommend this course to students with a very strong background in physics and math (calculus/linear algebra) who are interested in learning advanced physics. I would especially recommend it to those interested in quantum mechanics and quantum computing, as that half of the course is truly amazing. It is such a fun and unique introduction that would help someone gain background knowledge to approach quantum computing from a physics, electrical engineering, or computer science side in the future. However, if you want a more applied class or do not have strong physics knowledge, I would not recommend this class. ",
+            "\u00a0Yes, if you're possibly interested in studying physics! Don't be afraid of the number of the class. The workload is really manageable, especially with the peer tutors who are supper duper helpful. I wouldn't say every lecture was super interesting, but you can't say that about any intro physics course. I'd say for being an intro course, this was a pretty good one, and Professor Girvin is a great professor, so take this course, unless you're really not interested in the material. ",
+            "\u00a0Yes! I discovered a passion for quantum mechanics all thanks to this course. "
+        ]
+    ]
+}

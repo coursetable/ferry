@@ -1,0 +1,75 @@
+{
+    "crn_code": "30082",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained a whole plethora of knowledge and insights taking this course. Not only did we learn the fundamentals of cell biology, most of the topics were connected with real life examples that connects to things we knew, or new ideas we had just learned about. ",
+            "\u00a0Very detailed content with interactive teaching. "
+        ],
+        [
+            "\u00a0Good material and good teaching ",
+            "\u00a0This course was very informational and the information was always clearly explained, it not the Professor was always more than helpful and accommodating. ",
+            "\u00a0Strength: very good notes "
+        ],
+        [
+            "\u00a0Yes, it was very engaging and provided an opportunity to study at a very prestigious university. ",
+            "\u00a0Yes. It is a good chance to know more about this topic. "
+        ]
+    ]
+}

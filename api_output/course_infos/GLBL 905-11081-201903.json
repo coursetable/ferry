@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50037/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course covers the main theories and problems in international security. After analyzing the main theoretical traditions devoted to understanding international security and world order, we discuss a variety of topics such as: the causes of war; the role of nuclear weapons and the problems with their proliferation; coercion, signaling, and crisis bargaining; military effectiveness; and U.S. grand strategy. Students acquire broad familiarity with the canonical literature in these fields, understand how to apply scholarship to analyze contemporary international security problems, and learn to identify opportunities for new research. The course is designed for master\u00e2\u20ac\u2122s and Ph.D. students who plan to pursue either policy or scholarly work in international security. Seminar sessions may feature outside guest scholars. Besides the weekly seminar sessions, students are strongly encouraged to attend weekly reading group sessions in which we dissect recent scholarship on the same topics for which we have read the canonical works.", 
+    "title": "International Security", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "RKZ 301", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11081", 
+        "listings": [
+            {
+                "number": "905", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Nuno Monteiro"
+    ], 
+    "long_title": "International Security", 
+    "extra_info": "A"
+}

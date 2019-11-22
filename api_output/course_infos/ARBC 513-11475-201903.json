@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48999/assignments/syllabus", 
+    "requirements": "Conducted in Arabic.", 
+    "description": "An advanced course in Arabic language. The main objective is to offer a comprehensive introduction to selected original writings of some of the most influential leaders, politicians, and scholars who have shaped contemporary intellectual trends in political theory/philosophy in the Arab world.\nConducted in Arabic.", 
+    "title": "Modern Arabic Political Thought", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "YK220 003", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11475", 
+        "listings": [
+            {
+                "number": "513", 
+                "subject": "ARBC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Sarab Al Ani"
+    ], 
+    "long_title": "Modern Arabic Political Thought", 
+    "extra_info": "A"
+}

@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "One term of original research in an area relevant to ecology or evolutionary biology. This may involve, for example, laboratory work, fieldwork, or mathematical or computer modeling. Students may also work in areas related to environmental biology such as policy, economics, or ethics. The research project may not be a review of relevant literature but must be original. In all cases students must have a faculty sponsor who oversees the research and is responsible for the rigor of the project. Students are expected to spend ten hours per week on their research projects. Using the form available from the office of undergraduate studies or from the Canvas, students must submit a research proposal that has been approved by the faculty sponsor to the director of undergraduate studies, preferably during the term preceding the research. Proposals are due no later than the first day of the second week of the term in which the student enrolls in the course. The final research paper is due in the hands of the director of undergraduate studies by the last day of reading period in the term of enrollment.", 
+    "title": "Research", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10827", 
+        "listings": [
+            {
+                "number": "474", 
+                "subject": "E&EB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Marta Wells"
+    ], 
+    "long_title": "Research", 
+    "extra_info": "A"
+}

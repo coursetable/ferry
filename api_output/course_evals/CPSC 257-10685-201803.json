@@ -1,0 +1,83 @@
+{
+    "crn_code": "10685",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            7,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            4
+        ],
+        [
+            0,
+            1,
+            4,
+            2,
+            1
+        ],
+        [
+            0,
+            2,
+            4,
+            1,
+            1
+        ],
+        [
+            1,
+            3,
+            4,
+            0,
+            0
+        ],
+        [
+            2,
+            5,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned so much about security! Everything from cryptography, protocols, and software applications. ",
+            "\u00a0This course gives a very good introduction into the theory and some specifics of crypto. ",
+            "\u00a0I learned about the basics of encryption and networks. ",
+            "\u00a0We learned a lot of information. It was a good survey course into the many different aspects of internet security, and we covered more topics than I expected. We went from cryptography to malware, and got to implement some ciphers for problem sets. ",
+            "\u00a0Really cool guest speakers "
+        ],
+        [
+            "\u00a0Love the guest speakers. material is interesting and well structured ",
+            "\u00a0The course does a good job of introducing several interesting topics. ",
+            "\u00a0Cover less! We got such a surface view of so many things which is great, but when it came time for the final exam there was just so much content. Or, cover the same amount of info but test on less for the final. The midterm was very fair but the final was unexpected. We were asked to provide info on things we didnt cover in class, and ultimately the exam felt unfair. I did like the scope of the course, but when it came down to it, it felt like there was a lot of info on a great deal of topics that didnt quite tie in together. The speakers were my favorite part - Slade did a great job bringing in interesting people (former Deputy Director of NSA, lawyer from Microsoft in the Digital Crimes Unit) and we got the chance to have a small dinner with them via lottery, which was really cool. ",
+            "\u00a0Going to class is just reading off the online PowerPoint so people didnt really go "
+        ],
+        [
+            "\u00a0Yes! Super interesting material you wont find in other classes. ",
+            "\u00a0Absolutely, Professor Slade is a great teacher. Also there are a total of 5 psets and two exams. There is a decent amount of material to study for the exams but overall a low workload course. ",
+            "\u00a0This can be a tough class for some to validate taking since it doesn't even count for the CS major.  Nonetheless, it provides you with a newfound appreciation of how security is surprisingly complex, potentially effective, and ultimately useless in the face of simple human errors.  The class does not have a tremendous workload and is worthwhile in the INCREDIBLE speakers Slade brings in.  If meeting the former Deputy Director of the NSA and the Director of Microsoft's Cyber Crime Unit in seminar (10 student) settings aren't enough to entice you, maybe meeting Yale's own Chief of Information Security (and his funny anecdotes) or all expenses paid dinners to Mory's and the Heirloom will change your mind. ",
+            "\u00a0If you want to get a good overview of crypto, internet security and protocols, general information security, and a bit about hardware and software then take it. If youre expecting a deep dive into the inner workings of ciphers and IPSec, I would not. This course is a survey of many different topics, and you could honestly read the textbook online and learn all the info. But Slade is great and the speakers are really awesome, so if youre willing to go to lecture (it was a prettt small crowd who shows up, so lecture was interactive) then take it. If you credit/D it you honestly may not get as much out of it as you would if you were taking it for a grade and the problem sets are interesting and a good way to learn info, so I would take it for a grade. ",
+            "\u00a0I really liked it and loved slade ",
+            "\u00a0Totally! This is a really exciting field, and Slade, while a bit dry at times, gives you the breakdown of information security over the past fifty years. It's essentially an intro class, but you won't be disappointed if you do the readings and get to know Slade. He's quite amusing, and will bring in a bunch of speakers, so try to invest in the course, and you might just fall in love with the content. "
+        ]
+    ]
+}

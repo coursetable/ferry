@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50455/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Examination of the excitability of the nerve cell membrane as a starting point for the study of molecular, cellular, and intracellular mechanisms underlying the generation and control of behavior.", 
+    "title": "Neurobiology", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WTS A51", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12056", 
+        "listings": [
+            {
+                "number": "720", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Haig Keshishian", 
+        "Paul Forscher"
+    ], 
+    "long_title": "Neurobiology", 
+    "extra_info": "A"
+}

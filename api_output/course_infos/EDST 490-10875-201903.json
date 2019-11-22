@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: EDST 110.", 
+    "description": "Independent research under faculty direction, involving research, policy or practice resulting in a final capstone paper. This course is open to Education Studies Scholars who are completing their capstone, in lieu of taking EDST 400 or EDST 410. To register for this course, students must submit a written plan of study approved by a faculty mentor to the Director of Undergraduate Study no later than the end of registration period in the term in which the course is to be taken. The course meets biweekly (every two weeks), beginning in the first week of the term.\nPrerequisite: EDST 110.", 
+    "title": "Senior Essay Independent Study", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10875", 
+        "listings": [
+            {
+                "number": "490", 
+                "subject": "EDST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Talya Zemach-Bersin"
+    ], 
+    "long_title": "Senior Essay Independent Study", 
+    "extra_info": "A"
+}

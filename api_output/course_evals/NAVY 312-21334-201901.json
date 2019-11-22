@@ -1,0 +1,77 @@
+{
+    "crn_code": "21334",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            3
+        ],
+        [
+            1,
+            5,
+            1,
+            0,
+            0
+        ],
+        [
+            5,
+            2,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot of useful information, especially in preparation for my future career. ",
+            "\u00a0Basics of RADAR, SONAR, electronic warfare and other systems specifics as they relate to naval operations. ",
+            "\u00a0We talked about various types of weapons systems used by the US Navy. Overall the course covered the primary content you would expect - radar, sonar, missiles, torpedos, jamming, cyber, etc. "
+        ],
+        [
+            "\u00a0I thought this course was well taught, and although they were early, the lectures were engaging. With this topic, there's a vast depth of information, but the course did well in focusing on key facts and takeaways. ",
+            "\u00a0Very straightforward and clear what we needed to know. Nothing really significant needs to be improved. ",
+            "\u00a0I think the greatest strength of the course was the topics covered. The modern technology used by warfighting communities is very interesting and the class covers it at a reasonable level for the students to understand. The tests were all very reasonable and there weren't a bunch of curveball questions or surprises. Overall the class was pretty easygoing and stress-free while still hitting all of the key concepts.\r\n\r\nMy one suggestion would be for there to be more in class engagement. Instead of just sitting through lectures it would be nice if the students were given real life scenarios and asked which weapon systems they would employ for different situations. If we discussed more of the big picture as to how the US's procurement of particular types of weapons systems fit into the larger context of national strategy then I think that would have given the course another level of relevance and made it more interesting. "
+        ],
+        [
+            "\u00a0Yes. Actually super interesting for anyone (some topics more than other obviously) but generally pretty cool content. ",
+            "\u00a0Definitely! If you're interested in the subject matter it's a good time. ",
+            "\u00a0This is a course for Naval ROTC students and is probably the best out of the 7-8 courses we are required to take. "
+        ]
+    ]
+}

@@ -1,0 +1,113 @@
+{
+    "crn_code": "23281",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            10,
+            1
+        ],
+        [
+            1,
+            1,
+            3,
+            9,
+            1
+        ],
+        [
+            1,
+            2,
+            2,
+            8,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            10,
+            1
+        ],
+        [
+            0,
+            0,
+            4,
+            10,
+            0
+        ],
+        [
+            1,
+            1,
+            4,
+            7,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0IO, LCA being used to evaluate carbon footprint. I also learned a lot of MATLAB ",
+            "\u00a0Learning how to use Input-output model\r\nUsing Matlab to calculate carbon footprints ",
+            "\u00a0I'm not sure I ended up with any new skill, aside from learning some codes on matlab, which I'm never going to use again in my life. ",
+            "\u00a0Working understanding of environmentally-extended I/O; basic proficiency in MatLab ",
+            "\u00a0Concepts about carbon footprints, the use of Matlab and different skills such as presentation and analysis. ",
+            "\u00a0Matlab technical ability. Input-output table analysis. Understanding of Scope 1, 2 and 3 emissions in a supply chain ",
+            "\u00a0Matlab, analysis of I/O tables, a rigorous approach to carbon accounting ",
+            "\u00a0Class provided an introduction into how to use Matlab software to conduct carbon footprint accounting and analysis, as well as a background of the theory behind carbon footprinting. ",
+            "\u00a0Understanding of input-output analysis for carbon footprinting, understanding of literature on carbon footprinting, Matlab. ",
+            "\u00a0Understanding of carbon footprint modelling and analysis techniques; practice with carbon footprint modelling and analysis. I also got a better understanding of how carbon footprinting can be used in different situations, and the type of questions that can be answered using this tool. ",
+            "\u00a0Matlab, input-output analysis, quite a bit about the impacts of economic systems on the environment and potential mitigations. "
+        ],
+        [
+            "\u00a0Beyond my expectation ",
+            "\u00a0Very well ",
+            "\u00a0This course helps me to form deeper understanding on different IO models and the practice part with Matlab is  really good! ",
+            "\u00a0Not at all. I'm terribly disappointed about this class. We only focused on macroeconomic models and extremely high level carbon footprint analysis that are not translatable to any other country aside from the OECD countries, China and India. We had only two lectures on organizations and buildings' carbon footprint, but we didn't learn how to calculate their carbon footprint nor had any activity on them, which was the main reason I joined the class. ",
+            "\u00a0While the class wasn't always what I wished it was along the way, I finished it with skills I hoped to develop when I signed up for the class. ",
+            "\u00a0I learned more than I expected before the class. ",
+            "\u00a0Became more proficient in technical ability in Matlab than seemed possible going in ",
+            "\u00a0I think it was much more technical and focused on one way of doing things (manipulating tables in Matlab) than I had expected. I was hoping to gain more different kinds of skills. ",
+            "\u00a0Medium. I expected a much stronger focus on practical skills in terms of implementing carbon footprinting analysis, but left feeling like I was still fumbling around with the basics of the software, despite feeling like I more or less understood the theory. ",
+            "\u00a0Lecture was very interesting and I have a good grasp of how academics are applying IO for carbon footprinting I'm less competent with Matlab than I expected. ",
+            "\u00a0Overall, the experience from class was relatively well aligned with expectations. One aspect that was not aligned with my expectations was that I expected to learn more coding skills from the class and also more advanced forms of analysis (skills like STIRPAT) from the class. "
+        ],
+        [
+            "\u00a0The computer classes are quite helpful. ",
+            "\u00a0The course was excellent in teaching a concept or premise, and cementing the knowledge with a relevant assignment immediately.\r\nMight have helped if I had discussed problem sets from the start with others, though thats my bad. ",
+            "\u00a0Strength: theory combining practice\r\nWeakness: / ",
+            "\u00a0The main weakness of the class was the poor quality in the delivery of the lectures. Professor Hertwich was not prepared for the classes and rushed through the slides without giving any background information and simply showing a lot of formulas that were incomprehensible and unrealistic to even attempt to explain in 10 seconds per slide, without even including the reference of what each formula/letter meant in the same slide.\r\nIn addition, the lectures on MatLab had the same drawbacks, as the professor would be writing the codes (arriving to the correct formula after several attempts, showing that he didn't prepare for the class) at the same time that he would be explaining super fast what he was trying to do, with many codes being completely new to the class and he not explaining what they meant nor what they were intending to do. Imagine trying to type a code on your computer, understand what the new code means, understand what the professor is intending to do, and rushing to the next code with lacking explanation, all at same time. ",
+            "\u00a0The structure of the lectures felt a little arbitrary at times; it was hard to suss out conceptual relationships both within and between lectures. A higher level view may have helped to organize the information and communicate the significance of particular subjects that we encountered along the way. ",
+            "\u00a0Great way to learn how to use Matlab for analysis. However, there are some big jumps in difficulties between some homework. ",
+            "\u00a0I ended up learning a lot, but many of the tutorials were not very well organized and frankly misleading, as the prof would sometimes himself get confused in the middle of showing something. I think it wouldn't take too much work to streamline the lectures--the confusing parts that have to be edited out mid-class are what makes learning the most difficult. ",
+            "\u00a0The course should be more focused on practical applications, with more time for students to work with the professor and teaching assistant to learn the skills taught in the class. My questions were rarely answered in office answers and I fumbled around on the homeworks without feeling like I learned anything. ",
+            "\u00a0Strengths: lectures, project. Weaknesses: lab instruction (learning Matlab), not enough support for HW. ",
+            "\u00a0The class was well-organized and quite well-structured for learning. 1 lecture and 1 lab session a week was good for learning concepts and theories and subsequently applying those concepts and theories. "
+        ],
+        [
+            "\u00a0Edgar just left... Sorry for you guys ",
+            "\u00a0Keep up with the assignments and classes since day 1 and it should be a fun learning experience. Also make full use of office hours! ",
+            "\u00a0Matlab part is not very difficult and if you want to learn how to use IO model, you should take this course. ",
+            "\u00a0I was terribly disappointed with this class and wouldn't recommend it to anyone. The amount of work it required per week was extremely high for the very lacking lectures, and you will only ever use again the teachings of this class if you work on academia or research about whole-country economies carbon footprint calculations. This class won't help you to calculate carbon footprints of anything smaller than that--smaller products, buildings, organizations. ",
+            "\u00a0Learn some MatLab and get a handle on the basic vocabulary of input/output analysis beforehand--this class won't hold your hand through introductory material; the language of the assignments is largely inscrutable so don't be shy about asking for clarification on every point ",
+            "\u00a0Do not miss any lecture or lab sections and go to office hour for homework helps. ",
+            "\u00a0Take it for sure for a set of specific skills, but know in advance that you will be doing IO analysis in Matlab basically the whole time. ",
+            "\u00a0Start homeworks early and work with friends, because the teaching assistant might not actually be willing to help you. ",
+            "\u00a0Difficult class. Take for understanding of carbon footprint analaysis, not for picking up software skills. ",
+            "\u00a0It is a useful course that you should definitely take if you are interested in the topic! I believe it would be useful for the working world as well, especially if you are working in consulting related/energy related roles. "
+        ]
+    ]
+}

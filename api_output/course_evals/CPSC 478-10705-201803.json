@@ -1,0 +1,97 @@
+{
+    "crn_code": "10705",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            9,
+            1
+        ],
+        [
+            0,
+            2,
+            1,
+            7,
+            2
+        ],
+        [
+            0,
+            2,
+            1,
+            5,
+            4
+        ],
+        [
+            1,
+            2,
+            1,
+            6,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            7,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            5
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course is an introduction to the field of computer graphics. I learned a lot about ray tracing and producing lighting effects and colors and textures. ",
+            "\u00a0As advertised. I learned the basics of how computer graphics works. ",
+            "\u00a0You learn the fundamentals of computer graphics, including image processing, rendering, ray tracing, and more... and you get to implement them! All the problem sets are done in JavaScript and HTML, so you also learn how to use those languages. It is a very comprehensive course and you cover many areas in computer graphics, and Professor Rushmeier also gets into more advanced topics towards the end of the semester. There's also a decent amount of linear algebra/some calculus involved so even though there are no math pre-requisites it would be good to be familiar with them. ",
+            "\u00a0Lots of super cool fundamentals on graphics. You learn about ray tracing and everything in the rendering pipeline. ",
+            "\u00a0This course gives a good survey in basic topics in computer graphics, from ray-tracing to z-buffer rendering to data structures for graphics. The problem sets are all in javascript, with some mathematical questions. I felt like I left with a good handle on the basics of the field and was prepared to go more in depth. ",
+            "\u00a0I went from having essentially zero knowledge about how games or animated movies are made, to possessing a decent understanding of the fundamentals of computer graphics, and gaining the ability to create some rudimentary graphics. ",
+            "\u00a0This class served as an introduction to the world of computer graphics, and gave an overview of current topics while giving students experience with ray-tracing and Web-GL. ",
+            "\u00a0It acts as an introduction to graphics, and explores the rendering and rasterization process. Topics include but are not limited to: ray casting, depth buffers, meshes, lighting models, and 3D transformations using homogeneous coordinates. "
+        ],
+        [
+            "\u00a0The course is well organized and the workload is manageable (got a little hectic at the end with a final, a pset, and the final project). I also was really interested in the material and it was very cool when the CEO of Blue Sky Animation came to talk to us. ",
+            "\u00a0This course should not be allowed to run without a TF or a ULA. It is deceivingly difficult and had even the best CS majors tearing their hair out. ",
+            "\u00a0THIS CLASS NEEDS A TF!!! There are no math prereqs, but there is a ton of math involved throughout the course, and it often isn't easy. Office hours with Prof. Rushmeier are once a week during a time that I was never free, and who's really going to schedule special meetings with their professor every week (the other option for help that was made available)? A TF would've saved me so much stress. Overall, the lack of support was such that I felt like I barely had my head above water the entire class, and towards the end I straight up went under. The lectures are complex and fast, and there's no pretense of any individual attention. Another big part of the misery that was this course is the 9AM meeting time. I went to lecture much more than not, and yet I often just could not muster the brain power to stay on top of what was happening. Psets sometimes took 25 hours. ",
+            "\u00a0The lectures and problem sets work really well together to teach you computer graphics concepts and walk you through implementing them yourself. Lecture is at 9 am which is sometimes hard, but her slides are really good and clear. ",
+            "\u00a0There are a lot of assignments and two long exams and a final project. It was a lot of work! The material is all quite fascinating though. ",
+            "\u00a0The biggest weakness of this course is that it's offered at 9am, which unfortunately makes it easy to not come to lecture. While lecture slides are posted online, they're not organized particularly well, or very clear on their own, and going to lecture is helpful. ",
+            "\u00a0The assignments for the course were generally well designed and managed to cover a number of different topics. It was fun to get some hands on experience creating some relatively cool visuals. This is also one of the smaller CS electives, so it is probably one of a handful in which the professor will actually know your name. The lectures were informative, but not the most engaging. Holly is extremely accommodating and helpful, but TAs could definitely be hired - I'm not one to usually seek help from TAs in other CS classes, but the difficulty of debugging images in JavaScript, and the uniqueness of the material makes it hard to solve certain problems without help. Linear algebra could also be advertised as a pre-requisite, since I felt there was quite a wide gulf in mathematical backgrounds of the students who took this course. Lastly, depending on how many other final papers/exams you have, the final project can either be extremely fun or morph into a huge burden. ",
+            "\u00a0- The material was very interesting!\r\n- Slides could be more structured\r\n- Prof Rushmeier was very helpful and friendly! It's clear she cares about her students. ",
+            "\u00a0This course was well-taught by someone who is an expert in the field. The problem sets were challenging and engaging, and helped solidify concepts taught in the classroom. The curricula was also well-chosen, as I walked away feeling as though I had been given a good base from which to explore topics in computer graphics further.\r\n\r\nThe teaching materials themselves could use an update; Professor Rushmeier is using PowerPoint slides that you can tell have been in use for some years, and some of the slides have missing symbols and formulas. This class is also in desperate need of a TA; although Prof. Rushmeier was great about holding office hours and allowing students to set up appointments to go over questions, it would serve the course well to have someone to field the lower-level questions and help students get a hold of what she wants for some of the more challenging problems. ",
+            "\u00a0Students come away having learned a lot of new material.\r\n\r\nThe material on the tests does not relate closely to the assignments. The tests include concepts and vocabulary introduced in lecture but never applied personally. This is a result of the sheer breadth of material covered in the course, but can catch students off guard. "
+        ],
+        [
+            "\u00a0You definitely need a programming background for this class, but it is one of the better computer science courses at Yale. If you're interested in graphics and animation you will enjoy the course, it's really satisfying to create cool images from just pure Javascript (pure math kind of), especially if you choose the ray tracing final project. ",
+            "\u00a0Unless it looks like they can secure ULAs or TFs to help you through the psets, do not take this. ",
+            "\u00a0Take it if you're super self-motivated. ",
+            "\u00a0Yes, the material is both interesting and practical.  Computer graphics is cool!  Just be aware that it is a decent amount of work.  The problem sets are regular and time-consuming, although they are comprehensive and do a good job of ensuring that you actually learn the lecture material, and are sometimes kind of fun.  The two exams were challenging, and the final project was fun and fulfilling.  If it remains a 9am, make an effort to go to class, even if it's hard!  It will make studying for the tests easier.  For people looking to do the BS/MS, or grad students, note that unlike many 500-level classes, the 578 version of computer graphics is significantly more work than the 478 version every single problem set has additional 578 questions, and the exams themselves have additional 578-only questions, even though the time limit for the exam is the same.  The final project is also expected to be more substantial for 578 students.  As an undergrad going for the BS/MS, this made the class a lot more work for me than it would have been otherwise. ",
+            "\u00a0Yes! If you are interested in computer graphics or like art or like video games or like animated movies then this class provides a lot of insight into how those things are made. The problem sets are challenging but fun when you get them done. I feel like you would only really enjoy this course if you were actually interested in computer graphics because it is not very applicable in other ways. ",
+            "\u00a0Take it if you're generally curious about how the heck we've made graphics work so seamlessly. It's pretty wild stuff. If you want to use Maya or Blender and absolutely don't want to do any math at all, don't take it. ",
+            "\u00a0I would certainly recommend this course to any computer science student. The class is a lot of work, as there were 8 problem sets, 2 midterms, and a final project this semester, but the course offers a very comprehensive look at topics in computer graphics, and I left feeling prepared to move on to advanced topics (and apply to internships at animation studios). I love animation and art, and found the problem sets, especially the ray tracing ones, extremely satisfying to complete. It's always fun to see the result of a problem set, I'd highly recommend this course. ",
+            "\u00a0If the idea of rendering interesting visuals or 'replicating' real life in code excites you, then definitely. However, note that actually coding these visuals takes a non-trivial amount of work, requires a solid grasp of matrix multiplications/transformations and high-school geometry, and a fair bit of perseverance. Ultimately, how much you get out of this course depends on how much work you put in, since graphics is a huge field and there's a ton of material that is only covered briefly but can be courses in their own right. ",
+            "\u00a0If you want a hard (but not super hard) CS class w/ interesting material and a professor who cares about teaching, take this class! Downsides are only that a) it's 9am :( and b) the slides are disorganized ",
+            "\u00a0I highly recommend this course as it is a unique and challenging CS elective which allows you to gain insight into the fascinating world of graphics. \r\n\r\nThis course has a heavy work load, but in the end you are rewarded with a wealth and depth of knowledge taught by one of the leading experts in her field. ",
+            "\u00a0I would recommend this class. The material is interesting, but it can make use of obscure functions and libraries that create a steep learning curve to a programmer new to the subject. "
+        ]
+    ]
+}

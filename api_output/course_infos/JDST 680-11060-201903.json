@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50070/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Careful analysis of central texts in Benjamin\u2019s oeuvre in the context of his philosophical, political, and literary reading.", 
+    "title": "Walter Benjamin\u2019s Critical The...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WLH 203", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 18
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11060", 
+        "listings": [
+            {
+                "number": "680", 
+                "subject": "JDST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Paul North"
+    ], 
+    "long_title": "Walter Benjamin\u2019s Critical Theory", 
+    "extra_info": "A"
+}

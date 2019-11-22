@@ -1,0 +1,90 @@
+{
+    "crn_code": "12215",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            6,
+            7,
+            4
+        ],
+        [
+            1,
+            0,
+            5,
+            7,
+            4
+        ],
+        [
+            1,
+            0,
+            3,
+            5,
+            8
+        ],
+        [
+            1,
+            0,
+            2,
+            10,
+            4
+        ],
+        [
+            0,
+            3,
+            11,
+            2,
+            1
+        ],
+        [
+            0,
+            5,
+            9,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0- Useful programming techniques.\r\n- Design principles for \"good\" programs.\r\n- Abundant experience with C++ programming. ",
+            "\u00a0Objected-oriented concepts, C++ ",
+            "\u00a0OOD concepts ",
+            "\u00a0N/A ",
+            "\u00a0c++ ",
+            "\u00a0OOP in C++ "
+        ],
+        [
+            "\u00a0The course is well-organized and informative. The instructor offers detailed notes and instructions for reviewing. The course assignments cover many important topics in the class and enhances understanding of these concepts. However, sometimes the assignments do not synchronize very well with the progress of the lecture and can be improved. ",
+            "\u00a0The rules of the assignments are too strict. ",
+            "\u00a0The professor spent a lot of time preparing the course content. It's well designed. I think in general it's very good and there's no obvious weakness. ",
+            "\u00a0N/A ",
+            "\u00a0The course is very organized and you can learn things through assignments.\r\n\r\nThe lectures can be more engaging. ",
+            "\u00a0good, slides are clear and organized. professor is very engaged ",
+            "\u00a0The assignments helped a lot for understanding the material. ",
+            "\u00a0Strengths : Learned a lot of C++ semantics\r\nWeakness : The assignments could have been more flexible instead of telling us what exactly to do. It would be better if the professor could leave more design issues for us. "
+        ],
+        [
+            "\u00a0Yes. It is a fundamental course for computer programming and also provides much useful programming experience. ",
+            "\u00a0Yes ",
+            "\u00a0Yes. This course teaches me how to use C++ in a correct manner. In addition, I get a chance to practice it, it's worthwhile. ",
+            "\u00a0N/A ",
+            "\u00a0Yes. ",
+            "\u00a0yes. good to learn c++ in depth ",
+            "\u00a0Yes, because the material of the course is quite helpful for someone who wants to be strong in programming and c++ is absolutely an interesting programming language. ",
+            "\u00a0If you haven't learned C++ before and want to learn some C++, this course is a good choice. There are some unique features in C++ that are not present in other programming languages.\r\nIf you simply want to learn OOP, I would say that this course, especially the homework, is more about C++ itself than about OOP. "
+        ]
+    ]
+}

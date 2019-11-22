@@ -1,0 +1,75 @@
+{
+    "crn_code": "11609",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0good and required course ",
+            "\u00a0Presentation skills and synthesizing ideas relative to our stage in the doctoral program.\r\nHaving all doctoral students together provides a great opportunity to learn from other students at various stages in their doctoral work. ",
+            "\u00a0Presentation timing and clarity of communication. "
+        ],
+        [
+            "\u00a0Have more outlines for dissertation benchmarks. ",
+            "\u00a0Having to present in front of the group was a great opportunity.  The process also encouraged my own development of ideas over the course of the semester, and feedback and ideas from peers was really helpful in framing my own research and thinking about where to go next.  It was also great to absorb comments from students on others' presentations and apply to my own thinking. ",
+            "\u00a0I think that the main way to improve the course would be for the presenter to better direct the feedback being sought. For example, giving students not in the same cohort the first chances to ask questions. I found that their input was the most helpful at the time because they had \"fresh eyes\". "
+        ],
+        [
+            "\u00a0yes, nice to receive feedback on dissertation "
+        ]
+    ]
+}

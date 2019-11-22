@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "In his 1810 essay, On the Marionette Theater, Heinrich von Kleist proposes the marionette as a perfect simulation of human motion. The marionette\u2019s dynamic equilibrium is achieved through a string suspension system. \u201cThe Sensitive Machine\u201d is a four-day workshop that explores this homology between human and mechanized gesture. The workshop begins with an investigation into bodily equilibrium: where is the body\u2019s center of gravity? How does balance impact the body\u2019s sense of position? A single gesture will be identified, isolated and analyzed. The motion will then be exaggerated by grafting the gesture onto a mechanical extension. For example, the rotation of the shoulder or bending of the spine will be amplified through the attachment of a handcrafted prosthesis. Participants will design and build these bodily extensions. Once designed, participants will then assess the apparatus\u2019s performance as a sensory conduit, investigating how the machine transfers sensation to and from the proprioceptive body. Data describing the body\u2019s mechanized motion will feedback into the examination of gesture. Participants will redesign their bodily extensions, this time as a sensitive bridge between living selves.", 
+    "title": "Sensitive Machine", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14834", 
+        "listings": [
+            {
+                "number": "912", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Sarah Oppenheimer"
+    ], 
+    "long_title": "Sensitive Machine", 
+    "extra_info": "A"
+}

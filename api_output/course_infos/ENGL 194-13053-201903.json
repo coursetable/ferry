@@ -1,0 +1,55 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49725/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Study of modernist literature and the historical formation of homosexual identity from the late nineteenth through mid-twentieth centuries. Topics include: sexology as a medical and disciplinary practice; decadence and theories of degeneration; the criminalization of homosexuality in the Wilde and Pemberton-Billing trials; cross-dressing and drag balls in Harlem; transsexuality and sex-reassignment surgery; lesbian periodical cultures; nightlife and cruising; gay Berlin and the rise of fascism; colonial narratives of same-sex desire in Arabia and the South Pacific; Caribbean sexual morality; and the salon cultures of expatriate Paris.", 
+    "title": "Queer Modernisms", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "LC 211", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 11
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13053", 
+        "listings": [
+            {
+                "number": "194", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEN2\">YC English: 20th/21st Century</a>"
+    ], 
+    "professors": [
+        "Jill Richards"
+    ], 
+    "long_title": "Queer Modernisms", 
+    "extra_info": "A"
+}

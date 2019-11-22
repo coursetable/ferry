@@ -1,0 +1,86 @@
+{
+    "crn_code": "30201",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            3,
+            5,
+            0
+        ],
+        [
+            0,
+            2,
+            5,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a beautiful intersection of Law and Economics ",
+            "\u00a0Legal literacy. Learned how to apply law to economics and vice versa ",
+            "\u00a0contract theory, rational actor, breaching contracts, mediation vs arbitration ",
+            "\u00a0I learned how contracts are formed and mechanisms to analyze efficiencies in the contract. ",
+            "\u00a0Components of an efficient contract and its economic implications\r\nThe steps leading up to and following contract formation ",
+            "\u00a0I developed knowledge about private law, arbitration, game theory, mediation, and the history of Roman law "
+        ],
+        [
+            "\u00a0The course felt a bit scattered at first, and took some time to hit its stride.  I know one of the nice features of the course is that you can learn from so many different professors, but I found that a lot of them taught us the same things, so even though there was this amazing professor in front of me, I hardly learned anything new from them. ",
+            "\u00a0This course was amazing. Brooks was a great professor however some of the other professors from different universities were hard to comprehend. ",
+            "\u00a0S: Prof Brooks\r\nW: Nothing to show ",
+            "\u00a0The strengths were the diverse experiences we received through the various teachers in the course\r\n\r\nWeaknesses were the lack of full class activities and simulations to give us real world explanations ",
+            "\u00a0Some of the lecture handouts were somewhat difficult to understand. There was a lot of information packed into very little space. To that end, the inclusion of integration in some of our notes/lectures were more confusing than clarifying.\r\nReally enjoyed Prof. Songa's guest lectures. Really enjoyed the connection of contracts to redlining in American real estate. ",
+            "\u00a0Strengths: Talented professors, interesting curriculum, excellent guest lecturers\r\n\r\nWeaknesses: Some mathematical concepts were not explained fully "
+        ],
+        [
+            "\u00a0Yes, it was a great course in a great location with a great professor. ",
+            "\u00a0Yes. Best way to connect with foreign students while learning a lot. ",
+            "\u00a0Yes. Great class with low workload. The final although open notebook was kind of difficult. ",
+            "\u00a0Absolutely, the course teaches contracts while giving you an in explanation of the crossovers between law and economics. I was able to take these tools and apply them to my every day life because when it comes down to it, everything is a contract of some sorts. ",
+            "\u00a0Yes; a great way to see the world and fulfill economics requirements ",
+            "\u00a0Yes I would because it is an interesting course that is engaging without being overwhelming. "
+        ]
+    ]
+}

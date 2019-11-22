@@ -1,0 +1,79 @@
+{
+    "crn_code": "22018",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            5
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I really felt like I synthesized my learning from the past four years at Yale through the process of writing my senior essay. ",
+            "\u00a0Spending a full year researching and thinking about a single subject is deeply rewarding, and one of the best experiences Ive had at Yale. ",
+            "\u00a0How to write a paper of a wider and deeper scope ",
+            "\u00a0I learned how to write a sustained argument across 100 pages backed by extensive archival and in-person research. "
+        ],
+        [
+            "\u00a0All strengths! ",
+            "\u00a0there is not a huge amount of community among majors - it would be great to have regular meetings as a group. ",
+            "\u00a0I do think the Humanities could benefit from one mandatory class at the start of senior year which acts as a primer for writing the thesis, especially given that most students work among a couple of departments ",
+            "\u00a0The one-on-one structure is excellent and could only be improved, perhaps, by a few more partial paper deadlines. It would also be great to have a senior colloquium at the end of the year for Humanities majors to present their theses to each other. "
+        ],
+        [
+            "\u00a0Yes! ",
+            "\u00a0yes! ",
+            "\u00a0I would recommend the year-long thesis option to all Humanities majors! It's incredibly important to learn how to engage in a sustained way through an extended idea. The thesis teaches time management, research, and communication skills. It was my most satisfying (and challenging) intellectual project at Yale. "
+        ]
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: IBIO 531 or a similar course that provides a solid foundation in fundamental immunology. Enrollment limited to twenty-two; preference given to Immunobiology students taking the course as a degree requirement.", 
+    "description": "This seminar covers principles of cancer immunology and the role of immunotherapy in oncology. Emphasis is placed on understanding mechanisms of disease and therapeutic interventions.\nPrerequisite: IBIO 531 or a similar course that provides a solid foundation in fundamental immunology. Enrollment limited to twenty-two; preference given to Immunobiology students taking the course as a degree requirement.", 
+    "title": "Immunobiology Seminar: Cancer ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13105", 
+        "listings": [
+            {
+                "number": "538", 
+                "subject": "IBIO"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Aaron Ring", 
+        "Marcus Bosenberg", 
+        "Nikhil Joshi"
+    ], 
+    "long_title": "Immunobiology Seminar: Cancer Immunology", 
+    "extra_info": "A"
+}

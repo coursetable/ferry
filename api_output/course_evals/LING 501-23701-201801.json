@@ -1,0 +1,75 @@
+{
+    "crn_code": "23701",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0My Old English reading skills went from elementary to proficient over the course of a term, at which I am delighted and grateful. ",
+            "\u00a0My ability to read and translate Old English poetry improved greatly, and my knowledge of the poem Beowulf and its relation to other Old English poems also increased significantly. "
+        ],
+        [
+            "\u00a0More emphasis on discussion topics like historical context, religion, and textual history as opposed to the straight readings would have been welcome. Nonetheless, we covered those topics well. ",
+            "\u00a0The main strength of the class is its rigor; we read the entire poem in the original language and translated most of it out loud together in class. The main weakness of the class was that we did not have enough time in class to get through all of the material while also discussing it in depth. This issue would be partly rectified by meeting twice per week, rather than only once. "
+        ],
+        [
+            "\u00a0Professor Frank is the best! Her passion for the subject is infectious and she asks the most insightful questions. ",
+            "\u00a0Yes. Though the workload was tough, it was well worth it. Anybody seeking to improve their Old English ought to take this class. ",
+            "\u00a0I would absolutely recommend this course to anyone interested in Old English literature, especially heroic poetry. It would also be of interest to those interested in philology and linguistics, Germanic myth and conversion-era Christianity. However, I would not recommend it to someone with no experience with Germanic languages, as the learning curve would be very steep. "
+        ]
+    ]
+}

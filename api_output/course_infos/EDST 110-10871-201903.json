@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49607/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to key issues and debates in the U.S. public education system. Focus on the nexus of education practice, policy, and research. Social, scientific, economic, and political forces that shape approaches to schooling and education reform. Theoretical and practical perspectives from practitioners, policymakers, and scholars.", 
+    "title": "Foundations in Education Studies", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "LC 101", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10871", 
+        "listings": [
+            {
+                "number": "110", 
+                "subject": "EDST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Mira Debs"
+    ], 
+    "long_title": "Foundations in Education Studies", 
+    "extra_info": "A"
+}

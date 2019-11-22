@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "An examination of the horror film genre, primarily in American cinema. Psychosocial determinants; spectatorship, affect, and identification; the uncanny and the monstrous; the body; abjection. Films by Hitchcock, Romero, Friedkin, De Palma, Carpenter, Kubrick, Cronenberg, Demme, and others.", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12130", 
+        "listings": [
+            {
+                "number": "412", 
+                "subject": "FILM"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YFIC\">YC FILM Stud: Critical Studies</a>"
+    ], 
+    "professors": [], 
+    "long_title": "The American Horror Film, 1960-2000", 
+    "extra_info": "C"
+}

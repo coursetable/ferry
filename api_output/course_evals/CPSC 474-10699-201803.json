@@ -1,0 +1,123 @@
+{
+    "crn_code": "10699",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            2,
+            4,
+            11,
+            9,
+            3
+        ],
+        [
+            1,
+            2,
+            13,
+            8,
+            5
+        ],
+        [
+            1,
+            2,
+            6,
+            19,
+            1
+        ],
+        [
+            3,
+            4,
+            13,
+            7,
+            0
+        ],
+        [
+            1,
+            4,
+            15,
+            10,
+            0
+        ],
+        [
+            0,
+            6,
+            14,
+            8,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Started off with brute force backward induction and minimax, optimizing these, then worked with Monte Carlo (trying many many times), and finally moved a little to more 'smart' ways of artificial intelligence like neural networks. ",
+            "\u00a0I learned about the monte carlo search algorithm, sout, grundy numbers, neural networks, and how to wisely play games such as Yahtzee and Kahlah. ",
+            "\u00a0I hope to one day be able to answer this question. ",
+            "\u00a0Was exposed to the basics of machine learning in the context of games. ",
+            "\u00a0Intro methods for approximating best game moves, how to deal with probability in decisionmaking. ",
+            "\u00a0absolutely nothing I couldn't have learned with an hour of reading Wikipedia. ",
+            "\u00a0A wonderful introduction to a wide array of delightful board games and how to beat your friends (as long as you have a laptop and maybe a few minutes). Seriously, though, this class is great. Starts off with a bit of formal game theory but quickly gets more into AI-ish topics, which is the real reason to take this class. Glenn does a great job of introducing pretty complicated stuff in a really accessible way, and because it's not a huge class, you can actually interact with him during lecture and at office hours (weird, right?). \r\nTo actually answer the question: I learned how to think about games strategically and formally, and how to use a wide range of AI-related methods and tools. ",
+            "\u00a0Learned about game theory through programming applications. ",
+            "\u00a0I learned some fundamental concepts in game theory, as well as programming techniques for implementing intelligent game playing strategies. ",
+            "\u00a0Skills: you learn about how to think about game artificial intelligence. You get to program and practice in python too. ",
+            "\u00a0I developed my skills in python programming. I also feel like I have a good idea of the approaches used for game playing in computers. ",
+            "\u00a0A great overview of modern methods in computational intelligence. I feel\r\nLike I have an in when it comes to the field and that I could apply the skills outside of class for my own projects or to read research papers. ",
+            "\u00a0Learned different ways to analyze games and determine the best move to make, using both deterministic methods like backwards induction and stochastic methods like Monte Carlo Tree Search and neural networks. ",
+            "\u00a0I learned a bit of algorithmic thinking and such. I learned a way of thinking about games that has helped me play chess. ",
+            "\u00a0Lots of cool/useful algorithms and how they can be applied to create intelligent agents to play games ",
+            "\u00a0This course gives an overview of mathematical and programmatical concepts for developing game-playing programs. The class covers several major methods, including minimax trees, Monte Carlo Tree Search, Q-learning, and neural networks, which all provide various methods of maximizing win rate. The class doesn't cover mathematical proofs, which I appreciate, but Professor Glenn does explain each concept and go through examples. ",
+            "\u00a0Learned various topics about AI for games. ",
+            "\u00a0Theory and method for how to use computers to play or solve games, progressing from algorithmic and inductive methods to tree search, Monte Carlo methods and neural networks. ",
+            "\u00a0This course gives a good overview of a number of different algorithms used in game AI. I particularly enjoyed learning about Monte Carlo Tree Search, and the problem sets do a good job of reinforcing what we learned in lecture. However, other topics, such as neural networks for games, were not as thoroughly covered. "
+        ],
+        [
+            "\u00a0Pretty interesting content, but you don't really need to attend lectures to do the psets (you just need to read the notes online and understand / implement the concepts). They aren't difficult concepts. Not sure if this is a strength or a weakness. ",
+            "\u00a0Strengths are the interesting concepts taught; weaknesses are that it's hard to debug code, because of random elements in the algorithm, although this is an understandable issue. ",
+            "\u00a0The lectures were very interesting and Professor Glenn clearly has a passion for the subject.\r\nHowever, the PSets were exceptionally difficult (especially without prior knowledge of Python) and office hours were often understaffed. ",
+            "\u00a0Strengths: great at introducing the topic and Glenn is an amazing professor\r\nWeaknesses: first few psets were trivial with lecture notes while last few were difficult and seemed like we had no guidance. ",
+            "\u00a0Good concepts introduced. TAs were sometimes not up to date on the current assignment. Psets were hard to debug due to stochasticity inherent in game designs. ",
+            "\u00a0Strengths: introducing complex material in an accessible way, really fun problem sets\r\nWeaknesses: honestly not many. Getting out of class after dark was a bit of a drag, I guess? ",
+            "\u00a0I felt as though the material was interesting. I felt as though the workload was not nearly high enough to facilitate actual learning. I felt as though the problem sets were difficult not because of intellectual challenge but simply because of a lack of clarity in lecture and specifications. Psets were difficult for all the wrong reasons, making this class less about learning and more about parameter tuning and guessing. ",
+            "\u00a0Very interesting material, but the problem sets seemed half about concepts and half random tuning of parameters, which made progress slower. ",
+            "\u00a0Pro: Glenn is a great professor and passionate about the topic. \r\n\r\nCon: skill Spike with the last pset. Everyone does well on the hw. ",
+            "\u00a0I think the course could be improved by having prepared slides and more higher level material to talk about in class. I also wish the assignments were more focused on newer methods of game playing such as neural networks. ",
+            "\u00a0The strengths were the breadth of topics covered, the trajectory through the semester, and the homeworks. I liked the balance between test questions and homework questions. I thought most of the homeworks were good although the 6th was more difficult than expected. ",
+            "\u00a0Glenn is a great professor and lecturer. He obviously cares about the course and students. The subject material was fun and engaging although a bit hard to grasp at times (neural networks specifically). ",
+            "\u00a0Glenn taught the material really well ",
+            "\u00a0This course material was interesting, but lecture was often very slow and hard to maintain interest in. The last problem set was also horrible, being extremely confusing and assigned at a time that it essentially guaranteed students would have to work on it during reading week. ",
+            "\u00a0The course was interesting, although the difficulty in psets spiked heavily for the last two or three. TA's were somewhat helpful, but as the course grows and people who have taken the class are TA'ing, they will be more effective. Overall though, Professor Glenn is an engaging and understanding professor who is passionate about the course. I enjoyed it. ",
+            "\u00a0I enjoyed this course -- the assignments were fair, and in class Professor Glenn explains many helpful hints for how to complete them, making learning super approachable. ",
+            "\u00a0I thought the content of the course was really interesting, and the methods taught were useful. However, the problem sets were frustrating because they were graded stochastically and relied heavily on the tuning of a large number of parameters. It was extremely difficult to pinpoint the source of low performance, even with help. The problem sets often felt like a blind stumble in which students would randomly adjust parameters for hours until the performance improved. It would be helpful if there was a way to verify the correctness of our algorithms before tuning instead of relying on stochastic measurements. "
+        ],
+        [
+            "\u00a0Sure, if you are looking for a easy-ish CS elective. ",
+            "\u00a0Yes, because it teaches interesting game concepts. ",
+            "\u00a0If you enjoy and understand machine learning and Python then absolutely.\r\nIf you're looking for a fun and engaging CPSC elective that can be taken in conjunction with one of the core classes then this is a great one for you.\r\nIf you're looking to learn useful things about machine learning or Python then stay away.\r\nThis class was the bane of my semester, each PSet became increasingly abstracted from the lectures and ended up taking longer than three other CPSC classes combined. ",
+            "\u00a0I would recommend any class with Glenn, and this class especially if you have no experience with machine learning at all. ",
+            "\u00a0Cool, fun class. Psets get tricky to debug because chance is involved in playing games, so no deterministic output you can use to check your code. A lot of logically tracing through your code. Many last-mile performance improvements in psets are due to tiny tweaks unrelated to the concepts of the course. ",
+            "\u00a0Taking this course has been one of my most regretted decisions. I don't think I learned anything insightful, that I couldn't have taught myself with a brief reading. Though CS lectures at Yale are generally sub-par, the psets usually make up for it as you learn a lot while doing them. The psets for this class essentially consisted of spending 10 minutes coding up the main algorithm, and then 10-20 hours trying to find the right parameters. A ridiculous waste of time. As for the TA's, there were many cases where they did not know what they were doing (one literally told us he didn't know... every single week, and another told me wrong information that ended up throwing me off for a couple of hours), and often couldn't offer more advice than to look through the code more. I don't understand why this course isn't rated lower. ",
+            "\u00a0Absolutely. Interesting material, fun problem sets, Glenn is fantastic. ",
+            "\u00a0Yes. Game theory is cool to learn about and it isn't horribly painful. ",
+            "\u00a0Yes. The material is interesting, and it's a good way to learn some machine learning concepts without delving too deeply into the math of exactly how they work. Prof. Glenn is very nice and willing to help. ",
+            "\u00a0Yes this is one of the better CS electives and relatively easy ",
+            "\u00a0Definitely take this class. The material is interesting, Glenn is a great lecturer, 75% homework and 25% exams is great. Psets were all fair, exams were pretty fair too. You're not gonna find many classes this great in the CS department. ",
+            "\u00a0I would reccomend this to a student who would like a good, but not particualrly hard CS elective. The material is interesting enough, and it is not necessary to go to lectures to do well on psets (but helps and is very helpful for the exams). Prof Glenn is very helpful in one-on-one office hours though the rest of the staff, like all CS classes, is hit or miss. Overall, not too hard and satisfies a requirement in an interesting way. ",
+            "\u00a0If you are a CS major and are interested in games, then it would be a good course. It does not go into neural networks and newer methods until the end of the course. It is one of the better CS electives, but it definitely has room for improvement. ",
+            "\u00a0I would recommend this course if you liked Algorithms, but you want to do that with programming. The stochastic stuff was a little frustrating at times because the grading script was at the whims of the randomizer, but the grade always worked out well. I thought most of the topics were interesting, MCTS is certainly a good one to know. Games is a fun application. I wasn't too interested in the topic so that was frustrating at times but it still worked as a good elective for me. ",
+            "\u00a0I would recommend this to students who want a fun class although it is a bit of work to understand/utilize the material correctly. ",
+            "\u00a0Yeah! One of the better CS electives I've taken-- useful info through an interesting lens ",
+            "\u00a0This course material is interesting, but the course itself feels hard to follow along with. At the end of the semester, now that I feel I understand minimax, Monte Carlo Tree Search, etc., I think they're all very interesting topics. However, they felt hard to stay engaged with during lecture. Professor Glenn is extremely kind, but his lectures go EXTREMELY step-by-step, which is good for some but boring for others. The problem sets aren't trivial either, and many are fairly confusing. I wish I'd gone to office hours sooner, but they seemed to help. The final problem set, about neural networks, was also a nightmare. It was the most confusing by far, extremely hard to debug, and was assigned a week before the end of classes, when all CS courses have second exams. Most students I talked to were working on it through reading week, which just isn't fair. This course didn't feel particularly applicable to real-world applications, but it is a unique application of math and computer science. Worth a shop. ",
+            "\u00a0If you are interested in the topic, yes. ",
+            "\u00a0James Glenn is a fun and passionate professor - python is fun to code in but some of the specs could be more clearly written. Content for midterm and final was always manageable "
+        ]
+    ]
+}

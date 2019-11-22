@@ -1,0 +1,50 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49461/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A study of the ways that journalists define and shape economic news. Discussion of the pressures that business journalists face and the process of press coverage for business, economics, financial markets, and personal finance.\n\u00c2\u00a0", 
+    "title": "The Press, Business, and the E...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WLH 202", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 17
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11977", 
+        "listings": [
+            {
+                "number": "300", 
+                "subject": "CSBK"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "R. Thomas Herman"
+    ], 
+    "long_title": "The Press, Business, and the Economy", 
+    "extra_info": "A"
+}

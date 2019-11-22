@@ -1,0 +1,47 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Students conduct research for the master\u2019s thesis, give presentations on their research, and prepare a bibliography, a prospectus, and a draft chapter of the master\u2019s thesis. Discussion of model essays and other examples of writing.", 
+    "title": "African Studies Colloquium", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LUCE 302", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10321", 
+        "listings": [
+            {
+                "number": "590", 
+                "subject": "AFST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "David Simon"
+    ], 
+    "long_title": "African Studies Colloquium", 
+    "extra_info": "A"
+}

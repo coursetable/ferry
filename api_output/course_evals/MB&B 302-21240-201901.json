@@ -1,0 +1,103 @@
+{
+    "crn_code": "21240",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            6,
+            8,
+            2
+        ],
+        [
+            0,
+            4,
+            9,
+            4,
+            0
+        ],
+        [
+            1,
+            1,
+            7,
+            8,
+            0
+        ],
+        [
+            0,
+            1,
+            6,
+            8,
+            2
+        ],
+        [
+            0,
+            0,
+            5,
+            7,
+            5
+        ],
+        [
+            0,
+            1,
+            9,
+            7,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0In the first half of the course, I learned a bit about equilibrium binding and kinetics topics, which have been previously discussed in physical chemistry but were done more thoroughly in this course. I personally prefer the topics in the second half (fluorescence imaging and structural determination), which were newer to me and more complex. ",
+            "\u00a0I learned a lot from biomechanics to x-ray crystallography. ",
+            "\u00a0I learned a lot about biophysical chemistry in the first half of the class and a little bit about bimolecular spectroscopy in the second half, although I didn't really understand that much in the second half of the course. ",
+            "\u00a0Understood what biophysics was as a concept, and actually think I might understand how the imaging methods work they're actually super interesting and I really didn't give them enough credit ",
+            "\u00a0Biophysical principles, an in depth look at kinetics. ",
+            "\u00a0This course made me more comfortable with applying quantitative thinking to biology. It was the first biology course I've taken at Yale that really focused on that. ",
+            "\u00a0Biophysics principles relating to biological molecules and microscopy/spectroscopy ",
+            "\u00a0I learned basically only two things, but in an unprecedented depth: binding interactions and crystallography/EM. If CHEM 328 (P-Chem for MB&B) was taught us the intuitions and overarching themes, MB&B 302 was so focused on the applications and the specifics. ",
+            "\u00a0I learnt more about physical aspects of protein biochemistry, ranging from reaction kinetics to properties of biomolecules. I also learnt about how x-ray crystallography and cryo-em worked. It was a very qualitative understanding though, because we didn't really go into the math of things (even as we mentioned fourier transformations in class) which made some concepts (especially in crystallography) less intuitive. ",
+            "\u00a0I learned about how biomolecules behave in solutions  their movement, and how they interact with eachother during reactions. \r\n\r\nIn the latter half of the course I learned about spectroscopy (cryo-EM, X-ray crystallography, FRET). \r\n\r\nMany of these concepts are relevant to modern research; diffusion, kinetics, equilibrium, imaging. "
+        ],
+        [
+            "\u00a0This course is structured like two different courses with totally opposite approaches. The first half of the course is largely a review of existing concepts and is probably a bit too easy, while the second half is totally new stuff that is very difficult by comparison. I sometimes found it difficult to predict what would appear on the exams or felt that the lectures did not adequately prepare me for the problem sets. ",
+            "\u00a0This course is amazing in the first half and okay in the second. Both topics are really fascinating, but I think certain elements could make it better. I wish we didn't learn so much about fluorescence and instead learned more basics about waves and then Fourier transforms because they are the basic foundations for the rest of the content. ",
+            "\u00a0The first half of the course was very good - EDLC was engaging, and material was taught very well. The second half was also incredibly interesting, but the delivery of the course content left much to be desired. And throughout, the teaching staff were very nice and accommodating - but it seemed sometimes that they could not answer questions concisely/directly. Granted, the course material seems just difficult to teach in general. It was also distracting when the TAs would talk with each other during lectures. Though they tried to be quiet, it was distracting from the lectures. ",
+            "\u00a0The strengths were definitely the first half of the course. Enrique was great, and the content was really interesting. The second half of the course was more confusing, mostly because the lectures were hard to follow. Professor Sindelar is a really nice guy, and I think he didn't do a horrible job, but it definitely could be improved. The homework in the second half of the course definitely could be more refined and improved. The reliance on Matlab was cumbersome and was unfair to students without coding experience. The worst aspect of the class, however, is that the other students in the course are very disrespectful to the teaching staff and other students. This is a general problem in the MB&B department in general, but, for some reason, this was particularly prevalent in this class. ",
+            "\u00a0Strengths: Great TAs, the professors were very nice and Prof Sindelar was very available and willing to help. Enrique was willing to help but less available, but that's okay. The slides were very clear\r\nWeaknesses: The first half of the class was a little boring (thru no fault of Prof DLC, but merely as a product of the content being less exciting) and the second half was confusing - Prof Sindelar sometimes didn't have the best way to explain things, but was very willing to take the time to go over it again and again. TBH I think if it was just clarified what a Fourier transform was, even if just using someone else's video right at the beginning of the second half, everything would have made more sense. Would have appreciated more feedback on where I stand numerically in terms of grades bc though I'd like not to care, I do need to care... \r\nImprovements: Would love practice tests/more context for the exams ",
+            "\u00a0Strength is first half: well-taught and midterm was tailored toward pset questions. Second half is little less well-taught but still interesting. ",
+            "\u00a0Strengths: Enrique and Chuck are very kind and receptive to the students\r\nWeaknesses: Chuck is super nice and very willing to explain things to students. The only thing I think that might make his lectures easier to understand would be to make sure beforehand that the slides are in a proper order. The ideas he were presenting made sense, but they often didn't make sense within the larger context of what we were learning. ",
+            "\u00a0I thought Enrique De La Cruz's half was great, and though it was a little formula based, I thought that the material was interesting and well taught.   We looked at a fair number of applications to what we were studying, and I liked the smaller paper-reading sections in the course.  For Professor Sindelair's half, he is a truly nice person and cares a lot about the students in the class.  He is happy to meet with people outside of normal lecture as well.  It's a little unfortunate because I could tell he was trying to make the X-ray crystallography and Cryo-EM part of the class more basic than he thinks, but the way his mind works is too advanced for undergraduates with no experience in microscopy.  The material we were presented on was actually really interesting and informative at a relatively simple and non-mathematical level.  The slides are surprisingly clear upon review, but sometimes going to class was a barrier to understanding the material because Professor Sindelair jumped back and forth in a semi-incoherent manner.  He means really well but overall I wasn't super happy with his teaching. ",
+            "\u00a0This course was pretty well-spoken of by all but last year's graduating class of MB&B majors (because of the Peter Moore fiasco). As such, I was really looking forward to the class, and that made it all the more difficult to accept the many problems with this class. The strengths of this course, in my opinion, included the material, which was very interesting. Especially the second half, which is about crystallography and cryo-electron microscopy. The instructors are also very well-intentioned and nice, and the TA's sometimes tried to be helpful. As for other aspects of this course, I unfortunately don't have much  more positive to say. The professors try keep this course from being competitive (by not giving distributions on assignments etc), but it backfires. They don't seem to realize that over half of this class are pre-meds who will always be in competition. Depriving them of information just makes it worse, and this class ended up with a unfortunate cutthroat feel from such students. The course was also disorganized, and the expectations of us were not clear. The grading on p-sets was extremely nit-picky, which is usually not something I would complain about. However, it's hard to be perfectly precise when the assignments themselves are full of typos and misleading statements. The number of times I received emails correcting major problems with the psets after doing them was very bothersome. To hold students to a higher standard on their assignments than you hold yourself in creating them is absurd. Making matters worse was that the TA's were so afraid of \"giving away answers\" that they refused to provide clarification on even these major errors or typos in assignments. This was especially the case for the first two assignments, and it was very telling when the professor had to remove one question from the second pset because it made no sense to him either. Now, this isn't the TA's fault this year really. These psets came from previous years, and the TAs this year put a lot of work into making them better, but it was still a problem. Finally, this class had a very odd feature. More than any other course I've taken at Yale, this had an unfortunate level of segregation among the students. There were the pre-meds and then the others, and there were the rich kids and the poor kids. This made for a pretty uncomfortable situation for low-income students. This is a problem with STEM at Yale, but it was on full display in this class. ",
+            "\u00a0I actually really enjoyed this course. I feel like it straddled the line perfectly in terms of intensity for a senior level class - usually felt pretty relaxed week to week, and though the exams were challenging this was offset by the fact that the exams werent cumulative and there were fewer lectures with the paper discussions. I loved the paper discussions - I wish other MBB classes had time to incorporate papers in (I feel like this is something PCHem could do). Maybe adding a textbook or some reference to look up if you dont understand a figure would be helpful. I think a practice exam/ a few more practice questions would be helpful. ",
+            "\u00a0MB&B 302 had some cool concepts that were good ways to apply the knowledge we gained from previous courses. The lectures are pretty well taught. However, the p-sets were often badly worded, and it wasnt always clear what kind of answers they wanted and how they were graded. Also, the exam questions were so nit-picky (especially the final exam on crystallography and EM). Also the presentation of the material wasn't always too great  I kind of hated getting bogged down in the details for weeks at a time. Also, the paper discussions were just bad. Often the TAs didnt really help, and the students tried to one-up each other without really caring about the research. ",
+            "\u00a0I wish that there was more math in the class, because we were talking a lot about physics that required math, but the teachers were trying to give a \"broad intuitive understanding\" without the math (or just glossing over the math) that actually made the class harder to understand and confusing. The first part of the class with professor De La Cruz was great. He was very engaging and told many stories. The 2nd half of the Class with professor Sindelar could be a bit more organized. It was unclear what we were supposed to know from the lectures, because he copy-pasted a lot of formulas and figures from a textbook without providing a lot of explanations for what the figures meant, which made everything harder to understand. Also, we glossed over many math concepts that were crucial for understanding the concepts (like fourier transformations, argand diagrams), which made everything more confusing. It would be good if we either don't bring up the math and the equations, or actually talk about the math and give us examples of solving it. \r\nIt will also be good if we have a list of specific learning objectives every class. ",
+            "\u00a0The material is widely applicable to the study of biophysics, focusing not only on the theory behind some research methods but also on the applications. Id say this class was very good in actually distinguishing to me with biophysics is. The weaknesses Id say perhaps lie in how ambitious the class was - I think the first and second halves of the course could have each been their own class. On top of that, I think if the second half was more structured and taught like Grant Jensens online videos, I would have gotten more out of the in class lectures. We werent able to spend much time on the basics of things like Fourier transforms and so when we needed a more nuanced understand later, it was very hard to make sense of things ",
+            "\u00a0My TA Catherine was incredible! She was great at concisely summarizing the material and focusing on what we needed to know. Professor De La Cruz had an engaging, passionate/energetic lecture style that helped maintain my focus and interest, event for drier subjects. His lecture slides were very well organized and he followed along closely with the outline it provided during lecture.\r\n Professor Sindelar was also an engaging lecturer, though his presentation could have benefitted from some more organization, and perhaps simpler breakdowns of some of the more challenging concepts (principally X-ray crystallography), which were difficult to understand during lecture. "
+        ],
+        [
+            "\u00a0This is a (functionally) required course for MB&B, and also the only required biophysics class. Thus, most people who will be taking it are required to do so, although you can take it if you want, I suppose. ",
+            "\u00a0I'm not sure, I think there is some improvement that needs to take place to make it more accessible to non-biophysicists, and math heavy folk. It should use more basic materials and build a better transition into X-ray crystallography. ",
+            "\u00a0If you are considering this course, you likely have to take it. The first half of the course is fair enough, more or less. Enqirue is awesome and the content was interesting (to me at least). The content in the second half of the course is really interesting, but it is not taught as well, and the material is very confusing to outsiders who are learning it for the first time. Sindelar is a really nice guy, but sometimes it's hard to follow his logic and why we are doing the things that we do. The homework become much longer as time goes on and will take a *lot* longer than the professors imply at the beginning of the course. Overall, students just seemed disinterested in this course. The worst thing is that the other students are hyper-competitive in this course, which is really detrimental to the student environment. Everyone is bragging about their research in (high school?), MCAT scores, med/grad schools, publications, grades, etc. and its really unnecessary and simply petty at this stage. The class was uncomfortable for people who have actually struggled in the MB&B department at Yale, but, hey, what's new there? ",
+            "\u00a0You're taking this because you have to. Look up the Grant Jensen videos on youtube for the second half. They're lifesavers. Start the MatLab Psets early. Seriously. And make sure you're caught up or the tests will catch you off guard. They seem easy; they're not. ",
+            "\u00a0Yes! ",
+            "\u00a0If you're an MB&B major, you have to take it.  But if you're more inclined for a more in-depth look at microscopy, consider taking Pchem 2 and the crystallography course. ",
+            "\u00a0No. But then again, nobody takes this class unless they have to. ",
+            "\u00a0Yes! Relatively painless final MBB requirement, I actually enjoyed it. Loved Enriques enthusiasm and demonstrations - his lectures were always fun, engaging, and informative. Chuck was also good, though he was a bit hard to follow upon first listen (made more sense when I looked back on my notes). I also thought the material was pretty cool. ",
+            "\u00a0MB&B 302 is not the worst STEM course Ive taken at Yale, but it also is not the best. I was expecting something better because its supposed to be the crown jewel / the last core course of the MB&B major. Its not as painful as PHYS 180/181 or CHEM 328 in that you have to spend 10+ hours on p-sets every week. But also its not as eye-opening as those courses. The concepts we learn in MB&B 302 are very interesting  but we spend the whole semester on basically just two subjects: binding interactions, and then crystallography/EM. I guess its important to learn those subjects really in depth because theyre important in todays biological research. The lectures can be fun, especially in the first half of the semester, so I guess thats something. But the paper discussions SUCK because everyone in the class tries to one-up each other without really focusing on the research itself. I really hated them, but those only take up 5 class days  the rest are just lectures. If youre reading this, youre probably an MB&B major and dont really have a choice. MB&B 302 is fine and important  its just not that fun. Its not bad; its not good. Youre not going to suffer too much, but dont have too high of an expectation from this course. ",
+            "\u00a0I guess you have to take it to graduate from MB&B. But I really hope that the class can become better in future years. ",
+            "\u00a0Likely if you take this youll be an MB&B major and have to; in this case I recommend forming a strong study group and attending section; many of the subjects are clarified in discussion with other students. \r\n\r\nIf you are on the fence about taking this (that is, if you have a choice), I would recommend you examine how much you want/need to know about x-ray crystallography theory. The latter half feels like a survey course for spectroscopy techniques (except crystallography and EM, which focuses more on theory) while that former is definitely more theory based, which an excursion into experimental techniques. "
+        ]
+    ]
+}

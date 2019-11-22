@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50274/assignments/syllabus", 
+    "requirements": "Prerequisite: ITAL 140 or equivalent.", 
+    "description": "This is the first course in a sequence studying Italian Literature. The course aims to provide an introduction and a broad overview of Italian literature and culture from the Duecento to the Renaissance, specifically focusing on authors such as Dante, Petrarch, Boccaccio, Machiavelli, Ariosto, and literary and artistic movements such as Humanism and Renaissance. These authors and their masterpieces are introduced through readings, works of art, listening materials, videos, and films. Great space is left for in-class discussion and suggestions from students who may take an interest in specific authors or subjects. This course is interactive and open, and the authors mentioned here are only indicative of the path that we follow. At the end of the course, students are able to analyze and critique literary works of different genres and time periods. The course is conducted in Italian.\nPrerequisite: ITAL 140 or equivalent.", 
+    "title": "Introduction to Italian Litera...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "WLH 006", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11168", 
+        "listings": [
+            {
+                "number": "162", 
+                "subject": "ITAL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Simona Lorenzini"
+    ], 
+    "long_title": "Introduction to Italian Literature: From the Duecento to the Renaissance", 
+    "extra_info": "A"
+}

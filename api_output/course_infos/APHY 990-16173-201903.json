@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Faculty-supervised individual projects with emphasis on research, laboratory, or theory. Students must define the scope of the proposed project with the faculty member who has agreed to act as supervisor, and submit a brief abstract to the director of graduate studies for approval.", 
+    "title": "Special Investigations: Analyz...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 11, 
+        "oci_id": "16173", 
+        "listings": [
+            {
+                "number": "990", 
+                "subject": "APHY"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Robert Schoelkopf"
+    ], 
+    "long_title": "Special Investigations: Analyzing failure pathways in", 
+    "extra_info": "A"
+}

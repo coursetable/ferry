@@ -1,0 +1,76 @@
+{
+    "crn_code": "23688",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            4,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            3,
+            0
+        ],
+        [
+            0,
+            2,
+            5,
+            0,
+            0
+        ],
+        [
+            1,
+            5,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A broad overview of the arguments and debates surrounding the anthropocene, reading many fundamental texts on paleoclimate, the origins of agriculture and other topics intertwined with the anthropocene. ",
+            "\u00a0I learned a lot about current debates regarding the Anthropocene epoch and how to quantify it. "
+        ],
+        [
+            "\u00a0This course was broad and interesting, but it was also more of a lecture than a seminar. There was little discussion during class periods. ",
+            "\u00a0You read a lot of cutting edge material about the Anthropocene.\r\nCould be dry if you aren't actually passionate about the material. ",
+            "\u00a0This course was a seminar, but class discussion was minimal making it hard to engage with the material in a group at a deeper level. "
+        ],
+        [
+            "\u00a0This course would be a great course for anyone, not just environmental studies majors. Professor Weiss lectures on very interesting things, and traces certain patterns throughout human history. The workload for the course is also remarkably low. ",
+            "\u00a0Yes. It's not a ton of work (weekly readings, take home midterm, and take home final). You end up learning a lot about the Anthropocene without even realizing it. ",
+            "\u00a0I would recommend this course to another student who has NOT taken a course by Professor Weiss before. The material was fairly analogous to some of his other courses, so it was repetitive at times. Students must be prepared to listen to him talk for the whole class because discussion is minimal. "
+        ]
+    ]
+}

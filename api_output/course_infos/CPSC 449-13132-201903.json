@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49639/assignments/syllabus", 
+    "requirements": "Prerequisites: CPSC 100, CPSC 112, or equivalent programming experience; EENG 325, EENG 348, or equivalent circuits and digital logic experience; or permission of instructor.", 
+    "description": "Introduction to the development of computer architectures specialized for cognitive processing, including both offline 'thinking machines' and embedded devices. The history of machines, from early conceptions in defense systems to contemporary initiatives. Instruction sets, memory systems, parallel processing, analog architectures, probabilistic architectures. Application and algorithm characteristics. Formerly EENG 449.\nPrerequisites: CPSC 100, CPSC 112, or equivalent programming experience; EENG 325, EENG 348, or equivalent circuits and digital logic experience; or permission of instructor.", 
+    "title": "Computer Architectures and Art...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WTS B36", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13132", 
+        "listings": [
+            {
+                "number": "449", 
+                "subject": "CPSC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Richard Lethin"
+    ], 
+    "long_title": "Computer Architectures and Artificial Intelligence", 
+    "extra_info": "A"
+}

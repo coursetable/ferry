@@ -1,0 +1,47 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49740/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The course provides an introduction to English-language novels of the long eighteenth century (1688-1818), the period in which the novel has traditionally been understood to have \"risen.\" Emphasizing the experimental nature of novel-writing in this early period of its history, the course foregrounds persistent questions about the genre as well as a literary-historical survey: What is the status of fictional characters? How does narrative sequence impart political or moral implications? How do conventions of the novel form shape our experience of gender? What kind of being is a narrator? Likely authors include Aphra Behn, Daniel Defoe, Samuel Richardson, Henry Fielding, Laurence Sterne, Maria Edgeworth, Jane Austen, Jennifer Egan, Colson Whitehead, and Richard Powers.", 
+    "title": "Experiments in the Novel: The ...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 206", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10949", 
+        "listings": [
+            {
+                "number": "251", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEN1\">YC English: 18th/19th Century </a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENJ\">YC English: Junior Seminar</a></li></ul>"
+    ], 
+    "professors": [
+        "Jill Campbell"
+    ], 
+    "long_title": "Experiments in the Novel: The Eighteenth Century", 
+    "extra_info": "A"
+}

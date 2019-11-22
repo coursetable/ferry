@@ -1,0 +1,71 @@
+{
+    "crn_code": "15075",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course helped me discover my interest in American political thought. "
+        ],
+        [
+            "\u00a0This course is mainly focused on the works by Tocqueville, which makes it possible for us to understand his point of departure and observe how his thinking has changed over time. Professor Garsten makes sure that a reasonable amount of reading is assigned for each session so that we could engage with the texts carefully. It would be nice if we could start the class discussions with a passage from the book or questions from the students. "
+        ],
+        [
+            "\u00a0Those who have enjoyed the directed studies might finds this course a nice extension. Otherwise, this course is still worth taking for all Americans, for people who do not know much or have strong opinions about democracy, and for those with a general interest in political thought or intellectual history. "
+        ]
+    ]
+}

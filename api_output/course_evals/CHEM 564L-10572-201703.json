@@ -1,0 +1,74 @@
+{
+    "crn_code": "10572",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            2,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            2,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Everything I know about welding comes from Dave via this course. ",
+            "\u00a0I gained practical welding and machining skills I think will be incredibly useful in the future for everything from prototyping engineering designs and building laboratory equipment to fixing up around the home. "
+        ],
+        [
+            "\u00a0This course has no shortcomings. ",
+            "\u00a0I really liked the hands-off approach of the course - showing and explaining how it should be done then trusting that I'll figure it out.  This reduced the pressure and allowed me to figure things out myself, which I actually think ended up speeding the learning curve. "
+        ],
+        [
+            "\u00a0If you want to know how to weld you must take this class! ",
+            "\u00a0Absolutely.  Even for an undergraduate, where you won't earn any credit, just getting familiar with the shop and learning practical skills is useful for any engineer/scientist.  Also Dave is awesome! "
+        ]
+    ]
+}

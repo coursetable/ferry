@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "By arrangement with individual faculty.", 
+    "title": "Independent Reading and Research", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "16079", 
+        "listings": [
+            {
+                "number": "791", 
+                "subject": "MGMT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Gal Zauberman"
+    ], 
+    "long_title": "Independent Reading and Research", 
+    "extra_info": "A"
+}

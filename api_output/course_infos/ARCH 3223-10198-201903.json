@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49044/assignments/syllabus", 
+    "requirements": "", 
+    "description": "", 
+    "title": "Parallel Moderns", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "RDH 322", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10198", 
+        "listings": [
+            {
+                "number": "3223", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Robert Stern"
+    ], 
+    "long_title": "Parallel Moderns", 
+    "extra_info": "A"
+}

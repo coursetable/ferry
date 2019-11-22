@@ -1,0 +1,90 @@
+{
+    "crn_code": "12767",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0learned how to do mass balances and how to think more critically ",
+            "\u00a0The way to set up the mass balance in every processes ",
+            "\u00a0basic knowledge about water treatment ",
+            "\u00a0Consolidate the mass balance concept in different engineering systems. ",
+            "\u00a0I developed knowledge about the processes of water treatment and the principles of chemistry/biology behind these processes. "
+        ],
+        [
+            "\u00a0aligned very well- learned a lot ",
+            "\u00a0It gave me more insight than I expected. ",
+            "\u00a0very well ",
+            "\u00a0They aligned fairly well although I expected that there might be some more coverage of water treatment methods in developing countries. ",
+            "\u00a0This class surpassed my expectations, the professor is amazing. "
+        ],
+        [
+            "\u00a0strengths: taught at a good pace ",
+            "\u00a0Everything is great ",
+            "\u00a0The professor explains the problems very careful. ",
+            "\u00a0The amount of material covered was appropriate for the length of the class and the homeworks did a good job of reviewing all material. Students would benefit from a homework on the last section. "
+        ],
+        [
+            "\u00a0go to office hours if you are confused and stick with it, it can be challenging but worth it ",
+            "\u00a0Its a great class! ",
+            "\u00a0Very good ",
+            "\u00a0Follow the class notes closely ",
+            "\u00a0The course is most valuable if you are really interested in working in the water quality/water treatment sector in the future, but it is still cool to learn some of the processes behind various water quality issues. TA sessions really help for understanding the material better. "
+        ]
+    ]
+}

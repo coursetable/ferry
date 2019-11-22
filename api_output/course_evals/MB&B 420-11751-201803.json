@@ -1,0 +1,74 @@
+{
+    "crn_code": "11751",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Principles of protein and RNA structure, common motifs, how to use pymol, cryo-EM, crystallography, NMR ",
+            "\u00a0I learned a lot about structure determination and a small amount about protein folding/principles of structure, although a significantly amount of it overlapped with MB&B 302, despite that course being listed as a prerequisite. "
+        ],
+        [
+            "\u00a0This class's strength is in the variety and depth of topics it covers- it's weakness is in organization, especially with regards to what was covered in section versus in lecture. We spent several lecture periods doing activities with pymol, which would have been a great way to spend section, which would have allowed us to cover more material overall. The student presentations in section could also be revised to be a better use of class time, as the presentations on topics covered in class were just review and those on topics not covered in class were often less informative as the students doing those presentations had to teach themselves the material they would be teaching. Making the student presentations focus on extending the class material by, for example, covering recent papers in the field would be a better format for both the rest of the section and the students presenting. This class also had a problem with starting and ending late, which was a problem for students who had 10:30 classes. Overall, using lecture for lecturing and section for discussion/activities i think would greatly improve the class. ",
+            "\u00a0I really liked MB&B 420, and thought that the professors overall did a good job. The lectures were very interesting and at the appropriate level. I did feel that some of the PyMol exercises done in class might have been more appropriate in section, and wished that Professor Miranker's section of the class was more lecture-based and covered more new material; at the same time, I felt that the lectures given by the TA in section were not very effective, and section would have been better used for discussion/activities. I also thought that the section presentations were slightly disorganized, and personally would have gotten more out of them if we were asked to present on recent papers related to a topic that we learned in class (like a lit talk). I also loved the NMR portion and wished that we spent slightly more time on it. "
+        ],
+        [
+            "\u00a0I would recommend this course only to people who have a strong interest in structure determination or folding- the class did a good job covering these topics, but was definitely not a class that was exceptional enough to make it worth taking for someone with only a slight interest in these topics ",
+            "\u00a0I would probably recommend this class to other undergrads over MB&B 302, although the two classes covered much of the same material so I would not treat MB&B 302 as a prereq (whatever the course description says). "
+        ]
+    ]
+}

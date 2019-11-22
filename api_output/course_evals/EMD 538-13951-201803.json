@@ -1,0 +1,123 @@
+{
+    "crn_code": "13951",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's provided students with helpful and timely feedback",
+        "The instructor established a positive learning environment",
+        "The instructor raised questions or problems that encouraged me to think critically"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            6,
+            11,
+            5
+        ],
+        [
+            0,
+            1,
+            6,
+            8,
+            7
+        ],
+        [
+            0,
+            0,
+            3,
+            12,
+            7
+        ],
+        [
+            0,
+            0,
+            3,
+            9,
+            10
+        ],
+        [
+            0,
+            0,
+            2,
+            7,
+            13
+        ],
+        [
+            0,
+            1,
+            0,
+            8,
+            13
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a07 during problem set weeks ",
+            "\u00a05 hours ",
+            "\u00a0on weeks with psets, like 5 ",
+            "\u00a010 hours ",
+            "\u00a09 ",
+            "\u00a010 ",
+            "\u00a05-6 ",
+            "\u00a0~5-10 ",
+            "\u00a05 ",
+            "\u00a010 ",
+            "\u00a010-15 ",
+            "\u00a010 ",
+            "\u00a016 ",
+            "\u00a03-15 ",
+            "\u00a06 hours per week ",
+            "\u00a08 ",
+            "\u00a015 "
+        ],
+        [
+            "\u00a0Strengths: Provides students with skills that are directly translatable to future work in infectious disease surveillance.  Also encouraged to work with other students for the homework, which was greatly appreciated \r\nWeaknesses: A bit over my head sometimes with mathematical concepts/code.  Hard to follow along in lecture, the learning was primarily done outside of the classroom when reviewing slides and going over the problem sets with other students who had a better grasp on the material ",
+            "\u00a0I learned a great amount of knowledge about modeling. The strength of this class is it strength utilize. So after you learn this course, you can actually solve practical problems. Also, Ginny is very willing to answer your questions and explain it very clearly. You can always put up your hand with questions. Kayoko will hand in hand teach you how to code. It's a very useful class. ",
+            "\u00a0Strengths - You learn a lot and you learn to critically think in order to develop models. Challenging.\r\nWeaknesses - Didn't really get to learn the computer program as much as I wanted.\r\nImprovements - I think students can become really comfortable with the computer programs (R or Matlab) if the course was taught more like AAMIE where we learned SAS and became really comfortable with using it. ",
+            "\u00a0I felt that I learned a lot from this course, but I wouldn't have gotten so much out of it if I hadn't taken other statistics classes prior to this one. I think there should be prerequisites for this class because otherwise it is difficult to get anything out of it. ",
+            "\u00a0For those students interested in a survey of quantitative methods in public health research, this will serve you well. This is an interesting, practical class. Ginny also reviews criticisms of the methods and important concepts that underlie the methods (assumptions of independence, information bias in data, etc.). Critical for students interested in public health research and interested in pursuing a PhD. ",
+            "\u00a0Loved this class! It is definitely tough but the skills gained are invaluable. Lecture and lab every week and then psets based on the labs. It was great getting to work with other students and I believe I learned much more than I would have working on my own. ",
+            "\u00a0Overall, this class was pretty good. I learned a lot about mathematical techniques in infectious disease. I wish the labs were a little more hands-on because I wish I got more experience actually writing the code in MATLAB. The material could be a little complex at times, but Ginny did a good job of making sure the conceptual ideas behind the methods were well-understood. ",
+            "\u00a0This course was one of the more difficult ones for me at YSPH, but also among the most rewarding. The lectures are clear and concise given the sometimes opaque material. At times I would have liked to have some referential course texts focused on the more fundamental math material we encountered. But Ginny, the instructor, and Kayoko, the TA were more than helpful whenever I had questions. ",
+            "\u00a0Strengths:\r\n-Each week students learn a different quantitative methods for use in modeling infectious disease\r\n-Labs offered an opportunity to practice the methods and concepts taught in lecture\r\n\r\nWeaknesses:\r\n-The posted powerpoints and course material for use outside of class do not do a good job of supplementing concepts in class. If you do not understand a concept or method it is difficult to relearn outside of class. ",
+            "\u00a0This was an interesting course covering a wide variety of quantitative topics.  I enjoyed the introduction to different methods to evaluate epidemics of varying characteristics. ",
+            "\u00a0Strengths:\r\n-introduced concepts and quantitative methods that can be used in future situations\r\n-instructor and TA provided help and were accessible via email to answer questions and explain difficult concepts\r\n-introduced MATlab, labs and problem sets allowed students to get some familiarity with the functions of the applications\r\n-able to work in groups for the problem sets\r\n\r\nWeaknesses:\r\n-felt that another, introductory class would be useful to do well in this course \r\n-some difficulty in having to learn both the concepts in class and how to maneuver a new kind of program (MATlab)\r\n-I didn't understand the rule limiting how many times students could work with another student. It was certainly helpful working with a certain group where I could ask questions and explore concepts together throughout the course. I had to worry about finding someone else to work with on the problem set, and schedule a time to meet. Often, I just ended up working alone instead. I think it would be better to take out this rule and just let students work with whoever they want, or with an already established study group ",
+            "\u00a0The lab was very helpful in learning the materials taught in class. More examples can be used in class to help with understanding the materials better. "
+        ],
+        [
+            "\u00a0Ginny is extremely knowledgeable about the subject and you can see that she really wants students to learn and take at least one method presented to use in the future.  However, sometimes I thought that her knowledge about the subject matter was so advanced that it wasn't \"dumbed down\" enough for me to grasp it.  Overall, however, I'm glad that I took this class with her and I think it was a worthwhile experience. ",
+            "\u00a0She is great. She is willing to answer all your questions and explain the elusive paper to us really well. But sometimes she will skip some points because she assume we knew it. If she can have more time to explain some detailed knowledge to us to help us understand that will be better. ",
+            "\u00a0Brilliant instructor, gave very interesting lectures that taught important concepts. ",
+            "\u00a0She is very knowledgeable in the content of the lecture and in her field. Her lectures are informative but sometimes she does not explain the math behind some of the models very well or says it in a confusing way. ",
+            "\u00a0Dr. Pitzer is an engaging lecturer and clearly passionate about her research. ",
+            "\u00a0Ginny has outlined a course that surveys infectious disease research methods without being terribly overwhelming or feeling too extraneous. I enjoyed the way the course was set up, and I appreciated her lecture style. ",
+            "\u00a0Professor Pitzer is excellent! Incredibly knowledgeable and great at explaining complex topics in simple terms. ",
+            "\u00a0Ginny was a very good instructor. She could go a little fast at times through the more complex mathematical parts, but was very good at explaining the concepts behind the techniques. ",
+            "\u00a0Ginny is passionate and articulate about this subject, and her teaching style helps to motivate students to tackle even the most difficult material presented during the semester. She is always willing to answer any level of question, and keeps her sense of humor throughout the instruction of some very abstract concepts. My only piece of constructive criticism would be that she slows down even more in explaining the extremely dense equations and revisits or reviews these equations in later lectures, but there is only so much time per class, she covers a lot of material, and she or the TA were very much available outside of class. ",
+            "\u00a0Strengths:\r\n-Strong knowledge of quantitative methods\r\n-Teaches recent innovations in quantitative methods, allowing for students to be up to date upon graduation\r\n\r\nWeaknesses:\r\n-Powerpoints could be annotated for future reference outsides of class, in the event that a student does not understand a concept\r\n-Lectures and labs go very quickly, making it difficult to get all of the points precisely ",
+            "\u00a0Dr. Pitzer was a great instructor.  Her introductions to each topic were very clear.  I would suggest that more time be spent emphasizing the key components of each quantitative method as we go into their specifics; I found myself lost at times during class.  This might be difficult to implement, but I would have appreciated more time being spent writing code during the MATLAB section instead of running code that was already given to us; this may have helped me to understand what each line meant.  This would not be possible for some models, but there were instances where I felt I would learn more if we went through and wrote the code together. ",
+            "\u00a0The instructor did well to cover this complex subject. However, she tended to speak fast during lecture and during lab, so it was difficult to really understand all the concepts. If the computer took a while during lab, then I would miss a lot of lab notes and it was difficult to finish the associated problem set. It may help to record the lab lectures and post them after lab so students are able to check their notes and make sure they get all the information. "
+        ],
+        [
+            "\u00a0One of those courses at YSPH that provides you with skills/code that you will use in the future.  You can see directly what you are learning and how it will assist you in the future.  Definitely difficult and time-consuming, but once finished you'll be glad to have taken it. ",
+            "\u00a0highly recommend. if you want to be a model ninja. ",
+            "\u00a0I would say it is extremely challenging but rewarding if you understand and can use it in the future.. I would only recommend this course for those who have a strong grasp on modeling. ",
+            "\u00a0I would recommend this course to a student who has some quantitative skills and is hoping to build on them. ",
+            "\u00a0If you are interested in a course that may (reasonably) challenge you to think critically about infectious disease research methods, and then testing out these methods in a controlled setting in lab, then you should definitely take this class. A little knowledge of R, probability theory (basic distributions, assumptions of independence, etc), and some background in calculus is helpful, but probably not totally necessary. ",
+            "\u00a0This course was very challenging but was very interesting. The mathematical techniques could be complex at times and it may be helpful to take Transmission Dynamics in Infectious Disease Modeling class before this. This was not an option for me, however, but I still feel I was able to keep up with the material. ",
+            "\u00a0This class is excellent and essential for anyone wanting to get a foothold in modeling infectious disease outbreaks. It is definitely worth the difficulty and headaches that might be encountered because what you end up learning is really interesting and valuable in understanding disease investigation. You'll gain some powerful analytical tools. ",
+            "\u00a0This class is a must take for anyone who wants to work in infectious disease modeling following graduation. While the course is as relevant for non infectious disease specialists, the methods taught in the course have wide ranging applicability to other modeling areas of public health. ",
+            "\u00a0This course takes you through a variety of quantitative methods for evaluating epidemic data.  It is challenging, but the class is manageable with help from the TF and working with peers on assignments. ",
+            "\u00a0Overall, this course did cover quantitative methods that could be useful in the future. The class does require a lot of work and time to understand the concepts and to finish the problem sets. Lectures and labs must be attended and certainly the advice and knowledge from the instructor and the TA is necessary to do well in the class and complete the problem sets. However, if other students are interested and willing to do the extra work, I would recommend this class, though I feel the class could be improved in some ways, ",
+            "\u00a0This course teaches a very useful tool for monitoring infectious diseases. "
+        ]
+    ]
+}

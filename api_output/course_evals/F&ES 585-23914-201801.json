@@ -1,0 +1,83 @@
+{
+    "crn_code": "23914",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            0
+        ],
+        [
+            2,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained an understanding of the numerous factors that go into growth and yield modeling, as well as a basic understanding of how growth and yield modeling software works. ",
+            "\u00a0I became exposed to forest volumetric models (growth and yield) ",
+            "\u00a0This course was a good introduction to growth and yield modeling software, specifically the application of FVS. I learned the basic of how to use the software and what growth and yield means. "
+        ],
+        [
+            "\u00a0The course went better than expected. Dr. Weiskittel taught the subject matter in an engaging and straightforward manner. He knows the subject matter well and is a good instructor. ",
+            "\u00a0Somewhat well ",
+            "\u00a0I thought we would spend more time actually applying the software and becoming familiarized with it's use rather than talking about the theory and background behind it's use. "
+        ],
+        [
+            "\u00a0It's hard squeezing all of the course material into a two-day workshop. It would be great if it were a small portion of a larger forest measurements and modeling course. ",
+            "\u00a0Strengths: good thing to get exposed to\r\nWeaknesses: not very much time to actually engage with material ",
+            "\u00a0This workshop was a GREAT improvement from the course that was taught last year, and gave us some technical understanding of using growth and yield in forest management activities. Yet, it didn't really dive deep into the practical use of the software. If the same content, and the same instructor, were to teach a semester long course with more technical, computer lab time, the class would be just what students need. "
+        ],
+        [
+            "\u00a0If it is taught by the same instructor, then I would highly recommend it. ",
+            "\u00a0Make sure to do the pre-course reading ",
+            "\u00a0This course is a good introduction but don't expect to walk away with a thorough understanding of using growth and yield software. "
+        ]
+    ]
+}

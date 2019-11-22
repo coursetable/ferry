@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51892/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course is an iconoclastic introduction to the study of education. Besides examining the purposes and practice of education and learning across a wide variety of times and places, the course examines the study of education today in order to see what can be gained from a skeptical approach to the subject. Particular emphasis is placed on the origins and development of the research university.", 
+    "title": "Idolizing Education", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "RKZ 05", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15571", 
+        "listings": [
+            {
+                "number": "312", 
+                "subject": "EDST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Mordechai Levy-Eichel"
+    ], 
+    "long_title": "Idolizing Education", 
+    "extra_info": "A"
+}

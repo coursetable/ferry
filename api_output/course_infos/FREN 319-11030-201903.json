@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "requirements": "", 
+    "description": "Que sais-je? What do I know? This is Montaigne\u2019s motto, engraved on a medal in 1576 at the writer's request. At the crossroad of disciplines, this seminar explores how Michel de Montaigne develops a philosophy of doubt by literary means. We see that he does not naively or theoretically subscribe to the skeptical tradition, but rather proposes a practical and singular use of a non-judgmental attitude in the writing of Les Essais\u2014the early modern masterpiece of the French literature of the self. We read essays on topics such as: idleness, education, eroticism, imagination. These texts are coupled with short, theoretical excerpts (Sextus Empiricus, Diog\u00e8ne La\u00ebrce, Henri Estienne). Readings and discussion in French.", 
+    "title": "Montaigne Beyond Skepticism: L...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WALL81 301", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11030", 
+        "listings": [
+            {
+                "number": "319", 
+                "subject": "FREN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Dominique Brancher"
+    ], 
+    "long_title": "Montaigne Beyond Skepticism: Learning to Read the <i>Essais</i>", 
+    "extra_info": "A"
+}

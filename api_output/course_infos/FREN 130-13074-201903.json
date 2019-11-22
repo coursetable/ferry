@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "2019-12-13", 
+        "group": 2, 
+        "day_of_week": "Friday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49926/assignments/syllabus", 
+    "requirements": "Conducted entirely in French. After FREN 120, 121, or a satisfactory placement test score.", 
+    "description": "The first half of a two-term sequence designed to develop students' proficiency in the four language skill areas. Prepares students for further work in literary, language, and cultural studies, as well as for nonacademic use of French. Oral communication skills, writing practice, vocabulary expansion, and a comprehensive review of fundamental grammatical structures are integrated with the study of short stories, novels, and films. Admits to FREN 140.\nConducted entirely in French. After FREN 120, 121, or a satisfactory placement test score.\n\n1.5 Yale College course credits", 
+    "title": "Intermediate and Advanced Fren...", 
+    "skills": [
+        "L3"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WALL81 301", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "13074", 
+        "listings": [
+            {
+                "number": "130", 
+                "subject": "FREN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Ruth Koizim"
+    ], 
+    "long_title": "Intermediate and Advanced French I", 
+    "extra_info": "A"
+}

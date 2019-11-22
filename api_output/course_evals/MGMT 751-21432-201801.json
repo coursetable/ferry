@@ -1,0 +1,75 @@
+{
+    "crn_code": "21432",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            3,
+            1,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Reviewing and critiquing marketing literature , model development and estimation "
+        ],
+        [
+            "\u00a0Occasional feedback would be nice. \r\n\r\nThe choice of papers was questionable at times. ",
+            "\u00a0Strengths- curriculum, faculty engagement ",
+            "\u00a0It would be helpful to get a brief overview of the topic area during class instead of jumping right in. ",
+            "\u00a0I think less time spent on presentations and more time spent on discussion, framing the papers in the current work of the field, etc. would help this course. We also didn't receive any feedback on either the written or presentation components. ",
+            "\u00a0I found it helpful when professors explained the topic area (current trends, its history, relevance to our research) before jumping into the presentations. It could also be helpful if professors could guide us to spot the merits of the paper because I didn't have enough background to know what the faults and merits of each paper is. "
+        ],
+        [
+            "\u00a0Yes must take for marketing majors "
+        ]
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49045/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Mandatory for all second-year students in the Painting and Printmaking department, this course meets on six occasions during Fall 2019. The focus of our meetings will be to develop two thoughtful and collaboratively engaged thesis exhibitions for Spring 2020. Our six sessions will be dedicated to discussing what these shows can be, beyond 23 solo presentations in a shared University gallery. How can a year and a half of close proximity, sustained dialogue and shared materials, readings, and stories be integrated into exhibitions that culminate your time at Yale? The challenge of this seminar and for all its members is to formulate group shows that benefit each exhibitor\u00e2\u20ac\u2122s work, while understanding that they are MFA exhibitions. Enrollment is limited to second year students in the department.", 
+    "title": "Minimizing the \"i\" in Thesis: ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "GREEN C220", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12703", 
+        "listings": [
+            {
+                "number": "577", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Matthew Keegan"
+    ], 
+    "long_title": "Minimizing the \"i\" in Thesis: Thesis Workshops", 
+    "extra_info": "A"
+}

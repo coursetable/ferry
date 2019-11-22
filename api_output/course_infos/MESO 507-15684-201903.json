@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Readings and discussion of issues and evidence for the second millennium of Mesopotamian history.", 
+    "title": "History of Mesopotamia: Second...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15684", 
+        "listings": [
+            {
+                "number": "507", 
+                "subject": "MESO"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Benjamin Foster"
+    ], 
+    "long_title": "History of Mesopotamia: Second Millennium", 
+    "extra_info": "A"
+}

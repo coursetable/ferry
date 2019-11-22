@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50969/assignments/syllabus", 
+    "requirements": "Prerequisite: PHYS 170, 171, or 180, 181, or 200, 201, or 260, 261, or permission of instructor. Recommended preparation: familiarity with basic calculus and differential equations.", 
+    "description": "A broad introduction to the processes that affect the past, present, and future features of the Earth. Examples include climate and climate change and anthropogenic activities underlying them, planetary history, and their relation to our understanding of Earth's present dynamics and thermodynamics.\nPrerequisite: PHYS 170, 171, or 180, 181, or 200, 201, or 260, 261, or permission of instructor. Recommended preparation: familiarity with basic calculus and differential equations.", 
+    "title": "Introduction to Earth and Envi...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "KGL 119", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11558", 
+        "listings": [
+            {
+                "number": "342", 
+                "subject": "G&G"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "John Wettlaufer"
+    ], 
+    "long_title": "Introduction to Earth and Environmental Physics", 
+    "extra_info": "A"
+}

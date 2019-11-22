@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49544/assignments/syllabus", 
+    "requirements": "Prerequisites: ECON 117 and 123, or ECON 135 and 136.", 
+    "description": "This is an advanced course covers basic univariate and multivariate models and methods used to analyze financial and economic time series data and panel time series data. Topics include: classic linear models; serial dependence, autocorrelation in error variances (ARCH, GARCH); methods that allow for nonlinearity, tail dependence, comovements, conditional value at risk, fat-tails, nonstationarity; vector autoregressive models; factor models; Markov switching, latent factors, measurement errors, stochastic volatility; empirical asset pricing models. The aim of the course is to help students write their senior essays and start their own research in economics and finance.\nPrerequisites: ECON 117 and 123, or ECON 135 and 136.", 
+    "title": "Financial Time Series Economet...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "HLH28 108", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10858", 
+        "listings": [
+            {
+                "number": "419", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Xiaohong Chen"
+    ], 
+    "long_title": "Financial Time Series Econometrics", 
+    "extra_info": "A"
+}

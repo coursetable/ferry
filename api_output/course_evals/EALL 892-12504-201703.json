@@ -1,0 +1,74 @@
+{
+    "crn_code": "12504",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Through this course, I developed a rich understanding of developments in Japanese film and media during the 1950s and 1960s. ",
+            "\u00a0I have learned the history of Japanese New Wave cinema, and the background history of Japanese postwar politics and society in this course. I have also learned and practiced the skill of analyzing a cinematic text formally and ideologically. "
+        ],
+        [
+            "\u00a0Given the long list of New Wave courses that have been taught at Yale on European national cinemas, this class was a much needed addition to the curriculum. The course's strengths include a focus on close textual analysis, thought provoking readings, and well-curated screenings. The course could benefit from more historical and political context for the filmic texts and less of an emphasis on free form discussion. Consider structuring Monday sessions as if a lecture, followed by hour-long discussions on Wednesday. ",
+            "\u00a0One strength of this course is the concentration on a specific topic each week. The reading and film selected for that week will revolve around this topic, and overall those topics provide a comprehensive view of postwar Japan from different angles. One weakness I think is the time distribution, because students usually have more to say about the film than the background history, but the time of Monday and Wednesday class are equal. "
+        ],
+        [
+            "\u00a0I strongly recommend this course to any student with an interest in cinema history. The course's strengths include a focus on close textual analysis, thought provoking readings, and well-curated screenings. ",
+            "\u00a0I will recommend this course, because the instructor offers very helpful feedback on the discussion at class and student's work. "
+        ]
+    ]
+}

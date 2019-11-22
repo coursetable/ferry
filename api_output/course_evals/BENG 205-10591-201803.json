@@ -1,0 +1,91 @@
+{
+    "crn_code": "10591",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            7,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            7
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            3
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            4
+        ],
+        [
+            0,
+            1,
+            5,
+            2,
+            1
+        ],
+        [
+            1,
+            4,
+            4,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Researching skills and techniques relevant to a pressing need in the biomedical field. ",
+            "\u00a0This course provided an engaging introduction to research techniques and dilemma-based clinical research in biomedical engineering. The course is interdisciplinary, with exact skill sets and content likely varying year to year and with the specific clinical dilemma considered. We analysed the development of a tissue engineered vascular graft. In doing so, I learned substantially about heart vasculature, immunogenic response, key biological molecules and cells like cytokines and macrophages. We learned about error analysis, basic fluid mechanics (simple solutions to simplified and/or reduced Navier-Stokes), polymers, fabrication techniques, nanoparticles, etc. The course has interspersed lab days in which students gain a first level exposure to some important laboratory techniques like cell culture, double emulsion nanoparticle synthesis, solvent casting porogen leaching, etc. Professor Humphrey and Dr. Seifert do an incredible job of connecting ostensibly disparate concepts in a pedagogically effective manner to approaching large research questions. ",
+            "\u00a0Awesome class overviewing various aspects of designing a tissue engineered vascular graft. The first half of the course we learned a bunch of useful concepts, and then moved into a more hands-on second half where we split up into teams and designed various aspects of a graft. By the end of the course, all our teams came together and gave a big presentation based on our recommendations ",
+            "\u00a0We learned about how to design a tissue engineered vascular graft to treat congenital heart defects. We learned relevant topics drawing from physiology, cell biology, mechanics, immuno biology, nanotechnology, and biomaterials and used all the knowledge we learned, creativity, critical thinking to create a team design. ",
+            "\u00a0I came in with very limited biology background and left with a variety of skills of knowledge sets a basic understanding of hemodynamics in the human heart, as well congenital heart defects; the immune response and immunomodulation; biomechanics/mechanotransduction; mechanical properties of various polymers (I literally didnt even know what a polymer was before this course); cell culture; nanoparticle production; linear regression and transformations (taught better in one class of BENG205 than in a semester of my stats class); basic design principles/approaches; the timeline for clinical development/trials for new drugs and medical devices; the use of computer programs to simulate blood flow through patient specific geometries... the list goes on, and these are only what instantly came to mind. In short, I learned a LOT in this class, and I learned it all very painlessly through Dr. Humphrey and Dr. Siefferts very engaging and interesting lectures, various guest lecturers, hands-on lab work, and thorough but fair evaluations (psets, exams, projects, reports), and my own peers. ",
+            "\u00a0I became very fascinated with the topic of designing a tissue engineering vascular graft for patients with congenital heart diseases. The course combines biology, mathematics, physics, lab demonstration, and team collaboration skills to explain the complexity of the problem at hands in a very accessible way to non-majors. I learned a lot about how to think critically about a solution to a problem and how to expand our thinking to apply what we already about the problem to find the types of questions we must ask. Throughout the semester, I also get the chance to learn about recent health innovations in the field of biomedical engineering such as SimVascular, nanotechnology, and quantum dots. I also learned to seek extra help in science courses as a humanity major. "
+        ],
+        [
+            "\u00a0It is a really interesting course and I would definitely recommend it to anyone interested in research or problem solving. The one weakness of the course is that it can be a little disorganized because of when labs were available and when professors were available, so a more strict schedule could be helpful. ",
+            "\u00a0Dr.s Humphrey and Siefert were great, the course was structured really well, I just thought there would be a bit more of a lab component to it. ",
+            "\u00a0This was by far one of my favorite courses in engineering and STEM at Yale. A small class size, interactive classes with a combination of seminar style discussion and lecture based classes, plus periodic lab days and guest speakers, made it such that class was never boring. The material was well contextualized and presented in a manner well suited to student learning. In terms of improvement, I feel like the semester sometimes lost some structure and/or it wasn't entirely clear where the course was going. Barring trivial organizational elements, I also think that the labs could be better organized for student engagement. It's difficult in a class with such varying research background or laboratory experience, but I would have loved the opportunity to get more hands-on experience and/or training in things like cell culture, flow cytometry, ELISA, etc. ",
+            "\u00a0Prof. Humphrey and Dr. Siefert really made the class. They're both experts in domains that make a class about discovery and design a perfect fit for their skills. All their assignments related directly to practical aspects of graft design, and the team-based projects brought the class really close together. 10/10 ",
+            "\u00a0This class a refreshing deviation from the way most engineering classes are taught (using the discipline approach).  The class focuses entirely on addressing the dilemma of creating tissue-engineering vascular grafts in a way that helps student understand what working in the field of biomedical research can be like.  Though the class does a great job showing students what the real-world can be like, just like the real-world it can be, at times, tough to know what the overall direction of the class is and how to best move forward.  Nonetheless, the class is essential for anyone unsure about future careers in these types of engineering research type fields. ",
+            "\u00a0Strengths: small class size, great discussion, opportunity to ask questions and get help from instructors, good mix of lecture and lab and discussion, got to know my classmates well, team-based learning\r\nImprovements: more feedback on homework assignments instead of just a grade ",
+            "\u00a0Strengths: very engaging and interesting lectures, openness of our professors to all questions and inquiries, fair yet thorough evaluations, variety of topics covered, working with my peers\r\n\r\nWeaknesses: the assignments were often pretty vague (I am almost always texted a friend in the class to clarify the question, just because we were never certain exactly what was being asked). This was true also for the exams, which made them difficult to study for (what did they expect us to retain and what was auxiliary information?). I also felt the lab work would have been more helpful if we had been more explicit beforehand what we would be covering in the lab so we could better follow whe we were there. ",
+            "\u00a0The interdisciplinary nature of the course makes it by far the best class I have taken at Yale. Professor Humphrey and Professor Siefert present the topics of study through current researches, mathematical explanations, lab demonstrations. As a seminar, the course gives you plenty of chance to ask questions and receive clear feedback from the professors. I wish that the pace of the course was a bit slower because it was hard at times for me to grabble the more complicated topics. ",
+            "\u00a0This is a fantastic course for getting an idea of what goes into designing products for medicine, as well as a nice overview of concepts like tissue engineering and immunomodulation. At times the class didn't feel terribly structured, but that's a very minor complaint that in no way detracts from how great it is overall. "
+        ],
+        [
+            "\u00a0Yes, if you want good exposure to current research, biology, engineering, design, and the like. ",
+            "\u00a0I would absolutely recommend this course to another student. As mentioned, Professor Humphrey is an incredibly engaging professor who is genuinely passionate about the material. The modern clinical relevance of the material provides an imperative for why it matters, and this energy/importance is not lost in lecturing. Professor Humphrey complements lecturing with personal anecdotes. The small class size led to constructive teamwork and collaboration, including internally organized review sessions and presentations. Students are given a lot of freedom to think about the ideas without being pigeonholed into a certain approach. While the class is certainly geared towards sophomore and junior BME students, I think the course is made even stronger by perspectives brought from other engineering majors and/or other fields of study in general. If you're looking for a course to get a great introduction to basic research principles in biomedicine and engineering, take this course. The lessons and approaches taught by Professor Humphrey and Dr. Seifert are valuable regardless of your academic background/discipline. ",
+            "\u00a0100%, even if you're not a BME major. There were a ton of students from many different backgrounds, and everyone brought a unique perspective to the class, so no matter your class or major you should do it ",
+            "\u00a0I would certainly recommend other students take this class.  Though it may not count for your major, it's a great way to explore and take an interdisciplinary type approach that is difficult to find in many STEM classes. ",
+            "\u00a0Yes! If youre interested in BME and design, even if youre not a BME major, I highly recommend! Professor Humphrey is an amazing teacher and mentor, really engages everyone, and loves answering questions. Dr. Siefert is also an amazing teacher and very knowledgeable. This class has a mix of lecture, labs, and discussions and near the end of the semester we split into three teams that collaborated with each other and did a class presentation. The workload is pretty light (weekly homework) and the midterm/final were very fair. This class was very enjoyable and encourages you to think critically and innovatively instead of just absorbing info. You also get to know your classmates well. ",
+            "\u00a0Yes! A great multidisciplinary course, fun to get to know and work with all your classmates and Dr. Humphrey and Dr. Sieffert were truly incredible! ",
+            "\u00a0Yes! It will be the best science credit you would ever receive from Yale. ",
+            "\u00a0This class is quite fun, so you learn a lot without ever noticing it as work. It's a great way to get some insight into the design process, and I'd fully recommend it, especially if you are a BME or are considering BME. "
+        ]
+    ]
+}

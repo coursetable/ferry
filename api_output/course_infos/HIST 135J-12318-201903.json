@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50140/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The culture and politics of the revolutionary and early national periods of American history, using the lives, ideas, and writings of Thomas Jefferson and Alexander Hamilton as a starting point. Topics include partisan conflict, political culture, nation building, the American character, and domestic life.", 
+    "title": "The Age of Hamilton and Jeffer...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "PH 207", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12318", 
+        "listings": [
+            {
+                "number": "135J", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_PREI\">YC History: Preindustrial</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHI2\">YC History: United States</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHID\">YC HIST: Ideas &amp; Intellectuals</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIF\">YC History: Politics &amp; Law</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIJ\">YC HIST: Soc Chng &amp; Social MVMN</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIK\">YC History: War &amp; Society</a></li></ul>"
+    ], 
+    "professors": [
+        "Joanne Freeman"
+    ], 
+    "long_title": "The Age of Hamilton and Jefferson", 
+    "extra_info": "A"
+}

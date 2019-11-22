@@ -1,0 +1,72 @@
+{
+    "crn_code": "11804",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Developed critical thinking skills; gained experience working with what can be described generally as a very complex and highly problematic history; learned how to write a convincing and effective abstract; practiced conference presentation skills in a supportive environment; and of course, I know much more about Germany and the Third Reich than I did before taking the course. "
+        ],
+        [
+            "\u00a0Reasonable workload (readings for the next class announced consistently 24 hours or less after the previous class, and she made sure it was always a reasonable amount for a given week); opportunity to improve valuable skills of abstract writing and giving a conference paper; good variety of reading, listening, and watching films/documentaries/operas/etc. Relatively small detail, but the PDFs for readings could be \"fixed\" in the sense that they are occasionally rotated in strange ways, and it takes some time to go through and fix this. "
+        ],
+        [
+            "\u00a0Yes; interesting content, reasonable workload, opportunity to improve valuable skills of abstract writing and giving a conference paper ",
+            "\u00a0This was a wonderful class!  Very relevant topics for the current political climate. \r\nCourse work for the seminar was well planned and balanced, and though each week was different, the readings informed each other as a whole. "
+        ]
+    ]
+}

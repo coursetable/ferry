@@ -1,0 +1,75 @@
+{
+    "crn_code": "20991",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            4,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Wide variety of topics including atmospheric chemistry, air quality impacts related to energy, etc. All of it was very up-to-date with current research. ",
+            "\u00a0Air quality, particle lifetimes, atmospheric chemistry "
+        ],
+        [
+            "\u00a0Well-organized, taught effectively, interesting and relevant topics. Journal club was interesting and doing a couple more might have been nice. ",
+            "\u00a0More practical "
+        ],
+        [
+            "\u00a0Definitely; the class offers useful, interesting skills and information that are applicable across many fields. Also generally enjoyable and engaging. ",
+            "\u00a0Yes, it was engaging and informative. ",
+            "\u00a0Yeah, good content "
+        ]
+    ]
+}

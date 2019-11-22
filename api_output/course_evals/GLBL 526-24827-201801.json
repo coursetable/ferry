@@ -1,0 +1,75 @@
+{
+    "crn_code": "24827",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            2,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            1,
+            2,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            3
+        ],
+        [
+            1,
+            1,
+            3,
+            2,
+            0
+        ],
+        [
+            1,
+            2,
+            4,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learnt about many market failures in the difference developing countries ",
+            "\u00a0I learnt a great deal about how to apply economic concepts to developing states but also to all states in general. "
+        ],
+        [
+            "\u00a0Strengths: covers many topics \r\nWeakness: no in depth ",
+            "\u00a0Strengths\r\n- Readings were very good. Really liked the selection, especially liked reading newspaper articles about the different topics in different contexts. \r\n- Liked using game theory to understand market dynamics. \r\n\r\nWeaknesses\r\n- The final project did not seem to be very aligned with the class content. It ended up being more of an entrepreneurial pursuit (designing a business plan or thinking through an expansion ) rather than understanding the institutional context or the larger market dynamics. \r\n- Some overlap with State and Society. Repetitive for MBA students. \r\n- For those who have already working in development or in other countries -- which is most of the class -- much of the material was somewhat obvious and predictable. The class helped put some frameworks on these concepts, but the concepts themselves were not new news. \r\n- Little engagement with the class. I think would be better in smaller classroom, with more discussion between students "
+        ],
+        [
+            "\u00a0I will recommend it to people who begin to be interested in development works but not people who are already working in the field. ",
+            "\u00a0It helps you to think a little outside the neoclassical econ cannon. ",
+            "\u00a0No -- the prof didnt inspire confidence, found much of the material to be rather obvious if you've worked in development before. "
+        ]
+    ]
+}

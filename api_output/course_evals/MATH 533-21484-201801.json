@@ -1,0 +1,71 @@
+{
+    "crn_code": "21484",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned the essential concepts and facts about representations of finite groups and Lie groups. \r\nThe proof of the fact that the dimension of any irreducible representation of a finite group divides the order of the group by arguing that the quotient of the dimension by the order is an algebraic integer is particularly illuminating.\r\nThe one-to-one correspondence between Lie algebras and simply-connected Lie groups illustrates the power of linearization in the study of Lie groups. \r\nIt is also interesting to note that the dimension of the classical groups as manifolds can be calculated by considering their Lie algebras. "
+        ],
+        [
+            "\u00a0The professor teaching this course not only teaches us the material with many motivations beforehand, but also provides many valuable remarks between the various sections of this course. \r\nAnd the final presentations allow us to learn many seemingly different but deeply connected areas of representation theory, and their relations to other areas of mathematics. "
+        ],
+        [
+            "\u00a0This course is definitely worthwhile to take for students majoring in mathematics or physics. \r\nThis course covers all the essential aspects of representation theory of finite groups, which demonstrates how linear algebra interacts with group theory in a very inspiring way.\r\nFurthermore, the basics of the representation theory of Lie groups is also covered in this course, which is of interest to students of mathematics and physics alike. "
+        ]
+    ]
+}

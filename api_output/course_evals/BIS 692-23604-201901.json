@@ -1,0 +1,99 @@
+{
+    "crn_code": "23604",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's provided students with helpful and timely feedback",
+        "The instructor established a positive learning environment",
+        "The instructor raised questions or problems that encouraged me to think critically"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            5,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            7
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a08-10 ",
+            "\u00a010 to 15 hours. ",
+            "\u00a06 hours ",
+            "\u00a0Audit ",
+            "\u00a06 hours a week ",
+            "\u00a012-20 ",
+            "\u00a07-10 ",
+            "\u00a08 "
+        ],
+        [
+            "\u00a0The course gave me a brief introduction about statistical methods in genetic and genomic analysis. Though homework was a lot and hard, it made me reflect the questions deeply. I really love this course. ",
+            "\u00a0Almost all important topics in RNA data analysis were covered. In each topic, many classic and cutting-edge statistical methods were introduced. ",
+            "\u00a0It's very useful. ",
+            "\u00a0Strengths are that as an interdisciplinary course it creates a great atmosphere incorporating students of different background to think about the same problem; weaknesses are that in the first few courses students with little biological knowledge might feel a little overwhelming. ",
+            "\u00a0Great introduction to the area ",
+            "\u00a0A good topic for students who what to study computational biology. The lecture is quit long (2 hrs straight). Maybe consider breaking into sections and that could help students improve learning efficiency. \r\n\r\nGood literature/papers uploaded to the course website. ",
+            "\u00a0Many interesting topics. Learn a lot. "
+        ],
+        [
+            "\u00a0He was an excellent instructor. He was brilliant and was able to illustrate the course materials clearly. ",
+            "\u00a0Dr. Zhao's teaching is very instructive, and he encourage us to think critically. ",
+            "\u00a0Fabulous professor! ",
+            "\u00a0Inspiring, and lectures are great. ",
+            "\u00a0Dr. Zhao is a great teacher as he is really good at introducing the statistical approaches to biological questions and helping students with different backgrounds understand the problems. ",
+            "\u00a0Great at explaining technical knowledge in plain language; very logical and easy to follow ",
+            "\u00a0The lectures were really clear and rich in contents. \r\nReading materials are useful. "
+        ],
+        [
+            "\u00a0I highly recommend this course to students who want to know more about genetic data analysis, specifically statistical methods. Be prepared with high burden of homework. However, after finishing those homework, you will find yourself learning more. ",
+            "\u00a0A very good course for those whose research interest is related to RNA data analysis. Highly recommended. ",
+            "\u00a0Yes, I would recommend it, although the workload seems very heavy. ",
+            "\u00a0This is a course featuring introductions of the applications of statistical methods to computational biological problems of different topics.\r\nYes I will recommend it to other students because I think it is helpful if he/she wants to statistically study biological problems. ",
+            "\u00a0Highly recommend for anyone who want to work in this area ",
+            "\u00a0I will recommend it. Learn a lot about statistical methods in computational biology. "
+        ]
+    ]
+}

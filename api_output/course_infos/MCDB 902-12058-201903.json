@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "The course allows students to hone their presentation skills through yearly presentation of their dissertation work. Two students each give thirty-minute presentations in each class session. Students are required to present every year beginning in their third year in the MCDB program. Each MCDB graduate student is expected to attend at least 80 percent of the class sessions. Two faculty members co-direct the course, attend the seminars, and provide feedback to the students.", 
+    "title": "Advanced Graduate Seminar", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12058", 
+        "listings": [
+            {
+                "number": "902", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Murat Acar", 
+        "John Carlson"
+    ], 
+    "long_title": "Advanced Graduate Seminar", 
+    "extra_info": "A"
+}

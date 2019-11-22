@@ -1,0 +1,83 @@
+{
+    "crn_code": "11034",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0gained a much better/in-depth understanding of chemical reactions in the environment which I found very interesting ",
+            "\u00a0I gained a great deal of knowledge on how we can approximate and determine the chemical properties of water in both natural and controlled systems. ",
+            "\u00a0Basic concepts of aquatic chemistry, including pH, pe, alkalinity, precipitation of chemical species. ",
+            "\u00a0It was a great overview of aquatic chemistry, and how speciation happens in waters. ",
+            "\u00a0Thinking critically about the interaction of chemicals in the environment. In the beginning of the course, I didn't have any intuition about how compounds would behave, but through practice problems in class and on homeworks, I became more comfortable with this concept. "
+        ],
+        [
+            "\u00a0strengths: straightforward material \r\nweaknesses: sometimes too fast-paced ",
+            "\u00a0The homework assignments were designed well to reinforce course content and exams tested mastery of course content fairly. The instructor was also engaging. ",
+            "\u00a0Benoit was a fantastic lecturer and did a great job with structuring the lectures and following pace for us to follow. ",
+            "\u00a0I think that more real world examples/phrasing questions in a more real world setting would be helpful to keep student engagement high and allow for the material to be applied by the students outside of the course. However the homework and the exams were related to the in class examples which was nice for students. Also, writing questions where they are spaced out and points are assigned would be helpful for the homework/exams as I know a few students would not answer all parts of the questions on exams. :) ",
+            "\u00a0I appreciated that the in class examples and homeworks were similar in content and allowed me to practice concepts that we learned in class on my own. "
+        ],
+        [
+            "\u00a0Yes, I thought it was great to gain a better background in chemistry since I had forgotten a lot of what I learned in my other classes years ago. Material in two of my other classes also overlapped slightly with some of what I learned in this class, so it was great to have the Aquatic background since my other classes didn't go as in-depth with the specific material like this class did ",
+            "\u00a0Yes, the instructor teaches the course well and is passionate in his teaching. The course material is also fundamental to many different disciplines and is taught thoroughly. ",
+            "\u00a0Yes,\r\n\r\nThe instructor makes the class relatively easy to follow. The homeworks and exams are long, but genuinely test whether we know the content or not. ",
+            "\u00a0I really enjoy aquatic chemistry as a subject, however I think that the class would be more useful if the instructor used any modeling programs (especially as they were mentioned in the beginning and then never used). Additionally a follow up course where the material is applied to real world problems would be very helpful. ",
+            "\u00a0Yes. A background in chemistry (at least intro) would be helpful. "
+        ]
+    ]
+}

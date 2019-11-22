@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Advanced applications of isotopes to chemical problems and the theory associated with them, including kinetic and equilibrium isotope effects, tracer applications, and dating.", 
+    "title": "Chemistry of Isotopes", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10532", 
+        "listings": [
+            {
+                "number": "537", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Martin Saunders"
+    ], 
+    "long_title": "Chemistry of Isotopes", 
+    "extra_info": "A"
+}

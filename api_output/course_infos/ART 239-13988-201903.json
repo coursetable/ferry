@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51495/assignments/syllabus", 
+    "requirements": "Prerequisite: ART 138 or ART 136.", 
+    "description": "An introductory course that explores the various elements of photographic storytelling, artistic styles, and practices of successful visual narratives. Students focus on creating original bodies of work that demonstrate their unique artistic voice. Topics include camera handling techniques, photo editing, sequencing, and photographic literacy. Student work is critiqued throughout the term, culminating in a final project. Through a series of lectures, readings and films, students are introduced to influential works in the canon of photographic history as well as issues and topics in contemporary photography.\nPrerequisite: ART 138 or ART 136.", 
+    "title": "Introduction to Visual Storyte...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "GREEN G32", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13988", 
+        "listings": [
+            {
+                "number": "239", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Danna Singer"
+    ], 
+    "long_title": "Introduction to Visual Storytelling", 
+    "extra_info": "A"
+}

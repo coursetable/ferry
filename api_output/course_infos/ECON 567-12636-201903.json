@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "A forum for state-of-the-art research in econometrics. Its primary purpose is to disseminate the results and the technical machinery of ongoing research in theoretical and applied fields.", 
+    "title": "Econometrics Workshop", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "HLH28 106", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12636", 
+        "listings": [
+            {
+                "number": "567", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Yuichi Kitamura"
+    ], 
+    "long_title": "Econometrics Workshop", 
+    "extra_info": "A"
+}

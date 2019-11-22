@@ -1,0 +1,95 @@
+{
+    "crn_code": "12857",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            2,
+            3,
+            4,
+            4
+        ],
+        [
+            1,
+            4,
+            6,
+            2,
+            1
+        ],
+        [
+            1,
+            2,
+            6,
+            3,
+            2
+        ],
+        [
+            2,
+            3,
+            5,
+            2,
+            2
+        ],
+        [
+            1,
+            1,
+            4,
+            1,
+            7
+        ],
+        [
+            1,
+            0,
+            5,
+            2,
+            6
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Gained the ability to code basic versions of a handful of popular ML algorithms. ",
+            "\u00a0Tons, material was applicable to my research. Was really insightful and awesome and cool. ",
+            "\u00a0I learned a ton about machine learning techniques - particularly dimensionality reduction, clustering, and neural networks. ",
+            "\u00a0Dimensionality reduction, clustering, and neural networks. ",
+            "\u00a0I learned many machine learning techniques that are popularly applied to biological data. ",
+            "\u00a0Clustering and dimensionality reduction methods ",
+            "\u00a0Basic biology concepts, machine learning methods involving dimension reductions, classification, and clustering. ",
+            "\u00a0In this class, I learned three major topics in machine learning with biological applications:\r\n1. Dimensionality reduction. I learned how to perform PCA and diffusion map. I learned how to present high dimensional data with tSNE.\r\n2. Clustering. I learned how to perform K-means, spectral clustering and Louvain. Also I learned Fourier transformation on a graph.\r\n3. Neuron network (introduction). This class covered an introduction to neuron networks. Now I know the basics of neuron network and can construct the autoencoder, a most basic form of unsupervised learning.\r\nIn the final project I applied the above techniques to a real single-cell RNA-Seq dataset from my first lab rotation. Hopeful it generates some meaningful results. ",
+            "\u00a0The basic framework of knowledge of machine learning, especially algorithms that could be used in biological study. "
+        ],
+        [
+            "\u00a0This course really pushes you, and you learn a lot subsequently. However, the lectures are confusing and rarely translate into helpful material for the problem sets. I probably learned considerably more from Jay than from Smita. ",
+            "\u00a0The course could use more simple psets instead of fewer harder psets. ",
+            "\u00a0Grading needs to be improved. None of the problem sets were graded, so I had no idea where I stood in the class. ",
+            "\u00a0The strength is that this course covered a wide range of topics and algorithms. ",
+            "\u00a0The finals too hard, time too limited ",
+            "\u00a0strengths: closely related to biology.\r\nweaknesses: very research-oriented, more like a 6-level course instead of 5 ",
+            "\u00a0Strengths: Cutting-edge biostat theories.\r\nWeakness: Course setting is kind of messy and some knowledge points are vague. ",
+            "\u00a0This class assume no biological background but some data mining background and I was exactly the reverse one. I have to learn the python package from scratch and it was really time consuming. However, from this class I learned the most skill and knowledge this term. Because I have never studied machine learning before, everything I learned here is completely new to me. This class equipped me with powerful machine learning knowledge, which will prove useful in my future research.\r\nIn fact, though it assumes no biological background of student, no biology is covered in this class. While it is computational hard for students with biology background (like me), it is also biologically hard for students from CS department. I have heard some of my friends in this class having difficulties in finding a proper dataset. Also they find it challenging in interpreting the dataset in a biological way. The only student who would have less workload here (I suspect) will be the students from bioinformatics. But if this class is introductory, it would be less beneficial to them because they may have already studied machine learning in their previous research. On the other hand, if this class very advanced, students from pure biology background or pure CS background will not get much involved.\r\nImprovements can be:\r\n1. Divide the assignments into smaller parts, or sections. For example, each week require students to construct one set of figures and upload their codes. This will force students to better arrange their time and ease the workload of grading.\r\n2. Discussion time focusing on technical problems. The discussion session can be set to technically target the assignment section each week. Providing minimal examples will be very helpful.\r\n3. Set example questions for final project. I took part in UC Berkeley's IB161 population genetics, which also involves an computational final project. They offered concrete sample questions for student to choose if they cannot find a suitable topic (e.g. lactose intolerance in different human population). Note that no dataset is given in sample questions so student need to find their own dataset. Nonetheless, these examples provide student more orientation to think of a project and obtain dataset of interest. I did not choose one of the examples but I find it useful in forming my own ideas. "
+        ],
+        [
+            "\u00a0No ",
+            "\u00a0If you are a biologist, no. If you are an engineer, no. If you are anything besides a CS student, no. If you are a CS grad or undergrad, however, I'd recommend taking it. This class really doesn't have anything to do with bio, so its appropriate for anyone interested in ML. ",
+            "\u00a0Yes, but if you're motivated and able to keep on task without being constantly prodded. ",
+            "\u00a0Yes, because it was incredibly applicable to my research, although the class structure wasnt the greatest ",
+            "\u00a0Only take this class if you do not care about feedback. Your first significant grade will probably be your final grade. ",
+            "\u00a0Yes, I will recommend it to other students ",
+            "\u00a0No ",
+            "\u00a0I would only recommend this to the student with a biology background or interest ",
+            "\u00a0Not sure. The course indeed includes much useful knowledge for biostat. However, the teaching part and feedback makes it not easy for students to learn something. ",
+            "\u00a0That depends. If the other student has some programming background (at least better than me) and is interested in machine learning, I will recommend this class. This class is challenging (and rewarding as I learned a lot, because everything to me is completely new). I would discourage students in biology with weaker mathematical and programming competence to take this class. Also I would CS students with no biology background to take this class. However, I hope more students can learn machine learning because this is the trend of nowadays technology. "
+        ]
+    ]
+}

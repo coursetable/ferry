@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51541/assignments/syllabus", 
+    "requirements": "Open to nondepartmental and non-School of Drama students with permission of the instructor.", 
+    "description": "Digital video and motion graphics have become a central asset in the theater, and this course covers a diverse set of topics relating to video capture and delivery formats, compression fundamentals, utilization of graphics elements in motion graphics animation, nonlinear video editing techniques, special effects, and the digital video production pipeline. Students primarily utilize Adobe After Effects and Apple Motion to create motion graphics and animation content and Adobe Premiere to edit and produce finished assets, with an emphasis on the technical and creative challenges of projection in a theatrical environment.\nOpen to nondepartmental and non-School of Drama students with permission of the instructor.", 
+    "title": "Motion Graphics and Film Produ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 12, 
+            "location": "YK149", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14021", 
+        "listings": [
+            {
+                "number": "244", 
+                "subject": "DRAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "David Biedny"
+    ], 
+    "long_title": "Motion Graphics and Film Production", 
+    "extra_info": "A"
+}

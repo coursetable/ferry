@@ -1,0 +1,73 @@
+{
+    "crn_code": "30070",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ],
+        [
+            1,
+            0,
+            2,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned more about how to be a better storyteller through the visual media. ",
+            "\u00a0I learnt the proper formatting rules of screenwriting, as well as the different ways to capture an audience's attention in a script. I also learnt how to write script coverages and basic ground rules that a screenwriter follows. "
+        ],
+        [
+            "\u00a0I really enjoyed the workshop sessions and wish there could have been more of them. I was also exposed to a lot of fun screenplays and movies throughout the class. More time could have been spent delving into the intricacies of a screenplay and discussing the different things that make a screenplay enjoyable or surprising. However, a lot of time was spent on lectures instead. "
+        ],
+        [
+            "\u00a0Totally! Especially if you're trying to figure out if you might have a thing for screenwriting ",
+            "\u00a0Yes. It is a good introduction level crash course to screenwriting. It covered the fundamentals of writing a screenplay while forcing us to work out the kinks of our stories within a short amount of time, which is good writing practice for working with a tight deadline. "
+        ]
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "GLBL 305", 
+    "description": "Summer research developed into a case-study project on a topic related to the use of social enterprise in regional economic development.\nGLBL 305", 
+    "title": "Social Enterprise in Developin...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WLH 011", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10304", 
+        "listings": [
+            {
+                "number": "306", 
+                "subject": "AFST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Robert Hopkins"
+    ], 
+    "long_title": "Social Enterprise in Developing Economies II", 
+    "extra_info": "A"
+}

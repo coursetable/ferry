@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50324/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course introduces quantitative methods in linguistics, which are an increasingly integral part of linguistic research. The course provides students with the skills necessary to organize, analyze, and visualize linguistic data using R, and explains the concepts underlying these methods, which set a foundation that positions students to also identify and apply new quantitative methods, beyond the ones covered in this course, in their future projects. Course concepts are framed around existing linguistic research, to help students use these methods when designing future research projects and critically evaluating quantitative methods in the academic literature. Assignments and in-class activities are a combination of hands-on practice with quantitative tools and discussion of analyses used in published academic work.", 
+    "title": "Quantitative Linguistics", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "LC 205", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13655", 
+        "listings": [
+            {
+                "number": "234", 
+                "subject": "LING"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Chelsea Sanker"
+    ], 
+    "long_title": "Quantitative Linguistics", 
+    "extra_info": "A"
+}

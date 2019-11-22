@@ -1,0 +1,87 @@
+{
+    "crn_code": "23111",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            2
+        ],
+        [
+            0,
+            2,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            6,
+            1,
+            1
+        ],
+        [
+            0,
+            2,
+            4,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Improved knowledge of clinical cancer care, challenges in the clinic ",
+            "\u00a0I learned a lot about the clinical treatment of various types of cancer. I had not previously been exposed to the medical side of things, except peripherally through talks at Grand Rounds, etc. Having a clinician review all this in person was extremely interesting and helpful. ",
+            "\u00a0I found it very valuable to hear from MDs running trials here at Yale and from an industry professional about the current challenges and outlooks in oncology. I also found the research proposal to be a valuable exercise that allowed me to gain a better understanding of clinical trial design. ",
+            "\u00a0Understanding the interface between the lab and clinic and how therapeutics are developed. Presentation. Grant writing. ",
+            "\u00a0More clinical insight in to cancer research ",
+            "\u00a0Major clinical approach behind major cancer subtypes. Major concepts in designing clinical trials. "
+        ],
+        [
+            "\u00a0Many of the lectures at the beginning of this course overlapped significantly with other courses offered in BBS. They could have been replaced with other lectures from clinicians on disease areas not covered. It also would be nice (if possible) to coordinate journal articles with lecture topics. ",
+            "\u00a0I think that the weekly structure, which included journal club & a talk by a clinician was ideal. Perhaps if a wider breadth of topics was explored that would improve the course even more. Also, the final paper was very redundant of other assignments the students in this course would have had to do. For example, most students in this course were in the pathology department and had to take the grant writing course- so writing another full grant was a lot of additional work. Perhaps a more useful assignment would be several specific aims pages spanning a few topics over the course of the semester, so as to allow us to practice what we learned about different types of cancer relating to the course topics. ",
+            "\u00a0This course was eye-opening, with world-class lecturers and very interesting topics covered. ",
+            "\u00a0Personally, I found the clinical research proposal to be a key asset to this course and helped to solidify the knowledge gained from lecture. It would be helpful if more of the lectures were framed around how the material can be used to design a clinical trial and worked into a proposal. Additionally, clearer expectations and feedback on the written proposal would help to provide direction. Sample proposals that have previously submitted and arent real R01 grants would be helpful to demonstrate expectations; obviously, it wasnt possible to provide examples this year since its the first year the course was offered. ",
+            "\u00a0strength, superb faculty. Weakness, felt underprepared for final paper, would recommend a grant-writing workshop. Useful for the assignment and as a teachable skill in general. ",
+            "\u00a0Thought it was a great course! Some of the organization could have been a little smoother, but that is expected from a brand new course! ",
+            "\u00a0Strengths: Great selection of papers/speakers. Great assignment for final paper\r\nWeaknesses: More workshops to practice clinical trial design. "
+        ],
+        [
+            "\u00a0Yes. It provides a very unique perspective to graduate students about the real-world challenges associated with treating patients and allows us to begin to think about how we as scientists can assist. ",
+            "\u00a0I would definitely recommend this course to anyone doing cancer research who wanted to learn about the clinical aspects that relate to their research. ",
+            "\u00a0Highly recommend. ",
+            "\u00a0yes, great for MD/PhD students ",
+            "\u00a0Yes for anyone interested in translational cancer research. ",
+            "\u00a0Yes, very good overview of relevant information. Unique learning experience in designing clinical trial. "
+        ]
+    ]
+}

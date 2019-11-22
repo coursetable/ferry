@@ -1,0 +1,77 @@
+{
+    "crn_code": "25950",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0In this class, I have learned research methods and developed the result in analysis on paper on tissue engineering and biomaterials. The class is design in a way that the first parts of the class cover basic foundation topics regarding immunology and biomaterials and the second parts of the class focus on learning issue/ disease and current researches on that topic. I think having this type of style is very helpful for us to prepare us to properly conduct research and effectively analyze research papers. And most of the class is focus on developing these important research skills. ",
+            "\u00a0The basic knowledge about foreign body response to biomaterials, immune response, and wound healing process. ",
+            "\u00a0Learned how to really read a scientific paper and question the methods. "
+        ],
+        [
+            "\u00a0Strength\r\nOrganized: Introduction in the beginning and research application at the end of the course\r\nResearch analysis focus / most of the class\r\n\r\nWeakness/Suggestions \r\nMaybe inviting guest speakers that are in the industry or in the clinic may give additional perspectives of for students interested in going into industry of clinics. ",
+            "\u00a0Strengths: the instructor gave undergraduates and graduates different assignments, which is more suitable for students. \r\n\r\nWeaknesses: seems a little easy for graduates, making them less engaged in the class. Maybe also giving graduates some exams will help. "
+        ],
+        [
+            "\u00a0Yes. ",
+            "\u00a0I would recommend the course for students who want to have a good foundation in tissue engineering and biomaterials particularly to have a strong research paper analysis in these areas. ",
+            "\u00a0Yes, I think for students who are interested in biomaterials and want to enlarge their views on bioengineering, it would be a good class. ",
+            "\u00a0Yes! Every materials and tissue engineer should take it. "
+        ]
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49109/assignments/syllabus", 
+    "requirements": "To be taken before ARCH 494. Enrollment limited to Architecture majors.", 
+    "description": "Advanced problems with emphasis on architectural implications of contemporary cultural issues. The complex relationship among space, materials, and program. Emphasis on the development of representations\u2014drawings and models\u2014that effectively communicate architectural ideas.\nTo be taken before ARCH 494. Enrollment limited to Architecture majors.\n\n1.5 Yale College course credits", 
+    "title": "Senior Studio", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "RDH 705", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10404", 
+        "listings": [
+            {
+                "number": "450", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Turner Brooks", 
+        "Adam Hopfner"
+    ], 
+    "long_title": "Senior Studio", 
+    "extra_info": "A"
+}

@@ -1,0 +1,99 @@
+{
+    "crn_code": "13415",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            8,
+            7
+        ],
+        [
+            2,
+            3,
+            7,
+            2,
+            2
+        ],
+        [
+            1,
+            2,
+            6,
+            5,
+            2
+        ],
+        [
+            0,
+            1,
+            10,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            8,
+            6
+        ],
+        [
+            0,
+            0,
+            3,
+            8,
+            5
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0PIV, stress/strain, viscoelasticity, poroelasticity, membrane mechanics, cell spreading, some fluid dynamics. Lots of different topics. ",
+            "\u00a0The class mainly focuses on elasticity of biomaterials, from purely elastic to viscous. It's at the cellular and molecular level, so if you are hoping to learn more at the macro level, too bad. The class also covers a little bit about statistical mechanics and thermodynamics, but even the statistical mechanics part ties back into elasticity of materials. It is supposed to cover a lot, but tbh half the class is used to review the previous material. I feel like it's a really narrow subcategory of biomechanics, and the class could be a broader introduction.\r\n\r\n Professor Murrell constantly refers to his own paper, which is very annoying (yikes) and speaks random French words during class. He is obviously an amazing researcher with super high H-index (for an assistant prof), but like brags a lot about his time in France or his colleagues' publications. It's more like a class that focues on what Professor Murrell studies, rather than what's best for us to learn at this stage as BME undergrads. \r\n\r\nThe homework invovles some matlab, but nothing really interesting or new if you haven taken BENG 249 already. ",
+            "\u00a0I gained a greater capability for modeling systems and understanding the physics and fundamental laws underlying simplified but still complex biological systems. ",
+            "\u00a0I learnt quite a lot about mechanics and how it relates to biological systems. Learnt thermodynamics and all and also cell spreading etc. ",
+            "\u00a0This class was a whirlwind introduction to mechanics.  We learned a bit about continuum mechanics, fluid mechanics, viscoelasticity, poroelasticity, statistical mechanics, and whole cell mechanics.  At times it felt like taking the first few weeks of class of several different introductory MENG courses.  Up until the end it didn't feel all that pertinent to biomedical applications.  My impression is that this class gives a foundation which you can build on in higher level BENG courses. ",
+            "\u00a0I learned about some of the physics and math behind cell and physiological systems. ",
+            "\u00a0Biomechanics, Principles of mechanics as they relate to cells (viscoelasticitt, poroelasticity), Matlab coding. ",
+            "\u00a0I'm great at using google ",
+            "\u00a0If you want to learn more about the basics of biomechanics. ",
+            "\u00a0I learned how systems can be modeled in order to describe how they behave mechanically. "
+        ],
+        [
+            "\u00a0The course is fairly new and going through a lot of change. From what I heard last year, this year has been much better but can still be improved. The lectures are heavy on derivations and equations seemingly pulled out of thin air with mistakes splattered here and there. Hopefully there are good TAs like this year to explain things more slowly and thoroughly. Psets were extremely long and challenging - often pushing material we learned in class very far. I felt like I learned a lot of the basic concepts of mechanics and thermo, but a lot of the advanced material felt like memorizing and regurgitating equations and derivations, especially since most of it isn't exactly \"textbook\" information. It's all cutting edge research. GO TO SECTION! It is very helpful.\r\n\r\nPast TAs Lorenzo and Hao:\r\n\r\nBoth were extremely bright and quite the dynamic duo between writing/grading psets, holding section, and answering our gazillion questions. Sections were extremely helpful, and they always seemed awake and available to answer our questions virtually. Lorenzo put a lot of time into trying to relate our psets with class and drawing even further connections to real life applications. Hao posted lecture notes, which were very neat and helpful for when lecture was a little too fast. Definitely went out of their way to make sure we had the resources we needed and made the class more digestible despite the long psets and hardships. ",
+            "\u00a0Strength: the material are interesting. It makes me want to learn more about thermodynamics and statistical mechanics. \r\n\r\nWeakness: \r\n1.The lectures are horrible. The class goes on Tues and Thur 9:00-10:15. Every class there is a quiz. The first 20 minutes of the lecture will be Professor Murrell reviewing the previous lecture in a really conceptual, abstract way. The problem is: he just talks, and make gestures with his hands, but he doesn't write anything down on the board. The things he talked about are not helpful with exams or homeworks at all. And tbh, the 20mintues of recap are very straightforward, but he devotes a disproportional amount of time to it. When it comes to the actual material, such as the derivation of important equations or important examples, he glosses through those. His derivations always have errors, and he relies on the TAs to give out correct form later. He will be missing a 1/2, or a minus sign, or something else somewhere. His office hour is entirely unhelpful, because he just couldn't answer your questions ( I am not sure if he doesn't know the answer or he is just really bad at explaining). Also, he has no idea of time management, and once per week his class will go over time. Sometimes he will go over time for even 10 minutes without even realizing it. \r\n\r\nTo give you an idea of how clueless Prof. Murrell is, he led a final review section at the end of the semester, which just confused everyone even further. When students ask questions, he just didn't know the answer. He promised to upload a sheet explaining what he was trying to do, but he never did. He was like \" yeah I don't really have it with me right now. If any of you guys take good notes and are willing to share, I could upload that\". In the final review session that the TA led, he was just sitting in the back, while the TAs clearly had no idea what's going on, and they had to check their notes to regurgitate what was taught on the board. \r\n\r\n2. The homeworks are really long and half of the questions are MATLAB based and non relevant to the exams. The TAs apparently write the Psets. A good thing though is that at least there are tons of extra credits. The grading is fair too, and TAs are very helfpul with Psets problems. ",
+            "\u00a0The course asked for a lot of engagement from the student, in a way that could be considered simultaneously a strength and weakness. The material presented was complex and often new, making it difficult to fully grasp when first presented, and only a little easier with each repetition. Class was only twice a week, but attending both sections was wildly helpful in furthering my understanding of the subjects covered and making progress on the problem sets, so ultimately was a worthwhile four-day/week commitment in which I derived a lot out of each session. It sometimes felt like we weren't fully equipped to tackle some of the problems given, either due to the more shallow/quick presentation of material during class or lack of instruction when things were assumed to be more intuitive, but the process of working through the complexities of certain problems helped engage critical thinking and highlighted interesting challenges. ",
+            "\u00a0Given the reviews from last year, this class was much better. I feel it would have helped if we had a textbook we could stick to. The class was more of bits and pieces of 'helpful' material to guide. But I guess that's how the real world is and there's no textbook to follow. One weakness was that it was hard tying everything together although the different sections made sense when analyzed separately. Overall, the class was okay. ",
+            "\u00a0Strengths: We reviewed the previous day's lecture at the beginning of each class, which was helpful, and when there was time, we did a recap as well.  The daily quizzes were helpful in making sure that I kept up with the material, but I felt they counted too much towards our grade.  The homework was of varying difficulty as well as varying relevance to the class material, and the inconsistency was annoying, but overall I felt that it helped me review the material well.  I also appreciated that the psets had bonus questions, which helped serve as a grade buffer (but not an automatic one) for the midterm and the occasional super-challenging pset question.  Lectures, though sometimes difficult to follow, were engaging and I always found it easy to pay attention.\r\nWeaknesses: Lectures were sometimes difficult to follow.  This class necessarily had a lot of math but sometimes Prof. Murell did not make the setup super clear and then if you missed a small part it was difficult to continue to follow.   On pretty much every pset there was ~1 question that was both incredibly time consuming and not very relevant to the class material. ",
+            "\u00a0The exams and problem sets were rather difficult, as in class we practiced more the theoretical partthan practice problems. In the final exam, we did a lot of problems regarding cell mechanics, which we did not see or practiced much during the semester ",
+            "\u00a0I think the course is well structured to facilitate learning but some things could be improved. For example, many of the psets had single PIV questions that took several hours to complete even though PIV was not tested on in the course. ",
+            "\u00a0This course has very engaging material, there was just a disconnect between the lectures and the homework in the sense that the latter did not supplement the former. The lecturing style was that of a classic math course (fast paced, detailed, had derivations). The hw was very matlab centered. The second half of the semester saw improvements on marrying the homework to the lectures, but there's more to be done. \r\n\r\nThe class lacked resources. There were supplemental materials uploaded online, but without direction, they proved daunting.  When it came to preparing for exams, the TFs and professor were unprepared and dodgy. There seemed to be no intuition over how to prepare us for exams without giving away answers. \r\n\r\nThe exams were very fair, but without preparation, they were a regretful, somber journey for 1.5 hours. ",
+            "\u00a0Sometimes fast paced, sometimes slow paced, hard to keep up, problem set questions were usually much harder to do than problems from classroom, exams were harder than both ",
+            "\u00a0Getting a text book with actual resources would be helpful. Also psets and exams that are actually doable and don't require an IQ of 188 ",
+            "\u00a0this course did not do a good job laying down the basic foundation for learning about biomechanics which made learning subsequent material very changeling. I also felt like there were not enough resources. However the class was small and everyone got to know each other. ",
+            "\u00a0This course was broad in nature which was both a strength and a weakness. What could have made the course better is examples of where the ideas, concepts and formulas are used in practice. "
+        ],
+        [
+            "\u00a0Only for BME or a physics/mechE elective for ppl who are into biology. ",
+            "\u00a0Do not take this class unless you are a devoted BME and have to take it. The class could be way eaiser if it were better taught. It's not worth the time. The class also focuses too much on Murrell's research interests. Just don't, it's not pleasant or well organized at all. ",
+            "\u00a0Yes! This was one of the first courses I've taken that has integrated knowledge and thought processes from various disciplines in such an engaging and thorough manner. The material presented both built upon and helped enhanced my understanding of physics, biology, and physiology in nuanced ways I previously did not consider. ",
+            "\u00a0I would recommend this class to other students because Dr. Murrell is doing a better job year on year to make this class much better to cope. The material is hard anyway so that's a bummer or a plus depending on how you view it. But definitely you would take it if you're BME, but if you're not, you don't have to take it unless you wanna explore outside your field. The psets are a bit challenging and sometimes abstract. But there are extra credit questions to help up your grade. The midterm is difficult and literally a race against time, so you've gotta brace for that. So yeah, take this class! ",
+            "\u00a0For BENG this is required.  You're probably only taking this by choice if you're a MENG major - in which case I would say no, don't take it.  This goes over a lot of the same material (continuum mechanics, fluid mechanics, a little thermo) that you will go over in much more detail in your other classes.  It is much more of a MENG sampler than it is a biological applications course, so it's necessary foundational material for BENG majors, but probably not very interesting (or new) for a MENG major.  Would probably be an easy A for a MENG senior though. ",
+            "\u00a0I would only recommend this course to another student if it were improved to make it more clear from the beginning how to use outside resources to understand the material. Lecture was often very fast and we were expected to do problems on the psets and exams that were only very briefly covered. ",
+            "\u00a0I would recommend this course in a few years. All problems are related to inexperience. The professor is kind and extremely articulate, the TFs are undoubtedly intelligent and qualified. It's just a matter of practice and adjustment. ",
+            "\u00a0Please, save yourself. It sounds interesting, but so does sin until you end up in hell. ",
+            "\u00a0If they need it for their major, then yes. "
+        ]
+    ]
+}

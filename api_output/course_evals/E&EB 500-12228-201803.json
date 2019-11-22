@@ -1,0 +1,67 @@
+{
+    "crn_code": "12228",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [],
+        [
+            "\u00a0As first-year Ph.D. students, it's good (and necessary) to be able to meet each member of our new department. It's also very nice to be able to have a dedicated time to discuss relevant academic topics with our new cohort. However, the structure of the course is perhaps less than ideal, and we are left with a somewhat arbitrary understanding of any topics.\r\n\r\nI can think of [at least] two better structuring methods for this course.\r\n\r\n1: We survey key topics in Ecology and Evolution, with each professor giving a lecture on a fundamental concept relevant to their research\r\n2: We survey key \"canon\" papers in Ecology and Evolution, with each professor guiding a discussion on the paper.\r\n\r\nThe upside would be a much better, broader introduction to key ideas. Further, some of the faculty tend to enjoy mentioning the many classic papers we haven't read, so why not read them all together? The downside is that each professor would have to put in additional work. "
+        ],
+        []
+    ]
+}

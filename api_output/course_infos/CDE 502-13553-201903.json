@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49630/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The objective of this course is to build a comprehensive working knowledge base for each of the primary physiologic systems that respond to acute and chronic environmental stressors, as well as chronic disease states. The course follows the general framework: (1) examine the structural and functional characteristics of given physiological system; (2) explore how both structure and function (within and between physiological systems) work to promote health; (3) explore how necessary features of each system (or integrated systems) are points of vulnerability that can lead to dysfunction and disease. In addition, this course offers the opportunity to examine each physiological system with respect to influences key to public health interest, e.g., age, race/ethnicity, environmental exposures, chronic disease, microbial disease, and lifestyle, including the protection afforded by healthy lifestyle factors.", 
+    "title": "Physiology for Public Health", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LEPH 103", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13553", 
+        "listings": [
+            {
+                "number": "502", 
+                "subject": "CDE"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Catherine Yeckel"
+    ], 
+    "long_title": "Physiology for Public Health", 
+    "extra_info": "A"
+}

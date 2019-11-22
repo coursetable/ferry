@@ -1,0 +1,51 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51652/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The information revolution is causing the rapid mass adoption of information communication technologies (ICTs) across nations, demographics, and sectors in the early 21st Century\u2013such as mobile devices, social media platforms, \u201cbig data,\u201d artificial intelligence (AI), and machine learning, geospatial mapping applications, and the Internet of Things (IoT). However, 20th Century international data governance policies, normative frameworks, and domestic regulations are struggling to keep pace with the disruptive impacts ICTs are having on an increasingly digitally networked world. This seminar explores critical issues, trends, and events relevant to both the adaption of existing data governance regimes to meet these challenges and the creation of new regimes by international organizations, the private sector, civil society, and national governments. The primary learning goal of the course is to equip students with the skills to critically read and apply extant international data governance policies in concrete sector-specific contexts (i.e. corporate, governmental, humanitarian, development, etc.). Additionally, students learn to identify gaps in current regimes and to be literate in the major ongoing debates on these issues at the United Nations, the EU, the United States Congress, and other critical loci of policy development.", 
+    "title": "Data Governance in the Digital...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WLH 117", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14143", 
+        "listings": [
+            {
+                "number": "395", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Nathaniel Raymond"
+    ], 
+    "long_title": "Data Governance in the Digital Age", 
+    "extra_info": "A"
+}

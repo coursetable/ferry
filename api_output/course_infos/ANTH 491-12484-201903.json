@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Supervised investigation of some topic in depth. The course requirement is a long essay to be submitted as the student's senior essay. By the end of the third week of the term in which the essay is written, the student must present a prospectus and a preliminary bibliography to the director of undergraduate studies. Written approval from an Anthropology faculty adviser and an indication of a preferred second reader must accompany the prospectus.", 
+    "title": "The Senior Essay", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12484", 
+        "listings": [
+            {
+                "number": "491", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANA\">YC Anthropology: Archaeology </a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANB\">YC Anthropology: Biological</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANL\">YC Anthropology: Linguistic</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANS\">YC Anthropology: Sociocultural</a></li></ul>"
+    ], 
+    "professors": [
+        "William Honeychurch"
+    ], 
+    "long_title": "The Senior Essay", 
+    "extra_info": "A"
+}

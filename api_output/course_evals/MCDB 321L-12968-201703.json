@@ -1,0 +1,77 @@
+{
+    "crn_code": "12968",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            4,
+            0
+        ],
+        [
+            0,
+            2,
+            3,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0You will gain insights into a variety of experiments detailed in the lecture course, mainly regarding electrophysiology. ",
+            "\u00a0Firstly, I developed patience. Many experiments were spent rectifying the experimental setup than fully conduct the experiment. However, this is so crucial because in a laboratory setting this skill of troubleshooting needs to be acquired through exposure. \r\nAlso, I learned how to question scientific approaches and the reason why we carry them out. "
+        ],
+        [
+            "\u00a0I appreciated the structure of the course; the lab manual was very comprehensive and provided good overviews of necessary content. It was also good to take this course alongside the lecture MCDB 320. In terms of recommendations, I wish we had some sort of rubric or expectations before turning in our first lab reports for submission. ",
+            "\u00a0The labs themselves were pretty straightforward and reinforced various concepts discussed in the corresponding lecture course. The instructors and TA's were very helpful in set-up and concept explanations. However, it was difficult to gauge what was expected for the first lab notebook collection as there was no rubric and not a clear outline of what the TA's were looking for. Thus it was a shot in the dark the first time around. It would've been helpful if there was a clear online of sections to include in the write-up in the lab manual, perhaps, so that students are aware of what is expected. In addition, Professor Haig Keshishian and Fernando Vonhoff were excellent instructors with helpful conceptual explanations before each lab period, but Professor Robert Wyman was a bit harder to understand in terms of what he wanted out of the extensive question-answer format throughout the lab time that usually led to less time for actually executing the experiment for that day and more confusion than understanding. I appreciated his hope to improve critical thinking, but I think it could've been scaled back in order to facilitate enough time to actually complete the tasks at hand and to learn from those procedures instead of pure theorization. ",
+            "\u00a0I very much enjoyed the analysis of the results of these experiments but did not enjoy the experiments themselves as much. We did not get data for several labs due to experimental issues sometimes beyond our control, such as poor contacts of the electrodes, a malfunctioning oscilloscope, too much noise etc., and sitting around for 5 hours when the experiment does not work can get extremely frustrating. I think it would be better to provide more guidance in the first labs regarding issues we might encounter, or pick experiments that are easier to replicate. There is also so much lecturing involved for a lab course, especially during Prof Wyman's part of the course, which takes a lot of time away from the experiments. ",
+            "\u00a0The main strengths would be the intimate setting of the class. The TAs gave us students a lot of personal attention and guided us so patiently through the procedures, never hesitating to explain to us and clear our doubts. \r\nThe only weakness I can think of this course would be that for the first lab submission, we were unsure of the expectations and that could have been better spelled out for us. "
+        ],
+        [
+            "\u00a0The lab course helps to reinforce various concepts discussed in the corresponding lecture course. It's a fair workload with weekly quizzes and occasional lab notebook collections, but the lab notebook checks are very thorough so every so often there's a dramatic increase in the time needed to commit to completing a meticulous write up. Other than that, it's an enjoyable MCDB lab course. You do a lot of interesting experiments with live tissues and specimen and Prof. Keshishian and Vonhoff are super helpful. ",
+            "\u00a0This is a decent bio lab with interesting findings but sometimes long and frustrating experiments. ",
+            "\u00a0Yes. I would recommend this course if you are taking the neurobiology lecture series and plan to supplement your learning. It is a very watered down version of the highly content-packed lectures and sometimes came in really handy in putting things we have learned in class into perspective. "
+        ]
+    ]
+}

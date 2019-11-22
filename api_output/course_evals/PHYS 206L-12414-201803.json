@@ -1,0 +1,91 @@
+{
+    "crn_code": "12414",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            6,
+            0
+        ],
+        [
+            2,
+            2,
+            3,
+            3,
+            0
+        ],
+        [
+            1,
+            3,
+            1,
+            5,
+            0
+        ],
+        [
+            3,
+            3,
+            1,
+            4,
+            0
+        ],
+        [
+            0,
+            1,
+            6,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            5,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to write a better lab report, and I improved my skills with general lab equipment. ",
+            "\u00a0You learn how to use a wide variety of lab apparatus. In any other section, you would also learn how to write a scientific paper, but my section was not so lucky. I also gained firsthand experience with arbitrary grading and sexism in STEM. ",
+            "\u00a0I gained hands-on lab experience with physics concepts and equipment (oscilloscope, pendulum, etc.) ",
+            "\u00a0I learned how to use a lot of lab equipment and also how to deal safely with radioactivity experiments. ",
+            "\u00a0Interesting Labs applying mechanics and E&M concepts!! ",
+            "\u00a0I learned a lot about physics in this course, and got to work with a lot of amazing machines. The labs are really interesting, and you get much better at writing lab reports. I know lots of people are fluent in LaTeX before taking this course, but forcing myself to write my reports in LaTeX made me learn it very well. You operate more independently in this course than in 205L, so you learn more about experimental design too. ",
+            "\u00a0Did experiments "
+        ],
+        [
+            "\u00a0The labs that you can do in this class are actually very interesting, and allow you to recreate some famous experiments as well as explore some more advanced topics in physics. The lab reports were difficult however and oftentimes during lab itself it seemed much more a question of getting the experiment done in time rather than enjoying what you were doing. ",
+            "\u00a0Picking the labs you do is nice -- it lets you focus on what you're interested in and work semi-independently. The TAs were frequently not familiar with the experiments, but Prof. Irons was great and could always help out. ",
+            "\u00a0This course was graded by a TA who ruined the entire class for me. If you know any physics grad students, ask them what they think of your TA before committing to a section. ",
+            "\u00a0Enjoyed being able to pick my group's labs rather than have a pre-set schedule. The off-weeks were very helpful for balancing work.\r\nWeaknesses: Having labs due on off-weeks, some labs were a bit unclear as to procedure. ",
+            "\u00a0I thought the course was interesting and we covered a lot of very cool labs. However a lot of the write ups were very unclear, so it was difficult to write good lab reports. ",
+            "\u00a0Strengths: gave us choice in choosing labs, great TA Suhas!!, Irons is awesome, labs were much better than 205L\r\n\r\nWeaknesses: Arbitrary grading rubric point allocation it seemed, labs should have been graded out of 20, small mistakes propogated with too much weight to the final grade ",
+            "\u00a0The strengths are that this course has a lot of really cool labs, and you do learn about some neat concepts that you don't touch on in lecture. The lab report page requirement has also been decreased to 3 pages min, so the workload was better than other years. However, the class was weak because the TA graded EXTREMELY harshly, and it was very difficult to get above a 60% on your report, no matter how thorough it was. This is not just the case with me and my lab partner. All of the other students had the same issue, and we even confronted the professor, TA, and director about it. Hopefully, the grades will be normalized, so we will see when I finish writing this review. This course should have been fun, but it was actually a bit miserable because we knew no matter how hard we worked, we would get a C or D level grade, which just ended up diminishing enthusiasm. The TA was also unhelpful in answering questions -- he was usually cryptic or did not know the answer to the question. ",
+            "\u00a0Honestly, no one is taking this course for the love of science. I wouldn't say that you learn much science or even lab skills. Some of the labs are interesting, but most are pretty tedious and the analysis is unnecessarily confusing. The grading system is also very unclear, and points seem to be taken off lab reports with no real justification. "
+        ],
+        [
+            "\u00a0Much much better than 205L but still a struggle ",
+            "\u00a0This is a pretty standard lab course; take it if you have to, but it's pretty interesting. The year I took it, the TAs graded pretty harshly compared to other years, but they ended up dropping the lowest grade and I think they're curving it a bit -- grades seem to usually be in the B+/A-/A range, even though some of the individual lab grades can be low. ",
+            "\u00a0This is a required class for the physics major, and is interesting if you like applied physics. However, make sure your TA is sane before committing to a specific section. The TA that I had was so terrible that this half-credit class ruined my entire semester. ",
+            "\u00a0Yes, for physics students looking to take an engaging lab. ",
+            "\u00a0Yes, with the caveat that the grading is a mess. The material was interesting and the labs were very cool, but the grading of the course was ridiculous. ",
+            "\u00a0Yes, take this and 382L instead of 205L, if you are intensive physics. No real reason to take this if you are not required to tho. Also, LaTeX your reports. ",
+            "\u00a0Yes, if Suhas isn't your TA. This class is usually super cool, Stephen Irons is great, and you get to do cool stuff. ",
+            "\u00a0...\r\n\r\nHave fun, physics majors! "
+        ]
+    ]
+}

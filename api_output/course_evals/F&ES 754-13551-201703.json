@@ -1,0 +1,98 @@
+{
+    "crn_code": "13551",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            2,
+            2
+        ],
+        [
+            1,
+            0,
+            2,
+            3,
+            2
+        ],
+        [
+            1,
+            1,
+            3,
+            3,
+            0
+        ],
+        [
+            1,
+            0,
+            3,
+            3,
+            1
+        ],
+        [
+            1,
+            0,
+            3,
+            3,
+            1
+        ],
+        [
+            1,
+            0,
+            3,
+            2,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a great deal about java script and python coding, as well as how to use them to perform spatial analyses. ",
+            "\u00a0Learned how to code in JavaScript and Python ",
+            "\u00a0This course builds on foundational vector and raster concepts to also teach coding for geospatial analysis in javascript and python (arcpy). Until this year the course was taught on ArcMap, but is poised to move to ArcGIS Pro soon so that should be fun. Recommend this course! ",
+            "\u00a0Learned much about geospatial software design. ",
+            "\u00a0This course gave me a solid foundation to understand programming in geospatial analysis. ",
+            "\u00a0I gained a basic understanding of Python and Earth Engine, and more familiarity with coding in general. ",
+            "\u00a0Practical, applied use of Earth Engine and arcPython code editor. "
+        ],
+        [
+            "\u00a0They met my expectations. ",
+            "\u00a0Yes ",
+            "\u00a0Aligned well with my expectation. The course load is very heavy though, so that may be a cause for concern if you're looking to determine workload balance. ",
+            "\u00a0It aligned very well with my expectations of what this class would go over. ",
+            "\u00a0It surpassed my expectations. ",
+            "\u00a0Fairly well. I expected a bit more introductory information, especially with Earth Engine, rather than just launching into it. Other than that it met my expectations - it is taught very similarly to Dana's other classes. ",
+            "\u00a0The course was just as I expected. "
+        ],
+        [
+            "\u00a0I found the examples and resources provided to be very helpful.  The vagueness of the homework assignments made it somewhat difficult for me to challenge myself; it was difficult to come up with a problem or analysis that would allow me to utilize the skills we were learning. ",
+            "\u00a0Strengths: the other students in the class were helpful and interesting to bond with. The homework assignements and final project were engaging as well. \r\n\r\nWeaknesses: It was challenging to learn some of the basics of what we were doing - what is a sattelite image, how do you get it, what information can you pull out of it- because we went quickly into the tools and where to find them etc. this class should be switched with the observing earth from space course so it is in the spring. ",
+            "\u00a0GEE documentation is far more intuitive and helpful than ArcPy, which already has its share of problems with technical glitches in ArcpPy that has operations failing regularly. A troubleshooting manual would be extremely helpful. ",
+            "\u00a0Strengths are many, including instructor knowledge and material covered in class. Weakness might be the pace (fast). ",
+            "\u00a0I can hardly think of any weaknesses. The course content is excellent and Professor Tomlin is an extraordinary teacher. ",
+            "\u00a0The class was great, except I felt fairly lost in the beginning of the Earth Engine section. This class gives very little background on satellite imagery, how it is collected, and how to analyze it, which made getting started difficult. I found myself spending far too much time struggling to collect imagery because I didn't understand what I was looking at. I think this class should be switched with the spring course on imagery to give students the opportunity to gain more of an introduction. ",
+            "\u00a0The handouts, notes, and examples for Earth Engine and arcPython are excellent. If you take the time to go through the examples, you will learn the material. Both tools are fun and engaging, and I could see Earth Engine and arcPython offered as separate courses. "
+        ],
+        [
+            "\u00a0Identify a topic or problem you are interested in that will allow you to utilize the skills you are learning in the course. ",
+            "\u00a0If you already have experience in JavaScript or Python, or with remote sensing, this class will be great. If not, it is hard to get a lot out of it. ",
+            "\u00a0Yes. If you love a good old fashioned challenge and want to learn a lot of interesting marketable skills along the way. ",
+            "\u00a0Attend the classes and do so attentively, they are important and fun. ",
+            "\u00a0You definitely need an introduction to GIS, satellite imagery, and coding to jump into the class successfully. It does give a great overview of Earth Engine and Python, and plenty of space to explore a topic or project you are interested in. ",
+            "\u00a0Take the time to run through each example on your own, utilize Piazza, and take the time to get arcMap onto your computer at the beginning on the semester so you're not scrambling to troubleshoot it mid-semester when you'll have less time. "
+        ]
+    ]
+}

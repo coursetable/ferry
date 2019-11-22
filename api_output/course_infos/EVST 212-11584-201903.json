@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50968/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Democracy, liberty, and the sustainable use of natural resources. Concepts include institutional analysis, democratic consent, property rights, market failure, and common pool resources. Topics of policy substance are related to human use of the environment and to U.S. and global political institutions.", 
+    "title": "Democracy and Sustainability", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "RKZ 202", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11584", 
+        "listings": [
+            {
+                "number": "212", 
+                "subject": "EVST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEP3\">YC EP&amp;E Politics Core</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEPA\">YC EP&amp;E: Advanced Seminar</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YGLE\">YC Global Affairs: Elective</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSA\">YC Poli Sci: American Govt</a></li></ul>"
+    ], 
+    "professors": [
+        "Michael Fotos"
+    ], 
+    "long_title": "Democracy and Sustainability", 
+    "extra_info": "A"
+}

@@ -1,0 +1,120 @@
+{
+    "crn_code": "13883",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's provided students with helpful and timely feedback",
+        "The instructor established a positive learning environment",
+        "The instructor raised questions or problems that encouraged me to think critically"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            5,
+            7,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            6
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            7
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            6
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            11
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            9
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a05-10 hours ",
+            "\u00a05-10 hours per week. ",
+            "\u00a04 ",
+            "\u00a05-10 ",
+            "\u00a08-10 ",
+            "\u00a010 ",
+            "\u00a0I spent about 5 hours outside of the classroom on a typical week (homework, preparation for lecture/lab). When working on genetic analyses/exams, this could rise to 10-15 hours. ",
+            "\u00a0Depends on the week; 3 - 7 on average ",
+            "\u00a05-10 hours ",
+            "\u00a010 ",
+            "\u00a05 hours. "
+        ],
+        [
+            "\u00a0I would like to see a second half of this course, the material covered is excellent and there were many points one can analyze further. ",
+            "\u00a0Strengths: This course is well organized, covering many important genetics contents in public health area. This course really helps students get familiar with research in public health genetics areas.\r\nWeakness: the lab is relatively easy, more advanced coding skills and research methods will be helpful. ",
+            "\u00a0Overall assessment is good. I liked how there were set days just for laboratory work which was well-paced. ",
+            "\u00a0Strengths: Beyond just a basic intro to genetics class, even though basic genetic concepts are covered when necessary and no prior knowledge was assumed.  As a non-CDE student, this approach was appreciated as basic concepts were simple enough to grasp/teach yourself through a quick Google search, and more complex issues were tackled in class that went beyond the scope of what I'd be able to teach myself.  \r\nWeaknesses: As this was the first year in which a lab was introduced to the class, I wasn't expecting that experience to be perfect.  The code was confusing to grasp at times and sometimes I knew what I was doing but not why I was doing it.  Professor DeWan and Yasmmyn were always readily available to help and clear up any questions, however, which was greatly appreciated. ",
+            "\u00a0Hard to jump right into computer lab. Needed more help throughout. Also assumed a lot of base knowledge for whole course. ",
+            "\u00a0The small size was good, the long lecture setup once a week was not great ",
+            "\u00a0I enjoyed this course overall. The concepts we learned came in a logical order and built on each other. The computer lab component of the course was valuable and provided useful skills that we can use in genetic analysis work going forward. At times, I thought some topics were not explained as clearly. Two topics that were particularly confusing were the burden test and pleiotropy. Some additional clarity on those topics in particular would be beneficial. ",
+            "\u00a0Strengths: the course inspired me to pursue a genetics-related area of research potentially for my thesis. I came in with no background in biology or genetics, and I didn't regret taking this class. I learned a lot, especially a new skillset from labs and new knowledge in lectures. The course challenged me a lot and I was able to apply some of the concepts I learned from general epi and biostat. I enjoyed the take-home final project. I was able to apply everything I learned the whole semester, and it was just fun to have my own dataset, analyze it and applied my knowledge. The instructors were very willing to help students outside of class and in labs. Office hours were very helpful - I was able to have a lot of my questions answered and do my best to stay on top of the material. Homework was challenging, but I learned a lot. \r\n\r\nWeaknesses: this course did not seem like an introductory class despite its description. However, it was manageable. I didn't like how labs were taught. For first year students who are still building a foundation in epi and coding, it may be tough to learn another program language without clear and concrete step-by-step instructions. Don't get me wrong - it was step-by-step at first, but the lab went zero to a hundred after the first few weeks. We spent the first few weeks learning how to manipulate files, creating files and directories, but suddenly we were asked to do data quality control and plot Manhattan plots. It was a huge learning curve, and we received less instructions after that. We were asked to work independently or if we didn't understand anything, we had to ask for help. I thought this approach was inefficient because it slowed down our pace a lot, and it could be tough to implement this pedagogy for people trying to learn a language. We knew the concepts, but the work flow of labs took a while to understand, and I thought it could have been more efficient if we received more concrete instructions on the codes/work flow or didn't have to work independently. Also, the homework was good and challenging, but sometimes unnecessarily challenging. One time, we were asked to work on a problem using a very complicated set of formula. It was basic math, but since the slides didn't annotate the formula well and the flow of that lecture was hard to follow, it was hard for a lot of people to understand the homework even though it was just basic math. I thought things like that shouldn't be made that hard. None of the instructors wanted to ask us things beyond the scope of the class, but very often the homework pertained to things in the syllabus BUT weren't explicitly explained in class. There was no textbook for the class, so I often looked up things online and didn't feel 100% confident with my answers. Lastly, lectures weren't consistent in pace/quality. Some lecture slides contained just pictures and  graphics, which I found very difficult to understand. For someone who is new to genetics epi AND epi, introductory-level lectures should contain more text. Lectures were dense, and the pace was fast, and the instructors often ran out of time. Though I definitely appreciate how much I learned, I thought having two lectures per week would allow students to absorb the materials better. ",
+            "\u00a0Strengths: everything came together towards the end, learned a lot via the computer lab section of the classes\r\nweaknesses: seemed all over the place, poor organization of homeworks and they demanded too much of us, not graded timely, and exams/homeworks not representative of what we went over in class ",
+            "\u00a0Strengths:\r\n-being able to apply the material\r\nWeakness:\r\n-a lot of work at one time and hard to work on both the computer labs and lecture material (would go slower to be able to process everything) ",
+            "\u00a0I learned a lot from this course. but I think its a little difficult for someone who know little about biology. "
+        ],
+        [
+            "\u00a0He has been the best instructor I have had during my studies at Yale and one of the best in my academic career overall. ",
+            "\u00a0Strength: Dr. Dewan is an excellent instructor.\r\nWeakness: NA. ",
+            "\u00a0Great! Very understanding and willing to help clarify concepts. ",
+            "\u00a0Clearly knowledgeable about the subject matter but able to break it down in a way that was understandable for students.  Posed interesting questions throughout lecture that students could vote on, which provided a way to be engaged with the material and break up lecture. ",
+            "\u00a0Professor DeWan was passionate about the material and the content chosen for lecture was relevant and interesting. He was receptive to students' questions and available outside of class. Overall, I thought that his instruction was good and he created a positive classroom environment. My one comment for improvement would be to explain high-level concepts a bit more thoroughly. At times explanations were a little too complex or not as in-depth as we needed. Overall, though, I think that most of the lecture material was clear. ",
+            "\u00a0Andy made the class more engaging and enjoyable. He's funny and definitely wants to create a positive environment for students. He was also very helpful in office hours and seemed willing to make time for students to ask questions. I thought his lectures were confusing especially with a lot slides with just pictures and no words. Because the material was dense, I thought a lot of times he assumed we knew certain things already. This might not be the case for people who are new to genetics or new to epi in general. So having slower and clearer explanations from point A to point B would be nice. ",
+            "\u00a0They both often went over the class time and could not teach all the slides in the 2 hours of class time (often the most important stuff was towards the end which we didnt get to). the teaching style was often complex to understand and things only made sense once you went to office hours. ",
+            "\u00a0Wonderful and really passionate about teaching and the class. ",
+            "\u00a0Great professor, his office hour is very helpful in my study. ",
+            "\u00a0She is truly committed to foster the development of each and every student, and is always going an extra mile to ensure so. I could have not asked for a better instructor. ",
+            "\u00a0Strengths: Ms. Salinas is an excellent instructor and manifest extraordinary teaching ability even though she is still a PhD student.\r\nWeakness: NA. ",
+            "\u00a0Great! Warm and accessible, always willing to help my understanding in any way possible. ",
+            "\u00a0Yasmmyn was very helpful and patient in clearing up confusing concepts, especially during lab. ",
+            "\u00a0Yasmmyn was a great instructor. Her lectures were clear and thorough. She was very receptive to students' needs and reinforced concepts through asking questions about main concepts throughout the course. I thought that her teaching style was exceptionally strong and she taught at an appropriate level for students. She was also very helpful in the computer lab. ",
+            "\u00a0I enjoyed Yasmmyn's lecturing style and lectures very much! She was very clear, engaging and organized. Her lectures had a great logical flow. She was also very helpful in office hours, labs, and was open to feedback. I appreciate that she was very thorough in her explanations, and I thought that was appropriate for students who are still bounding a foundation in epi, biostat, and genetics. ",
+            "\u00a0she is very nice and responsible. ",
+            "\u00a0Was incredibly helpful throughout the semester. ",
+            "\u00a0Very nice and patient "
+        ],
+        [
+            "\u00a0Yes, I would recommend this course.\r\nThis class covers the basics of human genetics by focusing on the use state of art technologies and novel approaches to investigate the causes of many human diseases. ",
+            "\u00a0This course is very useful to student even without solid genetics backgrounds to get an introduction to public health genetics. I highly recommend this course. ",
+            "\u00a0Most enjoyable course I've had thus far at Yale. ",
+            "\u00a0Given the increasing importance of having an understanding about genetic concepts in public health practice, I would absolutely recommend this class to others.  Speaking from experience, it is accessible to non-CDE students as it does not assume prior genetics history/experience.  That being said, it goes beyond the scope of an introductory class, which makes it a unique course in that the basics are covered while also delving into skills and code/methodologies that could be used in GWAS studies and future practice. ",
+            "\u00a0It was good for in-depth knowledge of genetic concepts ",
+            "\u00a0Provides a broad introduction to genetic epidemiology and population genetics concepts. I would recommend this course to anyone with an interest in genetics and public health. ",
+            "\u00a0This class is definitely challenging for people who are new to epi or have less of a background in genetics. While the description says that no prereqs were necessarily, it did not feel like an introductory level course given how it was taught and how dense it was. I would recommend taking this class if you at least have some foundation in epi, biology, and maybe some biostat - that just helps you understand the material better intuitively. However, it is manageable even if you are a first year and new to epi ONLY if you put in extra work, which means staying on top of the lectures, going to office hours, not procrastinating on homework, and doing the readings to build your understanding. As someone who doesn't have a background in biology/genetics and not much in epi, I definitely learned a lot from the course, and I'm grateful for the new lab skills I obtained from the course. The content was very interesting and inspired me to pursue a research topic related to genetics. So, it is challenging, but manageable. ",
+            "\u00a0The course is great for teaching GWAS studies. Would recommend because the material is incredibly useful. ",
+            "\u00a0Yes. "
+        ]
+    ]
+}

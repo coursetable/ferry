@@ -1,0 +1,78 @@
+{
+    "crn_code": "11724",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            3,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned more lab techniques. ",
+            "\u00a0This course taught me the underlying principles of common lab techniques such as qPCR, RNA extraction, and gene cloning in more depth than other biology courses and brought in the practical components as well. This course was helpful for learning how to troubleshoot and design experiments with common lab techniques and would be helpful for anyone who does molecular biology work in a lab. ",
+            "\u00a0We didn't really spend time learning basic lab skills like pipetting since everyone except one person in the class already had research lab experience. This first half of the term we did RNA extraction, cDNA production, gene specific PCR, ligation of the gene product into a vector and transformation of bacteria, dsRNA synthesis via the T7 promoter, RNAi interference via feeding dsRNA to flatworms, and worm-sectioning with razors to look at regeneration. Overall, I appreciated the experiments we ran and was able to learn a lot from Professor Nelson and the TA's, all of whom were very helpful. Professor Nelson speaks quietly, so I'd suggest paying close attention to what he says, but he's very nice about explaining things you don't understand. Class lasted 1.30pm until around 4-4.30pm most days -- there were only a few times when it ran until 5pm. There are 4 or so weekly p-sets, but the TA's are extremely helpful in answering questions about them. The one thing I'd say detracted from my experience was the ambiguity of the final paper (which you write on the culmination of the experiments conducted over the course of the class). We received a handout on general expectations (abstract, introduction, results, discussion, methods, bibliography), but the tricky part was connecting everything we'd heard about the project from the first two days of class with all the steps we'd taken over the course of the semester. It was easy to get lost in the procedure and forget the big picture, and we didn't really go back over the big picture (which is important for writing the introduction) before having to write the paper. ",
+            "\u00a0I learned a lot about various nucleic acid lab techniques. Although I knew some of the techniques before, I have a much better understanding of the purpose of a lot of the steps than I did previously. "
+        ],
+        [
+            "\u00a0I don't think this course was well-designed to facilitate learning, as I felt pretty confused most of the time while doing experiments what the purpose of it was. Clearer communication and lecturing would be greatly appreciated. ",
+            "\u00a0The course structure was well designed for biweekly student participation, but planning some reagent orders a little further in advance may have helped with delays in experiments. ",
+            "\u00a0Strengths- very collaborative\r\n\r\nWeakness- the course moves pretty fast and you really need to pay attention or you will delay your progress and results "
+        ],
+        [
+            "\u00a0Yes! ",
+            "\u00a0Yes, definitely a good choice to fulfill the MCDB or premed bio lab requirements! You get two lab classes done in one semester, which is so convenient. ",
+            "\u00a0Yes!! A great lab to fulfill your MCDB lab requirement. It's probably one of few bio labs with a reasonable workload. We have a short lab p-set each week and a final paper after each half semester. Plus, Professor Nelson is incredibly nice and understanding should you need to miss lab for any reason. "
+        ]
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "crn_code": "11886",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            3,
+            1
+        ],
+        [
+            1,
+            1,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            4,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            2,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            3,
+            3,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Basic overview of Pharmacology; roughly equivalent to parts of my first year undergrad pharm course at Cambridge ",
+            "\u00a0I learned various aspects of the field of pharmacology as I had never taken a pharma course before. ",
+            "\u00a0Excellent topics. Some lectures better than others "
+        ],
+        [
+            "\u00a0Strengths; the initial intro on pharmacokintics / dynamics especially was good, and informative for the people who hadn't taken pharm before. \r\nWeaknesses; some exams seem based mostly on memorisation of drugs, graphs and basic facts as opposed to understanding of the material ",
+            "\u00a0The lectures varied quite a bit, some were interesting and others not so much. ",
+            "\u00a0Broad in-depth topics "
+        ],
+        [
+            "\u00a0no ",
+            "\u00a0Yes. Good intro to pharm for people who haven't taken it before, good refresher for people who have ",
+            "\u00a0Yes this class was a good introduction to pharmacology. ",
+            "\u00a0Yes but I would warn them about how significantly the level of difficultly the exams are. For each exam, we needed to know much  more material than the previous one (each exam is not cumulative) ",
+            "\u00a0Yes absolutely. Broad knowledge of pharmacology "
+        ]
+    ]
+}

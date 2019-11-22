@@ -1,0 +1,95 @@
+{
+    "crn_code": "22586",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            7,
+            3,
+            3
+        ],
+        [
+            1,
+            5,
+            7,
+            2,
+            0
+        ],
+        [
+            0,
+            5,
+            5,
+            5,
+            0
+        ],
+        [
+            1,
+            4,
+            3,
+            7,
+            0
+        ],
+        [
+            0,
+            0,
+            9,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            10,
+            5,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned a lot about laplace/fourier transforms, convolutions, image processing, and cardiac and EMG models. ",
+            "\u00a0I gained insight about image processing as well as signal acquisition and filtering. The course complimented what I learned in physiological systems lab very well. ",
+            "\u00a0Linear systems applied to modeling biological systems and diagnostic tools ",
+            "\u00a0I learned that I have the inner strength to learn and apply information that have absolutely no interest in. I do not understand why this class is REQUIRED. ",
+            "\u00a0I learned about signal processing and filtering, and the math that goes into doing that. ",
+            "\u00a0Lot about modeling the cardiovascular system using physics principles. How to manipulaye images. Tbh really not what Im into. So... ya know ",
+            "\u00a0Learned about convolution and circuits ",
+            "\u00a0I learned about the mathematics and physics behind medical applications like ekg, mri, etc. ",
+            "\u00a0I learned more about biomedical signals. "
+        ],
+        [
+            "\u00a0Both Duncan and Staib seem to be very interested in the topic, which makes the course more interesting although Prof Staib's lectures can be a bit monotonous. There were some inconsistencies/confusion with which transform tables to use, but this was a minor problem. Psets were appropriately challenging and about only once every other week. Stopped going to TA sessions once they seemed to be unprepared or not that helpful. They also did not give any feedback on psets. ",
+            "\u00a0The subject matter had potential to be interesting but the presentation was a little dry.  The best parts were the intro to machine learning and the modeling of the cardiovascular system. ",
+            "\u00a0Once you get a grasp on some of the basic course concepts, it feels interesting and useful course for modeling. Until then, though, you're gonna feel pretty lost and frustrated ",
+            "\u00a0This course. Every time I walk into the classroom with just a basket of happiness that is slowly but surely drained from my body as the class continues for an unbearable 75 minutes. Professor Duncan and Professor Staib seem like kind people, but they do not know how to teach an engaging course. Staib is the worse of the two as he just reads slides that are copy/pasted directly from the reading material in a soul sucking monotone. At least Duncan will growl sometimes when he makes a mistake which is fun. I won't say I didn't learn anything, but I'm not sure these people helped me learn it. The TAs were helpful. This is only because they have to just hand out answers because they don't really have a strong grasp on the specific information taught in class. \r\n\r\nHonestly, the BME department is in desperate need of women of color. I can't take another class like this. \r\n\r\nThis is the worst class I have taken at Yale. I am a STEM major so that is saying something. ",
+            "\u00a0Strengths: TAs were very available by email to answer questions.\r\n\r\nWeaknesses: class was not at all interactive, lectures were often boring.  The material that was on the problem sets often did not follow from the material from class, or, occasionally, even from the textbook.  The class was co-taught by two professors but I felt that the material that each one taught did not follow from the other's. ",
+            "\u00a0Personally not interested in material and feel most of it I wont use sgain ",
+            "\u00a0Lecturing for Staib was very difficult to pay attention too ",
+            "\u00a0This course is very clear in lecture and in problem sets with what it expects you to know, which is very helpful. I think the course could be improved if we got to observe more applications in class (like the Fourier imaging app) ",
+            "\u00a0This course was very boring at times and I think it could have been taught better. "
+        ],
+        [
+            "\u00a0BME requirement. But interesting if you really want to learn about how your instagram filters work. ",
+            "\u00a0Eh, if you're taking it its likely as a BME requirement. if you're actually interested in linear systems and their applications, probably take a better taught math or EE course ",
+            "\u00a0You got to put the killing thing in your mouth (this is a required class in BME), but don't let the killing thin kill you or whatever. If you are not BME, run for the hill geez. ",
+            "\u00a0Not particularly - this class was boring and focused a lot on foundational math skills which are important but not at all what I was expecting going in.  it is required for the BME major though.  it got a bit more interesting towards the end of the class where we actually started to learn about images. ",
+            "\u00a0Just not my thing so not into it ",
+            "\u00a0Nah ",
+            "\u00a0I would recommend this course because you come out of it with tangible knowledge of Laplace and Fourier applications, but the class itself is not overly stressful. ",
+            "\u00a0I would not recommend it for non-BME majors. ",
+            "\u00a0Not unless they are required to take it for their major, if not I would say to stay away from it. "
+        ]
+    ]
+}

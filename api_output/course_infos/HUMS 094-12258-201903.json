@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50175/assignments/syllabus", 
+    "requirements": "Enrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "description": "The relationship between the sciences and the humanities has never been a comfortable one. Nearly sixty years ago, C. P. Snow, a British physical chemist and novelist, commented on this uneasiness in his now famous work, The Two Cultures. Snow argued that the rift between scientists and literary scholars prevented modern societies from solving many of their problems. But what happens when science and the humanities actually do come together? What might be gained by putting these seemingly disparate ways of understanding the world in conversation with each other? This first-year seminar considers such questions by looking at several intersections between science and the humanities throughout the twentieth and twenty-first centuries. These intersections include: astrophysics and religion; modern science and modernist literature; quantum mechanics and postmodernism; and medicine and ethics.\u00c2\u00a0\nEnrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "title": "The Two Cultures: Science and ...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LC 208", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12258", 
+        "listings": [
+            {
+                "number": "094", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Brianne Bilsky"
+    ], 
+    "long_title": "The Two Cultures: Science and the Humanities", 
+    "extra_info": "A"
+}

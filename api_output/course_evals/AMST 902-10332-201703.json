@@ -1,0 +1,69 @@
+{
+    "crn_code": "10332",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            0,
+            0
+        ],
+        [
+            1,
+            0,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This workshop helped me to develop an understanding of the dissertation process, and to clearly articulate my project in the form of a prospectus. Additionally, Professor Meyerowitz fostered an environment where I learned from my cohort members and felt supported by them in my work. The workshop gave me clear guidelines for prospectus and dissertation writing, and also gave me a more general platform for asking questions and getting advice about moving through the remaining years of the PhD. "
+        ],
+        [
+            "\u00a0The workshop provided a way to reconnect with my cohort, and offered a space for informal discussion about all of our questions, uncertainties, and issues. Additionally, it gave me a clear sense of what was expected of me for my prospectus and dissertation, without being overwhelming. The weaknesses of this course were mainly to do with the amount of energy and knowledge each participant had to closely examine the work of everyone else. I sometimes felt that I did not give or receive very insightful feedback because few of us had the time or field-expertise to closely read everyone's work. Perhaps we could have done more pairing off for feedback--instead of reading everyone's work, we could have had sub-groups to more closely read and evaluate, and then rotated throughout the semester. "
+        ],
+        []
+    ]
+}

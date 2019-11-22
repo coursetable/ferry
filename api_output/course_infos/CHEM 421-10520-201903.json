@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49173/assignments/syllabus", 
+    "requirements": "Prerequisites: two terms of organic chemistry, and BIOL 101 or equivalent; BIOL 102 recommended.", 
+    "description": "A one-term introduction to the origins and emerging frontiers of chemical biology. Discussion of the key molecular building blocks of biological systems and the history of macromolecular research in chemistry.\nPrerequisites: two terms of organic chemistry, and BIOL 101 or equivalent; BIOL 102 recommended.", 
+    "title": "Chemical Biology", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "CRB 123", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10520", 
+        "listings": [
+            {
+                "number": "421", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jason Crawford"
+    ], 
+    "long_title": "Chemical Biology", 
+    "extra_info": "A"
+}

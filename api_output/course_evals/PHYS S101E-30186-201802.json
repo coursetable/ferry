@@ -1,0 +1,82 @@
+{
+    "crn_code": "30186",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            2,
+            4
+        ],
+        [
+            0,
+            1,
+            2,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            2
+        ],
+        [
+            0,
+            1,
+            7,
+            0,
+            1
+        ],
+        [
+            0,
+            1,
+            4,
+            3,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about how the world works, and I learned how interesting physics can be when it's well taught. I guess this was an even broader lesson--physics felt like the bane of my existence in high school, and it was nice to recognize that we aren't necessarily innately predisposed to love or hate any discipline, and that it's all about good teachers who put in effort and make themselves available and explain things in an interesting and engaging way. I would take more physics classes after this one, if I could guarantee I'd have more professors like Professor Robinson. ",
+            "\u00a0A clear visual understanding of physics and ability to apply physics to \"real world\" circumstances. ",
+            "\u00a0A lot of basic physics.  I actually learned a lot more about estimation, which I find valuable in real life. ",
+            "\u00a0It greatly helped me understand how to apply physics in my daily life. ",
+            "\u00a0I began to develop a deeper knowledge of physics. ",
+            "\u00a0I learned a lot of basic physics concepts from classic Newtonian mechanics to waves and how the Earth's climate works. "
+        ],
+        [
+            "\u00a0I think that the online setup is incredibly helpful and well-organized. I would only say that the courseload is a lot, which I suppose is necessary for summer courses, but it's hard to know what you sign up for at week 1 because the workload increases by the second week, with regards to having multiple chapters assigned. Strengths included Prof Robinson's flexibility with regards to students' needs for extra help outside of lectures and class discussion sections, the way in which concepts were explained, and the fact that the homeworks prepared you well for the exams. This, for whatever reason, has been rare in stem classes I've taken. ",
+            "\u00a0I think the strength lies in the teaching. ",
+            "\u00a0Frank Robinson taught the class incredibly well! The only downside is that I don't believe this class should be a summer class, but should rather be during a whole semester. The class was quite intense, and students could have really benefited from it stretching a bit longer. "
+        ],
+        [
+            "\u00a0Definitely! It was a fun introduction to physics, taught by a really great professor, and it adds that extra bit of fun with the movie part. I tend to find myself taking breaks to watch videos while I'm working in a broader sense, so it was really nice to have that built into the course, and to get to engage with both physics and narrative content while engaging with the clips. The clips also just made all the concepts more accessible, which was great. ",
+            "\u00a0Yes - the class presents a very unique and fun way of approaching physics. Very convenient to take online over the summer. ",
+            "\u00a0Absolutely take this course! It is a fantastic intro to kinematics applied to interesting movie clips. The class remains entertaining all the way through and the professor is awesome. ",
+            "\u00a0Yes, if the student wants to get a better grasp of physics I believe it would help them greatly ",
+            "\u00a0If you have a preexisting knowledge of physics, this class would be great for you! If you've never taken a physics course before, you'll probably struggle. It would be better if you took it during the school year, rather than the summer. "
+        ]
+    ]
+}

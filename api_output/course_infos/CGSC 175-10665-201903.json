@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49205/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The role in which sleep and circadian rhythms affect attention, cognition, and memory through multidisciplinary consideration of neurobiology, epidemiology, and humanities. Psychological aspects of sleep; sleep disorders; sleep deprivation; and the history of sleep in philosophy, literature, and art. This course is not open to students previously enrolled in CSPC 350, CSMC 370, or CSYC 390.", 
+    "title": "The Mystery of Sleep", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "WTS A60", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10665", 
+        "listings": [
+            {
+                "number": "175", 
+                "subject": "CGSC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Suman Baddam", 
+        "Meir Kryger"
+    ], 
+    "long_title": "The Mystery of Sleep", 
+    "extra_info": "A"
+}

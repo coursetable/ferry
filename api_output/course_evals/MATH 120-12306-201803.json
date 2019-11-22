@@ -1,0 +1,100 @@
+{
+    "crn_code": "12306",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            7,
+            5,
+            1
+        ],
+        [
+            0,
+            8,
+            2,
+            4,
+            0
+        ],
+        [
+            0,
+            3,
+            7,
+            2,
+            2
+        ],
+        [
+            0,
+            2,
+            6,
+            6,
+            0
+        ],
+        [
+            0,
+            2,
+            4,
+            8,
+            0
+        ],
+        [
+            0,
+            2,
+            8,
+            4,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Mutivariable calculus, how to approach different calculus problems. ",
+            "\u00a0I learned how to do multi variable derivatives and integrals of many types. ",
+            "\u00a0Multivariable calculus was honestly taught very straightforwardly ",
+            "\u00a0I had taken multivariable calculus before this class during high school. In that class, we often used graphing programs to see surfaces and even coded within the program itself to demonstrate visually like gradient vectors and fields. This class made me relearn that material in a way that was more more mechanical rather than visual and intuitive. This process, although it made it harder to understand the concepts at first, ultimately made my math skills much stronger because it forced me to understand the concepts through quantitative analysis rather than visual intuition. ",
+            "\u00a0Applications of calculus beyond the Taylor Series. ",
+            "\u00a0I learned how to teach myself math throughout this course. Since all the material was touched on but not heavily reviewed in class, I learned to do practice on my own. ",
+            "\u00a0I developed a knowledge about multivariable calc. I got to use my imagination in picturing a lot of the graphs which was nice. ",
+            "\u00a0How to evaluate multivariable functions ",
+            "\u00a0I learned about multivariable calculus. ",
+            "\u00a0I developed skills in multivariable calculus and am now able to solve many problems. "
+        ],
+        [
+            "\u00a0Well taught and the in-class learning correlated very well to the tests. ",
+            "\u00a0The teaching and office hours should be improved. I think a lot of my learning came from reading the textbook. ",
+            "\u00a0I think the course covered a lot in a very short span of time, and so clarity was essential in making sure that lessons were clear. However sometimes there were concepts that I feel were skimmed over very quickly that needed more repetition or clarification. ",
+            "\u00a0It seemed unfair that some classes got lecture notes and supplemental materials while others did not. In general, the use of technology and visual aids would have helped a lot with the intuition behind many of the topics we covered. Also, although I learned material, I didn't learn how to improve the mistakes I was already making. This is partly my fault because I didn't review mistakes on my PSET, but it meant that my grades on the exam reflected the number of bad habits and mistaken information I had rather than my general understanding of the material. The exam grades reflected the degree of precision rather than general understanding. ",
+            "\u00a0It's boring. ",
+            "\u00a0I felt many of the things they were teaching us were not very applicable to the real world. I would have loved more real world applications of everything we saw. ",
+            "\u00a0I really don't think this class should be seminar based. I think it should be a lecture, taught by the well reviewed lecturers who have a better handle on how to explain things well. There was no reason for this class to be a seminar since it was basically a mini lecture. ",
+            "\u00a0Maybe constantly reinforcing material that was already covered would be helpful, especially when the time to take the final comes around. ",
+            "\u00a0Very fast; homework didn't adequately prepare for exam ",
+            "\u00a0The problem sets were a lot for not being worth a lot of points.  My instructor was good.  The time slot was not my favorite. ",
+            "\u00a0Very fast paced and didn't feel like I ever had a chance to recover if I fell behind. Emphasizing the resources we have would have been great, my professor didn't tell our class about practice modules until after the first midterm. "
+        ],
+        [
+            "\u00a0Yes, so long as you have a strong calculus background. ",
+            "\u00a0Yes I would recommend it, I ended up learning the material very well by the end. ",
+            "\u00a0Yes ",
+            "\u00a0Yes, it gave a good overview of some extended topics on Calculus. ",
+            "\u00a0Not unless they were a STEM major... it is simply not enjoyable to be present for this class ",
+            "\u00a0Yes. I feel that multi-var calc is essential to understand before you graduate. ",
+            "\u00a0This class is okay if you're taking it as a pre-req, but I wouldn't take it just to learn math. You learn the mechanics of how to solve problems and forget them right after. It's not really an intellectual challenge. ",
+            "\u00a0I heard ENAS 181 was a better class to take. ",
+            "\u00a0Only as a prerequisite ",
+            "\u00a0Seeing as this is a prerequisite for many other courses, I would recommend to those wanting to do something in STEM.  I wouldnt recommend to those who do not need to take this course ",
+            "\u00a0If you have taken multivariable calculus or are a STEM genius, you'll be fine. But if not, you'll fall behind all of those kids very quickly. "
+        ]
+    ]
+}

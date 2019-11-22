@@ -1,0 +1,84 @@
+{
+    "crn_code": "12279",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            4,
+            3
+        ],
+        [
+            1,
+            0,
+            1,
+            4,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            3
+        ],
+        [
+            0,
+            1,
+            2,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            6,
+            0
+        ],
+        [
+            0,
+            1,
+            6,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Basically, by taking a wide view and tackling a couple different angles, you learn to understand how lexico-conceptual structures work and what the consequences and benefits are of their usage. And you learn about various lines of evidence that the human brain works in certain ways, which is not something I've ever really delved into in a linguistics course. ",
+            "\u00a0We learned about the ideas of Jackendoff and Carey, and learned a lot about how to think about formalizations of semantics (emphasis on lexical conceptual structure) ",
+            "\u00a0I learned a birds-eye view of the way that language is embedded in the larger human cognitive system. ",
+            "\u00a0Guided by questions like \"what is meaning?\", \"what properties do meanings (need to) have (in order to do what they do)?\", \"what is the structure of meaning?\", \"how do meanings combine?\", and \"how is meaning made visible through language? (or how can meaning be expressed?)\", we learned about the development and application of the Conceptual Semantics framework, including the motivations for this approach, the details of the major test cases, independent support for the validity of the model (from non- and pre-linguistic cognition), as well as the formal/analytical tools that can be used to investigate meaning structure.\r\n\r\nThis course really helped me better situate language in the mind and develop a more nuanced understanding of the relationship between language and other mental processes. And perhaps more importantly, it did so by emphasizing and illustrating the importance of good scientific practice along the way  how to develop a hypothesis, how to explore the predictions made by the hypothesis, how to make use of evidence from related fields to inform and constrain the development of the theory/model, etc. ",
+            "\u00a0We explored the topic of lexical conceptual structure and how it relates to both semantics and psycholinguistics. ",
+            "\u00a0I developed a stronger sense of what we mean when we talk about meanings, and how these are structured in the mind. We went over developmental psychology, frameworks of current meaning structure theory, and experimental design, and using these, we learned how to create a project to answer a specific question in the field. "
+        ],
+        [
+            "\u00a0Biggest strength is that Professor Piango facilitates discussions where everyone has their questions heard and everyone makes a group effort to understand these really conceptually difficult topics. ",
+            "\u00a0It's accessible to psych and other majors, not just linguistics students, but you'll have to pick up the slack in background yourself. Your work and progress are also very self-driven so you'll have to put in a fair amount of work. The material is pretty interesting though and it's laid out so that you really come away knowing new things. ",
+            "\u00a0This courses strength was the slow-and-steady tempo. It made sure that all the knowledge was firmly in placenta before we moved on. Its weakness was the lack of a central theme, or a unified principle behind all of the subjects we covered. ",
+            "\u00a0The strength of the course was definitely the seminar setting. Lots of questions were answered and it allowed for a lot of interaction and discussion. However, I do think that the amount of questions caused the discussion to go off-topic. What eventually occurred was that the main material would barely be covered while marginal knowledge outside of the material would be well-discussed. ",
+            "\u00a0The best part of the course was the dialogue between all the students and Professor Piango. I've never been in a class setting with this level of atmosphere of everyone being excited to talk, and excited to hear what everyone had to say. We got to know each other and drew from each other's backgrounds in asking questions. Some concepts specific to the field of linguistics went by pretty quickly, so an improvement could be more focus spent on making sure everyone understood a new term when it was brought up. People new to the field might have felt lost at times. But asking questions was highly welcomed and encouraged, so I think this ended up fine for everyone. "
+        ],
+        [
+            "\u00a0Yes, if you're ready to go really in-depth with these concepts. I loved this class but it's definitely not something you want to casually participate in - you won't understand what's going on unless you do all the reading and listen to the class discussions. If you ARE interested in that, you'll learn so much about how language works in our brains, which is so cool!!! ",
+            "\u00a0Yes. Workload varies greatly by week with most work falling in the first month and any weeks where you present, but it's worth it. ",
+            "\u00a0I would recommend this course to someone with a background in linguistics or cognitive science as it shows the intersection of the two disciplines. It might be less rewarding as a first class in the areas. ",
+            "\u00a0If you are interested in exploring (1) how meaning can be in the mind and/or (2) \"the shape it takes\" (i.e. its structure, functions, and properties) in the mind, I trust that you will find this class engaging and learn A LOT. This is a seminar that really requires to you to do \"deep work\": there's a lot of close examination of seemingly intuitive assumptions and claims, a lot of consolidation, synthesis and generation of understandings and (new) knowledge, and a lot of (re)construction of systems. I LOVED it. I think this class is what a real intellectually transformative experience looks like. ",
+            "\u00a0Definitely would recommend. This class is special in that it inspires new questions and thoughts even outside the classroom (more than other classes I've been in or heard of). You can bring your own background knowledge and interests to the course material, and it's a super welcoming environment for questions/dialogue. Even if you have zero background knowledge from related fields, the course is set up so you can ask and learn with no shame. You do a group presentation and develop an individual project, both of which are great experiences if you're interested in research. It's fun not just because the topics are interesting, but because you grow to really respect and develop a curiosity for others' ideas. You learn how to be rigorous in asking a scientific question and attempting to answer it. Take the class! "
+        ]
+    ]
+}

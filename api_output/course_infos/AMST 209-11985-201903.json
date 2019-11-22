@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49026/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Examination of how race\u2014as a mode of domination and resistance\u2014has developed and transformed in the United States since the early-twentieth-century. How political actors and social movements engage the law to shape visions of freedom, democracy, and political life. Consideration of critical race theory, political discourse analysis, intersectionality and women of color feminism, and American political development.\u00a0", 
+    "title": "Race, Politics, and the Law", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 201", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11985", 
+        "listings": [
+            {
+                "number": "209", 
+                "subject": "AMST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSA\">YC Poli Sci: American Govt</a>"
+    ], 
+    "professors": [
+        "Daniel HoSang"
+    ], 
+    "long_title": "Race, Politics, and the Law", 
+    "extra_info": "A"
+}

@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Preparation of a one-term senior project under the supervision of an HSHM faculty member, or of an affiliated faculty member with approval of the director of undergraduate studies. There will be a mandatory meeting at the beginning of the term for students who have chosen the one-term senior project; students will be notified of the time and location by e-mail before classes begin. Majors planning to begin their projects who do not receive this notice should contact the senior project director.\nStudents expecting to graduate in May enroll in HSHM 492 during the fall term. December graduates enroll in HSHM 492 in the preceding spring term. Students planning to begin their project in the spring should notify the senior project director by the last day of classes in the fall term. Majors must submit a completed Statement of Intention form signed by the faculty member who has agreed to supervise the project to the HSHM administrator no later than September 9, 2019 (HSHM 492a), or January 17, 2020 (HSHM 492b). Blank statement forms are available in the HSHM Senior Project Handbook on the HSHM website. Students enrolled in HSHM 492 must submit a completed senior project to the HSHM administrator no later than 5 p.m. on December 2, 2019, in the fall term, or no later than 5 p.m. on April 6, 2020, in the spring term. Projects submitted after 5 p.m. on the due date without an excuse from the student's residential college dean will be subject to grade penalties.", 
+    "title": "One-Term Senior Project", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11103", 
+        "listings": [
+            {
+                "number": "492", 
+                "subject": "HSHM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Carolyn Roberts"
+    ], 
+    "long_title": "One-Term Senior Project", 
+    "extra_info": "A"
+}

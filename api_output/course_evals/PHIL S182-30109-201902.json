@@ -1,0 +1,71 @@
+{
+    "crn_code": "30109",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The course provided my with an understanding of the influence of first-order, philosophical principles on the law. In this manner, it was profoundly helpful and interesting, since the law is not an immutable entity and, thus, it is salient to understand how legislators should strive to legislate and judges to adjudicate. "
+        ],
+        [
+            "\u00a0The primary strength of the course lies in the importance of the materials examined. Notions such as paternalism, retributivism, natural law and positivism are momentous to ones perception of the law vis-a-vis its implications and justifications. The only weakness could lie in the examination of numerous discrete concepts during a short period of time, however that is inherent to any summer course. "
+        ],
+        [
+            "\u00a0I would recommend it to any student with a certain background in philosophy and an interest in the rudimentary principles that underlie the law. I do also believe that students with political interests, especially pertaining to important Supreme Court cases, would stand to gain from this class. "
+        ]
+    ]
+}

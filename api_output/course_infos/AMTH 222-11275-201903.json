@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50423/assignments/syllabus", 
+    "requirements": "After MATH 115 or equivalent. May not be taken after MATH 225.", 
+    "description": "Matrix representation of linear equations. Gauss elimination. Vector spaces. Linear independence, basis, and dimension. Orthogonality, projection, least squares approximation; orthogonalization and orthogonal bases. Extension to function spaces. Determinants. Eigenvalues and eigenvectors. Diagonalization. Difference equations and matrix differential equations. Symmetric and Hermitian matrices. Orthogonal and unitary transformations; similarity transformations.\nAfter MATH 115 or equivalent. May not be taken after MATH 225.", 
+    "title": "Linear Algebra with Applications", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WTS A60", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "11275", 
+        "listings": [
+            {
+                "number": "222", 
+                "subject": "AMTH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YMAT\">YC Math: Algebra/Number Theory</a>"
+    ], 
+    "professors": [
+        "Yuchen Liu"
+    ], 
+    "long_title": "Linear Algebra with Applications", 
+    "extra_info": "A"
+}

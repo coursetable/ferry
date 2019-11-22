@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Offered by permission of the instructor and DGS to meet special requirements not covered by regular courses. Graded Satisfactory/Unsatisfactory.", 
+    "title": "Directed Reading: Indians in E...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "16271", 
+        "listings": [
+            {
+                "number": "998", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Ned Blackhawk"
+    ], 
+    "long_title": "Directed Reading: Indians in Early America", 
+    "extra_info": "A"
+}

@@ -1,0 +1,74 @@
+{
+    "crn_code": "22549",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Using fsleyes and the basics of analyzing fMRI and EEG data ",
+            "\u00a0This is an excellent course especially when paired with the lecture. In it, I got the chance to learn about, and get hands-on experience with, the most modern methods in human neuroscience. ",
+            "\u00a0I learned how to apply the research methods that I learned in the Human Neuroscience course with Professor McCarthy. "
+        ],
+        [
+            "\u00a0It is great to go through these analyses conceptually as most of the scripts to run the code is already written. However, we didn't get feedback on our lab reports as we were submitting them ",
+            "\u00a0Strengths: Wikis are detailed and easy to follow and there is a lot of 1:1 instruction time. \r\nWeaknesses: Sometimes the labs are difficult to complete within the timeframe. "
+        ],
+        [
+            "\u00a0I would recommend this course to students who are looking for a broad overview of the different software techniques that can be used for human neuroscience research. "
+        ]
+    ]
+}

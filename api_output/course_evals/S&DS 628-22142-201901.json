@@ -1,0 +1,81 @@
+{
+    "crn_code": "22142",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            3,
+            2
+        ],
+        [
+            0,
+            1,
+            3,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            4,
+            3,
+            0,
+            0
+        ],
+        [
+            4,
+            1,
+            2,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0NA ",
+            "\u00a0How to get started on analyzing data when someone from a completely different field comes in. How to ask the important questions, do some data visualization, how to communicate with non-statistics people, how to understand quickly someone's else problem. ",
+            "\u00a0I learned a lot about how real consulting may go in the real world. I saw how many times a main issue is just data cleaning and making sure your data actually is what you think it is. ",
+            "\u00a0The data analysis workflow which is very useful for statistical practical work. We also learned many programming techniques in R. "
+        ],
+        [
+            "\u00a0More guests ",
+            "\u00a0This class should have had more guests this year. But on the days we had guests, it was very interesting to try to understand the data, ask questions, do some visualization, and try to answer some problems. I really like the class being in an informal way, being in a small class, and getting to know better the people from the department in it. ",
+            "\u00a0more guests! ",
+            "\u00a0The class could be improved by having more guests as a lot of times we didn't have a guest to work with. ",
+            "\u00a0It showed us how data analysis is done, especially for real world problems, with actual researchers or professionals with data problems they need to solve. That made the course very interesting and relevant. "
+        ],
+        [
+            "\u00a0yes ",
+            "\u00a0I would not recommend this class to non-statistics people. I'd recommend this course to students interested in seeing cases, with many di erent datasets and how to ask questions to get to the point quickly and see what's important in the data. ",
+            "\u00a0I would recommend it because I did enjoy it a lot. ",
+            "\u00a0Yes, if they would to experience how data analysis is done for actual problems that practitioners face. "
+        ]
+    ]
+}

@@ -1,0 +1,83 @@
+{
+    "crn_code": "11953",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            8,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            8,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            8,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            6,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            7
+        ],
+        [
+            0,
+            0,
+            5,
+            2,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned about how to quantize charge and flux in linear/nonlinear circuits, treat circuit noise quantum mechanically, treat circuit dissipation, model optomechanical systems, qubit Hamiltonians in different regimes, and create a single electron pump. ",
+            "\u00a0A basic understanding of superconducting artificial atoms, optomechanics, and mesoscopic (super)conductivity. ",
+            "\u00a0I certainly learned a lot about the field of mesoscopic physics from the course, which was an excellent overview of the field. The course touched on a nice mix of different subjects, but the homework assignments were unnecessarily challenging. ",
+            "\u00a0I got a good overview of mesoscopic physics, both the theory and interesting experimental results. The homework provided interesting problems that were open ended and more like real world research questions instead of classroom exercises. ",
+            "\u00a0fundamentals of mesoscopic physics and related quantum phenomena. "
+        ],
+        [
+            "\u00a0Strengths- Very deep and interesting implications of the material. Good emphasis on the ideas and the connections. I feel I understand the physics behind the concepts presented.\r\n\r\nWeaknesses- There is quite a lot of mathematical rigor and formulation that is skipped. This can make actually application of some of the techniques discussed arduous and difficult. For example, how to decide which RL expansion to use in a Caldera-Leggett model still baffles me. ",
+            "\u00a0The course covers a large amount of important material, but at times it can be quite difficult. ",
+            "\u00a0The homework assignments for this course are unnecessarily challenging and time-consuming, and while there is value in assigning challenging problems that motivate students to work harder, the homework problems tended to go far beyond what was reasonable. Though the lectures were interesting and informative, the information conveyed in lecture was never sufficient to solve the homework problems. I understand this was the intention, but in practice this meant that I was frustratingly underprepared to tackle most of the homework problems. \r\n\r\nThat said, I did learn from the problem setsthey forced me to do a lot of additional background reading. But the course really would have been more enjoyable if the problem sets were more reasonable. ",
+            "\u00a0This course touches a lot of state of the art topics at the same time . Some related books or review papers might be provided to students which can be really helpful for the students. ",
+            "\u00a0The prerequisite knowledge background is so large, you have to take lots of time on it. "
+        ],
+        [
+            "\u00a0Yes, I would. As it talks about the interesting topics in the field of mesoscopic physics and students can get an insight of the physics behind it. ",
+            "\u00a0Yes. Great concepts, deep understanding, and great teaching. Homeworks are more for fun playing with the problems than for a grade and knowing that makes the class a lot of fun. Also, the mini-project at the end of the class is nice practice putting together a lit talk in a field you may not be familiar with. ",
+            "\u00a0I recommend it to anyone willing to take the necessary time to grapple with the problems. ",
+            "\u00a0Yes and noyes because the lectures were very informative and provided an excellent overview of mesoscopic physics; no because the problem sets were miserably challenging, to the point where I dreaded doing them and lost enjoyment of the material. This would be an excellent course to audit. ",
+            "\u00a0I would definitely recommend this course, even if only to audit.  One can get exposure to a very broad array of quantum and mesoscopic physics from these lectures.  The homeworks are VERY time consuming, but they contain some really interesting problems. "
+        ]
+    ]
+}

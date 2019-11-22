@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50402/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Investigation of how the Romans imagined the founding of their nation and their city, events to which they attached the highest importance yet about which they had little information. Careful reading of both prose and verse by Vergil, Livy, Ovid, and others. A bridge course between L4 and other L5 courses.", 
+    "title": "Early Rome from Aeneas to Romu...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "PH 310", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10655", 
+        "listings": [
+            {
+                "number": "411", 
+                "subject": "LATN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Joseph Solodow"
+    ], 
+    "long_title": "Early Rome from Aeneas to Romulus", 
+    "extra_info": "A"
+}

@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50091/assignments/syllabus", 
+    "requirements": "Prerequisite: HEBR 120 or equivalent.", 
+    "description": "Review and continuation of grammatical study, leading to a deeper understanding of style and usage. Focus on selected readings and on writing, comprehension, and speaking skills.\nPrerequisite: HEBR 120 or equivalent.\n\n1.5 Yale College course credits", 
+    "title": "Intermediate Modern Hebrew I", 
+    "skills": [
+        "L3"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "SML 116B", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "11438", 
+        "listings": [
+            {
+                "number": "130", 
+                "subject": "HEBR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Shiri Goren"
+    ], 
+    "long_title": "Intermediate Modern Hebrew I", 
+    "extra_info": "A"
+}

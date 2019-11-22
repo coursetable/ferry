@@ -1,0 +1,52 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50484/assignments/syllabus", 
+    "requirements": "Introductory courses (BIOL 101-104) and two MCDB 200-level courses (strongly recommended: MCDB 202 and MCDB 200 or MCDB 210) or instructor permission.", 
+    "description": "Study of epigenetic states and the various mechanisms of epigenetic regulation, including histone modification, DNA methylation, nuclear organization, and regulation by non-coding RNAs. Detailed critique of papers from primary literature and discussion of novel technologies, with specific attention to the impact of epigenetics on human health.\nIntroductory courses (BIOL 101-104) and two MCDB 200-level courses (strongly recommended: MCDB 202 and MCDB 200 or MCDB 210) or instructor permission.", 
+    "title": "Epigenetics", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WTS A32", 
+            "days": [
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 12
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11367", 
+        "listings": [
+            {
+                "number": "350", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Yannick Jacob", 
+        "Nadya Dimitrova"
+    ], 
+    "long_title": "Epigenetics", 
+    "extra_info": "A"
+}

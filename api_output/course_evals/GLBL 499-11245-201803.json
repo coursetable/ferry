@@ -1,0 +1,80 @@
+{
+    "crn_code": "11245",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ],
+        [
+            0,
+            1,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This class helped me with my teamwork skills, and how to do research on novel topics. ",
+            "\u00a0I learned about blockchain and digital assets from both the technology perspective and the policy perspective.  I also learned about consulting for a client and using one's own knowledge and skills to deliver something that's useful for them. ",
+            "\u00a0I developed knowledge of the state of the cryptocurrency and blockchain industries and the players in the ecosystems. I also gained knowledge about innovative applications of blockchain technology and about the regulatory landscape and challenges in regulating blockchain and crypto assets. ",
+            "\u00a0The knowledge I gained from this project was phenomenal. Professor Bandman brought amazing guest speakers in class. We spoke to regulators, professionals, and entrepreneurs who are thought leaders in the blockchain space. It was incredible to learn about cryptoassets from people who knew them the best. This class taught me to approach blockchain technology in a cool-headed approach and look for deep insights in business model instead of following the trend. "
+        ],
+        [
+            "\u00a0The course was great in the network it started for us with regard to blockchain and crypto. There should have been a bit more organization though. ",
+            "\u00a0Perhaps the client could be more clear about what they want from the get-go, but otherwise the course went very smoothly.  The biggest strength was the access we got to both our client and the experts who came to our class. ",
+            "\u00a0This course has numerous strengths. One strength is the readings in the syllabus, which constitute some of the most relevant documents from the crypto and blockchain industries thus far and which provide a comprehensive introduction for a novice to the subject. The course also included extremely strong guest speakers who are leaders in the industry. In addition, the course taught us how to engage with the crypto and blockchain industries to produce final deliverables that would be useful for GDF and its members. ",
+            "\u00a0The class was rarely structured as working sessions but functioned as interactive learning sessions with experts. By directly learning from industry players, this class provides students with strong industry insights and prepares students for professional careers.\r\n\r\nThe class can benefit students more if the curriculum is more systematized. The order of readings can be reorganized so that students can have a better background of blockchain technology before discussing its applications with industry experts. "
+        ],
+        [
+            "\u00a0It's required for global majors ",
+            "\u00a0I would.  You learn a lot, quickly, and the professor is quite supportive ",
+            "\u00a0I would recommend this course to another student, although I'm not sure it will be offered again. If there is a chance for another global affairs capstone group to work with Global Digital Finance (GDF) in the future, or if Professor Bandman teaches another course on cryptocurrency and/or blockchain at Yale, I would definitely recommend it. I learned so much about a new and rapidly developing field with potentially dramatic impacts, and I am excited to continue to be involved in the industry in the future. ",
+            "\u00a0This course is great for students who follow the cryptoasset space closely. Technical background is not not required. As a global affairs capstone, this class has a clear pivot towards policymaking and we learned incredible insights on latest policy debates and concerns over the blockchain industry. "
+        ]
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "crn_code": "20883",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            7,
+            15,
+            12
+        ],
+        [
+            2,
+            4,
+            11,
+            8,
+            8
+        ],
+        [
+            3,
+            3,
+            7,
+            10,
+            10
+        ],
+        [
+            1,
+            4,
+            9,
+            13,
+            6
+        ],
+        [
+            0,
+            0,
+            6,
+            18,
+            9
+        ],
+        [
+            0,
+            0,
+            9,
+            17,
+            7
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about multivariable calculus ",
+            "\u00a0I learned about three-dimensional geometry, multivariable differentiation and integration, vector algebra and geometry, and parametrization. ",
+            "\u00a0I learned how to picture and perform calculus in 3 dimensions ",
+            "\u00a0I learned math. ",
+            "\u00a0Basic overview of multi: vectors, partial derivatives, 3D geometry, Green's, Stokes', Gauss/Divergence, etc. The content was 100% the same as MATH 120 - no real engineering or science examples were used. It was more of a math class than an engineering class. ",
+            "\u00a0I learned a lot about multivariable calculus and its applications. ",
+            "\u00a0Calculus! ",
+            "\u00a0I developed my knowledge of multivariable calculus in this class. ",
+            "\u00a0I learned how to be confident in math. ",
+            "\u00a0We learned various topics including Vector Calculus, Volumes, 3-D analysis, etc. ",
+            "\u00a0How to teach myself things. ",
+            "\u00a0I learned the fundamentals of multivariable calculus, the course was especially good at developing intuition for higher dimensions. ",
+            "\u00a0I deepened my calculus skills by building on the single-variable calculus I had learned. ",
+            "\u00a0I learned 3 dimensional math and it was so cool! ",
+            "\u00a0I learned to think more critically about math problems, in particular how to find the best method/approach to solve a problem. This course gave me an insight into the important concepts behind fields such as aerodynamics and fluid mechanics. ",
+            "\u00a0How to work with 3D surfaces, vectors, etc in relation to physics concepts like flux and and work. "
+        ],
+        [
+            "\u00a0The flipped classroom was very hard for not just me, but the majority of students to keep up with the material and understand what level of knowledge was expected of us cone exam time. I think math should be a class that doesnt make students learn the majority of the material on their own. It is really important for the professor to spend time in class teaching so that we can do our homework and quizzes afterward. ",
+            "\u00a0The flipped classroom way in which the course was run made it extremely difficult to understand the material. The actual exams were also much more conceptually based than the practice exams so if new practice exams were made, that might help. ",
+            "\u00a0The course is overall great! It is quite slow-paced, which really facilitates learning, and grading is not harsh at all--the TAs are very fair and sensible. However, pre-class reading quizzes were sometimes extremely hard and abstract, and they often didn't really help me prepare for the lectures. ",
+            "\u00a0The weakness of this class is the difficult nature of the graphs that we use in class, I think it could be improved by a greater use of graphing equipment. The strength of this course is that once you learn how to do calculus in 3d its application can be used for a variety of things. ",
+            "\u00a0Perfect. ",
+            "\u00a0Strengths: instructor, grade structure, pace. Dr. Rolf was great: he made the course very engaging by incorporating in class activities, making a student of the day, etc. I also liked how the grading was structured: not too much weight on any single assignment or test. I also think the pace of the course was great. We went much slower than 120 and I liked that we were actually taught the content and given time to work with it and digest it.\r\n\r\nWeaknesses: lack of depth, workload. Biggest weakness was the fact that class sometimes went so slow that we hardly ever covered that days topic, but were still expected to know it very in depth and be able to do problems that we never saw before because we never got to them in class. We had a note packet (which was great!) but we usually only covered like 25-50% of it in class but were still expected to understand 100% of the content. Between this and the in-class quizzes, this class required quite a bit of self-teaching. Coupled with lengthy psets and sometimes 2-3 quizzes before class, it was a high workload. ",
+            "\u00a0The flipped course would ideally work well, however, I found this was not the case and it left a lot of students confused. This confusion got worse as the semester went on and topics became more complex. I think this occurred because even though Professor Rolf had us write down what we were confused about, we never got to it all in class. ",
+            "\u00a0Better than Math120 ",
+            "\u00a0He was very engaging and cared about knowing us as students ",
+            "\u00a0more step by step explanations because there are so many steps missed in math courses here and its hard to understand such hard topics this way ",
+            "\u00a0I think the fact that the class is a flipped classroom is a huge weakness because of the difficulty of the material. This makes it somewhat harder to learn if you aren't someone who is good at self studying. ",
+            "\u00a0I can't think of anything bad to say about this course. ",
+            "\u00a0Strength:\r\nGreat lecture slides.\r\nProf. Rolf was very accessible and he was open to student feedback. \r\n\r\nWeaknesses:\r\nWe progressed a little bit fast, and at times it was hard to easily digest the class material. ",
+            "\u00a0Our professor wasn't the best and I feel didn't have a strong grasp on the topic itself. He could often do the math, but when many would ask questions about more in-depth topics or to explain something differently, he was often at a loss. ",
+            "\u00a0The course is very well geared towards student learning, and the class time is very interactive, something hard to achieve with a larger class. I think the course would benefit from more real-life examples (for example from physics) of the concepts we learned. I also think the reading quizzes were sometimes too much work, and too difficult to complete without having learned the material in class. ",
+            "\u00a0I really disliked the flipped learning element. Class often focused on one problem and I found that it really was not conducive to improving my learning. ",
+            "\u00a0The online quizzes were not helpful for learning the material. The class time was also not well used - students were frequently left to solve problems on their own, instead of going through the material as a class. ",
+            "\u00a0Flipped classroom was very ineffective. ",
+            "\u00a0We can have fewer reading quizzes ",
+            "\u00a0I think the textbook was a weakness this semester because its explanations of the material were not clear most of the time. Something that I likes about the class was the printed hand outs, they were easy to follow and a great place to take notes and have everything in one place. However, lecture was not always helpful in gaining a deeper understanding of the material, and I did most of my learning on my own or at TA office hours. With that said, lecture was fun because the professor was engaging and passionate. ",
+            "\u00a0Professor Rolf took a long time to explain small things and therefore didnt quite finishing teaching the topics of each class. We had to learn or look up a lot on our own. ",
+            "\u00a0Often psets were not as conceptual as exams, which made understanding the material well enough to succeed was difficult sometimes. Would have liked a little more clarity about process in lecture - practice was good but often didn't put it all together. Psets were manageable, help was readily available. Engaging. "
+        ],
+        [
+            "\u00a0No. I expected to take this course and be better off than if I took Math 120, but I felt like I had more work and learned less. ",
+            "\u00a0I would certainly recommend this to any student who wants/has to take multivariable calculus. It is a great way to avoid MATH 120, and be in a very interactive lecture that focuses more on the application of three-dimensional calculus. ",
+            "\u00a0I would recommend this class for any other student that wants to learn calculus in 3d and likes physics ",
+            "\u00a0Yes, I felt it was taught in just the right way for the students to be pushed but also not beyond our comprehension. ",
+            "\u00a0You probably don't get to choose if you need to take multi. However, unless you are majoring in MATH, you probably do get to chose between ENAS 151 and MATH 120. I would 100% recommend that you take this course over MATH 120. The grading is more generous (more generous curve) and has better distribution (40% for 2 midterms, 30% final, 30% homework) compared to 120. The instructor was also very good. He teaches very slowly and kind of treats you like you're stupid, which is basically the ideal setting for me to be learning math in. Even though the work load is high, it helps keep you engaged and you are kind of forced to learn the content. Multi is hard and you will struggle if you haven't learned it before, but ENAS is definitely the lesser of 2 evils. ",
+            "\u00a0Yes, but I would caution them that they really have to be able to learn and understand concepts on their own, since it is a flipped course. ",
+            "\u00a0I would recommend it if you need multi variable calculus as a requirement. Professor Rolf makes math as interesting as he possibly can and I even enjoyed it sometimes. ",
+            "\u00a0would recommend this class to another student because I think it has a much better atmosphere of learning than MATH 120 and that it would be easier for students to succeed if they took this class. ",
+            "\u00a0Absolutely! ",
+            "\u00a0I would recommend this course to others who are interested in learning higher level of math. ",
+            "\u00a0This course was recommended to me, but with a  different professor. This current professor was not the best and often was not very helpful when it came to having things ready on time. For example we would almost never finish the topics during class time and were told to learn it on our own. ",
+            "\u00a0I would recommend it as a multivariable calculus course. ",
+            "\u00a0If it's for your major, I would recommend taking this over MATH 120, but it definitely was not a course that I would suggest taking on a whim. ",
+            "\u00a0This course isn't ideal, but it's much better than math 120, especially if you're interested in physics, applied math, or engineering. ",
+            "\u00a0definitely. best course at yale ",
+            "\u00a0Yes I would recommend this course to anyone choosing between ENAS 151 and MATH 120. Its practical applications are more straightforward I think than the slightly more proof based 120 class. ",
+            "\u00a0Yes, good foundational knowledge without being dry. A manageable course. "
+        ]
+    ]
+}

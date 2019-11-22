@@ -1,0 +1,79 @@
+{
+    "crn_code": "21896",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned how large-scale systems work and how to design them ",
+            "\u00a0Learnt about cutting edge research in networks, from cloud and data centers to some basic 5G. The material in the course was very interesting, and I learnt about interesting network architectures and programming frameworks. ",
+            "\u00a0I learned a lot about networks, network controllers, and evaluating different architectures based on latency, resource requirements, etc. ",
+            "\u00a0Software-defined networks, data center networks, distributed data analytics. "
+        ],
+        [
+            "\u00a0Strength: This iteration of the course covered landmark systems papers that are crucial for a career in infrastructure and systems. ",
+            "\u00a0Very well organized. Covers a large number of papers, and goes into some significant depth for a few of them, giving some wide and deep knowledge. Overall helped me develop a good intuition for how different network architectures work. ",
+            "\u00a0I wish there had been more clear guidelines for the final project and report. There were only a couple lines in the slides and no rubric so that was a little frustrating. Class is fast-paced, but you learn a lot each class. I also liked that we had technical white papers assigned. I hadn't actually read a technical paper for a CS course before, so this was really cool and taught me how to get the key points from these papers and developed my understanding. \r\n\r\nHonestly though, I think this course could be improved a lot by covering less material. Each class was fast-paced and I only answered questions occasionally bc I pretty much was always lost / scrambling to figure out what was going on, even if I had read the papers. I think that reducing the amount of material so that each class can be a little slower / really develop students' intuitions would be ideal. ",
+            "\u00a0Yang Yang is a wonderful and approachable professor. His passion for the field shines through in his teaching. Very insightful course that teaches you how to think about networked / distributed systems. "
+        ],
+        [
+            "\u00a0Yes, it's a great course that covers relevant material, and Professor Yang is a great teacher. ",
+            "\u00a0I definitely would recommend this course! It's very interesting. This semester there was only one pset which was pretty straightforward, a midterm, and a final project. Just keep in mind that the material is difficult, so if you want to do well on the midterm you need to keep up with class (do not skip and try to learn on your own. it's somewhat do-able, but v not fun). ",
+            "\u00a0Yes, please take this gem of a course! This is honestly one of the best computer science classes I've taken at Yale. You'll read a lot of important computer science papers and learn so many interesting concepts! The course will give you insight into designing and thinking about networked / distributed systems. It's extremely applicable to real life. "
+        ]
+    ]
+}

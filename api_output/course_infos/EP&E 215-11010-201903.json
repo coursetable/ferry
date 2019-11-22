@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49848/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A critical examination of classic and contemporary works that treat problems of ethics, politics, and economics as unities. Topics include changing conceptions of private and public spheres, the content and domain of individual freedom, and ethical and political limits to the market. Readings from the works of Aristotle, Hobbes, Locke, Smith, Bentham, Mill, Hegel, Marx, Hayek, Rawls, and others.", 
+    "title": "Classics of Ethics, Politics, ...", 
+    "skills": [], 
+    "areas": [
+        "So", 
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "HLH31 108", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11010", 
+        "listings": [
+            {
+                "number": "215", 
+                "subject": "EP&E"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Boris Kapustin"
+    ], 
+    "long_title": "Classics of Ethics, Politics, and Economics", 
+    "extra_info": "A"
+}

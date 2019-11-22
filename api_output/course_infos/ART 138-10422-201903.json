@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49084/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The focus of this class is the digital making of still color photographs with particular emphasis on the potential meaning of images in a overly photo-saturated world. Through picture-making, students develop a personal visual syntax using color for effect, meaning, and psychology.\u00a0Students produce original work using a required digital SLR camera. Introduction to a range of tools including color correction, layers, making selections, and fine inkjet printing. Assignments include regular critiques with active participation and a final project.\u00a0Materials fee: $150.", 
+    "title": "Digital Photography Seeing in ...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "GREEN B03", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10422", 
+        "listings": [
+            {
+                "number": "138", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Theodore Partin"
+    ], 
+    "long_title": "Digital Photography Seeing in Color", 
+    "extra_info": "A"
+}

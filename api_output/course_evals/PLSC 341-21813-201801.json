@@ -1,0 +1,98 @@
+{
+    "crn_code": "21813",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            9
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            11
+        ],
+        [
+            0,
+            2,
+            0,
+            3,
+            8
+        ],
+        [
+            0,
+            1,
+            1,
+            7,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            8,
+            4
+        ],
+        [
+            0,
+            0,
+            4,
+            7,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0R! Experiments in political science! How to read an empirical study critically! How to actually do stats! ",
+            "\u00a0I learned everything about randomized experiments: how to randomize, what are the core assumptions, the caveats to avoid, the different estimands we can get from a sampling distribution etc.. We also read a ton of papers on really exciting and well-thought experiments. ",
+            "\u00a0The focus of this course was on designing experiments on human populations through statistically sound methods, with theoretical statistics being a big part of the course material. ",
+            "\u00a0R was nice to learn ",
+            "\u00a0We learned how to conduct field experiments in political science and humanities as well as collect and analyze data using R Studio. ",
+            "\u00a0I learned how to interpret and critically analyze randomized experiments in a theoretical context, as well as in the context of social science research papers. ",
+            "\u00a0- learned basic R skills\r\n- learned how to conduct statistical experiments\r\n- learned how to write up a project ",
+            "\u00a0You will learn how to use R and how to run experiments. ",
+            "\u00a0How to conduct randomised experiments with R, principles of randomised experiments. ",
+            "\u00a0Methods, mathematical framework, and technical skills necessary to conduct excellent randomized experiments. Also gained a sense of the range of randomized experiments that have been conducted in the last years, and the variety of questions that they can answer. Developed an intuition for \"good\" design, and a deep skepticism of any claim of causation. "
+        ],
+        [
+            "\u00a0Wow Prof. Coppock is actually the strength of this class. Like, yes, the textbook is good, and yes, it is clear that the course material is well-developed... But truly think that the class' success was dependent on an educator like Coppock that cares about the students and is zealous about the material. The structure of the class is somewhat atypical each given day, but the engagement in the class was high!\r\n\r\nI think a weakness of the class is concrete feedback on Psets etc... there were some comments here and there, but I would love to know what I could do to improve or become a better thinker/learner in the class. I felt that I was tripping up on the same few places but never quite knew how to break out of them, even after attending office hours (maybe it's the learning curve though!). ",
+            "\u00a0Professor Coppock is super engaging and knows how to make us excited about his subject. He was always helpful, in class and during his office hours. He managed to teach us a lot of material in a relatively low-stress learning environment. I appreciated it that - it's rare at Yale. I loved the small class setting which enabled great discussion. I was a bit hesitant about our final project at first, but I learned a lot while doing it. ",
+            "\u00a0Professor Coppock is a skilled teacher who clearly knows his statistics but is also good at explaining difficult concepts to students. ",
+            "\u00a0PSETS take hours especially if you don't know R already ",
+            "\u00a0The strengths are the professor is amazing and the content is applicable to research at Yale. Also, it's very hands on learning. The weaknesses of the course is you sometimes get thrown into the deep end without a lifeguard on duty. ",
+            "\u00a0The strengths of the course were the close interactions I had with my classmates, as well as I professor. It really helped me to best understand the material, and develop a close connection with the cases that we read. There were no immediate weaknesses of the course I can think of, but having more problem-set, or closer collaboration with each problem set, may help. ",
+            "\u00a0Strengths:\r\n- fantastic teacher\r\n- good dynamic lessons\r\n\r\nWeaknesses\r\n- not enough R instruction in class ",
+            "\u00a0The course is great. I think getting more coding practice would make the course even better. ",
+            "\u00a0Strengths: Fantastic course structure and coverage of material\r\nWeaknesses: P Sets varied greatly in difficulty and amount of time required.\r\nSuggestions: More homogeneity in difficulty and length of P Sets ",
+            "\u00a0The course was very well structured and I particularly liked the dual focus on reading papers and learning about the mathematical, technical, and formal elements of experiments. The integration of R was also fantastic. One of the main strengths of the course, aside from the content, was Professor Coppock's phenomenal teaching--his excitement about the material made it impossible not to love experiments, and appreciate the beauty of an excellent design. "
+        ],
+        [
+            "\u00a0TAKE IT. EDUCATE YOURSELF. Literally wow especially if Prof. Coppock teaches it, you have to take it.\r\n\r\nThis course is by far the most useful that I've taken in the PLSC department. I can look at empirical studies with a more critical eye, understand the foundations of a field experiment, and utilize a working knowledge of R/statistical programming. You have to, have to take this class! ",
+            "\u00a0Yes ! Take it just for fun, or for your majo r! ",
+            "\u00a0I would recommend this course to anyone who is interested in field experiments and seeing statistics concepts being applied to real-world studies. ",
+            "\u00a0I would, except psets are marked out of 3 and it is unclear which questions you got wrong, there were no practice exams for the exam (which is just 10% of your grade, but still). If you haven't coded with R before, it can definitely feel like you're drowning and getting swept with the current. Thankfully, I had used R before but i can't imagine having taken this class without that knowledge ",
+            "\u00a0I definitely would. The professor is great, the skills learned are very applicable, and the final project is so much fun! ",
+            "\u00a0If you're interested in social science research, and want to understand the nuances of the experimental design used by those in this field, then this course is for you. ",
+            "\u00a0Absolutely, the teacher is phenomenal. He is so engaging and works with you in a kind, approachable manner. Even for people that are hesitant to take a STEM class, he makes the class interesting through his enthusiastic teaching. ",
+            "\u00a0Yes. Prof. Coppock is extremely charismatic and a great teacher. I doubt there is better way to learn the material. ",
+            "\u00a0Yes. Quantitative skills like this are essential for any political scientist. ",
+            "\u00a0I'd absolutely recommend this course. It teaches you how to figure out whether a causal theory you have about the world is true, which is useful for any field. It also teaches you a deep skepticism about other people's claims about how the world works, which is equally valuable. You also get to learn about the very cool experiments that have been done, and to learn how to code in R. "
+        ]
+    ]
+}

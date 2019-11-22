@@ -1,0 +1,75 @@
+{
+    "crn_code": "22055",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            1,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            1,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            1,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            0
+        ],
+        [
+            2,
+            2,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A whirlwind tour of a lot of interesting topics in complex analysis. Course tailored towards student interests, but still representative of a wide swath of subjects well-read mathematicians should see at some point. ",
+            "\u00a0Interesting selection of topics in intermediate complex analysis: lfts, eliptic functions, L functions, theta functions, zeta function, Riemann's famous results... "
+        ],
+        [
+            "\u00a0I don't believe the course will be taught by Professor Beals again, so this is somewhat moot, but Prof. Beals is wonderful. A very kind man who has been around the block many times and really can contextualize the material in an effective way. I would personally have benefitted from there being more assignments, as it would have forced me to study the material more regularly, but I still took away a great deal from the course, and am more likely to pursue subjects in complex analysis down the road. ",
+            "\u00a0Professor Beals is a great lecturer he is always extremely well prepared and he is always ready to answer any questions or just chat about math it anything related. ",
+            "\u00a0One of the strengths is that the material to be covered is flexibly chosen by the students, so the material is always interesting and pertinent to learn. One weakness, however, is that because of that, there wasn't as large a continuity between different sections, which made the content feel somewhat detached. This can be improved by highlighting important similarities between different chapters and actively referencing previous techniques/skills over the course of the semester. "
+        ],
+        [
+            "\u00a0I would. Complex analysis is beautiful. Your decision should largely hinge on who is teaching the course, in my opinion. If it's Professor Beals, I would recommend the course without question; just know that you will have to force yourself to sit down and work through the material if you really want to master it, as there aren't many required assignments. With that said, Prof. Beals supplied us with more optional exercises than one could ever hope for, so all of the pieces are there for your taking. ",
+            "\u00a0Yes absolutely! very fun and interesting advanced math course "
+        ]
+    ]
+}

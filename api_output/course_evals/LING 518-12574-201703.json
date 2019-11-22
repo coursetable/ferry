@@ -1,0 +1,71 @@
+{
+    "crn_code": "12574",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [],
+        [
+            "\u00a0More pedagogical materials would be great. Maybe break vocabulary into themes (start with body parts, colors, numbers, etc since we have that) and introduce some new verb roots. Learn regularities of verb conjugation through repetition, homework could be more focused on this (choose the right preposition/verb conjugation) at first, building up to broader translation. These materials take effort to create, but maybe a class could collaborate to do this, the students creating the materials will gain experience this way and future classes will benefit from the materials.\r\n\r\nThe language game(s) were great, I think it could even start off with something like the card game earlier, since it drills much of the same vocab as the normal game. More skits or small conversations could be worked into the game days as well, to prevent burn out and keep us on task.\r\n\r\nOverall very interesting class, I always found myself looking forward to the next meeting, which I can't really say for all courses. ",
+            "\u00a0I think a lot of people were looking for more structure, like there usually is in a big language class. Some of that can't be done without all the language resources that a big language has, but I think more structured lessons would've been helpful. "
+        ],
+        [
+            "\u00a0I would definitely recommend this course to another student. It provides a nice language learning environment and insight into a very interesting language. For linguists, especially those interested in phonology and morphology (and possibly syntax-semantics), there appears to be a lot of potential for research questions. ",
+            "\u00a0Yes, I think courses like this are really important and I think everyone enjoyed it and got something out of it. "
+        ]
+    ]
+}

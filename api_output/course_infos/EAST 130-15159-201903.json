@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51193/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This class provides an introduction to traditional Chinese religions. We study popular Chinese religious practices, ancient and enduring Chinese schools of thought such as Confucianism and Daoism, the traditional Chinese state religion in which the emperor ruled as the \u201cson of Heaven,\u201d as well as Buddhism, which entered China at the dawn of the common era, and Christianity and Islam. The course is structured around certain key themes\u2014cosmology, divination, the body, death, the family, and the sacred power of the Chinese state\u2014as they have been handled in different Chinese religious systems across time. Given topics are explored through ancient, medieval, and modern examples side-by-side so as to appreciate the continuities that have persisted in Chinese religion over the past 3000 years as well as the diversity of the practices and beliefs that comprise Chinese religious life.", 
+    "title": "Chinese Religion", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 004", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15159", 
+        "listings": [
+            {
+                "number": "130", 
+                "subject": "EAST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eric Greene"
+    ], 
+    "long_title": "Chinese Religion", 
+    "extra_info": "A"
+}

@@ -1,0 +1,85 @@
+{
+    "crn_code": "30035",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            6
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            1
+        ],
+        [
+            0,
+            0,
+            5,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A great introduction into corporate finance with an equal weighted focus on the math and the conceptual context ",
+            "\u00a0I learned the basics of finance. I learned about discounting cash flows, capital budgeting, and option valuation. ",
+            "\u00a0A lot of skills on corporate finance, especially understanding options. ",
+            "\u00a0Discounted cash flows, basic finance concepts, valuing firms, options, bonds, securities, ect ",
+            "\u00a0I learned a broad base of information regarding financial accounting, company valuation, and many types of investment vehicles.  Significant time was also spent covering modern models for investment porfolios and public equity pricing. ",
+            "\u00a0Money rates, stock evaluations, basic accounting questions, economic theory... A lot. "
+        ],
+        [
+            "\u00a0This course was taught very well. The material was very interesting. ",
+            "\u00a0The main strength is the amazing lectures by Michael and his overall teaching method. ",
+            "\u00a0Strengths: Pascutti is an awesome teacher and you learn a lot about the basic essentials for corporate finance. Also, during the summer there are much fewer students so you are able to learn better and ask questions easily.\r\nWeaknesses: It moves pretty fast, especially at the end, and the quizzes are pretty hard. ",
+            "\u00a0I would have liked it to have gone on longer. "
+        ],
+        [
+            "\u00a0I would definitely recommend this course, if you are interested in finance. ",
+            "\u00a0Yes! Definitely take this class. ",
+            "\u00a0Yes, it covers a great deal of information that is useful for a career in finance. ",
+            "\u00a0Yes. Very much so. Enjoyable lecture, very challenging PSETs and tests, and good content. ",
+            "\u00a0Yes I do recommend. I didn't really know anything about finance and markets but this class helped me understand financial news and could help if you want to go into banking. ",
+            "\u00a0I would recommend the course to another student.  Professor Pascutti was highly engaging and covered a ton of valuable information in a short period of time. ",
+            "\u00a0I would advise anyone to take this course. The Professor is wonderful, the class is interesting, the topics are incredibly useful.... There are too many reasons why one should take the course. "
+        ]
+    ]
+}

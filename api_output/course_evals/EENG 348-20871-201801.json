@@ -1,0 +1,133 @@
+{
+    "crn_code": "20871",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            20,
+            8
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            23
+        ],
+        [
+            0,
+            2,
+            0,
+            7,
+            20
+        ],
+        [
+            0,
+            0,
+            2,
+            10,
+            17
+        ],
+        [
+            0,
+            0,
+            9,
+            13,
+            7
+        ],
+        [
+            0,
+            3,
+            12,
+            12,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I really learned a lot about microcontrollers and embedded systems in this class, and Professor Manohar is really knowledgeable and also very clear in his explanations! ",
+            "\u00a0An overview for how computer processors work, an understanding of how a serial processor implements concurrency, a detailed inspection of how microprocessors interface with the world through various sensors and digital/analog inputs, handiness with a breadboard and an Ardunio, and a broader realization of the ubiquitousness of embedded devices (and their potential future applications to my own life). ",
+            "\u00a0I learned SO much in this class. From how a computer is programmed in assembly language to the intricacies of how hardware and software interact with the physical world, so much is covered in this class that are supplemented well with captivating labs and final project. ",
+            "\u00a0I learned how embedded systems work, how the fine details of things like scheduling (which are easily overlooked) are handled in practice, and how to design and build circuits to work with an electronic device and achieve a desired goal. ",
+            "\u00a0this is the best class. Learned about the software & hardware of digital systems. If you're familiar with it, effectively a crash course on the Arduino. Significant portion of the class focuses on process scheduling. ",
+            "\u00a0Learned about the arduino platform, microprocessor programming, assembly, I/O, RTOS, scheduling, priority and locks. ",
+            "\u00a0Arduino ",
+            "\u00a0We learned about embedded systems through working with an arduino and lectures. There were a ton of valuable ideas such as concurrency, system scheduling, digital conversions, and more. ",
+            "\u00a0Learnt about microcontrollers, programming arduinos, writing assembly, interrupts, polling, debouncing, IO, concurrency and locks, real time systems and scheduling algorithms, and some real world case studies. ",
+            "\u00a0Working with Arduinos, how to design embedded systems ",
+            "\u00a0I learned that there are a lot of different things that need to be taken into account when writing code for embedded systems. ",
+            "\u00a0Great intro to practical applications of digital systems ",
+            "\u00a0You learn about embedded systems, concurrency, different communication protocols and all that jazz. Useful knowledge. ",
+            "\u00a0A great introduction to embedded systems, going over I/O, interrupts, concurrency, and scheduling. You do a bit of assembly, and learn how to use an Arduino for system level programming ",
+            "\u00a0Low-level understanding of computer science, embedded systems, and the intersection of hardware and software. Also learned a great deal about concurrency, locks, and scheduling algorithms and played around with some assembly. ",
+            "\u00a0I learned about how to get a microcontroller to do useful things! I also learned about specifics about how a basic microcontroller operates (scheduling, concurrency, machine code, the stack, etc.) ",
+            "\u00a0I learned how to program an embedded system (namely, the Arduino Uno microcontroller) and interface it with external components. I also learned the history of real-time embedded systems, examined case studies in which things went wrong, and overall gained a holistic understanding of the software and hardware components of a digital/embedded system. ",
+            "\u00a0I gained a ton of experience coding in C and learned all about interfacing hardware and software. ",
+            "\u00a0I learned how to use embedded devices and the basics of electronics ",
+            "\u00a0A nice introduction to embedded systems and programming with the Arduino. I now feel equipped to build a wide variety of projects using the Arduino, and I think the AVRspecific examples are broad enough to be applied to a wide variety of other microcontrollers and architectures. ",
+            "\u00a0How to read a datasheet and manual. How to utilize an Arduino. How the memory stack works. How to code in assembly (AVR specifically), read inputs and problems with reading inputs, think about concurrency and parallelism and locking. "
+        ],
+        [
+            "\u00a0I think the only thing that could have improved this course was slightly more feedback about the labs. ",
+            "\u00a0Strengths: approachable to most any STEM major, masterfully taught, well-organized to encourage the student to learn more on their own\r\nWeaknesses: I would've appreciated perhaps one more required lab over the course of the semester, to illustrate more of the concepts we touched on towards the end. Additionally, some more guidance regarding the final project would've helped me to brainstorm something I was a bit more enthusiastic about. ",
+            "\u00a0The course could maybe benefit from more of an EE introduction for people who hadn't taken EE courses, or at least something like that for the final project (where we built much more complex circuits). ",
+            "\u00a0Strengths: not too much work, Rajit is a great lecturer, fascinating subject material. If you're EECS, this will be right up your alley. really no weaknesses. ",
+            "\u00a0Course was excellent. I think the analog and digital labs could be combined together. I think one lab should definitely touch on SPI/UART/I2C ect. ",
+            "\u00a0Bad lecture notes but rajit is an awesome lecture and guy ",
+            "\u00a0A little CS heavy compared to what I expected, but still doable for someone who comes in from a non CS background.\r\n\r\nAlthough I initially did not appreciate them, weekly quizzes kept me engaged and were valuable in helping me understand the material.\r\n\r\nGet started early on the final project- as it ended up taking most groups much longer to finish than expected. ",
+            "\u00a0Professor Manohar was amazing and really cared about the material. I learned a lot from the class and enjoyed the open discussion during lectures. There were no real weaknesses. ",
+            "\u00a0This is a great course - the material is very interesting, Prof. Rajit is an amazing teacher, the topics are very relevant and applicable, and the labs are a lot of fun. One great thing is that there isn't too much stress on an exam, but rather, the weights are spread out. ",
+            "\u00a0Professor Manihar is a great lecturer and the labs were fun and interesting. However, some of the students without a computer science background probably needed some help with coding in C ",
+            "\u00a0One of the best EE courses Ive taken. In fact, one of the best courses at Yale in my opinion. Prof. Manohar was exceptional, lectures were instructive, labs were challenging but never impossible, and the midterm was fair. The final project was a great culmination of the class! ",
+            "\u00a0The labs all use microcontrollers and are super fun. You get full autonomy over your final project and people came up with some really, really cool stuff. Would have been cool to design and fabricate our own PCB. ",
+            "\u00a0I loved the structure of the class, with the labs and quizzes reinforcing what we learned. The midterm was really hard to study for since we didn't know exactly what to focus on, and it was much harder than the quizzes. More practice material for the midterm would've been helpful; the only people I talked to who did well on the midterm had already been exposed to a lot of the topics in other classes. Luckily there was no final so that was the only test we had for the class. The project was fun to work on, but I wish we'd had more example projects to know what type of project to make (this shouldn't be an issue for next year, since our projects can be examples).\r\n\r\nThat being said, none of these things made up a huge percentage of the grade, so their impact wasn't too negative. ",
+            "\u00a0The class is taught extremely well and is organized really well for learning. Weekly quizzes force you to learn the material and not fall behind but are not worth so much at the same time. Professor Manohar is an amazing professor and is really knowledgeable. ",
+            "\u00a0The strength of this course is that Professor Manohar is highly knowledgeable and an incredible lecturer. He can communicate effectively and clarify any confusion students may have. The course material is mildly difficult, but it is definitely doable and insightful.\r\n\r\nThe weakness of the course is that the first few labs (and there are only 5) of the class are fairly unrewarding. We just filled in some machine code I feel like. ",
+            "\u00a0This course is exceptionally well-taught by Professor Manohar. He knows exactly what he's talking about, constantly slows down to make sure we understand what's going on, and answers our questions almost perfectly. It was an honor to be taught by him. The TAs were also great and timely in grading labs and very useful during office hours. ",
+            "\u00a0This is a required class for EENG majors however previous courses do not prepare the EE majors for the coding in this class. I would recommend taking at least one more coding class outside of the requirements to prepare for this class, otherwise you will put many hours and all-nighters into this class. ",
+            "\u00a0Enjoyed the project based work; wished there was a textbook ",
+            "\u00a0Strengths: flexibility of the final project, distributing grades among many different areas (quizzes, midterm, labs, project) made the class much less stressful as a whole and more conducive to learning. ",
+            "\u00a0Rajit is a very good if at-times dry lecturer who clearly has a lot of passion about the material and ensuring that his students understand it, and I hope he continues to teach this class. I also really enjoyed the class materials, which I can see myself using practically. However, this class is a challenge to make accessible yet engaging to various fields/levels of comfort: as EECS far along in the major, I found it rather easy and fun, but my CS peers were put off in the first half of the class and my EE peers struggled throughout. I wonder if consistent out-of-class resources (a review session or somesuch) for people who may need to understand some concepts they may not yet know would help. I also don't know how I feel about having to work with others for labs (again, I felt comfortable with the material so scheduling meetings was a pain that did not always seem necessary, but of course being able to collaborate and pick their brain proved useful), but I appreciated the ability to choose partners and I think that pairing should be done after shopping period/when people have committed their schedules. On the whole, I largely favor the revised Digital Systems class over what I've heard of past versions. "
+        ],
+        [
+            "\u00a0Yes definitely! If Professor Manohar is teaching it then this is a must take, he is a great lecturer and the material is very interesting. There isn't too much work over the semester, but don't let the final project get away from you since there isn't much time at the end. ",
+            "\u00a0Digital Systems is a fantastic course to take if you're interested in exploring how microprocessors work (and how they sometimes fail) and like playing with Arduinos. The course grade is based off of biweekly quizzes (which are more of a test if you've been coming to class than anything else) and labs where you implement the concepts you cover in lecture on an Arduino. Both are fun and low-stress ways to express your learning which require a blend of coding and circuit-building familiarity but are otherwise very approachable (even if you've never worked with microprocessors before). You'll also complete a final project of your own choosing, which can be an incredibly gratifying experience (some students built some fascinating projects) so long as you let your imagination roam free. While the workload is lighter than most engineering classes, you'll learn just as much as you would in another high-level elective thanks to Rajit's excellent teaching philosophy and style. Overall, this class is an incredible gem at the intersection of EE and CS and a great elective to take if you want a low-stress way to learn about devices that have truly come to govern most everything we do and use. ",
+            "\u00a0YES! This course has legitimate applications to those in electrical engineering and computer science, and with the labs and final project seeing the material applied in practice was extremely helpful and engaging. Be wary that the course is heavy on the computer science- side of electrical engineering, and taking data structures before the class would be very helpful. ",
+            "\u00a0Yes. It's an excellent course to learn embedded systems. ",
+            "\u00a0Yes, so much, especially if you are EE/CS/EECS/like tinkering with things. I think this class more than EE201 or CS201 helps you _really_ understand how your computer works, because you have to write what amounts to a basic task scheduler by yourself. ",
+            "\u00a0Yes, this is an excellent course. Rajit is by far one of the best professors in EE. Excellent lecturer. Classes and material are presented in an interesting way. Everything is fascinating. ",
+            "\u00a0I love the lab component ",
+            "\u00a0Super recommend. The grade is almost entirely labs, a final project, and midterm- no final or psets. This means much of the course is hands on and working with an arduino to solve concrete problems faced in the labs. ",
+            "\u00a0Fair warning, if you are EE ABET, this class is not based off material we have covered in previous classes. ",
+            "\u00a0I would highly recommend this class to any EE or CS student or anyone that wants to learn about the embedded systems that are in pretty much everything. Professor Manohar is one of my favorite professors at Yale and is such a good lecturer. ",
+            "\u00a0Yes, the material is interesting, Prof. Rajit is a great teacher, and the labs are a lot of fun too. ",
+            "\u00a0Yes! Its so interesting and the final project at the end of the semester really challenges you to apply the skills learned throughout the semester. You do need to have some confidence with coding in C to get all the benefits out of the class though. ",
+            "\u00a0Would definitely recommend.  I took this course as a CS major who had little experience with hardware, and it was a great way to get a taste of what working with hardware is like without having to have an EE background.  Having a CS background definitely helps, as the labs require a fair amount of coding.  The quizzes and midterm are all open note which is very nice.  The labs are done in pairs, so if you have a lab partner who you work well with, it's more pleasant than working alone.  Overall, workload is reasonable and I learned a lot. ",
+            "\u00a0One of the best EE courses Ive taken. In fact, one of the best courses at Yale in my opinion. Prof. Manohar was exceptional, lectures were instructive, labs were challenging but never impossible, and the midterm was fair. The final project was a great culmination of the class! ",
+            "\u00a0Yes, absolutely! This class is low input, high output. You learn a lot (although it does feel a little like a survey course in that you don't get too in-depth into anything). ",
+            "\u00a0Absolutely; it's both interesting and not too stressful. Instead of homework, there are 4 labs and a project (there's also an extra credit lab if you want). That's all the outside work for the class for the whole semester. Having had a bunch of weekly psets this was a godsend. You also have a lab partner so you're never struggling alone. There are weekly quizzes but they're really chill, open note, and really just check that you're paying attention in class. The midterm's the hardest part of the class, but that's the only test and it's only 20% of the grade. Plus you get to play with an Arduino (that you can keep). ",
+            "\u00a0Yes! ",
+            "\u00a0Definitely! This is a really great and enjoyable class. ",
+            "\u00a0I definitely recommend this class to other students. Knowing how to work with microcontrollers is important for both EE and CS majors, and this course is a great introduction. However, I feel like EECS majors are the best suited for this course - students purely in EE and purely in CS may struggle with the field they are not familiar with. EE majors should know C before taking this course, and CS majors could get by with the background material provided in the class on basic circuits. ",
+            "\u00a0I would highly recommend this to any of my fellow Electrical Engineering or CS majors. This course was an absolute blast, and Professor Manohar is an exceptional professor! He's knows exactly what he's talking about, he's very personable, has funny jokes, and he always makes sure to stop to see if we have any questions before he continues on with the material, and every question we did have, he answered with amazing, relevant and practical explanations! Honestly, this course is probably my favorite course ever so far at Yale. The TAs were also fun and very helpful. I learned how to program an embedded system (namely, the Arduino Uno microcontroller) and interface it with external components like lights, buttons, LED screens, etc. All that good stuff. I also learned the history of real-time embedded systems (like the ones that drive missile defense systems, rocket ships, and medical systems), examined case studies in which things went wrong, and overall gained a holistic understanding of the software and hardware components of a digital/embedded system. The best part was that the class was fun, and Manohar made the topic extremely relatable to our everyday lives- and it made me realize that it is! These tiny little systems are in our soda machines, our refrigerators, our phones, our air conditioners, our cars, and most modern electronics that we can interact with. Everything we learned, even if it sounded dry on its own (especially for non-STEM majors), was always brought back to the larger, more practical purpose as a whole, and just by teaching, Manohar always reminded us that there were everyday people who had their own lives, experiences, and ideas behind all of these concepts that we learned. This is a superb elective. In terms of workload, there is a lab every other week (which is essentially programming something on the micro controller) and once a week in class is a low-stakes open-note quiz that is used to let Manohar know how much we understood from the previous classes (and it also helps us stay engaged). There is a midterm exam and a final project which is a fun science expo-type project where you make something with the embedded system and you make a poster and there's a \"demo day\" where everybody gets to eat and drink and see each other's projects. This course is honestly great, and the things I've learned from it are highly relevant to my life. With this knowledge, I can actually make a device that will automatically water the plants I plan to have in my suite next year! Take this course! ",
+            "\u00a0Only take this class if it is required or if you have extensive coding experience. ",
+            "\u00a0Absolutely ",
+            "\u00a0Yes; a fun combo of software and hardware with a lot of flexibility. ",
+            "\u00a0If you are EECS, this class will be easy (this class should be reasonable if you did well in EE201 and CS223, and a touch of CS323). If you are CS or EE, you're in trouble. If you're something else, you're screwed unless you have a some time to spare (on studying concepts) or good study buddies. A dry class at times, but practical and sometimes fun. Rajit is a great lecturer who loves to make sure his students understand the material - work with him if you get the chance. You will get the chance to independently (i.e. without professor or TA guidance, if you don't want/need it) make some great things happen on microcontrollers. "
+        ]
+    ]
+}

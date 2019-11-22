@@ -1,0 +1,92 @@
+{
+    "crn_code": "21897",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            3,
+            11
+        ],
+        [
+            0,
+            1,
+            2,
+            2,
+            10
+        ],
+        [
+            0,
+            2,
+            2,
+            5,
+            6
+        ],
+        [
+            0,
+            4,
+            3,
+            4,
+            4
+        ],
+        [
+            0,
+            3,
+            7,
+            5,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            7,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This class enabled me to learn how to work on a real life software project on a team.  This is quite possibly the closest an academic class can ever come to simulate the real life environment working as a programmer. ",
+            "\u00a0You learn classical and modern software engineering principles. You also learn to work with a team on a software engineering project (app, game, etc.) and get to experiment with new technologies. You make your schedule, you just have milestones to complete for the class! ",
+            "\u00a0Learnt about the good software engineering practices and development strategies, along with using them as part of a team to build a large project ",
+            "\u00a0You learn SO much during this course. It's really your chance to see what it feels like to build a complex product from scratch. You also learn by doing: \r\n-github for collaboration \r\n-continuous integration and test cases \r\n-any new language or framework you'd like to use \r\n-infrastructure-related and design components of the project ",
+            "\u00a0- How web applications work.\r\n- JavaScript.\r\n- How to work on a team and manage a complex software project.\r\n- How to work with modern development frameworks.\r\n- A lot of SWE jargon.\r\n- Basic principles of software engineering like: weekly standup, code reviews, documentation, planning and engineering. ",
+            "\u00a0Software engineering principles including debugging, testing, team management, design, architecture, and collaboration. ",
+            "\u00a0Learned how to work with a team to build a software engineering project. ",
+            "\u00a0Lots of software engineering practices like Agile workflow, peer reviews, continuous integration, etc. "
+        ],
+        [
+            "\u00a0Ruzica is a very fun lecturer, as awkward as our class was at the start of the year. After the mid-term, the lectures improved a lot and involved group activities which kept us all engaged and I thought that was a lot of fun! As amazing as they were, though, the lectures sometimes felt like it would have been better time spent for our groups to just work on our projects. To improve lecture, we could perhaps do more demonstrations of the progress of our projects. We could also learn about the newer technologies, as Ruzica was a year behind the framework train (using Ruby instead of React ;) ). ",
+            "\u00a0Great course! The evaluation methods were interesting with a lot of peer review. Professor is great and very helpful. ",
+            "\u00a0Strengths: this class is open-ended in a really great way! It lets you build exactly what you would like to build, with any tools you like! There are no restrictions on the type of software you want to build, which resulted in all of us being really excited and passionate about our projects. Teams are also picked by students, so you can ensure you're working with people that you can collaborate well with. \r\n\r\nWeaknesses: the quizzes were really confusing. I studied the slides and understood the concepts, and I still found them very confusing. ",
+            "\u00a0I think this course needs a wholesale rework to its structure in order to realize its true potential, so rather than list strengths and weaknesses, I'll provide my vision for the future. SWE is the definition of a project-based class, and while the project _is_ the focus in terms of grading, it is pushed aside in terms of time spent. As it stands, the class meets biweekly for 75 minutes and students listen to lengthy lectures about software engineering principles. The lectures feel too long and too detailed, and I personally would have gotten much more out of them if I were able to engage more directly with the material.  More insidiously, this schedule requires that students find additional time to meet to do the main work of the course, and thus encourages procrastination or complete shirking of this responsibility. \r\n\r\nFirst off, I think a shorter, more frequent class meeting structure is in order. This is to facilitate what I think should be the main point of class -- providing an avenue for student teams to meet and discuss their projects. The course should be structured to encourage students to be good software developers, meeting regularly and pushing consistency rather than pulling all-nighters before a deadline in a mad scramble to get the job done. I believe that a more effective class structure is: a condensed 15-minute presentation at the start on a principle of SWE, followed by breakout sessions where students can work on their projects with these concepts fresh in their minds. This was attempted in various lectures this semester, but I think that the artificiality of the breakout sessions (students were asked to implement code or give presentations not directly related to their projects) and the fact that they were too short for any kind of substantive discussion made them ineffective.\r\n\r\nThis proposal requires that the course administration become much more hands-off and the workload of the students shift predominantly towards the projects. There were a few reviewing assignments this semester which, while I found moderately useful as a developer, were I think a waste of time as a writer. The inter-group feedback assignments were too long and too infrequent to be of use -- a simple 5 point questionnaire every week would have provided the team with better feedback about how it viewed its members' contributions. The intra-group reviews would have been more expedient and more useful as in-person meetings without formal write-ups. The exams felt completely pointless, were difficult to study for, and were confusing.\r\n\r\nI think this course has a lot of potential and fills a really important niche in the Yale CS curriculum. But I think that, in order to fulfill that potential, it needs to function very differently from any other class currently on offer. It currently tries to strike a bad balance between focusing on a real SWE project and becoming quagmired in lectures about SWE principles and a checklist of items required for grading. In short, I think that class time should be primarily devoted to team meetings and that the workload for assignments outside of the project should be minimized or eliminated. This will transform the class into an environment which is much closer to an actual software engineering job, which is what the class supposed to be preparing us for. ",
+            "\u00a0I really liked working on a real project in a group and actually developing something that we chose. It felt a lot more meaningful than just doing a pset that nobody will ever use and scoring points based on how many edge cases we hit. \r\n\r\nI thought the class material was pretty boring, though, and found it difficult to pay attention. It felt like a lot of memorizing random acronyms that some random person came up with to describe their favored design process. The quizzes were really hard, based on the questions in the slides, but even after reading through the slides, I usually still struggled with the questions. I felt like I didn't really understand the things we discussed in class on a basic level, or that understanding them was actually important at all. \r\n\r\nI would have preferred if class time were spent maybe discussing our projects with other groups - figuring out how they were implementing certain things, sharing knowledge, and giving feedback. My group felt that the most helpful classes were ones where we just randomly asked a presenting group \"how did you implement this\" or \"what tool did you use for this backend\" and got a helpful answer. It didn't really feel like we got any sort of direction or help from the class itself. It felt like there was a pointless class, and then the class set deadlines that helped us actually stay on track with our project - but that the project was otherwise completely disconnected from the class other than a couple presentations. The project was totally driven and done on our own without any guidance.\r\n\r\nFinally, we would write peer reviews multiple times throughout the semester, but that's not helpful if we don't get to see what others wrote about us (anonymously, of course). If it would be too obvious for anonymity, perhaps the basic feedback points could be distilled by the professor and compiled for us, so that we would have a general sense of what our teammates thought we could improve on.\r\n\r\nThis lack of clarity and feedback made it extremely difficult to discern how we were doing in the class. Since the quizzes didn't count for very much, we had no idea what sort of grade we were pulling. Even now I have no idea what I'll get as my final grade. It would have been nice to have some metric, at least some idea of \"here's what you're on track for so far\" a couple times through the semester. It just feels very vague, like the final code review is going to determine our entire grade but the teachers have no idea how much work we've actually put in to our projects, since it was so unsupervised. ",
+            "\u00a0very project based. could be improved with bringing in more people from industry to discuss specific aspects of software engineering ",
+            "\u00a0Great Course!!!! I think that its achieves a lot of the motivations it goes for and I think that Ruzica does an amazing job of gathering feedback and adjusting the course accordingly. The projects this year were so great. "
+        ],
+        [
+            "\u00a0Get together with a group of friends and take this course!  It's basically an excuse to spend a semester making a really cool code project with your buddies.  Not only is it very fun and rewarding, you also learn a lot about the theory and practice of Software Engineering; the knowledge is immediately applicable and immediately impacts code quality and every CS major should learn it.  Do be prepared for a significant time investment, however.  The project, plus all of the reviews of your teammates and other groups, and the in-class presentations, adds up to a lot of work! ",
+            "\u00a0100% recommend if you want to do software engineering (SWE) of any kind in the future. Plus, many alumni from this class go onto great tech companies! The first lecturer was somebody who graduated last year who works at Google now! I do recommend taking this either as a junior or a senior though, when you've gotten the big CS classes out of the way. It'll make this one run much more smoothly since you'll have more confidence going out and learning a new framework/language to make your own app! The professors won't help you with that part, but the class is a huge excuse to get some friends (or strangers but soon-to-be-friends) together and learn JavaScript, React, Git, desktop/mobile app development or videogame development and make something great.\r\n\r\nThere are two \"quizzes\" which are often multiple choice. In order to do well on them you need to pay attention in lecture because that's when you learn actual software engineering principles. Again, I would definitely take this class much later in your Yale career because you'll be more comfortable with all the lingo and whatnot.\r\n\r\nThere are two demo days within the class for presenting the progress of your app/game/project/whatever to the class, and then there's a final demo day exhibit where you present to your class again but also any faculty or friends you want to invite. There is also a \"code inspection\" at the end of the semester where you and your group get to go over your code with your professor.\r\n\r\nWhile the lectures are fun and informative, you might find yourself trying to work on your project and messaging your group members in class. I think Ruzica knows this but also try to be a good listener to her, too. She's an amazing professor and she works really hard to make this class work.\r\n\r\nRuzica Piskac is a wonderful, brilliant, and very kind professor. It was such a pleasure to learn from her and she really cares about everyone's projects! ",
+            "\u00a0Yes, its a great course! Get to build a large project as part of a team, and Professor Ruzica is very helpful, knowledgeable and friendly. ",
+            "\u00a0YES! If you are at all interested in building software from the ground up, or being a software engineer, this is definitely the class for you. While this is an open-ended class where exams don't count for much, this is not a low-workload class. You'll be working many hours a week to make sure your project is on track. That said, all the work is work you assigned yourself, and is part of building your vision into a reality -- so it's really fun work! ",
+            "\u00a0As it currently stands, I would recommend this course to another student looking for an excuse to [learn how to] develop a web or mobile app with a group of friends. Then again, a group of sufficiently motivated individuals will probably be better off building an app on their own time if they're disciplined enough, so that they don't have to deal with the frustrating requirements of the class (showing up to lecture, writing long reviews for other teams, etc.). While I did not find lecture to be very useful at all, I was glad for the opportunity to work on a project with friends which I can now add to my portfolio and showcase in interviews and job applications. If you're willing to put in a considerable amount of work into a project that you can be proud of by the end of the semester, then this class is for you (provided you can deal with the administrative tasks as well). ",
+            "\u00a0Yes definitely - you get to work together with your friends to develop an awesome product at the end ",
+            "\u00a0This class is basically a totally unsupervised group project, plus boring lectures on the side. There are two quizzes that most people found extremely difficult but that don't count for much of your grade. The rest of the grade depends on your group project. \r\n\r\nThe lectures feel like you're memorizing a bunch of really pointless acronyms that a bunch of people came up with to describe their preferred design process. Even after reading the slides, there aren't really good examples given in class of most of the things you talk about, so the quiz questions are still difficult to answer. \r\n\r\nThe class is cool because you get to work on a real project that can have real applications, instead of just hacking together some pset that nobody will ever look at again and losing points because you missed some edge cases. That also means that it's important to get a good group and good project that you will enjoy, because that's what you'll spend your time doing. You'll learn a lot about software engineering just by working on getting a project up and running from scratch, which is cool. However, the project will be very self-motivated (group-motivated?) and progress will really rely on you and your team dynamic. The professor sets deadlines for big picture goals like \"MVP due on this date,\" but doesn't micro-manage any of your progress along the way, so you'll need to be responsible and on top of the project on your own. \r\n\r\nThe hands-off approach is nice for a change and lets you learn about all sorts of new tools on your own and really decide on the direction of your project as you want it to be. It also has some drawbacks, though. For one thing, if you don't have a good group or are struggling with implementing your idea, it's harder to get direct help. Also, it makes grading really vague, and the whole class is left wondering how they're doing and how the teachers are actually going to be able to tell how much work you put in. \r\n\r\nTl;dr - Take this class if you want to work on a real group project for most of your time and don't mind the class itself consisting of boring lectures. ",
+            "\u00a0Yes definitely take if you want to get real experience building something. Course totally depends on who you have in your team. ",
+            "\u00a0Take this class if you want to gather relevant development experience for a software engineering project or if you want to work on a project idea! This is great learning prior to a relevant internship or full time job. I think hearing other project and writing peer reviews allows you to learn more about the relevant technologies out there. Its a project based class that will be most worthwhile if its heavy workload and you care a lot about the project. "
+        ]
+    ]
+}

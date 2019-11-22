@@ -1,0 +1,74 @@
+{
+    "crn_code": "30266",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            1,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I have developed some of the technical knowledge that is used to set up a camera when taking a picture. \r\nAlso, we have learned the basics of photoshop and camera raw. However, the time was short to be able and advance on that. \r\nWe also learned how to make our own prints, which was really helpful... ",
+            "\u00a0I was able to understand how to use a digital camera and how to use photoshop. Two invaluable skills for a digital photographer. "
+        ],
+        [
+            "\u00a0I believe that this course is good, however, it could've been better if it was more intensive, more hours of learning, more days a week and also more content that could be taught. ",
+            "\u00a0High level on engagement with students but lacks in clear instruction. "
+        ],
+        [
+            "\u00a0No. I believe that Yale has much to offer. However, this is an extremely expensive course to be provided only two classes a week and 3 hour each. Its very little time to improve something, to actually acknowledge the content that is being presented in class and there is a lot missing to it because everything has very short time to be seen. ",
+            "\u00a0Yes. I believe this is a course great for any student with an interest in digital photography. "
+        ]
+    ]
+}

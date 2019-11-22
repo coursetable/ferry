@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49878/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Critical exploration of how the whiteness of the United States and its institutions has been developed and maintained from the nineteenth century into the present. Special attention paid to the intersection of race and class, particularly to the position of poor whites. Examination of the politics and culture of American whiteness, texts include histories, literary essays, fiction, and films.", 
+    "title": "White America", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "RKZ 08", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12114", 
+        "listings": [
+            {
+                "number": "355", 
+                "subject": "AMST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Aaron Carico"
+    ], 
+    "long_title": "White America", 
+    "extra_info": "A"
+}

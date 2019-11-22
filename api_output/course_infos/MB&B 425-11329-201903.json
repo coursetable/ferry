@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50422/assignments/syllabus", 
+    "requirements": "Prerequisite: MCDB 202 or pre-approval of instructor.", 
+    "description": "The universal principles of genetic analysis in eukaryotes. Reading and analysis of primary papers that illustrate the best of genetic analysis in the study of various biological issues. Focus on the concepts and logic underlying modern genetic analysis.\nPrerequisite: MCDB 202 or pre-approval of instructor.", 
+    "title": "Basic Concepts of Genetic Anal...", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "TAC N107", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11329", 
+        "listings": [
+            {
+                "number": "425", 
+                "subject": "MB&B"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jun Lu"
+    ], 
+    "long_title": "Basic Concepts of Genetic Analysis", 
+    "extra_info": "A"
+}

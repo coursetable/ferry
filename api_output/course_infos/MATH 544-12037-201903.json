@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "A one-term graduate introductory course in algebraic topology. We discuss algebraic and combinatorial tools used by topologists to encode information about topological spaces. Broadly speaking, we study the fundamental group of a space, its homology, and its cohomology. While focusing on the basic properties of these invariants, methods of computation, and many examples, we also see applications toward proving classical results. These include the Brouwer fixed-point theorem, the Jordan curve theorem, Poincar\u00e9 duality, and others. The main text is Allen Hatcher\u2019s Algebraic Topology, which is available for free on his website.", 
+    "title": "Introduction to Algebraic Topo...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "DL 431", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12037", 
+        "listings": [
+            {
+                "number": "544", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Paul Apisa"
+    ], 
+    "long_title": "Introduction to Algebraic Topology I", 
+    "extra_info": "A"
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49209/assignments/syllabus", 
+    "requirements": "Enrollment limited to Cognitive Science majors.", 
+    "description": "Survey of contemporary issues and current research in cognitive science. By the end of the term, students select a research topic for the senior essay.\nEnrollment limited to Cognitive Science majors.\n\n0.5 Yale College course credits", 
+    "title": "Junior Colloquium in Cognitive...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "GR109 ROSENFELD", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10666", 
+        "listings": [
+            {
+                "number": "395", 
+                "subject": "CGSC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Natalia Cordova Sanchez"
+    ], 
+    "long_title": "Junior Colloquium in Cognitive Science", 
+    "extra_info": "A"
+}

@@ -1,0 +1,86 @@
+{
+    "crn_code": "12346",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            5,
+            4,
+            1
+        ],
+        [
+            2,
+            3,
+            5,
+            2,
+            0
+        ],
+        [
+            2,
+            4,
+            3,
+            3,
+            0
+        ],
+        [
+            1,
+            6,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            5
+        ],
+        [
+            0,
+            2,
+            4,
+            5,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about the theory of linear models, but very little applications. The material did not feel too relevant to my studies or my aspirations. ",
+            "\u00a0This class allowed me to solidify some of the theory I hadn't extensively worked on in more applied statistics courses, like S&DS 361 and S&DS 363. It also allowed me to solidify my linear algebra skills, which I did not feel confident in when I began the semester. ",
+            "\u00a0I learned the Mathematical and Statistical theory behind linear models-- a lot of linear algebra. We learned regression, model selection, model validation, mixed effects models, and also other topics, at a very theoretical level. ",
+            "\u00a0Learned a lot about the theory and application of linear regression, as well as a good deal of linear algebra. ",
+            "\u00a0I'd say I have a bit more knowledge of the intricacies of linear models (especially the linear algebra behind it) at the end of this class than I had at the beginning. ",
+            "\u00a0I learned things about linear models that I had previously only pretended to understand. This course also solidified my linear algebra, which was very helpful. "
+        ],
+        [
+            "\u00a0One of the biggest weaknesses of this class was its heavily theoretical focus. Linear models have a wide range of applications, but we very rarely discussed them. Although I adore Joe Chang, he is not always the best at answering questions, so it might be better to have this class co-taught by two faculty. ",
+            "\u00a0This course is marketed as a \"theory for the user\" course, but I don't think it struck the correct balance between theory and practice in lecture or on homework. I think that either the advertising of this course needs to be changed or there needs to be a slightly more application-based treatment of the material. I also think that I would have benefited more from a final project than from a final exam. I think that a final project would have allowed me to demonstrate my understanding of the material a little better, as a well as giving me more practice with the skills I worked on all semester. ",
+            "\u00a0It was extremely theoretical. While there were some examples of R implementation, I wished we'd been able to do some sort of final project rather than a final exam. I would have loved to have been able to utilize the tools that I'd learned over the semester, but I'm not confident that I'm able to. Additionally, the course was approximately 80% graduate students, so I often felt like the material was more catered to their skill level and expertise, and most of the undergraduates dropped the class, which really shouldn't happen. There were not enough office hours. Though there were very few problem sets, they were very challenging and oftentimes pretty ambiguous. ",
+            "\u00a0Overall, this was a very good course and I very much enjoyed it. \r\n\r\nHere are the things I particularly liked:\r\nI think the review over previous material at the beginning of each class was very useful. \r\nI think the material was very interesting and I very much liked the blending of theory and application (in R). \r\nI think the exams had very good problems. \r\nProfessor Chang was a great professor. \r\n\r\nHere are my critiques/suggestions: \r\nIt would be nice to have more problem sets. \r\nIt would be nice to spend less time on R syntax (such as how to get the p-value of the F-statistic). Given that R is simply a tool and not the focus of this course, I think these sorts of things could just be shown in the code but not actually discussed. The students should be able to figure things out. \r\nI think a brief review of confidence intervals, hypothesis testing, and the like would be useful. Yes, this is prerequisite material, but even so, I think it could be done rather quickly (though less quickly than was done in class) to the class' great benefit. \r\nI think a cheat sheet should be allowed for both exams. ",
+            "\u00a0Strengths: Interesting subject material, the very basis of regression, and a crucial topic in statistics\r\n\r\nWeaknesses: Horribly taught. This class had no organization at all. Joe Chang-- while nice and funny, mind you-- was not effective at all in teaching this class. His lecture slides were confusing, and he was not particularly good at answering student's questions about the topic. A lot of times his answer would be \"I don't know!\"-- which is worrisome to say the least. The problem sets were such large leaps from the in-class material, that all of the students would just gather together at office hours and complete the assignments together. By the end of a problem set, I am not sure we understood the material any better than when we started. Additionally, he was not great at answering student emails about the class (a lot of emails were just never answered) and the exams were extremely unreasonable. I was hesitant to write a bad review of this class because I do like Professor Chang... but the class was just so badly taught. ",
+            "\u00a0The main weakness of this course was the very low number of problem sets. This made it really hard to solidify the material from week to week. It also made it difficult to study for exams, and made each problem set very stressful (because you knew it made up a large percentage of your grade). \r\n\r\nThat being said, Professor Chang's lectures were typically well-organized and easy to follow. "
+        ],
+        [
+            "\u00a0I would not recommend it if it's not required. The material had the potential to be interesting, but the overly theoretical nature of the class made it fall flat. The workload was kind of unpredictable and inconsistent- we only had 5 problem sets throughout the semester and we never really knew when they would be assigned. There was no review session for the midterm or final and very few office hours. ",
+            "\u00a0I would recommend this course to another student if they were generally interested in the mathematics behind modeling and had taken all of the prerequisites. I would not characterize this class as fun, or even enjoyable, but rather as a labor of love. I definitely learned a lot in this class and feel like I have a better understanding of modeling than I ever did before, so it's definitely worth it if you can hold that mindset and are willing to put the work in. ",
+            "\u00a0Take it if you're read for a very theoretical approach to Linear Models, and lots of linear algebra. ",
+            "\u00a0Absolutely a course you should take if you're interested in linear models or even statistics in general. Presupposes some statistics and linear algebra knowledge, but the relevant topics are reviewed briefly. You learn both about the theory behind various concepts in linear regression (mixed models, R^2, leverage, etc.), as well as about the application through R. Typically difficult but fair problem sets and similarly for the exams. ",
+            "\u00a0Strengths: Interesting subject material, the very basis of regression, and a crucial topic in statistics\r\n\r\nWeaknesses: Horribly taught. This class had no organization at all. Joe Chang-- while nice and funny, mind you-- was not effective at all in teaching this class. His lecture slides were confusing, and he was not particularly good at answering student's questions about the topic. A lot of times his answer would be \"I don't know!\"-- which is worrisome to say the least. The problem sets were such large leaps from the in-class material, that all of the students would just gather together at office hours and complete the assignments together. By the end of a problem set, I am not sure we understood the material any better than when we started. Additionally, he was not great at answering student emails about the class (a lot of emails were just never answered) and the exams were extremely unreasonable. I was hesitant to write a bad review of this class because I do like Professor Chang... but the class was just so badly taught.\r\n\r\ntl;dr take another elective ",
+            "\u00a0The material in this course is foundational and important. If you really want to know what every piece of output from R's linear model command means, this is the course for you. But be prepared for difficult exams and very difficult (and irregular) problem sets. "
+        ]
+    ]
+}

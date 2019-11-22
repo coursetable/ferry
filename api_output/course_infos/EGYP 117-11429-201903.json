@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49619/assignments/syllabus", 
+    "requirements": "Credit only on completion of EGYP 127.", 
+    "description": "The native Egyptian language in the Roman and Byzantine periods. Thorough grounding in grammar and vocabulary of the Sahidic dialect as a basis for reading biblical, monastic, and Gnostic texts.\nCredit only on completion of EGYP 127.", 
+    "title": "Elementary Biblical Coptic I", 
+    "skills": [
+        "L1"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WHC B-04", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11429", 
+        "listings": [
+            {
+                "number": "117", 
+                "subject": "EGYP"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kavya Bhat"
+    ], 
+    "long_title": "Elementary Biblical Coptic I", 
+    "extra_info": "A"
+}

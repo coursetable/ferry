@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50018/assignments/syllabus", 
+    "requirements": "Prerequisites: ECON 115 and 116, or equivalent.", 
+    "description": "This course focuses on systemic risk, banking crises, financial stability and macroprudential policies. An emphasis will be on systemic risk and prudential policies in peripheral economies. Peripheral economies is defined here as peripheral European economies and emerging economies.\nPrerequisites: ECON 115 and 116, or equivalent.", 
+    "title": "Banking Crises and Financial S...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "RKZ 02", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12185", 
+        "listings": [
+            {
+                "number": "781", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Sigridur Benediktsdottir"
+    ], 
+    "long_title": "Banking Crises and Financial Stability", 
+    "extra_info": "A"
+}

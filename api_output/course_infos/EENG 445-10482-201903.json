@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49235/assignments/syllabus", 
+    "requirements": "Prerequisite: BENG 352 or EENG 310 or permission of instructors. Recommended preparation: familiarity with probability theory.", 
+    "description": "A study of the basic computational principles related to processing and analysis of biomedical images (e.g., magnetic resonance, computed X-ray tomography, fluorescence microscopy). Basic concepts and techniques related to discrete image representation, multidimensional frequency transforms, image enhancement, motion analysis, image segmentation, and image registration.\nPrerequisite: BENG 352 or EENG 310 or permission of instructors. Recommended preparation: familiarity with probability theory.", 
+    "title": "Biomedical Image Processing an...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "HLH17 113", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10482", 
+        "listings": [
+            {
+                "number": "445", 
+                "subject": "EENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "James Duncan", 
+        "Lawrence Staib"
+    ], 
+    "long_title": "Biomedical Image Processing and Analysis", 
+    "extra_info": "A"
+}

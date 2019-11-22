@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50831/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This lecture course is an introduction to Near Eastern civilization through its rich and diverse literary cultures. We read and discuss ancient works, such as the Epic of Gilgamesh, Genesis, and \u201cThe Song of Songs,\u201d medieval works, such as A Thousand and One Nights, selections from the Qur\u2019an, and Shah-nama: The Book of Kings, and modern works of Israeli, Turkish, and Iranian novelists and Palestianian poets. Students complement classroom studies with visits to the Yale Babylonian Collection and the Beinecke Rare Book and Manuscript Library, as well as with film screenings and guest speakers. Students also learn fundamentals of Near Eastern writing systems, and consider questions of tradition, transmission, and translation. All readings are in translation.", 
+    "title": "From Gilgamesh to Persepolis: ...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "YK220 100", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11454", 
+        "listings": [
+            {
+                "number": "128", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kathryn Slanski"
+    ], 
+    "long_title": "From Gilgamesh to Persepolis: Introduction to Near Eastern Literatures", 
+    "extra_info": "A"
+}

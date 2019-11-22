@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "", 
+    "title": "Advanced Studio", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "", 
+            "days": [
+                "Monday", 
+                "Thursday"
+            ], 
+            "end_time": 18
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10169", 
+        "listings": [
+            {
+                "number": "1102", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Teddy Cruz", 
+        "Marta Caldeira", 
+        "Fonna Forman"
+    ], 
+    "long_title": "Advanced Studio", 
+    "extra_info": "A"
+}

@@ -1,0 +1,87 @@
+{
+    "crn_code": "23937",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            2,
+            3
+        ],
+        [
+            0,
+            1,
+            2,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            7
+        ],
+        [
+            0,
+            1,
+            1,
+            5,
+            2
+        ],
+        [
+            0,
+            2,
+            5,
+            2,
+            0
+        ],
+        [
+            0,
+            5,
+            3,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I developed a basic understanding of Python coding as well as exoplanet discovery. I learned a lot about different methods that are used in statistical analysis and how those translate into code. ",
+            "\u00a0I learned to apply statistical methods to examine questions in astronomy (using transit/radial velocity data to find exoplanet properties, discerning stellar activity, classifying exoplanets, etc.). ",
+            "\u00a0Knowledge of Python as it relates to the field of data science and rudimentary statistics. ",
+            "\u00a0This course taught data manipulation in Python 3. ",
+            "\u00a0Very interesting information about detection and characterization of exoplanets. It is also great extra practice for the main YData lecture. ",
+            "\u00a0I learned a lot of valuable techniques for data analysis, and it was great additional practice for the main class. ",
+            "\u00a0I learned how to develop Python skills into the applications of analyzing exoplanets by methods of lightcurve analyzation, various scatterplots, normal hypothesis testing, and classification. "
+        ],
+        [
+            "\u00a0I think the labs were the biggest strength of this course. I really learned a lot from the Jupyter notebook exercises we did. In terms of weaknesses, I found that the lectures often felt too complicated for me. I couldn't understand some parts of the math she was discussing, especially when we got to PCA/clustering. ",
+            "\u00a0The instructor of this course is a good lecturer and a very helpful mentor.  Her guidance during office hours was instrumental in my learning. ",
+            "\u00a0The course was useful in that it was hands-on, but it would have been helpful to get to know the statistical concepts at work in greater detail. A lot of the time I felt like I didn't understand what I was actually doing to the data but could execute the appropriate code. The lectures were not especially helpful in this regard, despite the fact that Prof. Cisewski-Kehe is very knowledgeable and capable in this area. Overall, it is an o.k. course by helping with facility in python, but glosses over some of the statistical nitty-gritty. ",
+            "\u00a0Strengths: great professor and interesting topics. Great practice for main YData lecture. ",
+            "\u00a0I wish it was possible for the final project to review our work with the professor somehow before submitting the final paper. This would allow for valuable feedback on how we analyzed the data to solve our problem. I did like that the packages we used were actual statistical packages used for data analysis in the field and the structure of the midterm exams. ",
+            "\u00a0I really enjoyed the hour of lecture followed by hour of work. It allowed me to ask questions in the moment instead of having to solely wait for office hours. "
+        ],
+        [
+            "\u00a0Yes, if they are interested in python coding and astronomy, and want to learn how they intersect. ",
+            "\u00a0If you are interested in astronomy, this course may help you gain the statistical & technical skills you need to answer several interesting questions about exoplanet detection. ",
+            "\u00a0This a good course to improve you facility with Python don't let the exoplanets part make you think it's very niche. The only complaint is that it doesn't really teach you the concepts behind what you are doing in very much depth. ",
+            "\u00a0Yes, especially if they are taking the main YData lecture as well. ",
+            "\u00a0If you are interested in astronomy or just want to practice more with the concepts taught generally in the main class, I would really recommend the class. ",
+            "\u00a0If you are interested in exploring interesting data related to astrophysics, even if you haven't taken an astrophysics course before, yes. "
+        ]
+    ]
+}

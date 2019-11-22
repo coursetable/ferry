@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49420/assignments/syllabus", 
+    "requirements": "Prerequisite: BIOL 101\u00e2\u20ac\u201c104.", 
+    "description": "Introduction to the ways in which evolutionary science informs medical research and clinical practice. Diseases of civilization and their relation to humans' evolutionary past; the evolution of human defense mechanisms; antibiotic resistance and virulence in pathogens; cancer as an evolutionary process. Students view course lectures on line; class time focuses on discussion of lecture topics and research papers.\nPrerequisite: BIOL 101\u00e2\u20ac\u201c104.", 
+    "title": "Evolution and Medicine", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "OML 551", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10814", 
+        "listings": [
+            {
+                "number": "250", 
+                "subject": "HLTH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Stephen Stearns"
+    ], 
+    "long_title": "Evolution and Medicine", 
+    "extra_info": "A"
+}

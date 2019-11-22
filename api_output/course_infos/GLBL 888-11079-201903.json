@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48340/assignments/syllabus", 
+    "requirements": "Open to Jackson Institute master\u2019s students. Not open to Ph.D. students.", 
+    "description": "A comparative study of power and politics since the Cold War. Topics include the decline of trade unions and increased influence of business; growing inequality and insecurity; changing attitudes toward democracy and authoritarianism; and the character and durability of the new international order. We start with the impact of the USSR\u2019s collapse, both in former communist countries and the West, focusing on reordered relations among business, labor, and governments. Next we take up the Washington Consensus on free trade, privatization, and deregulation, and agendas to fight terrorism, prevent human rights abuses, and spread democracy. Then we turn to the backlash that followed the financial crisis, as technocratic elites lost legitimacy, the global war on terror became mired in quagmires, and humanitarian intervention and democracy-spreading agendas floundered. The new politics of insecurity is our focus next. We examine the populist explosions of 2016 and the politics to which they have given rise. This leads to a consideration of responses, where we discuss the policies most needed when congenital employment insecurity is the norm, and the political reforms that would increase the chances of those policies being adopted.\nOpen to Jackson Institute master\u2019s students. Not open to Ph.D. students.", 
+    "title": "Power and Politics in Today\u2019s ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "SSS 114", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11079", 
+        "listings": [
+            {
+                "number": "888", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEP3\">YC EP&amp;E Politics Core</a>"
+    ], 
+    "professors": [
+        "Ian Shapiro"
+    ], 
+    "long_title": "Power and Politics in Today\u2019s World", 
+    "extra_info": "A"
+}

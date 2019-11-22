@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49127/assignments/syllabus", 
+    "requirements": "ART 265; ART 368 recommended.", 
+    "description": "A studio class that explores how the graphic designer's conventions of print typography and the dynamics of word-image relationship change with the introduction of time, motion, and sound. Projects focus on the controlled interaction of words and images to express an idea or tell a story. The extra dimensions of time-based communications; choreography of aural and visual images through selection, editing, and juxtaposition. Materials fee: $150.\nART 265; ART 368 recommended.", 
+    "title": "Motion Design", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "GREEN 209", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10434", 
+        "listings": [
+            {
+                "number": "370", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Christopher Pullman"
+    ], 
+    "long_title": "Motion Design", 
+    "extra_info": "A"
+}

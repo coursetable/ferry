@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49538/assignments/syllabus", 
+    "requirements": "After MATH 118 or 120, and intermediate microeconomics.", 
+    "description": "An introduction to general equilibrium theory and its extension to equilibria involving uncertainty and time. Discussion of the economic role of insurance and of intertemporal models, namely, the overlapping generations model and the optimal growth theory model.\u00c2\u00a0Recommended for students considering graduate study in economics.\nAfter MATH 118 or 120, and intermediate microeconomics.", 
+    "title": "Mathematical Economics: Genera...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "WLH 117", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10852", 
+        "listings": [
+            {
+                "number": "350", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eduardo Davila"
+    ], 
+    "long_title": "Mathematical Economics: General Equilibrium Theory", 
+    "extra_info": "A"
+}

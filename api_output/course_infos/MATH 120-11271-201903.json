@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 19
+    }, 
+    "requirements": "After MATH 115, or with permission of instructor. May not be taken after MATH 121.", 
+    "description": "Analytic geometry in three dimensions, using vectors. Real-valued functions of two and three variables, partial derivatives, gradient and directional derivatives, level curves and surfaces, maxima and minima. Parametrized curves in space, motion in space, line integrals; applications. Multiple integrals, with applications. Divergence and curl. The theorems of Green, Stokes, and Gauss.\nAfter MATH 115, or with permission of instructor. May not be taken after MATH 121.", 
+    "title": "Calculus of Functions of Sever...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "WTS B74", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 12, 
+        "oci_id": "11271", 
+        "listings": [
+            {
+                "number": "120", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Anibal Velozo"
+    ], 
+    "long_title": "Calculus of Functions of Several Variables", 
+    "extra_info": "A"
+}

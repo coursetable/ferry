@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50120/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Major currents in European intellectual history from the late nineteenth century through the twentieth. Topics include Marxism-Leninism, psychoanalysis, expressionism, structuralism, phenomenology, existentialism, antipolitics, and deconstruction.", 
+    "title": "European Intellectual History ...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "OML 202", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12345", 
+        "listings": [
+            {
+                "number": "339", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHI1\">YC History: Europe</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHID\">YC HIST: Ideas &amp; Intellectuals</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIE\">YC HIST: International History</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIJ\">YC HIST: Soc Chng &amp; Social MVMN</a></li></ul>"
+    ], 
+    "professors": [
+        "Marci Shore"
+    ], 
+    "long_title": "European Intellectual History since Nietzsche", 
+    "extra_info": "A"
+}

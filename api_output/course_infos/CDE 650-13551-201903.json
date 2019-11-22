@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: CDE 516 or permission of the instructor.", 
+    "description": "Evidence-based medicine and health care use best current evidence in addressing clinical or public health questions. This course introduces principles of evidence-based practice in formulating clinical or public health questions, systematically searching for evidence, and applying it to the question. Types of questions include examining the comparative effectiveness of clinical and public health interventions, etiology, diagnostic testing, and prognosis. Particular consideration is given to the meta-analytic methodology of synthesizing evidence in a systematic review. Also addressed is the role of evidence in informing economic analysis of health care programs and clinical practice guidelines. Using a problem-based approach, students contribute actively to the classes and small-group sessions. Students complete a systematic review in their own field of interest using Cochrane Collaboration methodology.\nPrerequisite: CDE 516 or permission of the instructor.", 
+    "title": "Introduction to Evidence-Based...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 8, 
+            "location": "LEPH 115", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 9
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13551", 
+        "listings": [
+            {
+                "number": "650", 
+                "subject": "CDE"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Shiyi Wang"
+    ], 
+    "long_title": "Introduction to Evidence-Based Medicine and Health Care", 
+    "extra_info": "A"
+}

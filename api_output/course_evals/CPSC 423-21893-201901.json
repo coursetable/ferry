@@ -1,0 +1,76 @@
+{
+    "crn_code": "21893",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            3,
+            1,
+            2,
+            0
+        ],
+        [
+            1,
+            1,
+            4,
+            2,
+            0
+        ],
+        [
+            1,
+            0,
+            3,
+            3,
+            0
+        ],
+        [
+            1,
+            1,
+            2,
+            3,
+            0
+        ],
+        [
+            1,
+            4,
+            3,
+            0,
+            0
+        ],
+        [
+            2,
+            6,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned a lot about operating systems, processes, paging, segmentation, etc. ",
+            "\u00a0I learned a lot from a high level about operating systems. "
+        ],
+        [
+            "\u00a0Strengths: important topic, good lecture slides\r\nWeaknesses: lecture can be a bit boring, especially since its a 9 am, strong weight on exams\r\n\r\nA project or more engaging psets would be nice. ",
+            "\u00a0It's a great course. Avi is a great lecturer. I wish we saw more interplay of how the different components of the OS worked together. ",
+            "\u00a0Avi is a great lecturer so you should go to class even though its at 9am "
+        ],
+        [
+            "\u00a0I would probably recommend this course, Avi has a great personality, but the 9 am lecture can be a bit hard to wake up for, and the exams are weighted very strongly, so you have to do good on them which is not easy. ",
+            "\u00a0For those who took 323 and liked the computer architecture topics, this course is a very good next step. I actually enjoyed the content a lot and the exams are definitely a lot to study for but on a day to day basis it is pretty chill. ",
+            "\u00a0Yes. I think any software developer should have a basic understanding of OS and Avi does a great job of laying the fundamentals. "
+        ]
+    ]
+}

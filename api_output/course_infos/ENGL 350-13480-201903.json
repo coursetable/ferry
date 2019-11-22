@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49769/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Following recent theoretical turns in media studies, music theory, African American studies, and literary studies, this course teaches close listening to the soundscapes of twentieth- and twenty-first century literature. We study both written and performed texts across genres, as well as musical lyrics, to ask what social and aesthetic value lies in the production and reception of sound. Primary emphasis is on sound\u00e2\u20ac\u2122s racial construction, especially in dialect and musical performance. Additional topics include the relation of voice and gender, sonic expressions of colonialism and migration, and the influence of recording technology on poetry and its performance traditions.", 
+    "title": "Literary Sound Studies", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LC 206", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13480", 
+        "listings": [
+            {
+                "number": "350", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEN2\">YC English: 20th/21st Century</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENS\">YC English: Senior Seminar</a></li></ul>"
+    ], 
+    "professors": [
+        "Benjamin Glaser"
+    ], 
+    "long_title": "Literary Sound Studies", 
+    "extra_info": "A"
+}

@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "An extended research project. Students must petition the curriculum committee for permission to enroll by the last day of classes in the term preceding enrollment in LITR\u00a0492. For students expecting to graduate in May, the senior essay is due in the office of the director of undergraduate studies according to the following schedule: (1) by September 6, a three-page prospectus signed by the student's adviser; (2) by February 14, a full rough draft (not notes); (3) by April 9, the completed essay. December graduates should consult the director of undergraduate studies for required deadlines. The minimum length for a yearlong senior essay is forty pages.", 
+    "title": "The Yearlong Senior Essay", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11234", 
+        "listings": [
+            {
+                "number": "493", 
+                "subject": "LITR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Moira Fradinger"
+    ], 
+    "long_title": "The Yearlong Senior Essay", 
+    "extra_info": "A"
+}

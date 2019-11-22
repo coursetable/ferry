@@ -1,0 +1,74 @@
+{
+    "crn_code": "11256",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about the specific challenges facing particular countries in the Middle East, as well as the challenges that border do not determine. ",
+            "\u00a0The course provide a great overview of many of the key conflicts and issues in the Middle East and North Africa. "
+        ],
+        [
+            "\u00a0While I enjoyed the reports from each country and presentations, I wish there was more room for the teacher to share her experience/expertise. ",
+            "\u00a0The courses greatest strength is also its main weakness; the course covers alot of ground but is then subject to time limitations.  As long as the students know that going in, it isn't an issue.\r\nAdditionally, the professor is incredibly well versed on the subjects (she knows half the players!) and make sure all sides are equally judged. "
+        ],
+        [
+            "\u00a0Yes. The content is very well organized and the conversations very stimulating. ",
+            "\u00a0Absolutely, if the student wants a great overview of the region.  If the student wants to delve into a single area (Syria, Israel/Palestine, etc.) then another course would be better. "
+        ]
+    ]
+}

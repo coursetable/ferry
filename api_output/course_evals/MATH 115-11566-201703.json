@@ -1,0 +1,122 @@
+{
+    "crn_code": "11566",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            10,
+            6,
+            7
+        ],
+        [
+            4,
+            7,
+            7,
+            5,
+            3
+        ],
+        [
+            3,
+            5,
+            4,
+            8,
+            6
+        ],
+        [
+            1,
+            3,
+            6,
+            10,
+            6
+        ],
+        [
+            0,
+            4,
+            8,
+            10,
+            4
+        ],
+        [
+            0,
+            3,
+            12,
+            9,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned topics that will be useful to me in future courses. ",
+            "\u00a0I learned techniques for integration, series, parametric functions, polar functions, and basic differential equations. I also developed better studying habits for QR exams. ",
+            "\u00a0Gained math skills ",
+            "\u00a0New mathematical concepts and new ways of looking at problems ",
+            "\u00a0BC Calculus. I developed the skills to do well on problem sets in college ",
+            "\u00a0I learnt about new concepts involving integration. I also learnt the basics of integral calculus - limits, L'Hospital's Rule (all of which I wasn't aware of previously) ",
+            "\u00a0I developed a more complete understanding of calculus topics which built upon skills I developed in AB Calc in high school. ",
+            "\u00a0I progressed in my math skills. ",
+            "\u00a0I learned so much in this class. I am really glad I took it ",
+            "\u00a0Much of Calculus, more than I had anticipated. Well taught course. Flipped class was a bad idea, very inefficient and the videos were essentially useless. ",
+            "\u00a0I learned a lot about series and sequences ",
+            "\u00a0I reviewed what I had learned in BC Calculus in high school, but this class went even deeper into integral calculus than I ever did in high school. ",
+            "\u00a0Critical thinking and being able to apply concepts in the classroom to more difficult problems in homework and on test. ",
+            "\u00a0The course is very heavy on a few specific topics, rather than a broad range of areas. A lot of material on sequences and series which will be easy if you have learnt the material already, but very confusing to learn of this is the first time you are learning the material. ",
+            "\u00a0Literally nothing. Don't take this if you don't absolutely HAVE to. ",
+            "\u00a0As a student who had previously taken BC Calculus in nigh school. this course was a good refresher on those topics and laid a strong foundation if I want to take math in the future. I learned how to think critically to solve advanced questions, using a limited range of techniques. ",
+            "\u00a0mathematical understanding, great calculus comprehension and ability to overcome challenges "
+        ],
+        [
+            "\u00a0The flipped classroom aspect of this course was a big weakness of the course overall. The videos were presented in a confusing manner and I felt as though I never fully understood the material because it was not fully explained in section either. ",
+            "\u00a0This course clearly teaches all of the concepts in the course description, but not even close to enough practice with questions like those on the exams is given. The psets and class exercises are mostly just to illustrate the concepts, whereas the tests require layers of interpretation of the theory. A lot more test style practice is needed. ",
+            "\u00a0I had the course director, but did not feel that I learned a lot in class or in the course in general as it was a flipped classroom structure. I found I taught myself a lot of the course material from the textbook and from the internet. ",
+            "\u00a0I would like to consider the flipped classroom format a weakness because I personally had trouble learning from the videos. However, I have to recognize that the videos did simplify the content and provide images of the content which helped me learn and understand what was being taught. The main weakness that I found was the fact that the problems on the p-set did not correspond in difficulty to the problems on the exams.Finally I would say that the weaknesses were the quizzes that we took after the videos because sometimes they would take a long time to complete and multiple tries simply because I had not practice with the content. ",
+            "\u00a0Being flipped is more negative than positive for me it created learning challenges ",
+            "\u00a0Math was taught in a way that nicely blended presentation of theory and practice of problems ",
+            "\u00a0I prepared well for midterms and I took good class notes. ",
+            "\u00a0I personally don't enjoy the flipped classroom method, but I suppose that won't be changed any time soon. I enjoy learning in class and practicing at home because I ask questions while I learn, not after. The strength was in the size of the class. I like smaller classes, it made it easier to ask questions for clarification. ",
+            "\u00a0Strengths: \r\nOffice hours were very helpful. Our instructor provided us with helpful worksheets as well. \r\n\r\nWeaknesses: \r\nToo many topics covered in a short span of time.\r\nToo much work with the flipped class system. \r\nToo little practice on the types of exam questions involved. ",
+            "\u00a0I understand the idea behind a flipped classroom, but I felt that the pre-class videos rarely provided the right kind of exposure to the topics discussed. Often, I felt that the videos overexplained relatively irrelevant information while merely skimming over the stuff that was actually useful for classwork and psets. ",
+            "\u00a0My instructor was really good. I just feel that it could be a little but slower and we could have more time to do exercises in class.\r\nAlso, It could not be flipped. Flipped classes are very bad ",
+            "\u00a0Great teacher. I strongly urge to get rid of flipped class ",
+            "\u00a0I did not like the module videos.  I did not find them very helpful, and would have much rather been taught in the conventional style (lecture and practice problems in class, and textbook problems for homework). ",
+            "\u00a0Very engaging class, but could use some more difficult examples. Liked the video homework aspect. ",
+            "\u00a0The course is taught as a flipped classroom with videos to watch before every class. I didnt find these to be particularly helpful and the explanations were confusing and not generally helpful, so the class tone was spent re-teaching what was in the videos. If the material was just presented as new in class, I think it would have been a lot easier to understand. ",
+            "\u00a0Midterms are much harder than practice tests and psets so unless you know the material extremely well you're going to have a hard time on the exams. ",
+            "\u00a0Great teaching. Rather uncreative in its approach to teaching the material, however that may be necessary for an introductory course. I didn't mind the flipped classroom and watching the online video. However, I found that the quizzes paired with the video were sometimes unreasonable (ie. open response questions with multiple parts that one had to get exactly correct to get credit for). Additionally, I found that the exams, especially midterm #1, were much more challenging than the course as a whole. ",
+            "\u00a0Even though I studied on my own and went to all the professor's office hours, it was hard to score an A on all the exams. However, I must admit that Professor Vigliotta was a great professor--she was really good at explaining the material and she was always so nice to her students. ",
+            "\u00a0the flipped classroom videos could be improved with additional material "
+        ],
+        [
+            "\u00a0I would not recommend this course to another student unless it is required for their major. ",
+            "\u00a0I would only recommend this course if its a requirement. It is far too much trouble for what it is worth. I did well on psets and felt like I truly understood the calculus, but my test scores did not reflect that no matter how much preparation I put into the tests. ",
+            "\u00a0I won't recommend the students to take the class unless they need to because the content is not that interesting. ",
+            "\u00a0I would very strongly recommend this course. This course is well-taught, well-structured and provides a strong math foundation that can be applied to a variety of fields. ",
+            "\u00a0No, even though I learned the same material in high school, it was much more difficult to understand in this setting than in high school. If I did not have that background in the course material already, I don't know how I would've been successful. ",
+            "\u00a0Yes, because I think it will prepare me for other QR classes at Yale but the split classroom setup was not very helpful. ",
+            "\u00a0Yes. While I struggled, I think it's possible to excel with the correct work ethic. Although, I would warn them about the flipped classroom method. ",
+            "\u00a0No. I think that it was quite a tough course and for many students who are acquainted with the British education system, there are basics that they haven't been taught but higher level topics (eg. vectors) that they have been taught. This course assumes students have full knowledge of math 112, which unfortunately they don't. It is also very time consuming to manage with other work intensive courses. ",
+            "\u00a0I'd recommend it to anyone looking to further their math skills. Although the flipped classroom was less than optimal, there were an abundance of resources outside the classroom which really helped me master the material. ",
+            "\u00a0yes, especially if they want to improve their knowledge in math ",
+            "\u00a0Yes ",
+            "\u00a0If they are strong in math already, then yes. It is very difficult to be successful if you have not already taken the course. ",
+            "\u00a0Yes.  It effectively taught me more about integral calculus. ",
+            "\u00a0Yes, I have recommended this course to multiple students already for it is well taught and interesting. ",
+            "\u00a0If you like math then take it, but if not it will be very hard to stick with it. ",
+            "\u00a0I would never recommend this. Probably the worst class at Yale ",
+            "\u00a0Yes, this is a good course if you are learning Calc 2 for the first time or reviewing it. However anyone with a strong high school foundation in Calculus would find it repetitive. ",
+            "\u00a0yes, I would "
+        ]
+    ]
+}

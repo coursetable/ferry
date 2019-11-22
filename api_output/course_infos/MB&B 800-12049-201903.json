@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: biochemistry (may be taken concurrently).", 
+    "description": "The seminar, which covers topics in the molecular mechanisms of disease, illustrates timely issues in areas such as protein chemistry and enzymology, intermediary metabolism, nucleic acid biochemistry, gene expression, and virology. M.D. and M.D./Ph.D. students only.\nPrerequisite: biochemistry (may be taken concurrently).", 
+    "title": "Advanced Topics in Molecular M...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12049", 
+        "listings": [
+            {
+                "number": "800", 
+                "subject": "MB&B"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Susan Baserga", 
+        "William Konigsberg"
+    ], 
+    "long_title": "Advanced Topics in Molecular Medicine", 
+    "extra_info": "A"
+}

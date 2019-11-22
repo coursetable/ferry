@@ -1,0 +1,80 @@
+{
+    "crn_code": "11120",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            2,
+            2
+        ],
+        [
+            1,
+            0,
+            4,
+            2,
+            0
+        ],
+        [
+            2,
+            0,
+            0,
+            4,
+            1
+        ],
+        [
+            1,
+            1,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            1,
+            2,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            5
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I have a very strong command of the French language, all of its tenses, and many important common phrases. ",
+            "\u00a0I learned a lot about grammar and reading with more ease in french texts. ",
+            "\u00a0This class was mostly a review of the grammar concepts from French 120, going over verb tenses and sentence structures in both written and spoken French. ",
+            "\u00a0I learned or reviewed many basics of French grammar and usage, from the easiest past tenses to the subjunctive. I also became more adept at reading texts for comprehension even without knowing all of the words, and though my speaking and listening still needs work, it improved immensely. I also got a brief introduction to some kinds of French film and literature. "
+        ],
+        [
+            "\u00a0Strength: The intense workload of the class makes it so that you are forced to learn, which is good for a language. The tests are fair and the class does a great job in making a speaking component of exams very important. ",
+            "\u00a0I think more of a focus on speaking versus just learning the material prescribed by the course lead would be helpful. ",
+            "\u00a0I am pleased with the small class sizes, but the course is very fast paced and does not make a large effort to accommodate students who place into level 3, it is much more catered to those who took levels 1 and 2. ",
+            "\u00a0A strength of the course is the small section formatall of the sections I've been in have become close, which made for a great learning environment. One weakness is that all the grammar is a repeat of French 120, making it quite unfair for anyone who did not take 120 at Yale. The presentation of all the material was also very dry, and it seemed to be focused more on specific details than on actually understanding French. The feedback system is not sufficient. Class participation doesn't get feedback but is graded very harshly, and you there is no way to view exam feedback for more than five minutes in class. The exams themselves test how well you've memorized the assigned books and movies, but not much of anything else. ",
+            "\u00a0Because this course met everyday and assigned homework every night, it was the most immersive and therefore useful French course that I think I've ever taken. I loved that it started at grammar basics and then moved into more complicated usage, because it felt very foundational, but also applied in the sense that it was taught through books, films, and some music. However, while I found much of the work very useful, I think that some of it was unnecessarily arduous without being very useful, leading many students to skip all work except that which would be collected. The course packet was a bit inconsistent and sometimes confusing, and the vocabulary was especially frustrating because the words were often obscure, and we spent time memorizing them even though they probably wouldn't contribute to our overall fluency in French, they simply scored us points on a single exercise. I also thought that the jump from Le Petit Nicolas to L'tranger was a bit extreme in terms of content and grammar. "
+        ],
+        [
+            "\u00a0L3 is an important course that must be taken in order to become fluent. The homework is tedious and regular testing can be stressful,  but the information is useful. ",
+            "\u00a0No. This class both did not teach me much French and actively made me like the language less. ",
+            "\u00a0Yes, because I think it's very time-intensive (at times unnecessarily so), but I also feel coming out of it that my French has improved in many ways. Especially as a first French course at Yale, I think it's an excellent foundation to have going into higher-level French classes and experiences. "
+        ]
+    ]
+}

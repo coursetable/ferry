@@ -1,0 +1,105 @@
+{
+    "crn_code": "12287",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            3,
+            8,
+            4,
+            2
+        ],
+        [
+            1,
+            7,
+            5,
+            5,
+            0
+        ],
+        [
+            1,
+            2,
+            4,
+            9,
+            2
+        ],
+        [
+            0,
+            3,
+            7,
+            5,
+            3
+        ],
+        [
+            0,
+            2,
+            7,
+            8,
+            0
+        ],
+        [
+            0,
+            0,
+            9,
+            8,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned basic problem solving skills and learned about the foundations of calculus. ",
+            "\u00a0Calculus from pre-cal review to basic integrals. ",
+            "\u00a0My knowledge of calculus was built upon and strengthened, and I gained a firmer understanding of derivatives and integrals beyond only abstract computations. ",
+            "\u00a0I developed a willingness to attend peer tutoring because I needed help during the problem sets. This will serve me well as I continue my college career. ",
+            "\u00a0The course provided basic calculus. We learned basic limits, derivation, and integration. ",
+            "\u00a0Limits, Integrals, Related Rates, Optimization Problems ",
+            "\u00a0In this class I expanded my understanding of calculus. Math 112 is a review of Calculus AB, but it goes deeper into each concept. The skills I developed by taking this course include taking derivatives, integrals, manipulating autonomous differential equations, and finding tricky limits. ",
+            "\u00a0Calculus ",
+            "\u00a0I learned about limits, derivatives, and integrals. ",
+            "\u00a0Advanced my understanding and application skills of calculus topics. ",
+            "\u00a0I solidified my knowledge of calc 1. ",
+            "\u00a0I gained a deeper understanding of how to do calculus. I learned how to better access outside help and utilize resources for the course. "
+        ],
+        [
+            "\u00a0The lectures were very helpful, and I liked how we were put into small groups to talk with other students about the problems. ",
+            "\u00a0It's taught almost entirely by grad students. While my instructor was good, your mileage may vary. The WebAssigns were a bit tedious and a lot less helpful than the weekly problem set. ",
+            "\u00a0The method of teaching in this class does not make sense. They do not teach you how to actually apply what you've learned or even how to do it, but rather just lecture about the theorems and proofs that prove the mathematic concepts we learn. ",
+            "\u00a0The course did a good job of covering every concept involved in basic calculus, but at times was not particularly engaging. \r\n\r\nThe worksheets were a great way of bridging the gap between what was explained in class and the problem sets, which could be difficult to understand and complete without attending the peer tutoring session. ",
+            "\u00a0Section times and the lack of a sizable classroom for peer tutoring sessions were weaknesses. The problem sets were also unnecessarily difficult. ",
+            "\u00a0A big weakness to the course was Webassign. It is useless and doesn't add anything that the psets and worksheets didn't, but cost me $100 because I already had the textbook. It was also a little disorganized and it was difficult to know what sections/topics I was expected to learn. ",
+            "\u00a0Strengths: smaller sections, review sessions, peer tutors\r\nWeaknesses: webassign ",
+            "\u00a0The strength of this class is that it challenges your understanding of the concepts from lecture. The lectures go a little deeper than expected into the theory about the basic calculus concepts, but I think it helped me get a better understanding of calculus. ",
+            "\u00a0The homework forced you to keep up with the material and practice was provided for exams ",
+            "\u00a0Strengths: \r\nThe problem sets and review sessions prepared me well for the exams.  \r\n\r\nWeaknesses: \r\nThe derivative quizzes were difficult to complete successfully as there was no partial credit.  Completing math on a computer screen is much harder than completing math on paper (in my opinion). ",
+            "\u00a0Weakness the greading was extrememly varied by section. ",
+            "\u00a0Make tutors more available and advertised. ",
+            "\u00a0The strengths of the course was that there were many outside resources available, including the peer tutors, practice exams, practice tests on the web assign site, textbook help, etc. \r\n\r\nThe weaknesses were in how math course are \"flipped\" at Yale, where the professors expect students to understand the material before class, and they use the class time to practice, not teach. I think that the class time should be used to teach, and there should be more visuals to help teach. "
+        ],
+        [
+            "\u00a0I would recommend this class to another student. The expectations were clearly posted and there weren't any surprises along the way. Also, it was very easy to get outside help. ",
+            "\u00a0Yes. If you're in between taking 112 and 115, such as I was, just bite the bullet and take 115. You won't get an \"easy\" A in this class. Even if you have an understanding of calculus coming in, some of the problems can be tricky. ",
+            "\u00a0I would recommend it to those interested in building up their knowledge of math. I learned a lot in the class, even if at times it wasn't as engaging as I would have preferred. I think there is a lot to gain from learning the calculus taught in Math 112, even if someone isn't planning on continuing on to higher level math courses. ",
+            "\u00a0I  would recommend this course to students who feel they are not  quite ready for Math 115. The course was fairly easy if you have taken Calculus previously and can serve as a refresher for those who may have forgotten concepts. ",
+            "\u00a0I would recommend if needed for a major or QR requirement. Otherwise, there's no need. ",
+            "\u00a0Yes, it will provide you with a very strong base for future math classes. ",
+            "\u00a0If you can skip 112 and go to 115, then do it. Otherwise, 112 gives you a better foundation of calculus than AP Calculus AB would. ",
+            "\u00a0Yes it was very structured ",
+            "\u00a0Yes, I would recommend this course to a student if they needed it as a pre-requisite.  I wouldn't recommend this course as an elective, as its work load is high. ",
+            "\u00a0Not unless its necessary. ",
+            "\u00a0I probably would not recommend it for people who don't need to take it but if you do need to take it it was fine. ",
+            "\u00a0I would only recommend this course if the person if required to take math or enjoys math. "
+        ]
+    ]
+}

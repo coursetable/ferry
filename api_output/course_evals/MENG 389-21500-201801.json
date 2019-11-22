@@ -1,0 +1,101 @@
+{
+    "crn_code": "21500",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            3,
+            8,
+            6,
+            2
+        ],
+        [
+            3,
+            9,
+            6,
+            1,
+            0
+        ],
+        [
+            3,
+            3,
+            8,
+            5,
+            0
+        ],
+        [
+            1,
+            3,
+            9,
+            5,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            11,
+            7
+        ],
+        [
+            0,
+            0,
+            4,
+            8,
+            8
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course discussed the three main forms of heat transfer and different methodologies for solving problems involving heat transfer. ",
+            "\u00a0This class tested my ability to apply difficult mathematical and technical concepts to situations involving heat transfer. ",
+            "\u00a0Evaluate properties and flows involved in conduction, radiation and convection. These topics go hand in hand with fluids and thermal so it's a great continuation of the two. This course, if properly taught, rounds up some of the most widely used skillsets for a real-world design problem. ",
+            "\u00a0Three ideas and equation: heat travels through conduction, convection, and/or radiation. Everything else was just kinda super specific applications of these three and thus basically unimportant. ",
+            "\u00a0Knowledge of thermodynamics and heat transfer ",
+            "\u00a0MENG 389 is a comprehensive lecture course- you work through basically the entirety of \"Fundamentals of Heat and Mass Transfer\" textbook, covering topics from conduction (2D, steady-state and transient, multidimensional) to convection to (briefly) radiation. ",
+            "\u00a0Conduction, convection, steady and transient, in various geometries, dimensionless relations, and a little bit of radiation "
+        ],
+        [
+            "\u00a0I wish the professor and TA's had better handwriting.\r\nHonestly the accents I can get used to but the handwriting made it impossible to go by anything the lecture slides and textbook, and the lecture slides would have mistakes in them because Francesco is a busy researcher.\r\nHe's smart and knows his subject, but I hate Yale for employing researchers and forcing them to be professors. It hurts undergraduate STEM learning more than you can imagine. ",
+            "\u00a0The classroom teaching was very weak. The homework was very long. ",
+            "\u00a0The material of the course was very difficult to follow and seemed a little sketchy at times. There were so many formulas for so many different circumstances that it made it difficult to understand when to apply which formulas. The course was also taught primarily via power point slides which made it difficult to understand the math. ",
+            "\u00a0This class should not be taught straight from the book and should be more based on developing an understanding of what is read in the book. ",
+            "\u00a0The lectures in this course were at times hard to follow as some of the concepts could get very difficult. Perhaps doing more example in class would better our understanding of the theoretical approaches to solving these problems. ",
+            "\u00a0Strength (singular): one of the TAs had a really useful review session that saved our lives.\r\nWeaknesses: wow, where do I even start.\r\n1) The instructor had zero ability to decide on a single thing. We do not have an unequivocal due date for homework. Dr. Carbone told us the HW was due on Friday, when there was no class, but allowed us to turn in on Monday when there was a class. People turned in on Monday and he got mad because the pset was \"due on Friday\". It's fine for us to take a walk up/down hillhouse ave but this tiny detail opened up a world of indecisiveness.\r\n2) Dr. Carbone had a hard-to-ignore Italian accent that made explaining these difficult concepts a little more challenging. It is very hard to keep up.\r\n3) Dr. Carbone does not have the best take on visual aids. He either flies through the slides super quick leaving little to no time for notes, or chalks on a blackboard with hard-to-read handwriting. He even erases terms and simplifies equations on the same line. Imagine how difficult that is for students to switch between taking notes and looking at the board. It's just frustrating.\r\n4) Dr. Carbone barely listens to his students. He give psets on the week of midterm and also during reading week. He asked us to turn in our practice final pset to be graded \"for effort\" three days earlier than the actual exam. We low key has other commitments during reading week, but that's probably difficult for him to grasp. Most in our class came from another class taught in Dunham/ Becton, so it had been repeatedly proposed that we changed the classroom from Watson to Becton, but he does not want to push forth a petition that in fact over half of the class supports. I can go on for a while but I'll stop here.\r\n5) The grader (Joe) was such a nightmare. You lose points on the most trivial things. You also need to write sort of an essay for each question detailing your knowns, unknowns, assumptions, properties, schematics, before the actual analysis. It's not uncommon for each pset to take ten pages. Half an hour would past before you even begin to solve the problem.\r\n6) The whole team pushes for what they think is right for you, when in fact those reasons were more often than not, unfounded. ",
+            "\u00a0Lecture could be a bit more engaging. Maybe fewer power points? I'm not sure, but it could be hard to follow at times. Problem sets were good and helped learn ",
+            "\u00a0The structure of powerpoint slides for lectures was super unhelpful and made it hard to learn the material. Francesco is really nice but doesn't realize how long and timeconsuming the psets and exams were ",
+            "\u00a0The concepts were interesting but the lecture was kind of boring ",
+            "\u00a0The lecture presentations were the same as reading the book so not very helpful. The slides were pure gold, meaning they were filled with tons of useful information and examples. Maybe pare down the material and derivations that are taught in class because only half of it was useful for the purposes of homework and tests. One can only pack so much information into their heads in two hours. ",
+            "\u00a0More writing on the chalkboard. Less power points. ",
+            "\u00a0Strengths- tutors and professors are always available for consultations during or outside office hours\r\nWeaknesses- the material for lectures and sections are not always very well-related ",
+            "\u00a0The course was very well-organized, and the problem-sets were extremely helpful in inviting students to solidify concepts. I felt like the problem-sets readied me for both the midterm and final, which evaluated us on similar concepts and problem-solving approaches. My only criticism of the course is that the lectures often borrowed directly from/reiterated the material in the textbook. ",
+            "\u00a0It went zero to a hundred real quick, I would have preferred going a lot faster in the beginning. I know it's important because you can't do the other stuff without it. But it's so easy. We could have done the first three weeks of homework in a day of class, and then we could have slowed way down on the hard stuff and actually understood it. I got absolutely nailed with late penalties on the homeworks because instead of copying them off of chegg like my classmates, I wanted to actually understand them. But then the professor and TAs were not helpful at all and it took me forever to get caught up, so my grade suffered immensely as a result of me trying to be honest. "
+        ],
+        [
+            "\u00a0Heat transfer, despite how it's taught at Yale, is a fascinating and extremely important subject.\r\n40% of carbon emissions are from buildings. which primarily use fuel for air conditioning. heating, and lighting. ",
+            "\u00a0All depends on the professor. It is a lot of math. Heat transfer itself is mostly about matching theoretical equations to problems. No real pleasure in it. ",
+            "\u00a0I would only recommend this course if you are willing to invest a lot of time to understanding the material. ",
+            "\u00a0This was certainly a tough but interesting class. I think most people who take this class are ABET MechE so they have to take it anyways. ",
+            "\u00a0If this course is taught by Dr. Carbone again, don't do it. The following YouTube playlist does more to teach you Heat Transfer (based on the same textbook) yet causes you ten times less agony, uses far less time, and is 20x more pleasant to hear. You get to learn heat transfer whenever and wherever and most importantly, well.\r\n\r\nhttps://www.youtube.com/playlist?list=PLZOZfX_TaWAE6nTX50dJl0Jia8iQTIhrG\r\n\r\nIf you are ready for 12 hrs + of work just on Psets, going to a review session that lasts 2-3 hrs on average just to save your grade because frankly it's the only thing that made sense in this course, taking a take-home final designed to take 5 hrs (for which you grab your test at 2 PM and return by 7), deal with an instructor who cannot decide a thing and does not know how to organize or present his otherwise interesting material, then you are ready for a *good* semester ahead.\r\n\r\nThis topic is integral to a serious mechanical engineer and is among the most important classes you will ever take. So think twice before you take it with Dr. Carbone. That's the moral of the story. Oh yes, you do need a hard-copy textbook. ",
+            "\u00a0Similar to other MechE courses ",
+            "\u00a0expect to have to teach yourself most of the material ",
+            "\u00a0It's better than thermodynamics and fluids. ",
+            "\u00a0I think I am just entirely uninterested in Heat transfer so I didn't like the material and thus hated this class. The professor is a great guy and can provide super useful insights but I just couldn't sit through all of the pretty much esoteric equations. Also this class is secretly hard (wicked algebra, occasional differential equations, some derivations, and a lot of analytical methods).  Recommend Matlab for all of the plotting we had to do. ",
+            "\u00a0Yes because it is required for ABET accreditation ",
+            "\u00a0If you're interested in applying engineering to building science/design of mechanical systems in buildings, I'd definitely take this class. It gives you a conceptual foundation in processes of heat transfer (and a brief review of finite element analysis). ",
+            "\u00a0Just get a chegg account if you don't have one yet. Copy all the homeworks down, they're a waste of your time anyway because Francesco is throwing nothing but curveballs on the midterm and final. Don't bother going to lecture, that's also a waste of your time. Print out the pdf of the book prior to the tests, and try to find similar example problems and then just copy what they do. If you do all that, you will have learned absolutely nothing and you'll still get a really good grade in the class "
+        ]
+    ]
+}

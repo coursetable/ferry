@@ -1,0 +1,82 @@
+{
+    "crn_code": "25338",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            5,
+            3,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            6,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            8,
+            0
+        ],
+        [
+            0,
+            0,
+            7,
+            1,
+            0
+        ],
+        [
+            2,
+            6,
+            1,
+            0,
+            0
+        ],
+        [
+            7,
+            2,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Mostly intuitive information about ethics and politics in science. ",
+            "\u00a0Learn a lot about ethic things and the responsibility in scientific research. ",
+            "\u00a0what not to do in research ",
+            "\u00a0Learned how to conduct successful and responsibility research to maintain integrity in the sciences. Learned about the proper way to keep records and convey your results to readers. Learned about some of the things not to do in terms of research, such as plagiarism and messing with results. In all, received a broad overview of what being a good researcher means and how to do it in addition to getting exposure to what not to do and the negative results that come with it. "
+        ],
+        [
+            "\u00a0I liked that we had group discussions on the topics. It was much more engaging than being lectured all the time. Also the few sessions that were lectured, had interesting stories behind them ",
+            "\u00a0It's an important course that isn't always engaging. Some lecturers spend more time on having discussions with students than others who merely lecture from slides. An ethics course is best presented as a discussion, and for the most part the course meets that expectation. ",
+            "\u00a0Very great course! ",
+            "\u00a0We did what we had to do and they gave us snacks. No complaints here. ",
+            "\u00a0some lectures/discussions were repeats of the sessions we had during matriculation. feel that the whole course can be carried out as a one day workshop to save time on transportation. ",
+            "\u00a0I think that this course did a really good job for what it was supposed to be. Every lecture was engaging and insightful. I think that it should continue as it currently stands. "
+        ],
+        [
+            "\u00a0Yes. This course is a mandatory course. ",
+            "\u00a0some parts are still useful ",
+            "\u00a0They have to ",
+            "\u00a0Yes, I think it was a great way to receive exposure into what real research is and how to conduct it. I think that it gives you the details that many people leave out and can help you in the future with your graduate studies where you will be living it out. I think that it was very nice to hear some stories from the different faculty members that they used as learning experiences and that we can use before we reach that part of our research careers. "
+        ]
+    ]
+}

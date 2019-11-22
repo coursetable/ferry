@@ -1,0 +1,95 @@
+{
+    "crn_code": "11267",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            7,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            12
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            13
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            11
+        ],
+        [
+            0,
+            4,
+            3,
+            7,
+            1
+        ],
+        [
+            1,
+            1,
+            4,
+            5,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I received a great refresher on statistics and calculus. I was able to apply what I learned in a meaningful way while learning to use a useful program. ",
+            "\u00a0Use of STATA for data analysis. ",
+            "\u00a0The course provided a review of algebra and calculus and an introduction to statistics using Stata. ",
+            "\u00a0I regained a basic understanding of multivariable calculus and algebra; was introduced to basic statistical concepts; learned how to use statistical software to interpret and model survey data. ",
+            "\u00a0It gave me clarity on the fundamentals of statistics. It made my concepts pretty clear. ",
+            "\u00a0Intro stat. & calc review\r\nIntro stata ",
+            "\u00a0- how to do basic data analysis\r\n- regression analysis in stata\r\n\r\n- review of calculus\r\n- taking derivatives ",
+            "\u00a0Thinking in a mathematical way, calculus, and the basics of statistics. ",
+            "\u00a0This course was a very exciting stepping stone into the world of quantitative analysis. I found the course gave me a significant enhancement in knowledge and skills of calculus and statistical analysis. Prior to this course, my maths skills were rusty but I was excited to return to them and refresh them and this course gave me a great opportunity to do so. The statistical analysis part of the course enhanced my ability to consume and understand statistics. "
+        ],
+        [
+            "\u00a0I liked the overall structure of the course. However, I would have liked another week to practice model fitting/data analysis. ",
+            "\u00a0The course was rather homework-heavy ",
+            "\u00a0Lloyd is an amazing professor who makes sure that you understand what you're learning, why you're learning it, and gives you the tools to be able to solidify that knowledge. There were no weaknesses. ",
+            "\u00a0Very well organized ",
+            "\u00a0The math refresher portion of the course - while rigorous and helpful - might be a bit too extensive. More time might be spent on STATA, fundamentals of statistics, and applying statistical findings to policy formation. ",
+            "\u00a0The stata part could be devoted more time, with more opportunity for hands on practice. ",
+            "\u00a0Strengths - Professor ",
+            "\u00a0Strengths\r\n- Really liked the final exam where we were tasked with structuring our own analysis. It was a challenge that really caused us to do critical thinking and mimicked what we might be tasked with in a job. I would have enjoyed doing some work like that for homeworks.\r\n\r\n\r\nWeaknesses \r\n- I strongly felt that the time distribution between calculus and Stata was not helpful and not geared towards realistic expectations of skills needed in the workforce. I understand the desire to remind us all the concept of derivatives, and even taking basic derivatives. A quick review is fine. But I really dont expect that in the \"real world\" I'll ever be asked to take the derivate of a logarithmic function or of a complex fraction. We spent a lot of time drilling this, half the semester. The concept is important, drilling into manual complexities is not. \r\nI then felt we spent much too little time on Stata! This is the \"real world\" skill that I really do want to be able to use in my future jobs, and that could reasonably be expected of me from employers. This is the applied part that could actually be useful. I felt we only dipped our toes into Stata and while I did well in the assignments, I am not walking away feeling confident about my Stata proficiency. \r\n\r\nI know this was intended as an introductory course to Statistics, not intended for mastery, but I think we could at least move to greater Stata proficiency if we diverted time away from digging into details of derivatives and utilized that time instead for more Stata. \r\n\r\nIf Jackson is trying to prepare students to be professionals, not mathematicians or academics, then I think future students would benefit greatly from re-adjusting the calculus-Stata balance. \r\n\r\n\r\nAdditionally, I felt the workload of the first 5 or so weeks of homework was insane! We were handwriting 12+ pages of calculations every week. The level of difficulty of the homeworks was fine, but the sheer quantity of questions that we were asked to do was a lot. I would spend 8-10 hours a week doing them. I can understand that one wants to drill it enough that taking derivatives becomes quick and second nature, and we can get to that place with far fewer questions. The later homeworks then calmed to a more reasonable level. ",
+            "\u00a0The course was excellent and I do not see how it could be improved, except the statistics part went by very quickly and was for me much harder to follow "
+        ],
+        [
+            "\u00a0Yes, absolutely. ",
+            "\u00a0A thousand times yes. Lloyd made statistics fun and the problem sets may be long but you get to bond with your classmates. ",
+            "\u00a0Yes ",
+            "\u00a0Absolutely ",
+            "\u00a0I absolutely would.  A great accelerated introduction to data analysis. ",
+            "\u00a0Yes, a great first course on statistics. ",
+            "\u00a0Yes - great intro stat class, professor is engaging. ",
+            "\u00a0Yes. ",
+            "\u00a0YES!!! Lloyd is the best professor to teach statistics, and the best educator I may have ever had, committed to student learning and making complex concepts for a non mathematical mind become extremely comprehensible. "
+        ]
+    ]
+}

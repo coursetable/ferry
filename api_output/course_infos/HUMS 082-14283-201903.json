@@ -1,0 +1,55 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51783/assignments/syllabus", 
+    "requirements": "", 
+    "description": "In this course, we read six exceptional books that have had long cultural lives. In addition to reading and discussing these texts to which readers have returned for centuries, we also pay close attention to what humanistic study means at the university level. How do scholars in the humanities pose and answer questions? And how have those modes changed (or not) in the last few decades? We grapple with these questions through discussion of and engagement with the texts themselves. We also consider ways in which reading and writing about books can help us understand\u2014like nothing else can\u2014ourselves and our place in the world. Mandatory field trips included.\u00a0\u00a0", 
+    "title": "Six Pretty Good Books", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "MY 501", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }, 
+        {
+            "start_time": 13, 
+            "location": "MY 601", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14283", 
+        "listings": [
+            {
+                "number": "082", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Shawkat Toorawa", 
+        "Tina Lu"
+    ], 
+    "long_title": "Six Pretty Good Books", 
+    "extra_info": "A"
+}

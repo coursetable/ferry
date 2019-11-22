@@ -1,0 +1,85 @@
+{
+    "crn_code": "11752",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            4,
+            4,
+            1,
+            0
+        ],
+        [
+            0,
+            2,
+            3,
+            4,
+            0
+        ],
+        [
+            0,
+            2,
+            2,
+            3,
+            1
+        ],
+        [
+            2,
+            2,
+            4,
+            0,
+            0
+        ],
+        [
+            0,
+            3,
+            3,
+            2,
+            1
+        ],
+        [
+            2,
+            3,
+            2,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a pretty decent overview of topics in genetics, since this class is primarily taken by first year grad students in genetics. I appreciate that a lot of the material was very modern and directly relevant to work that is currently being performed in the field. ",
+            "\u00a0I learnt from the very early genetic technologies to the newest CRISPR technologies. Lots of ways to look at Genetics. ",
+            "\u00a0Genetic screens, insight into the newest genetic technologies ",
+            "\u00a0I learned about both the fundamental and current areas of research in genetics, with an overall focus on the latter. ",
+            "\u00a0Basic overview of many topics in genetics. Pitched at a somewhat higher level than MCDB 202, with a somewhat broader range of topics, but still an introductory class in many ways. Might be slightly confusing for someone who hasn't taken 202 or a similar class -- prior experience with genetics makes the class much easier. ",
+            "\u00a0I learned about the different techniques used in genetic analysis, through class lectures and papers that showed these techniques in action. "
+        ],
+        [
+            "\u00a0The greatest strength of this course was definitely its teaching talent; I found all of the professors in this class to be skilled and engaging lecturers. The material was also diverse and interesting. I sometimes wished for a bit more unification between topics, but I understand that this course needs to move quickly over a wide breadth. The graded work consisted almost exclusively of take-home assignments, which is not a bad idea but was not well executed: there needs to be a bit more communication so that the TAs aren't stuck with so much grading to do at the end (and so the students aren't in the dark.) ",
+            "\u00a0The undergraduate sections are really bad. The general discussion is very stagnant. \r\nLecturers are interesting, and the presenters are very passionate about their research in general. ",
+            "\u00a0Strengths: lots of different viewpoints\r\nWeaknesses: it sometimes seemed like there was a lack of understanding between the rotating lecturers and the course organizers about expectations for the class ",
+            "\u00a0This course was generally well taught, starting with simple genetics concepts and building up to hot areas of research in the field. As a topics review course it works really well. \r\n\r\nSometimes teaching was uneven between different instructors, and several concepts were covered multiple times. This, however, is typically a minor or even nonissue, as it helped to cement that concept and was usually helpful to review. Occasionally it was awhile before some of the lecturers slides were uploaded to canvas, but I suppose this generally cant be helped (theyre busy people, after all!). ",
+            "\u00a0Strengths:\r\n-Several of the lecturers (especially Dr. Hammarlund, Dr. Lu, Dr. Lek, and Dr. Greco) did a very good job explaining the content and asked for student input consistently.\r\n-You read primary literature, which makes the course more grounded in an understanding of actual experiments. The Drosophila papers are especially interesting, and the class also makes you read a couple of papers that were later found to be wrong, which is fun.\r\n-The workload is pretty reasonable on the whole.\r\nWeaknesses:\r\n-Class covers too much material too fast. It would be nice to see the pace slowed down so that more depth was allowed. However, this problem is understandable, since it's in part an introductory class.\r\n-Grading of homework assignments is slow, which delays feedback until late in the semester. ",
+            "\u00a0Receiving grades/feedback on assignments throughout the semester would have been nice. Instead, they all came back the last week and offered little chance for improvement. "
+        ],
+        [
+            "\u00a0In terms of graduate-level electives that are available to undergrads in biology-adjacent fields, this is probably one of the easier ones. There were no exams, which was nice, although it definitely impacted how much time I spent towards actually studying the material. Still, I think this class is worth taking for the material, and the professors are very good. ",
+            "\u00a0Yes. Especially if you just want a survery / intro to genetics. ",
+            "\u00a0If youre an MBB undergrad looking for a course to satisfy the upper level requirement, I highly recommended this class. Also, its not necessary to have taken MCDB202/genetics before this, just check with the course manager about your bio background. \r\n\r\nIts designed to not be overwhelming while still covering interesting/relevant material that you can delve into on your own time, and/or as a member of one of the professors labs (to my understanding many of the lecturers are PIs of labs working in the areas of research they discuss).\r\n\r\nAll grades are from homework (no quizzes, exams, or essays). The TAs are great, the discussion section for undergrads well designed for learning by incorporating a concept review. \r\n\r\nOne note to any undergrads taking this would be to make sure you have enough time to commute to/from the lectures in TAC. I had a class in SPL right after, and was very thankful to have 15 minutes (though sometimes it took 20) and a bike. ",
+            "\u00a0If you're interested in genetics, it may be worth it. The class is pitched a little bit higher than a real introductory course (such as MCDB 202) but is still similar to an introductory class in many ways. If you're looking to cover one or a few topics in depth, this is not a good choice. The subject matter is pretty broad and the class is fast-paced. However, several of the lecturers are very good, and a number of the papers that you read are quite interesting. Because it's a large lecture, what you get out of it is basically what you put into it. But there is definitely the opportunity to learn something new, even if you've taken MCDB 202 or similar in the past. ",
+            "\u00a0Only if you're very interested in genetics and are willing to put in the time to attend each section / lecture. "
+        ]
+    ]
+}

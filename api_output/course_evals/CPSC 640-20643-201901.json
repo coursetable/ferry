@@ -1,0 +1,86 @@
+{
+    "crn_code": "20643",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            3,
+            2,
+            4,
+            7,
+            2
+        ],
+        [
+            0,
+            5,
+            5,
+            4,
+            4
+        ],
+        [
+            1,
+            2,
+            6,
+            6,
+            3
+        ],
+        [
+            1,
+            4,
+            6,
+            6,
+            1
+        ],
+        [
+            2,
+            3,
+            7,
+            5,
+            1
+        ],
+        [
+            6,
+            6,
+            3,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about Soviet Russia. ",
+            "\u00a0The course covered a variety of classic topics in numerical computation, a number of fundamental math concepts needed to understand them as well as useful guidelines on programming. ",
+            "\u00a0Topics in numerical computation ",
+            "\u00a0Numerical techniques and methods, along with their pitfalls. ",
+            "\u00a0How to do research properly. ",
+            "\u00a0I learned computer programming, signal processing, linear algebra, differential equations, and applied numeric computing concepts. ",
+            "\u00a0Exposure to numerical techniques for integration, diagonalization, linear systems, differential equations, etc. Some good programming advice. Several recyclable anecdotes about life in the USSR. "
+        ],
+        [
+            "\u00a0Strengths: incredibly entertaining professor.\r\nWeaknesses: I literally learned zero things. ",
+            "\u00a0The lectures were clear and interesting and organized in a way to teach material that will be useful in a variety of fields and environments. ",
+            "\u00a0Strengths: cover a lot of topics\r\nWeakness: hope professor can elaborate on some concepts ",
+            "\u00a0The lectures are excellent. ",
+            "\u00a0Strengths: the material was fascinating and Professor Rokhlin obviously knows it as well as anyone. \r\n\r\nWeaknesses: Absolutely no work at all => no retention of the material. I didn't feel we covered that much, especially since we didn't go that in-depth on the topics we did cover. "
+        ],
+        [
+            "\u00a0I mean, yah. Interesting professor, low work. ",
+            "\u00a0Yes absolutely! The material is very interesting and useful, and professor Rokhlin is a great lecturer ",
+            "\u00a0Yes ",
+            "\u00a0I would strongly recommend this course. It'll force you to actually understand linear algebra. His lectures on proper programming technique are very important. ",
+            "\u00a0I can't say I would. I love the material and I like and respect Professor Rokhlin, but I wonder if I would have learned just as much from staying home and reading the Wikipedia pages. Having said that, there's literally no downside to taking it except the time spent going to lecture. ",
+            "\u00a0No "
+        ]
+    ]
+}

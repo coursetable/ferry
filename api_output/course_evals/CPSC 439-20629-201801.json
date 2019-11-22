@@ -1,0 +1,93 @@
+{
+    "crn_code": "20629",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            1,
+            6,
+            4
+        ],
+        [
+            1,
+            1,
+            2,
+            7,
+            1
+        ],
+        [
+            1,
+            0,
+            4,
+            6,
+            0
+        ],
+        [
+            2,
+            1,
+            3,
+            6,
+            0
+        ],
+        [
+            1,
+            3,
+            3,
+            4,
+            1
+        ],
+        [
+            0,
+            1,
+            4,
+            4,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned a lot about software engineering principles and was able to learn more about the practical aspect of computer science. ",
+            "\u00a0I gained an understanding of the core principles of software engineering. ",
+            "\u00a0I learned how to work in a team of developers. I also learned a lot about how software companies work, the development lifecycle, and how to apply these techniques at the micro-scale. ",
+            "\u00a0How to work as a team to build software. Methodologies and aspects of software. Rails. ",
+            "\u00a0Software engineering, rails, methodologies, etc. ",
+            "\u00a0Theoretical software engineering knowledge and practical project experience. ",
+            "\u00a0Stuff like agile development, strategies for testing code, understanding what exactly \"good code\" is ",
+            "\u00a0This course gave me an extensive overview of all the interesting ways to approach software engineering and the challenges of each design method. This course has also taught me how to document my code properly and get user feedback that would benefit my project. But most importantly this class has taught me how to work under pressure, collaborate and learn from other team members and produce a functional app within three months only. This course has helped me build a solid foundation in real-world software engineering and taught me many practical skills that will be useful in my future career. This is one of the best CS classes I took at Yale. ",
+            "\u00a0This class gave me a sense of what it is like to develop something from scratch in a team. "
+        ],
+        [
+            "\u00a0Good that it is project oriented as a whole but shouldn't have as many peer reviews. ",
+            "\u00a0This is the most practical CS class if you want to be a software engineer, so it has a lot going for it. Perhaps there was too much material covered in lecture so we didnt learn everything in depth. Also, the peer reviews and reviewing the other projects were just busy work and it was very subjective because some people were harsher graders than others. ",
+            "\u00a0It's a great course if you want to meet new people in your major and work with others to build an app. I feel like I didn't learn that much from the lectures, and the final quiz was pretty confusing, but overall I'm very happy that I ended the semester with a fully-functioning app and the experience that comes with bringing a software project to \"completion.\" ",
+            "\u00a0It is not a typical CS course. The exam is a minimal part of your grade, and the focus is on the project. If you are not good at getting traditional CS done, this class is perfect as it allows a lot of creativity. That said, the opposite stands. if you need direction, this is not the class for you. ",
+            "\u00a0It isn't a typical CS course. If you prefer creativity and projects it is perfect. If you want structure, it isn't. ",
+            "\u00a0The main strength of this course in my mind is the semester-long project. From this project I learned a lot about how to work with other people on a well-defined project. The project assignments (stuff like writing proposals, making presentations) were good at keeping you engaged with the project and preventing procrastination. The main weakness was that I feel like a lot of the lecture content is stuff you could either teach yourself by just googling the topics, or stuff you might learn quickly once you're industry. I suppose maybe it's good to go into industry with some of that knowledge already though. ",
+            "\u00a0I think having so many homework like peer reviews and project reviews was a little redundant. I think it was really helpful to receive some feedback from other teams and other team members about our project and progress and it was always nice to get to review other teams but we almost had one homework every week or two on top of all the other time and work we were putting on implementing the project itself and that just made this course very heavy-loaded and time consuming. I also think that the last question on the final was very vague and confusing. Other than that, the lectures were incredibly interesting, I really enjoyed the material being taught and the fusion of theoretical background, watching tutorials, presenting our progress and peer-programing. In general the course was very well structured and thought-through. ",
+            "\u00a0The course material regarding agile methods was helpful but the rest of the course was not. "
+        ],
+        [
+            "\u00a0I would certainly recommend Software Engineering to other students who want a practical CS class that lets you get some hands on experience with computer science. Ruzica is a very nice professor who does her best to make the class entertaining, although I think there should be more focus on the project. Lectures were at times very long and the slides didn't really make much sense. ",
+            "\u00a0I think this is one of the better CS electives. Your grade is mostly your project, and if you have an idea for an app or web app you want to create, then might as well get a course credit out of it as well. You work in teams of 5-7 people that gets chosen at the beginning of class (if you dont have other people already you can recruit students in the class). A good amount of your grade is determined by your peers through peer reviews which I didnt like that much. Make sure to be detailed in your reviews of other peoples projects because those get reviewed by your peers as well. The lecture material is interesting and practical at first. I tuned out though eventually and paid for it on the final exam. Exams are only worth 5% each though. Overall, Id give the class a 4/5. I think my main issues with it are that the lectures go by fast without much explanation so you dont learn much. Also, even if you spend a lot of time (much more time than youd devote to other classes) and have a great final product, you might not get an A or A- because of the exam and peer reviews. ",
+            "\u00a0Definitely take this class if you need a CS credit. It is one of our better electives and an excellent way to get some practical experience. Good for your resume too! ",
+            "\u00a0Yes! If you want to work on something meaningful instead of reading boring textbooks, this class is perfect! ",
+            "\u00a0Yes! Need more classes like this in CS that allow more actual work over memorization. ",
+            "\u00a0I recommend if you want to do a semester-long project with other students; there's something satisfying about that. But understand that much of what you learn will just be what you learn from doing that project. ",
+            "\u00a0Absolutely, I highly recommend taking this course. It is a bit heavily work-loaded, there is a decent amount of work that needs to be done in a very short period of time but it is also very rewarding to look back and see what you implemented in just three months and how much interesting facts you know about software engineering by the end of the semester. ",
+            "\u00a0This course is good if you want a chance to develop a new piece of software, but you need to already know python and object oriented programming in order to do well on the tests. "
+        ]
+    ]
+}

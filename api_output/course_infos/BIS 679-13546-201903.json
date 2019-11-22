@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49225/assignments/syllabus", 
+    "requirements": "Prerequisites: EPH 505 and basic knowledge of both SAS and R.", 
+    "description": "This class offers students the chance to build on basic SAS and R programming skills. Half of the term is spent working with SAS learning how to create arrays, format data, merge and subset data from multiple sources, transpose data, and write and work with macros. The second half of the term is spent working with R learning how to work with data, program functions, write simulation code using loops, and bootstrap.\nPrerequisites: EPH 505 and basic knowledge of both SAS and R.", 
+    "title": "Advanced Statistical Programmi...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "CO47 106B", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 11
+        }, 
+        {
+            "start_time": 13, 
+            "location": "CO47 106B", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 13
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13546", 
+        "listings": [
+            {
+                "number": "679", 
+                "subject": "BIS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Denise Esserman"
+    ], 
+    "long_title": "Advanced Statistical Programming in SAS and R", 
+    "extra_info": "A"
+}

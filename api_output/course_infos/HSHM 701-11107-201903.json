@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50230/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An examination of the variety of approaches to the social and cultural history of medicine and public health. Readings are drawn from recent literature in the field, sampling writings on health care, illness experiences, and medical cultures in Asia, Latin America, Europe, and the United States from antiquity through the twenty-first century. Topics include the role of gender, class, ethnicity, race, religion, and region in the experience of sickness and healing; the intersection of lay and professional understandings of the body; and the role of the marketplace in shaping cultural authority, professional identities, and patient expectations.", 
+    "title": "Problems in the History of Med...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11107", 
+        "listings": [
+            {
+                "number": "701", 
+                "subject": "HSHM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "John Warner"
+    ], 
+    "long_title": "Problems in the History of Medicine and Public Health", 
+    "extra_info": "A"
+}

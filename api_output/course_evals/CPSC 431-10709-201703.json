@@ -1,0 +1,80 @@
+{
+    "crn_code": "10709",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            4,
+            1,
+            0
+        ],
+        [
+            0,
+            3,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A renewed understanding of different means to produce music - using SuperCollider as a compositional tool. ",
+            "\u00a0I learned some of the techniques used by algorithmic composers to generate computer music. ",
+            "\u00a0I learned the basics of Supercollider and how you can use it to create algorithmic music. "
+        ],
+        [
+            "\u00a0I was really excited to take this course - I have a lot of experience with both computer science and music, I was hoping to be interested in the intersection of the two. Unfortunately this class did not do that for me. I'm not exactly sure where this class went wrong. I really like professor Petersen, and think he is one of the best in the field. However, I continually left lecture feeling uninspired and confused. I think this class focuses too much on abstract concepts that could be more quickly understood in ways other than how they were presented. For example, I didn't think a one-hour summary of atonal music theory to people who may barely even know how to read music was the best way to explain that intervalic relationships between pitches are important. \r\nThis could have just been a mismatch of expectations, but I longed for this course to be more practical. At the end of the semester, I truly felt like I could not produce music with SuperCollider. While trying to assemble a piece for my final project, I felt like I had nothing to draw from from the semester. Right now, I think the way to approach this class is to find topics and applications of SuperCollider that interest you specifically, and to meet with Professor Petersen individually and continuously, because he really is an amazing resource. ",
+            "\u00a0I personally was not that interested by the lectures. More musical examples and analysis of what makes them tick would be ideal. ",
+            "\u00a0The course teaches things that are very very interesting, but many of the topics are discussed without application. It may be better to lessen the scope of the course as a survey course in algorithmic composition - perhaps ending with cellular automata.  This is understandably difficult, however, as the course must teach the idiomatic SuperCollider language in addition to its applications. In this sense, a student taking this course may benefit from a prerequisite course that simply teaches the language. ",
+            "\u00a0The concept behind this course is great and I love the 'vibe' of the classroom that Scott creates. We're often listening to music or appreciating the creations of our classmates. However, the actual topics covered didn't really leave me with many tools for generating my own algorithmic music (Markov chains and cellular automata being the extent). Additionally, Supercollider is a headache of a language that felt like an obstacle to learning, especially because we spent so much of the first half of the semester learning to use it. ",
+            "\u00a0One of the weakness is having to learn Supercollider, which slows down the class and limits what we can learn. But what you can do with it is very interesting so it's worth taking the time to learn it well. "
+        ],
+        [
+            "\u00a0I would not recommend this course to another student because I don't feel like I learned anything. It would be better just to learn SuperCollider on your own and to meet with Professor Petersen individually. ",
+            "\u00a0CPAR majors on the music track, this is a required class and it's great! Requires one to be self motivated, however, because you can somewhat check out and still be fine. If you let it, this class can be really enlightening and open up doors to some very cool methods of musical expression. ",
+            "\u00a0I would not recommend this course to another student. If you are a computer science or music person, you will be disappointed coming away without any new skills. ",
+            "\u00a0The class and its concepts are a little hard to wrap your head around but if the topic interests you, then it is a good class to take. "
+        ]
+    ]
+}

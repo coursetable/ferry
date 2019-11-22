@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50126/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introductory survey of the interaction between Catholicism and Western culture from the first century to the present, with a focus on pivotal moments and crucial developments that defined both traditions. Key beliefs, rites, and customs of the Roman Catholic Church, and the ways in which they have found expression; interaction between Catholics and the institution of the Church; Catholicism in its cultural and sociopolitical\u00c2\u00a0matrices. Close reading of primary sources.", 
+    "title": "The Catholic Intellectual Trad...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "WLH 116", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12348", 
+        "listings": [
+            {
+                "number": "280", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHI1\">YC History: Europe</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIF\">YC History: Politics &amp; Law</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIH\">YC HIST: Religion in Context</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIJ\">YC HIST: Soc Chng &amp; Social MVMN</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIK\">YC History: War &amp; Society</a></li></ul>"
+    ], 
+    "professors": [
+        "Carlos Eire"
+    ], 
+    "long_title": "The Catholic Intellectual Tradition", 
+    "extra_info": "A"
+}

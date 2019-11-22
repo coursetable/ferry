@@ -1,0 +1,74 @@
+{
+    "crn_code": "11595",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            2,
+            1,
+            0,
+            1
+        ],
+        [
+            1,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0First Year Seminar introduced me to a wide range of faculty I might not otherwise know. Kinda cool format. Also its good to get to know my cohort. "
+        ],
+        [
+            "\u00a0More attention to discussion dynamics and best practice norms. It would have been more helpful to learn about important papers in contemporary analytic philosophy, not the work of Yale faculty members. ",
+            "\u00a0This course could be improved with more direct, intentional feedback to students on an individual level. This course provides an opportunity to help students understand their strengths and weaknesses when they come to graduate school for the first time. Especially as regards philosophical discourse, there wasn't much in the way of discussion of norms and best practices, and especially feedback to students for how they were doing in discussions. ",
+            "\u00a0There are a couple different ways I can imagine First Year Seminar running well. The professor(s) could open up a real discussion at the beginning of the semester and we could all come to a consensus about what we want from the course and how it should be structured. Or they could make a decision and stick to it. But this year, it felt like Keith split the difference. He was openly ambivalent and indecisive about the structure of the course, and he *kinda* asked for our input, but not really. Left us feeling like we were on a ship without a captain. \r\n\r\nI think the problem is that professors normally have a lot of freedom to design their classes, but First Year Seminar is this one weird exception. It sounds like the faculty design it by committee. Which makes sense on some levels... But it can understandably make the class hard to teach, especially if the teacher is less than stoked about the content or structure. \r\n\r\n(I know I just did a lot of complaining without actually proposing a solution. Sorry.) "
+        ],
+        [
+            "\u00a0Sure. This is an important thing for first-year students to do. ",
+            "\u00a0This particular iteration? Not so much. But I think there are cool things you could do with other versions of a First Year Seminar. "
+        ]
+    ]
+}

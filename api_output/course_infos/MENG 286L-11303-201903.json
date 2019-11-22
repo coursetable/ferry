@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Experiments that involve either structural mechanics or materials science. Comparisons between structural theories and experimental results. Relationships among processing, microstructure, and properties in materials science. Introduction to techniques for the examination of the structure of materials.\n\n0.5 Yale College course credits", 
+    "title": "Solid Mechanics and Materials ...", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "HLH17 03", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "11303", 
+        "listings": [
+            {
+                "number": "286L", 
+                "subject": "MENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jan Schroers"
+    ], 
+    "long_title": "Solid Mechanics and Materials Science Laboratory", 
+    "extra_info": "A"
+}

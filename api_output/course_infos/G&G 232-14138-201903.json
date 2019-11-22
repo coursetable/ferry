@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 1, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: G&G 100, 110, or 115, or permission of instructor.", 
+    "description": "Introduction to sedimentary rocks as paleoenvironmental archives. Reconstruction of depositional environments and paleoclimatic conditions using geochemical and sedimentological tools. Topics include sedimentology, stratigraphy, basin analysis, diagenesis, and sedimentary geochemistry.\nPrerequisite: G&G 100, 110, or 115, or permission of instructor.", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14138", 
+        "listings": [
+            {
+                "number": "232", 
+                "subject": "G&G"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Earth Surface Processes", 
+    "extra_info": "C"
+}

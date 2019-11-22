@@ -1,0 +1,78 @@
+{
+    "crn_code": "10525",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            5
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            5,
+            1
+        ],
+        [
+            0,
+            2,
+            4,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot of patient diagnosis ",
+            "\u00a0This course introduced me into the method by which medical students and physicians diagnose patients. I was reminded of much of the information learned during my physiological systems course that I took during my first year. However, I also learned new material about these systems including the medical nomenclature used to describe the medical issues discussed. ",
+            "\u00a0For a graduate student, this course is really superb in taking concepts/material taught in other courses and approaching it through the lens of clinicians. This helps solidify the physiological concepts and also adds a component of the medical school curriculum graduate students usually do not receive. ",
+            "\u00a0As a graduate student  taking a medical school  course it was interesting to observe how  the medical community analyses labs and symptom in order to arrive at a diagnosis. ",
+            "\u00a0Critical evaluation of clinical data "
+        ],
+        [
+            "\u00a0This class does a good job at allowing graduate students to seamlessly transition into a medical school course. Both Dr. Lister and Dr. Thoreen readily engaged with students and effectively explained difficult concepts.\r\n\r\nA weakness of the course would be the inconsistency timing of the conferences. ",
+            "\u00a0Strengths: unifies physiological concepts and principles in a way in which we see how they are used by clinicians to make a differential diagnosis, decide treatment and assess health outcomes; very engaging; graduate and medical students bring different perspectives to the conversation; taught by experts in the lab and in the clinic\r\n\r\nWeaknesses: sometimes the information may be overwhelming or too much at once, but modules are designed so that there is some overlap "
+        ],
+        [
+            "\u00a0I would recommend this course to any graduate student interested in understanding how the discoveries made in the laboratory are used to diagnose and treat patients. From this course, the importance of an in depth understanding of cell biology in the successful diagnosis and treatment of diseases is made apparent. ",
+            "\u00a0Yes - this course makes you think about the application of concepts learned in previous lectures and showcases the complexity of human physiology and how clinicians sift through it in order to treat a condition ",
+            "\u00a0yes "
+        ]
+    ]
+}

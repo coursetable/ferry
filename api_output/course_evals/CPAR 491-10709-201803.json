@@ -1,0 +1,70 @@
+{
+    "crn_code": "10709",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to work with a broad range of tools relevant to my project. This involved learning how to code in Python, how to use NLTK, how to work with graphics modules, and how to use sound generation modules. ",
+            "\u00a0Project management, planning, and execution. "
+        ],
+        [
+            "\u00a0Strength: I loved the flexibility and freedom with which I was able to pursue my project. It was so rewarding to see my project grow from an idea in my head to a set of algorithms with tangible output.\r\nWeakness:  I wish the course requirements were a bit more clear. For example, I was unsure at the beginning of the course when/how to submit my project proposal. "
+        ],
+        []
+    ]
+}

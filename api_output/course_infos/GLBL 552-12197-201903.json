@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50024/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course examines contemporary and global issues in Asia (east, southeast, northeast, south), in a historical and interdisciplinary context that includes international law, policy debates, cultural issues, security, military history, media, science and technology, and cyber warfare.", 
+    "title": "Asia Now: Human Rights, Global...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LUCE 202", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12197", 
+        "listings": [
+            {
+                "number": "552", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jing Tsu"
+    ], 
+    "long_title": "Asia Now: Human Rights, Globalization, Cultural Conflicts", 
+    "extra_info": "A"
+}

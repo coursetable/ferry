@@ -1,0 +1,82 @@
+{
+    "crn_code": "21203",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            4
+        ],
+        [
+            1,
+            1,
+            0,
+            2,
+            3
+        ],
+        [
+            1,
+            0,
+            1,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            3
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Had to execute independent research, and then write up and present the results. ",
+            "\u00a0I learned about some modeling techniques (from actually doing my thesis), but I didn't learn any skills/insights /knowledge from the meetings of the class or class assignments. \r\n\r\nThat only pertains to the class though; my regular meetings with my advisor were incredibly informative and educational. ",
+            "\u00a0I learned how to do a research project from start to finish. Asking a question, doing research, analyzing, writing, etc. ",
+            "\u00a0` ",
+            "\u00a0I learned how to write a 50+ page paper and how to effectively research and present research to others. "
+        ],
+        [
+            "\u00a0I think the senior essay program was very well structured. I generally enjoyed the weekly meetings although towards the end I sometimes felt like we didn't accomplish much during them. ",
+            "\u00a0I think this course met for too long, for too often. It felt like I was scrambling to have some sort of submittable piece of a document for each meeting of the class, but actually doing a research project (or at least, the kind I was doing) doesn't produce work in a steady stream like that. So I ended up spending time each week trying to figure out something to submit for the weekly submission, rather than actually working on my thesis. \r\n\r\nAgain, that only pertains to the weekly meeting of the class. The real strength of the Linguistics senior essay is how amazing the advisors are. I essentially had an in-depth class in the topic of my research each week. ",
+            "\u00a0fewer course meetings-- the meetings weren't always useful because we met so often (and for so long!)\r\nI think once a week for an hour suffices ",
+            "\u00a0It's as good as it needs to be. ",
+            "\u00a0It was helpful to have some intermediate deadlines and give each other comments as we wrote. "
+        ],
+        [
+            "\u00a0It's required. ",
+            "\u00a0` ",
+            "\u00a0You'll take it if you need to take it. ",
+            "\u00a0Of course I recommend this course if you are a linguistics major! Writing a thesis was a lot of work, but also a lot of fun and incredibly rewarding in the end. "
+        ]
+    ]
+}

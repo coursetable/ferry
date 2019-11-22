@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: DUTC 120 or equivalent. Course taught through distance learning using videoconferencing technology from Columbia University. Enrollment limited; interested students should e-mail minjin.hashbat@yale.edu for more information.", 
+    "description": "Continued development of reading,\u00c2\u00a0writing, and speaking proficiency in Dutch. Students review and improve grammar skills, expand their vocabulary, read newspaper articles, and watch and listen to Dutch newscasts.\nPrerequisite: DUTC 120 or equivalent. Course taught through distance learning using videoconferencing technology from Columbia University. Enrollment limited; interested students should e-mail minjin.hashbat@yale.edu for more information.\n\n1.5 Yale College course credits", 
+    "title": "Intermediate Dutch I", 
+    "skills": [
+        "L3"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 18
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12151", 
+        "listings": [
+            {
+                "number": "130", 
+                "subject": "DUTC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Intermediate Dutch I", 
+    "extra_info": "A"
+}

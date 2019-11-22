@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "782-01, Accounting Doctoral Student Pre-Workshop Seminar; 782-02, Financial Economics Doctoral Student Pre-Workshop Seminar; 782-03, Marketing Doctoral Student Pre-Workshop Seminar; 782-04, Organizations and Management Doctoral Student Pre-Workshop Seminar; 782-05, Operations Doctoral Student Pre-Workshop Seminar.", 
+    "title": "PhD PreSeminar: PhD PreSeminar...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "EVANS 4200", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12619", 
+        "listings": [
+            {
+                "number": "782", 
+                "subject": "MGMT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Paul Goldsmith-Pinkham", 
+        "Alexander Zentefis"
+    ], 
+    "long_title": "PhD PreSeminar: PhD PreSeminar:Fin Econ", 
+    "extra_info": "A"
+}

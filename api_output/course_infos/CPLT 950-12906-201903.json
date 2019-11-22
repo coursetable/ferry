@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "This seminar is an introductory overview of Latin American gender debates and feminist traditions since the turn of the twentieth century up to today\u2019s conversations around gender identity, human rights, gendered violence, and decolonial feminisms. The seminar consists of three basic units: (1) women\u2019s social movements from anarchism to the Mothers of the Plaza de Mayo, to indigenous feminisms and the regional debate around practical and strategic gender needs; (2) local theories of patriarchy and gendered violence; (3) new gender identity laws, the discussion around sexual diversity and sexual difference, and the transgender movement today (this unit includes the analysis of one autobiography, two literary texts, and four cinematic representations). We study texts written in Latin America, at times read in comparison with some European and North American texts, and we look at their migration outside the region. The majority of texts are in Spanish, though there will be as many translations as possible for those who read more comfortably in English. Seminar meetings are conducted in Spanish.", 
+    "title": "Latin American Gender Debates ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 19, 
+            "location": "CO451 B-04", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 20
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12906", 
+        "listings": [
+            {
+                "number": "950", 
+                "subject": "CPLT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Moira Fradinger"
+    ], 
+    "long_title": "Latin American Gender Debates and Feminist Traditions", 
+    "extra_info": "A"
+}

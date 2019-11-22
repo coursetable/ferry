@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49599/assignments/syllabus", 
+    "requirements": "Prerequisite: MATH 115 or equivalent.", 
+    "description": "An introduction to multivariable calculus focusing on applications to engineering problems. Topics include vector-valued functions, vector analysis, partial differentiation, multiple integrals, vector calculus, and the theorems of Green, Stokes, and Gauss.\nPrerequisite: MATH 115 or equivalent.", 
+    "title": "Multivariable Calculus for Eng...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WTS A60", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13699", 
+        "listings": [
+            {
+                "number": "151", 
+                "subject": "ENAS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Vidvuds Ozolins"
+    ], 
+    "long_title": "Multivariable Calculus for Engineers", 
+    "extra_info": "A"
+}

@@ -1,0 +1,47 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49978/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Physical processes that control Earth's atmosphere, ocean, and climate. Quantitative methods for constructing energy and water budgets. Topics include clouds, rain, severe storms, regional climate, the ozone layer, air pollution, ocean currents and productivity, the seasons, El Ni\u00c3\u00b1o, the history of Earth's climate, global warming, energy, and water resources.", 
+    "title": "Atmosphere, Ocean, and Climate...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "ESC 110", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11041", 
+        "listings": [
+            {
+                "number": "140", 
+                "subject": "G&G"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Ronald Smith", 
+        "Juan Lora"
+    ], 
+    "long_title": "Atmosphere, Ocean, and Climate Change", 
+    "extra_info": "A"
+}

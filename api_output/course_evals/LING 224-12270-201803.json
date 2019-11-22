@@ -1,0 +1,95 @@
+{
+    "crn_code": "12270",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            2,
+            2,
+            5,
+            3
+        ],
+        [
+            1,
+            2,
+            1,
+            6,
+            4
+        ],
+        [
+            1,
+            2,
+            3,
+            1,
+            6
+        ],
+        [
+            2,
+            2,
+            4,
+            4,
+            2
+        ],
+        [
+            0,
+            1,
+            4,
+            5,
+            4
+        ],
+        [
+            0,
+            2,
+            6,
+            3,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Lots of set theory, theory of computation, automata. Very useful math/comp. sci things, and a few linguistic definitions I vaguely knew but had never really understood. ",
+            "\u00a0SO MUCH! We began the semester with some general foundational discrete math knowledge and moved on to theory of computation after the midterm. I didn't have much training in constructing rigorous mathematical proofs and was not really exposed to areas of math beyond \"(just) numbers and calculations\" before this class, so it really took me a while to get comfortable with being inundated with unfamiliar symbols and lingos. That said, I am really glad I stuck it out because it was SO WORTH IT. I would say the most valuable things I learned in this class was were 1) a better understanding of the role formal systems play in scientific endeavors, and 2) (practical) intuitions regarding how to approach formal systems  how to use formal specifications to characterize things like the syntax and semantics of natural language, how to unpack and understand specifications for an unfamiliar formal system, etc. Besides learning about sets and lattices and groups and trees and algebras and grammars and automata, this class really made me think about questions like \"what is math\" and \"what is math for\"  well, granted, these questions were never *explicitly* addressed, but being immersed in \"abstractions\" for an extended period of time kind of forces you to think about what exactly it is that you are doing and why you are doing it :) Putting symbolic systems and representation in the context of the study of mental capacities is even more fascinating and I thank Prof. Frank for showing us what it's like to \"build a world from ground up\". ",
+            "\u00a0Learned mathematical structures applicable to language, then learned about math from the perspective of linguistics (different types of trees, mathematical differences between types of languages, etc.) ",
+            "\u00a0I was exposed to the fundamentals of linguistics from a mathematical perspective. ",
+            "\u00a0I learned how to understand and use concepts and notations from set theory. I learned about different representations of linguistic structures, and how to think about language mathematically. ",
+            "\u00a0This course gives an overview of different models for representing and analyzing formal languages. The first half of the course builds up a mathematical foundation from the ground up (starting with set theory, and working our way up to relations, algebras, and groups), and the second half applies these to define and reason about grammars and automata. ",
+            "\u00a0This class is a good introduction to fairly straight-forward, proof-based math for those who have never seen it. ",
+            "\u00a0We learned how to describe and construct the logical machinery that is used to describe language. In order to do this we spent the first half of the course learning mathematics. ",
+            "\u00a0I learned a large amount of how mathematics could be applied greatly to areas such as linguistics and understanding of language. "
+        ],
+        [
+            "\u00a0Excellent lecturer, fascinating material (like ridiculously so), problem sets were fun but a bit long and it was confusing that they were assigned on random days. ",
+            "\u00a0Strengths: so much knowledge! The progression from one topic to the next was generally pretty well structured, and Professor Frank is a brilliant lecturer with amazing eloquence. He also brings a lot of energy and passion to the classroom, which I really appreciated and enjoyed.  \r\n\r\nWeaknesses: I understand that the grading of the psets must have been a time-consuming task but it generally took longer than I would have liked and made it a little hard to review the material and reinforce the understanding alongside learning new stuff. I also wish we had talked more about the relevance of the material during the first half of the semester because I think quite a few of us found ourselves confused about the word \"language\" in the course title. ",
+            "\u00a0The course was remarkably disorganised, and couldn't have done less to facilitate student learning. The presentation of material was unmotivated, uninspiring and disinterested. While it is clear that Bob Frank is a lovely person who cares very much about the material he teaches, he couldn't have failed more spectacularly at getting his students to care too. The workload of the course, which began at a very reasonable level, in the second half of the course was out of control. The professor simply lost all judgement of the abilities of the students and gave assignments clearly outside the students' abilities. The professor's spiral out of control was evinced in his basic failure to constrain his lecture to within the bounds of the classes scheduled time. His incessant tendency to go over time shows his failure to understand that his students have other things to do and other interests besides his class and is symptomatic of his general inability to read the classroom. A more honest evaluation of where the students stood on the material in the second term and tailoring problem sets to actually reinforce concepts students had learned instead of making them solve problems on ideas briefly mentioned in class or worse obtuse linguistic concepts would be a strong start towards making this course a better one ",
+            "\u00a0The course moved pretty quickly and sometimes without establishing strong background. Grading criteria weren't clear.\r\nIt's a good mix of math and language, though, and covers interesting topics. ",
+            "\u00a0I think the course is fairly well-constructed. ",
+            "\u00a0Overall, this was a fantastic class.Professor Frank is an engaging lecturer, and the class as a whole seemed very self-contained and satisfying: there was no prerequisite knowledge that was expected, and Professor Frank was able to draw many neat connections between math and linguistics. The problem sets in this class were also extremely useful and informative, and helped to emphasize what was covered in class.\r\n\r\nMy one criticism would be that a lot of time was spent on building up mathematical tools which were not really used in the latter half of the course. It's a lot to try to fit in to one semester, so it might have been more useful if instead less time was devoted to the math half (covering fewer topics, but more in depth), and more time was spent on connecting the math to the linguistics in the second half of the course. ",
+            "\u00a0Overall, I think the information comtained in the course is interesting, but I felt like there were times when it could have moved more quickly. That may just be because I come from a math background. ",
+            "\u00a0The course held a large breadth of content while also holding a lot of depth in content. The problem sets and exams were very challenging but furthered my understanding of the content and demonstrated to me interesting applications and extensions of the material we learned in class. "
+        ],
+        [
+            "\u00a0100%, as long as you are even a bit interested in formal systems (i.e. math, computation) the material is amazingly cool and a lot of it is not available in any single other class. by far my favorite math class and learned lots of information processing and computation in general ",
+            "\u00a0If you like formal systems  if you are fed up with fuzziness and lack of precision and find yourself craving rigor  you'll have a great time in this class. I think this is an important class to take for CogSci/Linguistics majors who are interested in gaining a deeper understanding of what \"representation\" means. On the other hand, if you think of math as a tool to solve tangible, ~practical~ problems (and are not really interested in having that view changed), then I'm not sure you'll enjoy this class. ",
+            "\u00a0While the material of this class is in principle very interesting, I would not recommend this class to anybody unless there is clear evidence that the instructor has engaged in a fair amount of revaluation and fixed the structural problems in the teaching of the class ",
+            "\u00a0Not unless you have a strong background in math or already know at least half the material ",
+            "\u00a0Yes; this class expands your knowledge of two fields simultaneously, and the professor is genuinely excited about teaching it. ",
+            "\u00a0If theoretical math and its applications interest you and you are looking for a challenge I would recommend this course. If mathematical thinking is not really your thing, I wouldn't recommend it. ",
+            "\u00a0Absolutely. If you come from a math background you may find the class going a little slow in the first half, but the second half will be very rewarding. ",
+            "\u00a0Although Professor Frank is a great lecturer, the content of this class isn't the most interesting, particularly in the first half of the course. The psets can be quite time-consuming even when the content doesn't necessarily merit it. ",
+            "\u00a0I would recommend this class to any student who interested in learning about linguistics from a mathematical perspective. ",
+            "\u00a0I had a lot of fun taking the class and learned a lot. "
+        ]
+    ]
+}

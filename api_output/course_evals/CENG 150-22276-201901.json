@@ -1,0 +1,138 @@
+{
+    "crn_code": "22276",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            2,
+            6,
+            12,
+            7
+        ],
+        [
+            0,
+            1,
+            6,
+            11,
+            11
+        ],
+        [
+            0,
+            1,
+            5,
+            12,
+            11
+        ],
+        [
+            0,
+            0,
+            3,
+            12,
+            13
+        ],
+        [
+            1,
+            6,
+            11,
+            7,
+            4
+        ],
+        [
+            1,
+            13,
+            8,
+            6,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Dimensional analysis, mass/energy balance, and general intro to chem. eng.   It gives a nice look at a few different areas of the major. ",
+            "\u00a0I learned about dimensionless variables, thermodynamics, transport phenomenon, reactors, steady-state problems, and more. I learned basic dimensionless versions of classic chemical engineering problems. ",
+            "\u00a0Basic mathematical modeling to common engineering problems, such as water level in a tank, heat exchanger, batch reactors, kinetics, etc. ",
+            "\u00a0I learned the basics of fluid mechanics, reaction kinetics, heat transfer, and other chemical engineering topics. I also learned how to mathematically model physical phenomena and non-dimensionalize the models for further analysis. ",
+            "\u00a0I learned how to nondimensionalize and solve equations. I was also introduced to transport phenomena, thermodynamics, chemical reactions, and reactors. ",
+            "\u00a0It truly an overview of the entire Chemical Engineering major. You also learn the mindset behind all of the various types of problems and ChemE classes ",
+            "\u00a0This course was a good way to refresh my memory on advanced algebra that I forgot over the years. It is also a great introduction into the major topics of chemical engineering, and teaches problem solving and analysis from a practical engineering point of view. In short, it taught me how to think like an engineer, and I could apply the skills I learned here to other classes. ",
+            "\u00a0Nondimensionalization, understanding of basic engineering principles ",
+            "\u00a0In the course, you will learn about dimensionless variables and their uses in engineering, reactors, some basic thermodynamics, and a little transport phenomena. ",
+            "\u00a0Taking this course gave me a glimpse of what the chemical engineering major entails. The concepts discussed were unlike anything I had been exposed to before. Though I initially had a lot of difficulty with the content of the class, I enjoyed learning this topic and feel that I have a much better understanding of the material now. ",
+            "\u00a0I learned about dimension less variables, differential equations for chemical reactions, heat transfer, thermodynamics, transport phenomena. ",
+            "\u00a0It was a useful introduction to engineering analysis, thinking through thermodynamics, reaction systems etc. Most of the class was centered on thinking through how to render these problems through mathematical modelling. We worked with dimensional and dimensionless analysis, understanding how to scale-up experimental scenarios. ",
+            "\u00a0In this course I gained a broad overview of the chemical engineering major. The main theme of the class is looking at a physical engineering problem, identifying the information we know/don't know, then formulating a mathematical equation from balance equations to model the situation. The class has helped me to look at situations from a broad perspective and I have developed more of an intuition for physical situations and how to apply chemistry and physics principles to the situation. \r\nWe learned about mass and energy balances, chemical reactors, flow reactors, thermodynamics, scale-up problems, and much more. A major focus that was emphasized throughout the course was dimensionless variables, including how to manipulate equations to be in terms of dimensionless variables, the importance and value of doing this, and dimensional analysis in general. ",
+            "\u00a0I learned a great amount of true improvisation in engineering, problem solving in different scenarios that takes critical thinking. ",
+            "\u00a0Intro to the method of solving engineering problems, with a focus on problems related to the Chemical Engineering field (e.g. liquid flows, heat transfers, chemical reactions, diffusion of species, etc.)\r\n\r\nIf you are unsure what engineering actually consists in, this is a great class to get some concrete insights into the field ",
+            "\u00a0A broad understanding of different branches of chemical engineering along with the mathematical processes and models that govern systems. ",
+            "\u00a0Was given an overview of the types of problems and disciplines a chemical engineering student studies and the methods one uses to tackle the problems. ",
+            "\u00a0This course was outlined by a very elusive yet crucial approach to solving chemical engineering problems - nondimensionalization. Although initially I did not understand its usefulness, the professor quickly demonstrated its purpose in various practice problems, and the students soon thereafter understood its use. The use of dimensional analysis was also paramount, and it is something that I have been employing in my other courses. ",
+            "\u00a0Learned ways we could improvise engineering mathematical problems. ",
+            "\u00a0In this course you will learn the basics of the topics in chemical engineering such as liquid flow, thermodynamics, entropy, and transport phenomena. ",
+            "\u00a0I gained a lot of skill in creating a mathematical model for various engineering problems, such as water flowing in and out of a tank or a piece of metal being heated. Intuition in creating this models was the most significant thing I gleaned from this course. ",
+            "\u00a0I gained an introduction into chemical engineering and the use of calculus/multivariable calculus based modeling. I developed an insight into the applications of chemical engineering. ",
+            "\u00a0This course primarily serves as a good overview of chemical engineering topics. But even if you aren't a chemical engineering major, I think you can still get a lot out of the class. I learned a lot about mathematical modeling and engineering intuition, which I think is very useful for all types of majors (especially economics majors like myself). Professor Loewenberg is great and will definitely help you get a lot out of this course! ",
+            "\u00a0Chem e, water/volume flow and diff eq, thermodynamics, transport phenomena, basics of math modelling "
+        ],
+        [
+            "\u00a0The course is laid out well.  It is much easier if you have taken dif. eq. or multi. but they are not necessary.  Loewenberg teaches well to people with only single variable calculus background, and you should have no trouble.   It introduces interesting and useful strategies for model analysis and application, without making anything too complicated.  Organization of the class was a bit shaky, but this was the first implementation of the course.  The professor was very open to feedback and the course will likely be even better next year.  Great course. ",
+            "\u00a0Strengths-\r\n-Good pacing\r\n-Material was relevant as an introductory course to chemical engineering\r\n- Problems approached from different ways\r\n\r\nWeaknesses-\r\n-Often was confusing\r\n-Sometimes things seemed unrelated or unimportant\r\n-Problem Sets required going to recitation section to complete\r\n-Never really saw how the \"Improv\" part of the course played in ",
+            "\u00a0This course is very interesting, but could be organized in a clearer fashion. ",
+            "\u00a0This class served as a great preview for what the chemical engineering major has to offer. Its small size and participatory nature made students feel engaged, comfortable, and excited about the content. It could be improved with a little more lesson planning ahead of time, but that is expected for any new course. ",
+            "\u00a0Strengths:\r\n-By far, the best part of the course were Dr. Loewenberg and our TA, Rodrigo. They cared so much about us learning the material and their dedication to our learning went above and beyond any of my expectations.\r\n-The subject matter is very interesting and concretely relevant\r\n-The concept of introducing all of these advanced chemical engineering topics in this way is a great idea\r\nWeaknesses:\r\n-There wasn't a clear separation between theory and examples, so it was hard to know how to start a problem, even if we understood what was going on in theory. I think that this class would work very well with a math class structure (e.g. ENAS 194 had a \"theory-example-try your own example-go over together-practice on the pset\" structure)\r\n-The textbook was not helpful at all, since it was quite different in style from class ",
+            "\u00a0Strengths: Very good overview of what Chemical Engineering will be at Yale\r\n\r\nWeaknesses: Textbook is very bad, transport and thermodynamics towards the end of the class create a massive difficulty spike at the end of the class ",
+            "\u00a0Lecture was engaging and Professor Loewenberg was always open to adjusting the course to fit our needs. The course material gave a great overview of the topics in chemical engineering. ",
+            "\u00a0I think this course could benefit from a bit more structure because it sometimes felt that we spent far more time on certain subjects than others. ",
+            "\u00a0There were a lot of structural problems at the beginning of the course, but these have improved significantly over the duration of the class. I also think that secondary texts would be useful in developing understanding when the professor or TFs are not available. I would have also liked more practice problems, but since this was the first time the class was conducted, I don't think this will be an issue when the course is offered again. ",
+            "\u00a0Michael was a really amazing professor who really cares about his students and did everything to always help. The course was sometimes too specific to the major and not as improvisational as I thought it would be. The techniques we learned were interesting and there wasn't much content memorization, it was really more about learning how to solve problems, which was cool. ",
+            "\u00a0Professor Loewenberg and our TA Rodrigo were both really really committed to the course and provided plenty of help throughout. Whenever I had a problem or question I always felt like I could go to either of them and that really helped with my learning throughout the course. Based on the brief for the class, I had thought (or hoped) that the class would include more elements of exploration, of using the methods we've developed for modelling chemical engineering related situations to think about how we might model other processes that might not be conventionally approached this way. I'd be interested in thinking through how to model choreography in that way for instance. The class didn't feel exploratory in that aspect. It might also have been fun to end with a group/ individual project where we were creating something. But for what the class did end up setting out to do, I thought it did well. It was a good introduction to engineering analysis and the concepts that were taught were taught well. Professor Loewenberg was responsive to feedback and the PSETs were always a useful way to consolidate our learning. ",
+            "\u00a0This year, the course was brand new- they had previously offered an introduction to chemical engineering, but for this year they completely redid the curriculum and renamed the course. The novelty of the course introduced both weaknesses and strengths. \r\nFirst, the weaknesses. Initially, the course lacked direction and focus. Professor Loewenberg knew what he wanted to teach,  he just hadn't thought about how he would actually go about teaching it. Another weakness was the miscommunication about prerequisites. the course was listed to have only MATH 112 (Calc 1) as a prerequisite. However, throughout the course we were required to solve differential equations, take partial derivatives, and work with other higher level math concepts. For students who have not taken higher level math courses, this was a little overwhelming. \r\n\r\nHowever, the strengths of the course are directly in response to the weaknesses. Throughout the course Loewenberg was very perceptive to feedback from the students, even meeting with every single student after the first couple weeks to hear what we thought of the course so far. We communicated that we would like to have more big-picture direction for the course, and he quickly put together an in-detail syllabus for the entirety of the semester. He also realized that not all students had taken differential equations, so he taught these concepts in lecture, but was sure to design the tests in such a way that the problems did not require such experience with higher level math. \r\nAnother strength of the class was that it exposed us to the types of courses we will be taking farther along in the major, giving an overview of the entire major. ",
+            "\u00a0It was a very good course. Professor Loewenberg accepted a ton of student feedback, making the course easy to progress. ",
+            "\u00a0The course has a good pace: if a topic requires more time because students have more difficulty or questions, the professor will slow down and take the time to explain and make sure everyone is on board.\r\n\r\nThe course covers a good variety of topics, giving the students what feels like a good overview of the Chemical Engineering field.\r\n\r\nThe expectations are realistic and the course is not stressful.\r\n\r\nThe problem sets are interesting and are built in a way that allows students to learn things on their own while doing them. ",
+            "\u00a0Don't know how it could be improved. ",
+            "\u00a0Recitations are a major strength for the course. It is not atypical for students to have a look of intimidation on their face when they initially open their problem sets, but recitation helps clear up any confusion and start up problems for students to complete ate home. Recitations twice a week each for two hours sufficed for me and getting problems cleared up and completed. The professor and TA's office availability was also emphasized throughout the course, allowing students to drop by at almost any time to ask questions related to the course or even to just catch up. The only minor weakness that I could think of would be the lack of a completed syllabus at the start of the course, but the professor constantly made vocal his plans for the course and never threw any curve balls at us. Considering it was this professor's first time teaching the course, the lack of a completed syllabus was totally understandable. ",
+            "\u00a0Problem sets could be shorter. ",
+            "\u00a0I think the strengths of the course were the eventual introduction of more student interaction which was absent in the first half. The section to this course is also extremely helpful and I would highly suggest attending them. Also, saying the topics being covered in each class is a strength since topics change quickly. This course could still be improved by limiting the amount of times topics in the course change drastically especially in the same class. Also, I think that even more student involvement might be helpful. ",
+            "\u00a0Although for the first part of the course, I found the material to be difficult to grasp, Prof. Loewenberg was great about taking feedback and making improvements resulting in a class that I truly believe anyone from any major would be able to take and do well in. There are a generous amount of resources and help and both the professors and TAs make themselves available as much as possible. The many topics are organized in a way that you can learn each as beginner while still improving skills that are necessary to tackle very complicated problems. The strengths are definitely the hard work and genuine care for the students on the side of the staff and the only weakness would be the fact that the course was brand new this year and did not have a set way of being organized. With student feedback and the resulting changes made by the professor however, I don't feel that this was much of a weakness in the end. I think that this class will only continue to improve moving forward. ",
+            "\u00a0The biggest strength of the course was the accessibility of the professor and TF. However, the problem sets were too difficult to every complete without the TF's help. I think a little more connection between problem sets and lectures would be helpful. Additionally, the movement from one topic of the course to the next seemed a little erratic and it was difficult to tie things together. ",
+            "\u00a0This course offers recitation which is very valuable in grasping the material which can be difficult to understand at times. Lectures are organized by topics and Professor Loewenberg really engages students to ask for help and work in small groups throughout tough problems. Only improvement would be to offer exam prep resources sooner before exams. ",
+            "\u00a0The course was interesting and very well taught. I think the intention to make you think rather than do a bunch of unneeded math is a big strength. The only weakness is that the class was a little disorganized. "
+        ],
+        [
+            "\u00a0Yes.  Very good.  If you're not interested in chemical engineering, it's not going to mean as much to you, but anyone who doesn't mind a little basic math and wants to learn about engineering will love it. ",
+            "\u00a0Yes, I would recommend this course because it was interesting and was a good introduction to chemical engineering. It was slow enough that those of all levels of knowledge coming in could understand, and there are lots of resources for help. Also, the workload is fairly small. ",
+            "\u00a0I would recommend this course to any student who's interested in modeling and engineering. ",
+            "\u00a0I would recommend this class to anyone considering an engineering major. The class is engaging and caters to all levels of students. ",
+            "\u00a0I think this course is still in the process of being developed, but it has potential to be a truly great course for both STEM and non-STEM majors alike. Hopefully this will come to pass in a few years! ",
+            "\u00a0If you are a ChemE major this a great class to start off with first year as it covers everything you will be doing.\r\nIf you are looking for an easy Sc credit and don't care that you might be kinda bored, take the class ",
+            "\u00a0Yes, if you are considering majoring in any form of engineering, take this class. It is a requirement for ChemE, but may count as an elective for others. If you have a strong math background, it will be quite easy. ",
+            "\u00a0Yes! Even if just to get to know Prof. Loewenberg, take this class. ",
+            "\u00a0Yes because I think this course gives a good base for courses taken in the chemical engineering major. ",
+            "\u00a0Yes. If you are not in the chemical engineering major it might seem a bit too specific sometimes but overall you will learn a lot about the engineering way of thinking which I thought was interesting. ",
+            "\u00a0Yes, but perhaps the brief for the class could be updated to better reflect the tone of the class so students have a better idea of what the class will be like! I definitely think the class is accessible to non-majors but it should be clear that the class is centered on learning things that are pretty foundational to regular chem e techniques and is also primarily majors/ prospective majors. ",
+            "\u00a0Yes, I would recommend this course to those who like math and engineering. However, the concepts are pretty specific to chemical engineering, so I would recommend this mainly to chemical engineering majors, despite this being a major requirement. ",
+            "\u00a0Absolutely, a very interesting problem solving class. ",
+            "\u00a0Yes! If you are confused about what engineering is, this is a great course to elucidate that. \r\n\r\nOr if you are a prospective chemE major, this is a great course to be introduced to the topics you will spend the next few years studying in great detail. Also a great way to get to know personally your future adviser. ",
+            "\u00a0I would definitely recommend this to other students, Professor Loewenberg is an excellent teacher who cares about both the class and students. The material is interesting and no prior knowledge of modeling is required. ",
+            "\u00a0Would definitely recommend for other engineering students as a good way to get familiar with engineering problems. I think this course is also a good way to learn about generally what engineers do as a non engineering student. ",
+            "\u00a0I would definitely recommend this course to another student, even anyone outside the STEM field. Its a great opportunity to shift from being on the outside looking into an engineer's life and having the ability to apply some of your ideas into the world of engineering. The support system placed by this class is nothing short of amazing, and it really helped keep students on track. ",
+            "\u00a0I would. ",
+            "\u00a0I would highly recommend this course to all students even if they aren't pursuing chemical engineering. It is a very good option for a science credit especially since it doesn't require too in depth math and Professor Loewenberg and the TA Rodrigo are very helpful. ",
+            "\u00a0I would highly recommend this course to anyone with an interest in engineering or science (or even anyone who wants to dip their toes into either subject). Although it is not necessarily easy material, with good attendance in both lecture and recitation sections anyone can do well and learn quite a bit in this class even if they are unfamiliar with engineering topics. Not to mention that the class is extremely interesting, a lot of fun, and a good challenge. ",
+            "\u00a0I would recommend this course only if as a requirementI don't really see the benefit of taking it for anyone who is not a chemical engineering student. ",
+            "\u00a0I would recommend this course because it is intellectually challenging and offers many resources to help you tackle the difficult but rewarding and interesting course material. Also it is accesible to any major, not just chemical engineering majors. ",
+            "\u00a0Yes, definitely take this class! A great way to get some engineering insight and knowledge of mathematical modeling. The homework and tests are very fair and there are a ton of resources to help. Great for all majors and a good elective for engineering majors. ",
+            "\u00a0Yes! great intro to chemical engineering "
+        ]
+    ]
+}

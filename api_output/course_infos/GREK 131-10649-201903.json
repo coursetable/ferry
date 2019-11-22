@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50080/assignments/syllabus", 
+    "requirements": "Counts as L4 if taken after GREK 141 or equivalent.", 
+    "description": "Close reading of selections from classical Greek prose with review of grammar.\nCounts as L4 if taken after GREK 141 or equivalent.", 
+    "title": "Greek Prose: An Introduction", 
+    "skills": [
+        "L3"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "LORIA 258", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10649", 
+        "listings": [
+            {
+                "number": "131", 
+                "subject": "GREK"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Pauline LeVen"
+    ], 
+    "long_title": "Greek Prose: An Introduction", 
+    "extra_info": "A"
+}

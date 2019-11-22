@@ -1,0 +1,105 @@
+{
+    "crn_code": "20793",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            3,
+            8,
+            13,
+            5
+        ],
+        [
+            0,
+            1,
+            10,
+            9,
+            10
+        ],
+        [
+            0,
+            0,
+            6,
+            12,
+            12
+        ],
+        [
+            0,
+            0,
+            10,
+            12,
+            7
+        ],
+        [
+            0,
+            2,
+            15,
+            11,
+            1
+        ],
+        [
+            0,
+            3,
+            22,
+            4,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A thorough theoretical overview of Econometrics. Techniques like OLS regression, IV regression, TSLS regression, Fixed Effects estimation, Binary Choice estimation, Panel Data estimation, pooled OLS, etc. This course also nicely incorporated real world applications, including the analysis of econometric papers and the utilization of STATA. After this class, you should definitely be able to talk about all things theoretical OLS in your sleep. ",
+            "\u00a0I learned the mathematics of OLS, IV/2SLS and Panel Methods, including heteroskedasticity robust estimators. I also learned how assumptions affect the consistency of estimators. ",
+            "\u00a0I feel confident that I could pick up a newspaper, see economic analysis, read the paper that it comes from, and then question the validity of the methods used intelligently. Yuichi has really opened up the field of Econometrics for me: I used to conceive of things in purely theoretical terms, but learning the theory behind the methods used makes me appreciate the difficulty of getting data, the importance of the conclusions we draw and how we draw them, and the creativity behind the mathematics. ",
+            "\u00a0Learnt about different kinds of econometric models and how to apply them in different situations. ",
+            "\u00a0Developed good understanding of econometric principles. ",
+            "\u00a0I learned a lot of econometric theory, which I really valued. I learned how to be rigorous about assumptions in econometric modeling. And I got some insight into a handful of landmark econometrics papers. ",
+            "\u00a0Very useful econometrics theory ",
+            "\u00a0I learned various techniques for linear regression, and I feel like I am now able to read an economics paper and understand the methodology and results tables. ",
+            "\u00a0Learned applicable econometric skills. ",
+            "\u00a0Learned a lot about fundamental econometrics, building casual models and their predictors, whether those predictors are consistent with actual population numbers, reasons why we may have endogeneity bias and how to deal with them. "
+        ],
+        [
+            "\u00a0One of the strongest courses in the Economics department. Very informative lectures, engaging professor, fair problem sets and fair open note exams. Two downsides are grading and note availability. If you need to miss class, you're basically out of luck, as the online notes are quite useless. Professor Kitamura draws everything right out of lecture, so GO TO CLASS NO MATTER WHAT. Also, the curve is horrendous. It would be better if this class were graded on an absolute scale, since everyone is an Econ/Math major and gets a 100 on everything. ",
+            "\u00a0This course is effective in teaching students the mathematics of econometrics. The instructor used papers for pedagogical purposes in class, but perhaps homeworks could have included the analysis of published papers.\r\n\r\nStudents majoring in Econ/Math or Economics should be allowed to take a more advanced graduate econometrics course instead of this one. I had taken a number of statistics classes and had written a paper using instrumental variables before taking this class. For example, students who choose to take S&DS 241/242 could be allowed to substitute a graduate course for this one. ",
+            "\u00a0The course was intensely focused on the class notes and lectures, and this was excellent -- it really made use of Peng Peng and Yuichi's strengths. I remain a little confused by the grading schema, but that's secondary to learning, and I really do recommend the class highly. ",
+            "\u00a0Professor Kitamura is a great teacher and brings really dry topics to life. I definitely enjoyed 136 far far more than I liked 135 (and also learnt a lot more applicable stuff). I can't think of significant weaknesses apart from maybe the sometimes dry proofs but I guess they are a part of 136 and there is nothing we can do. ",
+            "\u00a0The tests should actually test our econometric knowledge and not how well we take notes. If we could go a little deeper into details and theory that'd be great, so that we know where the formulas come from. ",
+            "\u00a0Yuichi is great! Super nice, funny, organized, and a great teacher. Pengpeng was also a fantastic TA and very helpful in section and office hours. The course was great because it gave us a strong theoretical background and also included many STATA exercises to give us practical hands-on practice with running IV regression, OLS, etc. ",
+            "\u00a0The strength lies in the rigor, and the more advanced math involved (eg linear algebra). I will feel much more confident approaching more advanced econometrics material after this course. The weakness was in the problem sets, which I thought were too easy to be very useful. They could have been a bit more demanding, and the STATA programming a little more advanced. That way I would have learned more during this course. ",
+            "\u00a0Strengths: everything ",
+            "\u00a0Yuichi is a really wonderful professor, and the content of the course is interesting. I thought that the problem sets were really great in contextualizing class content, so I think that having more practice problems (or problem sets) would be helpful. ",
+            "\u00a0Well-organized, good notes. ",
+            "\u00a0Yuichi is an incredible lecturer and is very clear. Pengpeng was also an amazing TA. Her sections made things a lot clearer and was a great supplement to regular lecture. Learned a lot in the course.\r\n\r\nHowever, grades in the class are worrisome. Because the averages are usually super high and everyone in the class is is either an Econ&Math/Math major, the econ curve doesn't really work in your favor. ",
+            "\u00a0I thought we could have received better guidance on the problem sets. I also think lectures could be more engaging as they could be difficult to understand in class. "
+        ],
+        [
+            "\u00a0If you're reading this, you have to take this course. Although it's very heavy on the theory, you'll actually gain a much greater understanding of the practical applications of econometrics than in ECON 131. The ECON 135/136 sequence is very rewarding overall, and I would highly recommend it. Professor Kitamura is a delight, peppering lectures with funny anecdotes and explaining difficult concepts very clearly. As long as you work hard, study hard, and aren't afraid of a B+, you should take this course! ",
+            "\u00a0Students who want a more rigorous introduction to econometrics should take this course. ",
+            "\u00a0I would absolutely recommend the course to anyone considering graduate work in Economics, anyone who's skeptical of econometrics (I was!) or anyone who wants to proceed through an interesting mathematical take on the methods that are used to generate conclusions in Macro and Micro today. ",
+            "\u00a0Yes! Especially if you are thinking of doing any kind of economics research in the future or writing an empirical senior thesis. I learnt so much applicable stuff from this class. ",
+            "\u00a0Yes definitely ",
+            "\u00a0It's a course you should take. Econometrics is vitally important after all. Yuichi is also a great lecturer and extremely funny. That said, I don't feel like I've learnt econometrics just because we only ever scratched the surface. I hope he went a little deeper. The tests are also not meant to test your knowledge but rather how well you take notes.... ",
+            "\u00a0Much better than 135!! ",
+            "\u00a0Yes! Take this course. Take this course if you want to go to graduate school or just want to learn econometrics. Yuichi is the best! ",
+            "\u00a0Yes. If you want to take more advanced econometrics, this is the course for you. If you want to get an insight into econometrics and understand it at a more conceptual level, Econ 132 might be a better choice. ",
+            "\u00a0Yesssss ",
+            "\u00a0Yes, I would definitely recommend this class! It's a little challenging but not too much work, and you definitely get a lot out of it if you are looking to have a deeper understanding of econometrics. ",
+            "\u00a0I would recommend to anyone looking to do an Econ, S&DS, or Applied Math major. ",
+            "\u00a0Highly recommend this course to another student! I feel like a learned a ton in the class and Prof. Yuichi and TA Pengpeng were super clear and informative in their explanations for the topics. My favorite class in the econ/math major so far. ",
+            "\u00a0Yes. If you are interested in econometrics, this class was well facilitated to teach the material and the professor is a great lecturer. ",
+            "\u00a0Yuichi is a great professor and taught this class well. Very knowledgeable and enjoyed learning from him. Class is not too bad - 8 total psets and midterm and final and you can drop your TWO lowest psets which was so nice. Overall great class, would recommend! "
+        ]
+    ]
+}

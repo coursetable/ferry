@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "This departmental seminar studies the historical development of Hong Kong and China in relation to each other, from the colonial and late imperial experience to their shared histories in national and political movements, from postwar industrialization to reform-era economic growth, culminating in the 1997 handover and its attendant political and economic integration. The readings from the first half of the semester come primarily from the literature in history, while the readings in the second half draw from anthropology, economics, political science, and sociology. Each week readings include primary sources in or translated into English.\u00a0 \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0", 
+    "title": "Hong Kong and China: A Cross-B...", 
+    "skills": [], 
+    "areas": [
+        "So", 
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "SML 218", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12357", 
+        "listings": [
+            {
+                "number": "303", 
+                "subject": "EAST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHI4\">YC History: Asia</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIB\">YC HIST: Empires &amp; Colonialism</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIF\">YC History: Politics &amp; Law</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIJ\">YC HIST: Soc Chng &amp; Social MVMN</a></li></ul>"
+    ], 
+    "professors": [
+        "Denise Ho"
+    ], 
+    "long_title": "Hong Kong and China: A Cross-Border History", 
+    "extra_info": "A"
+}

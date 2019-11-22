@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/52140/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course is designed to introduce you to some of the major themes in black feminist theory. The course does so by presenting classic texts with more recent ones to give you a sense of the vibrancy of black feminist theory for addressing past and present concerns. Rather than interpret black feminist theory as a critical formation that simply puts race, gender, sexuality, and class into conversation with one another, the course apprehends that formation as one that produced epistemic shifts in how we understand politics, empire, history, the law, and literature. This is by no means an exhaustive list of the areas into which black feminism intervened. It is merely a sample of some of the most vibrant ideological and discursive contexts in which black feminism caused certain epistemic transformations. \u00c2\u00a0", 
+    "title": "Black Feminist Theory", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "YK220 100", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15526", 
+        "listings": [
+            {
+                "number": "315", 
+                "subject": "AFAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Roderick Ferguson"
+    ], 
+    "long_title": "Black Feminist Theory", 
+    "extra_info": "A"
+}

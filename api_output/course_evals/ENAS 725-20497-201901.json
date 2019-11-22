@@ -1,0 +1,86 @@
+{
+    "crn_code": "20497",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            3
+        ],
+        [
+            0,
+            1,
+            4,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            3,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to use x-rays to analyze my samples, and which methods would be appropriate in various situations. ",
+            "\u00a0Basic knowledge of various synchrotron techniques. ",
+            "\u00a0This course did a good job of presenting the range of possible analytical techniques available at a synchrotron. ",
+            "\u00a0varioua synchrotron techniques ",
+            "\u00a0Various characterization techniques using synchrotron radiation ",
+            "\u00a0A lot about how the different techniques at the Synchrotron work and how they can be employed. "
+        ],
+        [
+            "\u00a0Strengths: Lots of material covered, Variety of material covered, geared towards the application of the synchrotron facility\r\n\r\nWeaknesses: The variety of instructors can make this course a bit confusing when it comes to the homework sets. Luckily we had an excellent TA! ",
+            "\u00a0I don't see how it could be improved. ",
+            "\u00a0One suggestion: All 12 or so lecturers for the course were male. Not that it's necessarily a bad thing, and I know it's challenging to arrange speakers coming from Brookhaven, but it would have been nice to have at least one female speaker! ",
+            "\u00a0More examples will be better. ",
+            "\u00a0The contents were very interesting and helpful. Since the time for each technique was short, instructors had to skip many things and taught very fast. I would like the course to focus less on physical laws and equations, but more on applications and basic principles. ",
+            "\u00a0The problem sets were extremely useful for understanding the techniques and practicing data analysis. "
+        ],
+        [
+            "\u00a0Absolutely! If you would like to know more about the facilities at LBNL NSLS-II, take this course. ",
+            "\u00a0Yes, it is a great course if you're in a field where synchrotron techniques are used. Great introduction that covers most of the techniques. ",
+            "\u00a0I would recommend this course to another student. The course was well-designed with purposefully chosen speakers and a nice structure with the weekly lectures and doughnuts. Some of the material was less relevant to my particular interests and research, but it was still interesting to learn about the different techniques. ",
+            "\u00a0I will because it is very useful for sample characteristics. ",
+            "\u00a0yes. ",
+            "\u00a0Yes! Extremely useful for learning about a wide variety of techniques. "
+        ]
+    ]
+}

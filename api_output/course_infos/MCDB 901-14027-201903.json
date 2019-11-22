@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "This course consists of a weekly seminar that covers ethics, writing, and research methods in cellular and molecular biology as well as student presentations (\u201crotation talks\u201d) of work completed in the third laboratory rotation.", 
+    "title": "Research Skills and Ethics II", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14027", 
+        "listings": [
+            {
+                "number": "901", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Joerg Bewersdorf"
+    ], 
+    "long_title": "Research Skills and Ethics II", 
+    "extra_info": "A"
+}

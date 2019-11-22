@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49511/assignments/syllabus", 
+    "requirements": "Prerequisites: A course in econometrics/statistics and intermediate macroeconomics.", 
+    "description": "Immigration flows are a defining political concern throughout the world, and\u00a0internal migration is reshaping the political and economic landscape of\u00a0the developing world.\u00a0This class aims to bring students to the forefront of political and economic research on migration, with a specific\u00a0focus on the region of South Asia.\u00a0Studying the political aspects of migration involves engaging with formal models on the incentives of governments to facilitate or stymie internal and international movement.\u00a0Studying the economic aspects of migration requires learning about the economic theories underlying location choice. Students continue with the studying of the role that infrastructure plays in regulating movement.\u00a0\nPrerequisites: A course in econometrics/statistics and intermediate macroeconomics.", 
+    "title": "The Political Economy of Migra...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "HLH28 108", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13799", 
+        "listings": [
+            {
+                "number": "483", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Zachary Barnett-Howell"
+    ], 
+    "long_title": "The Political Economy of Migration", 
+    "extra_info": "A"
+}

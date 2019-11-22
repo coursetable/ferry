@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51997/assignments/syllabus", 
+    "requirements": "EMWAR area of concentration designation: STHJ. The course also provides important historical context for students concentrating in Rabbinic Judaism, New Testament, Early Christianity, and Christianity and Judaism in the Hellenistic East. The course can also be applied to secondary areas of concentration focused on archaeology and material culture.", 
+    "description": "An examination of case studies of Jewish ritual practices and prohibitions that may be investigated archaeologically. Topics to be surveyed include ritual bathing and ritual baths (miqwa\u00e2\u20ac\u2122ot), use of chalk vessels and avoidance of imported pottery, tefillin (phylacteries) and mezuzah, avoidance of figural art, the dietary laws, and the four species ritual.\nEMWAR area of concentration designation: STHJ. The course also provides important historical context for students concentrating in Rabbinic Judaism, New Testament, Early Christianity, and Christianity and Judaism in the Hellenistic East. The course can also be applied to secondary areas of concentration focused on archaeology and material culture.", 
+    "title": "Ancient Jewish Ritual Law (Hal...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 209", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14254", 
+        "listings": [
+            {
+                "number": "704", 
+                "subject": "JDST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Yonatan Adler"
+    ], 
+    "long_title": "Ancient Jewish Ritual Law (Halakhah) and Archaeology", 
+    "extra_info": "A"
+}

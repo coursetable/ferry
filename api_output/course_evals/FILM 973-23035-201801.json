@@ -1,0 +1,69 @@
+{
+    "crn_code": "23035",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course was extremely interesting! The readings and discussions in this class really helped me develop and strengthen my art practice. "
+        ],
+        [
+            "\u00a0I appreciated having a weekly student presentation because it was nice to have objects to hold on to while we discussed the texts. On most weeks, I also liked having a lecture to situate the readings. Nevertheless, I was disappointed that not enough time was left for discussion with our peers. Although the lectures, videos, and images were helpful overall, I found that the class dynamic shifted to comments being mediated through the instructor rather than with each other. "
+        ],
+        []
+    ]
+}

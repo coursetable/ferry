@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "This seminar focuses on advanced topics in climate science from a geochemical perspective. We cover intervals from Deep Time to the Anthropocene. Meetings are for two hours, once a week, and are organized around readings from the primary research literature. Undergraduates require permission from the instructor. Enrollment limited to twelve.", 
+    "title": "The Geochemistry of Earth\u2019s Pa...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12223", 
+        "listings": [
+            {
+                "number": "830", 
+                "subject": "G&G"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "The Geochemistry of Earth\u2019s Past Climates", 
+    "extra_info": "A"
+}

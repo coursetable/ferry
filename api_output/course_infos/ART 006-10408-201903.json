@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49141/assignments/syllabus", 
+    "requirements": "Enrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "description": "Introduction to the art and historical development of letterpress printing and to the evolution of private presses. Survey of hand printing; practical study of press operations using antique platen presses and the cylinder proof press. Material qualities of printed matter, connections between content and typographic form, and word/image relationships.\nEnrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "title": "Art of the Printed Word", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "JE L23", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10408", 
+        "listings": [
+            {
+                "number": "006", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Richard Rose"
+    ], 
+    "long_title": "Art of the Printed Word", 
+    "extra_info": "A"
+}

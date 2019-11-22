@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-13", 
+        "group": 2, 
+        "day_of_week": "Friday", 
+        "time": 14
+    }, 
+    "requirements": "Prerequisite: CHNS 142 or equivalent.", 
+    "description": "The third level of the advanced learner sequence. Intended for students with intermediate\u00a0high\u00a0to advanced low speaking and listening skills and with intermediate reading and writing skills. The goal of the course is to help students effectively expand their skills in reading and writing\u00a0while concurrently\u00a0addressing the need to improve their listening and oral skills in formal environments. The materials cover a variety of topics relating to Chinese culture, society and cultural differences,\u00a0supplemented with authentic video materials.\nPrerequisite: CHNS 142 or equivalent.", 
+    "title": "Advanced Modern Chinese for He...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WTS A48", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 3, 
+        "oci_id": "10751", 
+        "listings": [
+            {
+                "number": "152", 
+                "subject": "CHNS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Fan Liu"
+    ], 
+    "long_title": "Advanced Modern Chinese for Heritage Speakers", 
+    "extra_info": "A"
+}

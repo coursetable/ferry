@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49400/assignments/syllabus", 
+    "requirements": "May be taken more than once for credit.", 
+    "description": "Individual research project for majors in Computing and the Arts. Requires two faculty supervisors, one from Computer Science and one from the department in the chosen track. Requires permission of the director of undergraduate studies. The student must present both a verbal and a written report describing the results of the project.\nMay be taken more than once for credit.", 
+    "title": "Senior Project in Computing an...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10707", 
+        "listings": [
+            {
+                "number": "491", 
+                "subject": "CPAR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Holly Rushmeier"
+    ], 
+    "long_title": "Senior Project in Computing and the Arts", 
+    "extra_info": "A"
+}

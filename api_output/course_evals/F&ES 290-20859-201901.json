@@ -1,0 +1,100 @@
+{
+    "crn_code": "20859",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            6,
+            5,
+            3
+        ],
+        [
+            0,
+            1,
+            5,
+            5,
+            4
+        ],
+        [
+            0,
+            1,
+            4,
+            8,
+            2
+        ],
+        [
+            3,
+            3,
+            4,
+            4,
+            1
+        ],
+        [
+            0,
+            3,
+            8,
+            2,
+            2
+        ],
+        [
+            0,
+            4,
+            5,
+            6,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Introductory level intro to GIS, essential tools and familiarity with the interface, application of those tools to a self-guided project ",
+            "\u00a0Despite having nearly zero experience with computer programs before this class, I feel like I could work a full-time job as a GIS technician now. Of course, there's no much more to learn about ArcGIS, but this class gave me all the foundation I need. ",
+            "\u00a0I learned how to use arcGIS and create maps and models. ",
+            "\u00a0Gained considerable familiarity with ArcGIS. ",
+            "\u00a0I learned how to navigate GIS effectively. ",
+            "\u00a0Learning GIS ",
+            "\u00a0GIS skills! ",
+            "\u00a0I learned how to create maps on the computer, using the ArcGis suite. I learned more about what makes a good map, and gained a greater appreciation for the way we represent 3-D data in 2-D space. ",
+            "\u00a0You get a pretty comprehensive overview of some very useful and cool functions int eh ArcGIS software. There's no way to cover everything about the software and GIS in general in one course, but this class also gets you pretty comfortable with the basics of the software and how to more effectively navigate it and troubleshoot. ",
+            "\u00a0This course taught me how to use ArcGIS and to think about the world around me in a more spatial, visual manner. ",
+            "\u00a0Honestly I did learn the GIS software really well, and I feel like I have a deeper understanding of the various interfaces/functions/capabilities which ArcGIS provides. I also learned a ton about problem-solving, trouble shooting, reaching out for help when you need it, and paying attention to detail. ",
+            "\u00a0I learned how to use ArcGIS. "
+        ],
+        [
+            "\u00a0Strengths: Dana and Katie's expertise and willingness to help, the wealth of materials that Dana provides to help us in learning how to use the software, reasonable workload\r\nWeaknesses: Zero feedback of any kind at any point in the semester. I don't understand how Yale College allows this. Our weekly assignments were graded on a completion basis and intended to give us the tools to utilize in our final projects, but without feedback it's fairly easy to skate through these assignments without really getting a handle on the material. There's also an uncomfortable sense in which everyone in the class is being put into competition with one another--all of our assignments are visible to each other throughout the semester and we've been told that our final projects will be graded by ranking each of us from best to worst. At this point I have absolutely no idea what to expect from my final evaluation. ",
+            "\u00a0The class is mostly based on one final project grade which is kind of stressful - some other small grades may have been useful. I also wish I got feedback on my individual homework assignments because I'm not really sure if I am doing well or not.\r\n\r\nThat being said, I have really enjoyed this class. GIS is such an useful skillset to have, and I feel as if this class has really introduced me to it. ",
+            "\u00a0This course gives you a lot of freedom to forge your own path within the field of GIS. The approach is very hands-off, but there is ample opportunity for assistance, which you'll need, since the program is finicky. The workload varies wildly depending on how the program is behaving, and there is literally no indication of grades before the highly time-consuming final project, which is quite stressful. ",
+            "\u00a0There is very little feedback. It also is very difficult to know whether you are on the right track, the majority of the learning I did, I did on my own. Otherwise a great course. ",
+            "\u00a0Dana's a great professor, I wish we'd had more examples of ways to use some of the tools because I had trouble understanding some of them out of context ",
+            "\u00a0This course is very end-heavy-based. It allows you to learn the material without worrying about a grade in the beginning of the class, but if you don't stay on top of your maps, you end up doing a TON of work during finals week. ",
+            "\u00a0The project-oriented structure of the course, in which students are allowed to choose any topic they wish and work on that, is a definite strength. It makes it so that your engagement with the class is higher and more enjoyable. I do think this class would benefit from having more opportunities for students to receive feedback. I went into the final project stage not really knowing if any of the work I'd done throughout the semester was good enough. ",
+            "\u00a0The strengths of the course were the instructor's ability to be engaging and to help us to really understand the various tools in ArcGIS. Homework was manageable and it was honestly exciting to learn how to use the program! If we ever had a problem there were numerous worksheets we could access with detailed explanations on how to use a certain tool, but also Dana made himself very available and there was a class Piazza page that we could go to as well. ",
+            "\u00a0Professor Tomlin is really wonderful and helpful (as was our TA), and he gives you a deeper understanding of the software in class rather than just trying to take you through functions step by step, which would be tricker to follow along with. He made ArcGIS come to life. However, I find the structure of the class kind of weird and even de-motivating. You're told to spend at least 5-6 hours a week on homework assignments, and of course prepare all semester for the final presentation and project, but yet each time one of those things are due, Professor Tomlin reminds you that \"this doesn't count for anything--only the final project does--and I'm not looking at anything else besides checking it off.\" Especially with other coursework at Yale, it's difficult to allot 6 hours a week for something that will not even get looked at. And I do wish we got more feedback on the week to week assignments, presentations, and final projects. But I did learn GIS, and that was the point of the class. ",
+            "\u00a0The fact that ArcGIS does not run on Mac makes the course a lot more difficult -- virtually every Yale computer running Windows seems to have a different version of ArcGIS. Furthermore, many of the new computers in the Yale libraries use a type of virtual desktop that does not allow ArcGIS to run. I spent a great deal of time dealing with computer issues, which significantly took away from the amount of time I could spend on the course itself. "
+        ],
+        [
+            "\u00a0Only if you have a crystal-clear sense of what you'd like to use it for. I got a lot out of this class because I had a good sense of what I wanted to explore for my final project, but those that didn't have a clear sense coming in were continually struggling throughout the semester. This is a class where you really have to self-advocate to get feedback of any kind, and be willing to cope with assignments that'll take up anywhere from seven to ten hours a week just because of the limited processing capacity of running ArcMap on a Mac. Definitely not the class for everyone, but a useful skill to pick up, especially from an instructor so well-versed in its capabilities. ",
+            "\u00a0I would definitely recommend to someone interested in learning arcGIS! ",
+            "\u00a0I'd recommend the course for those who are naturally interested in geography and feel they could get something out of an intensive, independent project. That said, I would take the course with friends, as it can be stressful, and collaboration is often necessary. Also be warned that you will have absolutely no way of knowing how you are doing in the class. ",
+            "\u00a0Yes if they want to learn GIS ",
+            "\u00a0Most definitely would recommend, especially if you have a term project already in mind. ",
+            "\u00a0If you want something at the intersection of graphic design and data, this is a pretty cool course to take. ",
+            "\u00a0This course really relies on student input. You have to put in the time and energy, because there's not much structure to it. So if you really want to learn and end the semester with a cool project, you have to take the lead on that. If you have the ability to commit like that to this, I'd say go ahead. It's a cool opportunity to work on a project of your interest and learn a very valuable skill. ",
+            "\u00a0I would recommend this course to any student interested in learning how to map out and visually explain a space or region. We learned a ton of different skills that are really powerful tools in creating maps. ",
+            "\u00a0Yes, I think if you want to learn ArcGIS, this is the class to do it with. But just make sure you stand up for yourself each week to get the help and feedback you need even if it isn't explicitly provided. ",
+            "\u00a0If you are interested in learning ArcGIS then you will learn that in this course. However, most of the learning is on your own -- you have to figure out a lot of the functions of ArcGIS by trial and error, which takes hours and is extremely frustrating. GIS is a good skill to have, and this class will teach you...but prepare to be very frustrated and spend a great deal of time on it. "
+        ]
+    ]
+}

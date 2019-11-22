@@ -1,0 +1,77 @@
+{
+    "crn_code": "14587",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            3
+        ],
+        [
+            0,
+            1,
+            0,
+            6,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0- learned how to better critically read papers\r\n- learned a lot about the biochemical backgrounds of the clinical diseases we learned in class ",
+            "\u00a0How to think like a scientist. ",
+            "\u00a0Enjoyed reading papers that connected with med school, enjoyed the interactiveness, wish it be continued the entire year "
+        ],
+        [
+            "\u00a0strengths:\r\n- I loved having Dr. Baserga as my discussion group leader. She added a lot of insight to the discussions and asked the important questions\r\n- I really enjoyed all of the topics that we had\r\n\r\nweaknesses:\r\n- sometimes we got really off tangent\r\n- there were times when smaller discussions distracted from the greater discussion that was happening ",
+            "\u00a0I actually enjoyed some of the days where every student was required to speak because it felt a lot more engaging. I think more students were encouraged to participate the class would be even greater. "
+        ],
+        [
+            "\u00a0Yes ",
+            "\u00a0Yes! ",
+            "\u00a0Yes, the course helped me develop a framework for diving into research related to a variety of medical topics in sync with class topics. ",
+            "\u00a0Yes "
+        ]
+    ]
+}

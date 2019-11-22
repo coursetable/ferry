@@ -1,0 +1,71 @@
+{
+    "crn_code": "21556",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Exposure to various assessment methods ",
+            "\u00a0I learned about the history and implementation of several psychological assessment tests. "
+        ],
+        [
+            "\u00a0We covered a large amount of material and I appreciate feeling more familiar with a host of assessment instruments. That being said, it may also be beneficial to spend less time reading about assessment in the first few weeks of the course to spend more time developing familiarity with the various batteries. I appreciated the reading, and wonder if it could have been spread out a bit more so that we could have spent more time with each important article/chapter. ",
+            "\u00a0The course covers a lot of ground but I think it spent the most time where it needed to! "
+        ],
+        []
+    ]
+}

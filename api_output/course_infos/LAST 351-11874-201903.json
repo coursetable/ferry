@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51410/assignments/syllabus", 
+    "requirements": "Open to students who have placed into L5 courses or who have successfully completed an L4 course in Spanish. Counts toward the Spanish major.", 
+    "description": "An introduction to the work of Jorge Luis Borges, focusing on the relation between literature and power as portrayed in selected stories, essays, and poems. Topics include Borges and postmodernity; writing and ethics; and Borges's politics. Works include Ficciones, Otras inquisiciones, El aleph, El hacedor, El informe de Brodie, and Obra po\u00e9tica.\nOpen to students who have placed into L5 courses or who have successfully completed an L4 course in Spanish. Counts toward the Spanish major.", 
+    "title": "Borges: Literature and Power", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "RKZ 102", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11874", 
+        "listings": [
+            {
+                "number": "351", 
+                "subject": "LAST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Anibal Gonzalez Perez"
+    ], 
+    "long_title": "Borges: Literature and Power", 
+    "extra_info": "A"
+}

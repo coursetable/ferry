@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49260/assignments/syllabus", 
+    "requirements": "Offered subject to available laboratory space and sufficient enrollment. After CHEM 223L.\u00c2\u00a0Enrollment is limited; e-mail course instructor for enrollment procedure.", 
+    "description": "An intensive course in advanced chemistry laboratory technique intended to bring the student closer to independent research. Included are an independent laboratory project and presentation, introduction to library research, and training in the use of various analytical techniques.\nOffered subject to available laboratory space and sufficient enrollment. After CHEM 223L.\u00c2\u00a0Enrollment is limited; e-mail course instructor for enrollment procedure.", 
+    "title": "Intensive Advanced Chemistry L...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "SCL 231", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10513", 
+        "listings": [
+            {
+                "number": "226L", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jonathan Parr", 
+        "Christine DiMeglio"
+    ], 
+    "long_title": "Intensive Advanced Chemistry Laboratory", 
+    "extra_info": "A"
+}

@@ -1,0 +1,91 @@
+{
+    "crn_code": "11787",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            4,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            9
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            7
+        ],
+        [
+            0,
+            1,
+            3,
+            6,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            5
+        ],
+        [
+            0,
+            2,
+            6,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about the basics of homology and cohomology theory. I got much more familiar with topology in general, and also with algebraic tools such as basic homological algebra. ",
+            "\u00a0Learned Homology, Cohomology. Developed abstract thinking. ",
+            "\u00a0Homology theory ",
+            "\u00a0As a non-math student, I had great fun from the course and is strongly motivated to keep on. ",
+            "\u00a0We learned foundations of algebraic topology and basic algebraic tools to study geometric objects. ",
+            "\u00a0I learned quite a bit of Algebraic topology, especially fundamental group, covering spaces, homology, and cohomology.\r\nI developed a better understanding of the uses of algebra and the benefits of algebraic homology theory. ",
+            "\u00a0Basics of algebraic topology. Specifically, majority of chapter 1-3 of Hatcher (excluding most of additional topics). "
+        ],
+        [
+            "\u00a0I loved this course; professor Minsky was excellent, and lectures were always useful to understanding the course. One change I might make is to go through more examples in class and do more proofs at home, as prof Minsky is particularly good at drawing nice diagrams and explaining examples. I did find discussion of proofs in class useful, but overall I'd be fine with more key pictures and ideas of proofs being explained in class with details left to the student, and more class time going through particular cases, as those were my favorite parts of class. I would also recommend possibly going a bit faster so we could cover cup products in cohomology. ",
+            "\u00a0It would have been nice to have had prompter feedback on problem sets, and (I think more importantly) an extra problem set on cohomology and the Poincare duality. ",
+            "\u00a0The course was generally very well taught, with useful examples mixed in with the more difficult formal material.  The one weakness is the lack of feedback; multiple problem sets were handed in with nothing returned, making it harder to study for the final exam. ",
+            "\u00a0The course is very well organized and very well explained. ",
+            "\u00a0The lectures were amazing. The instructor did a great job working through definitions and theorems from first principles, together with the class. The organization and presentation of each proof is very clear. Examples are very reflective of tricky parts of a theorem or definition. The instructor is very generous with spending time with students and talking through ideas in class. \r\n\r\nGreat class! Can't think of weakness. ",
+            "\u00a0I thought the course was excellent. The problem sets were just the right level of difficulty. I think the course could have been improved if lectures had gone somewhat more slowly. It was hard for me as a student who hadn't seen the homology/cohomology material before to keep up. ",
+            "\u00a0Great course overall, except that the schedule can be more stable: we experienced a few make-up classes towards the end of the semester, so it is a bit tough then. "
+        ],
+        [
+            "\u00a0I would highly recommend this course, especially with Professor Minsky. Algebraic topology is a great starting point not just for learning about topology, but important constructions like cohomology which show up all the time in higher level mathematics. ",
+            "\u00a0I definitely would. The material is very interesting and fundamental, and especially if professor Minsky is teaching it this is a great course. ",
+            "\u00a0Yes, absolutely. It's hard, and the graduate students are obviously taking it extremely seriously, but the material is exceptionally beautiful (sometimes even fun!) and Prof. Minsky is great. Doable if you haven't taken the undergrad course, if you put a lot of work into it. ",
+            "\u00a0If a student has taken the undergraduate topology course, enjoyed it, and wants a challenge, I would recommend this class.  Only the most exceptional students or those with some topology background will succeed here. ",
+            "\u00a0Yes. ",
+            "\u00a0Yes, I would recommend this course to another student. It is very well explained and available to students outside of math department. ",
+            "\u00a0Yes. This is one of the best class I've taken at Yale. Yair Minsky is a fantastic teacher. ",
+            "\u00a0Yes! This is a great elective for a person interested in math to take.\r\nYair Minsky is a great lecturer and teacher, an excellent artist, and has a very strong command of the material. ",
+            "\u00a0Yes, especially when Yair is the instructor. The content is important: it introduces tools that have application in many branches in mathematics, and the lectures are clearly and enlighteningly presented. "
+        ]
+    ]
+}

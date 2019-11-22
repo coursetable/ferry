@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50069/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course examines the increasing influence that religion has had on global politics since the end of the Cold War. It attempts to narrate the rise and the fall of secular governance since 1989 in such places as central Europe, Russia, India, Turkey, and elsewhere. Concepts to be discussed include populism, traditionalism, post-secularism, religious freedom, etc.\u00c2\u00a0", 
+    "title": "Religion and Global Politics s...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 19, 
+            "location": "WTS A68", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 20
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11067", 
+        "listings": [
+            {
+                "number": "560", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Daniel Steinmetz Jenkins"
+    ], 
+    "long_title": "Religion and Global Politics since 1989", 
+    "extra_info": "A"
+}

@@ -1,0 +1,97 @@
+{
+    "crn_code": "21909",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            4,
+            11,
+            18
+        ],
+        [
+            1,
+            3,
+            5,
+            14,
+            10
+        ],
+        [
+            2,
+            4,
+            9,
+            11,
+            7
+        ],
+        [
+            1,
+            3,
+            8,
+            13,
+            7
+        ],
+        [
+            1,
+            1,
+            5,
+            19,
+            8
+        ],
+        [
+            1,
+            1,
+            9,
+            18,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0CS research ",
+            "\u00a0Really enjoyed my project! Thanks to Dana for being a great advisor! ",
+            "\u00a0I produced original research, gave a presentation, and wrote a scientific paper. ",
+            "\u00a0Learned how to conduct research, keep organized records of work, and develop a comprehensive report; learned how to communicate effectively and plan projects well ",
+            "\u00a0Experience doing a semester long research project on a topic I am interested in. ",
+            "\u00a0It's the senior project. Be intependant. ",
+            "\u00a0I was able to get a strong sense for the research process for my field and to start and carry out a significant project. This was, as expected, way tougher than I thought, but it was rewarding to be able to go through these bouts of frustration and progress. ",
+            "\u00a0Doing Research ",
+            "\u00a0I learned how to do a self-directed project and how to do modern software development like reading APIs and such. ",
+            "\u00a0During most of this project I felt overwhelmed with new information, and I feel I learned how to handle difficult and complex situations. I gained experience choosing which aspects of a project are most important to spend time on, and how to go about gaining an understanding of previously unknown topics. ",
+            "\u00a0How to perform research in computer science ",
+            "\u00a0I learned how to design and implement large-scale networked systems in the vibrant field of federated machine learning. "
+        ],
+        [
+            "\u00a0I went to the S&DS poster session and was very impressed with it -- it would be nice if CS had something similar for sharing our work more publicly. I gave a presentation but it was within my individual lab. Additionally, somewhat more standardized guidelines would be helpful -- as is requirements were pretty unclear and ad hoc. ",
+            "\u00a0Slightly disorganized/unstructured, this was sort of a positive because research can vary so much, but also felt like there was nothing to grip onto regarding criteria/deadlines ",
+            "\u00a0An opportunity to see other student's projects would be cool. ",
+            "\u00a0The course left a lot of flexibility for its students, and part of this entails the instructor being a bit hands-off. However, this sometimes meant that in less straight-forward projects, we didn't get so much feedback on how we were doing -- and this was a bit stressful for the theoretical work. ",
+            "\u00a0Good as is. ",
+            "\u00a0Your advisor is key. Make sure you choose an organized advisor. "
+        ],
+        [
+            "\u00a0Required for CS major. ",
+            "\u00a0It's required for the major. ",
+            "\u00a0Absolutely -- be realistic with what kind of project you want to carry out and get started early by itemizing your tasks and delivering. It's an important skill, being able to stick to a project agenda, and this is an excellent time to practice, whether or not you're going to do more research in life. ",
+            "\u00a0Very opened end! Not in a bad way. Gives you the freedom to work on basically whatever you might want to. As with all open ended experiences it is what you make of it. I chose to work with a lab, which I got a lot out of. ",
+            "\u00a0It is a required course. ",
+            "\u00a0Yes ",
+            "\u00a0Yes! Learned much more from this than from an average CS class. Take it twice if you want to learn something very well and get course credit for it. ",
+            "\u00a0You should start early and set a clear list of requirements from your professor! ",
+            "\u00a0This course is really dependent on your advisor, but if you start thinking about it early, you can do something really cool. ",
+            "\u00a0This is the senior requirement in Computer Science. I had Holly Rushmeier as an advisor, and she was very helpful in pushing my project and keeping me on schedule. ",
+            "\u00a0No this was a mess "
+        ]
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49881/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This interdisciplinary seminar explores, both theoretically and historically, how racial formations are bound to the formations of capitalism. Focus on the American scene, with sustained inquiry on slavery, its commodity logics, and their residues. Consideration of the effects of immigration and globalization.\u00c2\u00a0", 
+    "title": "Race and Capitalism", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "RKZ 08", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12118", 
+        "listings": [
+            {
+                "number": "341", 
+                "subject": "AMST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Aaron Carico"
+    ], 
+    "long_title": "Race and Capitalism", 
+    "extra_info": "A"
+}

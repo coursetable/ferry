@@ -1,0 +1,99 @@
+{
+    "crn_code": "10875",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            5,
+            7,
+            1
+        ],
+        [
+            0,
+            4,
+            4,
+            3,
+            2
+        ],
+        [
+            0,
+            2,
+            7,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            6,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            10,
+            1
+        ],
+        [
+            0,
+            1,
+            6,
+            6,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0really great first statistics course at Yale for someone who's taken AP Stats before and wants a more challenging stats course than the 100 series ",
+            "\u00a0Through this course, I built an understanding of probability theory, distributions, sample theory, confidence intervals and hypothesis testing through a mathematical lens. I gained more insight into how certain statistics are mathematically derived/work. ",
+            "\u00a0Learned a lot about basic statistics and probability - both how to do things in practice and theory of where it comes from. ",
+            "\u00a0Distributions, intro probability, max likelihood, confidence intervals and hypothesis testing ",
+            "\u00a0I developed a solid foundation in probability and statistics, as the course title would suggest; topics covered included various kinds of distributions, law of large numbers, simple regression, point estimation, interval estimation, and hypothesis testing. This was the first time I had any sort of exposure to this kind of material, and it was fascinating to learn to think like a statistician for the first time. I was also introduced to R. ",
+            "\u00a0This is a very intensive introduction to probability and statistics. If you can avoid it, S&DS 241 and S&DS 242 will teach the same material at a more manageable pace. But if you want to learn a lot of probability and stats in one semester, then take this class. ",
+            "\u00a0A rigorous theoretical foundation behind statistics. ",
+            "\u00a0I gained a pretty thorough understanding of probability theory and statistics. I would not say it was an \"intro\" class, however. Theoretically you don't need to know any statistics, and I didn't going in, but we moved through the basics very fast and I had to study a lot of it on my own. In class we focused a lot on going through the calculations and theory with very little focus on applications. Problem sets were largely computational, but on the exams, you will need to know how to go through some pretty complex calculations. ",
+            "\u00a0A deeper understanding of the proofs and logic behind the key tools in econometrics. ",
+            "\u00a0A solid foundation in the subject of statistics. "
+        ],
+        [
+            "\u00a0material could definitely be dry at times and lectures were not very engaging at all so classes could be more interactive. also there is a lot of homework every week with about 12 problem sets. ",
+            "\u00a0Prof. Andrews is clearly brilliant, very kind, and knows what he's doing really REALLY well. Unfortunately, the class doesn't provide enough intuition for how these methods work in my opinion, and I found I mostly just taught myself the material in doing the psets. They included R assignments in this iteration but they were given very little focus and if I didn't have the TA's code to help me I probably would not have been able to do them. I think the class would benefit from splitting the focus more evenly (decide whether we should get a really strong math understanding of the stats or learn more R). Also Prof. Andrews's board organization and presentation of material could use improvement to make more clear the logical build up of the material. ",
+            "\u00a0The class was a little dry at times, but otherwise, the class seemed pretty useful, especially when some of the connections between practice and theory clicked. ",
+            "\u00a0Too fast paced ",
+            "\u00a0We covered a lot of topics in statistics in a short amount of time, and for that I'm grateful  I'd imagine that it's pretty difficult to structure curriculum the way that Professor Andrews did this semester, and yet we were still able to learn a lot in a matter of months. I'm feeling pretty confident in my foundation heading into econometrics next semester.\r\n\r\nI didn't learn as much R as I had hoped; there were only three or four R-related problem sets over the course of the semester, and they were both ungraded and short (and assigned by the teaching assistant, not by the professor).\r\n\r\nThere were times were lectures moved away from what was discussed in the textbook, so it was difficult to reconcile certain ideas and catch up on material after class. At the same time, though, Professor Andrews was extremely helpful and friendly during office hours, so make use of those! \r\n\r\nTests were very fair, and well-written; although I personally found them difficult, the material was all stuff he covered in class (or in problem sets) and so nothing hit us from out of the blue, ever.\r\n\r\nAlso, the teaching assistant (Soonwoo Kwon) was absolutely incredible  he responded to emails promptly, gave office hours that were helpful, and would always linger around after class to answer questions (also, he came to every class, which is very unusual for a TA to do!). ",
+            "\u00a0It is a lot of material. The problem sets start out easy and get harder as the semester goes on. Post midterm, the class picks up a lot, so you have to be prepared. I wish he still gave the typed up notes he gave in fall 2017--try to get those if you can. ",
+            "\u00a0Course topics were sequential and problem sets were comprehensive. Provided notes and previous exams were enormously helpful.\r\n\r\nSome topics were perhaps overly ambitious and felt cursory. Peer tutors would be helpful. ",
+            "\u00a0Professor Andrews is a nice guy and he's actually a pretty good teacher. Both he and the TA were very available and helpful. However, lectures can be very confusing unless you already sort of know what's going on. It's very hard to take coherent notes because Professor Andrews moves around the board a lot and works in a non-linear fashion. I'm generally a very neat note taker, but if I didn't understand what was going on in class, it was pretty much impossible to learn anything from my notes. I think changing the lecture styles to make it easier for students to look back on later would vastly improve this class. I also didn't like the textbook we used. I don't know why, but for some reason, the way it was written just made everything more confusing. About halfway through, I started using another random textbook that explained the exact same material in a much better way and suddenly it all made sense. ",
+            "\u00a0This is an important course, but it could be difficult to follow the board work sometimes. ",
+            "\u00a0Course actually follows the textbook quite closely which is great. If you don't quite understand something in class, reading the textbook is a great way to answer your questions. Weekly homeworks were a great opportunity to practice the skills needed to grasp the material and do well on the exams. "
+        ],
+        [
+            "\u00a0If you have to take it for the Economics & Mathematics major, then definitely take it.  Relative to 117/131, the workload is both dramatically greater but you also learn more, which is a major advantage over those courses. If you care about actually learning econometrics/statistics for economics, then this course is dramatically superior to 117/131. That said, the professor is far from an engaging lecturer, which makes most of the class functionally self-taught. It is incredibly difficult to follow in class. On the flip side, the textbook is super helpful and easy to follow (and free online), the problem sets are not too long (average workload of 4.3 hours/week, with the shortest taking 2.0 hours and the longest taking 6.0 hours) and the material is interesting. Hard to recommend the class, however. ",
+            "\u00a0yes if you are economics-math, you have to take it before econometrics and it's a very helpful course. ",
+            "\u00a0if you're econ&math you gotta. don't take this otherwise unless you're wilding out. ",
+            "\u00a0Yes, you probably have to take it anyway. It's not the most exciting course, but it's not meant to be and it gets the job done. It might also be worth it just doing in this in a semester rather than across 241 and 242. ",
+            "\u00a0Yes ",
+            "\u00a0I have a feeling that students would develop a more thorough understanding of probability and statistics through the S&DS 241/242 series, but I'm still happy that I took ECON 135 and would definitely recommend it to another student; it's critical in the Econ-Math sequence and sets you up pretty nicely for ECON 136. ",
+            "\u00a0I would only recommend taking this course if you're Econ/Math -- take S&DS 241/242 if not because the material is more spread out. But honestly, if you keep up with the class, do the problem sets, get help when you need it, and actually pay attention in class, you should be fine. ~50% of the class got As and A-s, so you can do well. ",
+            "\u00a0Be ready to teach yourself everything ",
+            "\u00a0Although this course may have a faster pace than that of other similar courses, the rigorous foundation to statistics is pretty satisfying. ",
+            "\u00a0I think overall it's a fair class and the curve is generous enough that most people end up doing pretty well, so I wouldn't avoid taking it just because you're afraid of the grading. And don't be discouraged if you feel overwhelmed. I'd never taken a statistics class before and didn't do very well on the midterm, but worked hard in the second half of the semester and ended up with a good grade. If you lack a background in statistics like me, you might find yourself struggling a little bit to keep up and will need to learn how to do a lot of stuff on your own. Also, don't be fooled by the problem sets because they aren't reflective of exams. Exams are much less applied and you will need to know how to do the difficult calculations from lecture. As I said, they're tough, but if you study your notes well and make an effort to really understand things, you will be ok. ",
+            "\u00a0Econ/math majors have no choice, but I would even recommend it to straight Econ majors who want a bigger challenge than lower level econometrics courses. The class is very manageable if you do the work. "
+        ]
+    ]
+}

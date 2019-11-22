@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: ENVE 120.", 
+    "description": "An overview of air quality problems worldwide with a focus on emissions, chemistry, transport, and other processes that govern dynamic behavior in the atmosphere. Quantitative assessment of the determining factors of air pollution (e.g., transportation and other combustion\u2013related sources, chemical transformations), climate change, photochemical \u201csmog,\u201d pollutant measurement techniques, and air quality management strategies.\nPrerequisite: ENVE 120.", 
+    "title": "CANCELLED", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10992", 
+        "listings": [
+            {
+                "number": "373", 
+                "subject": "ENVE"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Air Pollution Control", 
+    "extra_info": "C"
+}

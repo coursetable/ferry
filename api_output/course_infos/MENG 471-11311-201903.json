@@ -1,0 +1,49 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50495/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Faculty-supervised one- or two-person projects with emphasis on research (experiment, simulation, or theory), engineering design, or tutorial study. Students are expected to consult the course instructor, director of undergraduate studies, and/or appropriate faculty members to discuss ideas and suggestions for topics. Focus on development of professional skills such as writing abstracts, prospectuses, and technical reports as well as good practices for preparing posters and delivering presentations. Permission of adviser and director of undergraduate studies is required.", 
+    "title": "Special Projects I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11311", 
+        "listings": [
+            {
+                "number": "471", 
+                "subject": "MENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Joran Booth"
+    ], 
+    "long_title": "Special Projects I", 
+    "extra_info": "A"
+}

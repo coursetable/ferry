@@ -1,0 +1,73 @@
+{
+    "crn_code": "12558",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained knowledge in Stoic doctrine and learned to navigate the history of Stoic thought. I refreshed my own reading knowledge of classical Greek. I was introduced to Epictetus and I read Marcus Aurelius with a new appreciation of the influences of Stoicism on his thought. ",
+            "\u00a0Facility in working with and interpreting difficult philosophical texts. "
+        ],
+        [
+            "\u00a0The ability for students to tailor the course requirements to their interests and past experience (choosing the Greek or English track) was a strength. \r\n\r\nThe class could be improved by adding secondary readings to the assigned weekly readings or adding a third thinker (perhaps Sextus Empiricus?) "
+        ],
+        [
+            "\u00a0Great course and great teacher. ",
+            "\u00a0Yes. I would recommend this course to a student interested in philosophy, ancient history, modern thought reception, religion, or ethics. "
+        ]
+    ]
+}

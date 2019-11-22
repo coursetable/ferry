@@ -1,0 +1,96 @@
+{
+    "crn_code": "23747",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            4,
+            4
+        ],
+        [
+            1,
+            0,
+            4,
+            3,
+            4
+        ],
+        [
+            1,
+            1,
+            5,
+            3,
+            2
+        ],
+        [
+            1,
+            1,
+            5,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            9,
+            3,
+            0
+        ],
+        [
+            0,
+            2,
+            7,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Fantastic course. Lots of new topics covered. Jay encouraged a lot of personal learning and delving deep into a new subject. ",
+            "\u00a0Light introduction to more advanced topics in R, parallel computing, writing C, and large simulation problems. ",
+            "\u00a0I got better at coding and learned about some aspects I hadn't thought about before. ",
+            "\u00a0Statistical computing developed many of the computational skills necessary to conduct statistical work. The course included a thorough overview of all of these topics, which include (but are certainly not limited to): \"under the hood\" R (what are the basic data structures? why are some of these structures faster/more efficient than others?), package creation, algorithmic efficiency (including C++), and the basics of Python. ",
+            "\u00a0Uh, I answered this in statistical consulting... Sorry. ",
+            "\u00a0Learned about optimizing computational efficiency and memory usage.\r\nLearned new programming languages like C++\r\nImproved programming skills in general and how to code in a group setting ",
+            "\u00a0R programing ",
+            "\u00a0R coding, efficient R coding, shiny apps, R with large objects (parallel programming), how to make an R package ",
+            "\u00a0I learned some particular skills in R "
+        ],
+        [
+            "\u00a0The course is extremely open ended. You get out of it what you put in. If you want to take a course that teaches you specific things and  has a strict plan, you will be disappointed. If you want to explore topics in statistical computing with some light guidance, this is a good course for you. ",
+            "\u00a0The expectations could be made much more clear. It was unclear how much we were supposed to work on things at a given point in the course, and then we would find out we hadn't done enough/ had done way more than expected and it made it difficult to manage time. \r\n\r\nThere was also very little feedback at any point in the course. It was basically a workshop, which is fine, but the teacher isn't super necessary in that case. ",
+            "\u00a0We didn't receive as much feedback on our work as I expected/would have liked. By the time we were receiving feedback it was almost too late to do anything to meaningfully reassess our work or modify our coding practice. ",
+            "\u00a0Strengths: small class with lots of discussion on particular topics. Unlike other statistics classes at Yale, a behind the scenes look at the computing that goes into statistical work (in many ways, this felt a bit more like a computer science class, which was great!)\r\n\r\nWeaknesses: as someone who needs structure for motivation, I would probably have learned more had there been more consistent/graded assignments. ",
+            "\u00a0Strength: interactive class with a good amount of time spend on individual as well as group work\r\n\r\nI think the class would benefit with a little more structure. Given the nature of the class, I know this may be difficult to do, but it helps give a sense of the direction in which the class is going and could help people get more out of the class. ",
+            "\u00a0Should be better organized ",
+            "\u00a0strengths: concrete, practical skills, lots of practice\r\n\r\nweaknesses: perhaps too much time on a few projects. I would have liked to spend more time on some of the other tools introduced (like parallel programming in R with maybe a few small homework exercises dedicated just to parallel programming rather than adding parallel programming on to the birthday problem; another idea is more time with big memory or web scraping or more small tasks like the PDF map problem) ",
+            "\u00a0I think one strength of the class was its somewhat freeform structure. We covered a wide range of topics and dove deeply into some of them. I liked how the birthday problem allowed us to explore both multi-core parallel computing as well as C++ integration in R. ",
+            "\u00a0There are several easy ways this course could be improved:\r\n\r\n1. Creating some sort of week-by-week syllabus/plan so that we know what topics are coming up and what will be covered on a day-by-day basis would be really helpful, both for deciding if we should take the course and for having a sense of what's going on and what we're learning\r\n\r\n2. Creating more defined boundaries and goals for the projects that we are assigned. I think this course would be so much better if there was a different topic every 4-5 class sessions (some could include: grid graphics, parallel computing, using C, making packages). Then for each topic the classroom model should be a flipped classroom: in the weekend since the previous topic, we should be assigned some reading that gives us an idea of the syntax & everything for the next topic. We'll all read up on it, then starting the next week we spend 4-5 class periods working in pairs on a defined goal (eg. making a course schedule output, the birthday problem, making a package that does X). Then we see everyone's results and move on.  The goal should be provided in a written description at the beginning and should remain static for the full duration of the project. The flipped classroom ensures that when we're in-class we're spending all of our time learning from each other and actually trying to code, not listening to lectures. It also increases the amount of content that can be covered because the lecture material can simply be written up as a Markdown document and emailed to all of us to read in preparation for the next topic. This also teaches us how to learn to code from documentation and online help sources, which is a vital skill for writing code on real projects where you can't simply ask an instructor how to do something, and have to work with other people.\r\n\r\n3. Assigning us to work in random pairs. I think there were so many missed opportunities for students to learn from each other because there was no requirement that we mix up and work with different people. We all came in with different skills and could really benefit from learning from each other. For each project/topic we should have been randomly assigned a partner to work with for that code, then get a new partner for the next topic. Don't leave it to people to mix themselves up, that doesn't work. Force us to work with people we don't know\r\n\r\n4. Allowing us to use other packages. Good coding is 90% taking what other people have already done and using it for ourselves. We don't need to be re-inventing the wheel over and over, and learning good practices for reading documentation and using other people's code is essential to becoming an efficient & effective programmer. How to do this properly with all the appropriate checks that code is doing what it is expected to should be one of the major lessons in this class. It was entirely prevented by your requirement that we use no packages.\r\n\r\nAs it was, this class was extremely hit-or-miss. Some days I'd come to class and learn extremely valuable content that I feel like I never could have learned on my own. Yet about 60% of the days I came to class and felt like it was largely a waste of my time. I think the above suggestions can easily move that needle to 0% "
+        ],
+        [
+            "\u00a0Yes. Worthwhile for computing methods. ",
+            "\u00a0See above. ",
+            "\u00a0Sure, you learn quite a bit about coding by doing a bunch of it. You can put in however much work you want. It's not very structured (sometimes annoyingly so). ",
+            "\u00a0If someone was interested in getting general experience with various topics in statistical computing not covered in other classes at Yale, I would highly recommend this class. This class, however, is not meant for those without extensive previous coding experience, particularly in R. ",
+            "\u00a0Yes! See above. ",
+            "\u00a0Yes, I would recommend this class to a student who is trying to learn more about programming in R and are new to concepts of computer memory usage and computational efficiency. ",
+            "\u00a0Great course. You learn some very marketable skills such as C++, R grid graphics, and R shiny. Would recommend. ",
+            "\u00a0yes, especially if you would like to learn more R (and in particular the underlying aspects of the language) and if you like programming ",
+            "\u00a0Yes, I would recommend any one looking for deeper understanding of R programming to take this course. ",
+            "\u00a0Maybe. About half the days are extremely useful for learning an eclectic group of programming skills in R. About half the days are basically no value-added in terms of learning. "
+        ]
+    ]
+}

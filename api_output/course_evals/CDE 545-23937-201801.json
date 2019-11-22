@@ -1,0 +1,77 @@
+{
+    "crn_code": "23937",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's <b>sensitivity to students and ability to provide students with adequate feedback</b> was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            4,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I spent about 3 hours per week on this class. ",
+            "\u00a010+ ",
+            "\u00a03 ",
+            "\u00a03 ",
+            "\u00a05 hrs ",
+            "\u00a03 "
+        ],
+        [
+            "\u00a0I loved this course! I have no suggestions for improvement. The syllabus was carefully put together, and the assignments were helpful to further understand the materials we learned in class. I loved the book club! The workload for this class was just the right amount.  The class discussions were interesting, and Professor Jones did a great job making sure all her students were engaged. ",
+            "\u00a0I LOVED this course. I wish I had more time to devote to it every week -- the readings were well-curated, the discussions were sensitive and important. I wouldn't change anything, except that the weeks where we had fewer readings the discussions were much more fruitful (I thought) because there wasn't a need to rush through them. ",
+            "\u00a0Strengths: covered a variety of topics. Great environment to foster open dialogue and communication. Weaknesses: I thought that this class would have actual epidemiological examples or problem sets. I think it may have been interesting to analyze data as an assignment and compare how other students categorized or didn't categorize racial or class indicators. ",
+            "\u00a0I liked how the course was structured with some lecture at the beginning of the session and then with student-led discussion after. I think that the discussions could have been facilitated to have been more in-depth and constructive, but that also may have been the nature the students this particular semester. ",
+            "\u00a0Strengths- great course that teaches the nuances of health disparities. Beth has an excellent choice of readings throughout the course that make the materials enjoyable and stimulating. \r\n\r\nWeakenesses- the class is entirely dependent on the students and the discussion they bring to the table. "
+        ],
+        [
+            "\u00a0Professor Jones is an amazing professor! I can't say enough great things!! She created a respectful and open learning space. She fostered an environment where we were able to discuss difficult topics openly. She was always really helpful when I had questions, and she gave me useful feedback on my assignments. She was accommodating and understanding. You can really tell that she cares so much about her students and her class! I have no suggestions for improvement. I have learned a lot from her class, and Professor Jones is a wonderful professor! ",
+            "\u00a0Beth created a fantastic learning space, I feel lucky to have taken a class with her. ",
+            "\u00a0Strength: Dr. Jones is very down-to-earth and approachable. She's also very interested in her students, which makes the classroom a welcoming place to interact. Weakness: Sometimes, Dr. Jones made off-the-cuff, insensitive comments that could have made her students feel isolated (e.g., during a discussion about the ACA penalty for not having insurance, she said something along the lines of, \"why don't people just get insured?\"). Otherwise, she was very willing to accept feedback on her language and tone. ",
+            "\u00a0Dr. Jones had extensive knowledge and hands-on experience in the field, which clearly showed. She was open to discussing any topic and I appreciated how she handled often sensitive subjects. ",
+            "\u00a0Beth is really sweet and flexible with her approach to the course. She appreciates good discussion during the class and has interesting assignments throughout the semester. I appreciated how she encouraged the class to critically evaluate health disparity pieces through the lens of an epidemiologist. She is a great resource to learn from! ",
+            "\u00a0Dr. Jones is a very sensitive, caring professor. She is very aware of what she says and leading a class like this, that is important. I think she could do better with time management and submitting feedback/grades on Canvas. It was difficult to see her comments, and she often had to email them. Overall, Dr. Jones was a lovely professor to have, and it was evident that she really cared about the course. "
+        ],
+        [
+            "\u00a0I would recommend this course to any student who is interested in exploring health disparities in the United States in depth. The class has something to offer for a student who is new to the subject as well as for a student who has more experience in this field. ",
+            "\u00a0Should be required! An essential overview of the assumptions made in epidemiological research and the ways in which we need to improve to adequately reduce health disparities and save lives. ",
+            "\u00a0Would somewhat recommend, only if the student was not already well-versed in social sciences! ",
+            "\u00a0I recommend this course if you're interested in health disparities and how to measure them with an epidemiological approach. ",
+            "\u00a0This course is a great discussion-based course that allows students to hear other students' perceptions and experiences with difficult race and health disparity issues. I would recommend this course. However, I think this course could move at a faster pace in order to cover all the material given by the professor. "
+        ]
+    ]
+}

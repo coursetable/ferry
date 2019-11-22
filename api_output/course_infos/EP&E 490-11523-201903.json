@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50946/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to the emerging field of moral cognition. Focus on questions about the philosophical significance of psychological findings. Topics include the role of emotion in moral judgment; the significance of character traits in virtue ethics and personality psychology; the reliability of intuitions and the psychological processes that underlie them.", 
+    "title": "The Cognitive Science of Moral...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 013", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11523", 
+        "listings": [
+            {
+                "number": "490", 
+                "subject": "EP&E"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEP2\">YC EP&amp;E Ethics Core</a>"
+    ], 
+    "professors": [
+        "Joshua Knobe"
+    ], 
+    "long_title": "The Cognitive Science of Morality", 
+    "extra_info": "A"
+}

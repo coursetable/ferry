@@ -1,0 +1,76 @@
+{
+    "crn_code": "11680",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            2,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained critical experience in speed-reading, analyzing, and discussing music-theoretical and music-historical texts. ",
+            "\u00a0True to its name, this course taught students the history of (mostly Western) music theory. ",
+            "\u00a0A good overview of pre-17th c. Western music theory, with insightful excursions into other music theory traditions. "
+        ],
+        [
+            "\u00a0The structure of this course was kind of up in the air until a month or so in; in the future I have no doubt it will be more solid. The readings were engaging, but I would have loved to see even more non-Western content beyond the few weeks we spent on India. Overall, very strong course. ",
+            "\u00a0It was a great idea for the professor to include Javanese and Classical Indian music theories, as the course is titled \"History of Theory\", not \"History of Western Theory\", and European cultures is not the only place that has music theory, yet it is too often treated that way. ",
+            "\u00a0I found the course rewarding; accomplishing the seemingly impossible task of exposing students to centuries and centuries of complex and messy music theory. A course like this engenders some challenges. For one, people of widely varying familiarity with the material are in the class, and since all theorist PhDs are required to take the class, they seem to start out with more ease with the materials/approaches than non-theorists. Additionally, for students specializing in particular musicohistorical eras, whether theorists or not, this class is potentially one of the few coursework opportunities to glean information about theory in their specialization. This means that the relative time given to each unit within the curriculum entails an opportunity cost for another. Speaking as an early Western music person, the study of Indian music theory was didactically and curricularly significant, but the amount of focus on it (several weeks) created anxiety that we wouldn't have the time to learn the stuff we \"have to\". This was exacerbated by the lack of a syllabus for the first half of the course. In the end, I think the class worked out pretty well in terms of breadth of exposure, but the depth was at times uneven. To that end, I think the Greek theory unit also went a bit far down the rabbit hole. More time should be spend on hammering out a syllabus early on, and student input should be sought. "
+        ],
+        [
+            "\u00a0I would recommend this course in a heartbeat to any other undergrad who is very serious about music and wants a taste of higher-level music academia, but I'm not sure how much your garden-variety premed or EP&E major would get out of this. But I think that's kind of the point. ",
+            "\u00a0I would, but I would encourage the student to be vocal in helping to guide the curriculum. Most students in the class are expected to know certain things on account of their specializations, and that should be made known, so that students can walk away with what they need to. "
+        ]
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "crn_code": "10515",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            2,
+            1,
+            3,
+            2
+        ],
+        [
+            2,
+            0,
+            4,
+            2,
+            1
+        ],
+        [
+            1,
+            2,
+            1,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            3
+        ],
+        [
+            1,
+            1,
+            4,
+            1,
+            2
+        ],
+        [
+            1,
+            1,
+            5,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Nothing. I really learned nothing. ",
+            "\u00a0I gained a better understanding of some of the principle modalities of imaging and biosensing, and perhaps more importantly the advantages/considerations/limitations of each. ",
+            "\u00a0I learned how much about imaging, and integrating physiology and physics to image or sense bio-phenomena. ",
+            "\u00a0Nice overview of biological and medical imaging techniques. ",
+            "\u00a0Understanding of signal acquiring for MRI, PET, and other biosensing techniques. ",
+            "\u00a0Basic, useful knowledge for Bio-imaging area. "
+        ],
+        [
+            "\u00a0This class is taught in a terrible manner. The homework assignments are worded so that no one knows what they are asking. It is just busy work. They spent too much time talking about the physics behind the imaging. This is supposed to be a general intro course. They should change it to explain what the different types of imaging are and how they could be applied to biomedical engineering. The class could discuss studies and papers. I think students would gain more from that. ",
+            "\u00a0This is essentially a survey course, which has the advantage of providing breadth, but also leaves you feeling like you don't have a good understanding of any of the topics covered. That being said, I think the advantage of being exposed to multiple biosensing modalities outweighs the lack of depth. I found the assignments to be a little disorganized (there were corrections sent out for nearly every problem set, and the submission dates were frequently changed), which was frustrating. I did enjoy writing the \"new technology\" proposal at the end of the course, which could be on nearly any topic of your choice. ",
+            "\u00a0I think that the lecture materials are poorly organized and inconsistent in their formatting. This made it hard to revise, or find specific details needed. The lectures were also not very engaging. They may benefit from shortening from 1.25 hrs to 1. Also the assignments were frustrating in that they were occasionally unclear in what they required, often leading to clarifications being posted and deadlines being pushed. This was an irritating experience. When the assignments have formatting issues on top of this, it is hard to be sure that you can do the question given the information provided. ",
+            "\u00a0I think that joint graduate/undergraduate classes are fundamentally flawed.  I think that a more advanced course should be required for graduate students. ",
+            "\u00a0Strengths: the teaching and syllabus are very modularized and grouped into application\r\nWeakness: Prof. Hyder's notes need to have some labeling for better navigation. ",
+            "\u00a0Strengths: this course has separated parts taught by different professors \r\nWeakness: N/A "
+        ],
+        [
+            "\u00a0Never. ",
+            "\u00a0If you are interested in a survey of different imaging/sensing modalities, then yes. If you have a good background in biomedical imaging and/or want to go really into depth on these topics, then no. ",
+            "\u00a0In its form I think there are too many topics, and they are not covered well. I think for those students who are new to imaging, this is overwhelming. In addition the confusing nature of the assignments increases the workload unnecessarily. I think students will be reticent to get involved in imaging after taking this course. ",
+            "\u00a0It is required for BME graduate students.  I would not otherwise recommend it, unless you have no experience with medical imaging and want an overview.  This class is not mathematically rigorous, which I see as a flaw.  That said, it's a nice introduction to the concepts. ",
+            "\u00a0Yes, it is a good first exposure of bioimaging if someone wants to get into the field, but I would not recommend to other students who do not necessarily engage in the field. ",
+            "\u00a0I will recommend this course, especially for whom are very interested in Bio-image study. "
+        ]
+    ]
+}

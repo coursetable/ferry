@@ -1,0 +1,108 @@
+{
+    "crn_code": "11593",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            4,
+            12,
+            6,
+            2,
+            2
+        ],
+        [
+            11,
+            6,
+            7,
+            1,
+            1
+        ],
+        [
+            14,
+            8,
+            3,
+            1,
+            0
+        ],
+        [
+            11,
+            9,
+            4,
+            2,
+            0
+        ],
+        [
+            0,
+            4,
+            6,
+            9,
+            6
+        ],
+        [
+            3,
+            14,
+            7,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Through this class, I developed a knowledge of Fourier series/analysis, solving PDEs such as the heat and wave equation, and knowledge of the spectral theorem. ",
+            "\u00a0A lot of theoretical mathematics for an applied math course. Fourier Series, Fourier Transform, partial differential equations, a sprinkling of complex analysis, some linear algebra, and the spectral theorem. Unfortunately, a lot of this course was difficult to understand, and there wasn't an accompanying textbook. One skill gained from this course was how to collaborate and utilize textbooks online to understand the material. ",
+            "\u00a0I learned a tiny bit of functional analysis and some fourier analysis too. I learned the solution to the heat equation and the wave equation and some stuff about the poisson kernel. ",
+            "\u00a0I sort of know what a fourier transform is now. ",
+            "\u00a0i learned how little i understand about fourier series/transforms/the like ",
+            "\u00a0This course covers a very wide range of topics, and serves as a good introduction to analysis. In this class you expand on a lot on concepts you learned in differential equations and linear algebra. This material has really cool applications, and is definitely important to know for practical purposes. ",
+            "\u00a0Absolutely none. There are no class notes, no textbook and lectures that I feel I wasted 2 and a half hours of each week over. The homework assignments came back without any notes/corrections explaining what went wrong and why, and the evaluation structure was unclear from the beginning till the very end.\r\n\r\nThis class is yet another example of Yale Math failing to teach a student anything but expecting the world from them in the homework and exams. In other words, you have to self learn everything. ",
+            "\u00a0A survey course on function spaces that spans linear algebra, differential equations, calculus and some basic analysis. ",
+            "\u00a0I developed so Fourier analysis ",
+            "\u00a0Very basic understanding of Fourier transforms, as well as wave and heat equations. ",
+            "\u00a0a basic understanding of Fourier Analysis and some insight into higher level math "
+        ],
+        [
+            "\u00a0I have a lot of thoughts on this class. Though I am thankful that over the course of the semester I learned a lot, I was perpetually confused throughout. Class was often confusing, and it seemed that lectures did not tie together - rather, each lecture was its own separate entity. My classmates and I often had to do a lot of self-studying outside the class through notes and online lecture slides to understand the class material. I don't think this would be as significant a problem if there were a definitive text for this class. Prof. Coifman assigns this old textbook, and it's decently helpful, but skips over a lot of class material. This class pulls in so much information from disparate fields of math that there's really no definitive text. Regardless, Prof. Coifman doesn't provide keywords or names of theorems/results proved in class, so it's hard to find online materials to self-study. Of course, through necessity, you will pore over dozens of Google results and .pdf lecture notes from other universities to grok the 260 material. Professor Coifman is kind and helpful, but despite this, the class remains confusing, and it's hard to piece together all the information and equations. \r\n\r\nOne strength of this class however, is the take-home exams, which Prof. Coifman gives ample time for. Our first take home exam was given before Thanksgiving break, and Prof. Coifman accepted submissions at any time following the break till the end of classes. He's very forgiving with mistakes. ",
+            "\u00a0This class has the potential to be an excellent introduction to functional analysis. The material can be quite interesting, and the grading structure is very fair (take home exams and homework). However, the material is pieced together very disjointly, and the assignments are exceptionally difficult. Professor Coifman is a wonderful person, but his teaching is often difficult to follow and can leave students scrambling when it comes time for the exams. ",
+            "\u00a0I wish we had a textbook for this class, as many times, the class was lost by the lecture but had no other resource to learn from. ",
+            "\u00a0Although the content of this course is probably very interesting and meaningful, I was not able to benefit from any of that potential based on how disorganized it was.  I benefited a lot from the notes that Professor Coifman posted on Canvas, but they were few and far between, and unfortunately on topics that I found to be covered relatively well in class. I think we need to do more concrete in class examples to reinforce concepts and getting real feedback on homework would be nice. There was also a frustrating discrepancy regarding what was considered correct on homework and what was considered correct on the midterm and I'm not exactly sure how that arose. ",
+            "\u00a0There is not a lot of support if you are struggling in this course -- there is no textbook, no TA, no section, and sometimes the notes aren't super clear when it comes to things like coefficients and so it can be difficult to know if what you have written down is completely correct (and sometimes it is written differently in multiple places). It would have been wonderful to have some types up notes posted to have a source where you could go to ensure that the little deals were absolutely correct when working through various exercises. Some of the notation is a bit different so it is sometimes difficult to compare with online courses. ",
+            "\u00a0This is not a great class. The only reason I could do any of the problems was because I watched them done on the board. The level of the lecture is so much higher than the level of attention required to do well on problem sets that it's difficult to pay attention at all. ",
+            "\u00a0This class is very disorganized. Coifman's lectures are difficult to understand as he presumes a knowledge of math higher than what the prerequisites imply and he jumps from topic to topic with very little correlation. We didn't really follow the syllabus he started out with in the beginning of the year. The nice thing about the class is that it's very low workload and the take home midterm and final. ",
+            "\u00a0It was nice that the course covered such a wide range of material, and material that is more cutting edge/ things that will be practical for using math in the real world. I thought the material was very interesting, but found it difficult to learn. It would be nice if we had more opportunities to make sure we understood the material. There were very few psets, all of which were short, so I feel like there is a lot of material he went over, that I did not get to fully understand, as I would have if we had pset problems/ had the opportunity to get more feedback. It would also be nice to do more examples of how this kind of math is used in applications, as I know it has many useful and interesting applications. ",
+            "\u00a0Did span many subjects and try to pull from many different fields of math, but there were no course materials at all and was very unstructured. ",
+            "\u00a0If Professor Coifman had at least a basic lesson plan for each class, I feel the course would be much improved. I felt that the course was very disorganized and it was difficult to match lectures up to what was written on the syllabus. ",
+            "\u00a0It was very disorganized.  The professor did not string together material in an effective manner. ",
+            "\u00a0The biggest weakness was not having a textbook. With a clear syllabus and lesson plan, this would have been less of a problem.\r\n\r\nIt could be improved by having a textbook, as well as lesson plans and some sort of idea of grading structure. As I'm writing this evaluation, I have no earthly idea what grade I'll get because the professor never stated grade breakdowns. ",
+            "\u00a0This was honestly the worst-taught and worst-organized course in the 32 credits I've taken at Yale. Professor Coifman is extremely friendly and a brilliant mathematician, but he could not effectively communicate the material to his class. The class is almost entirely based on his lectures. There is no textbook, and the only outside resources he gave us were a few short PDFs from various textbooks. His boardwork only made sense in the classroom. It was not well-organized or self-explanatory. When I came back to my notes, I had very little idea about what we were trying to cover, especially when I attempted to review weeks after we had covered a topic. In class, I was often lost and didn't understand the point of many of the derivations what he was doing. He had a tendency to state the result that we were trying to find only after we found it, which led to a lot of confusing class time. He also liked to skip large parts of the derivations, which led to more confusion and unhelpful notes. It was apparent to me and (from my perspective) pretty much everyone in the class, including Professor Coifman, that most of the class was lost most of the time. Much of the homework referred to the notes and what we had covered in class, things like \"repeat the derivation we did in class,\" \"refer to the notes,\" etc, which was useless to me since I didn't understand the notes and the derivation itself was incomprehensible. Most of the learning I did in order to be able to complete the homework assignments was the result of hours of googling to find PDFS containing somewhat relevant examples and lessons from textbooks. In addition, some of the problems on the take-home final were only tangentially related to what we had covered in class. Despite all this, Professor Coifman seemed to make no effort to change his approach to teaching the class. I did not at all enjoy this class, and I feel like I learned very little. A lot of work will have to be done before I would recommend that anyone take this course.\r\n\r\nSuggestions:\r\n\r\nFind a textbook and stick to it. I cannot stress how much this could have helped.\r\n\r\nPrepare self-explanatory and extensive boardwork beforehand. All of my favorite math teachers at Yale have had great boardwork.\r\n\r\nBe clear about what you are covering, including the names of the concepts/derivation you are covering, before you get into the math. Even being able to google the derivation afterward could have cleared up some confusion.\r\n\r\nState what you are attempting to derive beforehand. Either do the entire derivation or explicitly state where you skip steps and what steps you skipped. "
+        ],
+        [
+            "\u00a0Personally I don't believe I would recommend this course to other students. Lectures are very stream-of-consciousness and so not particularly organized, and there isn't really any check-for-understanding. ",
+            "\u00a0Depends. I took this class because it looked interesting and counted towards my major. This class has a strong emphasis on applications, so if you are a pure math major, there are probably other classes you can take that might be more interesting and 'purer' than this class. If you're an S&DS/applied math/math & physics major, this class could count toward your major and it would be worth considering. ",
+            "\u00a0This course is a good example of low workload but high intellectual rigor. I would only recommend this course to a student who is exceptionally well prepared in linear algebra and differential equations. You will struggle to understand the material and be extremely stressed when it comes time to complete the take home exams, but you will survive. ",
+            "\u00a0I am absolutely not mathematically advanced enough to take this course. I didn't understand anything that was taught whatsoever. I thought this would be fine based on previous evaluations, but it made getting the take-home midterm and final done hellish. Don't be fooled into thinking the take-homes make it easy; they create enough stress to make the class overall very difficult. ",
+            "\u00a0I would not recommend this course to any student at Yale. I also don't think it's a required course for any major here, and it should definitely stay that way. ",
+            "\u00a0Definitely not. There are a lot of other ways to take a math class. If you care about the material you should learn it a different way, if you don't care about the material this is going to be a horrible class. ",
+            "\u00a0No I would not. The class is disorganized and I didn't learn almost anything. Coifman is nice, but lectures are disjointed and difficult to understand. Think twice before taking this as a gut. ",
+            "\u00a0absolutely not. the worst class i have ever taken ",
+            "\u00a0I would still recommend this course to another student. I think the material is interesting and very important to learn if you are pursuing a degree in any math or applied science. I was very skeptical to take this course, worried that I would be behind, but ultimately I think it was okay. The material is pretty difficult to understand, but don't be afraid to go talk to the professor, which usually is pretty helpful. The class is really confusing at times, but ultimately its not very high pressure, Professor Coifman just wants to make sure you learn the material eventually. ",
+            "\u00a0DO NOT TAKE THIS CLASS.\r\n\r\nYou're probably considering it if you're a Math/Amth/Econ-Math major. Save yourself the hassle and take 250 instead. You may think it's more work, but you have resources available to tackle it. I feel like I'm about to walk into MATH 300/301 without knowing a thing I'm supposed to know about it. ",
+            "\u00a0Only one takehome midterm, one take home final and intermittent short homework assignments. Very hard to keep up in the course, since Professor Coifman bounces around a lot but interesting enough. ",
+            "\u00a0If you take this class, you will only get something out of it if you try hard to ask questions during class and muddle through the material. Coifman was a very nice professor, but you definitely have to work hard to get insights out of his lectures. ",
+            "\u00a0Not really. Too much variability and unclear grading ",
+            "\u00a0Though Prof Coifman is a genius, this class was incredibly poorly taught. It was usually a stream of consciousness of his thoughts onto the blackboard, and ideas were very difficult to follow. Though there were two take home midterms, very little feedback was given - when we were issued the final, we realized an example he had done during class and that he had put on the previous midterm was wrong all along. The lack of a textbook in the class makes it also impossible to know what the right answers should be. ",
+            "\u00a0Probably would not recommend, unless you already have a basic understanding of real analysis and Fourier series/transforms. It is very difficult to gain any deep understanding of anything, but some ideas presented are interesting, and not taught in other math classes. ",
+            "\u00a0This was honestly the worst-taught and worst-organized course in the 32 credits I've taken at Yale. Professor Coifman is extremely friendly and a brilliant mathematician, but he could not effectively communicate the material to his class. The class is almost entirely based on his lectures. There is no textbook, and the only outside resources he gave us were a few short PDFs from various textbooks. His boardwork only made sense in the classroom. It was not well-organized or self-explanatory. When I came back to my notes, I had very little idea about what we were trying to cover, especially when I attempted to review weeks after we had covered a topic. He had a tendency to state the result that we were trying to find only after we found it, which led to a lot of confusing class time. He also liked to skip large parts of the derivations, which led to more confusion and unhelpful notes. It was apparent to me and (from my perspective) pretty much everyone in the class, including Professor Coifman, that most of the class was lost most of the time. Most of the learning I did in order to be able to complete the homework assignments was the result of hours of googling to find PDFS containing somewhat relevant examples and lessons from textbooks. In addition, some of the problems on the take-home final were only tangentially related to what we had covered in class. Despite all this, Professor Coifman seemed to make no effort to change his approach to teaching the class. I did not at all enjoy this class, and I feel like I learned very little. A lot of work will have to be done before I would recommend that anyone take this course. "
+        ]
+    ]
+}

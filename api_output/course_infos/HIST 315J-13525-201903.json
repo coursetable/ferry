@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49687/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course examines how the Japanese Empire mobilized its legal frameworks and institutions to transform family relations, gender norms, and sexual behaviors in the societies that it engulfed. We explore these complex processes through which contradictory ideas and practices collided and intersected. Some traditions survived, while others were invented. Japan was in charge, but the colonies and their diverse populations influenced Japanese views. In the first half of the semester, we study Japanese family law as a malleable instrument for imperial governance and an interactive space of negotiation and contestation in the colonies. The second half is devoted to probing Japanese efforts to criminalize abortion, regulate reproduction, control diseases, \u201ccure\u201d disabilities, and study and fashion the body. In each session, we analyze the category of gender as integral to our discussions of empire, nation, culture, and war.", 
+    "title": "Law and Gender in the Japanese...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "LC 206", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13525", 
+        "listings": [
+            {
+                "number": "315J", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jooyeon Hahm"
+    ], 
+    "long_title": "Law and Gender in the Japanese Empire", 
+    "extra_info": "A"
+}

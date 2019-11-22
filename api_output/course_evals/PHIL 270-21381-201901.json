@@ -1,0 +1,86 @@
+{
+    "crn_code": "21381",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            3,
+            3,
+            3,
+            0
+        ],
+        [
+            1,
+            0,
+            3,
+            3,
+            1
+        ],
+        [
+            0,
+            2,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            6,
+            1
+        ],
+        [
+            0,
+            1,
+            5,
+            0,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Through the weekly reading responses (I underestimated the amount of effort they would require), I learned how to read, summarize, and critically analyze long (15+ pages) philosophical papers. ",
+            "\u00a0I learned that I don't know when and what I know, and therefore can't answer this question.\r\n\r\nLots of theories about knowledge, how different schools/camps emerged, how to think more critically about all kinds of questions ",
+            "\u00a0Good overview of important ideas in epistemology and how we can answer questions about knowledge. ",
+            "\u00a0Basic introduction to epistemology ",
+            "\u00a0Critical thinking ",
+            "\u00a0A depth of knowledge regarding theories of knowledge, their shortcomings, skepticism and its responses. "
+        ],
+        [
+            "\u00a0strengths: KDR is accessible, I preferred weekly reading responses to section. weakness: if you aren't interested in epistemology, you are not going to have a good time ",
+            "\u00a0Strengths: handouts, loved the conversation-feel of the small lecture (basically a seminar), giving questions made testing much more manageable\r\nWeaknesses: lots of reading, unclear answers to questions, sometimes monotonous\r\nImprovements: if you haven't covered all the material at the end of the semester please either cut it from the syllabus or plan better earlier on. At least don't decide to make these dense, rushed papers the core of the final exam. ",
+            "\u00a0Reasonable workload, pretty good progression of material, DeRose explains things ewll. ",
+            "\u00a0I found the classes - which were all lectures despite the small size - somewhat boring. There was very little class participation. ",
+            "\u00a0Strength: Professor was a great speaker\r\n\r\nWeakness: Not meant for STEM oriented students ",
+            "\u00a0It was an extremely productive dive into the subject material. The class was organized well so different systems of thought played of each other when we studied them. "
+        ],
+        [
+            "\u00a0I recommend this course if the student has a clear motivation for taking it. If not, the discussions will seem pedantic ",
+            "\u00a0It's useful training and Prof. DeRose has fun with it, which makes it fun for us. Be sure you know what you're getting yourself into, though. ",
+            "\u00a0Sure ",
+            "\u00a0I wouldn't. I did not find the material interesting nor the teaching captivating. ",
+            "\u00a0I would recommend this course for nonSTEM majors or students who like to think critically. ",
+            "\u00a0Yes it not only requires you to learn the author's positions but the regular writing requires you to engage and wrestle with the ideas on your own. "
+        ]
+    ]
+}

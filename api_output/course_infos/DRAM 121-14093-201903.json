@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51562/assignments/syllabus", 
+    "requirements": "Open to nondepartmental and non-School of Drama students with prior permission of the instructor.", 
+    "description": "Successful human resource strategy is about managing people, not about managing problems. This course examines the tools needed to be an effective manager: listening well, communicating needs, building core competencies, setting expectations, coaching, negotiating, empowering, evaluating, and terminating with respect. Specific focus is placed on human resources as it is currently practiced and communicated in the American regional theater.\nOpen to nondepartmental and non-School of Drama students with prior permission of the instructor.", 
+    "title": "Managing People", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 12, 
+            "location": "CR305 100", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14093", 
+        "listings": [
+            {
+                "number": "121", 
+                "subject": "DRAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Victoria Nolan-Crolius"
+    ], 
+    "long_title": "Managing People", 
+    "extra_info": "A"
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50909/assignments/syllabus", 
+    "requirements": "Prerequisite: PATH 650 or permission of the instructor. Open to all Ph.D., M.D./Ph.D., and M.P.H. students and to advanced undergraduates at the discretion of the instructor.", 
+    "description": "This advanced course focuses on readings and discussion on three or four major topics in cancer biology, such as targeted therapy, tumor immunology, tumor metabolism, and genomic evolution of cancer. For each topic, the class starts with an interactive lecture, followed by critical analysis of primary research literature. Recent research articles are assigned, and a student leads discussions with input from faculty who are experts in the topic area.\nPrerequisite: PATH 650 or permission of the instructor. Open to all Ph.D., M.D./Ph.D., and M.P.H. students and to advanced undergraduates at the discretion of the instructor.", 
+    "title": "Advanced Topics in Cancer Biol...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "BML 137", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11511", 
+        "listings": [
+            {
+                "number": "681", 
+                "subject": "B&BS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kurt Schalper"
+    ], 
+    "long_title": "Advanced Topics in Cancer Biology", 
+    "extra_info": "A"
+}

@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49212/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The course develops a foundation in human physiology by examining the homeostasis of vital parameters within the body, and the biophysical properties of cells, tissues, and organs. Basic concepts in cell and membrane physiology are synthesized through exploring the function of skeletal, smooth, and cardiac muscle. The physical basis of blood flow, mechanisms of vascular exchange, cardiac performance, and regulation of overall circulatory function are discussed. Respiratory physiology explores the mechanics of ventilation, gas diffusion, and acid-base balance. Renal physiology examines the formation and composition of urine and the regulation of electrolyte, fluid, and acid-base balance. Organs of the digestive system are discussed from the perspective of substrate metabolism and energy balance. Hormonal regulation is applied to metabolic control and to calcium, water, and electrolyte balance. The biology of nerve cells is addressed with emphasis on synaptic transmission and simple neuronal circuits within the central nervous system. The special senses are considered in the framework of sensory transduction. Weekly discussion sections provide a forum for in-depth exploration of topics. Graduate students evaluate research findings through literature review and weekly meetings with the instructor.", 
+    "title": "Physiological Systems", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "DL 220", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10469", 
+        "listings": [
+            {
+                "number": "550", 
+                "subject": "ENAS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Mark Saltzman", 
+        "Stuart Campbell"
+    ], 
+    "long_title": "Physiological Systems", 
+    "extra_info": "A"
+}

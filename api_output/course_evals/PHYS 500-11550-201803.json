@@ -1,0 +1,92 @@
+{
+    "crn_code": "11550",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            5,
+            6
+        ],
+        [
+            0,
+            0,
+            2,
+            6,
+            5
+        ],
+        [
+            0,
+            0,
+            2,
+            9,
+            2
+        ],
+        [
+            0,
+            1,
+            4,
+            4,
+            4
+        ],
+        [
+            0,
+            0,
+            4,
+            6,
+            3
+        ],
+        [
+            0,
+            0,
+            3,
+            9,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course taught me many methods for solving problems in classical mechanics. In addition to individual techniques, I also developed a better understanding of the mathematical foundations for mechanics. ",
+            "\u00a0I definitely solidified my knowledge of classical mechanics. Additionally, topics such as chaos and Hamilton-Jacobi were not covered in my undergrad courses. ",
+            "\u00a0Classical Mechanics! ",
+            "\u00a0I learned about some new theoretical frameworks to consider classical mechanics in and how those frameworks connected to areas outside of classical mechanics. ",
+            "\u00a0Learned classical mechanics. ",
+            "\u00a0Had a good revision of my classical mechanics concepts ",
+            "\u00a0I learned a lot about classical mechanics.  When I took the undergraduate version of this course I didn't quite get it, but at some point a lot of the material finally started to make sense.  I get Lagrangian and Hamiltonian mechanics a lot better now. ",
+            "\u00a0- Clarified how to use Lagrangian to solve more complex problems (in particular, I learned how Lagrange multipliers work)\r\n- Improved my understanding of Hamiltonian formalism, Poisson brackets, and Canonical transformations\r\n- Better understanding of rigid body motion (Euler's Equations) "
+        ],
+        [
+            "\u00a0This is a pretty straightforward course, so there isn't much to improve here. Perhaps, doing some practice problems on chaos in class? ",
+            "\u00a0Strengths: Wonderful Professor, interesting material, good Psets, fair exams\r\nweaknesses: Psets should be graded out of a higher point scale maybe ",
+            "\u00a0It was very difficult to keep up with the course's content without it being structured around a textbook or having the notes posted in a set location. I am not able to keep up with the pace of the lectures while taking notes meaning that I had to spend an excessive amount of time reading outside sources. ",
+            "\u00a0Much more time and homework should be devoted to the topics in the second half of the course. The first half was largely already well understood by most of the class. Truly new material was rushed, canonical transformations and action angle variables in particular. ",
+            "\u00a0Strengths - good lectures/professor.\r\nWeaknesses - too much time spent on boring/easy stuff. ",
+            "\u00a0It was slightly rushed towards the end, but had a good coverage overall ",
+            "\u00a0It was a good class that helped solidify and expand upon my understanding of the important part of classical mechanics.  I think the end of the course got very difficult very fast - the part on chaos went way over my head and wasn't essential to the course.  Because we didn't cover anything on that material analytically, I think that time could have been better spent going over completely integrable systems.  Completely integrable systems was also very difficult for me to follow, but I think that if we spent more time covering that instead of talking conceptually about chaos I would have gotten more out of the class.r ",
+            "\u00a0Strengths\r\n- Problem sets really hammered home the concepts covered in the course\r\n- Lecture notes were very useful\r\n\r\nWeaknesses\r\n- Would have liked to work out of a single primary textbook; it was not always easy to clarify concepts if they weren't understood after lecture\r\n- Final exam was meaningfully more difficult than midterm (would have preferred a harder midterm to get sense for final exam difficulty) "
+        ],
+        [
+            "\u00a0Yeah! It's great to form a solid foundation in classical mechanics. ",
+            "\u00a0Yes, overall it's a great course on fundamental topics every STEM should know ",
+            "\u00a0Yes! I took this as an undergrad sophomore, and it was definitely doable. I would recommend it! ",
+            "\u00a0Definitely! ",
+            "\u00a0Sure, it is required for physics grad studetns. ",
+            "\u00a0If you need a revision of your classical mechanics, this course would definitely be great to take. ",
+            "\u00a0Yes I would.  I've been told that this class isn't required in many other graduate programs, but I think it would be weird to get a Ph.D. in physics and not have this level of understanding of classical mechanics. ",
+            "\u00a0Yes. While I'd covered many of the concepts covered in this course in some capacity before, I didn't feel truly comfortable with Lagrangian and Hamiltonian formalism until after this course. "
+        ]
+    ]
+}

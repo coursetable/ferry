@@ -1,0 +1,56 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49270/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A graduate-level seminar in modern cell biology. The class is devoted to the reading and critical evaluation of classical and current papers. The topics are coordinated with the CBIO 602 lecture schedule. Thus, concurrent enrollment in CBIO 602 is required.", 
+    "title": "Seminar in Molecular Cell Biol...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "SHM", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 11
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10498", 
+        "listings": [
+            {
+                "number": "603", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Megan King", 
+        "David Breslow", 
+        "Christopher Burd", 
+        "Michael Caplan", 
+        "Charles Lusk", 
+        "Thomas Melia", 
+        "Thomas Pollard", 
+        "James Rothman", 
+        "Martin Schwartz"
+    ], 
+    "long_title": "Seminar in Molecular Cell Biology", 
+    "extra_info": "A"
+}

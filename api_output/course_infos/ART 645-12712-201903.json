@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Limited to M.F.A. sculpture students. Criticism of individual projects.", 
+    "title": "Individual Critics Sculpture: ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12712", 
+        "listings": [
+            {
+                "number": "645", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Martin Kersels", 
+        "Sandra Burns", 
+        "Brent Howard", 
+        "Jenn Joy", 
+        "Akiko Sasamoto", 
+        "Erica Wessmann"
+    ], 
+    "long_title": "Individual Critics Sculpture: Individual Criticism Sculpture", 
+    "extra_info": "A"
+}

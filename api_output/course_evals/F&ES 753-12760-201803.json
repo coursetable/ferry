@@ -1,0 +1,112 @@
+{
+    "crn_code": "12760",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            6,
+            7,
+            0
+        ],
+        [
+            0,
+            2,
+            2,
+            6,
+            3
+        ],
+        [
+            1,
+            1,
+            5,
+            1,
+            5
+        ],
+        [
+            0,
+            2,
+            8,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            7,
+            6,
+            0
+        ],
+        [
+            0,
+            2,
+            5,
+            4,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to perform regression modeling using a number of modeling approaches, and deal with data issues. ",
+            "\u00a0This is my second statistics course at FES. The intro course with Jonathan introduced me to a wide array of statistical tools and applications, but didn't leave me feeling proficient in their use. After taking Tim's course, I feel confident that I can prepare and analyze a dataset to identify significant predictors of a variable of interest while controlling for correlations and addressing changes in variability. I appreciated how Tim reminded us that regression modeling is a subjective process that does not produce definitive answers, but rather is a useful tool for understanding trends in our observations. ",
+            "\u00a0It gave me a new idea to look at the data. It was helpful in dealing with environmental data and to make fruitful inferences of results. ",
+            "\u00a0Very practically, how to build regression models, while accounting for different types of datasets, and how to interpret results and fit.\r\n\r\nI also gained confidence in applying statistical knowledge to practical applications. ",
+            "\u00a0This is a great introductory class for regression modeling and also a nice class for us to start using R studio. Topics covered are very useful and the lecture notes are pretty clear. ",
+            "\u00a0How to operate  R Studio, how to test different models to fit the given dataset, how to come up with the best regression model on my own ",
+            "\u00a0Learnt the foundation of regression modeling given a response variable and a number of potential indicator variables. By the end I was able to build a successful working model. Leveled up my abilities with R too. ",
+            "\u00a0Id say the predominant skill I learned was an improved comfort level in the use of R. Not only did I learn a number of important commands, but I also gained confidence in my ability to figure out the answer(s) in those all-too-common instances of my needing help. ",
+            "\u00a0R, stats ",
+            "\u00a0Working knowledge of a variety of different regression models appropriate for analyzing ecological and environmental data, as well as how to use open-source R software to implement these models. "
+        ],
+        [
+            "\u00a0Quite well ",
+            "\u00a0This course exceeded my expectations. Not only did I learn how to create regression models, I feel more confident in my ability to manage and analyze data overall. I also learned how to use R, although I wouldn't say I'm proficient. ",
+            "\u00a0I am satisfied with the knowledge I gained through this course. The course has a very specific focus and nice detail. ",
+            "\u00a0This is exactly what I was hoping to learn and we even got into some course material that I had heard about before and that interested me, but that I hadn't realized would be covered here. ",
+            "\u00a0I think the knowledge and skills covered in this class are more interesting and useful than I expected. It covered a lot of basic methods and also some upper-level materials for us to understand the reason behind regression modeling and also how to actually use it. ",
+            "\u00a0I learned a lot more than I expected and gained useful R skills from this class. ",
+            "\u00a0Reflecting back, I believe I learned less in the way of statistics than I expected to. This was certainly not because Prof. Gregoire neglected to teach the subject, but rather because his lessons had (what I would consider to be) a significant emphasis on the mathematical basis (especially with matrices) behind the statistical concepts he taught. I appreciate that he made those mathematical explanations available to us (if Id had time, I definitely wouldve liked to learn them outside of class), but I was rarely able to follow them during lecture because my mind was always racing, which made extended bouts of concentration difficult. As a result, there were major chunks of each lecture that I was unable to benefit from, though that wasnt really a fault of Prof. Gregoires. ",
+            "\u00a0Not enough R tought ",
+            "\u00a0Variety of regression models taught fit in line with expectations. However, I did not expect the in-class material to be so theoretical, with very few practical applications taught in-class and much of the learning of how to use R and implement these models taking place on our own while completing homework assignments. "
+        ],
+        [
+            "\u00a0Strength: instructor is thorough, open to questions, homeworks are very helpful\r\nWeaknesses: not much interaction with modeling techniques during lecture - easy to get distracted. ",
+            "\u00a0Tim teaches the course at slower pace than other statistics courses I've taken, which I appreciated because it allows for greater exploration of, and more practice with, each concept. The lectures and lecture notes are thorough and well organized, however sometimes hard to follow in class, particularly the algebra. We reviewed the homework assignment in class once, which I found very helpful. I think reviewing each homework assignment would improve the course. If there's not enough time to review it in class, a document with Tim's approach and thought process would be a good substitute. ",
+            "\u00a0Course materials and lecture notes are excellent. ",
+            "\u00a0Strengths: Great instructor with very helpful notes for each unit.\r\n\r\nWeaknesses: It would have been great to have more opportunity to practice the skills we learned near the end of the semester. ",
+            "\u00a0I believe the lecture notes created by Professor Gregoire is very useful and covered a lot of important materials. Also, the sample R scripts are very insightful for us to get some hands-on experience. However, I hope his lecture can be more interactive because right now the lectures were mostly trying to go through the lecture notes, which can be done at home before class actually. Maybe Professor can use some simple quizzes to figure out which materials that students don't understand the most and talk more about them. ",
+            "\u00a0The class material is very clear (Professor Gregoire's pdfs are very clear and easy to understand). He could help us learn better by making the class time more interactive (i.e. class discussion, mini pop quiz) ",
+            "\u00a0This is a lecture-focused class around a skill that requires a lot of technical practice, so there is something of a disconnect. Lectures are not interactive, but the materials provided (lecture notes) are good, plus have access to all the scripts. I think some focus on the practical side of modeling would help a lot. By the end I did feel like I had the ability to work with a variety of datasets and techniques to build a functional model. ",
+            "\u00a0Not very interactive, I had to teach myself a lot by re-reading the notes. I could've benefited from more examples in class. ",
+            "\u00a0Two of my favorite aspects of this course had to do with Prof. Gregoires very evident enthusiasm for statistics (and related disciplines) and the kindness he shows his students. For example, he had an open door policy for our dropping by his office, and he gave us an incredible number of resources to help us along (materials hed created himself and other stuff that he thought we might benefit from). I also appreciated the frequency of the homework assignments in this class and that they werent more numerous (like once a week), because that definitely wouldve been an overload (especially given how long I spent on each one!). \r\nI think one of the biggest weaknesses of the course was the style of lecture. While I really appreciated the effort Prof. Gregoire went to in compiling and sharing his lecture notes prior to class so that students could follow along, I wasnt a fan of the lectures being taught straight off of documents (projected at the front of the room) which consisted mainly of paragraphs of text interspersed with snippets of R code, graphs/figures, etc. I found that that was very difficult to follow in lecture, largely because I always felt compelled to read through the paragraphs on my computer to make sure Id understood the whole section/page, but in so doing, Id miss some of Prof. Gregoires discussion of the next page, thereby prompting me to scroll down and start reading the paragraphs there You can imagine how this might turn into a vicious cycle. All in all, I found it unfortunately easy to fall behind in a lecture based off of a (primarily) text document, and catching back up was similarly difficult. ",
+            "\u00a0More hands on exercises ",
+            "\u00a0The course notes are extremely detailed and a terrific resource, and the class is well-suited for those who will be working with biological-related data. However, as an economist/social scientist interested in environmental-related topics, I would have appreciated a much greater discussion of how to appropriately analyze social sciences data. Furthermore, the class could be improved tremendously by going lighter on the theory and focusing on how to use R software to implement regression models during class time. "
+        ],
+        [
+            "\u00a0Spend time on all of the homeworks ",
+            "\u00a0you will learn very useful modeling skills that can be applied in a number of settings ",
+            "\u00a0This class may seem like it's for research degree students, but there are applications for management as well. Regression modelling is a useful tool for evaluating the impact of management strategies or program activities. This class is also a good way to learn R--instead of taking an entire class devoted to R, you get to practice using the software while learning another important skill. ",
+            "\u00a0It's a technical course and best if you have your own data and struggling to analyze. ",
+            "\u00a0It is helpful to know R before taking this, but it is not necessary. Don't be afraid to ask questions or visit the instructor for help--he is always listening. ",
+            "\u00a0Lecture notes and sample R scripts are very important for you to understand the course material and teach you how to actually use them. ",
+            "\u00a0Make sure to ask lots of questions in class and take advantage of TA sections. ",
+            "\u00a0This is a technical class with a heavy workload, and wrangling R to apply the concepts can be challenging. The real learning in the class comes from working on the problem sets using the lecture notes and scripts to create your own models. Working in groups and seeking guidance from your TA is strongly recommended. A baseline working ability with R is really helpful. And for the final project, try to find a dataset you are interested in to build a real-life working model. ",
+            "\u00a0I would suggest that s/he uses Prof. Gregoires lecture notes as merely a supplement to other (personal) notes that s/he takes during lectures. The official lecture notes might best serve as a tool with which to fill in blanks in his/her own notes and assist with confusion over the material covered in class. If you take those provided-notes to mean that you neednt take more thorough notes during class, then, if youre anything like me, they will quickly become a crutch that inhibits the deeper learning that comes from having taken your own notes during class. ",
+            "\u00a0Be prepared to read everything ",
+            "\u00a0The in-class lectures are very theoretical, and it is possible to do well while minimally engaging with the content covered in class. Homework assignments take time and the best way to be an effective learner is to start early and seek help as soon as possible from the TA and Professor Gregoire. "
+        ]
+    ]
+}

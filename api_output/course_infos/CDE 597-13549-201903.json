@@ -1,0 +1,47 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: previous course work in biology or genetics (BIOL 101\u00e2\u20ac\u201c104 series for Yale College students) or permission of the instructors.", 
+    "description": "The widespread availability of genetic data has resulted in the translation of genetics into a variety of public health settings. At the core of public health genetics is the rapidly growing science of genetic epidemiology, the study of the role of human genetic variation in determining disease risk in families and populations. This course focuses on the design, analysis, and interpretation of genetic epidemiologic studies. Topics covered include Mendelian laws of inheritance; recombination and linkage disequilibrium; types of genetic variation; molecular technologies for detection of genetic variation; study designs and statistical analysis methods used in genetic epidemiologic studies; and the translation of genetic epidemiologic findings into genetic testing and screening programs. The course provides an understanding of the role of the public health sciences of epidemiology and statistics in the study of human genetics, and of the role of genetics in public health.\nPrerequisite: previous course work in biology or genetics (BIOL 101\u00e2\u20ac\u201c104 series for Yale College students) or permission of the instructors.", 
+    "title": "Genetic Concepts in Public Hea...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "CO47 6", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 14
+        }, 
+        {
+            "start_time": 13, 
+            "location": "LEPH 102", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13549", 
+        "listings": [
+            {
+                "number": "597", 
+                "subject": "CDE"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Andrew DeWan"
+    ], 
+    "long_title": "Genetic Concepts in Public Health", 
+    "extra_info": "A"
+}

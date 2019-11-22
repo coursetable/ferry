@@ -1,0 +1,79 @@
+{
+    "crn_code": "24276",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0It was a good complementary class to the first semester CPE class. \r\nIt went deeper into the models and the maths, allowing me to get to a better understanding of how PE models are built and analyzed. ",
+            "\u00a0Knowledge:  A great deal of comparative political economy\r\n\r\nSkills:  Reading long/complex formal CPE models ",
+            "\u00a0One of the best social science classes I have taken at Yale. I learned so many concepts/theories/models of political economy, and we gained a lot of what the research process is like for academic political economists. ",
+            "\u00a0I learned about dynamic game theory, recent papers in comparative political economy, and common critiques of formal theory models.  I also learned more about the field of state capacity. "
+        ],
+        [
+            "\u00a0The course would benefit from a visual support (slides, etc.). \r\nIt would make it easier to follow where we are in the paper and the maths we are dealing with. ",
+            "\u00a0Strengths:  Broad overview of formal CPE.  Lots of content covered.\r\n\r\nWeakness:  Sparse feedback (because the grade is almost entirely based on a final paper) ",
+            "\u00a0Strengths: great content, good explanations of complex issues, key papers in the field discussed\r\n\r\nThere weren't any weaknesses in particular, but I imagine the class will only get stronger if Professor Vindigni teaches it again. ",
+            "\u00a0The papers selected for discussion were excellent.  I also enjoyed are discussions, particularly the substantive critiques of the papers.  When Andrea used prepared slides, I found the models easy to follow.  However, sometimes when we skipped around, it could be more difficult.  I did like the level of engagement with the formal models, as political science classes often consider models only artificially.\r\n\r\nI believe some students struggled following the material.  It would have been useful if Andrea had spent more time reviewing dynamic programming / Bellman equations during the first few classes.  Moreover, it may be necessary to require that students had already completed a game theory course and/or open the class up to more economics PhDs. "
+        ],
+        [
+            "\u00a0Yes I would to any other political economy PhD student. ",
+            "\u00a0Yes! If you are interested in political economy formally (or even if you are just interested in economic research on elections, constitutions, class politics, identity politics, etc.), you will really enjoy this course. ",
+            "\u00a0Yes, I think this is great material that is missing in the other political economy courses offered by either the economics or the political science departments. "
+        ]
+    ]
+}

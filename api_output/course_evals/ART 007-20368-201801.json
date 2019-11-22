@@ -1,0 +1,94 @@
+{
+    "crn_code": "20368",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            5,
+            1,
+            4
+        ],
+        [
+            0,
+            2,
+            2,
+            5,
+            3
+        ],
+        [
+            0,
+            2,
+            3,
+            4,
+            3
+        ],
+        [
+            0,
+            0,
+            5,
+            5,
+            2
+        ],
+        [
+            0,
+            5,
+            2,
+            3,
+            2
+        ],
+        [
+            0,
+            5,
+            4,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0how to create a game in unity, program in c#, and code a website using html/css ",
+            "\u00a0Learned about how games are built/the ideas behind their construction ",
+            "\u00a0Designing games in Unity. Learning about the art aspect of game-making. ",
+            "\u00a0Art, character design, narrative structure, basic coding ",
+            "\u00a0How to make a game in Unity ",
+            "\u00a0We learned a great deal in this course, from using Adobe studio to gaming concepts and how to use Unity for the actual programming to create ouyr video games. ",
+            "\u00a0Unity, C#, Photoshop ",
+            "\u00a0how to develop a simple game in unity ",
+            "\u00a0I learned and developed an interest in design, be it graphic or otherwise. "
+        ],
+        [
+            "\u00a0strengths: casual setting allows for more creativity/ willingness to take risks, helpful feedback, learn a lot about video game design, engaging\r\nweaknesses: more collaborative activities so students can learn how to work in a team setting for building products ",
+            "\u00a0Interesting material but I did not feel like I learned much in class. We did not go over a lot of the important skills we needed to make our games ",
+            "\u00a0Due to the structure of the course, there isn't much time to learn a lot about Unity. It's not the professors fault, but it's just difficult to teach Unity in a larger class setting. In other words, don't plan on learning TOO much Unity. ",
+            "\u00a0Strengths: learned a lot about unity\r\nweaknesses: We didn't focus on the art aspect of the course as much this semester, which I was pretty disappointed in. I also thought that learning unity in class wasn't a good use of our time (we could have just learned from online tutorials better), and we could have spent a lot more time focusing on what's important, such as making our game, or discussing the theory aspect of game-making in more detail/depth. I don't think we really got into what the teachers know about their fields, I felt like we were doing very basic stuff. ",
+            "\u00a0The class covered a great set of fundamental skills in game design and was fun, exciting and educational.  Perhaps it might have been helpful if there had been a more structured/rigorous timeline for the final project ",
+            "\u00a0Strengths: Having focus to one big project means the entire class should be focus towards that project.\r\n\r\nWeaknesses: I think the idea of learning to do one big project is a bad idea. I think the class should have some small projects at the beginning of the year to get us more used to Unity. ",
+            "\u00a0This was a really fun course and I think it's biggest strengths were covering all of the different sides to video game development, from an artistic, analytical, and programming standpoint. We had experience working with every part of a video game and I could tell that the teachers put a lot of effort into these aspects. Only a few weaknesses but one that stood out was that it felt like feedback was kind of slow to flow back to us, also it felt like we didn't really follow the schedule they laid out for us at the beginning of the year, so sometimes I was confused by what would happen from class to class. ",
+            "\u00a0Interesting material. Much of the Unity was self taught. ",
+            "\u00a0Strength: the course is really cool in that there are actual physical products that you build and mess around with\r\n\r\nweakness: there is just so much to cover in the course and it's really easy to forget everything because there's very little time to practice what you have learned. Also even though no CS background is required, I think this course is heavily dependent on cs, and if you are not comfortable with cs, I wouldn't expect to learn it here (also you're just going to be swamped with cs and confused) ",
+            "\u00a0I feel like we learned too many separate things to be used fruitfully in one project. I don't think using Unity as the end goal was necessarily the right choice. If Unity is still used in the future, I think it would be better to focus on one core aspect and then teach the students the location to find the necessary tutorials to complete their learning on their own.  \r\n\r\nI think the course holds your hand too much in the early stages, because it is indeed hard to subjectively grade all of the modules we completed (audio, graphic, narrative, color) and still be fair to all backgrounds like the instructors wanted to. After that easy start, it felt like the later project stages were comparatively very difficult. "
+        ],
+        [
+            "\u00a0yes, because it was fun, engaging, and taught me a lot about video game design ",
+            "\u00a0I don't think so - felt like a lot of work that wasn't that productive, didn't give me that many useful skills. That said, I'm glad I took it - I just don't think it was a very efficient way to learn the skills we were taught. ",
+            "\u00a0Yes, absolutely. Both professors were wonderful and helpful and the class covers a really interesting topic. ",
+            "\u00a0Yes I would because it's an enjoyable class to relax in. It never felt high stress and it was fun to do the artsy assignments. ",
+            "\u00a0Yes, I think if you're looking for a fun freshman seminar that teaches you a lot of real world applicable skills about graphic design and video game development, this is a really great beginner course. ",
+            "\u00a0this course is very unique and one of a kind, you definitely won't be able to experience any other course like it at yale\r\n\r\nfurthermore, I think the course is really cool in that you have a lot of freedom to design your game and you can make it however you want. The cool thing is that at the end of the semester you will have an actual (hopefully high quality) physical (well technically virtual) product, which is very unique and not something that other classes can offer.\r\n\r\nOne thing to keep in mind for this course however is that I think how much you get out of this course depends on how much you put into it. If you don't know cs and aren't willing to take the time to learn it, then this course will be hard. If you do however, then you'll learn how to implement a bunch of cool things. Similar things apply to art. That being said, this class is generally pretty lenient during the semester, and it's only the final project (i.e. the actual game that will kick your butt) that has a lot of work, so if that fits with your schedule, then it's worth considering. ",
+            "\u00a0Yes, I'd recommend it for the interesting design ideas you learn about. However, I think there are other courses that could teach you the same but better. I don't know of any, but my intuition tells me this. I do highly recommend the instructor Sarah as a person to talk to about graphic design and Elena as a person to talk to about game design, even outside of this course. "
+        ]
+    ]
+}

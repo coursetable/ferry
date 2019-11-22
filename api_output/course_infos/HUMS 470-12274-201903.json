@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "For students who wish to pursue a topic in Humanities not otherwise covered. May be used for research or for directed reading under the guidance of one or more faculty advisers. In either case a term paper or its equivalent is required, as are regular meetings with the adviser or advisers. To apply, a student should present a prospectus and a bibliography signed by the adviser or advisers to the director of undergraduate studies. Enrollment limited to juniors and seniors majoring in Humanities.", 
+    "title": "Special Studies in the Humanit...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12274", 
+        "listings": [
+            {
+                "number": "470", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Norma Thompson"
+    ], 
+    "long_title": "Special Studies in the Humanities", 
+    "extra_info": "A"
+}

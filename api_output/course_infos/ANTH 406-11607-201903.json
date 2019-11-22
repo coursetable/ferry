@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50989/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The natural history of rivers and river systems and the politics surrounding the efforts of states to manage and engineer them.", 
+    "title": "Rivers: Nature and Politics", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "RKZ 102", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11607", 
+        "listings": [
+            {
+                "number": "406", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSC\">YC Poli Sci: Comparative Govt</a>"
+    ], 
+    "professors": [
+        "James Scott"
+    ], 
+    "long_title": "Rivers: Nature and Politics", 
+    "extra_info": "A"
+}

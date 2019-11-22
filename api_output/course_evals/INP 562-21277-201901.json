@@ -1,0 +1,85 @@
+{
+    "crn_code": "21277",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            1,
+            4,
+            1
+        ],
+        [
+            1,
+            0,
+            1,
+            4,
+            2
+        ],
+        [
+            1,
+            0,
+            1,
+            4,
+            2
+        ],
+        [
+            0,
+            1,
+            2,
+            3,
+            2
+        ],
+        [
+            1,
+            0,
+            4,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            6,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Knowledge of how to model biological systems that change over time and space. Introduction to the mathematics of dynamical systems and general principles of \"how-to\" turn a theory into a model ",
+            "\u00a0I learned how to write LaTeX in MATLAB and re-learned some stuff I had forgotten from undergrad, like how to solve linear ODEs and how to write a for loop in MATLAB. ",
+            "\u00a01) a better appreciation for nonlinear DE's and the amazing behaviors that can result from them\r\n2) a very clear picture of stochastic processes (diffusion, etc)\r\n3) deepened my appreciation for the ear as a physical device. The ear is totally amazing. ",
+            "\u00a0How to understand, analyze and model dynamical systems in biology. ",
+            "\u00a0Ability to analyze and establish models to explore biological behaviors "
+        ],
+        [
+            "\u00a0Strengths - engaging lecture and course material, fun homework assignments, general utility of approaches used ",
+            "\u00a0Strengths: biological content is cool / interesting\r\nWeaknesses:\r\n* terribly taught. Nobody is going to pay attention to you writing calculus on the board for one and a half hours. \r\n* pronumerals are often used without explanation, such that I spend an entire class wondering what mu is.\r\n* equations from the course notes are often referred to in the homework without referencing which set of notes and which page. Homework shouldn't be a treasure hunt.\r\n* homework frequently contained errors. Get your act together\r\n* homework uploaded to portal far too late. One week is not enough for a final project. One assignment was uploaded less than two days before the due date.\r\nImprovements:\r\n* think about the concepts that you are trying to teach. Nobody gains anything by watching you work through the calculus for an hour. What is the take home message? We benefit much more from an in depth discussion of what Fokker-Planck implies than from watching you struggle to derive it. ",
+            "\u00a0Really fun course, no real improvements I could suggest. \r\n\r\nMaybe give extra solved example questions to help students build intuition on how to approach different problems. ",
+            "\u00a0Strength: very clear presentation of mathematical methods and their application, although could have been more in depth at times.\r\nWeakness: lack of cohesive flow to the course. Switching back and forth between Prof. Howard and Prof. Emonet disrupted the flow. Would have been better if each of them had had his own self-contained half. ",
+            "\u00a0Weakness: homework was not very friendly for MATLAB beginners "
+        ],
+        [
+            "\u00a0Yes, the course presents most students with a new perspective on biological systems, and emphasizes thinking of a physical or mathematical theory to describe phenomena. ",
+            "\u00a0Most certainly not. It's a waste of time. I didn't learn anything more than a few biological novelties / curiosities that would be better appreciated by spending a single evening browsing wikipedia and watching a couple of review lectures from undergraduate mathematics. ",
+            "\u00a0Yes - it balanced a modest workload while still teaching me a lot ",
+            "\u00a0Yes!\r\n\r\nOne of the best courses I've taken here. ",
+            "\u00a0I would recommend this class to any student who wants to work on cellular biophysics or systems biology. While molecular biophysics people can still benefit from the math methods in the class, the applications would be less relevant. ",
+            "\u00a0I would definitely recommend this course. It is a good introduction to quantitative biology and equips students with the practical skills (programming, mathematical theories) they need. ",
+            "\u00a0Yes. This course is useful especially for students involved with system biology "
+        ]
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51221/assignments/syllabus", 
+    "requirements": "", 
+    "description": "What does it mean to forgive? Is forgiveness a cross-cultural phenomenon\u2014a human universal? Or are forgiveness's assumptions and practices reliant on particular cultural, religious, or philosophical underpinnings?\u00a0This seminar proceeds historically and thematically. We move from Ancient Greece and Rome, through early Judaism and Christianity and the thought world of medieval Europe, to early-modern, modern, and post-modern philosophical, theological, and literary terrains. And we ask questions such as: Who can forgive? Which reasons (if any) are needed to forgive? How does divine forgiveness relate to human forgiveness? Can states or nations forgive? And is forgiving a virtue, a duty, or just a moral option?", 
+    "title": "Ethics of Forgiveness", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WTS B60", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14374", 
+        "listings": [
+            {
+                "number": "332", 
+                "subject": "EP&E"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEP2\">YC EP&amp;E Ethics Core</a>"
+    ], 
+    "professors": [
+        "Andrew Forsyth"
+    ], 
+    "long_title": "Ethics of Forgiveness", 
+    "extra_info": "A"
+}

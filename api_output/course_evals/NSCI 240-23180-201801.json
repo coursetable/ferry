@@ -1,0 +1,92 @@
+{
+    "crn_code": "23180",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            5,
+            6
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            7
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            6
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            7
+        ],
+        [
+            0,
+            0,
+            2,
+            10,
+            0
+        ],
+        [
+            0,
+            1,
+            5,
+            6,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A lot about the basis of fMRI technology, research and analysis. Gave me a lot of applicable ways to use statistical learning from previous courses and apply it to relevant anatomical data. It was also a good refresher for many brain pathways, structures and functions. ",
+            "\u00a0I learned an immense amount about fMRI and EEG, both in terms of how they work and how to use them to get interesting scientific results. I could not have imagined at the beginning of this course how much I would learn about these topics, despite starting almost from scratch. ",
+            "\u00a0I learned the physics behind major neuroscience imaging methods, as well as how to interpret the results. I also learned a lot about the software used to analyse these results, and how to present them in a scientific manner. ",
+            "\u00a0I learned very valuable fMRI and EEG data analysis skills that will be applicable in my future lab work. ",
+            "\u00a0In this course, I learned the physical background behind neuroimaging acquisition, practical issues and experimental elements of fMRI design, and the skills to analyze functional, structural, and resting state neuroimaging data. The course was a perfect mix of theoretical underpinnings and actual practice with analysis techniques. ",
+            "\u00a0Learnt a lot about human neuroscience techniques and image processing and analysis. Human neuroscience techniques include the science behind collecting MRI data, DTI, EEG etc. We worked mainly with FSL to use the toolkit to preprocess brain images for analysis. A very hands-on lab. ",
+            "\u00a0a great understanding of how to work with MRI data in a practical setting ",
+            "\u00a0It's a computer lab course, so we use programs like MATLAB to learn how to do things like segment different parts of the brain. All the scripts are prewritten so you don't have to know Matlab beforehand, but it also means you won't learn how to use it unless you take additional time to look through the scripts yourself. You learn to become good at identifying different parts of the brain. "
+        ],
+        [
+            "\u00a0Strength: McCarthy shines in the seminar setting (his lecture abilities are better left for another discussion.) He is engaging and really knowledgeable on fMRI and really makes the course approachable for any individual with the basic knowledge of Psychology, Physics, Stats and Chemistry. I would say a weakness, that is just a function of the course, is that it felt like a lot of hand holding throughout the semester which didn't really make me feel like I was learning much. It was more just following an outlined script and analyzing the outputs. For a Methods course, I can't say I am walking away comfortable enough to begin my own research project (though I can damn well tell you what a good ICA looks like.) ",
+            "\u00a0This course was near perfect, and I don't have any suggestions for how to improve it. ",
+            "\u00a0The hybrid lecture/lab structure is very compelling, as you get to apply the methods you learned on lecture directly after. I also think it is incredibly useful that we have access to the lab outside of class time, and complete assignments without being rushed. I also found the final group project to be a very useful experience, as I feel that I didn't internalize some of the things we learned in class until I had to apply them to an original idea. ",
+            "\u00a0I don't really have any complaints with how the class was run. I think it was nice that we could go back to the lab and finish whenever we had time, since some of the labs were a little long and I couldn't finish them in one class day. It would be nice to have two class days dedicated to group project work instead of just one. ",
+            "\u00a0This course is strong in the structure of its labs, which progress from basic exploration of visualization tools to complex analyses and modeling methods. In addition, the group project component allows students to really test their technical abilities while exploring a question of interest to them. Professor McCarthy is incredibly helpful and very available to assist students. \r\n\r\nA weakness of the course is the intensity of the lecture content in the beginning of the semester. For students who do not have a background in electromagnetic physics, the initial introduction to the MRI signal and how it is obtained is a bit daunting. Perhaps some supplementary reading on basic magnetism could be suggested and encouraged for students without this background. ",
+            "\u00a0The course is a very good introduction to human neuroscience data analysis. The content of the course is well positioned so students new to fMRI and EEG can follow it. The labs are also very guided and very comprehensive so we learnt to use most of the FSL toolkit to skull-strip brains, create relevant masks and compare activation data. The final project at the end of the course also allowed us to use all the skills we learnt in the labs to do our own analysis and we obtained very interesting results. ",
+            "\u00a0strengths: practical time working with prof. mccarthy\r\nweaknesses: recording more of the prelab lectures and assigning them to be viewed before class would free up some time for additional/longer labs, which might be cool ",
+            "\u00a0I think this is a really well-taught, practical course to take. You really do learn a lot about fMRI in particular, and it's helpful if you're interested in doing that kind of research. Every class is 4 hours though, with the first 1.5-2 hours being a lecture and then the last two we spend in the lab. And you will very likely spend all four hours in class, so it is very long and I think the lectures are a little too long. That being said, Professor McCarthy clearly knows what he is talking about, he's just very thorough! \r\nThere are no assigned readings from the textbook, and you really don't need it because he provides so much info in class. It might be helpful for writing some of the lab reports, though, to refer to. I preferred the first few lectures where we watched the lectures online before class and then reviewed them in class together because that was personally really helpful for me with remembering and understanding the material. \r\nI also really appreciated the feedback we got back for each lab report, even if they took a while to get graded. "
+        ],
+        [
+            "\u00a0Sure! If you have a background in neuroscience and chemistry/physics, the course should be a wonderful bridge between these fields. ",
+            "\u00a0I would absolutely recommend this course to anyone who is even remotely interested in human neuroimaging. You will learn a lot and have a bunch of fun along the way. The only thing I would warn potential students about is the significant workload, as the labs run overtime almost every week, and the reports take a while to write. However, putting in this work leads to incredible learning outcomes. ",
+            "\u00a0I definitely would. It is a great introduction to neuroscience research, it would definitely help you if you are interested in research yourself or if you want to be able understand and interpret research better. Also a great lan course for the neuroscience major. ",
+            "\u00a0It's a lot of work towards the end of the semester, but it's worth it to take this class. If you have any interest in neuroscience you should try to take this class, you'll learn the methods behind the pretty brain pictures you see in published research papers (and you'll get to make your own!). ",
+            "\u00a0If you are interested in neuroimaging, as a future researcher or just a curious student, this is the course for you. You will get to work through the basics (and then dabble in more complex techniques) of fMRI analysis, with a professor who has been studying the brain with fMRI since its inception. It's an incredible and unique opportunity--don't pass it up! ",
+            "\u00a0Strongly recommended to those interested in human neuroscience and learning about fMRI anaylsis. The course is not too hard so you will not be thrown directly into the deep end but you will still learn a lot about how the brain works and what methods can be used to look at what is going on in the brain. The final project is also very fun and Prof. McCarthy is very helpful and accessible. Overall, great course! ",
+            "\u00a0definitely, if you're interested at all in working with MRI data ",
+            "\u00a0Yes, it's a very practical class to take if you're interested in research and Professor McCarthy is a really good professor. But I don't know if I'd take it as a \"fun\" class -- it's only one class a week, but 4 hours long! And your grades are entirely based on the lab reports, which are graded out of 10, and a final group project. The lab reports are about every other week, so it's not a ton of work and there are no exams. You also don't have to have a ton of knowledge about the human brain, since it's mostly about methods of looking at the brain, not about what the brain does. "
+        ]
+    ]
+}

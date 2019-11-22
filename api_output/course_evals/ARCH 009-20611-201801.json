@@ -1,0 +1,98 @@
+{
+    "crn_code": "20611",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            8,
+            3,
+            1
+        ],
+        [
+            2,
+            5,
+            3,
+            2,
+            0
+        ],
+        [
+            3,
+            4,
+            5,
+            0,
+            0
+        ],
+        [
+            1,
+            4,
+            6,
+            1,
+            0
+        ],
+        [
+            0,
+            4,
+            8,
+            0,
+            0
+        ],
+        [
+            0,
+            4,
+            6,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to use Maya and how to use a 3D printer. The rest is history. ",
+            "\u00a0The 3D modeling system Autodesk Maya as the basis of many problem sets and labs and I got to know this and 3D modeling systems in general much better. One of the biggest takeaways from this course was a mastery of 3D printing despite not having any prior knowledge or experience. I also became very familiar with the Next Engine laser scanner and the Kinect scanner. Although only some students used laser cutting for their final projects, I received training on the laser cutter as well. Besides the hands-on skills achieved through the projects, there was also a great deal of simple trig, matrices, and algorithms used in problem sets. Problem solving is a very important component of this course in problem sets, in labs, and particularly in the final project. ",
+            "\u00a0This course was a bit of a mess. Despite that, I did end up learning (at least somewhat proficiently) how to design in Maya. I got to use 3D printers, and how to troubleshoot them. I got a survey understanding of how animation, scanning, and CAD softwares work, though it was not taught in way that is easy to retain (I will likely forget this information soon). ",
+            "\u00a0I learned more about computer graphics and 3D modeling in very broad terms. The course brings up a lot of topics. ",
+            "\u00a0In this course, I learned about 3D printing technologies and concepts, such as 3D rendering, technical applications of 3D printing, and the math/geometry behind 3D printing. The weekly problem sets covered some of the math behind Maya, which was the 3D program that we used to create our 3D prints, as well as some of the weaknesses of modern 3D printers. ",
+            "\u00a0Learned a lot about 3D printing and different modeling techniques. ",
+            "\u00a0The main thing I took away from this course was how to 3D print-- which is awesome. This course taught me to look at objects in 3D space and to think about how I may represent them virtually. ",
+            "\u00a0I learned how to use 3d printers, learned about the different methods of scanning and fabrication, and got a taste of some of the mathematics behind digital representation. ",
+            "\u00a0I learned how to use the computer program (mostly taught myself), and how to use the 3D printers. ",
+            "\u00a0I learned the basic ability to 3D model and create objects using the program Maya and 3D printers. I now have an understanding of what 3D design means and how it is done successfully. ",
+            "\u00a0I learned a lot about the design process and the details of 3D printing and scanning. "
+        ],
+        [
+            "\u00a0Professor Dorsey should explain how to solve the mathematical problems that make up the bulk of the problem sets in this class. The first 3 psets were difficult because neither she nor Justin, the TF, explained how to apply the mathematics to the problems we had. ",
+            "\u00a0I am extremely impressed and happy with the many skills I gained particularly in regards to 3D printing. I loved the challenges and necessary problem solving that had to take place to try to get things to work, especially during the final project. The assignment forced you to be creative and deal with problems as they arose. Sometimes, however, the course seemed a bit disorganized and it was not always clear what was expected from us in both the problem sets and occasionally in the lab assignments. I found some of the material presented in lecture rather interesting, but also often felt that the material did not always directly relate to the problem sets. Overall this was a very intriguing course and it was far different than other courses I have taken here at Yale. ",
+            "\u00a0Strengths: \r\n- the final project is very open to individual design\r\n- grade breakdown is logical and fair\r\n\r\nWeaknesses: \r\n- poorly organized between the professor and the TA\r\n- lessons don't correspond well with assignments \r\n- assignments were difficult because it felt as though we were not taught how to do them \r\n- the programs/machinery necessary for the assignments were often just broken or bad programs/machinery\r\n- no feedback on assignments until it's too late (it takes ridiculously long to get feedback/grades)\r\n- Maya (it's an old program, it often crashes, and there are better programs to learn how to do CAD in) ",
+            "\u00a0I appreciated that this class taught me very practical skills with regards to 3D printers, and that it gave me a solid understanding of concepts like boolean geometry, working knowledge of Maya, and 3D printer troubleshooting skills.\r\n\r\nHowever, this class could have been improved with more office hours for the problem sets. I felt that a lot was expected from students in terms of prior knowledge, which frequently made it difficult to follow along the tutorials in class and to complete the problem sets without help. \r\n\r\nThis was a cool class, but I was definitely disappointed that it did not feature more types of applications of 3D printing rather than the math that goes behind it. ",
+            "\u00a0I thought the assignments were okay, but the instructor and TFs often didnt know how to do them because they didnt use the version of Maya that we all had. It was definitely frustrating in that respect. I liked the projects though and think that they were fun. ",
+            "\u00a0This course's main strength is the subject matter, which was extremely interesting to me. However, I believe that there are several weaknesses that need to be addressed. Firstly, the beginning of the course was so poorly-run that I thought I may drop it. Students are required to become members of the CEID and to get trained to 3D print. We had to complain to get these orientations placed within class hours (as it was extremely difficult for some of us to attend those outside class), and even then, we felt as if the professor was bothered by 'wasting' class time. These orientations should be during the first classes. The second issue is the way that the class was run. We had several lectures and were then given a quiz, which was worth a large portion of our grade. These lectures were bad because although the material was interesting, there was never enough time to write things down, and the professor (although very well-intentioned) did not engage the class at all. I think that we would have benefited greatly from a format in which the students were encouraged to give examples of the things that were described, and to have a more seminar-styled class. When the quiz came along, we were allowed to have a \"cheat sheet.\" I know people who literally copied everything on every slide of every presentation we had in class. If we had not had those sheets, I am certain that everyone would have failed. It's not even that the subject matter wasn't interesting-- it was just presented to us in a non-engaging way that was also unfortunately very convoluted (which is why the class may benefit from actual discussion). The final project portion of the course was good, but I think that there also was not a strict enough attendance policy during this time, because many classes near the end had about 50% attendance (when we were supposed to be doing \"important\" presentations). Overall, I think that this class has a lot of potential to be great, but almost none is being accessed at this point. ",
+            "\u00a0It could be a little more structured, and Maya is a terrible program that crashes all the time.  Maybe use a different software for the graphic design. ",
+            "\u00a0The strength of this course that you get the chance to be creative. However, this class has more weaknesses than strengths. You mainly have to teach the material/how to use the program to yourself and the assignments are long. The lecture is incredibly long and not that interesting. Though the concept of this class is cool, it is poorly executed. ",
+            "\u00a0The professor did a poor job of explaining how to carry out the mathematical problems we were assigned. Often what we discussed in class did not pertain to what our homework was on, and I felt utterly unprepared for the problem sets. We learned concepts in class, but avoided the finite calculations for the most part. ",
+            "\u00a0The problem sets were very challenging as many students had no previous background in the course material. The lectures could be improved by explaining the problem sets more. "
+        ],
+        [
+            "\u00a0If you want to learn 3D graphics, please do not take this course. Take it on edX or elsewhere, but do not take this course. ",
+            "\u00a0I would certainly recommend this course to anyone interested in 3D printing, modeling, or digital capture. Although you do not need to have prior knowledge of any of these things, you should feel comfortable solving basic math in the problem sets. I am very happy with the skills I gained as a result of taking this course. ",
+            "\u00a0No. I would if you need it as a QR, but if you're looking to learn how to animate, to learn about the mechanics behind 3D software, or to just create designs, this class is not ideal. There is a little bit of these three things in the course, but it's not executed well. There was one lesson on animation in Maya that, from my interaction with other classmates, no one really learned much from. The lessons on software are not engaging and therefore quite boring (especially because they're so long). As for designing and creating, the only time you get to do that is with the final project, which is fine but still less hands-on creation than I expected and wanted. Also, this class was just very frustrating. Assignments that should've taken less than an hour ended up taking hours just because no one knew how to do them. When that happens, clearly the lecture are not giving us the relevant material to do the assignments. This also means that students just don't end up learning. We struggle through each weekly pset/lab without actually extracting much from it. ",
+            "\u00a0I would recommend this class to another student as it is a great introduction to 3D printing technologies and concepts. It is also very satisfying at the end of the course to be able to know how to use a 3D printer, which comes in handy when you need simple objects that you can easily print for free at the CEID. \r\n\r\nOn the other hand, someone looking for a more art/artchitecture-oriented class would be let down due to this course's heavy focus on math especially at the beginning of the semester. ",
+            "\u00a0I would recommend this course to another student if they are willing to possibly be bothered by how poorly it is run. If they are really interested in the subject matter, it is worth taking. Hopefully, the course can iron out the wrinkles in how it is run and become something that I would recommend to everyone. ",
+            "\u00a0Only take this if you are seriously interested in computing and the arts.  If you aren't, you'll be pretty bored and it'll be hard to engage with the class. ",
+            "\u00a0I would not recommend this course to another student. It is more work than you think it will be and the coolness factor doesn't make up for the poor way this class is taught. ",
+            "\u00a0I would not, simply because I went into the course thinking that I would have more ability to use creativity throughout the class and express it through 3D modeling. Instead, our homework and classwork was regimented and only until the last project were we able to bring in any sort of personal creativity. ",
+            "\u00a0This course had a heavy workload and took 5 hours each week to complete the problem sets. I would take it if you need a QR credit, but I would not recommend it as a \"gut.\" Even though it is listed as a first-year seminar, it was not taught as a seminar style. It was disappointing that the students did not have a chance to get to know other first-years as each class was a lecture. It was enjoyable and rewarding to 3D print and scan things; however, the work could get very tedious. "
+        ]
+    ]
+}

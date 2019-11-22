@@ -1,0 +1,78 @@
+{
+    "crn_code": "30019",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            2,
+            4
+        ],
+        [
+            1,
+            2,
+            2,
+            2,
+            2
+        ],
+        [
+            1,
+            1,
+            2,
+            3,
+            2
+        ],
+        [
+            2,
+            0,
+            2,
+            2,
+            3
+        ],
+        [
+            0,
+            1,
+            5,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to organize and manage large quantities of information in short periods of time. ",
+            "\u00a0general chemistry knowledge ",
+            "\u00a0I learned a lot about the basics of chemistry that are critical to a larger understanding of the sciences. ",
+            "\u00a0How to learn on my own "
+        ],
+        [
+            "\u00a0Strengths: Smaller class size than term-time course definitely makes it easier to engage and keep on top of everything\r\n\r\nWeaknesses: Problems assigned from the textbook often included concepts professor said were not important, or emphasized things way differently than professor Cramer did. Explanations in class were sometimes confusing. ",
+            "\u00a0i think it's good as it is ",
+            "\u00a0There needs to be more time on tests and the expectations for any graded work needs to be made clear at the beginning. ",
+            "\u00a0The professor did not really teach, went on a lot of rants. TA didnt seem too invested in helping the students. "
+        ],
+        [
+            "\u00a0Yes, good efficient way to meet med school requirements ",
+            "\u00a0No, it was poorly taught. "
+        ]
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "This mandatory course for first-year M.F.A. students borrows its title from Adrienne Rich\u2019s poem, written in 1973 at the beginning of the second wave of feminism, in the wake of the civil rights movement, amid the student protests against the Vietnam War, and in reflection of the poet\u2019s own process of self-discovery and personal emancipation. As a work that focuses on the isolation of life as it does on a sense of shared community, Rich\u2019s poem brings forth a perspective that there can be no understanding of the \u201cwreck\u201d without becoming one with the wreck. The course explores how this self-motivated, even self-legislated, impulse toward autonomy is mirrored within the very constitution of a work of art that is bound by the dialectic between autonomy and dependence, individuality and collectivity, randomness and resoluteness, expression and rationality. Taking Diving into the Wreck as a point of departure, the course aims toward a cultivation of consciousness that extends self-knowledge into a sense of community through the act of critical reflection. The course adopts a lecture/seminar approach with additional breakout sessions. Students are required to complete required readings, participate in class-wide discussions, and develop the form of their writing as a method of engaging with the themes of the course. Marta Kuzma, Fred Moten, Peter Osborne, Hito Steyerl, and faculty", 
+    "title": "Diving into the Wreck: Rethink...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "EDG32", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12666", 
+        "listings": [
+            {
+                "number": "949", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Marta Kuzma", 
+        "Peter Osborne"
+    ], 
+    "long_title": "Diving into the Wreck: Rethinking Critical Practice", 
+    "extra_info": "A"
+}

@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50181/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Masterpieces of Roman art from the Republic to Constantine studied in their historical and social contexts. The great Romans and the monuments they commissioned\u00e2\u20ac\u201dportraits, triumphal arches, columns, and historical reliefs. The concept of empire and imperial identity, politics and portraiture, the making and unmaking of history through art, and the art of women, children, freedmen, and slaves.", 
+    "title": "Roman Art: Empire, Identity, a...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LORIA 351", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12239", 
+        "listings": [
+            {
+                "number": "170", 
+                "subject": "CLCV"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHA0\">YC HistofArt: Pre-800</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHAE\">YC HistofArt: Europe</a></li></ul>"
+    ], 
+    "professors": [
+        "Diana Kleiner"
+    ], 
+    "long_title": "Roman Art: Empire, Identity, and Society", 
+    "extra_info": "A"
+}

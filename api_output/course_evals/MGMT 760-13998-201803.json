@@ -1,0 +1,74 @@
+{
+    "crn_code": "13998",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Critiquing academic papers, writing research proposals. ",
+            "\u00a0I spent a lot of time in this class practicing being critical of research, including well-established research. I think I definitely got better at picking out methodological issues, as well as issues in terms of the actual relevance or implications of research. Also got the chance to discuss some topics in psychology very important to society as a whole, in much more depth than in any other setting. Also used the topics discussed to motivate a research project of my own. "
+        ],
+        [
+            "\u00a0Gal really values everyone's contributions and made that clear. ",
+            "\u00a0Thought it was pretty excellent for what I was looking for. Nice and small, good discussion, diverse topics, etc. "
+        ],
+        [
+            "\u00a0Yes! Definitely. ",
+            "\u00a0I don't want to recommend this too highly because if a bunch because of undergrads took it it wouldn't be the same. Very different from undergrad courses. Met for three hours at a time which is a lot, so if you can't handle that, stay away. But, if you're interested in controversial research findings and willing to talk about things like, for example, gender-based intelligence differences, it's definitely worth checking out. Anyone would benefit quite a lot, regardless of your area of study, from the approach this class takes, which is tackling controversial and pressing questions about social issues from a very data-driven perspective. It is a great check on the inclination we have to selectively believe some facts and not others. "
+        ]
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49403/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This writing intensive seminar explores narrative strategies for conveying critical moments in the transition from childhood to adulthood, using examples from memoir, creative nonfiction, poetry, and fiction (including works by Alison Bechdel, Junot Diaz, Patricia Lockwood, Toni Morrison, Alice Munro, An Na, and David Sedaris). Writing assignments emphasize elements of craft, including story structure, character, voice, and tone.", 
+    "title": "Coming of Age: Writing about C...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WLH 013", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 17
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12410", 
+        "listings": [
+            {
+                "number": "300", 
+                "subject": "CSMY"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Elise Broach"
+    ], 
+    "long_title": "Coming of Age: Writing about Childhood Turning Points", 
+    "extra_info": "A"
+}

@@ -1,0 +1,82 @@
+{
+    "crn_code": "21267",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            3,
+            3,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            4,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned basic skills regarding bacteria and fungi under specific concepts. For example, we learned how to spread a plate, use the dissecting microscope, and analyze different differential and selective media plates. ",
+            "\u00a0I learned how to perform environmental sampling to collect diverse microbes, study their biochemical properties, and identify them by 16S rRNA sequencing. In addition, I learned to use various techniques to study bacteria under a microscope, including simple stain, Gram stain, and live preps. I also gained insight into how to conjugate plasmids into bacteria in order to rescue motility and morphological defects in Caulobacter crescentus. ",
+            "\u00a0Learned valuable microbiology techniques and assays that both solidified understanding of experimental design and of theoretical concepts  from basics like streaking for singles, to trickier protocols like flagella staining. Good introduction to lab work, although those with lab experience may find it to be a bit slow. ",
+            "\u00a0I really came away from the course with a hands-on understanding of the kinds of microorganisms found in our surrounding environment, on our bodies, and in food products. We also learned how to isolate these microorganisms, how to count them, and how to identify them. Overall, I can say I now feel comfortable performing Gram staining, observing colony morphology using several different microscopes and imaging techniques, and interpreting the results of several biochemical tests. "
+        ],
+        [
+            "\u00a0The course is well-paced and not too stressful. However, the course can spend more time reviewing the concepts that we have learned. The textbook is nice, but there are also many extraneous details in the textbook. If professor can compose a lecture slide of pre-lab talk and post it on Canvas afterwards, it would be really helpful in understanding the concepts. ",
+            "\u00a0A strength of this course is its focus on teaching techniques used to identify bacteria in clinical settings. One weakness is that there is not a great deal of overlap with the microbio lecture. This course could be improved by incorporating more concepts from the lecture course. ",
+            "\u00a0Professor Dawson is a sweetheart, and the TA (Yashna) is amazing and very responsive. They love to walk around during experimentation time and answer questions or help  but by giving hints and facilitating understanding of the concept rather than just spoonfeeding instructions. Content criteria for the 4 lab report assignments were clearly outlined, although I wish there was a bit more guidance as to how things would be graded or what would be tested in the pop quizzes, since the level of difficulty seemed to vary by section. ",
+            "\u00a0I thought the labs were laid out well to take advantage of incubation times and make most classes fairly even in length. The lessons of each lab section were straightforward and easy to grasp. ",
+            "\u00a0Strengths \r\n- The lab exercises really do build on each other with each set of experiments, so there is a clear progression. \r\n- Professor Dawson gives great overviews of each lab at the beginning of the session\r\n- The lab packets provide plenty of background\r\n- The small class size really facilitates hands-on learning\r\n\r\nWeaknesses \r\n- There are a couple of sessions when lab gets out an hour late and a few an hour early. This inconsistency is not ideal if you have a tight schedule. \r\n- Professor Dawson is usually fairly understanding but sometimes if you do something wrong, he can become visibly frustrated, which may make students more afraid to make mistakes. "
+        ],
+        [
+            "\u00a0I would recommend the course to another student, because the skills taught in this lab is very useful and fundamental. ",
+            "\u00a0Yes! Very helpful to augment lecture material. Fun atmosphere and learn a lot. ",
+            "\u00a0Yes, I would recommend this course to another student, especially if they are interested in learning clinically relevant techniques to identify microorganisms. ",
+            "\u00a0Yes! Take it if youre looking for a solid lab credit to satisfy the MCDB research requirement, to build up a set of lab skills related to microbiology, or to learn science writing using data that actually feels experimental (and not just from a very controlled experiment). ",
+            "\u00a0This is definitely one of the most comfortably paced lab courses at Yale. The smaller size is conducive to learning, and it is super cool to take samples from our bodies and test for the presence of various bacteria! "
+        ]
+    ]
+}

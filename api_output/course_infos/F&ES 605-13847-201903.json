@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49879/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Risk communication is a critical but often overlooked part of how organizations identify and manage risks. Risk communication can help people take seriously risks that they might otherwise ignore (e.g., to wear a seatbelt or bicycle helmet, check for radon in their homes, evacuate from a coming hurricane). Risk communication can also provide reassurance when data indicate that a risk is not serious. Effective risk communication enables environmental professionals to communicate information in a way that is understood and accepted by different stakeholders (e.g., the public, industry, government leaders, etc.) and allows the participation of these stakeholders in\u00a0risk management decisions.\u00a0This course provides an overview of the theory and practice of effective communication about environmental and health risks to diverse stakeholders. Students are expected to actively participate in class discussions, drawing upon assigned\u00a0readings, lectures, and videos.", 
+    "title": "Environmental Risk Communication", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "S 32", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13847", 
+        "listings": [
+            {
+                "number": "605", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Andrew Schwarz"
+    ], 
+    "long_title": "Environmental Risk Communication", 
+    "extra_info": "A"
+}

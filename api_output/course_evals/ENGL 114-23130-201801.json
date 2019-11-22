@@ -1,0 +1,84 @@
+{
+    "crn_code": "23130",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned a lot about writing and writing styles that suit different occasions ",
+            "\u00a0This course definitely improved my writing (not featured here). I learned how to write a research paper, and how to join in discussion in a seminar style classroom. The content of this class was very fulfilling. ",
+            "\u00a0Writing academically ",
+            "\u00a0Professor Jones was a fantastic lecturer, who really encouraged my ever-growing journey as a writer. I learned the art of argumentative writing, and charitable approaches to opinions that were unlike my own. Also, I really gained a great deal of knowledge about art and its impact on our lives! ",
+            "\u00a0Much better writer ",
+            "\u00a0I gleaned a lot about self-image, art perception, and also close reading analysis and essay writing techniques in general. It was extremely insightful to me in more ways than I imagined. "
+        ],
+        [
+            "\u00a0I really liked the progression of paper styles, however I think that less rigid assignments could be beneficial ",
+            "\u00a0I really like the small number of students in this class. It led to a good bonding experience, and I recieved very direct feedback. I would have liked to have taken a deeper look into beauty itself, but we got through a lot of material regardless of the short time that we had together. ",
+            "\u00a0Maybe more feedback and close analysis on our paper ",
+            "\u00a0Very great material ",
+            "\u00a0Sometimes I wish I had more time to discuss the readings in class, so maybe allot more class time to spread out over all readings. "
+        ],
+        [
+            "\u00a0Yes! It is a great class to improve your academic writing, especially if you find writing daunting. ",
+            "\u00a0Yes, English 114 is a great tool, especially for student who are timid about writing at Yale. ",
+            "\u00a0If you can replace foreign language requirement with 114, do it. ",
+            "\u00a0Es ",
+            "\u00a0Yes - I think it's a great class that facilitates discussion much more easily than others. "
+        ]
+    ]
+}

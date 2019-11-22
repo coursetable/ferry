@@ -1,0 +1,84 @@
+{
+    "crn_code": "23123",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            1
+        ],
+        [
+            1,
+            2,
+            2,
+            1,
+            0
+        ],
+        [
+            1,
+            2,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Neuroanatomy gave me a lot of insight into how structures are conserved or not across species and what that means for how we study the brain. it was an excellent complement to foundations and the hands on nature was very engaging. ",
+            "\u00a0I learned how different structures relate to one another, structurally and functionally, within the mammalian brain. ",
+            "\u00a0Much stronger understanding for the brain's structure and function. Particular insights come from comparing neuroanatomy across different species - this helped to remind us the strengths and limitations of certain animal models within our fields. ",
+            "\u00a0I learned more about the anatomy of non-human animals, which was incredibly helpful for a human researcher who does not get much exposure to other species' neuroanatomy. ",
+            "\u00a0Developed a better understanding of comparative anatomy of vertebrates from rodents to primates. ",
+            "\u00a0In the course we covered key brain regions and how they compare between species. "
+        ],
+        [
+            "\u00a0Strengths- hands on, Caroline, assignments\r\n\r\nweaknesses- structure of class time, final project, use of technology\r\n\r\nI think class time could be structured slightly differently to optimize the time. First, the guided-exploration portion at the beginning of class was very helpful but should be kept to a minimum (about 30 minutes). second, when instructors are teaching with a model, it would be very helpful to have a projector and dot-cam type system in place so that every one can see. otherwise, time is wasted showing the same structures to each group of students. ",
+            "\u00a0I think the course is great as it is.  However, I found the final assessment to be rather unhelpful.  It felt like \"busy work.\" ",
+            "\u00a0Strengths - We received direct help from wonderful instructors and also time to explore the brains on our own. Great balance of free time and structured learning. \r\n\r\nWeaknesses - For the final project, instead of getting assigned brain regions to label across species (related to Alzheimer's), it might have been nice to be able to pick a network or circuit more related to our personal interests (i.e., limbic regions, a sensory circuit, etc.). ",
+            "\u00a0The course was relatively sporadic, a greater frequency would be helpful. ",
+            "\u00a0The strengths of the course really lie in the hands on learning with dissections and identifying real tissue samples. ",
+            "\u00a0This course was in principal very interesting as it would be useful for both students in clinical and animal-model research. The projects were helpful, and the dissection labs were useful. It might have been beneficial to have slides available for smaller models. "
+        ],
+        [
+            "\u00a0Yes, this was an informative and engaging way to learn neuroanatomy in a relevant way to my research. Caroline and Alvaro are amazing and really make the class a success. ",
+            "\u00a0Yes, an understanding of the brain's organization, and how it changed over evolutionary time, is critical to understanding what the brain is for. ",
+            "\u00a0Absolutely! The workload was a little less than other courses, but it was a very good amount for the fact that it was a pass/fail course! Incredibly helpful class even in a short period of time with only ~1 class period per week. ",
+            "\u00a0I would mainly recommend this course to people who will be working on vertebrate models, as there is really not very much for invertebrate neuroscientists. "
+        ]
+    ]
+}

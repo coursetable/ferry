@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49859/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This yearlong, monthly seminar is targeted most specifically to students in the Public Health Modeling Concentration but open to all interested members of the Yale community. The seminar features talks by faculty from across Yale University doing modeling-related research, as well as invited speakers from other universities and public health agencies. The objectives are to offer students the opportunity to witness the scope and range of questions in public health policy and practice that may be addressed, understood, and informed using model-based approaches; appreciate the breadth of public health modeling research being conducted around the University and beyond; explore possible collaborations/relationships with other scholars and professionals; review, critique, and evaluate model-based public health research in a structured environment; and form their own opinions regarding the applicability, relevance, and responsible use of modeling methods. Two terms of this no-credit seminar are required of students in the Public Health Modeling Concentration. For each class, one or two readings are circulated/posted on the course website prior to the talk. Students are encouraged to read the articles and articulate questions for the speaker.", 
+    "title": "Seminar for Modeling in Public...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 12, 
+            "location": "LEPH 115", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13612", 
+        "listings": [
+            {
+                "number": "580", 
+                "subject": "EPH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "A. Paltiel", 
+        "Theodore Cohen"
+    ], 
+    "long_title": "Seminar for Modeling in Public Health", 
+    "extra_info": "A"
+}

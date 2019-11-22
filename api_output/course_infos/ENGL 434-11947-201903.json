@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51370/assignments/syllabus", 
+    "requirements": "No previous knowledge of dance is required.", 
+    "description": "The esteemed choreographer Merce Cunningham once compared writing about dance to trying to nail Jello-O to the wall. This seminar and workshop takes on the challenge. Taught by a dance critic for the New York Times, the course uses a close reading of exemplary dance writing to introduce approaches that students then try themselves, in response to filmed dance and live performances in New York City, in the widest possible variety of genres.\nNo previous knowledge of dance is required.", 
+    "title": "Writing Dance", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "ELM294 303", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11947", 
+        "listings": [
+            {
+                "number": "434", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Brian Seibert"
+    ], 
+    "long_title": "Writing Dance", 
+    "extra_info": "A"
+}

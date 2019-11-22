@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49218/assignments/syllabus", 
+    "requirements": "Enrollment limited to majors in Biomedical Engineering, except by permission of the director of undergraduate studies.", 
+    "description": "Introduction to laboratory techniques and tools used in biomedical engineering for physiological measurement. Topics include bioelectric measurement, signal processing, and dialysis.\nEnrollment limited to majors in Biomedical Engineering, except by permission of the director of undergraduate studies.\n\n0.5 Yale College course credits", 
+    "title": "Physiological Systems Laboratory", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10476", 
+        "listings": [
+            {
+                "number": "355L", 
+                "subject": "BENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Rong Fan"
+    ], 
+    "long_title": "Physiological Systems Laboratory", 
+    "extra_info": "A"
+}

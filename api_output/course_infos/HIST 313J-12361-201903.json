@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50144/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Drawing on a wide genre of primary sources, this seminar explores the consolidation of British rule over the Indian subcontinent; the transformations brought about by colonial policies; the subsequent rise of resistance movements; the growth of mass nationalism and partition and independence.", 
+    "title": "British Raj and the Indian Nat...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "RKZ 04", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12361", 
+        "listings": [
+            {
+                "number": "313J", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHI4\">YC History: Asia</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIB\">YC HIST: Empires &amp; Colonialism</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHID\">YC HIST: Ideas &amp; Intellectuals</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIF\">YC History: Politics &amp; Law</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIG\">YC HIST: Race Gender &amp; Sexuality</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIJ\">YC HIST: Soc Chng &amp; Social MVMN</a></li></ul>"
+    ], 
+    "professors": [
+        "Rohit De"
+    ], 
+    "long_title": "British Raj and the Indian Nation (1757-1947)", 
+    "extra_info": "A"
+}

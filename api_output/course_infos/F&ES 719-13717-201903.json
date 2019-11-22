@@ -1,0 +1,51 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50190/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This is a course about how humans have come to know what we know about our impacts on the earth\u2019s climate and our vulnerability to climate change. This historical question is pivotal to thinking about who bears moral responsibility for the climate crisis. At what point in history did humans become the first species to alter the conditions of life on earth in full consciousness of the consequences of their actions? When did people first know that their actions, in the aggregate, could transform the planet? At what point did their knowledge outweigh their uncertainty? Did scientists bear responsibility to warn of these consequences? What evidence did their knowledge rest on? In what ways has the modern science of climate both appropriated and undermined traditional and indigenous forms of climate knowledge? What makes modern climate science \u201cmodern\u201d?", 
+    "title": "Making Climate Knowledge", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "LC 211", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13717", 
+        "listings": [
+            {
+                "number": "719", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YXWR\">Writing Skill (Opt.)</a>"
+    ], 
+    "professors": [
+        "Deborah Coen"
+    ], 
+    "long_title": "Making Climate Knowledge", 
+    "extra_info": "A"
+}

@@ -1,0 +1,122 @@
+{
+    "crn_code": "23402",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            1,
+            8,
+            5
+        ],
+        [
+            0,
+            2,
+            3,
+            9,
+            2
+        ],
+        [
+            0,
+            1,
+            7,
+            6,
+            2
+        ],
+        [
+            1,
+            0,
+            1,
+            4,
+            10
+        ],
+        [
+            0,
+            0,
+            3,
+            10,
+            3
+        ],
+        [
+            1,
+            2,
+            4,
+            6,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Modeling, economic-sustainability analysis, ecological concepts, critical thinking as it applies to academic paper writing. ",
+            "\u00a0Computer modeling skills\r\nMath and quantitative skills\r\nBroad qualitative questions in the environmental economics field. ",
+            "\u00a0Calculus, excel and R-based modeling, interactions of financial and ecological systems. ",
+            "\u00a0I learned a lot about sustainability, and gained modeling and software skills. I also learned about communicating modeling results to policymakers. ",
+            "\u00a0Modeling concepts, a lot of math, natural resource economics ",
+            "\u00a0I gained the ability to model and optimize different natural system dynamics, both in theory and in practice using Excel solver. ",
+            "\u00a0I gained grounding in the economic theory and discourse on valuation of natural assets. I used models and tools covered in class to ask questions relating to optimization and implicit pricing in environmental systems. The most useful insights were how to develop useful questions about systems I am interested in and how to evaluate empirical methods used in the field. ",
+            "\u00a0I learned how to understand, interpret and develop basic economic models for natural resource stocks as they change over time. I learned how to use Solver in Excel. ",
+            "\u00a0I developed mathematical insights on how to best approach sustainability issues, thinking about economic tradeoffs of decisionmaking about natural resources. ",
+            "\u00a0The course content is at the forefront of theoretical and practical developments lining ecologic and economic systems. It was very interesting to learn about this. We got a sense of the theory and also opportunities to put it into practice. ",
+            "\u00a0You become familiar with R, Excel solver, and differential equations. Also theoretical concepts related to national accounting, carbon credits, fisheries management, and forestry. ",
+            "\u00a0This course exposed me to modelling natural resource systems and measuring nature as capital assets. It explored opportunities for accounting for the future while taking today's decisions into consideration. "
+        ],
+        [
+            "\u00a0I was hoping for more professional/practical applications of the economic models. ",
+            "\u00a0Very well. Excellent, challenging, thought-provoking class. ",
+            "\u00a0Fulfills my expectations. ",
+            "\u00a0Aligned well. ",
+            "\u00a0Yes. I learned more about sustainability than I expected, which was a great part of the class. ",
+            "\u00a0Pretty well, expected a challenge and large workload ",
+            "\u00a0The knowledge, skills and insights surpassed my expectations.  I am not sure what exactly I was expecting in the beginning of the course, but I really enjoyed learning the theory and math behind these models, and learning how to think through and build an effective model. ",
+            "\u00a0The class was more math-heavy than I expected, with significant time devoted to derivations of equations. I ",
+            "\u00a0Fairly well. My quantitative analysis skills improved, perhaps not by as much as I originally hoped. ",
+            "\u00a0It was more abstract than I expected. At the end of the class, I can now nebulously look at a plot of land, a watershed, or a fishery and begin to piece together how one might put a price on it. I expected to walk away with a more concrete knowledge of the field. But since the field is still developing, there is no hard and fast path to evaluating natural resources. It's an exciting field of study! ",
+            "\u00a0Well. ",
+            "\u00a0This class required much more math and much less theoretical thinking than I had expected. The final project allowed an outlet to think more critically about the material, but the problem sets were mostly learning the math. ",
+            "\u00a0It was great knowledge that is relevant for today. "
+        ],
+        [
+            "\u00a0I would like more finance (capital markets) connections. I didn't get much out of your formula derivations, perhaps because I was looking for practical skills and less academic economics. I would have preferred to replace some of that time with talking through real-world problems, e.g. reading a newspaper article and starting to build a model around it. I wish we'd walked through building a model in advance of the final project. Since I learn best from concrete examples, I would have liked to talk about some contemporary problems and develop those inputs. \r\n\r\nWe never used the bubble and square model drawing concepts again, so I'd eliminate that lesson. ",
+            "\u00a0Problem sets could be hard to follow and require tons of group collaboration and input from the TA to make them workable. I suppose that's half the point, but I can't help but feel like they could be a little clearer. ",
+            "\u00a0I hope the lectures could be better ties with assignments. ",
+            "\u00a0Lots of practical skills but a huge commitment. I learned so much but it would have been nice to go deeper on certain topics so I felt like I mastered some things instead of just simply figuring it out. ",
+            "\u00a0This was a really good class. The lectures were interesting and informative, and the homework helped build useful skills. I like Eli's idea of separating the course into a conceptual class on sustainability and an intensive methods class. ",
+            "\u00a0A lot of material is covered very quickly. Really liked the philosophical discussions of concepts in class. ",
+            "\u00a0I really enjoyed all of the lectures and felt like I got the most out of those and the final project.  The problem sets each came up very quickly and I never felt like I was able to fully dive into them like I would have wanted to. ",
+            "\u00a0A strength of the class is that it covers both the concepts and the tools needed to for analysis of natural assets. The reading materials were all good and helpful for understanding the class. We had plenty of opportunities to explore tools through excel and r assignments as well as a self-directed group project. The difficulty of the material made the class a high priority and kept me engaged throughout the semester. The professor and the TA were excellent with scheduling office hours and making themselves available to students.\r\n\r\nWeaknesses of the course include the focus of math in the course. It makes sense that we need to understand the underpinnings of the theory we were learning, but most students seemed to struggle with the math involved in the economic analysis. Perhaps we covered too much material and the class should ideally be split into two, with one going into greater depth on the math and tools than the other. ",
+            "\u00a0Strengths: the material covered is very interesting. I don't believe the course should be split into different sections. I think that the heavy quant aspects sprinkled in with theoretical interpretations of the models was good. I think that more examples could be used in class to concretize the concepts. ",
+            "\u00a0I enjoyed the final project, taking a deep dive into the value of a specific natural resource system. I developed some important mathematical tools to carry out these sorts of evaluations. Some of the problem sets were a little abstract and excel/solver heavy (or R heavy) so at times I was more focused on getting the programs to work than I was focused on the math. ",
+            "\u00a0The strengths are how innovative it is. Some things that could be improved are: Eli is good at explaining the meaning and intuition behind the course content, and good at explaining the mathematical foundations of practical applications. He could improve the way in which he connects these two aspects of the class. Often, when he explained the math he did not link it to the intuition, or presented examples. ",
+            "\u00a0The strengths of this class is that it introduces you to a lot of hard math that is found in many equations that evaluate natural capital. You get introduced to working in R (although a bit abruptly,) with Excel solver, and calculus in general. The weakness of the class is that the problem sets are so math-heavy that it's hard to often see the theoretical connections that are drawn in class. I felt I got really good at making spreadsheets, but didn't always understand what they were saying. However, I will say, I was underprepared quantitatively for this class, and many of my classmates were able to draw those connections. ",
+            "\u00a0The course can be improved by creating sessions for joint problem solving on practical questions / examples in class then students would better use that knowledge and skill. "
+        ],
+        [
+            "\u00a0The class is very difficult but definitely worth taking. However, if you're not going to be a PhD in this field, it may not give you the most practical skills. That being said, still super interesting and great content. ",
+            "\u00a0Make sure you have enough time set aside for this course. The materials are useful, challenging but not very exciting and intellectually stimulating. ",
+            "\u00a0Make sure you have a pretty solid math background before taking this course. It is a practical course from which you will leave with hard skills. Keep up with the problem sets and think about your project topic early. ",
+            "\u00a0This is a difficult class. Start your homework and final model early, and seek feedback often. ",
+            "\u00a0Be ready to put in a lot of work. ",
+            "\u00a0Make sure to start the problem sets early and find a question for your final project that you are really interested in. ",
+            "\u00a0Heavy workload but significant opportunity for self-direction through content of group project and use of tools such as excel or r. A good chance to explore a topic of interest related to the course. The assigned books are very helpful for further discussion of course topics and for completion of homework assignments. Requires comfort with basic calculus. TA office hours are a must. ",
+            "\u00a0Understand the time commitment involved. Start homework assignments early. Work with friends on everything. ",
+            "\u00a0Walk in expecting to spend a lot of time on the problem sets, especially the second, third, and fourth ones. The class is better when the students engage and ask lots of questions. ",
+            "\u00a0Make sure that you really like very theoretical approaches. ",
+            "\u00a0Problems sets are long, and can be challenging. Start early and get help when you need it. ",
+            "\u00a0This class is very calculus-heavy, and requires quite a bit of quantitative familiarity. If you're new to (or recently refreshing) math, it may be difficult to understand the concepts of the class from the homework assignments. ",
+            "\u00a0You need to have a good background in maths so you don't struggle  with the course work "
+        ]
+    ]
+}

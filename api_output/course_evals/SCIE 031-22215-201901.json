@@ -1,0 +1,88 @@
+{
+    "crn_code": "22215",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            2,
+            2,
+            3
+        ],
+        [
+            0,
+            2,
+            2,
+            3,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            5,
+            2
+        ],
+        [
+            0,
+            3,
+            2,
+            3,
+            1
+        ],
+        [
+            1,
+            4,
+            2,
+            2,
+            0
+        ],
+        [
+            2,
+            4,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Some science knowledge in a variety of fields with varying relevance. ",
+            "\u00a0I got a SC credit. ",
+            "\u00a0I was able to learn about many different types of science, including biology, astronomy, and statistics. ",
+            "\u00a0An introduction to various fields in science such as data science, astrophysics, energy etc. ",
+            "\u00a0I learned introductory concepts for a variety of scientific fields. The topics covered were comprehensive and different, which made the course very interesting. ",
+            "\u00a0Learned a ton about different fields of science "
+        ],
+        [
+            "\u00a0Good course organization.  Definitely hard knowing what to expect on the third class of every module as the difficulty varied.  In addition, some professors did a better job than other emphasizing the most important part of their module. ",
+            "\u00a0Some modules and professors were really cool (Bailyn, Emerson, Schultes, Schutenmaur ??), some were hard (Baltay, Kankel) and some made me want to never come to class again (Prober) ",
+            "\u00a0The strength of this course is that we get to learn about various topics but the weakness could be that sometimes we don't get too deep about one topic. ",
+            "\u00a0The course is well-organized with 3-week-long modules for each science topic. Every professor is very knowledgeable in their own field and presented interesting intro lectures during their module. The course benefits from a seminar setting but could be more engaging. ",
+            "\u00a0This course could be improved upon by streamlining information between the instructor(s) and the students. The use of canvas is minimal by some of the guest lecturers, and it's hard to keep track with their expectations because we switch modules so often. ",
+            "\u00a0Great Course, can't think of any improvements! "
+        ],
+        [
+            "\u00a0Yes maybe to a first-year who is looking to fulfill a science credit.  Modules are fairly applicable, some being more interesting than others. ",
+            "\u00a0If you need a SC, this is hands down probably one of the easiest. You really only need to worry about it like 1 hour a week, if that. ",
+            "\u00a0Yes, because you get to learn about science topics that you may not be familiar with. ",
+            "\u00a0This class is a good and easy science credit. ",
+            "\u00a0Yes if you're interested in exploring different sciences but do not wish to study them in depth at the moment. ",
+            "\u00a0As a fifth class, yes! But material is only covered three days (since one meeting each week), so not too in depth. ",
+            "\u00a0I would recommend this course to students unaware of many scientific fields or looking to pursue non-science-related fields. It's great at introducing many topics, but if students are interested in a specific topic, they may be bored with the constant changing in course materials. ",
+            "\u00a0Yes, it has great pacing, excellent gust speakers, a very accessible professor, and a ton of fun learning about so many various things! "
+        ]
+    ]
+}

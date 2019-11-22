@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "No credit granted without prior approval of the director of undergraduate studies.", 
+    "description": "Individual study under faculty supervision. Applicants must submit a prospectus and bibliography approved by the faculty adviser to the director of undergraduate studies. The student meets with the adviser at least one hour each week and takes a final examination or writes a term paper.\nNo credit granted without prior approval of the director of undergraduate studies.", 
+    "title": "Directed Readings or Individua...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12173", 
+        "listings": [
+            {
+                "number": "478", 
+                "subject": "GMAN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Paul North"
+    ], 
+    "long_title": "Directed Readings or Individual Research in Germanic Languages and Literatures", 
+    "extra_info": "A"
+}

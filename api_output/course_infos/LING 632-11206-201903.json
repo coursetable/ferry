@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50323/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The structure of sound systems in particular languages. Phonemic and morphophonemic analysis, distinctive-feature theory, formulation of rules, and problems of rule interpretation. Emphasis on data description and problem solving.", 
+    "title": "Phonology I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 120", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11206", 
+        "listings": [
+            {
+                "number": "632", 
+                "subject": "LING"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Natalie Weber"
+    ], 
+    "long_title": "Phonology I", 
+    "extra_info": "A"
+}

@@ -1,0 +1,87 @@
+{
+    "crn_code": "22936",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            4,
+            5
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            8
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            8
+        ],
+        [
+            1,
+            0,
+            1,
+            3,
+            7
+        ],
+        [
+            0,
+            0,
+            4,
+            6,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            5,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0In this class, I learned a lot about statistics, especially how to use R programming to conduct statistical analysis. Currently I learned about how to use these skills to do some research work including data analysis. ",
+            "\u00a0Statistics skill, R skill ",
+            "\u00a0Basic stat knowledge applied in R ",
+            "\u00a0R, statistical analysis, coding. ",
+            "\u00a0I gained extensive data cleaning skills and brushed up on statistical skills. ",
+            "\u00a0Entry-level  R programming skill\r\nBroad statistical knowledge ",
+            "\u00a0the use of R to deal with real statistical analysis "
+        ],
+        [
+            "\u00a0The strengths include the systematical knowledge structure, which combine the knowledge of statistics with R programming, and the video record can help us to review the class contents in time. Temperately I did not find some specific weaknesses for this class. ",
+            "\u00a0The course have the recording videos, it's easy to catch up after class. ",
+            "\u00a0Course was good and provided great introductory learning on analysis using R. ",
+            "\u00a0I think the course was very strong overall. The only thing I would suggest for improvement would be to perhaps make one of the exams an in-class exam so that we are forced to study some of the statistics more. ",
+            "\u00a0we can look at videos even we missed the class. "
+        ],
+        [
+            "\u00a0I will strongly recommend this class to other students who is interested with data analysis, especially you want to learn R language. In this class, You will definitely learn a lot of useful knowledge on  statistics and practical programming language. ",
+            "\u00a0Yes I will.This course help with our basic Rlanguage from the very beginning. ",
+            "\u00a0Yes, for students looking for learning R and having basic stat knowledge. A lot of available office hours per week to help students understand the lecture and finish the homework ",
+            "\u00a0Absolutely! ",
+            "\u00a0This course is an essential course for any student wishing to work with data. I have taken other classes at Yale and this one is by far the best for this type of learning. ",
+            "\u00a0I will. it is a good basic class as an entrance to R language and the final project is also a real practice to use the knowledge we learn in class. ",
+            "\u00a0Yes, it is very base. "
+        ]
+    ]
+}

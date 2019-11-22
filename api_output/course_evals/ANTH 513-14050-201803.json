@@ -1,0 +1,75 @@
+{
+    "crn_code": "14050",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0It enabled me to gain a knowledge of a field that was initially very unfamiliar. It strengthened my capacity to identify view points of scholars and trace their implications and applications ",
+            "\u00a0I deeply enjoyed expanding my knowledge of both classic and more contemporary theories in linguistic anthropology and realizing for myself how they informed certain strands of sociology. The readings were obviously chosen carefully and very helpful in understanding how theories develop from one another and in what context they were created. "
+        ],
+        [
+            "\u00a0The content was quite difficult to penetrate yet the Professors framing of our discussions and the thoughts he shared were very helpful. It ",
+            "\u00a0The key strength of this course was also part of its weakness: Prof. Errington masterfully summarized his reasons for choosing the readings at the beginning of each session and connected them to the larger network of other theories discussed in class. However, sometimes it seemed like the class itself could have profited from a more straight-forward structure instead of leaving it up to the students to decide what they wanted to talk about. This obviously depends on the dynamic between the course members but especially having students at different levels (undergrad and grad) and from different academic backgrounds might need more of a script to follow to make sure everybody is on the same page. "
+        ],
+        [
+            "\u00a0Absolutely ",
+            "\u00a0I would recommend this course to other students. Much was learned from the time spent with the professor about how to approach scholarship and analysis ",
+            "\u00a0I would highly recommend this course to anyone who wants to learn about the intersection of anthropology, linguistics, sociology, philosophy and even political science in a seminar-style environment. The class provides you with a holistic picture of the vast variety of subtle information language entails and will surely make you stop and think about how you phrase or stress the things you say. "
+        ]
+    ]
+}

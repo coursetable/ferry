@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49244/assignments/syllabus", 
+    "requirements": "Attendance at a weekly discussion section required. Normally accompanied by CHEM 222L. Enrollment by placement only.", 
+    "description": "An introductory course focused on current theories of structure and mechanism in organic chemistry, their development, and their basis in experimental observation. Open to freshmen with excellent preparation in chemistry, mathematics, and physics who have taken the department's advanced chemistry placement examination.\nAttendance at a weekly discussion section required. Normally accompanied by CHEM 222L. Enrollment by placement only.", 
+    "title": "Organic Chemistry for First Ye...", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "HLH17 101", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10508", 
+        "listings": [
+            {
+                "number": "174", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Timothy Newhouse"
+    ], 
+    "long_title": "Organic Chemistry for First Year Students I", 
+    "extra_info": "A"
+}

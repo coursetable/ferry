@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49165/assignments/syllabus", 
+    "requirements": "Prerequisites: PHYS 201 and MATH 120, and one astronomy course numbered above 200. Taught in alternate years.", 
+    "description": "A survey of the contents, structure, kinematics, dynamics, and evolution of galaxies; galaxy interactions and the environments of galaxies; properties of active galactic nuclei.\nPrerequisites: PHYS 201 and MATH 120, and one astronomy course numbered above 200. Taught in alternate years.", 
+    "title": "Galaxies", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "WTS A30", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13181", 
+        "listings": [
+            {
+                "number": "430", 
+                "subject": "ASTR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jeffrey Kenney"
+    ], 
+    "long_title": "Galaxies", 
+    "extra_info": "A"
+}

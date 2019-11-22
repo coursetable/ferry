@@ -1,0 +1,104 @@
+{
+    "crn_code": "22279",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            9,
+            7,
+            7
+        ],
+        [
+            0,
+            0,
+            7,
+            7,
+            11
+        ],
+        [
+            0,
+            0,
+            4,
+            10,
+            11
+        ],
+        [
+            3,
+            2,
+            9,
+            9,
+            2
+        ],
+        [
+            0,
+            1,
+            21,
+            3,
+            0
+        ],
+        [
+            0,
+            6,
+            17,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to deal with multivariate dataset. ",
+            "\u00a0Multivariate methods ",
+            "\u00a0I learned many multivariate statistical methods, as expected, but I also learned/re-learned a lot of the foundational basic statistics that I had become rusty at. ",
+            "\u00a0Multivariate stats analysis and coding skills ",
+            "\u00a0PCA, factor analysis, discriminant analysis, MANOVA, ... multiple multivariate techniques in R programming ",
+            "\u00a0Thanks to this course, I am now able to use more advanced statistical analysis methods than I have gained from any other class at Yale. This class has been very useful for both balancing theoretical statistical knowledge with skills for applied statistical methods. ",
+            "\u00a0I've learned how to play with a large data set using a range of statistical analytic tests and tools.  This course was one of the most relevant to my PhD studies and will remain a set of statistics skills I will bring forth in my career forevermore.  I've also had my linear algebra and math skills refreshed, which help me to better understand what underlies each of the statistical tests. ",
+            "\u00a0Multivariate stats methods ",
+            "\u00a0I was able to learn a lot about different statistical techniques using multivariate data. Very useful! ",
+            "\u00a0Learning how to code better in SAS and how to interpret multivariate statistics. ",
+            "\u00a0Necessary statistics skills in applied analysis. ",
+            "\u00a0learn how to analyze multivariate data. ",
+            "\u00a0Techniques for multivariate analysis "
+        ],
+        [
+            "\u00a0This course covers a lot of material very quickly. It gave me some insight into what options are available for multivariate analysis in statistics, but I think more depth would have helped me to choose when a particular method is most appropriate and  the results of a given method. In effect, I have a broad understanding of the concepts but not mastery of them. ",
+            "\u00a0This course was really good at teaching a variety of multivariate methods. It struck a perfect balance between digging into the methods & proofs just enough to have a basic understanding of the underlying mathematics, while also focusing on the practical application of how to carry out the methods in a variety of computing environments. JRS also provided example scripts that helped us figure out how to start on the analyses\r\nA huge strength was the recorded lectures. I had a conflict every Thursday with the class time and was only able to take the course because everything was recorded. I'm so glad I had this opportunity because I would have really missed out if I hadn't taken this course.\r\nThere were very few weaknesses. The one thing I can remember is that there wasn't a good example of how to do multivariate or univariate contrasts in R. I know JRS said there weren't any packages that did this, but when I was googling around I seemed to come across a few that purported to offer multivariate contrasts. Unfortunately, when I dug into how to use those packages I quickly got lost because the documentation went over my head. Maybe this is something for JRS to take a look at again and see if he can write a brief example script for multivariate contrasts. ",
+            "\u00a0The lecturer well prepared the course, and the material is really practical. ",
+            "\u00a0Strengths: This class was engaging and designed in such a way that demonstrates a commitment to student learning. I never wanted to miss a single lecture, but on the occasions when it was inevitable, the video-recordings of the lectures proved invaluable. I appreciated the applied nature of the assignments as well as the thoughtfulness of the professor, who provided sample data sets to use for those who didn't have access to one of their own. I really enjoyed how the assignments were structured and the opportunity to work with a team on them was helpful in truly understanding concepts rather than just regurgitating what was said in class. Dr. Reuning-Scherer is one of the best professors I have had the pleasure of taking class with and I not only learned a lot about multivariate statistics from him, but also about how teaching should be done in general.\r\n\r\nWeaknesses: I wish we had gotten feedback on assignments sooner. ",
+            "\u00a0Assignments need to be graded in a timely manner. I did not know what kind of materials I was understanding or not throughout the semester without timely feedback. ",
+            "\u00a0The only major weakness in the course was not getting homework back in a timely fashion and, when we did get grades, we got them with little to no feedback.  Some of us were working with data of importance to research groups here at Yale, so it would've been nice to have gotten more feedback on our homework assignments. ",
+            "\u00a0The instructor is extremely knowledgeable, experienced, great sense of humor, and knows how to engage students ",
+            "\u00a0Strengths- the class is recorded! This is immensely helpful for students who want to replay lectures or attend remotely. Jonathan was amazingly flexible about his class structure and took ample time to come to office hours (especially towards the end of the semester)\r\n\r\nWeakeness- not enough feedback on assignments to know how you are doing throughout the course. This class may need more TA's. ",
+            "\u00a0The instructor's teaching is clear and well-structured ",
+            "\u00a0Strengths: flexible format. ",
+            "\u00a0Good ",
+            "\u00a0Returning assignments in a timely manner could help vastly improve this course. All the assignments should've been back before the final project was due. "
+        ],
+        [
+            "\u00a0Yes. ",
+            "\u00a0Yes. I think JDRS is a very good instructor overall. He is engaging and makes stats approachable. ",
+            "\u00a0Absolutely! The course provides a great overview of multivariate statistics, with emphasis on practical implementation while having enough details on methods to understand what is going on. The course also incorporates reviews of more basic statistical methods that help student integrate those concepts into the new approaches. ",
+            "\u00a0Yes. Important content. ",
+            "\u00a0Absolutely. Any student who needs to learn statistical methods should take this course. Any student who plans to teach should also take this course in order to see an example of what it looks like when teaching is done right. ",
+            "\u00a0Absolutely YES!  If you are in the social, health, environmental or other statistically relevant sciences, I would certainly recommend you take this course.  The tools you'll learn about and how to use are broadly applicable and will help you weed through large data sets for the rest of your career. ",
+            "\u00a0Yes, this is by far the best stats class I've ever taken, period ",
+            "\u00a0Yes! This course is great for learning multivariate statistics and various ways to analyze data. I highly recommend it for anyone interested in machine learning or statistical analysis. ",
+            "\u00a0Yes.\r\nThe knowledge is useful and the teaching is good. ",
+            "\u00a0Yes. ",
+            "\u00a0Yes "
+        ]
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48687/assignments/syllabus", 
+    "requirements": "", 
+    "description": "", 
+    "title": "Interpersonal Dynamics", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "EVANS 4220", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12696", 
+        "listings": [
+            {
+                "number": "531", 
+                "subject": "MGT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Heidi Brooks"
+    ], 
+    "long_title": "Interpersonal Dynamics", 
+    "extra_info": "A"
+}

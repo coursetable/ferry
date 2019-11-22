@@ -1,0 +1,101 @@
+{
+    "crn_code": "30034",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            9,
+            6
+        ],
+        [
+            0,
+            0,
+            4,
+            5,
+            7
+        ],
+        [
+            0,
+            1,
+            3,
+            5,
+            7
+        ],
+        [
+            0,
+            1,
+            4,
+            3,
+            8
+        ],
+        [
+            0,
+            3,
+            5,
+            5,
+            2
+        ],
+        [
+            0,
+            4,
+            5,
+            4,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0methodology of analyzing other's strategies not only in the economic but also in the daily life. ",
+            "\u00a0ability to reason ",
+            "\u00a0the way of thinking as a rational person. It is amazing! ",
+            "\u00a0Game theory as a language but an economic term ",
+            "\u00a0The way to make it decision between two people and think more logically and mathematical ",
+            "\u00a0I gained a new perspective on strategic situations and reignited my interest in mathematical modeling. ",
+            "\u00a0Great introductory game theory course. Learned basics of a strategic and extensive games, as well as concepts like backward induction, incomplete information, forward inductions and more. ",
+            "\u00a0Game theory and understanding how it applies to daily life in various forms. ",
+            "\u00a0Basic knowledge of game theory.  Methods to define/set up problems and solve them.  Tools to view and analyze human interactions as games. ",
+            "\u00a0I have learned the basic knowledge structure of Game Theory and the methods to analyze certain problems. ",
+            "\u00a0I've learned some intuition of economics. ",
+            "\u00a0I have developed a strategic view of the decision making process, in Prof. Neeman's words, a strategic language. "
+        ],
+        [
+            "\u00a0The professor taught slowly in the first half of the semester but quite fast in the latter and skipped something. It would be better if it could be balanced. ",
+            "\u00a0reasoning ",
+            "\u00a0It is quite a dilemma for the professor when students are of different levels in terms of how much they know about game theory. Personally speaking, I would like the course to be more intense and challenging. ",
+            "\u00a0Strength:very interesting and learn a lot \r\nWeakness:it will be better if there is more discussion ",
+            "\u00a0I thought the course itself was very interesting, but had trouble applying it to the real world. Game theory, to me, seems more like a thought experiment than a field that can be implemented in public life, though I can see how some portions of the worldview espoused by game theorists can be helpful to strategizing about public policy. I think this practical application would require a deeper understanding of the field than what was exposed to us in class. It could be improved by being more interactive and less lecture-heavy. ",
+            "\u00a0Course could be improved just by having more time with the material. There were only 10 meetings and 2 of which were midterm/final. So overall not that much lecture time. ",
+            "\u00a0maybe due to schedule of summer but material went fast. Professor did excellent job in teaching in an engaging way. ",
+            "\u00a0Strengths: Lectures are efficient and teaching assistant is helpful.\r\nWeaknesses: Problem Sets are really difficult and it is better to have more time to discuss them in class. ",
+            "\u00a0the exercise questions were challenging and the presentation of the content involves many movie clips, which makes the class more interesting. "
+        ],
+        [
+            "\u00a0Yes because the professor teaches in an interesting way and the methods are useful which can be applied to daily life. ",
+            "\u00a0yeah,because it's knowledgeable. ",
+            "\u00a0Yes, of course.\r\nThe professor is so nice and he encourages us to think actively and imaginatively. Besides, he is always patient to answer your questions. ",
+            "\u00a0Yes as the course provides a clear and concise brief introduction to game theory. The teacher has a good way of teaching that makes complicated concepts easy to understand and makes good real life examples to illustrate the points. Both the teacher and the TA give timely and helpful feedbacks on the works done throughout the whole term. ",
+            "\u00a0Yes, the professor has good sense of humor, takes videos and personal stories into the class. And classmates are keen to discuss. Its awesome. ",
+            "\u00a0Yes,its very useful and not so difficult ",
+            "\u00a0I would recommend it to a student that is well-versed in math, including calculus, set theory, and probability. These should be included as prerequisites in the course description (though it wasn't necessary to use these concepts in the class, so perhaps the professor could eliminate this type of notation and concepts in order to avoid confusion for non-math students). ",
+            "\u00a0I'd recommend for a person looking for an introduction to game theory. Don't expect too many difficult concepts. ",
+            "\u00a0Yes I would recommend if they are interested in intersection of psych and economics. Very good professor ",
+            "\u00a0Yes. For social science students, this course teaches me the basic knowledge of Game Theory, which enables me to get further study. ",
+            "\u00a0Yes. ",
+            "\u00a0yes I would. I find this course very interesting and beneficial. "
+        ]
+    ]
+}

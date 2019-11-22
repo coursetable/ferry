@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49390/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This seminar examines how the Greeks and Romans exploited their natural surroundings not only as physical resources, but also as resources for human thought. The focus is on how ancient thinkers, living lives that were largely city-bound and detached from nature, structured their thoughts about the lives they lived (and about human existence more generally) by reference to their nonhuman surroundings: creatures, plants, and places, some of which existed in the real world (in places far off, largely unknown and elsewhere; in places penetrated, explored, and/or told of), others of which existed entirely in the imagination, whether as inherited lore, or as places and creatures invented ad hoc by individuals and groups to get certain kinds of cultural work done. We look not only at the how and what, but at the why of nature\u2019s encoding via culture, and vice versa (their symbiosis), paying special attention to ancient Rome (though with a short first glance at Homer, Hesiod, and Aristotle). We begin by scrutinizing the categories themselves, attempting to find historically appropriate ways to connect modern ecocritical concerns and ways of thought to the ancient world. The readings are highly varied, ranging from cosmological lore, histories, treatises on politics, natural history, agriculture, medicines, and diet (Hesiod, Aristotle, Livy, the Elder Pliny, Celsus, Cato, and Columella) to poems on human work (in the fields of war and on farms), rivers, wine, banquets, bees, and flowers (Homer, Virgil, Horace, Martial, Statius, Juvenal). Among the main topics explored are: the cosmos, the heavens, and the first humans (and first peoples in their places); humans in their \u201ckinds,\u201d and animals wild and tame; mountains, rivers, the sea, and the undersea; human and animal foods, farming, and food ways; wine and fermentation; groves, forests, and trees; gardens, flowers, vegetables, and fungi; birds, fish, weasels, and snakes; earthquakes, floods, and natural disasters; pollution, dirt, and the city of Rome; the ecocultural lives of others.", 
+    "title": "Ecocultures of Antiquity: Stud...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "PH 312", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12912", 
+        "listings": [
+            {
+                "number": "819", 
+                "subject": "CLSS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kirk Freudenburg"
+    ], 
+    "long_title": "Ecocultures of Antiquity: Studies in the Ecocriticism of Ancient Greece and Rome", 
+    "extra_info": "A"
+}

@@ -1,0 +1,78 @@
+{
+    "crn_code": "10965",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            3
+        ],
+        [
+            0,
+            1,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            4,
+            1,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about how the Internet really works and what's under the hood. I also have had the opportunity to apply my CS skills in really fun real world ways. ",
+            "\u00a0This class teaches you about the structure of the Internet and the many protocols involved at each of the levels of the Internet and their underlying algorithms. You also learn how to use a networking testbed to see some of the protocols work in practice. ",
+            "\u00a0Thorough understanding of how the internet works. Applied knowledge through projects and psets. Very interesting material. ",
+            "\u00a0A better understanding of the layers of the internet. "
+        ],
+        [
+            "\u00a0This course had really interesting material and Professor Tassiulas is clearly so knowledgeable about the material. The homeworks were involved but straightforward and helped with understanding the material. I'd say one way the course could be made better is more office hours/more TA office hours! ",
+            "\u00a0This class covers material that is very different from other electrical engineering courses and the material itself is very interesting. ",
+            "\u00a0Very interesting material about a topic that is challenging to understand. For most of the semester the workload was very manageable. However, the last two weeks we had 2 problem sets, 2 projects and an exam (that was only scheduled in the end of the semester) which was very challenging. It would have been way better if there was a better breakdown of the semester, an earlier midterm and an earlier project because the last two weeks were just bad. The material is a lot and similar in some ways so it is very easy to get things mixed up (it helped a lot that the exam was open book).\r\n\r\nBut overall, good class, interesting material, good book and lecture slides.\r\nSuggestions: More spread out projects, early midterm instead of cumulative final ",
+            "\u00a0Strengths would definitely be the course material. If you want a better understanding of how data travels and the internet as a whole works, you will get exactly what you want. The only weakness I can think of would be it was a bit unorganized and it felt like we back-halfed the projects. "
+        ],
+        [
+            "\u00a0I would very much recommend this to other EE majors or CS majors, this course draws so many concepts from other courses you have either taken or will take, and in such an applied way so that things make sense and are still so interesting. Professor Tassiulas is a genius and this is really the only class he teaches undergrad, and I think it is definitely a great elective to take to really understand what is under the hood of the internet. ",
+            "\u00a0Yes, if you are interested in how the Internet works and would like to learn how to experiment on a testbed, you should definitely consider taking this class. "
+        ]
+    ]
+}

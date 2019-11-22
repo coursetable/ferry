@@ -1,0 +1,88 @@
+{
+    "crn_code": "24542",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            1,
+            4,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            3
+        ],
+        [
+            0,
+            1,
+            0,
+            7,
+            1
+        ],
+        [
+            0,
+            0,
+            6,
+            3,
+            0
+        ],
+        [
+            0,
+            1,
+            5,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned a to-date and historical overview of the molecular bio of cancer--often from lead researchers in the field. ",
+            "\u00a0We learnt about the hot topics in cancer. It was nice having the class taught by different professors at Yale, because we had to opportunity to hear a bit about their own, current research. ",
+            "\u00a0This course is a good basic overview of the biology of cancer, which exists to fill potential gaps in knowledge for students entering work in the cancer field. ",
+            "\u00a0A comprehensive course looking at basic biology of cancer, translational therapies, and clinical effects. There were also a couple of labs looking at the histopathology of tumors. We also learned critically read and presented scientific papers and wrote a review paper. ",
+            "\u00a0I learned a lot about how signaling pathways normally function and how activating mutations can drive these pathways in cancer. I've gained an appreciation for the complexities of the TME and metastasis. The stem cell theory of cancer was also new to me. ",
+            "\u00a0I gained both a clinical and molecular understanding of cancer in addition to the current challenges in the field of cancer treatment.  I really enjoyed the fact that many different professors taught lectures throughout this course; it was very valuable to hear from leaders in the field of cancer biology. "
+        ],
+        [
+            "\u00a0The historical perspectives offered often told cancer biology as a series of nice, learn-able narratives.\r\n\r\nHowever, the level of student engagement was low. Despite it being only an hour long class, I started slipping about 20 minutes in. Further, tons of students were on their computers--me included--and while some diligently followed, many strayed because the level of interaction was low.\r\n\r\nI also really disliked how the recitations were structured--not the TAs who were pretty good, but the nature of the quiz and the presentations. The quizzes, for instance, often focused on detail for which the only route was memorization, which seems antithetical to our place as graduate students. I found it hard to motivate myself to study for the quizzes because I knew the only route to a better grade was to memorize stuff transiently. \r\nThe presentations were a great idea, but had flaws in their execution. For instance, the first week was chaotic and a bit botched/inconsistent in their assessment. This wouldn't be a huge deal, but then the subsequent rubrics effectively sterilized the entire exercise. The quiz ensured that everyone had read the paper, but then the presentations were specified to cover the paper as if no one had read it, making it a boring thing to sit through and a very uninteresting, non-creative, and non-engaging assignment to have to do. I got to go once the first week before the rubric and thus operated on the assumption that people had already read the paper, meaning I had fun focusing on the parts of the paper I felt most worthy of discussion and elaboration (including pulling info from outside the paper). \r\nAgain, all the actors involved (instructors, TAs, and peers) were great. Actual coverage of topics and the experts talking were great. ",
+            "\u00a0Strengths: The class was very interesting and covered a wide variety of topics. The papers for recitation were good. \r\nWeaknesses: Quite a lot of reading. ",
+            "\u00a0The course unfortunately is not tailored to those who already have a good exposure to the cancer literature. An accelerated version could be useful to such students. ",
+            "\u00a0Strengths: excellent panel of lecturers, comprehensive material, workload manageable\r\nImprovements: better organized recitation (encourage more engagement and participation), sometimes lectures were too detailed/too much information ",
+            "\u00a0Strengths: Really good lectures by Drs. Stern and Yan, and a really interesting lineup of guest lecturers. Covering the early discoveries in cancer, esp tumor viruses, was really helpful. The histology day was great. \r\nWeaknesses: Friday recitations did not achieve anything. No interesting discussion ever took place. The audience did not learn anything new since everyone had read the papers. Quiz questions often seemed to miss the main points of the papers, focusing only on key words instead of actual conclusions. Basically all answers could be found by just reading the abstracts. ",
+            "\u00a0This was a really great course.  I really liked the format of having lectures 2 days a week and discussions one day a week.  Both the lectures and discussions were very well-led.  My only criticism is that taking quizzes didn't seem like the best way to test our engagement with the material.  I think it could be more beneficial to have us write summaries about a particular topic each week or the paper being discussed during the discussion.  This would ensure students are putting in the work without having the added stress of having something to study for each week. "
+        ],
+        [
+            "\u00a0Given you have any interest in cancer, this is the place to start undoubtedly. ",
+            "\u00a0Yes, it's a good class to take and, apart from learning about different topics in cancer, exposes you to the (mostly) current literature in cancer biology and helps you get more practice with reading papers and presenting papers. ",
+            "\u00a0Yes ",
+            "\u00a0Yes, this is a course in cancer biology that pretty comprehensive and has depth if there are areas you'd like to explore further. The lecturers were great and workload was very manageable. Cancer research is an exciting field, and I highly recommend if you're interested in pursuing this area scientifically or clinically. ",
+            "\u00a0Yes! A very comprehensive view of cancer scholarship. ",
+            "\u00a0Yes. I learned a lot about the field of cancer biology that I feel will be very useful to know to for my future career. ",
+            "\u00a0Yes, definitely ",
+            "\u00a0Yes, very well-structured and interesting! "
+        ]
+    ]
+}

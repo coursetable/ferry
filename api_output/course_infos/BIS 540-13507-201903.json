@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49185/assignments/syllabus", 
+    "requirements": "Prerequisites: EPH 505 or equivalent, and second-year status.", 
+    "description": "This course addresses issues related to the design, conduct, analysis, and interpretation of clinical trials. Topics include protocol development, examination and selection of appropriate experimental design, methods of randomization, sample size determination, appropriate methods of data analysis including time-to-event (possibly censored) data, non-inferiority studies, and interim monitoring and ethical issues.\nPrerequisites: EPH 505 or equivalent, and second-year status.", 
+    "title": "Fundamentals of Clinical Trials", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "CO47 106A", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 18
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13507", 
+        "listings": [
+            {
+                "number": "540", 
+                "subject": "BIS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Elizabeth Claus"
+    ], 
+    "long_title": "Fundamentals of Clinical Trials", 
+    "extra_info": "A"
+}

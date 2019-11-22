@@ -1,0 +1,71 @@
+{
+    "crn_code": "21120",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course provides a mathematical treatment of geophysical concepts such as  (1) Ekman Layers; (2) the Coriolis force; (3) geostrophic balance; (4) Kelvin waves; (5) Rossby waves and (6) fluid instabilities. It also teaches how to simplify the Navier-Stokes equations through scaling and linearization. Finally, I also learned a lot about multivariable calculus throughout the course and gained a much better intuition for fluid mechanics. "
+        ],
+        [
+            "\u00a0On the whole the course was well taught and designed. I liked the topics covered because they were almost all things that I had heard mentioned before but never understood in detail.  I also loved the experiments done in class because they helped me visualize how drastically rotation changes fluid flows. \r\n\r\n I wish we had spent more time on examples such as the Eady problem, the Stommel model, and thermohaline circulation. These examples really helped tie the course together and helped me understand the basic structure underlying GFD problems. I also gained the most understanding of the earth system from these examples.   I would love to take a class focused on entirely such examples.\r\n\r\nFinally, the problem sets could have been designed better. The problems were often times very lengthy  and solving them was disheartening since it was hard to know whether I was on the right track. It would have helped a lot if the problems were broken down it steps  (this was done really well on the final!) . I often learn best from doing the problem sets and breaking problems down in such a way would have helped me see similarities in problems much earlier in the semester. "
+        ],
+        [
+            "\u00a0I would only recommend taking this course if (1) you have a really solid background in mathematics and (2) you already have a strong conceptual understanding of concepts such as the Coriolis force, geostrophic balance, and Ekman Layers. I am a double major between applied math and G&G and found myself struggling with both mathematically and conceptually with many of the topics covered in class. That being said, the course is really rewarding as I learned a lot about math and fluid mechanics through it\r\nThe coursework itself is not very time-consuming as there are only six problem sets. Some of the problem sets, however, are extremely difficult. Often, even the graduate students in the class didnt know how to solve them. I spent a large amount of time reviewing the lecture notes or reading the textbook. I needed to review the previous class notes before attending each lecture to avoid getting completely lost. If you take this class expect it to be a struggle but it is possible to do well. "
+        ]
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "crn_code": "10710",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            1,
+            0,
+            2,
+            0,
+            1
+        ],
+        [
+            1,
+            0,
+            2,
+            0,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Music theory, composition with modern technology, and supercollider. ",
+            "\u00a0Basic music theory, how to think holistically about an algorithmic piece, LOTS of SuperCollider tricks, the beauty of stochastic processes combined with rules and sonification\r\n\r\nI also learned a lot from the other students, who were very talented (particularly in their projects) "
+        ],
+        [
+            "\u00a0It's already good I think. ",
+            "\u00a0The course was well organized and delivered useful skills. Access to the studio was also great.\r\n\r\nIt's tricky because of the department, but I sometimes wished the instructor had brought more of his composer background to the lectures. I wanted to listen to more music in class and have it explained by an expert.\r\n\r\nThe algorithms were interesting, of course, but it wasn't an algorithms course and we didn't write any mathematics, so at times it just felt like a Wikipedia level introduction to, say, CFGs. "
+        ],
+        [
+            "\u00a0Yes, because it is a lot of fun. "
+        ]
+    ]
+}

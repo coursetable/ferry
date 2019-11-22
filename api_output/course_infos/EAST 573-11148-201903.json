@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50281/assignments/syllabus", 
+    "requirements": "Prerequisite: knowledge of one foreign language, European or Asian.", 
+    "description": "Reading and discussion of significant themes in China and world history in the first decade of the twentieth century. We concentrate on topics that contain international, transnational, and comparative implications, and include discussion of literary and historical material. Most readings are in English, but selected primary sources in Asian languages may be used. Open to all History, East Asian Studies, and East Asian Languages and Literatures students, and others by request. Includes research paper and weekly writing exercises.\nPrerequisite: knowledge of one foreign language, European or Asian.", 
+    "title": "China and the World in the Twe...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LUCE 202", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11148", 
+        "listings": [
+            {
+                "number": "573", 
+                "subject": "EAST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Peter Perdue", 
+        "Jing Tsu"
+    ], 
+    "long_title": "China and the World in the Twentieth Century", 
+    "extra_info": "A"
+}

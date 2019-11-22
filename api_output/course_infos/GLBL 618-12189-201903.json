@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48664/assignments/syllabus", 
+    "requirements": "Prerequisite: basic undergraduate macroeconomics.", 
+    "description": "Born out of necessity in the post-Cultural Revolution chaos of the late 1970s, modern China is about reforms, opening up, and transition. The Next China will be driven by the transition from an export- and investment-led development model to a pro-consumption model. China\u2019s new model could unmask a dual identity crisis\u2014underscored by China\u2019s need to embrace political reform and the West\u2019s long-standing misperceptions about China.\nPrerequisite: basic undergraduate macroeconomics.", 
+    "title": "The Next China", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "LC 102", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12189", 
+        "listings": [
+            {
+                "number": "618", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YGLE\">YC Global Affairs: Elective</a>"
+    ], 
+    "professors": [
+        "Stephen Roach"
+    ], 
+    "long_title": "The Next China", 
+    "extra_info": "A"
+}

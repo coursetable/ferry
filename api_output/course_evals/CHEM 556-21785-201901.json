@@ -1,0 +1,86 @@
+{
+    "crn_code": "21785",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            5,
+            5,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            6,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            6,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            3
+        ],
+        [
+            0,
+            1,
+            4,
+            4,
+            1
+        ],
+        [
+            1,
+            4,
+            5,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Deeper understanding of molecular dynamics, equilibrium, NMR ",
+            "\u00a0I learned some things about enzymes that will be useful to my graduate studies in chemical biology. ",
+            "\u00a0Learning about studies/literature pertaining to enzyme mechanisms, kinetics, thermodynamics.\r\nThe experimental methods of studies were also addressed in great detail. Additional skills included presenting on a primary research paper and writing and evaluating a research proposal. ",
+            "\u00a0I developed great knowledge about possible experiments when dealing with enzymes, as well as the kinetics and theory of enzymes and lastly how to write a well structured proposal. ",
+            "\u00a0I learned how enzymes function. ",
+            "\u00a0Learned a lot of the math and lower-level molecular aspects of biochemical rates and mechanisms. Topics included enzyme thermodynamic cycles, entropic and enthalpic driven processes, steady-state kinetics equation derivations and graphs, transition-state theory, kinetic isotope effects, & autocorrelation. "
+        ],
+        [
+            "\u00a0Strength: everyone gets a chance to practice their presentation skills and experience the proposal writing processes.\r\nWeakness: the class materials are too heavily math-based. It will be better if the theoretical basis is combined with some useful practical examples. ",
+            "\u00a0Strengths: very open-ended, independent projects, presentations, and close-study of top scientific literature can give advanced insights\r\n\r\nWeakness: not enough background on important techniques, too much focus on math/theory without grounding in applications, only two graded assignments makes it a little stressful ",
+            "\u00a0I like that it is kind of a survey of enzymology. Not every subject is relevant to my research but by providing a wide variety I gained some useful knowledge in some things. I liked that the assignments were only on presenting and writing. The mock NIH proposal forced me to get really deep into a topic that I chose to be relevant to my research. \r\n\r\nA little more guidance from the instructor would be nice. ",
+            "\u00a0Strengths_ Loria is a great teacher and is willing to meet after class. He also responds to emails very quickly. \r\nThe class is structured in a way in which the later lectures rely on an understanding of previous lectures, and you finish with a solid understanding of enzymes as a whole. \r\n\r\nWeaknesses_\r\nI think this class could benefit from greater discussion between the teacher and class. ",
+            "\u00a0Strengths: I liked everything. I liked the challenge of reading and understanding journal papers as well as broadening my knowledge about experiments. ",
+            "\u00a0The course was well designed. I liked both projects. I think a few more smaller assignments to get feedback on understanding throughout the semester would be helpful though. ",
+            "\u00a0*Strengths:* Professor Loria is extremely knowledgeable, is great at answering questions, and is an absolute beast when it comes to chalk talk and breaking down the math behind these complicated physical chemical processes and phenomena. Class was always engaging and very fast paced -- never boring. Workload was very manageable, and grading tended to be a little strict, but very fair. Loria gives great, straight-to-the-point, constructive feedback, and has high expectations for everyone.\r\n\r\n*Weaknesses:* Sometimes when working through some very complicated, lengthy derivations, Loria would make a statement in passing like when n is large this quantity goes to this and just write the limiting expression. At least for me personally these quick leaps could sometimes seem non-trivial, and I would really spend some extra time thinking about why that was the case as Loria moved on. Not necessarily a bad thing, since not spelling everything out for you is one way to keep students on their toes -- just something I noticed. When running through derivations (especially the more involved ones) maybe slow down about 25% since I was really working hard to try and understand all the details, not just go along for the ride. Also I feel like only having two assignments was a bit sparse. Both assignments were well thought-out and sufficiently open-ended to allow students some room to breathe, but I feel like a third assignment around midterms might have been good, because a 50%/50% grade structure can definitely make-or-break you and was a source of stress. "
+        ],
+        [
+            "\u00a0Yes, but only if they are interested and motivated to learn the topic. ",
+            "\u00a0Yes ",
+            "\u00a0If you are interested in learning a lot about enzymes and are interested in experimental strategy, I would recommend this course. I really enjoyed Loria as a teacher, and he is very reasonable. There are only two assignments in this class which require some effort, but nothing else is assigned, so its easy to convince yourself to read the suggested reading material. ",
+            "\u00a0Yes definitely because what you gain from this course is very useful. ",
+            "\u00a0I would definitely recommend this class to another student provided they are very interested in the course material. Loria really goes in-depth in this course and we do a lot of derivations and math on the board. You wont necessarily be responsible for re-deriving the equations on the spot from memory, but you definitely wont get as much out of the class if youre not actively following along with the math. If one or two concepts from a lecture dont click with you, definitely ask Loria during class because hes great at answering questions(!), but if not, a lot of the concepts within each lecture are self-contained so youll still be in a good place overall. "
+        ]
+    ]
+}

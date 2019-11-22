@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50509/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Individual two-term laboratory research projects under the supervision of a faculty member. For MCDB seniors only. Students are expected to spend ten to twelve hours per week in the laboratory, and to make presentations to students and advisers. Written assignments include a short research proposal summary due at the beginning of the first term, a grant proposal due at the end of the first term, and a research report summarizing experimental results due at the end of the second term. Students are also required to present their research in either the fall or the spring term. A poster session is held at the end of the spring term. Students should line up a research laboratory during the term preceding the research. Guidelines for the course may be obtained at\u00c2\u00a0http://mcdb.yale.edu/forms and on the course site on Canvas@Yale. Written proposals are due by the end of the second week of classes. Fulfills the senior requirement for the B.S. degree if taken in the senior year.", 
+    "title": "Senior Research", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12497", 
+        "listings": [
+            {
+                "number": "485", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Joseph Wolenski", 
+        "David Breslow", 
+        "Jing Yan"
+    ], 
+    "long_title": "Senior Research", 
+    "extra_info": "A"
+}

@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51985/assignments/syllabus", 
+    "requirements": "", 
+    "description": "(Low-advanced) Develop oral English language skills and intelligibility required for participation in the American academic classrooms. Develop awareness of language and discourse and practice a variety of presentation skills for working with individuals and groups of students. Build your understanding of the culture of the American classroom through observations and case studies. Build confidence in individual and small group teaching practice. This course includes videotaping, individualized feedback and initiation of a teaching portfolio. The Oral Performance Assessment 2 (OPA2) is the final assessment in the course and may be used to achieve Yale Oral English Proficiency.", 
+    "title": "Teaching in the American Class...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "DOW 112", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 18
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "14972", 
+        "listings": [
+            {
+                "number": "515", 
+                "subject": "ELP"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Cynthia DeRoma"
+    ], 
+    "long_title": "Teaching in the American Classroom", 
+    "extra_info": "A"
+}

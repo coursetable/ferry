@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51785/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Students trace histories of gender variance from the early colonial period through the early 21st century, primarily in the parts of the Americas that have become the United States, in relation to such topics as settler-colonialism, two-spirit survivance, indentured labor and slavery, environmental history, changing definitions of citizenship in the early republic, sex/race segregation in the built environment, sexology/eugenics/scientific racism, theories of psycho-somatic plasticity, Post-WWII identity politics, and postmodern figurations of gendered embodiment.\u00c2\u00a0", 
+    "title": "Trans Histories of North America", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 210", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15397", 
+        "listings": [
+            {
+                "number": "108J", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_PREI\">YC History: Preindustrial</a>"
+    ], 
+    "professors": [
+        "Susan Stryker"
+    ], 
+    "long_title": "Trans Histories of North America", 
+    "extra_info": "A"
+}

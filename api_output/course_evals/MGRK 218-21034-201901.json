@@ -1,0 +1,76 @@
+{
+    "crn_code": "21034",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            2,
+            1,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            1,
+            0,
+            4,
+            1
+        ],
+        [
+            1,
+            1,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            3,
+            1,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course? (Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)",
+        "What are the strengths and weaknesses of this course and how could it be improved? (Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)",
+        "Would you recommend this course to another student? Please explain. (Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to approach philosophical questions from a different perspective and learned to question certain tenets of society that I had always perceived as unbiased facts. ",
+            "\u00a0I gained insights on the institution of the family in modern Greece. ",
+            "\u00a0I was able to read modern greek lit for the first time, learn about greek culture, and greek family structures. "
+        ],
+        [
+            "\u00a0The greatest strength of this course are the frequent discussions of ideas. ",
+            "\u00a0Being a seminar, the interactions among the students and the professor felt really intimate and personal. "
+        ],
+        [
+            "\u00a0I absolutely would. This course teaches you how to think and consider viewpoints that are not generally considered and to question certain conceptions that are not generally questioned. ",
+            "\u00a0Yes, the professor is great and it is a good way of fulfilling the writing credit. ",
+            "\u00a0Definitely, the Greek family is interesting to learn about and also the content allows for a lot of self-reflection. Prof is fun and lively and genuinely cares about the content. "
+        ]
+    ]
+}

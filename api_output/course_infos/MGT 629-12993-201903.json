@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48588/assignments/syllabus", 
+    "requirements": "", 
+    "description": "", 
+    "title": "EthicalChoicesinPublicLeadersh", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 8, 
+            "location": "HLH55 HORCHOW", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12993", 
+        "listings": [
+            {
+                "number": "629", 
+                "subject": "MGT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eric Braverman"
+    ], 
+    "long_title": "EthicalChoicesinPublicLeadersh", 
+    "extra_info": "A"
+}

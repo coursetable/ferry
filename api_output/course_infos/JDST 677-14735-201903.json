@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50377/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Marxist thought has played a major role in the understanding of literary institutions, as well as literary texts. Within Marxist thought, literature always had a unique function in the processes of ideology, class struggles, and the constitution of the subject; material Marxism, cultural Marxism, European Marxism, and neo-Marxism all studied the work of literature as an institution and as both reflection and construction of reality, and of its perception. The aim of this seminar is to acquaint ourselves with Marxist theories of literature in the twentieth century. We start with the very basics of Marxism, focusing especially on the theory of ideology. We then study Luk\u00c3\u00a1cs's theory of literature as the basis of the development of Marxist literary theory, followed by the literary theories developed by the Frankfurt School, the materialistic school of Louis Althusser, Antonio Gramsci, E.P. Thompson, Raymond Williams, Stuart Hall, Terry Eagleton, Catherine Belsey, Fredric Jameson, and others. All texts are in English, and no previous theoretical knowledge is required.", 
+    "title": "Marxism and Literature", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WLH 013", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14735", 
+        "listings": [
+            {
+                "number": "677", 
+                "subject": "JDST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Hannan Hever"
+    ], 
+    "long_title": "Marxism and Literature", 
+    "extra_info": "A"
+}

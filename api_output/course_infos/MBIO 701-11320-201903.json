@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "All students, beginning in their third year, are required to present their research once a year at the Graduate Student Research in Progress. These presentations are intended to give each student practice in presenting the student\u00e2\u20ac\u2122s own work before a sympathetic but critical audience and to familiarize the faculty with the research.", 
+    "title": "Research in Progress", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "HOPE 216", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11320", 
+        "listings": [
+            {
+                "number": "701", 
+                "subject": "MBIO"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Walther Mothes"
+    ], 
+    "long_title": "Research in Progress", 
+    "extra_info": "A"
+}

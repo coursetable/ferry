@@ -1,0 +1,47 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50469/assignments/syllabus", 
+    "requirements": "\u00a0Prerequisite: MATH 305.\u00a0", 
+    "description": "This course aims to be an introduction to the mathematical background that underlies modern data science. The emphasis is on the mathematics but occasional applications are discussed (in particular, no programming skills are required). Covered material may include (but is not limited to) a rigorous treatment of tail bounds in probability, concentration inequalities, the Johnson-Lindenstrauss Lemma as well as fundamentals of random matrices, and spectral graph theory.\n\u00a0Prerequisite: MATH 305.\u00a0", 
+    "title": "The Mathematics of Data Science", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "LOM 206", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11291", 
+        "listings": [
+            {
+                "number": "420", 
+                "subject": "AMTH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YMAS\">YC Math: Stat/Applied Math</a>"
+    ], 
+    "professors": [
+        "Stefan Steinerberger"
+    ], 
+    "long_title": "The Mathematics of Data Science", 
+    "extra_info": "A"
+}

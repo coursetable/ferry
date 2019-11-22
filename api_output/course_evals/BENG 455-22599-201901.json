@@ -1,0 +1,91 @@
+{
+    "crn_code": "22599",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            6,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            8
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            7
+        ],
+        [
+            0,
+            3,
+            2,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            5,
+            2
+        ],
+        [
+            0,
+            4,
+            6,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Class was about half math and half biology. Learned a lot about physiology related to the cardiovascular system. As far as the math goes, I retained the shorter derivations but still don't completely understand the workflow of the longer, more complicated models. The math is a bit overwhelming at times, making the later psets impossible unless you get help to understand what's going on. But Prof Humphrey is amazing, teaches so well, and I'm glad I took his class! ",
+            "\u00a0I think the course is great for facilitating thought about mechanics and the vascular diseases. Personally, I wasn't used to a STEM class that required me to be more than a sponge during class. It is little hard to get used to because you have to learn the information while gaining insight. Overall, I guess I definitely was able to understand how the math that I'm learning in the classroom could be implemented in disease areas. The mechanics fundamentals are really well related to vascular disease states in a way that gives them meaning. ",
+            "\u00a0I developed a variety of skills that included familiarity with solving differential equations, setting up different problems with skills developed in biomechanics, and also, of course, learned about the physiology of the vascular system. I learned the different stresses that are always present in the tissues and matrix wall, and about the importance of homeostatic balance. ",
+            "\u00a0I developed intuition and deeper understanding of mechanics as a whole, but particularly as it relates to vascular mechanics. I learned a healthy mix of both biology and mechanics, which helped to neatly tie all of the information together. ",
+            "\u00a0Everything I needed to know for an engineering analysis of the vascular system. Got some incredibly specialized knowledge I dont think I could have got anywhere else. ",
+            "\u00a0We were given a great basis in vascular mechanics ",
+            "\u00a0I learned a significant amount of information about solid and fluid mechanics and the behavior or biology under mechanical stresses, and the ability to model biomechanical processes using constitutive equations and prescribed motions. I also learned a lot about the history of mechanobiology! ",
+            "\u00a0This class helped me to learn how to work through biomechanics problems relating to the human vasculature. I learned both biomechanics solutions as well as the physiology behind some pathologies. "
+        ],
+        [
+            "\u00a0Lack of regular homeworks made me slightly less engaged with the class, but come pset time, the grind to understand everything was real. It was nice given the difficulty of the other courses I took at the same time, though. Actually enjoyed the material we learned, and came away with some practical medical life advice and understanding of diseases. ",
+            "\u00a0The course just needs a little more organization. I would have appreciated clear outline of assignments and when they were due. I think that the assignments were a little hard to get a handle because they were proposed casually. I also think that the TA sessions should be more rigid as well. The information is little too hard to not have clear, consistent TA sessions. ",
+            "\u00a0The course is extremely well done. The information is interesting and it is presented in a way that keeps you engaged. \r\n\r\nIf there are any weaknesses to the course, theyd be isolated to a lack of timeliness for graded material. Grades for homework assignments did not appear until the end of the semester and so it was difficult to learn from ones mistakes. The final paper was cumbersome when paired with the final, and so I think introducing the paper earlier in the term would be much appreciated. ",
+            "\u00a0Weakness: Slides would be immensely helpful. I feel like I was copying down things incorrectly on occasion since the equations were so intricate, and thats a shame because I dont really know whats wrong/how to get the correct version.\r\n\r\nStrengths: Everything else. Overall a top class, incredible course. ",
+            "\u00a0The material is well taught and well organized. Students leave with a great grasp of the vascular biology field and how mechanics can be applied to the field. Take it!! You won't regret it. ",
+            "\u00a0The strengths are, of course, Prof. Humphrey and the way he teaches this class, framed by four main questions and with signpost assignments to reinforce our learning using computational methods. I think this really facilitated an integration of the physiology/biology with the mechanics of the subject matter. I think a weakness, if any, is that  the class really picks up in the second half, while the first half is much slower, so perhaps better distributing the class load in time may help in keeping everything constant. ",
+            "\u00a0The class is structured very well with the lectures following a logical order. The midterm and finals are both very fair, and the final paper is very manageable. The problem sets helped us to go more in-depth to the problems proposed in class, which facilitated learning and understanding. "
+        ],
+        [
+            "\u00a0Yes! Make sure you took physiology and know diff eqs. ",
+            "\u00a0Yes, if you are interested in vascular disease AND have a taken a mechanics class, this class is really engaging. You definitely need to have your maths on tap because its easy to get lost in the mathy muck. But you do learn a lot! I wouldn't say its an easy class, but it is not overwhelmingly hard. It is great Credit/D/F class if you want to take an engaging STEM class but don't want the grade. ",
+            "\u00a0Yes, I would recommend this course to anyone majoring in biomedical engineering, and even to anyone in the bio sector, or simply engineering section. It is one of my favorite courses at Yale. ",
+            "\u00a0Yes I would! Professor Humphrey is an excellent lecturer and the class is structured around learning material deeply as opposed to completing busy work. ",
+            "\u00a0Definitely. An incredible class, not to mention the incredible Professor. Even if you dont want a thorough, high-level training in the field of vascular mechanics, its worth taking the class just because of Professor Humphrey. The course is well-taught and he focuses more on making sure we understand the material he has already presented than rushing through new material, which is often rare at Yale. Also his highly expansive level of knowledge and expertise make the course a truly special, one-of-a-kind opportunity. ",
+            "\u00a0Its a very well taught class and student's learn very effectively! ",
+            "\u00a0You should absolutely take this class if you're interested in vasculature at all! I didn't feel like I was super proficient in mechanics before but this class was super accessible and made me more confident in my quantitative skills. In addition, we learned a lot about physiological responses to mechanics and a lot of general information about health surrounding vascular health. ",
+            "\u00a0I would recommend this course to another student. Although the material itself seems very daunting, understanding the concepts is all that matters, and the midterms and finals are fairly simple if you can do that. The vasculature is such a cool system and we go through both biomechanics as well as biology, for those interested in either. The problem sets can honestly be tough, but Prof. Humphrey is very open to meeting to help you understand what is going on, and it really helps to work together with your colleagues. "
+        ]
+    ]
+}

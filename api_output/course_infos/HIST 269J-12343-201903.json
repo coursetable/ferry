@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50117/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The history and memoirs of Holocaust testimony. How victims' experiences are narrated and assessed by historians. Questions regarding memory and history.", 
+    "title": "History and Holocaust Testimony", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WTS B74", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12343", 
+        "listings": [
+            {
+                "number": "269J", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHI1\">YC History: Europe</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIA\">YC History: Cultural History</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHID\">YC HIST: Ideas &amp; Intellectuals</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIE\">YC HIST: International History</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIK\">YC History: War &amp; Society</a></li></ul>"
+    ], 
+    "professors": [
+        "Carolyn Dean"
+    ], 
+    "long_title": "History and Holocaust Testimony", 
+    "extra_info": "A"
+}

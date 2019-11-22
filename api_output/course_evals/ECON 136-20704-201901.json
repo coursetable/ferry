@@ -1,0 +1,123 @@
+{
+    "crn_code": "20704",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            9,
+            8,
+            5
+        ],
+        [
+            1,
+            0,
+            7,
+            11,
+            7
+        ],
+        [
+            0,
+            1,
+            3,
+            13,
+            8
+        ],
+        [
+            0,
+            1,
+            10,
+            8,
+            6
+        ],
+        [
+            0,
+            3,
+            10,
+            12,
+            2
+        ],
+        [
+            1,
+            3,
+            17,
+            5,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Theory and intuition behind econometrics and stats, basics on how to use STATA/R, basics on how to interpret econometrics papers ",
+            "\u00a0I learned a lot about econometric theories, techniques, and to some extent their implementation in software like R and STATA. ",
+            "\u00a0How to analyze complicated data in papers in Economics. Learned many different methods econometricians use. Learned how to analyze data in Stata and R. ",
+            "\u00a0Unlike Econ 135, here you actually understand what ur doing with R-Studio. And We also Use stata. ",
+            "\u00a0I understood the theoretical background of OLS regression, when to use it and when not to, and what to do when OLS doesn't apply. Those are fundamental knowledge in econometrics. ",
+            "\u00a0Basic theory behind several major techniques of econometric anaysis ",
+            "\u00a0From this course, I received a standard introduction to econometrics. Linear regressions, LASSO, endogeneity, probit, logit, panel data you name it. ",
+            "\u00a0Stronger understandings of methods in econometric analysis, regarding for example regressor interactions, instrumental variable regression, and panel data. ",
+            "\u00a0I learned a great deal about the fundamentals of econometric theory. ",
+            "\u00a0Many statistical analysis methods ",
+            "\u00a0I deepened my understanding of statistical analysis and economic sciences. ",
+            "\u00a0Basic econometric methods: consistency of variables, difference in differences, endogeneity(simultaneity, measurement error, IV regression), binary choice models, and panel data/fixed effects. Also implementation of these methods in R/Stata, and some examples of how these methods are used in economic research. ",
+            "\u00a0A good follow up to Econ 135. A good introduction to econometric theory with applications in R and STATA. ",
+            "\u00a0Linear regressions, instrumental variables, panel data techniques. Econometric logic underlying why it works. ",
+            "\u00a0This course was an introduction to teasing out causality from empirical data. I became familiar with the rigorous theory and practical methods of econometrics. I learned how to translate econometric analysis into STATA and R. ",
+            "\u00a0Statistics and various measures of data, panel data, methods to analyze data. ",
+            "\u00a0Multivariate regression; the difference between the Best Linear Predictor, Conditional Expectation Function, and causal models; endogeneity and its causes; IV regression and TSLS; binary choice models (LPM, probit, logit); LASSO; introduction to panel data methods ",
+            "\u00a0Foundations of econometrics "
+        ],
+        [
+            "\u00a0Yuichi is the best Econ lecturer I've had so far in the major. I had the easiest time focusing and following the material, even though it was arguably drier than other classes'. The psets are also reasonable and helpful in practicing what we learn. He also provides notes and slides to supplement what we do in class, and is very helpful during office hours.  \r\n\r\nWeaknesses? Not many, but the R/STATA bit felt sort of rushed or disjointed at times. Also wish we did some more practical application as opposed to pure theory, but I guess that's what you should expect out of the Econ and Math major version of econometrics here. ",
+            "\u00a0The course is a solid Econometrics, if you like the ideas, this course will be interesting. I can't think of any explicit weaknesses. ",
+            "\u00a0Interesting material, weekly sections, engaging homeworks. Classes could be more engaging though and I would've liked to actually analyze in class with others complicated papers written by econometricians. ",
+            "\u00a0Strength: lectures are very clear. Problem sets let you practice both R and Stata. Prof. Kitamura is very available.\r\nWeakness: Prof. Kitamura could be more engaging  it's sometimes hard to focus in class. ",
+            "\u00a0Strengths: Yuichi's notes are really good and help supplement because no textbook is really used\r\nWeaknesses: concepts lack contextualization ",
+            "\u00a0I was a big fan of this course  it gave a really good, fundamental introduction to the field of econometrics. It was also really great to have open-note exams; they took a lot of stress away from finals period without making it feel like I wasn't learning anything. I finally feel like I could pick up an economics article and understand what kind of statistical analysis academics carry out nowadays. The professor's a plus too. ",
+            "\u00a0Good material. Prof. Kitamura is charming and presents the material well. Wish office hours/section were closer to the time of psets being turned in though. ",
+            "\u00a0It was very well-structured and the teaching was clear. ",
+            "\u00a0No weakness. Strength is prof ",
+            "\u00a0The lecture is a bit fast and hard to follow but the notes are quite detailed and helpful. The course material is also interesting. ",
+            "\u00a0Strengths: Professor Kitamura makes material that could be dry pretty engaging, and is a great lecturer. I also enjoyed being able to look at real applications of some of the techniques we used. \r\nWeaknesses: This is less a \"weakness\" than something that would've just been cool, but I think it would be cool to have sort of project to apply some of the techniques we learned on a larger scale beyond problem set questions. ",
+            "\u00a0You learn STATA and learn the basics of econometric theory. ",
+            "\u00a0Lectures could have been more engaging and include doing more problems ",
+            "\u00a0Strengths: lecture notes were clear and comprehensive, problem sets fairly tested the material. Since examinations were open notes, the course emphasized understanding over memorization.\r\n\r\nWeaknesses: sometimes the powerpoint notes did not quite follow the lecture notes. Programming in STATA and R was useful, but did not go much into detail. ",
+            "\u00a0Professor Kitamura is great. He manages to make a subject that could be incredibly dry remain engaging and interesting throughout the semester. I learned a ton from the course. ",
+            "\u00a0Very clearly taught and straightforward path. Could be improved with more engaging problem sets. ",
+            "\u00a0This is a good course for introductory econometrics. I thought the course was a good mix of theory (the lectures are almost entirely theoretical) and application (the problem sets and parts of the exams). I liked that professor Kitamura would give us papers with applications of the topics. However, this course very easy to the point where it becomes difficult: it is so easy to score highly on our (open note) exams that the cost of an error is very high (i.e. one question wrong brings you down to the median or below). The medians for our exams were in the high 80's/low 90's, so you cannot make a single mistake. We also covered very little in this course, spending the first half on OLS, which people should have learned in previous courses. "
+        ],
+        [
+            "\u00a0Yes -- might be a tougher curve with the Econ+Math majors, but it's so much better taught than any of the econometrics courses here at Yale, I don't regret picking it at all. Definitely felt like I was learning and learning the concepts thoroughly. ",
+            "\u00a0Yes, absolutely take this course if you have any interest in Econometrics or understanding what's really going on behind regressions etc. ",
+            "\u00a0Yes, especially for students more interested in math and theory behind economics. ",
+            "\u00a0I would really recommend the course. It is really well taught and there's sufficient support for the class if you are having trouble. If you didn't understand something in class, the professor explains it really well and thoroughly in office hours. I really liked the fact that in this class, even when sometimes you might not have understood something in class, when you do the problem sets, that is when you understand. And the coding parts with Stata and R-Studio really further helped me understand/ further my understanding. ",
+            "\u00a0Yes. You may feel a bit lost in the first half of the class, because stats241&242/econ135 sucks and doesn't prepare you for this. Make sure you understand the material (it's not hard). ",
+            "\u00a0Only if you need to take it for Econ/Math. Otherwise, take ECON 132 probably. ",
+            "\u00a0Yes! If you're an economics major, you need to take this course in order to better understand how to conduct statistical analysis in the field. The material is distinct from one you'd pick up from any S&DS class. And you can't go wrong with Yuichi. ",
+            "\u00a0Yeah! you need it for econ & math, and it's definitely one of the better courses in the major. ",
+            "\u00a0Yes, this is a core course to learn about econometrics. ",
+            "\u00a0Yes. You learn a lot of stats ",
+            "\u00a0This course is organized and relatively easy to follow. The lecture can be a bit dry but Yuichi is funny and cares about teaching. ",
+            "\u00a0Definitely. You need it anyway if you want to do anything in econ, and the math is isn't bad at all (even though the pre-reqs are linear and multi.) Professor Kitamura is also great in lecture. He explains ideas very clearly and will throw in funny stories from time to time to keep everyone on their toes. Homework is very manageable, and tests aren't bad (and are open note!) ",
+            "\u00a0Yes - if youre S&DS looking for an elective this is a good choice ",
+            "\u00a0If you are taking this class, you probably have to, but I would say this is the math-ier version of econometrics. If you have a background in Statistics, Linear Algebra, Calculus, and Probability Theory, you should take this class. It is a much more in-depth version of econometric theory and actually provides you with tools. The other econometrics classes require you to memorize formulas but the deep learning happens in this class. ",
+            "\u00a0Take it for a much more indepth understanding of econometrics ",
+            "\u00a0I would recommend this course to anyone who wishes to perform empirical social science research---the course provides both a theoretical background and practical skills. Professor Kitamura is generous with his time. Also, his jokes are quality. ",
+            "\u00a0Absolutely. It has changed how I view data and the insights we can learn from that data. ",
+            "\u00a0Yes! Yuichi does a wonderful job of providing a relatively no-prereq introduction to econometrics. ",
+            "\u00a0Yes, you probably have to take it if you are Math/Econ. I think econometrics is a very good field to learn about - the questions in this course offered a new perspective to me (an S&DS major) but fell short in terms of how much we learned. ",
+            "\u00a0Yes. "
+        ]
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Designed to help fill gaps in students\u2019 programs when there are corresponding gaps in the department\u2019s offerings. By arrangement with faculty and with the approval of the DGS.", 
+    "title": "Directed Reading: Aesthetic Te...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "16257", 
+        "listings": [
+            {
+                "number": "995", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Noreen Khawaja"
+    ], 
+    "long_title": "Directed Reading: Aesthetic Teleologies", 
+    "extra_info": "A"
+}

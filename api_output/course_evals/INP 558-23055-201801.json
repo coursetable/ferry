@@ -1,0 +1,93 @@
+{
+    "crn_code": "23055",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            5
+        ],
+        [
+            1,
+            0,
+            2,
+            2,
+            4
+        ],
+        [
+            0,
+            1,
+            1,
+            4,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            8
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            6
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Comprehensive knowledge of advanced neuroimaging methods ",
+            "\u00a0The course provided an overview / list of new methods of analyzing fMRI data. ",
+            "\u00a0By taking this course, I learned the theory and practice of applying advanced computational methods to analyzing neuroimaging data. From classification to real-time fMRI analyses, I learned not only things to consider when applying these methods but received the tools necessary to apply them to real data. ",
+            "\u00a0This was an amazing course! Learned a lot, but it was pretty difficult. Especially having so little time to complete the assignments. That was pretty stressful. ",
+            "\u00a0Most of my learning in this class happened through the weekly assignments: the hands-on activities were incredibly useful in teaching us how to run analyses, and especially the final project was crucial in making us able to apply these methods to novel data. I thought the weekly readings were also super useful in helping us engage with the literature with a critical eye. ",
+            "\u00a0I improved significantly in my python coding abilities and my overall knowledge of multivariate techniques that one could apply to their data. ",
+            "\u00a0I learned sophisticated analysis approaches for fMRI data and the toolboxes available to implement these analyses. I also learned the basics of coding in Python and using Github. ",
+            "\u00a0This course was tremendously helpful in improving my programming skills and introducing me to fMRI data analysis methods that will be very pertinent to my research. "
+        ],
+        [
+            "\u00a0The knowledge about techniques was very comprehensive, and the repositories we built will be very helpful for future data analysis pipeline set-up. The timeline of the assignments however could be improved, as it really didn't allow for any other work to get done after class that day.  Also, a little more basic linear algebra/machine learning would be nice -- e.g., in talking about hyperplanes and dimensionality reduction it would have been nice to have a little more background on what the math is there and why it's useful, etc. ",
+            "\u00a0There was too much pressure on churning out homework (HW would be given at 3pm on Tuesday and then would be required to be turned in by 12nn the next day) that it did not allow any exploratory learning. The problem is that with a lot the topics in the class, it would have been nicer to actually play around with different parameters and see how this would change the outcome of the analysis.\r\n\r\nThe course was trying to do too much with too little time. ",
+            "\u00a0Strengths: the course content was very well-curated for graduate students. For graduate students in psychology, this is exactly the course we've been waiting to take for a long time. The lectures were excellent and gave just the right level of theory and do's and don't's. The journal clubs were great given that they got us to read relevant papers without placing too much emphasis on that part of the class. The hackathon and final project (choose your own adventure) were excellent learning experiences! I learned the most compared to the entire semester by applying a method on my own. Hosting another hackathon after the end of the semester to keep the momentum going would be fantastic!\r\n\r\nWeaknesses: it seems like there should be a limit imposed on how many students can enroll in this class. Had this been a 12-15 student course, there would have been more one-on-one interactions with the instructor and the TF. The weekly problem sets placed MUCH more emphasis on programming knowledge than on knowledge of the course content, making them extremely difficult even for advanced beginners in python. Most weeks, my classmates and I spend 6-8 hours after class working on the problem set, while it didn't seem like that was the instructor's intention. It was clear from interactions with other students in the class that some of them had very advanced programming knowledge but VERY little understanding of the concepts or why they would be useful for neuroscience or even the basics like what brains are supposed to look like when they're masked. The in-class problem set time could have been used to go through some of the problems as a group instead of immediately splitting up into working on it individually. This individualistic style often turned into a strangely competitive and secretive atmosphere where groups were trying to go faster and the TF would answer the same questions over and over instead of talking to the whole class.\r\nFor the final project, it would have been more useful to be able to use our own data given that it overlapped with end-of-the-year requirements, this would have been a great opportunity to take our projects to the next level and get feedback on them. Finally, it would have been very helpful starting the final project one week earlier would have been very helpful so that our questions at the hackathon could have been more advanced/further along. \r\n\r\nHow it could be improved: limited class size; more balanced emphasis on course content & programming knowledge; allowing the use of one's own data for final project; starting final project earlier; making better use of in-class problem set time. ",
+            "\u00a0Probably allow people to perform the final project over the course of the semester so that they can get more feedback. ",
+            "\u00a0This course does an awesome job at teaching us different skills, from learning the foundations of computational analyses to coding them in Python, and critically evaluating their use in the literature. It's definitely the most instructive and engaging course I've taken in grad school. Nick and Cameron were great: very responsive, knowledgeable, and excited about helping us learn. Also the hackathon was so awesome: I hope we have more in the future!! \r\n\r\nThe weekly assignments were very useful, especially because most of us plan to apply them to other data in the future; I liked that they were due the day after class, so we wouldn't have to worry about it for days. But on the other hand, I know it made many people anxious, and sometimes I would have perhaps done a better job if I had more time. So my one suggestion is to extend it, perhaps even just to Weds evening, which functionally doesn't change much, but would feel less crunched. \r\n\r\nAnother comment is that many people were lacking the basics that are necessary to learn this material, e.g. coding in Python for those used to Matlab, bash scripting, computing, preprocessing data, running a GLM etc.. Of course it'd be crazy to start from scratch in one course, and we should have all come in knowing all these things, especially because many of us took the lower level fMRI course; in case that course is ever re-designed, I wonder if it could be built on this model, with hands-on activities in Python and critical readings of the literature. ",
+            "\u00a0STRENGTHS\r\n\r\n- This course offered remarkable breadth and depth in methods in computational neuroscience. I learned more about fMRI analysis and scientific programming during this four month course than in three years working in fMRI-oriented research labs. For this, I am very grateful!\r\n- The lectures were always interesting, informative, and thoughtfully organized.\r\n- The readings were engaging, and I appreciated that they were often short enough that I was able to re-read them several times before class.\r\n- The utilization of Slack in this course was very effective for communication with the instructor and TA, and for collective problem-solving with other students.\r\n- Nick and Cam are both extremely knowledgeable, friendly, and supportive.\r\n\r\nWEAKNESSES\r\n\r\nMajor:\r\n- The assignments were very time consuming, and did not always seem like an efficient way to the learn the material. The next day deadline often made it necessary to speed through each assignment. This meant, in some cases, not stopping to correctly comment my code, not striving to find more elegant solutions to a problem, and not taking the necessary time to truly understand, in the big picture, what I was doing/learning. Suggestion: Many students would benefit from (i) extended assignment deadlines, and (ii) having tutorials during the second half of class (instead of a hackathon-like work period), where the teaching assistant walks through each week's code, and then the assignments (completed outside of class) are aimed at applying and extending this knowledge gained in class. \r\n- The feedback on assignments, while helpful, was quite limited, which in some cases resulted in repeating the same mistakes across assignments. I imagine many of us (ideally) hope to use the code from these assignments in the future, but are not well-equipped to identify all the mistakes we made in each of these notebooks. Suggestion: As an alternative to having tutorials before each assignment, it would also be useful to spend more time reviewing each week's assignment the following week (e.g., working through common issues, allowing for questions). I think people would also appreciate it if the solutions to each week's assignments were released so that we can review them, and refer to them in the future. Both of these approaches would likely amplify each student's ability to improve their code from week-to-week.\r\n\r\nMinor:\r\n- To succeed in this course, one needs a very strong background in Python, scientific computing, and machine learning, but very little time was devoted to directly teaching these skills. Inevitably, many graduate students wishing to take this course will not have the necessary background to succeed. Suggestion: Devoting a full lecture early in the semester to a crash course in the most relevant Python package(s) (e.g., NumPy) could be very helpful for those not well-versed with these tools.\r\n- I believe the process of randomly selecting a student to present on that week's reading was a source of unnecessary stress. Suggestion: I believe most people would prefer if this were done at the start of class. In addition, doing away with the random selection process altogether (i.e., assigning presenters in week 1) likely wouldn't discourage people from completing the readings. The papers are very short, and people are already incentivized to read them as they are receiving participation credit for contributing to the discussion. ",
+            "\u00a0I felt  that there was a big disconnect between the lectures and the problem sets.  It would have been more helpful if during the lectures we could walk step by step through the code.  It was almost as if you didn't need the knowledge of the lectures/theory in order to complete the problem sets, just a general idea of the goal of the code and coding skills.  I also feel like I would often get hung up on syntax coding problems, which really hindered my progress in the problem sets/final and my ability to fully absorb or explore the techniques in the problem sets. ",
+            "\u00a0The lectures were very clear and informative. The exercises were helpful to learn Python and implement the methods discussed during lecture. While the lectures and exercises complemented each other in topic, it did not always feel that the concepts learned during the lecture aided in completing the exercises. Another comment regarding the exercises is that they typically required 4-6 hours to complete which was far beyond the original intention for these exercises to be completed in class. I am not necessarily suggesting that the exercises be shortened, but to be clearer to students about what time commitment might be required to complete these exercises. The most rewarding section of the class was the final project. ",
+            "\u00a0The time constraints of the course assignments, particularly given the variety of skill sets people in the class come in with can make doing well in the course really quite challenging. Trying to complete the assignments in less than 24 hours when the difficulty of the material was quite high was making it so that I did not feel I was engaging with the assignments as much as I could have otherwise. On the other hand, I do realize this forces us to become faster programmers, and by the end of the course, the efficacy with which I could do this was improving. "
+        ],
+        [
+            "\u00a0Yes, it's very useful. ",
+            "\u00a0The class is a heavy mix of theory and technical know-how. Only take it if you are confident you can juggle both. ",
+            "\u00a0Yes, I would definitely recommend this course to other graduate students while warning them about the large time commitment (3 hours of lecture + 6-8 hours that same day to finish the problem set + 1-2 hours for reading) ",
+            "\u00a0Definitely ",
+            "\u00a0Definitely recommend! If you're interested in working with you own imaging data, or even just learning computational approaches to psychology, this is perfect. I think all pieces of it (readings, homework, lecture, final project) were useful, and even though this class is unusual in the amount of work and engagement generally required in grad school courses, this was a great investment and will definitely help in our work. ",
+            "\u00a0Yes, I would recommend this course to other Psychology graduate students who have experience with neuroimaging analysis.  I do not think the class is as appropriate for undergraduate who have no experience in Psychology. ",
+            "\u00a0Yes! This was an excellent course that offered pragmatic skills that can be implemented in grad student research. But, I would also tell prospective students that this course requires a substantial time commitment and may not be appropriate for graduate students with many other obligations, particularly on the day of the course. ",
+            "\u00a0Yes, though I think the demands of the course and the skill-levels necessary to enter the course would make it so the students who decide to take this ought to be very well prepared and experienced in fMRI or at least very good programmers. "
+        ]
+    ]
+}

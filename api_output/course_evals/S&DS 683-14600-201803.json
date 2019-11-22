@@ -1,0 +1,78 @@
+{
+    "crn_code": "14600",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            2,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0fMRI analysis with statistical skills ",
+            "\u00a0An overview of statistical methods of neuroimaging data. ",
+            "\u00a0This course was great at building a bridge between common statistical tests and their practical application in the field of neuroimaging. In addition there were discussion around state of the art neuroimaging analyses that gave insight into the current state of the field. "
+        ],
+        [
+            "\u00a0The course is well-organized and the contents are interesting. Wide coverage of the state-of-art techniques in fMRI although due to time-limit we cannot delve deeper into the machine learning contents. ",
+            "\u00a0The materials selection is very good. It could be better to include more statistical background for each chapter. ",
+            "\u00a0This course was very good at giving an intuition about statistical tests commonly used in neuroimaging. I think it could be improved by having a portion of the class be a lab-style arrangement. "
+        ],
+        [
+            "\u00a0Yes. The course is a good review of the current contents in fMRI research. ",
+            "\u00a0Yes, to those who are interested in neuroimaging data analysis. ",
+            "\u00a0Yes, if you have experience in neuroimaging and/or stats and want to learn how to bridge them ",
+            "\u00a0I would recommend this class to anyone who does neuroimaging based research, or is interested in getting into it. "
+        ]
+    ]
+}

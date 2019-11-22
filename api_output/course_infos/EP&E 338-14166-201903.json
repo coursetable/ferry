@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51673/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Exploration of the various causes, enablers, and effects of large-scale corruption, to better understand its impact, the consequences, and reform efforts. Topics include the abuse of entrusted power for private gain as an evolving geopolitical risk; how corrupt actors use and exploit the global financial system across both emerging and advanced economies; the impact of corruption across a diverse sample of\u00e2\u20ac\u00afindustries and sectors including infrastructure, extractives, sport, and art; and efforts for reform and risk mitigation. Some foundational basics with economics and political science preferred.", 
+    "title": "Corruption, Governance, and Re...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WTS B30", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14166", 
+        "listings": [
+            {
+                "number": "338", 
+                "subject": "EP&E"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEP2\">YC EP&amp;E Ethics Core</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YGLE\">YC Global Affairs: Elective</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSI\">YC Poli Sci: Intnatl Relations</a></li></ul>"
+    ], 
+    "professors": [
+        "Elaine Dezenski"
+    ], 
+    "long_title": "Corruption, Governance, and Reform in the Twenty-first Century", 
+    "extra_info": "A"
+}

@@ -1,0 +1,76 @@
+{
+    "crn_code": "11157",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            3
+        ],
+        [
+            0,
+            2,
+            3,
+            2,
+            0
+        ],
+        [
+            1,
+            1,
+            5,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Fundamental skills for translating any text - it was incredibly useful! ",
+            "\u00a0In this class, I practiced French to English literary translation. Through translating French texts into English, I developed a better grasp of the differences between French and English syntax. We also wrote commentaries to our own translation, and composed a parody to one of the texts we translated. "
+        ],
+        [
+            "\u00a0The strengths are undoubtedly the variety of texts you translate and Professor Waters is amazing. No weaknessss! ",
+            "\u00a0I think this class is well-structured. Prof. Waters didn't focus too much on translation theory, but rather shared with us her experience translating as we workshop-ed each of our translations. I greatly appreciate that. "
+        ],
+        [
+            "\u00a0Quite an informal class and fun and bizarre. Professor Waters is very funny. This was my only class on Wednesdays, and I always looked forward to my Wednesdays because this class was consistently relaxing and weird. ",
+            "\u00a0Yes definitely if you have any interest in translation or want to tackle some great contemporary French literature. I would definitely recommend it ",
+            "\u00a0I would recommend this course to another student. Translation was fun; you get to know other members of the class and Mme. Waters is awesome. Please take this class. ",
+            "\u00a0I definitely will recommend this class to other students who are fluent in both French and English. This class provides the chance for a close reading of literary texts, besides allowing you to try being a translator. "
+        ]
+    ]
+}

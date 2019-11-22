@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Qualified students may write a two-term senior essay in ancient literature or classical archaeology under the guidance of a faculty adviser. A written statement of purpose must be submitted to the director of undergraduate studies.", 
+    "title": "Two-Term Senior Essay for the ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10646", 
+        "listings": [
+            {
+                "number": "490", 
+                "subject": "CLSS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Andrew Johnston"
+    ], 
+    "long_title": "Two-Term Senior Essay for the Intensive Major in Classics", 
+    "extra_info": "A"
+}

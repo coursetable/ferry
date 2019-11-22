@@ -1,0 +1,85 @@
+{
+    "crn_code": "12115",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            4
+        ],
+        [
+            0,
+            1,
+            1,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            6,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learn the applications of quantum chemistry in different types of spectroscopy ",
+            "\u00a0Quantum Mechanics, NMR Spectra, J coupling, Matrix Algebra, Linear Algebra, ",
+            "\u00a0Really seeing practical QM at work - how theory could be applied to the real laboratory. ",
+            "\u00a0All things quantum, great class ",
+            "\u00a0I witnessed a fast paced, but vast in scope, exploration of the ties between quantum mechanics and spectroscopy. ",
+            "\u00a0Quantum mechanic description of molecules and spectroscopy; group theory; linear algebra. "
+        ],
+        [
+            "\u00a0Having the discussions were helpful in learning how to apply concepts in class. The notes were helpful so I didn't need to rush to write down long equations. ",
+            "\u00a0A strength of the course was how integrated all of the material was at the end.   It summed up all of the material quite nicely.\r\n\r\nThe weakness was that for my term, we could have stopped and not gone through the last week of accelerated material and I would be able to confidently write on here that I will remember the material for the rest of my life.  Unfortunately, as I am sure almost everyone else in the class will say, because we were rushed the last we did not gain a strong understanding of the material.  I was unable to obtain the answers to questions or gain a basic conceptual understanding of the last week's worth of material that really summed the entire semester together.   I appreciate the material of the last week, but trying to cram it for our final was stressful and not practical. ",
+            "\u00a0The materials were cool but there were too much of them and too much rushing. ",
+            "\u00a0A bit of a grind, but very clear and relevant material ",
+            "\u00a0My praise:\r\nThe class was exceptionally well structured. Prof. Zilm put in a ton of effort to make helpful lecture notes, which allowed for a faster paced course. The homeworks were spot on in difficulty and in terms of being a stretch. He also had a broad spread of students in terms of understanding and background. On the whole, he was fair and accommodating to all the students, while maintaining an instructive and fast paced atmosphere.\r\n\r\nMy complaints:\r\nNear the end of the semester, it began to feel like Prof. Zilm was disappointed in the class not get far along in the material as he would have liked. This soured the mood of the class at the end, as it felt like the vast amount of material we had covered was insufficient -- when in reality, we had covered what many courses wouldn't have been able to cover in that time. It was a bit excessive to continue lectures into reading period because of this.\r\n\r\nAdditionally, I felt like the homeworks were undervalued. At the beginning of the year, I consistently worked each homework to completion, but there was almost never any feedback on the homeworks, and the solutions were given out the next day anyway. Don't get me wrong, the solutions should continue to be given out, as they are crucial for review, but by the end of the year, I felt like homeworks weren't something I should worry about doing. Unfortunately, Prof. Zilm started to collect them around this time, which was a bit frustrating as all my past efforts were ignored and the current perceived lack of effort was noticed. ",
+            "\u00a0The notes are the strongest part of this course I think. They are comprehensive and having them during lecture instead of needing to write down what the instructor says is crucial for being able to follow everything. The homework is challenging, but not unmanageable. \r\n\r\nI have mixed feelings about the level of feedback and grading of exams. On one hand, I felt that the grading of my exams felt a bit arbitrary: questions I struggled with I would receive more credit than I expected, while questions that I got almost completely correct I would receive surprisingly large point deductions (for example -3 for dropping a square root sign on a single element of a 4x4 matrix). On the other hand, it sounds like the instructor is not too concerned with our grades and more with our learning, and suggested to us that we should approach the class in a similar manner. At any rate, I thought I would bring this up here. ",
+            "\u00a0Very systematic and provides great and timely feedback. "
+        ],
+        [
+            "\u00a0I would recommend this class even though it is really hard.  I would not recommend this class for someone who has not had linear algebra though. ",
+            "\u00a0Yes, but for students who are strong at math. ",
+            "\u00a0Yes, lots of great stuff ",
+            "\u00a0Yes, the topics covered are clearly essential for a student such as myself to learn and understand. "
+        ]
+    ]
+}

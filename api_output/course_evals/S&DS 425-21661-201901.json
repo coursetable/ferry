@@ -1,0 +1,88 @@
+{
+    "crn_code": "21661",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            5,
+            5
+        ],
+        [
+            0,
+            1,
+            2,
+            4,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            7
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            6
+        ],
+        [
+            0,
+            0,
+            6,
+            6,
+            0
+        ],
+        [
+            0,
+            1,
+            8,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained experience with a number of practical issues that come up when analyzing data. I also gained experience communicating statistical results. ",
+            "\u00a0I learned how to complete a statistical case study from beginning to end. It was helpful seeing how people gather the data, clean it, and present it in an insightful manner, and the hands on nature was well structured to encourage growth. ",
+            "\u00a0Get a lot of practice in R dealing with real world data sets. ",
+            "\u00a0I learned a lot of things: how to scrape data from the internet, how to format it, how to present a data research project, how to conduct a full data research project from scratch etc... Most importantly, this course taught me how to find answers to a question (\"What affects housing prices in New Haven\") using data. I'm sure the skills and knowledge I've acquired in this class will come in handy in the future! ",
+            "\u00a0Data scraping, mining, cleaning, how to code efficiently, so many important things! ",
+            "\u00a0I developed a process for data analysis and statistical projects. ",
+            "\u00a0You get great with R, dplyr, ggplot, exploring data, writing statistical reports, finding statistically rigorous results. "
+        ],
+        [
+            "\u00a0This course was an effective instrument for improving statistical communication skills. The capstone project at the end seemed like it was forced into an otherwise well-designed curriculum. This project should either receive more prominence or be eliminated from the syllabus. ",
+            "\u00a0The main strength of the course was the direct interaction with the instructors and the insights that they provided. The course didn't have any weaknesses. ",
+            "\u00a0Gets a little tedious some times because we spend a lot of time on a data set. But real world data science can be tedious so its understandable. ",
+            "\u00a0Susan is a great professor! Susan and Tal, the TA, formed a great team. They would walk around the class and help us if we needed it. I loved the format of the course where we actually worked on projects during class time. I didn't see time go by and I was much more engaged than in my previous S&DS lectures. The workload was not too intense, and the projects were super interesting to work on. I also really enjoyed working with other seniors in the major. ",
+            "\u00a0Really liked how each class was project-based. ",
+            "\u00a0This was an excellent course. I was not super into every single project, but I thought they were very good overall. "
+        ],
+        [
+            "\u00a0While I enjoyed this course, I probably would have enjoyed writing a thesis more. I took this course because I had difficulty finding an advisor. Departmental guidance in finding an advisor would have been appreciated. ",
+            "\u00a0Every S&DS major should take this class. It's the equivalent to a history department seminar, an opportunity to discuss and collaborate on projects in a smaller setting. I get to apply nearly everything I learned during the last 4 years, and got feedback throughout. ",
+            "\u00a0Fine if you don't do a thesis. ",
+            "\u00a0Yes ! I really enjoyed this class, my favorite S&DS class at Yale by far. I was super engaged in it and I'm glad took this class instead of doing a thesis. I would highly recommend it. ",
+            "\u00a0Definitely! Though you can only take it if you are a senior S&DS major not taking for credit. ",
+            "\u00a0I would absolutely recommend this course to anyone who doesn't have a thesis topic that they are passionate about. ",
+            "\u00a0Yes! "
+        ]
+    ]
+}

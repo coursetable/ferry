@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/52221/assignments/syllabus", 
+    "requirements": "Prerequisite: MATH 222 or permission of instructor.", 
+    "description": "Introduction to finite-dimensional, continuous, and discrete-time linear dynamical systems. Exploration of the basic properties and mathematical structure of the linear systems used for modeling dynamical processes in robotics, signal and image processing, economics, statistics, environmental and biomedical engineering, and control theory.\nPrerequisite: MATH 222 or permission of instructor.", 
+    "title": "Linear Systems", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "DL 514", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15748", 
+        "listings": [
+            {
+                "number": "432", 
+                "subject": "EENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "A. Stephen Morse"
+    ], 
+    "long_title": "Linear Systems", 
+    "extra_info": "A"
+}

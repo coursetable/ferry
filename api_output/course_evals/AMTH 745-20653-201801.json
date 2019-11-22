@@ -1,0 +1,82 @@
+{
+    "crn_code": "20653",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            10,
+            1
+        ],
+        [
+            0,
+            1,
+            8,
+            3,
+            2
+        ],
+        [
+            0,
+            1,
+            3,
+            7,
+            3
+        ],
+        [
+            1,
+            3,
+            6,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            7,
+            5,
+            1
+        ],
+        [
+            1,
+            2,
+            10,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This grad course was a great way for me, an undergrad, to explore computer science research and read some very interesting papers about new work in the field. ",
+            "\u00a0Learned about a broad range of topics in machine learning (particularly deep learning). ",
+            "\u00a0I learned about many different topics in machine learning, especially in deep learning. ",
+            "\u00a0the latest knowledge about deep learning. ",
+            "\u00a0Seminar format was great for deep learning, which is a rapidly advancing field. Getting to have lively discussion with current applied math PhD students was very helpful. In particular, discussions around deep networks and generalization were very clarifying. ",
+            "\u00a0I gained knowledge in a diverse range of topics related to the quickly advancing field of machine learning. "
+        ],
+        [
+            "\u00a0Strengths: The course is very shaped by its students and their interests, so we spoke about a range of research topics during the semester which I found to be particularly memorable.\r\n\r\nWeaknesses: The class is pretty unstructured, which can be difficult at times to ascertain how well I'm doing in the class. ",
+            "\u00a0Interactive format is good. Would have been better held in a small meeting room to encourage discussion. ",
+            "\u00a0It's very relaxed and student-run. I was very satisfied with the course. ",
+            "\u00a0I thought the reading, presentation and discussion format was quite good. My one suggestion would be to have a smaller set of readings for each class and have everyone read each reading instead of having a selection of readings to choose from. I think this would have lead to more productive discussions. "
+        ],
+        [
+            "\u00a0If you're interested in research and don't really want to do more problem sets, this is a great low-workload class for the Computer Science and Applied Math majors that discusses interesting material. ",
+            "\u00a0Yes. This is a very good way of learning about a wide range of topics in deep learning and encouraging critical thought about the current dogma. Also the interactive format meant I got to know more of my peers than I otherwise would have. ",
+            "\u00a0Yes ",
+            "\u00a0Yes, if that student wanted an introduction into a wide range of current machine learning topics. "
+        ]
+    ]
+}

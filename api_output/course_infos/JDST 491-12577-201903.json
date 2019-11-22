@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "The essay, written under the supervision of a faculty member, should be a substantial paper between 6,500 and 8,000 words for one term and between 12,500 and 15,000 words for two terms.", 
+    "title": "The Senior Essay", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12577", 
+        "listings": [
+            {
+                "number": "491", 
+                "subject": "JDST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "David Sorkin"
+    ], 
+    "long_title": "The Senior Essay", 
+    "extra_info": "A"
+}

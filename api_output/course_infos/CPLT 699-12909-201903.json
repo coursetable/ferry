@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50380/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A systematic, chapter-by-chapter study of Heidegger\u2019s Being and Time, arguably the most important work of philosophy of the twentieth century. All the major themes of the book are addressed in detail, with a particular emphasis on care, time, death, and the meaning of being.", 
+    "title": "Heidegger\u2019s <i>Being and Time<...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 317", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12909", 
+        "listings": [
+            {
+                "number": "699", 
+                "subject": "CPLT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Martin Hagglund"
+    ], 
+    "long_title": "Heidegger\u2019s <i>Being and Time</i>", 
+    "extra_info": "A"
+}

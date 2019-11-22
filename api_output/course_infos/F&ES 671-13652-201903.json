@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49818/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Dendrology literally translates as \u201cthe study of trees\u201d and integrates morphology, phenology, ecology, biogeography, and the natural history of tree species. In this course students learn how to identify more than 120 individual species of woody plants using common morphological and ecological traits used for field identification. Dendrology is by nature context-specific, so this course has a focus on North American forest species, primarily of eastern North America. In addition, we use phylogenetic systematics as the structure for understanding taxonomy and the evolutionary history and relationships between species. Enrollment limited to thirteen.", 
+    "title": "Temperate Woody Plant Taxonomy...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "MARSH R", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13652", 
+        "listings": [
+            {
+                "number": "671", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Marlyse Duguid"
+    ], 
+    "long_title": "Temperate Woody Plant Taxonomy and Dendrology", 
+    "extra_info": "A"
+}

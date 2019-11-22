@@ -1,0 +1,81 @@
+{
+    "crn_code": "10724",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            3
+        ],
+        [
+            0,
+            1,
+            3,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Software Analysis&Verification ",
+            "\u00a0I learned the fundamentals of software verification and skills for implementing basic techniques. ",
+            "\u00a0Model Checking\r\nFormal Verification ",
+            "\u00a0I learned about SMT solvers and SAT solvers, and various logical formalisms that describe computer programs. ",
+            "\u00a0Verification\r\nSAT Solver\r\nSMT Solver\r\nProgramming skill\r\nSoftware analysis method "
+        ],
+        [
+            "\u00a0It introduces many techniques and ideas in programming analysis.\r\nI especially like the two class projects and competitions.\r\nBut if TA can provide more benchmarks, that'll be great.\r\nBesides, the lecturer can introduce more techniques (like temporal logic) even briefly, just tell students there are some important fields in some place, so we can learn them by ourselves.\r\nAnd please do not schedule the course at noon, we are HUNGRY! ",
+            "\u00a0It was a bit too practical for my taste, but I think most students would disagree with me. Also, using a textbook would have been nice; I thought that both textbooks mentioned in the course were pretty useful, though they present the material in different ways. ",
+            "\u00a0This in all is an awesome course. "
+        ],
+        [
+            "\u00a0Yes ",
+            "\u00a0Yes, fascinating material and a great professor. ",
+            "\u00a0Yes.\r\nThis course introduces many essential techniques and ideas in programming analysis. You can improve your understanding by working on two small class projects and join two competitions among the class.\r\nBesides, you don't have to purchase any textbook for it. And all the questions in final exam test the same knowledge in homework. ",
+            "\u00a0I would recommend this course to students interested in logic or theoretical computer science, or to software engineering students interested in ways to improve or ensure code reliability. Among the graduate students in the course, it seemed that interests ran the gamut from people interested in writing better code to people interested in pure theory. ",
+            "\u00a0Yes, will recommend it my classmates. "
+        ]
+    ]
+}

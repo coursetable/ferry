@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51771/assignments/syllabus", 
+    "requirements": "", 
+    "description": "", 
+    "title": "Black Women Playwrights", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "PK217 206", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14233", 
+        "listings": [
+            {
+                "number": "686", 
+                "subject": "DRAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eric Glover"
+    ], 
+    "long_title": "Black Women Playwrights", 
+    "extra_info": "A"
+}

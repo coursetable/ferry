@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "A survey of current topics in high-energy astrophysics, including accreting black hole and neutron star systems in our galaxy, pulsars, active galactic nuclei and relativistic jets, gamma-ray bursts, and ultra-high-energy cosmic rays. The basic physical processes underlying the observed high-energy phenomena are also covered.", 
+    "title": "High-Energy Astrophysics", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WTS A39", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12835", 
+        "listings": [
+            {
+                "number": "570", 
+                "subject": "ASTR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Paolo Coppi"
+    ], 
+    "long_title": "High-Energy Astrophysics", 
+    "extra_info": "A"
+}

@@ -1,0 +1,78 @@
+{
+    "crn_code": "21448",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            4,
+            0,
+            2,
+            0
+        ],
+        [
+            2,
+            4,
+            1,
+            0,
+            0
+        ],
+        [
+            2,
+            2,
+            3,
+            0,
+            0
+        ],
+        [
+            2,
+            2,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            2,
+            4,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            4,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0It was a good review of calculus ",
+            "\u00a0The most I can say I gained from the course was exposure to basic calculus and the ability to solve niche questions that were relevant for the exams. ",
+            "\u00a0I learned the uses of derivatives and some of the uses of integrals. There were also other concepts of calculus that were taught. "
+        ],
+        [
+            "\u00a0less going over proofs and more practice problems in class ",
+            "\u00a0I felt that the course was poorly structured to facilitate student learning: problem sets felt unnecessarily different from the material that would eventually be tested on exams. ",
+            "\u00a0The questions on problem sets helped us thoroughly learn the material. I thought the my class was too focused on theory and proofs and sometimes failed to actually teach us the material. Maybe in future years more examples of concepts could be done in class so that students have an idea of the material before completing problem sets. "
+        ],
+        [
+            "\u00a0I wouldn't recommend this course because it moves at a relatively fast pace, and it is often difficult to see how the problem sets help with studying for the midterm ",
+            "\u00a0No ",
+            "\u00a0No. I would not recommend this course to a friend who had never taken calculus before, and would only recommend it to someone who had exposure to the material if they were looking for a QR credit. ",
+            "\u00a0I would recommend this course to students that would like to major in something mathematics related or need this class as a requirement. "
+        ]
+    ]
+}

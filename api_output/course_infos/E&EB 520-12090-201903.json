@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49416/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A broad consideration of the theory and practice of ecology, including the ecology of individuals, population dynamics and regulation, community structure, ecosystem function, and ecological interactions on broad spatial and temporal scales. Topics such as climate change, fisheries management, and infectious disease are placed in an ecological context.", 
+    "title": "General Ecology", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "ESC 110", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12090", 
+        "listings": [
+            {
+                "number": "520", 
+                "subject": "E&EB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "David Vasseur", 
+        "Ann Staver"
+    ], 
+    "long_title": "General Ecology", 
+    "extra_info": "A"
+}

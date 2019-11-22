@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Credit for EALL 492 only on completion of EALL 493.", 
+    "description": "Preparation of a two-term senior essay under faculty supervision.\nCredit for EALL 492 only on completion of EALL 493.", 
+    "title": "Yearlong Senior Essay", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12492", 
+        "listings": [
+            {
+                "number": "493", 
+                "subject": "EALL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Hunter"
+    ], 
+    "long_title": "Yearlong Senior Essay", 
+    "extra_info": "A"
+}

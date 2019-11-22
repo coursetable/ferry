@@ -1,0 +1,116 @@
+{
+    "crn_code": "11591",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            7,
+            6,
+            7
+        ],
+        [
+            0,
+            6,
+            6,
+            7,
+            1
+        ],
+        [
+            1,
+            2,
+            5,
+            8,
+            4
+        ],
+        [
+            3,
+            3,
+            5,
+            7,
+            3
+        ],
+        [
+            0,
+            0,
+            4,
+            12,
+            4
+        ],
+        [
+            0,
+            0,
+            10,
+            10,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about differential forms and manifolds in this class. Prof. Casson is very careful with definitions and pays attention to the terminology. I found the textbook not very helpful, because it was often going into depths with which I am unfamiliar. I understood definitions such as open sets, open balls and the ways of defining a manifold, but I did not get a very good sense of where the class leads. I did not find the textbook helpful. Prof. Casson is very careful, but I wish we had worked more examples and had spent less time on definitions which might only become fully understandable with more knowledge of analysis. ",
+            "\u00a0Limits, some exposure to epsilon-delta proofs, definition of a derivative (as a matrix) in n variables, directional derivatives, derivative as a linear transformation, inverse & implicit function theorems, manifolds & tangent spaces, constrained optimization, Fubini's Theorem & generalized change-of-variables, surface areas of manifolds, k-forms, integrating manifolds over parametrized domains, boundary orientations of manifolds, exterior derivative, generalized Stokes' Theorem ",
+            "\u00a0Extension of MATH 120. ",
+            "\u00a0stronger foundation in abstract math, understanding of differential forms, multivariable calculus, etc. ",
+            "\u00a0This class is an n-dimensional version of multivariable calculus. ",
+            "\u00a0This class covers vector analysis assuming you already know multivariable calculus at the MATH 120 level. We revisited a lot of topics and did their n dimensional cases on manifolds, and then for the last few weeks we did differential forms building up to the generalized Stokes' theorem. ",
+            "\u00a0I gained a lot more knowledge about calculus and linear algebra, building off of my what I learned in my math classes from last year (MATH 120 and MATH 225). I developed skills in working with vector functions and with integrating and differentiating in n dimensions, which I had never done before this class. Unfortunately, I do not feel like I really gained many insights into the geometric (or any other) meaning of a lot of the topics we covered in this class, especially k-form fields. I learned how to do the computations (Generalized Stokes Theorem, for example) without really understanding what they mean. ",
+            "\u00a0If you felt unsatisfied with multivariable calculus or linear algebra, then you have to take this course. You will fill in all of the gaps and be able to prove great things like Stokes Theorem. You probably don't have much of a choice in taking this class, but I definitely recommend that you do. Great help for Math 300 (or so I have heard). Not too proof heavy, but very helpful. ",
+            "\u00a0I became familiar with n-dimensional space and became a very independent learner. This class required me to learn how to do proper proofs for the first time in my life and provided quite a struggle. ",
+            "\u00a0Much better skills dealing with limits, differentiability, and especially manifolds -- skills which are clearly crucial to studying Mathematics. ",
+            "\u00a0As you go through this class, you'll understand 120 concepts more and more, and get to expand on those ideas. ",
+            "\u00a0I learned about how to build up the tools of multivariable calculus with proofs and notation found in Linear Algebra 225, extending the tools of calculus to n-dimensions. Particularly engaging was the culmination of these skills in Generalized Stokes' Theorem. ",
+            "\u00a0Gained a better understanding of vector calculus. ",
+            "\u00a0Deeper understanding of the concepts discussed in 120, expansion on the notions of differentiation/integration, more familiarity with topics covered in linear algebra and working in n dimensions. "
+        ],
+        [
+            "\u00a0Prof. Casson pays attention to the right use of terminology. However, I do not think I clearly understood everything we discussed in class. I sometimes had issues moving from the very exact definition to concrete examples. I wish we had done more examples in class. ",
+            "\u00a0Strengths: Casson in general -- he is very clear in lecture, he has 3 office hours/week + 2 sections (which is SO generous) and answers questions very clearly, class moves at a good pace, exams are very very fair, practice exams were very helpful, grading curves/expectations made very clear. the course is overall solid.\r\nWeaknesses: The textbook and its indecipherable notation. It was a horrible textbook that almost never worked out a single example start-to-finish for any given (difficult) topic/theorem. Sometimes hw problems don't correspond to lecture (but hw was only worth 10%, which is fine). ",
+            "\u00a0Professor was subpar; textbook (Hubbard and Hubbard) was TERRIBLE. ",
+            "\u00a0This class helped me build a stronger foundation in math and also helped me integrate the concepts i've learned in both math 120 and math 225. However, the lectures are dry as all hell, Casson isn't good at answering questions at all, and i was reliant on the peer tutor to understand the concepts of this class. Having an actual TF instead of having Casson run the sections would be helpful I think and also just more intuitive, engaging lectures. ",
+            "\u00a0Andrew Casson is an incredibly dedicated lecturer. Some people find him easier to understand than others, but he is a professor willing to walk through the same ideas over and over again with extreme precision until you really get it. The course is not strictly analysis though, it repeats a lot of the concepts in 120 (though in, of course, a lot more depth), and the work is perhaps at least 50% computational. ",
+            "\u00a0More enthusiasm. I don't think there was much excitement from the students or the instructor. ",
+            "\u00a0The material is definitely very interesting and important to all math related fields. The lectures were very, very hard to pay attention to because of the way the professor instructs. I think this class should either be more rigorous and be a proof-based class, or have more of an \"applied\" approach, the way Math 120 is taught, because right now Prof. Casson does a mix of both and it makes it very difficult to learn. ",
+            "\u00a0The strengths of the class are that the exams are very fair and that it is clear what is expected of the students in order to do well on the exams and in the class in general. Unfortunately, the material is not always explained clearly, and it could become easy to fall behind and feel lost because of that. The peer tutor was super helpful in explaining difficult concepts as well as preparing for exams and going over challenging homework problems, and I wish I took advantage of this resource more than I did. The discussion sections, on the other hand, felt somewhat unnecessary at times, in part because they were led by the professor, and it would have been nice to get an additional perspective on the material during section. ",
+            "\u00a0Great material. At first, the course seems to have no direction, but you will soon see that it is about combining linear algebra and multivariable which has so many applications. Problem sets aren't rough but you have to go to section to truly understand how to do the problems. The course could be improved with better structured sections. ",
+            "\u00a0This class requires very independent learners. The lectures were not incredibly engaging. One criticism is that no solutions were ever released for midterms and homework. ",
+            "\u00a0The class gave a rigorous introduction to calculus in higher dimensions. The class should present more of the intuition behind core theorems. ",
+            "\u00a0Great office hour sessions, although some students complained that the lectures were difficult to learn useful tools from and that the textbook was similarly hard to learn from in a practical way for the class. ",
+            "\u00a0I wasn't a huge fan of the textbook because often what we learned in class wasn't presented in the same way as it was in the book. ",
+            "\u00a0Very clearly taught. Casson is a fantastic Professor, and I think his ability to explain concepts clearly made an otherwise-difficult class much easier. ",
+            "\u00a0I absolutely appreciated Professor Casson's dedication and flexibility: if you have a chance to take Math 300 with him before he retires, please consider it. ",
+            "\u00a0Material generally well-taught except for the last unit ",
+            "\u00a0The topics basically follow the same path as 120, but generalizing to higher dimensions, which I thought was a good structure. Lots of time is spent on opening topics like limits and differentiability, which provides a strong foundation for the remainder of the course. For improvements, the book is dense and fairly difficult to understand; the homework occasionally went beyond what we covered and was confusing. The homework grading was also harsh on small errors. "
+        ],
+        [
+            "\u00a0I would recommend this to a student. I just did not like the textbook and was not always clear from the lectures and what I was supposed to do in the homework, however, I did find the material about manifolds and differential forms a good one. ",
+            "\u00a0Yes. You will learn so much, and you will finally make the connection between linear algebra and differential calculus (which is, to say, the course definitely fulfills its stated purpose). Unfortunately Casson isn't teaching it anymore, but with him, you can count on a very fair course. It is a hard course, but so worth it. ",
+            "\u00a0Only if ya gotta. ",
+            "\u00a0It's good in integrating the concepts of linear algebra and multivariable calculus in an abstract way that is pretty interesting. However, the class is very dry, and Casson's lectures, while clear, are thoroughly uninspiring. Further, the textbook presents things oftentimes quite different from what's done in lecture which makes it a difficult resource to use in understanding the material. Psets aren't too long which is nice. Having the final worth 50% is brutal though so take that into account as well. This is Casson's rumored to be last year teaching though so idk how next year's gonna be like! ",
+            "\u00a0I recommend this to anyone who enjoyed 120 but felt it wasn't challenging enough/in-depth enough. You do kind of need to enjoy computation to like the course, I feel. ",
+            "\u00a0If you want to know the material in the course description or you need the requirement than take it. The course is as advertised, but isn't made to be very exciting. ",
+            "\u00a0Unless you have to take it, I definitely would not take this class. ",
+            "\u00a0As it is a required class for all math majors, most people taking it do not really have a choice. However, for those who do have a choice, I would definitely recommend it if you liked multivariable calculus and would like to delve deeper into that area. I thoroughly enjoyed the class and the material, and I think it was a nice class to take that was less abstract than a lot of other math classes. Dont take it if you already took MATH 230 and 231. ",
+            "\u00a0I definitely recommend this course to someone that enjoyed multivariable and linear algebra. Great material that builds where these two courses left off. Casson is fantastic, incredibly kind and helpful. Definitely take this course before Math 300. ",
+            "\u00a0Not necessarily. It depends on the student I'm speaking to. If I was talking to a transfer student, I would suggest some review of old material at Yale because there were several skills that you were expected to be proficient in that may not have been taught at other universities. ",
+            "\u00a0This is a fine class. You can learn a lot in this class if you go to office hours and pay close attention in class. Casson doesn't do a lot to maintain your attention (he isn't a very excited lecturer) so you have to work to get what you need from the class. Casson is always willing to help though. ",
+            "\u00a0If you want to major in math, you should take the course. If not, there are probably more interesting subjects out there to study which you would probably enjoy more! ",
+            "\u00a0You probably don't have a choice in taking this or not, but even if you do and you just want a manageable introduction to analysis, I'd still recommend it. ",
+            "\u00a0Yes. It is kinda required for some of us, and it is basically an Intro to hard math for kids like me who arent great at proofs yet ",
+            "\u00a0You must like Math and spending some time working the problem sets out yourself -- but if you do, this is a great introduction into what the Math major is like, and definitely don't be scared off. If you put the work in, you'll learn the material. ",
+            "\u00a0Take it if you like math ",
+            "\u00a0I'd say to take it if you had an okay time in 120 and want to gain a deeper understanding of how differentiation, integration, Stokes' theorem, etc. might work in higher dimensions. "
+        ]
+    ]
+}

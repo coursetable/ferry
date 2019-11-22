@@ -1,0 +1,53 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49143/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The first half of a two-term sequence in the history of architecture. Architecture and urbanism from ancient Egypt through Greek and Roman classical traditions to the Enlightenment. The formal expression\u2014organizational, structural, and ornamental\u2014and social context of specific buildings and urban areas. Architecture as a form of social expression that builds on its own stylistic development, articulating a response to changes in history and culture. Emphasis on Western architecture, with selections from other parts of the world.", 
+    "title": "History of Architecture I: Ant...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "YK212 106", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 11
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10399", 
+        "listings": [
+            {
+                "number": "260", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHA0\">YC HistofArt: Pre-800</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHA1\">YC HistofArt: 1500-1800</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHA8\">YC HistofArt: 800-1500</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHAE\">YC HistofArt: Europe</a></li></ul>"
+    ], 
+    "professors": [
+        "Kyle Dugdale"
+    ], 
+    "long_title": "History of Architecture I: Antiquity to the Baroque", 
+    "extra_info": "A"
+}

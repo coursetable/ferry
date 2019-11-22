@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49523/assignments/syllabus", 
+    "requirements": "Prerequisite: After introductory microeconomics.", 
+    "description": "Study of the financial system as part of the global economy, rather than only the financial world. Topics include bond pricing, the capital asset pricing model, option pricing, the social security system, the mortgage market, hedge funds, collateral, default, and financial crises.\nPrerequisite: After introductory microeconomics.", 
+    "title": "Financial Theory", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LUCE 101", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10849", 
+        "listings": [
+            {
+                "number": "251", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "John Geanakoplos"
+    ], 
+    "long_title": "Financial Theory", 
+    "extra_info": "A"
+}

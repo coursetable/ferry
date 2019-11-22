@@ -1,0 +1,74 @@
+{
+    "crn_code": "22604",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This is primarily an applied math course that instructs how to set up and analytically/computationally work through a system of interdependent differential equations. The applications that the course focuses on are neural membrane dynamics and bacterial chemotaxis. Matlab is used but not taught; as a result, I gained additional Matlab proficiency. ",
+            "\u00a0The course takes you on a whirlwind tour of Matlab, nonlinear systems, and stochastic processes. I took this course having previous exposure to the math and programming involved, but I loved the way we learned to apply these skills to interesting problems! "
+        ],
+        [
+            "\u00a0The course architecture is logical and helps to sort all the material into a systematic understanding. The homework was fair and reinforced/complemented the material nicely.  However, Professors Emonet and Clark have very different teaching styles. Specifically, I found it much harder to follow Professor Emonet's lectures and felt myself, as a result, falling behind in the content taught by Professor Clark. Having Professor Clark teach more of the material or having Professor Emonet adapt to Professor Clark's teaching style would be an improvement. Moreover, this course is marketed as a neuroscience or upper level biology course, but it is really an applied math course focused on biological applications. It would have been nice to spend more time focused on biological connections, as we did when we engaged with primary literature. Multiple lectures were entirely focused on acquiring specific math understanding. ",
+            "\u00a0Strengths: I liked the assignment structure (weekly 1 pt problem and three PSETS), which motivated me to keep up with the material. The hackathons were super helpful.\r\nWeaknesses: Having two professors resulted in some minor logistical issues. "
+        ],
+        [
+            "\u00a0I recommend that interested students in MB&B or NSCI instead take the first semester of the course, which is much more informative, well-taught, and focused on developing useful, basic MATLAB skills. That course was also geared more towards biology majors. If students have a math, computing, or physics background I foresee that the second semester course would be an interesting and valuable extension of their learning. For example, as a student heading into neuroscience graduate programs with a neuroscience research background, I did not learn anything about neuroscience from this course that was not covered in Neurobiology (NSCI 320), but I imagine a physics major would learn some preliminary neuroscience from this class. ",
+            "\u00a0I would recommend this to undergraduates who are comfortable with math and basic programming (the hackathons will help you get up to speed if you're not familiar with Matlab). There's a lot of bang for your buck in terms of the analytical framework you develop. "
+        ]
+    ]
+}

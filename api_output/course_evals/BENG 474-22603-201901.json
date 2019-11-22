@@ -1,0 +1,84 @@
+{
+    "crn_code": "22603",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            4,
+            10
+        ],
+        [
+            0,
+            0,
+            5,
+            3,
+            6
+        ],
+        [
+            0,
+            0,
+            5,
+            4,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            7
+        ],
+        [
+            0,
+            0,
+            5,
+            4,
+            4
+        ],
+        [
+            0,
+            0,
+            6,
+            4,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned about the process of research ",
+            "\u00a0I learned how to manage a long-term research project. ",
+            "\u00a0I learned computational techniques for BME and how to piece together my own project. ",
+            "\u00a0Really appreciated being able to explore something I'm interested in! ",
+            "\u00a0A class to do research for a semester, with advising from your selected PI. Learned to do individual research, writing, etc. ",
+            "\u00a0I learned a lot about neural networks, PET, brain images, and ODEs! ",
+            "\u00a0I learned how to generate my own MATLAB code to solve vascular mechanics problems.  I also learned about academic writing and research. "
+        ],
+        [
+            "\u00a0Very little structure was helpful because it allowed for independent work. However, I would have appreciated a bit more guidance getting advisors and projects. ",
+            "\u00a0It was a good course, and it really is what you make of it! maybe more advising on the front end could be helpful ",
+            "\u00a0This course is very open-ended, more so than the senior projects for other majors.  You can do pretty much anything for your thesis.  This is both good (more independence to do what you are interested in) and bad (I wasn't sure what the expectations were). "
+        ],
+        [
+            "\u00a0If required. ",
+            "\u00a0Required to graduate for biomedical engineering majors. ",
+            "\u00a0It's required for BME majors. ",
+            "\u00a0yes, do something that makes you truly interested though ",
+            "\u00a0if you're a senior in BME, yes! you've got no other option ",
+            "\u00a0Mandatory, a lot of work, but a highly valuable experience. "
+        ]
+    ]
+}

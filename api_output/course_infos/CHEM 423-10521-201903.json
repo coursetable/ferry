@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49178/assignments/syllabus", 
+    "requirements": "Prerequisite: two terms of organic chemistry or permission of instructor.", 
+    "description": "Survey of practical methods in synthetic organic chemistry. Emphasis on learning how to acquire new information and understand chemical reactivity from a fundamental and mechanistic perspective.\nPrerequisite: two terms of organic chemistry or permission of instructor.", 
+    "title": "Synthetic Methods in Organic C...", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "SCL 19", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10521", 
+        "listings": [
+            {
+                "number": "423", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jonathan Ellman"
+    ], 
+    "long_title": "Synthetic Methods in Organic Chemistry", 
+    "extra_info": "A"
+}

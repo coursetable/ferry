@@ -1,0 +1,79 @@
+{
+    "crn_code": "25657",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            3
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            4,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0You learn all about how self-driving cars work. And really put it to practical use by building your own self-driving car throughout the semester. ",
+            "\u00a0Of all of the courses Ive taken at Yale, I took away the most number of practical, hard skills in this one. Learning ROS, improving my Python, and getting an intro to a number of other hot CS topics (machine learning, open cv) was really valuable. ",
+            "\u00a0By taking this course, I learned about different technologies that self-driving cars use, and I learned how to implement many techniques and mathematical concepts into our mini cars to mimic how real self-driving cars drive. ",
+            "\u00a0I learned about the high-level architecture of self-driving cars, the relevant hardware used in industry, and a selection of algorithms useful in robotics. We discussed pulse-width modulation, PID control, Kalman filtering, and simultaneous localization and mapping (SLAM). "
+        ],
+        [
+            "\u00a0This was the first time this course was taught and there is a ton that can be improved (instructor is already planning all the improvements he wants to make). Big strength is the knowledge of the instructor and all of the equipment available. Weakness is the current organization, but that will improve a lot the next time the class is taught I imagine. ",
+            "\u00a0The math prerequisites for this class are completely wrong. Students were told that MATH 120 was needed and nothing more, but the class covered high level statistics concepts throughout the semester which the lectures did not explain (assumed we already knew them). The lab time was very engaging, and I wish that less time had been spent on putting formulas on the board and more time had been spent on writing code. Man-Ki is great and very willing to help. ",
+            "\u00a0This was the first time this course was taught, and so there were a few minor things that were to be expected. Overall, it was a well-structured course, and I expect next year's teaching will be fantastic. It would've been nice if the course counted towards the CS major. "
+        ],
+        [
+            "\u00a0Yes. I highly recommend this class as an introduction to programming to any first-years interested in coding and/or CS. ",
+            "\u00a0Absolutely. If youre interested in autonomous cars, robotics, or any other hands on cs/engineering application, this is a great class. ",
+            "\u00a0I would, but I would make it extremely clear that the math prerequisites are misleading and that they should be prepared to use high-level statistics and discreet math with little explanation. ",
+            "\u00a0Absolutely yes. I was initially unsure if I should take this class, but I am very glad that I took the leap of faith. It was my favorite class this semester. "
+        ]
+    ]
+}

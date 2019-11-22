@@ -1,0 +1,87 @@
+{
+    "crn_code": "21482",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            5,
+            6,
+            0
+        ],
+        [
+            1,
+            3,
+            4,
+            4,
+            1
+        ],
+        [
+            0,
+            1,
+            5,
+            4,
+            3
+        ],
+        [
+            0,
+            3,
+            4,
+            2,
+            4
+        ],
+        [
+            0,
+            1,
+            5,
+            7,
+            0
+        ],
+        [
+            0,
+            3,
+            9,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0In taking this class, I learned more than I ever thought was possible about Boolean functions. ",
+            "\u00a0I learnt about boolean functions and their properties. This class improved my ability to manipulate expectations, random variables, polynomials and multinomials, and improved my ability to reason about probability. ",
+            "\u00a0A rigorous and varied introduction to the study of boolean functions. Good exercises in combinatorial thinking, and topics chosen with broader applications to other areas of mathematics. Useful review of fundamental concepts like orthonormal bases, Holder's inequality, generalized binomial theorem, and so on. ",
+            "\u00a0I developed a strong understanding of Boolean functions and how they might be used in applications. In particular, I learned the kinds of techniques used to prove some theorems and important results. ",
+            "\u00a0I learned much more about probability theory in general and about boolean functions in particular. "
+        ],
+        [
+            "\u00a0I took this class because I thought it would be similar to Discrete Math--and it really wasn't at all. I wish there was more information available on the topic BEFORE students took the class, because the class is entirely different year in and year out. The grading of this class has been very vague, and no information about how much the homework/exam are weighted. ",
+            "\u00a0It was good, I don't have any suggestions for improvements. ",
+            "\u00a0Sometimes it was difficult to see where the class was going, since the various inequalities seemed to involve so many variables that it's hard to see how they would come in useful. Perhaps more application-based questions would help. ",
+            "\u00a0A more wide array of topics would have been nice. ",
+            "\u00a0I really like the course. I personally would have liked to have had a midterm exam, only because it would have incentivized me to consolidate my learning so far. It was tempting to just intensively study those concepts which pertained directly to the homework problems. But perhaps that's a me problem, not a MATH 345 problem. ",
+            "\u00a0Material was interesting and the results shown were fascinating.  However, the individual lectures were sometimes disorganized and as a result things went a little slower than they should have (although the overall structure was fine). ",
+            "\u00a0Professor Berkowitz is a very clear lecturer and went at a good pace. The workload was also very fair. However, I didn't like the textbook we used. I found the material at times dry and very notation heavy, which I didn't enjoy. It felt like sometimes we got so bogged down in notation, that we couldn't grasp the actual concepts and their implications very well. It also felt sometimes like we were learning almost completely new things week by week, and that the material didn't always really build on itself. I think boolean functions would be more interesting for students that had already studied other areas of math where boolean functions could be applied to help solve problems, in order to give them some context and better understand their usefulness. ",
+            "\u00a0I strongly disliked the textbook used in this course, as did almost every other student I talked with. This was definitely the largest weakness of the course. I thought that Ross followed the textbook more closely than he should have, and at times he was hard to follow when outlining proofs. The homework was generally interesting though, and Ross was always accessible in office hours. "
+        ],
+        [
+            "\u00a0I found this course to be not particularly engaging/exciting. If you really like niche math or weird combinatorics stuff then this is right up your alley, but not really my cup of tea. The workload wasn't too bad though. ",
+            "\u00a0Much time was spent watching arithmetic get done on the board or getting introduced to new definitions. But once you make it past those, the problem sets are challenging enough, and it's a refreshing change from the typical areas of math such as analysis/algebra that one may be more familiar with. ",
+            "\u00a0I would definitely recommend this course to another student. I understand that the topics and professors vary widely from semester to semester, so it's difficult to speak in generalities, but I had a worthwhile experience. ",
+            "\u00a0I highly recommend the course for anyone interested in discrete math. This year covered Boolean functions and how to analyze them. They turn out to be pretty interesting, and the techniques used to analyze them build strong familiarity with discrete math and algebraic concepts. ",
+            "\u00a0This class is taught very differently each year, so my main advice is to email the professor and ask what topic they will cover this semester. The class doesn't cover the topics it says on the syllabus. Instead, it focuses on one specific area of Combinatorics and then rotates every year. That means you can take the class more than once, and that it's worth checking in on what topic is being taught so you don't miss out on a good one. If Professor Berkowitz is teaching it again, I would recommend it for upperclassmen in a math related major. He is a very good lecturer: clear, organized, and goes at a good pace. It is taught like a grad course, so the material is sort of hard, but you get a very normal amount of homework, which you can do well on by working with other students or going to office hours, and my year there was no midterm and a take home final. Also, if you haven't taken Discrete, even though it is officially listed as a prerec, just email the Professor because you won't necessarily actually need it. ",
+            "\u00a0Boolean functions are an interesting subject. I would definitely not recommend this course if the O'Donnell textbook is used in the future, but as long as another textbook is adopted I think it's a worthwhile course. "
+        ]
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48812/assignments/syllabus", 
+    "requirements": "", 
+    "description": "", 
+    "title": "PrinciplesofEntrepreneurship", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "EVANS 4430", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "12741", 
+        "listings": [
+            {
+                "number": "665", 
+                "subject": "MGT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Balazs Kovacs"
+    ], 
+    "long_title": "PrinciplesofEntrepreneurship", 
+    "extra_info": "A"
+}

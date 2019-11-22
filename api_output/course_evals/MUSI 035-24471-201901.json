@@ -1,0 +1,93 @@
+{
+    "crn_code": "24471",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            6,
+            6
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            6
+        ],
+        [
+            0,
+            1,
+            3,
+            8,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            10,
+            3
+        ],
+        [
+            0,
+            2,
+            6,
+            4,
+            1
+        ],
+        [
+            0,
+            2,
+            6,
+            4,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned the basics of producing, mixing and mastering with the open-source DAW Ardour, as well as some coding in SuperCollider and Arduino applications. ",
+            "\u00a0An investigation into computer music including but not limited to how to use Ardour to make music, coding music with SuperCollider, making music with Arduino, what is computer music, recording techniques, history etc. ",
+            "\u00a0How to record and produce music and a lot more coding than I thought I would be doing. ",
+            "\u00a0I learned how to listen to modern computer music properly. I never realized how many layers there was to a pop song or computer songs in general, and I'm glad to know terms and signs of specific forms of processing as I go out and make more music. It's such a good class in that it sets you up to succeed later on because you learn how to learn about computer music. ",
+            "\u00a0I learned that the computer music world is much broader (and stranger) than what I previously thought it was. Through developing my coding skills, or learning about arduinos, I learned that computer music goes way beyond production, mixing and mastering. It was a great introduction to this world. ",
+            "\u00a0I have learned a lot about computers and especially about coding ",
+            "\u00a0All my life I've listened to music but after learning from Professor Petersen, I feel I have learned how to truly listen to music. I am much more appreciative of music and the craft behind it. I also learned a lot of technical skills that will assist me in my musical pursuits. ",
+            "\u00a0I developed both my creative side and my technical side, learning skills that bolstered both. ",
+            "\u00a0I learned how to make music projects in Ardour. I also learned about digital music production in general. "
+        ],
+        [
+            "\u00a0This course covers a lot of fascinating topics that one would be hard-pressed to find anywhere else, and Professor Petersen is an amazingly engaging instructor, but the way in which the topics are taught could be given more structure especially for those that enter the class without much prior context. Even for someone who did have previous music/computer experience, I did feel like more \"hand-holding\" was warranted. Part of learning how to use a creative software is indeed trying out things yourself, but the do-it-yourself-and-figure-things-out format did lead to communal confusion at times with things like Ardour and SuperCollider. Also, the non-hands-on topics of the course (such as recording techniques, mics, etc.) while extremely interesting, were mostly presented in lecture format (besides, say, being able to handle some of the mics) and were often only gone over once which made them feel like topics that were simply brushed over once. ",
+            "\u00a0It's incredibly interesting and Scott is a great teacher, if you're into this stuff. If not, I don't know what to tell you. One weakness is that there's so much ground to cover and you're not able to do a lot in each subject. ",
+            "\u00a0Everything about this course is a strength. I think even the trouble with the Ardour DAW program was a good lesson in patience and even in learning that new technologies aren't perfect but the grit behind pushing forward that makes modern advancements so great. ",
+            "\u00a0The class was always extremely fun to attend, and Scott never failed to be charismatic. I think that as a computer music class, it had very few flaws. Maybe we could have worked less on Ardour and more with the arduinos and super collider. Overall, this was a great class. ",
+            "\u00a0Strengths:\r\n- a lot of fun and a very interesting class\r\n- You learn about computers and coding in a fun way \r\n\r\nWeaknesses:\r\n- I do not think this is an introductory class. It is really helpful to have prior knowledge about music and computers before taking this class ",
+            "\u00a0Although only some what troublesome, having more stations to work on would be welcome. Also, it was hard to find studio time in some of the college studios to record when we needed to record for projects. ",
+            "\u00a0The course could have been more structured, and the software for production was very confusing ",
+            "\u00a0The material was naturally exciting for anyone who loves to listen to music. However, too much material was being covered for a semester-long course. As for the initial weeks covering Ardour basics and plug-ins, it would've been extremely helpful if there were more in-class demos or practice assignments to help us understand their mechanics and have us prove that we knew how to use them properly. "
+        ],
+        [
+            "\u00a0Yes! Amazing course by all means, you won't find anything else quite like it as a first-year; if you want to learn how to make computer music whether through software or live coding or Arduinos or learn about things like the anatomy of a recording studio then this class is for you. Be warned though that while there is very little homework in itself, there are regular projects that, while extremely fun can be time-consuming if you don't plan well or are new to this stuff. Still worth it, just plan carefully. ",
+            "\u00a0Yes, definitely. I had a great time and I really feel like I learned so much in this class. ",
+            "\u00a0I would highly recommend this course to any art-interested student and even to people who are only interested in listening to music for fun. It gives them a new appreciation for what they hear on the radio and elsewhere. ",
+            "\u00a0Yes! If the student is at all interested in computer music, this is an informative and fun way to get into it. ",
+            "\u00a0Yes I would if you like music and coding and if you have prior knowledge in this field (or have friends that can help you out with this stuff:) ) ",
+            "\u00a0If you have interests in making music (whatever genre, really) take it. Professor Petersen helped introduce me to many technical and artistic aspects of music. ",
+            "\u00a0I would definitely recommend this course. Scott is great, it's big fun. ",
+            "\u00a0Absolutely if they have a passion or strong desire for making music in a digital setting. "
+        ]
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "crn_code": "20483",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            5
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Lots about radiation, not too much about molecules. ",
+            "\u00a0This course gave  practical insight into the quantum mechanics behind spectroscopy. Often, comparisons with classical mechanics were used to aid and reinforce learning. ",
+            "\u00a0From the foundations of E&M through multi-electron systems and their interactions in spectroscopy. "
+        ],
+        [
+            "\u00a0Mark seemed to put a lot of effort into making sure we fully understood the concept, beginning from the basics and building up. The assignments, although challenging, proved to be very helpful. The organization of the course could be improved, with refined/revised notes for the future of the course. ",
+            "\u00a0The course content was interesting and useful, and the workload was not overwhelming. The biggest weakness of the course was that it was sometimes very disorganized. However, this lack of structure allowed for aspects (such as the problem sets) to be improved as the course progressed. ",
+            "\u00a0Building from the foundations of E&M up through spectroscopy provided a much more complete picture of the science of spectroscopy than generally happens. The use of analogies and visualizations to describe the concepts was very helpful.\r\n\r\nThe biggest weakness is that sometimes the transitions from one topic to the next lacked clear connection and needed to be reiterated.\r\nSummarizing  was often done at the beginning of the class about the previous class. Doing this at the end of class with info fresh in our heads would help to solidify the topics discussed. "
+        ],
+        [
+            "\u00a0Yes. It is very useful for an intro to electronics, optics, and spectroscopy. ",
+            "\u00a0I would recommend this course to any student interested in spectroscopy and/or physical chemistry, as the content is interesting and relevant ",
+            "\u00a0For any student using spectroscopy this course is highly valuable, particularly for those building lasers. "
+        ]
+    ]
+}

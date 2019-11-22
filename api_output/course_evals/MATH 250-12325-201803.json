@@ -1,0 +1,142 @@
+{
+    "crn_code": "12325",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            7,
+            15,
+            11
+        ],
+        [
+            1,
+            9,
+            11,
+            13,
+            0
+        ],
+        [
+            3,
+            11,
+            9,
+            11,
+            0
+        ],
+        [
+            7,
+            9,
+            12,
+            6,
+            0
+        ],
+        [
+            0,
+            1,
+            4,
+            14,
+            15
+        ],
+        [
+            0,
+            1,
+            3,
+            21,
+            9
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The syllabus covered basic real analysis then moved into differentiation and integration in N dimensions. Some useful computational methods were covered. There were a lot of tangential theorems thrown into lectures that were interesting but not coherently integrated with the material (although some are in the book). ",
+            "\u00a0The content of this class was pretty cool, the kind of math is interesting. The same kinda concepts seen in 120 but with a proof based and rigorous approach. ",
+            "\u00a0I learned a lot more about how proof techniques are used past numerical math, and my mathematical thinking developed a lot. ",
+            "\u00a0I learned how to write rigorous proofs through which I began to understand the fundamental principles of calculus. ",
+            "\u00a0I developed a deeper understanding of multivariable calculus and linear algebra. I became better at mathematical problem solving and proof-writing. ",
+            "\u00a0I developed an understanding of the foundational theorems of calculus and analysis. I also learned more about the introduction of rigor in the mathematical process. ",
+            "\u00a0Sequences and series, derivatives, integrals, basically vector calculus. Kind of like MATH 120 + MATH 222/225 combined and more advanced. ",
+            "\u00a0Mathematical analysis for rigorous proof of concepts encountered in earlier calculus courses. The rigor developed in this class can be unwieldy at times, especially with the expansion of proofs and concepts to higher dimensions. ",
+            "\u00a0Wow. This class was quite a whirlwind. It's honestly quite impossible to say anything about the course itself because the entire experience was defined entirely by Stefan. What even is Vector Analysis you may ask? Hell if I know. What does one learn in this class you may ask? Unclear, tbh. Was it entertaining? Totally! Stefan is a wild human being who provides endless entertainment. He is so enthusiastic about math (in general) but seemed to care literally not one bit about structuring a good class. If you're reading this review because you're wondering if you should take 250, I cannot help you. This experience was an anomaly defined entirely by Stefan. ",
+            "\u00a0Calculus in multiple dimensions. Proof writing skills definitely developed and critical thinking with application of theorems. ",
+            "\u00a0I built on my computational knowledge of multivariable calculus with a theoretical approach. My problem solving skills developed as a result of the psets. ",
+            "\u00a0Writing proofs, building and understanding the theory behind a lot of the formulas we were kind of just given in Math 120 ",
+            "\u00a0I learned a lot about how to think about calculus and rigorously prove things. In particular, I learned more about how everything is connected. ",
+            "\u00a0Quantitative skills, ability to write some basic (though maybe not rigorous) proofs, greater spatial reasoning. I learned how fun math can be ",
+            "\u00a0I learned how to develop proofs properly, as well as the foundations behind a lot of the math used in multivariable calculus/linear algebra. ",
+            "\u00a0This course had a good mix of focus on abstract material and its most useful applications. Certainly, I improved my proof-writing ability and my ability to understand more abstract mathematics. The class also helped make sense of a lot of the material we covered in 120. ",
+            "\u00a0Math 250 was essentially a Math 120 with proofs along with other curated topics (some more relevant than others). The course will give students an opportunity to learn and improve their skills in proof based math, though it does assume a bit of familiarity with proofs prior. ",
+            "\u00a0Newton's method; Banach's and Brouwer's fixed point theorems; a very non-rigorous treatment of vector calculus. ",
+            "\u00a0We learned about continuity of functions, series/sequence convergence, differentiation, integration, Newton's method for approximating roots, determinants, and some other theorems related to vector analysis. My feeling was that this course is supposed to tie together concepts you learn in multivariable calculus and linear algebra and prove a lot of things from Math 120, but I also think that it differed a lot this semester because Stefan was teaching it and that some of the concepts we covered were different from in past terms. ",
+            "\u00a0Calculus generalized to higher dimensions with concepts developed from first principles starting from basic topology, convergence, and continuity, differentiability in higher dimensions, critical points, Taylor's theorem, Riemann integrability, etc. And some concepts from multivariable calculus like Lagrange multipliers, change of variables, Green's theorem, Gauss' theorem, Stokes, etc. ",
+            "\u00a0This course revisited the fundamentals of calculus in a more rigorous way. It began with the definition of limits, continuity, and series convergence. Then, it defined the derivative of functions in higher dimensions, discussed the second derivative test, and Banach's fixed point theorem. Finally, at the end of the semester, it covered Riemann integration as well a Green's Theorem, Stokes Theorem, and the Divergence Theorem. The course was good at giving me a mathematical intuition for all of these. ",
+            "\u00a0This was my first proof-based math course, and I think I've come away from it with a more analytical and logical view of proving things in general. "
+        ],
+        [
+            "\u00a0This class was wildly entertaining at times and I really felt like I was learning a lot, particularly in the first three weeks. At other times, it felt like there was little structure to the course as it moved through the big topics (convergence and series, differentiation, integration) that made having a coherent understanding of the broad lessons of the class difficult.  Sometimes, I wished things had been approached more rigorously. Sometimes, I was grateful that we didn't waste time on things that the Professor didn't think were actually meaningful and did other things like Newton's Method. I think your impression of the class depends on what you want to get away from it and how you learn. ",
+            "\u00a0Interesting content, pretty disorganized though. Not clear what order we were following/if there was an order at times. ",
+            "\u00a0Problem sets were very hard and exams are very tough. ",
+            "\u00a0It definitely teaches a lot. What that is and how useful is it are two questions that I don't think I've really answered. I learned a few things past what was taught in 120: Newton's Method, what integrals and many of the theorems really mean, but not much more functionally (although that is what you should expect from this class). The final exam was also significantly harder than either midterm. ",
+            "\u00a0Strengths = really interesting and rewarding work, energetic and incredibly intelligent professor\r\n\r\nWeaknesses = really difficult without prior experience with proofs, difficult to follow lecture, lack of direction (syllabus had little roadmapping), less than helpful textbook ",
+            "\u00a0It is highly disorganized, but the teacher is passionate. Exams were unpredictable, but problem sets were interesting. ",
+            "\u00a0This class has some interesting material but lacks in structure. As a prerequisite for the analysis classes, I was expecting a more defined area of study, not a complete mix of linear algebra, multivariable calculus, and analysis. To be perfectly honest, this class should not really exist. ",
+            "\u00a0I learned a lot but it was also a lot of work. ",
+            "\u00a0The material although well defined on how it is to be used and where the concepts take place, lining the course up to a particular textbooks' chronology was hard to place. ",
+            "\u00a0Wow. Stefan is all over the place. I would say this course was 90% weaknesses. I wish there had been a clear outline of what we were doing instead of just assorted math. ",
+            "\u00a0It doesn't follow very closely with the book for the whole course, so for a good portion of the material it's on you to find outside resources. Stefan presents the material in a very engaging way. ",
+            "\u00a0Strengths: this course covers interesting material that is applicable to many fields, and the lectures were a lot of fun. The psets were difficult but rewarding. Weaknesses: there was a lot of material to cover, and not enough time was given to some of the concepts that were more difficult to understand. Exams were out of a small number of points, and grading and feedback were very inconsistent. ",
+            "\u00a0This course would be an excellent one to sit in on. Stefan is incredibly engaging, and his mastery of math as well as math history makes his lectures fascinating and flexible. This flexibility sometimes comes with a cost. We lingered far too long on certain topics while rushing by others. We had no plan or structure to the lessons on a macro scale, so we didn't have a reference for what was relevant regarding the midterms and finals. The midterms were graded out of six (6) points, and the higher one accounted for 50% of our entire grade, which made them feel incredibly variable and not good representations of our learning. The final was also far harder than was warranted, especially with how non-rigorously we covered certain topics. All in all, the time in the class was great. The time outside was not. ",
+            "\u00a0Strengths: The material was interesting, I learned a lot from the problem sets (which were usually a good level of challenging, except for a couple near the beginning that took a little too long...), Stefan's sense of humor and entertaining accounts of math history, very helpful peer tutors.\r\n\r\nWeaknesses: I would've appreciated more sample proofs/detailed feedback for the earlier problem sets, to have a better sense of what made a complete proof/what I could improve on. Lectures were sometimes hard to follow; proof steps that were obvious for Stefan were sometimes a bit of a leap for us. I'm also not sure if the midterms were really a good way of evaluating how well we understood the course material. ",
+            "\u00a0I liked how excited the professor was about material and what he chose to teach us, but homeworks were often confusing. ",
+            "\u00a0Strengths: Problem Sets help students engage with the material deeply enough so that they learn it beyond the lecture. Also some interesting problems help to show the incredible nature of some of these theorems and discoveries\r\n\r\nWeaknesses: Little helpful feedback from graders and professor on how to improve and correct errors made on homework. Inconsistent notation and occasional lack of rigor was an obstruction in learning the material ",
+            "\u00a0The course is difficult, but with the proper time put in can be very rewarding. I enjoyed the material learned throughout the course, and found the challenge to be fun but not deprecating. ",
+            "\u00a0Stefan is an engaging professor, but at times the course felt like an assorted math class. The final section on integration helped bring a lot of the material together, but for a while I was not clear how we were supposed to put together the things we were learning. Peer tutors were fantastic. ",
+            "\u00a0The problem sets asked interesting and challenging questions.\r\n\r\nHowever, the lectures moved quickly and didn't offer much preparation for the problem sets.\r\n\r\nPeer tutor hours were enormously helpful and quite fun. A teaching assistant would be very helpful. ",
+            "\u00a0Strengths: interesting topics like Newton's method, fixed point theorems, and Monte-Carlo integration were covered.\r\nWeaknesses: Stefan only gave a cursory treatment of the topics that are meant to be the core of this course, such as differentiation, Riemann integration, and Stoke's theorem and its corollaries. ",
+            "\u00a0This course was all over the place, to be honest. Some of the concepts were interesting and I can see how they'll come up in later math courses. But I think the main flaws were that it was hard for us to get good feedback on our work and it was difficult to get help with the problem sets when we were having trouble. At the beginning of the semester the graders weren't grading our problem sets properly, so sometimes we thought that we had done problems correctly but it turned out that our proofs were actually wrong. Stefan eventually found a new grader, but it was definitely frustrating at the beginning of the semester to not really have a good idea of whether or not you were approaching problems correctly. Our peer tutors were really great and tried their best to help us, but since we covered some different material from when they took the course sometimes they were just as confused as we were. After the problem sets were due, Stefan didn't like to post \"answers\" because he said there were no single right answers and there could be a hundred correct ways to prove something. While I can see how this may be true, it would have been really helpful to see at least one right answer. The graders posted sample answers taken from students' psets, but the ones from the beginning of the semester weren't always correct and we never really got good clarification about that so we could study for the exam. \r\n\r\nI would have appreciated sample solutions from the instructor and a better textbook to accompany the class, since the Hubbard one wasn't really that helpful. I think I also would have had an easier time following along in lecture if Stefan had been able to slow down some, since he went pretty quickly most of the time. ",
+            "\u00a0The course has little to no structure so it was difficult to schedule studying outside of the classroom. The textbook for the course is also very bad. ",
+            "\u00a0The course was difficult for me, as it was my first introduction to proof-based mathematics. However, even people who took MATH 225 before found this course very difficult. I think part of the reason was that Stefan was not always the most organized during lecture (e.g. having many tangential asides, switching notation including during exams) and sometimes the direction the course was taking was unclear. ",
+            "\u00a0The course was good because it gave me a good intuition for the topics we discussed and helped me understand concepts such as the second derivative test in a more rigorous way.  I would have preferred it some of the material (e.g. implicit function theorem, change of variables formula, stokes theorem) had been proved in a more rigorous way. I understand that the detailed proofs of these theorems are not really important; however, this is probably the only time in my life I was going to see them, so I would have liked exposure to the proofs nonetheless. On the whole though, the class was easy to follow. ",
+            "\u00a0It would have been better if we had followed a textbook or given an outline of topics. It was difficult to follow along during lecture as to what topics we were covering, and I didn't feel prepared for our problems sets each week. ",
+            "\u00a0Professor Steinerberger would always insist that he wrote easy tests, but the final was orders of magnitude more difficult and complex than either midterm; other students agreed with me about that. "
+        ],
+        [
+            "\u00a0Yes, I really really enjoyed this class, but I think it depends on what kind of a person you are. Professor Steinerberger is a good lecturer in that he's good at illustrating what's really going on with the math as opposed to just relying on definitions and notations. If you like to rely on firm definitions and rigor, this might not be the class for you. If you are thinking of using vector caculus in an applied field, you might learn a lot about relevant techniques (Newton's Method, Numerical Integration, Implicit Function Theorem, Maximization/Minimization problems). If you do take it, be prepared to sink a lot of time into this class. ",
+            "\u00a0Honestly, no. Stefan is an interesting teacher and good lecturer, but it gets ruined by exams. The grading is so arbitrary, and does not actually reflect your learning in the class. You can easily drop a letter grade for a tiny computational error. The final exam made everyone wonder what the whole point of the class was, it was brutal and the consensus was that everyone felt blind sided and completely unprepared for it. Not even sure what the point of studying for the final was because the only difference was I knew what I was getting wrong, still couldn't do any of it. Good as a learning experience, extremely frustrating as a class. ",
+            "\u00a0If you are looking to learn a lot of Math or want to cover the topics covered in the Math 230-231 sequence this is a good course. ",
+            "\u00a0Not really unless you are very interested in math. ",
+            "\u00a0I would recommend this course to someone who is really interested in math (in particular, proof-based math), but I would warn them that they should be ready to make a large time commitment to just understanding the material. ",
+            "\u00a0Yes, if you know what you're getting into. This class was really rewarding and interesting when you understand the material, but I think you have to really like math, and be willing to put in the work, to see the beauty in the theorems we learned. ",
+            "\u00a0I might recommend the course. It is an okay course. You can get engaged because the professor is passionate. I prefer courses to be more organized. ",
+            "\u00a0Take this course if you need to take it. It will be some interesting material. If it is taught by Professor Steinerberger, Cr/D it, the chaos is not worth risking a grade on. ",
+            "\u00a0I would! I gained so much more intuition behind things that I learned from calculus and linear algebra that I didn't understand fully. ",
+            "\u00a0Really whatever I have to say about this course is totally irrelevant to anyone considering taking it not with Stefan. This class was Stefan. It was a wild ride. ",
+            "\u00a0If you are interested in math, I would definitely recommend this course, but it was simultaneously my favorite and least favorite class. It was very challenging but very rewarding. ",
+            "\u00a0I would recommend this class to another student: it was a lot of fun and the material was interesting. That said, it was a disorganized class and feedback was inconsistent. ",
+            "\u00a0This course would be an excellent one to sit in on. Stefan is incredibly engaging, and his mastery of math as well as math history makes his lectures fascinating and flexible. This flexibility sometimes comes with a cost. We lingered far too long on certain topics while rushing by others. We had no plan or structure to the lessons on a macro scale, so we didn't have a reference for what was relevant regarding the midterms and finals. The midterms were graded out of six (6) points, and the higher one accounted for 50% of our entire grade, which made them feel incredibly variable and not good representations of our learning. The final was also far harder than was warranted, especially with how non-rigorously we covered certain topics. All in all, the time in the class was great. The time outside was not. ",
+            "\u00a0If you like math, yes it seems like the material is foundational and the proof-writing skills probably very necessary for taking any higher-level math classes. Probably not in a very heavy-workload semester, though the problem sets (and honestly understanding any of the material) took a lot of time and effort. But looking back it felt pretty rewarding to see how much I'd learned in the semester. ",
+            "\u00a0I would recommend it just because it's pretty fundamental skills you are learning if you ever want to do something quantitative later in life. It forces you to build a familiarity with calculus and linear algebra. There are also some fun things that the professor brings up from time to time, and he might make you appreciate math more. ",
+            "\u00a0If you are genuinely interested in math, yes. You will find the class a fun puzzle to solve. ",
+            "\u00a0I would definitely recommend this course to individuals hoping to progress to take upper level math courses. It is a step above 225 in terms of conceptual difficulty, making it a really useful bridge to 300 level courses, while learning some quite applicable material. ",
+            "\u00a0I would recommend this course to a student looking to improve their skills in proof based math. However, I would recommend the course to a student who has the time to commit to doing the problem sets and looking over the material from class (you won't understand all of it the first time around). The class is definitely challenging and will require that you spend time and mental energy in understanding the material and doing the psets in doing so. However, if you do commit the time, I think its a great opportunity to become much more confident in your ability to do proof-based math and work through problems that you may not have ever seen or cannot solve at first (or second or multiple) glance. ",
+            "\u00a0I would recommend the course to anyone who works independently and can self-study. ",
+            "\u00a0Not if Stefan is teaching it. (On the merit of the material itself, it's worth taking.) Stefan is a polarizing figure. His lectures are \"improvisatory\" in that he doesn't really prepare them. For some reason, he recommended a textbook that he then proceeded to make fun of it for the rest of the course. Why not choose a textbook that he actually thinks would be a good teaching tool, instead of defaulting to the book that Casson (previous instructor) used? Midway through the semester, students requested that Stefan provide possible problem solutions to our psets in lieu of trustworthy feedback from the student graders. Stefan replied with the lazy answer that he can't give solutions to a proof-based class. This is simply not true. Of course, he could not give an exhaustive list of possible strings that are valid proofs, but providing a possible solution would have been a vital way to learn when feedback was otherwise inadequate. The real reason that Stefan didn't want to do it was that it takes him time to do so. This is a valid objection, though an ideal teacher would make the time to provide such a valuable resource. Finally, Stefan was rarely helpful and often dismissive in office hours. His gruff response to one of my questions: \"We covered that in class.\" Of course we covered the topic in class, but why would I come to office hours to ask further about it if his explanation in class was sufficient? In summary, teaching is not a priority for Stefan. Sure, he publishes like crazy (he put out almost 8 papers during this semester; search him on arXiv), so it would be hard to call him \"lazy\" without qualificationbut it's too bad that he doesn't focus more of his energy on effective teaching. ",
+            "\u00a0If you want to be a math major, you're required to take it if you don't take Math 230 and Math 231. I can't say that I would recommend it as I took it this semester. It was a tricky course that didn't really have good resources to support students and I felt pretty confused about the problem sets a lot of the time. But I also think that it might be a class that varies a lot semester to semester, so I don' know how much of my experience is relevant to the way the course will be next time. ",
+            "\u00a0If interested in pure math, definitely take it. But do not take the class just to fulfill a requirement. ",
+            "\u00a0Most people who took the course needed to - if you don't, it is still an interesting course, but be prepared to set aside more time to review the material and complete the problem sets. Also, don't take this course under Stefan - he had a really bad grading scheme where he makes questions 1 point (so our midterms were out of 6). This resulted in a grading scheme with very low granularity and even a fractional point off would take off many percentage points off your grade. When someone suggested he make the final more granular, he simply added more 1 point questions instead of just assigning more points to a question (like a typical exam). It made for a very high anxiety test environment where the cost of making small mistakes was much higher than the reward for getting something correct. ",
+            "\u00a0I would recommend this course. It's a good review of multivariable calculus and expands on your current calculus knowledge. Expect that a lot of the concepts will sounds familiar to things you have already learned, but you'll come out of this course with a better understanding of them. This class is also a good introduction to proofs and mathematical induction, so definitely worth taking before MATH300 ",
+            "\u00a0Don't take this class unless you need to. The topics are important for MATH 300 but the format of the class can be greatly improved. ",
+            "\u00a0This was a difficult course, but I would recommend it in an instant to a student who was both very interested in and very passionate about math; I'm sure someone like that would enjoy this course quite a lot and would do very well in it. "
+        ]
+    ]
+}

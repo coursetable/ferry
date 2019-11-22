@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48919/assignments/syllabus", 
+    "requirements": "No formal prerequisites; prior coursework in Native American history or studies is helpful, but not required.", 
+    "description": "This seminar examines the spatiality of indigenous communities, both on their own terms and in relationship to ongoing processes of settler colonialism. Focusing primarily on indigenous geographies and place-making practices in the settler United States, it explores the survivance and creativity of Native peoples in the face of persistent spatial violence. While rooted in the intellectual traditions of critical indigenous studies, we also engage scholarship from history, geography, architecture and planning, anthropology, sociology, and education. Topics include: land-based ways of knowing, relations of care, and identity/community formation; treaties, relocation, and reservation-making; ideologies and practices of property; urbanization, urban indigenous communities, and urban activism; cartography and Geographic Information Systems (GIS); movement and mobility; environmental justice hazards and activism; public memory, monuments, and place-names; the significance of borders (both national and local), especially in relationship to violence; and place-based efforts toward co-existence and solidarity in a more-than-human world.\nNo formal prerequisites; prior coursework in Native American history or studies is helpful, but not required.", 
+    "title": "Indigenous Geographies", 
+    "skills": [], 
+    "areas": [
+        "So", 
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "YK220 002", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11993", 
+        "listings": [
+            {
+                "number": "320", 
+                "subject": "ER&M"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Laura Barraclough"
+    ], 
+    "long_title": "Indigenous Geographies", 
+    "extra_info": "A"
+}

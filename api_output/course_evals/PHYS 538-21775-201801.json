@@ -1,0 +1,80 @@
+{
+    "crn_code": "21775",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            3,
+            1
+        ],
+        [
+            1,
+            2,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            3
+        ],
+        [
+            0,
+            2,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            3,
+            2,
+            1
+        ],
+        [
+            0,
+            2,
+            5,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0As an undergrad I found this class to be a good introduction to a subject any physicist should have an understanding of. There are many levels at which you can understand any subject. It is overwhelming at first. The general relativity taught during the first half of this course emphasized understanding of differential geometry and advanced special relativity (especially electrodynamics). If you really want to understand GR then eventually you will have to master these but for this course you can do what you need to do with only a baby understanding of them. The professor really stresses being able to solve explicit cases over the technical details.\r\n\r\nMy biggest takeaway is an understanding of what it means to solve the Einstein field equations. I understand what the metric of spacetime tells you and how it is related to manifold connections and curvature. From this we solve the field equations and can solve for the equations of motion of photons and matter particles in curved spacetime. ",
+            "\u00a0Understanding of metrics, killing fields, black holes, and early universe cosmology. ",
+            "\u00a0A lot. ",
+            "\u00a0I got a clear general picture about General Relativity basics. "
+        ],
+        [
+            "\u00a0This course is well structured in the sense that it builds upon itself and incorporates what is learned in lecture into problem sets very well. The professor is very helpful. ",
+            "\u00a0The course is very mathematically heavy at the beginning, and it's hard to make heads or tails of the first 1/3 of it. The homework assignments are a little vague; I can't say it was aways clear to me what the next step was, or how it related to the course material. ",
+            "\u00a0The class gives a broad overview. Unfortunately, the course is not self consistent. Without reading background material one won't understand what is going on in class. ",
+            "\u00a0Strengths include well organized material and very helpful homework. "
+        ],
+        [
+            "\u00a0Absolutely. While it is not always the most enthralling lecture, taking this class gives you a legitamate context within which to study one of the pillars of modern physics. ",
+            "\u00a0Probably not; I still don't feel very comfortable with GR. ",
+            "\u00a0Yes, of course. Students interested in pursuing research in general relativity should definitely take this course. ",
+            "\u00a0Yes. It gave a very nice introduction to General Relativity and also give some ideas about on-going research in the field. "
+        ]
+    ]
+}

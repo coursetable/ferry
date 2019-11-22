@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50524/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The course exposes students to main stochastic modeling methods and solution concepts used to study problems in operations research and management. The first half of the class covers analysis of queuing models such as Markovian queues, networks of queues, and queues with general arrival or service distributions, as well as approximation techniques such as heavy traffic approximation. The second half focuses on control of stochastic processes; it covers finite and infinite-horizon dynamic programming problems, and special classes such as linear quadratic problems, optimal stopping, and multi-armed bandit problems.", 
+    "title": "Models of Operations Research ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "EVANS 4400", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 19
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14115", 
+        "listings": [
+            {
+                "number": "675", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Vahideh Manshadi"
+    ], 
+    "long_title": "Models of Operations Research and Management", 
+    "extra_info": "A"
+}

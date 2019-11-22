@@ -1,0 +1,75 @@
+{
+    "crn_code": "10583",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            2,
+            0,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Obviously, galaxy formation and evolution. The man himself, Franciscus vdB, wrote the dang textbook and lemme tell ya, it's the best one available presently on the market. I mostly gained a better appreciation for the baryonic processes involved in galaxy evolution, and polished some of my cosmology background along the way. ",
+            "\u00a0The physics behind galaxy formation, galaxy-halo connection "
+        ],
+        [
+            "\u00a0Strengths: excellent lectures, great problem sets, an overall good approach to a term project\r\nWeaknesses: perhaps too few problem sets, maybe 4 or 5 instead would have been better for the purpose of cementing some of the more complicated topics into our minds\r\n\r\nImprovement: building a semi-analytical model of galaxy formation would be a great idea, so whenever Frank has time to put together that component for a future rendition of this course, I think it would be very helpful as a 5th problem set. Also, perhaps there is too much material in the class? I feel like we spend a very small amount of time on any one thing in particular, and I probably could have learned more overall if we had focused more time on individual topics instead of covering so much stuff. ",
+            "\u00a0Strength- good focus on the physics of structure formation, good overview of the scientific papers in various topics\r\nWeakness- should incorporate some relativistic perturbation theory "
+        ],
+        [
+            "\u00a0Absolutely. Frank's the best lecturer I've had in my time at Yale. To be fair, at face value this isn't the hardest thing to achieve, as the first-year grad course instructors in physics are particularly not good. Frank's class blew all of them out of the water. ",
+            "\u00a0Yes definitely. This is by far the best course I have done in Yale Astronomy. Instructors taking other Astronomy courses should learn from the organization and presentation of this course. ",
+            "\u00a0yes "
+        ]
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50932/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introduction to ancient philosophy, beginning with the earliest pre-Socratics, concentrating on Plato and Aristotle, and including a brief foray into Hellenistic philosophy. Intended to be taken in conjunction with PHIL 126.", 
+    "title": "Introduction to Ancient Philos...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "LORIA 351", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11517", 
+        "listings": [
+            {
+                "number": "125", 
+                "subject": "CLCV"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Verity Harte"
+    ], 
+    "long_title": "Introduction to Ancient Philosophy", 
+    "extra_info": "A"
+}

@@ -1,0 +1,47 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "A weekly seminar covering science and professional issues in astronomy.", 
+    "title": "Professional Seminar", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WTS A30", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 15
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12836", 
+        "listings": [
+            {
+                "number": "710", 
+                "subject": "ASTR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Paolo Coppi"
+    ], 
+    "long_title": "Professional Seminar", 
+    "extra_info": "A"
+}

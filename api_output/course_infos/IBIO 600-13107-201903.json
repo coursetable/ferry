@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Introduction to the research interests of the faculty. Required of all first-year Immunology/BBS students. Pass/Fail.", 
+    "title": "Introduction to Research: Facu...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13107", 
+        "listings": [
+            {
+                "number": "600", 
+                "subject": "IBIO"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Introduction to Research: Faculty Research Presentations", 
+    "extra_info": "A"
+}

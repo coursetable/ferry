@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 1, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "No knowledge of Italian required. Course conducted in English.", 
+    "description": "A critical reading of Dante's Divine Comedy and selections from the minor works, with an attempt to place Dante's work in the intellectual and social context of the late Middle Ages by relating literature to philosophical, theological, and political concerns.\nNo knowledge of Italian required. Course conducted in English.", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "13828", 
+        "listings": [
+            {
+                "number": "180", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Dante in Translation", 
+    "extra_info": "C"
+}

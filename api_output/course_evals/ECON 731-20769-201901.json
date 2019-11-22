@@ -1,0 +1,75 @@
+{
+    "crn_code": "20769",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            1
+        ],
+        [
+            1,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned important concepts of market failures in developing countries ",
+            "\u00a0Running RCTs, market failures and barriers to adoption, lots of general research advice, how to do development research and formulate a good question. "
+        ],
+        [
+            "\u00a0The course should not be cross-listed with Advanced Macroeconomics. ",
+            "\u00a0I really liked the class discussions about how to improve on existing research designs, what would you do differently, how to design research experiments and which questions to ask, etc.  Good slides, engaging lectures.  Also good overview of research  methods at the beginning. We spent a lot of time on some topics such as networks which got a bit tedious; would be nice to spend more time on migration instead.  Also, it would be nice to give us the details of the presentations and confirm that they're actually happening more than 3 days in advance (I know they were on the syllabus but there was no mention of them otherwise until 3 days before.)  I don't think a final exam is the most effective way to organize a 2nd year class or synthesize the material.  Why not have research proposals or some other sort of project instead?  Finals seem very 1st-year.  Also, it would be great to have more grades than just simply the final and the presentation, and to make the class separable so that you could take only the first semester without having to commit to the full year. "
+        ],
+        [
+            "\u00a0Yes, I really enjoyed Mushfiq's classes ",
+            "\u00a0Yes, the developing part. ",
+            "\u00a0Yes, good overview of development topics, good research methods advice and fair workload. "
+        ]
+    ]
+}

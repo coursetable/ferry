@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "The course provides a basic introduction to the fabrication of scientific apparatus from glass. Topics covered include laboratory setup, the fundamental skills and techniques of glass blowing, the operation of glass fabrication equipment, and requisite safety procedures.", 
+    "title": "Introduction to Glass Blowing", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "SCL 14", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13824", 
+        "listings": [
+            {
+                "number": "565L", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Patrick Vaccaro", 
+        "Daryl Smith"
+    ], 
+    "long_title": "Introduction to Glass Blowing", 
+    "extra_info": "A"
+}

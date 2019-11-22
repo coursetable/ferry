@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50952/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Interactions between large-scale firms that make international investments and policy makers and government officials in the\u00a0\u201chost\u201d countries. National and subnational officials who work to attract investments (or not) and who set policies regulating global firms and their investments.\u00a0Focus on less-developed countries.\u00a0Theories as to why firms \u201cglobalize\u201d; case studies of controversies created by overseas corporate investments; the changing economic landscape associated with investments by countries such as China, Brazil, and India.", 
+    "title": "Global Firms and National Gove...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "RKZ 202", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11576", 
+        "listings": [
+            {
+                "number": "245", 
+                "subject": "EP&E"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEP3\">YC EP&amp;E Politics Core</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEPA\">YC EP&amp;E: Advanced Seminar</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YGLE\">YC Global Affairs: Elective</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSI\">YC Poli Sci: Intnatl Relations</a></li></ul>"
+    ], 
+    "professors": [
+        "Joseph LaPalombara"
+    ], 
+    "long_title": "Global Firms and National Governments", 
+    "extra_info": "A"
+}

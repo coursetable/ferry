@@ -1,0 +1,77 @@
+{
+    "crn_code": "10548",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to write a scientific report, as well as organize and drive my own project. ",
+            "\u00a0Very dependent on project (your choice for Lab 2). This makes this completely un-anonymous.\r\n\r\nLab 1- Synthesis, purification, and mildly air-free techniques. Fun write-up and data analysis.\r\nLab 2- Ab initio calculations on periodic structures using QuantumESPRESSO. ",
+            "\u00a0I learned a lot by taking this course. So much about skills around the lab, things you don't learn in intro lab courses because they do so much for you before you begin. I learned how to think about designing a research project and how to actually complete one. It was a really fun class. "
+        ],
+        [
+            "\u00a0This course is one of the few lab courses at Yale that is carried out with a small number of students, and in a lab dedicated solely for the course.\r\n\r\nThe rigor of the course is in large part determined by the student. The open-ended format of the course allowed a lot of room for exploration and failure in experiments, which would not be possible in a highly structured lab course.\r\n\r\nFinally, the information sessions at the beginning of the semester (to the instrument center, the library and the safety briefing) were very detailed and would definitely prepare me for research at Yale. ",
+            "\u00a0Strengths- The freedom to choose your topic for Lab 2 is stellar. Well taught and organized. Nice and relaxed atmosphere. Not a stressor in my semester while still allowing me to learn skills I desired.\r\n\r\nWeakness- Instructing staff may not have expertise in the project you choose in Lab 2. However, such is actual research life. Not a huge deal. ",
+            "\u00a0This course is really great, it allows for really heavy student engagement, but is not extremely demanding. Not nearly as much as pchem lab. The only things I think could be improved would be if Dr.Parr were slightly harsher/franker. He is extremely nice and helpful, but I am always unsure of how he really thinks I'm doing. He gives a lot of compliments and many constructive criticisms, but I still wish he were more obvious about when I said something stupid. "
+        ],
+        [
+            "\u00a0Yes, if you are looking to learn how to carry out independent scientific investigation. The level of support and personal guidance received was extremely high. ",
+            "\u00a0Yes. Great WR where you can learn about a type of chemistry you are interested in. Low workload outside of class. #superchill ",
+            "\u00a0Yes, definitely, super fun and I loved the freedom to research whatever I wanted. "
+        ]
+    ]
+}

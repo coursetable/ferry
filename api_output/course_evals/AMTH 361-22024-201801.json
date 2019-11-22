@@ -1,0 +1,132 @@
+{
+    "crn_code": "22024",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            6,
+            7,
+            15,
+            3,
+            1
+        ],
+        [
+            2,
+            6,
+            13,
+            7,
+            3
+        ],
+        [
+            2,
+            4,
+            6,
+            12,
+            6
+        ],
+        [
+            2,
+            4,
+            9,
+            11,
+            6
+        ],
+        [
+            2,
+            12,
+            12,
+            5,
+            0
+        ],
+        [
+            4,
+            13,
+            11,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned how to apply fundamentals from statistics to analyze data using R. Useful class. ",
+            "\u00a0You learn basically everything there is to learn about linear and logistic regression. At the end of the course, you also touch on some more complex tools like quantile regression and splines. ",
+            "\u00a0Data analysis ",
+            "\u00a0A slightly better understanding of the theory operating behind certain kinds of models and methods. ",
+            "\u00a0I learned actually practical methods for Data Analysis. Winston and Peter were well aware that many of the classical statistics methods don't apply well to real data problems. The course was executed very well, and Winston was an excellent instructor! He was so so knowledgeable, kind, and supportive throughout the course. ",
+            "\u00a0I can only speak to what I learned from the problem sets, since I rarely attended lecture. In problem sets, we were tasked with analyzing various datasets (from fields such as education, health, and quantitative political science) using R. Analyses included: basic descriptive statistics; estimating regression coefficients with different regression models e.g., linear, logistic, polynomial, quantile; calculating bootstrapped and heteroskedasticity-consistent standard errors; and constructing and interpreting confidence intervals. Though I cant say how much of what I learned from the problem sets will stick with me in the long run. ",
+            "\u00a0Bootstrappinig, regression, lots of R. ",
+            "\u00a0Doing regression ",
+            "\u00a0Mostly R skill ",
+            "\u00a0Data analysis technique with a focus on regressional methods ",
+            "\u00a0Typical data analysis class. Learned about running different kinds of regressions and how to do experiments on batches of data, sampling, etc. ",
+            "\u00a0Data Analysis ",
+            "\u00a0I learned how to use data analysis methods in R to examine and evaluate data sets. A solid course in programming and data science. ",
+            "\u00a0A greater theoretical understanding of some data analysis techniques and some practice using them in R ",
+            "\u00a0data analysis skills in R ",
+            "\u00a0I have learned how to infer information from datasets and verify various claims made in research papers. ",
+            "\u00a0Learned R, which was the main thing. I also got a good idea of the process of replicating a paper on randomized experiments -- which was cool. But honestly, besides that I did not learn a ton besides how to implement a few cool functions in R. I learned what robust standard errors and things were, and how to find them, but I do not have a great theoretical understanding of them after this course. ",
+            "\u00a0Better understanding of R, best practices in coding. ",
+            "\u00a0I learned a lot about linear regressions. "
+        ],
+        [
+            "\u00a0Write the code as the class goes on rather than displaying it and explaining it. This would keep everyone engaged. ",
+            "\u00a0The course was very well taught, but the theory that we learned in class was never really tested in the homeworks, which sometimes made it hard to motivate yourself to pay attention. The homework was overall pretty easy and followed pretty closely what was done in the class, though the grading was in some respects a bit capricious. I think the course could be improved by making the homework a bit harder and by incorporating some \"theory\"-esque questions into the homework. ",
+            "\u00a0Needed to include more advanced topics ",
+            "\u00a0The course was very poorly designed. There was no incentive to pay attention in lecture, because the assignments were mostly code-based and there were no exams on which they could test the more theoretical material. As much as it was nice to have no exams, I probably would have been more engaged had I known I would be held accountable for the lecture material. ",
+            "\u00a0Strengths: Winston is very very knowledgeable and excited about the materials that he is teaching. He also made sure that we really understood the material. \r\n\r\nWeaknesses: I think the co-teaching structure could have been executed better. I would have preferred Winston teaching every course, as he was more prepared and coherent in explaining the materials than Peter. I think the problem sets could have been more difficult, as I realized most of the problems could be done with the code provided in the lecture. ULAs could've been more helpful. ",
+            "\u00a0Strengths: Decent exposure to R. Weaknesses: It was far too easy to let this class fall to the bottom of the priority list because there was no incentive to attend lecture (students grade in the course depended only on problem sets, which you didnt need to go to class to complete). Though some may consider this flexibility to be a strength, insofar as we should care about deep, meaningful learning experiences, I think the lack of accountability and consequently low student engagement are the biggest shortcomings of this class. Also, the professors completely misrepresented the focus of this class at the beginning of the term. They said it would focus on practical knowledge and skills, but I found half the lectures way too theoretical and divorced from the actual experience of analyzing new datasets. Improvements: Structure the class to incentivize student attendance and engagement. Make lectures less theoretical, or at least make more effort to connect theory and practice. ",
+            "\u00a0Straightforward course, professors were very approachable. ",
+            "\u00a0I would actually say exams would make this course more engaging and also to make it clear that one wont gain much from this course if they took S&DS 230. ",
+            "\u00a0Strenghts: very practical, uses real datasets and practical problems\r\n\r\nWeakness: homeworks don't cover theory only using R commands ",
+            "\u00a0Strength: The professors are all very nice and the psets do not take too much of your time.\r\n\r\nWeakness: I find the lectures pretty disorganized as there are 2 professors alternating each other. It also doesn't provide much knowledge outside of S&DS 230 and ECON 136, besides the last few lectures. ",
+            "\u00a0Very detailed treatment of the materials. Although some materials are new, many can be found in other statistics course at Yale ",
+            "\u00a0Relatively chill class. Winston is the sweetest professor. No exams so that was really nice. Felt like this class was essentially a little too similar to 230. Would have been nice if it were a little more different. ",
+            "\u00a0The grade in the class was only based on psets, which was nice.  The TAs and professors were very approachable. They seemed to assume that we had a certain amount of experience which data analysis, and there were definitely a bunch of different levels in the class so the math lectures were not necessarily as approachable as I would have liked and they often seemed like they dealt with exceptions. Might be better off taking s&ds 230 if you don't have any experience. ",
+            "\u00a0The strengths of the course were the lectures and the problem sets. They were really informative, and aimed to help us understand the material more than just take time out of a student's day. The lectures were really helpful, although sometimes it wasn't clear what the schedule or topic was any given day. ",
+            "\u00a0Strengths: I enjoyed most of the lectures; I felt like I learned something new from each one, even if the topic was something that had been covered in a previous Stats class. Winston and Peter were both very accessible for asking questions before and after class and on Piazza, and their responses were always very thorough. Weaknesses: The problem sets didn't always feel like they coincided with the more theoretical lectures. Winston's and Peter's styles of lecturing were also pretty different, so it was a little disorienting sometimes. Would've liked to have covered more stuff that was on the syllabus!  unfortunately ran out of time. ",
+            "\u00a0Really great course design and intentions and engaging lectures. Wish that the lectures could have been faster in pace; I found it more efficient to just review the notes and codes in my own time. Also, wish that the problem sets demanded much more from us as students. I found the tasks to be fairly routine and didn't demand more from us than what I knew from before the class. I would've enjoyed assignments that demanded a lot more from us in terms of interpretation and data visualisation, emphasising what was unique that was taught in the class. ",
+            "\u00a0the class is good ",
+            "\u00a0The strengths of this course are the office hours and the psets - you will realize how much you learn, only after successfully figuring out the psets - on your own or with the help of the ULAs and professors. One weakness maybe be the level of engagement in class. I am thinking that instead of reading the code on the screen, we could be prompted to run it and do small exercise in class involving the code/methods we are learning. I think that could be a reason why less people showed up to class towards the end of the semester. ",
+            "\u00a0Oftentimes the theoretical stats offered during lecture seemed to have little connection/was not necessary for the homework. Having little interest in the theoretical, it was hard for me to stay motivated to attend lecture when I could figure the PSETs out from lecture notes and example code. ",
+            "\u00a0The course definitely needs to follow a more defined structure and not just be a mix of topics that the professors are interested in. I get that both of the professors are really into the theory of agnostic statistics, but there needs to be a bigger focus on how actually to do data analysis and learn the classical methods that are useful. The problem sets were generally fine, and sometimes cool, but the lectures were often useless. The professors ( particularly Peter) are clearly too optimistic that we will just absorb his results on agnostic statistics from a powerpoint -- and there is not much motivation to dive into the results afterwards with no tests. Winston's lectures were generally much better and actually showed you how to do the appropriate analysis in R. ",
+            "\u00a0I think we could cover more different types of regressions. "
+        ],
+        [
+            "\u00a0Great course to learn how to analyze data using R. Class is all psets so very fair and there's plenty of office hours and support if you need it. ",
+            "\u00a0Yes I would. Taking this course is a must if you want to call yourself a statistician. You learn to understand and appreciate regression and its many applications, and the theory presented is very interesting. Most importantly, the teachers were excellent and class was a joy. ",
+            "\u00a0No I found that I did not really learn anything. ",
+            "\u00a0No ",
+            "\u00a0It is a pretty straightforward class if you're experienced in stats and using R, but in its current form I can't in good faith recommend it. Something like S&DS 365 is much more engaging and applicable, especially if its being taught by Professor Lafferty. ",
+            "\u00a0I would recommend this course if Winston teaches it! Or really, I would recommend any class that Winston teaches. He is super knowledgeable, helpful, patient, and kind. I learned so much from him this semester. ",
+            "\u00a0I took this class hoping to gain more insight into why researchers select certain models but not others. But instead of walking away with a clear understanding of when & why to use certain methods of analysis and their comparative advantages/disadvantages, I find myself with a loose grasp on several statistical concepts and tools with no coherent framework to organize them in my mind. I do not feel any more equipped to look at a completely new dataset, explore it deliberately and systematically, and extract insights using the right analyses than I did at the start of the semester. That is profoundly disappointing. Furthermore, I didnt learn much programming that I couldnt have learned on my own if the need ever arose. Like many college classes, the value of the course is holding you accountable to devoting the time and headspace necessary to learn the material. Maybe take this course if you simply want more practice using R, but if youre already comfortable with R and/or have a modicum of self-discipline to learn things on your own, I wouldnt recommend taking the class. Having said all of this, this is Prof. Lin and Aronows first time teaching 361. They are good instructors with good intentions and are more than willing to help during office hours; its just that the content and structure of the course were not conducive to learning (e.g., excessively dense & theoretical lectures, somewhat disjointed units, complete lack of incentive to attend lecture because the only graded assignments were the problem sets). Perhaps in the future, the class will be structured so that there is a clearer narrative arc and more incentive to actually engage with the material and get something meaningful out of it. ",
+            "\u00a0Yes, learned a decent amount without being too stressed out. ",
+            "\u00a0I would definitely recommend this course to a student who wants more stats than 230 has to offer, because you learn R. But if someone aleady took 230, they probably dont need to take this course. ",
+            "\u00a0Yes, if you are not a S&DS major a good coverage. ",
+            "\u00a0I would recommend the course if you have never taken ECON 136 (econometrics) or S&DS 230 before. ",
+            "\u00a0This course may be good for those who are new to Statistics and want to build up from S&DS 238/242. ",
+            "\u00a0Yes! If youre interested in learning basic data analysis and R, this class is low stress and great. ",
+            "\u00a0Yes, if you've already taken a data analysis class and want more detials. ",
+            "\u00a0If you enjoy programming and are comfortable with some basic data science skills, this course will be helpful to you! ",
+            "\u00a0Yes, I'd recommend, if some of the kinks in the class and pacing were worked out. The material itself was interesting to learn  even though some topics overlapped with other classes (as a S&DS major, linear regression seems to be covered in half of the department's classes), I felt like there was always something new I learned in each lecture. However, it would've been nice to have covered more of the material that had been listed on the syllabus. As far as teaching go, Winston and Peter are both pretty good lecturers and super willing/accessible to help students and answer their questions. The workload is very manageable. ",
+            "\u00a0yes ",
+            "\u00a0Absolutely! ",
+            "\u00a0Absolutely! ",
+            "\u00a0Yes ! If you are willing to put the time and effort in the psets, take it. ",
+            "\u00a0Only when the course is more well structured. ",
+            "\u00a0If you really want to learn a lot, I would not recommend this course. It is not a lot of work, but with no tests, you also do not have much motivation to learn the material outside of the minimum needed for the problem sets. Winston's lectures, which often showed practical methods of implementing things, were generally better than Peter's, which often went through his results on agnostic statistics very quickly and from a powerpoint. \r\n\r\nThat being said, the problem sets were often pretty fair and good, with interesting results. You do learn how to find things such as robust standard errors in R. ",
+            "\u00a0Would recommend as a good course to understand how to examine data sets with R in fairly rigorous ways. Winston especially is incredibly helpful, though Peter is very prone to use a lot of jargon and not be super clear in lectures. ",
+            "\u00a0Yes. I think it gives a strong foundation in linear regressions. "
+        ]
+    ]
+}

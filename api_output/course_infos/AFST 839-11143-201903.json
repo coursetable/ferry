@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50271/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An examination of the interaction between people and their environment in Africa and the ways in which this interaction has affected or shaped the course of African history.", 
+    "title": "Environmental History of Africa", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "BASSLB L71", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11143", 
+        "listings": [
+            {
+                "number": "839", 
+                "subject": "AFST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Robert Harms"
+    ], 
+    "long_title": "Environmental History of Africa", 
+    "extra_info": "A"
+}

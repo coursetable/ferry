@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51388/assignments/syllabus", 
+    "requirements": "Admission by audition during the first class meeting.", 
+    "description": "A practical and theoretical study of the traditional dances of Africa, focusing on those of Burkina Faso and their contemporary manifestations. Emphasis on rhythm, kinesthetic form, and gestural expression. The fusion of modern European dance and traditional African dance.\nAdmission by audition during the first class meeting.", 
+    "title": "West African Dance: Traditiona...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11956", 
+        "listings": [
+            {
+                "number": "435", 
+                "subject": "AFST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Lacina Coulibaly"
+    ], 
+    "long_title": "West African Dance: Traditional to Contemporary", 
+    "extra_info": "A"
+}

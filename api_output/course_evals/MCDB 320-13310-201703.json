@@ -1,0 +1,86 @@
+{
+    "crn_code": "13310",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            4,
+            4,
+            3
+        ],
+        [
+            0,
+            4,
+            4,
+            2,
+            1
+        ],
+        [
+            2,
+            2,
+            4,
+            3,
+            0
+        ],
+        [
+            3,
+            2,
+            3,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            5
+        ],
+        [
+            0,
+            2,
+            3,
+            5,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I have some background in neurobiology, but it is a huge field and I ended up learning a lot of new information about neuronal cell types and pathways. ",
+            "\u00a0This gives a very comprehensive overview of the basic biological concepts underlying neural communication and processes. ",
+            "\u00a0This class taught me how to regurgitate large volumes of information in a short period of time. It taught me how to teach myself difficult material. ",
+            "\u00a0We started with the physics / dynamics of the action potential, which is focused on circuitry (capacitors, but don't worry, no calculus problems required) as well as ion currents and the Hodgkin-Huxley model. With the basics under our belt, we moved on to neural systems, studying canonical examples of sensory input, sensory processing, and decision making. Finally we talked about learning and the development of neurological systems.\r\n\r\nIn terms of skills, let's say this: coming into this class, I was an MBB major with no neuro background. Coming out of this class, I can go read papers in high class neurosci journals and have a good idea of what's going on (why the question is interesting, why they picked their particular method, what the data mean, etc). I didn't take the lab section, but I imagine that would help even more.\r\n\r\nInsights: honestly, innumerable. Here's a fun fact they don't teach in high school: to change the membrane voltage of a neuron requires miniscule amounts of Na+/K+ to change places (about 0.01% of the total amounts present). That's why neurons can fire repeatedly at high frequencies without losing the Na/K balance. Plus Na/K pumps  but those are relatively slow-working. "
+        ],
+        [
+            "\u00a0There was a huge amount of material to learn. Professor Forscher was good about drawing diagrams but Professor Keshishian would sometimes go for long periods of time lecturing with only transparencies, which made things hard to follow. Midterm II also had some super general questions that made it hard to answer. ",
+            "\u00a0The organization is in dire need of improvement.\r\nExpectations are extremely unclear.\r\nSections need to be better.\r\nThere need to be review sessions.\r\nThere is a clear emphasis on the graduate students, many of whom have research experience in the techniques discussed in class. What about the undergraduates? ",
+            "\u00a0Forscher and Keshishian are very good lecturers. They're so knowledgeable about almost every aspect of the material. It's always cool to take classes where the profs are the ones who made groundbreaking contributions to the field. However, be aware of the following. 1) There are few resources for students seeking help. The TF's are helpful to some extent, but the exams require a level of understanding at a more detailed level than what discussion sections can cover. It was difficult to get in touch with the professor as well. The course should add weekly office hours from each professor. 2) There was no practice problems after the first 1/3 of the course, and no grades besides exams. Problems sets would have been very helpful to benchmark our level of understanding. Please write psets for the final 2/3 of the course, be it from TF's or professors or online resources. ",
+            "\u00a0All the lectures were very free-flowing, with occasional diagrams and powerpoint slides to aid in the verbal presentation of the information, thus it was extremely helpful to have the summaries/outlines on Canvas. Professor Forscher's practice problems were also very helpful for midterm preparation. \r\n\r\nThere also seemed to be a bit of a disjoint between the undergraduates and graduate students in the course. It seemed that most of the time the way the information was presented went over the undergraduates' heads but was too easy for the graduate students. I'm not sure what would be the best way to cater to both parties, but just something to think about for future lectures. ",
+            "\u00a0I really enjoyed how the class was divided into sections, so that each unit was self contained (although clear ties between sections could be seen). The handouts were a great supplement to the course material. \r\n\r\nThat being said, I found the last third of the class to be extremely disorganized and rushed. The rushed nature meant tons of terminology was given without clear definitions. At times it was hard to understand what the exact topic of each lecture was (a problem that was not just contained to the third section of the class). \r\n\r\nThe pace of the class material was generally acceptable, but at times too rushed (e.g. several weeks spent on visual processing and only 2-3 classes on sensation and muscles). However, the speed of the lectures (i.e. how fast the professors talked) was constantly too fast. Often times several advanced concepts would be discussed and nothing would be written on the board, making it hard to understand what the professor was saying (e.g. afferent vs efferent) or know how to spell the complex words. Also, because much of neurobiology has overlaps, more side-by-side comparisons could be made in class. Another way to helo on this front would be to perhaps provide a brief outline of what will be discussed each day and comparing/relating that to what has been learned previously. \r\n\r\nMore time should be given for questions and answer in each class, especially because not everyone comes from the same background, so not everyone knows all the terms. Additional worksheets/problem sets would have been nice (i.e. they really helped for the first exam, but there were no more after that). Finally, not all diagrams presented in class were included on Canvas, which did cause some confusion. \r\n\r\nThe TAs were a wonderful help, as they explained everything slowly, clearly, and multiple times if needed. They would ask the section questions making sure we understood the material. The only thing I would say against them would be that there seemed to be a slight lack of organization (which may have been because there were three sections to the course and three TAs). \r\n\r\nWhile the breakdown of the grading was clear (25% per midterm, 50% for the final), the grading of the class was not very transparent (in terms of exam regrades, curving, added weighting of the final, etc.) One thing that would have been nice is a couple of points here and there for attendance, participation, or problem sets. ",
+            "\u00a0Strengths: looking back on it, I'm pleased with this course. All the material is relevant, interesting, and not simply surface-level. The professors don't shy away from telling us when the things we're learning are still being worked out. The teaching is mostly in chalk talk format, or very simplified powerpoint (ie just single pictures at a time, minimal text on slides), which is refreshing. Both professors are great speakers, and are willing to answer questions and generally be accessible.\r\n\r\nWeaknesses: that said, there are two large weaknesses I would point out. First, there are no weekly problem sets after week ~5. The first 1/3 of the class has two problem sets; after that you're on your own. This is frustrating, because a) most people learn better by actively using the material they're learning! This is a neuroscience class; maybe we could implement some neuroscience in teaching it? b) you have no idea what the second / third set of test questions are going to look like. To be fair, you can guess decently well, but it's not the same. (Don't worry, the tests are fair).\r\nSecond weakness is that the lectures can be difficult to follow. Despite the fact that the profs start with an introduction and move through the material linearly, it can be quite difficult to tell what kind of transition they're making at times. Eg, should these next 5 minutes of notes be a sub-sub-bullet under the last big header, or are they moving on to the next big topic for the day? Or, eg, sometimes they'll spend 10 minutes giving you the story/problem of how something was discovered, and then the punchline doesn't seem like the main point. Give the punchline first, please  then you can tell us why it's interesting. Eg \"It turns out that NMDA channels are, in a sense, voltage-gated. But it's a different kind of voltage gating than the Na+ channels we just learned about. At first...[draw up data, etc].\" ",
+            "\u00a0The material is extremely interested, but poorly taught. Both professors fly through material, often using acronyms or terms of art that they assume we know that have never been covered. The lecture handouts are the best guide for what will actually be tested, but sometimes include material not covered in lecture at all. ",
+            "\u00a0The main weakness with the course is that it is highly physics-oriented, if you enjoy that then this course would be for you. Do not be fooled into thinking that the content is highly biological in nature, it is not until perhaps the second half of the semester and it is one of the toughest course I've taken so far at Yale. For someone with little interest in physics, I really suffered through the various graphs and electrical calculations took me time to fully understand. However, there are summary slides and handouts which capture the essence of the lectures given and serve as great review material. "
+        ],
+        [
+            "\u00a0Neurobiology does not have a lot of busy work, which I appreciated, but it is very easy to fall behind if you aren't paying attention due to the sheer amount of information covered. Make sure to go to lectures, read the handouts, and go to section if you have time. No guarantee that the test will go well, but those actions will keep you from failing. ",
+            "\u00a0If you are prepared to work hard and are interested in how the brain works, I would recommend this course. ",
+            "\u00a0Unless you have to, no. The material is interesting but the class is so poorly organized, grading is a black box, and tests are unreasonably long. This class has the potential to be great, but it is really not great. Personally, it gave me extreme anxiety. Do not take this class for \"fun.\" It's not fun. ",
+            "\u00a0This is the only neurobiology survey course offered in the curriculum, so you don't have much choice if you want a strong foundation in this field or if you're a neuroscience major. Don't take it for fun. Take it only if you have a passion for this topic and the willingness to put in the time. Some of the topics are so freaking blow-your-mind cool and make you marvel at the elegant ingenuity of biology. These moments make the frustrating and difficult parts worth it. \r\n\r\nForm a study group! Make friends if you don't already have friends. The best way to learn and ~the only way~ to discover what you don't know (but need to know) is by talking over the material with your friends. It really beats re-reading your textbook/notes. ",
+            "\u00a0This class is hard. You need to study. You may not get the grade you want. That being said, the content you learn is fascinating, and can be applied to other courses. \r\n\r\nIf you take the class, make sure you spend the time to understand everything that is discussed in lectures. If you don't make a point to ask! (Trust me it's much easier to have the professor explain than try to figure out what your notes mean).\r\n\r\nAlso utilize the handouts. They are wonderful summaries of what happens in lecture. ",
+            "\u00a0I would absolutely recommend this course if you're interested in a legit introduction to all things neuroscience, and want to put in the work. You'll have to put in a lot of time studying, and not just a week before the tests if you want to be successful. Find a study partner and quiz each other every week!\r\n\r\nOthers notes:\r\n-learn the toxins. Make flashcards, whatever you have to do. Yes, all of them.\r\n-There are in-depth lecture notes posted online. Read those thoroughly; they are imho equally valuable to your lecture notes.\r\n-The more you can do the assigned textbook readings *before* class, the more class will make sense to you. Whenever I did this, I had a 10x better time in lecture because despite the somewhat-difficult-to-follow lectures, I always knew where they were going with it (even if I needed to be reminded a second time of the details of the story). "
+        ]
+    ]
+}

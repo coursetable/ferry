@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Examination of the interplay between market and political processes in different substantive realms, time periods, and countries. Inquiry into the developmental relationship between capitalism and democracy and the functional relationships between the two. Investigation of the politics of regulation in areas such as property rights, social security, international finance, and product, labor, and service markets. Topics include the economic motives of interest groups and coalitions in the political process.", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11600", 
+        "listings": [
+            {
+                "number": "242", 
+                "subject": "EP&E"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSC\">YC Poli Sci: Comparative Govt</a>"
+    ], 
+    "professors": [], 
+    "long_title": "Politics and Markets", 
+    "extra_info": "C"
+}

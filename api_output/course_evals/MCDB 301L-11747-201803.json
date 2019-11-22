@@ -1,0 +1,85 @@
+{
+    "crn_code": "11747",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            5,
+            1
+        ],
+        [
+            1,
+            0,
+            4,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            4,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Definitely gained some basic molecular biology lab skills, but didn't learn any new conceptual information that wasn't covered in MBB 300. ",
+            "\u00a0Learned basic biochemistry lab techniques (e.g. SDS-PAGE, pipetting, cloning, gel electrophoresis, etc.). ",
+            "\u00a0I practiced basic techniques in biochemical research such as SDS PAGE, PCR, protein purification, and kinetic analysis of proteins. ",
+            "\u00a0I learned fundamental skills in biochemistry and molecular biology, as well as how to effectively plan an experiment and execute it. ",
+            "\u00a0MB&B 251L was a comprehensive review of all the biochemical lab techniques Ive developed from prior research experience. I didnt really learn many new lab techniques. However, this class was still useful because I learned how to write a comprehensive, publication-style lab report. For example, I learned how to use computer programs to analyze structures, and how to translate the computer-generated structural images to textual conclusions. ",
+            "\u00a0This course was really helpful in terms of teaching much of the techniques used in biochemistry research. Especially if you are new to this type of work, you will learn a lot. It may not be as helpful if you already work in a lab that uses this techniques. "
+        ],
+        [
+            "\u00a0Strengths: teaches you some very basic lab skills\r\nWeaknesses: disorganized, unclear expectations, extremely time consuming lab reports ",
+            "\u00a0Strengths: generally okay in its organization. Small lab section lets us get to know each other, which is nice. Free lab manual is also nice. Weaknesses: very dry lectures before lab (which aren't that helpful), extremely lengthy lab reports that were graded more harshly than was communicated ",
+            "\u00a0This course does a great job of covering basic techniques needed in biochemical research labs. It could be improved by returning graded materials more quickly with clear feedback and expectations for improvement. ",
+            "\u00a0The strengths are that the experiments are explained carefully, and because they are continues (two for the semester) you get to really understand what you are doing. Weaknesses are that the expectations for the quizzes etc are not always clear, and you are sometimes expected to remember many details that are hard to keep in mind even though you read the manual beforehand. ",
+            "\u00a0The structure of the lab is pretty comprehensive and does a good job teaching the foundational Biochem lab skills and techniques. The projects represent a good integration/application of biochemical theories. Even though I had prior research experience, I still found this class to be useful and informational.\r\nThe lectures could be faster and concise; sometimes they dragged on for too long. Also, there was minimum guidance on writing lab reports and, on top of that, the grading was rather harsh. Perhaps they could be more guidance on how to write and analyze data. ",
+            "\u00a0The lectures were not very instructive and sometimes took too much of lab time. They were often inaudible and it was much easier to just read the lectures by oneself. The lab part itself was stressful but fun. Aruna and the TAs are really helpful and it is not the end of the world if you mess up something during lab. "
+        ],
+        [
+            "\u00a0I would recommend avoid taking this course if at all possible (although the options for biology labs are fairly slim so you may find yourself needing to take it). ",
+            "\u00a0It's ok for a bio lab. Quizzes are super detailed, so I lost a lot of points there. Lab itself is tedious but manageable. Lab reports are super long, start them in advance!! I waited until the Saturday before lab (I was Tuesday) and I was suffering immensely. Aruna is sweet. ",
+            "\u00a0I recommend this course to anyone who wants to know the basics of biochemical research. ",
+            "\u00a0I would recommend this course as a biology/biochemistry lab to a student who wants to learn how techniques taught theoretically in lectures are applied in real life. It is definitely not as precise in many cases as you might expect, and this takes some getting used to especially following chemistry labs. ",
+            "\u00a0If you are not an MB&B major, then consider taking a different class. If you are an MB&B major, welcome to the struggle bus (but its not that bad). If you have prior research experience, this class isnt that difficult. If you dont, you might want to set aside some extra time during the week to review Biochem lab techniques. You learn a lot of things  like how to write a comprehensive lab report (publication style). But the standard for the two lab reports (which make up most of the grading scheme) are super high, so be prepared to spend a lot of time on them. Each one, including the figures, ended up being about 20-25 pages for me, so please, please, please, start the lab reports early. Do NOT wait until the week before or you will suffer greatly. When there are no lab reports due, there isnt too much work to do so make sure you look over the data and analyze them as soon as you obtain them. This class is useful and you learn a lot, but it is nonetheless kind of a pain. Theres not a lot of guidance and you just have to figure things out, especially when it comes to analyzing data. This class will not be as easy as orgo lab or even gen chem lab (but I promise you that this class is much, much better than gen chem lab). Bottom line: be prepared to do a lot of work on your own and keep your course load reasonable, and you should be fine. This class is really a transition from passive learning (defined lab curriculum, lectures) to self-driven learning (research). "
+        ]
+    ]
+}

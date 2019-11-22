@@ -1,0 +1,47 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50123/assignments/syllabus", 
+    "requirements": "Enrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "description": "Introduction to the history of Western fashion from the mid-eighteenth century to the present, with a focus on Paris and London. Approaches, methods, and theories scholars have historically employed to study fashion and dress.\nEnrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "title": "Fashion in London and Paris, 1...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WTS A32", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12312", 
+        "listings": [
+            {
+                "number": "033", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHI1\">YC History: Europe</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIJ\">YC HIST: Soc Chng &amp; Social MVMN</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIL\">YC History: The World Economy</a></li></ul>"
+    ], 
+    "professors": [
+        "Becky Conekin"
+    ], 
+    "long_title": "Fashion in London and Paris, 1750 to the Present", 
+    "extra_info": "A"
+}

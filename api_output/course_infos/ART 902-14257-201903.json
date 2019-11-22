@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51739/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A broad survey of narrative, documentary, and experimental film (and television) exploring influence and overlap within traditional visual art genres: sculpture, painting, performance, installation, etc. Screenings and discussions examining a variety of moving image histories, practices, and critical issues. The class also reserves time for screening student works in progress, with special consideration given to the presentation of installations and/or site-specific work. Weekly screenings may also be open to nonregistered students with permission of the instructor.", 
+    "title": "Experimental Narratives", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 12, 
+            "location": "EDG36 204", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14257", 
+        "listings": [
+            {
+                "number": "902", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "John Pilson"
+    ], 
+    "long_title": "Experimental Narratives", 
+    "extra_info": "A"
+}

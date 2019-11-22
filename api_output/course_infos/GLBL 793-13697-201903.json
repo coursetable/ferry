@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50155/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Reading seminar. Among the topics covered are the \u201cNew Imperialism,\u201d the military and naval arms race prior to 1914, the relationship between domestic politics and foreign affairs, the First World War and the alteration of the Great Power order, the \u201cnew diplomacy,\u201d appeasement, the rise of the dictator-states, the origins of the Second World War, military and strategic results of the war, the Cold War, reconfigurations of the 1970s and \u201980s, the end of the Cold War, post-Cold War relations. There is a heavy emphasis on historiography and an encouragement to relate economic and strategical trends to diplomatic. Open to undergraduate seniors with permission of the instructors.", 
+    "title": "Relations of the Great Powers ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "YK212 004", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13697", 
+        "listings": [
+            {
+                "number": "793", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Paul Kennedy", 
+        "Arne Westad"
+    ], 
+    "long_title": "Relations of the Great Powers since 1890", 
+    "extra_info": "A"
+}

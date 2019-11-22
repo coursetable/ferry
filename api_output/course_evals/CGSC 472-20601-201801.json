@@ -1,0 +1,77 @@
+{
+    "crn_code": "20601",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            3
+        ],
+        [
+            0,
+            1,
+            4,
+            2,
+            0
+        ],
+        [
+            1,
+            2,
+            2,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I've learned how to work in a lab and have made meaningful discoveries. ",
+            "\u00a0I gained a deeper understanding of how infant research works and I understood a little more what it takes to develop a research project. ",
+            "\u00a0Hands on experience doing research. "
+        ],
+        [
+            "\u00a0I love doing research, and it's great that you can get credit. ",
+            "\u00a0A strength of the course was it gave me hands on experience with research that really related to what I have been learning in my classes. A weakness was it could be a little boring at times. "
+        ],
+        [
+            "\u00a0Absolutely! It's been a fantastic experience. ",
+            "\u00a0I would totally recommend doing research to another student, especially if they want to get a BS, as you get hands on before your senior year. ",
+            "\u00a0I would recommend this! Research is so valuable in understanding and researchers are so open and available to help undergraduates in my experience. ",
+            "\u00a0There is no better experience than doing hands-on research. "
+        ]
+    ]
+}

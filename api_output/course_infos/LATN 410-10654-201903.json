@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50396/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Close reading of selections from Livy's Ab Urbe Condita, including Books V and XXI in Latin and additional books in English translation. The nature of representation; Augustan elements in Livy's work; themes and plots of Livian history; Livy and other Roman historians; comparison of ancient historiography and contemporary historical writing.", 
+    "title": "Livy's Rome", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "PH 407", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10654", 
+        "listings": [
+            {
+                "number": "410", 
+                "subject": "LATN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Christina Kraus"
+    ], 
+    "long_title": "Livy's Rome", 
+    "extra_info": "A"
+}

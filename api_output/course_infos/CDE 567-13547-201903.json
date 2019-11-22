@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49166/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course focuses on the contemporary burden of injuries and violence, with an emphasis on models and methods for studying and preventing injuries and violence. The first part of the course focuses on the history of injury and violence epidemiology and prevention, as well as the risk factors for, and distribution of, morbidity and mortality related to injuries and violence in the United States and globally. The remainder of the course focuses on specific types of injury and violence events, research and interventions to prevent and mitigate injury and violence, linkages between research and practice in the field of injury and violence prevention, as well as policy and legal issues in injury and violence prevention. This course meets primarily online via Zoom video conferencing software, with in-person meetings during weeks 1 and 13.", 
+    "title": "Injury and Violence as Public ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "LEPH WINSL", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13547", 
+        "listings": [
+            {
+                "number": "567", 
+                "subject": "CDE"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Linda DeGutis"
+    ], 
+    "long_title": "Injury and Violence as Public Health Issues", 
+    "extra_info": "A"
+}

@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "This seminar is designed for advanced Ph.D. candidates who are going on the job market. Students draft and revise three full rounds of the five standard genres of job market materials: job letter, CV, dissertation abstract, teaching portfolio, and diversity statement. Students also participate in mock interviewing skills, developing a job talk, and preparing applications for postdoctoral fellowships. Graded Satisfactory/Unsatisfactory.", 
+    "title": "American Studies Professionali...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12510", 
+        "listings": [
+            {
+                "number": "917", 
+                "subject": "AMST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Matthew Jacobson"
+    ], 
+    "long_title": "American Studies Professionalization Workshop", 
+    "extra_info": "A"
+}

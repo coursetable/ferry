@@ -1,0 +1,96 @@
+{
+    "crn_code": "22427",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            4,
+            7
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            11
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            9
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            13
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            7
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0In this course, I better learned how to solve ordinary and partial differential equations. I also learned a lot about mass and heat transfer in specific instances. ",
+            "\u00a0A rigorous introduction to certain engineering mathematics (matrices, tensors, vector proofs) which segues into application via solving heat and mass transport problems. You will learn (or attempt to learn) lots of math and its physical application with an emphasis on approximation techniques and dimension reduction. The course concludes with a brief review of fluid mechanics. ",
+            "\u00a0The concepts behind the governing equations for heat, mass, and momentum transfer. Various approximations/empirical laws that can be used to simplify these equations so that they are easier to solve. How to solve these governing equations (differential equations) for various systems in which the equations can be simplified even further, or cannot be simplified as much. Methods such as: fin approximation, pseudo steady state approximation, similarity transformation, and separation of variables. Various dimensionless groups to describe fluid flows and transport. ",
+            "\u00a0Amazing course, professor and TA. they really went above and beyond to make this very hard class doable. ",
+            "\u00a0This class taught the fundamentals of transport phenomena--mass, heat, and energy transfer. During the last couple of weeks, the class merged a lot of material that we had learned in fluid mechanics with what we were learning in transport. My math skills also improved with this class. ",
+            "\u00a0Heat and Mass Transfer, Partial Differential Equations and Ordinary Differential Equations, Tensors and Vector Calculus,  a bunch of really cool math concepts. ",
+            "\u00a0Developed math skills, practiced solving engineering problems (thinking about the governing equations, boundary conditions, etc.), and learned methods to solve transport phenomena problems. ",
+            "\u00a0This course brings together a lot of previous chemical engineering courses to build on them: thermodynamics, material balances, fluid mechanica, and a lot of DFQ. Expect to learn ALOT. ",
+            "\u00a0I solidified my understanding of many topics introduced in earlier courses. This is the best chemical engineering class I've ever taken. ",
+            "\u00a0An overview of the relevant methods of analysis for heat and mass transfer problems encountered in Chemical Engineering heavily rooted in Math. "
+        ],
+        [
+            "\u00a0This course is very difficult, but also very doable.  The weekly sections are very helpful to make completing the homework more feasible. The workload is reasonable and the professor is very nice and supportive. The class really hits the ground running in the beginning, but becomes more manageable as the semester goes on. I think that linear algebra should be a suggested pre-requisite for this class. I did not realize how much linear algebra would be in the course before I took it, and I wished that I was better prepared. ",
+            "\u00a0This is an incredibly difficult course. With that said, I think the course is structured in a way to facilitate student learning and that, while rigorous, you will learn a lot if you put in the work. The saving grace is a good TA; Sarwar was incredibly helpful in leading weekly sections in which we worked through the homework. Homework is often too difficult to really begin without this sort of additional help. The course is also well structured, and Amir provides really great lecture notes outlining all the examples and material he goes through. Often I found the lecture notes more helpful than lecture itself, since Amir often skips steps in class and can be difficult to follow. The course starts off mathematically dense and intimidating, but I think it does get better as the semester moves on. ",
+            "\u00a0The course material is very difficult, but Professor Haji-Akbari was an amazing lecturer and made the material much more understandable. His notes were very well organized and comprehensive, and he always made himself for office hours/extra help. The exams and grading were very fair. My only complaint would probably be that the homework sometimes involved math that was unnecessarily difficult. ",
+            "\u00a0Amazing course, professor and TA. they really went above and beyond to make this very hard class doable. ",
+            "\u00a0There's a lot of material in the class--which is to be expected in any transport class, but the professor went at a good pace. This class requires a fair amount of math, including a proficient understanding in solving differential equations. During the first weeks, Professor Haji-Akbari went over a quick review of some of the math that we would need and posted a precept that we could use to brush up. It was definitely very helpful. The professor also posted his lecture notes which were amazing---his notes were very extensive and contained lots of examples. I attended lectures and took good notes during class but his lecture notes really helped a TON! ",
+            "\u00a0The lecture notes that Amir puts up are definitely the best part of the class and serve as an amazing guide to study for homeworks and exams, as well as broadening your palette for hard math. The homeworks themselves were pretty challenging and maybe could have been split up into smaller sub-parts, as a lot of the time it was hard to figure out what to actually do to solve the problem or even how to start. The same applies to the final, which I think could have been split up into smaller subsections that would be used to make it more digestible. ",
+            "\u00a0I thought it was a great course overall. The lecture notes posted by the professor were indispensable. Without them the course would have been much worse. The professor and TA were very accessible for outside help. ",
+            "\u00a0Strength: --Rigorous, --intellectually stimulating, --great community building in class for ChemE majors. \r\nWeakness: --this class is a bit relentless. There is a lot of work and a lot of material. It is rewarding when you finally understand, but otherwise, it can feel like you are lost. ",
+            "\u00a0The biggest strength is professor Akbari's desire to so whatever he can to effectively teach the material in a way that is sensible at this level. He took care from the beginning to begin with mathematical precepts and an overview of the math that we hadn't covered yet like linear algebra that we would need for the course. Covering so much math so quickly made the course very overwhelming at first, and I do seriously think that if the course is going to be taught through a lens of linear algebra like this then linear algebra should really be a prerequisite for this course. I think a big flaw in most of the engineering courses I have taken is that all of my professors tend to assume that we have far more preexisting knowledge than we do and feel justified using graduate level textbooks and glossing over important concepts just \"because we are Yale students\" and should be somehow more capable. So many of my courses have used unnecessarily graduate level textbooks with that exact justification, which results in students having a lack of resources beyond the posted lecture notes which makes learning very difficult. With this I really think that the books of the Chemical Engineering curriculum should be chosen by the department not individual professors with an eye on making them relevant for an UNDERGRADUATE level. (The Thermo textbook and the textbook for this course are the two that need to be reevaluated most urgently as I found no help only stress in opening  both of those textbooks throughout these semesters). This semester started off as I mentioned with Professor Akbari assuming that we had a wealth of knowledge on this subject that we had never seen before, presumable because he is still getting used to the fact that his students are now undergraduates who have never seen this material before and he would say things like \"you have probably seen this derivation before in your undergrad.\" As the semester progressed however he really made a point to listen to our feedback as we expressed our concerns and even though I still think parts of this course were taught with a level of mathematical rigor that wasn't necessary, he seemed genuinely concerned with trying to present the material in a way we understood and made a point to further clarify some things as the semester went along. This genuine desire to be an effective teacher is what stuck out to me as the most positive thing about this course, as most other professors start off assuming we have background knowledge we don't and once they realize we are unfamiliar with the material, teach over our heads just to prove a point. With this I think professor Akbari improved a lot as the semester went on, and further adjustments for future years (more math background and less of an emphasis on excessively mathematically dense derivations and a more approachable textbook) would help make this course even better. Professor Akbari presented us with very detailed lecture notes prior to the lecture that he updated after the fact with any changes which I found EXTREMELY helpful, as given the density of the material, reading these lectures in advance of class made it possible to mostly follow what was going on rather than sitting there completely clueless. The PSETS as well started off way too difficult (we couldnt do them at all without our TA walking us through them) but they eased up a bit as the semester continued, I suggest making them more approachable from the beginning such that even if they are long and difficult they are doable without being walked through them With this I am confident that future adjustments to better tailor this class to undergraduates will make this course actually a very good and informative class. "
+        ],
+        [
+            "\u00a0I doubt you logged on to CourseTable, decided to rank classes by highest difficulty, and then decided to shop the first three or so. In other words, you're required to take this class if you're considering it. That said, given the reviews from last year, I think it has significantly improved from the first time it was taught. It will be a big time sink and an incredibly difficult class, but it will not necessarily ruin your Junior year in the same way that previous reviews may have suggested. ",
+            "\u00a0This is a chemical engineering course, and with all chemE courses only take them if you are pursuing a degree in chemE. ",
+            "\u00a0This course is probably only relevant if you are studying chemical engineering. However, it is very well taught, and there is a lot of math involved. I would definitely recommend taking if you enjoy math and are interested in learning more about how heat, mass, and momentum are transferred between components of a system. ",
+            "\u00a0Amazing course, professor and TA. they really went above and beyond to make this very hard class doable. ",
+            "\u00a0The course is really difficult but if you attend office hours, go to section, read Amir's notes, and try your best then you will probably be just fine. I think Prof. is getting to understand how hard the course is for undergraduates and has been making overtures to make the work less intense but still keeping the same level of rigor. He is also really kind and willing to meet outside of class to help, and his lecture notes are a real gem. However, because he's so brilliant and intelligent at some points it could be hard for him to see where/when we're struggling unless you bring it up yourself. ",
+            "\u00a0If you are doing chemical engineering, I would definitely recommend. It's a quintessential engineering course. ",
+            "\u00a0Yes. Transport phenomena is a difficult topic to grasp in the engineering discipline, but Amir does a great job at making the lecture notes clear and being available for office hours to answer any questions. My advice: print out and read the lecture notes the week you cover the material. Go to office hours to clarify any questions that same week, and dont let things build up until before the exam ",
+            "\u00a0Within the major, of course! Otherwise, absolutely not. It would be hard to understand this class without all the other ChemE requirements. ",
+            "\u00a0It's required for ChemE majors and only ChemE majors take it so not sure. I would recommend that if you have the option to take linear algebra beforehand you do because that math background would help a lot. If at all possible (though if you're on the normal track for the major I don't think it is) do whatever you can to not take this class at the same time as pchem 2. Both of these classes are UNBELIEVABLY mathematically dense and time consuming and it really is absurd that Junior ChemE majors are supposed to take these simultaneously - especially if you are in one of those unlucky years where Pchem 2 is taught by Patrick Vaccaro. Many of us I feel could have handled the workload and rigor of one of these courses alone but each was set up as if it was your only class and having to juggle the expectations of both courses AND three other engineering courses in the same semester was really unhealthy at times. I learned a lot in this class but I also lost count of the all nighters we had to pull to stay on top of everything and I would have gotten more out of it if I could focus on it separately from pchem. "
+        ]
+    ]
+}

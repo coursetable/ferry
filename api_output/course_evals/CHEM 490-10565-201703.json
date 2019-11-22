@@ -1,0 +1,88 @@
+{
+    "crn_code": "10565",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            6,
+            4
+        ],
+        [
+            0,
+            1,
+            1,
+            6,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            5
+        ],
+        [
+            0,
+            1,
+            1,
+            4,
+            5
+        ],
+        [
+            0,
+            2,
+            5,
+            4,
+            1
+        ],
+        [
+            2,
+            1,
+            5,
+            2,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Knowledge of ethics in science. ",
+            "\u00a0Independent research skills, how to function in a lab environment, principles of scientific ethics ",
+            "\u00a0I developed synthetic chemistry skills that I could not have acquired in any course. The practical aspects of setting up reactions have developed my problem solving skills and made me a more proficient chemist ",
+            "\u00a0A better understanding of ethics as it relates to scientific research and the time to think about how I would handle ethical dilemmas if faced with them. ",
+            "\u00a0Research in the lab, and a course on ethics that was honestly pretty interesting ",
+            "\u00a0I learned how to formally work in a research lab. ",
+            "\u00a0I learned valuable skills in ethics and research ethics. ",
+            "\u00a0History of ethics in scientific research, the need for scientists to be politically aware, and public speaking skills ",
+            "\u00a0This semester of research allowed me a lot of time to pursue independent research that would not have been possible with less time. Working with members of the Jorgensen lab, I got to learn a lot about force fields, MD simulations, and biomolecular simulation in general. \r\n\r\nThe lectures by Dr. Parr are also quite good at alerting you to many of the problems encountered when performing research in the scientific community. "
+        ],
+        [
+            "\u00a0The strengths of this course were:\r\nshowing students examples of ethical dilemmas in chemistry\r\ninspiring them to create an environment where these problems are less common.\r\n\r\nThe course could be improved by Professor Parr letting us out of class on time instead of 10-15 minutes late every time, making me late for subsequent courses. Also, it would be more interesting if the focus was more on others' research, like the last few classes. ",
+            "\u00a0There could be more communication between research advisors and the teaching staff, it felt very disconnected and sometime's it's unclear what the expectations are since there's no oversight.  It's still a great way to get involved in research though. ",
+            "\u00a0It is really up to the individual to decide how much they choose to engage and consequently, how much they get out of it. ",
+            "\u00a0Presents overarching ethical issues and then case studies. Forces us to think about the perpetrators as humans and to think about their motivations. "
+        ],
+        [
+            "\u00a0This is independent research for the chemistry degree. You either have to do it or you don't. ",
+            "\u00a0Very interesting series of lectures on ethics to supplement the research requirement. Nothing difficult about it; just go every week and listen to an often amusing lecture. ",
+            "\u00a0It's research for credit so it's exactly what you think it is, the experience is entirely dependent on who you choose as your PI.  Parr's ethics lectures are actually pretty interesting and entertaining, and it's nice to be able to hear presentations on other people's research. ",
+            "\u00a0Yes, well you'll have to take depending on your major ",
+            "\u00a0If you're a chemistry major, this course is required; nevertheless, the course was actually really valuable in presenting ethical dilemmas that anyone with a career in science may face. Individual case studies force us to think about those that do unethical things not as \"bad\" people but rather as human beings that made poor choices. ",
+            "\u00a0Definitely. ",
+            "\u00a0Yes, if you have the chance to pursue research for credit with the great members of the Jorgensen lab, you should definitely take it. All of the lab members are generally very helpful and are willing to have you help out with their interesting projects.\r\n\r\nAlso, Parr's lectures on ethics are pretty good, with lots of interesting factoids. You learn a lot about research, but also the names of New Haven streets and their connection to British history. "
+        ]
+    ]
+}

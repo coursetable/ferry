@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49887/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A research seminar intended to move students toward the successful completion of their senior projects, combining discussions of methodological and theoretical issues with discussions of students' fields of research.", 
+    "title": "The Senior Colloquium: Theoret...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "BRW35 221", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12123", 
+        "listings": [
+            {
+                "number": "491", 
+                "subject": "ER&M"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Quan Tran"
+    ], 
+    "long_title": "The Senior Colloquium: Theoretical and Methodological Issues", 
+    "extra_info": "A"
+}

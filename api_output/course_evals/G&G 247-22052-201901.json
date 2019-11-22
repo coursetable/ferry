@@ -1,0 +1,99 @@
+{
+    "crn_code": "22052",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            3,
+            1,
+            5,
+            3,
+            0
+        ],
+        [
+            3,
+            6,
+            2,
+            0,
+            1
+        ],
+        [
+            2,
+            5,
+            2,
+            2,
+            0
+        ],
+        [
+            1,
+            2,
+            3,
+            4,
+            1
+        ],
+        [
+            1,
+            2,
+            1,
+            6,
+            2
+        ],
+        [
+            0,
+            1,
+            3,
+            8,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0In this class, I learned about separation of variables, reducing nonhomogenous PDEs to homogenous ones, Green's Functions, and Fourier Transforms. ",
+            "\u00a0Homogeneous heat equation with separation of variables, homogeneous Laplace equation with separation of variables, homogeneous wave equation with separation of variables, homogeneous heat equation with separation of variables and forcing terms, homogeneous wave equation with separation of variables and forcing terms, homogeneous heat equation with separation of variables in 2D, homogeneous heat equation with separation of variables in 3D, homogeneous wave equation with separation of variables in 2D, homogeneous wave equation with separation of variables in 3D, ..., etc. In seriousness, almost 70% of this class was spent on solving homogeneous PDEs on various geometries using the method of separation of variables. The really interesting (and challenging) stuff started at the end: nonhomogeneous problems, Green's functions, Fourier transforms. ",
+            "\u00a0We used Haberman's \"Applied Partial Differential Equations\" and covered the first 10 chapters. The course started with classification of PDEs and then moved into solution techniques: separation of variables, Green's functions, and eigenfunction expansion were all covered. We spent entirely too much time on separation of variables and only learned the rest of PDEs in around 2 weeks. ",
+            "\u00a0Method of separation of variables, inhomogeneous PDEs & boundary value problems, Green's functions, Fourier Series and transforms. Basically, we learned the techniques to solve the basic kinds of second order linear PDEs that come up in physics (the heat eqn, wave eqn, and Laplace's eqn). ",
+            "\u00a0This is a first course in the theory of partial differential equations, principally focusing on second-order equations. The course studies the wave, diffusion, and Poisson's equations, and their inhomogeneous counterparts. It discusses the physical origins and applications of each of these models, though the object of the course is principally to solve these equations in an abstract setting. The course covers Fourier transforms, Green's functions, and solutions through series. In addition to this, there is a unit on Sturm-Liouville theory and eigenfunction expansions.  By the end of the course, students have a good understanding for the foundations of partial differential equations, and effective solution methods. ",
+            "\u00a0I learned about theory and applications of certain types of partial differential equations. ",
+            "\u00a0Lots of separation by variables. Worked with manipulating heat and wave equations in various coordinates and 1-3D. ",
+            "\u00a0Besides a thorough understanding of separation of variables, I left this class with minimal knowledge of other methods of solving PDEs. ",
+            "\u00a0Overview of partial differential equations largely through their applications in physical situations. ",
+            "\u00a0I learned generally about different types of partial differential equations and some methods for solving them. I also got better and teaching myself from the textbook. "
+        ],
+        [
+            "\u00a0Though there were only 5 psets in this class, each one was very long. I think for one of the psets, my peer's writeup was 40 (!) pages. Not that the pset was hard -- it was just long. I think this was a weak point of the class. But having only 5 psets was very nice. Furthermore, HW was 50% of the grade, so it was nice being able to go into the midterm knowing it counted for 20% rather than 30% or more like many other midterms! So there were definite positives to the class, but by far its biggest weakness was the pace. It felt like we only covered half the material on the syllabus. We didn't stick to the schedule. So although I got more confident working with PDEs, I think we missed out on going into depth with Green's functions, Fourier transforms, and the method of characteristics. ",
+            "\u00a0This class has a lot of potential - PDEs are fascinating, wide open for research, and relevant in almost every quantitative field. With that being said, I think that this course fell short in many ways. Problem sets were computationally intensive to the point of frustration and incredibly long (for example, one problem set was over 20 pages, front and back). The exams, much like the problem sets, were essentially tests of who could manipulate variables the fastest and best memorize coefficient formulas. The grading distribution was great (half homework, half exams), which incentivized us to work hard on the problem sets, and the curve was extremely generous (around 50% for an A/A- on the midterm, which would not have been necessary with a shorter exam).  The workload was also very sporadic - the first half of the course was very slow and simple (solving PDEs by separation of variables in 1D), while the second half was very fast and challenging. Problem sets were distributed irregularly, and many classes were taught by guest lecturers who weren't always in sync with what we were actually learning. One other qualm I had was the lack of numerical methods - this course was advertised as a course in applied partial differential equations, but we never saw a numerical method (even something simple like Euler's Method for ODEs). The professor was really nice and meant well, but things just didn't come together. ",
+            "\u00a0This class had a lot of weaknesses, which is sad because the subject matter is very fun, deep, and rich. The pacing was horrible -- we spent the first 8 weeks of the course covering separation of variables. The time wasted on this was massive: it caused us to only cover Green's functions in two weeks. We didn't even cover the method of characteristics. The homeworks were arduous and unrewarding; they didn't encourage any deeper understanding of the material and surmounted to just being a tedious hurdle. \r\n\r\nThe strength of this class is the fantastic textbook used: Haberman's book was a godsend. ",
+            "\u00a0This course was pretty disorganized. The instructor missed a large number of lectures, and many topics got repeat lectures while other topics were somewhat rushed. The textbook (Haberman) was good thankfully, but unfortunately some of the psets assigned waaay too many textbook problems and were unnecessarily tedious. While the course at least stayed on topic for the most part, overall I would have been better off just reading the textbook in my freetime. ",
+            "\u00a0The course was strong in its dual approach, viewing equations both from the physical world, as well as in the more abstract, algebraic and analytical senses. The standard assessment structure of problem sets and exams worked well in this course. ",
+            "\u00a0The course content can be very interesting and was presented in a reasonably organized way. However, there were no TAs which was a big issue for me so help outside class was limited to the professor's office hours which I had a lot of conflicts with. Also, the problem sets were consistently way too long so it was hard to finish them. Also, I could have used some more explanation of theoretical underpinnings than was given, as well as more thoroughly worked examples in and out of class. ",
+            "\u00a0The problem set questions were nice; the timeline couldve been a little longer to reflect when the material was taught in lecture. Also, this is fairly unique to this semester and out of control to an extent, but a steady instructor would be nice to get used to a teaching style. ",
+            "\u00a0This course is difficult because it pulls students from a variety of math backgrounds. Applied math and math majors found the course easier than physics or engineering majors because of their extensive background and preparation for the course. ",
+            "\u00a0This course really lacked any definite sense of trajectory or linearity. We were never provided with a framework for why we were learning what we were learning, how it connected to what came before it or how it led into what came after it. I was left to puzzle out the trajectory of the course mostly through the textbook. ",
+            "\u00a0This course was often difficult to follow along with. It often felt unclear why we were doing what we were doing in class, and the homework assigned often was on topics covered in class so we were expected to teach ourselves from the textbook. Because we had several different professors over the course of the semester, it was difficult to get used to one teaching style and they often didn't really know what had been covered so far in the lecture. The course felt disjointed and hard to follow, and this made it difficult to absorb and understand the material. "
+        ],
+        [
+            "\u00a0Yeah, I felt it was good practice. It was Prof. Serkh's first time teaching and I'm sure the course is bound to get better. I think if he focused on following the syllabus, and keeps the grade breakup the same (50% HW, 20% midterm, 30% final), it will be a nice low-stress math class. ",
+            "\u00a0I wouldn't recommend this course in its current form. As I mentioned, the material has the potential to be fascinating (especially near the end - Fourier Transforms are really, really awesome and have incredible applications). However, I think the focus of the course was lost by the amount of time that was spent on analytic solutions (by separation of variables) of very simple PDEs. If you're interested in a math class that looks nice on a transcript, lacks consistency, and doesn't require a lot of mental acrobatics (but a lot of tedious calculations), this may be the course for you. Otherwise, it may be worth taking the new PDEs course that the math department is offering (taught by Prof. Schlag, more theoretical) or finding a true, applied, numerical PDEs class. ",
+            "\u00a0Partial differential equations is a fantastic and fun topic to learn. If you're a STEM person, understanding this material is invaluable. However, because this is the Yale math department, be prepared to teach yourself the material. Haberman's \"Applied Partial Differential Equations\" will be invaluable to any student learning the material. Yale cannot hire a competent professor (especially in analysis-related courses) so you'll have to do most of your learning from the book. The psets are long and computational; they aren't hard, they just take forever -- so make sure you budget enough time. The midterms for our course were designed so that they couldn't be finished in the allotted time (of course some precocious students were able to, this it Yale after all) so the curve on the exams was very generous. \r\n\r\nSo basically, if you're taking this as a non-math student: good luck, buckle down and you'll get through it. If you're a math major interested in a more analysis-heavy interpretation of PDEs this is not your course. ",
+            "\u00a0Take this class if you're willing to do tedious homework involving solving PDEs. Keep in mind who the instructor is when you take it, because it can very wildly from year to year. The course material is certainly interesting if you like analysis or physics. ",
+            "\u00a0Oh man this class hurt me in some ways, but the curve is ridiculous so I guess that means it hurts everyone. If you're taking this course, it's prob because you have to. If you don't have to, go find another course that will make you happier. ",
+            "\u00a0I would recommend this course to any mathematician or scientist at Yale. Partial differential equations form an integral component of both pure and applied mathematics. Their prevalence in engineering and physical analysis make a thorough understanding of such equations fundamental. Having both the physical and mathematical perspectives is useful, to gain insight into solutions and solution methods. ",
+            "\u00a0This is a relatively good PDEs course and is definitely better than many of the subpar math classes at Yale. However I wouldn't recommend it unless you're sure that you need it for your major or that you will be interested and very self-motivated in learning the content. ",
+            "\u00a0Depending on the instructor, yes or no. The first lecture will often outline how the rest of the course will go. ",
+            "\u00a0If this course is necessary for your major, you learn key methods for solving PDE's and its manageable. If you don't require PDE's for your academic pursuits, taking this class as an elective would be painfully boring and would be a waste of a semester. ",
+            "\u00a0Absolutely not unless you have to, as long as Kirill is teaching. This is a terribly taught, terribly organized class. ",
+            "\u00a0I would not recommend this course to another student unless they must take it or they love math and are confident they can teach the material to themself. "
+        ]
+    ]
+}

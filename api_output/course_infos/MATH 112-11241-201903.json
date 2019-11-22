@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50370/assignments/syllabus", 
+    "requirements": "No prior acquaintance with calculus or computing assumed. May not be taken after MATH 110 or 111.", 
+    "description": "Limits and their properties. Definitions and some techniques of differentiation and the evaluation of definite integrals, with applications. Use of the software package Mathematica to illustrate concepts.\nNo prior acquaintance with calculus or computing assumed. May not be taken after MATH 110 or 111.", 
+    "title": "Calculus of Functions of One V...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "LOM 205", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 3, 
+        "oci_id": "11241", 
+        "listings": [
+            {
+                "number": "112", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Elad Zelingher"
+    ], 
+    "long_title": "Calculus of Functions of One Variable I", 
+    "extra_info": "A"
+}

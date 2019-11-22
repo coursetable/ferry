@@ -1,0 +1,74 @@
+{
+    "crn_code": "15965",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Techniques for proving statements about random graphs. I also learned that I need knowledge of (deterministic) graphs in order to study random graphs. ",
+            "\u00a0Probability, manipulating inequalities and starting to develop an instinct for how probabilistic graph properties behave as graphs get large. "
+        ],
+        [
+            "\u00a0Strength: The instructor provided sufficient motivation for the subject. His explanation was clear and he tried to make sure that students understood his explanation. The instructor also offered office hours to help us doing the homework.\r\nWeakness: Sometimes the instructor rushed the calculation. The class started at 8am. Nevertheless, I was looking forward to this class every week. ",
+            "\u00a0The course was very thorough and covered a vast range of interesting material. Scheduling it for two hours a week, once a week in the morning made it a little difficult to absorb everything, but the teaching and material were great. "
+        ],
+        [
+            "\u00a0I would strongly recommend this course for those who are interested in graphs, random objects, or probabilistic methods. ",
+            "\u00a0I think this course is very important to every math major, whether you haven't done much probability and want to develop intuitions for it, or want to take your learning further in a beautiful field. "
+        ]
+    ]
+}

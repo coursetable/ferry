@@ -1,0 +1,88 @@
+{
+    "crn_code": "11725",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            5
+        ],
+        [
+            0,
+            1,
+            1,
+            4,
+            3
+        ],
+        [
+            0,
+            2,
+            5,
+            2,
+            0
+        ],
+        [
+            0,
+            8,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0We worked on a project for Dimitrova's lab with long noncoding RNA p21 and CRISPR/Cas13b, which cuts RNA instead of DNA. Cas13b is a relatively new discovery, so it was pretty cool to get to work with it. Professor Nelson was as great as always -- such a kind, patient teacher who's always willing to answer questions and crack jokes to keep class light-hearted. He's the best! This second half of the semester was easier than the first in that the final project isn't a research paper: instead, we read articles and gave 10-minute formal presentations on the articles' contents to the class. Professor Nelson calls it a symposium. ",
+            "\u00a0I learned about new CRISPR technology and how to apply it. ",
+            "\u00a0I learned how to use CRISPR Cas13 to perform precise editing of target long noncoding RNAs. ",
+            "\u00a0A wide array of knowledge on how to purify RNA, DNA, and perform PCR/RT-PCR/qPCR, CRISPR target sequencing ",
+            "\u00a0I learned many new novel laboratory skills and biological concepts in a very academic and entertaining setting. These skills were invaluable as they were applicable to the biolab I conduct undergraduate research in as well. ",
+            "\u00a0I learned many practical lab skills such as PCR, minipreps, tissue culture work and others that will be helpful if I decide to pursue a career in research. "
+        ],
+        [
+            "\u00a0No weaknesses! An overall great class with a great professor, manageable workload, and fun environment to learn basic lab techniques and methods. ",
+            "\u00a0A huge strength of this course was Professor Nelsons patience and knowledge. ",
+            "\u00a0This class is well structured in that it is run like a normal lab, so certain days are longer than others. We are done when the work for that day is done. This helps prepare us for research in the real world. ",
+            "\u00a0The every day of the lab was good. I think it was hard to follow the logic of why we were doing each experiment or why each reagent was necessary. Prof. Nelson did a good job of explaining that to us, but we students would often be tripped up among each other about the necessity of the chemicals/protocols we were doing.. \r\n\r\nSometimes the class ran til 2:30pm, on an occasion it ran to 5:30pm. So, budget an appropriate amount of time in your schedule for it. ",
+            "\u00a0The strength of this class is how engaging and hands-on it is for the students, and therefore requires the students to be proactive and take initiative in their own learning. ",
+            "\u00a0Strength: great teaching staff and professor\r\nWeakness: not enough machines and materials at times in lab "
+        ],
+        [
+            "\u00a0100% take this and MCDB 342L (the first half of the semester that precedes this course) for your MCDB 2-labs requirement if you're a BS. These are by far the most fun, light-hearted labs you could take, and the teaching is great. Professor Nelson is a wonderful professor who explains things thoroughly, is excited to be there, and is an overall nice guy. You learn basic lab techniques and methods dealing with nucleic acids (e.g. RNA isolation, cDNA production, PCR, a little bit of cell culture, creating plasmids with specific inserts (restriction enzyme-based), transformation of bacteria,qPCR). ",
+            "\u00a0I would highly recommend this course!! I learned a lot without doing unnecessary work. Take it. Professor Nelson is the nicest. ",
+            "\u00a0I would recommend this class to an MCDB major trying to fulfill their lab requirement. It is not too much work and you learn a lot. ",
+            "\u00a0For sure! This was my first lab as an MCDB major (and I'm a senior) but if someone took this during junior year, they'd be really set to work in a  research lab. The workload also is pretty good, the class is just a solid 4-6 hour commitment each week. The HW problems took roughly an hour a week as well, each other week. Can't ask for too much more than that. \r\n\r\nThe final project is a little challenging though. We had to give a 10 min presentation on a CRISPR related paper. It doesn't sound that bad, but depending on your paper and speaking skills, can be work than you'd expect. I preferred writing the 10 page research paper based on our in-class work from the first half of the semester, personally. ",
+            "\u00a0Yes, this class was amazing. Dr. Nelson is a very patient and caring teacher and made the whole course extremely enjoyable. ",
+            "\u00a0Yes, it was an enjoyable and fun class. A great way to complete the MCDB lab requirement for the major. Nelson is also such a kind professor. ",
+            "\u00a0This is a great lab to take, whether or not youre an MCDB major. The fact that its two days a week may seem daunting, but the workload is very manageable. Prof. Nelson is a great teacher, and is always very understanding. I also loved that we worked on research for actual labs in the MCDB department, which made the lab feel a lot more like doing actual research than most other lab courses. Make sure to email early to get on the list for the class, but even if you dont, many people got off the waitlist by just showing up on the first day. Would definitely recommend this lab to anyone who needs to fulfill a lab requirement and is interested in learning a lot of techniques in one semester. ",
+            "\u00a0I would highly recommend the course as an effective way to tackle premed/MCDB lab requirements in a single semester with a manageable schedule and workload and very helpful hands on practice on necessary techniques while participating in actual current research in biology. "
+        ]
+    ]
+}

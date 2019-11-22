@@ -1,0 +1,76 @@
+{
+    "crn_code": "20324",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            2
+        ],
+        [
+            0,
+            3,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained a deep understanding of both archaeology and the study of ancient civilizations. Honestly, one of the most interesting and thought provoking classes I have taken in my time at Yale. ",
+            "\u00a0As someone who knew next to nothing about world religions and how they are studied through archaeology, I learned a lot, especially about the indigenous religions of South America. I also learned about how archaeologists are able to glean insight from a site or object. ",
+            "\u00a0I developed a much wider ranging and more nuanced understanding of the importance of considering religious thought and behavior in interpreting past behavior. This class was highly valuable to me. "
+        ],
+        [
+            "\u00a0The main strength of the class is Professor Burger's engagement with the material and great knowledge about the topic. He is able to discuss anything we study in the class at length, and is clearly an expert in his field. He has a wealth of fascinating and humorous anecdotes about his fieldwork that he is happy to share with the class. The readings he picked for us were all interesting and relevant. The assignments were a pleasure to complete, as they involved going to religious sites and putting ourselves in the shoes of archaeologists. The main weakness is we received no feedback on our papers, not even grades. "
+        ],
+        [
+            "\u00a0Yes, I took the class as an undergraduate in a dual listed class. It was extremely interesting to take the class with grad students who have a deep and profound understanding of the course material. Professor Burger was an amazing discussion leader. Overall a really amazing class. ",
+            "\u00a0I would recommend this course to, quite literally, anyone at Yale. Very interesting subject matter, fantastic professor, not an unreasonable amount of work. ",
+            "\u00a0Yes certainly!! ",
+            "\u00a0Absolutely. "
+        ]
+    ]
+}

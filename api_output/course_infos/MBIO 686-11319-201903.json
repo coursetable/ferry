@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50462/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The course provides an introduction to basic principles in bacterial pathogenesis. Topics focus on the bacterial determinants mediating infection and pathogenesis, as well as strategies to prevent and treat diseases. Each week a lecture is given on the topic, followed by student presentations of seminal papers in the field. All participants are required to present a paper.", 
+    "title": "The Biology of Bacterial Patho...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "BCMM 101", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11319", 
+        "listings": [
+            {
+                "number": "686", 
+                "subject": "MBIO"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eduardo Groisman"
+    ], 
+    "long_title": "The Biology of Bacterial Pathogens I", 
+    "extra_info": "A"
+}

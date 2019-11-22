@@ -1,0 +1,79 @@
+{
+    "crn_code": "22126",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            5,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Math knowledge, running stata for my on research ",
+            "\u00a0Stats. ",
+            "\u00a0The course provided a good survey of statistical models, their assumptions, as well as their shortcomings. ",
+            "\u00a0Quantitative data analysis skills "
+        ],
+        [
+            "\u00a0strength: weekly assignment and finals are helpful in terms of pushing students to understand the materials.\r\nI hope there's more explanation of math and question-posing to push students in class rather than mostly lecturing. ",
+            "\u00a0Good overview of stats methods. ",
+            "\u00a0The course was clearly structured "
+        ],
+        [
+            "\u00a0Yes, because the knowledge is very useful ",
+            "\u00a0If they want a survey of different kinds of methods sociologists use. ",
+            "\u00a0Yes. I think the course was a value survey of quantitative methods relevant to social science. ",
+            "\u00a0Yes, I would recommend this course to other students. "
+        ]
+    ]
+}

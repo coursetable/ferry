@@ -1,0 +1,98 @@
+{
+    "crn_code": "11947",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            3,
+            11,
+            3
+        ],
+        [
+            0,
+            2,
+            4,
+            5,
+            8
+        ],
+        [
+            0,
+            2,
+            1,
+            6,
+            10
+        ],
+        [
+            0,
+            1,
+            3,
+            11,
+            4
+        ],
+        [
+            0,
+            4,
+            8,
+            4,
+            1
+        ],
+        [
+            0,
+            4,
+            11,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0None. ",
+            "\u00a0I learned a lot of the more theoretical formalism of quantum mechanics that I was not fortunate enough to learn in my undergraduate out of Griffiths textbook. ",
+            "\u00a0I vaguely learned how to approach some quantum mechanics problems. The professor's lectures were often vague and a little difficult to follow. ",
+            "\u00a0Understanding of basic concepts of quantum mechanics and methods on the time-evolution, spin-related and symmetry issues. ",
+            "\u00a0Though I have taken a few QM/QFT courses while undergrad, this course has refreshed me on a lot of the concepts and topics about quantum mechanics; There are quite a few topics in which Prof. Appelquist used a totally different approach and gave another way of understanding things. ",
+            "\u00a0The course solidified several concepts from undergrad qm. It also covered some new topics. ",
+            "\u00a0I learned a lot. ",
+            "\u00a0I learned a formal understanding of Quantum Mechanics that start from the very basics to follow later topics such as the Feynman Path Integral and angular momenta. ",
+            "\u00a0This course was appropriate considering my background! Very useful as in prerequisite to QFT :) ",
+            "\u00a0I learned QM from a different approach. ",
+            "\u00a0Basic quantum mechanics. I found the skills I learned, esp. Dirac notation, very useful. "
+        ],
+        [
+            "\u00a0Weakness: another typical undergraduate course. Unnecessary in a graduate program. ",
+            "\u00a0Perhaps connect the material to experiments more often. I know that it is a theory course, but not all of us are theoretical CM/AMO physicists. I'm a cosmologist and am already annoyed at having to take two semesters of quantum mechanics, so I would really enjoy learning more of how QM is studied experimentally rather than talking about nothing other than Hilbert space. ",
+            "\u00a0This course seems to lack coherent structure and goals. The lectures and homework sometimes went together but frequently did not have clear connections to each other, and neither the lectures nor the homework had clear connections to the material tested on the exams. Clearer connections between what is important in the lectures and what is important on exams and homework would definitely improve this course. ",
+            "\u00a0I would appreciate a more historical/experimental focus.  If the material could be presented along with the historical experiments that inform our understanding of quantum, I think the overall understanding would improve (we would understand \"why\" we have to represent things in such an alien and abstract way). ",
+            "\u00a0The content of this course is very good and every topic was arranged in a logic way. ",
+            "\u00a0The course is very clear, and really well organized. You can clearly follow the instructor as long as you pay enough attention. The only improvement I can think of is that more material should be covered; The amount and level of the course kind of falls below (my personal) impression of graduate level QM. Especially, the first chapter can be speeded up a little, to allow more time for later topics. ",
+            "\u00a0The lectures are very dry and hard to follow. ",
+            "\u00a0The material flowed very coherently and the problem sets, while not too challenging, required the students to understand the concepts. ",
+            "\u00a0Too little homework. The lectures were great ",
+            "\u00a0The class is moving a little bit slow "
+        ],
+        [
+            "\u00a0If you're interested in graduate school in physics, then this is a course worth taking in order to prepare you for the level that they teach QM. ",
+            "\u00a0Yes, I can review the concepts of quantum mechanics and get deeper understandings of it. And now I can arrange all the topic in a more logic way. ",
+            "\u00a0I would recommend this course to grad students who want to have a recap on quantum mechanics; However, I would recommend someone who already has a solid foundation on it to spend a few days and pass out. ",
+            "\u00a0Yes, I would. ",
+            "\u00a0The course gives a formal introduction to quantum mechanics with the Dirac notation.  Later representations are explored based on this formalism.  Some topics that are not covered at the undergraduate level are investigated such as the Feynman Path Integral and hydrogen atom symmetries.  I would recommend this course to any student who would like to receive a formal introduction to quantum mechanics. ",
+            "\u00a0Yes, it's well organized and thorough ",
+            "\u00a0Yes ",
+            "\u00a0This course has clear logic flow to introduce quantum mechanics. ",
+            "\u00a0Yes. I found what I learned in this course to be very useful! "
+        ]
+    ]
+}

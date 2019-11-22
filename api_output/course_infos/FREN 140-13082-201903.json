@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-13", 
+        "group": 2, 
+        "day_of_week": "Friday", 
+        "time": 14
+    }, 
+    "requirements": "Conducted entirely in French. After FREN 130 or a satisfactory placement test score.", 
+    "description": "The second half of a two-term sequence designed to develop students' proficiency in the four language skill areas. Introduction of more complex grammatical structures. Films and other authentic media accompany literary readings from throughout the francophone world, culminating with the reading of a longer novel and in-class presentation of student research projects. Admits to FREN 150.\nConducted entirely in French. After FREN 130 or a satisfactory placement test score.\n\n1.5 Yale College course credits", 
+    "title": "Intermediate and Advanced Fren...", 
+    "skills": [
+        "L4"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "AKW 100", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 5, 
+        "oci_id": "13082", 
+        "listings": [
+            {
+                "number": "140", 
+                "subject": "FREN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Soumia Koundi"
+    ], 
+    "long_title": "Intermediate and Advanced French II", 
+    "extra_info": "A"
+}

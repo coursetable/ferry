@@ -1,0 +1,117 @@
+{
+    "crn_code": "12301",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            12,
+            9,
+            1
+        ],
+        [
+            1,
+            7,
+            10,
+            6,
+            1
+        ],
+        [
+            1,
+            2,
+            7,
+            11,
+            4
+        ],
+        [
+            3,
+            3,
+            5,
+            11,
+            3
+        ],
+        [
+            1,
+            1,
+            15,
+            6,
+            1
+        ],
+        [
+            0,
+            3,
+            15,
+            6,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0-Knowledge of series tests\r\n-Integration Strategies\r\n-Familiarity with Parametric Equations and Polar Coordinates ",
+            "\u00a0I learned how to integrate, series and sequences, calculating volumes, polar equations, and parametric equations. ",
+            "\u00a0I learned how to learn the material beforehand and practice it in class. I also learned various functions of calculus. ",
+            "\u00a0New math techniques ",
+            "\u00a0I learned how to connect lots of calculus concepts into one problem. ",
+            "\u00a0I learned the skills taught in the second year of calculus. I also learned how to take simple ideas and apply them to more complicated projects. ",
+            "\u00a0Learning how to integrate, test different series ",
+            "\u00a0I relearned integral calculus, which I had taken in high school but wished to re-take in order to firmly establish my own mathematical underpinnings before pursuing a STEM degree. ",
+            "\u00a0I learned more calculus ",
+            "\u00a0I developed my calculus skills ",
+            "\u00a0Problem solving ",
+            "\u00a0I learned about calculus. Also, this course was new for me in the teaching style - as I was learning on my own a lot more. ",
+            "\u00a0I learned how to use integrsl calculus effectively and about the uses of csalculus. i also develeoped more study habits ",
+            "\u00a0This course expanded my knowledge of integral calculus and advanced differentiation. ",
+            "\u00a0how to learn material on my own ",
+            "\u00a0I developed skills related to integration. "
+        ],
+        [
+            "\u00a0-Difficult topics were too close to the end (polar coordinates, for example) ",
+            "\u00a0This course teaches topics that are interesting to learn.\r\nI don't think the flipped classroom idea is good since I like it better the the professor teaches the topic. ",
+            "\u00a0Homework gives great feedback, review sessions are very useful, peer tutors make the class survivable. ",
+            "\u00a0I found the course overall to be interesting, but didnt find the groupwork helpful. ",
+            "\u00a0I thought the structure of the class was great. One place it could be improved is if the professors engaged more with the problem sets, offering to go over certain problems or problems like what is seen on the problem sets. ",
+            "\u00a0I didnt like the flipped classroom ",
+            "\u00a0It was very well organized. ",
+            "\u00a0I felt that the course was really fast paced. I felt that my two lecture a week approach was not the best for me. I maybe should have opted for the 3 classes a week style ",
+            "\u00a0Exams were a lot more difficult than homework assignments ",
+            "\u00a0The strength and weakness of this course was its format: minimal lecturing supplemented by a majority of time spent working in small groups on problems pertinent to the day's material.  While I was apprehensive about this format at first, I believe it aided my own engagement with the material and facilitating more ingrained learning.  The downside of such a format is that we often did not have time to finish or go over the answers to at least some of the problems on a given day, meaning we received little feedback on all the iterations of a given concept with which we may be confronted on an assessment. ",
+            "\u00a0I enjoyed the way my teacher structure the lectures with packets ",
+            "\u00a0I think that my teacher was good, but I thought that the course could have been more engaging, perhaps with more practice problems. ",
+            "\u00a0Not enough explanation ",
+            "\u00a0I like working with other students. However, sometimes, I feel it would be helpful to have the professor teach more. ",
+            "\u00a0the class could be made more interesting, with more interesting examples ",
+            "\u00a0I feel that the quantity of material covered in the course was just right. I also think that the preclass explorations were helpful. However, the problem sets were usually more difficult than what we learned in class. I also wish that there was less group work and more lecture. ",
+            "\u00a0I like the packets handed out in class. But, if I hadnt taken calc before I would have been extremely lost ",
+            "\u00a0The strength of the course is that it focuses just on integration so most of the topics just build on previous knowledge, which is how I learn best. A weakness is that some more difficult topics that were not as related to everything else we learned, like solids of revolution, were rushed and I felt that spending more time on them would have been helpful. ",
+            "\u00a0The use of printed lecture notes by the professor was very helpful and made sure no important information was missed. "
+        ],
+        [
+            "\u00a0Yes. It's a good calculus course. ",
+            "\u00a0I would recommend this class to another student since this is a prerequisite for many majors. ",
+            "\u00a0Yes, I really enjoyed this class and thought it was rewarding. ",
+            "\u00a0Yes ",
+            "\u00a0Yes, I think its very well organized and clear. ",
+            "\u00a0I would not recommend this course given that I feel yourbexperience in the coyrse caties greatly depending on which instructor you have. ",
+            "\u00a0I would not recommend this course to another student ",
+            "\u00a0I would recommend this course to anyone looking to establish or reestablish basic foundations in integral calculus. ",
+            "\u00a0Yes. I enjoy math ",
+            "\u00a0I would recommend this course because it helped develop my math skills for multi variable calculus. ",
+            "\u00a0Yes, I think everyone needs a strong basis of math. This course was interesting. ",
+            "\u00a0this course is required for many majors. if you have to, tske it. ",
+            "\u00a0I would recommend this course if you are interested in math at Yale. ",
+            "\u00a0I would recommend it because it was challenging but interesting. "
+        ]
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50246/assignments/syllabus", 
+    "requirements": "Enrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.\u00a0", 
+    "description": "An introductory course on the art of watercolor as a humanistic discipline within the liberal arts tradition. Readings, discussions, and studio work emphasize critical, creative thinking through a tactile, \u201clearning by doing\u201d study of the watercolor medium. Students analyze and imitate the classic techniques of J. M.W. Turner, John Singer Sargent, Georgia O\u2019Keeffe, and Edward Hopper, among others. Studio components include painting en plein air to understand color, form, perspective, composition, and shade and shadow. Basic drawing skills recommended.\nEnrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.\u00a0", 
+    "title": "Mastering the Art of Watercolor", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "DC 215", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12256", 
+        "listings": [
+            {
+                "number": "075", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Adam Van Doren"
+    ], 
+    "long_title": "Mastering the Art of Watercolor", 
+    "extra_info": "A"
+}

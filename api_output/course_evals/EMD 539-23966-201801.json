@@ -1,0 +1,97 @@
+{
+    "crn_code": "23966",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's <b>sensitivity to students and ability to provide students with adequate feedback</b> was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            13,
+            2,
+            0
+        ],
+        [
+            1,
+            1,
+            7,
+            7,
+            0
+        ],
+        [
+            0,
+            3,
+            6,
+            6,
+            2
+        ],
+        [
+            0,
+            2,
+            9,
+            1,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a03 ",
+            "\u00a06 ",
+            "\u00a0Homework assignments took about 4-5 hours, group presentation (on paper) took 3-4 hours and final project took approximately 10 hours. ",
+            "\u00a0~5 on each of the three homeworks and two presentations ",
+            "\u00a0In the beginning of the semester, the workload was much lighter. I would generally spend 0-3 hours per week on work for this course at the beginning of the semester. Toward the end of the semester, however, I was spending MUCH more time on this course for projects, between 10-20 hours per week. ",
+            "\u00a03 ",
+            "\u00a02 ",
+            "\u00a05 ",
+            "\u00a0It varied a LOT depending on the homework. Usually 1-2, but for the harder homework assignments more like 8 hours. ",
+            "\u00a01-7 ",
+            "\u00a06 ",
+            "\u00a0Depends on homework. Homework weeks I probably did 4-8 hours ",
+            "\u00a04 ",
+            "\u00a012 hours when working on assignments. ",
+            "\u00a05-6 hours "
+        ],
+        [
+            "\u00a0Very useful course for EMD! ",
+            "\u00a0I really like Dan and Kayoko, and I thought the class touched on some interesting topics. However, I think it would have been useful to have an explicit overarching structure so we knew what the key takeaways were and how the topics related to each other. ",
+            "\u00a0The course could use an overall restructuring to bring everything together more cohesively. Also, the lab portion of the classes could be assigned to a whole session because the current structure felt very rushed and poorly managed. The topics were highly interesting, but, unfortunately, I do not believe I was able to take much away. \r\n\r\nAlso, it would be nice to return the assignments sooner with feedbacks. \r\n\r\nClearer and better-organized communication, resources, and syllabus would be helpful. ",
+            "\u00a0Very heavy on the methods and focused on only  a few specific topics of surveillance, would be better if it addressed a broader scope of surveillance issues. ",
+            "\u00a0Strengths include that it was pretty accessible and covered a range of topics. Weaknesses include that I didn't feel like I learned very much about any one topic, so now that the class is over I still kind of feel like I don't really have a great understanding of most things surveillance. It was also really frustrating trying to use SAS when Cisco was constantly down--I should have just learned how to do the homework in R. ",
+            "\u00a0I think the concepts in the class were interesting, but I do not think the course had a solid structure or flow. I think it started off way too fast and we should have been eased into the more methods-heavy concepts . ",
+            "\u00a0There are many concepts in surveillance and it's challenging to organize them into a four-month course. This might be the reason why the course seemed a bit lack of structure. ",
+            "\u00a0I learned a lot in this class, but there was a huge learning curve. Citrix is evil and should not be used in any class...I think the learning curve would have been a lot more manageable if we had just been in the computer lab from the beginning. In terms of material covered, it was very interesting and I think it was explained well. My only complaint is that the code presented in class did not always work, which made it frustrating for all of us. ",
+            "\u00a0I did not enjoy this class at all. I thought the material was super interesting, but the way in which it was taught made the material very difficult to grasp. First, Citrix crashed during half of our sessions, so we had to sit and follow along for the rest of those class periods. Then we were expected to remember those steps on our own for the assignments. We never went over the graded assignments, so it would have been helpful if we could have gone through each of them step-by-step in class. The answer keys to the assignments weren't even posted! So I don't know what I could have done to improve or go back and work through them to get the correct answers. This seemed like a methods course, but we had to learn the procedures in one class sitting. I would recommend creating step-by-step guides on navigating the SAS/R code that was provided or how to approach each weeks tasks. It was very difficult to understand each weeks class material and tasks in one class sitting. Ultimately, I don't feel prepared to work within surveillance after taking this class. So disappointed! ",
+            "\u00a0I think the course is an essential methodology course that should be taken by any student interested in public health surveillance. I think the course could be improved if there were a key for each homework made prior to the homework assignments being sent out to students so that when questions do arise for the teaching fellow and professor, there will be more clear and definitive answers to instruct the students in the right direction for their homework assignment as opposed to further confusing students on a question that is unclear. "
+        ],
+        [
+            "\u00a0one of the nicest professors at YSPH ",
+            "\u00a0Dan is approachable, kind, and transparent. I think the one thing that would really improve the course would be more explicit organization/structure. ",
+            "\u00a0Prof Weinberger is a great instructor! His enthusiasm for the subject is contagious. His teaching style was really conducive to learning, and very open to questions. ",
+            "\u00a0Very approachable, and receptive to students' comments. ",
+            "\u00a0Good. ",
+            "\u00a0Dr. Weinberger is very approachable and accommodating, and he is great at providing feedback/answering questions. He made me feel like the emphasis of the class was on learning and exploring whatever topics interested us rather than just on grades, which was really nice. I think he could have explained a lot of the concepts we covered in more detail, though--it was often difficult to replicate analyses or other methods discussed in class just based on his (quick) instruction.  That said, I enjoyed learning more about why/when certain methods are used and their strengths and weaknesses. ",
+            "\u00a0I think that Dan is knowledgeable about some interesting surveillance methods, but I do not think he was able to explain or teach them well. I think there was a contrast in what people in the R group versus the SAS group learned or how much detail was explained in the lab sessions. I think more thorough explanations of the concepts and a more structured, explanation of the coding methods would have been useful. There were times when the code didn't work and it was frustrating. ",
+            "\u00a0Dan is clearly knowledgeable of the material and concepts we covered this course. I appreciate how Dan tried to deliver the class in a more flipped classroom format, but I think many of us would prefer a bit more time allocated in going through the codes (SAS) at a slower pace, so that we can actually take the skills and apply it in the future. ",
+            "\u00a0Dan is very intelligent and works at explaining modeling in a way that is accessible to everyone. The only thing I think he can improve on is giving us feedbacks and legit grades...we never received actual grades for our presentations in class. ",
+            "\u00a0Very nice, but overall not an effective instructor. He spoke in highly technical terms even though it was an introductory course to surveillance. I left very confused after every class period. "
+        ],
+        [
+            "\u00a0Highly recommended! ",
+            "\u00a0This class is an interesting survey of ways that surveillance can be useful. There are some quantitative aspects, but none that are super difficult (especially as compared to Ginny Pitzer's Quantitative Methods class). It is more conceptual generally speaking. There were three homeworks, a paper presentation, and a final project presentation. I would generally recommend it, especially if Kayoko continues to be the TF. ",
+            "\u00a0The topics are very interesting, but the poor organization hurts the learning experience a bit. Therefore, I would recommend this class with a word of caution. ",
+            "\u00a0Good. ",
+            "\u00a0This course covers different types of surveillance--data used and methods. It is not very coding-intensive except for a few homework assignments that were fairly difficult, but Dr. Weinberger and Kayoko both helped me through those and were fairly forgiving as long as I explained my rationale behind the methods I used. I would recommend it if you are looking for an overview-type class, but if you want a class that is more methods-focused or detail oriented, you might talk to Dr. Weinberger before taking this class. ",
+            "\u00a0Learn a lot from the  model/computational side of public health surveillance. Be ready to be challenged in some ways, but definitely worth it. Dan and Kayoko are great. ",
+            "\u00a0You learn the basics of public health surveillance. I wouldn't recommend taking this course. "
+        ]
+    ]
+}

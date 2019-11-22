@@ -1,0 +1,81 @@
+{
+    "crn_code": "20729",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A more technical understanding of trade and development theories ",
+            "\u00a0Basic canonical models of trade + recent literature. ",
+            "\u00a0I learned some of the most basic models in understanding international trade, and somewhat learned how to critique them. I mostly learned that the data cannot really tell us anything, and that it seems we need new models. ",
+            "\u00a0This class provides a good overview of key trade economic theories in the first half of the semester (Ricardian, Hecksher Ohlin, IRS, etc.). The second half of the course is taught as a seminar in which students read economic papers in the field and present on each one. I felt I learned a lot about the topics themselves and how to read economic papers and eventually write an abbreviated version of one. A great course. "
+        ],
+        [
+            "\u00a0Prof Noguera is a fantastic professor. Highly knowledgeable on what he teaches, and knows how to communicate it very well in a seminar setting. The pace, breadth and depth of material covered was the right amount, and the student presentations were a great way to think more critically (and learn more) about the theory of the material we were asked to understand. ",
+            "\u00a0Without a doubt one of the best international econ classes. ",
+            "\u00a0The course is strong in its size and in that Prof. Noguera is at the top of his field. However, I don't think the presentations were conducive to our learning. It felt everyone mostly zoned out throughout the presentations, and those presenting overly stressed out. I think we all would have learned a lot more if it had actually been in a seminar format, in which we were expected to read the papers and give our opinions on them. ",
+            "\u00a0The course was fairly laid back yet very informative and helpful. Professor Noguera is great -- both a good teacher and a very nice human being all around. He was always very helpful during office hours and got to know each of his students. As a small course, this has the benefit of being a good seminar style environment and that certainly aids in my learning. The only weakness is that the course could have been a little better organized. Excellent overall though! "
+        ],
+        [
+            "\u00a0Absolutely. Seminar setting is great for the material covered (having taken similar development courses in a lecture style, the engagement in the seminar setting is much more suitable for understanding the more challenging material), the presentations are an enjoyable way to engage with the readings and economic theories we review, and the final paper was a fun way to tie everything together (and a great way to dust off the programming skills). \r\n\r\nDo not take this class with zero experience in R or Stata, and do have some experience in statistical analysis. Econometrics is a must too. Besides that, the balance of lectures, debates, problem sets and final paper are the perfect balance for a seminar like this. ",
+            "\u00a0Yes. Assignments seem like a lot (two debates, three psets, empirical midterm, two presentations on papers, research final) but it's not actually particularly time consuming, and you really do learn a lot. ",
+            "\u00a0Yes, Guillermo was a great instructor who engaged with his students. ",
+            "\u00a0I am not sure. Yale doesn't offer many good international economics classes, so I think that must be taken into account that there may not be very many options. \r\n\r\nYou learn the fundamentals of models to understand international trade. The class is overall a ton of work -- three problem sets that he calls short are actually burdensome. The second half of the semester feels like a ton of work, with 2 presentations to give and a final paper to write. That being said, I do think I learned more than I would have in the standard international economics class. \r\n\r\nIn recommending this class, I also think it really depends on your class dynamic -- we had not great gender dynamics in our class. Overall, I would say shop it for as long as possible and feel it out. ",
+            "\u00a0Definitely talk this class if you are looking for a seminar on trade economics. This course is both a good overview and an opportunity to explore more advanced research in the field. Professor Noguera is a great person and always very keen to help students learn. I had little previous exposure to trade economics topics and I felt I got a lot out of this course. "
+        ]
+    ]
+}

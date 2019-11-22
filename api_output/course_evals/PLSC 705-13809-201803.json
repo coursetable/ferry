@@ -1,0 +1,80 @@
+{
+    "crn_code": "13809",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Modelling political problems using the economist's toolkit (utility functions, resource constraints). Assumptions that underlie models. Analytic meaning of concepts like equilibrium and efficiency. Proofs of important theorems: median voter, Nash bargaining, Arrow's impossibility. ",
+            "\u00a0I learned the fundamentals of economic modeling in the  context of political economy. ",
+            "\u00a0An overview of formal models and some of their applications to political science. ",
+            "\u00a0An increased understanding of modeling, from turning theoretical concepts into mathematical equations, how to solve constrained optimization problems, and other ad hoc tools like Nash Bargaining "
+        ],
+        [
+            "\u00a0Problem sets are good for thinking through concepts. Some questions could be reworked because they are not solvable without TA intervention or prior knowledge of what the solution should look like (or are simply not solvable). ",
+            "\u00a0This course provided broad and deep instruction of key concepts in political economy. The problem sets were a fun challenge. ",
+            "\u00a0I would have appreciated more political science applications, as well as concrete examples of how we could used the models we were learning about to build our own (even very simple) models. I know the micro foundations are necessary, but more time on how to use those tools to build political science models would have been appreciated - and would have been a good incentive to engage with the maths parts. We got a deep introduction to some political science models (voting competition, distributive justice), but I would have enjoyed a broader introduction to the possibilities of formal models.  \r\n\r\nClasses spent going through existing textbooks or notes were very hard to follow (it was much easier when the Professor was working on the white board).  As an example, the class on Nash Bargaining was the best one we had, it was clear and well-structured. Other classes (the marriage example) were much harder to follow. ",
+            "\u00a0Problem sets were great at making us apply class concepts. And tests followed well (with some tweaks) from problem sets. The class was quite strong overall, though class was sometimes confusing, so the TA sessions were necessary to understand the concepts. "
+        ],
+        [
+            "\u00a0Great foundation to intro political economy. Make sure to collaborate with your classmates for the most fruitful learning experience. ",
+            "\u00a0I would definitely recommend this class to a student with a strong math/ economics background. ",
+            "\u00a0Definitely. Requires some time and thought but not a ton. And great intro to formal modeling of various economic and political concepts. ",
+            "\u00a0I still feel weird about the Nash bargaining proof.\r\nI wish we had delved deeper in the 1st theorem of welfare economics and its justification for capitalism. "
+        ]
+    ]
+}

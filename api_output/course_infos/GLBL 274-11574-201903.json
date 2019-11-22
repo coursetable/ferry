@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50949/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Theoretical and empirical literature used to examine a host of questions about terrorism. The definition(s) of terrorism, the application of the term to individuals and groups, the historical use and potential causes of terrorism, suicide and so-called religious terrorism, dynamics within groups that use terrorism, and counterterrorism strategies and tactics. Theoretical readings supplemented by case studies.", 
+    "title": "Terrorism", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "RKZ 102", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11574", 
+        "listings": [
+            {
+                "number": "274", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSI\">YC Poli Sci: Intnatl Relations</a>"
+    ], 
+    "professors": [
+        "Bonnie Weir"
+    ], 
+    "long_title": "Terrorism", 
+    "extra_info": "A"
+}

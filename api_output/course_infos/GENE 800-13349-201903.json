@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "This weekly seminar, a continuation of the highly successful Colloquium on Molecular Evolution, covers topics in the general area of molecular evolution. Past topics have included evolution of transcription factors, the role of epigenetics in evolutionary processes, and detecting selection in DNA sequences. Speakers generally come from Yale: faculty, postdocs, and graduate students. We solicit speakers as the term progresses, and we invite volunteers to let us know if they want to present ongoing research for input from other participants. Graduate students may take the course for credit, but it is not graded. Credit is given for attendance at at least two-thirds of meetings; sign-in for students taking the course for credit is held at each session.", 
+    "title": "Seminar in Molecular Evolution", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "OML 201", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 10
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13349", 
+        "listings": [
+            {
+                "number": "800", 
+                "subject": "GENE"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jeffrey Powell", 
+        "Bluma Lesch"
+    ], 
+    "long_title": "Seminar in Molecular Evolution", 
+    "extra_info": "A"
+}

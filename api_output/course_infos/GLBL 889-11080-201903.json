@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Enrollment limited to those graduate and professional school students selected as Associate World Fellows. Associates join 16 leaders from across the globe to learn, share, connect, and challenge through their participation in the weekly \u201cGood Society\u201d seminar, the Distinguished Speaker weekly dinner series, and other events throughout the fall term. See http://worldfellows.yale.edu/associate for details. 0.5 GSAS credit. Graded Satisfactory/Unsatisfactory.", 
+    "title": "World Fellows Seminar", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11080", 
+        "listings": [
+            {
+                "number": "889", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Emma Sky"
+    ], 
+    "long_title": "World Fellows Seminar", 
+    "extra_info": "A"
+}

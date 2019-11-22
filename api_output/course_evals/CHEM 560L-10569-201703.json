@@ -1,0 +1,79 @@
+{
+    "crn_code": "10569",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained practical experience with experimental techniques, as well as a lot of valuable experience with analyzing and presenting data. In particular, I felt that making the poster was a useful experience. ",
+            "\u00a0Informative course on basic electronics especially for beginners and a good flashback to undergrad level courses ",
+            "\u00a0Studied a lot very useful lab techniques! ",
+            "\u00a0This course provided hands on instruction and practice of techniques useful in a research lab. ",
+            "\u00a0Electronics,paper writing, presentation, Numerov. "
+        ],
+        [
+            "\u00a0I felt that the course was especially useful for gaining experience with data presentation and analysis. The practical skills gained will also be helpful. I think one weakness of the course is that at certain times it felt like we had an overwhelming amount of things to do, while at other times there was little that needed to be done. ",
+            "\u00a0It can be more organised ",
+            "\u00a0Strengths:\r\nTopics taught span a wide range of physical chemistry topics.\r\nThere is a fair bit of learning on your own and this is quite valuable.\r\nCourse is adjusted to work with other courses while still having an expected level of work.\r\n\r\nWeaknesses:\r\nToo much time was spent on the electronics. Not that what was taught was not valuable, but rather that the running of this section of the course had a lot of \"wasted\" time. While it is important to work through \"new\" topics and experience the struggle, it may be better to have a small tutorial on how electronics are used and measured just as one may have an older student in the group do for a newer student. A lot of time was spent not understanding the basics of breadboards. There was also a great deal of time just trying to decipher what was wanted for the objective. If we were given a clear objective and perhaps less instruction in the manuals then we could explore resources on our own to try to find ways to solve that objective. The time would feel much less wasted then. "
+        ],
+        [
+            "\u00a0I would recommend this course to others, particularly if they are an experimental physical chemist. There were a lot of useful practical skills gained by taking this course. ",
+            "\u00a0Absolutely. ",
+            "\u00a0Yes. I found this course very instructive, though perhaps it could be paired with separate modules that could help theory students instead of them taking some of the more experimental ones. "
+        ]
+    ]
+}

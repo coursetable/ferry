@@ -1,0 +1,80 @@
+{
+    "crn_code": "22762",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            6,
+            6
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            8
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            9
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            9
+        ],
+        [
+            0,
+            0,
+            4,
+            5,
+            3
+        ],
+        [
+            0,
+            0,
+            6,
+            3,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0writing the paper is a fantastic exercise\r\ni enjoyed the more theoretical, chatting through development topics of this class as a complement to metrics ",
+            "\u00a0I learned about many of the major papers in development economics, the structure of an RCT, and some of the challenges in intervening in developing countries. I also learned about the theory behind things like microfinance, and carrying out my own project helped me get an applied sense of how economic research is conducted. ",
+            "\u00a0Incredibly relevant insights on the present developing world. The problems and some of the inspiring practices employed to assess their magnitude and overcome them. ",
+            "\u00a0Y "
+        ],
+        [
+            "\u00a0strengths - micro finance and RCTs are interesting, and i loved seeing TAvneet\r\n\r\nweaknesses: some people got a little lost as to why we were doing insurance, some other more esoteric topics, so maybe it would be useful to more clearly signpost the the course material (we're doing this to get to that sort of thing) ",
+            "\u00a0A little too much focus on microfinance is a weakness in my view. But then my opinion could be prejudiced as I am not a big believer in it. ",
+            "\u00a0y "
+        ],
+        [
+            "\u00a0sure ",
+            "\u00a0Absolutely ",
+            "\u00a0Yes! ",
+            "\u00a0Y ",
+            "\u00a0yes "
+        ]
+    ]
+}

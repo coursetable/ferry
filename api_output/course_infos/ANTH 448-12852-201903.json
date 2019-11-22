@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48963/assignments/syllabus", 
+    "requirements": "Prerequisite: A prior medical anthropology course or permission of instructor.", 
+    "description": "The field of medical anthropology boasts a rich theoretical and empirical tradition, in which critically acclaimed ethnographies have been written on topics ranging from local biologies to structural violence. Many scholars engage across the social science and humanities disciplines, as well as with medicine and public health, offering both critiques and applied interventions. This medical anthropology seminar showcases the theoretical and ethnographic engagements of nearly a dozen leading medical anthropologists, with a focus on their canonical works and their intersections across disciplines.\nPrerequisite: A prior medical anthropology course or permission of instructor.", 
+    "title": "Medical Anthropology at the In...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "SA10 105", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12852", 
+        "listings": [
+            {
+                "number": "448", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANB\">YC Anthropology: Biological</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANS\">YC Anthropology: Sociocultural</a></li></ul>"
+    ], 
+    "professors": [
+        "Marcia Inhorn"
+    ], 
+    "long_title": "Medical Anthropology at the Intersections: Theory and Ethnography", 
+    "extra_info": "A"
+}

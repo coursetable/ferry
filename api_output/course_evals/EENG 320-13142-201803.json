@@ -1,0 +1,84 @@
+{
+    "crn_code": "13142",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            5,
+            3,
+            1
+        ],
+        [
+            1,
+            4,
+            2,
+            3,
+            0
+        ],
+        [
+            3,
+            1,
+            3,
+            3,
+            0
+        ],
+        [
+            3,
+            3,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            7,
+            2
+        ],
+        [
+            0,
+            0,
+            6,
+            3,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained a lot of knowledge about semiconductor physics. ",
+            "\u00a0a good intro into semiconductors, including physics and devices ",
+            "\u00a0This was a really cool course that dives into (literally) the semiconductor devices you've seen in EE 200 and EE 203.  It was really interesting to learn about the particle physics behind why a transistor works the way it does. ",
+            "\u00a0We learned a bit of quantum physics, how semiconductors and transistors work, and their applications. ",
+            "\u00a0I learned how semiconducting devices, like diodes, transistors, solar cells, and LED work, both on quantum and classical scales of physics. "
+        ],
+        [
+            "\u00a0The labs, as painful as they were, are the largest strength of this course -- especially with Ming as a TF; he really helped us out!  If you had Hong for 203 then you know what you're getting into... the teaching quality could definitely be improved, as could the typo-filled slides, but overall OK lectures.  Moving forward I'd like to see homework solutions and exam solutions posted so we can understand what we did wrong.  I'd also like to see consistent TF office hours.  Furthermore, I'd like to see the labs arranged to follow the content in course -- at least introduce the Hall voltage before we have to do 2 labs on it.  It's OK if the lectures and labs aren't completely in sync, but they did feel too isolated for it to be in the same course.  The largest weakness, though, was that we got 0/6 lab reports back -- I could've failed all of them but wouldn't know. ",
+            "\u00a0The material is important and interesting, but there can be a lot of it and it can be difficult. Need to buckle down, pay attention, and read the text. \r\n\r\nLabs didn't always coincide with class and often went beyond the material covered in lecture. We were told this so it wasn't a surprise. Going beyond lecture could be challenging but overall rewarding. Lab reports were very long. ",
+            "\u00a0Some of the information regarding calculations were introduced but either skipped over or not thorough enough to grasp the skills of performing the calculations. Some calculations would have provided a quantitative description of qualitative expectations and concepts. Additionally, labs were meant to be supplemental and were to introduce concepts, however, lab reports required extensive outside research which wasn't necessary given that we would learn the concepts later in the class. If we are going to cover the concepts later, the delay between the lab and classroom material made the subject matter incoherent and difficult to learn. ",
+            "\u00a0Pretty good, although I think most people thought the midterm was a curve-ball in terms of what was expected. I think most people expected derivation type problems, such as those in physics, and were caught off guard by 20 question format.\r\n\r\nThe labs were good, however, please do not try to push back the last two labs into the last week of classes. The write-up took quite a bit of time and absolutely detracted from the time I should have spent studying for other courses. They labs provided a pretty good introduction to examining key characteristics of semiconductors. Perhaps, in the future, more complicated characteristics can be examined, provided that accurate methods of measurement can be made available. But in general the labs were very good!\r\n\r\nAlso, I do not think we ever got feedback on any of our labs. This should be improved on. ",
+            "\u00a0Hong is a very bad teacher. He is not good at communicating the concepts and quite frankly should not be teaching this course. More clarification about what is expected in the lab reports would be helpful as well. ",
+            "\u00a0Strengths: Interesting material, intellectually challenging.\r\n\r\nWeaknesses: labs are not in sync with lectures (for instance, the theory needed to complete reports for the third lab was not covered until 2 weeks afterwards. This happened for other labs as well); zero lab feedback; unclear instruction; deadlines were unclear and in flux. "
+        ],
+        [
+            "\u00a0Hong was clearly passionate about this course, but I think he struggled with how to teach it.  This was his first year teaching it after several years of Mark Reed leading the course.  Although the beginning of the semester was rocky, things got smoother in the second half of the semester when Hong relied on the slides less and added his own explanations.  I do think that moving forward Hong will have a more comprehensive grip over the course, so I tentatively recommend shopping it at least. ",
+            "\u00a0Yes. The material is interesting and important. Just know what you're getting into in terms of difficulty of concepts. ",
+            "\u00a0I would say to take this course.  This can be very math heavy or very theoretical, and it depends on who's teaching it.  The homework is not that bad, and they've reduced the number of labs you have to complete over the semester.  It was a fun, interesting class that I'm glad I took. ",
+            "\u00a0Never, not if it's taught by Hong. ",
+            "\u00a0No, not unless you have to "
+        ]
+    ]
+}

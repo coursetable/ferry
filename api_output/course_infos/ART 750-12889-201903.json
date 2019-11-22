@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "\u201cLearning to code through reading and writing.\u201d This studio course introduces fundamental concepts of programming for the web. Students learn technical skills solely through the development of their own writing. The course asserts that programs should be written not only for computers to process but also for humans to read. While best practices are discussed, a variety of techniques that consider craft, tone, and style\u2014challenging the notion of a singular, universal method\u2014are discussed and explored. After being introduced to document structuring and semantic HTML, students learn PHP through intensive writing exercises. In this course, writing is considered a forward-facing web application, its constituent code, and the code\u2019s annotation as written for a future reader. The course is intended for first-year students with little or no programming experience and is a prerequisite for ART 742b.", 
+    "title": "Sound. Space. Type.: Programmi...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "GREEN 107", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12889", 
+        "listings": [
+            {
+                "number": "750", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Laurel Schwulst"
+    ], 
+    "long_title": "Sound. Space. Type.: Programming as Writing", 
+    "extra_info": "A"
+}

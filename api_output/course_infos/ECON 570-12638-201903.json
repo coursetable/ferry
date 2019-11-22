@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "A course for third- and fourth-year students doing research in econometrics to prepare their prospectus and present dissertation work.", 
+    "title": "Prospectus Wrkshp in Econ: Pro...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 12, 
+            "location": "HLH28 B-1", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 13
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12638", 
+        "listings": [
+            {
+                "number": "570", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Edward Vytlacil"
+    ], 
+    "long_title": "Prospectus Wrkshp in Econ: Prospectus Wrk in Econometrics", 
+    "extra_info": "A"
+}

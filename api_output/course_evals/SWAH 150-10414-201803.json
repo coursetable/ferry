@@ -1,0 +1,76 @@
+{
+    "crn_code": "10414",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about a bunch of topics affecting citizens of East Africa. I learned about the History of Kiswahili, Literature, Development, and the health of communities. ",
+            "\u00a0Foreign language. "
+        ],
+        [
+            "\u00a0This course has an amazing professor. This course could be improved if we did more grammar review and speaking practice. ",
+            "\u00a0Assignments could have been posted on canvas to make for clearer communication. ",
+            "\u00a0While beginning and intermediate swahili teach grammar and vocabulary directly, this course uses exclusively discussion and reading to try to improve fluency. I think there were still aspects of grammar and such that we should have gone over directly. We advanced into complex discussion too quickly and I became lost. "
+        ],
+        [
+            "\u00a0I would recommend this to a student who has passed L4 Kiswahili and is looking to keep up their language skills. ",
+            "\u00a0L5 language credit - yes. ",
+            "\u00a0I enjoyed intermediate and beginner much more, as much as I wanted to enjoy advanced. Still great to have Kiarie as a teacher though. "
+        ]
+    ]
+}

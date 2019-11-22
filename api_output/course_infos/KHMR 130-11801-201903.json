@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 1, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Course taught through distance learning using videoconferencing technology from Cornell University. Enrollment limited; interested students should e-mail\u00a0minjin.hashbat@yale.edu\u00a0for more information. Prerequisite: KHMR 120 or equivalent.", 
+    "description": "This course focuses on learning Khmer (the national language of Cambodia). Students communicate in day-to-day conversation using complex questions and answers. The course focuses on reading, writing, speaking, and listening to Khmer words, long sentences, and texts. The course also emphasizes grammar, sentence structure and using words correctly.\u00a0\nCourse taught through distance learning using videoconferencing technology from Cornell University. Enrollment limited; interested students should e-mail\u00a0minjin.hashbat@yale.edu\u00a0for more information. Prerequisite: KHMR 120 or equivalent.\n\n1.5 Yale College course credits", 
+    "title": "Intermediate Khmer I", 
+    "skills": [
+        "L3"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11801", 
+        "listings": [
+            {
+                "number": "130", 
+                "subject": "KHMR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Intermediate Khmer I", 
+    "extra_info": "A"
+}

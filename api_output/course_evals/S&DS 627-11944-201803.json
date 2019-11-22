@@ -1,0 +1,71 @@
+{
+    "crn_code": "11944",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            2,
+            1,
+            1,
+            0
+        ],
+        [
+            3,
+            0,
+            0,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course helped me better understand the process/behavior of discovering a data set and asking the relevant questions to understand it, perform some visualization, do some kind of algorithms in the span of two hours, on data coming from a department that can be very different from statistics. We saw this semester people from biology, linguistics, public health, med school... so a wide range of problems and topics, some fairly specific and in need of some preliminary questions. But the magic of this course is that we always have something to show and see with the data, by asking the good questions and looking at it. "
+        ],
+        [
+            "\u00a0I really like the class being in an informal way, being in a small class, and getting to know better the people from the department in it. Some of the topics we saw this year were very interesting, and we got some nice results out of the way with the data analysis. Learned how to apply some machine learning algorithms to some of the datasets, so nice to see some relevance with other classes. "
+        ],
+        [
+            "\u00a0I'd recommend this course to students interested in seeing cases, with many different datasets and how to ask questions to get to the point quickly and see what's important in the data. "
+        ]
+    ]
+}

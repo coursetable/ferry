@@ -1,0 +1,75 @@
+{
+    "crn_code": "21055",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Developed french skills. New vocab, new verb tenses. Speaking and listening skills. ",
+            "\u00a0I learned a lot bout french "
+        ],
+        [
+            "\u00a0the usage of the textbook is limited ",
+            "\u00a0Strengths- good prof, interesting textbook\r\nweaknesses- tests are insanely hard and the class does not prepare students for them. No matter how much you study is hard to do better than a C/low B on a test. ",
+            "\u00a0It has a vey heay workload "
+        ],
+        [
+            "\u00a0Maybe. If they love French I would encourage them to take it. ",
+            "\u00a0Yes it is really fun "
+        ]
+    ]
+}

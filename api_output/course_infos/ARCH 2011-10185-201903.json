@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "", 
+    "title": "Structures I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LORIA 250", 
+            "days": [
+                "Monday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }, 
+        {
+            "start_time": 11, 
+            "location": "RDH 211", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10185", 
+        "listings": [
+            {
+                "number": "2011", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kyoung Sun Moon"
+    ], 
+    "long_title": "Structures I", 
+    "extra_info": "A"
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49443/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The study of invertebrate anatomy and diversity in a laboratory and field setting. Activities include examination of live animals and museum specimens, as well as local field trips. Some field trips fall on weekends. Must be taken concurrently with E&EB 555.", 
+    "title": "Laboratory for Invertebrates", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "ESC 210", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12097", 
+        "listings": [
+            {
+                "number": "556", 
+                "subject": "E&EB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Casey Dunn"
+    ], 
+    "long_title": "Laboratory for Invertebrates", 
+    "extra_info": "A"
+}

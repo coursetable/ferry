@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49002/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This multidisciplinary seminar highlights the study of contemporary Africa through diverse academic disciplines. Each session features a Yale faculty scholar or guest speaker who shares their unique disciplinary perspective and methodological approach to studying Africa. Topics include themes drawn from the humanities, social sciences, and public health, with faculty representing expertise from across Yale\u00e2\u20ac\u2122s graduate and professional school departments. The course is intended to introduce graduate students and upper-level undergraduates to the breadth and depth of Yale scholarship on Africa, facilitating the identification of future topics and mentors for thesis or senior paper research. Each weekly seminar focuses on a specific topic or region, and students are exposed to various research methods and techniques in archival research, data collection, and analysis. A specific goal of the course is to impart students with knowledge of how research across diverse disciplines is carried out, as well as to demonstrate innovative methodology, fieldwork procedures, presentation of results, and ethical issues in human subjects research.", 
+    "title": "Gateway to Africa", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WLH 003", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10319", 
+        "listings": [
+            {
+                "number": "505", 
+                "subject": "AFST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YGLE\">YC Global Affairs: Elective</a>"
+    ], 
+    "professors": [
+        "Veronica Waweru", 
+        "Michael Cappello"
+    ], 
+    "long_title": "Gateway to Africa", 
+    "extra_info": "A"
+}

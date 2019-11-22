@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-13", 
+        "group": 2, 
+        "day_of_week": "Friday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49770/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to the English literary tradition through close reading of select poems from the eighteenth century through the present. Emphasis on developing skills of literary interpretation and critical writing; diverse genres and social histories; and modernity\u00e2\u20ac\u2122s multiple canons and traditions. Authors may include Alexander Pope, William Wordsworth, Elizabeth Barrett Browning, Robert Browning, W. B. Yeats, T. S. Eliot, Langston Hughes, Gertrude Stein, Gwendolyn Brooks, Elizabeth Bishop, and Derek Walcott, among others. Preregistration required; see under English Department.", 
+    "title": "Readings in English Poetry II", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "LC 318", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10932", 
+        "listings": [
+            {
+                "number": "126", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Leslie Brisman"
+    ], 
+    "long_title": "Readings in English Poetry II", 
+    "extra_info": "A"
+}

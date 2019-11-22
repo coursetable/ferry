@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49976/assignments/syllabus", 
+    "requirements": "After or concurrently with G&G 110, or after G&G 115.", 
+    "description": "Practical exercises in the laboratory and in the field to complement G&G 110 or 115. Identification of minerals and rocks; construction of geologic maps and cross sections to determine Earth-system processes and histories. Includes a field trip to the northern Appalachians during the October recess.\nAfter or concurrently with G&G 110, or after G&G 115.\n\n0.5 Yale College course credits", 
+    "title": "DynamicEarthLab&FieldMethods", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "KGL 120", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11040", 
+        "listings": [
+            {
+                "number": "111L", 
+                "subject": "G&G"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Danny Rye", 
+        "David Evans"
+    ], 
+    "long_title": "DynamicEarthLab&FieldMethods", 
+    "extra_info": "A"
+}

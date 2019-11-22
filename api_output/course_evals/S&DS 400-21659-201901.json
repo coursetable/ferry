@@ -1,0 +1,81 @@
+{
+    "crn_code": "21659",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            7,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            9,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            7,
+            4
+        ],
+        [
+            0,
+            1,
+            4,
+            5,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            7
+        ],
+        [
+            0,
+            0,
+            3,
+            9,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Understanding of measure-theoretic probability & ability to interact with academic papers ",
+            "\u00a0I learned a measure-theoretic approach to probability, with case studies of the law of large numbers, conditional probability, and martingales. ",
+            "\u00a0This is a great course not just for S&DS majors, but also for Math and probably CS majors who are interested in analysis-style arguments. This course will force you to reevaluate your understanding of concepts such as conditional probability and independence, but the problem sets are well designed and helped me understand the concepts significantly better. If anything, this course teaches you to be very careful about the underlying assumptions behind important theorems that are often hand-waved in other intro probability classes. ",
+            "\u00a0Probability "
+        ],
+        [
+            "\u00a0Great course. Couldn't imagine it being improved. Loved the paper report at the end of the semester. Also loved the pacing and content of problem sets. ",
+            "\u00a0Strengths of the course included Sekhar's rigorous but engaging treatment of the material, challenging but not overwhelming problem sets, and the interesting final assignment. Sekhar was also good about adjusting his approach to lecture given feedback, such as by incorporating more examples and greater intuition into complex theorems. ",
+            "\u00a0This was an awesome course, but the grading by TFs was not very helpful. ",
+            "\u00a0There is a good variety of important concepts covered in this class, and the problem sets are usually very well designed and help reinforce and understand the concepts from lecture (although it may not seem that way initially). It would be nice to have an official checkpoint for the final paper before the actual deadline. ",
+            "\u00a0It could be improve if the class goes a bit slower "
+        ],
+        [
+            "\u00a0Absolutely. If someone is interested in advanced probability, this is THE class to take. ",
+            "\u00a0This is a challenging proof- and measure-theory-based course, but struggling with the material and problems sets was part of the fun. Sekhar is a great instructor, the TAs were very helpful, and the final assignment is an innovative way to force students to confront cutting-edge research in the field of probability theory. Take it! ",
+            "\u00a0This is a great course not just for S&DS majors, but also for Math and probably CS majors who are interested in analysis-style arguments. Taking measure theory before this well help you at different points of the course, but is not at all required- however, I would recommend taking at least an analysis class before this. There are weekly problem sets which can seem like a lot of work, but they are very well-designed and can be very satisfying to solve. ",
+            "\u00a0Yes if he wants to do something related to econometrics "
+        ]
+    ]
+}

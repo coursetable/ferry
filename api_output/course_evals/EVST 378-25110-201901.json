@@ -1,0 +1,93 @@
+{
+    "crn_code": "25110",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            7,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            8,
+            3
+        ],
+        [
+            0,
+            0,
+            3,
+            6,
+            4
+        ],
+        [
+            0,
+            0,
+            6,
+            6,
+            2
+        ],
+        [
+            2,
+            2,
+            7,
+            2,
+            0
+        ],
+        [
+            2,
+            6,
+            5,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0History of USAID, sampling of programs, into to text mining ",
+            "\u00a0I learned about USAID's many initiatives as they pertain to infectious diseases, neglected tropical diseases, agriculture, and small businesses. I also learned how to text mine with R. ",
+            "\u00a0I learned a lot of information about text mining and how to apply the techniques to large documents to extract important information. ",
+            "\u00a0I learned text mining skills in R, including the tidytext and tm packages. I learned how to evaluate and examine foreign assistance programs. ",
+            "\u00a0You learn about the history of USAID and its projects in Sub Saharan Africa. ",
+            "\u00a0I learned more about US foreign aid in Africa; in addition, I learned about text mining and how to apply that to research. ",
+            "\u00a0I developed the ability to think critically about US foreign aid relations with various countries in Africa, as well as the ability to analyze large documents through text mining. ",
+            "\u00a0Learned how to use R, and a lot of interesting tidbits about foreign aid. ",
+            "\u00a0I developed a significantly better understanding of how data can be applied to evaluate USAID work in Africa. "
+        ],
+        [
+            "\u00a0More step by step intro to R ",
+            "\u00a0I very much enjoyed the group project components to this course as well as the stories Professor Barbour had. ",
+            "\u00a0This course is very low workload and the professor encourages the students to learn the material rather than stress over grades. ",
+            "\u00a0strengths \r\n- interesting material \r\n- required to do a lot of presentations which require you to learn the material - student presentations are interesting \r\nweaknesses\r\n- sometimes hard to follow because feels like we're studying about random development projects. ",
+            "\u00a0I really liked how we covered a wide array of topics from a variety of perspectives. In addition, I liked the incorporation of text mining into the class. ",
+            "\u00a0The course is the most straightforward course I have ever taken at Yale. Lectures and group assignments was all there was to it, which was awesome. A weakness that I would like to point out would be the lack of a proper syllabus outlining assignments throughout the course. That's all. ",
+            "\u00a0Strengths: High student engagement, extremely high relevance of the work (data analysis and text mining are very useful/practical skills), enthusiastic and very approachable professor - thank you professor barbour! "
+        ],
+        [
+            "\u00a0I would recommend this course to any student interested in foreign aid in Africa. The majority of students in this class were either Africans or associated to Africa in some way (through study abroad or other programs). ",
+            "\u00a0Absolutely ",
+            "\u00a0Yes! My favorite course at Yale by far. Professor Barbour is incredibly kind and informative and I highly recommend this class to anyone keen on learning about foreign aid! ",
+            "\u00a0If you're interested in USAID or development efforts in Sub-Saharan Africa, this is a great class. \r\nProfessor Barbour has a huge amount of real life experience, and will tell so many stories. ",
+            "\u00a0I would recommend this course to another student. I gained more knowledge on the topic and it helped shape my perspective on global issues. ",
+            "\u00a0I would recommend this course to other students who would like to combine text mining with material related to US foreign aid to African countries. ",
+            "\u00a0Yes! It's a great class, and Prof. Barbour is super nice. ",
+            "\u00a0Yes, I absolutely would recommend this class. I learned a lot about using extremely relevant methods to analyze interesting data. I look forward to applying these skills in the future and learning more about foreign efforts in Africa! ",
+            "\u00a0If you want to learn super applicable coding and dataset skills in a low-pressure environment where you're not consistently worried about ruining your GPA forever, this is the course for you. "
+        ]
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50182/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The complexities of poetic influence in the traditions of the English language, from Shakespeare to Keats.", 
+    "title": "Poetic Influence from Shakespe...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "DOW 215", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12260", 
+        "listings": [
+            {
+                "number": "152", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Harold Bloom"
+    ], 
+    "long_title": "Poetic Influence from Shakespeare to Keats", 
+    "extra_info": "A"
+}

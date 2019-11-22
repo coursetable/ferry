@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49190/assignments/syllabus", 
+    "requirements": "Prerequisite: CENG 300 or 315 or permission of instructor.", 
+    "description": "Theory and design of separation processes for multicomponent and/or multiphase mixtures via equilibrium and rate phenomena. Topics include single-stage and cascaded absorption, adsorption, extraction, distillation, partial condensation, filtration, and crystallization processes. Applications to environmental engineering (air and water pollution control), biomedical-chemical engineering (artificial organs, drug purification), food processing, and semiconductor processing.\nPrerequisite: CENG 300 or 315 or permission of instructor.", 
+    "title": "Separation and Purification Pr...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "ML 104", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10500", 
+        "listings": [
+            {
+                "number": "411", 
+                "subject": "CENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Paul Van Tassel"
+    ], 
+    "long_title": "Separation and Purification Processes", 
+    "extra_info": "A"
+}

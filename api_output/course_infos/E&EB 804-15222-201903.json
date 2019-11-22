@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/52055/assignments/syllabus", 
+    "requirements": "Prerequisites: introductory biology and evolution.", 
+    "description": "All living things exist in an era of unprecedented global-scale environmental change. Global change encompasses numerous, often interconnected phenomena that are currently impacting organisms. These include rising temperatures, ocean acidification, habitat loss and degradation, overexploitation, novel pathogens, and toxin exposure. This course focuses on global change from the perspective of the organisms themselves. Our goal as biologists is to understand the magnitude of the problem by addressing the following questions: (1) What are the principal ways in which organisms are being challenged due to human impact? (2) What mechanisms are there for organisms to adaptively respond to these challenges? and (3) What can we do to help organisms? To address these questions, we delve into the scientific literature on distinct topics related to global change, discussing one of these topics in each class meeting. Key papers from the literature are assigned to help guide discussion. This course is discussion-based and interactive; each week a student leads discussion along with the instructor. A secondary goal of the course is to help students improve their written communication abilities, either through a traditional term paper or something else, like a grant application or a dissertation chapter. Depending on the number of students and their goals, we might tackle a review paper together, with the goal of obtaining a peer-reviewed publication.\n\u00c2\u00a0\nPrerequisites: introductory biology and evolution.", 
+    "title": "Life in the Anthropocene", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "OML 551", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15222", 
+        "listings": [
+            {
+                "number": "804", 
+                "subject": "E&EB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Martha Munoz"
+    ], 
+    "long_title": "Life in the Anthropocene", 
+    "extra_info": "A"
+}

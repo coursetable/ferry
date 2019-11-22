@@ -1,0 +1,93 @@
+{
+    "crn_code": "14399",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            6,
+            7
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            10
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            11
+        ],
+        [
+            0,
+            0,
+            7,
+            4,
+            5
+        ],
+        [
+            0,
+            3,
+            4,
+            4,
+            5
+        ],
+        [
+            0,
+            4,
+            3,
+            6,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0- Markov\r\n- Queuing \r\n- Poisson Process\r\n- Ability to apply such concepts to real world policy questions\r\n- understanding that sometimes complex real world complex policy questions can be modeled so simply ",
+            "\u00a0Mathematical models used in real life situations, queueing theory I did not know before ",
+            "\u00a0learning how to build models based on various policy problems ranging from health to terrorism to homeless shelter homes, building statistical skills ",
+            "\u00a0Repetition method ",
+            "\u00a0How to set up models and frame problems in a way that can be answered by models. A lot of useful real-world applications of the skills we learned. I particularly enjoyed learning about queueing theory and Markov models. ",
+            "\u00a0approaches to solve different type of problems ",
+            "\u00a0Modeling ",
+            "\u00a0I learned a lot form this class. This class is a practical class and the methods used in this class provide many new perspectives to look at many real problems. ",
+            "\u00a0critical thinking, problem solving "
+        ],
+        [
+            "\u00a0I learned SO MUCH from this course. While relevant to my research, it taught me a very different way of approaching modeling than I would typically use. The only suggestion (I would not call it a weakness) I would make is that sometimes the PhD problems were extremely long and too challenging. I am a PhD student and I am not opposed to challenging homework problems (in fact, I usually like them), but in many cases I felt that my background was not adequate for the PhD problems and I ended up having to try to learn an entire branch of research/statistics/modeling just to answer part of a question. I didn't feel like the lectures prepared me for the PhD problems. ",
+            "\u00a0The course is designed very well and the teaching style is great too! ",
+            "\u00a0Although Prof. Kaplan's previous work is very impressive and interesting, I think we can benefit more from learning the concept, models and methods than the background and context of the work. ",
+            "\u00a0It is really fast paced, but I enjoyed learning with Prof Kaplan, and he's really articulate, humorous, and knowledgeable ",
+            "\u00a0The examples used in class are all simple and easier to understand, but the problems in the homework are much harder than the class. ",
+            "\u00a0better guidance by the teaching assistant "
+        ],
+        [
+            "\u00a0I would recommend this course to another student; however, I would only recommend it to students with very strong quantitative skills, motivation, and enough time to dedicate to the courseload. ",
+            "\u00a0Yes - you'll learn how to apply so many mathematical concepts to real world problems. opens your eyes to so many research questions waiting to be answered. ",
+            "\u00a0Yes, very insightful ",
+            "\u00a0Yes I will, if one is interested in learning quantitative policy analysis and learning challenging probability models. ",
+            "\u00a0Yes, it is very useful for learning the basics of modelling and the class also provides the opportunity to apply what we've learned to real-life problems. Although some probability background is necessary, the level of probability background required is not too advanced. ",
+            "\u00a0Yes! It would allow you to learn to think from a different perspective, and use different/simple mathematic tools to solve problems! ",
+            "\u00a0yes ",
+            "\u00a0Yes. It is a practical class to optimization. ",
+            "\u00a0Yes ",
+            "\u00a0yes, non-technical skills to estimating numbers "
+        ]
+    ]
+}

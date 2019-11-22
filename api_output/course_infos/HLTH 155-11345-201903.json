@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50485/assignments/syllabus", 
+    "requirements": "Intended for non\u00e2\u20ac\u201cscience majors; preference to freshmen and sophomores. Prerequisite: high school biology.", 
+    "description": "Introduction to the biology of pathogen transmission from one organism to another by insects; special focus on malaria, dengue, and Lyme disease. Biology of the pathogens including modes of transmission, establishment of infection, and immune responses; the challenges associated with vector control, prevention, development of vaccines, and treatments.\nIntended for non\u00e2\u20ac\u201cscience majors; preference to freshmen and sophomores. Prerequisite: high school biology.", 
+    "title": "Biology of Malaria, Lyme, and ...", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 318", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11345", 
+        "listings": [
+            {
+                "number": "155", 
+                "subject": "HLTH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YGLE\">YC Global Affairs: Elective</a>"
+    ], 
+    "professors": [
+        "Alexia Belperron"
+    ], 
+    "long_title": "Biology of Malaria, Lyme, and Other Vector-Borne Diseases", 
+    "extra_info": "A"
+}

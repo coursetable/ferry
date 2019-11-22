@@ -1,0 +1,119 @@
+{
+    "crn_code": "14405",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            5,
+            12,
+            6
+        ],
+        [
+            0,
+            1,
+            5,
+            6,
+            13
+        ],
+        [
+            0,
+            0,
+            2,
+            13,
+            10
+        ],
+        [
+            0,
+            0,
+            1,
+            9,
+            14
+        ],
+        [
+            0,
+            6,
+            15,
+            4,
+            0
+        ],
+        [
+            0,
+            14,
+            11,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Really interesting look at academic research and how to critique studies. ",
+            "\u00a0I learned how to read studies critically and the theory behind why studies can or cannot demonstrate causality. Additionally, I learned some basics of research design. ",
+            "\u00a0This course was mainly a survey of various topics in causal inference through the reading and critiquing of academic papers. Through this I gained confidence in asking questions about research and practiced analyzing assumptions and verifying results, as well as developed a vocabulary to read about and discuss various topics in applied causal inference research. ",
+            "\u00a0I learned fundamental causal inference techniques and how to critically engage with current and past scholarship, even if I'm not fully familiar with the techniques they used. ",
+            "\u00a0I learned to critically read academic papers and note flaws in research design, execution etc. I learned about various statistical methods in a fun and intuitive manner (Winston tries very hard to not make the little math in this class intimidating) and enjoyed applying those concepts in the assignments. ",
+            "\u00a0I learned about key methods in causal inference, but more importantly, I learned to critique causal claims and evaluate the benefits and drawbacks of different research designs and methodologies. I became more comfortable with reading social science papers and understanding the methods and analyses within. ",
+            "\u00a0I learned about a variety of strategies for performing causal inference and how to critique researchers/reporters who make claims about causal relationships but may not back them up with proper analytical techniques. ",
+            "\u00a0I became better equipped with the statistical tools and knowledge to critique papers that claim to answer causal questions. I learned about different experimental designs and various statistical methods, as well as the functions, assumptions, and limitations of these methods. I also gained a better understanding of the different ways in which randomized experiments and observational studies are treated and the limitations and advantages of both. ",
+            "\u00a0I learned how to read research papers critically and evaluate research designs. I learned how to question assumptions of causal inference, and general claims made in the media about said research papers. ",
+            "\u00a0Skepticism and how to be skeptical of causal studies ",
+            "\u00a0I learned how to critically evaluate research papers, as well as the statistic methods, techniques, and concepts to back up my arguments. ",
+            "\u00a0Lots of interesting topics were covered: potential outcome framework, survival analysis, confounder adjustments, instrumental variables, regression discontinuity, etc. The most important takeaway is the ability to think critically about medical, social science research that relies on statistical analysis to reach causal connections. ",
+            "\u00a0A lot of invaluable information about causal inference. ",
+            "\u00a0How to critically evaluate statistics in social and natural science papers. This course is also a fantastic discussion around challenges in causal inference. ",
+            "\u00a0This course gives you a great understanding of studies that attempt to argue for causality, which often lean towards medical focused papers. We learned a great deal about the assumptions these studies rely on and took part in many discussions where we evaluated the merits of the studies' reliance on these assumptions. ",
+            "\u00a0The premise, assumptions, and strengths/weaknesses of different statistical methods for causal inference, practice in critically analyzing the methods used/assumptions made in various papers in the social sciences/medicine that make causal claims. ",
+            "\u00a0This course covered a variety of topics in causal inference. A few included randomized experiments, regression discontinuity, cox models, instrumental variables, fixed effects models. All of this was new to me and extremely interesting. "
+        ],
+        [
+            "\u00a0Interesting material, professor is great, not too much work but enough to engage me. ",
+            "\u00a0I think it was a really good class but the 4-5:15 meeting time was really, really, bad-- it was so hard to pay attention sometimes. ",
+            "\u00a0I really loved that this was a methods coursethe only of it's kind in currently in the statistics department. That being said, I think that we could have benefitted from doing more math in class and having some problem sets that involved carrying out causal inference analysis ourselves. ",
+            "\u00a0I loved that this course was so case-study heavy as it is SO important to not just \"do data science\" but also think about how it's being done and what its limitations are. Also Winston is an incredible and caring instructor.\r\n\r\nConversations were sometimes a tad dry, but many time we had fruitful points brought up. ",
+            "\u00a0Strengths:\r\n1. Winston is one of the nicest and most thoughtful professors I have had at Yale. He really cares about his students and goes out of his way to make everyone's learning experience enjoyable.\r\n2. I liked the relatively qualitative nature of this class (for an S&DS offering) because it helped me think critically about statistics and how it is actually applied around me (not something I got in my core theory classes). \r\n3. The class is structured very well and I liked the assignments (though the prompts were a little vague at times, Winston is very helpful with clarifications during OH and class)\r\nWeaknesses:\r\n1. We sometimes spent a lot of class time going over the assignments in minute detail which kind of felt like a waste of class time. I think a better approach would've been to post some outlines of answer keys and let us ask questions (though i understand that several answers were often acceptable for these questions and Winston may have been uncomfortable prescribing a certain set of them through an answer key) ",
+            "\u00a0The strength of this course is absolutely its discussion-oriented format. Some of the most rewarding moments in the class were when we were allowed to debate the plausibility of a paper's claims. Likewise, the problem sets really encouraged us to think critically and seek out alternate explanations. The studies we discussed were well-chosen and often thought-provoking. \r\n\r\nThe only improvement I can think of would be to offer the course more regularly! It could also be interesting to incorporate guest lecturers from people around the university using causal inference in their research (e.g. people from the ISPS, Fredrik Svje, etc.) ",
+            "\u00a0Strengths: very reasonable workload, well-curated syllabus with illustrative examples of all the ideas that we discuss in class\r\n\r\nWeaknesses: slightly dry lectures, relatively slow pace, and very little \"application\" exercises that challenge students to actually perform analysis with the techniques that we were taught in class ",
+            "\u00a0I thought that the class was a refreshing departure from many of the other statistics classes offered at Yale and allowed for both an application to the social and health sciences and a greater focus on critiquing methodologies and experimental design. I really enjoyed the format and content of the course and appreciated how Professor Lin had both lectures and discussions of papers and problem sets during class. The papers that we read were really interesting and were from a wide range of disciplines, and Professor Lin is a very engaging and caring professor. Though I know that the course was meant to be more a critical discussion and conceptual analysis and was not meant to have a heavy mathematical focus, I wish that the course involved more data analysis and engage more with mathematical analysis, either through problem sets or lectures. Sometimes the course material often felt a bit disjointed, which may have been the result of the lack of an overarching textbook and the nature of a course about causal inference. ",
+            "\u00a0This course fosters a low-pressure learning environment which helped me absorb more of the material. I found the papers really interesting: through the lens of causal inference, we read about a wide array of topics (the harmful effects of smoking, the benefits of the Mediterranean diet, effect of school programs etc.) and learn about different designs (regression discontinuity etc.) I found the psets/exams interesting - they helped me become more critical of the scientific papers I read. The weakness of the course is that sometimes the lectures were a bit slow (but I honestly think it's because the time 4-5:15pm wasn't ideal). ",
+            "\u00a0The course is structured such that you will spend a lot of time critiquing published papers in many domains about the feasibility of their conclusion, which is an amazing learning opportunity. Nowadays, there is a growing mindset of treating statistical tools as magical black box and apply them to all different sorts of problems, regardless of applicability. In other words, \"when you learn how to use a hammer, the entire universe is a nail.\" The course teaches us to look at the assumptions of these statistical techniques and assess whether these assumptions are violated in those studies.\r\n\r\nThe only drawback is that the course does not really focus on how to employ these techniques. If you are looking for a course to teach you what R packages you can use to run propensity score matching, this is not a great fit. ",
+            "\u00a0Winston is an incredible professor and extremely nice. Hes the kind of professor who really wants his students to develop critical thinking skills and understand the topics. If the class is confused, hell take extra time to drive the lesson home. ",
+            "\u00a0The course was planned very well and I genuinely learned a great deal from the problem sets and exams, which forced us to apply the theories in class to the studies we examined, reinforcing the material very well. It could be improved by changing the location of the room, which was too small for the class size. ",
+            "\u00a0Strengths: Winston is great always very thorough and thoughtful in his lectures and in feedback to problem sets, eager to help and answer questions. The selected readings were also really interesting and came from a variety of fields. I enjoyed the format of the class focusing more on analyzing the use of various statistical methods and seeing when they're appropriate/whether the assumptions hold/what conclusions can really be drawn rather than just using the methods. \r\nWeaknesses: That being said, it would've been nice to have some practice using the actual statistical methods. Understandably, it was the first time the course was taught, but in the future it would nice to have assignments be a mix of data analysis and thinking responses. ",
+            "\u00a0This course was well organized and well taught! Honestly there were not many weaknesses, I really enjoyed it. I think it would be beneficial if there were a data analysis component. We mostly read about the methods we were learning about and saw how they were implemented in research papers, but I think it would have helped to have implemented the methods ourselves. However, I do like that the course wasn't focused on data analysis and really enjoyed the psets that we did have. "
+        ],
+        [
+            "\u00a0Winston is great and the material is interesting, but it can be a little technical and dry. I definitely found it difficult to pay attention at times. ",
+            "\u00a0It's a fantastic course  high level topics, but not too much work. ",
+            "\u00a0Yes! It's so good and so eye-opening! It really does teach you to think more critically about all research. ",
+            "\u00a0Yes! It is very different than any other statistics course I have taken at Yale and the first in which I actively read and discussed academic papers. ",
+            "\u00a0DEFINITELY take this course!!! Especially if you're a statistics and data science major, please do not just take classes that teach you methods and theory. It is so incredibly important to be aware of the ramifications of the knowledge we can produce and this is one of the few courses in the department that offers that. While the S&DS expands this area (hopefully!) absolutely take this and get to know Winston who is amazing. ",
+            "\u00a0Yes! Especially if you are interested in research. I came from a development economics background and it was super interesting to learn about the various techniques that I had encountered in my research (but never \"really\" understood in an applied context). This is also a unique S&DS class and would form a good break from the plug and chug pset rigmarole. ",
+            "\u00a0Absolutely! Whether or not you are an S&DS major, you probably encounter causal inference in your field. The material learned in this class built my confidence in both understanding and critiquing secondary literature. Winston is also an incredibly kind and thoughtful professor, and makes the class that much more enjoyable. ",
+            "\u00a0Yes -- it teaches important concepts in causal inference in a very clear, digestible way and does not require a huge time investment in order to learn all that the course aims to teach. ",
+            "\u00a0Yes, absolutely! This class really changed the way that I read and review journal and newspaper articles and equipped me with a critical lens that I can easily apply to future classes and research endeavors. It's very well organized and allows you to learn not only about statistical methods and experimental design, but more about the ways in which research is conducted in the social and health sciences. ",
+            "\u00a0Yes ! Winston is a great professor and this is an interesting, low-pressure course which can count towards the S&DS major. ",
+            "\u00a0Dr. Lin is a brother. He is the best. He wears the same thing everyday - casual button down, light grey khakis, and some sweet, sweet NB shoes. He is extremely knowledgeable about the research in his field, able to name basically all the authors, dates, and contributions within the last century of anything remotely relevant to course content. Psets and exams are thought provoking yet very chill; Dr. Lin gives the most time for the amount of work required ratio out of any professor I have had, and I am grateful, since this course was my fifth. During lectures you are able to understand the world a bit more though Dr. Lin's eyes: to be more skeptical and how to be more skeptical about the world are you, without becoming a cynic. Highly recommended for anyone remotely interested in causal studies. With Dr. Lin there are no pre-requisites for the course; the statistical analyses are simple but the procedural analyses are challenging. So do it! Everyday you will be blessed with the joys of Dr. Lin. ",
+            "\u00a0Yes! It's not a very math-y course, but I do think I learned a lot from being able to read a paper and to question the methods used by the researchers. I can confidently say that I'm a lot more well equipped to critique these sorts of papers now. ",
+            "\u00a0Yes, definitely. Especially if you are an S&DS major ",
+            "\u00a0Yes! A must take if you're a stats major. ",
+            "\u00a0Yes! You learn a lot about important questions and Professor Lin is great! ",
+            "\u00a0Yes absolutely. A must take in the stats course. Models and math can only get you so far- take this to complete is a liberal arts stats curriculum ",
+            "\u00a0I would definitely recommend this course. Winston is very passionate and a great discussion leader. The course was organized well and problem sets and exams were straightforward and reinforced the class material well. ",
+            "\u00a0Would definitely recommend! This was probably one of my favorite classes I've taken here. I think the material is interesting and important for anyone pursuing research in the social sciences, medicine, whatever  it really taught me how to look critically and deeply at research papers making causal claims (as well as news articles trying to summarize the findings of research papers) and evaluate their use of certain methods and their conclusions made. Winston is a great professor, very approachable and eager to help students. ",
+            "\u00a0YES!! This course is so useful for reading and critically analyzing research papers, no matter what field you're in. Causal influence is tied in with so many fields of research, no matter what you're majoring in, this course would be extremely beneficial to take. It had some theoretical components, but was mostly focused on applications, which I really enjoyed. I loved this course! ",
+            "\u00a0Yes, it was really interesting and not too difficult. There was only a pset about every other week and they generally took 2 hours at most. We read a lot of really interesting papers for the class. "
+        ]
+    ]
+}

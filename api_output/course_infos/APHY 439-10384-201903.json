@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48935/assignments/syllabus", 
+    "requirements": "Prerequisites: PHYS 181 or 201, PHYS 301, or equivalents, or permission of instructor.", 
+    "description": "The basic concepts and techniques of quantum mechanics essential for solid-state physics and quantum electronics. Topics include the Schr\u00c3\u00b6dinger treatment of the harmonic oscillator, atoms and molecules and tunneling, matrix methods, and perturbation theory.\nPrerequisites: PHYS 181 or 201, PHYS 301, or equivalents, or permission of instructor.", 
+    "title": "Basic Quantum Mechanics", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "ML 107", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10384", 
+        "listings": [
+            {
+                "number": "439", 
+                "subject": "APHY"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Robert Schoelkopf"
+    ], 
+    "long_title": "Basic Quantum Mechanics", 
+    "extra_info": "A"
+}

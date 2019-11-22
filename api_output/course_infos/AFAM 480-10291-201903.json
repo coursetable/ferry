@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "A seminar on issues and approaches in African American studies. The colloquium offers students practical help in refining their senior essay topics and developing research strategies. Students discuss assigned readings and share their research experiences and findings. During the term, students are expected to make substantial progress on their senior essays; they are required to submit a prospectus, an annotated bibliography, and a draft of one-quarter of the essay.", 
+    "title": "Senior Colloquium: African Ame...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WALL81 201", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10291", 
+        "listings": [
+            {
+                "number": "480", 
+                "subject": "AFAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Aimee Cox"
+    ], 
+    "long_title": "Senior Colloquium: African American Studies", 
+    "extra_info": "A"
+}

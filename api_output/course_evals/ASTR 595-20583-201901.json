@@ -1,0 +1,77 @@
+{
+    "crn_code": "20583",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I ended up learning a little bit of fluid mechanics, its application to a few astrophysical problems, and some useful numerical methods! ",
+            "\u00a0Fluid mechanics and its applications in astrophysical systems ",
+            "\u00a0Order of magnitude estimate, MHD, fluid dynamics, coding, numerical methods, and dimensional analysis "
+        ],
+        [
+            "\u00a0Overall I found this course to be well organized to facilitate my learning. My one potential suggestion would be to have a larger number of smaller problem sets, as I found myself often neglecting problem sets until a week or so before they were due. This would even out the workload, which might be helpful for a handful of students. ",
+            "\u00a0Strength- Covers various topics of fluid mechanics. Good focus on turbulence, shocks, fluid instabilities, MHD.\r\n\r\nWeakness- Less focus on analytical solutions for incompressible fluid, could have taught instabilities like Rayleigh-Taylor and Parker, and MHD instabilities like MRI, etc in more detail. ",
+            "\u00a0The best graduate course I ever took so far. The course structure is very well organized with a mixed with both theory and numerical techniques. I really enjoy the idea of integrating the latest research findings into course materials (such as hot Jupiter MHD heating, and also the dimensional analysis on DSHARP disks). The area of improvement is I really hope you can have more time to cover MHD. When talking about the Alfvn wave, there are different modes (slow, fast, ...) and this part is not included in the course. I hope the semester is longer so I can learn more about the disks.  \r\nThank you for such an amazing course! "
+        ],
+        [
+            "\u00a0Certainly! The numerical aspect of this course is rare at Yale, and in my opinion highly important. I would caution students that this course is an astrophysics course, not a numerical methods course, so make sure you have at least some interest for fluid mechanics and its application to astrophysics. ",
+            "\u00a0Yes definitely ",
+            "\u00a0Definitely. One of the best course I ever took. "
+        ]
+    ]
+}

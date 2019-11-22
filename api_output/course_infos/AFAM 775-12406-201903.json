@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "This seminar traces the emergence of affect, sense, feeling, and mood as critical keywords in American studies. Particular attention is paid to the manner in which queer theorists such as Eve Kosofsky Sedgwick, Lauren Berlant, Ann Cvetkovich, Heather Love, Jennifer Doyle, Jonathan Flatley, and Jos\u00e9 Esteban Mu\u00f1oz developed the concept in what has been called \u201cthe affective turn\u201d in queer and feminist aesthetics. The philosophical basis of affect theory in the writings of Spinoza, Heidegger, and Deleuze form the core of the seminar. We also look to an alternate genealogy for affect politics in the writings of Bergson and Deleuze on fabulation. We consider the psychoanalytic take on affect, in particular the object relations school of Klein and Winnicott, and we read critics who contrast affect theory with trauma theory. Marxist contributions to affect theory include readings from Virno (on humor), Hardt and Negri (on affective labor), and Ranci\u00e8re (on the distribution of the sensible). The writings of Jasbir Puar and Brian Massumi on the affective politics of contemporary war, empire, and societies of control are also considered, as are writings by Fred Moten, Saidiya Hartman, and Frank Wilderson on optimism and pessimism as moods/modalities of black studies.", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12406", 
+        "listings": [
+            {
+                "number": "775", 
+                "subject": "AFAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Affect Theory", 
+    "extra_info": "C"
+}

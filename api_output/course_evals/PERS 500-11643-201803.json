@@ -1,0 +1,71 @@
+{
+    "crn_code": "11643",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Established a strong foundation in Persian to continue building on "
+        ],
+        [
+            "\u00a0Im glad this class meets every day. Ostad is a great teacher and instructor - she explains things very clearly.\r\n\r\nI really appreciate the emphasis on learning cultural material and find it valuable - but I would prefer if less time in class had been spent on going over our culture posts. \r\n\r\nI did not find the Friday conversation classes to be beneficial. I think this time could be better used focusing on grammar, or just being structured differently. "
+        ],
+        [
+            "\u00a0If this person is committed to learning Persian and is okay with not getting a high grade in this class, then I would recommend it. "
+        ]
+    ]
+}

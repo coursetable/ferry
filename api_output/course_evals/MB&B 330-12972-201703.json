@@ -1,0 +1,86 @@
+{
+    "crn_code": "12972",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            1,
+            4,
+            0
+        ],
+        [
+            1,
+            1,
+            1,
+            3,
+            1
+        ],
+        [
+            1,
+            0,
+            3,
+            3,
+            0
+        ],
+        [
+            0,
+            3,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            4,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0We actually learned a LOT in this course! I learned about modeling gene expression, cell signaling networks, and kinetics. I also became much better at MATLAB than I was previously. ",
+            "\u00a0I hadn't had any experience with the kinetics of biochemistry or biological systems in general, so this was a good introduction. I found the discussion of hysteresis in biological systems to be very interesting, and overall, I feel like learned a lot of basic knowledge in the field. ",
+            "\u00a0Helped to clarify and expand on models discussed in other classes. Basic intro to matlab. ",
+            "\u00a0Basic modelling of gene expression dynamics. ",
+            "\u00a0I developed more knowledge regarding a quantitative approach to biology. Previously, I had always considered protein signaling pathways or gene transcription as simple ON-OFF symptoms, but this course provided me a way to look at these systems through a more quantitative lens. I think such knowledge is crucial in understanding how cellular systems work. In addition, I got a great introduction to MATLAB coding, which may prove useful in future career work and research. "
+        ],
+        [
+            "\u00a0This course taught extremely useful material but much of the beginning (about a month) was overlap with MB&B 302 Biophysics, a requirement for the undergrad MB&B major. If this could be shortened so the overlap was less and more time was dedicated to mathematical modeling of systems like gene expression, I think the course would be more applicable to both MCDB and MB&B students. ",
+            "\u00a0The two halves of the course could have been integrated slightly better, but overall I thought it was taught very well. One major weakness was the workload distribution; there was fairly little work throughout the semester, but the three homework assignments and the take-home final all took a very long time to do. It might have been better to split the homeworks into shorter but more frequent assignments. I also found the take-home exam incredibly difficult, long, and time-consuming. ",
+            "\u00a0It could be improved by a rubric for paper presentations - they seemed entirely up to us, and only after the first group presented were we told what the professors were actually looking for. Otherwise, great course! ",
+            "\u00a0I liked the way the assignments were structured in this course. Through the exercises, homeworks, and paper abstracts, I felt like I learned a lot without a large amount of stress. However, I felt like a lot of the class was repetitive, and I think we could've moved more quickly and covered more material. The class also essentially assumed that you have no background in differential equations or any degree of coding, which can be kind of annoying if you have that knowledge and are mostly there for the actual material of the course. ",
+            "\u00a0Strengths: KMJ\r\nWeaknesses: TE ",
+            "\u00a0I think lectures were not 100% clear. I think it might be good to give the lecture notes before so that its easier to follow the class. ",
+            "\u00a0A strength lies in its practice exercises, which were designed to help us develop MATLAB coding skills in a stress-fee way. I felt these exercises prepared me well for future problem sets and assignments. "
+        ],
+        [
+            "\u00a0I would definitely recommend this course to anyone interested in getting a better understanding of the mathematical principles that underlie common biological models. The lectures were interesting and enjoyable, and the workload was light, with the exception of the three large homework assignments. If you don't have any coding experience, don't let that stop you from taking this class; the MATLAB modeling covered in the course is easy to pick up, but you will definitely have to put some time and effort into learning it on your own. ",
+            "\u00a0This course is a great start to dynamical systems in biology, however don't be fooled! It definitely has more material, a stronger emphasis on math (differential equations and probability, to be specific), and more difficult assignments than a simple \"introductory\" course. The final was particularly difficult, and quite math-heavy. You can do the work without a background in diffeq or probability (not a course necessarily but any background), but you won't get nearly as much out of the course if you're struggling to keep up with the derivations rather than focusing on the biological applications. In fact, it would make more sense for this course and MCDB 361 (Dynamical Systems in Biology) to be paired up as Dynamical Systems I & II. Anyways, I learned a LOT in this course, and Thierry and Kathryn are extremely knowledgeable about the material. This course is a great supplement to other biology courses, since computational biology really bridges the quantitative and qualitative aspects of biology. I expect to use the material I learned in this course during my future studies for SURE, no matter which field of biology I end up in. ",
+            "\u00a0This is a good course if you don't have any knowledge about kinetics in biological systems. The class can be kind of slow and assumes little knowledge on differential equations and MATLAB, so I've been told that if you have that sort of a background, you should just wait to take the more advanced course in the spring. It is very manageable in terms of workload, and the final is take-home which is always nice. ",
+            "\u00a0Absolutely would not recommend. First half is so poorly organized and explained that by the time you get to KMJ it's too late. Some weeks you have almost no work, other weeks you'll spend 14 hours or more on a pset, let alone what other assignments might be due for the class. This class was not only exhaustingly boring but also made difficult for undergraduates by the grad student majority. I don't want to write a mean review because the professors seemed like great people who were genuinely interested in their subject, but I would never ever recommend this class to another student. ",
+            "\u00a0I dont think it was that useful for me but I would recommend it to students in molecular biology, gene expression, etc. ",
+            "\u00a0This course was really fantastic. The professors and TAs were very approachable and were great at answering our questions. Sometimes, the mathematical derivations become confusing, but the class makes sure to practice these equations and apply these equations to more concrete objects to make the knowledge stick. If you are looking for a more quantitative approach to biology, this is a great introductory course for you! "
+        ]
+    ]
+}

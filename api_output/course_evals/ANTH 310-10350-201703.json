@@ -1,0 +1,79 @@
+{
+    "crn_code": "10350",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to identify animals by skull. ",
+            "\u00a0Mammalogy is a wonderful course where you go through the whole phylogeny of mammals and learn about every family! The lectures give you a broad overview of features of different mammals and in labs you will look at skins and skulls and be able to identitify them by the end of the course. ",
+            "\u00a0Deep understanding of mammal systematics and diversity ",
+            "\u00a0This was a great class. Learned a lot about mammals. Obviously. Dr. Sargis is a great lecturerer. Also learned a lot about evolution which was a previous gap in my knowledge. "
+        ],
+        [
+            "\u00a0The strengths were the active engagement with mammal bones and utilizing the specimens in the Peabody Museum ",
+            "\u00a0Overall a fantastic course ",
+            "\u00a0Strengths: lectures and lab were both great\r\nWeaknesses: too much material before each test. Would recommend more lab exams with fewer families on each. "
+        ],
+        [
+            "\u00a0Yes but with caution. This is the first class that \"low workload\" did NOT correlate with an easy class. Over a third of the class was composed of PhD students who want to pursue a similar field for a living. As a result, the exams were challenging and not curved unless someone didn't get a 100 (which someone always did). I took the class Cr/D and that was a fantastic decision on my part, who came in knowing nothing about specimen identification. Also, the class is less a mammology course and far more an anthropology course with a smattering of fun facts about an animal. ",
+            "\u00a0Yes! Take it-- there': no other class like it! Both labs and lectures will leave you feeling fresh and inspired. ",
+            "\u00a0Absolutely, but only if you are entirely committed to it going in. ",
+            "\u00a0Yes, definitely. Should be offered in several sections for more people. "
+        ]
+    ]
+}

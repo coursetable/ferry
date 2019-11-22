@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49121/assignments/syllabus", 
+    "requirements": "", 
+    "description": "1 credit. (Required in, and limited to, Ph.D. first year, fall term.) This seminar centers on a thorough examination of fundamental ideas of historiography, centering on Rome and exploring aspects of geology, culture, mapping, site development, the establishment of institutions, and the construction of buildings across several millennia, as well as a study of literature on the urbs and its worldwide impact.", 
+    "title": "Ph.D. Seminar I: Ph.D. Sem. I ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "RDH", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12421", 
+        "listings": [
+            {
+                "number": "551", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Mary McLeod"
+    ], 
+    "long_title": "Ph.D. Seminar I: Ph.D. Sem. I His.& Crit.Theory", 
+    "extra_info": "A"
+}

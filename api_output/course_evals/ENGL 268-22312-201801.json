@@ -1,0 +1,78 @@
+{
+    "crn_code": "22312",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            4,
+            3
+        ],
+        [
+            1,
+            0,
+            0,
+            3,
+            7
+        ],
+        [
+            0,
+            1,
+            0,
+            6,
+            4
+        ],
+        [
+            0,
+            1,
+            1,
+            5,
+            4
+        ],
+        [
+            1,
+            3,
+            6,
+            0,
+            0
+        ],
+        [
+            2,
+            4,
+            5,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A better understanding of film criticism. ",
+            "\u00a0I developed a better ability to look at film critically. Not necessarily its craft, but its substance-- plot, writing, etc. ",
+            "\u00a0I learned a lot about how to analyze movies that I didn't know before this class! "
+        ],
+        [
+            "\u00a0I thought it was strong in that it let Prof. Minnis shine on a subject that he clearly loves. ",
+            "\u00a0This was an awesome course. The workload was manageable and the film screenings and readings were organized in a way that made a lot of sense. "
+        ],
+        [
+            "\u00a0Honestly, this class is a hidden gem at Yale. No prior experience with the text is really necessary. ",
+            "\u00a0no ",
+            "\u00a0Yes! Proffessor Minnis is great and the course itself is really creative ",
+            "\u00a0Absolutely, a fun course where you watch cool movies, discuss them, and write about them. Not much work, lots of interesting conversations. ",
+            "\u00a0I would definitely recommend this course! The workload is not evenly distributed, so keep that in mind, but it was great as a 5th class. "
+        ]
+    ]
+}

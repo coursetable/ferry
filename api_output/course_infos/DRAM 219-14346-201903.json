@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51849/assignments/syllabus", 
+    "requirements": "Open to nondepartmental and non-School of Drama students with permission of the instructor.", 
+    "description": "This course combines lectures and lab demonstrations on the setup and use of lighting equipment, technology, and effects used in live events. Students learn of the available technology and its proper use and handling. Topics include power distribution, DMX, power and circuit plots, LED fixtures, moving lights, board programming, fog and haze units, and practicals.\nOpen to nondepartmental and non-School of Drama students with permission of the instructor.", 
+    "title": "Lighting Technology", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "YK222 EX", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14346", 
+        "listings": [
+            {
+                "number": "219", 
+                "subject": "DRAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Donald Titus"
+    ], 
+    "long_title": "Lighting Technology", 
+    "extra_info": "A"
+}

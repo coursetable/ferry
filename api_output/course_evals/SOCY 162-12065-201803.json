@@ -1,0 +1,116 @@
+{
+    "crn_code": "12065",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            5,
+            11,
+            7
+        ],
+        [
+            0,
+            0,
+            1,
+            9,
+            13
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            19
+        ],
+        [
+            0,
+            1,
+            3,
+            9,
+            11
+        ],
+        [
+            0,
+            4,
+            9,
+            10,
+            0
+        ],
+        [
+            0,
+            2,
+            10,
+            11,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Good basic overview of calc and stats for humanities students--definitely super applicable to real life phenomena and experiences. ",
+            "\u00a0I learned how to do calculus and how to use STATA. I now know how to quantitatively develop a research experiment and feel confident that if I ever have to produce statistical analysis for another class or for a project at work, I could definitely figure it out. ",
+            "\u00a0By taking this course you will gain a solid foundational understanding of how to interpret and analyze sociological data. In addition to this, you will gain working knowledge of Stata statistical programming software. For those who have not taken calculus, the class also briefly covers single- and multivariable calculus in order to set up the statistical portion of the class. ",
+            "\u00a0I learned over two years' worth of mathematics and basic programming on Stata, which has given me a new perspective and ability to understand and engage with sociological data. ",
+            "\u00a0We covered a wide range of mathematics, starting from algebra to multivariable calculus. We ultimately concluded with applying such mathematics in Stata. ",
+            "\u00a0I learned the basics of data analysis and how to use Stata. ",
+            "\u00a0I learned to analyze data using stata. I also learned a great deal of calculus and statistics. ",
+            "\u00a0I learned how to use Stata, and how to think critically about what factors lead to inequity in society. I learned how to quantify human characteristics, and how to manipulate data sets ",
+            "\u00a0Great intro to stats class! I had no background but had a lot of fun learning! ",
+            "\u00a0Calculus review and stats and stata introduction ",
+            "\u00a0I learned how to use stats at an elementary level for data analysis in the social sciences. ",
+            "\u00a0I learned Stata pretty well. A solid foundation. I also learned a bit more about the methods of certainty/epistemologies in sociology. ",
+            "\u00a0He taught calculus and statistics principles in a way that actually made sense and cleared up years of confusion I had. Absolutely amazing to be able to cogently understand these methods. ",
+            "\u00a0I learned valuable information about using the program STATA do derive bivariate relationships between variables. This course introduced me to programming, and I now have a grasp on linear regression models. ",
+            "\u00a0I learned a ton through this course. I learned how to analyze data and find statistical relevance in a data set. I also learned various topics in calculus and multi-calculus. I've learned the most in this course than in any other Yale course. ",
+            "\u00a0I learned a lot about descriptive statistics, and finding and interpretations regressions between multiple variables. ",
+            "\u00a0I received a crash course in the basics of calculus (great review for those who only studied 1 year/took calc AB in high school), learned the process of surveying/collecting data for sociological studies, saw the value in understanding metadata, and also learned the basics of statistics through the lens of STATA. We were taught to code in the STATA program, interact various types of variables (continuous, categorical, hybrid), and create several regression models (OLS linear, OLS exponential, LPM, Logit) to understand the relationship. ",
+            "\u00a0I gained knowledge of evaluating data collection sets and methods and using Stata. Also, this class was a good review of multivariable calculus. "
+        ],
+        [
+            "\u00a0Lloyd is awesome!! \r\nStrengths: applicability, pace, very clear expectations and guidelines\r\nWeaknesses: by the end of the course I'm still not sure why we needed to do as much calculus as we did? At some points in the semester the office hours and discussion sections didn't make sense with due dates of the psets (i.e. section the day after the pset was due, office hours two hours before the pset is due, etc.) ",
+            "\u00a0Strengths: The teaching staff is absolutely fantastic! One of the strongest teaching teams at Yale for sure. They are incredibly engaging and they make QRs fun.  They teach us the difficult work in an incredibly engaging way that made math fun for me again -- I literally haven't felt that way since elementary school.\r\nWeakness: Grading could be a bit tough, and nit picky, especially on the psets. ",
+            "\u00a0Strengths:\r\n- Lloyd is a really engaging teacher and explains things in fun and interesting ways\r\n- The class is low-stress\r\n- You cover a wide range of statistical concepts and apply all of these new techniques to real-world data\r\n\r\nWeaknesses:\r\n- the class felt a bit slow sometimes; many classes consisted of a review of the previous class for about half the time ",
+            "\u00a0Strong lectures, great office hours help, incredible class notes, flexible structure- no complaints here! ",
+            "\u00a0I think the course is a bit rushed in terms of learning stata, especially for someone with no computer science background, but otherwise it is structured well. ",
+            "\u00a0Not many weaknesses, more stata background ",
+            "\u00a0Great teaching fellow, great teacher. Overall a great class. ",
+            "\u00a0The content is well provided, though state could be introduced earlier I think. Having more time to sit with the software would allow some greater familiarity ",
+            "\u00a0Strengths: covers a lot of ground, expansive, but you learn pretty in depth about different methods as well. \r\n\r\nWeaknesses: kinda hard still if youre not good at math, but thats not really a true weakness bc now i feel prepared to actually take a MATH class. ",
+            "\u00a0This course started off slowly with little work, then hit a point where it seemed almost overwhelming, especially as compared to the first half. If there's any way to even the work across the semester it would improve the class. ",
+            "\u00a0The course overall was very well structured and engaging. The only weakness of the course is the pace in which it moves at the beginning of the course. There was a lot of time devoted to foundational topics which weren't applied while coding. ",
+            "\u00a0I think it might be nice to learn to code in R, as opposed to using stats, but Lloyd is a brilliant teacher who conveys information clearly, and cares about his students ",
+            "\u00a0The course was strong in providing students with everything they needed to compute calculus problems and understand regression models built through STATA. There was an ample amount of opportunities to ask questions and both the professor and TA did a great job in communicating the content material clearly. As for weaknesses, my only comment would preparation for the final. I wish there would have been one extra section to prepare us for the statistical memo (almost akin to a writing workshop) as I struggled to organize my findings and communicate them in a manner expected for those doing work in sociology. ",
+            "\u00a0This class spends a lot of time reviewing math basics, which is useful to understand why and how to model different types of regressions, but I think led to many students not attending class for the beginning weeks and a lot of busy work on psets. I wish there could have been a quicker review so we would have more time to work with Stata. "
+        ],
+        [
+            "\u00a0If Lloyd Grieger is still teaching it, then yes! He is great and makes the material interesting in a way that I'm not sure it would be if he wasn't the prof. If you're a humanities student who needs a QR and has even a slight interest in calc or stats this class is pretty painless. ",
+            "\u00a0Yes!! Most definitely!!!  The teaching staff is absolutely fantastic! One of the strongest teaching teams at Yale for sure. They are incredibly engaging and they make QRs fun.  They teach us the difficult work in an incredibly engaging way that made math fun for me again -- I literally haven't felt that way since elementary school.  If you have the option to take this class, I would 10/10 recommend! ",
+            "\u00a0Take this course if you want a basic introduction to statistical concepts and statistical programming. But if you are strong in math, this class may feel very slow to you. I had taken calculus before taking this class, and the first half of the course was essentially all review. I would say, take this course if you are not a math-y person, but otherwise an introduction to statistics course may be a better option. ",
+            "\u00a0YES! This class would appeal to both humanities and STEM students, since it deals with their intersection. ",
+            "\u00a0Would highly, highly recommend this class. I am a sociology major and I don't like math so I took the class just to fulfill my major/QR requirement. However, this class turned out to be one of the best classes I took at Yale and I learned so much. I even developed some interest in data analysis that I might take more stats or quantitative classes in the future. Prof Grieger is a dynamic, engaging lecturer and cares a lot about students. The way he structures his lectures and homework really facilitates learning. (+After taking so many socy classes taught by white male professors it was so nice to take a class taught by a professor who I could relate to better...) You have to keep in mind though that the later lectures (bivariate and multivariate analysis) are very dense and more difficult. I had trouble understanding some of the lectures (FYI I have no statistics experience at all so maybe other students didn't find them so challenging) but after reviewing the class notes, doing psets and going to office hours I felt back on track. ",
+            "\u00a0I would! Its a lot of work but it pays off. ",
+            "\u00a0Yes I strongly recommend this class for all students, it was very well taught and very high energy! ",
+            "\u00a0This class is an absolute must for anyone looking to get some simple, but impressive experience with Stata. No prior calculus experience needed at all! ",
+            "\u00a0Yes lt was a great way to brush up on calc and get some stats and the prof grierger ls amazing ",
+            "\u00a0Yes ",
+            "\u00a0Yes. A useful and interesting sociology class and QR to boot ",
+            "\u00a0Yes! I just as able to understand math in a different way and Professor Grieger is amazing. ",
+            "\u00a0I would recommend this course for anyone looking for looking a alternative statistical course or semi-difficult QR. The course was very engaging and I learned so much. I felt very accomplished after. ",
+            "\u00a0Absolutely!!! Lloyd is just really good at explaining things in everyday terms, and he makes complex concepts easily understandable, so definitely take this course just to learn! ",
+            "\u00a0Yes, I would especially recommend this course to those who are not interested in STEM but are looking to fill their QR credit because it takes an analytical look at social phenomena as well as the possible factors that contribute to them. The calculus and statistical concepts are much more accessible to those who may struggle with math (such as myself) as we constantly discussed the meaning of the numbers and the purpose in understanding the equations/models. The homework always directly connected to the lectures and the midterm was straightforward in structure. The final allowed us to apply skills we had been practicing for a considerable period of time and the prompts even provided some room to take risks or creatively explore with coding in STATA. ",
+            "\u00a0I would definitely recommend this class. Prof Grieger is an incredible professor with a lot of great insight into applications and nuances. He is very patient and enthusiastic about the material. Maggie, our TA, was also an incredible resource. She is very helpful at breaking down concepts and guiding us through difficult coding. "
+        ]
+    ]
+}

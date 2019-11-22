@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 9
+    }, 
+    "requirements": "Prerequisite: Completion of an L4 Greek course or its equivalent.", 
+    "description": "This course aims to expand and enhance students\u2019 grasp of Ancient Greek grammar and syntax, while honing abilities to translate Ancient Greek historical prose texts of the fifth and fourth centuries BCE. This seminar draws upon two historical texts concerned with the (often vexed) interactions of Greeks and Persians during the Classical period: Book 6 of Herodotus\u2019 Histories, and Book 3 of Xenophon\u2019s Anabasis. The overall goal of this course is to move students beyond translating Greek accurately, into the realm of (1) asking critical and interpretive questions of two historical texts, (2) considering strategies of translation, and (3) analyzing the narrative styles and biases of two Classical Greek prose writers. The course also familiarizes students with the form, circumstances, and evolution of early historical genres, exploring the beginnings of a tradition that would shape historical narratives and notions of \u201cWestern Civilization\u201d (contributing to perceptions of east vs. west, democracy vs. autocracy, etc.) for millennia thereafter.\nPrerequisite: Completion of an L4 Greek course or its equivalent.", 
+    "title": "Greeks & Persians", 
+    "skills": [
+        "L4"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "WLH 001", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13623", 
+        "listings": [
+            {
+                "number": "452", 
+                "subject": "GREK"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jessica Lamont"
+    ], 
+    "long_title": "Greeks & Persians", 
+    "extra_info": "A"
+}

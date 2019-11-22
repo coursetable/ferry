@@ -1,0 +1,113 @@
+{
+    "crn_code": "10952",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            4,
+            5,
+            7,
+            5
+        ],
+        [
+            2,
+            6,
+            8,
+            5,
+            0
+        ],
+        [
+            1,
+            4,
+            8,
+            7,
+            1
+        ],
+        [
+            1,
+            2,
+            7,
+            7,
+            3
+        ],
+        [
+            0,
+            3,
+            5,
+            9,
+            3
+        ],
+        [
+            0,
+            2,
+            12,
+            6,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Through the labs and homework assignments, I developed a better understanding of engineering concepts, including graph searching, the PageRank algorithm, and encoding/decoding information. ",
+            "\u00a0This course covered a variety of elementary topics in the realms of encoding, signals/systems, and networking, providing a good survey of topics. It does not go into too much depth on any of these topics, but it is a solid foundation. Note, the course title says that it includes controls, but this was not a part of the curriculum, which was disappointing. ",
+            "\u00a0I learned all about signals and how they're sent and received. ",
+            "\u00a0Basics of signal processing, electrical and computer systems, networks, etc. This is a potpourri of topics, which means that rigorous treatment can be given to only a few of them. The actual topics this course covers are FASCINATING and incredibly useful in real engineering contexts, but it is unfortunately not taught well. ",
+            "\u00a0The course suffered to give any in depth analysis but rather very superficial analysis of many topics ",
+            "\u00a0I learned a lot of intro information about communications, computation, and control relative to electrical engineering. This included signal processing, quantization, machine learning, signals, Fourier series, recommendation systems, etc. ",
+            "\u00a0Random knowledge of many things related to electrical engineering. ",
+            "\u00a0I learned all about information theory and basically the foundation/thinking behind how code and signals are structured and how networks interact with each other. I also gained skills and experience with Matlab. ",
+            "\u00a0a lot of fourier analysis ",
+            "\u00a0The first half of the semester I felt as though I learned a lot: Huffman coding, LZW coding, nodal networks, Fourier series, and more.  All of this information is crucial to understanding how data is encoded and transmitted in the modern age, so it was nice to receive a strong background in those skills. ",
+            "\u00a0I learned about information science, graph theory, computer architecture, and several different topics. Overall, since the course contained so many different topics, it felt more like a survey course than one where I could learn in-depth about a topic. ",
+            "\u00a0I learned about certain algorithms for features such as recommendation systems, as well as how to use matlab. ",
+            "\u00a0Surveyed a wide variety of subjects ranging from information science and signal processing to machine learning. This course broadened my idea of what EE really is and piqued my interest in the major. ",
+            "\u00a0Received an introduction to a number of various disciplines within engineering. Learned to apply probability and linear algebra to solving and approaching problems as relevant as information collection, storage, and compression and image processing, ",
+            "\u00a0It was interesting to learn the basics of the machine learning and data encoding. "
+        ],
+        [
+            "\u00a0This would be the perfect class with a different instructor. Yale needs to treat investment and commitment to STEM more seriously by bringing in instructors who are excited and informed about the material they are covering. ",
+            "\u00a0I would say that potentially trying to tackle fewer topics and instead go into more depth on each of them might be more useful, since we didn't get to spend much time on any one concept. Moreover, the addition of controls topics, as the title implies, would be good. ",
+            "\u00a0Wenjun is an incredibly accomplished professor, so she has so much to say!  I thought the labs did a good job at demonstrating applications of the concepts learned in lecture, but I found the psets very challenging.  I'm happy Wenjun had a microphone, although I wish she would've covered the content slightly slower (although part of that is our fault for not being more inquisitive). ",
+            "\u00a0Strengths: fascinating material. This class goes quickly but covers most of the underpinnings of modern technology.\r\n\r\nWeaknesses: It goes too quickly. Inconsistent treatment of topics -- too fast in general; some topics are brushed past, and some are given slightly more rigorous treatment. In all, however, unfulfilling. \"Labs\" are potentially interesting but more annoying than useful -- there is no actual lab work but instead MATLAB coding assignments; however, the TA writes most of the code and you have to complete one or two important lines. End result is that you neither learn the material, nor get better at using MATLAB. It would be a lot more work to make us write the programs from scratch (and it might become more of a CS class, lol), but I think it's worth having more MATLAB in \"labs\". And possibly even real labs. Term project (given in conjunction with a takehome final) was also kind of outside the scope of the class and was more of a research write-up than a real project (i.e. we could have had some really cool signal processing final project). ",
+            "\u00a0I felt that the teaching style suffered. The lecture notes were not like the lectures in person. However the problem sets were covered by note material but not described in lecture thus a greater deal of time was spent in office hours than needed to be if the instructor taught the material in the first place ",
+            "\u00a0Course has many diverse topics and is not in depth. This is a survey course for other EENG courses. This is both a strength and a weakness. ",
+            "\u00a0This course always had help readily available. Wenjun was extremely helpful and generous with her time and very accommodating to the students' needs. The TAs as well were very helpful and knowledgeable and stayed late for office hours almost every week and made arrangements to even meet outside of office hours. ",
+            "\u00a0Wenjun is super nice but can't teach ",
+            "\u00a0While the first half of the semester went great, I found the second half to be rather disorganized.  I often found myself struggling to jot any notes down from the slideshows, and as a result I didn't get as much out of the second half of the course. ",
+            "\u00a0It's an interesting course that covers a decent amount of material. I think the beginning of the course should be more dedicated to teaching relevant statistics and linear algebra (Like 2-3 classes or so, and have a quiz to test the students). This would ensure that students understand the relevant concepts needed to fully appreciate the remainder of the course. \r\n\r\nEven though this is a broad survey course, I think topics could be covered more in-depth, provided they are taught clearly and effectively.\r\n\r\nThere also needs to be more in-class examples, or examples in the notes. These examples should be difficult enough that important concepts are thoroughly examined, which would result in better understanding of the material. The current examples in the notes are difficult to follow, and often make jumps between steps that can be difficult to understand.\r\n\r\nThe notes should also include a symbol \"key\". Many university notes have an appendix attached that maps a symbol to it's meaning. This could be a small but helpful improvement and save students' time as they work through / review notes for the class. ",
+            "\u00a0The psets and labs were a reasonable amount of work and I wouldn't change their level of difficulty. One thing I would like changed is if the professor was more clear about the grading criteria earlier in the course.  Also, it would be nice to cover fewer topics and go into more depth with each, rather than covering so many at a shallow level.\r\n\r\nAlso, more opportunities for students to do projects or implement what they learn in class would be nice. ",
+            "\u00a0Although I understood the applications of what  we learned, I didn't feel that it was a cohesive course; it felt like loosely related topics put together. ",
+            "\u00a0The course is a great survey course. Every class felt like an adventure and Wenjun was very nice and patient with us. At times though, Wenjun would speak fairly quickly in class and towards the end of the course the lecture notes did not line up with the actual lecture in terms of level of detail such that it got to the point where students became confused about course material later in the semester. Other than that, the course was very exciting! Truly eye-opening. ",
+            "\u00a0A strength of this course is that it gave us a slight familiarity with topics we'll have the opportunity to study in depth in later classes. In doing so, it allows us to better gauge potential interest in them. Another strength of the course is its small size and strong TF support, allowing for collaborative learning especially when the topics get difficult. \r\nA weakness of this course is that since the class is a survey of so many topics, and since each unit topic covers so much, each individual pset assignment seemed to have only one or two questions per concept. Although each pset was of reasonable length, and the workload was manageable, I personally struggled with this course. Only having one or two problems to look back to, when studying for the midterm, made it difficult for me to learn and understand the topics. ",
+            "\u00a0Strengths is the topic. Weakness is the instructor. "
+        ],
+        [
+            "\u00a0I would recommend this course to another student, but I would not recommend Wenjun Hu as a professor. The course material is fascinating and applicable to the real world. The homework assignments are interesting and manageable, and the labs--completed on the student's own time in Matlab--are fascinating. The lectures, however, will not help a student complete these assignments. Fortunately, other universities have posted lecture notes, and there are many lecture videos from other universities and organizations on YouTube that concisely and clearly explain the topics covered. ",
+            "\u00a0If one wants a fairly easy EE course to take, this course is a solid choice, but it certainly wasn't the most interesting. ",
+            "\u00a0Wenjun is still learning how to be an effective lecturer, but I overall enjoyed the class.  I couldn't recommend it to non-EE/CS people (the content is just too technical), but overall it was enjoyable.  Some of the lecturers required a lot of thought, but it was amazing to be taught from someone who's doing leading research in the field.  Wenjun cares a lot about her students -- so go to office hours and get to know her!! ",
+            "\u00a0Same response you will get for any other engineering core class: not a great class, but you'll be fine; don't take it for fun. I hate to beat a dead horse, but Yale Engineering (again) does a meh job with theoretical understanding and a poor job with practical skills. This class really could be excellent if it was entirely redesigned from the ground up, and given more emphasis on practical skills, and more consistency across the board. ",
+            "\u00a0I think the course itself can be beneficial.The concepts are necessary for electrical engineering students but the organization of the material and its presentation suffered ",
+            "\u00a0Good course and probably required for your major if your looking at it. ",
+            "\u00a0Required for all EENG tracks. More math inclined people should take signals and systems, information theory, or machine learning  this is a survey course. Teaches matlab sort of. ",
+            "\u00a0I found this course really interesting and learned A LOT thanks to Wenjun's and the TA's dedication to the class. It's not too technical so if you're interested in learning about the origin of coding and how it applies today, this is a good class to take. Not having experience with Matlab beforehand makes it a little more challenging for the biweekly labs, but office hours help with this. ",
+            "\u00a0Only for majors ",
+            "\u00a0Only take this course if you're an electrical engineering student or are highly interested in how data is encoded.  The amount of work isn't ridiculous, but I still wouldn't recommend taking it unless you need to. ",
+            "\u00a0No, take it if you only have to. EENG 310 and EENG 348 are there if you are truly interested in signals and systems. ",
+            "\u00a0I would recommend it if they were interested in the math/theoretical side if engineering and were majoring in something along the lines of math/computer science/engineering. A non-stem major would get very little out of this course because it is more theoretical than practical. ",
+            "\u00a0EE202 is a great course if you're interested in doing Electrical Engineering. Wenjun is very kind and ensures the students are learning without burdening them with too much work. She gets to know the whole class and loves participation. At times she might speak fairly quickly and I think she knows this sometimes, so just ask clarifying questions or read along with the lecture notes and you'll be fine. The topics we covered ranged from signal processing and information science to machine learning, so we didn't go super in-depth into any of them but got a great taste of all of them. We looked at Netflix's movie recommendation systems and reconstructed Homer Simpson's voice through signal sampling.\r\n\r\nThere's a problem set due on Wednesday every week and then a lab (which is essentially another problem set but you use MATLAB to complete it) due every other Wednesday. There was an open-note and book midterm and then, at the end of the semester, a take-home final as well as a short paper on a certain subject we had learned.\r\n\r\nThis class will be *much* better and more fun if you all squad up and go to office hours. The TAs are very helpful and personable. In fact, a lot of us agreed we wouldn't have survived the latter half of the course without their teachings and guidance.\r\n\r\nAnyway, I highly recommend this course. ",
+            "\u00a0Obviously it's an EE requirement. But for a non EE major, I found the topics interesting and enjoyed getting an introduction to them, but I'm not sure that this survey class is the best way for someone to get an in-depth handling of any of the covered topics. ",
+            "\u00a0No. Not with Wenjun. She's nice but she just cannot teach. "
+        ]
+    ]
+}

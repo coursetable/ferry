@@ -1,0 +1,73 @@
+{
+    "crn_code": "30210",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I greatly imrpoved my ability to converse in German and my cultural knowledge of Germany. "
+        ],
+        [
+            "\u00a0Everything was great, though I would like to point out some issues with the essays we had to write. I think that the word limit for these essays made it impossible to fulfill all of their requirements (especially in the cultural exploration part). I also think that though topic of cultural analysis was very interesting and appropriate, the essay had unrealistic expectations from students (e.g \"The essay should be an in-depth cultural analysis and comparison\"). "
+        ],
+        [
+            "\u00a0Very much so yes. The structure of the class is such that students have enough time to complete their work while also exploring Germany. ",
+            "\u00a0I definitely would! ",
+            "\u00a0Yes, because the professors and learning assistants truly want to help you succeed in improving your language skills. They will work with you outside of class, and they do not judge you on your lack of experience. "
+        ]
+    ]
+}

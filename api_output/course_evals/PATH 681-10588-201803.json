@@ -1,0 +1,82 @@
+{
+    "crn_code": "10588",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            3,
+            0
+        ],
+        [
+            1,
+            2,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0While I had a foundation in cancer biology to start with, this class gave me advanced insight into subfields of cancer biology I hadn't yet known.\r\n\r\nI particularly appreciate the early immunology sections. ",
+            "\u00a0MOA of different cancer therapies.\r\nskills of research scientific evidence ",
+            "\u00a0Learning to read advanced papers on subjects that are different from my own research and discuss them ",
+            "\u00a0I learned a lot about cancer biology ",
+            "\u00a0General background in various topics of cancer biology. Including more in-depth analysis of primary literature in the field through reading and discussing current articles. An idea of where the future of cancer research is going in terms of drug development and learning more about the molecular basis of the disease. I developed critical thinking skills about the research being done in cancer biology. Finally, I developed better presentation skills in areas new to me. "
+        ],
+        [
+            "\u00a0The content was great; relevant, well selected speakers and papers. However, as the semester wore on it became clear that people were not as engaged as at the start. Something could be done to draw people back into the conversation, though I falter on specific recommendations. ",
+            "\u00a0This class requires students to do research on scientific papers on their own and then to present to peer students, it was good training for us.\r\nThere were people from different academic backgrounds in class, and people share their portion of understanding about cancers.\r\nThe co-instructors were really helpful, and we could contact them if had questions! ",
+            "\u00a0There could be more participation of the classmates when presenting. I liked the idea of phone a friend but it should have been implemented more. ",
+            "\u00a0I think that the discussion is great but at the same time could be more directed. I think it was a good idea to assign figures but more engagement could be created in this area rather than having the speaker control the discussion. I think that it was a great strength that there was a focus on recent literature as well as making sure the topics were introduced prior to reading those articles. Additionally, I think there could be a writing aspect incorporated into the class to allow for students to think differently and more critically about the topics and papers in the course. "
+        ],
+        [
+            "\u00a0If a student had interest in cancer biology, this is a great course. ",
+            "\u00a0yes ",
+            "\u00a0Yes. Very interesting. ",
+            "\u00a0Yes. This class is a great way to learn about new topics and advances in cancer. ",
+            "\u00a0Yes, I think anyone relatively interested in cancer biology should take this course. It was a great way for me to dive into a field and see where it was at. Furthermore, it allowed me to think about my own research in a new way and learn to help me in the future. "
+        ]
+    ]
+}

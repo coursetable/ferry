@@ -1,0 +1,83 @@
+{
+    "crn_code": "22303",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            1
+        ],
+        [
+            0,
+            2,
+            1,
+            3,
+            1
+        ],
+        [
+            1,
+            1,
+            5,
+            0,
+            0
+        ],
+        [
+            0,
+            5,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I have continued to hone my compositional skill set with my private instruction. Moreover, I have learned much from listening to other composers speak and share their work, from practical career advice to new styles of artistic thinking. ",
+            "\u00a0I significantly improved my composition skills from my private lessons with my TF and learned much about the many directions and possibilities for composition from the guest lectures. ",
+            "\u00a0I continued to hone my skills as a composer. ",
+            "\u00a0-composition technique & DAW usage\r\n-orchestration\r\n-business & self-marketing\r\n-insight into the state of concert and film composition as a whole ",
+            "\u00a0This course provides great practice for writing concert music, as well as a chance to interact with some of the most influential people in the field today. "
+        ],
+        [
+            "\u00a0This course really benefits from the collaboration between graduate and undergraduate composition students. Grouped all together, we are placed within the same high standard of learning and we are all fortunate to listen to every great guest. Another great strength is the freedom to pursue whichever composition project that we want. This allows musicians from very diverse backgrounds to gather and share their own voice in the class. ",
+            "\u00a0This is truly an excellent course; I cannot think of any ways to improve it. ",
+            "\u00a0I think better critical response to our pieces would benefit the students greatly ",
+            "\u00a0-strengths: engaging guest speakers, accommodating schedule\r\n-weaknesses: could use more structure, direct feedback, a more reliable lesson schedule, and more content-based classes rather than guest lectures ",
+            "\u00a0I found my TA to be very helpful, and learned a lot. I also always appreciated the meetings with Dr. A. She is consistently helpful and supportive. However, I wish that in addition to the guest lectures, there could be a real score study component. The guest lectures always felt a bit long to me, so it might be worth looking at spending the first half of seminar looking at a guest's influences, scores, etc, and then have them talk the second half? "
+        ],
+        [
+            "\u00a0I would (and have!) recommend this course to other students, especially those with a strong musical background. The workload is not too overloading or intimidating, so it is a good place for people even mildly interested in composition to come and learn a lot. ",
+            "\u00a0I would strongly recommend this course to anyone interested in music composition of any style.  The professors and TFs all know about many different styles of music, and the guest lectures also cover a broad range of styles and careers. ",
+            "\u00a0Yes, there is a lot of freedom to pursue the music you want to write as well as teachers and resources to help you ",
+            "\u00a0-yes; it's essential for developing fluency in music composition and notation ",
+            "\u00a0Yes, but keep in mind that what you get out of it is what you put in, and some of the guest lectures were more useful than others. "
+        ]
+    ]
+}

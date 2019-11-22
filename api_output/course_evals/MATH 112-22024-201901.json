@@ -1,0 +1,82 @@
+{
+    "crn_code": "22024",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            4,
+            4
+        ],
+        [
+            0,
+            1,
+            5,
+            5,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            5,
+            4
+        ],
+        [
+            0,
+            1,
+            2,
+            8,
+            1
+        ],
+        [
+            0,
+            3,
+            3,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            5,
+            5,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learning more about the way math actually works ",
+            "\u00a0Basic Calculus skills ",
+            "\u00a0Basic calculus of one variable.  Helped me develop and maintain skills in logical thinking and quantitative reasoning. ",
+            "\u00a0I learned how to problem solve in a different way. Though I took calculus in high school, I learned to approach topics I had already learned to ensure a deeper understanding of each. ",
+            "\u00a0Calculus I "
+        ],
+        [
+            "\u00a0there could be more office hours held and more sessions on how to do the problem sets - specifically giving out the answers to problem sets prior to exams ",
+            "\u00a0Strengths- good teaching\r\nWeaknesses- lots of unnecessary work ",
+            "\u00a0this course does not explain differential equations well- don't act like it's confusing it makes sense when it's explained right. ",
+            "\u00a0I thought it was well taught. It would be useful to go over more challenging examples in class, similar to problem set and WebAssign questions. I also thought it was difficult to have the WebAssigns due on days we did not have class. I would rather have them due on a day we had class for book keeping purposes. "
+        ],
+        [
+            "\u00a0yes, it gives you a good basis ",
+            "\u00a0I did not particularly enjoy the course but I think that it is very useful. For this reason, I would most probably recommend it to someone who thinks they will need to use Math in the future. ",
+            "\u00a0Yes ",
+            "\u00a0I would recommend to a student that needs to take it for distributional requirements. ",
+            "\u00a0Yes, it is necessary math. It was a well structured calculus course. "
+        ]
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "crn_code": "21771",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            0,
+            7,
+            6
+        ],
+        [
+            0,
+            0,
+            4,
+            7,
+            3
+        ],
+        [
+            0,
+            1,
+            6,
+            4,
+            2
+        ],
+        [
+            0,
+            1,
+            6,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            6,
+            3
+        ],
+        [
+            0,
+            2,
+            3,
+            4,
+            5
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned much about my topic of choice and the information implied by my results. ",
+            "\u00a0Research for credit is an incredible opportunity; I learned a great deal about coding, quantum, working in a team, and thinking independently. ",
+            "\u00a0This is a basic research class. Do research in a lab with an advisor, write a report and give a presentation. Pretty simple. ",
+            "\u00a0Learned how to apply Physics to a real-lab setting ",
+            "\u00a0The presentation at the end of the course was very helpful as an educational exercise. "
+        ],
+        [
+            "\u00a0Strengths: letting people do research for credit is a great idea!\r\nCons: more guidance and feedback on the presentations and final reports would be ideal. Being able to present one's work is very important as a scientist, be the course provides no help for how to go about putting these documents together. ",
+            "\u00a0I think this course was ran well as it is. ",
+            "\u00a0I wish there had been more clarity in how the grading was going to work or what the final grade distribution would look like. It's obviously tough to grade research projects since it's so subjective. ",
+            "\u00a0It's good the way it is ",
+            "\u00a0I think it is a fine format, though it may be nice to get a bit more feedback on the first and second papers we turned in. "
+        ],
+        [
+            "\u00a0Independent research just depends on the PI you choose and the amount of time you are willing to put into it. Don't expect to accomplish an incredible amount (you will probably only work on it like 8 hours a week), but you can definitely lay the foundation for a larger project. ",
+            "\u00a0If you are interested in doing research definitely take this class. ",
+            "\u00a0Good course for doing research! Being in 472 will force you to come regularly into lab and work on a stable project. I suggest choosing an advisor who will meet with you regularly, as this helped a lot for me. ",
+            "\u00a0The most important part of this course is choosing the right advisor. Make sure you take the time to choose a good advisor at the beginning of the semester ",
+            "\u00a0Definitely take this course if you are a Physics major and have a good lab. ",
+            "\u00a0This is the course you take to complete the thesis requirement. The course itself isn't hard, but you put 10-15 hrs a week into working on your thesis. "
+        ]
+    ]
+}

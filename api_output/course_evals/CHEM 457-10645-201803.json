@@ -1,0 +1,81 @@
+{
+    "crn_code": "10645",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Developed a strong understanding of coordination chemistry- which I didnt even knew existed before this class. I learned to develop MO structures from group theory. ",
+            "\u00a0Learned how to build MO pictures from a group theory approach. ",
+            "\u00a0A thorough analysis of the history and methods used in modern coordination chemistry. ",
+            "\u00a0I learned a lot about abstract concepts regarding metal complexes, such as symmetry, bonding, energy levels, spectroscopies... leading up to contruction of MO diagrams. In addition, pragmatic topics near the end such as special ligand properties and reactivity are covered. ",
+            "\u00a0We learned a lot about MO theory and how to construct an MO diagram for coordination complexes. Many of the topics covered in inorganic chemistry are explored in greater depth and you begin to understand more of the \"why\" behind chemistry rather than memorizing various trends. "
+        ],
+        [
+            "\u00a0This course is very well thought out and well taught. All the lectures and psets are very helpful. ",
+            "\u00a0Overall a very well-designed course. Assignments are reasonable and teach you the material. Exams are also appropriately challenging. ",
+            "\u00a0Prof. Hazari is a very good lecturer and is clear. He provides both handouts for further information and provides his notes on the topic to supplement yours. He's usually very easy to get a hold with and clearly explains himself if you are behind and have problems.  I really enjoyed the content.\r\n\r\nHe writes a lot of full sentences on the board (as opposed to bullets or images) . This makes it very easy to look back and know what he was trying to say. However, if you have trouble writing quickly and/or neatly (especially since you can't type MO diagrams well) try to print stuff out to write on so you can focus on major things.\r\n\r\nBoth the midterm and final are fair. He also allows people to start at any time throughout the day (8 am - 3 pm) to help accommodate different schedules. This almost guarantees you can get a good night's sleep (a big issue for many midterms, especially for 9am classes!)\r\n\r\nIn general, this course starts out very abstract, based a lot around linear algebra (which you don't do exactly), reducible/irreducible representations, SALCs, etc... and some of the talks about spectroscopy can be difficult to understand deeply without the PChem background. However, that issue is minimal. \r\n\r\nIn general, most people taking this class are inorganic chemists and as such might expect examples and applications right away. Doesn't happen until the last 2-3 lectures. "
+        ],
+        [
+            "\u00a0Yes!! Fantastic class, and Nilay is so helpful. ",
+            "\u00a0Yes! This is a great inorganic chem class! ",
+            "\u00a0If you like chemistry (especially inorganic chemistry), take this class!! The material is difficult but you will learn a lot, and Nilay is a great professor who is very dedicated to teaching. ",
+            "\u00a0Are you an inorganic or physical chemist? If so, absolutely 110%.\r\n\r\n Otherwise, be wary. \r\n\r\nThis is entirely worth it, especially if you have never done more rigorous MO diagrams (if you have, most of this course is review and might be better applied in other classes). \r\n\r\nThe PSETs weren't hard and were extremely useful but could be tedious. ",
+            "\u00a0If you have any interest in inorganic chemistry, and especially if you are a chem major, I would recommend this course. It's very interesting, engaging and the amount of work is fair. You finish the problem sets and really feel like you have learned something. Plus, Nilay is a great professor and you want to take a class with him at some point. "
+        ]
+    ]
+}

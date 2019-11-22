@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50430/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Advanced non-fiction workshop in which students write about science, medicine, and the environment for a broad public audience. Students read exemplary work, ranging from newspaper articles to book excerpts, to learn how to translate complex subjects into compelling prose.\nAdmission by permission of the instructor only. Applicants should email the instructor at carl@carlzimmer.com with the following information:\n1. One or two samples of nonacademic, nonfiction writing. (No fiction or scientific papers, please.) Indicate the course or publication, if any, for which you wrote each sample.\n2. A note in which you briefly describe your background (including writing experience and courses) and explain why you\u00e2\u20ac\u2122d like to take the course.", 
+    "title": "Writing about Science, Medicin...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 206", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11334", 
+        "listings": [
+            {
+                "number": "459", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Carl Zimmer"
+    ], 
+    "long_title": "Writing about Science, Medicine, and the Environment", 
+    "extra_info": "A"
+}

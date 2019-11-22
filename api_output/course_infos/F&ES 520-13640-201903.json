@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49852/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introductory course on the scope of social scientific contributions to environmental and natural resource issues. Section I, overview of the field and course. Section II, framing of environmental problems: placing problems in their wider political context, new approaches to uncertainty and failure, and the importance of how the conceptual boundaries to resource systems are drawn. Section III, methods: the dynamics of working within development projects, and the art of rapid appraisal and short-term consultancies. Section IV, local communities, resources, and (under)development: representing the poor, development discourse, and indigenous peoples and knowledge. Two guest lectures by leading scholars in the field. No prerequisites. This is a core M.E.M. specialization course in F&ES, a core course in the combined F&ES/Anthropology doctoral degree program, and a prerequisite for F&ES 869/ANTH 572.", 
+    "title": "Society and Environment: Intro...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "KRN 321", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13640", 
+        "listings": [
+            {
+                "number": "520", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Dove"
+    ], 
+    "long_title": "Society and Environment: Introduction to Theory and Method", 
+    "extra_info": "A"
+}

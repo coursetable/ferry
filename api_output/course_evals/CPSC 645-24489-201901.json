@@ -1,0 +1,79 @@
+{
+    "crn_code": "24489",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            4,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about all kinds of questions and ideas in machine learning beyond the standard \"is the algorithm accurate?\" For example, we discussed fairness/bias/discrimination, robustness, stability, generalization, physics-inspired optimization, and more. ",
+            "\u00a0Overview of some topics in theoretical machine learning; the necessity of understanding assumptions in machine learning models ",
+            "\u00a0A better theoretical and applied understanding of theoretical topics in machine learning. ",
+            "\u00a0This class delves into the principles and proofs motivating modern machine learning methods. "
+        ],
+        [
+            "\u00a0I wish this course was a year-long course or longer! ",
+            "\u00a0Having an assignment or two in the initial portion of the class would have been helpful for us to refresh background knowledge. Pointers to resources were given, but I feel that making these required would help. Also, I would have like to see the full syllabus from the beginning and to know the direction where the course was headed, as it was uncertain at points. Having regular meetings with the professor was very helpful. ",
+            "\u00a0I liked that each module was separate so we were able to get a good understanding of various topics. I wished there was more feedback and perhaps collaboration in the project component of the class. ",
+            "\u00a0The course covers a diverse array of topics while preserving technical depth. I don't have any criticism. "
+        ],
+        [
+            "\u00a0Absolutely. The best course I've taken here, maybe the best course I've taken period. ",
+            "\u00a0If you are interested in working on a project in this area and getting more insight into the topics, then I would recommend. ",
+            "\u00a0I would recommend this course to students interested in mathematically motivating machine learning algorithms. "
+        ]
+    ]
+}

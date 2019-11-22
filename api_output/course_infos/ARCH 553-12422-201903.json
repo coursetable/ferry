@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49125/assignments/syllabus", 
+    "requirements": "", 
+    "description": "1 credit. (Required in, and limited to, Ph.D. second year, fall term.) Seminar content to be announced.", 
+    "title": "Ph.D. Seminar III: Ph.D. Sem.I...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12422", 
+        "listings": [
+            {
+                "number": "553", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Mary McLeod"
+    ], 
+    "long_title": "Ph.D. Seminar III: Ph.D. Sem.III His.&Crit.Theory", 
+    "extra_info": "A"
+}

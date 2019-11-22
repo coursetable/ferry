@@ -1,0 +1,79 @@
+{
+    "crn_code": "11887",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The course was comprehensive in presenting cell signaling pathways from kinase cascades to second messenger signaling. The topics, while different, had significant overlap in some areas, which made it easier to see how pathways integrate and cross-talk in order to mount a response. Different receptor types were presented and while the tests concerned the general concepts, the lectures did present interesting specifics. ",
+            "\u00a0My knowledge of signaling pathways, namely phosphorylation, was enhanced by taking this course. ",
+            "\u00a0Pharmacology 528 was an excellent, detail heavy survey of classic, well described signaling pathways in eukaryotic cells. I have no doubt that the information I learned from this course will be directly applicable to my research and has expanded my ability to understand and appreciate research outside my field. The course material covered in Pharm 528 has allowed me to view my own research from new perspectives. For example, I have gained an appreciation for the massive and diverse roles of individual proteins in different contexts depending on cell type, signaling pathway, etc. I feel confident that I will approach my research with a much more holistic understanding of protein function and pathway complexity. "
+        ],
+        [
+            "\u00a0Strengths: the topics complemented one another, which made the materail easier to absorb; lectures were readily available online \r\n\r\nWeaknesses: some lecturers presented a lot of detail and it was difficult to sift through the important concepts later ",
+            "\u00a0I audited the course, however, the resources provided in the form of instructor powerpoints were very helpful. In addition, all faculty that lectured were easy to contact outside of lecture in case students had any additional questions. ",
+            "\u00a0Strengths: excellent guest lecturers, topics covered were applicable to many different fields of biology, pathways covered are well described in literature and should be readily available to and appreciated by anyone studying cell signaling, exam questions generally provided fun and challenging opportunities to synthesize and demonstrate knowledge of the course material\r\n\r\nWeaknesses: some topics were redundant (i.e. GPCR signaling, GTPase signaling), feedback on exams was minimal ",
+            "\u00a0The TAing of this course was exemplary. Joel led us through reviews of the lectures and retaught important concepts that were sometimes skimmed over in lectures. His review sessions and his practice exams were a great way to review and solidify the knowledge we learned in class. \r\n\r\nThe only weakness was some of the lectures.\r\n\r\nI wish there was a lecture on immune signaling. "
+        ],
+        [
+            "\u00a0Yes, the course will be helpful for anyone studying receptors and signaling pathways. It provides a good overview of important concepts and some important master regulatory pathways. ",
+            "\u00a0For those interested in bolstering their knowledge of how biological signals are propagated, this course is very useful. ",
+            "\u00a0I would recommend this course to any student whose work overlaps with protein function or cellular signaling mechanisms ",
+            "\u00a0Yes. This is a great course for non Pharm students as it summarizes a wide swath of cell signaling that students are likely to encounter in their labs. "
+        ]
+    ]
+}

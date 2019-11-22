@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/52088/assignments/syllabus", 
+    "requirements": "", 
+    "description": "We discuss a variety of topics in the theory of hypergraphs (finite set systems). While graphs can be mainly used to model binary relations, hypergraphs are the appropriate tool to study relations of higher arity. Virtually every combinatorial problem can be phrased in the language of hypergraphs. Owing to this generality it is maybe not surprising that generalizing results from graphs to hypergraphs is often very challenging. We mainly focus on the following problems and techniques from hypergraph theory: (1) Tur\u00e1n problems and their variations; (2) forbidden intersections in set systems; (3) matchings in hypergraphs; (4) absorption method for spanning subhypergraphs; (5) regularity method, removal lemma, and Szemer\u00e9di\u2019s theorem. Some background in discrete mathematics is helpful, but the course is self-contained. Open to advanced undergraduates in Math and Computer Science.", 
+    "title": "Topics in Hypergraph Theory", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "RKZ 02", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15253", 
+        "listings": [
+            {
+                "number": "769", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Mathias Schacht"
+    ], 
+    "long_title": "Topics in Hypergraph Theory", 
+    "extra_info": "A"
+}

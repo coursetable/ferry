@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48392/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This seminar provides a comparative perspective on American constitutional law by looking at analogous case law and institutions from other constitutional democracies including the U.K., Germany, France, Japan, India, Canada, South Africa, Australia, Indonesia, South Korea, Brazil, Italy, Israel, and the European Union. Topics include amendment mechanisms, secession, judicial review, separation of powers, federalism, fundamental rights, equality, freedom of expression, freedom of religion, comparative procedure, property rights and economic liberties, entitlements to government aid, and guarantees of democracy. Paper required. Also Law 20121.", 
+    "title": "Comparative Constitutional Law", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "BAKER 419", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15154", 
+        "listings": [
+            {
+                "number": "738", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Steven Calabresi"
+    ], 
+    "long_title": "Comparative Constitutional Law", 
+    "extra_info": "A"
+}

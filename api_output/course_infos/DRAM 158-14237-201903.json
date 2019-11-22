@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51751/assignments/syllabus", 
+    "requirements": "Open to nondepartmental and non-School of Drama students with prior permission of the instructor. Limited enrollment.", 
+    "description": "In this class students develop an understanding about how sound and music can be used effectively as a tool to enhance meaning in a play. Students analyze scripts, develop critical listening skills, and learn the fundamentals of sound delivery systems as well as terms used to describe the perception and presentation of sound and music in a theatrical setting. This course is required of first-year lighting, projection, and sound designers; and of second-year costume and set designers and stage managers. Two hours a week.\nOpen to nondepartmental and non-School of Drama students with prior permission of the instructor. Limited enrollment.", 
+    "title": "Introduction to Sound Design", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 12, 
+            "location": "PK205 101", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 14
+        }, 
+        {
+            "start_time": 12, 
+            "location": "PK205 102", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14237", 
+        "listings": [
+            {
+                "number": "158", 
+                "subject": "DRAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "David Budries"
+    ], 
+    "long_title": "Introduction to Sound Design", 
+    "extra_info": "A"
+}

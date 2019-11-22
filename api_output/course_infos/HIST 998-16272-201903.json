@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Offered by permission of the instructor and DGS to meet special requirements not covered by regular courses. Graded Satisfactory/Unsatisfactory.", 
+    "title": "Directed Reading: New Debates ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 3, 
+        "oci_id": "16272", 
+        "listings": [
+            {
+                "number": "998", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Rohit De"
+    ], 
+    "long_title": "Directed Reading: New Debates in S.Asian History", 
+    "extra_info": "A"
+}

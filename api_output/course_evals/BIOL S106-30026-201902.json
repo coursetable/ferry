@@ -1,0 +1,80 @@
+{
+    "crn_code": "30026",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            4
+        ],
+        [
+            0,
+            1,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Insights into genetic and phylogenetic analyses and knowledge of the developmental process of organisms. ",
+            "\u00a0how to write a science paper ",
+            "\u00a0I feel as if I truly gained a solid foundational understanding of ecology and evolutionary biology. ",
+            "\u00a0Great. I learned more about the scientific method, to understand and analyze critical scientific thinking and to appreciate science and it's process. "
+        ],
+        [
+            "\u00a0Strengths: Professors Lin and Near; they made the course a true joy.\r\n\r\nWeaknesses: I wouldve benefitted from an example of a good clade paper (like Professor Lin did for the gene paper) ",
+            "\u00a0Amazing professors, small class size ",
+            "\u00a0I would love to see a few more smaller homework assignments like the large paper so we might have a chance to do more research for the class for credit. I would also have liked it if the quizzes were a little less memorization based and challenged our thought processes more. ",
+            "\u00a0Strengths: professors, small class, personalized attention \r\nWeakness: quizzes sometimes tripped us up, boundaries for grades are not that clear (i.e what makes a B+ vs. A-) \r\n\r\nImprovements: There should be an additional lab course that goes along with the Biology sequence because not all first-years coming into college know how to read a protein band. That's certainly not taught in underfunded high schools across the nation and for the biology department to think that students know about lab techniques is truly not helpful to its students. I think methods about how we understand biology knowledge should be emphasized more. "
+        ],
+        [
+            "\u00a0Yes! bio103 is a nightmare during the year and Lin and Near are incredible ",
+            "\u00a0YES especially during the summer if possible ",
+            "\u00a0Yes! Such a great, efficient course. ",
+            "\u00a0yes, it's much better to take the biology sequence in the summer than in the 500 person lecture in the fall/spring. It's easy to get lost in a big lecture but the smaller course size made it much more approachable to ask questions! "
+        ]
+    ]
+}

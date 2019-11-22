@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50143/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course covers readings in European cultural history from 1789 to the present, with a focus on Western Europe.", 
+    "title": "Readings in European Cultural ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "YK220 003", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11128", 
+        "listings": [
+            {
+                "number": "700", 
+                "subject": "FREN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Carolyn Dean"
+    ], 
+    "long_title": "Readings in European Cultural History", 
+    "extra_info": "A"
+}

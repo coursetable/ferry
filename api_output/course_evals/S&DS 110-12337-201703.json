@@ -1,0 +1,91 @@
+{
+    "crn_code": "12337",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            2,
+            5,
+            3
+        ],
+        [
+            0,
+            1,
+            3,
+            5,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            4,
+            4
+        ],
+        [
+            0,
+            2,
+            0,
+            7,
+            2
+        ],
+        [
+            0,
+            3,
+            5,
+            3,
+            0
+        ],
+        [
+            1,
+            2,
+            5,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Really great for learning R, especially if you have limited background in statistics and computer science. Good foundations. ",
+            "\u00a0I learned basic foundational skills about R which I think will be useful for me in the future. ",
+            "\u00a0This is a helpful class to introduce you to the basic syntax and application of R. It's exactly as advertised, however, and won't really help you with statistical analysis beyond the most basic tasks. ",
+            "\u00a0Very intuitive and well structured introduction to R. ",
+            "\u00a0I learned to code in R, both basic functions and importing/cleaning up data sets from websites or spreadsheets ",
+            "\u00a0Basic data analytics using R ",
+            "\u00a0I learned technical skills of the R statistical data analysis language, gained practice using R for actual analysis and cleaning data, and learned the thought process behind coding (which was helpful, as I hadnever coded before). ",
+            "\u00a0I had absolutely no exposure to R before, and by the end of the class I was able to input data, clean it up and be ready to analyze it. We didn't do much analysis, but we learned the basic foundations of commands and functions, and how to work with data sets in R. "
+        ],
+        [
+            "\u00a0I liked when we did more in class problem solving. It felt like the class started slowly then sped up very quickly. Would have been nice to spend more time learning the skills needed for homework. It felt like most homework required independent exploration and problem solving, which was useful but very time consuming and difficult. Maybe more emphasis on teaching specific methods then various ways of applying. ",
+            "\u00a0It was taught as well as it could have been, considering the topic. Being in the TEAL classroom was helpful. More sections and individual attention would've helped. ",
+            "\u00a0Extra practice could be provided. ",
+            "\u00a0Professor Emerson did a great job being specific about best practices and methods for solving problems. The materials were clear and the problems were fun and helpful. I think the course could be a bit clearer about what functions are the most important (tapply, etc.). I also would have appreciated more small problems that give practice on important concepts. ",
+            "\u00a0Being a half semester, the last three weeks were very fast paced, it was easy to get behind ",
+            "\u00a0A strength of the course was its focus on the technical basics of R, without getting into probability that wouldve made it inaccessible to certain demographics who want to learn R without emphasis on statistics. Another strength was that Jay emphasized learning by doing. He taught us a lot in class, and taught us even more at home on the psets, which had us apply stuff from class and learn on our own. I thought this was good for teaching me how to approach problems and code.\r\n\r\nA weakness of the course was how short it was. Learning R had a big learning curve for me, and I really struggled through the first few weeks. By the time I felt like I was coming to understand the language and was ready for more advanced techniques and statistical or data-cleaning applications, the course was over! I wish it had lasted the whole semester. ",
+            "\u00a0I think the psets were super helpful, especially when done with groups.\r\n\r\nThe TAs (or ULAs) were super super super super great and definitely HUGE strengths of the course. \r\n\r\nIf done again, I'd suggest that they offer more groupwork projects to work on harder problems together. "
+        ],
+        [
+            "\u00a0Take this course if you are willing to work really hard for half of a semester! Really useful skills and professor is great. A lot of work and challenging but worth the effort, and ends before October break, so the rest of your semester is free! ",
+            "\u00a0I would recommend anyone who is wanting to learn the basics of R to take the class.  You won't be much data cleaning or analysis but it was truly a nice introductions class. ",
+            "\u00a0Yes, it's a very good course for getting the basics of R, and will definitely help in the future if you want to learn about data analysis (since many classes and even jobs use R for data analysis, it will give you an edge if you come in knowing the basics). ",
+            "\u00a0Great intro to R for those with no coding background. ",
+            "\u00a0If you want to learn R, regardless of your background in programming, I would recommend taking this class. It's a very efficient way to learn the language and the best practices for coding in it. Professor Emerson is great - clear and enthusiastic. ",
+            "\u00a0Yes, if you are interested in learning the basics of R, or want to pursue data analytics ",
+            "\u00a0I would 100% recommend this course. I learned SO much from Jay and from doing the psets. It may seem daunting and hard during shopping period and the first few weeks (I almost dropped the class after bombing the first quiz), but go to office hours, ask for help, and work hard at it. Jay and the peer turors are very helpful and great teachers. The satisfying feeling of success upon doing problems on your own by the 5th week is incredible (coming from someone who knew no coding going into the class). Definitely take the course if youre willing to put time into it. You will learn the thought process behind using Rnot just how to memorize a few commands. ",
+            "\u00a0I would recommend if you have no exposure to R and want to learn the barest of minimums. "
+        ]
+    ]
+}

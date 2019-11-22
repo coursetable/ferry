@@ -1,0 +1,75 @@
+{
+    "crn_code": "22589",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            1
+        ],
+        [
+            0,
+            2,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Design thinking, importance of vaccination, what works / does not work for technologies in the context of the developing world, how to develop a proposal and presentation for high-impact grants. ",
+            "\u00a0Learned how to think critically about creating new initiatives in the developing world and the pitfalls of technology. "
+        ],
+        [
+            "\u00a0Lots of student interaction and participation. Students get to develop and pitch their own project ideas to solve health issues in developing countries. No salient weaknesses. Anjelica Gonzalez was the best part of the course!!! ",
+            "\u00a0Strength: Taking on real-world challenge through Gates was excellent experience\r\n\r\nWeakness: We should have the opportunity to apply for a Grand Challenge with the midterm and be able to work on it longer in the semester instead of having it at the end for the final. ",
+            "\u00a0It covered a broad range of topics, but I felt like it was very high-level and we could have dived deeper. It would have been great to learn more concrete frameworks that we can keep and apply with us moving forward. It also felt we were jumping around on topics rather than having a roadmap for how things connect from unit to unit. "
+        ],
+        [
+            "\u00a0Wonderful course! If you are at all interested in applying biotechnologies to the developing world, this is a great course to take. Even if you are not, Anjelica Gonzalez is one of the best instructors I have had at Yale and makes the course fun, interesting, and enjoyable. ",
+            "\u00a0Yes it is a great class, particularly for engineers, to think about the repercussions of technology development. "
+        ]
+    ]
+}

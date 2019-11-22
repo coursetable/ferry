@@ -1,0 +1,79 @@
+{
+    "crn_code": "21718",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            2,
+            2,
+            0,
+            0
+        ],
+        [
+            1,
+            1,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Cursory knowledge of structural determination techniques and methodology as well as FAR too specific/niche information about kinases ",
+            "\u00a0Learnt the basics of how x-ray crystallography works which I didn't know before ",
+            "\u00a0drug discovery and kinase structures in relation to functions ",
+            "\u00a0We learned a bit about drug development, structural techniques but most topics centered on kinases "
+        ],
+        [
+            "\u00a0The course title is slightly misleading. While the first half of the course does focus on Structural Biology, the Drug Discovery portion of the course is not well-developed. Some highly specific examples of structure-based drug design/discovery are mentioned, but they are just examples from the lecturing faculty's own research, as opposed to being more broadly applicable knowledge. Additionally, the majority of \"Drug Discovery\" was just incredibly in depth lectures on the intricacies of kinases. While kinases and their associated pathways are very important drug targets, the lectures did not spend an appropriate amount of time describing their relationship to drug discovery. Instead, a whole lot of irrelevant kinase research was hurriedly explained. Additionally, it is incredibly disappointing how slowly and poorly the exams in this course were graded. Exams were graded within days of the next exam being administered and thus students were not allowed much time to meet with faculty and understand previous mistakes in preparation for upcoming exams. Exam 2 did not even include the corrected exam! Only the numerical grade was provided to students so there was absolutely no way to learn from mistakes. Furthermore, faculty do not appear to grade exam questions on a set rubric but instead compare students' answers and award or deduct points based on relative merit which is unfair. Also, the sequence of lectures was not planned well, as some lectures were given in orders that were not intuitive and lecturers often covered identical information (including using identical figures or slides) which indicates that they did not consult one another in preparing lectures. ",
+            "\u00a0Strengths. Teaching x-ray crystallography from first principles, very useful. Personally enjoyed the kinase biology parts the most.\r\nWeaknesses. The structural methods components at the start of the class were fairly dry, needed effort to stay engaged. ",
+            "\u00a0I really enjoyed certain lectures in the series, namely ones by Chuck, Titus and Ya. However, the flow of the course feels disjointed owing to the swaps in lectures. Certain topics have large amounts of overlaps, such as kinase functions.\r\n\r\nThe field trip was enjoyable and insightful, though the last minute notice that it's exam-able was unpleasant. ",
+            "\u00a0There are few lectures actually on structural techniques. Most lectures are just follow the theme of kinases and how mutations in key kinases affect their function "
+        ],
+        [
+            "\u00a0I would only recommend this course to students who are interested in gaining a BASIC understanding of structural biology and drug development and an incredibly detailed understanding of kinases. Otherwise, it was poorly organized and I do not believe I learned the information that I was hoping to glean from this course ",
+            "\u00a0Yes, to get an overview of structural methods. ",
+            "\u00a0Yes, a good way to learn about drug discovery and kinase structures. "
+        ]
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "A two-term senior essay. The essay should fall within the student's area of concentration. The student, in consultation with the director of undergraduate studies, should choose an appropriate member of the faculty to supervise the senior essay.\nStudents must obtain the signature of the faculty member supervising their independent work on an Independent Study Form (available from the Ethics, Politics, and Economics registrar's office). This form must be submitted to the director of undergraduate studies at the time the student's class schedule is submitted.", 
+    "title": "The Yearlong Senior Essay", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11019", 
+        "listings": [
+            {
+                "number": "492", 
+                "subject": "EP&E"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Peter Swenson"
+    ], 
+    "long_title": "The Yearlong Senior Essay", 
+    "extra_info": "A"
+}

@@ -1,0 +1,79 @@
+{
+    "crn_code": "13071",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to write and present my own research. ",
+            "\u00a0The thought process that goes into and general time frame of writing up research and re-writing it and giving feedback to other people's work and re-writing your own again. "
+        ],
+        [
+            "\u00a0They were exactly as i expected. ",
+            "\u00a0Very well "
+        ],
+        [
+            "\u00a0The course was great. No additions necessary. ",
+            "\u00a0I appreciate the continuous feedback and the set schedule of submission. It helped me become more disciplined. I also appreciate the feedback on presentations. "
+        ],
+        [
+            "\u00a0Stay self motivated and be proactive about your research. ",
+            "\u00a0Take it. You'll improve your writing and presenting skills so much. "
+        ]
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50045/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course is designed to build literacy in Yiddish, the vernacular of Ashkenazi Jewry. With focus on the accelerated treatment of Yiddish grammar, regularly supplemented with simple primary texts (poems, songs, folktales), and followed by close readings of (modern) Yiddish literature, students will be able to navigate most Yiddish texts with the aid of a dictionary. May not be taken concurrently with elementary or intermediate German.", 
+    "title": "Reading Yiddish", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 115", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12154", 
+        "listings": [
+            {
+                "number": "102", 
+                "subject": "GMAN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Joshua Price"
+    ], 
+    "long_title": "Reading Yiddish", 
+    "extra_info": "A"
+}

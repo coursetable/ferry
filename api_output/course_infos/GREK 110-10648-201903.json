@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50078/assignments/syllabus", 
+    "requirements": "No prior knowledge of Greek assumed.", 
+    "description": "Introduction to ancient Greek. Emphasis on morphology and syntax within a structured program of readings and exercises. Prepares for GREK 120.\nNo prior knowledge of Greek assumed.\n\n1.5 Yale College course credits", 
+    "title": "Beginning Greek: The Elements ...", 
+    "skills": [
+        "L1"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "YK220 004", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10648", 
+        "listings": [
+            {
+                "number": "110", 
+                "subject": "GREK"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Zachary Wolens"
+    ], 
+    "long_title": "Beginning Greek: The Elements of Greek Grammar", 
+    "extra_info": "A"
+}

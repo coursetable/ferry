@@ -1,0 +1,74 @@
+{
+    "crn_code": "10648",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            3
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Interesting discussions related to scientific ethics and regulatory institutions. ",
+            "\u00a0I thought it was an engaging course. I really enjoyed learning about research ethics and thought the class provided a lot of good resources to learn them. "
+        ],
+        [
+            "\u00a0Strengths were getting to consider research from an ethical/philosophical point of view, which is something rarely discussed in STEM classes. Weaknesses were that it was largely passive listening to information or being called on, rather than any true discussion between students. ",
+            "\u00a0Strengths - well organized, safe space for discussing ethics\r\nCons - no small group discussions "
+        ],
+        [
+            "\u00a0This class is basically an addendum to research for credit within the chemistry major. While the topics discussed were important, the research component was much more significant in terms of time and intellectual challenge. ",
+            "\u00a0Yes, I think doing this course made me a better chemist. "
+        ]
+    ]
+}

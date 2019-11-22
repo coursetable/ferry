@@ -1,0 +1,88 @@
+{
+    "crn_code": "22066",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            2,
+            3,
+            4,
+            1
+        ],
+        [
+            0,
+            2,
+            3,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            5,
+            3,
+            3
+        ],
+        [
+            1,
+            1,
+            5,
+            2,
+            2
+        ],
+        [
+            2,
+            4,
+            3,
+            2,
+            0
+        ],
+        [
+            3,
+            4,
+            4,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The instructors presented a few topics in the beginning and towards the end of the course. Each student had to present on one topic chosen from \"Networks, Crowds and Markets\" of David Easley and Jon Kleinberg. ",
+            "\u00a0I gained an overview of how graph theory is applied to economics and the open areas of research which are being investigated. In addition, I was able to see what student presentations of papers are like, and how I could possibly improve my own. ",
+            "\u00a0I learned about network theory, game theory and its application in various fields. The materials, overall, was interesting. ",
+            "\u00a0In my section, we went through an interesting book called \"Networks, Crowds, and Markets\" by Easley and Kleinberg. It covered many different applications of graph theory. ",
+            "\u00a0I learned about economics and mathematical models of networks. ",
+            "\u00a0N/A "
+        ],
+        [
+            "\u00a0This was a good course. ",
+            "\u00a0The course covered interesting material and did so in a way that was flexible and accessible to all levels. However, it might've been nice to have a clearer sense of expectations -- compared to many other classes in the Math and Econ / Math major, it felt a bit strange to have a grade that was just a presentation and comments on other people's presentations. ",
+            "\u00a0In each class a student presents. I think it could be made more engaging by making it mandatory to read a few pages on that topic each week for every student. ",
+            "\u00a0Strengths: The class felt like a mini-conference, which was a great capstone for the major.\r\nWeaknesses: There was absolutely zero feedback provided at any point in the course. It's a shame because many of us (particularly those going into academia or finance) will be giving talks throughout our lives, and it'd be great to learn how to do so effectively from experienced professors. ",
+            "\u00a0It gives a good way to do a mathematical presentation, which is actually a very important skill to have. ",
+            "\u00a0The seminar was nice and low key, which was great for people also writing theses, but it felt like a bit of a waste---certainly not like a capstone of the major. For instance, it might have been nice if the textbook we were supposed to present presupposed any college level math at all. ",
+            "\u00a0Very entertaining math class. The pace is very good. "
+        ],
+        [
+            "\u00a0I would recommend this to senior students. ",
+            "\u00a0It's certainly a nice way to finish off the major, and we absolutely loved the enthusiasm of Professor Liu and his desire to drive both mathematical formalism and intuition into the results. ",
+            "\u00a0Yes, if you have to. ",
+            "\u00a0Yes, if you want to sharpen your presentational skills. ",
+            "\u00a0Well, it was better than the other option for the math senior seminar. In no way was any of the material relevant to what I had actually studied as a math major, but at least it wasn't very hard. ",
+            "\u00a0If you're taking it, you have to. ",
+            "\u00a0This class is very entertaining. You learn math cooperatively without the stress of weekly psets. "
+        ]
+    ]
+}

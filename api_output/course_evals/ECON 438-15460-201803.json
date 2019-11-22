@@ -1,0 +1,87 @@
+{
+    "crn_code": "15460",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            3
+        ],
+        [
+            0,
+            1,
+            3,
+            2,
+            1
+        ],
+        [
+            0,
+            3,
+            3,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Use of econometrics to answer real-world questions in super interesting + diverse subject areas ",
+            "\u00a0After two semesters of Econometrics I was looking to do actually apply everything I had learned and this class helped me do exactly that. This is my first class at Yale that really lived up to a \"learning by doing\" philosophy. I learned to critically read academic papers in applied econometrics, and think of appropriate research designs to answer questions using econometric techniques. ",
+            "\u00a0Learned about how different econometric techniques are applied and then applied them myself in writing three full length papers. I liked essentially every single one of the weekly topics he chose. My favorite was probably the Harvard admissions case or the concussion diff in diff paper. ",
+            "\u00a0Learn methods of econometrics used by researchers and paper and get practice doing one's own empirical work ",
+            "\u00a0An arena where econometric techniques that were acquired in previous courses could be fully applied. There was a strong focus on producing work that would mirror that found in a research paper or journal. Much of the coursework itself focused on reading previous literature on a subject and critiquing or praising the approach or techniques they used. ",
+            "\u00a0A good understanding of econometric methods being used in top economics papers. "
+        ],
+        [
+            "\u00a0Econ 438 is a total gem within the econ department. 10/10 take it. workload is minimal and if you like econometrics, you'll actually enjoy it: just three empirical research papers all semester. that's it. class is just discussions of econometric techniques and primary literature. fair is super cool and discussions are chill. no weaknesses at all -- except maybe if you can't do data analysis, take 123 first, but then definitely take this one!! ",
+            "\u00a0Strengths:\r\n1. I really liked the assignments that Professor Fair assigned very thoughtfully. They gradually increase in difficulty and scope, and made me feel well prepared as I went into the more substantive final paper for the class.\r\n2. Professor Fair was extremely approachable. This was especially helpful given the independent nature of the assignments -- his guidance was invaluable with regards to planning research designs and narrowing down on questions\r\n3. I appreciated the small size of the class (not sure if this was meant to be a seminar since we were assigned to a decent sized classroom). Most of my economics classes at Yale have not been discussion based (and especially not in a quantitative manner) so I really enjoyed thinking about econometrics in using the critical lens I am used to applying in my political science or history classes.\r\nWeaknesses:\r\n1. I think the academic papers we were assigned to read could have been organized better. In class we pretty much read and critiqued research designs and arguments which worked out great because everyone in the class was engaged and interested in the material. However, I do wish the material had been slightly better organized/there had been a textbook to look over applied econometric concepts. I do feel like we relied a bit too much on our past econometrics courses to inform our theoretical knowledge and some refreshers would have been helpful. Maybe having smaller, econometrics assignments as refreshers (without making them be worth much of the grade) would be helpful ",
+            "\u00a0Strengths: Prof. Fair is awesome. I read his reviews for the macro lecture and was almost dissuaded but they're totally wrong and probably written by people who didn't actually go to lecture. He is so chill and helpful, actually wants everyone to succeed and learn, and will spend an undetermined time with you until he makes sure you understand everything you need to to write the paper.\r\n\r\nThe structure of the course is great since Prof. Fair checks up to make sure you've actually done something on the paper in the week before it's due and then gives very good feedback on the paper both during your in-class presentations and in written form.\r\n\r\nWeaknesses: none\r\n\r\nImprovements: Maybe ask that people don't use their laptops in class since they were something of a distraction sometimes. Really don't have any big suggestions ",
+            "\u00a0Very good course, helpful discussions of previously published papers about a variety of topics and using a variety of methods. ",
+            "\u00a0It was a very free-flowing course with no weekly assignments, and was built around the schedule of the 3 large papers. It allowed us to explore many subjects pertaining to our own personal interests, including Professor Fair's expertise in politics and voting models, lots of sports literature, as well as betting/financial markets. The work we viewed was extremely interesting and the work that each student produced, which Professor Fair facilitated us sharing between one another, was also extremely fresh and exhibited a lot of new ideas that we discussed. \r\n\r\nOne weakness was that there was no guidance on statistical software that was necessary to produce the analysis that the papers were written on. It was not something that should have been covered in class time, but it would be a great space for a TA to fill, to help students with their regressions. ",
+            "\u00a0The course really allowed you to pursue a research topic you are passionate about. Professor Fair presented some very interesting papers, including his own work, but there wasn't necessarily a structure to how they were organized (besides the first two units of politics and then sports) "
+        ],
+        [
+            "\u00a0Strongly recommend. The class is basically an introduction to economic research (or, if you already know how to do it, an opportunity to improve and practice those skills). You spend class reading and presenting on papers with the professor and discussing the methodology. The assignments are just to do three econometrics research papers. Professor Fair is chill and gives very prompt and helpful feedback. The class is a great medium to learn how to do write economics papers, which I found to be very helpful. Prof. Fair is also very ready to meet during office hours to provide more feedback. Another plus is the class size was so small (~7 people). Definitely recommend. ",
+            "\u00a0100% recommend. See above. Hidden gem in the econ department. You get to do your own research on topics you're interested in, discuss primary literature in class, and learn some cool econometrics while you're at it. Take it!! ",
+            "\u00a0Yes! Especially if you are interested in doing research/want to write a senior thesis in the econ major. I took this class as a junior and now feel much better prepared as I start thinking about ideas for my senior thesis. I definitely ended up spending more time than necessary on my assignments just because the material was so interesting. You get to pick your own topic for the second and third papers so this class is a great opportunity to undertake significant independent research in an area that interests! Strongly strongly recommend. ",
+            "\u00a0Yes. Be prepared to write three full length econometric papers, but it's really not that bad if you're decent at stats and know R or Stata reasonably well (otherwise writing the papers will be challenging). Prof. Fair is awesome and so chill. The small seminar is a great intimate setting for learning - it was really felt more like a directed reading group where you write some papers than a traditional class. \r\n\r\nDon't be dissuaded by his bad reviews for his macro lecture - those are written by prospective econ freshmen who've never been to lecture. Fair is actually very good at explaining and great at teaching when you talk to him one on one. ",
+            "\u00a0Yes. If you are expecting to learn econometric theory it is not the right class but if you already have a grasp of that then definitely a really good class to learn about how the theory is applied in research. ",
+            "\u00a0If you have a robust econometric toolkit going in and an interest in doing some work with those techniques, there is no better setting to do it and Professor Fair was very open to helping students beyond the course with their thesis work or senior projects. Again, the topics the course spans are extremely interesting and it does not resemble a typical economics field course that spends a lot of time building up big themes and little in what is relevant today. We were reading research papers published within the last couple years and discussing how thoughts or ideas have shifted since then, as well as looking at Professor Fair's voting models in the peak of midterm season. ",
+            "\u00a0Yes, great to get to work on some economics research from a very knowledgable professor who will support you in your work. "
+        ]
+    ]
+}

@@ -1,0 +1,109 @@
+{
+    "crn_code": "12743",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            4,
+            2,
+            3
+        ],
+        [
+            0,
+            1,
+            3,
+            3,
+            4
+        ],
+        [
+            0,
+            1,
+            1,
+            6,
+            2
+        ],
+        [
+            0,
+            2,
+            4,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            6,
+            4,
+            1
+        ],
+        [
+            0,
+            2,
+            1,
+            3,
+            5
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0the landscape of UAV research, drone flight planning, drone data analysis. ",
+            "\u00a0It was completely a new subject and by taking this course I learned using drones, planning flight routes, and a lot about drone and photogrammetry. I was able to explore the application of UAVs and looking forward to applying in the future. ",
+            "\u00a0High level understanding of photogrammetry software processes, broad overview of applicability of drones to many subjects (focus on environmental monitoring, but also archaeology, civil engineering, 3D modeling), opportunity to fly drone missions. ",
+            "\u00a0I have developed skills to plan a drone flight mission, process data and images acquired in the mission, and interpret the results. I have also learned to use two related software, pix4d and photoscan. I have gained a basic knowledge of the mechanism of the drone photogram as well as its applications, and I am able to optimize my work plan to perform better. ",
+            "\u00a0I've learned how to control a drone and how to mosaic images using SfM-based applications. I've also learned how to be creative if I intend to do a remote sensing related research, which I've never had a chance to do so. Most importantly, I've gained a lot of experience in remote sensing area, which could be really helpful for my future researches. ",
+            "\u00a0Thorough background into practice and development of remote sensing. ",
+            "\u00a0Basic familiarity with Photoscan software and its workflows. Exposure to the truly wide variety of applications of drones in the world (scientific and otherwise). Basic comfort in operating a DJI drone on auto-pilot. ",
+            "\u00a0My engagement with the course as an auditor was less than other students, but the course was really great because I now have:\r\nA conceptual understanding of drone technology applications in RS and photogrammetry projects\r\na range of ideas of how drone technology could be used to enhance land surface assessments of various natures ",
+            "\u00a0I learned how to conduct a drone flight mission to capture drone imagery, how to bring that imagery into different softwares to stitch them together, and how to perform different kinds of analyses with the mosaicked images. In general, I learned the difference applications, opportunities, and obstacles associated with using drones for data collection. "
+        ],
+        [
+            "\u00a0very well. I am able to have conversations with people about drone applications in the environmental field. ",
+            "\u00a0very well ",
+            "\u00a0As I am new to the field, I am satisfied with what was offered in the course. ",
+            "\u00a0Met expectations ",
+            "\u00a0My knowledge, skills, and insights gained in this class are exactly what I expected. ",
+            "\u00a0They just beyond my original expectations. I've learned more than what I thought I could learn. ",
+            "\u00a0Well. ",
+            "\u00a0I hoped to leave the class knowing more \"rules of thumb\" about how changing certain parameters of a drone mission (flight height, speed, camera aperture, angle etc) affects ones collected data, AND how one might want to set these parameters based on their project's goal. Lots of guest speakers and papers we read inundated students with parameters used by other people and choices they made, but I wish this class had done more to *synthesize* that information into memorable reasons *why* other drone analysts made the choices they did.\r\nI didn't enter the class with the expectation of becoming a pro drone pilot (we only could dedicate one day of the semester to a field-test flight). However, if this class is taught again I think more opportunities should be given for students to use the drones with guidance from an instructor. I wish I had a better grasp on how that technology really works in the field, and I had expected to feel more comfortable with that at the end of this course. ",
+            "\u00a0Very well. ",
+            "\u00a0They met my expectations almost exactly as anticipated. "
+        ],
+        [
+            "\u00a0Strength: the first few weeks of literature critique is great, but I am often lost as I am so invested in this particular field. The flight missions are great, I have learned so much from planning and analyzing data. \r\nWeakness: I wish there is a lab section to go over PhotoScan and Pix4D data analysis techniques basis-- It is great that I am able to learn so much through trails and errors-- but I would also like to save some time. There is a need for a class session to \"pull everything together\" --- even a midterm is fine. ",
+            "\u00a0Very interesting and cutting-edge topics; great field trio opportunity to fly drones and get practical experience ",
+            "\u00a0The major weakness was the lack of specific teaching and learning materials. ",
+            "\u00a0Strengths- cutting edge subject area.  Drones are the future- this field is about to explode!  Opportunity to learn from classmates and link up with professionals . Opportunity to exercise image processing/geospatial skills without constraint for personal project.\r\n\r\nWeaknesses- I did not like the overall format of the course.  We rushed through about 20 different papers in the first 3 weeks of class- hardly enough time to read through and discuss those papers thoroughly.  This should have been the bulk of the course!  Instead, the rest of the class sessions were focused on student mission presentations and guest lectures, and this became extremely repetitious. ",
+            "\u00a0The major strengths of this course: it offers a hands-on experience of planning flights, carrying on missions, collecting data and processing data to complete course projects. The knowledge and skills learned in this process is practical and will continue to be useful in the future. And the invited lectures are very helpful in providing insights for the industry. ",
+            "\u00a0Strength: very hard-core, even programming skill improved. Also had a chance to combine my drone project with the GIS software such as ArcMap and ENVI.\r\nTo be improved: that would be fascinating if we had multi-spectral dataset to practice in N drive. ",
+            "\u00a0Course was very much based on solid expectations of final project, with great help from Natalie and Xuhui. I appreciated that. ",
+            "\u00a0Strengths: The flexibility and openness in final project topic selection, which allowed each student to really focus on the aspect of drone/photogrammetry technology relevant to their field and interests. All students in this class had very different methodological approaches in their final projects, which speaks to the freedom each student felt in diving into a niche and exploring it. Speaking for myself, I was very happy that I didn't have to follow a rigid rubric and \"check certain boxes\" that weren't relevant to what I wanted to spend my time on in the project. My final product in this class is the one I'm most proud of this semester and I had fun doing it.\r\nIn addition, the vibe I got from the instructor and students was that perfection and success in our photogrammetry/analysis attempts was not expected--the classroom felt like a safe space to fail. This was very important to me, as I was more motivated to experiment when playing with my data or tools. \r\n\r\nWeaknesses:  My biggest complaint was the lack of synthesis in the course structure. Sure, we're reading all these papers and hearing about all these different methods (some that even contradict each other!), but what are the big takeaways? Professor Lee gave one brief slideshow near the beginning of class where he attempted to summarize what our lit review presentations had conveyed; I wish there were more lectures like this that give an overview of the theory, not just enumerate examples.\r\nClass meeting times were mostly presentation-watching (whether other students or guest speakers), which gets really un-engaging when you're in the audience week after week. (Thus, I'm not surprised by the number of students I witnessed using class time to catch up on emails.) I felt especially un-engaged because no expectations were set by the instructor for what info in these presentations we'd be responsible for knowing! This could be remedied in future semesters by requiring students to post reflections on Canvas synthesizing the main takeaways from presentations and recording intelligent follow-up questions. ",
+            "\u00a0Modality of teaching/delivery was great: the class was a small intensive and allowed for a contained learning environment, and easy communication between instructors and students. ",
+            "\u00a0The class succeeded in giving students a chance to learn about a lot of different drone applications and connect drone work with both academic research and practical, real-world applications. The class projects differed greatly from one student to the next, especially since drone imagery can be used for such a wide range of uses. While this created an interesting array of student projects, I didn't feel wholly prepared for my project after drone image collection since next steps could have entailed more technical expertise with coding, GIS software, and other programs that I wasn't as familiar with. Also, I found the guest speakers interesting but by the last one or two, a bit repetitive regarding the benefits and uses of drones. It could have been nice to scrap some of the later guest speakers and dedicate that time to working in the lab. "
+        ],
+        [
+            "\u00a0You need to have a good understanding of remote sensing and raster data analysis. Ask professor and TA feedback and ask for help when you are stuck. ",
+            "\u00a0highly recommend, this is one of those classes that people in every field could benefit from ",
+            "\u00a0If your future is in landscape planning and research, I would highly recommend taking this course. In the future will potentially be applicable everywhere and will make our job easier. ",
+            "\u00a0You need to have solid foundations in geospatial software or image processing in order to thrive in the course. ",
+            "\u00a0Very interesting course. Whoever interested in remote sensing must take this course. ",
+            "\u00a0Ask questions and read a lot. The strength of the final projects was based on a clear idea of what you were trying to get out of it. A lot of the class is info sessions from folks in the field as opposed to hands on in class. Expect most of your project and technical learning to be done outside of class time. ",
+            "\u00a0Make your presentations succinct!! Since your lectures are essentially lectures to the class, share only what you think is the most important learning material--don't show off every tiny detail you noticed.\r\nCome prepared to be a little bored sometimes.\r\nInstead of focusing on taking notes on every presentation you hear, keep notes about general trends you notice across presentations.\r\nWhen planning your own drone mission, find other papers that did what you want to do and replicate their flight parameters. ",
+            "\u00a0A great class for students interested in remote sensing and near-surface RS+P assessments that are made possible by drone technology. An emerging and specialised area that can offer students competitive advantages. ",
+            "\u00a0Brainstorm project ideas early, with an understanding that the drone imagery is just one part or step in the overall project. Addition knowledge of remote sensing, GIS, and/or stats would be helpful for really taking on an interesting project. "
+        ]
+    ]
+}

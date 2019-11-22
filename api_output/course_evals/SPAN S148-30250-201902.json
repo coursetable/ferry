@@ -1,0 +1,72 @@
+{
+    "crn_code": "30250",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned the history of Spain from like 1930 to present day. This is also a culture course so we took fun trips and learned about cultural aspects of Spain. ",
+            "\u00a0I practiced my language skills and learned about Spanish culture, which helped prepare me for my study abroad. "
+        ],
+        [
+            "\u00a0Strengths: Very in depth history of Spain, taught in Spanish since culture and language go hand in hand.\r\n\r\nWeaknesses: I wished this game focused more on the cultural aspects of Spain, it felt very much like a history class as opposed to a history and culture class. "
+        ],
+        [
+            "\u00a0Yes, it was fantastic and the excursions we took were extremely fun and interesting "
+        ]
+    ]
+}

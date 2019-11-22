@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49778/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A study of literature that responds to a changing post\u00e2\u20ac\u201cWorld War II Britain, with attention to the problem of who \"belongs\" and who is an \"outsider.\" Authors include William Trevor, Kazuo Ishiguro, Jean Rhys, Samuel Selvon, Ruth Prawer Jhabvala, and John Osborne. Formerly ENGL 416.", 
+    "title": "Contemporary British Fiction", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 103", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13497", 
+        "listings": [
+            {
+                "number": "377", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEN2\">YC English: 20th/21st Century</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENS\">YC English: Senior Seminar</a></li></ul>"
+    ], 
+    "professors": [
+        "Caryl Phillips"
+    ], 
+    "long_title": "Contemporary British Fiction", 
+    "extra_info": "A"
+}

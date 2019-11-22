@@ -1,0 +1,80 @@
+{
+    "crn_code": "11960",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            0
+        ],
+        [
+            0,
+            2,
+            1,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about research and what it entails to get a PhD! ",
+            "\u00a0I learned so much about the statistical side of political science. We read tons of papers and developed the ability to look critically at them. We used statistics to examine papers in a way that I hadn't done before, and this class gave me a much better base to read information as a political science major. ",
+            "\u00a0I became acquainted with the strengths and weakness of various research designs in the social sciences. ",
+            "\u00a0I have learned to think much more critically about individual social science papers and bodies of evidence as a whole. "
+        ],
+        [
+            "\u00a0I think it's a wonderful class. It taught me a lot about research and research methods, and how to recognize good papers from bad one. It was probably one of the most instructive class I have taken at Yale! The class is wonderful! I loved the way class was run! ",
+            "\u00a0The course is really what you make of it. Professor Aronow treats his students a lot like graduate students (from what I can tell) so if you don't do any readings or any work, he'll probably be able to tell, but he doesn't treat you like a child and hold your hand. He's super willing to meet with students and help out though, so there's the opportunity to learn a ton if you want and try. ",
+            "\u00a0Strengths: the course material is flexible; the course provides a lot of support to start a research project\r\n\r\nWeakness: lack of micromanagement can make the course feel unstructured ",
+            "\u00a0The greatest strength of the course is Prof. Aronow who is a brilliant academic and an amazing person. The class is very student directed, which depending on the students can be a plus or minus. "
+        ],
+        [
+            "\u00a0Absolutely!!! ",
+            "\u00a0If you have any interest in grad school, doing research, or just improving the way that you read papers, please take this class. Professor Aronow is so helpful and absolutely amazing. I learned more in this class than most courses I've taken at Yale, and Professor Aronow is such an amazing resource. ",
+            "\u00a0I would; this course is a wonderful opportunity to consider social science research. ",
+            "\u00a0Yes, I would definitely recommend this course to a student who is interested in empirical social science and thinks of pursuing graduate school. It is a real behind the scenes look into how research is done. Prof. Aronow's teaching approach is very student directed and different from most Yale Professors. A student interested in the class should, therefore, make sure they like this before taking it. "
+        ]
+    ]
+}

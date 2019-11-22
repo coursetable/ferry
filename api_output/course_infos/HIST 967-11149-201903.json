@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50287/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This seminar explores the discipline of intellectual history from the perspective of the historian's role as author of that history. Topics include the challenges of working with highly personal and subjective sources; the moral dilemmas of relativism; and the relationship between voyeurism and empathy. How do historians relate to novelists grappling with similar material? How can we narrate the history of ideas? How can we write nonfiction about people whose worldviews involved elaborate fantasies about the past, present, and future? How can we situate abstract ideas in concrete times, places, and lives? How do we integrate narrative and analysis? When is it justified to write about the present? The relationship between lunacy and genius is often very intimate; we discuss how historians can approach morally ambiguous historical protagonists be they communist poets, surrealist novelists, fascist philosophers, or others. We focus on storytelling, on history as both art and Wissenschaft. Readings include novels, essays, narrative nonfiction, and the genres in between.", 
+    "title": "Intellectual History as Storyt...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 209", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11149", 
+        "listings": [
+            {
+                "number": "967", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Marci Shore"
+    ], 
+    "long_title": "Intellectual History as Storytelling", 
+    "extra_info": "A"
+}

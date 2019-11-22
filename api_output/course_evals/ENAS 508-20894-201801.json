@@ -1,0 +1,84 @@
+{
+    "crn_code": "20894",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            4,
+            1,
+            3
+        ],
+        [
+            0,
+            1,
+            4,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            6,
+            2
+        ],
+        [
+            0,
+            1,
+            4,
+            3,
+            2
+        ],
+        [
+            3,
+            3,
+            3,
+            0,
+            2
+        ],
+        [
+            5,
+            2,
+            2,
+            0,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How fundamental ethics is to good science. ",
+            "\u00a0a greater level of thinking of my impact on society ",
+            "\u00a0Ethics ",
+            "\u00a0Interesting ethics subjects pertaining to researchers ",
+            "\u00a0Essential knowledge about how to be a better researcher. ",
+            "\u00a0I learned basically nothing that I had not known before. "
+        ],
+        [
+            "\u00a0strengths: interactive \r\nweakness: lack of structure ",
+            "\u00a0Good topics, time of seminar irritating ",
+            "\u00a0It's a pretty interesting and relaxing course. ",
+            "\u00a0Evan was very enthusiastic. But the class was a combination of common knowledge and things I had already been taught. "
+        ],
+        [
+            "\u00a0You are probably taking this course as a requirement. Evan makes ethics somewhat entertaining. ",
+            "\u00a0yes ",
+            "\u00a0Yes, thought provoking ",
+            "\u00a0Yes, it's not your usual boring ethics class. The 'lessons' revolve around interesting real life stories. Also, the speakers Prof. Morris invited were interesting and engaging too ",
+            "\u00a0Yes. It is a good opportunity to get yourself familiar to those information. ",
+            "\u00a0It is required, otherwise I would say no "
+        ]
+    ]
+}

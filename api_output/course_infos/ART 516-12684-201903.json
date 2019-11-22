@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "With a different point of view, we will start by examining all our senses. This class is experiential and open ended. We will use our encounters with color to try to answer this question: Does color primarily reside in materials, in light, or in the mind? This course is bound to generate more questions than it can answer and is open to those working in all subject areas but will be taught from the point of view of a painter. Is a blue object bluer when perceived outside Earth\u2019s atmosphere? What does Wittgenstein have to say about the relative brightness of the blue sky versus a blank white canvas under that same open sky? What causes a rainbow\u2019s characteristic arcing shape? What is the difference between purple and violet? What has an ideology of whiteness done to our understanding of the colors of persons? Class time will be divided between experiences, discussions and field trips. Meets six times for 1.5 credits.", 
+    "title": "What Is Color?", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "GREEN C220", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12684", 
+        "listings": [
+            {
+                "number": "516", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Byron Kim"
+    ], 
+    "long_title": "What Is Color?", 
+    "extra_info": "A"
+}

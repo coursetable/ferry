@@ -1,0 +1,73 @@
+{
+    "crn_code": "13761",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            4,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            2,
+            4,
+            0,
+            0
+        ],
+        [
+            0,
+            2,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I would say that my writing skills improved in this course, though perhaps not as quantifiably as in the L1-L4 classes. I learned some more about German politics as well as the Germans' love of radio. ",
+            "\u00a0I developed speaking skills. Very good for me. "
+        ],
+        [
+            "\u00a0I would say a strength of this class is the small size and that there were no native speakers, as can sometimes happen in L5 courses. I think that the class could have been structured better so as to develop vocabulary and grammar, as all of the students struggled with this. The syllabus seems to have been designed to facilitate a lot of conversation, but that can become very slow when the students in the class cannot communicate with any semblance of ease. Adding in an emphasis on vocabulary and grammar would make this class seem more worthwhile. "
+        ],
+        [
+            "\u00a0I would recommend this course to students who have completed L1-L4 (or the equivalent) at Yale, but not to native/fluent speakers. Also, if you are more comfortable talking or livening up a class atmosphere, you will probably get more out of this class than students who are quieter. ",
+            "\u00a0Yes "
+        ]
+    ]
+}

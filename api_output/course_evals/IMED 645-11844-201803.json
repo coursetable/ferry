@@ -1,0 +1,72 @@
+{
+    "crn_code": "11844",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            1
+        ],
+        [
+            2,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            1,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course taught me basic stats "
+        ],
+        [
+            "\u00a0This course basically said to consult statisticians when necessary instead of teaching us stats. Not an amazing course. "
+        ],
+        [
+            "\u00a0Nope. Did not go in depth into really any part of statistics ",
+            "\u00a0Yes, I would recommend this course to other students at the knowledge is statistics is always useful. "
+        ]
+    ]
+}

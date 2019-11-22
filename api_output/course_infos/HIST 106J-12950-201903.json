@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50133/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This seminar focuses on the history of the United States and Spanish, French, and Portuguese America, from the Age of Revolution to the present day. It covers such topics as the American, Haitian, and Spanish-American Revolutions; the Monroe Doctrine; the Confederacy\u2019s foreign policy toward Spanish America, Brazil, and Haiti; William Walker\u2019s invasion and occupation of Nicaragua; the end of slavery throughout the Americas, and the New World consolidation of jus soli (or birthright) notions of citizenship; the War of 1898; the building of the Panama Canal; US counterinsurgencies in Haiti, Nicaragua, and the Dominican Republic; the Good Neighbor Policy; the politics and culture of the Cold War, including CIA interventions in Guatemala, Chile, and Nicaragua; and the Invasion of Panama. Combining social, intellectual, and diplomatic history, the course covers topics such as the region's revolutionary wars for independence; comparative republicanisms; the creation of borders; the expansion and abolition of slavery; more revolutions, and counterrevolutions; military interventions and coups; and evolving forms of political economy. The course\u2019s main comparative framework is to examine how the United States and Latin America both advanced, and struggled to define, a set of New World ideas and political forms: Christianity, republicanism, liberalism, democracy, sovereignty, rights, and, above all, the very idea of America.\u00a0", 
+    "title": "A History of the United States...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "STOECK 408", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12950", 
+        "listings": [
+            {
+                "number": "106J", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHI2\">YC History: United States</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHI3\">YC History: Latin America</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIA\">YC History: Cultural History</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIF\">YC History: Politics &amp; Law</a></li></ul>"
+    ], 
+    "professors": [
+        "Greg Grandin"
+    ], 
+    "long_title": "A History of the United States and Latin America", 
+    "extra_info": "A"
+}

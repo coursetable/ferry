@@ -1,0 +1,88 @@
+{
+    "crn_code": "10883",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            6,
+            0
+        ],
+        [
+            1,
+            0,
+            3,
+            2,
+            3
+        ],
+        [
+            1,
+            0,
+            2,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            4,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            9,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            5,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course is a fantastic way to learn how to think about causal inference. Other statistical courses do not give you this way of thinking nearly as clearly. This is done both with theory and application. I highly recommend this course to anyone with any interest in research or, more broadly, in having the ability to think about causal claims more skeptically. ",
+            "\u00a0The course provided training in statistical proofs, R, and broad methods in statistics. Usage of R was extremely helpful, and Im grateful for how the course was taught. ",
+            "\u00a0I learned various econometric research designs (OLS regression, instrumental variables, regression discontinuities, group structures, etc) as well as some high level machine learning concepts (i.e. sparse/regularized regression, tree/forest, deep learning, counterfactual prediction). I learned a little bit of R but feel that my foundation in R is pretty terrible. Overall, I feel a lot more equipped to read economics papers and understand their research designs. ",
+            "\u00a0Learnt econometrics skills and a smattering of machine learning. Self-learnt a whole ton of R by myself because the course doesn't teach it but the psets require it... ",
+            "\u00a0Causality and Prediction ",
+            "\u00a0I developed a working theoretical understanding of causal inference models from pure RCTs to natural/quasi-experiments (e.g., regression discontinuity, difference-in-differences) to crude models like event studies. Learned how to read seminal econ papers that used the research designs we studied and replicate some of their results using R. Also learned the very basics of prediction by machine learning. ",
+            "\u00a0I learned about different methods of doing statistical analysis and how to apply these skills to different empirical studies. And I also learned some R programming. "
+        ],
+        [
+            "\u00a0The class was structured as a relatively optional lecture that had about 60% attendance and a critical section taught by the indomitable and essential TA, Soum. The lectures could have been more necessary to attend had they included more than the sum contents of the slides, which were sufficient to understand the course materials. I skipped probably 1/8 of the lectures but other people skipped far more because they thought the slides were all they needed. They were largely right. The slides were well designed and presented, and Yusuke did a great job assembling and explaining them. ",
+            "\u00a0Strengths: Yusuke has really good notes that are very comprehensive, and I do think some of the material is inherently interesting (the questions posed in the studies are meaningful). TA (Soumitra) was very accessible and helpful.  \r\n\r\nWeaknesses: Yusuke is a dry lecturer. Sometimes clarifying questions helped, but not always. Problem sets were way too difficult to do on your own, so you had to rely heavily on the TA for help (also, each problem set counted for 8% of the grade! That was so stressful - perhaps consider adding a few easier problems) ",
+            "\u00a0This course was just taught poorly. R skills were required for the psets but not taught AT ALL. The lecturer is completely disengaged. ",
+            "\u00a0Very well structured course curriculum\r\n\r\nWeakness: Assignments can be weekly, to apply all concepts dealt in the class ",
+            "\u00a0Strengths: Nice, smooth progression of topics. Almost every lesson built logically off of the previous one(s). I also appreciated how Professor Narita demanded us to develop an integrated understanding of each econometric concept or model by blending mathematical theory, verbal intuition, research applications, and DIY empirical practice into each lesson/problem set. This really helped solidify the learning for me. Prof Narita also does a commendable job breaking down models into digestible bits and then tying them all back together. He explains most things very clearly and is open to answering questions when students get confused.\r\nWeaknesses: Coding on the psets could get really tricky and time-consuming if you don't have much prior experience. This isn't necessarily a fault of the class; just know that you'll be dedicating a few extra hours per pset (especially the latter ones) if you don't have coding background. Low familiarity with programming, however, should not dissuade you from taking the class, especially if you have a TA as helpful and patient as Soum! Another weakness for me personally was the emphasis on machine learning in the second half of the semester. I didn't find it as relevant to my interests and kind of checked out during those lectures. But some students may have found it more useful or interesting than me. ",
+            "\u00a0Strength: theoretical knowledge is demonstrated through different interesting studies\r\n\r\nWeakness: a little bit too overwhelming because have too much to cover "
+        ],
+        [
+            "\u00a0This course, particularly with Yusuke, is FANTASTIC. He connects the concepts super well. Highly recommend this content as hugely helpful to anyone in the economics major and beyond. Econometrics is an incredibly useful subject that more people should get access to. ",
+            "\u00a0Great chance to learn R and get some machine learning experience. Hard course though. Good luck, and work in teams on the p-set! ",
+            "\u00a0I'd only recommend if you are actually interested in learning how to understand research designs in economics/econometrics papers. If you are just looking to fulfill your econometrics requirement, I've heard 131 is more painless (haven't taken it though). I took it to challenge myself beyond basic stats, which it definitely did. Beware - you are expected to learn R on your own. Psets are every other week, so workload is nonexistent half the time and terrible the other half (so it averages out). Yusuke is a dry lecturer. Material is somewhat interesting but becomes a drag, especially the machine learning stuff (you don't actually learn machine learning, just the high level concepts of it). The TA, Soum, saved us with every pset. ",
+            "\u00a0Not unless you have prior experience with R. Or if a better professor takes over ",
+            "\u00a0Strongly recommend this to data science enthusiasts. This course is a grand introduction to Data Science and deals with applied aspects. ",
+            "\u00a0Yes, I recommend this class to any social science major who wants a more substantive, rigorous approach to statistics with interesting policy applications. While the material can get dry at times, Professor Narita does a great job of bringing concepts to life with cool research questions and seminal economics papers. By the end of the course you'll gain a workman's understanding of key econometric models and be able to read econ papers all the way through, which is super satisfying. There are only five psets, and while the later ones take a pretty long time, they are valuable exercises and not useless textbook problems. Try your best to devote time and attention to this course if you take it; it can be tempting to skip lecture and weekly readings because Narita's slides are so good, but then you won't get out all that this under-appreciated course has to offer. To me, ECON 132 should be the minimum stats requirement for social science majors, not just an intro stats class or ECON 131 or AQA in the global dept. Metrics II is where it all starts to make sense. Note on my background: I'm not an econ major (poli sci), skipped ECON 131, have minimal coding experience (took the intro comp sci lecture), and found this course both manageable and worthwhile. ",
+            "\u00a0I would recommend this course to those who want to have understanding of different statistical methods and want to learn R or other data programming languages. "
+        ]
+    ]
+}

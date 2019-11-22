@@ -1,0 +1,100 @@
+{
+    "crn_code": "24265",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            6,
+            6
+        ],
+        [
+            0,
+            0,
+            3,
+            6,
+            3
+        ],
+        [
+            0,
+            0,
+            4,
+            4,
+            4
+        ],
+        [
+            1,
+            2,
+            2,
+            4,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            9
+        ],
+        [
+            0,
+            0,
+            1,
+            8,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned nonparametric methods for a wide variety of problems. I gained a strong mathematical and intuitive understanding of rates of convergence and the effect of assumptions. ",
+            "\u00a0This was a great course covering the fundamentals of nonparametric estimation and then exploring various open research problems in the field. ",
+            "\u00a0I had been exposed to very few non-parametric methods in other statistics courses before taking this class. I feel like this course has given me new tools for my data analytics toolkit that I feel comfortable using at a basic to intermediate level. ",
+            "\u00a0A broad sense of some classical and cutting edge methods in nonparametric estimation, and how they differ from parametric methods. ",
+            "\u00a0I learned about the various nonparametric techniques that are commonly used in machine learning, their shortcomings and advantages, and how to implement and evaluate the methods. ",
+            "\u00a0- Good introduction to non-parametric statistics\r\n- Requires substantial pre-requisite math knowledge and I would recommend taking the class as a senior or advanced S&DS junior.\r\n- Doesn't require much programming experience; just be familiar with R and knowledgable in the basic data structures and syntax of R ",
+            "\u00a0Learned the nonparametric counterparts to the classical statistics techniques. ",
+            "\u00a0Various methods of non-parametric estimation like kernels, local linear regression, wavelets. Cross validation, How to program better in R. ",
+            "\u00a0Learnt the basics and an overview of the modern methods in nonparametric estimation. ",
+            "\u00a0Nonparametric estimation, including density estimation, regression, wavelets, high-dimensional estimation, graphical models, plus some really neat Bayesian stuff (yay Dirichlet processes :) ) "
+        ],
+        [
+            "\u00a0This course was very effective in covering a lot of material (more than what was in the textbook) while giving a students a very deep understanding of the topics. ",
+            "\u00a0This course was great in providing a new perspective via the nonparametric view of many problems in traditional machine learning. The problem sets were very helpful as they were a good mix of theoretical and practical problems that furthered our understanding of the material. ",
+            "\u00a0This was  as mathy as advertised, but even given its strong theoretical leaning, I think that it struck a nice balance with applied work. I might like to have class 3 times a week for 50 minutes as opposed to 2 meetings for 1.25 hours because the material is difficult and attention waned as class went on. ",
+            "\u00a0Crazy amount of work and lectures go really fast. ",
+            "\u00a0The course material was interesting. The questions on the problem sets were often unnecessarily confusing (wording, etc). Office hours with the professor were usually helpful. The use of piazza was not helpful since usually the professor gave very brief answers that ended up causing more confusion. ",
+            "\u00a0The biggest strength of the course is who teaches it! Professor Lafferty is brilliant and an engaging lecturer. He really cares about his students' success and clearly puts a lot of thought into his pedagogy. I also like the structure of the course, with four large assignments, two short quizzes, a midterm, and a final project. I thought this organization balanced my desire to do meaningful work while also being held accountable for the material in the course. ",
+            "\u00a0It was such a great course! A strength of the course is that the material is new, exciting, advanced, and highly relevant for a variety of disciplines. However, sometimes the material in lecture was far too theoretical for any of us to understand (ie, the lectures about functional analysis/ various spaces) and it was hard to understand the implications of the theoretical material. I also think I would have liked to have gotten a better understanding of how these methods are used in real life. ",
+            "\u00a0- Professor Lafferty is a great lecturer. However, sometimes the lectures can move too fast and one can miss important concepts. ",
+            "\u00a0The class could have been slightly more structured. Additionally, the quizzes and exams felt unfair because of the true/false sections. ",
+            "\u00a0It is a very good class that gives a detailed overview of the various regression methods, and also the mathematical basis behind them. It would be better if some of the symbols used in class are better clarified, which will make the lectures easier to follow. ",
+            "\u00a0Strengths: Lafferty is an amazing lecturer. He is extremely knowledgeable and has no problem answering any student problems. The structure of the class is organized well. ",
+            "\u00a0The R required for the psets often took longer to figure out than expected (there's not always a lot of good documentation and tutorials online), but I loved the material covered. As someone who wants to do AI safety research in the future and wants to understand how algorithms work in order to provided safety and certainty guarantees, it was really important to be able to understand the statistics behind everything. I just wish we could have also covered some stuff relating to nonparametric classification! "
+        ],
+        [
+            "\u00a0I would strongly recommend this course to another student. I learned more from this course than I did in any of the other statistics courses than I have taken at Yale. ",
+            "\u00a0I would recommend this course to anybody looking to learn more about machine learning and those who want to learn more about current research problems in machine learning, especially in nonparametric statistics. It is a great elective to take and a really good second course after introduction to machine learning. ",
+            "\u00a0If Lafferty is teaching it, absolutely. A lot of his work is in the realm of non-parametric statistics, so you'll be getting to learn from an expert in the field, but also someone who's very serious about teaching and places an emphasis on student learning. The material is unlike anything that I've seen before in other S&DS classes, so it's a unique opportunity to learn some useful techniques. ",
+            "\u00a0The course is fine. The material is interesting and the professor is pretty good at explaining it. The problem sets are hard and long, but office hours with the professor were helpful. The exam and quizzes were reasonable. The final project was not too bad. ",
+            "\u00a0Especially if Prof. Lafferty is teaching it, I definitely recommend this course. It is difficult, but you will learn about some the most cutting-edge methods in nonparametric estimation, including some that Prof. Lafferty has done significant work on. As long as you keep going to lecture and get a head start on every assignment, the class is manageable and Prof. Lafferty is very understanding. ",
+            "\u00a0It is a great course! It was very challenging and the problem sets (which were assigned every 2 weeks) normally took at least 30 hours, but Professor Lafferty is the best! I would note that it is largely grad students which can feel intimidating. But overall, this has been my favorite statistics class ever, and I feel like I learned so much. ",
+            "\u00a0I'd recommend this course if you are really interested in taking a new perspective on machine learning and have a strong math background. ",
+            "\u00a0Take it if you're interested in statistics. You learn a lot about the nonparametric counterparts to standard techniques. Often times, these techniques are more versatile. You won't be doing too much coding however. ",
+            "\u00a0Yes! If you're interested in statistics you should definitely take this class. This class is all about making estimations with as few assumptions as possible. In the real world you'll come across many datasets that may not follow X distribution, so it is important to understand methods where you can make estimations. ",
+            "\u00a0The material covered in this course is really interesting, and super helpful if you're hoping to understand machine learning that assumes very little about the data it's modelling. The course starts slow, but be prepared for things to pick up quickly when Prof. Lafferty introduces the Bayesian stuff (Dirichlet processes etc)! In general Prof. Lafferty does a really good job of explaining conceptually what's going on, though this becomes harder towards the end of the material - thankfully there are only 4 psets and they don't cover the more cutting edge material at the end of class. You definitely want *some* background in statistics / inference before taking this. "
+        ]
+    ]
+}

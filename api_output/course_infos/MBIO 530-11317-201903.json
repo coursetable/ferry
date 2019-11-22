@@ -1,0 +1,54 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50494/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The development of the immune system. Cellular and molecular mechanisms of immune recognition. Effector responses against pathogens. Immunologic memory and vaccines. Human diseases including allergy, autoimmunity, cancer, immunodeficiency, HIV/AIDS.", 
+    "title": "Biology of the Immune System", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WTS A60", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11317", 
+        "listings": [
+            {
+                "number": "530", 
+                "subject": "MBIO"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eric Meffre", 
+        "Peter Cresswell", 
+        "Kevan Herold", 
+        "Nikhil Joshi", 
+        "Carrie Lucas", 
+        "Ruslan Medzhitov", 
+        "Noah Palm", 
+        "Joao Pedro Pereira", 
+        "Jordan Pober", 
+        "Aaron Ring", 
+        "Carla Rothlin", 
+        "Craig Roy", 
+        "David Schatz"
+    ], 
+    "long_title": "Biology of the Immune System", 
+    "extra_info": "A"
+}

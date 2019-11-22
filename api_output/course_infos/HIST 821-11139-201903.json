@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50093/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course is taught in conjunction with a course of the same title and scope at Cornell University with Professor Ernesto Bassi. We engage with new work emerging about the Greater Caribbean in the context of Latin America, the African diaspora, Atlantic history, global history, comparative emancipation from chattel slavery, and the study of global revolutions. Students make in-class presentations that locate these titles in a deeper historiography with classic texts. This course crosses imperial boundaries of archives and historiography in order to consider the intersecting allegiances, identities, itineraries, and diaspora of peoples, in local, hemispheric, and global context. Some central questions include: What is the lived geography of the Caribbean at different moments, and how does using different geographic and temporary frameworks help approach the region's history? What role did people living in this amorphously demarcated region play in major historical transformations of the eighteenth and nineteenth centuries? How did the varied but interconnected processes of Caribbean emancipation impact economic and political systems throughout the Atlantic and beyond? The course concludes with a mini-conference in which students of both universities come together to discuss the state of the field and future directions in Caribbean history.", 
+    "title": "A Greater Caribbean: New Appro...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 014", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11139", 
+        "listings": [
+            {
+                "number": "821", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Anne Eller"
+    ], 
+    "long_title": "A Greater Caribbean: New Approaches to Caribbean History", 
+    "extra_info": "A"
+}

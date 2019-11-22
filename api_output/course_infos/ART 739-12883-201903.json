@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "For second-year graduate students. Resolution of the design of the independent project fitting the appropriate medium to content and audience. At the end of the second term, two library copies of a catalogue raisonn\u00e9 with all independent project work are submitted by each student, one of which is retained by the University and the other returned to the student. The independent project or \u201cthesis\u201d is expected to represent a significant body of work accomplished over the course of two years, culminating in the design of an exhibition of the work.", 
+    "title": "Degree Presentation in Graphic...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "GREEN 109", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 19
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12883", 
+        "listings": [
+            {
+                "number": "739", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Sheila de Bretteville", 
+        "Keira Alexandra", 
+        "Yotam Hadar", 
+        "Dan Michaelson", 
+        "Susan Sellers", 
+        "Forest Young"
+    ], 
+    "long_title": "Degree Presentation in Graphic Design", 
+    "extra_info": "A"
+}

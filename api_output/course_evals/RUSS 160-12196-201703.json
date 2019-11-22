@@ -1,0 +1,74 @@
+{
+    "crn_code": "12196",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            5
+        ],
+        [
+            0,
+            1,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course helped me in particular with reviewing grammar rules and building off of the skills I already had in this area. ",
+            "\u00a0I developed my speaking, listening, writing and grammar skills in Russian. It was helpful using a range of media and topics. I also gained an insight into Russian culture and everyday life through the topics covered. "
+        ],
+        [
+            "\u00a0A major strength of this course is that it is designed for simultaneously reviewing grammar concepts students may have already learned while building up vocabulary and more complex structures. There are plenty of short writing assignments and exercises as well. The one major weakness of the course is that there are not very many opportunities to practice oral communication. The course could be improved by making it meet twice per week for longer hours. ",
+            "\u00a0I felt the range of media and topics was good, and the grammar useful and manageable. I would benefit from slightly more grammar and vocabulary but in general I can't think of any obvious weaknesses. "
+        ],
+        [
+            "\u00a0I would recommend this course to a student who already has strong oral and written communication skills in Russian, but is looking to improve their grammar. ",
+            "\u00a0Yes, this course was helpful to learning Russian, had a good amount of work, but not too much, generally, and was well taught. "
+        ]
+    ]
+}

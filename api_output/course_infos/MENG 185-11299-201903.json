@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50461/assignments/syllabus", 
+    "requirements": "Prerequisite: physics at the level of PHYS 180, or permission of instructor.", 
+    "description": "A course designed for potential majors in mechanical engineering, with units on design methodology, statics, mechanics of materials, and machining. Includes a design project.\nPrerequisite: physics at the level of PHYS 180, or permission of instructor.", 
+    "title": "Mechanical Design", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "ML 104", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11299", 
+        "listings": [
+            {
+                "number": "185", 
+                "subject": "MENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Rebecca Kramer-Bottiglio"
+    ], 
+    "long_title": "Mechanical Design", 
+    "extra_info": "A"
+}

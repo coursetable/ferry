@@ -1,0 +1,96 @@
+{
+    "crn_code": "10927",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            5,
+            7,
+            8
+        ],
+        [
+            0,
+            0,
+            4,
+            10,
+            6
+        ],
+        [
+            0,
+            1,
+            3,
+            6,
+            10
+        ],
+        [
+            0,
+            2,
+            5,
+            5,
+            8
+        ],
+        [
+            0,
+            0,
+            7,
+            9,
+            4
+        ],
+        [
+            0,
+            1,
+            8,
+            8,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I developed basic analysis skills to research something that I am interested in such as development economics.\r\nThis course knowledge will be really helping me for deepening further applied analysis skills next semester. ",
+            "\u00a0I would like to highlight my main takeaways from this course: I learnt to be conscious that all the models we work with have their weaknesses and strenghts and thus we have to work with them but having this into account. Also, to differentiate the statistical significance from the economic one. The concept of power and its use. To be clear and tidy in the way we express ourselves. To underlying idea behing the OLS and to work with matrix alegbra in OLS. ",
+            "\u00a0I have a much better understanding of data and how to use it to answer questions ",
+            "\u00a0Great course i learned evereything with another perspective ",
+            "\u00a0Challenging content ",
+            "\u00a0Principles underlying multivariable regression ",
+            "\u00a0A better understanding of power and practical measures like minimum detectable effects. ",
+            "\u00a0I developed my math skills and a solid foundation in econometric theory ",
+            "\u00a0Even though I had done much of the syllabus before, the clarity with which it was taught was very insightful to me. I think emphasising things like which assumptions are needed for what, the difficult problem sets and exam we're critical to my learning. "
+        ],
+        [
+            "\u00a0If you are a student who have studied econometrics in the past, that should be fine. On the other hand, if you are not familiar with development economics or some algebras, ",
+            "\u00a0Strengths:\r\n1. All the topics covered were in depth and fully explained. \r\n2. The choice of the topics was very good and the focus of each of them as well. In particular, I loved the fact that we could discuss the pros and cons of the models we were dealing with and also that the professor brought up many applications, which was great.\r\n3. The professor and TA are excellent.\r\n4. The lecture notes were written very clearly.\r\n5. The problem sets were well thought and made us think a lot and fully understand the topics covered in the lecture.\r\n6. We used the chalk board in class, which is much better than slides.\r\n\r\nWeakness:\r\nIt would have been good to have a reading week before the final. ",
+            "\u00a0More simple practice would be helpful - before jumping in to problem set questions, give some simple repetitive practice things that establish the basic skills we'll need for the more complicated problems.  There can be 10 easy warm up questions on a problem set, just to make things like getting a test statistic or a p-value become muscle memory.\r\nStrength - high expectations of students forced us to learn a lot ",
+            "\u00a0Strengths: great teacher and very applied ",
+            "\u00a0Content learned is quickly applied to specific contexts.\r\n\r\nSome of the key mathematical proofs for Matrices could be included in the notes on top of being covered in class. ",
+            "\u00a0A really good emphasis on practical applications and what to think about in practical settings. The final exam was probably too hard given the very limited amount of time spent on things like R^2 at the very end of the course. ",
+            "\u00a0More practice material would have helped ",
+            "\u00a0Strengths: taking the easiest parts of econometrics and testing students on it with rigour. \r\n\r\nWeakness: Went too slow with the first few lectures. Slight gap between the level of the lectures and the difficulty level of the problem sets. ",
+            "\u00a0I think the subject matter of the course is very interesting however the teaching methods need to be definitely improved. \r\n\r\nFor example: building the knowledge level from the ground up. While most of the students are economics graduates, spending some time to go through the basic concepts and using a lot more graphs and visuals would have definitely enriched the learning experience.\r\n\r\nBreaking concepts down to simple analogies and then building complexities onto the simple model. The teaching method here seemed to jump right into the thick of it. "
+        ],
+        [
+            "\u00a0If you are really interested in applied analysis, I definitely recommend to take this course as you could learn basic knowledge in terms of regression models. ",
+            "\u00a0Yes, it taughts econometrics but from a very particular, interesting and in depth focus. ",
+            "\u00a0Yes - this is a great class if you want to understand data. ",
+            "\u00a0Yes, it is a really good course for someone who plans on using the tools taught in their future. It gives a clear understanding of the basics of econometrics. ",
+            "\u00a0Definitely. Very good course for conceptual clarity ",
+            "\u00a0Amazing teacher, great memory. Motivates students ",
+            "\u00a0Yes, to someone with background in math ",
+            "\u00a0Yes ",
+            "\u00a0Yes, if the student is relatively new to Economics ",
+            "\u00a0Yes! It is a good course if you are interested in gaining a solid foundation in econometric theory "
+        ]
+    ]
+}

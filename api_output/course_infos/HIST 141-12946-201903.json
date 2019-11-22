@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50077/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The history of the American West as both frontier and region, real and imagined, from the first contacts between Indians and Europeans in the fifteenth century to the multicultural encounters of the contemporary Sunbelt. Students work with historical texts and images from Yale's Western Americana Collection.", 
+    "title": "The American West", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "YK212 106", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12946", 
+        "listings": [
+            {
+                "number": "141", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Travis Ross"
+    ], 
+    "long_title": "The American West", 
+    "extra_info": "A"
+}

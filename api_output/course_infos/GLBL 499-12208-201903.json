@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Students work in small task-force groups and complete a one-term public policy project under the guidance of a faculty member. Clients for the projects are drawn from government agencies, nongovernmental organizations and nonprofit groups, and private sector organizations in the United States and abroad. Projects and clients vary from year to year.\nFulfills the capstone project requirement for the Global Affairs major.", 
+    "title": "Senior Capstone Project", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "CO493 208", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 6, 
+        "oci_id": "12208", 
+        "listings": [
+            {
+                "number": "499", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jenna Krajeski"
+    ], 
+    "long_title": "Senior Capstone Project", 
+    "extra_info": "A"
+}

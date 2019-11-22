@@ -1,0 +1,71 @@
+{
+    "crn_code": "22271",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0From this course, I gained the knowledge of several recent theoretical trends in literary and cultural studies, as well as the critical engagement of those theories in the East Asian context. "
+        ],
+        [
+            "\u00a0Strengths: the rather small size of the class allows the discussion to touch very specific and detailed problems, from which I learn a lot. "
+        ],
+        [
+            "\u00a0Yes, I will recommend the class to those East Asian majored student with a strong interest in theory. The overall structure of the class bridges the two issues in a very inspiring way. "
+        ]
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "crn_code": "10905",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Thorough course on mathematical general equilibrium - builds from the classical models of Walras, Arrow-Debreu, and CAPM up to cutting-edge models on collateral, default, and punishment. This class was refreshing in that it changed the way I think about economics as a whole. All of the models in this class are treated extremely carefully, and most are proven rigorously. ",
+            "\u00a0I learned about financial markets: the leverage cycle, default and punishment, debt forgiveness etc. "
+        ],
+        [
+            "\u00a0This is the best course that I've taken at Yale. The material is extremely relevant and is treated very rigorously - you will learn a lot. The seminar truly flew by each week - John G is an amazing lecturer who is clearly accomplished in his field, and it shows in class. I really appreciated the seminar style of the class - class participation and questions were encouraged and topics were always made clear before moving on. The exam structure is nice as well and feels very true to the real world. ",
+            "\u00a0I'm probably unique in this opinion, but I would have liked problem sets or some assignments. ",
+            "\u00a0The main strength of the course is that is rigorous and covers many topics about financial markets.\r\n\r\nThe main weakness of the course is that it does not cover many of the modern theories of Macro finance. "
+        ],
+        [
+            "\u00a0Yes - please take this course! It is truly a gem in the economics department. John G is an incredible professor, and you will learn more in this class than in most courses at Yale. This has been by far my favorite course. ",
+            "\u00a0Yes! If you're an undergrad, I would recommend shopping the first class. You will definitely know by the end of the first class whether you're a good fit. And if you are a good fit, you'll have an awesome time! Lectures are engaging and very different from the majority of undergrad courses. The workload isn't crazy high, but you do need to put in the effort to stay on top of the lectures (the first assessment is in November, if I'm remembering correctly so there's plenty of time to fall behind). I would recommend Macro/Micro Theory and strong familiarity with Analysis as prereqs (the class is very mathy, as the name might suggest). ",
+            "\u00a0Yes I would recommend the course to another student exactly because the course is mathematically rigorous and covers important topics in macroeconomics and finance. "
+        ]
+    ]
+}

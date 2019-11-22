@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49149/assignments/syllabus", 
+    "requirements": "No prior drawing experience necessary. Open to all undergraduates. Required for Art majors.", 
+    "description": "An introduction to the language of visual expression, using studio projects to explore the fundamental principles of visual art. Students acquire a working knowledge of visual syntax applicable to the study of art history, popular culture, and art. Projects address all four major concentrations (graphic design, printing/printmaking, photography, and sculpture). Materials fee: $25.\nNo prior drawing experience necessary. Open to all undergraduates. Required for Art majors.", 
+    "title": "Visual Thinking", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 8, 
+            "location": "GREEN G01", 
+            "days": [
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10411", 
+        "listings": [
+            {
+                "number": "111", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Markus Schinwald"
+    ], 
+    "long_title": "Visual Thinking", 
+    "extra_info": "A"
+}

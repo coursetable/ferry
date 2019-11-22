@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48711/assignments/syllabus", 
+    "requirements": "", 
+    "description": "", 
+    "title": "Global Leadership: Increasing ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 18, 
+            "location": "EVANS 4200", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 19
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12787", 
+        "listings": [
+            {
+                "number": "636", 
+                "subject": "MGT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "David Tate", 
+        "Heidi Brooks"
+    ], 
+    "long_title": "Global Leadership: Increasing Personal and Interpersonal Effectiveness", 
+    "extra_info": "A"
+}

@@ -1,0 +1,76 @@
+{
+    "crn_code": "20581",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            4,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            0
+        ],
+        [
+            0,
+            3,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0One main thing I took away from this class was better understanding of multi wavelength observations and how to model stellar populations and galaxy SEDs. ",
+            "\u00a0We learned about how to take a general census of the galaxies in the universe and measure/identify important properties of them, and then discussed how to potentially link these populations to derive an evolution of galaxies in the universe. ",
+            "\u00a0I learned about galaxy formation, a little bit of cosmology, Simple stellar synethesis, and cosmic star formation history. "
+        ],
+        [
+            "\u00a0The course is very good about summarizing the research that has been done, and the broad concepts involved with how we think about galaxy evolution, but suffers a little bit in the specifics --- for example, I found it a useful class to listen to in a conversational way, but found there were only a few instances where \"taking notes\", or writing down what was being said, felt relevant. I think giving the syllabus notes to the class was a good first step, and perhaps improving on those notes in scope and then making it available a week's worth at a time throughout the semester would be a good way to help us know where each class session is going. \r\n\r\nI'd just add that the final exam for the course, in retrospect, was probing the exact type of knowledge the course was trying to offer --- broad ideas, ways to easily (if loosely) identify things, etc. The final comes across as very simple, and ended up requiring a lot more thought than I expected, but in a way which did, I feel, seem rooted in the types of things discussed in class. ",
+            "\u00a0The course covers a broad range of topics and due to the time limit, it is impossible to go in-depth in all of the topics. I think it would be better if the instructor can choose a few topics he thinks is important to cover more in-depth in addition to the basic overview. Also, I really enjoyed doing the take-home final, and I think question 2 is very well designed and very interesting. "
+        ],
+        [
+            "\u00a0Yes this is a good course for understanding concepts and observational techniques for studying the high redshift universe. ",
+            "\u00a0Yes. I would say it is a nice overview course that is useful to take before something like Frank van den Bosch's more in-depth galaxy formation class, which, granted, tends to cover more the early universe but does have overlaps with this class. ",
+            "\u00a0Yes. It is a very good introductory course for galaxy formation. "
+        ]
+    ]
+}

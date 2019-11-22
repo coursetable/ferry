@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48958/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Optical properties of materials and a variety of coherent light-matter interactions are explored through the classical and quantum treatments. The role of electronic, phononic, and plasmonic interactions in shaping the optical properties of materials is examined using generalized quantum and classical coupled-mode theories. The dynamic response of media to strain, magnetic, and electric fields is also treated. Modern topics are explored, including optical forces, photonic crystals, and metamaterials; multi-photon absorption; and parametric processes resulting from electronic, optomechanical, and Raman interactions.", 
+    "title": "Introduction to Light-Matter I...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "BCT 408", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10393", 
+        "listings": [
+            {
+                "number": "676", 
+                "subject": "APHY"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Peter Rakich"
+    ], 
+    "long_title": "Introduction to Light-Matter Interactions", 
+    "extra_info": "A"
+}

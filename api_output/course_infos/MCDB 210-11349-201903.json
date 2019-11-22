@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50437/assignments/syllabus", 
+    "requirements": "Prerequisites: BIOL 101, 102, and 103, or equivalent performance on the corresponding biological sciences placement examinations.", 
+    "description": "A survey of the molecular and genetic control of embryonic development, cell-cell communication, and cell differentiation. Emphasis on mechanistic investigation in model organisms that reveal fundamental concepts explaining human birth defects and disease. Topics include gastrulation; neural and mesoderm induction; limb development; heart and vascular development; craniofacial development; adult and embryonic stem cells; regeneration; evolution and development.\nPrerequisites: BIOL 101, 102, and 103, or equivalent performance on the corresponding biological sciences placement examinations.", 
+    "title": "Developmental Biology", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "YSB 352", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11349", 
+        "listings": [
+            {
+                "number": "210", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Scott Holley", 
+        "Douglas Kankel"
+    ], 
+    "long_title": "Developmental Biology", 
+    "extra_info": "A"
+}

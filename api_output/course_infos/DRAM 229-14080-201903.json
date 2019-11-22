@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51564/assignments/syllabus", 
+    "requirements": "Open to nondepartmental and non-School of Drama students with permission of the instructor.", 
+    "description": "This course is an introduction to planning, design, documentation, and construction of theaters, concert halls, and similar spaces. Emphasis is placed on the role of the theater consultant in functional planning and architectural design. The goal is to introduce the student to the field and provide a basic understanding of the processes and vocabulary of theater planning.\nOpen to nondepartmental and non-School of Drama students with permission of the instructor.", 
+    "title": "Theater Planning and Construct...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "CR305 100", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14080", 
+        "listings": [
+            {
+                "number": "229", 
+                "subject": "DRAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eugene Leitermann"
+    ], 
+    "long_title": "Theater Planning and Construction", 
+    "extra_info": "A"
+}

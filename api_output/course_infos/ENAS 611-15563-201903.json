@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49190/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Theory and design of separation processes for multicomputer and/or multiphase mixtures via equilibrium and rate phenomena. Included are single-stage and cascaded absorption, adsorption, extraction, distillation, filtration, and crystallization processes.", 
+    "title": "Separation Processes", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "ML 104", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15563", 
+        "listings": [
+            {
+                "number": "611", 
+                "subject": "ENAS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Paul Van Tassel"
+    ], 
+    "long_title": "Separation Processes", 
+    "extra_info": "A"
+}

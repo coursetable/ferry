@@ -1,0 +1,76 @@
+{
+    "crn_code": "20445",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            1,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            1,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to read a scientific paper and think critically. Scientific writing and presentation skills. I have learnt more about research hotspots in physiology, pathology and pharmacology. ",
+            "\u00a0The intention of this course was to provide an opportunity to hone our skills for development of thoughtful and well crafted specific aims for research proposals. However, I do not feel like the structure of the course actually helped these skills develop due to the short amount of time to become acquainted with the disparate topics covered each week and write the specific aims. ",
+            "\u00a0Further insight into areas of biology I didn't know before, specific aims writing skills and presentation of data "
+        ],
+        [
+            "\u00a0The strengths are: students get fully involved in the course. The feedback from instructors is very prompt and helpful. It is a challenging course but also a very rewarding one. ",
+            "\u00a0Very little time was spent discussing the aims that were developed and no opportunities were given to revise developed aims. I think the act of revision and more of a focus on in depth critiques (perhaps in small groups) would better help future students develop the useful skills the class is intended to provide. ",
+            "\u00a0Having papers which are related to each other like the fall semester would have been preferred "
+        ],
+        [
+            "\u00a0Yes, I would. It is a course that will definitely benefit graduate students in the long term. ",
+            "\u00a0I would not recommend this course to another student. Because the topics discussed were seemingly picked at random, none of the specific information discussed was relevant to my research interests. I do not believe the structure of the course was useful for developing the writing skills intended. "
+        ]
+    ]
+}

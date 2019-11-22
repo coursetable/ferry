@@ -1,0 +1,77 @@
+{
+    "crn_code": "11112",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0French vocabularies ",
+            "\u00a0This course taught me the skills I need to understand and improve my journey with the french language. I obtained these skills through various meetings with my teacher as well as completing the different practice modules. ",
+            "\u00a0I learned basic french and how to produce a decent accent. I feel comfortable talking in french very basically with others. "
+        ],
+        [
+            "\u00a0The strengths of this course was that the professors are really dedicated to make sure that you do well. However, I think that the placement of some students may have been incorrect in that some students had taken French for a multitude of years prior and elected to start at L1 simply due to course requirements for work. This class moves really fast. ",
+            "\u00a0I feel that the strengths of this course lies in how immersive the class was. Through being forced to speak solely french during class, students were able to constantly interact with the language. I think the weakness of this course was that sometimes things weren't explained as clearly as they could be. ",
+            "\u00a0The course could be a little more open about explaining grammar points in English as well as french because the explanations in french often leave students more confused. "
+        ],
+        [
+            "\u00a0This course is not to be taken lightly because the rigor of the course is intense. I think that it moves much faster than some of the other language courses as a Level 1 course. ",
+            "\u00a0I would recommend this course mainly to students who have had some interaction with the French language. I personally feel as though this course would be extremely challenging for someone who has never encountered french before. ",
+            "\u00a0Yes "
+        ]
+    ]
+}

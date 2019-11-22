@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50232/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course focuses on the history of dance in Africa since the 1850s. The main learning and teaching objectives are to address issues of representation, creativity, agency, and sociocultural change by drawing on methodologies used by dance historians, art historians, and anthropologists. The course allows students to understand Africa\u2019s pasts through the study of performances in the stylistic, political, and critical contexts in which they emerged. We reflect on how scholars and museum exhibitions have explored Western exhibitions, music halls, and human zoos that disseminated an exotic visual dance corpus from Africa between the 1850s and the late 1930s; examine how colonial-era anthropology has portrayed in texts and images Africa\u2019s dancing cultures and dancing bodies; consider the potential of dance to reveal histories of changing notions of self, ethnicity, and the articulation of ideas about national identity and \u201cAfrican personality\u201d; and ask how contemporary dance productions and African subjectivities evolve out of the circulation of people and ideas. The course examines a broad array of primary sources, including travel accounts, colonial-era ethnographies/postcards/images, missionary records, museum catalogs and exhibitions, artists\u2019 interviews, photographs, and videos.", 
+    "title": "Dance in Africa since the 1850s", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "LORIA 358", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15387", 
+        "listings": [
+            {
+                "number": "534", 
+                "subject": "AFST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Cecile Bushidi"
+    ], 
+    "long_title": "Dance in Africa since the 1850s", 
+    "extra_info": "A"
+}

@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50456/assignments/syllabus", 
+    "requirements": "Prerequisite: MATH 244.", 
+    "description": "Recent developments and important questions in combinatorics. Relations to other areas of mathematics such as analysis, probability, and number theory. Topics include probabilistic method, random graphs, random matrices, pseudorandomness in graph theory and number theory, Szemeredi's theorem and lemma, and Green-Tao's theorem.\nPrerequisite: MATH 244.", 
+    "title": "Modern Combinatorics", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LOM 202", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11287", 
+        "listings": [
+            {
+                "number": "345", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YMAS\">YC Math: Stat/Applied Math</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YMAT\">YC Math: Algebra/Number Theory</a></li></ul>"
+    ], 
+    "professors": [
+        "Mathias Schacht"
+    ], 
+    "long_title": "Modern Combinatorics", 
+    "extra_info": "A"
+}

@@ -1,0 +1,76 @@
+{
+    "crn_code": "13193",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned some more specifics of Verilog HDL design. Also learned how to design an asynchronous FIFO module ",
+            "\u00a0Explored possible metrics for measuring the semantic similarity of functions, in order to enable better computation reuse across different applications/programs. Further, explored the effect associated with modifying the weights of a model (knowing that the structure remains the same), in order to get a better understanding of the modified and unmodified models in this setup. "
+        ],
+        [
+            "\u00a0A strength is that you get to work one-to-one with a Yale professor. A weakness is that there is a lack of structure outside of what you discuss with your professor (little outside oversight of the project) ",
+            "\u00a0I think this course's lack of official structure is both its biggest strength and its biggest weakness. The fact that it's so open-ended is great for the student who wants to do something unique and unbounded, but it's not so great for students who prefer a rigid curriculum and a well-established path. Overall, I think the whole adviser-finding and project-picking stage could be a bit more standardized or institutionalized, and this could help the latter group have an easier time with the course (as it's a requirement). ",
+            "\u00a0The topic and exploration was interesting, and I learnt a lot. "
+        ],
+        [
+            "\u00a0Well you kind of need this to graduate as an electrical engineering major. If you are EECS, you have the option of doing a CS senior project. You get out what you put into your senior project. ",
+            "\u00a0You're probably taking this course to either satisfy your senior requirement or because you already took it and enjoyed it enough to take it again. In either case, I can't give a normal recommendation for this course since everything is dependent on the individual project. Nevertheless, here are some tips if you're considering 471:\r\n1. Pick an adviser with whom you think you can work well, and who you don't have a problem being honest with. Having strong support is really useful for an unguided course like this one.\r\n2. Don't be afraid to ask your adviser for project ideas if you don't have any. I was drawing complete blanks and my adviser helped me find something that turned out to be quite fun. See point 1.\r\n3. Make sure you have weekly meetings with your adviser. This is more to hold you accountable to doing something each week, but the ritual of it can be surprisingly effective. It's really important, especially with something as big and nebulous as 471, that you're actually putting in the work you need to be, and weekly meetings can make sure that that happens.\r\n4. Everything is what you make it. How polished you want your project to be, how much work you want to put in, how complex your problems are, etc. If you get stuck doing something you know you're not going to be satisfied with (either because it's too hard, too easy, or something else entirely), have an honest discussion with your adviser about how to change course. It's less important that you get arbitrary milestones done and more important that you do something worthwhile. Make it count. ",
+            "\u00a0Yes, helps explore a particular area in the field. "
+        ]
+    ]
+}

@@ -1,0 +1,124 @@
+{
+    "crn_code": "24246",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            7,
+            7,
+            13
+        ],
+        [
+            0,
+            2,
+            2,
+            9,
+            16
+        ],
+        [
+            0,
+            1,
+            0,
+            9,
+            19
+        ],
+        [
+            1,
+            0,
+            4,
+            7,
+            17
+        ],
+        [
+            0,
+            2,
+            13,
+            10,
+            3
+        ],
+        [
+            0,
+            4,
+            17,
+            3,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I developed analytical approaches such as difference in difference analysis, IV method and panel data analysis (fixed effect, random effect)  which are very useful for my future research job. ",
+            "\u00a0Econometric approach to evaluate social policy ",
+            "\u00a0My knowledge in economic analysis and the mathematical intuition behind these analyses really developed through this course. Additionally, I learned how to code in STATA. I also learned how to apply economic concepts to global development issues. ",
+            "\u00a0I have learned how to critically read papers in the field and use econometrics instruments like difference-in-differences, regression discontinuities, randomized control trials as well as instrumental variables. ",
+            "\u00a0The course touched upon a wide range of topics relevant to development and poverty alleviation while not becoming overly technical. ",
+            "\u00a0I learnt a lot about interesting papers on exciting topics. Very inspiring class. ",
+            "\u00a0I could develop the skills to implement impact evaluation with the following techniques. \r\nRCT, DID, Instrumental Variable, Regression Discontinuity. ",
+            "\u00a0how to better assess economic articles, somewhat understand the tests being ran. Am familiar with terms like parallel trends, dont know what they mean though. ",
+            "\u00a0Knows lots of research techniques through analyzing the research projects in the development field ",
+            "\u00a0Much higher understanding of research methods and ease of understanding research papers ",
+            "\u00a0Got a clear understanding of all the main tools used in development economics. ",
+            "\u00a0Better understanding of the econometric tools like RCT, RD and Diff in Diff. ",
+            "\u00a0extremely application oriented course ",
+            "\u00a0A great deal of knowledge about empirical tools to do economic research. ",
+            "\u00a0I learnt to practically use STATA to evaluate a social policy through rigorous econometric techniques. I learnt to truly interpret econometric analyses and also learnt various new techniques of such evaluations. Moreover, this course taught me to analyze economic papers through a critical eye and recognize potential shortcomings thereby equipping me with the skills integral to an effective policymaker. I learnt about the importance of considering general equilibrium effects of any intervention and of the various trade-offs associated with different intervention styles. ",
+            "\u00a0I gained a much better ability to read and critically evaluate economics papers. ",
+            "\u00a0Basic of the methods development economists use to evaluate development projects. Basics of Stata. Some familiarity with development econ literature - the projects that are being assessed, what types of questions they are asking. ",
+            "\u00a0Greater understanding of tools used to alleviate poverty and how they have been evaluated ",
+            "\u00a0Econometric understanding for policy analysis ",
+            "\u00a0A lot of practical understanding of econometric methods "
+        ],
+        [
+            "\u00a0I think this is the well-organized course. Especially, lecturer Gaurav's clear explanations for applied analysis were excellent. In addition, I learned a lot from external lecturers who came from MIT, Yale SOM etc. ",
+            "\u00a0This course was amazing! One of my favorites this semester. I learnt so much and pushed myself to really engage with the course material. Strengths include Gaurav (who is a really great teacher), the types of studies we evaluated (which were really interesting), and the guest lectures. I can't think of any weaknesses other than I wish we had worked more with STATA. I think the first problem set could have been a STATA problem set, and then the second problem set could have pushed our skills even further by asking us to do a longer STATA coding project. ",
+            "\u00a0Strengths - strong focus on empirical understanding and writing a critical response to papers included in the syllabus. Presenting papers in a seminar style talk was also a great way to engage students and learn about recent, relevant papers. Organizing guest sessions was also a great aspect of this course because it gave us an understanding of what certain researchers in the field are doing.\r\nWeaknesses - Literally, nothing. ",
+            "\u00a0The course structure was clear and comprehensive.\r\nLess time could've been spent on explaining estimation techniques like RD or diff-in-diff ",
+            "\u00a0Strengths: the guest speakers are very engaging and informative. It's very exciting to hear about undergoing researches  \r\nWeakness: it's too long. ",
+            "\u00a0Strengths: the topics covered are very interesting, useful and they had a very applied focus. The professor is great, and the assignments were interesting and helped us understand better the concepts covered in class.\r\nWeaknesses: having 3hours of class is tough, although it makes sense due to the structure of the course. But maybe having class twice per week would be better. ",
+            "\u00a01 Reading Assignment helped me to familiarize myself with various papers. \r\n2 The assignment related to DID (Indian bicycle program) enabled us not only to understand but also to implement DID. ",
+            "\u00a0It is definitely and IDE course, if you have minimal background in economics and econometrics its best advised not to take it. Not enough time to learn all concepts. ",
+            "\u00a0Very well structured\r\nCan be improved if there are more guest lectures or field trips\r\nOr maybe some in-class debates ",
+            "\u00a0Strengths: interesting and good teaching ",
+            "\u00a0Strengths: Very clear instructions, and the course was a good introduction to all the tools and methods used in Development Economics.\r\n\r\nWeaknesses: The course is too easy for IDE. ",
+            "\u00a0It was extremely interactive ",
+            "\u00a0The course could be made more interesting by discussing research papers on countries all around the globe. ",
+            "\u00a0Strengths:\r\nOrganized, structured, interesting, concise, engaging, academically moderately challenging, intellectually stimulating\r\nWeaknesses:\r\nToo few lectures in that I learnt so much and so efficiently that I wish there were more lectures and more subject matter to cover! ",
+            "\u00a0I thought this course was a great balance between discussing study design and having guest lecturers. ",
+            "\u00a0Weaknesses: Low number of assignments made it easy to fall behind in class and then stressful when we did have an assignment due. Adding more assignments (each worth a smaller % of total grade) would have worked better for me. Also, I'm not really sure this class is very useful unless you are planning to go into a development economist role. Unless you need to understand what development economists due in your adjacent role. \r\n\r\nIn class, I wish we had talked about more papers related to each development topic. It would have been useful to see what the consensus is among development economists regarding the successes of different development projects and what aspects contribute to their successes. It felt too piece-meal for me to get a sense of best practices in the sphere. \r\n\r\nGrading criteria was very vague. Instructor gave almost no specifics about how assignments would be graded, then graded very stringently. Maybe we just have a different definition of what a good grade is? I felt blindsided by how poorly I did on a few pieces of final grade. I haven't felt that in any other graduate school classes. \r\n\r\nStructure of: first half of course discussing economic tools/methods, second half discussing papers that use each method, made it easy to forget how the tool worked when we went to read the papers. Maybe the structure should be: discuss a tool one class, read papers that use it the next class, and so forth. ",
+            "\u00a0Strengths: engaging, stimulating, encouraged to talk/discuss\r\nWeaknesses: very long lectures on a Friday.... ",
+            "\u00a0Course was ordered from techniques to application, it seemed interesting and engaging. That been said the work load was high and the students presentations might not necessarily be the best ",
+            "\u00a0It could be more difficult.  One class a week with one reading assignment meant that it did not occupy my thoughts or my time. "
+        ],
+        [
+            "\u00a0Yes, I will recommend this course for students who are really interested in development economics. ",
+            "\u00a0Yes! Taking this course is a great way to further develop one's economic knowledge, particularly in developmental economics. ",
+            "\u00a0Definitely, if they want an introduction to the tools used in development economics. ",
+            "\u00a0If you're interested in learning more about development without delving into many equations, consider this course. ",
+            "\u00a0Yes. I will recommend to all my friends ",
+            "\u00a0Yes.\r\nIt is a very applied course and teaches the necessary tools for impact evaluation. Besides it covers a lot of development topics through a very good choice of papers. The course is useful to have a broad exposure of development and impact evaluation. ",
+            "\u00a0yes, an IDE student. ",
+            "\u00a0Yes. Very great course that helps people to learn more about the development field ",
+            "\u00a0Yes, great grounding and interesting topics ",
+            "\u00a0Yes, this course is good not just for IDE students but also others. ",
+            "\u00a0Definitely. It was enjoyable and beneficial for a career in economics ",
+            "\u00a0Yes. The course is well organized to teach students about the necessities of conducting a research to evaluate world problems. ",
+            "\u00a0Definitely take this course if you want to familiarize yourself with the basics of policy evaluation in an econometrically relevant manner, if you would like to learn about various methods in which interventions designed to promote better social outcomes may be designed! ",
+            "\u00a0I would recommend this course to other students. I am in the public health, and felt the course was beneficial to my program and skill set, overall enjoyable and worthwhile to take. ",
+            "\u00a0I honestly just didn't understand the course content enough before I decided to take the class. A development economics theory class would have been much more useful for me than a methods class, because I was trying to see whether I wanted to pivot to studying more developing country issues and what the main success factors are for development projects. Compare this course to other IDE courses before you decide to take it. If you're not in the IDE program, make sure you understand regression pretty well. Although an understanding of some of the theory the course gets into wasn't necessary to get a good grade, it felt like a good chunk of the course content went over my head, which is a shame because graduate school for me is a lot more about what I am learning from classes over grades. \r\n\r\nIf you're interested in trying out a course to see if international/development issues are what you want to work in, do a course at Jackson then maybe dive deeper into the econ side of things with an IDE course if its a fit. ",
+            "\u00a0Yes - if you are interested in poverty and development ",
+            "\u00a0Yes, great practical course "
+        ]
+    ]
+}

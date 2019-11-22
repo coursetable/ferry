@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Individual research. Requires a faculty supervisor and the permission of the director of undergraduate studies. The student must submit a written report about the results of the project. May be taken more than once for credit.", 
+    "title": "Research Project", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10376", 
+        "listings": [
+            {
+                "number": "482", 
+                "subject": "AMTH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "John Wettlaufer"
+    ], 
+    "long_title": "Research Project", 
+    "extra_info": "A"
+}

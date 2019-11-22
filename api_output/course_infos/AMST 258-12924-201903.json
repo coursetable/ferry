@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48909/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The idea and practice of wilderness in American history, art, literature, society, and politics. Authors include Salomon Northup, Henry David Thoreau, John Muir, Jack London, Aldo Leopold, and Rachel Carson. A class dinner and field trip are held during the term.", 
+    "title": "Wilderness in the North Americ...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 212", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12924", 
+        "listings": [
+            {
+                "number": "258", 
+                "subject": "AMST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Carlos Nugent"
+    ], 
+    "long_title": "Wilderness in the North American Imagination", 
+    "extra_info": "A"
+}

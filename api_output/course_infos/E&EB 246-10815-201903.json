@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49424/assignments/syllabus", 
+    "requirements": "Prerequisite: A general understanding of biology and evolution.", 
+    "description": "This course has several, interrelated objectives. First, it serves as an introduction to the science of phylogenetics, providing an overview of both the theory and methodology involved in constructing phylogenetic trees, and how to use trees to study character and organismal evolution. For our second objective, we put this new framework to immediate use by using phylogeny to explore and illustrate 400 million years of land plant evolution, with emphasis on the diversity of flowering plants. The course examines major trends in plant evolution from functional, ecological, and bio-geographical perspectives. Students acquire a basic understanding of 1) phylogenetic approaches to comparative biology, 2) plant anatomy and morphology, 3) evolutionary relationships among the major land plant clades (with emphasis on the flowering plants), and 4) major evolutionary trends that have significantly shaped the diversity of plant life that we see today. The third and most important objective is to instill in students the ability to look at any biological problem through the lens of \"phylogeny-colored glasses\"- a powerful way to examine the complexity of life that surrounds (and includes!) us.\u00c2\u00a0\nPrerequisite: A general understanding of biology and evolution.", 
+    "title": "Plant Diversity and Evolution", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "ESC 110", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10815", 
+        "listings": [
+            {
+                "number": "246", 
+                "subject": "E&EB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Erika Edwards"
+    ], 
+    "long_title": "Plant Diversity and Evolution", 
+    "extra_info": "A"
+}

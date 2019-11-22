@@ -1,0 +1,98 @@
+{
+    "crn_code": "20893",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            5,
+            5,
+            2
+        ],
+        [
+            0,
+            1,
+            6,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            8,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            6,
+            2
+        ],
+        [
+            0,
+            2,
+            6,
+            4,
+            0
+        ],
+        [
+            0,
+            2,
+            9,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained an understanding of differential equations, linear algebra, complex analysis, vector calculus, and Laplace/Fourier tansforms. ",
+            "\u00a0I learned many commonly used mathematical techniques to solve problems in science and engineering. ",
+            "\u00a0enginering math. Solving ODE, PDE. Learn a lot about complex function ",
+            "\u00a0nothing. just some basic math skills. ",
+            "\u00a0Reviewed multivariable calculus and Diff EQs ",
+            "\u00a0math skills for engineering ",
+            "\u00a0This course taught core necessary mathematical skills I will use going forward in my research ",
+            "\u00a0Basic engineering mathematics skills ",
+            "\u00a0I learned basic tools/approaches for solving a variety of problems using differential equations, linear algebra, complex analysis, etc. ",
+            "\u00a0Vectors, differential calculus, linear algebra, Fourier and Laplace transforms "
+        ],
+        [
+            "\u00a0The strength is that this class covers a wide range of topics. One thing I wish is that the practice problems we do in class could be harder. ",
+            "\u00a0learning a lot of math knowledge that can help me  to understand the equation in advanced chemistry. ",
+            "\u00a0strength is that it focuses on only basic math skills ",
+            "\u00a0I think it's pretty strong actually.  Not my subject of choice, but it gets the point across. ",
+            "\u00a0very systematic, very well-delivered ",
+            "\u00a0Strengths are that It was very comprehensive, weaknesses are that it could have been more applied ",
+            "\u00a0Strength: covers many important topics\r\nWeakness: too much memorization and not much emphasis on problem solving skills ",
+            "\u00a0A strength is that the course focuses on techniques to solve general classes of problem, thereby giving us a toolbox of approaches. However, the course is rather proof-driven for an engineering course - it would benefit from more application of the math we were learning. ",
+            "\u00a0It is what it is ",
+            "\u00a0The class is well-organized and most of the topics is potentially useful for our research. It would be better to add more cases where these analysis method s are used in actually research or applications. "
+        ],
+        [
+            "\u00a0n/a: Course is a requirement for all engineering grad students. ",
+            "\u00a0Yes this class covers a wide range of commonly used mathematical techniques in solving problems in engineering and science. ",
+            "\u00a0Yes. Professor Paul Van Tassel is a good teacher. His class is clear. ",
+            "\u00a0maybe only if they want a chilled out math course ",
+            "\u00a0Only take it if you like doing hard core mathematics.  There is a statistics alternative for engineering grads here that allows you to bypass doing rigorous math problem sets if that's not your jam. ",
+            "\u00a0yes ",
+            "\u00a0I would recommend this course to a student who does not have the background outlined in the textbook used for this course. The mathematical skills are necessary for research ",
+            "\u00a0Yes, if their mathematics background is lacking ",
+            "\u00a0Yes, if you want to learn some basic concepts in multiple different mathematical disciplines. Not exactly a good engineering math class though, in that it is very proof-heavy. ",
+            "\u00a0Yes, intense but good "
+        ]
+    ]
+}

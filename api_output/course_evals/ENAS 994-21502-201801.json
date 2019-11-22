@@ -1,0 +1,83 @@
+{
+    "crn_code": "21502",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            3
+        ],
+        [
+            1,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            1,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            5,
+            0,
+            0
+        ],
+        [
+            1,
+            0,
+            2,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0nice overview of how memory is stored, how to interface electronics and computers.\r\npicked up some coding skills, greater familiarity with circuitry, mathematical descriptions of controls\r\nas far as insights, i thought a lot of great intuition was given for the math we were doing, i.e. the motivation for laplace transforming and what it is physically ",
+            "\u00a0- How to program Arduino in assembly\r\n- How to use stepper motors and op-amps in useful circuits\r\n- How to predict basic behavior of motors and op-amps\r\n- How to deal with basic control systems\r\n- Increased ability to read spec sheets for instruments and hardware ",
+            "\u00a0Not only just specific material (circuit dynamics, micro controller operation, PID control, how motors work), but approaches to problem solving and debugging in instances where there are a lot of variables to consider. ",
+            "\u00a0Controls and motors. ",
+            "\u00a0Some electronics and mechanics skills (lab and theory) "
+        ],
+        [
+            "\u00a0strengths: engaging, well taught, covers a nice variety of subjects\r\nweakness: lab portion is done with only one partner, so people divvy up work early on according to their strenghts and aren't forced to expand skills base as much. In my case, that partner was extremely familiar with arduinos and kind of took over the coding. i would have learned a lot more if I had more time at the computer ",
+            "\u00a0Instructor is a strength: he is clear at delivering lectures, and engages the class effectively.\r\n\r\nPlease provide a few more advanced labs. Maybe have three sensor-focused labs early on, then move to systems. ",
+            "\u00a0Strengths: Amazing/brilliant instructor lecturer. Very helpful TA's. Also, wide swath of material covered made it interesting each day. \r\n\r\n\r\nWeakesses: by the same token, I would've like to go into depth into certain areas (ie. control) a bit more. ",
+            "\u00a0Professor was very willing to change course according to interests of the students. He adapted through time, and taught very well. ",
+            "\u00a0Weakness: not structured properly, lab reports are too long and confusing\r\nThe professor must explain the syllabus properly "
+        ],
+        [
+            "\u00a0Depends on the student, but generally yes. Might be too simple for most engineering grad students, but provides a nice overview for those less familiar with the concepts/aspiring electronics hobbyists. ",
+            "\u00a0Definitely recommended. Enjoyable, useful material, engaging instructor, meaningful assignments. ",
+            "\u00a0Take this class. Each lab is structured so that it contributes in some way to the final project. We built a sun-tracking robot by the end, and I was quite proud of it. Also, Professor Madhu is very smart and brings expertise to every in-class conversation. ",
+            "\u00a0Yes. Great course if you are interested in controlling any sort of system. Madhu is very insightful. ",
+            "\u00a0No, a student would learn more taking a regular mechanics/electronics class "
+        ]
+    ]
+}

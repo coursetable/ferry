@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50391/assignments/syllabus", 
+    "requirements": "Counts as L4 if taken after LATN 141 or equivalent.", 
+    "description": "Close reading of a major work of classical prose; review of grammar as needed.\nCounts as L4 if taken after LATN 141 or equivalent.", 
+    "title": "Latin Prose: An Introduction", 
+    "skills": [
+        "L3"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "PH 310", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10653", 
+        "listings": [
+            {
+                "number": "131", 
+                "subject": "LATN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Irene Peirano"
+    ], 
+    "long_title": "Latin Prose: An Introduction", 
+    "extra_info": "A"
+}

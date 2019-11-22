@@ -1,0 +1,113 @@
+{
+    "crn_code": "21300",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            7,
+            6,
+            6
+        ],
+        [
+            0,
+            2,
+            9,
+            6,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            10,
+            5
+        ],
+        [
+            0,
+            0,
+            6,
+            9,
+            4
+        ],
+        [
+            0,
+            0,
+            4,
+            9,
+            6
+        ],
+        [
+            0,
+            1,
+            6,
+            9,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Hodge podge of important concepts in molecular biology ",
+            "\u00a0I now know a lot about molecular biology. This was a very good course. I feel like my paper-reading skills have improved, and I know about many more techniques than before. I feel like I have improved at being critical of science that I read. ",
+            "\u00a0I learned a lot more about the processes used to regulate gene expression and simultaneously worked to critically analyze papers. ",
+            "\u00a0It's hard exactly to describe what I learned exactly since we learned about a lot of different things. However, I would say the most important takeaway is the chemical logic thought process that was present in every lecture. I also enjoyed writing the proposal since this is an area I always strive to improve. ",
+            "\u00a0transcription, mRNA export, mRNA turnover, translation, mRNA modification, ER stress response, autophagy, etc ",
+            "\u00a0The course covered topics in molecular biology of eukaryotes - including both knowledge of biological mechanisms and techniques used in research. Learned how to critically evaluate experiments. ",
+            "\u00a0The course helped me further develop knowledge into how to work/interpret experiments from RNA, the techniques involved in RNA isolation and identification. It also helped me develop skills of protein and ER stress interpretation and experiments in simple model organisms. ",
+            "\u00a0Lots of molecular biology concepts and ideas ",
+            "\u00a0Molecular biology techniques and critical thinking. ",
+            "\u00a0This course provided valuable knowledge about experimental techniques, and molecular biology topics that are essential to know for conducting research in the field of molecular biology. I was able to learn how to read primary literature more critically through the discussion sections. The lectures were engaging yet overwhelming at times. ",
+            "\u00a0the general process of RNA biogenesis, splicing, modification export and turnover. Translational control and protein degradation methods. ",
+            "\u00a0Critical thinking in developing experimental technique ",
+            "\u00a0A lot of information on RNA,  protein degradation, and certain pathways like UPR. My favorite thing I learned in this course was how to write a grant proposal. I thought that was the most valuable thing in the course. ",
+            "\u00a0Lots of specific examples of regulation of the central dogma ",
+            "\u00a0Definitely gained an appreciation for all the layers of control during transcription and translation, even if I have since forgotten many of the specific names of the proteins involved. ",
+            "\u00a0I learned a lot about the mechanisms of regulation in essential eukaryotic cellular activities. And I also got to know plenty of useful techniques to study DNA and RNA involved cellular events. "
+        ],
+        [
+            "\u00a0Strengths: first half of course was well organized with a clear flow within and between lectures. Use of interactive questions+discussions was very effective. Weaknesses: second half of course felt pretty random at times, with lectures quickly diving into details and experiments without setting enough context for why a given problem is worth understanding deeper. Discussion papers were expected to be written within 1 page, but the content needed to satisfy the grader's demands would necessitate >1 page -- leading to points being deducted regardless. ",
+            "\u00a0This was a very strong course. The paper reading component was very valuable. \r\n\r\nOnly weakness -- the midterm was way too time restricted. It is impossible to convey meaningful thoughts and express yourself in that time. ",
+            "\u00a0Strengths were the teaching - all of the professors were very engaged with their topics. A weakness is the length of the tests. Alternatively, the tests would be fine if more time was given on the midterm like there was in the final. ",
+            "\u00a0strength: the course is pretty systematic around the central dogma\r\nweakness: the course load is too much, 7 discussions in total, one term paper, and two exams. I highly suggest that there should be no exams. ",
+            "\u00a0The course is well structured and organized, the discussion papers help a lot. Some of the result shown are pretty old, it would be good to have at least a review at the end of each lecture of where each field/results stand in the present time. ",
+            "\u00a0Its a very rapid topic shift from the first half to the second half. ",
+            "\u00a0It is a very good course, but the time given for the first midterm was too short ",
+            "\u00a0Strengths are that this course makes you think critically; you learn a lot of experimental techniques, designs.\r\n\r\nSome issues with the course is that at times it could be very overwhelming especially for students who miss some background knowledge. I found exams very challenging since it was hard for me to come up with experimental designs right in the moment. I think it will be helpful to incorporate practice problems/problem sets for students with questions similar to exam ones. This will prepare students more for exam and will give enough time for students to think deeply about topics. ",
+            "\u00a0The choice of paper is good and the format of the paper discussions was good as well. ",
+            "\u00a0the strengths of this paper is using a lot of previous experiment to show how people discover the pathway and teach it clearly.\r\nIt is better to have several answers in the discussion part. ",
+            "\u00a0Time for midterm exam is too short. ",
+            "\u00a0The material is taught well, but the exams are really long and sometimes I feel like they test way above the level the course was taught. ",
+            "\u00a0It would be nice to have a general overview before diving into specific examples. this course felt like we jumped from one specific example to another. ",
+            "\u00a0Strengths: Really good scope within 'eukaryotic molecular bio'. Covered a lot of important things in txn/tln control with appropriate depth. Papers for discussion were generally good. \r\nWeaknesses: There was a pretty big focus on the discovery of different factors involved in mRNA processing, translation control, etc and while this does provide a nice perspective, it can also cause somewhat dull and slow lectures sometimes. ",
+            "\u00a0There were no weaknesses. This is the most perfect class I've ever attended. "
+        ],
+        [
+            "\u00a0Not particularly, it feels like the course was deliberately (and unnecessarily) made to be very challenging. ",
+            "\u00a0This is the only course I've taken at Yale which I would actually recommend to others. ",
+            "\u00a0I appreciated that the course focused on mechanisms of RNA regulation, however, I work mainly with prokaryotes and so the eukaryotic specific mechanisms of the class were less helpful. I would recommend this course to other students simply because there is no course that focuses on the prokaryotic systems. ",
+            "\u00a0for students interested in MB&B department, I would recommend this course since it will benefit their research a lot; for student in cell biology, maybe I won't recommend this course. ",
+            "\u00a0Yes, its a great class to learn the basic and specifics of molecular biology. If you're interested in mol bio or biochem it's a great place to learn ",
+            "\u00a0Yes, if you want to learn how to use molecular biology techniques in your research. ",
+            "\u00a0Yes, I will recommend this course because a lot of essential experimental techniques are introduced as well as more detailed overview of central dogma. ",
+            "\u00a0Yes, it is very detailed and we can learn how they address these question back to their age and it can help me think. ",
+            "\u00a0Yes. Good for graduate study ",
+            "\u00a0If you join MBB, then yes, it is pretty much required. ",
+            "\u00a0if they are interesting in regulation ",
+            "\u00a0Probably, depending on research interests ",
+            "\u00a0I would recommend this course. It provides you with ample amount of knowledge and incites your participation through discussions on literature every three class sessions. ",
+            "\u00a0yes "
+        ]
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "", 
+    "title": "Advanced Akkadian: Akkadian Li...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13805", 
+        "listings": [
+            {
+                "number": "503", 
+                "subject": "AKKD"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eckart Frahm"
+    ], 
+    "long_title": "Advanced Akkadian: Akkadian Literary Texts", 
+    "extra_info": "A"
+}

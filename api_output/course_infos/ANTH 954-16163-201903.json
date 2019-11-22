@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "By arrangement with faculty.", 
+    "title": "Dir Research Biological Anthro...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 3, 
+        "oci_id": "16163", 
+        "listings": [
+            {
+                "number": "954", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jessica Thompson"
+    ], 
+    "long_title": "Dir Research Biological Anthro: Bone taphonomy at Hora 1", 
+    "extra_info": "A"
+}

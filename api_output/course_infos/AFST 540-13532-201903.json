@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48986/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course focuses on the literary and visual cultural productions that took shape around national efforts at reconciliation in three African contexts: post-apartheid South Africa, post-genocide Rwanda, and post-civil war Nigeria. These disparate case studies examine the impact on cultural productions of differing judicial and political formations, as well as the role that literature and film have played in shaping reconciliation law and policy. Primary readings include novels, memoir, theater, and film, in addition to legal documents from reconciliatory justice systems. Secondary readings include theories of reconciliation from the fields of law, political science, and cultural studies. Open to advanced undergraduates.", 
+    "title": "African Reconciliation Narrati...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LC 206", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13532", 
+        "listings": [
+            {
+                "number": "540", 
+                "subject": "AFST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Meredith Shepard"
+    ], 
+    "long_title": "African Reconciliation Narratives", 
+    "extra_info": "A"
+}

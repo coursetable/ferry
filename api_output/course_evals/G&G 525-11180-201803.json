@@ -1,0 +1,77 @@
+{
+    "crn_code": "11180",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I've taken a version of this course at every institution I have attended, and I still came out of this course learning so much more about paleontology and evolutionary history than I expected to. ",
+            "\u00a0I greatly enhanced my understanding of the evolution of vertebrate life. ",
+            "\u00a0Knowledge/insights:\r\n- Holistic overview of evolutionary history of life (and particularly vertebrate life) on Earth\r\n- Basic systematics theory\r\n- Basic vertebrate phylogenies\r\n- Knowledge of several keystone studies and concepts in systematics and vertebrate evolution and development\r\n- Basic comparative vertebrate anatomy\r\n\r\nSkills/overall:\r\n- I knew almost nothing about vertebrate anatomy upon entering the course, and I left with a strong enough understanding to pave my way through future research questions in phylogenetics and anatomy. "
+        ],
+        [
+            "\u00a0The material is very engaging and interesting. Individual classes have a tendency to run a little long, so if I had to make a suggestion, it would be to meet for an extra day per week so that we can fully discuss the material without feeling drained by the end of the lecture. I personally have a tendency to feel unfocused by the end of longer lectures, which ultimately limits my ability to learn and take in the material we are presented with. However, I still thoroughly enjoyed that class and the way the material was presented. The instructor and TA were very engaged and communicated the material very well. ",
+            "\u00a0The course was fanTAStic! Jacques Gauthier is a systematics legend and uncannily knowledgeable, so his lectures were awesome and insightful to hear.\r\nNo weaknesses whatsoever!\r\n\r\nThe lecture notes can sometimes read a little like streams of consciousness, so they can be hard to follow at times, but I don't consider this a problem, for two reasons: (1) In this way, the lecture notes are most faithful to the lesson narratives as they're conveyed during the in-person lectures; (2) They force us to organize portions of the lecture content ourselves, in ways that make sense to us, and this action forces us to better process and internalize the material. "
+        ],
+        [
+            "\u00a0Yes, if you are interested in paleontology, this class is a must. You will receive information about macro-evolutionary changes, anatomy, morphology, and the history of life itself. ",
+            "\u00a0Absolutely, it is very in depth and Jaqcues is a wonderful professor. ",
+            "\u00a0Absolutely! In addition to being incredibly informative and engaging, it's a lot of fun! ",
+            "\u00a0Yes, if you are interested in paleontology you must take this class. It provides an excellent overview of the major animal clades and their evolutionary histories, and it is well-taught and engaging. The labs give you opportunity to see the fossils and characters you learn about in lecture and help tie everything together. If the subject is new to you, some of the terminology may be challenging at first, though you will eventually become accustomed to using it. "
+        ]
+    ]
+}

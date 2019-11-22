@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51505/assignments/syllabus", 
+    "requirements": "Open to nondepartmental and non-School of Drama students with prior permission of the instructor.", 
+    "description": "This course is an introduction for all non-lighting design students to the aesthetics and the process of lighting design through weekly critique and discussion of theoretical and practical assignments. Emphasis is given to the examination of the action of the play in relation to lighting, the formulation of design ideas, the place of lighting in the overall production, and collaboration with directors, set, costume, and sound designers.\nOpen to nondepartmental and non-School of Drama students with prior permission of the instructor.", 
+    "title": "Introduction to Lighting Design", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "PK205 102", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13985", 
+        "listings": [
+            {
+                "number": "124", 
+                "subject": "DRAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Alan Edwards"
+    ], 
+    "long_title": "Introduction to Lighting Design", 
+    "extra_info": "A"
+}

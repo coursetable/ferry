@@ -1,0 +1,98 @@
+{
+    "crn_code": "23564",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            3,
+            8
+        ],
+        [
+            0,
+            0,
+            2,
+            8,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            9,
+            3
+        ],
+        [
+            0,
+            0,
+            3,
+            6,
+            5
+        ],
+        [
+            0,
+            2,
+            5,
+            8,
+            0
+        ],
+        [
+            0,
+            0,
+            4,
+            8,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The many functions and applications of SolidWorks. We learned how to run analysis of different types on something before we build them and refined our design to ensure an aesthetics and functional design. This was a great course because contrary to many other engineering classes at Yale, this one offers real skills and allows you to practice the hands-on engineering mindset. We also got to prototype at the end of the semester, which was great because we could put the skills we learned throughout the semester to use. A must-take for Mechanical Engineering students. Professor Long is a gem. ",
+            "\u00a0Learning CAD/CAM/CAE through solidworks and mathematica. ",
+            "\u00a0I learned about computer graphics and how to use SolidWorks ",
+            "\u00a0CAD CAD CAD. SIMULATIONS SIMULATIONS SIMULATIONS! You learn so much about how to work with the tools in SolidWorks to 3D model objects and the and run static force simulations, flow simulations, buckling analysis, motion analyses and more. ",
+            "\u00a0I learned about the design process and a lot about how to use Solidworks. I feel quite confident in my ability to navigate solidworks now. ",
+            "\u00a0learn to use solidworks and refine designs after testing ",
+            "\u00a0I learned how to model things in Solidworks and run analyses on them. ",
+            "\u00a0I learned a lot about the proper process of design and simulation with solid works. Each assignment involved a lot of practical experience that has helped me understand how to better and more efficiently design. ",
+            "\u00a0This course taught me how to design models and use simulation tools on Solidworks. It also taught me about the history and theory of computer-aided design and a bit on the coding behind the software through some MatLab problem sets. ",
+            "\u00a0Learned a HECK lot in this course! Came away with a serious hard-skill that I can carry with me through my education and career. Learned a little history about CAD/CAM, a bit about how computers/displays work, finite element analysis, a little MatLab. Mostly SolidWorks and studies (static analysis, flow, fatigue, etc.) "
+        ],
+        [
+            "\u00a0The only complain I would have with the course is that it would be helpful for Professor Long to hold more office hours. Also, the module on computer graphics could be wrapped up by a project or something, instead of an exam. Apart from that, the course is quite perfect. ",
+            "\u00a0The material demonstrated in class and learned through the homework assignments seems very disconnected from the material that was on the midterm exam. I wish that those had been more interwoven as I think I would have been better able to retain the information for the exam if that was the case. ",
+            "\u00a0I thought that the TA sessions were incredibly helpful and I'm glad they were added this semester! I also really enjoyed the MATLAB exercises. I was also so glad that it was not at 9am. ",
+            "\u00a0This class gives you the most tangible/hands-on/applicable skill in the entire engineering department at Yale. It's not a class where you learn something/concepts and forget all about it the next semester. The skills you learn, you can use for a very long time and you know exactly where you stand in terms of knowledge/skill acquisition. ",
+            "\u00a0The Solidworks portion of this course was the strength. I think we spent too much time on history of computer graphics. The projections lectures were somewhat useful, but most of the non-Solidworks stuff felt unnecessary. Prof. Long lectures at a fast pace so it can be easy to get lost. Psets were long, but we had a great TA who was very helpful--this is key to the class in my opinion. Having a TA who will troubleshoot your specific issue is super useful in a class like this. The guidelines for the final project were very vague, which made it hard to decide on the scope of the project. ",
+            "\u00a0pretty good and useful course, the homework assignments appropriately tested and extended the skills learned in class ",
+            "\u00a0The strength of this course is that you come away from it with an extremely concrete and useful skill. I also found it to be really fun! I can't really think of anything that I would want to change! ",
+            "\u00a0The strengths of this course were the structure of the lessons. I felt that topics built on each other in a very intuitive manner and helped me learn. ",
+            "\u00a0Strengths: Professor Long is great, I've had him before and I think he is very consistent and fair about his assignments and grading. Assignments are not made to be easy, but not too complicated either-- he really wants students to learn. The final project was pretty cool. \r\n\r\nWeaknesses: I felt that I didn't learn the studies and analysis as well as I could have because a lot of it was just a series of what-to-click-next instead of conceptually understanding. Also lecture could be boring and hard to follow, but that's mostly because the best way to learn is by doing (which is why the psets were so important). Maybe having more office hours could help with that? Although between Long and the peer tutor there were lots of office hours, that was awesome. "
+        ],
+        [
+            "\u00a0Wholeheartedly. Professor Long is a gem and the class is without a doubt the most helpful course you will take at Yale. ",
+            "\u00a0Yes, it's a great introduction to computer-aided-engineering. ",
+            "\u00a0Yes! Great skills that you will likely need (or could benefit from) in the future. ",
+            "\u00a0I would definitely recommend this course to other students. It taught me one of the most useful skills that I have, job-wise. Marshall Long is a great guy and straightforward teacher. ",
+            "\u00a0Yes, this course is great so everyone interesting in 3D prototyping (or not) should take it. TAKE IT!! ",
+            "\u00a0absolutely, this should be required for all engineering majors ",
+            "\u00a0Yes! The psets are time consuming and require you to be at a computer with Solidworks for a long time, but you learn a lot. Prof. Long is pretty approachable and willing to answer questions. He does lecture quickly, so you need to speak up before you get lost in the weeds. The final project can be cool if you start early enough on it. ",
+            "\u00a0super useful class if not the most exciting. you get to be really good at solidworks design and simulation which is essential for engineering. homework assignments are weekly and usually took me 5-8 hours, but some of them can be longer and some are shorter. if you do the work for this class you will do well. ",
+            "\u00a0I would absolutely recommend this course to anyone that wants to learn how to use solidworks. ",
+            "\u00a0I would recommend this course to any student who would like to learn more about how to use Solidworks and would like a chance to design and prototype something of their own choosing. Be prepared to spend a lot of time on running studies as they often take time to finish, and make sure to know when office hours are as they can be very helpful. ",
+            "\u00a0Yes! Even if you're not ABET, take this course FOR SURE! It's a super important skill to develop and you learn a lot with great resources. "
+        ]
+    ]
+}

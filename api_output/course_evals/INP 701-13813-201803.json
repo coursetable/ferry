@@ -1,0 +1,77 @@
+{
+    "crn_code": "13813",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0critical reading of neuro papers ",
+            "\u00a0I improved my ability to read and understand papers and to propose new experiments based on past work. It also improved my scientific writing and structuring of ideas in my writing. ",
+            "\u00a0I gained a lot of knowledge about various fields and techniques within Neuroscience, which provided insight into what I am more and less interested in for my own research. I also improved my scientific reading and writing skills. "
+        ],
+        [
+            "\u00a0strong: breadth and depth of reading, having diverse topics/profs. great TAs and leading profs\r\n\r\nweak: essays could be better served as mini specific aims/grants practice. journal club style is good, but class size was too large to be truly effective ",
+            "\u00a0I really liked the format of the course and clearly it has been mostly unchanged for a reason because it seems very successful to me. \r\n\r\nThe one suggestion I would have is to maybe stress a bit higher expectations in discussion early on, but I know it has to be balanced with encouraging everyone to contribute. ",
+            "\u00a0Our class was quite large which made the Tuesday group discussions difficult. There should be clearer expectations for the essays at the beginning of the year. "
+        ],
+        [
+            "\u00a0yes, great for any neuro phd student ",
+            "\u00a0Yes, I really enjoyed this course and thought it did a fantastic job improving my abilities. ",
+            "\u00a0I learned a great deal in this class, particularly at the end going through essay revisions. The class was definitely worth it, but it is not easy and takes a great deal of time. Students should be aware of the effort and time they will need to put into it, but I do think it's helpful and provides a good overview of the field, getting to see work from various faculty members, and practice in writing. "
+        ]
+    ]
+}

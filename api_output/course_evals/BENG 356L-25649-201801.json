@@ -1,0 +1,85 @@
+{
+    "crn_code": "25649",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            4,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            2
+        ],
+        [
+            1,
+            1,
+            5,
+            0,
+            0
+        ],
+        [
+            1,
+            2,
+            4,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The course taught me about materials and methods used in biomedical research. I thought the the class was a great introduction to work we might be doing in lab next year. The skills we learned were very applicable. ",
+            "\u00a0Learned how to make nanoparticles, culture cells, and the techniques used to characterize and identify them. ",
+            "\u00a0I learned how to fabricate nanoparticles and run flow cytometry assays. ",
+            "\u00a0Pretty much a semester-long introduction in making and testing drug delivery nanoparticles ",
+            "\u00a0How to create PLGA nanoparticles, how to load them or add surface proteins, how to make cell cultures, how to identify unknown samples. "
+        ],
+        [
+            "\u00a0The modules were very clear and easy to complete. The lap reports were fair and overall the lab when smoothly. ",
+            "\u00a0This course could focus on more aspects of biomedical engineering. It felt like we only focused on a very small area of biomaterials. ",
+            "\u00a0TAs were great!!!!! Interesting material. Horrible professor. Tarek Fahmy is basically a joke. ",
+            "\u00a0The course is very chill and informative which is definately a strength. Its TA's are kind and knowledgeable and I appreciated the structure. That said, the reports could have been returned earlier to allow us to learn from mistakes before turning in new reports. ",
+            "\u00a0Based on review from previous years, this class has improved a lot. They hired a second TA for this year and redid a lot of the syllabus, which seems to have made quite a difference. The TA, Sean, is fantastic. He did a great job of explaining the concepts and making sure the labs were running correctly. The class is also relatively low commitment. There were only 3 lab reports and a final project, and those are all done in groups. The reports are a little long though, so it's probably best not to leave them until the last day. The material is also pretty cool. I knew little about nanoparticle drug delivery before this class, and actually learned a pretty fair amount.\r\n\r\nIn terms of weaknesses, this class only covered nanoparticles, and it would have been nice to cover other material. I think this is because the syllabus was new for this semester and not fully developed. Sean mentioned that the class would probably expand the scope of topics in the future though. ",
+            "\u00a0We only covered nanoparticles, where I was hoping to expand to other lab techniques, but everything taught was pretty clear. TAs are amazing!\r\n\r\nI would also say that the professor didn't really add up anything to the class: only gave 2 lectures and was in the final presentation, all of them he was late. "
+        ],
+        [
+            "\u00a0If required. ",
+            "\u00a0Yes. Take it if Sean and Phillip are TAing. ",
+            "\u00a0The material focused on is very geared towards biomedical engineering, so I would not recommend this course to someone who isn't majoring in BME. ",
+            "\u00a0If you have to take it, don't worry its not too bad. May be a good option for a lab for premeds too because its pretty low stress and interesting ",
+            "\u00a0This class definitely improved from previous years. I'm still not sure if I'd recommend taking it if it's not required though. Maybe if you really like nanoparticles. ",
+            "\u00a0Yes! I was pleasantly surprised about this class, as I had heard the horrors of past years. The TAs were truly amazing in organizing the class material and making sure that we understood the format and questions of the report. Labs were short but still meaningful and, as our last task, we had to independently identify unknown samples using the techniques we learned, which showed that everyone had a good grasp of the subject. The only downside is that we only got our reports back after more than 3 weeks that we submitted them. "
+        ]
+    ]
+}

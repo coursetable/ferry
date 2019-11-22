@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "After consultation with the DUS, students engage individual experimental and/or theoretical research problems in the laboratories of a selected faculty member within the Chemistry department. At the end of the term, students submit a brief report summarizing goals, methods, and accomplishments. For each term of enrollment, students must complete the CHEM 480 registration form, available in the DUS office, and have it signed by their faculty research mentor. It must be submitted to the Chemistry DUS for final approval no later than the last week of classes in the immediately preceding academic term. Individuals wishing to perform independent research must have demonstrated proficiency in the aspects of chemistry required for the planned project, as ascertained by the supervising faculty member, and must meet basic safety requirements prior to undertaking any activities, including certified completion of the online courses entitled Laboratory Chemical Training and Hazardous Chemical Waste Training administered by the Office of Environmental Health and Safety (EHS) at http://ehs.yale.edu/training. At least ten hours per week of research are required (including time spent on requisite safety training), with the faculty mentor affirming this level of student commitment by midterm. This course may be taken multiple times for Pass/Fail credit, subject to restrictions imposed by Yale College.", 
+    "title": "Introduction to Independent Re...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10527", 
+        "listings": [
+            {
+                "number": "480", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Nilay Hazari"
+    ], 
+    "long_title": "Introduction to Independent Research in Chemistry", 
+    "extra_info": "A"
+}

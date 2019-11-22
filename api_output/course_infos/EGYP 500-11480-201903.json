@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49616/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A two-term introduction to the language of ancient pharaonic Egypt (Middle Egyptian) and its hieroglyphic writing system, with short historical, literary, and religious texts. Grammatical analysis with exercises in reading, translation, and composition.", 
+    "title": "Introduction to Classical Hier...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "DOW 215", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11480", 
+        "listings": [
+            {
+                "number": "500", 
+                "subject": "EGYP"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Gaelle Chantrain"
+    ], 
+    "long_title": "Introduction to Classical Hieroglyphic Egyptian I", 
+    "extra_info": "A"
+}

@@ -1,0 +1,94 @@
+{
+    "crn_code": "23534",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            7,
+            9
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            16
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            16
+        ],
+        [
+            1,
+            1,
+            3,
+            3,
+            11
+        ],
+        [
+            0,
+            1,
+            5,
+            10,
+            3
+        ],
+        [
+            0,
+            5,
+            9,
+            2,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Understanding stock market behavior, investor mindsets, experimental methods ",
+            "\u00a0Amazing insights on the intersecion of Finance and Psychology ",
+            "\u00a0Learned all about the theoretical and empirical work in the field ",
+            "\u00a0This course offered me a comprehensive introduction to behavioral finance. I learned about how academics, for the past few decades, have been applying ideas in psychology to improve their understanding of financial markets, investor behavior, and corporate finance. The insights were fascinating, and I realized that the knowledge I've picked up in the past about finance can't entirely explain what goes on the real work; rational frameworks aren't enough to understand why, for example, the equity premium is so large, or why everyday people invest the way they do. As ECON672 was a research-centric course, I also was introduced to numerous seminal papers in the field, which were fascinating to read and learn about. ",
+            "\u00a0Gain a new insight into looking a financial market from a totally different perspective than how I have been taught until now. ",
+            "\u00a0Ive got a comprehensive view of the behavioral finance literature. ",
+            "\u00a0I had never taken a finance class before, so I learned a lot about the basics of finance and statistical research methods. I also learned about some basic behavioral economics concepts and how they can be applied to solve puzzling facts in finance. ",
+            "\u00a0A comprehensive review of behavioral finance with a focus on the literature and conceptual frameworks ",
+            "\u00a0The field of behavioral finance was completely new to me before I took this course. It was a great introduction. I learned how to analyze financial models, form behavioral finance research questions, and how to test economic hypotheses. "
+        ],
+        [
+            "\u00a0Great, engaging lectures. \r\nPerhaps more problem sets to keep us up to date with reading. \r\nPerhaps better to have it twice a week, but shorter, easier to retain information. ",
+            "\u00a0No weakness. Less paper would be better. A little bit of focus on how bussiness enterprises use it would also be interesting. ",
+            "\u00a0Amazing course wouldn't change a thing ",
+            "\u00a0Strengths: Professor Barberis' teaching was incredible. He has the ability to clearly break down and explain complicated, nuanced ideas in behavioral finance. He showed up to every class knowing exactly what he wanted to cover. His lecture notes were impeccable. Also, I was a huge fan of the flexibility were were afforded for the assignments in the course. For the last two, we were able to choose between quantitative (i.e., work with a mathematical model) and qualitative (i.e., read and analyze an academic paper) options. The scope of the course was also perfect in both depth and breadth. ",
+            "\u00a0Very well prepared instructor. Superb organization that helps student absorb the information in the most efficient way. ",
+            "\u00a0The classes are very well prepared and the course material is great. \r\nI cant think of weakness of this course. ",
+            "\u00a0This course is extremely well organized and well taught by Professor Barberis. He explains concepts very thoroughly and keeps students engaged through the 3-hour long lectures. The only weakness is that we received no feedback on assignments, so it was difficult to know how we were doing in the course and how to improve. ",
+            "\u00a0The course was very well planned out and moved at a good pace. I might have enjoyed more hands-on work like what we did in the second and third homework assignments. "
+        ],
+        [
+            "\u00a0Yes. ",
+            "\u00a0Yes, for anyone interested in behavioral finance. I think it's a good introduction to some of the main ideas, for those interested in doing further research in this area. ",
+            "\u00a0Definitely. ",
+            "\u00a0It's amazing, a must take ",
+            "\u00a0Absolutely! Not only is the material incredibly interesting and relevant (especially if you want to go into quantitative finance in the future), the professor is one of the best I've had at Yale. At the very least, stop by the first few lectures  you'll be introduced to various puzzles that rational frameworks can't understand and that will motivate you to learn more about the irrational, behavioral, growing side of finance. ",
+            "\u00a0I definitely want to recommend this course to anyone interested in explaining facts in the financial market from a psychological perspective. Very engaging instructor and outstanding material. Couldn't have asked for a better class. ",
+            "\u00a0Yes. I this course is a must for those who are interested in behavioral finance or even traditional finance. The professor is great and you finish the course with a great overview of the field. ",
+            "\u00a0Yes, Id recommend it to anyone who is interested in the intersection of psychology and finance. ",
+            "\u00a0Yes. For anyone interested in applications of recent cognitive science research and economics/finance, behavioral finance is a great introductory course. "
+        ]
+    ]
+}

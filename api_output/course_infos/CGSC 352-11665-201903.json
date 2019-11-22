@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51030/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Study of empirical and theoretical accounts of adolescent-specific changes in the brain and in behavior that relate to the development of self control. Discussions will focus on adaptive and arrested adolescent brain development in the context of relevant legal, social, and health policy issues.", 
+    "title": "Arrested or Adaptive Developme...", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "HLH17 05", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11665", 
+        "listings": [
+            {
+                "number": "352", 
+                "subject": "CGSC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "BJ Casey"
+    ], 
+    "long_title": "Arrested or Adaptive Development of the Adolescent Brain", 
+    "extra_info": "A"
+}

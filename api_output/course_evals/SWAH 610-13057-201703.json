@@ -1,0 +1,71 @@
+{
+    "crn_code": "13057",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I developed a beginning understanding of practical, useful Kiswahili. "
+        ],
+        [
+            "\u00a0In the first weeks, I understood very little.  Then I finally realized that through repetition and learning from written exercises and grammar, that I was actually developing a structure of understanding.  I still have a great deal of difficulty understanding my professors in class.  They speak quickly, and I am not easily able to understand what words they are saying, even though I have learned the words.  In other words, I cannot readily distinguish their words in speech. "
+        ],
+        [
+            "\u00a0Absolutely.  I love the class.  My only complaint is that often we are required to respond in learning assessments to very small photocopied photographs in which it is almost impossible for me to identify the subject and action of the photograph to guess what idea it represents so that I can respond with the appropriate Swahili answer. "
+        ]
+    ]
+}

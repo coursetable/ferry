@@ -1,0 +1,115 @@
+{
+    "crn_code": "10873",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            5,
+            6,
+            6
+        ],
+        [
+            6,
+            7,
+            3,
+            2,
+            1
+        ],
+        [
+            2,
+            8,
+            6,
+            3,
+            0
+        ],
+        [
+            3,
+            4,
+            8,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            8,
+            11
+        ],
+        [
+            0,
+            0,
+            6,
+            7,
+            6
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned much of the math and theory that supports microeconomics. I got much better at doing proofs throughout the class ",
+            "\u00a0I developed proof-writing skills, as well as knowledge of microeconomics (including MANY cases of optimization). ",
+            "\u00a0Microtheory is essentially intermediate microeconomics but with proofs. While intermediate micro is mostly about \"how do we do these calculations?\", microtheory is more focused on \"how do we know we can do these calculations in this way?\". However, while the material in class is mostly focused on the second question, there were very few proofs on the psets, leading to students having to learn essentially the intermediate micro content in doing the psets. Thus, this course is a strange in-between for intermediate micro and economics grad school -- though the instructional content is mostly on proofs, the psets and exams have almost none. ",
+            "\u00a0I learned about the fundamentals of microeconomic theory and the nature of research in this subject area. This course exposed me to a rigorous way of thinking and analyzing. ",
+            "\u00a0I feel like I've developed a more fundamental understanding of microeconomic decisions and behavior through a rigorous mathematical lens, and I now understand more about how individuals and businesses behave rationally. I also feel like I now appreciate why people choose to do things in everyday life. ",
+            "\u00a0We gain a deeper insight into the foundations of microeconomic theory, and then turn to apply these foundations to describe simple economic system. We learn how think with rigour about preferences, uncertainty, markets, and externalities. However, even this deeper insight is limited, as many of the concepts actually require math at the level of real and convex analysis to fully understand and derive. ",
+            "\u00a0A more in-depth, mathematically grounded understanding of basic microeconomic concepts: utility functions, utility maximization, production, partial/general equilibrium, competition, information, externalities, etc. There is definitely exposure to the way micro is treated at the graduate school level, if that's something you're interested in. ",
+            "\u00a0We learned Consumer Theory and Producer Theory in good detail, and some General and Partial Equilibrium Theory, Monopolistic Competition. The first half of the course seemed more theoretical while the second half was more computational. The course is an in-depth overview of Microeconomics at a theoretical level. ",
+            "\u00a0In this course I learned alot about Microeconomics from a theoretical and mathematical perspective ",
+            "\u00a0We studied the consumer problem and the producer problem and how they can used to calculate general equilibriums in a market. Such subtopics include consumer preferences, demand correspondence, direct and indirect utility, hicksian demand, expenditure function, risk, production, oligopolies, externalities. These topics are studied in a very proof-based sense, testing your understanding of concepts from introductory economics and expanding on numerous concepts. Proofs are discussed during lecture to explain concepts but are not necessarily expected to be memorized for exams. ",
+            "\u00a0I gained a basic understanding of the foundations of the study of microeconomics: where the theory came from, how it is derived, and how the theory can be applied. ",
+            "\u00a0I realized how complex microeconomics actually is; to be frank, introductory microeconomics (or even intermediate microeconomics) really doesn't give you an idea of how complicated and fascinating the field is. Topics covered included consumer choice, theory of the firm, competitive markets, imperfectly competitive markets, partial/general equilibrium, basic game theory and imperfect competition. Everything we did was either proof-based or mathematics-heavy. I refined my proof-writing technique, mastered the art of the Lagrangian, and got a glimpse of what it's like to study economics at the graduate school level. ",
+            "\u00a0I learnt economic theory in a lot of depth and all the math supporting it. ",
+            "\u00a0Solid foundation in microeconomic theory. "
+        ],
+        [
+            "\u00a0I wish that we went through more example problems in class. It was all very theoretical and I would often walk away from a lecture with little idea of how to apply what we had just learned to problems on a pset. ",
+            "\u00a0The course was taught at a nice pace and the class size allowed for students to be engaged and ask questions in order to ensure understanding of difficult concepts. The course was structured so that lectures taught us only theory, and then we were expected to solve difficult problems on our own without any examples - I relied heavily on office hours. More examples would be very helpful. ",
+            "\u00a0The course does give students some exposure to proof based economics and the material that could potentially be seen in grad school, but because of the proof-based nature of instruction, often the \"bigger picture\" is often lost -- i.e. what was this proof for? what does it tell us? why do we care? etc. And especially because this proof based material is often not found in the psets, it is often difficult to see the connection between the content learned in class and that on the psets. ",
+            "\u00a0The format of lectures could be improved to be more engaging and comprehensive. The proof-based core of the course made it difficult to follow; applying concepts taught in lecture to homework was often near impossible without the help of the TA. Since most lectures consisted of the professor throwing out information at the students, the students did not develop an understanding of the content until much later. Teaching the class in a way that allows students to contribute to lectures and walk through proofs themselves would improve this class.\r\n\r\nThe content of the course has the potential to introduce students interested in economics and mathematics (especially research economics) to the nature of the field. ",
+            "\u00a0The course was strongest in its presentation of the curriculum - it was rigorous and there was definitely a development in the subject material. However, most students were very lost and it didn't seem like the professor was very open to re-elaborating certain things and just wanted to get through the material leaving us quite lost throughout the semester. Most of us felt defeated by the end and we only gained quite little due to the pace and clarity of the course. Lectures felt somewhat monotonous and repetitive, and everything was just on the lecture notes posted online anyways, so classes didn't feel very rewarding to attend. ",
+            "\u00a0I think this is a difficult course to do well because so much of the material actually requires much more advanced math. I can't really say the course had many strengths other than fair (and interesting) exams, and that it pushes you to test your ability to understand difficult, abstract concepts, and to see the logic beyond the math. However, the course was not particularly well delivered, and the textbook was rather useless due to its sophistication. Also, some of the material was so advanced that it was simply presented and then never spoken of again. ",
+            "\u00a0Some of the material could be interesting, but it was sometimes hard to understand behind the mathematical language used to express it. We definitely went more into the theoretical math than we ended up needing to use, which could be seen as a strength and a weakness. A good foundation, but a lot of material definitely went over my head. ",
+            "\u00a0It was helpful that many proofs presented in class could be found written more formally in the textbook. A lot of the times, the theory was taught in class, and then on the homeworks, we had to extend this knowledge to solve problems, usually involving some Lagrange-optimization. This method was very common throughout the course. Learning to apply theoretical knowledge was helpful, but it was not easy. The conclusions of proofs in Microeconomic Theory can sometimes be difficult to understand. A notable weakness is that frequently (almost every time), a few problem set topics were not covered until the lecture on the due date, so it was challenging to complete the assignments. ",
+            "\u00a0Needs a prerequisite class. I felt I didnt have enough math knowledge to take the class. The class muddled the economic concepts I had mastered in the intro class. ",
+            "\u00a0This course is simply not appropriate for students who have only taken Intro Micro. It is fully taught at a PhD level, which is very difficult, but honestly could have been fine if the professor wasnt also rhe worst. ",
+            "\u00a0Let me preface this by stating Professor Fanning was a really good professor and in no way are these weaknesses because of him. This course is NOT an Intermediate Microeconomics class, and I see no reason why it is labeled as such. To be frank, I am not even sure if the Economics Department head knows what is taught in this class.  First and foremost it is taught out of an Advanced Microeconomic Theory Textbook... Key word Advanced. It would make sense that after studying Intro Micro students would proceed to study from an intermediate text book, but this was not the case. The mathematical jump was ridiculous. As a student who only took MATH 120 - Multivariable Calculus prior to the course I along with more than half the class felt utterly unprepared. The fast that the only prerequisite mathematically for this course was MATH 120 makes me seriously question the ECON DUS. This course had Discrete Math (Some students didn't even know set theory...) , Linear Algebra, and Differential Equations... The best thing of all is that I along with many other students did not even want to take this class. I was informed by the website, as were many other students that \"Beginning with the class of 2021, ECON 121 may no longer be substituted for ECON 125 and ECON 122 may no longer be substituted for ECON 126.\" However upon meeting with the DUS in person two days prior to the drop deadline for the semester I was informed that this has been rolled back during SHOPPING PERIOD.... In no way did the department make an effort to inform the students in the course that if they felt like the course was too much they could switch into Intermediate Micro. The best thing is that the website still has not been updated... That is ridiculous in my opinion that they could not even update the website, what I along with all other Yale Undergrads go off of for major requirements.. Know that all of my ratings for this course are for Professor Fanning. I would rank this class poor but to be fair to Professor Fanning who made this class manageable I am saying good. I have never given a review for a course like this because I have never gone through something like this before. This class to be frank was completely unfair... ",
+            "\u00a0I think that course was interesting in terms of its content as we were able to solve problems through optimization under constraints. The midterm and final were moderately fair in terms of their length and relation to material covered in class. Practice problems were well designed to decent on these examinations yet the tests still remained challenging. There are several ways that this course can be improved though. I think that lectures covered too much information too quickly, not giving students enough time to understand the material. In addition, the majority of lectures notes consisted of proofs and theorems that went beyond an introductory level of microeconomics knowledge. It's fair to say a majority of students felt lost in that class after each lecture and that became expectation each week. The expectations for what should be understood by microeconomic theory students need to be clarified as it is highly unclear what should have been understood after each lecture. The problem sets in this class were generally four questions but required many proofs and explanations of material covered in class. Often students were not comfortable enough with the content from class which made homework a struggle. The corresponding textbook for this class was also difficult to comprehend as it contained yet more proofs of concepts from class. It was dry and didn't aid well with our understanding throughout the class. It was made more difficult because office hours for class were held after the first lecture each week, before students had started the problem set and often before it had been released yet, as well as Friday morning when many students had class. These time slots should be adjusted to meet the demands of the students rather than the teacher and TA's easiest convenience. ",
+            "\u00a0The course offered a truly in-depth look at microeconomics, which will surely prove handy for any graduate-level study we do in the future. However, I do wish that there would have been more examples along the way. ",
+            "\u00a0My feeling is that this course is incredibly difficult to teach  we were going off of a graduate-level textbook, and a lot of the topics and concepts in there were far too complex for an undergraduate without too much mathematics training. As such, lectures and problem sets were often very difficult to slog through (which was OK, as I prefer that kind of learning), and the professor somehow had to work out how to teach all of this mathematics-heavy material without going too deeply into the mathematics. Honestly, I don't know if this qualifies a strength or a weakness. I guess, if you're looking to come out of the semester with a strong sense of what microeconomics is like and want to frame your future studies, this course is perfect for you. If you want this course to feel entirely complete by itself, you might be disappointed. ",
+            "\u00a0In the start the syllabus is pretty dense and taught very poorly, so most of us were lost for a solid month and a half. The textbook assigned was a grad level book. It was a great book, but often too advanced to help us understand concepts that we already understood very little about. I had to struggle to understand material by going to a tutor every week as well as section, and ended up spending almost double the time as I did on my other classes every week. There was definitely a steep learning curve, and only towards the end I was able to solve the psets myself. Half the class was considering dropping it. I think the material needs to be way way simpler, especially the stuff in the beginning which seems like useless pedantic knowledge most of the time. The instruction was also pretty poor and Professor Fanning often confused me more than he helped me. ",
+            "\u00a0Lectures were often difficult to follow. Used a graduate textbook that was more advanced than the class. "
+        ],
+        [
+            "\u00a0Be ready to work pretty hard if you want to take this class. Make sure you have a very strong math background beforehand. I don't know why you would take it if you aren't in the Econ Math major ",
+            "\u00a0I would recommend this course to anyone considering the Math & Econ major. ",
+            "\u00a0This course is often recommended to students who are thinking about pursuing grad school. Though the course may give some exposure of grad school material, the course does not assess much on psets or exams regarding this material. Thus, in some sense, if students are thinking about Econ grad school, it may be more beneficial to pursue more proof based math courses rather than this one. ",
+            "\u00a0No. The course required an excessive amount of self-studying and learning. The material of the course was not taught well and students truly interested in research economics would likely benefit more from doing an internship or reading the textbook by itself. The professor did not clarify questions well and often taught in a rushed manner. ",
+            "\u00a0Not unless they really wanted to get a rigorous treatment of economics from a fundamentally mathematical lens. Class didn't feel very rewarding and it's likely better to take intermediate microeconomics and learn using its abstraction of concepts in a less rigorous environment. ",
+            "\u00a0I recommend that future students shop this course. For mathematically-inclined econ students seeking a challenge, this course is a great option if taught by a professor that can do it well (no doubt a big ask). However, your judgement of the professor should definitely make or break it. In intermediate micro, you will have to spend less time deciphering complicated mathematical formulations, leaving you more time to grapple with the economic ideas, developing your own economic intuitions. If you do take ECON 125, I would recommend some familiarity with vectors and proof-writing. If you want to feel well-prepared, the course should be taken after or concurrently with Math 250 or above. ",
+            "\u00a0If you're considering economics graduate school, it would behoove you to take this class to see what it's like. The class might be a pain at times, and it will definitely be a different professor the next time this course is taught. If you're looking for a bit of a challenge, sure, go for it: there's definitely more covered than in standard intermediate micro. ",
+            "\u00a0No, the course was poorly taught. The TA was helpful, but the professor did not explain concepts clearly and the homework were extremely long and challenging. I felt that I did not learn from the professor, and only learnt from the TA. ",
+            "\u00a0It's a very good course if you need a challenge and like math in economics. Take this advanced class to learn microeconomics more fundamentally. It's not trivial though, so you may want to take it only if its an Econ-Math degree requirement. ",
+            "\u00a0Dont take it unless you absolutely need to. Double check that its actually a requirement- it might be on the website but not officially so ",
+            "\u00a0Absolutely not. Do yourself a favor and take intermediate. ",
+            "\u00a0No - unless you suddenly actually need it, I would not ",
+            "\u00a0I would not recommend this course to another students unless it is required by a specific major such as the Economics and Mathematics major. It is very advanced compared to introductory microeconomics based on the amount of proofs and terminology used throughout lectures. It is a challenging course that will leave you frustrated each week and grateful to be done with each problem set. ",
+            "\u00a0I would recommend this course to another student who is very interested in economics. If you just want to understand calculations, this may not be the right course for you, but the in-depth insight is truly satisfying if you are interested in it. ",
+            "\u00a0I wrote this in a previous response, but if you're looking to come out of the semester with a strong sense of what microeconomics is like and want to frame your future studies, this course is perfect for you (as long as you're not too concerned about your grades, and are taking this course purely for the sake of learning about microeconomic theory). If you want this course to feel entirely complete by itself, you might be disappointed. In the end, I think your experience in this course will wholly be dependent on the professor that teaches it and how he/she decides to teach the material. ",
+            "\u00a0Most people take it only for their major. If you don't need to do that, I wouldn't really recommend it. There are more fun, and less taxing econ courses. ",
+            "\u00a0Only those who are serious about putting in a lot of effort should take this course. Requires a lot of learning on one's own. "
+        ]
+    ]
+}

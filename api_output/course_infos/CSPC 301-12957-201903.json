@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49407/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A group of photographers, chemists, and dreamers invented the movies in the last years of the great romantic century. As technology advanced this new art form, music was the invisible glue that partnered with it: music to cover the sound of the projector, music to make the experience seem linear, and music to both specify the drama and simultaneously give it a complexity that only opera was previously able to do.\u00a0In a mere thirty years the \u201cflickers\u201d became the most successful art form in history, transcending borders and politics, and the music composed for the movies brought Western classical music of the late 19th and early 20th centuries to every corner of the world.\u00a0", 
+    "title": "Music and Cinema: A History", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "BR TV ROOM", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12957", 
+        "listings": [
+            {
+                "number": "301", 
+                "subject": "CSPC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "John Mauceri"
+    ], 
+    "long_title": "Music and Cinema: A History", 
+    "extra_info": "A"
+}

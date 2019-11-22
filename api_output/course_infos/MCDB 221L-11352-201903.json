@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "With permission of instructor or concurrently with or after BIOL 101, 102 or 103.", 
+    "description": "An introduction to research and common methodologies in the biological sciences, with emphasis on the utility of model organisms. Techniques and methods commonly used in biochemistry, cell biology, genetics, and molecular and developmental biology; experimental design; data analysis and display; scientific writing.\nWith permission of instructor or concurrently with or after BIOL 101, 102 or 103.\n\n0.5 Yale College course credits", 
+    "title": "Model Organisms in Biological ...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 3, 
+        "oci_id": "11352", 
+        "listings": [
+            {
+                "number": "221L", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Maria Moreno"
+    ], 
+    "long_title": "Model Organisms in Biological Research", 
+    "extra_info": "A"
+}

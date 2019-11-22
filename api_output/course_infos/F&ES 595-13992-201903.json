@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51512/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The\u00a0Yale Environment Review\u00a0is a student-run publication that aims to increase access to the latest developments in environmental studies. We aim to shed light on cutting-edge environmental research through summaries, analysis, and interviews. During this one-credit course, students produce one or two articles on subjects of their choosing for publication on the YER website. Please refer to our Canvas page for an overview of the different types of content that YER produces. Students receive coaching to improve their writing skills, and their work goes through a rigorous editing process. Participation in Yale Environment Review helps students sharpen their writing skills and familiarize themselves with science communication, and it provides a platform to showcase their expertise. Enrollment is limited to sixteen, and the class is selected through an application process. Application instructions can be found on our Canvas page and will be discussed during the information session on January 16 (12\u201312:50 p.m.; Sage 41C). Applications are due by January 21 at 11:59 p.m.\u00a0Please e-mail\u00a0environment.review@yale.edu\u00a0with any questions. Class meets five to six times, dates to be announced.", 
+    "title": "Yale Environment Review", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 12, 
+            "location": "S 41C", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 13
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13992", 
+        "listings": [
+            {
+                "number": "595", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Matthew Kotchen"
+    ], 
+    "long_title": "Yale Environment Review", 
+    "extra_info": "A"
+}

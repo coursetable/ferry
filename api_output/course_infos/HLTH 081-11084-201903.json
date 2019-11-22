@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50302/assignments/syllabus", 
+    "requirements": "Enrollment limited to first-year students with a score of 4 or 5 on the Advanced Placement examination in Biology or the equivalent. Preregistration required; see under First-Year Seminar Program.", 
+    "description": "Analysis of issues in public health and medicine that get extensive media attention and provoke policy debates.\u00c2\u00a0Topics include vaccination, the value of cancer screening and genetic testing, determinants of a healthy lifestyle, the U.S. role in global health, and the cost of health care. Students critique and produce medical journalism.\nEnrollment limited to first-year students with a score of 4 or 5 on the Advanced Placement examination in Biology or the equivalent. Preregistration required; see under First-Year Seminar Program.", 
+    "title": "Current Issues in Medicine and...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 210", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11084", 
+        "listings": [
+            {
+                "number": "081", 
+                "subject": "HLTH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Robert Bazell"
+    ], 
+    "long_title": "Current Issues in Medicine and Public Health", 
+    "extra_info": "A"
+}

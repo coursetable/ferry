@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50179/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This global introductory course surveys how works of art and architecture have responded to political ideals, shaped political life, and galvanized political debate from antiquity to the present. We consider the relation between visual representation and political representation, addressing how artists and architects have responded to the demands of democracy, empire, war, and revolution, and how individuals and communities have reacted with and against the works that they produced. Topics span from propaganda to public monuments, icons to iconoclasm, civic buildings to border walls, and from the politics of display to political censorship. Ranging from painting, sculpture, prints, and photography to architecture, landscape design, and military fortification, this course aims to de-center \u2018western\u2019 notions of artistic achievement in its multi-media and transnational scope. Lectures and assignments emphasize close looking and close reading, skills which are essential to making us better viewers and citizens. Open to all, including those with no prior background in art history. Sections will include visits to collections and sites across Yale campus.", 
+    "title": "Introduction to the History of...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "LORIA 250", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12236", 
+        "listings": [
+            {
+                "number": "176", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Marisa Bass"
+    ], 
+    "long_title": "Introduction to the History of Art: The Politics of Representation", 
+    "extra_info": "A"
+}

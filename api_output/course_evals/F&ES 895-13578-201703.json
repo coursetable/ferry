@@ -1,0 +1,80 @@
+{
+    "crn_code": "13578",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            1,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            1
+        ],
+        [
+            1,
+            2,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a bit about building construction and really enjoyed the hands on experiences of learning to use various tools ",
+            "\u00a0This course was really cool and a very positive learning environment. I had no experience in this field, so everything was new. ",
+            "\u00a0I learned the basics of buildings operations and specifically water and heat transfers/movements in buildings. "
+        ],
+        [
+            "\u00a0Pretty much what I expected! ",
+            "\u00a0Again, I had no experience in anything relating to buildings and I learned a lot. It's also very clearly stated in the syllabus what will be learned. The most interesting component is the optional trip to the Green Build Conference. ",
+            "\u00a0I thought the class would be more focused on green buildings versus \"old\" inefficient building designs. I think it seemed more like a class for engineers than environmental students who plan to manage efficient buildings. "
+        ],
+        [
+            "\u00a0I think that this course is pretty solidly what it is - an experiential one credit class. I don't think it needs changing. ",
+            "\u00a0No more Friday morning classes "
+        ],
+        [
+            "\u00a0Take this as you can. It's not a lot of work for a big reward and new knowledge. Moreover, the instructor is great and waaaaay better than most FES profs. in that he creates a very relaxed but effective learning environment "
+        ]
+    ]
+}

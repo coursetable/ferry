@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51216/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introduction to Sanskrit language and grammar. Focus on learning to read and translate basic Sanskrit sentences in the Indian Devanagari script. No prior background in Sanskrit assumed. Credit only on completion of LING 525/SKRT 520.", 
+    "title": "Introductory Sanskrit I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LUCE 102", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13859", 
+        "listings": [
+            {
+                "number": "515", 
+                "subject": "LING"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Aleksandar Uskokov"
+    ], 
+    "long_title": "Introductory Sanskrit I", 
+    "extra_info": "A"
+}

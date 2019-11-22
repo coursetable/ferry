@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "For students who wish, under the supervision of a member of the faculty, to investigate an area of history not covered by regular departmental offerings. The course may be used for research or for directed reading. It is normally taken only once. The emphasis of the tutorial is on writing a long essay or several short ones. To apply for admission, a student should present the following materials to the director of undergraduate studies on the Friday before schedules are due: a prospectus of the work proposed, a bibliography, and a letter of support from a member of the History department faculty who will direct the tutorial. A form to simplify this process is available from the office of the director of undergraduate studies.", 
+    "title": "Individual Writing Tutorial", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12595", 
+        "listings": [
+            {
+                "number": "494", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Edward Rugemer"
+    ], 
+    "long_title": "Individual Writing Tutorial", 
+    "extra_info": "A"
+}

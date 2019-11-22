@@ -1,0 +1,80 @@
+{
+    "crn_code": "30033",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0More knowledge on Macroeconomics. ",
+            "\u00a0Macroeconomics. ",
+            "\u00a0I learned how to evaluate economic growth in the short run and long run. I developed basic skills for using models and making predictions based on them. ",
+            "\u00a0basic macroeconomics and how it is relevant to the real world. "
+        ],
+        [
+            "\u00a0strengths: have reasonable office hours ",
+            "\u00a0after the midterm, the class goes too fast and it is too loose before midterm ",
+            "\u00a0This course was very informative and engaging, but could be improved in terms of pacing. The first half of the course material was taught at a moderate pace, but the second half felt a bit rushed. I think that time should be more evenly divided between these two halves of the course material. ",
+            "\u00a0the first half of the course felt a lot easier and less rushed. "
+        ],
+        [
+            "\u00a0Yes. Great time and opportunity to learn something in summer. ",
+            "\u00a0Yes. It is a good course ",
+            "\u00a0Yes, I would recommend this course because it really encourages better understanding of our economy and what has happened in the recent financial crises. ",
+            "\u00a0Yes because you learn a lot in a very short amount of time. "
+        ]
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "crn_code": "21146",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            1,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            1,
+            0,
+            0,
+            3,
+            0
+        ],
+        [
+            1,
+            0,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Deeper understanding of basic immunology concepts ",
+            "\u00a0-Enhanced ability to dive deep into the literature of different fields within Immunology.\r\n-Use of primary literature to develop novel hypotheses\r\n-Enhanced scientific writing skills\r\n-Critical thinking skills ",
+            "\u00a0Antibodies\r\nInitiation, regulation and pitfalls of adaptive immunity, both B cells and T cells\r\nTranslational questions in immunology, transplantation/allergy/immune therapies "
+        ],
+        [
+            "\u00a0There needs to be better communication between the coordinators of the course, the professors teaching it, what material has been covered, what the structure of the session is supposed to be like, etc. Overall the content was great, but the course was extremely disorganized. ",
+            "\u00a0-Strengths: The course design allows students to immerse in different fields of research within immunology and to develop curiosity and questions in each of these fields. It is a great opportunity for us to be exposed to different fields and learn more about them.\r\n\r\n-Weaknesses: There seems to be a gap between what faculty members assume we know and what we actually know. Because different students engage in different fields of research, the level of background each student has on each topic varies drastically. Some faculty assume that students have a thorough background on their topic of research and this is highly detrimental to the learning experience. While papers and reviews are assigned before discussion sessions, the general topics covered by these usually allow students to keep up with the first few minutes of discussion. Subsequently, discussion are usually dominated by students who have strong background in this area of research or who can contribute clinical knowledge (ex. What is the usual dose of Rituximab a patient is given in the clinic? This was an impromptu question in discussion and something that the typical 1st year PhD student probably does not know). While students with strong backgrounds may benefit greatly from the discussion, the lack of structure in the discussion sessions leaves students who lack the proper background stranded and struggling to earn participation points. Faculty also fail to bring the other students up to speed. This could be addressed by asking students to explain new terms/concepts that come up every time there is a new comment or question.\r\n\r\nMy experience this year was that many students, including myself, constantly fail to engage in questions to \"drive impromptu discussions\". The reasons for this are not entirely clear to me (although I would assume it has to do with a lack of background knowledge combined with a culture that is hesitant to ask 'unimportant' questions), but the end result is that discussions are highly uncomfortable and unproductive for both faculty members and students. I think the most successful discussion sessions were those that had a proper set of discussion questions beforehand and more so if these questions actually address the background being presented instead of being technical questions. The set of questions provided by Dr. Eisenbarth are an excellent template. They go from simpler background to more specific/technical concepts, thus allowing students to follow a step by step approach to understand the more technical questions. \r\n\r\nFInally, despite being assigned interesting questions for homework. Discussions typically stray in a completely different direction from the homework. Furthermore, most faculty give out a grade and don't include any feedback. This hinders the possibility for students to actually learn from their homeworks and effectively defeats the purpose of assigning homeworks in the first place. ",
+            "\u00a0Excellent topics and presenters! "
+        ],
+        [
+            "\u00a0Yes ",
+            "\u00a0Absolutely! "
+        ]
+    ]
+}

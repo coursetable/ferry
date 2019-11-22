@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49234/assignments/syllabus", 
+    "requirements": "Attendance at a weekly discussion section required. Normally accompanied by CHEM 134L. Enrollment by placement only.", 
+    "description": "A comprehensive survey of modern descriptive, inorganic, and physical chemistry. Atomic theory, stoichiometry, thermochemistry, chemical periodicity, concepts in chemical bonding, and the shapes of molecules. Appropriate either as a\u00a0first chemistry course or\u00a0for students with one year of high school chemistry.\nAttendance at a weekly discussion section required. Normally accompanied by CHEM 134L. Enrollment by placement only.", 
+    "title": "General Chemistry I", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "SCL 110", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10506", 
+        "listings": [
+            {
+                "number": "161", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jonathan Parr"
+    ], 
+    "long_title": "General Chemistry I", 
+    "extra_info": "A"
+}

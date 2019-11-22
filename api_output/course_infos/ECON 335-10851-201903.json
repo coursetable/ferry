@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49535/assignments/syllabus", 
+    "requirements": "Introductory Macroeconomics, Intermediate Macroeconomics", 
+    "description": "The course provides a rigorous framework for understanding the process of economic growth. The main focus of the course is on the factors sustaining long-run growth. We emphasize the role of governments and institutional factors. The final part of the course explores the demand side of the economy and short-run equilibrium phenomena such as monetary policy, financial factors, stabilization policy, and financial crises.\nIntroductory Macroeconomics, Intermediate Macroeconomics", 
+    "title": "Growth and Macroeconomics", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WTS A30", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10851", 
+        "listings": [
+            {
+                "number": "335", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Fabrizio Zilibotti"
+    ], 
+    "long_title": "Growth and Macroeconomics", 
+    "extra_info": "A"
+}

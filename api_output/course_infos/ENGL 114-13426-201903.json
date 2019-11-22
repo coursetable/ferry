@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49779/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Instruction in writing well-reasoned analyses and academic arguments, with emphasis on the importance of reading, research, and revision. Using examples of nonfiction prose from a variety of academic disciplines, individual sections focus on topics such as the city, childhood, globalization, inequality, food culture, sports, and war.\u00c2\u00a0Preregistration required; see under English Department.", 
+    "title": "Writing Seminars: Health, Reli...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 007", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 28, 
+        "oci_id": "13426", 
+        "listings": [
+            {
+                "number": "114", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Meredith Ringel-Ensley"
+    ], 
+    "long_title": "Writing Seminars: Health, Religion, and Morality", 
+    "extra_info": "A"
+}

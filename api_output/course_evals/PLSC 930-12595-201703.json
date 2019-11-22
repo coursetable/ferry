@@ -1,0 +1,73 @@
+{
+    "crn_code": "12595",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            1,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            1,
+            0,
+            1,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I gained knowledge about presenting in a professional setting, both from watching others and from having the opportunity to present myself. "
+        ],
+        [
+            "\u00a0I didn't used to mind them, but some (not all) of the loosely affiliated or unaffiliated people are bothering me more and more. The ethic of being open to the public is right, but I wonder what speakers think of Yale when they field perplexingly off-base questions from people who look like professors from other departments. ",
+            "\u00a0Variety of speakers. I learned to most from the comments of the faculty and students. "
+        ],
+        [
+            "\u00a0The workshop is an important tool of professional socialization. ",
+            "\u00a0Yes - great talks! "
+        ]
+    ]
+}

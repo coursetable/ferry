@@ -1,0 +1,95 @@
+{
+    "crn_code": "22459",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            9,
+            3
+        ],
+        [
+            0,
+            1,
+            4,
+            7,
+            3
+        ],
+        [
+            0,
+            0,
+            4,
+            9,
+            2
+        ],
+        [
+            0,
+            2,
+            5,
+            5,
+            2
+        ],
+        [
+            0,
+            1,
+            6,
+            6,
+            2
+        ],
+        [
+            0,
+            2,
+            8,
+            5,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned practical skills of electrical engineering in this class. From mathematical tools such as Laplace and Fourier transformations to manual skills like soldering and PCB. ",
+            "\u00a0I learned a lot of Algebra skills that I probably should've known anyways. ",
+            "\u00a0I learned how to analyze more efficiently and quickly analog circuits using the transfer function, Laplace, and Fourier (and gained insight into the value of the time v. frequency domain). Basically just became more comfortable with circuit analysis. ",
+            "\u00a0I learned about filters and how to perform Fourier and Laplace transforms. ",
+            "\u00a0Fourier series, Laplace transform, first and second order circuits, soldering in later labs, etc ",
+            "\u00a0I learned a lot about circuit analysis. ",
+            "\u00a0An extension of EE 200 ",
+            "\u00a0I learned about the applications of different circuit systems as well as how to better analyze circuit systems. I learned about Fourier series and transforms as well as Laplace series and transforms that will be very helpful in future EE courses. ",
+            "\u00a0I learned circuit theory. "
+        ],
+        [
+            "\u00a0This is an excellent class. The labs are perfect-- the worksheet setup makes for good learning without too much unnecessary extra work. ",
+            "\u00a0This class is well-structured and well-taught. The labs were helpful but short, and we turned in the lab reports at the end of each lab session. ",
+            "\u00a0This course moves really fast. It can be hard to keep up and is definitely one to attend lecture for and put in the work. The labs were super fun in my opinion! One criticism is that there were only two assessments and they were four and two questions respectively. So misunderstanding a single problem was hugely detrimental to one's grade. ",
+            "\u00a0I really like that the lab reports are designed to be completed in class. I don't think it would be necessary to write lengthy lab reports as in the other intro EENG classes. I also like that a lot of this course overlapped with EENG200, especially the early parts of this course, since it serves as a short review of all we did in EENG200.\r\n\r\nI really wished that we had more feedback on Canvas. Instead, everything tends to be handed back on paper, and it makes it hard to keep track of how well or poorly I am doing in the class. ",
+            "\u00a0Lectures were good, also appreciated how lecture notes were available online on canvas. The textbook was also EXTREMELY useful to help understand the information. Labs were the best part of the course. I just wished the two lab sessions would be offered on two different days, because some people had conflicts with the single day that was chosen. ",
+            "\u00a0It was well taught, and the homework was helpful.  I just wish that there were more problems that didn't require pages of algebra that would allow me to get a better grasp of the material. ",
+            "\u00a0Hong Tang is an excellent professor and you will understand what he says. ",
+            "\u00a0The strengths of this course are the Professor and the labs. One weakness of the course is lack of help outside of the classroom. ",
+            "\u00a0Strengths: Builds on material from EENG 200 and EENG 202; Reasonable homework assignments; Textbook available online; Reference sheets allowed during exams.\r\n\r\nWeaknesses: Labs felt somewhat separate from the course and met often; The final exam had very few questions; Prof. Xia taught several lectures while Prof. Tang was away at conferences, but Prof. Xia often went too fast. "
+        ],
+        [
+            "\u00a0Yes. I highly recommend this class to anyone interested in electrical engineering. ",
+            "\u00a0Yes, if they are interested in EE ",
+            "\u00a0Yes. This class is obviously really important in developing an intuition around circuitry so if you are interesting in EE you should take this course. Hong Tang is also a gem. ",
+            "\u00a0I would recommend it for any electrical engineering majors, since the course introduces Laplace and Fourier transform, both of which are essential in circuit analysis. ",
+            "\u00a0Must take it if youre an EE/EECS major ",
+            "\u00a0I would recommend this course for electrical engineering majors because I do not think it would be very applicable outside of that. ",
+            "\u00a0Yes, Professor Tang is a great lecturer. It is a good way to learn more advanced circuits. ",
+            "\u00a0I would recommend this course to another student who is pursuing an EE degree. It is well taught and a very interesting class. ",
+            "\u00a0The course was fine, but there are probably more interesting classes to take. "
+        ]
+    ]
+}

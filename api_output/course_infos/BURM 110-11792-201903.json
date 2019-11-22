@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 1, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "This course is taught through distance learning from Cornell University using videoconferencing technology. Interested students may e-mail minjin.hashbat@yale.edu for information.", 
+    "description": "This course aims to train students to achieve basic skills in Burmese. The students develop competency in reading and writing Burmese script and also learn basic spoken Burmese.\nThis course is taught through distance learning from Cornell University using videoconferencing technology. Interested students may e-mail minjin.hashbat@yale.edu for information.\n\n1.5 Yale College course credits", 
+    "title": "Elementary Burmese I", 
+    "skills": [
+        "L1"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11792", 
+        "listings": [
+            {
+                "number": "110", 
+                "subject": "BURM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Elementary Burmese I", 
+    "extra_info": "A"
+}

@@ -1,0 +1,90 @@
+{
+    "crn_code": "20461",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            7
+        ],
+        [
+            4,
+            1,
+            2,
+            0,
+            1
+        ],
+        [
+            3,
+            3,
+            1,
+            1,
+            0
+        ],
+        [
+            4,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            6
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0None. I learned how to complete projects with an appearance of quality. ",
+            "\u00a0I learned some of the basics surrounding plant design and chemical engineering simulation software. ",
+            "\u00a0I mostly learned how to find information and problem solve when the problem is Norbert clear. I also improve public speaking and presentation skills. ",
+            "\u00a0So much. Such a practical, interesting class. ",
+            "\u00a0Learned a bit about Aspen Plus. ",
+            "\u00a0I learned a bit about Aspen, and the considerations of building a plant from design, to safety, to finances. Exposure to process design, building reactors, separators, heat exchanger systems. ",
+            "\u00a0I learned how to use aspen as a chemical modeling tool. More importantly, I learned how to work in a small technical group.  I developed team leadership skills as well as better group conflict resolution techniques. I gained insight into the chemical industry, and the types of machinery, processes, and factors that contribute to the success/failure of a chemical plant. "
+        ],
+        [
+            "\u00a0Strength: You have to take it to get your degree\r\n\r\nWeakness: You're expected to learn a very complicated software all on your own, you're given an unworkable problem, you don't get actual feedback (so you have no idea how you're doing), you get graded with some meaningless metrics - such as minutes talking during a presentation ",
+            "\u00a0The course could be improved by using a different simulation software, or perhaps finding more powerful computers. By the end of the semester, I had a lot of difficulty working on my project because of how slow and crash-prone Aspen became. ",
+            "\u00a0Strengths include the group aspect since this is not offered any other time in the ChemE major, but by far the biggest weakness is the connection between the assigned problem and students capability. The project and aspen was too large for a single semester. ",
+            "\u00a0More lectures that are directly helpful to building the factories and less broad would be nice. ",
+            "\u00a0This class is strong in that the project requirements are the accumulation of the last couple of years. The weakness of this course is that the expectations are not properly addressed, the scope of the project is too large, and there is a lack of guidance for the Aspen software. An industry professional should be brought in to help the course and the project should be restricted. ",
+            "\u00a0I think having a course that teaches \"practical/industrial/process\" engineering is essential for Yale because this is generally lacking in our curriculum.  On this note, I got the most practical knowledge I have received at Yale from this class.\r\n\r\nThat being said, for this course:\r\n-Aspen:  It is a program which is glitchy, and I spent more time this semester dealing with files crashing, deleting themselves, or running so slowly that I couldn't actually do all of the work I wanted, than actual design work.  This a huge problem and wastes a lot of students' time. Also, it is very hard to get help for very specific Aspen issues. I would suggest finding people who know Aspen well or switching from Aspen to a program that is not as problematic.\r\n\r\n\r\nAlso - this would be a better course if Yale students were prepared to take it.  \r\n\r\nWe come into this class with legitimately no idea what we are doing.  Yet it often feels like we are supposed to have some industrial intuition which frankly no Yale engineer would ever have.   It would be helpful to have industry people to get more advice from or more detailed instructions on what is expected.  I noticed some of the people who looked like they were doing the best were doing more consulting-style work as opposed to engineering, which from my perspective misses the point of what I thought this class was - but perhaps reflects what Yale students are better prepared for.\r\n\r\nIf you want to give Yale students a senior class where you let them loose to do practical engineering with an engineering based program, it would be of benefit to have another course where we actually learn one or both of these things. \r\n\r\nAdditionally, the trajectory of this class is heavily based on your project group, which can either be a blessing or a curse.  Some groups had technical strong, dedicated teams and there projects seemed to go smoothly.  Some groups had technically weak groups, and they seemed to have to put a lot more time and effort into this project. ",
+            "\u00a0This course uses Aspen Plus, a chemical engineering modeling software that we didn't receive enough structured, concise, or thorough instruction in. I feel like we struggled with a lot with trivial aspects of the program as a result. ",
+            "\u00a0Strengths of this course include framework in teams.  The 4-person team setting really contributes to self-growth and learning from this course.  Another strength is the clearly divided timeline.  Having interim progress reports already scheduled which should include preselected topics was helpful towards planning and producing.  A major weakness of this course was its expectations.  Though general topics to include in the IPR were given, we all had no idea how in depth to go with them.  Lots of the parts of our project could take 30 minutes OR 30 hours to complete, depending on expectations, and those were just never given.  Another flaw of the course was the in-class material.  I feel like almost no one used the in class material in our projects (except the aspen training), and we could have produced the exact same quality report without ever having gone to class. "
+        ],
+        [
+            "\u00a0Absolutely not!! You're only taking this class because you have to. ",
+            "\u00a0Id recommend doing independent research for your senior project if you have a subject you are passionate about. ",
+            "\u00a0Yes, as it gives a good glimpse into the industrial applications side of chemical engineering that you never really get. ",
+            "\u00a0No I would not because it was very difficult to be expected to use so much Aspen in a short amount of time. You do learn about interesting and real engineering however, but it is very much self motivated. ",
+            "\u00a0No, do not take this course as it currently is. If I knew how unnecessarily difficult this course was going to be, I would have dropped the ABET degree a long time ago. I was not rewarded for my hard work in the major with a great project, instead I was given a hot, unorganized pile of crap that is Aspen. I only managed to make it through this project because my team was STACKED with geniuses, and I was taking 3 credits. ",
+            "\u00a0I do think any student graduating with an engineering degree should have a course like this, but if you don't plan on putting much effort into it -- do not take this course.    This course is very stressful and will consume your senior spring most likely. ",
+            "\u00a0I would not recommend this course to another student unless required.  It is a big time commitment with unclear expectations. "
+        ]
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "crn_code": "20767",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            2,
+            0,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I developed a better understanding of science, its ethical principles, approaches to maintaining better student and advisor relationships, and creative thinking about science. "
+        ],
+        [
+            "\u00a0I cannot think of any weakness. ",
+            "\u00a0Strength: room for students to share their thoughts and concerns about ethics in science\r\nWeakness: many articles to read. ",
+            "\u00a0Engaging discussions rather than lectures is a strength. "
+        ],
+        [
+            "\u00a0Yes! ",
+            "\u00a0Yes, I would recommend the bioethics course because aside from the class being small, the professor allows the student to become immersed and thoughtful about the topics. The class is conversational than lecture-based, and the ethical information gathered from these conversations will take students a long way to making the most out of their research careers. "
+        ]
+    ]
+}

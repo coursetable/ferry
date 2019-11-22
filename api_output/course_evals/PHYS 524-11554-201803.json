@@ -1,0 +1,80 @@
+{
+    "crn_code": "11554",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            2
+        ],
+        [
+            1,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            4,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about neutrinos and neutrino-related experiments. I also got some presentation practice. ",
+            "\u00a0The course provided me with a solid foundation in weakly-interacting particle detection, covering a wide array of neutrino experiments and a variety of approaches to detection. Additionally, the combination of required presentations on a weekly basis as well as several guest lectures by researchers in physics facilitated my improvement in giving talks, which is central to research. ",
+            "\u00a0I learned a lot about nuclear/high-energy/neutrino physics. It was a really understandable and engaging course, and this is coming from someone with a structural biology background! ",
+            "\u00a0Basics on nuclear physics and weak interaction detection,  especially neutrinos. "
+        ],
+        [
+            "\u00a0The course did a good job of focusing on experimental methods and not theory, which was a nice change from the core classes. However, in the first half of the course, homework was assigned with less than 2 days to complete it sometimes, which is hard for students who also have research obligations and who may not be able to complete it quickly and easily. The course could be improved by giving only weekly homework (and not twice-weekly homework), and by providing some feedback on assignments (we didn't even get feedback after we turned in our final project proposals). ",
+            "\u00a0The course might benefit from occasional problem sets in order to reinforce topics learned in class. ",
+            "\u00a0Very awesome lectures, especially the guest lectures. ",
+            "\u00a0More introduction to other aspects of nuclear physics would be appreciated. Also, I remember at the beginning, they said there would be an introduction to the standard model, but I didn't find it at the depth I expected. "
+        ],
+        [
+            "\u00a0I would only recommend the course to a student whose research interests fall into experimental particle physics. Otherwise, assignments are difficult to complete and it is difficult to make good connections to your real research interests. ",
+            "\u00a0I would highly recommend this course to any student interested in learning more about experimental nuclear/particle physics. It covers a considerable amount of ground in enough depth to be enriching, and provides ample practice for preparing and presenting research and results to one's classmates. ",
+            "\u00a0Yes, especially if you're interested in this kind of physics. It gives a great overview of the current experimental efforts in the field. ",
+            "\u00a0Possible, but not always. It requires a lot of effort, and if you are not doing neutrino physics, it kinda wastes some time. "
+        ]
+    ]
+}

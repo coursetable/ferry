@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51383/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The intersection of storytelling and movement as seen through historical case studies, cross-disciplinary inquiry, and studio practice. Drawing on eclectic source materials from different artistic disciplines, ranging from the repertory of Alvin Ailey to journalism, architectural studies, cartoon animation, and creative processes, students develop the critical, creative, and technical skills through which to tell their own stories in movement. No prior dance experience necessary.", 
+    "title": "Embodying Story", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "ELM294 303", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11952", 
+        "listings": [
+            {
+                "number": "313", 
+                "subject": "AFAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Renee Robinson"
+    ], 
+    "long_title": "Embodying Story", 
+    "extra_info": "A"
+}

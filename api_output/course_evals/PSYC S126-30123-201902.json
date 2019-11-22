@@ -1,0 +1,81 @@
+{
+    "crn_code": "30123",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            3,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            5
+        ],
+        [
+            1,
+            0,
+            1,
+            2,
+            4
+        ],
+        [
+            1,
+            2,
+            4,
+            1,
+            0
+        ],
+        [
+            0,
+            4,
+            4,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0So much about interpersonal relationships, how they affect us in our every day lives, how to nurture good, healthy relationships. ",
+            "\u00a0I am better able to evaluate my own relationships and understand just how many components are a part of relationships in general, not just romantic ones. I am more comfortable with evaluating, analyzing, and discussing research as well as developing my own questions about psychology topics. ",
+            "\u00a0I learned that social sciences have strong scientific research and that conclusions are only drawn from rigorous proves. Also, I learned about some of the ways there are to study relationships. ",
+            "\u00a0This course taught me a lot about romantic relationships and introduced me to the invisible part of them. Honestly, dealing with friends, family, and romantic partners is what we spend most of our times doing and this course taught me how to do it properly. "
+        ],
+        [
+            "\u00a0I loved the textbook as it was very easy to read and did not bore me! I think the discussions every week were also very helpful. I also thought many of the videos incorporated during the 2 hour lectures were good to allow us a break from note-taking and to see real-life examples. ",
+            "\u00a0It was a great course to take over the summer because you got pretty much all of the material covered in a semester in 5 weeks. It did a good job of providing the student with a lot of condensed material in a way that was engaging and easy to understand but also covering a ton of topics. It was engaging with a variety of videos and studies and explanations. I liked how different participation was. It could provide a little different variety between textbook and lecture. ",
+            "\u00a0It's really fast paced but super interesting "
+        ],
+        [
+            "\u00a0Yes, I absolutely recommend this course anyone at Yale College. Material covered in class are practical and applicable. ",
+            "\u00a0Yes!!! I loved this course because it was very applicable to my life. ",
+            "\u00a0I would definitely recommend this course to another student because it takes a look at a specific part of psychology that doesn't maybe seem like science but it is, without being too science-y. I really think that it engages the student and makes them take a closer look at their own relationships and help them discover what kind of person they are. It was a super fun class! ",
+            "\u00a0I would recommend this class to other students. It gave me an insight on how to deal with my life partner, a crucial aspect of life. I wish more people would take it. It will make their lives easier. ",
+            "\u00a0Yes, professor hirsch made everything really easy to understand and interesting. ",
+            "\u00a0no. "
+        ]
+    ]
+}

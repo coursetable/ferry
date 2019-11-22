@@ -1,0 +1,74 @@
+{
+    "crn_code": "11894",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            1,
+            4,
+            0,
+            0
+        ],
+        [
+            0,
+            3,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned the history of black dance forms and made connections between dancers. I learned how to effectively analyze dance videos, and the class improved my writing. "
+        ],
+        [
+            "\u00a0Since the classes were long, I sometimes felt bored in class. My favorite parts of the class were when we got up and learned the dances. I also learned a lot during the writing workshops. "
+        ],
+        [
+            "\u00a0absolutely ! ",
+            "\u00a0I would recommend this course to another student if they were interested in dance. Since I was interested in the subject, it made writing the papers much easier. ",
+            "\u00a0Probably not ",
+            "\u00a0Definitely take it, it is super chill, and the professor is really nice. He also gives good feedback to improve your essays. "
+        ]
+    ]
+}

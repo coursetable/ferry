@@ -1,0 +1,75 @@
+{
+    "crn_code": "23158",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            2,
+            1,
+            0,
+            0
+        ],
+        [
+            1,
+            1,
+            0,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I developed the skills to be able to critically evaluate technologies for application in low-resource areas. I learned the considerations for these technologies to be successful and even learned how to design an innovation and write a Gates Grand Challenge Grant. ",
+            "\u00a0good introduction to ideation, biotech, targeting technologies to the developing world. covers basic regulatory info, and lots of great speakers were brought into the classroom. "
+        ],
+        [
+            "\u00a0I really enjoyed the topic of this class but feel like it should definitely be organized better. Both Professor Gonzalez and the TA are very nice and knowledgable, but it seemed like their level of engagement with the course was low. We were able to hear from a lot of great guest lecturers, including the former President of MSF, but there didn't end up being that many lectures from Professor Gonzalez. It sometimes felt like the lectures didn't flow together well. These guest lectures could have been spread out more. In addition, assignments and readings were sometimes posted only a few days before they were due. Overall, I think this class needs better organization, but I still managed to take away a lot of key insights to apply to global health and really enjoyed the class. ",
+            "\u00a0very good content and readings toward the beginning of the class, great speakers. it could have been more structured toward the end. "
+        ],
+        [
+            "\u00a0Yes. Not very work intensive and you learn about the problems the developing world faces. You also learn about the behind the scenes process of creating an innovation and bringing it to market. Very enjoyable class with an amazing professor and TA. ",
+            "\u00a0I would recommend this course to another student. The topic of the course is very interesting and I learned a lot about how to apply technologies to low-resource areas. I am definitely leaving the course with insights to apply in the future. Just be aware that there are definitely some weaknesses in terms of organization. ",
+            "\u00a0yes, it is a great course if you're looking to develop an understanding of the role of biotech in low-resourced settings. not too much work, and you can get a lot out of the course!! "
+        ]
+    ]
+}

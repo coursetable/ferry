@@ -1,0 +1,87 @@
+{
+    "crn_code": "20703",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            4,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            7
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            7
+        ],
+        [
+            0,
+            0,
+            1,
+            7,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            4
+        ],
+        [
+            0,
+            0,
+            3,
+            5,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about experiment design (natural and random experiments), machine learning, and prediction techniques. ",
+            "\u00a0Regression models, intro to machine learning methods, empirical research analysis and replication ",
+            "\u00a0I learned many practical applications of econometrics. ",
+            "\u00a0I took ECON 132 directly after taking ECON 117, and I'm glad I did, because it builds off wonderfully on the foundational knowledge provided by ECON 117. ECON 132 doesn't dwell much on intro statistical concepts like hypothesis testing, but it provides great knowledge on a series of econometric techniques and a lot of the experimental methods used by economists. Through this course, we read and learnt a lot about important economic papers and how they employ those methods on a variety of interesting research questions about colonialism, charter schools, voting, the election, and so on. Before spring break, the class focuses more on experimental design/causal inference, and towards the end of the semester, it provides a high-level overview of different machine learning techniques. ",
+            "\u00a0I learned so much of how to critically evaluate econometric methods. I feel confident to be able to analyze and add to an Economics paper now. ",
+            "\u00a0I learned more about econometric methods, how they are applied in real empirical economic studies, and developed my skills in R to carry out these methods and replicate figures from the papers we discussed in class. "
+        ],
+        [
+            "\u00a0This was a very rigorous course. Professor Narita had the course very well organized and Sukjoon was a great TA. ",
+            "\u00a0An amazing range of materials introduced by research papers. The psets are extremely hands-off: challenging at times, but in retrospect very helpful and rewarding. ",
+            "\u00a0This course is fantastic because it integrates a lot of existing economic research with the econometric techniques we learned, so we feel that the theoretical knowledge we learn is really useful, and we know immediately how to apply them in a research context. I think this is what ECON 117 attempted to do, but somehow Prof. Narita was able to integrate it much more seamlessly. I enjoy looking at real economics papers immediately as we are learning a new concept/technique in each lecture. In addition, the structure and organization of the course is very good, as each lecture is clear and the concepts build off from one another, so we never get lost in the midst of the many proofs and techniques we learn.  This semester, Prof. Narita also invited the Chief Digital Economist at Amazon to give a guest lecture, and it's really cool to have this opportunity to hear about how companies like Amazon are starting to hire lots of economists to use econometric techniques like the ones we learned in class to solve their business problems.  \r\n\r\nIn terms of workload, it's doable with one PSET due biweekly (and the PSETs gets harder every time so we need the two weeks), a midterm, and a final. The  support from the TA Suk Joon was also amazing. \r\n\r\nPerhaps, one note is that students are required to have had experience in either R/Stata/Python. While new methods are introduced throughout the course (and are required in the PSETs, especially as many questions involve replicating results from existing economic papers), there's no formal instruction in coding outside of the TA-led sections and office hours. We're all so grateful to Suk Joon who gave us lots of advice with regards to coding. If you've taken ECON 117, or another Stats class that uses R/Stata, you're definitely well-equipped to take this class. ",
+            "\u00a0Strengths: Prof. Narita's lectures. He really makes them engaging and brings in interesting material. Another strength is the amount you will learn on the pset -- they're definitely challenging, but I do feel they better helped me understand the course. \r\nI honestly can't think of many weaknesses. ",
+            "\u00a0Weakness: 9am made it really hard to focus. Also, given that it was <10 people, I wish the class was made to be much more interactive rather than lecture style. That would have helped make understanding the mathematical concepts easier at 9am.\r\nStrength: Professor Narita is a great lecturer and makes the material really understandable at the level of intuition. ",
+            "\u00a0The major strength of this course is in its organization. The lectures were well-developed, always available on Canvas in a timely manner, and followed pretty closely. The professor came in with a plan and stuck to it, and you can tell that the lectures' explanations and examples had been well thought out ahead of time. The problem sets and their solutions were always uploaded in a timely manner. The TA made himself available for questions consistently. Overall, something I really value is a class that clearly shows you how to succeed - what concepts and examples are important - so that studying from week to week and for exams is not a guessing game. As long as you stay on top of the material, and reach out to the TA when you need guidance, you can do well. "
+        ],
+        [
+            "\u00a0I recommend this course to anyone who is interested in what econometrics can do. Prof. Narita is very good at bridging econometric theories and real-world applications. ",
+            "\u00a0I would recommend this course to students who are looking to pursue a Phd in Economics or who are interested in writing a Senior Thesis. Our homework is to read economic papers, recreate all their tables and graphs, and then do our own analysis with the data. ",
+            "\u00a0Yes. Having taken ECON 132, I am a lot more confident about doing empirical research for my senior essay. ",
+            "\u00a0Yes, this is a great course to take, especially for students in the Economics major who wish to write a thesis. It is very helpful to me to read and understand research papers as I write my thesis. ",
+            "\u00a0Take this class! I absolutely recommend this course to other students. It's my favorite Econ class at Yale so far as an Econ major and I believe it prepares me well to write a senior thesis. Absolutely take it if you're interested in exploring how economists do research. You'll come away feeling prepared to start your own research project as well. \r\n\r\nProf. Narita also clearly cares a lot about his students. He ordered tons of food for dinner for us during our 7pm exam on a Saturday and also invited a guest lecturer from Amazon to talk about the use of econometrics in a business setting. ",
+            "\u00a0Yes -- I think this is the best Econometrics II for someone who does not have a very very strong math background. That being said, you are expected to prove theorums, and my math definitely improved as a result. ",
+            "\u00a0Professor Narita is great and explains the concepts well. It's a great way to see these statistical/data science methods applied to really cool case studies: race, education, socioeconomic mobility, labor regulation, etc. "
+        ]
+    ]
+}

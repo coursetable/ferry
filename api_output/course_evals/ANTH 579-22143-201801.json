@@ -1,0 +1,74 @@
+{
+    "crn_code": "22143",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0By taking this course, I developed a lot of knowledge on how to deal with different situations that might occur during archaeological fieldwork. ",
+            "\u00a0Skills regarding planning and executing one's own excavation for research\r\nsurvey skills \r\ndocumentation\r\ndevelopment of research and execution of specialists "
+        ],
+        [
+            "\u00a0The professor has organised the course in a very engaging way that each class was interesting and fruitful. ",
+            "\u00a0Really great course regarding actual examples of on-site excavation\r\nInteraction with specialists of different kinds that work on these excavations \r\nInteraction and open-discussion regarding excavation issues and problems\r\n\r\nMaybe more hands-on experience with a mock planning of an excavation "
+        ],
+        [
+            "\u00a0Yes, I would definately recommend taking this course for graduate students, who will be organizing their fieldwork in the future. ",
+            "\u00a0Yes; Very good for getting first hand accounts of issues faced during actual excavations, and an opportunity to learn how to nominate a potential site for UNESCO or World Heritage. "
+        ]
+    ]
+}

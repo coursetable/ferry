@@ -1,0 +1,97 @@
+{
+    "crn_code": "13842",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            7,
+            2
+        ],
+        [
+            0,
+            3,
+            6,
+            4,
+            0
+        ],
+        [
+            1,
+            1,
+            9,
+            2,
+            0
+        ],
+        [
+            0,
+            4,
+            4,
+            5,
+            0
+        ],
+        [
+            0,
+            0,
+            7,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            6,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned more about processor design principles and basic processor concepts that are commonly in use today: caches, pipeline processors, etc ",
+            "\u00a0We learned about the instruction set architecture that acts as an interface between a computer's software and hardware. ",
+            "\u00a0An understanding of how a computer processor operates, in-depth knowledge of pipelining and caching, an introduction to virtualization (both virtual memory and virtual machines), and an overview of concepts in modern computing like secure processor and datacenter design. ",
+            "\u00a0Pretty interesting material. Learnt concepts and applied them in verilog. Interesting final projects. Implemented our own caches and 5-stage pipeline processor which was super cool ",
+            "\u00a0An overview of the basic principles of computer architecture. Focused mainly on computation regarding improving performance. ",
+            "\u00a0I learned the details of how a computer accesses memory, processes instructions, and optimizes for time and power consumption. You'll definitely want to have taken EE 201, and CS 323 is a great complement to take alongside since much of the material is the same. I feel like I have a deep understanding of what a computer does from the physical to the OS level. ",
+            "\u00a0This is a great introductory class into computer architecture. You will learn a good amount about how pipelined processors and multi-level caches work. ",
+            "\u00a0Knowledge about computer architecture. Verilog. ",
+            "\u00a0I learned about principles of computer architecture, details about the implementation of processors and caches, and contemporary topics in computer architecture such as Google's TPU and Intel SGX. ",
+            "\u00a0Basically overview of caching and pipelining, with some other computer architecture topics thrown in. "
+        ],
+        [
+            "\u00a0The course covers more or less the right amount of ground, and sticks to vital design concepts within the topic of the class. However, some concepts could have been tightened (I believe, for example, that we were taught what hazards are three times over the course of the semesterlectures were often repetitive like this and sometimes even within the same class) and prioritized (for example, studying multi-threading a little more would have helped more than studying Intel SGX). \r\n\r\nI enjoyed it, as a student looking to learn more about concepts at this level of the computer stack. Some concepts were also covered in CS323, but this went more in-depth and applied EENG concepts (a good thing). \r\n\r\nThe RISC-V textbook was fairly solid, but the Verilog textbook was solidly the worst book I've ever had the displeasure of attempting to work with. Get rid of it; it claims to be a tutorial but the very first introductory chapter expects readers to already know the ins and outs of Verilog. Its questions are unclear and, in some cases, impossible to compile. \r\n\r\nGet a TA, or consistently help studentswe can learn a lot from class but the homeworks are not derived from class and are not always clear. ",
+            "\u00a0I found the subject material very interesting, but unfortunately I found that I often had to teach myself what I needed to know for the class. What was taught in lecture was more conceptual, but what was asked for on the homework was incredibly specific topics. It was impossible to do the homework with just the information from lecture, which forced us to teach ourselves what we needed from the book in addition to grasping the high-level concepts from lecture. The homework also included verilog coding, which was never taught in lecture. We had to entirely teach ourselves how to code in verilog from a textbook, meaning that we had to grasp concepts self-taught from two textbooks in addition to what was taught in lecture. The sheer amount of material we were asked to learn was huge and made it incredibly difficult to grasp any of it; I often felt overwhelmed this semester because of this class. The problem sets were massively long, sometimes including up to 30 questions (8-10 problems, most of which had multiple (non-trivial) parts, sometimes as many as 10 parts to one problem). The two final projects both required extensive verilog coding, which was incredibly difficult because verilog was never taught in lecture and because we received no grades or feedback on our verilog homework. Also, having two final projects, an 8-page report (double-spaced), and a final exam for this one class took a massive amount of time, and I was found that I had to choose between studying for the final and working on the project for this class. Ultimately, this class was a huge amount of work on material that wasn't taught in class. The midterm and final exam were fair though. ",
+            "\u00a0This course does an excellent job of covering the basic principles of computer architecture and introducing the student to topics like caching and pipelining. It covers about the right amount of material for a semester-long course and presents the topics in a clear and understandable way.\r\n\r\nThe biggest weakness of this course was the lack of learning assistance provided. With no TA to provide guidance, questions and queries were relegated to the limited time slots of office hours which students often had difficulty attending. As a result, areas of difficulty were often glossed over and ignored by the student, rather than being explored and ironed out.\r\n\r\nA major point of contention among the students was learning Verilog: the resources we could find on the internet were not very helpful in completing our assignments and we all found the course textbook especially hard to understand. Some more guidance in learning this language, specifically for application to our homework assignments, is desperately needed, as many of us struggled with the homeworks and the final project not because of a failure to understand the material, but because of a failure to be able to communicate our knowledge with Verilog. ",
+            "\u00a0GIven that this is one of the biggest EE electives, a TA would have helped a lot. It was hard for the professor to handle all of our psets and projects and exams and that often lead to deadlines being postponed or really big office hours. Sometimes psets would be posted late leading to late submission and that didnt help in keeping a routine. Also the final projecs were posted late so the end of the semester was quite stressful and very challenging, trying to keep up with both exam and project work.\r\nBut professor was very helpful in office hours.\r\nVery interesting material, really good lecture slides, clear lectures ",
+            "\u00a0The course covers the fundamentals but I think lacks an element of critical thinking. It focuses on how to improve a design rather than examining the choices made behind the design. I think looking at examples of different architectures over time would be beneficial. ",
+            "\u00a0Some of the lecture topics were only tangentially relevant, but Jakub explained the key topics well. The problems in the textbook are a bit of a mess though, and sometimes the strategies for solving them would not be covered in lecture or even in the book itself. Grading was very haphazard and we usually had to wait a long time for grades with very little feedback. ",
+            "\u00a0The material is amazing, and Prof. Szefer is a great teacher. However, many of the problem sets also include verilog assignments, but we aren't taught how to code in verilog at all. There should definitely be at least one class on verilog. ",
+            "\u00a0The course content was interesting but I think the execution of the course could have been improved. While the first half of the course seemed well organized, the course after Thanksgiving break felt disorganized. The projects at the end of semester was fun and, in my opinion, really helps with understanding the course content. Meanwhile, I felt like the psets were not great and did not serve any useful pedagogical purpose. I think a way to amend this is to take an approach used by CS programming courses where psets programming tasks with public and private test cases. I also think this course would benefit from having a TA since Jakub seems to constantly be behind on grading and releasing psets. Another note is I feel like the room we were in is not an optimal space for lectures. The benches are perpendicular to the board and there are many visual obstacles in the way. ",
+            "\u00a0The class taught material at the intersection of electrical engineering and computer science, which is an interesting field that is not the focus of many other classes. I do think that it would improve this class if the workload was lessened and the lecture material was more spread out. We would have more time to really understand and absorb the material, and this class could be taken manageably alongside other rigorous courses. The lectures and homework from the book already covered plenty of material, and I think the Verilog aspect of the course could be reduced without much understanding of the material being lost, which could really help with the pacing of the lectures and the assignments. A definite strength of the course, however, was a very helpful professor who made time to meet with his students outside of class as needed. ",
+            "\u00a0The homeworks were awful. Both the main textbook and the Verilog textbook were terrible, with vague questions that didn't make sense. Homeworks were also very time consuming (probably my longest psets this semester), but not like other classes where the concepts are difficult and it takes you a long time to graspthese homeworks were the type that are conceptually easy, but involve tedious arithmetic and take forever to complete. More guidance on the project would've also been appreciated; understanding how to even put the files together was complicated. "
+        ],
+        [
+            "\u00a0If you liked EENG201 and you like being at the level where hardware meets software, take this class. You'll learn more about how a processor does what it does, starting from the assembly-language level and going down to the model of processor subunits (such as the ALU and register files). We ended up writing a pipeline processor and a memory cache in Verilog. However, expect to do all work in a compressed timeframe: homework and projects will often go up late and it is very difficult to get clarifications on what is expected of you. If you are an EECS major and are considering taking this concurrently with CS323: there is a portion of the curriculum that will overlap and will be very helpful to your understanding of CS323 concepts. However, because there isn't a lot of time to do projects and CS323 psets take a lot of time, consider whether your time management skills are good enough to have two time-consuming coding classes. ",
+            "\u00a0The subject material is very interesting and I'm very glad that I now know what I've learned from this class. That being said, I would warn anyone considering taking this class that it's a massive amount of work and you'll have to teach yourself almost everything you need to know for the homework and projects. The problem sets are incredibly long and almost always require close reading of the textbook to find the answer, and the final projects (2) are in verilog, which you'll have to entirely teach yourself. You'll have to complete 2 final projects, a 4 page single-spaced report, and a final exam. Even though I only took 4 classes this semester, I often felt overwhelmed because of this class. ",
+            "\u00a0This is a great course if you want to really understand how a processor works and how it increases its performance with pipelining and caching. These topics are explored in detail along with other ideas in computer architecture like virtualization. If you've taken CS323, this covers many of the topics presented in that class, but in greater (more satisfying) depth. A few words of warning: be sure you have a moderately strong EE background (201 should be sufficient) to understand the circuitry used to create things like multiplexors, addition circuits, etc.; and be prepared to learn to write code in Verilog, which is difficult to learn and has very few online resources to help in that regard (comparatively). ",
+            "\u00a0Not a very interesting course unless you want to use it as an elective for your major. The project is pretty difficult because its in Verilog which you are expected to learn on your own and its heavily weighted. ",
+            "\u00a0This is an elective where you will come away with new understanding of the material. If you've taken a course with Jakub before, you know what you're getting into. Make sure to ask lots of questions and go to group work sessions. Like most EE courses, success relies heavily on support from your cohort, since problems are often ambiguous or impenetrable for someone working alone. The workload is medium to high, with weekly problem sets that involve answering lengthy questions (sometimes with dozens of parts), evaluating tables of instructions, and coding in Verilog (which is quite unlike most other languages). The final project is a large Verilog assignment that is manageable but lengthy. Grading is capricious but generous. ",
+            "\u00a0Take this class if you're interested in computer design. There's certainly scope for improvement, but the material itself is definitely worth it. ",
+            "\u00a0I came in very excited about this course but left quite disappointed. While the course content was very interesting, I think the course was not well executed. Psets throughout the semester felt mundane and it was not until the final projects (implementing cache and pipeline processor in Verilog) that I felt excited about the course. That being said, I'd still recommend this course to anyone interested in computer architecture (primarily because you still learn interesting things). ",
+            "\u00a0If you know you will be able to spend a lot of time on this class and if you already feel comfortable with Verilog, you should consider taking the class. The subject material is interesting and the class will teach you a lot about the intersection between electrical engineering and computer science. However, if you do already have a workload-intensive semester and/or are unfamiliar with Verilog, this class may not be the best to take. The class requires about one problem set every week, which consists of questions from the book in addition to some Verilog programs, two Verilog projects (a cache and a pipeline processor), a midterm, and a final. The homework and projects are time-consuming and may be difficult to juggle with your other classesbut if your workload for your other classes looks manageable, this would definitely be a good class to consider. ",
+            "\u00a0It was ok. Professor Szefer's great but the class semed disorganized. "
+        ]
+    ]
+}

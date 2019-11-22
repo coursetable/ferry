@@ -1,0 +1,80 @@
+{
+    "crn_code": "30270",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course was an introduction to forensic anthropology. I learned the history and purpose of the field, as well as the responsibilities and goals of those who work in the field. I also learned basic human osteology, including histology, development, anatomy and physiology, and bone identification. Three subjects were studied in-depth: forensic odontolgy, facial reconstruction, and ossuary analysis. Important criminal cases, as well as an introduction to forensic evidence and recovery, were also covered in class. ",
+            "\u00a0I developed my skills in writing reports, I learned a lot of aspects of human anatomy, I got to know the identification techniques applied in forensic sciences and I had an opoortunity to use this knowledge in real life situations ",
+            "\u00a0in this course I've learned almost all the bones in the human skeleton. Not only that, but also be able to identify age, sex, and ancestry just by looking at the skull. In this course I also learned how to write a proper lab report, which will be very useful for me in the future ",
+            "\u00a0I developed new skills in the practical application of osteometric and craniometrics using the scientific methods appropriate in the medicolegal context.\r\nThis course offered insights into the \"real world\" application of forensic anthropology. ",
+            "\u00a0The ability of extracting info from bones "
+        ],
+        [
+            "\u00a0The textbooks were not necessary for the completion of the course. The powerpoints and sources were easily accessible and helpful. The quizzes and exams were interesting, engaging, and straightforward. The content was interesting, and lectures were supplemented with many hands-on activities using real specimens. I think that too much time was spent on forensic odontology, and not enough class time was devoted to learning about the post-crania skeleton and trauma. All feedback on assignments was punctual and constructive. ",
+            "\u00a0Strengths: pleasant atmosphere, a lot of practical excercises that helped us to apply theoretical knowledge, a lot of interesting material\r\nWeaknesses: none ",
+            "\u00a0This is a great course, there are no weaknesses in it. "
+        ],
+        [
+            "\u00a0I would recommend this course to another student. The subject itself is interdisciplinary and would be of interest to those entering any branch of forensics, medicine, or anthropology. The demand for scientific reading and writing is overall fairly low, but can be adjusted based on the students needs and prior experience. This makes the course accessible to non-science majors but also useful to those wanting real lab experience. The content is engaging, and there was a nice mixture of lecture and lab activities. The course moved at a very fast pace and assignments often overlapped, but the workload was not overwhelming. ",
+            "\u00a0I absolutely would as it challanges you but not in a way that overloads you with work. The professor is very understanding and methods of teaching applied by the professor are very effective. We are taught a lot of theory but the professor shows us how to apply this knowledge in real life situations. ",
+            "\u00a0I would recommend this course only to those who are interested in forensics, because if they are not then the workload will not be fun. All the things you learn in this course are super interesting, but then you will not be able to apply the knowledge obtained unless you become an anthropologist or a criminologist ",
+            "\u00a0Yes, I would highly recommend this course for students who are interested in entering the field of forensic anthropology and/or physical science. "
+        ]
+    ]
+}

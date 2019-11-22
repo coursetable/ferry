@@ -1,0 +1,80 @@
+{
+    "crn_code": "13707",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            2
+        ],
+        [
+            1,
+            1,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Many different aspects of current immunological research as well as a basis for where this field came from. ",
+            "\u00a0I developed a comprehensive knowledge of the human immune system. ",
+            "\u00a0The fundamental conceptual framework of the immune system; The logic of the organization of immune functions. ",
+            "\u00a0Developed an understanding for immunology. "
+        ],
+        [
+            "\u00a0The multitude of lecturers made it a bit discordant with other lectures in the course, so that individual topics were either skimmed over too much or lost in translation between lectures. Some lectures were fantastic while others were less organized and more chaotic with how topics were overviewed. The best lectures seemed to have a common theme: a very good basis in the course reader for material to be covered, an overview of what was to be covered in that class lecture, and use of summarizing very key points through bullet points after a long discussion on a single topic. Other lectures mentioned many different ideas or concepts, and failed to really emphasize what the key takeaway for learning about a certain topic. ",
+            "\u00a0The course could be improved by having the instructors talk to each other about what was covered. Several times during the course the current instructor would repeat topics or be unaware of what had been taught. \r\nMore detailed feedback on exam questions would also be helpful. ",
+            "\u00a0Strengths:\r\nThe course itself is so precious because some of the lecturers are exactly the researcher that made the discovery introduced in the lecture; Most lectures were well organized and also fascinating; we learned not only the knowledge and concepts but also some invaluable advice on doing research.\r\n\r\nWeakness:\r\nThe order of the lectures could be better arranged for a more holistic understanding of the big picture. Although I understand this could be hard due to the schedule of the lecturers. ",
+            "\u00a0A weakness is that this course is directed for students in Immunology with experience in Immunology and not for anyone with a general interest in Immunology with a want for a better understanding of the field. "
+        ],
+        [
+            "\u00a0I don't know. As I said, I feel that the course itself was a bit erratic in the quality of the lectures as well as a lack of true discussion revolving around the papers that were \"required\" reading. Also, the grading was on the poor end, as it took ages to get homeworks returned or the one midterm returned, and even then one entire essay question was missing, thus causing the test to lose an entire 10 points. However, since overall it is a true survey of immunology and the current research, it is a useful course, although not executed in the most efficient or productive way. ",
+            "\u00a0If the student was interested in the subject matter, then I would absolutely recommend this course. It is very comprehensive, and it is well taught. ",
+            "\u00a0Yes! Any student interested in immunology should definitely take this course, with both textbook discoveries introduced by the researcher who made it, and cutting-edge perspectives of the field. ",
+            "\u00a0I would not recommend this course unless the student has prior experience in Immunology. "
+        ]
+    ]
+}

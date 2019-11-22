@@ -1,0 +1,69 @@
+{
+    "crn_code": "25733",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's <b>sensitivity to students and ability to provide students with adequate feedback</b> was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a015 hours per week; 10 during spring break and finals ",
+            "\u00a05-10 ",
+            "\u00a03 ",
+            "\u00a015 "
+        ],
+        [
+            "\u00a0I really appreciated the opportunity to practice the research skills that I learned during my first year of the MPH program. It showed me what research looks like as a career, real-world practices, common issues, etc. \r\n\r\nI built a great relationship with my PI, who also introduced me to other researchers at Yale who I would have never met if I had just taken another class. I also got to build actual research experience for my resume, which was super influential when I was job searching for post-grad life. ",
+            "\u00a0Working with the Cornell Scott Hill Health Center took longer than expected to get going on the project, but once the project was started it was a very exciting and interesting project- we were able to actively be engaged in the DM clinic and observe how the clinic runs each day. Moving forward, future projects with CSHHC may benefit from making sure that the necessary paperwork and forms are completed prior to starting the project. ",
+            "\u00a0Great opportunity to get practical experience while at YSPH. "
+        ],
+        [
+            "\u00a0Receptive and knowledgeable ",
+            "\u00a0Trace was very helpful in guiding our project and helping to provide information, tools, and feedback as we continued to work throughout the semester. For future semesters, it may be helpful for us to schedule more regularly meetings to check in with Trace to keep our project on track. ",
+            "\u00a0Great instructor/advisor in the project. Always willing and able to meet with us to provide guidance and feedback. "
+        ],
+        [
+            "\u00a0Great opportunity to practice research skills and gain real-world experience while in school. ",
+            "\u00a0Working with Cornell Scott has so far been an interesting and hands-on experience that has provided a \"real life\" opportunity to work with a local community heath clinic and interact with the providers and patients. If you are looking for this type of project to apply your public health skills in the New Haven community, I would highly recommend this course and Cornell Scott as a community partner! ",
+            "\u00a0Partnership with Cornell Scott Hill Helath Center to provide an evaluation plan and implement and evaluation of the Diabetes Clinic. ",
+            "\u00a0A great learning experience! "
+        ]
+    ]
+}

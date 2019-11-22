@@ -1,0 +1,124 @@
+{
+    "crn_code": "12561",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            2,
+            3,
+            13,
+            9,
+            10
+        ],
+        [
+            2,
+            1,
+            8,
+            9,
+            17
+        ],
+        [
+            1,
+            0,
+            8,
+            10,
+            18
+        ],
+        [
+            2,
+            1,
+            10,
+            9,
+            15
+        ],
+        [
+            6,
+            8,
+            10,
+            9,
+            4
+        ],
+        [
+            3,
+            7,
+            19,
+            5,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0introduction to probability theory ",
+            "\u00a0I learned how to better use conditional probability and conditional expectation. I also got personal insights into ways to potentially quantify dependence between two events. ",
+            "\u00a0New concepts in Probability Theory. ",
+            "\u00a0some basic knowledge about probability ",
+            "\u00a0basic probability ",
+            "\u00a0Knowledge of probability distributions!  Huzzah! ",
+            "\u00a0I learned more about probability theory. ",
+            "\u00a0Basic knowledge of probability theory ",
+            "\u00a0The basic theory of probability.\r\nThis course is awesome because instructor could develop the idea thoughtfully and intuitively. ",
+            "\u00a0Nothing. ",
+            "\u00a0problem solving\r\nprobability theory\r\ncritical thinking ",
+            "\u00a0It was a refresher course for me in basic probability. I hope it has given me enough of a foundation for future courses in probability, in particular Stat 600. ",
+            "\u00a0I learned all the chapter in the textbook and I understand more deeply and better in very detailed knowledge than my bachelor degree in Rutgers. ",
+            "\u00a0The course was an introduction to probability theory (discrete and continuous probability distributions, independence of random variables, moment generating functions, etc.). Developed better sense of probability in both a practical and theoretical sense. ",
+            "\u00a0Hard to enumerate them all. A fundamental set of skills that are applicable to a wide range of fields, from philosophy to law. ",
+            "\u00a0A foundational understanding and appreciation of probability theory, which will undergird further training in statistical theory. ",
+            "\u00a0Basis of probability theory ",
+            "\u00a0I learned about the mathematical foundations of statistics and the theory behind it. "
+        ],
+        [
+            "\u00a0strengths: covered a lot of material, good professor\r\nweaknesses: course was very easy prior to midterm (took awhile to review simple concepts), then sped through more advanced concepts after midterm ",
+            "\u00a0Strength: the course provides the basic knowledge for nearly all statistical course. ",
+            "\u00a0Possibly making the course a little more rigorous could improve it. ",
+            "\u00a0Very good at introducing new material. ",
+            "\u00a0Strength: This course is really good!\r\nWeakness: none! ",
+            "\u00a0strength: instructor teaches really good\r\nweakness: it's too easy at least for the first half of semester ",
+            "\u00a0I wish it had covered more topics.  Sometimes the instructor ran out of slides by the end of class because he anticipated a slower pace than he kept, and I wish that he'd always had extra slides so that we could have covered more. ",
+            "\u00a0The course is great. ",
+            "\u00a0The instructor delivers excellent speeches, with clear illustrations of the basic knowledge. ",
+            "\u00a0The content of this course is better to be developed more deeply. ",
+            "\u00a0Course was designed to be excessively easy (midterm average 98%, assignment averages over 90% and final exam took less than 90 minutes despite being given 210 minutes). \r\n\r\nCourse never tested half of the content (e.g. distribution theory) that was covered. \r\n\r\nExams had 'cheat sheets' that made the exams possible to do without actually learning any of the material. Since none of the theory (or intuition) was ever tested, you could literally copy the method for any question onto your sheet, then reproduce that on the exam without actually learning or thinking about the course content. ",
+            "\u00a0strengths: the homework of the this course help me to understand the course material a lot.\r\nThe lecture slides are very informative, clear, and easy to follow.\r\nweaknesses: it would be better if there is more examples given in the lecture. ",
+            "\u00a0This course, to my perception, seemed unusually straightforward for a probability class at this supposed level. If I use my undergraduate experience with such probability courses as a benchmark comparison, I would say this class was considerably less challenging. ",
+            "\u00a0The instructor have awesome lectures and very clear and understandable slides for us to study. The difficulty of the homework is much higher than the exam which is exactly what I want. Grade is very fair. ",
+            "\u00a0Strengths: Excellent professor, interesting material, good lecture notes. ",
+            "\u00a0Winston is a great lecturer. I don't think there were many weaknesses to the course, honestly. ",
+            "\u00a0Strength: well explained.\r\n\r\nweakness: too easy ",
+            "\u00a0I enjoyed that the class allowed us to collaborate on homework. However, I did not enjoy how little homework was weighted and how much the two exams were weighted. It put a ton of pressure on us to do well on the exams. ",
+            "\u00a0Well organized. "
+        ],
+        [
+            "\u00a0yes, the material is an integral foundation for other statistics courses. ",
+            "\u00a0Yes, if they have not taken a probability or statistics course before. But if they have, such as incoming graduate students, I might not. ",
+            "\u00a0Yes it was very good and great for learning about introductory concepts in probability theory. ",
+            "\u00a0Definitely, this is the best course I've ever taken! ",
+            "\u00a0No if it's not a core and you have already taken probability course.\r\nYes if you don't have relevant background ",
+            "\u00a0Yes!  I had a blast. ",
+            "\u00a0Yes. ",
+            "\u00a0I would strongly recommend it if he/ she needs to take a course covers fundamental probability knowledge. ",
+            "\u00a0Yes I will recommend this course to other students who are a new learner of statistics. ",
+            "\u00a0Yes, this course provide basic knowledge in probability theory. It is useful to many subjects. ",
+            "\u00a0Yes, I would, because it's important to the theoretical foundations that form the basis of mathematical statistics and more advanced probability theory. And these things show up over and over. ",
+            "\u00a0Yes. I strong recommend this course to student because the instructor is really an excellent professor!!!!He clearly explain every detail for his students. ",
+            "\u00a0Yes, every student interested in mathematics or statistics should take this course. ",
+            "\u00a0Uncertainly is a fact of life, and this course introduced it well. I'd recommend this course to students of most majors. This basic knowledge of probability is a must for social sciences, law, philosophy, and natural sciences. ",
+            "\u00a0Yes, this is a necessary course if you are at all interested in anything related to statistics or probability. ",
+            "\u00a0No. I thought the exams were poorly constructed. I did not like the homework. ",
+            "\u00a0The professor is very nice and I learned the most from TFs. Decent if you have a very strong background in math. ",
+            "\u00a0Yes ",
+            "\u00a0Yes. "
+        ]
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "crn_code": "10499",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            1,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Solid state physics. ",
+            "\u00a0I certainly learnt a lot about solid state physics. Professor Ismail-Beigi made a lot of good problem sets that developed my understanding of various theories without feeling like busy work.\r\n\r\nThe course topics are probably relevant for any aspiring physicist, even if you do not plan on going into solid state physics. This is because the topics are highly relevant to lots of experimental instrumentation that you would find in any physics sub-field. ",
+            "\u00a0I learned a lot about the theoretical basics of solid-state physics. Everything from phonons forwards (i.e. phonons, metals/the Drude model, the Sommerfeld/quantum model, energy bands, semi-conductors, junctions) was very well taught. In particular, I appreciated Professor Ismail-Beigi's commitment to making sure we had a good sense of the approximate scales of various processes and use of Fermi-style estimation to help us understand scales. "
+        ],
+        [
+            "\u00a0Professor Ismail-Beigi responds really well to student feedback! ",
+            "\u00a0I found the course examinations very difficult, often referring to various theories that I did not remember by heart but could certainly look up and understand in a textbook if need be. Of course, it is the prerogative of the professor to choose what aspects of someones learning to test on an exam. In this case I simply disagreed with Professor Ismail-Beigis choice.\r\n\r\nI found Professor Ismail-Beigi to be a very able lecturer. His enthusiasm was fairly contagious, and I was often easily engaged by his discussions. There are also plenty of office hours, which was fantastic and really helped my understanding. ",
+            "\u00a0Strengths - Professor Ismail-Beigi was great! Lectures were interesting and informative, a good mix of equations, diagrams, and general principles.\r\nWeaknesses - most of the weaknesses of the course were fixed after Professor Ismail-Beigi received midterm feedback in October, which is commendable. One remaining problem was that the problem sets were sometimes unclear (as to what we were supposed to do) and a little too conceptual sometimes. "
+        ],
+        [
+            "\u00a0Good class at the graduate level for solid state. ",
+            "\u00a0Yes, but only if it is taught by Professor Ismail-Beigi. Solid state physics is honestly a pretty dull subject. However, Professor Ismail-Beigi does a great job making you excited and interested in the subject. Of course it is also a very useful subject, for which it deserves further recommendation. ",
+            "\u00a0I'd certainly recommend this to any physics majors - solid state is a fascinating combination of quantum, E+M, and stat mech and will likely be your first course that actually applies all of the principles you learned in 420/430/440. Also Professor Ismail-Beigi is great. "
+        ]
+    ]
+}

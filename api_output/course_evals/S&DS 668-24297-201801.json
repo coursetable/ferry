@@ -1,0 +1,105 @@
+{
+    "crn_code": "24297",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            5,
+            12,
+            6
+        ],
+        [
+            0,
+            1,
+            2,
+            12,
+            8
+        ],
+        [
+            0,
+            0,
+            4,
+            8,
+            10
+        ],
+        [
+            2,
+            1,
+            5,
+            10,
+            4
+        ],
+        [
+            0,
+            1,
+            2,
+            16,
+            4
+        ],
+        [
+            0,
+            1,
+            6,
+            11,
+            6
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned approaches to non-parametric statistics and their parametric counterparts ",
+            "\u00a0An overview of nonparametric techniques, with particular focus on the more recent work related to Professor Lafferty's research. ",
+            "\u00a0I learned a great deal with regard to various modern techniques in nonparametric estimation. I particularly learned a great deal in density estimation, regression techniques, bayesian statistics, shrinkage estimators, and the mathematical culture of machine learning. ",
+            "\u00a0I learned many aspects of nonparametric estimation methods, as well as intuitions behind these methods and usage and implementation of these methods with R.  I also gained a general idea on how to select the proper estimation methods based on prior assumptions and properties of the data. ",
+            "\u00a0We learnt both theories on nonparametric statistics/machine learning and related techniques on empirical data analysis. ",
+            "\u00a0Kernel estimation, Sparse data modeling, basic nonparametric concepts, models and corresponding coding skills. ",
+            "\u00a0kernel regression, wavelet, RKHS, Nonparametric Bayesian, ",
+            "\u00a0I am grateful to have learned about how nonparametric statistical methods differ from parametric statistical methods, and why one might be more appropriate in a certain setting than the other.  Particular topics included density estimation, the bias-variance tradeoff, nonparametric bayesian methods, nonparametric regression, wavelets, cross-validation, the normal means model, Stein shrinkage, high-dimensional graph estimation, and, sparse additive models.  I thought it was great that Prof. Lafferty incorporated a fair amount of relatively recent research into his lectures, and this made the class very interesting. \r\n\r\nOf all the statistics classes I have taken, this is probably the one that expanded my understanding of statistics the most.  Even though I had taken many statistics classes prior to this one, I had never studied nonparametric estimation before, and I think this class really widened my knowledge of different types of statistical models and how to analyze how suitable they are in various settings. ",
+            "\u00a0Understanding of various non-parametric methods ",
+            "\u00a0nonparametric techniques ",
+            "\u00a0A lot about nonparametric statistics. I'm especially interested in graphical models and kernel smoothers. ",
+            "\u00a0I finally have a much better sense of what nonparametric statistics are, it's value, and the problems that people are working on within that area. ",
+            "\u00a0Nonparametric modeling techniques, programming practice. "
+        ],
+        [
+            "\u00a0The emphasis on theory was welcomed, but a few more worked-out problems, in addition to the code posted, would have been helpful. ",
+            "\u00a0The strengths are the material and the professor. Professor Lafferty is knowledgable and engaging, and the material often isn't covered elsewhere in the department.\r\n\r\nThe weaknesses are organizational. It was quite a large course for a single TF, and we got very little feedback on homework. ",
+            "\u00a0The strengths primarily include a good, in depth, overview of the mathematics behind many common machine-learning techniques. It also gave great insight into when each technique is, and isn't, applicable based on assumptions and end-goals. No overall weaknesses come to mind. ",
+            "\u00a0The course materials are well organized and explained in sufficient detail. The homework and assignments could enhance learning as they cooperate well with the course materials. ",
+            "\u00a0The lectures were very informative and interesting. A strength of this course was the combination of nonparametric theories and machine learning techniques, which is an attractive and helpful topic. ",
+            "\u00a0strength: good lectures.\r\nweakness: Sometimes, a little unclear about the applications. ",
+            "\u00a0The material is really difficult, but the lecturer explained it really well ",
+            "\u00a0Strengths:  Challenging class that will teaches a lot of material which is not frequently taught in other statistics courses.  Helpful for graduate-level study.  Assignments are helpful for gaining a better understanding of the material.  The project is so much fun, and a great way to end the semester by delving deeper into a topic you found interesting.\r\n\r\nAreas of improvement:  It would have been nice to get a little bit more feedback on the assignments. It wasn't clear why/where points were taken off, if any. ",
+            "\u00a0Too many tasks ",
+            "\u00a0I think the course material is quite difficult. If there are more detailed notes and more theoretical exercises, I will be able to understand better. ",
+            "\u00a0Professor's availability felt pretty low ",
+            "\u00a0Strength: good assignments. Weakness: could be more theoretical and explain more math details. "
+        ],
+        [
+            "\u00a0Yes, this is a challenging but worthwhile course. ",
+            "\u00a0Yes, I would recommend this course to anyone who intends to use machine learning and/or advanced statistical techniques. It will enforce a level of understanding about when various techniques are, and aren't, applicable. ",
+            "\u00a0Yes. This course offers a general insight to nonparametric estimation and the instructor gives insightful and incisive explanations for not only the methods but also ideas behind the methods, which is helpful for any students who wish to further explore this field. ",
+            "\u00a0This course would be helpful for students interested in either the analytic/theoretical or the empirical/applied aspects. It covers a broad class of useful and interesting techniques. I would recommend it to students with related interests. ",
+            "\u00a0This course needs a lot commitment and it would be easier for students with solid mathematical/statistical background. It is a great course has rick materials. ",
+            "\u00a0Yes. ",
+            "\u00a0Yes! I loved this class and would definitely recommend it.\r\n\r\nI would just want to add as a caution that the assignments do take a fair amount of time, and it is important to budget the time you are given to complete the assignments wisely.  Expect a minimum of about 20 hours to complete the assignments - each involves lots of programming, lots of LaTeX'ing (if you desire), and lots of math.  I did think the assignments were really fun, and I learned quite a bit from doing them, but would just want to warn anyone who will be taking the class that it would be important to set aside a fair amount of time to devote to it. ",
+            "\u00a0The course is quite mathematical and it seemed like most of the students were either math, statistics, or computer science ph.d students. The skills that are taught in this course seem much more applicable for academia than for an industry job. If you want skills that are marketable for industry, I would take Susan's class instead. ",
+            "\u00a0Yes ",
+            "\u00a0Yes. ",
+            "\u00a0Yes. But I think one needs to expect a lot of time spending on this course. ",
+            "\u00a0Yes, a very useful and fun class. "
+        ]
+    ]
+}

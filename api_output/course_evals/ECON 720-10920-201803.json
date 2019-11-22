@@ -1,0 +1,76 @@
+{
+    "crn_code": "10920",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            1,
+            1,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            2,
+            1,
+            1,
+            2
+        ],
+        [
+            1,
+            2,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ],
+        [
+            0,
+            1,
+            2,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Classical Trade Theory\r\nGeneral Spatial Models ",
+            "\u00a0Basic trade theories, spatial models, derivations of consumer and firm problems, equilibrium, comparative statics. "
+        ],
+        [
+            "\u00a01st quarter: clear presentation, good overview especially for those of us (most) who haven't ever taken a trade class before. More applications/empirical papers (like ADH--that day we discussed ADH, political economy papers with trade deals, etc. was very interesting) would be nice to mix it up a little.\r\n2nd quarter: ambitious material, advanced level, mastering it would make you able to really understand, not just skim, spatial literature when you read it. Nice to have a unified approach, going over each step of a trade model and then seeing how various specific models fit in.  Sometimes, we were a bit lost in the generality.  Maybe you could incorporate some of the material from the undergrad slides--go over a specific simpler example from those slides first and then move to the more general version in the textbook.  In general, having slides might help follow the lecture so students don't have to worry about getting the notation on paper and can focus on understanding each step.  Also, perhaps more of a focus on specific papers/models -- like the last day when we talked about Armington and EK (?) producing the same results.  We did mention them along the way, but sometimes without much context, so having a clear definition of Armington, Melitz, etc. with all associated assumptions somewhere at the beginning of the class and textbook .  Maybe a table with models in the rows and each column is for a different assumption or characteristic--goods continuum/production structure (where which goods are produced), market structure, labor mobility etc. ",
+            "\u00a0This course was a tale of two cities. The first half with Giovanni was full of old and boring ge papers from the seventies. Then the second half was Costas' papers, including working papers, which are frankly too complicated for second year students with no exposure to trade. Please revamp the syllabus to find a middle ground! ",
+            "\u00a0There were no assignments until the midterm, and there was no feedback on assignments after the midterm, which made it difficult to learn from mistakes. ",
+            "\u00a0Giovanni's part of the course provided a very useful introduction to basic trade models.  Costas's part was not helpful. "
+        ],
+        [
+            "\u00a0Yes, rigorous overview of general trade theory and spatial models.  The next big thing in econ! ",
+            "\u00a0Trade is a cool field. Tbh the class isn't that great though. "
+        ]
+    ]
+}

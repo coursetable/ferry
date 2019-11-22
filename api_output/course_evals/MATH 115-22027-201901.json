@@ -1,0 +1,81 @@
+{
+    "crn_code": "22027",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I developed skills that required me to think logically and come up with creative solutions to math problems. ",
+            "\u00a0Learned about integrals, Taylor series, sequences, areas and volumes under curves, and polar coordinates. ",
+            "\u00a0Some skills pertaining to calculus 2. ",
+            "\u00a0It's basically AP Calc BC "
+        ],
+        [
+            "\u00a0The strengths of this class were that the problem sets were taken from the textbook, so all of the questions directly correlated with what we were learning in class. in other math classes, the problem set questions were very different than what we were learning in lecture. One weakness of the class was that the instructor assigned a lot of \"pair problems\" during class, and we gave us way too much time for that because if we didn't know it right away, we were just sitting there waiting for him to explain the problem. I think that worked examples would have been a much better use of class time. ",
+            "\u00a0Well structured, tests were fair, as were the problem sets. ",
+            "\u00a0The greatest weakness of this course was making students do pair problems. I personally did not like doing these problems as it made me uncomfortable to work with a partner when at times I did not understand the material. This aspect of the class would make me feel stressed and insecure about my math skills. A better alternative would be problems done for each individual to check understanding. Those who wish to work with others would be allowed to work with others, while those who were not yet comfortable could attempt to work out a problem on their own to see where they lie in terms of understanding a concept. ",
+            "\u00a0A lot of self study required to fully understand the concepts and be comfortable engaging with exam questions. ",
+            "\u00a0I enjoyed the teaching of this course. The modules were a great addition to aid in learning the material. "
+        ],
+        [
+            "\u00a0I would recommend this class to someone, especially if taken with Math 112. ",
+            "\u00a0Yes, it's a prerequisite. ",
+            "\u00a0If you do not need this course for a major requirement I would not recommend taking this course. ",
+            "\u00a0Yes if it's a prereq for other classes you want to take "
+        ]
+    ]
+}

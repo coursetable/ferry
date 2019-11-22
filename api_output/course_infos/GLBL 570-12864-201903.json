@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49989/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This seminar is a practical introduction to the negotiation of international agreements, with a focus on climate change. Through the climate lens, students explore the crosscutting features of international agreements, the process of international negotiations, the development of national positions, advocacy of national positions internationally, and the many ways in which differences among negotiating countries are resolved. The seminar also examines the history and substance of the climate change regime, including the 1992 UN Framework Convention on Climate Change, the 1997 Kyoto Protocol, the 2009 Copenhagen Accord, and the 2015 Paris Agreement. The seminar ends with a mock climate-related negotiation.", 
+    "title": "Negotiating International Agre...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 12, 
+            "location": "SML 177", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 14
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12864", 
+        "listings": [
+            {
+                "number": "570", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Susan Biniaz"
+    ], 
+    "long_title": "Negotiating International Agreements: The Case of Climate Change", 
+    "extra_info": "A"
+}

@@ -1,0 +1,84 @@
+{
+    "crn_code": "20719",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            3
+        ],
+        [
+            1,
+            2,
+            2,
+            1,
+            1
+        ],
+        [
+            1,
+            1,
+            2,
+            2,
+            1
+        ],
+        [
+            1,
+            3,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about the methodology, theory, and current topics in development economics. This class gave me a great understanding of what it means to be a development economist and the type of work that is done in the field. I learned how to data visualizations in R and created my first research poster. This was a very practical course, and I appreciate that a lot. ",
+            "\u00a0Worked a lot in R and definitely developed a lot skills as it relates to presenting data in graphs, tables, et.c ",
+            "\u00a0This course was an exploration of various frameworks/ways to approach economic development. we learned the impact (both positive and negative)  of topics like education,infrastructure and microcredit financing on economic growth for individuals and households in countries in South Asia.  We primarily read economic papers and discussed their findings in class. We also learned how to work with R to create data visualizations. ",
+            "\u00a0I learned how to incorporate statistical analysis tool like R to derive economics interpretations of issue like education, public health, immigration, and equality. This course really opens up my understanding of the application of economics to current issues in developing countries. In addition to empirical methods, the class goes beyond traditional economic theories to explain market constraints that people face every day. ",
+            "\u00a0I got to revisit economic thinking and learned a lot about different aspects of economic development and learned a lot about R. "
+        ],
+        [
+            "\u00a0A strength of this course was the variety of assignments. For example, I thought having a map quiz was creative and essential and having and readings and psets was a good mixture.\r\n\r\nHowever, I thought this course assigned too much work. The psets were very long especially because none of the coding techniques were taught in class. It was frustrating to have to learn how to do them by pouring through github, especially because I couldn't make the professor's office hours. Although they didn't seem particularly helpful for people who did go. Having mandatory psets, weekly readings, biweekly psets, a map quiz, a brief midterm presentation, a midterm, a significant final project, and a final, was an undue amount of work. \r\n\r\nI also thought this course wasn't sufficiently critical of the development economics mindset. Although there was recognition that macro economic policy has largely failed, I would have appreciated a few lectures problematizing development economics. ",
+            "\u00a0The course really needs to further expand upon the expectations of assignments. The grading on the PSETS and presentations were unclear, especially in regards to the final project where we were just told to make visualizations of the data without clear expectations of an end we should be working towards. This class could be immensely improved if the professor gave rubrics of a kind to help guide our projects, rather than simply expecting students to reach out during office hours. ",
+            "\u00a0The topic of the class was great and interesting to learn about and the teaching was palpable, but the overall vibe was not. Majority of the assignments were coding in R, which was not taught in class so there was a lot of self-teaching outside of class time. ",
+            "\u00a0Each week's class theme was very interesting and relevant to what every student of economics should consider or know about the development economics. I felt like I was looking forward to class every time because of the content name. Professor Barnett-Howell is a very good lecturer because his contents are very engaging and easy to follow. Even though the course has a high expectation for students' work, we do receive a lot of help from our TF so that makes it more manageable.  The course could be improved by having a smaller focus on R and more focus on student collaboration. ",
+            "\u00a0I think it was a pretty strong course in accomplishing what it was meant to. I learned a lot, enjoyed the papers, was challenged by the homework but was happy to do it. "
+        ],
+        [
+            "\u00a0I would recommend this course to a student who is interested in learning what development economics is. It's a great course for that, but it is a significant amount of work. Make sure you've taken econometrics before. If you're not certain you're interested in dev. econ, take something else. ",
+            "\u00a0If you want to get a sense of research design, and you are interested in improving your skills in R (you really should have a basic understanding in R or some programming language, otherwise this class will be very painful to take) by learning how to make interesting figures, then take this class, but expect there to be a lot of uncertainty in what you should be doing for PSETs and the final project. Subject wise, the material wasn't that novel. You could get a sense of the main takeaways of development economics thus far by just reading some NPR articles. ",
+            "\u00a0No. If you want to take it, definitely shop it because your enjoyment in the class will be dependent on how well you get along with the professor. In my opinion, the class/professors energy was a bit awkward which made the class subpar. it does have the potential to be better though. The class also lacked proper directions/instruction. \r\n\r\nAlso, the final project for the class was a mess. The only instructions were basically \"create a data visualization of a research topic of your choosing\". There was barely any guidance, no rubric for what we were expected to do and not much useful advice. The datasets given to use for the project were also very limiting and difficult to work with. ",
+            "\u00a0Absolutely not. The teaching is terrible, which is a shame because it is an incredibly important class to have a Yale and could have so much potential if it were well organized and the Professor was transparent about grading. In the guise of trying to make grades not count, Zack makes it incredibly difficult for students to figure out how theyre doing. His grading also appears to be arbitrary, and he docks marks for the presentation with absolutely no explanation. I have learnt nothing and found this class a constant stress this past semester. Up there as one of the worst classes Ive taken at Yale. ",
+            "\u00a0Yes! I would recommend this course to any student who is interested in learning more about the applications of economics. Even though the workload was very challenging, I would say you will have a very high learning curve and find yourself having more faith in what you can do with economics methods and empirics. ",
+            "\u00a0If you want to learn about economic development I would. "
+        ]
+    ]
+}

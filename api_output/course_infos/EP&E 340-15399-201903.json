@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50980/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course examines the challenges of democratic transition and consolidation in Europe in an exciting way using contemporary and historical political research, documentary and dramatic film, a non-fiction graphic novel, and in class debates. Together we explore political themes like authoritarianism, state collapse, nationalism, ethnic conflict, transitional justice, and democratic development through the turbulent political history of Southeastern Europe, which provides a solid theoretical foundation for the understanding of past and current events around the world.", 
+    "title": "Legacies of Communism and Conf...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WLH 208", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15399", 
+        "listings": [
+            {
+                "number": "340", 
+                "subject": "EP&E"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEP3\">YC EP&amp;E Politics Core</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YGLE\">YC Global Affairs: Elective</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPSC\">YC Poli Sci: Comparative Govt</a></li></ul>"
+    ], 
+    "professors": [
+        "Andrea Aldrich"
+    ], 
+    "long_title": "Legacies of Communism and Conflict in Europe", 
+    "extra_info": "A"
+}

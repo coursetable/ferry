@@ -1,0 +1,71 @@
+{
+    "crn_code": "10646",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This course helped to solidify my knowledge of quantum mechanical models, such as the particle in a box, particle in a rectangular well, harmonic oscillator, rigid rotor, and hydrogenic atom. It also solidified my knowledge of the variational method and perturbation theory, and introduced me to Hartree-Fock theory and other uses of quantum mechanics in computational chemistry. "
+        ],
+        [
+            "\u00a0Strengths: This course features a very strong and effective review of the basic quantum mechanical models, the variational method, and perturbation theory. Professor Hammes-Schiffer's lectures are very clear, logical, and engaging. The homework is completely manageable, and solidifies knowledge of the topics covered in lecture. The tests are also very reasonable; there is no trickery at all. The literature assignment is very enlightening; it is a short assignment that helps students discover how useful computational chemistry is in research.\r\nWeaknesses: The lectures on Hartree-Fock theory were rather difficult to follow. I had very little exposure to Hartree-Fock before this class, and I felt completely lost during those lectures, despite have understood the course very well up until that point. It seemed as though more time should have been spent covering what the Exchange and Coulomb operators actually are, and how self-consistency implies physical accuracy. "
+        ],
+        [
+            "\u00a0I would strongly recommend this course to another student who has taken an undergraduate course on introductory quantum mechanics. The majority of this course was essentially a review of Chem 333 (physical chemistry 2). I had a shaky grasp on the material last spring when I took Chem 333, but, after taking this course and seeing the material for a second time, I have a secure grasp on basic quantum mechanics. The lectures are very clear, the homework is manageable and informative, and the tests are completely fair. All of the information you need to know is covered well in lecture. This is a great course. "
+        ]
+    ]
+}

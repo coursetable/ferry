@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49085/assignments/syllabus", 
+    "requirements": "", 
+    "description": "", 
+    "title": "Composition & Form", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "RDH 706", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10182", 
+        "listings": [
+            {
+                "number": "1233", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Peter de Bretteville"
+    ], 
+    "long_title": "Composition & Form", 
+    "extra_info": "A"
+}

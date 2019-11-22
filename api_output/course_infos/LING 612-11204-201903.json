@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50318/assignments/syllabus", 
+    "requirements": "Prerequisites: LING 512, 632, and 653.", 
+    "description": "Principles governing linguistic change in phonology and morphology. Status and independence of proposed mechanisms of change. Relations between the principles of historical change and universals of language. Systematic change as the basis of linguistic comparison; assessment of other attempts at establishing linguistic relatedness.\nPrerequisites: LING 512, 632, and 653.", 
+    "title": "Linguistic Change", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "DOW 112", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11204", 
+        "listings": [
+            {
+                "number": "612", 
+                "subject": "LING"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Claire Bowern"
+    ], 
+    "long_title": "Linguistic Change", 
+    "extra_info": "A"
+}

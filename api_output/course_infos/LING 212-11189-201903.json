@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50318/assignments/syllabus", 
+    "requirements": "Prerequisite: LING 112 or equivalent.", 
+    "description": "How languages change, how we study change, and how language relates to other areas of society. This seminar is taught through readings chosen by instructor and students, on topics of interest.\nPrerequisite: LING 112 or equivalent.", 
+    "title": "Linguistic Change", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "DOW 112", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11189", 
+        "listings": [
+            {
+                "number": "212", 
+                "subject": "LING"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Claire Bowern"
+    ], 
+    "long_title": "Linguistic Change", 
+    "extra_info": "A"
+}

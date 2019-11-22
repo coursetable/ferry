@@ -1,0 +1,79 @@
+{
+    "crn_code": "22087",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            1,
+            1
+        ],
+        [
+            0,
+            3,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            3,
+            0,
+            1
+        ],
+        [
+            1,
+            3,
+            1,
+            1,
+            0
+        ],
+        [
+            1,
+            3,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            1,
+            3,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to critically analyze literary texts, especially poetic ones. Also, writing skills. ",
+            "\u00a0-understanding of modern literature\r\n-understanding of the growth of literary styles from ancient times to the present\r\n-ability to critically speed read ",
+            "\u00a0I learned how to write a more concise literary intervention. ",
+            "\u00a0Literature analysis skills, literature essay writing skills, and knowledge about major literary texts in the Western canon. "
+        ],
+        [
+            "\u00a0This is a great course. The instruction could see improvement, but overall a very interesting course. Some books were too long and could have been replaced with others, but still very instructional. One large issue is the heavy variance in the quality of the course based on the instructor, as not all classes are equal. ",
+            "\u00a0Primary weakness: No rigorous discussion\r\nPrimary strength: Teacher who is very willing to help ",
+            "\u00a0I think the selection and distribution of books could have been improved. I think we should start the semester with Don Quijote so we have time to read it over break. And maybe fit in another Shakespeare? "
+        ],
+        [
+            "\u00a0Ya its DS. its hard but worth ",
+            "\u00a0I would recommend this course, because DS was overall a very beneficial experience. However, the teacher one receives significantly affects the quality of the course and should be taken into heavy consideration when choosing classes. ",
+            "\u00a0No. The discussion was largely lead by the teacher and often hard to follow, but also well planned ",
+            "\u00a0Yes. The class is great. "
+        ]
+    ]
+}

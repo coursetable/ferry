@@ -1,0 +1,80 @@
+{
+    "crn_code": "20813",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            1,
+            3,
+            5
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            5
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            4
+        ],
+        [
+            0,
+            2,
+            3,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            3,
+            7,
+            0
+        ],
+        [
+            0,
+            2,
+            7,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A very great deal.  The class is excellent at pulling back certain \"mysteries\": why do boards of directors sometimes turn down positive NPV projects?  How does a firm decide whether to merge or whether to lease rather than buy?  Every topic was fascinating and imminently applicable.  The cases were too engaging.  The knowledge checks were excellent, too:  it was a quick way to assess what was sticking and what wasn't.  Bravo! ",
+            "\u00a0Fundamentals of corporate finance and interesting case studies ",
+            "\u00a0The course combined theoretical foundations of corporate funance with ample real life applications and problems. It was great to be immersed in material from both academic finance as well as real life finance from the investment banking industry. ",
+            "\u00a0You learn about capital structure, debt overhang, debt capacity, asymmetric information, working capital, FCF, CAPM and CAPM with leverage, capital budgeting, valuation, leasing, M&A, and risk management. "
+        ],
+        [
+            "\u00a0Strengths include the teaching staff and the clarity of instruction through the course.  I was also fond of the marathon-esque 3-hour class time.  The class demanded that level of focus.  The problem sets, exam, in-class knowledge checks, and lecture notes were all \"in chorus\" one to another, which gave  feeling of cohesiveness to the instruction that too many Yale courses lack.  I say keep the knowledge checks, and perhaps we could do with one more case in the second portion of the class (we didn't have any after Spring Break and they're great for delving into topics).  I found myself effortlessly getting the hang of bankruptcy, leasing, M&A, valuation...  There's definitely a feeling of understanding things intuitively in the course that is admirable.  The only thing is that the marks on the problem sets could have been more informative. ",
+            "\u00a0It was an engaging class if not a little too qualitative, would've liked a stronger focus on the quantitative side. Also the material taught in class wasn't always sufficient for the problem sets. ",
+            "\u00a0The lectures were quite long but Professor Shue did a great job of keeping them engaging. The problem sets became much harder and I wish we had received a bit more guidance on how to complete them, beyond office hours with the TAs. The TA also did not give us clear feedback on which questions we lost points on in the problem sets. The lectures were incredible and the course was great overall. ",
+            "\u00a0The lecture are 3 hours long and the information is very interesting but honestly I believe the same amount of information can be delivered in 1.5 hours. I wished it was a little bit faster paced. "
+        ],
+        [
+            "\u00a0Absolutely.  I would recommend it after all the 6 opening undergraduate courses.  I took it concurrently with Financial Markets, and there was considerable overlap, but I'm sure that's not necessary. ",
+            "\u00a0Would not recommend after taking \"Intro to Corporate Finance\" because it teaches practically the same material, if not a bit more superficially. ",
+            "\u00a0Take it because it has both theoretical foundations and examples and applications from real life. Professor Shue does a great job of giving relavant real life examples to keep the lectures interesting. If youre interested in investment banking and having a strong foundation in firms capital structures and financial decision-making, this would be a very useful course. ",
+            "\u00a0Yes i would recommend this course. You learn about capital structure, debt overhang, debt capacity, asymmetric information, working capital, FCF, CAPM and CAPM with leverage, capital budgeting, valuation, leasing, M&A, and risk management. The grading is structured as 20% participation and cases, 30% problem sets, and 50% final. Overall, you have to be really comfortable with the final making or breaking your grade but other than the course is great. "
+        ]
+    ]
+}

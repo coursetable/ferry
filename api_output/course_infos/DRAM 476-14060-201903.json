@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51594/assignments/syllabus", 
+    "requirements": "The series is open to D.F.A. and nondepartmental students, and to non-School of Drama students.", 
+    "description": "A lecture series inaugurated by the Dramaturgy and Dramatic Criticism department to make students aware of current discussions in theater and performance studies that necessarily lie outside the department\u00e2\u20ac\u2122s core curriculum. Attendance at the series is required of all M.F.A. dramaturgs. Each lecture is accompanied by a short bibliography chosen by the lecturer and circulated in advance of the meeting through Canvas.\nThe series is open to D.F.A. and nondepartmental students, and to non-School of Drama students.", 
+    "title": "Hot Topics", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14060", 
+        "listings": [
+            {
+                "number": "476", 
+                "subject": "DRAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Catherine Sheehy", 
+        "Kimberly Jannarone", 
+        "Katherine Profeta"
+    ], 
+    "long_title": "Hot Topics", 
+    "extra_info": "A"
+}

@@ -1,0 +1,47 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50066/assignments/syllabus", 
+    "requirements": "For beginning students of superior linguistic ability.", 
+    "description": "Intensive training in speaking, reading, writing, and comprehending the language. Focus on the mastery of formal grammar.\nFor beginning students of superior linguistic ability.\n\n2 Yale College course credits", 
+    "title": "Intensive German I", 
+    "skills": [
+        "L2", 
+        "L1"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WALL81 101", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12162", 
+        "listings": [
+            {
+                "number": "125", 
+                "subject": "GMAN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Lieselotte Sippel"
+    ], 
+    "long_title": "Intensive German I", 
+    "extra_info": "A"
+}

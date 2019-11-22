@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50290/assignments/syllabus", 
+    "requirements": "After JAPN 151 or equivalent.", 
+    "description": "Introduction to the grammar and style of the premodern literary language (bungotai) through a variety of texts.\nAfter JAPN 151 or equivalent.", 
+    "title": "Introduction to Literary Japan...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WTS B52", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13190", 
+        "listings": [
+            {
+                "number": "170", 
+                "subject": "JAPN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Adam Haliburton"
+    ], 
+    "long_title": "Introduction to Literary Japanese", 
+    "extra_info": "A"
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49854/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This required foundational course provides students with the physical science basics that they need in order to understand and manage environmental problems. The course draws on the following disciplines: climatology, environmental chemistry, geology, hydrology, meteorology, oceanography, and soil science. Focus is on understanding both the underlying concepts and how they apply to real-world environmental challenges. Useful both as a freestanding course and as a gateway to a wide spectrum of intermediate and advanced courses.", 
+    "title": "Physical Science Foundations f...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "BOWERS", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13528", 
+        "listings": [
+            {
+                "number": "521", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Shimon Anisfeld"
+    ], 
+    "long_title": "Physical Science Foundations for Environmental Managers", 
+    "extra_info": "A"
+}

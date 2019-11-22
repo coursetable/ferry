@@ -1,0 +1,107 @@
+{
+    "crn_code": "23944",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's <b>sensitivity to students and ability to provide students with adequate feedback</b> was"
+    ],
+    "Evaluation_Data": [
+        [
+            2,
+            3,
+            11,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            8,
+            3,
+            7
+        ],
+        [
+            0,
+            0,
+            9,
+            3,
+            7
+        ],
+        [
+            0,
+            0,
+            9,
+            4,
+            6
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a05 ",
+            "\u00a05 ",
+            "\u00a01 ",
+            "\u00a03 ",
+            "\u00a02 hours ",
+            "\u00a03 hours ",
+            "\u00a04-8 hours ",
+            "\u00a05 ",
+            "\u00a010 ",
+            "\u00a02 hours if there is no homework or exam. 8 hours if there are homework and exam, but I'd like to spend more time to study the topic for debate and writings, so I tend to spend more time on my homework.  There are a reasonable amount of homework and exams, overall I think the workload is perfect for us to handle. ",
+            "\u00a01/2 ",
+            "\u00a02 hours ",
+            "\u00a0normally 0 except when we had assignments ",
+            "\u00a02 hours "
+        ],
+        [
+            "\u00a0cover a variety of topics ",
+            "\u00a0amazing ",
+            "\u00a0Good ",
+            "\u00a0The strengths include that lecturers come from a bunch of fields which are related to toxicology, and we therefore can learn a lot of topics on this class. ",
+            "\u00a0Only strenghts; great variety of material and extremely interactive discussion friday sessions. ",
+            "\u00a0Great course. Very informative and well taught. ",
+            "\u00a0This course was overall very good. I learned a lot from the guest speakers and appreciated how Dr. Vasiliou encouraged us to explore topics that we were interested in with the various assignments. The Friday discussions were nice when we had specific assignments or speakers attend but sometimes I was confused on what exactly was happening in them, so some extra clarity regarding those would be useful. ",
+            "\u00a0Great course, amazing guest lecturers, and not too much work. ",
+            "\u00a0Our professor Vasiliou has a very good design of this class and invited outstanding officers and professors to our class and gave us very good lectures. ",
+            "\u00a0Good seminar series on topics in toxicology but did not teach more than superficial information about toxicology.  I learned some things but do not think my overall knowledge of toxicology improved throughout this course.  There were also no exams throughout this course, as all the exams were changed to papers.  This was fine, but should have been reflected in the syllabus with specific due dates and instructions. The debates could have also been improved with better class interaction and participation. ",
+            "\u00a0Great and interesting ",
+            "\u00a0I think this course could use more organization. It would also be useful to have a toxicology class more relevant for HC management. ",
+            "\u00a0The course was interesting and I learned a lot. It is a tough balance since toxicology can be a very science (chemistry, biochemistry) heavy topic, but there are no science prerequisites for the course- I think the class did a good job of trying to balance giving the science information that we needed vs. the class' ability level, however I do think we could have gone a bit more into depth on the chem/biochem side of things. I appreciated the emphasis on debates, essays rather than eams "
+        ],
+        [
+            "\u00a0Good ",
+            "\u00a0amazing ",
+            "\u00a0Very likable ",
+            "\u00a0Professor Vasilis is a responsible professor, he is willing to help us and also taught his former experience with us. ",
+            "\u00a0Fantastic - great convener of interesting topics and guest speakers with expertise. ",
+            "\u00a0Professor Vasiliou is passionate about his work. He is very good at translating class material into real world events, a skill that is very important to get students engaged. He is very supportive and accommodating. ",
+            "\u00a0Dr. Vasiliou was a great instructor. He is very knowledgable and clearly cares a lot about his students. He is very open to suggestions and feedback as well. ",
+            "\u00a0Great professor. Always kind and responsive, even if a little disorganized. ",
+            "\u00a0Professor Vasiliou had a very good design of the class. He encouraged us to actively participate in the class, through debate and topic writing. We learned a lot, from this class, about the knowledge of toxicology. We also had opportunities exchanging ideas with outstanding officers and professors in this field and got a sense of the trend in this field. ",
+            "\u00a0The instructor is friendly and seems to care about students.  He purposefully teaches this course in a more superficial manner, not wanting to explain concepts that might be more difficult, such as metabolic steps and mechanisms of toxicity. ",
+            "\u00a0Excellent. ",
+            "\u00a0very nice, sincere, and excited about the material. I wish i were excited about it if I had to take the class. ",
+            "\u00a0Dr. Vasiliou was very engaged and interested in the course. We had multiple guest speakers, most of whom were interesting as well "
+        ],
+        [
+            "\u00a0good ",
+            "\u00a0amazing ",
+            "\u00a0A good course but needs prior knowledge of biology/chemistry ",
+            "\u00a0I will strongly recommend this class to those who are interested in toxicology. And definitely you can learn a lot about the related knowledge on this class. ",
+            "\u00a0Amazing course! Exposure to many different topics in toxicology, great class atmosphere. Assignments can be personalized which makes all material relevant. ",
+            "\u00a0I did not take this course, exempted out. ",
+            "\u00a0Great course. Take it to learn more on Toxicology, product design and sustainable design for green chemistry. ",
+            "\u00a0I would recommend this course. It was a great learning experience and the outside lecturers really enhanced the course. ",
+            "\u00a0Definitely take this course. There is not too much work, the guest lectures are amazing, and the professor and TA are kind and helpful. ",
+            "\u00a0I strongly recommend this class to other students. It is a good opportunity to study some of the hot topics in toxicology. ",
+            "\u00a0I would recommend taking this course only if it is a requirement.  If you are interested in toxicology, it would be a better use of your time to learn on your own rather than taking this semester-long course.  This class is too simplified if you have prior knowledge about toxicology. ",
+            "\u00a0Yes. This course is very interesting "
+        ]
+    ]
+}

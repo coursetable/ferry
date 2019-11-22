@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49969/assignments/syllabus", 
+    "requirements": "Enrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "description": "A first-year science seminar devoted to the understanding of humankind\u2019s interactions with, and place within, the natural world. Topics include: Earth\u2019s history and early life, evolution and mass extinction, human population growth, industrialization, fossil fuels, pollution, the carbon cycle and global warming, and a planetary perspective on the Earth.\nEnrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "title": "Earth, Resources, Energy, and ...", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WTS A35", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11037", 
+        "listings": [
+            {
+                "number": "010", 
+                "subject": "G&G"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Mary-Louise Timmermans"
+    ], 
+    "long_title": "Earth, Resources, Energy, and the Environment", 
+    "extra_info": "A"
+}

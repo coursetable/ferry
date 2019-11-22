@@ -1,0 +1,71 @@
+{
+    "crn_code": "30241",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A better understanding of African American art, and the history of its creative expression. The political discourse for African Americans in the 1920's and how popular thinkers of the time tried to gain social capitol by way of art. "
+        ],
+        [
+            "\u00a0The strength is in the exploration of the material. The writings are still fresh, resonating with the class and giving room to discuss not only the technique of each piece individually, but how their narrative relate to contemporary issues. The weakness would be it relies heavily on student contribution and discussion, so the quality of the class would be directly linked to the engagement of your classmates. "
+        ],
+        [
+            "\u00a0Yes. It would be an ideal way to get a writing credit. Varied forms of writing (biographical, peoms, prose, novel ect) will keep them from getting fatigued. "
+        ]
+    ]
+}

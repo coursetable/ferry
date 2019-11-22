@@ -1,0 +1,74 @@
+{
+    "crn_code": "21987",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0During this course I received a synthetic but comprehensive overview of extant and extinct primate diversity. I also learnt the basics of primate identification, with focus on cranial and dental remains. ",
+            "\u00a0Ability to identify some skeletal features and how to use them to distinguish different primates, extant and extinct. Also learned about primate living habits, biogeography, and evolutionary origins. "
+        ],
+        [
+            "\u00a0The main strength of the course was to provide a comprehensive introduction to the topic in an accessible format. The hands-on labs were engaging and fun. A possible area of improvement is the choice of the studying materials: Fleagle's textbook is comprehensive, but the content is presented in a rather encyclopedic way. This was sometimes unnecessary if one studies the lecture slides. Perhaps some book chapters could be substituted with more engaging journal articles. ",
+            "\u00a0I really liked the structure of lectures early in the week and labs later in the week. This allowed for more preparation and time to review notes before the labs, which helped me get more out of them. I could focus on the various features we discussed in lecture, rather than having to immediately recall that information. I like that the labs were designed to learn these features and not trick you. I also enjoyed the lab exams and the opportunity to practice identifying different primates. The questions on the lecture exams were quite easy and straightforward. "
+        ],
+        [
+            "\u00a0Yes, I would recommend this course. ",
+            "\u00a0Yes, it provides a great overview of primate diversity and evolution. "
+        ]
+    ]
+}

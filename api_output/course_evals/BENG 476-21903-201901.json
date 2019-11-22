@@ -1,0 +1,80 @@
+{
+    "crn_code": "21903",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            1,
+            1,
+            2,
+            0,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Insight into current research in computer and biological vision ",
+            "\u00a0Greater understanding of neural networks and how to approach vision from a mathematical way ",
+            "\u00a0Deeper understanding of topics taught in the intro sequence ",
+            "\u00a01. Binary classifiers, (single-layer) perceptron learning algorithm, margin.\r\n2. Multi-layer NNs, backpropagation, Deep Convolutional Networks.\r\n3. Basics of dimensionality reduction: linear - PCA; non-linear - diffusion maps and related concepts: adjacency matrix, random walks, walk matrix\r\n4. Clustering: k-means, Gaussian mixtures\r\n5. Basics of V1 neurophysiology - simple and complex cells, endstopping, long-range horizontal connections.\r\n6. Basics of differential geometry - curves, curvature, frames, Frenet equations, tangent plane, covariant derivative, connection equations.\r\n7. Shape inference from contours, flows, etc. \r\n8. His research!! Super cool stuff "
+        ],
+        [
+            "\u00a0It would be nice to have regular sections to discuss the actual mathematical theory with a TF who can explain it for students not as well versed in the mathematics, and shorten the lectures to 50 minutes instead. ",
+            "\u00a0Tough lectures, lot of stuff to cram ",
+            "\u00a0Strengths are fascinating topics and enthusiasm of professor. Weakness is in organization. The material is complicated and a bit more organization in lectures and notes wouldve been helpful ",
+            "\u00a0Strengths: Zucker is the man!! He's really passionate about the material, and you get to learn about things that are literally at the forefront of current research. The class is really small, almost like a seminar, so you have the chance to engage with him if you want (although classes are lecture based). Weaknesses: the lecture moves too quickly, often times. Because it is a more interdisciplinary class, Zucker draws on statistics/math that are more than just basic-level, and it can be difficult to understand the content if you don't have experience there. I think he welcomes and encourages questions, but sometimes the class moves so fast that it's hard to know what to ask about. \r\n\r\nAlso, the lecture notes are much less comprehensive than the first semester, and the class is less organized, but the exam is much easier and things are much more flexible/laid back. The final project was really fun! "
+        ],
+        [
+            "\u00a0Yes - super insightful course. ",
+            "\u00a0Yes, great homework and professor ",
+            "\u00a0Absolutely. Fascinating class with manageable workload ",
+            "\u00a0The workload for this class is low and the material is very interesting. Still, I'd say you get out as much as you put in, and the requirements are very lax, so it's possible to do great in this course without learning much. There is some disconnect between the problem sets and the lectures in what they emphasize, kind of like the first semester. The final exam is also much easier than the exams in the first semester, covering only the bare basics of what you learn in the class. There were only 4 homeworks + final project + final exam, and the final project was super flexible and fun to work on! I would recommend it if you like Zucker and his teaching style--he tells some fascinating \"stories\" (instead of just relaying the facts) and does an amazing job motivating the material and connecting it to other disciplines. \r\n\r\nZucker also moves very fast, and I think most of the other undergrads and I were confused as heck like 70% of the time, but you're all in this together!! Make sure you ask him questions when you don't understand things. It can be intimidating because there are grad students in the class whose theses are on literally the same thing and they seem to know everything, but Zucker is nice about questions and cares about your learning!!\r\n\r\nThis isn't a survey course, but I think I leave with a much better understanding of what's out there and how it developed, the \"bigger picture\". It is also a good introduction to networks, if you're looking for something less cut and dry than a pure ML course (this is not the intention of the class, but it certainly helped me understand what a CNN is when it all seemed like magic to me before). "
+        ]
+    ]
+}

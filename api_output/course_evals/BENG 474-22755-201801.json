@@ -1,0 +1,82 @@
+{
+    "crn_code": "22755",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            6,
+            11
+        ],
+        [
+            0,
+            0,
+            5,
+            8,
+            6
+        ],
+        [
+            0,
+            0,
+            6,
+            8,
+            5
+        ],
+        [
+            2,
+            3,
+            3,
+            8,
+            4
+        ],
+        [
+            0,
+            0,
+            6,
+            8,
+            6
+        ],
+        [
+            0,
+            0,
+            7,
+            8,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Valuable research experience and I have a better idea of what kind of research I want to pursue in the future. ",
+            "\u00a0Through this course I became comfortable with running a research project essentially on my own.  I especially became comfortable with the side of research that is overcoming challenges you didn't expect. ",
+            "\u00a0This was the culmination of my undergraduate research experience. I had amazing faculty and fellow support, and the course was well designed to facilitate research freedom and stress-free evaluation. Gained knowledge in my respective lab on coding, data handling and monitoring, and other lab based techniques. ",
+            "\u00a0How to conduct research at a deeper level and write a formal scientific paper ",
+            "\u00a0This is the capstone project class for the biomedical engineering major, and enables students to develop research skills. "
+        ],
+        [
+            "\u00a0Had a really good experience in the lab I worked in. My postdoc was very helpful and I was always receiving feedback. ",
+            "\u00a0There's not a lot of guidance from the department for this course.  Some could take that well and others more poorly.  I thought it was just a little odd coming from the more structured senior project from mechanical engineering, but it didn't really mind it. ",
+            "\u00a0None ",
+            "\u00a0A little more communication before due dates ",
+            "\u00a0More guidance on how to write the paper and construct a project would be very helpful. Also standardizing requirements/expectations for the project between the labs would make projects more fair. ",
+            "\u00a0The course is extremely flexible, and Prof. Duncan enthusiastically accommodates a wide range of projects and topics. The course seems deliberately designed to allow students to focus their energies on research, and it has very few assignments. That being said, the course could be improved by incorporating a few more milestones throughout the semester to keep research projects on track. The course should also have more explicit expectations outlined for both students and for their project mentors. Providing a forum for students in the course to meet (say, at monthly progress meetings) could also give students a chance to practice presenting their projects, to field questions, to troubleshoot, and to drum up some enthusiasm for one anothers projects. "
+        ],
+        [
+            "\u00a0Do you want to graduate with a BME degree?  Then I and the DUS would probably recommend a senior project. ",
+            "\u00a0Yes. You'll have to take it either ways if you're Biomedical Engineering ",
+            "\u00a0Highly recommended for BME majors. Required, in fact. "
+        ]
+    ]
+}

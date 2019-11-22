@@ -1,0 +1,97 @@
+{
+    "crn_code": "10405",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            3,
+            4,
+            4
+        ],
+        [
+            1,
+            2,
+            1,
+            2,
+            6
+        ],
+        [
+            1,
+            0,
+            3,
+            2,
+            6
+        ],
+        [
+            1,
+            1,
+            3,
+            4,
+            3
+        ],
+        [
+            2,
+            1,
+            5,
+            3,
+            1
+        ],
+        [
+            0,
+            2,
+            5,
+            5,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I have learned a lot useful and interesting knowledge on solid state physics. ",
+            "\u00a0A conceptual understanding of solid state physics. ",
+            "\u00a0Basic knowledge of metals, insulators, and semiconductors and some devices ",
+            "\u00a0I learned the basics of solid state physics and the devices based on solid state material. ",
+            "\u00a0The material in this course was new to me.  However, the professor did an exceptional job presenting the information in a manner in which it was accessible.   The course is a step by step introduction of solid-state physics, walking the student through crystal structures, phonon and electron modes, and finally semiconductors and devices. ",
+            "\u00a0I understand the lattice structure, phonons and electrons behavior, and the band structure, semiconductors, dielectrics. ",
+            "\u00a0I got lots of knowledge that I can't learn from textbooks this course. Prof. Henrich gives us a very clear picture on solid state physics. ",
+            "\u00a0Basic concepts of solid state physics including structures, energy bands and semiconductors. And corresponding methods to deal with these problems. ",
+            "\u00a0I felt I learned the basic physics that govern crystalline materials in the solid phase. Additionally, I gained a good conceptual understanding of solid state physics. "
+        ],
+        [
+            "\u00a0Everything is good. Professor Victor Henrich is a very good teacher. Because I only take the first solid state course, if possible, I hope professor Victor Henrich could talk something about superconductor and superconductivity, because this is a very important topic in solid-state physics. ",
+            "\u00a0The strength is the material in addition to the professor's clear passion for it. Given the focus is conceptual understanding, more thorough reading materials on the latter third of the class would have been invaluable. ",
+            "\u00a0In my opinion I think this course is great and I find no weakness about it. ",
+            "\u00a0The instructor for this course put a great deal of effort into developing each lesson plan.  Unlike many courses I have taken at Yale, where the instruction seems like an afterthought, it is clear that the professor is dedicated to ensuring the students  get the most out of each lecture. ",
+            "\u00a0Strength: every point is clear and Victor is really patient to answer my questions.\r\n\r\nWeakness: Too fast, sometimes cannot catch up with the point. ",
+            "\u00a0This course covers lot of things, from solid state physics, semiconductor physics, to semiconductor devices, light-matter interaction, etc. I love this course. ",
+            "\u00a0The detailed reduction of some important formulas should be done in the class. Meanwhile, the exam should contain important derivations. ",
+            "\u00a0Let me start by saying I recognize that a first course in solid state physics is hard to teach. The interests of theorists and experimentalists vary greatly in this subject. With that said, I feel the course taught fall of 2017 was too focused on concepts of interest for experimentalists. Lecture derivations were surface level and felt rushed. When students would ask for more depth there didn't appear to be much interest from the instructor to give deeper explanations. Maybe this was forward thinking about what was necessary to understand future topics and concern over the length of the course. All I know is I was left feeling a bit empty about what was covered. I recommend teaching a more well rounded course to better satisfy both theoretical and experimental interests. Again, I realize this is easier said then done. ",
+            "\u00a0I think it is good enough for a first-year course. All the materials are arranged in a logic way and I could review some concepts and explore more new parts in solid state physics in this class. ",
+            "\u00a0One major strength of this course was providing a conceptual understanding of the physics that drive processes in crystalline materials. Over this course, there was a constant stress on relating different topics thinking deeply about how to use the basic knowledge we learned to answer difficult questions. "
+        ],
+        [
+            "\u00a0For students in physics, applied physics, and electrical engineering, I will highly recommend this course to them. ",
+            "\u00a0The course material is interesting and excellent. The professor is engaging and caring. You will need to understand the material -- not simply know how to use equations. ",
+            "\u00a0Yes if you want to know the basics of solid state physics ",
+            "\u00a0Yes. If it is related to their major I would, as you can develop a solid base in this field. ",
+            "\u00a0absolutely, yes! ",
+            "\u00a0Of course, it helps me to understand fundamental physics behind semiconductor, facilitating my research. ",
+            "\u00a0I would recommend this course to another student. Because this course can serve as a roadmap to this field. It can give a clear picture of the field. I felt my understandings of this field have been deepened since I took this course. ",
+            "\u00a0If someone has taken a course in solid state physics previously I would not recommend this course. If someone hasn't then yes I would recommend it. It exposes students to the fundamentals of solid state physics. If a graduate student was intending on taking this course I would tell them to expect content not much different or difficult than an undergraduate course teaching out of Kittel. ",
+            "\u00a0Yes, this course is interesting and I had a deeper understanding of solid state physics by taking this course. ",
+            "\u00a0Yes, anyone who wants a conceptual understanding of solid state physics should take this course "
+        ]
+    ]
+}

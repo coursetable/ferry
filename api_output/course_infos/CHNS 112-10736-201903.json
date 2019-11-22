@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "2019-12-13", 
+        "group": 2, 
+        "day_of_week": "Friday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49378/assignments/syllabus", 
+    "requirements": "", 
+    "description": "First level of the advanced learner sequence. Intended for students with some aural proficiency but very limited ability in reading and writing Chinese. Training in listening and speaking, with emphasis on reading and writing. Placement confirmed by placement test and by instructor.\n\n1.5 Yale College course credits", 
+    "title": "Elementary Modern Chinese for ...", 
+    "skills": [
+        "L1"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "WLH 014", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10736", 
+        "listings": [
+            {
+                "number": "112", 
+                "subject": "CHNS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Hsiu-hsien Chan"
+    ], 
+    "long_title": "Elementary Modern Chinese for Heritage Speakers", 
+    "extra_info": "A"
+}

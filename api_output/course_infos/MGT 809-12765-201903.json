@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48764/assignments/syllabus", 
+    "requirements": "", 
+    "description": "", 
+    "title": "AdvBusinessAnalyticsw/Sprdshts", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "EVANS 4200", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "12765", 
+        "listings": [
+            {
+                "number": "809", 
+                "subject": "MGT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Lesley Meng"
+    ], 
+    "long_title": "AdvBusinessAnalyticsw/Sprdshts", 
+    "extra_info": "A"
+}

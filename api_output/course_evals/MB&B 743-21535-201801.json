@@ -1,0 +1,92 @@
+{
+    "crn_code": "21535",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            3,
+            5,
+            1
+        ],
+        [
+            0,
+            2,
+            5,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            7,
+            1
+        ],
+        [
+            0,
+            0,
+            4,
+            5,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            4,
+            4
+        ],
+        [
+            0,
+            0,
+            8,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This is an intense crash course in Molecular Biology concepts, fields, and a techniques. It is extremely useful and informative, though the pace is fast and the expectations are high. ",
+            "\u00a0I learned the details of biological processes that govern the transformation of DNA into proteins and the various decay pathways associated with the intermediates of these pathways. ",
+            "\u00a0Transcription & translation regulation; experimental techniques and design ",
+            "\u00a0I learned the wide range and applications of the RNA/DNA world. This course covered many rna techniques, export pathways, and in depth knowledge of the current field. ",
+            "\u00a0I learnt a lot about eukaryotic processing of DNA, RNA and so on. ",
+            "\u00a0I learned some new and useful information about RNA ",
+            "\u00a0Critical thinking skills in molecular biology data interpretation, reading, and experimental designs. How to write and convey our thoughts about assigned papers and to extend this with a grant proposal. Basic concepts in molecular biology as well as in depth analysis of regulatory mechanisms. ",
+            "\u00a0practice reading relevant literature and studying in a field different than my own. ",
+            "\u00a0An in depth understanding of eukaryotic transcription, dna repair, and translation. Learned about how these things were actually discovered, and developed skills to more in depth think about how to answer the unanswered questions of science. "
+        ],
+        [
+            "\u00a0This course could be improved by providing more supplemental information or a textbook. Some lecturers are good about assigning review articles for their topics, but this is not a consistent practice. Since this course covers a wide breath of information at a very deep level, it might be beneficial to some students to have a reliable source to fall back on for some of the background information or basics. This could be especially useful for students who are new to the material and molecular biology as a whole. Otherwise, some lectures could be paced better and could benefit from a better understanding of how much material can reasonably be covered well in a class. Overall, the class is very useful and builds a strong foundation for students to begin learning more about these topics. ",
+            "\u00a0Strengths:\r\nFocused on recently published data on the specific areas of study. \r\nThe discussion courses were helpful in learning details about important topics. \r\nThe term paper helped exercise our writing skills.  \r\nWeaknesses:\r\nThe variety of teaching methods is hard to keep up with and the slides are often not comprehensive when looking back on them (even with notes). \r\nThere was no reinforcement of knowledge learned in the class (hw). I am not totally sure how this would be carried out but it was hard to retain all the information presented. \r\n\r\nIt was really challenging to study for the exams because it is hard to know what the focus is going to be. \r\n\r\nIt would be nice if there were three exams and not just two. \r\n\r\nA recitation class in addition to the discussion would be helpful. ",
+            "\u00a0I enjoyed the discussion sections and found them insightful. \r\n\r\nThe amount of time given for the first mid-term exam was way too short for the amount of questions given. The term paper is also pretty much an unguided practice and I am not sure if it is appropriate for the topic of this module or addresses the learning goals at all. ",
+            "\u00a0The level of understanding expected from different instructors seemed to vary and some more clarity on what is expected out of the assignments and class participation would be beneficial. ",
+            "\u00a0No weakness. Very good course! ",
+            "\u00a0I think a strength was the paper discussions with TAs and professors. I think it was nice to get everyone involved and read about the concepts taught in lecture. I enjoyed having both in class exams and writing assignments for the course. I a weakness was having different people grade the same assignments, consistency seemed lacking there. I also think that there could be better use of class time on the discussion section days, where maybe there is also a general review of what has been lectured on since sometimes those days ended early. ",
+            "\u00a0The final was a decent length, but the midterm was too long for the time period.\r\n\r\nThe discussion was my favorite part of the class. I really liked how we were split up and assigned figures. This format really encouraged participation. "
+        ],
+        [
+            "\u00a0I would recommend this course to any student who intends to study these topics or go into molecular biology, but I would advise students taking the course to do lots of reading on their own. This course is very difficult for students who are new to molecular biology or who may not have learned some of these topics before ",
+            "\u00a0I would only recommend this course to someone with a stronger biology background because otherwise it is very challenging and you don't gain as much from it. ",
+            "\u00a0Yes, but perhaps only audit the course to get the best experience without the term paper and exams. ",
+            "\u00a0Yes, this is really helpful and informative! ",
+            "\u00a0It would depend on the type of lab they are joining. It would not be as helpful for some people. ",
+            "\u00a0Yes, I think anyone truly interested in pursuing research of their own in molecular biology should take this course to help them with knowing the basic overall concepts as well as exposure to general experiments, the literature, and how to think about those. ",
+            "\u00a0yeah, its a solid course which will help a lot with graduate qualifying exams. ",
+            "\u00a0Yes, it teaches you the critical thinking skills that will be necessary going forward. "
+        ]
+    ]
+}

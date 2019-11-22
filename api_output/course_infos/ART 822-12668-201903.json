@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "For first-year photography students. Structured to give students a comprehensive working knowledge of the digital workflow, this class addresses everything from capture to process to print. Students explore procedures in film scanning and raw image processing, discuss the importance of color management, and address the versatility of ink-jet printing. Working extensively with Photoshop, students use advanced methods in color correction and image processing, utilizing the medium as a means of refining and clarifying one\u00e2\u20ac\u2122s artistic language. Students are expected to incorporate these techniques when working on their evolving photography projects and are asked to bring work to class on a regular basis for discussion and review.", 
+    "title": "Intro.Tech.Seminar Photography...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "GREEN G10", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12668", 
+        "listings": [
+            {
+                "number": "822", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Benjamin Donaldson"
+    ], 
+    "long_title": "Intro.Tech.Seminar Photography: Practice & Production", 
+    "extra_info": "A"
+}

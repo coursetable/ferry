@@ -1,0 +1,80 @@
+{
+    "crn_code": "24664",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            1,
+            0
+        ],
+        [
+            0,
+            2,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The ability to critically think about how different parts of the world's economies are impacted by political institutions. ",
+            "\u00a0Really enjoyed this course. I learned a lot about how to read academic literature in the field of economics, as well as various econometric techniques. The workload is quite light, the tests are very fair, and Professor Padro is very willing to help out in office hours. 10/10 would recommend. ",
+            "\u00a0I learned more about the fundamentals of economic development and the statistical literature within it. This class helped me appreciate more about the stats work and understand its role in econ. ",
+            "\u00a0I learned various reasons why different regions fare differently economically; how to interpret empirical papers discussing development; how to interpret regressions and other econometric ideas ",
+            "\u00a0This was one of the most useful econ courses I have taken at Yale. Although it is a class about development, the goal was really to teach us how to apply econometrics to reading and understanding papers. After this course, I felt that I had a much better understanding of econometrics and how to use it. Plus the papers we read were generally pretty interesting and had many interdisciplinary applications. "
+        ],
+        [
+            "\u00a0strengths: Professor, material, workload\r\nWeakness: book report was not that fun ",
+            "\u00a0Strengths: interesting lecture, a general direction of the course\r\nWeaknesses: should provide more econometric background at the beginning ",
+            "\u00a0I think the professor was the biggest strength. Professor Padro is a real gem. You could tell that he had a methodological goal in mind and wanted his students to learn. Assignments and exams were therefore designed to be useful rather than needlessly long or difficult. The format of the class was also set up well to facilitate learning. The weakness was that the class size wasn't really large enough for conversation, but I guess that couldn't be helped. "
+        ],
+        [
+            "\u00a0This class was really great because the professor was engaging and all of the readings were actually super interesting. ",
+            "\u00a0Yes, you learn a lot and do it in an effortless way. ",
+            "\u00a0I would recommend this course to any student interested in statistics or in learning about the theories behind varying economic development across countries ",
+            "\u00a0Yes, I highly recommend this class if you need an elective! It's interesting, you'll learn something, and it's not too demanding. I especially recommend this class if you are interested in being able to read academic papers in Econ. It's an important skill that I haven't learned in any of my other classes at Yale. Padro is also perhaps my favorite Econ professor I've had at Yale. "
+        ]
+    ]
+}

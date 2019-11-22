@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49273/assignments/syllabus", 
+    "requirements": "Prerequisites: undergraduate-level cell biology, molecular biology, and genetics.", 
+    "description": "This course is designed for first-year or second-year students to learn the fundamentals of stem cell biology and to gain familiarity with current research in the field. The course is presented in a lecture and discussion format based on primary literature. Topics include stem cell concepts, methodologies for stem cell research, embryonic stem cells, adult stem cells, cloning and stem cell reprogramming, and clinical applications of stem cell research.\nPrerequisites: undergraduate-level cell biology, molecular biology, and genetics.", 
+    "title": "Stem Cells: Biology and Applic...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13783", 
+        "listings": [
+            {
+                "number": "655", 
+                "subject": "CBIO"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "In-Hyun Park", 
+        "Haifan Lin"
+    ], 
+    "long_title": "Stem Cells: Biology and Application", 
+    "extra_info": "A"
+}

@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49838/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Aqueous inorganic chemistry for environmental engineering. Topics include acid-base chemistry, alkalinity, the carbonate system, speciation, precipitation/dissolution, redox chemistry, Eh/pH diagrams.", 
+    "title": "Water Chemistry", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WTS A53", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10903", 
+        "listings": [
+            {
+                "number": "638", 
+                "subject": "ENAS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "John Fortner"
+    ], 
+    "long_title": "Water Chemistry", 
+    "extra_info": "A"
+}

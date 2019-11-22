@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "For advanced graduate students in applied microeconomics, serving as a forum for presentation and discussion of work in progress of students, Yale faculty members, and invited speakers.", 
+    "title": "Industrial Organization Seminar", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "EVANS", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12643", 
+        "listings": [
+            {
+                "number": "608", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Industrial Organization Seminar", 
+    "extra_info": "A"
+}

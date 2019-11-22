@@ -1,0 +1,77 @@
+{
+    "crn_code": "20881",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            1,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            1,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            1,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            1,
+            0,
+            0,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0We developed engineering insights by working on a team to complete a semester long project. We had to work cohesively and communicate well to interface our systems, and we needed to come up with clever solutions to the problems that arose. We had develop our own subsystems from scratch and understand enough about everyone else's subsystems to work well as a group. ",
+            "\u00a0This course taught me many practical skills needed to complete a complex engineering project, from planning the design to testing and revising to interfacing with other team members to incorporate my system into a larger one. It teaches technical skills and practical applications of theoretical topics learned in earlier EE classes, but it also provides practice in working on a team and designing a system with a larger-scale system in mind. "
+        ],
+        [
+            "\u00a0I really liked that the course was structured very much like a job. It was nice to know that if I spent a week struggling on one problem, it wasn't like failing a problem set, I was just able to work with Professor Kuc to find a solution. It was much more like real life. In future years, it might be nice to try to interface the systems earlier, or at least have more meetings with the entire group earlier on. I feel like we might have been able to come up with cool features that utilized more than one subsystem if we had been communicating earlier, although it's also hard to judge when everyone will have a subsystem that works well enough to do that. ",
+            "\u00a0This course is a great way to develop skills that would be applicable to any job wherein you are working on an engineering team to develop a component that is to be used in a larger, more complicated product. The weekly meetings and feedback from Professor Kuc were very helpful to stay on track and reaffirm goals. ",
+            "\u00a0Was fairly unorganized, didn't know what anyone else in the class was doing. Didn't have access to the right tools, the lab space (until it was too late to be productive), the equipment, or the parts to do my project sufficiently. Most projects this year were CS/EE-digitial ignal processing, so not a lot of variety in EE tracks. ",
+            "\u00a0This project has been the same for the past 10 years or so. It is about time ABET students engaged themselves with something different. Even though I did learn things through this project, I don't think we utilized our full potential. It would be really nice to do something new that we haven't seen the previous years; I think it would make us more excited to work on a new problem with new exciting challenges instead of problems that we can find solutions in previous years' reports.\r\nOn the general structure thiugh: Weekly reports and meetings were helpful to stay on top of work and avoid last-minute cramming. "
+        ],
+        [
+            "\u00a0This is necessary for ABET students, but I do think it's a learning experience that's very different from most classes at Yale and it's really nice that it's much more like real life. Getting to completely come up with your own solutions to problems is a really interesting challenge; I would recommend this to students who want to go into industry as an engineer. ",
+            "\u00a0This is a great course to take to develop practical skills that will be applicable to any job that has you working on an engineering team and interfacing with systems designed by others. It gives you a chance to apply what you have learned in previous classes and gives you experience managing the pacing of developing a complicated engineering project. ",
+            "\u00a0This is your senior project, better recommend an idea to make it good. You don't have a choice if you're ABET, and if you're not ABET, take independent study because the projects came out way better. "
+        ]
+    ]
+}

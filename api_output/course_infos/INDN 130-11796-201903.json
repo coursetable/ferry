@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-13", 
+        "group": 2, 
+        "day_of_week": "Friday", 
+        "time": 14
+    }, 
+    "requirements": "After INDN 120 or equivalent.\u00c2\u00a0Limited enrollment.", 
+    "description": "Continued practice in colloquial Indonesian conversation and reading and discussion of texts.\nAfter INDN 120 or equivalent.\u00c2\u00a0Limited enrollment.\n\n1.5 Yale College course credits", 
+    "title": "Intermediate Indonesian I", 
+    "skills": [
+        "L3"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "BF S-12", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "11796", 
+        "listings": [
+            {
+                "number": "130", 
+                "subject": "INDN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Dinny Risri Aletheiani"
+    ], 
+    "long_title": "Intermediate Indonesian I", 
+    "extra_info": "A"
+}

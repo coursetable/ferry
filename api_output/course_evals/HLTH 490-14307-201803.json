@@ -1,0 +1,81 @@
+{
+    "crn_code": "14307",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            4
+        ],
+        [
+            0,
+            1,
+            2,
+            4,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Through this course I had the chance to write up my findings. I learned the anatomy of a journal article and how to write the introduction to one. ",
+            "\u00a0Great ",
+            "\u00a0This course was somewhat like a thesis (and perhaps should be treated as such because the final requirement is equivalent to a thesis). In that sense, we did a lot of workshopping and I learned a lot about bringing a manuscript through data analyses and into publication. This was a very useful course in the end product, but I think class time could be used more effectively: ",
+            "\u00a0So many skills! The main being that I learned how to write a good research paper. I learned how to present my findings succinctly in a presentation. I learned how to write a good literature review.\r\nMost of the data analysis skills is stuff you have to learn on your own or with the STATLAB or an advisor "
+        ],
+        [
+            "\u00a0Strengths: gets you to really write up your GH scholar field experience (deadlines are so helpful)\r\nWeaknesses: not enough was taught about quantitative methods, also the work everyone does is so varied. ",
+            "\u00a0This class could have used someone to come in and work with students on their quantitative analysis once or twice. Also, the fact that only two assignments throughout the whole course count towards the final grade is very annoying and stressful because a lot of other work goes into the other assignements. ",
+            "\u00a0Great ",
+            "\u00a01) there should be at least one data analysis period with a professor/TF from the Stats Lab, where students conducting quantitative analyses can learn the appropriate techniques/tests for their datasets and troubleshoot problems. This would be highly beneficial.\r\n2) the course does not need to meet weekly to rediscuss our papers that haven't much changed--either there should be fewer class hours or time should be used more effectively: learning how to create appropriate tables and graphics for publication, researching/contacting journals for publication tips... ",
+            "\u00a0I wish there was an official day when Dr. Morse brought in a professor to give a quick crash course on how to begin analyzing quantitative data from survey the same way she did for qualitative interviews.\r\nOther than that, conceptually speaking, Dr. Morse was a great resource and sounding board in refining research topic and thesis. "
+        ],
+        [
+            "\u00a0Yes I would definitely recommend this to anyone with data they want to publish. ",
+            "\u00a0Yes ",
+            "\u00a0This course should be changed to a \"Global Health Scholars Thesis\" given the amount of work required and that the final product is a document for publication, it deserves the thesis designation. If there isn't a thesis credit I would not recommend the class as it was quite boring on a weekly basis and I had to learn most of the hard skills myself. ",
+            "\u00a0Yes, but only if you're willing to take a initiative to do a lot of work outside of class in figuring out how to do data analysis. "
+        ]
+    ]
+}

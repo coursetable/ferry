@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49974/assignments/syllabus", 
+    "requirements": "May not be taken after FREN 171.", 
+    "description": "Introduction to close reading and analysis of literary texts written in French. Works by authors such as Marie de France, Moli\u00c3\u00a8re, Balzac, Hugo, Baudelaire, Duras, Proust, and Genet.\nMay not be taken after FREN 171.", 
+    "title": "Worlds in French: An Introduct...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 001", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "11027", 
+        "listings": [
+            {
+                "number": "170", 
+                "subject": "FREN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Maryam Sanjabi"
+    ], 
+    "long_title": "Worlds in French: An Introduction to French and Francophone Literatures", 
+    "extra_info": "A"
+}

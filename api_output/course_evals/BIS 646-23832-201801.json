@@ -1,0 +1,122 @@
+{
+    "crn_code": "23832",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's <b>sensitivity to students and ability to provide students with adequate feedback</b> was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            6,
+            20,
+            6,
+            0
+        ],
+        [
+            0,
+            1,
+            10,
+            15,
+            6
+        ],
+        [
+            0,
+            1,
+            9,
+            14,
+            8
+        ],
+        [
+            1,
+            2,
+            6,
+            17,
+            6
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a08 hours ",
+            "\u00a05h ",
+            "\u00a05hours ",
+            "\u00a03 hours ",
+            "\u00a03-10 ",
+            "\u00a04 ",
+            "\u00a06 hours ",
+            "\u00a03 ",
+            "\u00a08 hours ",
+            "\u00a05 ",
+            "\u00a02hrs for taking the course and 3hrs for doing homework (if there is) ",
+            "\u00a04 ",
+            "\u00a020 ",
+            "\u00a04 hours. ",
+            "\u00a03 ",
+            "\u00a01 hour ",
+            "\u00a04 ",
+            "\u00a06hr ",
+            "\u00a04 ",
+            "\u00a08 ",
+            "\u00a05 ",
+            "\u00a05 "
+        ],
+        [
+            "\u00a0Too little coursework ",
+            "\u00a0The amount of homework is good, the teaching is overall excellent. The weakness is sometimes the theoratical part of the method is not covered. ",
+            "\u00a0Nice structure, Maybe more details into the proof and theorem. ",
+            "\u00a0interesting materials covered\r\ncould add more topics on machine learning methods\r\ncould provide R codes and packages of the methods covered ",
+            "\u00a0it had both theory and applied part.  this course is very important for biostat students ",
+            "\u00a0The course is well organized. However, as the only nonparametric course provided in the department, I feel some important topics were not covered. There were only five homeworks and the first two were too easy. ",
+            "\u00a0Strength: Detailed lecture notes.\r\nWeakness: More demo and application/codes of each concept will be much more helpful. ",
+            "\u00a0Great! ",
+            "\u00a0great ",
+            "\u00a0I don't understand why the nonparametric course contains a lot of parametric topics. ",
+            "\u00a0good ",
+            "\u00a0it is a good course overall. combined theory and practice use ",
+            "\u00a0introduced lots of useful non-parametric topics \r\nsome concepts are difficult to follow and understand ",
+            "\u00a0It covers most of essential topics in nonparametric statistics. However, I fell like this course might need to pay more attention to rigorous part of some topics to get student a better understanding. "
+        ],
+        [
+            "\u00a0Great. ",
+            "\u00a0He is good at teaching and he is very nice. ",
+            "\u00a0Great Professor. ",
+            "\u00a0He enjoys his teaching. ",
+            "\u00a0Professor very energetic and passionate about subject. Spent much time on small details and not enough time on big picture. ",
+            "\u00a0interesting teaching style; able to explain the materials very clearly ",
+            "\u00a0He is very nice and experienced ",
+            "\u00a0Heping is a talented and enthusiastic professional. Hes very responsive to questions. ",
+            "\u00a0Strength: Detailed lecture notes.\r\nWeakness: More demo and application/codes of each concept will be much more helpful. ",
+            "\u00a0Prof. Zhang is excellent. ",
+            "\u00a0responsible instructor ",
+            "\u00a0Obviously, professor Zhang did not spend much time on teaching. ",
+            "\u00a0good ",
+            "\u00a0A very responsible professor. The slides are well-organized. It will be better if the content could be more detailed. ",
+            "\u00a0He is very nice and kind. ",
+            "\u00a0responsible and humorous\r\ndoes not give help on homework, some homework questions are arbitrary "
+        ],
+        [
+            "\u00a0I am afraid that you still do not know how to use nonparametric methods in real-life problems after taking this course. ",
+            "\u00a0This course I will definitely recommend to any biostat student. It is helpful. ",
+            "\u00a0Would recommend. ",
+            "\u00a0Since the course opens per 2 years, so I have to take it in the first year. But it is a little hard for me. \r\nThe nonparametric algorithm is very important in actual data analysis. \r\nI recommend the course! ",
+            "\u00a0Worthwhile to gain background, but won't learn much skill. ",
+            "\u00a0Yes ",
+            "\u00a0this course is good. I will recommend it. ",
+            "\u00a0I would recommend it to other students. Topics covered in the course were important. However, I wish that we could go into more depth. ",
+            "\u00a0Strength: Detailed lecture notes.\r\nWeakness: More demo and application/codes of each concept will be much more helpful. ",
+            "\u00a0Great! ",
+            "\u00a0I would recommend ",
+            "\u00a0No, I would not. ",
+            "\u00a0good ",
+            "\u00a0The course is good. I will recoomend ",
+            "\u00a0introduced a set non-parametric methods applicable to the field of biology\r\nyes, it deepened my understanding of lots of concepts "
+        ]
+    ]
+}

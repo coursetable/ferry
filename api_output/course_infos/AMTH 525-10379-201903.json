@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "This course consists of weekly seminar talks given by a wide range of speakers. Required of all first-year students.", 
+    "title": "Seminar in Applied Mathematics", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10379", 
+        "listings": [
+            {
+                "number": "525", 
+                "subject": "AMTH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Peter Jones"
+    ], 
+    "long_title": "Seminar in Applied Mathematics", 
+    "extra_info": "A"
+}

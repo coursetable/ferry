@@ -1,0 +1,49 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49529/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Linking of abstract economic concepts to concrete policy and management decisions. Application of theoretical tools of economics to global warming, pollution control, fisheries, water management, forestry, recreation, and mining.", 
+    "title": "Economics of Natural Resources", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "WLH 201", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13735", 
+        "listings": [
+            {
+                "number": "804", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Robert Mendelsohn"
+    ], 
+    "long_title": "Economics of Natural Resources", 
+    "extra_info": "A"
+}

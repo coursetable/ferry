@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "There are a small number of openings for second-year graduate students. Students interested in participating should contact michael.denning@yale.edu.", 
+    "description": "A continuing yearlong collective research project, a cultural studies \u201claboratory.\u201d The group, drawing on several disciplines, meets regularly to discuss common readings, develop collective and individual research\u00a0projects, and present that research publicly. The general theme for the working group is globalization and culture, with three principal aspects: (1) the globalization of cultural industries and goods, and its\u00a0consequences for patterns of everyday life as well as for forms of fiction, film, broadcasting, and music; (2) the trajectories of social movements and their relation to patterns of migration, the rise of global cities, the\u00a0transformation of labor processes, and forms of ethnic, class, and gender conflict; (3) the emergence of and debates within transnational social and cultural theory. The specific focus, projects, and directions of the\u00a0working group are determined by the interests, expertise, and ambitions of the members of the group, and change as its members change.\nThere are a small number of openings for second-year graduate students. Students interested in participating should contact michael.denning@yale.edu.", 
+    "title": "Working Group on Globalization...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LORIA 258", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10334", 
+        "listings": [
+            {
+                "number": "622", 
+                "subject": "AMST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Denning"
+    ], 
+    "long_title": "Working Group on Globalization and Culture", 
+    "extra_info": "A"
+}

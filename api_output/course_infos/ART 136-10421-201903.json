@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49080/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introductory course in black-and-white photography concentrating on the use of 35mm cameras. Topics include the lensless techniques of photograms and pinhole photography; fundamental printing procedures; and the principles of film exposure and development. Assignments encourage the variety of picture-forms that 35mm cameras can uniquely generate. Student work is discussed in regular critiques. Readings examine the invention of photography and the fl\u00c3\u00a2neur tradition of small-camera photography as exemplified in the work of artists such as Henri Cartier-Bresson, Helen Levitt, Robert Frank, and Garry Winogrand. Materials fee: $150.", 
+    "title": "Black & White Photography Capt...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "GREEN G32", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10421", 
+        "listings": [
+            {
+                "number": "136", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Danna Singer"
+    ], 
+    "long_title": "Black & White Photography Capturing Light", 
+    "extra_info": "A"
+}

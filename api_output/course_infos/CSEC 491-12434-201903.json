@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 1, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "This one-term independent-project course explicitly combines both techniques and subject matter from computer science and economics. A project proposal must be approved by the DUS and project adviser by the end of the third week of the term in which the student is enrolled.", 
+    "title": "Senior Project", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12434", 
+        "listings": [
+            {
+                "number": "491", 
+                "subject": "CSEC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Philipp Strack"
+    ], 
+    "long_title": "Senior Project", 
+    "extra_info": "A"
+}

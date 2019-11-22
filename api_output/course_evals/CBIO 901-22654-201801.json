@@ -1,0 +1,77 @@
+{
+    "crn_code": "22654",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            4,
+            5
+        ],
+        [
+            0,
+            0,
+            4,
+            5,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            8,
+            4
+        ],
+        [
+            1,
+            0,
+            2,
+            3,
+            5
+        ],
+        [
+            2,
+            6,
+            2,
+            1,
+            2
+        ],
+        [
+            4,
+            6,
+            0,
+            1,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Researsh tips ",
+            "\u00a0I learned about a variety of topics that are important a graduate student other than the research. ",
+            "\u00a0I learned a variety of ethical issues relating to many aspects of scientific research. ",
+            "\u00a0I learned a lot in this course pertaining to proper research techniques and how to handle issues that may arise. "
+        ],
+        [
+            "\u00a0I enjoyed the class and the topics covered were relevant. ",
+            "\u00a0I enjoyed that the course was very discussion based, but smaller group discussion might get more people involved. ",
+            "\u00a0I think that some of the instructors were amazing and others were okay, but overall this course was much better than the one offered in the fall. "
+        ],
+        [
+            "\u00a0Yes, I would recommend to the first year student. ",
+            "\u00a0Yes...? It's a required class obviously, but everything covered is relevant and the class addressed issues that I had previously not dealt with. "
+        ]
+    ]
+}

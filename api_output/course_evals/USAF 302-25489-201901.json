@@ -1,0 +1,76 @@
+{
+    "crn_code": "25489",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ],
+        [
+            3,
+            2,
+            1,
+            0,
+            0
+        ],
+        [
+            4,
+            2,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This taught me a lot of the same AF principles that Ive been learning since freshman year but added more with the context of us now being POC. ",
+            "\u00a0Air Force leadership skills "
+        ],
+        [
+            "\u00a0I liked the video scenarios that used up-to-date situations that we could very well encounter ourselves, such as associating with civilians who smoke marijuana in a state where its legal. ",
+            "\u00a0The course was very relaxed but was engaging. I think that the workshops we did were especially useful, and while TED talks were interesting, we spend a good portion of our class listening to them rather than discussing them. ",
+            "\u00a0Taught very well. Engaging lectures and assignments. "
+        ],
+        [
+            "\u00a0N/A - take if youre in ROTC ",
+            "\u00a0Not unless you are in Air Force ROTC ",
+            "\u00a0If you are an AS300 you have to! "
+        ]
+    ]
+}

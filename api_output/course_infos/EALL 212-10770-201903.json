@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49651/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introduction to the foundational works of ancient Chinese thought from the ruling ideologies of the earliest historical dynasties, through the Warring States masters, to the Qin and Han empires. Topics include Confucianism and Daoism, the role of the intellectual in ancient Chinese society, and the nature and performance of wisdom.", 
+    "title": "Ancient Chinese Thought", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "PH 310", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10770", 
+        "listings": [
+            {
+                "number": "212", 
+                "subject": "EALL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Hunter"
+    ], 
+    "long_title": "Ancient Chinese Thought", 
+    "extra_info": "A"
+}

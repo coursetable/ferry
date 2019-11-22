@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Special projects intended to enable the student to cover material not otherwise offered by the program. The course may be used for research or for directed reading, but in either case a term paper or its equivalent is required as evidence of work done. It is expected that the student will meet regularly with the faculty adviser. To apply for admission, a student should submit a prospectus signed by the faculty adviser to the director of undergraduate studies.", 
+    "title": "Individual Reading and Researc...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12008", 
+        "listings": [
+            {
+                "number": "471", 
+                "subject": "AMST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "James Berger"
+    ], 
+    "long_title": "Individual Reading and Research for Juniors and Seniors", 
+    "extra_info": "A"
+}

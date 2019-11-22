@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50513/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introduction to modern Greek, with emphasis on oral expression. Use of communicative activities, graded texts, written assignments, grammar drills, audiovisual material, and contemporary documents. In-depth cultural study.\n\n1.5 Yale College course credits", 
+    "title": "Elementary Modern Greek I", 
+    "skills": [
+        "L1"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "RKZ 241", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12499", 
+        "listings": [
+            {
+                "number": "110", 
+                "subject": "MGRK"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Maria Kaliambou"
+    ], 
+    "long_title": "Elementary Modern Greek I", 
+    "extra_info": "A"
+}

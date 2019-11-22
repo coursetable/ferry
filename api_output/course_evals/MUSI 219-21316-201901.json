@@ -1,0 +1,74 @@
+{
+    "crn_code": "21316",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            1,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            0
+        ],
+        [
+            1,
+            3,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            3,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Developed my musicianship skills (ear training, sight singing etc) ",
+            "\u00a0Sight reading, rhythm, metric space, harmonic and rhythmic dictation. Tonal and atonal harmony. "
+        ],
+        [
+            "\u00a0Strengths: Michael is an excellent instructor, very knowledgable and changed how I listened to music. Weaknesses: more work than I was expecting from a half credit course. ",
+            "\u00a0The course was heavier on theory than I expected... I thought this class would focus more on skill-building since there are companion intro music classes to this one that focus solely on theory (MUSI 210/211). ",
+            "\u00a0Overall, the course was good. However, at times, assignments felt too difficult for the level of the course and required much outside time and help. If more of the assigned creative/out-of-the-box questions that had less directly to do with the course were delegated to be extra credit, homeworks would have been more manageable. "
+        ],
+        [
+            "\u00a0Yes, it helps but you never know how it will turn out because it depends a whole lot on who the teacher happens to be "
+        ]
+    ]
+}

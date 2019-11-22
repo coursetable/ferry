@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50386/assignments/syllabus", 
+    "requirements": "After MATH 112 or equivalent; open to freshmen with some preparation in calculus. May not be taken after MATH 116.", 
+    "description": "A continuation of MATH 112. Applications of integration, with some formal techniques and numerical methods. Improper integrals, approximation of functions by polynomials, infinite series. Exercises involve the software package Mathematica.\nAfter MATH 112 or equivalent; open to freshmen with some preparation in calculus. May not be taken after MATH 116.", 
+    "title": "Calculus of Functions of One V...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LOM 201", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11246", 
+        "listings": [
+            {
+                "number": "115", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Gabriel Bergeron-Legros"
+    ], 
+    "long_title": "Calculus of Functions of One Variable II", 
+    "extra_info": "A"
+}

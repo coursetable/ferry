@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48991/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Focus on improving the listening, writing, and speaking skills of students who already have a substantial background in the study of modern standard Arabic. Prerequisite: ARBC 503 or permission of the instructor.", 
+    "title": "Advanced Modern Standard Arabi...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "YK212 106", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11472", 
+        "listings": [
+            {
+                "number": "504", 
+                "subject": "ARBC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jonas Elbousty"
+    ], 
+    "long_title": "Advanced Modern Standard Arabic I", 
+    "extra_info": "A"
+}

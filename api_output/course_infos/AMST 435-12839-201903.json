@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48944/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Sociocultural dimensions of social inequality in the contemporary United States. Ways in which the socioeconomic processes that produce inequality are inextricably embedded in worlds of cultural meaning; how those meanings are constructed and embodied in everyday practice. Perspectives from\u00c2\u00a0anthropology, sociology, economics, history, and popular media.", 
+    "title": "Inequality in America", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "SA10 105", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12839", 
+        "listings": [
+            {
+                "number": "435", 
+                "subject": "AMST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANS\">YC Anthropology: Sociocultural</a>"
+    ], 
+    "professors": [
+        "Kathryn Dudley"
+    ], 
+    "long_title": "Inequality in America", 
+    "extra_info": "A"
+}

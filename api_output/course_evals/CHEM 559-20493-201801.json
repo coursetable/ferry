@@ -1,0 +1,76 @@
+{
+    "crn_code": "20493",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            4,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about various biophysical techniques and the underlying theory in how they work. I also learned how the techniques are applied in modern research. ",
+            "\u00a0Critical reading of biophysics literature \r\nLeading of discussions\r\nProposal writing ",
+            "\u00a0This course provided a background on biophysical techniques with a focus on fluorescence and vibrational specctroscopy "
+        ],
+        [
+            "\u00a0The structure of the course was a major strength as it takes a well rounded approach to covering different topics in a manner that is clear and natural. ",
+            "\u00a0This course was good at providing an overview of biophysical techniques. One way to improve the course would be to allow students to have more time to read the articles for discussion, either by enforcing that the articles are submitted earlier or by learning about a technique on Wednesday and discussing on the following Monday. As someone who had an extremely busy Monday schedule, it was frustrating to have to read the article and write a discussion report because a classmate couldn't be bothered to submit their article until late Sunday night. "
+        ],
+        [
+            "\u00a0Yes. It covers many topics in a way that doesn't feel forced and understanding the theory of these different techniques is beneficial. ",
+            "\u00a0To gain an overview of basic biophysics tools, chemistry literature discussion, and introduction to proposal writing ",
+            "\u00a0I would recommend this course to a student interested in biophysical techniques "
+        ]
+    ]
+}

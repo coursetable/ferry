@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Introduction to optimization methods and partial equilibrium. Theories of utility and consumer behavior production and firm behavior. Introduction to uncertainty and the economics of information, and to noncompetitive market structures.", 
+    "title": "General Economic Theory: Micro...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "WTS A53", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12622", 
+        "listings": [
+            {
+                "number": "500", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Eduardo Davila", 
+        "Larry Samuelson"
+    ], 
+    "long_title": "General Economic Theory: Microeconomics", 
+    "extra_info": "A"
+}

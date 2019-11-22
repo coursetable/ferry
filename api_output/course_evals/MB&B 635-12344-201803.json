@@ -1,0 +1,107 @@
+{
+    "crn_code": "12344",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            4,
+            4,
+            4
+        ],
+        [
+            0,
+            4,
+            5,
+            2,
+            3
+        ],
+        [
+            0,
+            1,
+            7,
+            3,
+            3
+        ],
+        [
+            0,
+            1,
+            6,
+            3,
+            4
+        ],
+        [
+            1,
+            2,
+            7,
+            4,
+            0
+        ],
+        [
+            1,
+            4,
+            8,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned a little bit about a lot of different things. ",
+            "\u00a0I learned several quantitative approaches in studying biological questions, for example, the Fourier Transform, the use of Matlab simulation, principle component analysis (PCA), etc. ",
+            "\u00a0The quantitative and mathematics components in biophysics and biochemistry. I learned a great deal in Fourier Transform and how it applies to many aspects of science, even in imaging. Basics of MATLAB, crash course in statistics, and large data analysis were also covered. ",
+            "\u00a0MATLAB and basic statistics ",
+            "\u00a0I leaned a lot about Fourier Transforms and data analysis/statistics. ",
+            "\u00a0The introduction to coding with Matlab was helpful and interesting. I did have limited coding experience in other languages, so it came easily to me, though I know that other students had to work at it more. However, I do think there should be a more concerted effort to maintain the thread of learning Matlab throughout the course. I certainly felt comfortable with rate equations before, and my impression is most everybody had the same experience. This section could probably be moved through quicker. ",
+            "\u00a0I gained insight to tools that are available for research. The use of programs such as Matlab (including SimBiology) and prism were great skills to develop. Also, learning about Fourier analysis and statistics are very useful tools for biological research. ",
+            "\u00a0I got a good grasp of the use of Matlab and symbiology under certain circumstances. ",
+            "\u00a0The basic knowledge about Matlab, statistics, biological dynamics and Fourier transform. How these knowledge can be applied in biological problem. ",
+            "\u00a0Coding techniques ",
+            "\u00a0Basic matlab and data analysis skills. Basic knowledge of fourier transform and statistics. ",
+            "\u00a0I took that class primarily to learn Matlab and I feel it succeeded very well in giving me a good foundation. The assignments and final projects definitely helped. ",
+            "\u00a0Basic Matlab coding; concepts of modeling, statistics and Fourier transform "
+        ],
+        [
+            "\u00a0Strengths: learned a lot about how math can applied to biology.\r\n\r\nWeaknesses: course organization ",
+            "\u00a0Strengths: The Matlab workshops were really helpful. ",
+            "\u00a0It seems that the course was organized enough but wasn't sure if all objectives were met. It is understandable that the course is at its early stages. Fourier Transform was taught well. I would say that statistics was not the best part of the course. As interesting and significant as it is, I believe this could be taught better with examples or using real data as the course description stated. It seems that the statistics portion is a compressed version of a semester-long course. Maybe it would be best to have undergraduate level statistics as a prerequisite. It was also emphasized that background experience in MATLAB is not required, however, this was not the case. Several classmates struggled understanding the computer language. I suggest that MATLAB is incorporated in EVERY activity, including the introduction of MATLAB functions relevant to the topic(s).\r\n\r\nUnderstanding biochemical rates is a fundamental topic that I think must be mastered. We focused on rate calculations leading to the Michaelis-Menten model using the simplest reaction A+BAB. I think this can be better using visuals such as examples on how Kd is calculated for drug candidates via biochemical methods or by ITC.\r\n\r\nFor large data analysis, this is an important topic but it lacks teaching the fundamentals. ",
+            "\u00a0Julien can speed up a little bit ",
+            "\u00a0I think that there needs to be a more clear understanding of what the course aims are. I was under the impression that I would learn about Matlab and data analysis through interacting with data sets in class and as homework. However, I feel as though I gained only a cursory knowledge of Matlab and watched how other people had analyzed data. ",
+            "\u00a0Matlab should be a more significant through-line. More intentional coding projects would help myself and many of the other students I've talked with. Additionally, more time spent on Fourier transform seems more important to me, especially with the time given to rate equations and statistics, which the majority of students will have significantly more experience with. In general, there's a lot of extra material that could be trimmed off this course. I will point out -  this course required very minimal effort. I'd be happy to be asked more of if that means learning more. ",
+            "\u00a0I did not like how the biological dynamics classes were split up and hope that in the future that biological dynamics will be taught all at once. I thought that the statistics module was helpful, especially the notes that correlated with the lectures. I think it would be helpful if this course spent more time teaching how to write scripts in Matlab. That part of the course felt a bit rushed. I also think tests are excellent learning tools and this course would benefit from testing students. ",
+            "\u00a0The statistics portion was very short and brief. Perhaps by design. As was Fourier transform. I felt like less modeling focus and more attention to those other two elements would strengthen my overall benefit. ",
+            "\u00a0It could help to establish a background to people who haven't have knowledge about bioinformatics. we get in touch with various method to solve statistics questions by writing the coding ourselves. However, it have kind of overlap with Macromolecular class. ",
+            "\u00a0Some coding basics, explain the codes better ",
+            "\u00a0Organization and coordination between each professor can be improved. ",
+            "\u00a0Strengths: Really good intro to Matlab and Simbiology. I feel like a learned a good amount of stats given how few classes were covered. The handouts for the stats section in particular were really helpful. Drawing from real biological data was good. \r\nWeaknesses: In trying to address three main topics the coverage of each was quite thin. Also most of the Fourier Transform section went entirely over my head, but admittedly my math skills are very weak, so that definitely did not help.\r\n\r\nI became more proficient at Matlab and started to remember the functions/nomenclature when practicing on consecutive days. So having more frequent, but smaller, assignments might be good in the future. ",
+            "\u00a0Strengths: clear logic; detailed instructions starting from ABC\r\n\r\nWeakness: the pace of the course was a little bit slow "
+        ],
+        [
+            "\u00a0I would recommend this class for those who have little to no background in quantitative approaches. ",
+            "\u00a0Yes. The Matlab workshops were really helpful. ",
+            "\u00a0If improvements are made, then yes. Otherwise, I would recommend taking statistics or higher level mathematics first before tackling this course. ",
+            "\u00a0Yes. Its very useful to learn MATLAB ",
+            "\u00a0No, I would recommend that they look for a different option to fulfill their quantitive biology requirement. ",
+            "\u00a0No. A person who is interested in the topics covered in this course could gain a better understanding of them via self-study - with the possible exception of the Fourier transform. ",
+            "\u00a0Yes. I think the course needs to be optimized a bit, but I feel that there are useful takeaways from the course. Again, being comfortable with Matlab is an excellent skill to develop and I think this class should focus more on teaching how to write scripts in the beginning. But brushing up on statistics and getting a grasp on Fourier are both very valuable skills for a researcher to acquire. ",
+            "\u00a0I probably would as a short primer course but most students would be better served taking a dedicated modeling, math or statistics class. ",
+            "\u00a0Yes, it is very helpful especially for people like me who are working on the experiments instead of coding. we can learn some basic knowledge like matlab and solve the problem on ourselves. ",
+            "\u00a0Yes, pretty good if you want to learn a bit about coding ",
+            "\u00a0No. A fair introductory course, but did not go detailed enough for students without no previous experiences. Too basic for students with previous experiences. ",
+            "\u00a0Depends on student, but probably. ",
+            "\u00a0Yes. The skills taught in the course were essential for doing biomedical research, and the lectures are well organized. "
+        ]
+    ]
+}

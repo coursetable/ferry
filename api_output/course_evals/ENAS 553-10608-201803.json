@@ -1,0 +1,77 @@
+{
+    "crn_code": "10608",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            2,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Immune system and its components, how to engineer new treatment methods ",
+            "\u00a0I learned updated knowledge about immunology and trained my presentation skills. ",
+            "\u00a0In this course, I learned how to engineer in the immune system which enables us to tune the immune system depending on designated applications. For example, for autoimmune disease setting, we learned how to specifically tune down corresponding such as effector T cells. In order to learn these skills, first, we learn the foundation of immunology. Then we applied to these foundations into an engineering discipline. Overall, in this course, I was able to learn a huge deal of information in immunology and engineering. "
+        ],
+        [
+            "\u00a0Expectations and schedule fluctuated too often and was unclear ",
+            "\u00a0Strength: The workload of the course is reasonable.\r\n\r\nWeakness: The organization of the lecture content is confusing. The lecture notes were not uploaded in time. ",
+            "\u00a0Strengths\r\nThe TA and the professor were very helpful and expert in the area of immunology. Most of the topics were current diseases like cancer, allergies. And learning the pathological pathways in this class was very helpful. The professor is also dedicated to teaching current research topics which makes very helpful for us to understand what is going on currently in the area.\r\n\r\nWeakness\r\n-Have the class well-defined curriculum and make the readings assignments and class discussions in line with the HW and the exams so that students could actively engage with the class. "
+        ],
+        [
+            "\u00a0The course schedule was hectic, possibly due to extenuating circumstances. However, I would recommend based solely on content. ",
+            "\u00a0I would recommend this course to students who are interested in nanoparticle research. ",
+            "\u00a0I would recommend this class for students who are planning on going to study immunology and immunoengineering because this class was very helpful for me to understand the foundation of immunology and how to tune the immunology to make a significant impact in cancers, allergies and autoimmune diseases. "
+        ]
+    ]
+}

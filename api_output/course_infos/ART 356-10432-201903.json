@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49119/assignments/syllabus", 
+    "requirements": "Prerequisite: ART 114 or equivalent.", 
+    "description": "An introduction to intaglio (dry point and etching), relief (woodcut), and screen printing (stencil), as well as to the digital equivalents of each technique, including photo screen printing, laser etching, and CNC milling. How the analog and digital techniques inform the outcome of the printed image, and ways in which they can be combined to create more complex narratives. Materials fee: $150.\nPrerequisite: ART 114 or equivalent.", 
+    "title": "Printmaking I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "GREEN C014", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10432", 
+        "listings": [
+            {
+                "number": "356", 
+                "subject": "ART"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Alexander Valentine"
+    ], 
+    "long_title": "Printmaking I", 
+    "extra_info": "A"
+}

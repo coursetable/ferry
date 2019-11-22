@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49799/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introduction to the literary traditions of the Anglophone world in a variety of poetic and narrative forms and historical contexts. Emphasis on developing skills of literary interpretation and critical writing; diverse linguistic, cultural and racial histories; and on the politics of empire and liberation struggles. Authors may include Daniel Defoe, Mary Prince, J. M. Synge, James Joyce, C. L. R. James, Claude McKay, Jean Rhys, Yvonne Vera, Chinua Achebe, Ng\u0169g\u0129 wa Thiong'o, J. M.\u00a0Coetzee, Brian Friel, Amitav Ghosh, Salman Rushdie, Alice Munro, Derek Walcott, and Patrick White, among others. Preregistration required; see under English Department.", 
+    "title": "Readings in Comparative World ...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LC 209", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "10937", 
+        "listings": [
+            {
+                "number": "128", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Cajetan Iheka"
+    ], 
+    "long_title": "Readings in Comparative World English Literatures", 
+    "extra_info": "A"
+}

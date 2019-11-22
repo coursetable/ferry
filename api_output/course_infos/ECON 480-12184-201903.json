@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50018/assignments/syllabus", 
+    "requirements": "Prerequisites: ECON 115 and 116, or equivalent.", 
+    "description": "Focus on systemic risk, banking crises, financial stability and macroprudential policies. Additional emphasis on systemic risk and prudential policies in peripheral European economies and emerging economies.\nPrerequisites: ECON 115 and 116, or equivalent.", 
+    "title": "Banking Crises and Financial S...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "RKZ 02", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12184", 
+        "listings": [
+            {
+                "number": "480", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Sigridur Benediktsdottir"
+    ], 
+    "long_title": "Banking Crises and Financial Stability", 
+    "extra_info": "A"
+}

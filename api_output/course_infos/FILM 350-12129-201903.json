@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: FILM 150. Not open to freshmen.", 
+    "description": "A beginning course in screenplay writing. Foundations of the craft introduced through the reading of professional scripts and the analysis of classic films. A series of classroom exercises culminates in intensive scene work.\nPrerequisite: FILM 150. Not open to freshmen.", 
+    "title": "Screenwriting", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WLH 202", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12129", 
+        "listings": [
+            {
+                "number": "350", 
+                "subject": "FILM"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YFIP\">YC FILM Stud: Production</a>"
+    ], 
+    "professors": [
+        "Marc Lapadula"
+    ], 
+    "long_title": "Screenwriting", 
+    "extra_info": "A"
+}

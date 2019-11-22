@@ -1,0 +1,76 @@
+{
+    "crn_code": "20620",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0excellent course to teach fundamentals of Latin, does assume some prior knowledge but catchup is thorough at the beginning ",
+            "\u00a0This course makes you much better at reading Latin, period. The focus on etymology was typical of a Solodow course and often very interesting, though did not end up playing a large role in our graded assignments. This course offers an introduction to writing Latin. ",
+            "\u00a0I learned the quirks of the Latin language--it's concrete, it avoids metaphor, it's tense fussy--and learned how to read texts for stylistics and to examine how the sound fits the sense of Latin prose. I learned more about Indo-European linguistics and the historical development of the Romance languages. And perhaps the greatest boon of all, my Latin vocabulary, which had plateaued during college, expanded rapidly. And of course, I composed Latin prose for the first time in my life. ",
+            "\u00a0Nominally, I learned to write Latin prose according to Classical rules of usage. But that process was valuable, not merely in itself, but also because it has made me a much better reader of Latin. I think I've got a whole new set of tools for close/stylistic reading of Latin texts, which I didn't have before. "
+        ],
+        [
+            "\u00a0Professor Solodow has honed this course over the years and it seems he's discovered the perfect formula for teaching Latin prose composition. If anything (and this feels true only in hindsight), I wish we had covered more material--more chapters in Bradley's Arnold, more prose readings, and perhaps even secondary readings either in stylistics or historical linguistics. For the sake of future generations of Latinists, I hope he doesn't implement this recommendation. ",
+            "\u00a0This course succeeds because it deftly weaves together three separate curricular threads -- historical linguistics, prose composition, and stylistic analysis of classical authors. Its only shortcoming is having to move very quickly through more material than is quite realistic: I wish I could have spent at least a year learning this way. "
+        ],
+        [
+            "\u00a0Yes. This is one of the best ways to improve your Latin. Solodow is an excellent lecturer to boot. ",
+            "\u00a0Yes -- it's a requirement for the Latin major but, requirements aside, it's a worthwhile use of your time if you're looking to get much better at Latin reading. "
+        ]
+    ]
+}

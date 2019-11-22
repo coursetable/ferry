@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50178/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A reading of Shakespeare's histories, comedies, and poems, with an emphasis on their originality in regard to tradition and their influence on Western representation since the seventeenth century. Secondary readings included.", 
+    "title": "Shakespeare and the Canon: His...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "DOW 215", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12259", 
+        "listings": [
+            {
+                "number": "150", 
+                "subject": "HUMS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Harold Bloom"
+    ], 
+    "long_title": "Shakespeare and the Canon: Histories, Comedies, and Poems", 
+    "extra_info": "A"
+}

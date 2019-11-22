@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49927/assignments/syllabus", 
+    "requirements": "Enrollment limited to eighteen; application required.", 
+    "description": "This is a research seminar focused on the foundations of natural resources policy and management and designed for students in any subfield of environmental studies or other disciplines. The seminar\u00e2\u20ac\u2122s purpose is to help students improve their skills in thinking more effectively and acting more responsibly in complex management and policy cases. The seminar explores comprehensive and integrated (interdisciplinary) concepts and methods for thinking about problems in natural resources policy and management and proposing solutions to them. Once students gain familiarity with the core concepts and methods of standpoint clarification and problem orientation, they apply them to particular issues in natural resources policy and management. Each student, alone and in collaboration with a group, is responsible for researching a particular problem. Each student circulates a draft of their paper to other seminar participants and lectures on and leads discussion of it in a class session. It is hoped that papers of sufficient quality will be published. Each student is also required to engage in course exercises outside of class and in in-class dialogue on a weekly basis. The seminar is designed to lay the foundation for all future work and for all other policy courses.\nEnrollment limited to eighteen; application required.", 
+    "title": "Foundations of Natural Resourc...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "S 32", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13743", 
+        "listings": [
+            {
+                "number": "826", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Susan Clark"
+    ], 
+    "long_title": "Foundations of Natural Resources Policy and Management", 
+    "extra_info": "A"
+}

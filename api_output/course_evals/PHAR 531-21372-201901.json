@@ -1,0 +1,86 @@
+{
+    "crn_code": "21372",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            1,
+            2,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            6,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about techniques in structural biology and how this techniques are used for the developments of drugs. Also, a lot from kinases ",
+            "\u00a0I learned more about kinases, their regulation, and how to solve crystal structures. ",
+            "\u00a0The basic knowledge about drug design, protein/lipid kinase structure and function. ",
+            "\u00a0Structural study in drug discovery and be aware of current structural biology tool used in pharmacology ",
+            "\u00a0I learned so much about the process of drug discovery and also about the basics of kinases. ",
+            "\u00a0Knowledge of the steps to take towards drug discovery, biophysical techniques, and kinases, "
+        ],
+        [
+            "\u00a0The first half is really well organized and what is expected from a structural biology class. The second half is a lot of information from kinases, and specific kinases which gets repetitive, up to some extents boring and the time to study for the final is super short. ",
+            "\u00a0The course organization was not the best. Less instructors would help. Some lectures had overlap. ",
+            "\u00a0The strength of this course is to use a lot of structure detail to elucidate the mechanism of the target inhibitor. It would be better if teacher could arrange the range of teaching so that we won't have redundant class. ",
+            "\u00a0Since the topics might be somewhat overlapping, some materials were covered repetitively. However, it's not a big issue. ",
+            "\u00a0This course not only gives you a great deal of knowledge but also allows you to gain a lot of hands-on experience with Crystallography. Also, the instructors always relate the knowledge to real-life examples to get us more motivated to study the basic concepts. However, the tests are very daunting. They were brutal. But as long as you studied what was discussed in class, you will be fine. ",
+            "\u00a0Very good course. "
+        ],
+        [
+            "\u00a0If they really like kinases and structural biology, yes ",
+            "\u00a0Only if they were interested in structural biology. ",
+            "\u00a0Yes, it is very useful especially for pharmacology students. I like the practice class in the course so that I can get in touch with the crystallization and drug design procedure. ",
+            "\u00a0Yes. This is one of my favorite courses here at Yale. They did a pretty good job of introducing pharmacology in the aspect of structural biology. The TAs are super helpful as well. ",
+            "\u00a0Yes. If you are a pharmacology student, you should take it. It has all the necessary knowledge you need to know and also gives you a sense of how the pharmaceutical industry works nowadays. ",
+            "\u00a0Yes, very nice if you want to learn about kinases "
+        ]
+    ]
+}

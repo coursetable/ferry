@@ -1,0 +1,88 @@
+{
+    "crn_code": "21648",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            8,
+            2
+        ],
+        [
+            1,
+            1,
+            7,
+            5,
+            0
+        ],
+        [
+            1,
+            1,
+            3,
+            9,
+            0
+        ],
+        [
+            1,
+            1,
+            7,
+            5,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            8
+        ],
+        [
+            0,
+            0,
+            6,
+            6,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0markov chains, martingales, Brownian motion, stochastic calculus, Black-Scholes ",
+            "\u00a0I learned about Markov Chains, Martingales and Brownian Motion, and how to use them to solve problems. ",
+            "\u00a0Stochastic Processes: Markov Processes (chains, fields, Ising model), Martingales, Brownian Motion (finished off with Block Scholes) ",
+            "\u00a0I learned a lot about the intuition behind stochastic processes and how it applied to certain areas of our lives. I found the material incredibly engaging and interesting, and developed a better understanding about the characteristics of these processes. ",
+            "\u00a0In this course I learned the basics about how stochastic processes (sequences of random variables) are analyzed. The first several weeks were dedicated to studying discrete-time Markov chains. Then, we learned a little bit about the theory of martingales and continuous stochastic processes (e.g. Brownian motion). The class gives a good introduction to how such principles are relevant to gambling, financial theory and statistics. ",
+            "\u00a0discrete time and space markov processes, general markov processes, martingales, brownian motion, and other general processes "
+        ],
+        [
+            "\u00a0weird structure where each half is taught by a different professor. First half was Yihong, and we only really covered all of Markov Chains, which was not overly difficult, and the midterm was pretty reasonable. The second half had Sahand, who isnt quite as good of a lecturer, but the material got significantly more difficult, especially towards the end with brownian motion and stochastic calculus. The psets are not too bad in terms of the amount of time (8 of them with 4-6 hours spent on each). ",
+            "\u00a0Course goes to at too fast and assumes a much higher level of probability than it states in the syllabus. ",
+            "\u00a0Strengths: Learned a lot about stochastic processes and the homework was well designed to solidify the concepts. Also tests are open note/book.\r\nWeaknesses: Changing professors in the middle, especially when they have completely different teaching styles. Is not meant for people who have only taken intro statistic classes. ",
+            "\u00a0I think the topics of the first half of the course are much much easier than the second half. That being said, spend less time on the first half topics and more on the second half topics. ",
+            "\u00a0I thought the second half of the semester could have been better organized. The lectures were less cohesive and required us to rely much more on the Chang text. I found the Chang text to be very well-written, and enjoyed how the intuition behind these otherwise non-trivial constructions could be made easier to understand. I felt the homework was very fair, and I learned a lot by doing them. I also felt that there should be slightly more clarification about the expectations behind exams, as there were two instructors and different standards between them. ",
+            "\u00a0The course did a good job introducing stochastic processes. The lecture notes were really helpful in understanding the material. Overall, the pace of the course was ok. It was possible to keep up if you put the effort into it.\r\n\r\nMy main criticism is that toward the end of the semester the problem sets became less frequent and therefore it was hard to practice the material in lecture. We had no problem set on the entire last chapter of the class (diffusion, Black-Scholes equation) but were somehow expected to know the material for the final. Furthermore, toward the end of the semester the material was sometimes presented in a confusing order (e.g. when Brownian motion was first introduced).  I often felt the Chang lecture notes did a much more cohesive job of explaining the material the lectures themselves. ",
+            "\u00a0Material is structured well - the content for the course flowed in a manner that made sense. However, individual lectures sometimes were not coherent. Some jumping around is made although generally the lectures followed the textbook. "
+        ],
+        [
+            "\u00a0yeah, really interesting material with a reasonable workload ",
+            "\u00a0I would not recommend it. The two professors were poor instructors. Sahand barely made himself available. They both sped through lectures, trying mainly to get through material versus solidifying understanding. ",
+            "\u00a0Yes but with the following warnings: This year, the professors switched after the midterm and while I loved this class for the first half, I did not for the second half. Professor Wu is really engaging and prepared and even though he goes really fast, with a little outside work, what he's saying becomes really clear. Also he is so helpful at office hours. Professor Negahban is really confusing. He often makes mistakes on the board and his lectures are hard to follow. Also he always started late, and it honestly didn't seem like he wanted to be teaching us. \r\nThis material of this class is difficult, but it is doable and ultimately interesting when the professor knows what they're doing. ",
+            "\u00a0Yes, I think it is a useful and necessary class across fields. I was one of the few physics majors and I enjoyed myself! ",
+            "\u00a0Yes - I found the material to be very engaging, and really enjoyed going through the textbook. If you had an interest in probabilistic thinking, then perhaps it would be worth taking this course. I found the concepts to be much more different and abstract than that of the introductory classes, and so the new wave of thinking was definitely challenging and rewarding at the same time. If you are interested in applications of statistics to financial theory, we do eventually produce an derivation of the Black-Scholes formula, although not in its entirety. ",
+            "\u00a0Yes, I would recommend taking this course. There is a lot of cool material that is covered in this class that is very different from other applied math classes at Yale.  The course is manageable. That being said, it may be a good candidate to take Credit-D if you have the option. It will make the class a lot less of a burden. ",
+            "\u00a0Yes, stochastic is a wonderful introduction to random processes, with applications mostly in finance. A decent level of probability theory is assumed (241 I think is enough although Yihong does post his lectures from 241 so you can learn from that). Homework problems are very engaging and are pretty fun honestly. Yihong does a great job of lecturing. I found myself looking forward to his lectures every MW. A great class especially if you into math. "
+        ]
+    ]
+}

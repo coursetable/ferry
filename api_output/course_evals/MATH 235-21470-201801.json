@@ -1,0 +1,102 @@
+{
+    "crn_code": "21470",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            1,
+            8,
+            2
+        ],
+        [
+            1,
+            0,
+            3,
+            3,
+            5
+        ],
+        [
+            1,
+            0,
+            1,
+            6,
+            4
+        ],
+        [
+            1,
+            2,
+            2,
+            6,
+            1
+        ],
+        [
+            0,
+            0,
+            5,
+            5,
+            2
+        ],
+        [
+            0,
+            0,
+            6,
+            4,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0In 235 I learned a lot about introductory group theory, symmetries, etc. I liked the structure of the psets in this class, which were rarely overly difficult, but helped me solidify my grasp of proof techniques and class material. ",
+            "\u00a0I learned a lot about Reflection groups themselves, but my biggest takeaway from this class was just being more acquainted to pure math in general. ",
+            "\u00a0A disengaging course that offers little in terms of concrete takeaway ",
+            "\u00a0We learned about a topic at the intersection of linear algebra and geometry. This was the first group theory class I have taken, and it doesn't expect you to have any prior knowledge on the subject, so I'd say what I learned the most was all of the group theory, and then of course, the specifics of reflection groups. ",
+            "\u00a0Group theory with a geometric flavor, a greater appreciation for algebra. ",
+            "\u00a0Intro to group theory, more practice with proofs and more proof techniques, practice and application of linear algebra. Fun practice visualizing in 2/3 dimensions. ",
+            "\u00a0learned a lot about reflections and rotations! cool introduction to an area of algebra. ",
+            "\u00a0We learned introductory group theory concepts, and then studied Coxeter groups and CoxeterDynkin diagrams in order to describe groups of reflections. ",
+            "\u00a0This was a super fun introduction to some basic group theory and reflection groups, it helped solidify some of my knowledge of linear algebra and also introduced me to a much wider range of math. ",
+            "\u00a0A more mature mathematical mind, spatial reasoning, elementary concepts in group theory. ",
+            "\u00a0A very rudimentary knowledge of group theory was taught in order to do an in-depth study of finite reflection groups. My understanding of the nature of symmetry was increased. ",
+            "\u00a0I learned about group theory and abstract algebra. "
+        ],
+        [
+            "\u00a0Professor Liu always helped distill and clarify the lessons from the textbook. His lectures were always understandable and covered a vast breadth of material. My only qualm with the course is the textbook - it is poorly written, skips over proofs, and has little illustration. I know that due to the unique format and content of the class, a good textbook is hard to find, but I believe there has to be a better textbook than the Grove and Benson book the class used. Regardless, the lectures were great and the psets always helped me understand and work with the material. ",
+            "\u00a0One big weakness is that the class does not quite go concurrently with a textbook, and online sources of information for this class are very sparse. ",
+            "\u00a0Student engagement would go a long way. The professor would do well to turn from the board and field questions from time to time. A real textbook that might be helpful would also be useful rather than a brief graduate text that assumes a far deeper background than any student in the classroom has. ",
+            "\u00a0Strengths were that the class went at a reasonable pace. The small class size also made it easy for all students to ask questions in order to make sure they had a sound comprehension of the material. The material itself was also very interesting, although sometimes it was hard to see the real-life applications of the knowledge we were acquiring. Professor was excellent. ",
+            "\u00a0Lectures were very good and Professor Liu was always good at answering questions during the lecture. The small class size also made it much easier (approachable) to ask questions. It was also very helpful that professor Liu followed the textbook's notation and keeping the notation constant. Homework was useful for reinforcing skills learned in class and required some thought instead of constant repetition. However, it would have been useful to have a homework answer key. Office hours were also good - Professor Liu tried to give hints instead of just answers to the problems. Exam's very pretty fair, but it would have been much better to have gotten back our graded midterms. ",
+            "\u00a0The course constantly builds upon itself and delves deeply into a specific subject which makes it fun and rewarding. The homework and tests are very fair and the textbook is a little dense but still comprehensible and helpful. I believe that previous professors of the course also used the method of giving a list of questions that could appear on part of the exams. This was excellent practice and very doable this year, but if it were significantly longer I think this system has the potential to be overwhelming. ",
+            "\u00a0Lectures are very clear and organized. Psets definitely facilitated my learning. ",
+            "\u00a0I really liked this course; in the end it spent a lot of time on Coxeter groups and I wonder if there's more we could've done if there hadn't been such a large emphasis on that but overall it was a lot of fun. ",
+            "\u00a0Generally speaking, the course was very rewarding. It had a more geometric flavor than it might've in the past, but I grew to appreciate it. While I would've loved, in some instances, a more algebraic approach to the topic, most of the class (including myself) had not taken an algebra course and, thus, some concepts were necessarily beyond the scope of the course. That being said, I think the class was rigorous enough in that it was challenging but not overwhelming. ",
+            "\u00a0I feel like this class could benefit from some more motivation/applications to the material we've studied. Explaining the importance of reflection groups could make the course more interesting. ",
+            "\u00a0The course material was very interesting, but the textbook was hard to follow so it was hard to learn the material outside of class. "
+        ],
+        [
+            "\u00a0Absolutely. This is a great introduction to group theory, proof techniques, etc. ",
+            "\u00a0Do not recommend. Take any other course instead. It was a complete waste of a semester and I learned very little from it. ",
+            "\u00a0I would definitely recommend to any STEM major interested in algebra. I found to be very interesting and learned a lot. I think physics, comp sci and math majors would enjoy a lot. ",
+            "\u00a0Yes! Reflection groups is a really cool introduction to group theory from a geometric perspective, which really helps in making the more abstract concepts more understandable (with lots of examples). The workload is very reasonable and the lectures are always very interesting. I also liked however there was an overall flow to the course (working towards classification of Coxeter groups). ",
+            "\u00a0Absolutely - if you've taken abstract algebra it will probably be review/go too slowly through group theory but I found the topic really interesting and fun having come from 225. It gives you practice with old concepts and you prove cool results about your favorite geometric shapes. ",
+            "\u00a0I would definitely take this class with Yuchen. He explains things clearly and is super helpful during office hours. He does not give unmanageable psets that destroy you. ",
+            "\u00a0This is a good class if the right person is teaching it. Just be prepared for the fact that this math is abstract and sees very little applications. ",
+            "\u00a0This is a great class!! It definitely still requires work and does have some intellectual challenge but it's all super manageable and the content is also just a lot of fun. It introduces you to group theory in a really gentle way, and the stuff you learn about reflection groups - which is often grounded in geometry - is super interesting and exciting. ",
+            "\u00a0Absolutely. This course is a great introduction to concepts in group theory and really developed my ability to think spatially. Also, it gave me some concrete examples of groups to draw upon if I decide to take an algebra course next fall. ",
+            "\u00a0This class is great if you're not ready to commit to math 350 quite yet, it will give you the tools to understand if algebra is your cup of tea or not. In addition, the material is interesting and the work isn't too hard. ",
+            "\u00a0If you are a math major I would recommend taking this before MATH 350 "
+        ]
+    ]
+}

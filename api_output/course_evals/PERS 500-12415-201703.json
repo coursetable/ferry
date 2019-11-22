@@ -1,0 +1,78 @@
+{
+    "crn_code": "12415",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I obtained knowledge about the Perian language grammar, vocabulary, and I can read and write correctly. ",
+            "\u00a0Language skills in Persian ",
+            "\u00a0elementary speaking, listening, reading,and written skills inthe Persian language ",
+            "\u00a0I learnt both spoken and written Persian. "
+        ],
+        [
+            "\u00a0It provides a great insight into the culture as well as learning a language that might be very different to other languages. ",
+            "\u00a0The course is very demanding as a L1 language course.\r\n\r\nThis course not very well organised and the content of everyday meeting appears to be spontaneous. And sometimes the instructor does not seem to care whether the whole class has fully understood what was going on before moving on to the next topic. ",
+            "\u00a0Strengths - flexible, structured, paced according to the needs of the students.\r\nWeaknesses - In my opinion, we could have spent less time on the cultural component of the course since that would have given us more time to practise the language. "
+        ],
+        [
+            "\u00a0Yes ",
+            "\u00a0yes ",
+            "\u00a0Yes, I would recommend this course to someone who just wants to learn a new language without having any specified target or goal in mind such as taking it for being able to read primary sources etc. "
+        ]
+    ]
+}

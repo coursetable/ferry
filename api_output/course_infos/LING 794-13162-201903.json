@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50342/assignments/syllabus", 
+    "requirements": "Prerequisite: LING 663 or permission of the instructor.", 
+    "description": "This course introduces students to some of the current debates in the literature on questions. It articulates the relationship between declarative/interrogative structures and the speech acts of asserting and asking. It also probes the status of an assertion as an answer to a question. Some of the main approaches to the semantics of questions are introduced, with special attention to linguistic phenomena. These include pair-list answers, quantificational variability effects, scope marking, alternative questions, and polar question particles. The left periphery of interrogative clauses is explored by studying the behavior of interrogatives under different embedding predicates, and by locating the points at which direct question intonation and pragmatic bias in questioning can enter the derivation.\nPrerequisite: LING 663 or permission of the instructor.", 
+    "title": "Asserting, Asking, Answering", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "DOW 321", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13162", 
+        "listings": [
+            {
+                "number": "794", 
+                "subject": "LING"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Veneeta Dayal"
+    ], 
+    "long_title": "Asserting, Asking, Answering", 
+    "extra_info": "A"
+}

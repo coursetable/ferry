@@ -1,0 +1,74 @@
+{
+    "crn_code": "25106",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            0,
+            1,
+            0
+        ],
+        [
+            1,
+            0,
+            1,
+            0,
+            1
+        ],
+        [
+            1,
+            0,
+            1,
+            0,
+            1
+        ],
+        [
+            1,
+            1,
+            0,
+            0,
+            0
+        ],
+        [
+            2,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            2,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0knowledge of historical basis for ethics in research, as well as the peer review process ",
+            "\u00a0None "
+        ],
+        [
+            "\u00a0a variety of topics discussed ",
+            "\u00a0Weaknesses: much of the content feels extremely irrelevant to me as an MD/PhD student several years into lab research (i.e. \"How to pick a mentor\" session). Many of the examples used (i.e. The Tuskegee experiments) are historical and already well-known so  I didn't really learn anything new. I think we would get more out of this course if it were small-group discussion-based and focused on ethical issues and considerations we are likely to face as graduate students. Have us work through more relevant potential \"grey area\" ethical questions instead of giving us examples of historical violations of ethics. "
+        ],
+        [
+            "\u00a0yes ",
+            "\u00a0No. It's an NIH requirement which is the only reason I took it. "
+        ]
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisite: arrangement with a faculty member must be made in advance of registration.", 
+    "description": "The course offers direct experience in field methods in chronic disease epidemiology for doctoral students and advanced M.P.H. students. Students are expected to actively participate as part of a research team (8\u00e2\u20ac\u201c10 hours per week) doing field research in some aspect of chronic disease epidemiology. It is expected that their progress will be directly supervised by the principal investigator of the research project. This course can be taken for one or two terms and may be taken for credit.\nPrerequisite: arrangement with a faculty member must be made in advance of registration.", 
+    "title": "Advanced Field Methods in Publ...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15668", 
+        "listings": [
+            {
+                "number": "670", 
+                "subject": "CDE"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Nicola Hawley"
+    ], 
+    "long_title": "Advanced Field Methods in Public Health", 
+    "extra_info": "A"
+}

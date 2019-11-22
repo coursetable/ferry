@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50468/assignments/syllabus", 
+    "requirements": "Prerequisites: elementary calculus and background in basic mechanics (deformation, Hooke's law) and structure of atoms (orbitals, periodic table).", 
+    "description": "Study of the atomic and microscopic origin of the properties of engineering materials: metals, glasses, polymers, ceramics, and composites. Phase diagrams;\u00c2\u00a0diffusion; rates of reaction; mechanisms of deformation, fracture, and strengthening; thermal and electrical conduction.\nPrerequisites: elementary calculus and background in basic mechanics (deformation, Hooke's law) and structure of atoms (orbitals, periodic table).", 
+    "title": "Introduction to Materials Scie...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WTS A30", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11301", 
+        "listings": [
+            {
+                "number": "285", 
+                "subject": "MENG"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Sudhangshu Bose"
+    ], 
+    "long_title": "Introduction to Materials Science", 
+    "extra_info": "A"
+}

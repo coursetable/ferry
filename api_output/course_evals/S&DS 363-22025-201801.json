@@ -1,0 +1,122 @@
+{
+    "crn_code": "22025",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            3,
+            7,
+            11,
+            8,
+            1
+        ],
+        [
+            0,
+            4,
+            10,
+            11,
+            7
+        ],
+        [
+            0,
+            3,
+            6,
+            17,
+            6
+        ],
+        [
+            6,
+            5,
+            9,
+            8,
+            4
+        ],
+        [
+            1,
+            9,
+            17,
+            4,
+            1
+        ],
+        [
+            2,
+            15,
+            14,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The assignments are done in groups (including the final project), so I felt as though I could get away with learning very little and still knowing enough to contribute to homework assignments. I don't think I gained any lasting knowledge, however, which is a shame -- as it seemed like many of the techniques Jonathan taught would be useful in almost any data-involved field. To get the most out of this class, try to pay attention in lectures, even though they are livestreamed (which makes attendance practically unnecessary -- a dangerous thing). Go to class, actually listen, and try to learn for the sake of using these skills later (like in the workforce). ",
+            "\u00a0Multivariate statistics e.g. principal components analysis, generalized linear models, structured equations modeling, discriminant analysis, etc. ",
+            "\u00a0Learned a variety of tools for analyzing data as a social scientist would. ",
+            "\u00a0I learned how to think about multivariate data and how to use rudimentary tools in SAS, R and SPSS. ",
+            "\u00a0Using SAS and SPSS to conduct multivariate analysis ",
+            "\u00a0A good overview of some multivariate techniques commonly used ",
+            "\u00a0A general knowledge of the many multivariate techniques available to social scientists in diverse disciplines. ",
+            "\u00a0Learnt a variety of multivaruate statistical techniques, very practical and applied course ",
+            "\u00a0Basics of a variety of techniques and computing languages. ",
+            "\u00a0I learned various multivariate statistical techniques and learned how to apply them to a data set that I brought into the class. I learned which methods work for which types of data and what types of questions each technique is good for answering. ",
+            "\u00a0The course was helpful in gaining experience doing statistical analysis using R and SAS. There is ample examples and lectures to learn to conduct multivariate analysis. The skills are gained through actually doing it, trial and error. ",
+            "\u00a0Principal components analysis, cluster analysis, discriminant analysis, ordination, factor analysis, generalized linear models, and manova. ",
+            "\u00a0Super animated teacher, made concepts that seemed hard accessible ",
+            "\u00a0I developed the ability to work with many multivariate data analysis techniques, including cluster analysis, discriminant analysis, principle components analysis, MANOVA, factor analysis, adn structural equations modeling. I also gained competency in R, SPSS, and SAS for using these techniques. ",
+            "\u00a0I learned about many multivariate techniques such as PCA and clustering. ",
+            "\u00a0We learned a lot of techniques for computational multivariate statistics processes on our coding program of choice, focusing on stats subjects that should prove quite useful in the future. The course was mostly focused on computation rather than concepts; this is what I was hoping for in the course, so I was satisfied. ",
+            "\u00a0Knowledge of multivariate analysis techniques "
+        ],
+        [
+            "\u00a0Jonathan is one of the good STEM teachers, in the Stats department especially. He's funny and relaxed, and the workload is very reasonable. He also provides lots of resources online for learning and for completing PSets -- he even includes a bunch of his own, well-commented code! It's hard to improve much; really, the only tough part about this course is that math with a lot of variables gets boring in lecture, but that can't be helped. Lots of office hours, though! One thing that might be useful in the future would be to have a class Piazza page (or maybe there was one, but I never heard about it). Other CS/STEM/Stats classes that have used Piazza have gained a lot from student-to-student communication, as well as TAs remotely answering questions about concepts. ",
+            "\u00a0Strengths:\r\n- Weekly assignments helped solidify understanding of key concepts \r\n- Engaging professor, good explanation of concepts, enjoyable lectures\r\n- Provision of lecture videos for review was a huge plus \r\n- The R mark-up was very helpful for getting started with the course\r\n\r\nWeaknesses:\r\n- Feedback on individual assignments could be expedited\r\n- Clarity in how different techniques fit together could be improved ",
+            "\u00a0Course was fantastic overall. Only weakness was the slow grading time. ",
+            "\u00a0This course is great in that I had not encountered this material anywhere else. I like that the class is set up to allow us to work on our own projects, and working in groups was very helpful to my learning. The main way that the course could be improved is if we received evaluations more consistently over its course. Hardly any grades were posted before the drop deadline, and I remain uncertain of my progress in the course, because so few of my mistakes were explained to me. Though the TAs were helpful, it's hard to know what kinds of questions to ask without having the problem sets graded, and I wish the course had given me more of that feedback. ",
+            "\u00a0This course is one of the most useful and fruitful courses I have taken at Yale. Video lectures and handouts are so well prepared! Thank you! ",
+            "\u00a0JDRS is an amazing professor who makes going to class bearable. He'll even throw in some jokes during lectures. Lectures are live streamed and recorded so you can watch them from the comfort of your room/while you have lunch, or you could just attend class! Lecture slides are also available in Canvas, which is great. However, homeworks are graded very slowly and it will be weeks before you get your scores back. ",
+            "\u00a0Working in groups throughout was nice, but there should be some individual assignments to force people to understand on their own. The assignments were also not turned back in a timely fashion. ",
+            "\u00a0The fact that lectures were recorded was very helpful in learning during a busy schedule ",
+            "\u00a0I can only think of one weakness, but it's a major one- the grading on our assignments was extremely delayed. It would regularly take over a month to get grades back, and when we finally did, we received no feedback on what we did or did not do well. This, combined with the lack of exams, made it really hard to know how you were doing in the course.\r\n\r\nOther than that, though, the course itself is great! JDRS is a phenomenal teacher! ",
+            "\u00a0Strengths: The course goes into the theory of how and why the techniques work, and even provides a crash course in linear algebra at the beginning for those unfamiliar, as well as the application of how they work in a variety of softwares. I used R and now I have code that can help me run these techniques, but am also familiar with how to run them in SPSS, SAS, Minitab, and STATA. The professor records and live streams the lectures as well, so looking back at course materials is possible and useful. Also, you're able to work in groups.\r\n\r\nWeaknesses: Because the work is particular to your own data set, there often isn't a right answer and that might be hard for some, but the professor and TF's are great resources. ",
+            "\u00a0The strengths are that the material is very well organized and structured and the lectures are very well taught. I could see that the material had been organized to facilitate easy digestion of what would be a very difficult material if we were reading it. Lectures are very engaging with ample examples.\r\nThe single biggest weakness of the course if how slow and unsubstantiated the feedbacks are. It was unbelievable how long it took to get stuff back. Considering the fact that student learning exponentially decreases the longer it takes to get feedback, it was very disappointing. I would say, though, that the homework was very well structured as well as the grading rubrics. So I was even more surprised to see how poorly it was managed. ",
+            "\u00a0Great lectures, professor extremely helpful and kind. ",
+            "\u00a0Not super accessible location of office hours, also sas isnt available for mac ",
+            "\u00a0This course is very strong in that it teaches the practical elements of how to analyze data, with enough underpinning theory to support understanding without requiring an extensive linear algebra background. It is also strong in its lectures, which are entertainingly presented and make frequent use of examples and visuals, which help with comprehending the more abstract concepts of data modeling. ",
+            "\u00a0jrs is the most excellent and competent stats prof i've had. he's also really funny and makes what could be a very terrible course, very enjoyable. ",
+            "\u00a0The course doesn't hold students accountable for the material. It needs to provide more incentives for students to actually learn and not just copy the professor's code. ",
+            "\u00a0Jonathan is a very fun instructor, and he has put a lot of work into this course to make potentially dry material seem interesting and fun to use. The course is very much the sort of course where you get out what you put in. It seems like a strange request to say that I wish the course had been a bit harder -- I would have liked some way to foster a higher baseline level of learning. I often went through the coding motions without ever feeling like I quite understood what was happening conceptually. Of course, the real test for this class is not how well you do on problem sets, but how well you can apply the material afterwards, and I suspect this is true of many courses largely consisting of graduate students. So if I could have learned more, it's mostly on me. And I did enjoy S&DS 363; the course material, if nothing else, will be a useful resource moving forward, and I was introduced to a lot of useful techniques I'd hoped to learn. ",
+            "\u00a0Strengths: Interesting material, opportunity to explore datasets of personal interest, Jonathan's engaging lectures, the sheer amount of time outside of class put aside to helping students, the flexibility provided by the lecture recordings posted online. Weaknesses: Would've liked more time diving into the theory and proofs behind the techniques instead of just seeing them performed during lecture. Would've also liked more feedback on problem sets. "
+        ],
+        [
+            "\u00a0Yes! If you are an S&DS major, DEFINITELY take this course to fulfill requirements. It's one of the more relaxed and fun courses in the major. If you're interested in applications to social science or even biology, you can also get a lot out of this course. I really appreciated that there were no examinations -- this was a game-changer! ",
+            "\u00a0Yes - for research purposes or just general knowledge about statistics, Professor Reuning-Scherer was very engaging and informative about his field. ",
+            "\u00a0Definitely take this regardless of your major. Professor RS is a great teacher and you'll learn a ton about statistics and data analysis. ",
+            "\u00a0I would recommend this course to anyone interested in working on their own dataset and who might enjoy a gentle introduction into thinking about multivariate space. ",
+            "\u00a0Yes, because different statistics analysis are becoming increasingly applicable in whatever career or path you decide to take. ",
+            "\u00a0I would recommend this class, but for your own sake, it is better if you come in with some knowledge of how to code cause everything revolves around coding. If you can't code, you can't do the homework unless you work with a partner who can code but then the onus is on you to make sure you are also carrying your own weight. ",
+            "\u00a0I'm a social science rather than stats person, so I was a little hesitant going into taking it, but now I would absolutely recommend it to another student. ",
+            "\u00a0This is basically a statistics gut; all the assignments are in groups and he posts all his lecture notes online. The final project is just a compilation of homeworks you already did. Take it with friends and either invest time in learning the material or glide by without doing much of anything. It won't really alter your life in any way. ",
+            "\u00a0If you need an S&DS credit and you have a group (of up to 4) to work with, then yes. ",
+            "\u00a0I would recommend it for sure especially if JDRS is teaching it! The course covers a ton of material, so something is bound to be relevant to your personal and academic interests. ",
+            "\u00a0Yes, its a great course. ",
+            "\u00a0Definitely a good way to get started with social sciences stats ",
+            "\u00a0I would recommend, especially if you have a data set to analyze. You learn a lot of statistical methods and how to apply them. Great QR credit. ",
+            "\u00a0Jonathan is a very good lecturer with a lot of energy. The material can be difficult, especially if you started thinking about the nitty-griddies of it, but Jonathan made it very easy to digest. It does make sense, however, to have a project in mind when you take this course. Its designed to be most useful when you have a project you care about to test these stuff on. Jonathan is also cool with group work/project. ",
+            "\u00a0Yes! Professor JRS is a great lecturer and the material is presented in a way that is easy to understand. ",
+            "\u00a0If you are interested in learning how to use multivariate techniques or think they will be an important part of your future work (in the social or natural sciences), then take this course! You will learn a lot, the workload is not overwhelming, and Professor Reuning-Scherer is the absolute funniest person to learn complicated math from--he's the statistics teacher manifestation of the \"spoonful of sugar helps the medicine go down\" cliche! ",
+            "\u00a0No. I really didn't gain too much out of this course. ",
+            "\u00a0I'd recommend this course to a student who doesn't want to be a pure statistician but hopes to incorporate statistics into their future work. The course is exactly how it bills itself -- you learn practical, upper-level statistics techniques, focusing on performing the techniques rather than exploring their conceptual nature -- and it does its job on this front. ",
+            "\u00a0Would recommend, though I think it'd be even more rewarding if you've also taken linear algebra (even though it's not technically a prereq) to understand the more theoretical foundations of the techniques the class teaches. The material seems generally quite useful, and it was interesting to be able to apply it to datasets of your own choosing and personal interest. The class is pretty flexible with the video recordings, which is nice. "
+        ]
+    ]
+}

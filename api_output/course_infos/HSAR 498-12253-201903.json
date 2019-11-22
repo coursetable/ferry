@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50216/assignments/syllabus", 
+    "requirements": "Enrollment limited to History of Art majors.", 
+    "description": "For students who wish to pursue a subject in the history of art not otherwise covered by departmental offerings. May be used for research or directed reading under faculty supervision. A term paper or its equivalent and regular meetings with the adviser are required. To apply for admission, a student should present a prospectus and a bibliography, signed by the adviser, to the director of undergraduate studies.\nEnrollment limited to History of Art majors.", 
+    "title": "Independent Tutorial", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12253", 
+        "listings": [
+            {
+                "number": "498", 
+                "subject": "HSAR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Marisa Bass"
+    ], 
+    "long_title": "Independent Tutorial", 
+    "extra_info": "A"
+}

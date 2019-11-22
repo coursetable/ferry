@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48342/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course explores the application of human rights perspectives and practices to issues in regard to sexuality and health. Through reading, interactive discussion, paper presentation, and occasional outside speakers, students learn the tools and implications of applying rights and law to a range of sexuality and health-related topics. The overall goal is twofold: to engage students in the world of global sexual health and rights policy making as a field of social justice and public health action; and to introduce them to conceptual tools that can inform advocacy and policy formation and evaluation. Class participation, short reaction papers, and a final paper are required.", 
+    "title": "Sexuality, Gender, Health, and...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WLH 003", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12663", 
+        "listings": [
+            {
+                "number": "529", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Alice Miller"
+    ], 
+    "long_title": "Sexuality, Gender, Health, and Human Rights", 
+    "extra_info": "A"
+}

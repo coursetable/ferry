@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "The Foundations of Legal Scholarship (20653). 4 units. This seminar will focus on legal scholarship, including some older classics as well as newer work that we consider important. Permission of the instructors required.R.C. Post.\n", 
+    "title": "The Foundations of Legal Schol...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15730", 
+        "listings": [
+            {
+                "number": "20653", 
+                "subject": "LAW"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Robert Post"
+    ], 
+    "long_title": "The Foundations of Legal Scholarship", 
+    "extra_info": "A"
+}

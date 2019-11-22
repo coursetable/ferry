@@ -1,0 +1,105 @@
+{
+    "crn_code": "14491",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            8,
+            10,
+            2
+        ],
+        [
+            0,
+            1,
+            3,
+            9,
+            8
+        ],
+        [
+            0,
+            0,
+            5,
+            11,
+            5
+        ],
+        [
+            0,
+            5,
+            6,
+            6,
+            4
+        ],
+        [
+            0,
+            1,
+            9,
+            5,
+            6
+        ],
+        [
+            0,
+            3,
+            13,
+            4,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to study a research area and give a short presentation on its history and current progress; I learned how to replicate an NLP paper; and I learned how to write an NLP paper. ",
+            "\u00a0Presentation skills, skills of asking questions\r\nTHe knowledge of recent progress in many areas of NLP ",
+            "\u00a0The ability to read and analyze current research papers in NLP. ",
+            "\u00a0Familiarity with current ideas and research breakthroughs in NLP. ",
+            "\u00a0State of the Art in Natural Language Processing ",
+            "\u00a0Discussion of state-of-the-art research in natural language processing. Focus on technical details or big picture as preferred by the student leading the session. ",
+            "\u00a0Interesting review of state of the art of natural language processing.\r\n\r\nGood format. Each student lectures in each class. ",
+            "\u00a0A general understanding and the cutting edge development of several NLP tasks ",
+            "\u00a0Reading academic papers to know and learn, rather than just skim; building statistical intuition for algorithms; working with ML models. ",
+            "\u00a0Full overview of recent NLP research ",
+            "\u00a0While I learned a bit more in-detail about selected topics in NLP from the class presentations, the vast majority of what I learned was from the topics I chose for my presentation, replication, and final project. These spanned spectral learning, graph convolutional networks, and word sense embeddings. ",
+            "\u00a0Knowledge: Student-selected research topics in NLP. Word embeddings and text representations (doc, sentence embeddings; topic and language models); related probability and math, graph and linalg techniques; supervised and unsupervised learning with applications in MT, retrieval, common sense, question answering, sentiment analysis, etc. Lots of prior knowledge is assumed.\r\nSkills: Giving a presentation, reading/skimming papers, background and novel research + paper replication.\r\nInsights: Unsupervised language modeling with high data efficiency is crucial to so many techniques, for instance sentiment analysis in which a single neural cell codes for sentiment. There is a lot of \"engineering\" being done to get shit to perform well, but some of the theory and tricks toward greater data efficiency, etc., are interesting. Non-neural methods such as spectral methods are interesting. ",
+            "\u00a0Python, analysis of peer reviewed literature ",
+            "\u00a0I learned a LOT about the cutting edge research going on in natural language processing.  I also learned how to replicate research, read CS papers, and so much more.  Overall, a very useful class. "
+        ],
+        [
+            "\u00a0This course was great - it is absolutely astonishing to see how much you can learn in just one semester. I loved that the classes were driven by students and their interests. I really learned a lot from taking this course. ",
+            "\u00a0The presentations and bibliographies are very useful for getting an overview of a topic. I think that spreading the final project over a longer timetable with periodic updates would have been helpful to stay on track. ",
+            "\u00a0I felt very lucky to be able to take this class. It was pretty exciting to read papers that had first been published this year-- sometimes only weeks before we read them -- and some of the research we learned about was totally mind-blowing. The format of student presentations predictably meant there was a lot of variation in the lecture quality. For some topics, I felt that even after reading the paper and listening to the lecture I had no idea what was going on (sometimes I was missing important background, or there just too much math to cover in an hour). I definitely didn't become an expert in anything but it was nice to get the exposure. ",
+            "\u00a0Strength: A lot of discussion about the newest techniques and methodologies in the field.\r\n\r\nWeakness: Very little instructor involvement in each class content so highly dependent on student presenters. ",
+            "\u00a0Seminar style, pretty standard, student presentations. ",
+            "\u00a0I think the lecture/discussion format was very good. I thought there might have been too many assignments though. I think the class could have worked fine without a final project. ",
+            "\u00a0Student presentations are kind of a waste of time ",
+            "\u00a0Strength - great coverage of topics , instructors deep involvement ",
+            "\u00a0The course is well-organized, and the opportunity to do a paper replication, final project, and presentation lets you really get into topics deeply, which I liked. It also is a very good introduction to NLP research, and is very paper-focused. But, it's hard to get a lot out of some of the student presentations. With or without the required paper, students are not as good at explaining as professors, and it's difficult to convey all the nuances of a topic in one lecture: because of the requirement to include research papers, they were often high-level but had to leave details/intuitions about the fundamental methodology out. Despite a lot of student effort and preparation, lectures were just by nature not often as intellectually stimulating, coherent, or effective as in other classes. ",
+            "\u00a0Strengths: Some EXCELLENT student presentations. Really.\r\nWeaknesses: Some not-so-excellent student presentations. Easy to go off on your own on all projects and let deadlines creep up on you. Gotta stay disciplined; good news is it preps you for real research. ",
+            "\u00a0Strengths:  Covers a lot of material.  The material was very interesting.  Drago provides a lot of support for creating lectures, making sure that lectures always are at a baseline of usefulness.\r\nWeaknesses:  Because almost all of the lectures were taught by different students, presentation quality would vary widely.  Additionally, different students would have different assumptions as to what was \"common knowledge\" was, leading to some lectures being way above some student's prerequisite knowledge. "
+        ],
+        [
+            "\u00a0Yes, but I would suggest some background in NLP or ML. ",
+            "\u00a0Yes, I would recommend! ",
+            "\u00a0If you are interested in learning about important topics in NLP, definitely. ",
+            "\u00a0Probably don't take this just because you liked Drago's NLP class. Do take this if you're interested in research and want an excuse to do some NLP experiments of your own. Week to week the workload is extremely light, and Drago is a very flexible and easygoing teacher. Having said that, you won't gain as many hard skills as you might in another classit's more about getting exposure. It also helps if you're a self-starter / independent ",
+            "\u00a0Yes. It's a good class to learn about the field ",
+            "\u00a0Yes, if you hold a big interest in NLP and would like to get closer to doing research, this will help you. ",
+            "\u00a0Yes, but obviously only if you are interested in natural language processing.\r\n\r\nGood to take if you are thinking about grad school/research. ",
+            "\u00a0Ah you get out of it what you put into it, but dont expect to be spoon fed intellectual stimulation or anything; you have to go in wanting NLP and then finding the niche in it thats interesting. ",
+            "\u00a0Yes ",
+            "\u00a0If you're interested in ML research, this course is a good opportunity to see what's cutting edge and get a feel for what papers in NLP look like, what the current research is, etc. It's not a lot of work most of the time, and lectures are not extremely fulfilling, but the projects are time intensive, and it's possible to really get a good understanding of an interesting topic out of them. Because you can choose your own topics for the assignments, it's possible to tailor your experience to your own interests. ",
+            "\u00a0Yes if you have a good background in NLP/AI/math and can self-motivate. Basically a reading group on modern NLP research. ",
+            "\u00a0Yes.  This class teaches you a lot about natural language processing, an exciting field, and Drago is an expert in his space. "
+        ]
+    ]
+}

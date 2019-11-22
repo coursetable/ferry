@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-17", 
+        "group": 2, 
+        "day_of_week": "Tuesday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50438/assignments/syllabus", 
+    "requirements": "After MATH 120 or equivalent; after or concurrently with MATH 222 or 225 or equivalent.", 
+    "description": "First-order equations, second-order equations, linear systems with constant coefficients. Numerical solution methods. Geometric and algebraic properties of differential equations.\nAfter MATH 120 or equivalent; after or concurrently with MATH 222 or 225 or equivalent.", 
+    "title": "Ordinary Differential Equations", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "LOM 215", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11281", 
+        "listings": [
+            {
+                "number": "246", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YMAN\">YC Mathematics: Analysis</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YMAS\">YC Math: Stat/Applied Math</a></li></ul>"
+    ], 
+    "professors": [
+        "Ariel Jaffe"
+    ], 
+    "long_title": "Ordinary Differential Equations", 
+    "extra_info": "A"
+}

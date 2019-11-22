@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50354/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to the basic principles of second-language acquisition theory, focusing on current perspectives from applied linguistics, sociolinguistics, and psycholinguistics. Topics include language teaching methodology, communicative and task-based approaches, learner variables, intercultural competence, and models of assessment.", 
+    "title": "Principles of Language Teachin...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "DOW 106", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11202", 
+        "listings": [
+            {
+                "number": "564", 
+                "subject": "LING"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Petronella Van Deusen-Scholl"
+    ], 
+    "long_title": "Principles of Language Teaching and Learning", 
+    "extra_info": "A"
+}

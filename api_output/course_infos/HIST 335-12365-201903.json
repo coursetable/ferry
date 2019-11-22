@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 1, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "An introduction to the history of southern Africa, especially South Africa. Indigenous communities; early colonial contact; the legacies of colonial rule; postcolonial mismanagement; the vagaries of the environment; the mineral revolution; segregationist regimes; persistent inequality and crime since the end of apartheid; the specter of AIDS; postcolonial challenges in Zimbabwe, Angola, and Mozambique.", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12365", 
+        "listings": [
+            {
+                "number": "335", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHI5\">YC History: Africa</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIA\">YC History: Cultural History</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIB\">YC HIST: Empires &amp; Colonialism</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHIJ\">YC HIST: Soc Chng &amp; Social MVMN</a></li></ul>"
+    ], 
+    "professors": [], 
+    "long_title": "A History of South Africa", 
+    "extra_info": "C"
+}

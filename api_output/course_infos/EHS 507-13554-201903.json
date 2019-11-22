@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49636/assignments/syllabus", 
+    "requirements": "Prerequisites: EPH 508 and BIS 505, or permission of the instructor.", 
+    "description": "This course focuses on application of epidemiology principles and methods to the study of environmental exposures and adverse health outcomes. The major focus on environmental exposures includes both physical and chemical exposures, i.e., environmental chemicals and pesticides, air pollution, radiation, etc. Emphasis is placed on designing population-based studies to investigate environmental issues and human health, critically reviewing literatures and interpreting environmental epidemiologic research data, identifying challenges involved in studying environmental exposures and human health, and analyzing data of environmental exposures and human health. Gene-environment interactions, an essential component when studying environmental hazards in relation to human health, are also addressed and discussed.\nPrerequisites: EPH 508 and BIS 505, or permission of the instructor.", 
+    "title": "Environmental Epidemiology", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LEPH 115", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13554", 
+        "listings": [
+            {
+                "number": "507", 
+                "subject": "EHS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Yawei Zhang"
+    ], 
+    "long_title": "Environmental Epidemiology", 
+    "extra_info": "A"
+}

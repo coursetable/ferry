@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51968/assignments/syllabus", 
+    "requirements": "Enrollment limited\u00c2\u00a0to first-years and sophomores. Online preregistration is required; visit economics.yale.edu/undergraduate-program for more information. May not be taken after ECON 116. Prerequisite: ECON 108, 110, or 115.", 
+    "description": "Similar to ECON 116, but taught as a lecture discussion with limited enrollment.\nEnrollment limited\u00c2\u00a0to first-years and sophomores. Online preregistration is required; visit economics.yale.edu/undergraduate-program for more information. May not be taken after ECON 116. Prerequisite: ECON 108, 110, or 115.", 
+    "title": "An Introduction to Macroeconom...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 113", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "10838", 
+        "listings": [
+            {
+                "number": "111", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Marnix Amand"
+    ], 
+    "long_title": "An Introduction to Macroeconomic Analysis", 
+    "extra_info": "A"
+}

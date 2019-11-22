@@ -1,0 +1,78 @@
+{
+    "crn_code": "10496",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            4,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Quantum mechanics ",
+            "\u00a0I learned about general quantum principles by going through examples starting from classic 1-D potentials (infinite square well, harmonic oscillator, free particle) to identical 3-D particles. We ended talking about NMR/periodic table, and it was really cool to be able to see where chemical principles come from. ",
+            "\u00a0Elementary mathematical framework for quantum mechanics, simple single-dimensional potentials, QM in three dimensions, angular momentum, spin, and vector/matrix formulation of QM. I also developed some intuition for QM. "
+        ],
+        [
+            "\u00a0Liang is chill which is nice. HW is worth 50% - honestly not sure this is even fair when all of the solutions are online. Tests were for the most part very straightforward and fair (though not necessarily easy).\r\n\r\nI think the only way in which the course could be improved is to focus less on regurgitating the book and all derivations in detail than on big picture ideas and intuitive explanations. Liang should see his job not as rehearsing what we can get from the book but complementing it by focusing on the big picture. To be sure, this is much more difficult to do as a teacher, and is perhaps unreasonable to expect of someone whos very busy. There isnt much to complain about when it comes to this course. Liang was a kind and helpful instructor! ",
+            "\u00a0The course was very-well organized, and I cannot overemphasize how important organization is to a quantum mechanics class. The professor always spoke clearly and concisely, which made concepts easier to understand. He pulled complex ideas together with just a few phrases. \r\n\r\nThe course was heavily math-based, which is good if you like math but not so great if you do not have a strong math background. Though I understand quantum is based on math, I wish there were more conceptual explanations during lectures. ",
+            "\u00a0The course was very useful in providing an understanding and appreciation for the vector and matrix formulations of QM. Perhaps there was too much emphasis on the simple 1D cases (up till the midterm), which were taught before the formalism was introduced. I felt that the problems in the problem set, which were from Griffiths, sometimes focused too much on mathematical skills and less on concepts, which I think are more important in the study of the subject. "
+        ],
+        [
+            "\u00a0Yeah  compared to the other quantum course (440), Id assume this is much easier. ",
+            "\u00a0I would definitely recommend this class to anyone who is interested in learning about the quantum foundations of the world around us. Though this course was difficult for me, I enjoyed learning about it! The exams are difficult to prepare for, though, as most of the class is very mathematics based but the exams are more conceptual. ",
+            "\u00a0As a non-physics major, I really enjoyed the course. I think it provided a solid introduction to QM and provided me the right tools and concepts to explore the subject further. I would recommend it if you are looking to explore QM, but there probably exist more rigorous courses for those who are looking for  in-depth study of QM. ",
+            "\u00a0Only if you REALLY have to. "
+        ]
+    ]
+}

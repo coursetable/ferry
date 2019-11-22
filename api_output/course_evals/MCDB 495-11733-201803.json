@@ -1,0 +1,76 @@
+{
+    "crn_code": "11733",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            1,
+            1,
+            13
+        ],
+        [
+            0,
+            1,
+            6,
+            3,
+            7
+        ],
+        [
+            0,
+            2,
+            3,
+            4,
+            6
+        ],
+        [
+            1,
+            2,
+            5,
+            0,
+            7
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            9
+        ],
+        [
+            2,
+            1,
+            1,
+            2,
+            10
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The presentation at the end of the semester was really rewarding -- getting to talk about the research we'd put so much time into (20 hours minimum per week, for the intensive major) was great, albeit a little nerve-racking because many PI's and mentors were in the room. ",
+            "\u00a0Knowledge of lab methods and how to construct/perform experiments. ",
+            "\u00a0I learned a lot about designing my own experiments, troubleshooting, learning how to optimize protocols, etc independently. "
+        ],
+        [
+            "\u00a0I appreciated the hands off approach of the course for the most part, but the one time I wish there had been more guidance was in writing the grant proposal. A general outline was provided, but that does not give a very good sense to students about the typical style of grant writing or formatting norms. I learned how to write the grant more from asking my PI to give me some of his older grants and the outline provided by the course did very little to help me learn grant writing. It also gave me very little idea how the grant would be evaluated by teaching staff for the course.\r\nI think this course could be improved if there was one organizational meeting at the beginning of the year, laying out everything required. This would give a chance for students to associate faces with the Professors names (I only met one of the three professors all semester, and even then, it was in the context of final presentations). ",
+            "\u00a0Strengths include the assignment - they are very relevant to improve skills for future research writing. Weaknesses include lack of help and guiding in finding laboratories. "
+        ],
+        [
+            "\u00a0If you know you're going to be spending close to 20 hours/week in lab for your senior thesis anyways, I'd recommend bumping yourself to intensive. I had a lot of friends regret not starting out intensive and having the option of dropping to non-intensive if they weren't able to handle it. 20+ hours/week in lab isn't so bad if you organize your class schedule to afford you lots of open space in your weekday schedule (I'd recommend taking at least one seminar for your other classes). Make sure you know that your hours for lab line up well with when your mentor is available to help you. ",
+            "\u00a0Yes, if you're serious about doing research, or if the lab you're joining wants you to do >15 hours per week (you might as well just go up to 20 hours for the additional credit). If you only take 2-3 other classes, 20 hours really isn't too much. ",
+            "\u00a0I would recommend this course only if you have a stable laboratory set up already and really enjoy research - and are able to handle a lot of focus on research while managing coursework/other exams. It will be really helpful for those interested in research as a career. "
+        ]
+    ]
+}

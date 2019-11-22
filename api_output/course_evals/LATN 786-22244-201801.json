@@ -1,0 +1,71 @@
+{
+    "crn_code": "22244",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0My command of classical Latin improved quite a bit by taking this course, both in terms of vocabulary and grammar. The course also increased my familiarity with classical texts which are not read as often in the mainstream curricula, due to their difficulty and didactic nature. "
+        ],
+        [
+            "\u00a0The strength of the course was the variety of texts which we read, including prose and poetry, from various stages of the Latin language and Roman literary style. The size of readings per class was about right in terms of difficulty and the time it took to read them. We sometimes failed to get through the whole translation in class, but this was due to instructive discussions about the material and its cultural context. I would have liked to have progressed through the material a bit faster so as to have time to read some of Horace's Ars Poetica, but this would have been difficult given the time constraints. The course could possibly be improved with more discussion of the difficult grammar which sometimes arose, but overall the course was very well conceived. "
+        ],
+        [
+            "\u00a0I would certainly recommend this course to a student interested in classical Latin literature and the development of didactic literature in Rome. I think that it would even appeal to students who would consider the topic of didactic poetry boring or unappealing; the literature that we read was neither, and was actually quite stimulating intellectually. "
+        ]
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49238/assignments/syllabus", 
+    "requirements": "Attendance at a weekly discussion section required. Normally accompanied by CHEM 134L. Enrollment by placement only.", 
+    "description": "An in-depth examination of the principles of atomic, molecular, and stolid state chemistry, including structures, periodicity, and chemical reactivity. Topics include the quantum mechanics of atoms and chemical bonding, and inorganic, organic, and solid state molecules and materials. For students with strong secondary school exposure to general chemistry.\nAttendance at a weekly discussion section required. Normally accompanied by CHEM 134L. Enrollment by placement only.", 
+    "title": "Comprehensive University Chemi...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "SCL 160", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10507", 
+        "listings": [
+            {
+                "number": "163", 
+                "subject": "CHEM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "James Mayer"
+    ], 
+    "long_title": "Comprehensive University Chemistry I", 
+    "extra_info": "A"
+}

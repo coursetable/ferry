@@ -1,0 +1,79 @@
+{
+    "crn_code": "21351",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            1,
+            2
+        ],
+        [
+            0,
+            1,
+            3,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            2,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            2,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            4,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Learned how to use swiss pdb for molecular modeling ",
+            "\u00a0swiss pdb protein viewer program\r\noverview of epidemiology, drug approval process, case studies of ethical and methodological issues ",
+            "\u00a0The course gave an overview of structure-guided drug design and various aspects of the drug approval process. I have a much better understanding of the process and the challenges associated with it. "
+        ],
+        [
+            "\u00a0To be honest, I was a little disappointed in this course. The first half was just too much of the modeling. The second half was often way too specific with minute details. For example, a few classes just gave the details of who we need to contact and what forms we would need to fill out as if you were about to start a study that moment. I just generally felt that I did not get really attached to the realistic process of it all. \r\n\r\nI think what might have been more interesting/useful is to basically model the course where each class is each progressive step in actually taking a drug from modeling to the bench. In this regard, spend 2/3 classes on the modelling but then the groups continue on with the drug and feed that into thought exercises for the material in the second half of the course. As an example, we would spend half of the class talking about ethical dilemmas or patient recruiting but then spend the second half of the class discussing it in the groups and having a small right up about how. Or when we are considering the first dose in patients problem get a fake worksheet with some of the trial data that is different for each group and ask us to asses what that dose should be. This obviously takes a lot more effort on both sides. And I think it would really be important to talk about setting up the trial, recruiting patients, recruiting doctors, the decisions in what makes a successful phase 1, 2, or 3 trial. ",
+            "\u00a0The interactive portions of the first half were great for hands-on learning, but it would have been nice to talk about the background of what we were looking at before diving in. The second half of the course was hit or miss, some lectures were great, some were bad. Everything with the HIC was particularly bad, I think there was absolutely no point in attending those two lectures. Going to the meeting had a minute or two of novelty before it wore off. ",
+            "\u00a0a broad survey which is a strength and a weakness- exposure to a variety of topics which allows for further depth of learning if desired ",
+            "\u00a0Strengths: covers a range of topics; highly knowledgeable instructors; a diverse group of students from the clinical and research field \r\n\r\nWeaknesses: a strong emphasis on structure-guided design, but I would like to know better what happens when the process fails and how issues are addressed then; a 10-page paper on drug design and a group presentation seemed a bit too much - I liked the group presentation because it gave us a chance to work with people outside our field, so I would perhaps shorten the paper; the clinical part of the course could have been a bit more streamlined; "
+        ],
+        [
+            "\u00a0It's good for learning about clinical trials and basic molecular modeling. I've definitely taken worse courses at Yale. ",
+            "\u00a0yes ",
+            "\u00a0Sure. If they like discussion class, this course will be perfect for them. ",
+            "\u00a0I would. It brings the basic and clinical side of drug development together and also brings clinicians and basic scientists together. It is informative to know how each group looks at a problem and where gaps in the process can be addressed. "
+        ]
+    ]
+}

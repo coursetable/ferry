@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "A continuous workshop for graduate students in American Studies, History, African American Studies, and related fields. This group devotes the fall term to intensive reading and discussion of important interdisciplinary texts in Latina/o studies. Students interested in participating should contact stephen.pitti@yale.edu.", 
+    "title": "Working Group on Latina/o Stud...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "BRW35 215", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15603", 
+        "listings": [
+            {
+                "number": "716", 
+                "subject": "AFAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Alicia Camacho", 
+        "Stephen Pitti"
+    ], 
+    "long_title": "Working Group on Latina/o Studies I", 
+    "extra_info": "A"
+}

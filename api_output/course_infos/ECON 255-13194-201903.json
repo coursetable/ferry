@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49526/assignments/syllabus", 
+    "requirements": "Prerequisite: introductory microeconomics and introductory macroeconomics.", 
+    "description": "Introduction to the concepts and techniques necessary to analyze and implement optimal investment decisions.\nPrerequisite: introductory microeconomics and introductory macroeconomics.", 
+    "title": "Introduction to Corporate Fina...", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "LUCE 101", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13194", 
+        "listings": [
+            {
+                "number": "255", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Pascutti"
+    ], 
+    "long_title": "Introduction to Corporate Finance", 
+    "extra_info": "A"
+}

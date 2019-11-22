@@ -1,0 +1,79 @@
+{
+    "crn_code": "11415",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            3,
+            1
+        ],
+        [
+            0,
+            2,
+            2,
+            2,
+            1
+        ],
+        [
+            0,
+            2,
+            1,
+            3,
+            1
+        ],
+        [
+            1,
+            2,
+            2,
+            0,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            3,
+            0
+        ],
+        [
+            1,
+            1,
+            5,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about basic neural processes and how brain functioning relates to various psychological topics. ",
+            "\u00a0A survey of various subfields and research topics within neuroscience. It was cool to have different Yale faculty teach different classes based on their personal expertise. ",
+            "\u00a0This course was effective in providing a broad overview of various topics within neuroscience. My knowledge of the field was enhanced by taking the class. ",
+            "\u00a0An overview of many topics in neuroscience such as sensorimotor systems, clinical neuroscience, affective neuroscience, social neuroscience, neuroeconomics, memory, and perception. "
+        ],
+        [
+            "\u00a0The course is engaging, and it is very interesting to get to know many different speakers in terms of their research interests, methodologies, and lecture styles. However, the downside to team teaching is that the course often lacked a coherent structure, and many professors either repeated basic information across several lectures or assumed that the class had knowledge that it did not. One solution to this problem would be to have professors sit in on each of the classes. Alternatively, professors could view each others' slides so that way they would have a sense of the information that has been covered. Also, the way that the exams are set up (i.e., all at the end) is not conducive to consolidation of learning and causes immense amounts of stress and work at an already hectic time of the semester. It would be preferable to have the exam questions released after the speaker has lectured so that students can pace the essays to their own schedules. Of course, professors would be under no obligation to provide any feedback until the end of the semester. However, the downside to this approach (and to the way the exam is structured currently) is that students have no opportunity to get feedback on the material they are submitted and thus have no opportunity to demonstrate improvement and/or learn from their mistakes. ",
+            "\u00a0Strengths: variety of material. \r\n\r\nWeaknesses: It would have been helpful if the lectures had more continuity between them and if the instructors were able to coordinate in some way to create more of a flow with the material. While the material was mostly interesting, it felt more like a special interest course than a true foundations of neuroscience course. This lack of continuity and the huge range in style and quality of the lectures did not foster as much of a fluid building-block style learning experience. In addition, it would be helpful to have a midterm that is structured similarly to the final so that the final is not such a huge burden at the end of the year (it took way longer than the instructors may have anticipated. would have been nice to have the assessments spread out a little more throughout the semester). Lastly, why did we start lectures before classes even officially started AND have one more lecture than would have been schedule per the Yale academic calendar? :( ",
+            "\u00a0A major strength of this course was having the opportunity to interact with so many faculty in the department. \r\n\r\nOne area the course could be improved in is overall organization. Because faculty were coming in without knowing what material had been covered before them, it was sometimes difficulty to just jump from one topic to another). The course could be improved with more cohesion.\r\n\r\nSimilarly, not having any assignments until the final made it hard to integrate learning along the way and I felt as if I had to spend extra time reviewing material that had been covered at the very beginning of the semester in order to respond to some of the prompts. It could be nice to have a midterm of 2 essays from the beginning of the course and another final 2 essays from the latter half of the course to prevent this. Alternatively, it could be nice to have 4 essays spread out over the course with a different final project requiring a bit more synthesis or reflection (opposed to extensive recapitulation of material that was covered in class). ",
+            "\u00a0Fantastic lectures and several important readings. "
+        ],
+        [
+            "\u00a0Maybe for a certain type of student who is looking for a breadth vs. depth neuroscience experience. ",
+            "\u00a0I would recommend this course to students looking for a broad, surface level overview of neuroscience. For students who might want more extensive neuroscience training, I would recommend taking a more specialized course. ",
+            "\u00a0Yes - if you're interested in neuroscience and hearing lectures from a wide variety of Yale's faculty in the department, definitely take this class. "
+        ]
+    ]
+}

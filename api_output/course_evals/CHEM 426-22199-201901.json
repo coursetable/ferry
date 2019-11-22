@@ -1,0 +1,96 @@
+{
+    "crn_code": "22199",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            6,
+            2,
+            3
+        ],
+        [
+            0,
+            1,
+            7,
+            2,
+            2
+        ],
+        [
+            0,
+            2,
+            6,
+            3,
+            1
+        ],
+        [
+            0,
+            3,
+            5,
+            2,
+            2
+        ],
+        [
+            0,
+            2,
+            5,
+            3,
+            2
+        ],
+        [
+            0,
+            5,
+            7,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about quantum chemistry and the theory of computational chemistry, along with how to use Gaussian, in the section with Professor Hammes-Schiffer. ",
+            "\u00a0Quantum mechanical methods and molecular mechanics methods. Practical tips and experience in using Gaussian and BOSS. ",
+            "\u00a0How to use various computational software (Gaussian and BOSS) to perform basic calculations on molecular systems. ",
+            "\u00a0A survey of various different methods and approaches in computational chemistry, from the very theoretical to the more practically-applied. ",
+            "\u00a0The basics of how to use Gaussian, quantum computational chemistry theory and applications. ",
+            "\u00a0The theory behind quantum chemistry methods for calculating chemical structures, Hartree-Foch, DFT, etc. Applications of molecular dynamics. ",
+            "\u00a0Learned how to use guassian and boss (and learned how they worked). ",
+            "\u00a0The class was an excellent crash-course into both introductory quantum and statistical mechanics theory and a more in-depth treatment of current computational methods for calculating chemical properties according to these fundamental principles. There were too many topics to even make a short list (mean this only as a positive), and I learned so much by taking this class. "
+        ],
+        [
+            "\u00a0Professor Hammes-Schiffer's part was fantastic. I think it was a hard topic to teach well and she was really committed and engaging - her lectures were well put together and interesting, and even though it could be hard to figure out how Gaussian worked, the TAs and professors were generally helpful. The course could be significantly improved by having her teach the entire course, or replacing Professor Jorgensen with any other professor at Yale. I think the second half (about molecular simulations and docking) is a really fascinating and important topic that absolutely deserves a serious treatment by a professor who cares. ",
+            "\u00a0The first half of the course was extremely well-organized, and I really appreciated the approach taken by Prof. Hammes-Schiffer. Rather than delving deep into the details, she provided a selection of concepts that proved instrumental to my big-picture understanding of quantum mechanical computational methods, sans the mathematical tedium. With sufficient interest, a student who has taken the class would be in a very good position to delve deeply into advanced electronic structure methods. The only weakness was probably a result of the large number of students taking the class - the labs, which admittedly tried to cover the key functions in Gaussian, did not give me as rigorous an introduction to the software as I was expecting.\r\n\r\nThe second half of the course was BOSS- and OPLS-centric, which was understandable given Prof. Jorgensen's expertise. While there was not as clear structure to the class from day-to-day compared to the first semester, at the end of the semester I felt I could appreciate molecular mechanics methods and see where and when to best apply them. It was very interesting to learn the various small details behind the making of OPLS, BOSS, water models etc. from the creator himself. ",
+            "\u00a0The first half of the course with Professor Hammes-Schiffer was taught very well. The second half with Professor Jorgensen was a little disorganized, and I wish that we had been given more comprehensive notes. ",
+            "\u00a0The first half, taught by Prof. Sharon Hammes-Schiffer, is very well-organized to facilitate student learning. I gained a great understanding of the field of computational chemistry through a combination of theoretical knowledge and applied use of various programs. We learned a good amount of theory through the lectures and applied the principles through thoroughly-explained problem sets, which \"got our feet wet\" with actual computational programs. The only weakness of this half of the course was that I feel there is still a lot more to learn to be able to apply this knowledge in an actual laboratory, but this makes sense because there is only so much information that can be crammed into half of a course. The exam for this half of the course, though it was not easy, covered reasonable material and actually tested our knowledge of the theory in the course.\r\n\r\nThe second half, taught by Prof. Jorgensen, had the potential to be truly fascinating due to its emphasis on medicinal chemistry and drug discovery. Many of the topics we covered were important, interesting, and relevant. However, the greatest weakness of this half of the course was that it was not as well-organized to facilitate student learning. I don't feel like I learned anything useful from completing the problem sets. The problem sets themselves were not very descriptive and were very much \"plug and chug,\" rote exercises. The classroom lectures were dry and few efforts were made to show us how the material is relevant or interesting. The final exam tested very little actual knowledge of the theory in the course but instead included questions such as matching up the names of authors on papers to their subjects. This half of the course has huge potential for improvement, as the topics are very interesting and relevant to many scientists, but the students are not walking away with the knowledge we need. ",
+            "\u00a0This course was structured well for learning during the first half. I appreciated how the lectures were more conceptual and the labs walked through the nitty gritty. During the second half of the course, the material was interesting but the lectures and problem sets were not. It could also be made more clear what we were supposed to learn. ",
+            "\u00a0Strengths- Sharon Hammes-Schiffer is a great professor who makes content engaging, understandable, and conducive to learning. During her portion of the course, she facilitated great labs, introduced important ideas, and communicated clearly.\r\n\r\nCons- the second half of the course (protein modeling and drug docking), which was arguably more interesting and relevant to most students in the class, but this part of the semester was neither engaging nor instructive in any way. ",
+            "\u00a0Prof. Hammes-Schiffer's side of the course was excellent. She did an especially good job of evaluating the theory, process, and trade-offs of different methods. Prof. Jorgensen's side of the course was not as strong. He did not do nearly as much to explain the actual mechanics behind the methods. As a consequence, I would not really have a good idea of what to keep in mind if I had to go off and do my own MD simulation. ",
+            "\u00a0Strengths- Practical problem sets, the first half of the class in general- SHS is great and did a good job assigning problems that complemented the theory we learned in lecture. Overall a great first half!\r\n\r\nWeaknesses- The second half of the class. our psets were I think written in the early 2000s and Jorgensen either coded in front of us or reminisced about papers from the 70s and 80s. I don't think I'll be using anything I learned in the second half of the class. I did learn a little bit about the process of drug design. ",
+            "\u00a0The first half of the course was great. Professor Hammes-Schiffer is an amazing lecturer. The lectures were interesting and informative, and the problem sets reinforced concepts learned in class. The second half of the course was not as good. It felt disorganized, and I didn't learn as much. ",
+            "\u00a0**Sharon Hammes-Schiffer (Quantum, 1st-half):**--\r\n\r\n*Strengths:* Sharon has to be one of the best teachers in the Chemistry department. Everyone I talked to loved her half. She clearly spent a lot of work putting together excellent slides that I reread after classes because theyre sparsely written, but jam-packed with info -- straight and to the point. Class was always great and shes an engaging lecturer and very knowledgeable. Also the TF Josh was also great and would come in at the last 10 minutes of class to run some computational demos of topics discussed. Sharon started the class literally from scratch (began by introducing summation notation lol), but by the end we were discussing stuff like DFT theory and electron correlation at a very in-depth level. Homeworks problems were always practical examples and psets were written like guides on how to use the Gaussian software hosted on Grace to do the computations; it was just on us to run the computations, put together graphs, and write some commentary. Homeworks really extended the topics we discussed in class to hands-on work that enhanced our understanding. Homeworks and midterm grading was extremely fair and if you read all the lecture slides through a few times (granted, total its like ~150 slides) you will be well prepared for everything.\r\n\r\n*Weaknesses:* I almost always can think of a few minor weaknesses, but this time cant think of any :)\r\n\r\n**William Jorgensen (Statistical Mechanics, 2nd-half):**--\r\n\r\n*Strengths:* Professor Jorgensen is extremely knowledgeable about this topic, obviously -- he invented pretty much all the tools we use in the second half, from the OPLS force field to the BOSS program we used to run calculations. I thought the material we covered in this half was as interesting as the quantum we covered in the first half. Some other students felt that Jorgensen wasnt as engaging as Sharon, but I personally really enjoyed his laid back personality and dry sense of humor. Jorgensen also had other colleagues from his lab come in to teach a few select lessons and Ana and Julian did an amazing job.\r\n\r\n*Weaknesses:* Jorgensens lectures were some brief chalk talk about a bit of theory and then discussing a handout with clippings from a few notable publications about the topic. I thought it was manageable, but everyone did miss Sharons great slides from the first half. Also the homeworks didnt have nice guides for using the BOSS program like Sharons did, which I personally was ok with since I have a decent coding/command-line Linux background, but there were a lotttt of kids who were totally lost on these homeworks. Julian and Jorgensen were available to explain things, but they were missing the week the second homework was do and there were a million people frantically texting trying to figure things out. The documentation isnt amazing and BOSS mechanics are more grounded in a general intuition for Linux stuff than anything else -- something that only comes with experience; lotta people felt thrown off the deep end here. Also homeworks had a portion that was like please look up the lit values for these compounds but **literally some of the lit values did not exist, so we spent forever wasting time googling** (by contrast Sharons psets included the lit values we were to compare to). Also the final for this class had some BS questions like matching kinda obscure author names to the more famous methods they developed and writing down a stat mech math equation for enthalpy kinda outta nowhere lol. "
+        ],
+        [
+            "\u00a0I would definitely recommend this course if Prof. Jorgensen is not teaching again (which I don't expect he will). If he is, I would recommend students audit the course and attend only the first half, because his lectures in the second half consisted primarily of mumbling about his papers from the 80s, but computational chemistry is a really amazing and important field and Prof. Hammes-Schiffer is the best! ",
+            "\u00a0Definitely, if you are looking to survey computational chemistry methods. The main strength of this class is how both QM and MM methods are taught by recognized experts in the respective fields, who bring to class extremely vast experience and deep insight about their fields of study. ",
+            "\u00a0Yes! Great way to learn some basic computational chemistry techniques and the theory behind them. Professor Hammes-Schiffer was also great! ",
+            "\u00a0I would recommend this course to anyone who wants to learn about computational methods used in many, many different kinds of chemistry. This includes both physical chemists interested in modeling, for example, a hydrogen molecule, as well as biological chemists interested in modeling things like protein-ligand binding. The material is interesting, relevant, and useful; it's also high-level material, but the workload is not overwhelming. However, it is to be noted that Prof. Hammes-Schiffer is much more engaging and puts much more effort into student learning than Prof. Jorgensen, and so there is inconsistency in how the course is taught / what students will learn. ",
+            "\u00a0I'd recommend this course to a chem major interested in research or graduate school if Professor Hammes-Schiffer is teaching. It was useful and a fair workload.  The second half by Professor Jorgensen was not much work but less interesting and less well designed for learning. Take it if you're really interested but you can probably find a better elective. ",
+            "\u00a0If you're interested in quantum computational chemistry, by all means, take Sharon Hammes-Schiffer's portion! If you're hoping to learn about drug design or protein modeling...perhaps look elsewhere. ",
+            "\u00a0I would recommend Prof. Hammes-Schiffer's half of the course in an instant. I left her side of the course with an enhanced understanding of the theory of DFT and some practical considerations, like basis set choice. I would not recommend Prof. Jorgensen's half of the course particularly. Overall, it was a fine course. ",
+            "\u00a0Audit this class and just come to the first half. The first half was really great! Or take it of someone else teaches the second half- Jorgensen really doesn't care about teaching ",
+            "\u00a0A good survey of computational chemistry. The first half is much more organized and good for learning than the second half, but that could also be personal preference in material. ",
+            "\u00a0Overall, I would definitely recommend this course to other students. Sharons portion was truly top-notch, and Jorgensens portion was interesting and relatively well delivered as well. Both professors are pioneers in their respective fields and it was an honor to learn from both of them. I learned a bunch in this class and the workload was very manageable and overall low stress. Great class. "
+        ]
+    ]
+}

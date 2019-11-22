@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Preparation of a research paper about forty pages long under the direction of a faculty adviser, in either the fall or the spring term. Students write on subjects of their own choice. During the term before the essay is written, students plan the project in consultation with a qualified adviser or the director of undergraduate studies. The student must submit a suitable project outline and bibliography to the adviser and the director of undergraduate studies by the third week of the term. The outline should indicate the focus and scope of the essay topic, as well as the proposed research methodology.\nPermission may be given to write a two-term essay after consultation with an adviser and the director of undergraduate studies and after submission of a project statement. Only those who have begun to do advanced work in a given area are eligible. The requirements for the one-term senior essay apply to the two-term essay, except that the two-term essay should be substantially longer.", 
+    "title": "The Senior Essay", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12494", 
+        "listings": [
+            {
+                "number": "491", 
+                "subject": "LAST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "The Senior Essay", 
+    "extra_info": "A"
+}

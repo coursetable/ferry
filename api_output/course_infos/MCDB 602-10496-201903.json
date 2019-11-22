@@ -1,0 +1,59 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49265/assignments/syllabus", 
+    "requirements": "Prerequisites: none, but some knowledge of basic cell biology and biochemistry is assumed. Students who have not taken courses in these areas can prepare by reading relevant sections in basic molecular cell biology texts. We recommend Pollard et al., Cell Biology (3rd ed., 2016), Alberts et al., Molecular Biology of the Cell (6th ed., 2014), or Lodish et al., Molecular Cell Biology (8th edition, 2016).", 
+    "description": "A comprehensive introduction to the molecular and mechanistic aspects of cell biology for graduate students in all programs. Emphasizes fundamental issues of cellular organization, regulation, biogenesis, and function at the molecular level.\nPrerequisites: none, but some knowledge of basic cell biology and biochemistry is assumed. Students who have not taken courses in these areas can prepare by reading relevant sections in basic molecular cell biology texts. We recommend Pollard et al., Cell Biology (3rd ed., 2016), Alberts et al., Molecular Biology of the Cell (6th ed., 2014), or Lodish et al., Molecular Cell Biology (8th edition, 2016).", 
+    "title": "Molecular Cell Biology", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10496", 
+        "listings": [
+            {
+                "number": "602", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Thomas Melia", 
+        "David Breslow", 
+        "Christopher Burd", 
+        "Michael Caplan", 
+        "Valerie Horsley", 
+        "Megan King", 
+        "Charles Lusk", 
+        "Thomas Pollard", 
+        "James Rothman", 
+        "Martin Schwartz", 
+        "Josephina van Wolfswinkel"
+    ], 
+    "long_title": "Molecular Cell Biology", 
+    "extra_info": "A"
+}

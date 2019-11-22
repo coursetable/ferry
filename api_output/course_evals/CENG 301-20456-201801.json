@@ -1,0 +1,106 @@
+{
+    "crn_code": "20456",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            8,
+            5,
+            5
+        ],
+        [
+            0,
+            0,
+            3,
+            7,
+            10
+        ],
+        [
+            0,
+            0,
+            2,
+            6,
+            12
+        ],
+        [
+            0,
+            2,
+            4,
+            5,
+            9
+        ],
+        [
+            0,
+            4,
+            11,
+            5,
+            0
+        ],
+        [
+            0,
+            11,
+            8,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about how to approach and tackle difficult problems. We learned a lot about different types of reactors, and how at the end of the day a difficult problem can be simplified through some equations. We did a lot of derivations, and this mentality really prepared us for future derivations of more complicated equations and set-ups. ",
+            "\u00a0I learned about reactors and mathematical modeling of reaction kinetics. ",
+            "\u00a0An overview of chemical reaction engineering fundamentals and kinetics ",
+            "\u00a0This course is a great introduction to chemical reactor engineering and how to apply the theories behind chemical kinetics (e.g. collision theory, Arrhenius theory) to design and select reactors of appropriate dimensions or structure to attain maximum yields in reactions of interest. ",
+            "\u00a0Kinetics stuff: rate of generation, molar flow rate, volumetric flow rate, and the mathematics that ties it all together.\r\nReactors: Batch, Continuous Flow, Plug Flow, Packed Bed, Semi-Batch, Membrane, Catalyzed\r\n\r\nI'm not actually a chem E major (took this for the Applied Math), but I feel like a lot of what I learned is applicable to the rest of the world too... basically whenever something is flowing or being generated. ",
+            "\u00a0I learned about various types of reactors and ways to calculate relevant parameters using the design equations (based on various assumptions). I also learned how to derive reaction rates for several reaction such as those involving catalytic mechanisms or pseudo-steady state hypothesis. More generally, I learned a lot about what a job as a chemical engineer might involve and various real-world applications of the material that we were learning. ",
+            "\u00a0Learned to describe the kinetics of chemical reactions and create equations relating the conversion of a reaction to other parameters in various chemical reactors. ",
+            "\u00a0Gained knowledge of how to size reactors by volume and catalyst mass, understood the relationships between volumetric flow rate through a reactor and other variables, learned to model different reactor types ",
+            "\u00a0Basic understanding of elementary reactors and kinetic processes. ",
+            "\u00a0Super interesting course, learned good problem solving skills, and Prof Zhong did a great job of showing us the big picture the lessons and relating it to current research. "
+        ],
+        [
+            "\u00a0This course is by far the best course I have taken at Yale. It convinced me to stay a chemical engineering major. The professor is so nice, helpful, and knowledgeable. He really cares about the students, and sets up the homework and exams in a very just way. We learned the material incredibly well, and it prepared us for future study in this area. ",
+            "\u00a0Strengths:  Small/close-knit class size, comprehensive lecturer style, good online notes for review/study, kind/understanding professor.\r\n\r\nWeaknesses:  mathematically dense, easy to fall behind if not studying ~12-15 hours/week.  Similar to previous chemical engineering classes, as you continue the knowledge from CENG 210 and CHEM 332,  then go beyond into boundary layers for reacting fluids, how thermodynamically favorable a process is in specific conditions, etc. ",
+            "\u00a0The course was great! The only think I would change is that it needed more office hours. ",
+            "\u00a0This course is excellent the way it is currently taught with Prof. Zhong. If another professor begins teaching it, I cannot say the same for them. The only improvements I would recommend are perhaps going a little quicker through some of the review introductory material and then having time to introduce newer, more interesting topics at the end of the class. Perhaps also going a bit more in-depth mathematically with the more interesting topics such as semiconductor manufacturing or bioreactors would be interesting. ",
+            "\u00a0Strengths: Mingjiang is awesome. Very thorough, clear lecture notes on canvas, explains things well and doesn't bite off more than we can chew. And he sometimes tells interesting stories or provides other information that won't be on the exam but that furthers our knowledge of the subject. Exams were very fair and tested the core material of the course. The way the material is taught, if you understand what's happening, then you can intuit the answer to everything on the exam even if you haven't seen it exactly before. This is great!\r\n\r\nThe only weakness is the textbook, which I feel is a bit strange and not very clear (defines a variable in one chapter and assumes you know it for the rest, which can be confusing). The problem sets came from the textbook and were horrible, because the calculations were really messy and often computer code was needed to do them. So I think the only real improvement would be for the professor to write his own problem sets and either leave everything in variables (so no bad calculations), make the calculations easier, or provide the values of integrals that aren't doable without technology. I feel like I spent a lot of headache on the psets and didn't learn that much with them. ",
+            "\u00a0The material in this course was covered in a very clear and logical way, and the professor was very good at explaining concepts (why we use certain reactors instead of others, what assumptions we rely on when making calculations, etc.) and tying them into the real world. I think the course could perhaps cover a little more material and move a little faster, especially in the last couple of weeks. ",
+            "\u00a0I think the course covers a wide range of topics but I wish we could've gone more in depth on a few them, for example it would've been nice to go more into detail on the membrane reactors, although I understand that that topic is limited due to needing prior knowledge of some transport. ",
+            "\u00a0The professor is excellent! Professor Zhongs lectures and lecture notes are very well organized, and the whole course has clear units and goals. He also always included some interesting examples and side notes from his personal studies, which allowed us to learn even more and better. ",
+            "\u00a0Professor Zhong said the course cannot be sped up or entail more work because it is meant to be introductory, but I do kind of wish there was more content because the subject itself is interesting. ",
+            "\u00a0The course was filled with easily understandable material presented as challenging questions, the teaching was engaging and thorough, and exams were concise, fair, and representative of the most important topics ",
+            "\u00a0Workload and information are very manageable, a welcome change from the rest of the CENG curriculum. Lectures are fairly slow though. ",
+            "\u00a0I really liked the course, the only thing to be improved to me was the TA. She was completely unhelpful. Only negative thing I have. "
+        ],
+        [
+            "\u00a0I would definitely recommend this course to another student. It is an incredible way to get familiar with some odd but very interesting concepts. The professor is phenomenal, and the assignments are very well made to facilitate a great learning environment. ",
+            "\u00a0Only take this course if you already have completed the classes for Physical chemistry I, thermodynamics, and fluid mechanics.  The math is straightforward to understand, but only take if adequately prepared (as an engineering, applied math, physics major, etc.) ",
+            "\u00a0Yes, I would definitely recommend. As long as you've taken general chemistry this course can be very fun. You spend more time actually learning the concepts then just trying to rush through material quickly to get it memorized. ",
+            "\u00a0This course is great! Not too hard if you really understand general chemistry, and the professor is wonderful! ",
+            "\u00a0Yes! ",
+            "\u00a0I would recommend this course to another student if they were considering being a Chemical Engineering major here. It's necessary for the major and will teach you some valuable fundamental chemE skills (even though it's not really used in industry, it will help you for further courses in the major). ",
+            "\u00a0Yes! I'm going to write this as an Applied Math student (because this counts for that), since not many AMTH people take this, so for those of you out there who are considering it, maybe this will be useful.\r\n\r\nA few other AMTH people shopped this and got scared away on the first day when he was talking about some things from Orgo, things that in the next class he said we didn't actually need to know and that he was just saying to provide background for the course. Yes, you do need *some* chem background to take this. Things like the ideal gas law, the definition of flow rate, how equilibrium constant is affected by temperature, stoichiometry. I'd say if you took AP chem in high school you're fine. I never felt that there was a time that I didn't understand something from a chemistry perspective that was going to be on an exam. The math is actually pretty chill... there are a couple integrals, but most of it is just \"number sense,\" e.g., \"This function will behave quadratically,\" or \"If A is much larger than B, then the equation can be simplified to this.\" Diff EQ is not needed as long as you know how to solve a basic differential equation by separation (like f(t)dt=f(x)dx and then integrate). So I would say that you need AP Chem to take this, but if you have that, this is a very chill applied math credit in the engineering category (I assume it's much less work/stress than any other class in the engineering category of AMTH). Great professor, fair exams, take it! ",
+            "\u00a0Definitely take this course with Professor Zhong if possible! He is great at explaining the material and making the class interesting. His exams are very fair, and it's easy to do well if you study and keep up with the material. ",
+            "\u00a0Yes. ",
+            "\u00a0Yes. Professor Zhongs lectures and lecture notes are very well organized, and the whole course has clear units and goals. The professor also always included some interesting examples and side notes from his personal studies, which allowed us to learn even better and more. Its a great course overall, and I think everyone in the class learned a lot and enjoyed taking it. ",
+            "\u00a0Best course in Chem E sequence when taken with professort zhong. You learn cool things about reactors and the kinetics behind them. ",
+            "\u00a0Quality class if youre an engineer, especially if you take it with Professor Zhong.  The workload is light, the material is pretty straightforward and the test and final are very fair. ",
+            "\u00a0Definitely. The ratio of how much you learn to how difficult the course is is very high. Professor Zhong is extremely fair and an incredible teacher. ",
+            "\u00a0Definitely recommend this course. Material is already interesting and immediately applicable to reactor design, and the course introduces and explains technical chemical engineering vocabulary sure to reappear throughout later coursework or tasks in industry. ",
+            "\u00a0Probably a good engineering elective bc workload is not too intense, plus the professor is nice. Wouldn't take it if you're just interested in chemistry though. ",
+            "\u00a0Yes, most people would only take it if required by the CENG major, but if you are thinking about taking it for another engineering major as an elective, I totally recommend it if Zhong is teaching. "
+        ]
+    ]
+}

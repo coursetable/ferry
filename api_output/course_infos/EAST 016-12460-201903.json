@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50172/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This course focuses on important works of Chinese painting and major painters from the fourth century CE to the twentieth century. Through close readings of the pictorial contents and production contexts of such works of art, this course investigates the works\u00e2\u20ac\u2122 formats, meanings, and innovations from social, historical, and art-historical perspectives. In this course, students become familiar with the traditional Chinese world and acquire the knowledge necessary to be an informed viewer of Chinese painting. Discussions of religion, folkloric beliefs, literature, relationships between men and women, the worship of mountains, the laments of scholars, and the tastes of emperors and wealthy merchants also allow students to understand the cultural roots of contemporary China. Enrollment limited to first-year students. Preregistration required; see under First-Year Seminar Program.", 
+    "title": "Chinese Painting and Culture", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "LORIA B50", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12460", 
+        "listings": [
+            {
+                "number": "016", 
+                "subject": "EAST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHA3\">YC HistofArt: Transchron</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YHAS\">YC HistofArt: Asia/Near East</a></li></ul>"
+    ], 
+    "professors": [
+        "Quincy Ngan"
+    ], 
+    "long_title": "Chinese Painting and Culture", 
+    "extra_info": "A"
+}

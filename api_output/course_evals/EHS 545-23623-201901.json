@@ -1,0 +1,111 @@
+{
+    "crn_code": "23623",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's provided students with helpful and timely feedback",
+        "The instructor established a positive learning environment",
+        "The instructor raised questions or problems that encouraged me to think critically"
+    ],
+    "Evaluation_Data": [
+        [
+            3,
+            2,
+            5,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            4,
+            2,
+            7
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            8
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            8
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            10
+        ],
+        [
+            1,
+            0,
+            3,
+            2,
+            8
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a05-10 hours ",
+            "\u00a03 ",
+            "\u00a01 ",
+            "\u00a03 ",
+            "\u00a02 hour/week ",
+            "\u00a02 h ",
+            "\u00a01 ",
+            "\u00a00-1 ",
+            "\u00a01 hour ",
+            "\u00a02 hour/week ",
+            "\u00a05 "
+        ],
+        [
+            "\u00a0Learned a lot about disease mechanism and molecular epidemiology. ",
+            "\u00a0great ",
+            "\u00a0This course is definitely designed for people who are very passionate about mol epi. It's pretty long, and the slides can get a little bit dull, and sometimes it's hard to completely understand the instructor - sometimes it seemed like this was the first time he was seeing the slides. That being said, it was great that we got to do labs, and I loved the approach that the instructor took towards assignments, which was essentially, write what you want on this overall topic and turn it in when you can. This really let me put more work into these assignments since I wasn't crunching for a due date. I LOVED that we got to take genetic testing kits. It's very easy, I will say, to put virtually no work into this class. ",
+            "\u00a0good ",
+            "\u00a0More regular assignments with feedback. ",
+            "\u00a0Very relaxed course that provides a fundamental overview of molecular epidemiology. I found that the first few lectures covered very basic material and wished the course were a bit higher-level/ more in depth. It seemed that the majority of those in the class were not familiar at all with molecular or genetic techniques and had never lifted a pipet. I wish that there was a bit more class discussion and more thoughtful attention to the course. However, Professor Zhu is wonderful and understood how busy everyone's schedules were. ",
+            "\u00a0This course is great for both student that have and don't have biological basis. ",
+            "\u00a0This course is weak in that the primary instructor has difficulty communicating difficult concepts. The homework was distributed in an informal fashion without clear due dates or expectations. On the day of final presentations, the professor left the room, for a mid-presentation break, and failed to return for at least 20-minutes and did not schedule a re-start time. \r\n\r\nOverall, a lot of material was covered. However, learning of the material was inhibited by the professors lack of organization and communication skills. ",
+            "\u00a0Great labs! ",
+            "\u00a0Very nice course. It explains really well molecular and cell biology concepts and makes you think critically about potential studies that can be set up to attempt to explain the mechanisms of environmental exposures and their link with diseases. It is a new field of study that has the potential to ascertain mechanisms of toxicity or explain away variance that would be otherwise unexplained in classical epidemiological studies. \r\nIt can also identify certain pathways and genes that can be really helpful for treatment or explain the effect of environmental exposures. "
+        ],
+        [
+            "\u00a0Very interesting topics gives a deeper understanding of the disease mechanisms. ",
+            "\u00a0Professor Zhu is very nice to his students. ",
+            "\u00a0Dr. Zhu is wonderful, understanding, accessible, and excited about his subject. He takes a very relaxed view of teaching, clearly prioritizing us learning rather than teaching to a test or assigning busy work. Sometimes it was hard to understand him, and sometimes he seemed like he hadn't looked at the slides in awhile - had to kind of read them and figure out what it was trying to say before he started talking about them. ",
+            "\u00a0One of best and kindest professor in YSPH ",
+            "\u00a0good ",
+            "\u00a0Great! ",
+            "\u00a0Professor Zhu was wonderful, fair, and very understanding of everyone's schedules. I wished that there was a bit more attention and engagement placed into the course. ",
+            "\u00a0Nice and patient. ",
+            "\u00a0Dr. Zhu is a nice person who want his student to be excited about molecular epidemiology. However, he lack efficient communication and scheduling skills, and would benefit from more organization and structured-teaching. ",
+            "\u00a0Ask more questions to asses the class comprehension. ",
+            "\u00a0Amazing instructor. Explains really well all the concepts and interlinks them so that you have a clear, wide picture of molecular biology concepts and techniques and their application to environmental health problems. He then relates to studies that exemplify the concepts reviewed in class. "
+        ],
+        [
+            "\u00a0I would recommend this class. ",
+            "\u00a0great ",
+            "\u00a0This class will be very valuable if you have a passion or strong interest in molecular epidemiology, genetics, and genetic laboratory methods. If you don't, it's pretty easy to zone out or not attend at all; there are a couple assignments but they didn't have a due date and were pretty loosey-goosey. We got to do some fun labs, which was a great break. It's definitely accessible to someone new to genetics. I don't totally feel like I got much epidemiology out of it, but I liked the professor. ",
+            "\u00a0good ",
+            "\u00a0Very relaxed course that provides a fundamental overview of molecular epidemiology. I found that the first few lectures covered very basic material and wished the course were a bit higher-level/ more in depth. It seemed that the majority of those in the class were not familiar at all with molecular or genetic techniques and had never lifted a pipet. I wish that there was a bit more class discussion and more thoughtful attention to the course. However, Professor Zhu is wonderful and understood how busy everyone's schedules were. ",
+            "\u00a0Recommend for students that have interest in gene ",
+            "\u00a0This course is a survey of the public health applications of molecular epidemiology and its related methodologies. Not useful for critical analysis of molecular epidemiology literature or methods. ",
+            "\u00a0I recommend it strongly. "
+        ]
+    ]
+}

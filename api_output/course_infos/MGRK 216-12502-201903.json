@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50522/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Modernity's fascination with the myth of Dionysus. Questions of agency, identity and community, and psychological integrity and the modern constitution of the self. Manifestations of Dionysus in literature, anthropology, and music; the Apollonian-Dionysiac dichotomy; twentieth-century variations of these themes in psychoanalysis, surrealism, and magical realism.", 
+    "title": "Dionysus in Modernity", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "RKZ 241", 
+            "days": [
+                "Friday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12502", 
+        "listings": [
+            {
+                "number": "216", 
+                "subject": "MGRK"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "George Syrimis"
+    ], 
+    "long_title": "Dionysus in Modernity", 
+    "extra_info": "A"
+}

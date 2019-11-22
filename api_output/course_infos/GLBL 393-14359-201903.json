@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51874/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Analysis of humanitarian interventions from a variety of social science disciplinary perspectives. Issues related to policy, legal protection, health care, morality, and governance in relation to the moral imperative to save lives in conditions of extreme adversity. Promotion of dialogue between social scientists and humanitarian practitioners.", 
+    "title": "Humanitarian Interventions: Et...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "SML 120C", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14359", 
+        "listings": [
+            {
+                "number": "393", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Catherine Panter-Brick"
+    ], 
+    "long_title": "Humanitarian Interventions: Ethics, Politics, and Health", 
+    "extra_info": "A"
+}

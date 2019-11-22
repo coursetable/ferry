@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49563/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Application of statistical analysis to economic data. Basic probability theory, linear regression, specification and estimation of economic models, time series analysis, and forecasting. The computer is used. For IDE students.", 
+    "title": "Econometrics", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "HLH28 B-8", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12635", 
+        "listings": [
+            {
+                "number": "558", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Boozer"
+    ], 
+    "long_title": "Econometrics", 
+    "extra_info": "A"
+}

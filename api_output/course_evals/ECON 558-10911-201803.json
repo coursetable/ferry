@@ -1,0 +1,87 @@
+{
+    "crn_code": "10911",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            1,
+            4,
+            8
+        ],
+        [
+            1,
+            1,
+            4,
+            6,
+            2
+        ],
+        [
+            0,
+            1,
+            2,
+            8,
+            3
+        ],
+        [
+            1,
+            0,
+            1,
+            9,
+            3
+        ],
+        [
+            0,
+            0,
+            4,
+            4,
+            6
+        ],
+        [
+            0,
+            0,
+            3,
+            7,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Econometric Methods ",
+            "\u00a0The skill to be intuitive and apply the concepts learnt in class to real problem-solving. ",
+            "\u00a0I gained a theoretical understanding of econometric tools to be used in applied settings. ",
+            "\u00a0Econometric concepts. ",
+            "\u00a0I was able to build upon my undergraduate econometrics classes and learn the theory and math behind it. ",
+            "\u00a0Good place to start for metrics and statistics when starting from zero for someone with little knowledge coming into it ",
+            "\u00a0in depth specifics into OLS regressions and how they work "
+        ],
+        [
+            "\u00a0Well for people who are not great at math - are looking at linear algebra and all for the first time, it is really tough to take in all of that and apply it to econometrics. I would have loved it I was given a list of topics I need to thorough with before joining the program so that I could be well-equipped and not struggle at this point. So I would recommend that the future students are either made to take a mandatory class before the program starts or at least be given a list to say that better be aware of these topics beforehand. ",
+            "\u00a0The class was overall enjoyable, but I wish we were able to take our time with the matrix stuff. It kind of came out of nowhere and felt rushed. ",
+            "\u00a0The parts taught towards the end were a bit rushed. ",
+            "\u00a0It is very math heavy, and what we learn in class is not necessarily tested in exams. ",
+            "\u00a0Very challenging, some foundational stuff got missed (e.g. how to work through sigma notation). Could use more prep in the summer, additional resources to see before coming into it. Ran out of time in the course, which was stressful. ",
+            "\u00a0Good for building a foundation for understanding regressions but a lot of material on probability, statistics and matrix algebra were redundant from undergrad. "
+        ],
+        [
+            "\u00a0If you want to learn about RCTs and applying econometrics in research work, yes. ",
+            "\u00a0I'd recommend it for someone who already has a math/stats background. ",
+            "\u00a0Depends on the student's requirements really. ",
+            "\u00a0No. I would rather take an undergraduate advanced econometrics class. This class is purely theoretical. ",
+            "\u00a0Very, very challenging. Hard to see where it was going and how some of this can be applied, given the depth and level of complexity of the material. But the first half of a full year course, so I'm sure it will be fine. ",
+            "\u00a0No unless need econometrics for advanced classes or future career "
+        ]
+    ]
+}

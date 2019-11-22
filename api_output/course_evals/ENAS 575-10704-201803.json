@@ -1,0 +1,105 @@
+{
+    "crn_code": "10704",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            7,
+            3
+        ],
+        [
+            0,
+            0,
+            3,
+            5,
+            6
+        ],
+        [
+            0,
+            0,
+            2,
+            6,
+            6
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            8
+        ],
+        [
+            0,
+            2,
+            5,
+            5,
+            2
+        ],
+        [
+            0,
+            3,
+            4,
+            7,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about the background knowledge of computational visions. ",
+            "\u00a0This was a good survey of a number of computational vision techniques/important algorithms -- gradient ascent, backpropagation, machine learning, etc. Overall, a nice course to apply computer science knowledge. ",
+            "\u00a0Mathematics is beautiful. ",
+            "\u00a0fundemental knowledge on computer vision ",
+            "\u00a0computer vision ",
+            "\u00a0Biological perception, edge detection, image processing. ",
+            "\u00a0Knowledge about computer vision like convolution, edge detection, visual cortex ,etc. This course teaches us how to analyze real life problems . ",
+            "\u00a0computer vision. Math. matlab ",
+            "\u00a0Basic concepts about computer vision and learn to implement the algorithms by myself. ",
+            "\u00a0we spent like 70% in biology and math background, and 30% in CV algorithms. ",
+            "\u00a0Some CV related ML algorithms, basic neuroscience ",
+            "\u00a0Computer vision, neural networks, biological perception ",
+            "\u00a0Rudimentary Knowledge about our vision systems. "
+        ],
+        [
+            "\u00a0The lecture notes of this course is kind of poorly organized. ",
+            "\u00a0It covered a lot of different concepts, and the student's level of interest really dictates how much they will learn from the class. That means that a motivated student can walk away with a fairly robust understanding of a number of computational vision techniques. cons -- it was a little scattered, especially since it covered so many topics, and the tests were not very representative of the core technical course material. \r\n\r\nTests could be adjusted to be more representative of lecture. Currently they're fairly easy, but not what you would study from the online notes or lecture notes. ",
+            "\u00a0One strength would be that Prof. Zucker's lecture is very engaging (he seems to have a lot of jokes prepared for the subject matter of each lecture). Another strength is that the homework is well-designed, and really helps the learning process. \r\n\r\nOne weakness would be that Prof. Zucker's handwriting on the blackboard is sometimes hard to read. Although lecture notes are uploaded in the form of chapters from the textbook, I hope concise version of printed notes can be provided. That would make it easier to study for exams. ",
+            "\u00a0Very good course ",
+            "\u00a0interesting course. notes could be more organized ",
+            "\u00a0If the lecture notes could be made easier for non-bio students to understand it would be much better; or the homework assignments could be made harder so that we can gain deeper understanding of the material. ",
+            "\u00a0The professor is humorous. \r\nI think the lecture notes are not concise enough ",
+            "\u00a0Strengths: homework is well-designed and Professor Zucker is very humorous\r\nWeaknesses: lecture nodes could be improved more. ",
+            "\u00a0The course is certainly a great introductory course for CV. the only weakness, in my opinion, is that the assignments are required to be done in matlab, and i don't like matlab, ",
+            "\u00a0The lecture handouts can be condensed, and lectures are a bit hard to follow; homework and TA are really helpful ",
+            "\u00a0Clear lectures accompanied by clear lecture notes ",
+            "\u00a0Strength: a lot of useful and interesting materials covered. "
+        ],
+        [
+            "\u00a0I would recommend this course to students who want to learn more about the computational models about animal visions. ",
+            "\u00a0Yes, it's a great course for a CS or BME student to branch out and learn a bit more about each field. Prof Zucker is engaging, lively, and very knowledgeable. ",
+            "\u00a0I would definitely recommend because this course introduces me to a whole new wonderful area of computer science (in a beautifully presented way). Although the lectures can be hard to follow sometimes since I have not done anything related to computer vision before, the lectures are well-structured and homework sets are well-designed. As a result, the learning process is quite pleasant. And besides all that, the computer vision area is wonderful in that you can see how beautiful mathematics is. ",
+            "\u00a0Yes, it is very interesting and you will learn a lot about CV ",
+            "\u00a0yes, it is interesting ",
+            "\u00a0Yes. The course teaches very interesting topics in computational vision in biology. The teaching staff teach the course with great enthusiasm, and provide high quality feedback. The topics being taught in this course are different from what we usually learn from all other courses, but yet related and useful. You feel highly engaged and motivated to learn in this course. ",
+            "\u00a0Of course. Professor Zucker is great! ",
+            "\u00a0Yes. Its necessary for computer vision. And it combines biology and computer vision. ",
+            "\u00a0Sure. It provides a clear structure and introduction for students who are interested in computer vision. ",
+            "\u00a0Neutral ",
+            "\u00a0Yes. Great theoretical understanding of computer vision, as well as applicational aspects and up-to-date knowledge of neural networks ",
+            "\u00a0Yes, very well organized lectures and helpful homeworks. "
+        ]
+    ]
+}

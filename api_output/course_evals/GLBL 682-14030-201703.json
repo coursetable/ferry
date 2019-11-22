@@ -1,0 +1,79 @@
+{
+    "crn_code": "14030",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The readings and discussions in the class have provided a great perspective on the issues escalating nowadays. ",
+            "\u00a0Gained a better understanding of current regional challenges. Was especially helpful to look at the problems each country faces in a comparative perspective. ",
+            "\u00a0An overview of the challenges faced by middle eastern states ",
+            "\u00a0I learned a great deal about Middle Eastern relations in a time when the topic is extremely relevant and conflicts are rapidly evolving. "
+        ],
+        [
+            "\u00a0Readings are great\r\nDiscussion is very productive ",
+            "\u00a0An in depth analysis of the countries and how they were affected, but it was hard to fully grapple with the material coming from a low knowledge base. Some introductory \"who's who\" readings might have helped. ",
+            "\u00a0I took this course as someone with no background on the Middle East. I think this ended up being a weakness for me, as I often felt like I lacked a lot of information that other classmates did not and this prevented me from fully engaging with and participating in the discussions. "
+        ],
+        [
+            "\u00a0Yes, strongly recommended ",
+            "\u00a0Absolutely. However, it would probably be good to have some Middle East background coming into the course. ",
+            "\u00a0I would if it was offered again, and if said person had some background knowledge of the middle east. ",
+            "\u00a0I would recommend this course since JJ is a great instructor, but I would warn people who have no background in the subject matter that this might be challenging for them. "
+        ]
+    ]
+}

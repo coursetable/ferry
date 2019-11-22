@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49412/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A survey of the origins, practice, and business models of venture capital. Consideration of three major areas: the history and purpose of venture capital; the practical details of venture investing; and advanced topics on business models, technology ecosystems, and ethics. Particular emphasis on how venture capitalists partner with entrepreneurs to finance technology startups.", 
+    "title": "The Business of Venture Capital", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "YK212 004A", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12412", 
+        "listings": [
+            {
+                "number": "300", 
+                "subject": "CSSY"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Jorge Torres"
+    ], 
+    "long_title": "The Business of Venture Capital", 
+    "extra_info": "A"
+}

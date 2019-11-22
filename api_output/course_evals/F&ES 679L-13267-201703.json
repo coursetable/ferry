@@ -1,0 +1,82 @@
+{
+    "crn_code": "13267",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            4,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            1
+        ],
+        [
+            1,
+            3,
+            4,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            8,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            5,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Hands-on component of plant ecophys, learned how to use a number of sensors and instruments both in the lab and in the field. ",
+            "\u00a0I learned more about how some of the various processes in plants are actually measured--and what the limitations/operating procedures of the various machinery were. We also explored the concept of scaling up from an individual tree to an entire stand. ",
+            "\u00a0I was exposed to some important methods for analyzing plant behavior. ",
+            "\u00a0Same as the lecture component of the course--a greater understanding of plant functioning. "
+        ],
+        [
+            "\u00a0Sometimes (e.g., one of the first labs, when we tested basic equipment near Marsh, or the dissecting and hydraulics lab in the greenhouse), I felt like I was getting the chance to do a lot of new things, and learned a significant amount. As the semester wore on, the structure of the labs seemed to collapse significantly; by the end, the labs were optional, and we were mainly on our computers. ",
+            "\u00a0I was disappointed by the lack of structure in the lab section.  I think the ideas were awesome and I definitely learned a lot, but more coherent activities could lead to more clarity. "
+        ],
+        [
+            "\u00a0I would recommend maintaining a bit more structure all the way through the course. Also, the final course project was a really cool idea--but needed more organization and maybe a presentation just on that, with well-defined roles and expectations for everyone from the get-go. It worked best when we were able to self-organize, but that organization took lots of time and a number of measurements were not as rigorous/didn't get taken/weren't standardized across the class.... ",
+            "\u00a0The activities covered in the lab section were awesome - it was great to be exposed to them.  More structure would help transform that from exposure to knowledge. ",
+            "\u00a0I really liked the hands-on approach to learning taken in the lab. Emphasis was always on exploration, experimentation, and curiosity. "
+        ],
+        [
+            "\u00a0Hopefully by now, when you're reading this, the instructor will have had some time to plan these lab periods more thoroughly and create some clear, guided exploratory activities.  If that's the case, you're going to be exposed to some really cool things and learn a lot about them. ",
+            "\u00a0Reach out to Craig to discuss your goals. He seems willing to try to accommodate everyone. "
+        ]
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49590/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Development theory at both aggregate and sectoral levels; analysis of growth, employment, poverty, and distribution of income in both closed and open developing economy contexts.", 
+    "title": "Economic Development I", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "HLH28 108", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12655", 
+        "listings": [
+            {
+                "number": "730", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Mark Rosenzweig", 
+        "Nicholas Ryan"
+    ], 
+    "long_title": "Economic Development I", 
+    "extra_info": "A"
+}

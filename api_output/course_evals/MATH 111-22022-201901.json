@@ -1,0 +1,100 @@
+{
+    "crn_code": "22022",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            4,
+            5,
+            5,
+            4
+        ],
+        [
+            3,
+            2,
+            6,
+            2,
+            5
+        ],
+        [
+            1,
+            2,
+            2,
+            4,
+            9
+        ],
+        [
+            1,
+            0,
+            2,
+            6,
+            9
+        ],
+        [
+            0,
+            1,
+            4,
+            6,
+            5
+        ],
+        [
+            0,
+            1,
+            6,
+            6,
+            4
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about integration and derivatives and such. ",
+            "\u00a0Gained a deeper understanding of differential calculus and all its application and a quick introduction to integral calculus. ",
+            "\u00a0Math ",
+            "\u00a0I developed very solid knowledge in intro calculus. ",
+            "\u00a0I really found her teaching very helpful! I truly gained a deeper understanding of Calculus. ",
+            "\u00a0How to integrate and derive functions. ",
+            "\u00a0Derivatives, Differentiation, and Integrals ",
+            "\u00a0I feel that this course challenged me to think about a problem in many different ways and to develop my own Interpretation of math problems and how to go about solving them. I learned about the concept of derivatives and how they are applied to Calculus in several ways. ",
+            "\u00a0Optimization, differentiation, integration, etc. ",
+            "\u00a0Calculus ",
+            "\u00a0I would like to think that I developed a general understanding of certain topics in calculus. ",
+            "\u00a0I learnt how to analyze information and basically calculus. "
+        ],
+        [
+            "\u00a0I wish I had been told that the textbook was free online before I bought it. ",
+            "\u00a0There is honestly no weakness to this class. Even though the quizzes, p-sets, and workshop problems are challenging, they help prepare for the midterms and finals. It is better to be confused with the homework and quizzes than being confused about an exam, so I find them to be extremely helpful. The number of office hours is definitely a strength of Math 111. Not only does the professor hold office hours, but teaching assistants hold office hours almost every single day of the week. Help is everywhere, so I never felt lost. ",
+            "\u00a0Itziar is the greatest. The packets were so helpful and made 111 so much better than 110 where I'd spend all my time copying down words for examples. ",
+            "\u00a0The workshops were very pointless as it seemed nobody wanted to participate or be present in the class. Additionally, the tests and problem sets seemed to involve much harder material than was seen and taught in class. ",
+            "\u00a0Professor Itziar was absolutely phenomenal! I have never had such an engaging and passionate professor yet. She always explained all the new material very clearly, and if she noticed someone hasn't understood something, she made sure everyone knows the material on 100%. \r\n\r\nI didn't like the math workshops. I found them very useless as they usually covered material not so well connected to our curriculum. They would make much more sense, if they focused on the challenging PSet problems. ",
+            "\u00a0I feel that at times the course was confusing and I think that a little more explanation and different approaches from instructors  could benefit this course a lot. I say this because at some times i felt lost in how to go approach some of the material when it wasnt explicitly clear. ",
+            "\u00a0The problem sets were very difficult and were never discussed in class. ",
+            "\u00a0Great course, very engaging and insightful ",
+            "\u00a0I think that the course was somewhat organized, which I would consider a strength. A weakness would be that the information is taught in a way that does not translate well to exams, so it made coursework in the class difficult. ",
+            "\u00a0The course had a very good structure and I loved my section where Professor Itziar handed out lecture notes that we filled in during the class. The notes really made all the difference for me and she made it easier to understand difficult concepts and it was also much easier to be engaged throughout the class. However, as much as the group discussions were really helpful in the lecture, I feel as if reducing their frequency would be better to allow the lecturer to explain more examples. "
+        ],
+        [
+            "\u00a0Yes. The teachers are very supportive and willing to help you learn. Its a nice slow pace so non STEM kids can learn the material thoroughly and get the full QR out of the way. And I met a lot of my friends in this class bc everyone goes to office hours and helps each other. ",
+            "\u00a0Definitely. If you need math to be taught slowly and thoroughly, this is the class for you. The class provides you with all the basic calculus you need for life or for future math classes. ",
+            "\u00a0For sure. Very in-depth learning. ",
+            "\u00a0No. In my opinion, it is better for a student who is struggling in mathematics to just take the one semester of Math 112 rather than doing the two semesters of Math 110/111. I would recommend a student just take Math 112 instead, and although possibly struggle a little more, get the requirement out of the way in one semester instead of dragging it out over two semesters with a difficult workload. ",
+            "\u00a0Yes, but only if you truly want to understand the true applications of calculus ",
+            "\u00a0I would take math 112 for one semester than have to take two semesters of 110 and 111. ",
+            "\u00a0yes, I would still recommend this course to other yale students as it breaks down one semester of math over two semesters. I felt it was challenging however I learned a lot and found different ways to study and prepare for the course. ",
+            "\u00a0Yes! They put in a lot of effort to support students in this class. ",
+            "\u00a0I would recommend this course to another student, but inform them that they must work very hard in order to do well. ",
+            "\u00a0Yes! If you're not very confident in your Math background, do Math 110 and 111. It's honestly the best decision I made with regard to studying calculus. Also, the ULA office hours were great to help with problem sets. "
+        ]
+    ]
+}

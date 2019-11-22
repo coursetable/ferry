@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Open only to students who have completed EMD 596/SBS 596.", 
+    "title": "Advanced Global Health Justice...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13574", 
+        "listings": [
+            {
+                "number": "584", 
+                "subject": "EMD"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Amy Kapczynski", 
+        "Gregg Gonsalves", 
+        "Alice Miller"
+    ], 
+    "long_title": "Advanced Global Health Justice Practicum: Fieldwork", 
+    "extra_info": "A"
+}

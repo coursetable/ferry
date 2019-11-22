@@ -1,0 +1,74 @@
+{
+    "crn_code": "24042",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            1,
+            2,
+            0,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about how the different parts of the world took different paths of development in the last couple of centuries. I gained a global perspective on problems of development, and learned to identify situations and policies that are likely to prioritize growth. ",
+            "\u00a0international economic development history course "
+        ],
+        [
+            "\u00a0The material was broad but also analyzed at a deeper level - the coverage of the course was the perfect amount. The course should stay as is. ",
+            "\u00a0No improvement necessary, one of the best courses at Yale! "
+        ],
+        [
+            "\u00a0Yes - it provides a great overview of economic development through a historical lens ",
+            "\u00a0yes "
+        ]
+    ]
+}

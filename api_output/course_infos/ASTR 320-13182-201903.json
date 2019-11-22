@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49157/assignments/syllabus", 
+    "requirements": "Prerequisites: MATH 120 and PHYS 201 or equivalents, or permission of instructor. Previous experience with computer programming recommended. Taught in alternate years.", 
+    "description": "Introduction to the physics required for understanding current astronomical problems. Topics include basic equations of stellar structure, stellar and cosmic nucleosynthesis, radiative transfer, gas dynamics, and stellar dynamics. Numerical methods for solving these equations.\nPrerequisites: MATH 120 and PHYS 201 or equivalents, or permission of instructor. Previous experience with computer programming recommended. Taught in alternate years.", 
+    "title": "Physical Processes in Astronomy", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WTS A60", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13182", 
+        "listings": [
+            {
+                "number": "320", 
+                "subject": "ASTR"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Franciscus van den Bosch"
+    ], 
+    "long_title": "Physical Processes in Astronomy", 
+    "extra_info": "A"
+}

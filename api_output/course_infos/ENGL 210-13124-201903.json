@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49728/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An examination of justice, mercy, and the law in drama, film, and writings from disciplines at the intersection of literature, law, ethics, and religion. Reconsidering the usual binaries of convict and victim, self and other, judgment and forgiveness from antiquity to the present, the seminar gives voice to enduring questions about the brokenness of freedom, human rights, and the status of religious belief. Plays by Aeschylus, Shakespeare, Soyinka, and Peter Brook; films by Sidney Lumet, Gavin Hood, and Martin Scorsese; selected readings in philosophy and religion from Plato, Aristotle, the Bible, Montaigne, Hannah Arendt, Martha Nussbaum, and Howard Lesnick; and recent publications on the mass incarceration crisis in the U.S. (Bryan Stevenson's\u00a0Just Mercy; John Pfaff\u2019s Locked In: The True Causes of Mass Incarceration; Danielle Allen\u2019s Cuz: The Life and Times of Michael A.). The seminar models a gracious and inclusive learning community, seeking to move past the paralysis that often occurs in well-meaning conversations on politics and controversial social issues. To this end, we welcome students of all backgrounds and majors: theater/performance majors, English majors, non-majors, those with long-standing opinions and insights, and/or those with fresh eyes and genuine interest.", 
+    "title": "The Drama of Justice and Mercy", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "LC 206", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13124", 
+        "listings": [
+            {
+                "number": "210", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENJ\">YC English: Junior Seminar</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENR\">YC English: Renaissance</a></li></ul>"
+    ], 
+    "professors": [
+        "Lawrence Manley", 
+        "Trina Hyun"
+    ], 
+    "long_title": "The Drama of Justice and Mercy", 
+    "extra_info": "A"
+}

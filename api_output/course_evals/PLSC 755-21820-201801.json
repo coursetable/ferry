@@ -1,0 +1,77 @@
+{
+    "crn_code": "21820",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Great discussions on contemporary European politics and how we should make sense of the current environment ",
+            "\u00a0Electoral systems, theories about party formation, immigration and other subjects of variation among European states. ",
+            "\u00a0Greater knowledge of the scholarship of European politics. "
+        ],
+        [
+            "\u00a0Professor Cameron asks very good questions that have always sparked great and lively discussions. Overall, the course is excellent. ",
+            "\u00a0The discussions and weekly commentary were the strengths of the course. It had no weaknesses. ",
+            "\u00a0I really enjoyed all the books we covered, though in some cases extracts from several books rather than the whole of one book might have helped give a broad perspective on the week's topic. I felt the topics were really well chosen, and spanned big issues facing European countries. I also liked that the writing load was divided over the whole course. "
+        ],
+        [
+            "\u00a0Yes, certainly to everyone wanting to know more about contemporary Europe. ",
+            "\u00a0Yes, this course was very informative. ",
+            "\u00a0Yes. "
+        ]
+    ]
+}

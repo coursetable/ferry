@@ -1,0 +1,74 @@
+{
+    "crn_code": "21899",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            2,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about theoretical aspects of Distributed computing. ",
+            "\u00a0Distributed system paradigms and foundational problems. How to reason about distributed processes sending messages asynchronously, or accessing shared memory asynchronously. "
+        ],
+        [
+            "\u00a0Strenghts: material is very interesting and good. \r\nWeaknesses: professor goes very fast in lecture. Not enough problem sets to enforce learning (when he gave them they were sufficiently rigorous, though). ",
+            "\u00a0Very interesting material. Misleadingly manageable in the first half. But too much content, gets way too difficult in the second half. You're either one of those grad students/undergrad geniuses who get most of everything, or you realize (too late) you're in over your head and you struggle to understand the most basic 20% of stuff. But you still learn a lot, and the expectations are actually not very high - that 20% is enough to scrape by/get a decent grade if you pore over the readings dilligently and go for office hours often enough. "
+        ],
+        [
+            "\u00a0Yes. Material is good and professor is entertaining. ",
+            "\u00a0Go for it if you have a credit/D to spare. Despite everyone (including the prof) saying that its really theoretical and only 1% is practically relevant to say web dev, its still nice to know you can intellectually categorize and deal with various constructs and components of distributed systems. "
+        ]
+    ]
+}

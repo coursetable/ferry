@@ -1,0 +1,92 @@
+{
+    "crn_code": "20897",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            1,
+            7
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            6
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            3
+        ],
+        [
+            0,
+            0,
+            6,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            5,
+            3,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned physical and chemical mechanisms that enable water and wastewater treatment. I thought the class was informative and well structured. ",
+            "\u00a0A great deal about the physics and chemistry of several processes important in environmental engineering, as well as the context for why they're important to understand. ",
+            "\u00a0I learned a lot about processes that are used to treat water ",
+            "\u00a0Membrane technologies, flocculation, filtration, disinfection processes. ",
+            "\u00a0Knowledge for chemical and physical processes in environmental engineering perspective. I like the lecture notes. ",
+            "\u00a0water treatment process and mechanism for every steps ",
+            "\u00a0Water treatment, chemical reaction engineering, membrane separation, disinfection ",
+            "\u00a0Practice with difficult problem solving, thinking about processes in a mathematical way, proofs, etc. Learned a great deal. "
+        ],
+        [
+            "\u00a0I wish we would have covered topics such as advanced oxidation. I felt we went deep into some topics but only brushed over others, like disinfection. To improve, I would like to gone into more detail on some topics. ",
+            "\u00a0Extremely well-organized and well-taught. Plenty of difficult material, but the structure of the class makes it much more approachable and less stressful. No major weaknesses come to mind. ",
+            "\u00a0I am not a very big \"powerpoint presentation learner,\" though I know some people are. However, for me, less calculations on the slides and more written out would have been helpful ",
+            "\u00a0This class introduces some of the most important technologies in water and wastewater treatment processes. Great! ",
+            "\u00a0it is very systematic and well-developed. I think it is a good course. ",
+            "\u00a0More practical applications ",
+            "\u00a0Workload was high, which was a strength and weakness because I feel like I would have spent more time on problems if I had longer on the problem sets, but also learned a lot from the difficulty level. "
+        ],
+        [
+            "\u00a0Yes, but some topics were not relevant for everyone looking for a higher level understanding of treatment processes. ",
+            "\u00a0Absolutely. Whatever a students exact focus in the environmental field is, the material is likely to be useful. Meny does a great job teaching it and makes it an overall pleasant experience. ",
+            "\u00a0Yes. I think for the length of the classes, the amount we learned was comparable. It was very well taught. ",
+            "\u00a0Yes, because Meny is a great professor ",
+            "\u00a0Yes. It will be helpful to future research. ",
+            "\u00a0Yes, if you are an environmental engineering students. Some lecture might be involved in future research ",
+            "\u00a0yes ",
+            "\u00a0Yes. Good course to learn basics of water treatment and membrane processes ",
+            "\u00a0Yes, excellent course, excellent instructor. "
+        ]
+    ]
+}

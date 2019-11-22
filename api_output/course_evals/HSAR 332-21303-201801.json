@@ -1,0 +1,78 @@
+{
+    "crn_code": "21303",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            5,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            6,
+            3
+        ],
+        [
+            0,
+            2,
+            3,
+            3,
+            4
+        ],
+        [
+            1,
+            1,
+            4,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            8,
+            4,
+            0
+        ],
+        [
+            0,
+            1,
+            7,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Amazing class especially for someone like me with no architecture background! ",
+            "\u00a0I learned so much in this class and if you are interested in architecture this class is a must. ",
+            "\u00a0Architectural precedents and theory "
+        ],
+        [
+            "\u00a0Very good overview - good workload balance. ",
+            "\u00a0The lectures were SO STRONG.\r\nKeep up the excellent lecturing.\r\n\r\nThat said, grading is unfair because Craig Buckley and Eeva-Liisa have different standards and priorities.\r\nI received comments and grades like two months ate and there was no explanation for what was wrong with my submissions. I saw compliments and then an A- or B+, and three of the five were graded after the last lecture of the semester.\r\nThe TF was probably symbolic and was just as confused about discussions on canvas as the professors and students.\r\nThe Canvas discussions added little value to the course and were never consistent in where they were located. I didn't do them sometimes because of that reason.\r\nPlease be more organized or don't try to add complexity if you can't grade it. ",
+            "\u00a0The class is co-taught by an architecture professor and an art history professor. It is great to see two points of view in one class and I really appreciated the structure of it. ",
+            "\u00a0Strengths: the lectures were interesting \r\nWeaknesses: the workload (2 exams, a paper, regular writing assignments, weekly reading responses) was intense given the class structure "
+        ],
+        [
+            "\u00a0If someone is interested in architecture most definitely! ",
+            "\u00a0Excellent foundation to Modern Architecture ",
+            "\u00a0I learned so much in this class and if you are interested in architecture this class is a must. "
+        ]
+    ]
+}

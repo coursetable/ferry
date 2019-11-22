@@ -1,0 +1,73 @@
+{
+    "crn_code": "11226",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            3,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            4,
+            0,
+            0
+        ],
+        [
+            0,
+            2,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Insightful and informative in teaching yiddish language and culture "
+        ],
+        [
+            "\u00a0While it was very accessible and hands on in the small classroom setting, I think a slightly larger group would've facilitated a better experience. I also think a shorter class time meeting 2 days a week would've made it easier to retain information than one long class each weak. I also really liked the songs and other fun aspects of the course. "
+        ],
+        [
+            "\u00a0I would recommend this course to anyone who is interested in learning yiddish language and culture. Not a stress inducing class or a heavy work load, but still a wholesome way to learn or hold onto a culture that is in need of preservation. The monotony of the long class time is nicely broken with songs... ",
+            "\u00a0Take this course if you are looking to get an excellent base in the reading Yiddish! we go over the structure of the language and translation strategies so that we can understand complex texts on our own. Workload is manageable and often times quite intellectually compelling. ",
+            "\u00a0Grammar-based and translation-focused intro to yiddish. Lots of leeway to choose texts to translate and present on authors. "
+        ]
+    ]
+}

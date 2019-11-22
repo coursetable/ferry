@@ -1,0 +1,72 @@
+{
+    "crn_code": "23117",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            1,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A general overview of some current work/developments in IR. "
+        ],
+        [
+            "\u00a0A strength is that this course had a wonderful range of speakers, taken from pre-docs, post-docs and faculty. This meant the topics were diverse and fascinating. A slight problem for those who come from outside of the IR cohort is that the structure/requirements are not made clear at all, and there are several occasions when the timings are changed which may result in not being able to attend. This is a shame for what is otherwise a compelling series of discussions. ",
+            "\u00a0The International Relations workshop this semester had a good mix of speakers working on fascinating research topics. I thought the overlap of at least two sessions with ISS was particularly well thought out, and enjoyed both presentations given their security slant. I would like to see the workshop continue to aim for good balance of International Security, IO and IPE topics, and would also be curious to see more multi-method research design work being presented in IR (e.g., papers that use archival or interview-based research alongside statistical or experimental analysis). "
+        ],
+        [
+            "\u00a0Tentatively, yes. But if you come from outside the IR cohort, it can be a bit complicated in terms of knowing what your role is. "
+        ]
+    ]
+}

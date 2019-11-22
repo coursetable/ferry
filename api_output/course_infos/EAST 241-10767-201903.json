@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49648/assignments/syllabus", 
+    "requirements": "All readings in translation; no knowledge of Chinese required. Some Chinese texts provided for students who read Chinese. Formerly CHNS 201.\u00c2\u00a0", 
+    "description": "A study of major women writers in traditional China, as well as representations of women by male authors. The power of women's writing; women and material culture; women in exile; courtesans; Taoist and Buddhist nuns; widow poets; cross-dressing women; the female body and its metaphors; footbinding; notions of love and death; the aesthetics of illness; women and revolution; poetry clubs; the function of memory in women's literature; problems of gender and genre.\nAll readings in translation; no knowledge of Chinese required. Some Chinese texts provided for students who read Chinese. Formerly CHNS 201.\u00c2\u00a0", 
+    "title": "Women and Literature in Tradit...", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "ELM143 106", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10767", 
+        "listings": [
+            {
+                "number": "241", 
+                "subject": "EAST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kang-i Sun Chang"
+    ], 
+    "long_title": "Women and Literature in Traditional China", 
+    "extra_info": "A"
+}

@@ -1,0 +1,84 @@
+{
+    "crn_code": "10712",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            4,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            5,
+            6
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            6
+        ],
+        [
+            0,
+            1,
+            4,
+            4,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            6,
+            4
+        ],
+        [
+            0,
+            1,
+            0,
+            3,
+            7
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I think that the best part of this class is the analysis of a large number of algorithms that allow the small networks and humongous networks like the Internet to run. We went over the design choices that led to our current network infrastructure, and we got to implement protocols like TCP and even build our own HTTP servers! You will learn A LOT in this class, so be ready! ",
+            "\u00a0I gained a ton of knowledge about the basics of how the internet works. Lots of information about protocols at various layers of the internet. Yang also really likes to include a lot of analysis, so expect to not just learn qualitative information, but do quantitative analysis. ",
+            "\u00a0Learned the foundations of Computer Networks and how the internet works, layer by layer. Was a good introduction with relevant information in math (i.e. queuing theory), some graph theory, and algorithms. ",
+            "\u00a0I learned a lot about how computer networking works, especially about BGP and the broader Internet. ",
+            "\u00a0I learned so much! The class is essentially covers how the Internet works by unpacking each of the \"layers\" of networking. A fascinating blend of economics, math, computer science. Professor Yang did a fantastic job encouraging us to think critically about design choices that pioneers of networking protocols made, to learn from their architectures as we design our own pieces of software. A must-take for any CS major. "
+        ],
+        [
+            "\u00a0The assignments could have been paced better. The first two assignments were easy and then BOOM! Build 7 servers. Building them was cool, but maybe a bit more time would have helped everyone. ",
+            "\u00a0Strengths: very interesting information (I think at least), Yang is extremely knowledgeable and eager to talk with students.\r\nWeaknesses: a lot of information is covered in class and per lecture, so it can be difficult to follow. Yang tries to keep students involved in lecture by asking questions, but when the questions are difficult and people refuse to try guesses, there's a lot of dead air which can get awkward. ",
+            "\u00a0Course was taught very well with introductions to a specific network goal, proposed solutions with drawbacks and other ways to combat these problems. This made it very natural to understand and see the evolution in these network structures.\r\n\r\nThe weakness of this course is in the homework. The assignments were less structured, although very rewarding. I hope that the homework can be split up into more assignments with less work for each assignment in the future. ",
+            "\u00a0Lecture was great and very interesting! Sometimes it went too fast though, and questions were posed before students could answer them. ",
+            "\u00a0For better or worse, the coding assignments (especially 3 and 4) took a long time to accomplish, to the point that I had to submit code with many half-patched bugs instead of focusing on the underlying concepts. But that's also poor planning on my part. Nevertheless, the assignments taught me a large amount in applying the class material from lecture. \r\n\r\nProfessor Yang is clear and organized, which really facilitates learning. I wish we had had a second exam to cover the second half of the course; having the opportunity (and being forced) to condense and revise all that material would have been helpful. "
+        ],
+        [
+            "\u00a0TAKE THIS COURSE! It is super useful and you will learn a lot about how our current communications systems work. Even if you are not planning to go below pretty software, knowledge of how the whole Internet works is a must. ",
+            "\u00a0I would highly recommend it to my past self because I know I find the material really interesting. This meant that lecture was enjoyable even when it was tough to keep track of all the information, and the problem sets were kinda fun even though they were a ton of work. So I'd look at the syllabus and take it if you think you'd find the material interesting. The course is certainly a lot of work, but I think some of the reviews can be a little exaggerated. ",
+            "\u00a0I would very much recommend this to another student. This class is a great introduction to networks, and the way Professor Yang teaches it allows students to understand a lot of material with a natural structure of identifying a goal and proposed solutions with different advantages and drawbacks. The course workload is intimidating, but you gain very much from this class and the grading is very generous. If you put in the work, there is much to be gained from this class. ",
+            "\u00a0This course does a good job of teaching you principles of networking. If you want to learn those, take it. ",
+            "\u00a0Yes! Very interesting and important material, and Yang Yang and the TA (Qiao) were very helpful and approachable. Workload is intimidating, but is concentrated in around 3 weeks of the semester for the server assignment and the TCP assignment (the latter was much more manageable imo). ",
+            "\u00a0Yes. All CS majors ought to consider taking this. Networking and the Internet affect so much these days, it is critical to understand the fundamentals. "
+        ]
+    ]
+}

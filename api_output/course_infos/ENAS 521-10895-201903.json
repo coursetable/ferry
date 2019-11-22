@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49611/assignments/syllabus", 
+    "requirements": "", 
+    "description": "A unified approach to bulk-phase equilibrium thermodynamics, bulk-phase irreversible thermodynamics, and interfacial thermodynamics in the framework of classical thermodynamics, and an introduction to statistical thermodynamics. Both the activity coefficient and the equations of state are used in the description of bulk phases. Emphasis on classical thermodynamics of multicomponents, including concepts of stability and criticality, curvature effect, and gravity effect. The choice of Gibbs free energy function covers applications to a broad range of problems in chemical, environmental, biomedical, and petroleum engineering. The introduction includes theory of Gibbs canonical ensembles and the partition functions, fluctuations; Boltzmann statistics; Fermi-Dirac and Bose-Einstein statistics. Application to ideal monatomic and diatomic gases is covered.", 
+    "title": "Classical and Statistical Ther...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "ML 107", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10895", 
+        "listings": [
+            {
+                "number": "521", 
+                "subject": "ENAS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Loewenberg"
+    ], 
+    "long_title": "Classical and Statistical Thermodynamics", 
+    "extra_info": "A"
+}

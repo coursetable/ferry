@@ -1,0 +1,47 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49759/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Close reading of selected lyric poetry from the twentieth and twenty-first centuries. Focus on ways in which the poems illuminate and engage contemporary habits of political evaluation and response. Poets include Seamus Heaney, Dylan Thomas, W.B. Yeats, W.H. Auden, Lesbia Harford, Pablo Neruda, Bertolt Brecht, Frank O'Hara, Wislawa Szymborska, Edith S\u00c3\u00b6dergran, and Audre Lorde.", 
+    "title": "Poetry and Political Sensibility", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LC 203", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13058", 
+        "listings": [
+            {
+                "number": "313", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<ul><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YEN2\">YC English: 20th/21st Century</a></li><li><a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENJ\">YC English: Junior Seminar</a></li></ul>"
+    ], 
+    "professors": [
+        "Joseph North"
+    ], 
+    "long_title": "Poetry and Political Sensibility", 
+    "extra_info": "A"
+}

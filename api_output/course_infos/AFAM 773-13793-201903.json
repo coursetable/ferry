@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "The ethnographic interpretation of urban life and culture. Conceptual and methodological issues are discussed. Ongoing projects of participants are presented in a workshop format, thus providing participants with critical feedback as well as the opportunity to learn from and contribute to ethnographic work in progress. Selected ethnographic works are read and assessed.", 
+    "title": "Workshop in Urban Ethnography", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "WALL81 201", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 13
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13793", 
+        "listings": [
+            {
+                "number": "773", 
+                "subject": "AFAM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Elijah Anderson"
+    ], 
+    "long_title": "Workshop in Urban Ethnography", 
+    "extra_info": "A"
+}

@@ -1,0 +1,54 @@
+{
+    "exam": {
+        "date": "2019-12-15", 
+        "group": 2, 
+        "day_of_week": "Sunday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49644/assignments/syllabus", 
+    "requirements": "No knowledge of Chinese required for students enrolled in EALL 200. Students enrolled in CHNS 200 must have L5 proficiency in Mandarin or permission of the course instructor.", 
+    "description": "An introduction to the literature, culture, and thought of premodern China, from the beginnings of the written record to the turn of the twentieth century. Close study of textual and visual primary sources, with attention to their historical and cultural backdrops. Students enrolled in CHNS 200 join a weekly Mandarin-language discussion section.\nNo knowledge of Chinese required for students enrolled in EALL 200. Students enrolled in CHNS 200 must have L5 proficiency in Mandarin or permission of the course instructor.", 
+    "title": "The Chinese Tradition", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "WLH 120", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10764", 
+        "listings": [
+            {
+                "number": "240", 
+                "subject": "EAST"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YXWR\">Writing Skill (Opt.)</a>"
+    ], 
+    "professors": [
+        "Lucas Bender", 
+        "Yongtao Zhang"
+    ], 
+    "long_title": "The Chinese Tradition", 
+    "extra_info": "A"
+}

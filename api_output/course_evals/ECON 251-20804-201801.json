@@ -1,0 +1,133 @@
+{
+    "crn_code": "20804",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            2,
+            9,
+            20,
+            5
+        ],
+        [
+            1,
+            3,
+            15,
+            13,
+            6
+        ],
+        [
+            1,
+            4,
+            13,
+            11,
+            7
+        ],
+        [
+            1,
+            5,
+            15,
+            9,
+            4
+        ],
+        [
+            0,
+            1,
+            12,
+            21,
+            5
+        ],
+        [
+            0,
+            2,
+            18,
+            17,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Background of financial theory. ",
+            "\u00a0Quick mathematical thinking, reasoning ",
+            "\u00a0I learned a lot about how financial theory works, from pricing assets to bonds and stocks to social security. ",
+            "\u00a0A thorough introduction to the world of financial economics. Financial equilibrium as a natural extension of general equilibrium, present value problems, bonds, yield curves, bond pricing, current yields/marking to market, OLG equilibrium models, risk, probability theory, backwards induction, option pricing, CAPM, Black Scholes pricing, mortgage hedging, etc, etc. I learned a ton about the theory behind markets and how to apply theories to complex problems using basic mathematics. ",
+            "\u00a0A lot of computations of concepts previously learned ",
+            "\u00a0i understanding the concepts behind common finance ideas more and improved my intuition regarding certain things. ",
+            "\u00a0It gives a super solid mathematical understanding of finance and general equilibrium. ",
+            "\u00a0Econ251 was helpful for applying mathematical concepts to financial markets. Learning about theories of securities, asset trading, optimal investing, portfolio management, etc. was intellectually stimulating and always interesting. ",
+            "\u00a0The intersection between econ and finance ",
+            "\u00a0I learned a lot about financial theory including General Equilibrium Models, Bond Pricing, and the Capital Asset Pricing Model. One also develops skills on strategic decision making through backwards induction. ",
+            "\u00a0I have learned more about finance than I thought I could ever know, and I have gained a refreshed, healthier perspective on some of the basic principles that make up our financial system. ",
+            "\u00a0Through this course, I have developed a greater understanding of financial economics. I have gained knowledge about interest rates, social security, mortgages, option pricing, and many other important topics, while also helping to refine my mathematical skills. The course has provided both the theoretical foundations and the real-world applications of financial theory. ",
+            "\u00a0This class taught me a lot about analytic skills relevant in the real financial world. ",
+            "\u00a0Learned about there theory behind the existence and use of financial systems in the economy. ",
+            "\u00a0I definitely learned a lot about finance that helped me solidify my knowledge and apply it to other contexts. ",
+            "\u00a0Econ 251 is a solid course. It was pretty intense and I learned a lot. It gave me a better understanding of how securities are traded. OLG model was pretty cool! ",
+            "\u00a0You learn about the fundamental economics underlying the financial markets. Theories are derived from first principles, and topics are covered from general equilibrium and Pareto efficiency to social security, mortgages, CAPM, and dynamic hedging. ",
+            "\u00a0We learned financial equilibrium, mortgage pricing, present value, optimal pricing of call/put options etc. I understood the financial world better. ",
+            "\u00a0I learned a lot about the operation of the financial market, specifically how firms value different assets. I gained insight into investment strategies used in the real market as well as an understanding of how math and probability are used in the industry. ",
+            "\u00a0Finance knowledge ",
+            "\u00a0Basic knowledge of financial concepts and tools for pricing various financial instruments. "
+        ],
+        [
+            "\u00a0The course is very well-structured. The exams and PSets are well-designed. \r\nThe homework grades and PSet scores should be posted on Canvas. ",
+            "\u00a0The course has a really good selection of topics and the professor is great. Attending sections is vital. ",
+            "\u00a0Financial theory was a good course, interesting and with engaging material. I wish that Professor G had covered the basics first, though, like what a each form of assets is and how they work. He would sometimes throw in financial words that either he hadn't covered, or that he discussed weeks ago briefly and which I had forgotten the definition of. Maybe that's a fault on the side of the student, but it wouldn't be that much extra work to briefly remind us what TKTK term meant if it was covered a few weeks ago. \r\n\r\nI personally didn't benefit much from the Excel portion of the course; it was difficult to see what Prof G was doing on the projected computer screen on Excel since he already had all the templates and such laid out, and the TA didn't really cover it, either. Since it's not really a relevant or good program anymore, I think it might be better to eliminate that aspect of the course entirely. Short of that, it would be worth actually teaching Excel. ",
+            "\u00a0Professor Geanakoplos is a polarizing figure - some will be bored by the 9 AM lectures filled with tedious algebra and Ellington stories, and others will love it. You should love it - the material is fascinating and extremely applicable. Exams are perhaps a little too fair - it's very possible to get an A-, but you'll have to put in a lot of work for an A. Professor G's anecdotes add a nice layer of practicality to the material and make the class enjoyable. ",
+            "\u00a0The course was bit disorganized and it felt like we could have moved through the material more quickly and more efficiently had we not gotten onto so many tangents ",
+            "\u00a0The topics that are covered are very interesting but there are times when the professor would go too fast for the class to keep up ",
+            "\u00a0if john g could be more concise, maybe by not mentioning ellington for 1/6 of each lecture lol, the class wouldn't chronically run late every day. i like john g though he's funny and is patient with trying to get us to understand concepts, always happy to take questions. ",
+            "\u00a0This is very much a well done classic course: amazing lecture notes, lectures, midterms, weekly psets. If that's something you enjoy, you'll love the class. ",
+            "\u00a0The strengths of this course are that it covers fascinating material with an excellent professor.\r\n\r\nThe weaknesses, however, are rather strong and include that same professor, which is explained below. Could be improved with another TA because its a difficult job and more concise lectures. ",
+            "\u00a0The problem sets and exams don't really match the depth of the course materials ",
+            "\u00a0The course is very clear. Problem sets are very educational and there are numerous practice exams for each test you take. ",
+            "\u00a0Wonderful course and professor! ",
+            "\u00a0The course does a great job of translating financial concepts into concrete examples that make more sense to me. I do wish that it was a little bit more collaborative - sometime I felt a little lost doing the problem sets. ",
+            "\u00a0Professor Geanakoplos is a major strength of the course. His vast knowledge and ability to explain complex topics are major assets to the course. It is especially helpful that he solves examples on the chalkboard, explaining the steps along the way. If students have questions during lecture, he is happy to answer them or to clarify confusing topics. Another strength of the course is its ability to cover topics that are relevant both within the field of finance and also in the political realm, ranging from option pricing to social security. The material from the course is beneficial both for students who want to work in finance and for students who simply want a greater understanding of these important topics. ",
+            "\u00a0Professor Geanakoplos has a tendency to move pretty fast in lectures, but as long as each student prepares well in advance by previewing the class notes, they should be fine. ",
+            "\u00a0Well-organized. 9 am is a tough time to hold a class. ",
+            "\u00a0Strengths: the material is broken down in easier to understand and relate to terms (apples=Dividends; trees=stock)\r\nWeaknesses: there is not enough of graphical representation of the material. I wish Professor Geanakoplos would write down more of what he is saying so it is easier to follow. ",
+            "\u00a0The strengths are that it covers some very interesting material and it is interesting to see the derivations of the formulas. The weaknesses are that the professor does not explain things with clarity and often ran out of class time. An extra ten minutes a class to understand the real world impacts and implications of what we had just learned would have made the class much better. ",
+            "\u00a0The lectures could have been more structured, and cover more technical aspects carefully. With that said, John's stories are very interesting, and his real world experience gave me a good context for what I am studying in the course. ",
+            "\u00a0He's been teaching the same class for over >15 years and all the lectures are recorded online. There isn't much of an incentive for students to come to class ",
+            "\u00a0This course is very mathematical to the point that it sometimes gets away from the theories behind the equations. There were times when I understood the mechanics of solving a problem but not what question the problem was trying to answer in the first place. I think it would be helpful if the math could be more grounded. \r\n\r\nA strength of this course is that much of its content is very practical, even for those not going into finance. It teaches a lot of skills that will be helpful in the future when making investment decisions, and offers an interesting look at the inside operations of investment firms that will help students make informed choices. ",
+            "\u00a0The lectures are often hard to follow. The weekly problem sets give the course a very high workload. If the exams papers can be released from the start, it can help the students do the weekly problem sets a lot. ",
+            "\u00a0Very interesting content and course notes are extremely helpful but lecture sometimes unfocused "
+        ],
+        [
+            "\u00a0Yes. This course is extremely helpful for understanding the financial theory. ",
+            "\u00a0I would recommend it, the way of seeing financial instruments becomes much more understandable ",
+            "\u00a0Yes, I would if you want to explore how systems such as Social Security work, and want a better understanding of our world from an economic perspective. Professor G can be a little difficult to follow, as can the material, but his assessments are extremely fair and he covers a lot of interesting material. ",
+            "\u00a0Sure. If you need an ECON elective credit, you might as well take something practical and learn from someone legendary in his field. Although the algebra is tedious, nothing is really that difficult in this course. Go to section, study the past exams and course notes, and you'll be fine. Definitely worthwhile for someone who is interested in markets but doesn't know much about the theory behind them. ",
+            "\u00a0If you are interested in the basics of finance and like a teacher who engages with the class, then take it. However, be aware that the class can feel disorganized at times. ",
+            "\u00a0when john g isn't talking about ellington's financial equilibrium, ellington's capital asset pricing model and how overlapping generations would work in a hedgefund, ellington's sharpe ratio and Johnny G's markowitz-variance pricing formula, how ellington can use black scholes pricing, and trees, he's teaching. he's a funny teacher and cheery guy, happy to take questions whenever. and the material is sorta interesting, esp things on betting/backwards induction. more mathematical than most econ classes which makes it fun. it does get tedious though math and homework wise ",
+            "\u00a0If you want to understand how finance works and the math behind it, this course is a must! ",
+            "\u00a0Probably not. The material is interesting but much of the time is spent scratching one's head and pondering why these things are true and how they are true. ",
+            "\u00a0Any student interested in developing a quantitative intuition on finance that they can apply to their consumption of financial news and a potential career in finance should take this course. ",
+            "\u00a0Yes, if you are interested in finance or investing ",
+            "\u00a0I recommend this course to anyone looking for an introduction in the financial system. John G is a really interesting professor and the TA's were pretty cool too. A lot to learn from the course material and anecdotally. ",
+            "\u00a0I would recommend this course to another student, especially a student who has had exposure to finance and economics but wants a thorough introduction to financial theory. The course covers material that has important real-world applications, ranging from pricing options to reforming social security. The course is both an enjoyable and intellectually challenging way to learn financial theory. ",
+            "\u00a0If you're someone with a  strong background in math and if you're interested in getting a taste of how the financial market works / what kinds of analyses happen in finance, I would strongly recommend taking the class. ",
+            "\u00a0I would recommend for anyone interested in learning about the ideas behind trading. An academic approach to a finance class. ",
+            "\u00a0This course has very difficult material and requires individual review outside of class to truly learn effectively. That being said, the material is quite interesting, despite how challenging it is. ",
+            "\u00a0Yes! But beware of the prerequisites. The material presented in the class implies more of background knowledge from students than in prerequisites suggest. ",
+            "\u00a0Probably not. While the material is interesting, the lectures are not as engaging as one might hope given how nice the professor seems. ",
+            "\u00a0Yes. Yale offers limited finance related courses. If you would like to understand the financial world better, through a technical perspective (working out the numbers yourself), this class is a good fit. ",
+            "\u00a0I would recommend this course to another student who is interested in finance, however I would caution them that it is much more quantitative and math-heavy than it appears. ",
+            "\u00a0No. ",
+            "\u00a0Yes not a bad class "
+        ]
+    ]
+}

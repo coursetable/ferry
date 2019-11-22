@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Introduction to the language of ancient Babylonia and its cuneiform writing system, with exercises in reading, translation, and composition.", 
+    "title": "Elementary Akkadian II", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "SML 323", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11465", 
+        "listings": [
+            {
+                "number": "501", 
+                "subject": "AKKD"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Evelyne Koubkova"
+    ], 
+    "long_title": "Elementary Akkadian II", 
+    "extra_info": "A"
+}

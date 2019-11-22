@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Required of CDE Ph.D. students, in preparation for qualifying exams. Readings arranged with specific faculty in related research area. By arrangement with faculty.", 
+    "title": "Applied Area Readings for Qual...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "15605", 
+        "listings": [
+            {
+                "number": "610", 
+                "subject": "CDE"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Applied Area Readings for Qualifying Exams", 
+    "extra_info": "A"
+}

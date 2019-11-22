@@ -1,0 +1,78 @@
+{
+    "crn_code": "10978",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            6
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            6
+        ],
+        [
+            0,
+            0,
+            5,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned numerical methods for differential equations (ODE's and PDE's) just as the title of the class suggests. ",
+            "\u00a0The objective of the course is to learn about numerical methods to solve differential equations, and to understand the nuances of each method. These objectives were definitely met. I can confidently say that I learned enough to implement it in my own research or to understand the numerical methods used by other researchers. ",
+            "\u00a0Programming skills in Matlab, Solving ODEs and PDEs numerically. Stability analysis. "
+        ],
+        [
+            "\u00a0The lectures, handouts and homework all worked together to help me learn the material. Dr. Beth is an incredible teacher and is the most clear and organized teacher that I've ever had during my time as an undergrad and graduate student. ",
+            "\u00a0The biggest strength of this course is the instructor, Dr. Bennett. This is the most organized course I have taken, and Dr. Bennett's lectures were certainly a joy to listen to. I have previously believed that a lecture format was not the most productive way to learn but seeing how well Dr. Bennett give her lectures have changed my mind.\r\n\r\nMy single critic of this course relates to the programming task assigned in homeworks. I often felt restricted in how to solve or implement a solution. The homework instructions and lecture material were very detailed in how to implement a solution and I felt that this was too much hand-holding. Even if there is an optimal solution, I would have rather fidgeted around to arrive at that solution than to be given it. ",
+            "\u00a0Not much feedback I could provide to improve the course--it was already so great. ",
+            "\u00a0Strength - Rigorous homework and exams, helpful handouts, The syllabus is very organized. "
+        ],
+        [
+            "\u00a0Yes, definitely take this course from Beth! She is a rockstar. I am amazed by her teaching abilities. I am not yet sure if the material will be immediately relevant to my research, but if it is one day I will feel comfortable choosing and applying one of the numerical methods to a differential equation! ",
+            "\u00a0Dr. Bennett is extremely organized and on top of everything. The course is very well taught and you will learn a lot. That being said, it's also lots of work, but definitely worth it. ",
+            "\u00a0I would recommend this class to the other students who are interested in numerical method "
+        ]
+    ]
+}

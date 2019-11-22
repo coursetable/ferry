@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49570/assignments/syllabus", 
+    "requirements": "Prerequisites: simultaneous enrollment in or successful completion of ECON 500 and ECON 510; permission of the instructor.", 
+    "description": "A survey of some major events and issues in the economic development of Western Europe during the eighteenth and nineteenth centuries, stressing the causes, nature, and consequences of the industrial revolution in Britain and on the Continent, and the implications of the historical record for modern conceptions of economic growth.\nPrerequisites: simultaneous enrollment in or successful completion of ECON 500 and ECON 510; permission of the instructor.", 
+    "title": "General Economic History: West...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 8, 
+            "location": "HLH28 B-8", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 9
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12639", 
+        "listings": [
+            {
+                "number": "580", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Timothy Guinnane"
+    ], 
+    "long_title": "General Economic History: Western Europe", 
+    "extra_info": "A"
+}

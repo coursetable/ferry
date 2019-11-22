@@ -1,0 +1,98 @@
+{
+    "crn_code": "11580",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            2,
+            8,
+            8,
+            1
+        ],
+        [
+            4,
+            4,
+            9,
+            3,
+            1
+        ],
+        [
+            2,
+            4,
+            3,
+            9,
+            3
+        ],
+        [
+            2,
+            5,
+            6,
+            7,
+            1
+        ],
+        [
+            0,
+            1,
+            6,
+            11,
+            3
+        ],
+        [
+            0,
+            2,
+            9,
+            9,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Lots and lots of stuff about vectors. ",
+            "\u00a0I definitely learned what my strengths are in terms of learning, as well as my weaknesses- visualizing 3D concepts was something that really aided in my learning when I could grasp it. This course also taught me that practice is incredibly important, especially as concepts became more abstract or harder to visualize in 3D space. ",
+            "\u00a0I learned about a lot of multivariable calculus concepts including curl, divergence, triple integrals, etc. ",
+            "\u00a0Problem solving skills, especially in regards to multi variable calculus. ",
+            "\u00a0I developed good note-taking skills for math by taking this course. I never really took indepth notes for math in high school, so this course was a good wake up call for what college mathematics was like.\r\n\r\nI gained insight in that lots of practice problems definitely helps me learn material better than lectures with only theory. ",
+            "\u00a0This was a very theory-heavy course, and I learned to manage my time well and effectively memorise the different parts of the theory. This was a good course to build foundations for future applications and understandings. ",
+            "\u00a0I have a rudimentary understanding of calculus in 3-dimensions, and an advanced ability to apply certain techniques to solve calculus problems in 3-dimensions. I say rudimentary because I actually learned very little about multi-variable calculus, other than how to evaluate line and curve integrals without ever being taught what those integrals actually are. Nearly all of what I learned that I could understand and confidently apply was taught to me either by my peers or online sources - other than that, I was forced to cram my mind with meaningless (or at least meaningless to me) equations I knew I would be tested on. Those equations will be quickly forgotten and what knowledge and insight I gained about 3-dimensional calculus could have been obtained easily in a quarter of the time. ",
+            "\u00a0I learned how to apply multivariable calculus concepts. ",
+            "\u00a0I gained a good understanding of multivariable calculus - the main theorems and a general ability to think about functions in three dimensions. I learned problem solving and how to look at problems and apply the right theorem, but not much on proofs. "
+        ],
+        [
+            "\u00a0Strengths-lots of material.\r\nPrimary weakness: went through material very quickly, not really sure what certain operations meant in a physical context. ",
+            "\u00a0This is nothing new, but it has an Incredibly ill-conceived grading system. Most students have already covered the material in high school, and the graders ravage students for insignificant errors. Whereas most math classes provide a clear sense of one's understanding of the material through the grading, in Math 120, there is no reason to believe an A student is more knowledgable than a B- student. It's the luck of the draw in terms of getting a strong instructor or being lucky on errors. ",
+            "\u00a0I think too much emphasis is placed on testing, especially as test taking is not one of my stronger suits; I'd much rather more weight was given to homework and other  assignments, as those really indicated how much effort I was putting into the class and into learning the material. ",
+            "\u00a0Lots of review sessions available, but it moves very fast. ",
+            "\u00a0The strength of this course is that it is very fast-paced and therefore is good for quickly learning Calc. 3 if one can keep up.\r\n\r\nThe weakness of this course is that it is very fast-paced and therefore it is HARD to keep up in material if you don't quite understand a concept from one lecture. ",
+            "\u00a0The strength of the course was that it was very well organised and the problem sets were helpful in remembering which approach to use in which case. One weakness may be a lack of true understanding in the differences between different methods, and what they represent in reality. ",
+            "\u00a0The strengths of this class lie mainly in both the breadth and depth of the material. Math 120 covers an incredible amount of ground very quickly, going surprisingly in depth on many facets of the subject. Unfortunately, this is also one of its greatest weaknesses. This course is, in my opinion, overzealous in the amount of material it tries to cover. In lecture, we would cover so many problems so quickly that I wouldn't actually comprehend anything I was being taught - partly because there simply wasn't enough time for comprehension and giving us an intuition on the problem. Instead, we were simply thrown an unmanageable number of different examples that we would essentially have to teach ourselves without any real guidance. Fortunately my instructor posted his lecture notes online, but that was rare - most of the other students I talked to didn't have this resource. I believe if the course lessened the amount of material it tried to cover and placed more of an emphasis on actual understanding and knowledge, as well as offering more resources out of class like online lecture notes, it would be a substantially better class. Simply put, the course is ambitious to a fault, forcing students to understand the nuances of Green's and Stokes' Theorems without even teaching them what a line integral is. I also believe the grading is unfair, encouraging students who memorize materials and do not make calculation errors. For example, I made a few simple calculation errors that I feel I was over-penalized for, losing over half the points on a question I understood conceptually. Simply, I feel as though this class has a fatally misplaced emphasis on regurgitation of equations and facts instead of on real learning and conceptualization. ",
+            "\u00a0The different professors of this course are inconsistent in their teaching. Some professors are excellent while others are not nearly as good. ",
+            "\u00a0A strength was the small class sizes, but weaknesses include the largeness of the course and the rigidity of the framework of the course due to the size. ",
+            "\u00a0I think theres a huge mismatch between the relatively easy homework assignments and the very hard tests - I think you should make the homework significantly harder to better prepare students for the tests and then make it a larger percentage of the grade. Also I think you should allow students to correct their tests to get some credit back, which would incentivize students to learn more from each midterm. "
+        ],
+        [
+            "\u00a0I mean, it's a prerequisite for a lot of courses, so if you must take it, better to get it over with. ",
+            "\u00a0I would recommend this class. It taught practical skills that I will take with me in other disciplines. ",
+            "\u00a0Yes ",
+            "\u00a0It depends.\r\n\r\nI would say yes to another student who has taken Calculus 3 before or is proficient enough in math.\r\n\r\nI would say no to another student who is not too enthusiastic with math, as the course demands a certain mentality about math and learning weird concepts. ",
+            "\u00a0I recommend this ONLY if you need it ",
+            "\u00a0Yes, it is a good course for basic understanding of multivariable calculus, and I don't think it would be possible to do future courses without this one, which teaches the fundamentals. ",
+            "\u00a0I would absolutely not recommend this course to another student, in fact I plan to actively advocate against it. To be brutally honest, this was probably the worst class I've ever taken. I learned nearly nothing in lecture and felt as if whoever created the curriculum did not care whether the students were learning or getting anything out of the class. As there was too much material for me to teach myself and understand conceptually, I was forced to simply memorize and regurgitate different equations, trust my test-taking abilities, and pray I didn't make a simple mistake early on in my calculations that would likely wind up costing me at least a third of the points on a question I otherwise did correctly. The class is, and perhaps this is simply my own bruised ego talking, graded too harshly, as I was a few simple mistakes from a much higher grade on both midterms. Nonetheless, putting grades aside, my main problem with the course is that it simply did not teach me calculus of several variables. I would recommend students to either take Math 115 or skip to Math 222, 225, or 230 instead of taking Math 120 until there is more of an emphasis on actually teaching students what they are promised to be taught. ",
+            "\u00a0I would not recommend this course to another student because there is a very good chance of not getting a good professor. Professors also think that the students know more than they actually do about the subject and if you have not taken multivariable calculus you start the class at a large disadvantage. ",
+            "\u00a0Yes. This class requires a fair amount of individual work to really learn the material, but by the end the students have a good understanding of multivariable calculus. ",
+            "\u00a0Maybe, but be prepared of put in a lot of work outside of class if you want to do well. The class is not very well structured. ",
+            "\u00a0Good class for learning the multivariable calculus, not an incredible class otherwise. Take it if you want to learn the content in a well-organized, fast paced, and straightforward manner. "
+        ]
+    ]
+}

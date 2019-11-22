@@ -1,0 +1,37 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisites: undergraduate-level cell biology, molecular biology, and genetics.", 
+    "description": "This course is designed for first-year or second-year students to learn the fundamentals of stem cell biology and to gain familiarity with current research in the field. The course is presented in a lecture and discussion format based on primary literature. Topics include stem cell concepts, methodologies for stem cell research, embryonic stem cells, adult stem cells, cloning and stem cell reprogramming, and clinical applications of stem cell research.\nPrerequisites: undergraduate-level cell biology, molecular biology, and genetics.", 
+    "title": "CANCELLED", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "13008", 
+        "listings": [
+            {
+                "number": "655", 
+                "subject": "GENE"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Stem Cells: Biology and Application", 
+    "extra_info": "C"
+}

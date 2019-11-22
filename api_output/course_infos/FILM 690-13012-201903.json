@@ -1,0 +1,48 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49510/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introductory overview of Latin American cinema, with an emphasis on post-World War II films produced in Cuba, Argentina, Brazil, and Mexico. Examination of each film in its historical and aesthetic aspects, and in light of questions concerning national cinema and \u201cthird cinema.\u201d Examples from both pre-1945 and contemporary films. Conducted in English; knowledge of Spanish and Portuguese helpful but not required.", 
+    "title": "Radical Cinemas of Latin America", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 19, 
+            "location": "", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 20
+        }, 
+        {
+            "start_time": 19, 
+            "location": "CO451 B-04", 
+            "days": [
+                "Wednesday"
+            ], 
+            "end_time": 20
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13012", 
+        "listings": [
+            {
+                "number": "690", 
+                "subject": "FILM"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Moira Fradinger"
+    ], 
+    "long_title": "Radical Cinemas of Latin America", 
+    "extra_info": "A"
+}

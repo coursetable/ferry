@@ -1,0 +1,76 @@
+{
+    "crn_code": "25358",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            3
+        ],
+        [
+            0,
+            1,
+            3,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            0
+        ],
+        [
+            0,
+            0,
+            4,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This class covers some interesting topics in host-microbe interaction. The main idea of this class is to encourage students to discuss such promising topics, which is interesting and very helpful. From this class, I know more background of host-microbe interaction and think more about this area. In addition, this class is also a good opportunity to develop ability to write grant. ",
+            "\u00a0A overview of various aspects of host-microbe interaction. "
+        ],
+        [
+            "\u00a0Strengths: good and required reading papers are marked which can help us to know better about the topics in short time ",
+            "\u00a0Strengths: The topics are wide ranging and very interesting. The class format facilitated discussion and encouraged questions and thinking. The workload is acceptable. ",
+            "\u00a0I think it may be more useful to assign less reading and instead provide 2-3 primary papers and a single review on a topic because then students would have more availability to search the literature themselves for what aspects of the topic interests them. I think that the students had a hard time balancing the assigned readings and searching deeper into the literature beyond the assigned papers. "
+        ],
+        [
+            "\u00a0Yes. A good class to know more about host-microbe interaction. ",
+            "\u00a0Yes. ",
+            "\u00a0Yes. If they are interested in surveying the current literature and knowledge of host-microbe interactions, the class would be great for them. "
+        ]
+    ]
+}

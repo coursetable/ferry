@@ -1,0 +1,77 @@
+{
+    "crn_code": "13121",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            2,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            3,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This was a great crash course in starting a PhD - specifically I better understand how to develop a good research question, how to get grant funding, how to publish. ",
+            "\u00a0This course provided a broad overview of how to be a scientist - ranging from topics such as grant writing, ethics, publishing, communications, academic job searches, and personal habit forming. The class helped me to learn in one semester many things that would have likely taken me years to pick up (if at all), and has made me aware of things I should be doing throughout my time as a doctoral student that I might not have otherwise known. ",
+            "\u00a0Lots of good information about timelines, best practices, and how the grad school institution works. "
+        ],
+        [
+            "\u00a0I thought this was incredibly helpful - I really like the way that Karen has structured the course. My only critique was that the latter half of the course when we focused on academia and academic jobs was kind of depressing and dis-heartening. Not sure how to reconcile that - I understand that this is important information but it was slightly stressful and discouraging. ",
+            "\u00a0Strengths: I learned a lot from having an open, conversational class format with Karen - I was able to get to know my cohort and learn from a highly successful woman scientist. Hearing from weekly speakers was also very useful. The topics we discussed in class that I found the most useful were - writing, communications, grant writing, publications. Daily writing was not something I would have thought to start doing at this point in my time as a doctoral student, and I'm really glad that we were asked to do so.\r\n\r\nI almost wish there were a communications class available for doctoral students once we are in the process of dissertation research/writing. Working on communications in the doctoral seminar was very useful, but I think would be even more so once we have concrete projects.\r\n\r\nWeaknesses: I imagine that it's really difficult to put together a diverse speaker series, but I wished that there had been at least one person on the roster doing qualitative social science research, as there are two of us who have this emphasis. \r\n\r\nLooking back, several topics that I wish we had covered include - women in science/academia (I think non-women students should be involved in this conversation, too), non-academic job opportunities ",
+            "\u00a0Interesting to meet with speakers after their presentations. Good information. "
+        ],
+        [
+            "\u00a0Yes ",
+            "\u00a0Yes ",
+            "\u00a0Yes, helpful introduction to grad school. "
+        ]
+    ]
+}

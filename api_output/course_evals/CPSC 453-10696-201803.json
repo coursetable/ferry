@@ -1,0 +1,86 @@
+{
+    "crn_code": "10696",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            5,
+            0
+        ],
+        [
+            0,
+            3,
+            2,
+            0,
+            1
+        ],
+        [
+            2,
+            2,
+            0,
+            2,
+            0
+        ],
+        [
+            3,
+            2,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about machine learning techniques and their applications to biological data. ",
+            "\u00a0Data dimensionality reduction techniques, using the numpy python package. ",
+            "\u00a0This class is a great introduction to dimensionality reduction and the analysis of Big Data in biology, and if you have a hunch that these topics might interest you, take this class!  I'm an MB&B major with a little bit of programming under my belt, and this course opened my eyes to an entirely new field of biology.  That said, TAKE IT CREDIT/D.  I did not have a single assignment graded until January 2nd, meaning that taking this class for a letter grade has been confusing and stressful. ",
+            "\u00a0Very interesting material, but not a lot of helpful instruction. Learned about dimensionality reduction, clustering, and neural networks ",
+            "\u00a0I learned a lot about dimensionality reduction and unsupervised machine learning techniques applicable to high-throughput, high-dimensional data, such as biological datasets. Applications in class were primarily focused on single-cell sequencing data for genomics, although I personally feel that the techniques covered in this course would be applicable to a variety of different fields that involve analysis of nonlinear high-dimensional data. ",
+            "\u00a0I learned a ton about dimensionality reduction, clustering techniques and neural networks. "
+        ],
+        [
+            "\u00a0The material in the class was interesting and the structure of the course was well thought out. I enjoyed the problem sets and they were a great way to learn how to actually apply the methods from class to a real data set. However, we never received feedback on any of the problem sets throughout the semester, so it was difficult to gauge how I was doing in the class. More consistent feedback would be helpful, but overall, I felt like I learned well through the lectures alone. ",
+            "\u00a0More resources necessary for students for whom class concepts are completely new. Only having one TA limited how much office hours could be utilized. TA was excellent in providing assistance and guiding exploration of class concepts. ",
+            "\u00a0My biggest takeaway: TAKE THIS COURSE CREDIT/D.\r\n\r\nThis is not a knock against the course itself;  I actually really enjoyed the lectures and the material.  If you are interested in Big Data and/or biology, the course's approach to data analysis is fascinating and transformative.  Yes, you should have a lil programming and linear algebra under your belt, but don't be scared away by those requirements - the crux of the course is a qualitative understanding of the techniques used.\r\n\r\nThat said - I did not have a SINGLE ASSIGNMENT graded until January 2nd.  I suspect that I didn't do particularly well (mostly because the problem sets are quite hard) but I have truly no earthly idea if I have an A or a D.  If you're someone who cares about grades AT ALL, taking this class for a letter grade will be hugely stressful, because you will have literally ZERO feedback on your performance the ENTIRE semester.  Maybe someday this class will have two TAs! ",
+            "\u00a0Lectures werent very organized, Professor and the TA were often out of town, problem sets required going to office hours since lectures werent helpful for the hw. Very interesting material though, would recommend if youre interested in machine learning topics ",
+            "\u00a0Prof. Krishnaswamy's fascinating lectures were definitely the highlight of this course, and I felt that the central course material was well-organized, accessible to students with the required prerequisites, and built logically on itself such that I felt like I was being presented a body of knowledge rather than random facts. However, the guest lectures (which were frequent) were less useful, and I usually felt that I much preferred Prof. Krishnaswamy's lectures than the other ones. I additionally felt that by far the largest problem with this course lay in the manner of assessment and feedback. The three problem sets were generally challenging but appropriate (although the second one was very long and challenging compared to the other two, including some highly technical material not covered in class) - however, Jay (the TA) never finished grading them and I never received any feedback on any of my problem sets, which is absolutely unacceptable and clearly against both Yale's rules and the spirit of education. The final exam additionally was written by the TA and honest-to-God approximately five to six times as long as the practice exam presented in class, and significantly longer than any of my 3-hour final exams despite being offered in a single course period. This is completely crazy and not an effective manner of assessing students on the material learned in class, because it was impossible to finish and therefore rewarded only how fast students could write without thinking. The practice exam was far more fair. ",
+            "\u00a0I think that the class lectures did not go over things in sufficient detail to prepare students for the psets. That being said I think through doing the problem sets I learned a ton. Ultimately, I feel like the class could benefit from some ULAs. I think too much work was put on our one TA. "
+        ],
+        [
+            "\u00a0This class was useful for learning practical application. However, the class if fairly surface level. Although we were expected to understand the big theoretical ideas behind each method, we didn't have to truly understand how it worked on a finer detail. ",
+            "\u00a0If you are interested in different ways to analyze data, this class introduces useful methods. However, it is not set up for students with little previous exposure to programming and data analysis. I DId not have analysis experience and had a difficult time adapting to the material of the class. ",
+            "\u00a0My biggest takeaway: TAKE THIS COURSE CREDIT/D.\r\n\r\nThis is not a knock against the course itself;  I actually really enjoyed the lectures and the material.  If you are interested in Big Data and/or biology, the course's approach to data analysis is fascinating and transformative.  Yes, you should have a lil programming and linear algebra under your belt, but don't be scared away by those requirements - the crux of the course is a qualitative understanding of the techniques used.\r\n\r\nThat said - I did not have a SINGLE ASSIGNMENT graded until January 2nd.  I suspect that I didn't do particularly well (mostly because the problem sets are quite hard) but I have truly no earthly idea if I have an A or a D.  If you're someone who cares about grades AT ALL, taking this class for a letter grade will be hugely stressful, because you will have literally ZERO feedback on your performance the ENTIRE semester.  Maybe someday this class will have two TAs! ",
+            "\u00a0Would recommend if youre interested in ML but you do need to put in a lot of work. The class isnt very well organized ",
+            "\u00a0I would recommend CPSC 453 to another student interested in learning how to apply sophisticated methods to the analysis of large datasets (particularly in biology, although also in other fields), assuming that they have some background in programming and linear algebra AND that they take it Credit/D/Fail. This is because the assessment and grading range from opaque to absurd (problem sets were never graded, exam was impossibly long and nothing like the practice, etc.), and based on several years of reviews this is not a problem that the instructors seem willing or capable of addressing. However, given that one does not care about grades and assessments, this is a very interesting class that a motivated student can get a lot out of, and I would recommend it as long as Professor Krishnaswamy is still teaching it. ",
+            "\u00a0I think that this class taught me a lot but think that I had to learn most of it on my own / through talking with the TA. "
+        ]
+    ]
+}

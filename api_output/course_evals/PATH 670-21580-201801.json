@@ -1,0 +1,71 @@
+{
+    "crn_code": "21580",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned pathophysiology of a number of systems and some aspects of normal physiology in comparison. The skill is how to understand what happens when physiological systems are perturbed and how they manifest. "
+        ],
+        [
+            "\u00a0The great strength was the focus on pathology which is not covered in most Yale biology courses, and the compelling lecturers who are experts in their fields. It is a good course to take later in the biology career after building up background in normal physiology, including cell biology and molecular biology. It might help to list this as 400 level or list the normal \"Physiological Systems\" course as a prerequisite. This could also give more time by not having to cover normal physiology of kidney and gut so much. I feel it might be hard to follow without the right background. I don't know why students dropped out early but maybe this had to do with being intimidated by the difficulty or feeling underprepared? Some of the students who stayed in were very capable and experienced. "
+        ],
+        [
+            "\u00a0Take this if you feel confident with background in normal physiology and want to learn about pathology, especially if you are interested in medicine. "
+        ]
+    ]
+}

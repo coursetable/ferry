@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-13", 
+        "group": 2, 
+        "day_of_week": "Friday", 
+        "time": 14
+    }, 
+    "requirements": "After CHNS 153 or equivalent.", 
+    "description": "Intended for students with advanced speaking and listening skills and with advanced low reading and writing skills (able to write 1,000\u00e2\u20ac\u201c1,200 characters). Further readings on contemporary life in China and Taiwan, supplemented with authentic video materials. Class discussion, presentations, and regular written assignments. Texts in simplified characters with vocabulary in both simplified and traditional characters.\nAfter CHNS 153 or equivalent.", 
+    "title": "Advanced Modern Chinese for He...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "TM432 102", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "10755", 
+        "listings": [
+            {
+                "number": "162", 
+                "subject": "CHNS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Wei Su"
+    ], 
+    "long_title": "Advanced Modern Chinese for Heritage Speakers III", 
+    "extra_info": "A"
+}

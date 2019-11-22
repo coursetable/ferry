@@ -1,0 +1,93 @@
+{
+    "crn_code": "21655",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            3,
+            3,
+            6,
+            0
+        ],
+        [
+            5,
+            4,
+            2,
+            2,
+            0
+        ],
+        [
+            2,
+            6,
+            4,
+            1,
+            0
+        ],
+        [
+            3,
+            5,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            3,
+            5,
+            3,
+            2
+        ],
+        [
+            0,
+            4,
+            8,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Information about information theoretic quantities and notions. ",
+            "\u00a0I learned a lot about Information Theory, ranging from optimal codes to the channel coding theorem to portfolio construction to distances between probability distributions. ",
+            "\u00a0I learned the basics of entropy, KL divergence, coding theory, channels, gambling...information theory generally. ",
+            "\u00a0Basic introduction to Information Theory. ",
+            "\u00a0A decent introduction to information theory and its application in different fields ",
+            "\u00a0Good to know entropy, which can be applied to machine learning and channel encoding. ",
+            "\u00a0Basics of information theory and its various applications ",
+            "\u00a0Very few if any. How to learn lots of math in a single sitting to prepare for an exam, I guess. ",
+            "\u00a0Greater familiarity with entropy, ratio tests, and stochastic processes. "
+        ],
+        [
+            "\u00a0Strengths: Moderately cool material. \r\nWeaknesses: Professor literally could not be worse. ",
+            "\u00a0The material was very interesting, but Andrew Barron was a challenging instructor to learn from. ",
+            "\u00a0The only prereq for this class is S&DS 241, but there should be some additional prereqs. Professor Barron brings in information from a lot of other S&DS classes, including Markov chains and hypothesis testing, which he does a good job giving a high level overview of. However, it would be better if a student taking this class had prior background in these areas. ",
+            "\u00a0The content is interesting and the textbook is decent. Problem sets were somewhat dry but reasonable, and it was good to have them every week so you didn't get rusty. The course itself moved far too slowly - Professor Barron is very kind and clearly cared about both the students and the material, but lectures were often dry/slow (hence lower student engagement). Too much time was spent focusing on historical details instead of presenting the material, and we barely covered the end material (which seemed very interesting). Sometimes the material also didn't feel particularly coherent. ",
+            "\u00a0Strengths:\r\n- good overview of a lot of different topics\r\n- good textbook with good problems\r\n\r\nWeaknesses:\r\n- professor's lectures are almost orthogonal to psets and exams ",
+            "\u00a0The lectures were quite disorganized and the psets were often not that aligned with what we did in class. The second exam was substantially longer and more difficult than the first, which was frustrating. ",
+            "\u00a0The strength of this class is the offering of the course itself. Other college does not usually offer Information Theory for undergraduates. ",
+            "\u00a0Have someone else teach it if you're gonna offer it, I guess. ",
+            "\u00a0This course covers interesting material, but Cover's text is not well-organized for learning, and the absence of clear connection between lecture and homework could be frustrating. "
+        ],
+        [
+            "\u00a0No. Not with this professor at least. ",
+            "\u00a0I would take this class as a \"capstone\" after having taken many other classes in the S&DS department. This class provides a useful way of viewing things that you learned in other S&DS classes. However, it can be confusing if you haven't had these classes beforehand. ",
+            "\u00a0With caution, I would. The material itself is super interesting, accessible, and relevant to a variety of fields. But be wary of who is teaching it -- it can still get dry, and problem sets can feel somewhat mechanical. ",
+            "\u00a0At this time, I would not recommend the course to people who are reliant on lecture to do psets. I felt throughout the course that the material covered in lecture was an attempt to challenge us more than it tried to reinforce our complete understanding, which left me lost while trying the psets. The textbook is very good, so most of this course was self taught by the end. His exams are very fair. ",
+            "\u00a0No, I wouldn't recommend this class. Professor Barron's lectures started well but within a few weeks they became kind of disorganized and filled with somewhat confusing tangents. The textbook also isn't particularly helpful or well-written, so understanding how to use the material that you learn was a challenge. Also, the class had two exams, and the first was very easy but the second one was much longer and more difficult. In general, it was hard to gauge what we needed to know. Beyond the technical aspects of the class, the topic itself ended up not being particularly engaging or enlightening. ",
+            "\u00a0Please, don't take anything that Barron is teaching. He simply doesn't know how to teach. Basically everyone thought so. ",
+            "\u00a0This covers an interesting topic, but I would not recommend if Barron is teaching--lectures devolved, and I felt I could learn equally well/better just from reading the text. "
+        ]
+    ]
+}

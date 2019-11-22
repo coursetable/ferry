@@ -1,0 +1,83 @@
+{
+    "crn_code": "25744",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            4,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            4,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I developed a good understanding of many topics that are at the forefront of contemporary analysis, particularly with regard to probabilistic methods. I also learned how to tackle more difficult concepts in my own personal research of a topic. ",
+            "\u00a0The Martingale square is now a familiar, friendly entity to me. ",
+            "\u00a0Insights of Probability theory and some surveys ",
+            "\u00a0I learned concepts in Analysis from the perspective of Martingales, essentially. ",
+            "\u00a0I learned fundamental connections between analysis, physics, finance, algorithmic complexity.\r\n\r\nThe course was sort of a basic introduction to martingales, and once we understood them, we explored about four concepts where martingale theory was a good \"jumping off point.\"\r\n\r\nOh, also, the course provided a framework to understand hierarchical analysis schemes (e.g., anyone who attend this course will be able to give a short lecture on the Haar basis within 3-4 weeks, with both mathematical rigor and theoretical motivation for \"why we're doing it.\") "
+        ],
+        [
+            "\u00a0The strength of the course is definitely the wealth of interesting topics that are covered. If anything, it would be nice to have more explanation of the connections across various topics. ",
+            "\u00a0The course was very much an interest course for all involved, which I think worked quite well overall as a setup in this case. That said, perhaps due in part to the lovable but often frustrating tendency of Prof. Jones to confuse and/or distract himself, the course didn't always seem to have much direction. I feel this was partially intentional, as the course seemed deliberately loosely-organized to accommodate student preferences, and also partially explainable by the fact that I wasn't able to attend all of the classes. ",
+            "\u00a0The strongest point is that it provides a wonderful insight which cannot find easily in this department. It also provides a lot of applicational aspects.\r\n\r\nIt could be better if timeslot does not conflict with math department Colloquium and I personally hope it could be more intense. ",
+            "\u00a0The strength is that Peter Jones is amazing and any chance to learn from him is precious. The weakness is that it is hard to know what to study for this class. I think it could be improved by having a syllabus with recommended reading from a textbook. Although lectures are great, I need a textbook to really solidify concepts. ",
+            "\u00a0The lectures are extremely clear. "
+        ],
+        [
+            "\u00a0Yes! This is a fun and interesting way to get brought into some of the more interesting topics of active research in analysis. ",
+            "\u00a0I'd recommend it to students who love Prof. Peter Jones as much as I do. Or, alternatively, to students who have a well-developed idea of what topics in analysis they want to study, and who are interested in having a strong hand in self-directing that study. ",
+            "\u00a0Surely! Especially those who are interested in probability theory and other graduate students who are interested in mathematical stuffs. ",
+            "\u00a0If you have a strong background in Analysis you will get a lot out of it. ",
+            "\u00a0Without a doubt. The concepts in the course are extremely clearly explained by the professor, but outside the course, there basically isn't a unified treatment. I think book 4 of Stein is the closest someone can get to learning it.\r\nI don't think it's possible to learn the connections between martingales and the various topics that are discussed without attending this course, unless you are willing to dedicate years to it.\r\n\r\nHowever, the course is extremely intellectually demanding. "
+        ]
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 9
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49868/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Historical roots of contemporary ethnic and racial formations and competing theories of ethnicity, race, and migration. Cultural constructions and social practices of race, ethnicity, and migration in the United States and around the world.", 
+    "title": "Introduction to Ethnicity, Rac...", 
+    "skills": [], 
+    "areas": [
+        "So", 
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "LORIA 351", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12104", 
+        "listings": [
+            {
+                "number": "200", 
+                "subject": "ER&M"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Alicia Camacho"
+    ], 
+    "long_title": "Introduction to Ethnicity, Race, and Migration", 
+    "extra_info": "A"
+}

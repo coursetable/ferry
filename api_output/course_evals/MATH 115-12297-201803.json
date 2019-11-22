@@ -1,0 +1,107 @@
+{
+    "crn_code": "12297",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            3,
+            12,
+            4,
+            1
+        ],
+        [
+            0,
+            8,
+            4,
+            7,
+            2
+        ],
+        [
+            0,
+            3,
+            7,
+            9,
+            2
+        ],
+        [
+            0,
+            5,
+            7,
+            8,
+            1
+        ],
+        [
+            0,
+            1,
+            9,
+            9,
+            2
+        ],
+        [
+            0,
+            1,
+            14,
+            5,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I took BC Calculus in high school, but never had the strongest grasp on the concepts. This class really reinforced my understanding of calculus and I walk away feeling really comfortable with the material. ",
+            "\u00a0Learned all of calc 2 and some foundations for calc 3 ",
+            "\u00a0Further developed abilities in fundamentals of calculus and deepened understanding of concepts and their applications ",
+            "\u00a0I learned about integrals, sequences, series, Taylor series, parametric curves, and polar functions. ",
+            "\u00a0I learned college-level calculus and problem solving skills. ",
+            "\u00a0Integrals and Series and Parametric Curves and Polar Equations ",
+            "\u00a0I learned calculus! It was intense. ",
+            "\u00a0Basic calculus skills ",
+            "\u00a0This course was a good introduction into integral calculus and it covers a lot throughout one semester. ",
+            "\u00a0The contents of this course was primarily a deeper insight into the AP Calculus BC course I took in high school ",
+            "\u00a0I learned more about the resources that Yale has for undergrad courses in terms of peer tutors, coaches, and private tutors. It helped me see how difficult some courses may be depending on how high school education was administered. It also taught me how sometimes I need to make smart decisions with the bigger picture in mind. ",
+            "\u00a0Through this course, I learned a great deal about calculus. Through practice with integration techniques, drawing conclusions about series/lists, and expanding to different coordinate systems I developed my basic mathematics skills and deepen my understanding of the use for these techniques. I also learned some techniques for studying. "
+        ],
+        [
+            "\u00a0Strengths - Professor Adelstein was a very good teacher and did a good job explaining difficult concepts. ",
+            "\u00a0I think the material is very interesting, but the class does sometimes drag on in an hour and a quarter long block, so having more three day a week sections may be good. ",
+            "\u00a0A good professor can lead to good understanding of what is being taught. However, the class depends on how much you can learn from how well you can stay caught up with what the professor says. ",
+            "\u00a0It could be a little more interactive. Also, although the classes and p sets are relatively unchallenging, the tests are killer, and the graders are super harsh. ",
+            "\u00a0The course curriculum was redone this year which was very helpful, but because of this, the last years' tests were not helpful to study. Students had no idea what exactly would be important and on the midterms because the material covered varied wildly from the past couple years. The instructors need to provide a guide for what is important or create better practice tests. ",
+            "\u00a0I wish it was more interactive. ",
+            "\u00a0weakness, psets can be so much harder than the material we actually learn ",
+            "\u00a0This course touches on a lot of math topics that broadens your knowledge on integral calculus. The weakness is that the course is fast-paced and quite dry, so it makes absorbing information a little difficult. ",
+            "\u00a0The strengths was the resources provided by online programs, and the overall lectures during class was clear to understand. I think that the content was taught in a rather fast/rushed pace and can be more clearly emphasized on how different components of the unit are related to one another. ",
+            "\u00a0The course definitely relies on the student being able to absorb the content within a few days if they did not already know it. The text book and online videos are also equivalent to what is taught in lecture. It would help if the problem sets were geared towards the exams and practice exams were released earlier. The discrepancy between the type of problem presented on the exams and the problem sets was large. ",
+            "\u00a0Some of my strengths was dealing with convergence/divergence tests. Some of my weaknesses came from struggling with integration that required thinking outside the box. This could have been improved on my end through more practice. ",
+            "\u00a0A strength of the course regards the professor, who enjoys teaching and attempts to engage his students, pausing to answer questions whenever. A weakness in the course however regards the transparency in the difficulty going from the lecture material in class to the actual exams. "
+        ],
+        [
+            "\u00a0Yes, especially with Professor Ian Adelstein. He was a patient, on-topic, helpful instructor who is always open to help students outside of class. ",
+            "\u00a0I would recommend this course. I learned a lot without being too stressed. ",
+            "\u00a0Would recommend if it is a prerec ",
+            "\u00a0If you like math and haven't taken calc ii, definitely. ",
+            "\u00a0I would take it if you have interest in math or if necessary. ",
+            "\u00a0No probably not. Its kind of wildly unfair given that the tests are so much harder than the class. ",
+            "\u00a0I wouldn't recommend Math 115 to anyone because this is not a course you just take for fun. This is a course that you take only if you absolutely have to. ",
+            "\u00a0Yes if they like Math. ",
+            "\u00a0Yes ",
+            "\u00a0I would not recommend this course to another student unless necessary for satisfying a requirement because the content is quite difficult and it is not taught in an engaging way. ",
+            "\u00a0YEs, but only if you are relatively familiar with the contents of Calculus BC, or else it might be a little challenging to follow. ",
+            "\u00a0I would only recommend it if this student tested into a higher level of math. If the student tested into this level, they should think hard about registering for this course. The concepts are a greatly accelerated version of the calculus taught in high school that requires a mastery of Calc I. ",
+            "\u00a0I would definitely recommend it. It isn't the most demanding course in terms of workload and all the concepts are tough in a manner that wrap together nicely. With the proper commitment, it is a manageable course. ",
+            "\u00a0I would recommend this course to other students looking to fulfill their WR credits and have background knowledge in Calculus. The professors are relatively approachable and the feedback given is clear if requested. ",
+            "\u00a0I would recommend this course to another student if they want to learn calculus. This course is needed to take more advanced math courses so if the student wants to learn math this is a great course to take. "
+        ]
+    ]
+}

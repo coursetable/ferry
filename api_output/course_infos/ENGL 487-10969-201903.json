@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Prerequisites: two courses in writing.", 
+    "description": "A writing tutorial in fiction, poetry, playwriting, screenwriting, or nonfiction for students who have already taken writing courses at the intermediate and advanced levels. Conducted with a faculty member after approval by the director of undergraduate studies. Students must apply in the previous term; deadlines and instructions are posted at english.yale.edu/undergraduate/applications-and-deadlines.\nPrerequisites: two courses in writing.", 
+    "title": "Tutorial in Writing", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10969", 
+        "listings": [
+            {
+                "number": "487", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YENW\">YC English: Creative Writing</a>"
+    ], 
+    "professors": [
+        "Michael Warner"
+    ], 
+    "long_title": "Tutorial in Writing", 
+    "extra_info": "A"
+}

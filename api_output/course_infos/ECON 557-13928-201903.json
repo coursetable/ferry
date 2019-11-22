@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51444/assignments/syllabus", 
+    "requirements": "", 
+    "description": "This class provides an introduction to econometrics of high-dimensional models. It covers the following topics: (1) relevant results in probability theory (concentration and maximal inequalities); (2) estimation of linear high-dimensional models using Lasso, Dantzig selector, and related methods; (3) estimation of generalized linear high-dimensional models (e.g., quantile and logit regressions) using 1-penalized M-estimators; (4) basics of machine learning (regression trees, random forests, neural networks); (5) semi-parametric inference in high-dimensional models via double machine learning; (6) related topics in econometrics such as grouped fixed effect estimators in panel data and many moment inequalities. Although the class is primarily based on research papers, as a general reference, a highly recommended textbook is Wainwright, High-Dimensional Statistics (2019).", 
+    "title": "Econometrics of High-Dimension...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "HLH28 108", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13928", 
+        "listings": [
+            {
+                "number": "557", 
+                "subject": "ECON"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Denis Chetverikov"
+    ], 
+    "long_title": "Econometrics of High-Dimensional Models", 
+    "extra_info": "A"
+}

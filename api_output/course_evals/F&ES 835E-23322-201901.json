@@ -1,0 +1,82 @@
+{
+    "crn_code": "23322",
+    "Evaluation_Questions": [
+        "Your level of engagement with this course compared to others you have taken was",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "How would you rate the workload of this course in comparison to other F&ES courses you have taken?",
+        "Given the course objectives, the level of intellectual challenge of the material covered was:",
+        "What is your overall assessment of this course?"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            1,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            1
+        ],
+        [
+            1,
+            3,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "How well did the knowledge, skills, and insights gained in this class align with your expectations",
+        "What are the strengths and weaknesses of the course and how could it be improved?",
+        "What advice would you give to a student considering taking this class"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Topics surrounding sustainable land use planning ",
+            "\u00a0The different concepts and considerations that go into land use planning. ",
+            "\u00a0Basics of land use law, state/local policy and how understanding these foundations can help build more sustainable communities. "
+        ],
+        [
+            "\u00a0Well aligned ",
+            "\u00a0I did feel like there was a more urban focus than rural.  But, it was interesting to learn about the intricacies of many of the aspects of land use planning. ",
+            "\u00a0Well. "
+        ],
+        [
+            "\u00a0Can complete lectures at your own pace ",
+            "\u00a0There are a lot of concepts that the course touches: the strength is that you can get a sense of how each topic relates to your direct interests; the weakness is that the course can only touch these topics and it is up to the student to go beyond the course. ",
+            "\u00a0Some of the lectures are dated. "
+        ],
+        [
+            "\u00a0Take this course if you are interesting in a cursory dive into land use planning.  It will give you a taste of many aspects and you can take deeper dives from there. ",
+            "\u00a0Useful to audit. I perhaps would've gotten more out of taking it. "
+        ]
+    ]
+}

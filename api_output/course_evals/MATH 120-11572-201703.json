@@ -1,0 +1,86 @@
+{
+    "crn_code": "11572",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            2,
+            2,
+            6,
+            3,
+            2
+        ],
+        [
+            1,
+            7,
+            3,
+            2,
+            2
+        ],
+        [
+            1,
+            4,
+            4,
+            3,
+            3
+        ],
+        [
+            2,
+            4,
+            4,
+            5,
+            0
+        ],
+        [
+            0,
+            1,
+            6,
+            7,
+            0
+        ],
+        [
+            1,
+            3,
+            9,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about Multivariable Calculus as well as about methods of math instruction at Yale. ",
+            "\u00a0I learned how to visualize functions in three dimensions, and how to wake up for a 9:25 class! ",
+            "\u00a0The course takes you through the fundamentals of multi-variable calculus (primarily functions of 2 or 3 variables) in a manner that emphasizes the geometric intuition behind various methods. You will learn how to optimize functions in multiple dimensions, calculate the areas, volumes, curl and divergence of various 3-d regions. The problem sets and preparation for exams will do a pretty good job at making you proficient in using multi-variable calculus techniques and understanding the intuition behind them, though there will not always be time to rigorously prove that all these methods work. ",
+            "\u00a0I acquired the ability to carry out vector operations, analyze multivariable functions, as well as understand mathematical fields and their relationships to functions within them. Furthermore, my understanding of surfaces and 3-Dimensional objects also improved as a result of this course. ",
+            "\u00a0I gained a better understanding of the mathematical tools used to solve calculus problems when dealing with functions of multiple variables. ",
+            "\u00a0I developed some skills in linear algebra and multivariable calculus, including how to tackle many variations of problems in two and three dimensions involving fields. \r\n\r\nThe book contained several proofs and some were discussed in class, but I cannot confidently say I learnt them, much like I was at times at a loss as to the significance of the answer we were obtaining. This is due to the course's pace, and I understand that further classes exist to explore these areas. "
+        ],
+        [
+            "\u00a0I'm not sure why this class is broken into sections. We were not really encouraged to participate in my section, and many of the teachers are not great -- wouldn't it make the most sense for Miki to teach one big lecture? ",
+            "\u00a0The instructor needs to explain things in a more concise manner. ",
+            "\u00a0I really enjoyed this class.  My section was small enough to feel personal, and Min Ju was organized with the material.  I don't have many complaints about the content. ",
+            "\u00a0I learned more from office hours from a teacher who wasn't mine than from class periods. However, I was very challenged by the material in this course; it taught me how to apply myself. ",
+            "\u00a0The course will give you a pretty solid grasp of the fundamentals of multi-variable calculus. If you are looking to gain a good intuition of where and how to use these techniques, then you will be satisfied. The course primarily emphasizes more 'mechanical' problem solving, and the p-sets and exams do not require exceptional creativity or originality. So if you're looking to challenge yourself and really love math, then perhaps 230 would be a better fit. The instructor, Min Ju Lee, is very patient and willing to stay back after class to clarify concepts or tackle more difficult problems. ",
+            "\u00a0With most of the sections not being taught by professors, the class becomes very hit-or-miss with who your instructor is. A better model would be a large lecture taught by a good professor to explain concepts, in addition to smaller grad student led sections for problem-solving and review. ",
+            "\u00a0Weakness: taught in an odd, fast paced environment, with little motivation ",
+            "\u00a0I believe this course could greatly benefit from a lecture instead of sections. I believe sections are of greater benefit when discussion or collaboration are entailed, but this was a very rare occurrence. Class mostly consisted in taking notes from the whiteboard and trying to understand while keeping up with the class' brisk pace. I know this would be a radical revision to the way math 120 is taught, but a lecture would ensure that all of the important content is polished and ready to be presented in a standardized way. Additionally, no time would be lost in making 3d drawings as digital images could easily be implemented. I found the revision sessions to be extremely useful and would have liked to learn with that style. \r\n\r\nI loved the coaching session. Many thanks to Fernando Al-Assal. "
+        ],
+        [
+            "\u00a0I would recommend this course if you have to take it, but please take it with Miki. She really understands the challenges students face when learning multivariable calculus, whereas my teacher taught pretty well but didn't teach us to differentiate between the various techniques we could use. ",
+            "\u00a0Yes.  I enjoyed the material and felt the class was engaging and interesting.  It is challenging, but if someone enjoys visual thinking and math, I think this class will work very well for them. ",
+            "\u00a0Yes; as a physics major, this course was a requirement for me, but the the content was exciting enough that I'd recommend it to anyone else. ",
+            "\u00a0It offers a good baseline for math and is likely a required prerequisite if you plan on pursuing math further. However, it's important to make sure you end up with a good instructor, as this can make-or-break your experience with the class. "
+        ]
+    ]
+}

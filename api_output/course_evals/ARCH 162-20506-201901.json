@@ -1,0 +1,101 @@
+{
+    "crn_code": "20506",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            4,
+            7
+        ],
+        [
+            0,
+            0,
+            3,
+            3,
+            10
+        ],
+        [
+            0,
+            0,
+            3,
+            6,
+            7
+        ],
+        [
+            0,
+            2,
+            5,
+            4,
+            5
+        ],
+        [
+            1,
+            7,
+            4,
+            3,
+            0
+        ],
+        [
+            4,
+            7,
+            2,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0You learn about a variety of materials used in architecture (wood, glass, concrete, etc.) and get the chance to learn how to manipulate them with tools in the lab! This course got me to start looking at the materials that make up the spaces around me more carefully and also allowed me to work materials with my hands (sanding wood, welding, pouring concrete, etc.) ",
+            "\u00a0A lot of hands-on skills working with wood, concrete, bricks, metal, etc. ",
+            "\u00a0This course really expanded my understanding of the types of materials used in architecture throughout history and the properties of each. I also gained a basic understanding of architecture machine shop tools. ",
+            "\u00a0I learnt about the role of materials in architecture, and got to have a hands on experience with different materials. ",
+            "\u00a0I learned about different materials used in architecture and basic shop and build skills. ",
+            "\u00a0This course provided an in-depth perspective on how the function, role and use of materials in architecture. ",
+            "\u00a0An appreciation of the amount of work that goes into most every building I see. ",
+            "\u00a0Brick. ",
+            "\u00a0I learned how to use various tools in the fabrication shop (e.g. various saws / sanders), how to weld, how to mix and pour concrete, how to put together masonry, how to build an A-frame house...great course for learning about, well, different materials and how to manipulate them! ",
+            "\u00a0This was a fantastic hands on architecture/ design course. While the workshop portion was relatively simple and the earlier projects were not that complex, I really learned how to move around a shop and use a variety of machines. Considering that I came it with no knowledge of any of this, I learned a lot. ",
+            "\u00a0Lots of knowledge about the way materials are made. Very strong skill set as to actually shaping and using said materials. "
+        ],
+        [
+            "\u00a0Strengths - Tim is awesome, and the final project is an awesome way to create a nice product with your own hands.\r\n\r\nBig weakness - zero transparency on how grading works. ",
+            "\u00a0Some way of increasing engagement with the course during the rest of the week would be valuable. Like office hours  or a section parallel in the shop. ",
+            "\u00a0Great course! ",
+            "\u00a0Strengths: really interesting lab sections that I wouldn't be able to get an experience with anywhere else\r\nWeaknesses: lectures were sometimes dull ",
+            "\u00a0The course was strong, engaging, and very well-taught. ",
+            "\u00a0This class was incredibly fun. I learned a lot of specific details of the history, style, and modern applications of many architectural elements. This class was engaging and interesting. I think that, although the workshop/lab section of the class in interesting, the workshops are too short to be fully immersive in a certain topic. While this may be the intention of the class, I found it to be a bit disappointing. I got so excited to give bricklaying a try, but in two short hours our arch was done and my only lifetime experience with brick masonry was over. ",
+            "\u00a0So strong, not at all weak. ",
+            "\u00a0The lecture portion of the class is interesting but sometimes rough in the morning. Tim does a great job of talking about the material but I felt like we learned more in the architecture shop. The hands on labs and final project for this class were a huge strength. Going downstairs in Rudolph Hall and working in teams on the small material studies was great. The final project, while demanding, was a great way to bring it all together. "
+        ],
+        [
+            "\u00a0Yes! Youll get to actually build a final model using some of the skills and tools you learn about in class. Lectures are interesting, and you get to apply the theory to a hands-on lab every week immediately following the lecture! ",
+            "\u00a0Take this class!! If youre an ARCH - Design major you have to anyway, so I would take this class as a first-year or sophomore and not much later than that because youll know how to do everything by the time youre a junior (and then being in the class will definitely feel like a waste of 4 hours on a Friday). Tim starts with a morning lecture in which he recognizes everyone is pretty much asleep, then lets us go grab a bite for breakfast before linking back up in the fabrication lab. Its really fun, relaxing, and fulfilling to be working physically with your hands and tools to actually make something, and its definitely worth the early wake up time. ",
+            "\u00a0Yes! Very low outside-of-course workload besides the final project. In class is a blast. ",
+            "\u00a0Yes if they had any interest in architecture and the materials/engineering side of it. ",
+            "\u00a0It is a fun class. The lectures can be a bit dull, but the lab part is well worth the lecture. ",
+            "\u00a0Yes! Such a fun 5th credit and you learn shop skills that you wouldn't learn anywhere else. ",
+            "\u00a0It was a pretty fun and unique class. ",
+            "\u00a0Would definitely recommend this course. ",
+            "\u00a0Would highly recommend. I decided to take this class on a whim and it was my most enjoyable of the semester. As an EE student, this class pushed me in ways entirely different from any other Yale class I have taken. We work with our hands, look through and interpret architectural plans, and design precedent studies. There are not enough of these truly investigative maker-based classes at Yale, so take 'em while you can. ",
+            "\u00a0Would recommend. Likely the best course I've taken at Yale. ",
+            "\u00a0Very chill class for most of the semester, the work really just comes in for the midterm presentation (on what building you'll be making for the final model) and creating the final model itself - good intro course if you haven't had any shop experience and are interested in architecture and fabrication! ",
+            "\u00a0Yes, definitely. The class is not a huge commitment for most of the semester and really enjoyable way of working with materials and undertake doing design. Its not the most challenging course, especially if you have machine experience, but still a great time. ",
+            "\u00a0Yes! Even if you have no interest in architecture, it is so cool to learn about how the materials of the built environment are produced and manipulated. ",
+            "\u00a0Yes! A chill class that gets you to work with your hands and eyes in ways that Yale courses typically don't. "
+        ]
+    ]
+}

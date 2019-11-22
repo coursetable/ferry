@@ -1,0 +1,86 @@
+{
+    "crn_code": "11575",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            3,
+            4
+        ],
+        [
+            1,
+            3,
+            3,
+            3,
+            0
+        ],
+        [
+            0,
+            2,
+            4,
+            4,
+            0
+        ],
+        [
+            1,
+            1,
+            3,
+            5,
+            1
+        ],
+        [
+            0,
+            1,
+            3,
+            3,
+            3
+        ],
+        [
+            0,
+            2,
+            5,
+            3,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I highly enjoyed the intellectual rigor of this course--I had always enjoyed math, but multivariable calculus taught me how to approach a problem I had never seen before and use the theorems I had learn to take a stab at it. I became much more methodical at thinking through the conditions required to apply certain theorems. ",
+            "\u00a0I learned very little - did not understand theory behind the laws and problems. ",
+            "\u00a0Math skills, and experience studying from p-sets ",
+            "\u00a0I learned how to expand my calculus intuition from 1 variable (1D) to up to 3 variables (3D). The course demands strong 3D geometric intuition. ",
+            "\u00a0Multivariable calculus ",
+            "\u00a0I learned the fundamentals of multivariable calculus as well as a broad array of applications. "
+        ],
+        [
+            "\u00a0MATH 120 in general is organized in a way that is not as conducive to learning and performing well on tests, I believe, simply because not all of the material taught in each class was standardized. Other classes covered topics my class had not, while our class emphasized specific topics that other classes did not. ",
+            "\u00a0The class lacked emphasis on theoretical understanding and was basically just memorizing problems. ",
+            "\u00a0Math 120 covers a lot of ground, but the teaching varies from instructor to instructor and it seems like since there is so much variation, no instructor really knows what he or she is supposed to emphasize. ",
+            "\u00a0This class moves very fast and I think in the beginning I could have used more guidance. ",
+            "\u00a0The review sessions for the final were useful. I attended all 6 of them. Sudesh's was\r\n especially good  he explained concepts very clearly and logically, and his humor made it fun. I would've liked to have more review sessions before each of the midterms.\r\nIt would be great to have intermittent small graded quizzes (worth a small percentage of the grade). I often found before the midterms and final that I hadn't yet grasped many concepts fully, because the material goes by so fast. The quizzes would highlight deficiencies in my understanding.\r\nThe grading weights should be changed; exams should be weighted less. Having 90% of my semester grade come from purely exams makes exams very risky  a small mistake can erase dozens of hours of hard work spent on homework (which is weighted 10%). Particularly as exams are graded harshly. One arithmetic mistake with the quotient rule cost me 25 points out of 30 on one question, dropping my midterm's score by 17 percentage points (and my semester grade by 4 percentage points). ",
+            "\u00a0The course is very good in that it covers everything one needs to know about multivariable calculus. One weakness is that the pace is very fast and sometimes 1 hour and 15 minutes of class time is not enough to go over the material thoroughly. "
+        ],
+        [
+            "\u00a0I would not recommend this course to a prospective non-math/science major. ",
+            "\u00a0I don't think I would recommend this course to another student unless they need it as a prerequisite. I think that a more conceptual course with less calculations would be more beneficial to most students. ",
+            "\u00a0I would say only take this course if needed for your intended major. ",
+            "\u00a0Math 120 is a prerequisite for math and computer science related majors, so depending on your situation you might have to take it regardless. This course is best if you really excelled in AP Calculus BC or equivalent in high school. In any case, you will have to put in a lot of effort, as this is known as a difficult class. The semester average grade is rumored to be B or B+, compared to Yale's (and other grade-inflated schools') average GPA of A-. If you're unsure about your abilities and have no obligation to take this class, shop both 120 and 115 (which is basically Calc BC but a little harder). If you take 120, you should do practice problems beyond just the required homework, because the hw doesn't provide enough practice to cut it for the exams. ",
+            "\u00a0It is a course to know how to compute instead of really understanding. ",
+            "\u00a0Yes. I do not know if this course would be helpful for non-STEM majors, but for all STEM people, calculus is a fundamental skill set that is valuable to have. "
+        ]
+    ]
+}

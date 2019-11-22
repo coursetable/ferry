@@ -1,0 +1,84 @@
+{
+    "crn_code": "10855",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            6,
+            4
+        ],
+        [
+            0,
+            0,
+            3,
+            7,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            7,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            7,
+            5
+        ],
+        [
+            0,
+            0,
+            5,
+            6,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            7,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I developed a much better process for developing my writing and a better framework to analyze my logic and argumentation ",
+            "\u00a0Time management, data work, how to do leaf hydraulics, how to work efficiently in a lab. ",
+            "\u00a0How to work in a lab, basic research, what a profession in infectious diseases research may look like. ",
+            "\u00a0This course gives a student the freedom to pursue their own research. ",
+            "\u00a0This was my first true lab research experience. I learned just how tedious and frustrating independent research can be, but also how much more meaningful it is when its my own project. Also learned several lab techniques I didnt know before. ",
+            "\u00a0From this course I learned a lot! I learned how to code using R which I had knew nothing about at the beginning of the semester. I also learned about the value of outlining, efficient ways of writing a scientific paper, the importance and utility of drafts, and the benefits of being in a lab group with other peers who are working on similar projects. I learned a lot about ecology from my other peers, as well as about scientific writing, and they provided constructive feedback on my work.\r\n\r\nIn addition, I learned a shit-ton about forestry practices and how they affect reptile and amphibian populations. I learned this from doing my own field work, and from an extensive literature review of relevant past scientific studies. ",
+            "\u00a0I enjoyed the opportunity to continue exploring the system I had spent the summer researching. I had never written a research paper as long as the thesis, and I believe my scientific writing skills improved because of it. I learned a great deal about type of ecological system my research explored. "
+        ],
+        [
+            "\u00a0I wish E&EB had more information on how students felt about their lab experiences through E&EB 475, specifically how each faculty member facilitated their experience. There's a huge difference between being in the same lab for 4 years and the students who found a new lab specifically for the research component of E&EB. ",
+            "\u00a0I wish there had been a bit more structure in the course. I often reached out asking for literature to read and never was given many sources. However, I am hoping to actively seek out more meetings with my advisor in the second semester to make sure I get the most out of the course. ",
+            "\u00a0Independent research is far more educational than lab as a class. But also way more work with way less result. I definitely worked harder this semester than my data has to show for it. ",
+            "\u00a0I think this is a difficult question to answer because the course is so variable between advisers and research topic.\r\n\r\nIn general, I think the strengths of this course are the ability to take a scientific question and follow it through from brainstorming experimental design to writing up the findings in a paper. I think the course also shifts a lot of the responsibility onto the students and gives them independence, both of which are often scarce in other courses. Finally, the course gives a student an opportunity to develop a close relationship with a professor or graduate student who can act as a mentor.\r\n\r\nIn terms of my project specifically, I think the strength was learning how to program in R, and applying and relearning the statistics I had learned in previous courses but had not had an opportunity to use. Also the ability to delve deep into work that is meaningful and applicable to aspects of ecology and conservation in the real world, and that contributes towards a conservation profession that I would like to have in the future. Another advantage of this project was that my adviser and the other grad student I was working with were flexible in allowing me to choose my own project and not have to tag along with a project that was already being done by people in the lab that may have been of less interest to me.\r\n\r\nI think one weakness of my project specifically is that because of the short nature of the project, and not having worked with my adviser previously, I did not feel like I developed a personal relationship with my adviser. ",
+            "\u00a0I appreciate the immense support and enthusiasm of my DUS and advisor, but regret a lack of guidance and communication that I think was a product of muself, the program, and my specific project. Unlike lots of senior research projects, my research was conducted outside the framework of a lab or a professors work, and in hindsight I missed having the support structure this is Luke have offered. "
+        ],
+        [
+            "\u00a0It's great! Marta is very flexible about what lab you choose, which allows you to explore fields you're actually interested in. It was daunting because I'd never been in a wet lab before but I had a great time learning basic lab techniques, being part of larger projects, and then focusing on a specific project that allowed me to feel like I was contributing (albeit in a small way), to the lab. Your experience is completely dependent on your lab (duh) so choose carefully! ",
+            "\u00a0If you work with live organisms be prepared to give up your life for them. ",
+            "\u00a0Yes, I would. Based on experience from a past independent research-based study, I think it's really important that you have a final goal set ahead of time that you will accomplish by the time you finish the course. Also that you have a project that you are motivated about, and feel competent enough to complete a large portion and understand the direction by yourself. And finally, that you have a good adviser who you have worked with before and know will provide good guidance and have time to help you and keep you on track. ",
+            "\u00a0Im not the right person to ask, because for some time now Ive been fairly I invested in the E&EB major. This is no fault of the program, but rather a product of my changing interests. Considering this, I did not particularly enjoy doing the senior research project, although I liked finding out something new about a system I value, and appreciated many parts of the research process. In general, this course is a great opportunity to explore interesting questions, and Professor Wells is a wonderful guide. "
+        ]
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-18", 
+        "group": 2, 
+        "day_of_week": "Wednesday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50418/assignments/syllabus", 
+    "requirements": "After BIOL 101; after or concurrently with CHEM 175 (or CHEM 125) or 220", 
+    "description": "Discussion of the physical, structural, and functional properties of proteins, lipids, and carbohydrates, three major classes of molecules in living organisms. Energy metabolism and hormone signaling as examples of complex biological processes whose underlying mechanisms can be understood by identifying and analyzing the molecules responsible for these phenomena.\nAfter BIOL 101; after or concurrently with CHEM 175 (or CHEM 125) or 220", 
+    "title": "Principles of Biochemistry I", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "LC 102", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11327", 
+        "listings": [
+            {
+                "number": "300", 
+                "subject": "MB&B"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Matthew Simon", 
+        "Michael Koelle", 
+        "Candice Paulsen"
+    ], 
+    "long_title": "Principles of Biochemistry I", 
+    "extra_info": "A"
+}

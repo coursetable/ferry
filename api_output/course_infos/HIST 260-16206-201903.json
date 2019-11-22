@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "A study of Leo Tolstoy\u2019s masterpiece War and Peace (1865-1869) about Napoleon\u2019s 1812 invasion of Russia, in philosophical, historical, and political contexts.\u00a0 All readings and class discussions in English.", 
+    "title": "Tolstoy's <i> War and Peace </i>", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "16206", 
+        "listings": [
+            {
+                "number": "260", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [], 
+    "long_title": "Tolstoy's <i> War and Peace </i>", 
+    "extra_info": "B"
+}

@@ -1,0 +1,76 @@
+{
+    "crn_code": "30081",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            0
+        ],
+        [
+            0,
+            2,
+            1,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Coming into this class as a high school student taking the summer course I had minimal lab knowledge. Through this class I learned how to pour a protein column, run protein gels, do immunoblots, and how to use advanced microscopy to view urchin, mouse and human cells. I also learned how to better give a talk/presentation in front of an audience and how to fertilize sea urchin eggs. ",
+            "\u00a0I learned a lot about the different ways in which to wrk in a lab s well as how they relate to the principles in biology. This course in conjunction with the bio 101-104 sequence really helped to put the concepts to work in the lab setting rather than simply learning about them in the classroom. I think my technique and knowledge of lab procedures improved immensely during the time in this lab. "
+        ],
+        [
+            "\u00a0The strengths of this course include its fun and interesting curriculum. The course also has excellent equipment and a great teacher. It could be improved with time managment and planning at least in the summer course since we always ended about an hour later than usual. ",
+            "\u00a0All strengths! ",
+            "\u00a0Strengths were that Professor Wolenski was very thorough and made the things we were learning about applicable without having realistic expectations. A weakness would be that the class went over time frequently "
+        ],
+        [
+            "\u00a0I would most definitely recommend this course to another student who enjoys intense hands on lab work. This class is most definitely not a lecture class, as every minute was filled with doing a lab and learning by hands on interaction. Each student gets to run their own materials and do everything the teacher mentions, so it is very rewarding when the entire class yields exciting results together. ",
+            "\u00a0Yes! Wonderful course with a wonderful professor. Wolenski is excellent and makes the class fun, relevant, and engaging. ",
+            "\u00a0Yes I would recommend this course to another student because it was a great basis for how to work in a lab as well as how the different lab procedures were done. The expectations were very fair and when there was outside of class work it was all in relation to labs we have done in class or ways in which we can prepare to one day work in a lab ourselves "
+        ]
+    ]
+}

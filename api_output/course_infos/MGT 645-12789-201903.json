@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48720/assignments/syllabus", 
+    "requirements": "", 
+    "description": "", 
+    "title": "Start-up Founder Studies", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 16, 
+            "location": "EVANS 4220", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 19
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12789", 
+        "listings": [
+            {
+                "number": "645", 
+                "subject": "MGT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Kyle Jensen"
+    ], 
+    "long_title": "Start-up Founder Studies", 
+    "extra_info": "A"
+}

@@ -1,0 +1,77 @@
+{
+    "crn_code": "23424",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            4
+        ],
+        [
+            0,
+            1,
+            4,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about a few different matrix theories and their applications. ",
+            "\u00a0The course is a seminar-style introduction to random matrix theory. The methods illustrated are measure concentration, moment method, Stieltjes transform and free probability. The course also brings us to see how theory is applied in various interesting aspects, including graph analysis, PCA etc. ",
+            "\u00a0An introduction to random matrix theory ",
+            "\u00a0I learnt a lot about random matrices "
+        ],
+        [
+            "\u00a0The material is well organized. The delivery is engaging. The teacher is fabulous. ",
+            "\u00a0I think a 2.5 hour intense lecture is very tiring, and I could hardly concentrate at the end. Maybe divided into two 1.25 hour lectures is better. "
+        ],
+        [
+            "\u00a0I would definitely recommend this course. A little bit intellectual challenging though, you will get to know a lot of techniques that commonly arise in your research. The organization of the material is great! ",
+            "\u00a0Yes. Random matrix theory is a very beautiful and useful subject. ",
+            "\u00a0Yes "
+        ]
+    ]
+}

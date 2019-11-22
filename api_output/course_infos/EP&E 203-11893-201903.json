@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 14
+    }, 
+    "requirements": "", 
+    "description": "Statistical analysis of politics, elections, and political psychology. Problems presented with reference to a wide array of examples: public opinion, campaign finance, racially motivated crime, and public policy.", 
+    "title": "Introduction to Statistics: Po...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "OML 202", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11893", 
+        "listings": [
+            {
+                "number": "203", 
+                "subject": "EP&E"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YPST\">YC Poli Sci: Analyt Pol Theory</a>"
+    ], 
+    "professors": [
+        "Jonathan Reuning-Scherer", 
+        "Kelly Rader"
+    ], 
+    "long_title": "Introduction to Statistics: Political Science", 
+    "extra_info": "A"
+}

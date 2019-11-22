@@ -1,0 +1,71 @@
+{
+    "crn_code": "22241",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            3,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about the modern history of Italy and the literature of the workers' movements from before WWII to today. Prof. Ballerini is very knowledgeable and illustrates many points with examples from literature. I found his interpretations of the literary pieces he read very strong. "
+        ],
+        [
+            "\u00a0The course was very good. The assigned readings were very good works of literature and often Prof. Ballerini would illustrate the points with examples from his own experience and with snippets from the readings. "
+        ],
+        [
+            "\u00a0I would recommend this course to an undergraduate with a good knowledge of Italian and of the modern history of Italy. I would recommend this knowledge, because we read works of literature of an advanced level of Italian and because the literature was specific to the historical periods we discussed, such as Italy before, during and after WWII, particularly in the '60s and '70s. "
+        ]
+    ]
+}

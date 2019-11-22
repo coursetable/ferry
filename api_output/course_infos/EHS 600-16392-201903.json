@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Independent study or directed readings on a specific research topic agreed upon by faculty and student. By arrangement with faculty.", 
+    "title": "Directed Readings EHS: Urinary...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "16392", 
+        "listings": [
+            {
+                "number": "600", 
+                "subject": "EHS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Krystal Pollitt"
+    ], 
+    "long_title": "Directed Readings EHS: Urinary Metals Variance", 
+    "extra_info": "A"
+}

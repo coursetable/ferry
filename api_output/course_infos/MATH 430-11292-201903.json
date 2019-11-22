@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50472/assignments/syllabus", 
+    "requirements": "After MATH 350, and 300 or 301, or equivalents.", 
+    "description": "The theory of fundamental groups and covering spaces, with particular reference to two-dimensional manifolds.\nAfter MATH 350, and 300 or 301, or equivalents.", 
+    "title": "Introduction to Algebraic Topo...", 
+    "skills": [
+        "QR"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "LOM 205", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11292", 
+        "listings": [
+            {
+                "number": "430", 
+                "subject": "MATH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YMAG\">YC Math: Geometry/Topology</a>"
+    ], 
+    "professors": [
+        "Caglar Uyanik"
+    ], 
+    "long_title": "Introduction to Algebraic Topology", 
+    "extra_info": "A"
+}

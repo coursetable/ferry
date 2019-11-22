@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "2019-12-14", 
+        "group": 2, 
+        "day_of_week": "Saturday", 
+        "time": 19
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49365/assignments/syllabus", 
+    "requirements": "After CHNS 151, 153, or equivalent.", 
+    "description": "Reading and interpretation of texts in various styles of literary Chinese (wenyan), with attention to basic problems of syntax and literary style.\nAfter CHNS 151, 153, or equivalent.", 
+    "title": "Introduction to Literary Chine...", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "ELM143 106", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10760", 
+        "listings": [
+            {
+                "number": "170", 
+                "subject": "CHNS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Hunter"
+    ], 
+    "long_title": "Introduction to Literary Chinese I", 
+    "extra_info": "A"
+}

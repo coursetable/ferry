@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50459/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to the neurosciences. Projects include the study of neuronal excitability, sensory transduction, CNS function, synaptic physiology, and neuroanatomy.\nConcurrently with or after MCDB 320.\n\n0.5 Yale College course credits", 
+    "title": "Laboratory for Neurobiology", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11358", 
+        "listings": [
+            {
+                "number": "321L", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Haig Keshishian", 
+        "Paul Forscher", 
+        "Robert Wyman"
+    ], 
+    "long_title": "Laboratory for Neurobiology", 
+    "extra_info": "A"
+}

@@ -1,0 +1,103 @@
+{
+    "crn_code": "20641",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            2,
+            5,
+            5,
+            4
+        ],
+        [
+            0,
+            4,
+            5,
+            6,
+            2
+        ],
+        [
+            0,
+            4,
+            4,
+            7,
+            2
+        ],
+        [
+            0,
+            1,
+            4,
+            7,
+            4
+        ],
+        [
+            0,
+            0,
+            7,
+            9,
+            0
+        ],
+        [
+            0,
+            1,
+            8,
+            7,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a01. A broad variety of topics, both basic and advanced, related to several NLP tasks.\r\n2. Implementation of some important techniques and experiments with their capacities and limitations. ",
+            "\u00a0A broad understanding of the core ideas and problems in NLP, both classical techniques and newer, machine learning based approaches. ",
+            "\u00a0Coding ",
+            "\u00a0NLP ",
+            "\u00a0The course covers many topics of NLP: parsing, linguistics, deep learning... in a introductory way. ",
+            "\u00a0Theory and practical applications of NLP and programming ",
+            "\u00a0NLP ",
+            "\u00a0Some understanding of the topics in natural language processing. ",
+            "\u00a0Machine learning. Deep learning. NLP. ",
+            "\u00a0Challenges and current techniques regarding Natural Language Processing. Basic NLP methods and relative models are taught. ",
+            "\u00a0A lot of deep learning and NLP algorithms. "
+        ],
+        [
+            "\u00a0Strength: The lectures are well organized. Most topics are covered in sufficient details with abundant reading materials provided. \r\nWeakness: The slides are somewhat too fragmented, making it kind of difficult for retrieval. Also, some topics were gone through too quickly. ",
+            "\u00a0The primary strength of the course is also it's primary weakness --- it's remarkable breadth for a single semester, introductory course. This survey approach means that I feel I've been exposed to a quite substantial swath of the core ideas in NLP, but also means that I don't feel I have more than a surface understanding of any of it. This was furthered by programming assignments that primarily took the form of \"fill in the blanks\" on large codebases. The course could I think greatly benefit from programming assignments that --- even if lesser in total scope --- require students to work from (near) scratch and show they understand the core ideas, instead of just filling in bits and pieces by using examples from elsewhere in the code and snippets of documentation. \r\n\r\nOther strengths are the quality of the lectures themselves and the single written homework assignment given, which I felt was suitably enlightening and challenging. ",
+            "\u00a0I think the content in this course needs to be reduced a bit. Especially, there are almost more than 100 different PP slides, and it is really hard to follow. Also, I think the last two assignments can be updated to be more instructive instead of doing some coding puzzle. Other than these issues, I feel that I learned the basics of NLP after this course. ",
+            "\u00a0Material was old. ",
+            "\u00a0The slides and lectures can be much more organized. The slides are ordered by topics instead of by lectures, which make the course hard to follow. Also there are way too much materials, I think it could be better if some of them are selected to be covered and more in depth. ",
+            "\u00a0material not organized... too many slides ",
+            "\u00a0I absolutely loved this course, probably one of the best courses I've taken at Yale to date. ",
+            "\u00a0The lectures were very engaging, but went by faster than I could take exhaustive notes and the slides didn't have all of the information discussed. Neither of these are problems on their own, but it meant that I couldn't review the lectures terribly well. If you were able post recordings of the class (or have longer form notes available) that would be helpful. ",
+            "\u00a0Strengths - Great assignments\r\nWeakness - Lecture slides, material wasn't gone into depth ",
+            "\u00a0Strength: it covers a lot of things in NLP and some are really new. You can learn as much as you want of NLP. \r\nWeakness: too many topics and weak connections between them. The slides are hard to understand if you miss what the instructor told in class. ",
+            "\u00a0Too much focus on old-school NLP methods. Course should instead be focused on deep learning. Please make it more practical by teaching students how to build deep learning models for various tasks. ",
+            "\u00a0Strengths: many cutting-edge technique introductions, large coverage of the knowledge\r\nWeakness: not many focused points, some lectures are only very basic introductions ",
+            "\u00a0Strength:\r\nCovers a lot of topics, clearly introduced and explained.\r\n\r\nWeakness:\r\nToo many topics are covered in a single lecture. "
+        ],
+        [
+            "\u00a0Yes. This course covers both broad overview and deep insight into a wide variety of important topics in NLP. It is good for students who wish to further explore this area. ",
+            "\u00a0I'd absolutely recommend it if they were interested in NLP and linguistics. Even still, I might recommend it as an awfully good survey of various topics of relevance to modern computer science, which we covered quickly but well throughout the course as necessary for NLP tasks. Basics of machine learning, probability theory, linear algebra, stochastic processes, and so forth, all of which were familiar to me but might be a good exposure for someone who has taken a more straightline CS curriculum. ",
+            "\u00a0Maybe ",
+            "\u00a0The topic itself is interesting but the course is not very organized. Prepare to study by yourself about the material from Internet / textbooks. ",
+            "\u00a0not really unless you're interested in linguistics and grammar ",
+            "\u00a0Absolutely ",
+            "\u00a0Absolutely - I feel like I learned a lot and enjoyed the lectures. The homework problems were also well set up. ",
+            "\u00a0Yes, good class. ",
+            "\u00a0Yes. In all, it is a really good course. ",
+            "\u00a0Yes. This is a good course to start with NLP. It gives an overview point of the whole NLP field, and you can build from scratch from easy models to difficult ones. This is a great process of learning. ",
+            "\u00a0If you wish to learn more NLP knowledge and algorithms, and you aren't scared of a lot of reading and self-study, please take it. "
+        ]
+    ]
+}

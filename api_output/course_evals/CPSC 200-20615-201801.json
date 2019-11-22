@@ -1,0 +1,96 @@
+{
+    "crn_code": "20615",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            2,
+            7,
+            7,
+            1
+        ],
+        [
+            1,
+            2,
+            6,
+            8,
+            1
+        ],
+        [
+            0,
+            5,
+            4,
+            7,
+            2
+        ],
+        [
+            1,
+            5,
+            7,
+            3,
+            1
+        ],
+        [
+            0,
+            1,
+            11,
+            5,
+            1
+        ],
+        [
+            0,
+            3,
+            7,
+            8,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Python ",
+            "\u00a0Python\r\nrecursion\r\nlist comprehensions\r\nmemoization\r\ndecorators\r\nexceptions\r\nUNIX including bash shell scripts\r\nregular expressions\r\nobject oriented programming\r\ndata bases + SQL\r\nPython byte code\r\ncryptography ",
+            "\u00a0Python, Python bytecode, UNIX, basic cryptography ",
+            "\u00a0I learned a lot about computer science - applicable skills like how to code in Python and use UNIX, but also some theory, cryptography, and logic puzzle solving. ",
+            "\u00a0Learned quite a bit about Python, UNIX, SQL, and basic cryptography principles. ",
+            "\u00a0Python, Unix, general programming skills ",
+            "\u00a0I developed significant Python skills as well as the ability and interest to teach myself more CS down the road. ",
+            "\u00a0This was a good course introducing concepts in Python. ",
+            "\u00a0I learned a lot about programming in Python, structuring my programs, and operating systems through topics such as recursion, object oriented programming, and UNIX. ",
+            "\u00a0Python is very helpful. "
+        ],
+        [
+            "\u00a0Good course for python beginners ",
+            "\u00a0I like it the way it is. ",
+            "\u00a0All the exams made you memorize how to write like 10 procedures. I really dont think this is an effective way to test our understanding of the concepts, especially since we have access to Google and can troubleshoot our code in situations where wed be using the skills we learn in this class. I know this is impractical but I wish there was a way for us to take all exams on laptops inside a Faraday cage, so that we could run our code without being able to cheat. ",
+            "\u00a0Lectures could be more clearly organized.  The website is very helpful ",
+            "\u00a0I thought that the vast majority of learning in this course had to be on your own through googling and trial and error. This was both a strength in that it teaches you that you have the tools to learn CS, but also means that you learn very little in class. I did not attend the majority of lectures and did not feel like I gained much from the lectures that I did attend. ",
+            "\u00a0There was a lot you had to teach yourself in the course; the teaching was not comprehensive. ",
+            "\u00a0I thought the problem sets were really great at allowing us to apply and practice the theoretical concepts that we cover in class. I think the class would benefit by being a longer class with two classes per week because I feel like more topics can be covered at one time in depth and felt like classes each week sometimes felt segmented and disjoint because we couldn't cover enough about a single topic in one class. I also wish that there was a way of debriefing or going over problem sets to discuss the correct solutions in class. ",
+            "\u00a0The psets and lectures could be more clear but prof Slade is willing to spend time with students. "
+        ],
+        [
+            "\u00a0Yes, I recommend this course ",
+            "\u00a0Yes! It's a great second CS class for non-CS majors. Very straightforward, very practical. ",
+            "\u00a0Yes, I would absolutely recommend this course to another student, especially someone not sure about taking 201. This was the perfect computer science class to take since I had too much previous experience for 112, and the material itself was very practical. ",
+            "\u00a0Yes, since you learn a lot about computer science - applicable skills like how to code in Python and use UNIX, but also some theory, cryptography, and logic puzzle solving. The psets are reasonable in length and grading. However, the averages on exams on fairly high and the professor is not explicit about possible curving so perhaps it's a good Cr/D/Fail. ",
+            "\u00a0Useful for picking up Python and UNIX, both valuable skills. ",
+            "\u00a0Yes, a great way to get experience with Python ",
+            "\u00a0I would absolutely recommend this class to anyone interested in learning basic CS. More people should take this class over 112, as python is more useful than Java. It is a lot of hard work and not always easy, but you emerge with an entirely new set of tools and frameworks to solve problems. ",
+            "\u00a0I would recommend this course if it counts as an elective or if you are taking it for the QR, but I would not recommend it otherwise. ",
+            "\u00a0Yes, I would definitely recommend this class to another student looking to get more practice in programming. I think this class is a fantastic introduction to Python and great way to improve and keep up with your programming skills, especially if you aren't a computer science major but have an interest in programming. It is a smaller class and more practical and probably a little less work and less intensive than CPCS 201. I enjoy programming but am not a computer science major but considered taking 201, but discovered this class last minute and am very glad that I ended up taking this class. ",
+            "\u00a0I am hesitant. "
+        ]
+    ]
+}

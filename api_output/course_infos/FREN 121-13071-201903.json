@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "2019-12-13", 
+        "group": 2, 
+        "day_of_week": "Friday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49960/assignments/syllabus", 
+    "requirements": "Conducted entirely in French. Daily classroom attendance is required. Placement according to placement test score. Online preregistration required; see french.yale.edu for details.", 
+    "description": "Designed for initiated beginners, this course develops all the language skills with an emphasis on listening and speaking. Activities include role playing, self-expression, and discussion of cultural and literary texts. Emphasis on grammar review and acquisition of vocabulary. Frequent audio and video exercises.\nConducted entirely in French. Daily classroom attendance is required. Placement according to placement test score. Online preregistration required; see french.yale.edu for details.\n\n1.5 Yale College course credits", 
+    "title": "Intermediate French", 
+    "skills": [
+        "L2"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "CO493 208", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13071", 
+        "listings": [
+            {
+                "number": "121", 
+                "subject": "FREN"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Candace Skorupa"
+    ], 
+    "long_title": "Intermediate French", 
+    "extra_info": "A"
+}

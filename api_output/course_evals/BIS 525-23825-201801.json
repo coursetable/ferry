@@ -1,0 +1,79 @@
+{
+    "crn_code": "23825",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's <b>sensitivity to students and ability to provide students with adequate feedback</b> was"
+    ],
+    "Evaluation_Data": [
+        [
+            9,
+            6,
+            6,
+            1,
+            0
+        ],
+        [
+            1,
+            4,
+            8,
+            7,
+            2
+        ],
+        [
+            1,
+            2,
+            8,
+            7,
+            3
+        ],
+        [
+            1,
+            1,
+            8,
+            7,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a02 hours ",
+            "\u00a00 ",
+            "\u00a00 ",
+            "\u00a01 ",
+            "\u00a00 ",
+            "\u00a03 hours. ",
+            "\u00a00 ",
+            "\u00a00 "
+        ],
+        [
+            "\u00a0there were some interesting speakers this semester. ",
+            "\u00a0This course gave me many chance to get exposed to all kinds of research topics. ",
+            "\u00a0do not understand most of the presentation ",
+            "\u00a0it should be cancelled "
+        ],
+        [
+            "\u00a0Great ",
+            "\u00a0Great! ",
+            "\u00a0fair ",
+            "\u00a0Great ",
+            "\u00a0Great! ",
+            "\u00a0do not see his participation "
+        ],
+        [
+            "\u00a0No. We were not interested in some of the lectures. ",
+            "\u00a0It is a required course. ",
+            "\u00a0No ",
+            "\u00a0Great! ",
+            "\u00a0very technical, recommend for phD students ",
+            "\u00a0better be cancelled "
+        ]
+    ]
+}

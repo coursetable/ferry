@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49819/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Exploration of major themes in selected works of literature. Individual sections focus on topics such as war, justice, childhood, sex and gender, the supernatural, and the natural world. Emphasis on the development of writing skills and the analysis of fiction, poetry, drama, and nonfiction prose.\u00c2\u00a0Preregistration required; see under English Department.", 
+    "title": "Literature Seminars: Novel Tec...", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "LC 208", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 6, 
+        "oci_id": "12862", 
+        "listings": [
+            {
+                "number": "115", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Anna Shechtman"
+    ], 
+    "long_title": "Literature Seminars: Novel Technologies", 
+    "extra_info": "A"
+}

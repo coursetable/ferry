@@ -1,0 +1,76 @@
+{
+    "crn_code": "14386",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            3
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a lot about what I wanted to work in for my PhD, and it taught me the necessary techniques to do research in the field. ",
+            "\u00a0I learned a lot of knowledge in atomic physics which are really helpful with my research. "
+        ],
+        [
+            "\u00a0It is a very fast paced course, and requires consistent effort to be able to get through. However, at the end of the course, one emerges enlightened and ready with a lot of knowledge about the field. ",
+            "\u00a0Strength: lots of hands-on work with AMO theory.\r\n\r\nWeakness: not every topic covered in class is also covered in the problems, which makes me likely not to learn it as well. ",
+            "\u00a0I really like the organization of the class. I felt I learned a lot from doing problem sets. "
+        ],
+        [
+            "\u00a0Yes, but only if that student were prepared to put in the required effort. ",
+            "\u00a0Yes, if they are working in AMO. ",
+            "\u00a0If you want to do AMO related research, you should definitely take the class. "
+        ]
+    ]
+}

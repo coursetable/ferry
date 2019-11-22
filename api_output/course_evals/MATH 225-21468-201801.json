@@ -1,0 +1,136 @@
+{
+    "crn_code": "21468",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            4,
+            7,
+            20
+        ],
+        [
+            0,
+            0,
+            3,
+            6,
+            23
+        ],
+        [
+            0,
+            0,
+            1,
+            7,
+            24
+        ],
+        [
+            1,
+            1,
+            6,
+            13,
+            11
+        ],
+        [
+            0,
+            0,
+            0,
+            9,
+            23
+        ],
+        [
+            0,
+            0,
+            0,
+            8,
+            24
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0You learn a very solid foundation for the basics of linear algebra. It is proof based so it can be challenging at times, but through the struggle you end up with a better understanding if it all beyond just memorizing formulas. ",
+            "\u00a0I developed knowledge of the theory of vector spaces and matrices by taking this course. I learned the skills of matrix multiplication, evaluating determinants, diagonalizing matrices, and orthogonalizing bases. I developed insights into the abstract theory of algebra that make the algorithms I learned in high school algebra make much more sense. ",
+            "\u00a0Matrices are cool. ",
+            "\u00a0Linear algebra, introductions to rigorous proofs in mathematics which is a cool way of thinking ",
+            "\u00a0Learned about the fundamentals of linear algebra. Also learned about mathematical proofs. ",
+            "\u00a0I learned a WHOLE LOT about linear algebra. ",
+            "\u00a0I learned why algebra works. The course starts from some fundamental axioms and definitions and builds up proofs and theorems from there. I now have a much better understanding of non-numerical math and can now conduct proofs fairly well. ",
+            "\u00a0Proving things, linear algebra, matrices ",
+            "\u00a0Knowledge of linear algebra and matrix theory\r\nStrengthened my proof-writing skills\r\nLearned how to use Latex! ",
+            "\u00a0I learned an incredible amount of about mathematics in general from this course. It was a wonderful introduction to Linear Algebra, and I think it is the math course within which I have learned most. ",
+            "\u00a0I learned about linear algebra! This was also the first-ever proof-based mathematics course I took, and it was splendid. But the exams were mostly computational, so I learned how to apply linear algebra knowledge as well. The lectures on Google's page rank algorithm and on the Heisenberg principle were especially interesting. ",
+            "\u00a0The course did a comprehensive study of linear algebra and matrix theory, and also a couple of its applications. I learnt a number of skills- from working in groups to writing proofs to solving mathematical problems. ",
+            "\u00a0Linear algebra and thinking about how to prove something that I would usually take at face value. ",
+            "\u00a0Key concepts in linear algebra, vector space and field theory, some set theory as applicable. Basic methods of proof writing. ",
+            "\u00a0Great introduction to proofs in mathematics, as well as the best linear algebra course I can imagine. Professor Auel is dedicated to student learning, holding great office hours and making staff available that are super helpful. I would definitely recommend taking this over 222 if you have some extra hours per week to spare on the PSETS, as they can be hard and time-consuming. But they are definitely worth it. ",
+            "\u00a0I learned essential linear algebra concepts and how to apply them  we covered the Google Page Rank Algorithm in class, which was super interesting. I also feel like I improved my proof writing skills and reasoning. ",
+            "\u00a0Math 225 gives a thorough overview of linear algebra with a strong focus on proofs. Professor Auel doesn't expect anyone to have prior experience with proof-based math, and thus, this is definitely a great course for students looking to pursue further advanced math but do not yet have any experience with proof-based math. You get plenty of practice with proofs on the psets, but the exams are mostly calculation based. ",
+            "\u00a0I learnt how to write mathematical proofs, but more importantly I learnt how to appreciate the origins behind mathematical concepts rather than blindly plug in numbers into formulas. ",
+            "\u00a0The most valuable takeaway from this course is writing proofs, especially if you haven't taken a proof-based math class before. Otherwise, I learned about topics in linear algebra like basis, linear maps, null space, range, systems of linear equations, determinants, eigenvalues and eigenvectors, and inner products. ",
+            "\u00a0I learned a WHOLE LOT about linear algebra and the theory behind it. It's really cool seeing all the applications it has in things I already do and the new stuff I learn. ",
+            "\u00a0Learned about Linear Algebra and Matrix Theory. ",
+            "\u00a0You gain an intuitive view of Linear Algebra in which matrices are not arbitrary collections of numbers, but a representation of linear transformations. If you haven't done much proof-based math before, then this course will develop the part of your brain that allows you to quickly interpret math symbols and theorems, reason logically, and write up proofs clearly.  I became perceptibly faster at finding solutions to problems or internalizing theorems towards the end of the course. ",
+            "\u00a0Solid linear algebra knowledge and mindset ",
+            "\u00a0I developed an intuitive understanding of linear algebra and became more familiar with mathematical proofs. "
+        ],
+        [
+            "\u00a0Strengths: Clear textbook, clear lectures, results in a much deeper understanding of algebra.\r\nWeaknesses: None. ",
+            "\u00a0Omg the psets were so long. There was one pset that I pulled an all-nighter and that was one of my biggest regrets of the semester. ",
+            "\u00a0It's a good start into maths if you're into that kind of thing. Has a reputation for being harder than it actually is I think. ",
+            "\u00a0Strengths: AMAZING professor. Professor Auel breaks down linear algebra into its fundamental components and really makes sure that you build a great mathematical foundation and understanding of the material. The content is very interesting as well and makes you think about math in many new ways.\r\n\r\nWeakness: Super long problem sets that make your hand hurt. ",
+            "\u00a0This course is quite difficult and makes you think a lot about the fundamentals of math. ",
+            "\u00a0The course was very well taught and was very thorough. The psets were relevant and helped me to learn the subtleties of linear algebra. However, it was difficult in terms of the concepts and workload. ",
+            "\u00a0So much work. like sooooo much. But what you learn is really cool and worth it! ",
+            "\u00a0Strengths: Professor Auel is amazing. He put his heart into this class and made showing up every lecture at 9:00 a.m. worth it. His sense of humor is on point. He possesses the ability to explain concepts thoroughly yet concisely. I like his pedagogy make the problem sets difficult and long, but the quizzes and exams either conceptual-based or computational-based.\r\n\r\nWeaknesses: I don't think many people utilized the TFs, maybe because they weren't well advertised, or because they weren't off to a great start at the  beginning of the semester. But otherwise, I honestly don't have any complaints about the class. The material did seem to increase exponentially in difficulty in the second half of the semester (after spring break), but I think that's just the nature of linear algebra. ",
+            "\u00a0The course is brilliantly taught and so smoothly structured- Asher is always on top of everything, and ensures you have just the right amount of support you need to pick up the material. ",
+            "\u00a0Although this course was my most time intensive, it was the most rewarding and fulfilling. I think the course has maximized its potential ",
+            "\u00a0Strengths  excellent instructor and textbook, interesting material, thoughtful problem set questions, strong community of engaged students. No weaknesses other than the obvious difficulty. ",
+            "\u00a0Can't think of any real weaknesses. Sometimes the PSETs were maybe a bit longer than they needed to be, but I learned a lot from them and my peers. Strengths were definitely all the support that was available, as the material can sometimes be tough to grasp at first encounter. ",
+            "\u00a0A strength of this course is the amount of resources offered to students, albeit office hours, peer tutor hours, or TA sessions. The course was engaging and interesting and I felt like I learned and accomplished a lot at the end of the course. While there was a lot of homework, the class encouraged group work, which made the problem sets more manageable and fun. ",
+            "\u00a0The course's main strength, apart from a giving a strong foundation in linear algebra, provides students with plenty of practice and experience in proof based math. The p-sets are not 2 or 3 hour long, but rather closer to around 10 or even 15 hours. This is definitely a course that you get out of it what you put into it -- by going to office hours and talking to the peer tutors, you can essentially get most of the answers for the p-sets. But I would say you learn a lot more and it is a lot more rewarding if you take the time to struggle through the material and the p-sets and get the experience of thinking about a problem for a long time and suddenly realizing the answer (sometimes at random moments). Professor Auel is incredible and has a very strong passion for linear algebra -- it really rubs off on the students. ",
+            "\u00a0The strengths of this course was definitely the manner in which it cultivated a high level of appreciation for mathematics. Although there is a steep learning curve, you come out having learnt a lot and feeling incredibly fulfilled. The course was also highly focused on learning for the sake of learning and not grades. Thus, while the problem sets were rigorous, the exams themselves weren't too bad. The only weakness I found was the need for more peer tutors. The 2 peer tutors we had were always swamped during office hours. ",
+            "\u00a0The class is a lot of work (expect 15-20 hour problem sets every week) but I found that this was a strength, because I understood the concepts well by the time I was finished with the assignments. Professor Auel is a clear and engaging lecturer, and very approachable if you want to ask questions. In terms of weaknesses, my only complaint is that the first few weeks can be difficult if you don't have prior experience writing proofs, and I didn't find the proof writing sections especially helpful. ",
+            "\u00a0I think it could benefit from a slightly easier introduction to proofs. We had just one \"proof writing\" session and that was it. Otherwise this course is perfect. ",
+            "\u00a0A very interesting course, if you can withstand the workload ",
+            "\u00a0Asher is a passionate teacher and his enthusiasm for the material is reflected not just in lectures but also in review sessions, problem sets and even the final exam. This is a great course not only to understand linear algebra, but also to get a taste of what being a math major might be like. I'd be hard-pressed to find many weaknesses - it doesn't cover some topics like SVD, and the final topics were slightly rushed, though there are probably reasons for that. ",
+            "\u00a0The problem sets could be less questions but more focus on understanding\r\n\r\nSometimes I feel that we are doing questions repeatedly ",
+            "\u00a0The topics all gradually built upon one another.\r\n\r\nThe problem sets were at times perhaps too long. "
+        ],
+        [
+            "\u00a0Yes. I took this class just for kicks (even though it was not a requirement for my major) because I wanted a stronger foundation in math, and I enjoyed it and feel like I have learned a lot. Definitely worth it if you're interested in the subject. ",
+            "\u00a0I would highly recommend this course to another student. Professor Auel is a great, engaging lecturer. Problem sets are long and difficult, but the logic of how to prove various statements becomes clear as you reread the text. Attending office hours helps a lot with the problem sets. Exams are computational (not proof-based) and very easy compared to the homework. They are made even easier by the fact that the homework ingrains the material in your brain.\r\n\r\nParticularly, if you are a chemistry major, physics major, or part of any other major that requires taking a course on quantum mechanics, take this course first, because quantum mechanics is all linear algebra. I took this course concurrently with Chem 333, which is 75% quantum mechanics; everything I learned in math 225, I learned in Chem 333 first, which made math 225 incredibly easy. Given the option, I would have taken math 225 sooner to make Chem 333 easier instead. ",
+            "\u00a0Yes. 222 is a gut. ",
+            "\u00a0Yes, would recommend to even those who are interested in proof-based maths! The subject material is very useful for the future. ",
+            "\u00a0YES, take this class over MATH 222. You build a much better understanding of linear algebra. You don't cover as many applications in MATH 225 (as the course titles suggest), but taking MATH 225 will allow you to learn any additional applications of linear algebra very easily and quickly. Asher Auel is also definitely one of the best MATH professors at Yale. This is a class you do not want to miss out on taking (even if you do it Cr/D/F, you will learn a lot)! ",
+            "\u00a0Absolutely 100%. While much harder than 222, I had actual fun going to lecture and learning new stuff, even though my section was at 9 am. ",
+            "\u00a0I would definitely recommend the course if you want to understand how algebra works and want to build up your knowledge from the fundamentals. Asher is a great prof in terms of style and caring about how students learn. However, psets take 10-15 hours usually and dominated my Tuesday and Wednesday nights. Don't expect to go to Woads. ",
+            "\u00a0Only if they're willing to put a lot of effort in, but it's worth it because the math is really gratifying and the course builds up your knowledge in a very satisfying way ",
+            "\u00a0Five stars!!! Asher is the best professor I had this year at Yale. This class is absolutely fantastic BUT I will say you need to have enough time to take it  people aren't lying when they say the problem sets take 10-20 hours a week. Problem sets are generally released on Thursday or Friday. Each problem set contains around four questions, though be warned that one \"problem\" may consist of a list of problems. On Friday, Saturday, Sunday, and Monday, I tried to get through one problem a day, first writing out a preliminary solution on paper and then typing my solution using Latex. (Pro tip: Latex is not required but it will change your life!) Then, on Tuesday afternoon, my best friend/suite mate (special shoutout here, you know who you are) and I would meet at Blue State to go over our problem sets, review concepts, ask each other questions, etc. COULD NOT RECOMMEND MORE. Please take this class with a friend (or make a new friend in class!) and hold each other accountable to this Tuesday meet-up. Truly a game-changer. I used Tuesday night and Wednesday to edit so that I wasn't stressed about the Thursday 9 am deadline, as I was in the morning section. Important note: you will hear horror stories about people who pulled all-nighters on Wednesday in the math lounge to finish psets. These people generally tend to have poor time management skills and/or too much on their plates to begin with. If you are a procrastinator, then you could end up in this late-night crew. I would say, though, that this IS avoidable! I took this class and still managed to get 8+ hours of sleep every night/live my best life, etc. Another word of advice: there are a ton of resources for getting help in this class  two fantastic peer tutors, two TAs, and, of course, Professor Auel himself. Don't be afraid! You can totally do it! I was a bit nervous about this class after struggling to get a B in Math 120, and I did so, so much better in this learning environment. If you are curious about math and like challenges/problem-solving, you belong in this class! ",
+            "\u00a0Absolutely! I spent forever debating between MATH 222 and MATH 225, and in the end, I'm super glad I took the latter. I think people complain about Yale's STEM departments having professors that teach poorly, but Professor Auel is by no means in that constituency. He was absolutely stunning in every respect. And I developed a solid foundation in proof-based mathematics (it was my first time doing something like this I had taken MATH 120 previously). The sections were a little large, but that just speaks to how popular MATH 225 has become in the last few years. ",
+            "\u00a0Absolutely! Asher is a great professor- his lectures are energetic and well-thought out, he is so patient and good-natured, and has one smart brain that knows seemingly all there is to know. But what really makes this course special is the structure outside the class. Asher puts a great deal of thought into each lecture and homework assignment, and ensures that you really get the maximum out of the course.\r\n\r\nBe warned, however, that the course is a huge time drain- problem sets take between 12 and 20 hours a week, so do not jump into it blindly. ",
+            "\u00a0Yes  I would. It is a very intense course both in terms of workload and mental challenge. Overall, it was worth it because every assignment and lecture had a purpose and was efficient. ",
+            "\u00a0Yes if theyre ready to work hard. Its not always glamorous, by far the hardest class Ive taken at Yale, both quantitatively and qualitatively in terms of the workload. If you take it, find friends early whom you enjoy working (read: struggling, crying, screaming with joy when you finally get the answer) with. I dont know if many people can really succeed In this course as a pure loner, nor do I think it would be enjoyable even if one could. Take it over 222 if you care about the beauty of math, the rigor of proof writing, and understanding that surpasses computation. ",
+            "\u00a0Yes, definitely recommend it over 222. I think few students regret taking this class. It definitely does not feel like a waste of time. ",
+            "\u00a0Yes! While it was one of my most challenging courses at Yale so far, I felt like I learned a lot, my reasoning/logic skills improved, and I made a lot of friends. ",
+            "\u00a0I would recommend this course to another student, if they are willing to put in the time necessary and are interested in learning about proof-based math. If you don't need further math than linear algebra and have to prioritize other classes, I would recommend taking math 222 instead of this course. However, if you think you will be pursuing further, more advanced math, then I would definitely recommend taking this over math 222 -- this course will give you the experience necessary for future courses that require proofs, and it is much more likely that more advanced courses will expect that you have had previous experience with proofs. It is really rewarding if you put in the time and effort, but I wouldn't recommend it if you aren't willing or able to do so. ",
+            "\u00a0I would highly recommend this course. If you love math, definitely take Asher's course at some point. He will restructure your perspective of math, and though you will be frustrated at times, you will come out of it having learnt a whole lot. ",
+            "\u00a0Yes. If you're studying math, physics, engineering, CS, economics, or any other quantitative field, you should be familiar with linear algebra, and this is the best way to learn it. Professor Auel is one of my favorite professors at Yale. The course is challenging, but there are resources available for help. If you put in the effort, you'll get so much out of 225-- not just linear algebra, but logical thinking as well. ",
+            "\u00a0Yes, especially if you have a love for pure math. ",
+            "\u00a0Yes, if you are willing to put in the effort. ",
+            "\u00a0Take this course by all means if you're willing to try your hand at some proof-based math, want to get an intuitive understanding of linear algebra, and are willing to spare about 2 full days every week completing problem sets. Warning: This course will control your schedule. I routinely spent about 10-15 hours every week typing up solutions (though there were some people who somehow managed to do them in far lesser time). On the bright side, grading is very fair and you will be rewarded accordingly if you put in the work. ",
+            "\u00a0I think it is better to take 225 than 222 because of learning the mindset of linear algebra. however it is much harder and time-consuming ",
+            "\u00a0I would recommend this course to any student who wishes to gain a conceptual appreciation for the beauty of linear algebra. "
+        ]
+    ]
+}

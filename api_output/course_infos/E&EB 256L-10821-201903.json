@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49443/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The study of invertebrate anatomy and diversity in a laboratory and field setting. Activities will include will examine live animals and museum specimens, as well as local field trips. Some field trips will fall on weekends. This lab must be taken concurrently with the lecture E&EB 255.\n\n0.5 Yale College course credits", 
+    "title": "Laboratory for Invertebrates", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "ESC 210", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10821", 
+        "listings": [
+            {
+                "number": "256L", 
+                "subject": "E&EB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Casey Dunn"
+    ], 
+    "long_title": "Laboratory for Invertebrates", 
+    "extra_info": "A"
+}

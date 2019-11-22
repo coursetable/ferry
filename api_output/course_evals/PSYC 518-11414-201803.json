@@ -1,0 +1,101 @@
+{
+    "crn_code": "11414",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            9,
+            1
+        ],
+        [
+            0,
+            2,
+            0,
+            8,
+            3
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            8
+        ],
+        [
+            0,
+            1,
+            0,
+            6,
+            6
+        ],
+        [
+            0,
+            4,
+            9,
+            0,
+            0
+        ],
+        [
+            0,
+            4,
+            9,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0R and multivariate statisitcs. ",
+            "\u00a0Proficiency for coding basic, useful statistical tests in R; good understanding of most statistical tests used in basic analyses. ",
+            "\u00a0More advanced understanding of and skill set for using R ",
+            "\u00a0I learned a lot of practical skills in this course. Importantly, I learned how to take a dataset and use R to analyze different aspects of it. We ran through regressions, correlations, t-tests, etc. What was really great was that Professor Jara-Ettinger made the content applicable to the students' research, so that everything we learned could easily be tailored to our own data. ",
+            "\u00a0I learned how to use R programming and a lot of statistical analysis techniques. ",
+            "\u00a0Binomial, probabilities, ANOVAs, t-tests, and regressions. ",
+            "\u00a0Broad foundational knowledge with basic, useful statistical analyses. ",
+            "\u00a0Learning R and learning about statistics using R ",
+            "\u00a0The course was well structured to teach us lessons in parametric and non-parametric statistical methods. ",
+            "\u00a0A very comprehensive understanding of statistical analyses using R ",
+            "\u00a0Learned how to perform a variety of functions and analyses in R. ",
+            "\u00a0I learned the basics of R and how to produce graphs and statistics that were relevant to the field of psychology. I have already applied what we have learned in how to process data in my research. "
+        ],
+        [
+            "\u00a0Too fast! I think if that class had been a bit longer, we could have gone a bit slower. ",
+            "\u00a0Strengths: teaches R well, I gained strong skills in data visualization and basic tests; structure of lectures is engaging and encourages learning (following along with examples and being able to ask questions about code bugs, etc. real-time during class). Structure of the psets and midterm/final are good. \r\n\r\nWeaknesses: Seemed like too much time was spent on the material in the first half of the course, leaving less time for more interesting statistical material (e.g. the lectures that were posted that we did not get to). In addition, problem sets were sometimes spaced out too far. It would be more helpful to have at least a short assignment each week or every other week that helps to consolidate learning. ",
+            "\u00a0This course offered a great introduction to using the R environment and demonstrated a number of very helpful packages that can be used in psychology analysis, however as a student who had previously worked in R, it felt fairly introductory and I would've liked to get to more advanced stats. I would recommend combining courses on intro to R and data visualization (while it was great to learn ggplot, the amount of time devoted to making different graphs subtracted from our time to learn about stats). Similarly, the 2 days we spend learning \"advanced R\" was not necessary for learning stats. \r\n\r\nAdditionally, the staggered intervals between, and amount of material covered in, PSETs made was a little frustrating because it felt like there were some assignments where the material included hadn't been practiced for weeks. It could be nice to have a PSET every week to encourage students to keep up with skills. ",
+            "\u00a0While the course was overall very informative and I feel like I learned a lot of tangible skills that are applicable to my research, it is a bummer that we didn't get to finish the entire course. Somehow the speed of the class felt right (not too slow but not too fast) yet we ran out of time for a few lectures. I don't have a perfect solution since it was actually really helpful to run through problems together the way we did in class, and the more examples we saw the more I understood the material. Overall, I appreciate the application rather than theoretical focus of this class. ",
+            "\u00a0Strengths: Using R and how the material was taught. \r\nWeakness: N/A ",
+            "\u00a0Julian is a wonderful instructor who explained the concepts incredibly well.  I was disappointed that we never covered any Bayesian statistics, and wish we could have spent less time learning about piping so that we could potentially have gotten to it. ",
+            "\u00a0A strength was that we were guided through a lot of material, just following along, so we were shown how to do a lot. This was helpful for learning how to do a lot on R. A weakness was that we weren't thinking through anything on our own in class since it was so fast paced, so the problem sets were difficult unless we just looked at class notes and copied things we had done. I felt like I was able to do a lot using R, but like I was not any good at thinking about the problems for myself. Problem sets force you to do that, but they were a bit infrequent. I guess it would have been helpful to have some problems after each class. The feedback from Rosie on the problem sets we had was really helpful though. Mostly I just don't feel like I have a thorough understanding of the material, but like I would be able to run tests on data if the data and questions are exactly like ones we've done in class. The class seemed more geared toward making it possible for students who show up to class to get good grades rather than toward making sure all students would have a thorough enough understanding of the material to be able to apply it outside of class. For a graduate class, I expected it to be geared toward graduate students and practical research (not that it wasn't at all, it just felt like a low undergrad course where students listen and copy the teacher and memorize in order to get a good grade). The midterm and final were also huge weaknesses, in my opinion. Giving the exact test/answers on the review day tests students' attendance, it does not test students' understanding of the material. If the exact test/answers were not given out, I think it would become clear that a lot of students did not have a good understanding of the material. I missed one day the entire course (for a conference, and I emailed far ahead of time), and it happened to be a review day. Little did I know that the students who were able to attend the review were given all of the answers beforehand. The test/answers were given on the review day for the final as well (thankfully I didn't have a conference to go to during this review day). And both tests were worth a good chunk of the total grade. This seemed very unfair and I was very shocked to see this in a graduate course. ",
+            "\u00a0I wish that we had moved a little bit faster through the material early on, so that we could have gotten through more of the syllabus (particularly bootstrapping and permutation testing). ",
+            "\u00a0The professor was very engaging and covered a range of subjects. However, we did not get to some topics listed on the syllabus. Perhaps more meeting times would help. ",
+            "\u00a0Strengths were that we learned things in a fairly systematic way, integrating small tasks (such as relabelling a column or row) with larger tasks (such as performing a new statistical test).\r\nWeaknesses were that we did not get through all of the material, though it seems that that later material would be useful and perhaps necessary to perform modern statistical analyses.\r\n\r\nThat said, the material we did cover was very well presented and easy to understand. "
+        ],
+        [
+            "\u00a0Yes, especially other students in my dept. ",
+            "\u00a0Yes, but not for someone who already has a basic understanding of R or regression analyses. I had a background doing regressions and using R before this class and was initially excited about the ambitious curriculum set out in the syllabus which got into more advanced statistical techniques, but we sadly barely got past GLMs. ",
+            "\u00a0I would recommend this course to students who are looking for introductions to both R and stats. For students coming in with some more practice and familiarity with either, I may recommend taking a more advanced course that will provide skills directly useful for graduate level statistical analyses. ",
+            "\u00a0Yes, especially if you are looking for a stats class that will actually teach you useful statistics that you can then later use for your own data. Compared to other stats courses like STAT 103, this class actually prepared me and I feel like I walked away with tangible skills. Also Professor Jara-Ettinger is wonderful and very approachable. He's very helpful when it comes to taking what we learn in class and helping you understand how it would apply to real situations like for the kind of data you collect. It's not very much work - there's about a pset every week or every other week and the midterm and final are both take-home and open notes. This class is not stressful and Professor Jara-Ettinger doesn't emphasize memorization because he realizes that when you run tests on your data, you will have access to your notes and the internet, etc, so you can really focus on understanding the material. ",
+            "\u00a0I would recommend this course to students who want to know more about different statistical tests and who want to learn how to use R. ",
+            "\u00a0Yes. This is a great course to learn data analysis. ",
+            "\u00a0Yes -- Julian does a great job teaching the material ",
+            "\u00a0It depends on if they want to get a hands-on R tutorial, or if they want to get a good understanding of statistics. I thought it was helpful for learning R. ",
+            "\u00a0Yes! Well-organized, engaging, and very helpful. ",
+            "\u00a0Yes! Great intro to R. ",
+            "\u00a0Yes, it taught very useful an practical skills that are beneficial and necessary in performing good research. "
+        ]
+    ]
+}

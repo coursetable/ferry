@@ -1,0 +1,78 @@
+{
+    "crn_code": "11613",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            4,
+            2
+        ],
+        [
+            1,
+            3,
+            2,
+            1,
+            0
+        ],
+        [
+            2,
+            2,
+            1,
+            1,
+            0
+        ],
+        [
+            2,
+            2,
+            2,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            5,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0General Eng. Skills ",
+            "\u00a0I developed a large range of skills and insights from this course, such as sketching, using Solidworks, the design process, engineering maths such as beam bending, statics, trusses, and more. However, this knowledge was over a broad range of topics and the course attempted to delve deeply into each, without having the time to be able to do so. ",
+            "\u00a0I learned a lot about statics and stress analysis. And problem solving in general. ",
+            "\u00a0Basic Solidwork skills, machine work, design and inteo to strengrh of materials "
+        ],
+        [
+            "\u00a0Good job on hands-on experience, Machine Shop training/project is very helpful\r\nPerhaps have more time in class, as there are too many topics in relation to class time.\r\nShould be as that sophomore-level MechE students should not take this class, as many sophomore-level topics coincided with this class (i.e. MENG 280) ",
+            "\u00a0The design aspect of this course was a strength, specifically designing and building bridges as a midterm project and then water pumps as a final. However, the course overall was very weakly designed; it attempts to cover too many topics and does not allow time to delve in depth in any of them, offering only an artificial understanding of these subjects. The professor attempted to teach us advanced topics such as statics, beam bending, stress analysis, shear forces, etc. without having efficient time to allow us true understanding of any of these topics. The course design itself needs to be reevaluated in order to compensate for these errors. ",
+            "\u00a0The course felt like a decent overview of stress analysis, and I think I have a good handle on that to go into a more advanced course. But over all the course felt disorganized and expectations for assignments were not clear. "
+        ],
+        [
+            "\u00a0I would not recommend it to another student, especially not a first-year. The math is much to advanced and the professor does not allow proper time outside of class for assistance to understanding. The class is a large commitment (being at 6pm on Mondays and Wednesdays) and as a result many students decided to drop it for their own well-being: during shopping period there were 20+ students and by the last class it was down to 7. ",
+            "\u00a0I wouldn't in its current form. It needs to be better organized with clearer requirements for assignments. ",
+            "\u00a0no "
+        ]
+    ]
+}

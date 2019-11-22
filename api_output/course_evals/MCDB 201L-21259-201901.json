@@ -1,0 +1,81 @@
+{
+    "crn_code": "21259",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            1,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            4
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            4,
+            1,
+            2
+        ],
+        [
+            0,
+            1,
+            3,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course? (Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)",
+        "What are the strengths and weaknesses of this course and how could it be improved? (Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)",
+        "Would you recommend this course to another student? Please explain. (Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Acquired basic molecular biology skills that include analysis of gene, interpretation of results, development of own experiment, and most importantly, scientific writing and recording skills. ",
+            "\u00a0I learned basic skills needed to work in a biology laboratory. ",
+            "\u00a0I learned how to pipet, write scientifically, and understand biology procedures. ",
+            "\u00a0I learned how to carry out an in vitro CRISPR/Cas9 cutting assay, which has broad transferrable skills to other research in molecular biology. I also improved my scientific writing significantly, and got ample feedback on it. "
+        ],
+        [
+            "\u00a0Strengths: All the experiments conducted are all connected and led to a final goal. It promotes students' understanding of what it is like to work in a real lab where one experiment leads to another. The class also taught us to not only look at data but also interpret it and tie it to the overall project which is a critical skill to have when working in an actual lab. \r\n\r\nOne weakness is that sometimes the instructions can be a little vague and unclear on why we have to follow a certain step. However, the TAs and professors were always around to answer any questions. In the future, instead of answering students' questions one on one, just have a pre-lecture of the experiment to evaluate students' understanding and answer any questions. Another weakness is not being able to perform some part of the project due to Yale regulation or time. For example, if we would have more time, each of us would have learned how to operate a centrifugation machine or learned how to make a liquid stock of bacterial culture. ",
+            "\u00a0The professor is very good at teaching us the hands on techniques needed for experiments. ",
+            "\u00a0Strengths: the course covered a lot of procedures. \r\nWeakness: Some of the work was difficult to understand in the big picture of the project. ",
+            "\u00a0This class was definitely a great foundation for molecular biology research, and getting to work on an actual research project was awesome. Often certain aspects of a project would be explained in great detail, which was awesome, but then another aspect would just be entirely skipped. This led to a lot of people being confused, especially regarding the big picture. Additionally, it felt like there was a lot of time wasted in class. At least this year, the TAs were great, and gave a ton of extremely helpful feedback on lab reports. "
+        ],
+        [
+            "\u00a0Definitely, if you are interested in research. It not only teaches you laboratory skills like pipetting and gel electrophoresis, but it also teaches you skills like how to write a scientific report and keep a scientific notebook, all of which are important as a researcher. ",
+            "\u00a0I would recommend this course to others because it is very interesting to learn the different skills while helping with research at the same time. ",
+            "\u00a0I would recommend this course to any student that does not have research experience, as this course serves as a fantastic introduction to basic research lab methods. ",
+            "\u00a0Yes, I would recommend this course to someone AFTER they have taken the intro bio sequence. ",
+            "\u00a0If you're looking for an MCDB lab and a basic introduction to molecular biology lab techniques, this is a good class. Even if you already have quite a bit of lab experience, taking a lab class is still helpful. It gives you the theory and background you might not get in a research lab, and the scientific writing skills are very transferrable. Per usual for lab classes, it's a fair bit of work. "
+        ]
+    ]
+}

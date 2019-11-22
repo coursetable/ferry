@@ -1,0 +1,77 @@
+{
+    "crn_code": "20755",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about numerical techniques for solving models and also learned interesting things about economic growth. ",
+            "\u00a03rd quarter: Understanding of basic growth models, current research being done, how to solve growth models, different strands, how to apply them, structural change.\r\n4th quarter: frontier programming methods, Krusell-Smith, Aiyagari-type model solution methods ",
+            "\u00a0Growth theory from basics to the frontier.\r\nModern treatment of macro model with heterogeneous agents. "
+        ],
+        [
+            "\u00a0The strength of the course was clearly its focus on computational methods, taking into account Simon's lectures and Tony's lectures.\r\n\r\nThe weakness of the course is that it focuses on development at the time that there is already a sequence on development economics. On the other hand there was no discussion on things like monetary and fiscal policy and their interaction, or topics such as sovereign debt which were not taught on other courses too. ",
+            "\u00a03rd quarter: Great lectures, very engaging, good slides, liked the fact that we went over details of models and how to solve them but also covered a variety of current research, not just Acemoglu's textbook.  The reading slides and discussions in class were very helpful, in fact I want to try this sort of thing when I'm TAing next year.  The problem sets were fair and helpful for gaining a grasp of the models.  Even as more of a macro person, was nice to discuss the links to development issues and how the two literatures could learn from each other.  Not much to criticize except that we devoted a lot of time to the Qian et al paper which isn't directly growth.  Also sometimes the discussion of basic neoclassical models could get a bit tedious.\r\n4th quarter: honestly, the Scheidegger lectures were way over my head and I didn't gain much beyond knowing of the existence of these methods and  a very basic intuitive sense of what they do.  For Tony's part, was good to finally learn about Krusell-Smith since it comes up a lot in seminar discussions.  I wish we would have spent more time on applications like climate change and less on the continuous time methods and basic Aiyagari models. ",
+            "\u00a0The course is well-organized. I learned a lot. "
+        ],
+        [
+            "\u00a0If the student is interested in computational economics, yes. ",
+            "\u00a0Yes, I would recommend to anyone interested in development or macro.  Even if you don't want to do research in this area, it can give you a sense of important questions that are relevant for growth which could then guide a more micro-based research agenda. ",
+            "\u00a0Yes! "
+        ]
+    ]
+}

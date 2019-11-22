@@ -1,0 +1,79 @@
+{
+    "crn_code": "30092",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            6,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            6,
+            0
+        ],
+        [
+            0,
+            0,
+            6,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            3,
+            2,
+            0
+        ],
+        [
+            0,
+            2,
+            3,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learnt basic physics lab skills, how to account for uncertainty in measurements, I gained familiarity with LoggerPro software. ",
+            "\u00a0This course gave me a good sense of how to conduct basic lab experiments for physics. Special attention was paid to identifying and reducing sources of error, and quantifying the degree of uncertainty in our experiments. ",
+            "\u00a0Developing skills in using several piece of lab equipment, and in calculating errors inherent in lab processes ",
+            "\u00a0Ability to use LoggerPro, emphasis of how to do various physics experiments. ",
+            "\u00a0I learned a great deal about mechanics and the application of the theoretical concepts learned in PHYS 180. "
+        ],
+        [
+            "\u00a0We usually spent more time in the lab than we should have and went over 3 hours most days. It would be nice if we could have a general timeline to help us use our time efficiently or more guidance so that we are done with each part of the experiment by a certain time, and in turn, be able to leave lab on time. I think having a one page addendum was very efficient and are better than a model of lab reports being too long. I also appreciate that we could print out all our graphs in the lab and did not have to worry about how to get it printed on our own. ",
+            "\u00a0The experiments for the course are okay, if a little tedious at times. I think the collisions lab in particular would be much better if it didn't involve us performing measurements on a video of the experiment. I also wish the lab would get better video cameras and more sophisticated software than LoggerPro. Another improvement would be to clarify the guidelines on the lab reports, because points were taken off seemingly arbitrarily all the time. When grading, please give students more detail on how they can improve on future reports. Also, please make clear what the expectations are for the typed \"appendix\" and whether we must provide a procedure in the report. ",
+            "\u00a0Strengths--Paul Noel and James Ingoldby were extremely knowledgable, nice individuals who were able to help whenever needed. In many ways, however, I feel they were constrained by the lab manual.\r\n\r\nWeaknesses--I think that 3 hours for 3 experiments on the final was wholly unreasonable based on the labs we conducted in class. Perhaps if they were shorter, less time intensive labs, it would make sense to have this many experiments. The problem with the time given is that it gave no leeway to actually reason your way through the lab. You basically had to go on a gut instinct instead of logically reasoning through the problem at hand. I think 3 hours for 2 experiments is reasonable based on the difficulty of the labs and the amount of time we had (with partners, I might add) throughout the semester. ",
+            "\u00a0This course was fine! The instructors taught well and effectively helped. "
+        ],
+        [
+            "\u00a0If you're taking this class, it's probably because you have to. The experiments are moderately interesting but tend to get kind of tedious. The highlight experiment in my opinion was the gyroscope/angular momentum lab, because the results aren't immediately obvious. The labs take the full three hours, but your workload outside class is ~1-2hrs per lab, which is not bad at all. Definitely not my favorite course at Yale, but it was pretty well-run. ",
+            "\u00a0Yes, I would. Physics is quite wide-spanning, showing face in several disciplines. "
+        ]
+    ]
+}

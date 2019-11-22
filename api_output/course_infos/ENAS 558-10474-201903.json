@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49214/assignments/syllabus", 
+    "requirements": "", 
+    "description": "An introduction to the biomechanics used in biosolid mechanics, biofluid mechanics, biothermomechanics, and biochemomechanics. Diverse aspects of biomedical engineering, from basic mechanobiology to characterization of materials behaviors and the design of medical devices and surgical interventions.", 
+    "title": "Introduction to Biomechanics", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "WLH 116", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10474", 
+        "listings": [
+            {
+                "number": "558", 
+                "subject": "ENAS"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Michael Murrell"
+    ], 
+    "long_title": "Introduction to Biomechanics", 
+    "extra_info": "A"
+}

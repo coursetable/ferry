@@ -1,0 +1,80 @@
+{
+    "crn_code": "24194",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            2,
+            1,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned about linear programming and duals, submodular functions and their extensions, and some convex optimization. I became pretty comfortable with the methods that are used to reason about randomized algorithms, greedy algorithms, and algorithms dealing with submodular functions in general. I also learned some introductory convex optimization, which I think will be useful in other areas too. ",
+            "\u00a0I've learned a ton about optimizing algorithms in many situations. "
+        ],
+        [
+            "\u00a0The material of the course is pretty interesting, and Professor Karbasi is great at explaining it. It's also very applicable to other areas, so is certainly useful to know, and there's usually some cool intuition behind what we learn. That said, it's missing some structure, as 3 problem sets are not really enough to reinforce the material. I think the course would be vastly improved by having more, shorter problem sets. Typos on problem sets and exams were also pretty disorienting. They're easily fixed, but very confusing for the first person to notice them, so it would be really beneficial to have a TA carefully proofread and solve them before release. Also, class was very interactive, but could move somewhat slowly sometimes. I'd love to have gone through the material about 1.5x as fast, and seen even more interesting stuff! ",
+            "\u00a0This course was engaging and difficult and that was incredible.  However, there could be more structure/notes/resources.  Sometimes the process felt confusing and I felt lost. ",
+            "\u00a0Strengths: Relatively slow pace, so that we understand every step. Extremely positive for a purely mathematical course like this. \r\n\r\nWeaknesses: A few mistakes in the problem sets/exams. Also, the take-home exams, although more flexible in terms of time, are painful and force the student to spend a looot of time to solve them. Perhaps the whole grade could be based on graded assignments (which could be quite difficult as long as there is a TA to support the students and hold office hours). This would be better educationally I think. ",
+            "\u00a0The course was difficult and required some prerequisites that were not listed (linear algebra, calculus, etc). It would have been nice to have office hours since some of the problem sets were worded weirdly and the concepts are not always intuitive. ",
+            "\u00a0It is a great course "
+        ],
+        [
+            "\u00a0I would recommend this course to a student that's interested in combinatorial optimization, has worked with probability/expectations before, and is ready to really pay attention in class. The content is interesting, relevant, and pretty popular right now, but there aren't many assignments, so be prepared to work when you receive them. Midterms and exams are doable (both take-home), but you have to be ready to think on your own. ",
+            "\u00a0If you have strong math and CS backgrounds, you should take this course.  It's difficult but you will learn a lot. ",
+            "\u00a0Yes, definitively, if they are interested in the topic, or if they are having fun with mathematics. (The topic this year was mainly the following: optimization through linear programming formulation and rounding techniques, and submodular optimization with algorithms and applications in offline and online optimization problems). But to like the course you need to be motivated to take it, because it is quite difficult, and this can be bad if you don't really like it. If you like it, it is definitely worth it, given also that Prof. Karbasi's research is very related and he is an expert in the field.\r\nHaving taken an optimization course before taking this class is helpful in my opinion, but not necessary. What might be more useful to know in advance is some basic things about randomized and/or approximation algorithms. The course is covering whatever you might need, but I am just saying that extra familiarity would help even more. ",
+            "\u00a0Only if you're very confident in your ability to write proofs. It was an interesting topic, but very difficult to grasp. ",
+            "\u00a0Yes "
+        ]
+    ]
+}

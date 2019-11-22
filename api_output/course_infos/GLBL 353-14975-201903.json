@@ -1,0 +1,53 @@
+{
+    "exam": {
+        "date": "2019-12-16", 
+        "group": 2, 
+        "day_of_week": "Monday", 
+        "time": 14
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50997/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Consideration of how women\u00e2\u20ac\u2122s socioeconomic status and political power have varied across time and place. Three analytical lenses are used: biology, markets, and power.", 
+    "title": "Sex, Markets, and Power", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "DL 220", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 12
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14975", 
+        "listings": [
+            {
+                "number": "353", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YXWR\">Writing Skill (Opt.)</a>"
+    ], 
+    "professors": [
+        "Frances Rosenbluth"
+    ], 
+    "long_title": "Sex, Markets, and Power", 
+    "extra_info": "A"
+}

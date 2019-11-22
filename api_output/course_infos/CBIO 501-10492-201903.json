@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "The course is offered only to M.D. and M.D./Ph.D. students.", 
+    "description": "This full-year course (CBIO 501/CBIO 502) is designed to provide medical students with a current and comprehensive review of biologic structure and function at the cellular, tissue, and organ system levels. Areas covered include structure and organization of cells; regulation of the cell cycle and mitosis; protein biosynthesis and membrane targeting; cell motility and the cytoskeleton; signal transduction; cell adhesion; cell and tissue organization of organ systems. Clinical correlation sessions, which illustrate the contributions of cell biology to specific medical problems, are interspersed in the lecture schedule. Histophysiology laboratories provide practical experience with an understanding of exploring cell and tissue structure.\nThe course is offered only to M.D. and M.D./Ph.D. students.", 
+    "title": "Molecules to Systems", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10492", 
+        "listings": [
+            {
+                "number": "501", 
+                "subject": "CBIO"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Peter Takizawa"
+    ], 
+    "long_title": "Molecules to Systems", 
+    "extra_info": "A"
+}

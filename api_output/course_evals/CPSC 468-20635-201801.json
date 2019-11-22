@@ -1,0 +1,104 @@
+{
+    "crn_code": "20635",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            8,
+            6
+        ],
+        [
+            0,
+            0,
+            1,
+            8,
+            7
+        ],
+        [
+            0,
+            0,
+            0,
+            8,
+            8
+        ],
+        [
+            0,
+            1,
+            2,
+            6,
+            7
+        ],
+        [
+            0,
+            0,
+            2,
+            8,
+            6
+        ],
+        [
+            0,
+            0,
+            5,
+            6,
+            5
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learnt a lot about theoretical computer science and its real-world implications - for instance, the reasons why we believe our current encryption methods to be secure. This class also improved my ability to think algorithmically and get some insight into many very interesting problems and ideas in the field of theoretical computer science research. ",
+            "\u00a0If you're interested in CS theory, this course is a gem for you. Languages, Turing machines, theory of computation are generally what we studied. ",
+            "\u00a0So much about complexity theory. ",
+            "\u00a0Thorough survey over various complexity classes, the relationships between them, models of computation, etc. ",
+            "\u00a0A broad understanding of computation, its current limits, and ongoing research.\r\nAlso, improved my proof writing skills. ",
+            "\u00a0Being a theoretical CS class, I learned a lot of mathematical and abstract thinking. Complexity is basically a more abstract version of algos. Personally, I found the content more interesting because of the added extraction! It really gets you thinking in a different way than you're used to. ",
+            "\u00a0Knowledge: core topics in the study of computational complexity, including Turing machine formalisms, P, NP, PSPACE, (complexity classes), time and space hierarchies (can we solve more problems with more time/space? What?), circuits, randomized computation, interactive proof, and cryptography. \r\nSkills: formal reasoning about algorithms - algorithms come up a lot when doing reductions, \"what if\" style proofs, equivalences, etc. Use of counting, probability and statistics (chernoff bounds, Markov's inequality, the probabilistic method). Thinking in parallel accross multiple computer formalisms (deterministic TMs, nondeterministic TMs, advice strings, alternation, circuits, randomized, interactive proof, and PCP).\r\nInsights: various characterizations of NP and the question P ?= NP and its significance. Theoretical understandings of the utility of time and space and what can be done. Study of proof formalisms such as NP and interactive proof (private and public coins). Relatedly, the existence of asymmetrical problems (proving is hard, checking the proof is easy), and the difficulty in proving these asymmetries. Relations to cryptographic systems. ",
+            "\u00a0This course taught me about a field within computer science with which I had little to no previous knowledge-- computational complexity. Every day in class was a challenge, but with Professor Angluin's incredible teaching style and explanations, I feel like I learned more than I could have imagined about this topic. While I am not sure I will study computational complexity in the future, I truly appreciate this class for the opportunity it gave me to learn more about complexity theory and how to write a well-defined proofs. ",
+            "\u00a0I learned much more about complexity theory than was covered in algorithms, including the polynomial hierarchy, circuits, the Turing machine definition of NP, randomized algorithms, interactive proofs, and a lot more. I learned how it's possible to reason about the \"hardness\" of problems, techniques that are used to prove some of the known facts in complexity theory, and also what isn't known. ",
+            "\u00a0I had a great introduction to the field of computational complexity and also to the development of theoretical computer science and its proof techniques. "
+        ],
+        [
+            "\u00a0This class was a little dry at first, but it slowly starts to grow on you and you end up appreciating better how all that you learn fits into the greater context that is the study of computer science. Problem sets were challenging and long enough to force you to engage with the material, yet not so long as to feel repetitive or overwhelming. Exams were fair, and also challenging. Overall, this class has provided a reasonable level of intellectual challenge and has been a good learning experience. ",
+            "\u00a0We covered too much material. I found it hard to stay interested. ",
+            "\u00a0Dana is fantastic: smart, clear, funny, fairly engaging in lecture. Homework was extremely reasonable and the exams, while slightly difficult, were quite fair. ",
+            "\u00a0The overall structure of the course was a standard computational complexity class, following the textbook. I thought the level of rigor was appropriate, but that requiring the final paper for the entire class in lieu of the second midterm, which covered some of the more eclectic material from the book, would have been better. ",
+            "\u00a0I really enjoyed the material. Problem sets are adequately challenging, but a lot of work, since you have to do one every week.\r\n\r\nI appreciated the detailed feedback that we got on all of the homeworks. ",
+            "\u00a0The textbook could be better, but other than that this course and the information covered were great. ",
+            "\u00a0I was a big fan of Dana's teaching in this class -- she's super smart and honestly pretty funny with her wry sense of humor. The material covered was also solidly interesting, and the problems were challenging but not overwhelmingly tough. Maybe give a sample midterm, since I wasn't sure what to expect going in (although I did find the exams very fair). Also, some of the probability material at the end was tough for those without background in that. I can't think of a way to make it more fair, but perhaps providing a handout of common probability rules/concepts would be helpful, at least psychologically. ",
+            "\u00a0Strengths: Dana has a good pace, clear presentation. Encourages participation, which is key. Problem sets were very instructive and good difficulty. Tests were hard but fair.\r\nImprovements: At times the topics felt rather episodic rather than continuous -- drawing connections and thinking philosophically about these topics can be really cool (we did this some, like in proof systems). The class was very individualistic and I did most of the work on my own. My friends in CS have not gone the \"theory\" route so much and so in the class I felt a little isolated. ",
+            "\u00a0Strengths: Professor Angluin is by far the best part of this class-- even the most difficult concepts are easily elucidated by her notes and explanations, so this is definitely a class where you can only learn by attending lecture. The material is also very interesting, albeit difficult, which makes every problem set both challenging and exciting.\r\n\r\nWeaknesses: I honestly can't think of anything. The class was difficult, but I'm glad it was because it helped me understand the material better. ",
+            "\u00a0The material of the course was really cool and well-cultivated, and we covered it at an ideal level of detail. Homeworks were thought-provoking and relevant without being extremely time consuming. I think a supplemental textbook might be helpful, because although I enjoyed the text used (Arora), sometimes it was useful to see something presented in a new light from what was covered in class. To that end, more attention could be called to Professor Aspnes' past course notes. ",
+            "\u00a0Taught very well! Dana Angluin did a very good job. No improvements to suggest. "
+        ],
+        [
+            "\u00a0If you're at all interested in algorithms, mathematics, or theoretical computer science, take this class. In fact, take this class even if you aren't. Though it's not exactly an algorithms class, it certainly feels like a very natural continuation of 365 - you'll have to think about ways to reduce problems into other problems to show NP-completeness, or conceive of a manner in which you could solve problems given various assumptions (randomness, nondeterminism, space- or time-bounded computation, etc). All this while learning about the theory underpinning much of what we do in computer science today. ",
+            "\u00a0Yes, if you're a math/cs major who wants to learn about the theory of computation. Be prepared to be lost, because the amount of stuff covered is insane. ",
+            "\u00a0Yes, if you are willing to put in the brainpower and tons of work. ",
+            "\u00a0Absolutely. Complexity is quite fascinating stuff; most CS majors and math majors would definitely gain something from it. ",
+            "\u00a0Most def ",
+            "\u00a0A good course in complexity that followed the textbook pretty closely. Dana is a good lecturer and fair grader who covers the details well. ",
+            "\u00a0By design, I think this course would only appeal to a student in CS/math/linguistics/etc. who is interested in theory ",
+            "\u00a0Very much so, especially if Dana is teaching it! ",
+            "\u00a0Yes ",
+            "\u00a0I'd definitely recommend this class, especially with Dana. She's a great teacher and the material we covered is really interesting. The problem sets were challenging but not overwhelmingly so, and the exams were pretty interesting as well. Workload is solidly manageable -- not quite a 5th class, but nothing to stress too much about. ",
+            "\u00a0I paired this course with Computability and Logic, and it was a great combo. Those are the theoretical foundations of computer science, and if you're at all interested in CS theory you should know it. Fun and interesting material, beautiful proofs. Similar mindsets and techniques to algorithms. Probability theory comes up in the end, so either know it beforehand or self-study a bit. You will be able to solve P ?= NP by the end (we hope). ",
+            "\u00a0Absolutely. This course is very interesting to people who enjoyed classes like Algorithms (CPSC 365/366) and are looking to further their knowledge of theoretical computer science. I will add that if Professor Angluin is teaching the class, it will be absolutely phenomenal. ",
+            "\u00a0I would absolutely recommend this course to another student. It's extremely interesting material, and there's such a rich variety of topics that it certainly doesn't get boring. The problems are interesting and thought-provoking, and it's exciting to study a field where many crucial questions are still not known. ",
+            "\u00a0So difficult but so cool! Overall, the topics are really awesome and interesting. I learned so much about turing machines and complexity classes.\r\n\r\ntowards the end, there's some stuff about probability and bounds that are harder with no background in probability, but it's only for the last couple weeks. \r\n\r\nWith professor Angluin, homework is doable if you go to office hours or work with friends, tests are very very hard. \r\n\r\nOverall, I enjoyed it! ",
+            "\u00a0Dana Angluin taught this class very well, and if you're at all interested in the subject you should take it with her. It's a lot of fun and there are some great proofs and concepts. I'm glad I took it, but I'm not sure it's as good when other professors teach it. "
+        ]
+    ]
+}

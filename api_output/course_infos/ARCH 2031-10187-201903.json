@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "", 
+    "title": "Architectural Practice & Mgmnt", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 14, 
+            "location": "LORIA B51", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 16
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10187", 
+        "listings": [
+            {
+                "number": "2031", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Phillip Bernstein", 
+        "John Apicella"
+    ], 
+    "long_title": "Architectural Practice & Mgmnt", 
+    "extra_info": "A"
+}

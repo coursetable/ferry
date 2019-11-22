@@ -1,0 +1,92 @@
+{
+    "crn_code": "14568",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            7
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            5
+        ],
+        [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        [
+            0,
+            3,
+            2,
+            4,
+            1
+        ],
+        [
+            1,
+            4,
+            4,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0It developed my knowledge, skills and insights over a number of areas.\r\n1) Helped me become more familiar with python as a programming language and how to deploy it to scrape information on the internet\r\n2) Increased my understanding of big data, data science and their policy implications\r\n3) Expanded my insights on a variety of field due to the variety of the high calibre guest speakers we had for class throughout the semester.\r\n\r\nOne of my best classes at Yale. ",
+            "\u00a0A look at the issues surrounding big data from multiple perspectives: the technology itself, the policy and politics, and the ethics. The ability to scrape websites and Twitter using Python. The importance of integrating policy and ethical considerations when developing technology, and the need for technologists to enter the policy world and develop forward-thinking, tech-enabled policy. ",
+            "\u00a0Data is EVERYWHERE! I really appreciated the course's holistic approach to learning about data. What is data? What is big data? What can it be used for? What are its limitations? What is next? Should we regulate data? \r\n\r\nI have a much better understanding of big data itself, but more so how to think about issues regarding data moving forward. ",
+            "\u00a0Use what I learned in statistics and computer science to explore important topics about justice and policies. ",
+            "\u00a0This course was a great overview of big data across many disciplines. As big data and algorithmic decisionmaking continue to shape more and more of the world (from business to medicine to politics), it's a critical field for students (and future policymakers) to understand. In addition to the high-level perspective, the optional coding sessions were also very helpful. ",
+            "\u00a0What is Big Data?  I am now able to answer that question and also explain many of the policy issues. "
+        ],
+        [
+            "\u00a0This course is tremendously helpful in getting me up to speed with the latest and greatest of data science across multiple field. Prof. King was very instrumental in facilitating great in class discussions. He was also very skillful in guiding guest lecturers to enlighten the class on the most pertinent issues around big data today. He also offered multiple sessions outside of class to improve our skills with python. ",
+            "\u00a0A strength is Dr. King - hes great. A weakness is a lack of assignments. I would have liked a few more concrete assignments. ",
+            "\u00a0Overall, the class was fantastic. The discussions were great and the content was super interesting. I do wish there had been fewer guest speakers so that we could have discussed the topics more in class. ",
+            "\u00a0Loved that I came out of the class with the ability to scrape websites using Python. Wished that we had more Python sessions (our semester, there were only three mandatory Python sessions), but Prof. King mentioned considering expanding out the Python component of the course -- please do, it'd be very useful and very valuable for students! Readings were interesting, but wish we had more time to discuss them, and wish that there were more readings that presented opposing perspectives -- would make for some lively discussion, and Prof. King is definitely well-equipped to facilitate those discussions. Lots of really interesting guest speakers -- Prof. King has many connections that he really leverages to give his students industry perspective into the topics we discuss. The flip side is that many classes are filled entirely by guest speakers rather than covering the syllabus content and readings, which meant that we never got around to discussing many of the topics. Some guest speakers were cool but not as substantive in terms of course content, which diminished the amount of new \"knowledge\" I can say I came out of the class with. Not really sure which I would have preferred, but could be something to keep in mind. Few substantive assignments other than the final project (really no assignments other than the final project), would have preferred probably a short paper or two. Finally, we had to tweet during class time (yes, sounds weird), which at first seems cool but at points becomes more of a nuisance. ",
+            "\u00a0This course is incredible. You should absolutely take it if you can. No weaknesses! ",
+            "\u00a0It is a great class! The reading was fun and prof was engaging. ",
+            "\u00a0The course was great overall, but some of the guest speakers were weaker than others. Asking them to prepare may be challenging, but it would be worth briefing some of them more thoroughly on the arc of the class. The hedge fund speaker, in particular, gave a talk on finance that was probably too advanced for non-financiers and too basic for people who have done other coursework. ",
+            "\u00a0The readings and material were always engaging and the discussions were fantastic.  The use of Twitter within the classroom was novel and worked well.  The students were always engaged and ready to participate and the guest speakers were diverse, sometimes controversial, and eager to share their views and hear the views of the class.\r\n\r\nThe only weakness was the high frequency trading guest speaker because it devolved into a lesson on trading. ",
+            "\u00a0More practical aspects, including coding bootcamps could be added. "
+        ],
+        [
+            "\u00a0Yes, this class is very great at understanding the multi-faceted opportunities and challenges of big data. ",
+            "\u00a0Absolutely. ",
+            "\u00a0Absolutely! It is incredibly important for EVERYONE to take. ",
+            "\u00a0This course is very much still being developed, and it depends on where the course goes. This course had about 60% grad students and 40% undergrads, and since the graduate students have different priorities than undergrads, this course was a lot less focused on tangible assignments; as a course in the Jackson Institute, it was also more focused on industry and practice than many other courses I've taken. As an undergrad I very much appreciated both aspects, but it also felt like I came out of the class with less hard knowledge (other than scraping), especially since I had already read 1 1/2 out of the four books on the syllabus and already had exposure to the topics we discussed beforehand. Overall it was a good fifth class and I'd recommend it as a fifth class, but you should know what you're gonna get before committing to this course. ",
+            "\u00a0Take this course: Professor King is wonderful, you will learn a lot and have a lot of fun doing it.  It's a great 5th class. ",
+            "\u00a0I would highly, highly recommend this course. Professor King made us want to work hard and learn, but he did not require it. I did work and the final project not for the grade, but because I found the course interesting. I cannot recommend this course highly enough. ",
+            "\u00a0Yes, if you want to explore big data from a social perspective. Prof King was a very kind, knowledge, and charismatic person that you can learn a lot from. ",
+            "\u00a0Yes - would highly recommend to any student regardless their area of focus. It is a critical lens for understanding all aspects of society. ",
+            "\u00a0Absolutely.  The class is not just informative but also fun.  The topic is supremely relevant and will continue to be so. "
+        ]
+    ]
+}

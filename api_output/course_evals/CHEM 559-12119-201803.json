@@ -1,0 +1,78 @@
+{
+    "crn_code": "12119",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            3,
+            0
+        ],
+        [
+            0,
+            1,
+            4,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            4,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I have learned a lot about the principles, theories, and instruments of NMR and other spectroscopies. I also learned how to design and rationalize an experiment, write a proposal, and read a paper properly. ",
+            "\u00a0NMR and optical spectroscopy. Proposal writing. ",
+            "\u00a0I think I developed a better theoretical understanding of Bio NMR and a good understanding of the basic experiments done. I also think I will be better equipped to read papers on the subject in the future. I also think I developed a better practical understanding of vibrational and fluorescence spectroscopy in biophysics. Just like with NMR, I think I will have a better understanding when reading papers that use these methods in the future. ",
+            "\u00a01) Better understanding of NMR, especially product operator formalism\r\n2) Better understanding of correlation spectroscopy\r\n3) Better understanding of grant writing "
+        ],
+        [
+            "\u00a0I think the strengths of this course is that it combined the theoretical part with the experiments and really showed how the spectroscopy/technique can be utilized and applied to biological systems.\r\n\r\nThe weakness is that this course required a lot of prior knowledge of physical and theoretical chemistry, which I did not have. Therefore, it was very difficult for me to understand the materials. ",
+            "\u00a0Great lectures and discussion. It would be better if the NMR component is more focused on applications than on theoretical descriptions in the half-semester period. ",
+            "\u00a0I liked the focus on the theoretical understanding of NMR, but at the same time it also felt very compressed. I liked the class being split between the two different types of methods, but it didn't feel like a very even split. I liked reading papers on methods following the lectures. I think it would have been helpful if the lectures given on grant writing took place right before I started writing my proposal. ",
+            "\u00a0Strengths - good overview of a variety of methods\r\nWeakness - the NMR part should really be at least a full semester. Just setting up/first explaining all of the formalism takes time. Understanding that + all of the methods used in protein structure determination and dynamics takes even more time. "
+        ],
+        [
+            "\u00a0I took this class as an undergrad (senior MB&B major).  The class was definitely a challenge, but I learned a lot of really valuable information about NMR, fluorescence, and vibrational spectroscopy.  If those things interest you, definitely take this class!  Pat and Elsa are both experts in their fields.  I would perhaps recommend Credit/D/F; I took it for a letter grade, and it was fine. ",
+            "\u00a0I would recommend this course, but only if the NMR part is expanded enough to do justice to this rich/complex subject! "
+        ]
+    ]
+}

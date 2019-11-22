@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48911/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The course explores archaeological approaches to the study of religion. While the term \u201creligion\u201d is hard to define, it is generally agreed that religious phenomena occur in almost all cultures and that this realm played a significant part in most prehistoric cultures. In order to provide a broad vision of this theme, the course begins by considering influential schools of thought on the definition, origins, and social significance of religious behavior. The course then reviews a variety of methods that scholars may use to reconstruct ancient beliefs and rituals. The course assesses the applicability and success of these methodologies across the broad spectrum of ancient cultures representing differing degrees of sociopolitical complexity. Finally, we explore case studies from a diverse range of ancient societies and consider the impact of religious behaviors within their broader cultural contexts.", 
+    "title": "Archaeology of Religion", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "HLH51 101", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13766", 
+        "listings": [
+            {
+                "number": "780", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANA\">YC Anthropology: Archaeology </a>"
+    ], 
+    "professors": [
+        "Richard Burger"
+    ], 
+    "long_title": "Archaeology of Religion", 
+    "extra_info": "A"
+}

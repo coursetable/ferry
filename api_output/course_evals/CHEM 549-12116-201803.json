@@ -1,0 +1,90 @@
+{
+    "crn_code": "12116",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            2,
+            5,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            5,
+            3
+        ],
+        [
+            0,
+            0,
+            3,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            5,
+            0
+        ],
+        [
+            0,
+            4,
+            5,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This was an excellent introduction to materials chemistry with useful focus on characterization techniques and practical applications of the course material. The course offered a chemists' perspective of some topics that I have previously covered from a physicist's perspective and was very helpful. ",
+            "\u00a0This course gave me a great overview of much of the materials science. Each day was a new and important technique or application, or the basics behind why the applications and techniques work. It was very interesting and a great course. ",
+            "\u00a0Learned the basics of materials chemistry- synthesis, preparation, characterization. ",
+            "\u00a0I learned a ton about the crystal structure/electronic band structure of materials and how they affect their resulting mechanical, chemical, and electrical properties. I knew nothing about nanomaterial synthesis or characterization before this. The course focused a lot on these topics, which was really helpful for my research too. Great course overall! Dr. Wang explains things very well. My background is mechanical engineering, but I was able to learn and follow the lectures well. ",
+            "\u00a0I learned a lot about crystal structure, materials synthesis, and characterization techniques. ",
+            "\u00a0Fundamentals of materials chemistry principles and characterization techniques.  I felt this was a very practical class, balancing both the theory and application of the science quite well. ",
+            "\u00a0I learned the basics of materials chemistry as well as some specific techniques. I had no background in the material previously, so exposure to the field was valuable. "
+        ],
+        [
+            "\u00a0The strengths include how much material was covered and the breadth of the topics. One way that course could be improved would be to encourage more class participation in answering questions and thinking about what we are talking about. ",
+            "\u00a0Strengths: survey course, easy to follow most of the time, light workload.\r\nWeaknesses: wish that we had gone more in-depth on a lot of the topics such as synthesis or solid-state devices. ",
+            "\u00a0I had trouble visualizing the crystal structure of materials, but the online resources were helpful. \r\n\r\nHomework assignments matched the course material very well. \r\n\r\nI think more time could have been spent on MOSFET devices. ",
+            "\u00a0I think the course covered a lot of interesting material but I sometimes feel as though it was a little too much. At times I wished we covered topics more in depth. I'm also not a fan of PowerPoint-based classes but I cannot really think of a very good alternative as to how to present the material. ",
+            "\u00a0I think the course was overall quite good.  The curriculum it covered I felt was thorough but not overdone, and I really enjoyed the actual lecture.  Sometimes I felt it would be useful to have more information on the slides themselves so after class I could go back over them, or for example when reviewing for the final, but I never really felt this hampered me in the end. ",
+            "\u00a0The course could be improved by a more evenly distributed grading system. I felt that 40% on the final exam was a little steep considering the only other basis for our grades were problem sets. ",
+            "\u00a0The material covered in the course was interesting and well-presented. The problem sets were great for targeting the key concepts and allowing me to dig more deeply into what was covered and process the material. Overall I enjoyed the course!\r\n\r\nSome suggestions I would have for improvement would be more student involvement during lecture periods. For some of the topics, a 75-minute lecture was a bit long to sit through and keep my full attention. Time for discussion or problem solving somewhere in the middle would help keep students engaged. "
+        ],
+        [
+            "\u00a0Definitely. An informative course with an appropriate workload for graduate students balancing research and coursework. ",
+            "\u00a0Yes, it was very interesting and all information that is helpful in many different fields of chemistry and engineering and physics. ",
+            "\u00a0I would recommend only if you are truly interested in materials science/chemistry and want a broad exposure to the field. If you want something more technical, a different class would be more appropriate. ",
+            "\u00a0Definitely! A great way to learn more about nanomaterials and nanotechnology. Great to supplement research. ",
+            "\u00a0Yes! This course is a great introduction to many concepts within materials chemistry and materials science. ",
+            "\u00a0If you like materials science, take it!  It's a great way to supply a strong foundation in the field from a very knowledgeable professor, without too much work. ",
+            "\u00a0I would recommend this course to another student if they had no prior experience with material chemistry. If they had already taken a similar course or knew the basics of materials chemistry, it wouldn't be quite as valuable. ",
+            "\u00a0Yes, I would recommend this course to another student. Beyond the applicability and broad coverage of a range of interesting topics in materials chemistry, the professor presented the information clearly and the problem sets and assessments were reasonable and well-suited to the material covered in lecture. "
+        ]
+    ]
+}

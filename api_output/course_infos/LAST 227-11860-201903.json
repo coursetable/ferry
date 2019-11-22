@@ -1,0 +1,43 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51374/assignments/syllabus", 
+    "requirements": "Enrollment limited to 18. A maximum of one course in the 200-230 range may count as an elective toward the Spanish major.", 
+    "description": "An introduction to the craft and practice of creative writing (fiction, poetry, and essays). Focus on the development of writing skills and awareness of a variety of genres and techniques through reading of exemplary works and critical assessment of student work. Emphasis on the ability to write about abstract ideas, sentiments, dreams, and the imaginary world.\nEnrollment limited to 18. A maximum of one course in the 200-230 range may count as an elective toward the Spanish major.", 
+    "title": "Creative Writing", 
+    "skills": [
+        "L5"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 014", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11860", 
+        "listings": [
+            {
+                "number": "227", 
+                "subject": "LAST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Maria Jordan"
+    ], 
+    "long_title": "Creative Writing", 
+    "extra_info": "A"
+}

@@ -1,0 +1,107 @@
+{
+    "crn_code": "12112",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            5,
+            7,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            6,
+            6
+        ],
+        [
+            0,
+            0,
+            2,
+            6,
+            6
+        ],
+        [
+            0,
+            0,
+            2,
+            10,
+            2
+        ],
+        [
+            0,
+            0,
+            4,
+            9,
+            1
+        ],
+        [
+            0,
+            0,
+            9,
+            4,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Many methods, an idea of where chemical biology is currently as a field ",
+            "\u00a0Basic concepts in chemical biology. It was a broad survey so I learned a little bit about a lot of things. ",
+            "\u00a0I learned many new and relevant techniques and experiments pertaining to the field of chemical biology. Most of all I am taking away a newfound appreciation for how the principles of chemistry can be applied to biological problems. ",
+            "\u00a0This was one of the most useful courses I have taken.  Prior to the course I had very little experience or knowledge of chemical biology concepts or lab techniques.  Because of this I was also not comfortable with reading the current literature.  The course exposed me to major concepts such as directed evolution, chemical probes, and CRISPR.  The weekly lit readings reinforced concepts through well led discussions on relevant and high impact papers.  I am now comfortable reading articles in the field and can grasp the main takeaways. ",
+            "\u00a0This course taught me various modern techniques used within chemical biology research. ",
+            "\u00a0A survey of popular chemical biology techniques ",
+            "\u00a0this course allowed to gain appreciation for different experimental designs and tools used in chemical biology. I was able to learn a lot about cutting edge research and applications of the material. ",
+            "\u00a0I learned so much in this course that will help me to be successful as I continue through grad school. I learned how to think like a chemical biologist, read scientific articles, analyze figures and data, critically think about deeper problems and applications. ",
+            "\u00a0Overview of general chembio topics. ",
+            "\u00a0Knowledge of chemical biology techniques. ",
+            "\u00a0I learned a lot of new concepts that will help me in the future ",
+            "\u00a0Knowledge in chemical biology ",
+            "\u00a0Independent thinking and practical problem solving. ",
+            "\u00a0This course greatly broadened my understanding of chemical biology and the more recent developments in the field. "
+        ],
+        [
+            "\u00a0Strength - interesting questions, homework that I feel is relevant\r\nWeakness - covering a lot of material which sometimes can be overwhelming ",
+            "\u00a0I liked that there were multiple assessments beyond exams. The problem sets were useful and I really liked the NSF grant proposal assignment as it strengthened my writing and understanding of a chemical biology concept of choice. The survey nature of the course was a little frustrating because we kept changing topic. ",
+            "\u00a0I appreciated that the lecture slides were printed out so we could take notes during class as well as keep the print-outs to study later. The readings were often interesting, too. ",
+            "\u00a0The course is very up to date and relies well on both current literature and major papers from the field. ",
+            "\u00a0strengths: great information; learned a lot about a field I knew little about beforehand\r\nweaknesses: sometimes difficult to translate concepts to problems ",
+            "\u00a0Strengths: Great problems sets, discussion session topics and papers, topics covered, and newest information covered.\r\n\r\nWeaknesses: Tests covered too much material. I would have preferred more tests to show the wide amount of information we had learned. ",
+            "\u00a0Good overview. ",
+            "\u00a0The overall course was great and challenging. I liked it very much ",
+            "\u00a0I think there's too much workload, especially the proposal writing and presentation. ",
+            "\u00a0Strengths: covers a wide range of topics. ",
+            "\u00a0The independent proposal was very useful to begin thinking about how to design projects in the field and explore a topic we each found interesting. "
+        ],
+        [
+            "\u00a0Yes, this is a really interesting class. I learned so much in such a short amount of time. Sarah was really engaged with the material. ",
+            "\u00a0Yeah, it's a very thorough survey of important topics in chemical biology. Makes you a much more literate scientist in chemical biology. ",
+            "\u00a0I would recommend this course to students interested in biology who also have an appreciation of chemistry. I would also recommend that students who plan to take this course take biochemistry and introductory biology first. ",
+            "\u00a0Yes.  I had very little experience beyond basic biochemistry prior to this course so my knowledge in the field is greatly expanded. ",
+            "\u00a0I would indeed recommend this course to other students, especially if they intend to conduct research within chemical biology. The techniques covered throughout the course are ubiquitous throughout modern literature and thus should be well understood. Moreover, the problem sets and exams, though difficult, are isomorphic with problems one would encounter during research. As such, learning to solve these problems in a classroom setting can be incredibly helpful for later endeavors. ",
+            "\u00a0Yes! Especially if you are considering a chemical biology or biologically-relevant chemistry career ",
+            "\u00a0yes, definitely! the course provided solid foundation for understanding and applying major concepts involved in chemical biology. ",
+            "\u00a0Yes. This course is a must take. It covers a large amount of material is applicable to all chemistry fields. It also is up to date on all subjects, so it is exciting to learn about. ",
+            "\u00a0Yes.  Even for non chembio students. ",
+            "\u00a0Yes ",
+            "\u00a0Yes I would because I think you learn a lot of important skills. ",
+            "\u00a0It's a good course for people interested in chem bio ",
+            "\u00a0Yes. It is a good introductory course for first year chembio students. ",
+            "\u00a0Yes, definitely!  I enjoyed the format and the content of this class and think that it would be useful for any student in the chem bio or organic track. "
+        ]
+    ]
+}

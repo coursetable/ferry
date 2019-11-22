@@ -1,0 +1,112 @@
+{
+    "crn_code": "23081",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            5,
+            16
+        ],
+        [
+            0,
+            0,
+            3,
+            7,
+            11
+        ],
+        [
+            0,
+            0,
+            2,
+            10,
+            9
+        ],
+        [
+            1,
+            0,
+            0,
+            12,
+            8
+        ],
+        [
+            0,
+            0,
+            1,
+            10,
+            10
+        ],
+        [
+            0,
+            0,
+            3,
+            4,
+            14
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0How to analyze genomic data, starting with only programming knowledge and no knowledge of genomics-specifics ",
+            "\u00a0Genomic analysis.\r\nPython.\r\nR.\r\nLinux. ",
+            "\u00a0Coding in python, bash, and R. Basic pipeline analysis of CHIP-seq, exome-seq, RNA-seq, scRNA-seq. ",
+            "\u00a0I went from having no coding experience to being fairly proficient in writing Python scripts, using R, and analyzing genomics data. ",
+            "\u00a0This course taught me how to use my computer to efficiently analyze large data sets that I might encounter in my research. I learned the general pipelines for evaluating multiple types of genomics data, multiple programs and ways to achieve each step in this pipeline, and how to interpret and analyze the final results. ",
+            "\u00a0This course helped me develop practical skills to analyze genomic data such as RNA-seq, ChIP-seq, SNP genotypes, etc. I developed basic abilities in python and bash scripting, and learned how to use the Yale high performance computer clusters in my research. This will be very useful in ongoing graduate school projects. ",
+            "\u00a0I learned to use many of the tools for analyzing high throughput genomic data. I also learned the basic logics of the tools, although this course focused more on the application of the tools. It was challenging since I had absolutely no experience in any of the things I learned, but because of that I gained so much knowledge and insight that I believe is going to be useful even if I do not end up using the tools myself. ",
+            "\u00a0How to use Unix ",
+            "\u00a0The ability to code in multiple languages and process a variety of genomic data types ",
+            "\u00a0Bash programming and methods of DNA/RNA sequencing analysis ",
+            "\u00a0I developed skills in using Linux HPC clusters, in scripting (both bash and Python), and in running bioinformatics analysis programs. ",
+            "\u00a0The most important one was that I was able to write and execute a python script. ",
+            "\u00a0By taking this course, I learn how to write python and R script to process high-throughput sequencing data that can be used for genetic analysis. ",
+            "\u00a0RNA-seq, ChIP-seq and WE-seq data analysis. "
+        ],
+        [
+            "\u00a0Strengths: the discussions, walking us through analyzing genomic datasets\r\nWeaknesses: The schedule is extremely difficult to work around if you have other courses or teaching responsibilities, or if you're not located on the Medical campus. Additionally, many of the lectures were not really useful. I think you could cut the lecture content in half and the course quality would only improve. Have the lectures be even more of a survey, rather than going into some of the details they do now. Just to give students an idea of the kinds of data out there and vaguely how it's analyzed. Then convert that unused time into more programming workshops, or just leave it for us to work on problem sets. I think there are other types of genomics datasets (eg. proteomics) that we could probably learn to analyze with the extra time or also other techniques (e.g. genome assembly, doing annotations, visualizations) ",
+            "\u00a0The assignments are great and help me practice a lot of useful tools. ",
+            "\u00a0The lectures and coding sessions were relatively independent. Further connecting the biological background into practical considerations for analysis could strengthen the course. ",
+            "\u00a0This course covers a ton of material and skills, which I see as a major strength. This does however, make it extremely challenging and time consuming. The talented TAs are a great strength for the course, as is Piazza.\r\n\r\nOne weakness of this course was the timing of the deadlines with discussion sections and office hours (especially early in the semester, when problems sets were due on Mondays). At the beginning of the semester I found it frustrating to learn material on a Thursday afternoon and then have office hours on Friday with the problem set due on Monday, because I didn't have always enough time Thursday night to work on it so that I could ask questions at office hours. Moving the deadline to Wednesday instead of Monday was helpful to have more time to finish the problem set after the second discussion section, but I never really ended up utilizing office hours.\r\n\r\nAdditionally, I didn't find the lectures very helpful. Most of my learning came from the discussion section and from what I learned from working individually on the problem sets. Although I can see why the lectures are important in theory, I would prefer to spend less time in lecture and more time in discussion section or in workshops (like the single cell workshop) where we could build practical skills. I think having only 1 lecture per week would help to cut down on the time investment of this course without actually taking much away from students' learning. I will also say that there was quite a bit of variability in how useful the lectures were depending on which guest lecturer was teaching.\r\n\r\nOne potential improvement would be sending information to everyone signed up for the course about the CodeAcademy Python course beforehand so that the first few weeks of the course would be less hectic. It was a 25 hour course, so I would have preferred to work on it in the week before classes started, rather than trying to juggle the time consuming Python course with initial assignments in my other classes, the first problem set, and starting a new rotation in January. ",
+            "\u00a0I really enjoyed this course. I think the discussion sessions were the most valuable and that lectures were the least. I understand that the lectures are important but I found that they usually did not line up at all with the discussion sections and I did not get much information from the lectures. I think that time would better be spent focusing on the coding and only brief time (maybe once a week) dedicated to actual genetics material. ",
+            "\u00a0The great strength is that is focuses on practical abilities and understanding how the experiments really work, but not to such a degree that we get distracted by the statistical or mathematical models and can focus on real biology and practical computing.\r\n\r\nThe weakness is that the two parts of the class - understanding biology through guest lectures and understanding practical skills through P sets and discussion section - are not really connected, and only the P sets are really graded, which incentivizes students to skip lecture and not engage with the biology portion. Also the guest lecturers did not always know what they were supposed to be talking about, and our level of expertise. ",
+            "\u00a0This course is very informative, but it was sometimes overwhelming. The TAs helped a lot in overcoming the hardship. ",
+            "\u00a0It is a great course ",
+            "\u00a0Very large work load, but I think that's the only way to truly internalize this information. ",
+            "\u00a0The problem sets are very useful and time intensive. It was difficult to see how they related thematically to the lectures during a given week. ",
+            "\u00a0lectures were interesting, but it could have helped to get more practical instruction on bash and python, and on how to select a package/program to use for a given task (ex. bowtie vs star) ",
+            "\u00a0Strengths: feedback at every stage\r\nWeakness: no feedback for final reports ",
+            "\u00a0The strength of this course is that the discussion section and the TA are really helpful. I also like the problem sets that we've done in class. Although they are quite challenging, it helps me learn a lot how to use write scripts and process data for RNA-seq, ChIP-seq etc. The weakness of this course is I think there should be more thorough assessment of how people contribute to the final team project in this class. ",
+            "\u00a0It is really useful for the real research and it gives us a basic idea about data analysis in biological research.\r\nIt could be better if it stressed more on the biological meaning of these steps.\r\nOVERALL, it is so GREAT! "
+        ],
+        [
+            "\u00a0Absolutely. This is really the only class at Yale for taking people from 0 to being able to analyze next-generation datasets ",
+            "\u00a0It's help you learning a lot of techniques for bioinformatics. ",
+            "\u00a0Yes, this class was a practical and useful bootcamp for genomic analysis. The coding sessions with TAs were especially essential for success in the class and was when most learning occurred. It is a significant time commitment if you do not have prior experience in coding, but there are ample resources for help from TAs and classmates. This class will also force you by necessity to learn how to look for help on your own and to have the basic coding vocabulary to actually understand and search for solutions to your coding problems. ",
+            "\u00a0I would absolutely recommend this course to other students! I learned so much this semester and the skills I built will be essential to my future research. ",
+            "\u00a0Yes, I would. I learned exactly what I wanted from this course and it was by far the most useful and well organized one I have taken at Yale. ",
+            "\u00a0Definitely recommended if your research will entail any of these analyses. ",
+            "\u00a0I would. ",
+            "\u00a0Yes, if they are interested in computational work ",
+            "\u00a0Absolutely, provided they are willing to take on the challenge ",
+            "\u00a0Yes ",
+            "\u00a0I would heartily recommend this course, as I learned more in this course than any course I have taken at Yale. I also warn potential students that the workload is greater than any other course. ",
+            "\u00a0yes!! very practical/interesting ",
+            "\u00a0Yes! ",
+            "\u00a0Yes, it is really helpful. ",
+            "\u00a0Yes. I would recommend this course to any BBS graduate student because the workload is fair and it helps you learn a lot about programming. ",
+            "\u00a0YES.\r\nIt is helpful as an introductory course for seq data analysis. "
+        ]
+    ]
+}

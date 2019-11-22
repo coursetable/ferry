@@ -1,0 +1,77 @@
+{
+    "crn_code": "20280",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            2
+        ],
+        [
+            0,
+            1,
+            3,
+            0,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0The course provided an introduction to the techniques, technologies, and methodologies of archaeological laboratory analysis. ",
+            "\u00a0Learned use of lab techniques such as pxrd, SEM, archaeometry etc. \r\nFormation and presentation of a conference poster\r\nResearch of pots using pXRF\r\nAnalysis of pXRF results ",
+            "\u00a0I learned a great deal about various hard sciences as they apply to archaeology and anthropology. This included dating methods, metallurgy, archaeo-magnetism, ceramics and ways of analyzing the material composition of various artifacts. I also developed my ability to think creatively and form new ways of putting historical and archaeological concepts to the test. In particular I learned a great deal about the applications of compositional analyses to numismatics. I performed my own XRF tests for this and also read up on the applications of LAMS and Neutron Activation. I even got a chance to brush up on statistics. "
+        ],
+        [
+            "\u00a0Strengths - The professors teaching this course are highly knowledgeable and accessible.  The hands on lab project is the highlight of the course.  It provides students with opportunities to utilize Yale's extensive resources in advanced technologies for artifact analysis.\r\n\r\nWeaknesses - None. ",
+            "\u00a0More time in he actual lab\r\nlearning techniques hands on \r\nClass should be more than once a week\r\n\r\nVery informative\r\nGreat class to learn about various techniques in actual researches\r\nVery good for feedback on presentations of research and conference-level poster ",
+            "\u00a0The course relied rather heavily on lectures which provided a great deal of background information in a short time. Tours of some of Yale's facilities were also fascinating and were a welcome break from the classroom setting. The course might be further improved with more opportunities for hands on training. "
+        ],
+        [
+            "\u00a0Yes, I would recommend this course highly to any student interested in the scientific analysis of archaeological artifacts. ",
+            "\u00a0Yes; It is very informative and gives students the opportunity to conduct their own research, thus giving experience in research skills, as well as in presentation of their research. It also helps develop great conference-level research, and excellent feedback from instructors. ",
+            "\u00a0I would recommend this course to any student in the archaeological field who has not already studied the material it covers. Our studies of dating methods alone were invaluable. "
+        ]
+    ]
+}

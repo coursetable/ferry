@@ -1,0 +1,82 @@
+{
+    "crn_code": "20971",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            4,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            3,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned a quick refresher on fluid mechanics/partial differential equations. Also, I learned about surface gravity waves, rossby waves, internal flows, and convection. ",
+            "\u00a0How to solve a wide range of complex fluid mechanics and geophysical fluid dynamics problems ",
+            "\u00a0I learned a lot about fluid mechanics and how this applies to geophysical processes. I also learned a lot about specific problems and how to work through them mathematically. ",
+            "\u00a0I developed a knowledge of gravity currents and viscid flow, surface waves and perturbation, and convention with and without rotation. I used vector notation, the E-D rule, and conservation of mass and energy to derive equations for the scenarios above. ",
+            "\u00a0I learned a bunch of fluid mechanics. How to use tensor notation, how to manipulate governing equations and apply boundary conditions based on different situations to arrive at formulas that describe things like viscous flow, gravity currents and cavity flow, inviscid (i.e. non-viscous) flow like acoustic waves, gravity waves, and flows in a rotating system like geostrophic flow...\r\nThis is how Dave Bercovici taught the course, I hear it is different when ML Timmermans teaches it. Dave is a baller though so it's cool "
+        ],
+        [
+            "\u00a0We were pressed for time in the course, and its slow to start up. If MENG 361 fluid mechanics was a prerequisite, we could have moved faster. ",
+            "\u00a0I think this course does a good job of both introducing students to fluid mechanics and walking them through some important geological fluid dynamics problems. It would have been nice to have one more general lecture giving an overview of different types of problems and how these methods are used by researchers today, but otherwise the class was very clear and well taught. ",
+            "\u00a0I doubt this course will be taught by Dave again in the foreseeable future, so please remember that many of these points only apply to this years course, as Dave taught it.\r\n\r\nStrengths:\r\nThe small size the Geophysical designation grants let Professor B tailor the material to students interests. Quite a few lectures began with Ive got few different concepts we could cover  heres what they are  what should we cover first? \r\nOverall, a good introduction to fluid dynamics, even if we never got to magneto-hydrodynamics\r\nClear lectures (see the question below for more on Professor Bercovici)\r\nInteresting, challenging-but-reasonable problem sets\r\n\r\nWeaknesses:\r\nSome steps in lecture derivations could be a bit hand-wavey or could bear to be covered in more depth.\r\nIn a course with so much material, the absence of any midterms or final has upsides (respect for time) and downsides (possibly, slightly less comprehension/knowledge synthesis) ",
+            "\u00a0The class is good because you start from the beginning with everything and theoretically it all makes sense, after a whole semester of deriving different equations for different types of flow, you've done some of the basic techniques so many times that you know it well. However, the course covers a lot and moves really fast, and if you're not following with whatever happened last class by the time the next one starts, you can easily get lost or feel like you don't know why whatever the prof is doing on the board is happening. The notes are really clear though, so if you copy everything down and ask the TA in between classes, you should be fine. "
+        ],
+        [
+            "\u00a0Yes; it was a very fun class and Bercovici is a really great instructor. He keeps the material within class interests and explains it at a fairly decent level. The homework reflects the material, and the TA was also very intelligent in his knowledge regarding GFD. ",
+            "\u00a0I would recommend this course to any student interested in GFD. It is more comprehensive, better taught and more interesting than engineering fluid mechanics classes, so I would strongly recommend to someone who is choosing between MENG 361 and GFD. ",
+            "\u00a0If they are interested in fluid dynamics and earth systems and enjoy math, I would recommend this course to another student. ",
+            "\u00a0I would recommend this course to another student.\r\n\r\nI had never taken a class in Fluid Dynamics before, and took this course at the behest of my advisor, Mark Brandon, who thought it would be a good-if-challenging introduction to fluid mechanics. In this respect, he was absolutely right. \r\n\r\nI feel pretty far from mastering most of these concepts and derivations, but I know that Ive seen and worked with them. I feel that my time in the course was well worth it. ",
+            "\u00a0I mean yea, if you're going to do anything related to the math behind geophysical flows (i.e. any kind of flow out in the physical world), this class is a must. It's a bit of a doozy though so be ready, and start the psets early, do them w friends, go to office hours, you know the drill... "
+        ]
+    ]
+}

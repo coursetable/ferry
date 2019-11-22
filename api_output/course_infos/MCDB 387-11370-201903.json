@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50492/assignments/syllabus", 
+    "requirements": "Enrollment limited, with preference to juniors and seniors. Prerequisites: BIOL 101, 102, and 103, or equivalent performance on the corresponding biological sciences placement examinations; MCDB 202, 205, or 210. Electronic permission key required. Students must contact the instructor prior to the first class meeting.", 
+    "description": "The regulation and coordination of the eukaryotic cell cycle examined by means of a detailed critique of primary literature. Particular attention to the role of the cell cycle in the processes of development and differentiation and in cancer and other diseases. Students develop an understanding of experimental approaches to problem solving.\nEnrollment limited, with preference to juniors and seniors. Prerequisites: BIOL 101, 102, and 103, or equivalent performance on the corresponding biological sciences placement examinations; MCDB 202, 205, or 210. Electronic permission key required. Students must contact the instructor prior to the first class meeting.", 
+    "title": "The Eukaryotic Cell Cycle", 
+    "skills": [], 
+    "areas": [
+        "Sc"
+    ], 
+    "sessions": [
+        {
+            "start_time": 15, 
+            "location": "WLH 014", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 17
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11370", 
+        "listings": [
+            {
+                "number": "387", 
+                "subject": "MCDB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Iain Dawson"
+    ], 
+    "long_title": "The Eukaryotic Cell Cycle", 
+    "extra_info": "A"
+}

@@ -1,0 +1,88 @@
+{
+    "crn_code": "21103",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            2,
+            5,
+            4,
+            1
+        ],
+        [
+            0,
+            4,
+            2,
+            5,
+            2
+        ],
+        [
+            1,
+            2,
+            4,
+            5,
+            1
+        ],
+        [
+            1,
+            3,
+            5,
+            3,
+            1
+        ],
+        [
+            0,
+            2,
+            5,
+            6,
+            0
+        ],
+        [
+            0,
+            4,
+            7,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I'm planning to go into the renewable energy/storage/utilities field, so this course was a must-take for me. I was introduced to storage technologies and renewable fuels I had never encountered before. I am very glad to have a full arsenal of options to consider when thinking about replacing fossil fuel generation. It was also useful to have a \"bigger picture\" of the electrical grid taught to us- for instance, we learned about the basics of transmission, energy bids (baseload vs. peaker),  that will be very useful in the field. ",
+            "\u00a0Really interesting course. Learned a lot of cool and interesting information about renewable energy that I think everyone should know ",
+            "\u00a0None ",
+            "\u00a0Future of renewable energy ",
+            "\u00a0This class teaches the technology behind harnessing various renewable energy sources, including solar, wind, biomass, tidal, waves, geothermal, and hydroelectric (and additionally touches on nuclear). Beyond that, it also delves into some of the economics behind the integration of renewable energy, broader difficulties in this integration, and projects in place deploying these technologies. ",
+            "\u00a0I learned about the current state of renewable energy in the U.S. and world. I also learned how several sources of renewable energy work (hydro, wind, solar, geothermal, biomass, nuclear), their promises, and their limitations and consequences. "
+        ],
+        [
+            "\u00a0I enjoyed the discussion of ongoing renewable projects, the merits and cons of each fuel type, and their outlooks for the future based on policies and technology improvements. The course is also well paired with its fall companion course G&G 274- the first two or so lectures are redundant, but from then on, content is new. I think the course focused a bit too much on the physics and description of steam and gas turbine technology (especially on the exams). I was far more engaged in the science behind the fuels themselves, although that may just be my personal preference. ",
+            "\u00a0Lots of rote memorization about what doesn't seem to be very important facts. Much less analysis than I was expecting. It's a summary course, but I felt like emphases were in the wrong areas. ",
+            "\u00a0Very poorly organized. Hard to get help when needed as I couldn't attend any of the study sessions as a result of outside conflict. Also the information was presented as overly complicated when in actuality it wasn't. ",
+            "\u00a0interesting material - disorganized course ",
+            "\u00a0Lectures seemed to have a lot of information that distracted from what was really important. ",
+            "\u00a0This course provided a great overview of each major renewable energy technology, and some additional background and context. It was a well-rounded class that gave us an idea of how this technology is being used today and what potential this technology has. ",
+            "\u00a0Strengths: Straightforward, somewhat interesting material, just the right amount of work for a SC credit without it being a gut // Weaknesses: 9am was pretty brutal, and slides were decent enough so that you could skip class and learn on your own later (but then you get behind on the material and have to cram) "
+        ],
+        [
+            "\u00a0This is a comprehensive overview of all the different types of renewable energy and storage technologies that exist today. I would definitely recommend it for anyone interested in the field, and it's a must-take for Energy Studies students. This class is very much an SC credit- there will be rote review of some scientific concepts like photosynthesis for biofuels, the Carnot cycle for turbines, etc. However, the meat of the course is really interesting: we discuss renewable participation in energy markets, pros and cons for consumers and the grid, and plausible world energy futures. I feel very well prepared for a career in energy after taking this course. ",
+            "\u00a0Yes, this course is an excellent overview to renewable energy sources. Rigorous but accessible even to those without an extensive STEM background. ",
+            "\u00a0Interesting material but take CR/D so your hair doesn't fall out when you're trying to memorize very random information for the exams. ",
+            "\u00a0Yes. Because the material is so interesting. But, the way it's taught makes this class a lot of work and requires a lot of self teaching ",
+            "\u00a0No. Interesting material but lectures were not very engaging ",
+            "\u00a0I would definitely recommend this course if you are interested in any aspect of renewable energy, but particularly if you are interested in the technology side. This course provides a great overview of many different types of renewable energy and contextualizes the technology by discussing economics and implications. ",
+            "\u00a0This is a very standard survey course on the state of renewable energy in the U.S. & world. Each unit on a particular renewable energy source (hydro, wind, solar, geothermal, biomass, nuclear) covers the basic how those technologies work and why we use them. It is a relatively painless SC credit if thats what youre looking for (thats why I took it). Its neither a gut nor the kind of course that demands more of your time than youre willing to give it. The material is pretty easy to grasp and the problem sets and assessments are straightforward. To be honest, though, the course title and premise sound more interesting than I found the day-to-day lectures and problem sets to be, but that isnt necessarily a fault of the course. While I got bored occasionally, I did appreciate Prof. Smith and Oristaglios more holistic approach to the subject matter. They didnt focus exclusively on nitty-gritty scientific details. Rather, they situated many of the concepts and technologies in a political and economic context. As a social science major whos not *that* into the study of renewable energy (or anything related to the environment, for that matter) this broader perspective helped sustain my interest in the course. "
+        ]
+    ]
+}

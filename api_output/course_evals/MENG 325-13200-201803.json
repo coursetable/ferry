@@ -1,0 +1,110 @@
+{
+    "crn_code": "13200",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            1,
+            0,
+            4,
+            12,
+            9
+        ],
+        [
+            1,
+            1,
+            4,
+            15,
+            5
+        ],
+        [
+            2,
+            1,
+            7,
+            12,
+            4
+        ],
+        [
+            1,
+            1,
+            4,
+            13,
+            7
+        ],
+        [
+            1,
+            5,
+            11,
+            9,
+            0
+        ],
+        [
+            0,
+            4,
+            10,
+            10,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Gained knowledge of the many manufacturing processes and the machines that perform them; beam/spring/gear analysis; how to design an engine system, geartrain, and springs ",
+            "\u00a0It was the most applied mechanical engineering class I've taken. I learned how to design and build things. And then I got to design and build things. ",
+            "\u00a0I learned about manufacturing processes. It's quite difficult to make things, interestingly. ",
+            "\u00a0Good class that shows you more applicable knowledge than most MENG classes ",
+            "\u00a0I learned how to better approach design problems and how to order a number of common machine parts such as stock material, bearings, springs, etc ",
+            "\u00a0Time management, assembly, manufacturing processes, shafts, gears, springs, and more! ",
+            "\u00a0Manufacturing processes, specifically additive manufacturing and relative machine elements ",
+            "\u00a0I learned theoretical methods of analyzing various types of machine components as well as many manufacturing processes. I also learned practical skills related to modifying 3D printers. ",
+            "\u00a0First actual practical meche class I've ever been in. Really appreciated that. Thought the content was relevant to actual design and I now feel comfortable in design process and evealuating components ",
+            "\u00a0This class covered some material that felt like a continuation of MENG 280, like bending, and column stress, but went on to cover motors, gears, and springs. The psets were reasonable, and really helped for exams. Prof. Booth is very friendly and a good professor, though I think that because this was the first semester of the course, it was a bit disorganized. We had to give two short presentations and had to build a 3D printer, run various print, tests, and modify it for our course project! This class was a lot of fun, got me more comfortable with actually building things, and it's great for mechE people. ",
+            "\u00a0Theres a Great amount of inside do you tame from his class and a lot of it comes from doing things on your own. The course is set up in a way such that you gain a lot of experience and knowledge of creating your own parts which you can use for later in your senior design. ",
+            "\u00a0This was definitely one of the meng classes in which I learned the most! There was a fair amount of review of concepts from 280 and physics generally, but with a more practical approach, such as how it applies to gears, screws, etc. We also covered a variety of additive and subtractive manufacturing processes. For some people with more exposure to these either through internships or certain clubs some of these might have been review, but I really gained a lot from the different presentations. Lastly, we learned through the class project: assembly, troubleshooting, and some of the manufacturing processes on a smaller scale. ",
+            "\u00a0I learned a lot about what it takes to bring about an assembled part, and how complicated the process it and what it requires to build it. ",
+            "\u00a0Fatigue failure, Gear design, motor and spring selection, 3d printing, four bar mechanisms, etc. More broadly, design thinking. ",
+            "\u00a0This course provided a good overview of historical and modern manufacturing processes, as well as the basics of system design. The class was divided into lectures on introductory design and a course project of assembling, using, and modifying a 3D printer you get to keep. "
+        ],
+        [
+            "\u00a0The lectures are informative and enjoyable; the 3D printer assembly project is a lot of work and very time consuming, but assuming you can get it to work, very rewarding. ",
+            "\u00a0Good class for those who have not had hands on/technical skills in mechanical engineering\r\n\r\nShould have a more clear-cut structure/syllabus provided at the beginning of the semester, but it was understandable that it did not have one as such this year (first semester the class was taught) ",
+            "\u00a0Overall I think the course was pretty good, especially for this being its first instance.  This is definitely a course that should have been created a long time ago.  I think people struggled to think of feedback in class because while the course can definitely be improved, the course is good enough that the changes aren't obvious.  One thing is I think the lectures should be faster paced.  There is so much material to cover, lectures were sometimes slow enough that you could zone out.  Stuff like \"all the different types of screw heads\" should just be skimmed over in 30 seconds and no one will remember the specifics anyways.  One bigger problem I had with the course was homework.  A lot of the homework was open ended and graded accordingly, which isn't a bad thing.  However, a lot of the homework that maybe wasn't intended to be so open ended really felt that way.  It was very disorienting and frustrating when the problems were vague, it wasn't clear what to use, everyone was getting different answers, etc when the problems weren't that different from more clear textbook problems.  I'd say- make it clear which problems are openended, and for the ones that aren't, work on making it more clear and see where students got confused. ",
+            "\u00a03D printer aspect was fantastic. Ending project was very flexible, allowing me to choose something that I was really excited about working on. Now I have a great 3D printer in my bedroom and that's awesome. \r\n\r\nRe-using MENG 185 slides was somewhat disappointing, as most of us had already taken that class. Nonetheless, we did cover new material, like springs and manufacturing processes, so I did learn a fair amount. ",
+            "\u00a0Strengths are that it allows for a lot of creativity and hands on work, something that many other mechanical engineering courses don't offer. Not too many cons, the only big thing i can think of is that sometimes assignments were a little unclear but Professor Booth was quick to respond to emails. ",
+            "\u00a0Overall, the course was good. I thought the content covered was helpful. My biggest complaint is just that it oftentimes felt somewhat disorganized. I expect this will change in the future since this was the first year the class was offered. ",
+            "\u00a0Great content. Disorganized. First iteration of the class so understandable ",
+            "\u00a0The strengths were the materials and assignments and Prof. Booth. It was fantastic that we got to design our own modifications and really take ownership of the final project. I think the biggest weakness was the disorganization of the course given that it was the first time. In the future these shouldn't be problems. ",
+            "\u00a0The overall structure this class is one of the things I think could be improved on it seemed as if most of the lectures were impromptu. And you really didnt know how far we get in each lecture ",
+            "\u00a0The staff at the teaching concourse and machine shop were extremely helpful during the class project and very accessible. I especially appreciated how invested they seemed in the success of our projects and our understanding of each step. The class was generally structured to prepare us for senior design and how we ought to approach the design process, which I think I will appreciate next year. I think most issues of the semester will be improved next time the class is taught; there was just a lot to sort out the first time it was taught. I think the best improvement will be a more consistent course schedule! I also would have liked more interaction with the TA on the pset's. ",
+            "\u00a0Course could benefit from more organization. ",
+            "\u00a0The class fills in some of the gaps that previous courses don't thoroughly cover (shaft design, motors, fatigue, etc). I really enjoyed the earlier lectures on fatigue failure and four bar mechanisms. I felt that I learned the most through those--I think that is a conducive lecture structure. I wish that this more regular lecture style was carried throughout the second half of the course, though I understand that the intention was to ease up on lecturing to give time for the final project. I do think that more guidance was needed on the final project because it was the first big engineering independent project a lot of us had taken on. Maybe more checkins to ensure that we were staying on schedule (I know I definitely did not stay on schedule) and help in developing our projects. Getting 3D printers were a very cool pro to the course--I learned a lot by working on my printer throughout the semester. Definitely keep this component of the course in some capacity.\r\nI think too much time was spent on the manufacturing process presentations, but that may be because the class was rather large this year. That being said, I don't think enrollment should be limited because there aren't any other classes that offer the same experience. In general, I think the course would benefit from more structure. It doesn't need to be like a \"one pset a week, x number of midterms\" kind of situation. But I felt that the course was strongest in the first month and a half when we had a stricter schedule. \r\nHaving a dedicated TF or even peer tutors would be very useful. There wasn't a clear help system for questions and I think that should be included next time this is taught. ",
+            "\u00a0This course was excellent in general materials and approach to content, but just needed some kinks worked out. Professor Booth is a knowledgable and engaging lecturer. Sometimes lectures were a bit disjointed as he tried to figure out what materials to teach specifically, but overall very good and I'm sure it will be even better the next time around. "
+        ],
+        [
+            "\u00a0yes ",
+            "\u00a0Yes. It's unlike all of the other mechanical engineering courses you're probably taking. You learn how real things actually get designed and made, and that's like, super cool. ",
+            "\u00a0Free 3D printer. 2 midterms. No final. 3 PSETS. Fun and flexible individual final project. \r\n\r\nYou should definitely take this class. You are given a printer which you then have to build, document, and eventually modify for the final project. I am now so confident in rapid prototyping, which is such a valuable skill for other classes and for personal projects. \r\n\r\nThe slides were recycled from MENG 185, which I had already taken, so the two midterms were a breeze. You do two 4-minute presentations additive and subtractive manufacturing processes, which were similarly breezy. Combining that with three somewhat easy problem sets lends this class to be the closest to an engineering elective dream as you can get. ",
+            "\u00a0Yeah, good class with Logan of applicable stuff. Needs a bit more structure but thats normal for a first go around. Overall definitely a good elective ",
+            "\u00a0Yes! Absolutely my favorite class of this semester, the work felt fulfilling as we could hold our final product in our hands. ",
+            "\u00a0Absolutely! This is a welcome addition to the curriculum and extremely important for every engineer. ",
+            "\u00a0I would recommend this course to students. It's fun to build and modify the printers, and you learn more practical engineering skills than most Yale classes. This class is also relatively easy compared to other engineering classes, so it is more relaxed than most of the mechE major. ",
+            "\u00a0Yes. If you want to take a meche class that is moves away from theory and goes for actual application, this is the class. Great prof and awesome projects ",
+            "\u00a0I would strongly recommend this course! No matter how much you know or don't know this course will help fill in gaps. ",
+            "\u00a0I would definitely recommend this course from under student. It requires critical thinking Time management and practices useful engineering skills ",
+            "\u00a0Definitely! There were definitely some issues that came up during the first year of this class; Joran is for sure somewhat disorganized, but all in all, this course is extremely beneficial to anyone hoping to go into mechanical engineering because it provides a significant amount of insight both into the senior design process necessary at Yale, as well as the process necessary for research and product and development post college. In my opinion, this is the only class at Yale that is truly \"mechanical engineering\" focused, and as such is a definite \"must take\" for anyone hoping to go into industry post-college. Therefore, anyone hoping to go into industry after college should definitely take this class. ",
+            "\u00a0As an elective I would definitely recommend! It will either be good, easy review of previous courses and an introduction to a design process mindset; or an introduction to all of these concepts with a lot of support from Professor Booth and engineering staff. I think it may be a required class for future mechanical engineering majors, but I think the same is true. ",
+            "\u00a0Take this class! It's one of the few hands-on  engineering experiences you can get in the department. You learn a lot of engineering design fundamentals and get your own 3d printer to compete projects throughout the semester (and keep it afterwards). The psets and exams were very fair and Prof. Booth is great. ",
+            "\u00a0Yes, this is one of the best engineering courses I've taken at Yale. Actually helpful material presented in an understandable way, not unnecessarily complicated just because it can be. Prof. Booth is great and you will learn a lot, especially if you speak up and ask questions / let him know what you are interested in. "
+        ]
+    ]
+}

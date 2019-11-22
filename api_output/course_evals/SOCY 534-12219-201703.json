@@ -1,0 +1,71 @@
+{
+    "crn_code": "12219",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I feel that my knowledge of cultural sociology as a specific theoretical project within the discipline was greatly expanded. I gained a firm foundation of understanding for how it developed and from whom it developed, and how it interacts with other work on culture. "
+        ],
+        [
+            "\u00a0I really liked all the readings, and Dr. Alexander's reviews of each of the readings in class was so helpful. It was really helpful to get critiques of each of the readings, too. \r\n\r\nI would have liked to have had more time to interact with Dr. Alexander in class as he was lecturing, rather than waiting until the end to ask a few questions. "
+        ],
+        [
+            "\u00a0Absolutely. "
+        ]
+    ]
+}

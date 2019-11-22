@@ -1,0 +1,46 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50516/assignments/syllabus", 
+    "requirements": "Prerequisite: MGRK 120 or equivalent.", 
+    "description": "Further development of oral and written linguistic skills, using authentic readings and audiovisual materials. Continued familiarization with contemporary Greek culture.\nPrerequisite: MGRK 120 or equivalent.\n\n1.5 Yale College course credits", 
+    "title": "Intermediate Modern Greek I", 
+    "skills": [
+        "L3"
+    ], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "RKZ 241", 
+            "days": [
+                "Tuesday", 
+                "Monday", 
+                "Thursday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12500", 
+        "listings": [
+            {
+                "number": "130", 
+                "subject": "MGRK"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Maria Kaliambou"
+    ], 
+    "long_title": "Intermediate Modern Greek I", 
+    "extra_info": "A"
+}

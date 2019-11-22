@@ -1,0 +1,86 @@
+{
+    "crn_code": "25060",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            4,
+            6,
+            2
+        ],
+        [
+            1,
+            0,
+            3,
+            5,
+            4
+        ],
+        [
+            1,
+            0,
+            6,
+            4,
+            2
+        ],
+        [
+            2,
+            3,
+            4,
+            2,
+            1
+        ],
+        [
+            0,
+            1,
+            10,
+            2,
+            0
+        ],
+        [
+            0,
+            5,
+            8,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned so much about how to think about the increasing prevalence of Big Data in the world. We talked about the data collection process, biases that are amplified by AI, and how to combat these biases. ",
+            "\u00a0I learned about the principles of ethics and what to think about when using data or looking at things that involve data. ",
+            "\u00a0I gained a broad understanding of different ethical issues in data science and its applications. My perspectives on these issues became much richer as a result of our class discussions, and I now have a much clearer idea of what solutions are available to being addressing bias in data systems. ",
+            "\u00a0This course was an overview of the various dangers of technology and how data science has the potential to cause harm. ",
+            "\u00a0I learned so many things! We started with some ethics philosophy, moved on to different frameworks for ethics, and the rest of the coure focused on the fairness and ethic aspects of multiple technologies, such as classification and self-driving cars. We had great readings that provided particular cases per class. ",
+            "\u00a0I was introduced into some of the larger ethical and philosophical questions behind current developments in the field of data science. Developed mental frameworks to think about these questions. "
+        ],
+        [
+            "\u00a0The small class size was good for facilitating discussions and active learning. The readings and colloquiums were interesting and relevant. The course could be organized a bit better. ",
+            "\u00a0The strength of the course is definitely the seminar format and the kinds of discussion it allows. We had some really thought-provoking discussions about difficult and timely issues in data ethics. Elisa did a phenomenal job at creating a classroom space that allowed us to feel comfortable challenging each other's opinions. Elisa is incredibly knowledgable about (and involved in) the data ethics space, and brings her expertise to the classroom.\r\n\r\nI do wish, however, that the blog component of the class was maintained more, because I was looking forward to reading and commenting on my classmates' work. ",
+            "\u00a0The readings were sometimes super long and wr didn't know what to focus on. The lectures were a bit dry even though the content was interesting, but our discussions were very lively. ",
+            "\u00a0Strentgh of the course lies in its blend of practical case studies and the theoretical background provided in the readings. Its the first time the course is taught  it could benefit from a slighly more streamlined schedule. But given how well is went this year, Im sure Prof Celis has already thought about this. "
+        ],
+        [
+            "\u00a0Take this class! There are almost no classes related to ethics in data science/computer science, and that is a substantial issue, especially for a place like Yale, where students will go on to implement the very systems and perpetuate the very biases we discuss in this class in their jobs. This class gives you skills to critically analyze the effect of machine learning systems. It also gives you options on how to combat some of the issues presented. ",
+            "\u00a0Yes, anyone working with data should take this class to think more deeply about how they are impacting the world. ",
+            "\u00a0Honestly, this course should be required for anyone in the S&DS major or certificate. The material taught in this class is absolutely critical for anyone entering a field where they will be using data to make decisions. That being said, until it's required (do more, S&DS department), I do indeed recommend this course. The seminar format works really well for this kind of stuff, and it was definitely a highlight of my senior year. ",
+            "\u00a0Yes and I think it should be required to graduate with a degree in S&DS. ",
+            "\u00a0Absolutely! Not only was the class interesting, but also adds crucial perspective for anyone considering entering the technology field. ",
+            "\u00a0Absolutely take this class! This is such an important class for people in computer science, data science, and also any other discipline having to do with technology and its societal implications. The class gives so many things for you to think about. ",
+            "\u00a0YES! this class is so important becausr we rarely think about the consequences of the technologies we build. ",
+            "\u00a0Would recommend. There are many, occasionally counterintuitive, ways of thinking about handling data in todays messy world. Being aware of potential risks should be as bital to a data scientists toolkit as coding skills. "
+        ]
+    ]
+}

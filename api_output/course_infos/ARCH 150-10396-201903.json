@@ -1,0 +1,52 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49098/assignments/syllabus", 
+    "requirements": "Not open to freshmen. Required for all Architecture majors.", 
+    "description": "Lectures and readings in the language of architecture. Architectural vocabulary, elements, functions, and ideals. Notebooks and projects required.\nNot open to freshmen. Required for all Architecture majors.", 
+    "title": "Introduction to Architecture", 
+    "skills": [], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LC 101", 
+            "days": [
+                "Monday", 
+                "Wednesday", 
+                "Friday"
+            ], 
+            "end_time": 10
+        }, 
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10396", 
+        "listings": [
+            {
+                "number": "150", 
+                "subject": "ARCH"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Alexander Purves"
+    ], 
+    "long_title": "Introduction to Architecture", 
+    "extra_info": "A"
+}

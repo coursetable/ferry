@@ -1,0 +1,45 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49763/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Introduction to the English literary tradition through close reading of select poems from the seventh through the seventeenth centuries. Emphasis on developing skills of literary interpretation and critical writing; diverse linguistic and social histories; and the many varieties of identity and authority in early literary cultures. Readings may include Beowulf, The Canterbury Tales, Middle English lyrics, The Faerie Queene, Paradise Lost, and poems by Isabella Whitney, Philip Sidney, William Shakespeare, Amelia Lanyer, John Donne, and George Herbert, among others. Preregistration required; see under English Department.", 
+    "title": "Readings in English Poetry I", 
+    "skills": [
+        "WR"
+    ], 
+    "areas": [
+        "Hu"
+    ], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "LC 206", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 2, 
+        "oci_id": "10930", 
+        "listings": [
+            {
+                "number": "125", 
+                "subject": "ENGL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "David Bromwich"
+    ], 
+    "long_title": "Readings in English Poetry I", 
+    "extra_info": "A"
+}

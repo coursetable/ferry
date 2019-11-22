@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48992/assignments/syllabus", 
+    "requirements": "", 
+    "description": "The course offers critical evaluation of the nature of ethnographic research. Research design includes the rethinking of site, voice, and ethnographic authority.", 
+    "title": "Research in Sociocultural Anth...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "SA10 212", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12015", 
+        "listings": [
+            {
+                "number": "502", 
+                "subject": "ANTH"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YANS\">YC Anthropology: Sociocultural</a>"
+    ], 
+    "professors": [
+        "Helen Siu"
+    ], 
+    "long_title": "Research in Sociocultural Anthropology: Design and Methods", 
+    "extra_info": "A"
+}

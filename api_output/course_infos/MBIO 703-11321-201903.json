@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "All students are required to attend all Microbiology seminars scheduled throughout the academic year. Microbiologists from around the world are invited to describe their research.", 
+    "title": "Microbiology Seminar Series", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11321", 
+        "listings": [
+            {
+                "number": "703", 
+                "subject": "MBIO"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Walther Mothes"
+    ], 
+    "long_title": "Microbiology Seminar Series", 
+    "extra_info": "A"
+}

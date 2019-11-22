@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51220/assignments/syllabus", 
+    "requirements": "Prerequisite: F&ES 510 or the equivalent.", 
+    "description": "Survey of statistical methods: plots, transformations, regression, contingency tables, analysis of variance, logistic regression, and cluster analysis. Data manipulation, web scraping, and data cleaning techniques are discussed. The R computing language is taught, and web data sources are used.\nPrerequisite: F&ES 510 or the equivalent.", 
+    "title": "Data Exploration and Analysis", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 9, 
+            "location": "DL 220", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 10
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "13729", 
+        "listings": [
+            {
+                "number": "757", 
+                "subject": "F&ES"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Ethan Meyers"
+    ], 
+    "long_title": "Data Exploration and Analysis", 
+    "extra_info": "A"
+}

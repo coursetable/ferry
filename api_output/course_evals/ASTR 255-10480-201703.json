@@ -1,0 +1,95 @@
+{
+    "crn_code": "10480",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            7
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            10
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            10
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            8
+        ],
+        [
+            0,
+            0,
+            3,
+            5,
+            2
+        ],
+        [
+            0,
+            1,
+            4,
+            4,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0My coding abilities skyrocketed, with my knowledge of coding being pretty minimal. I now feel confident in writing a program in various contexts. I learned how to think critically about how the science I'm implementing is powered by code, which was incredible. In my individual research project, I learned statistical data analysis and how this directly correlates to doing good research and science. My knowledge of Python at this point is more than I thought I could achieve just through one semester. ",
+            "\u00a0I learned so many practical programming skills! I definitely came in as a beginner with programming, but left feeling pretty confident with python and excited to learn more languages. ",
+            "\u00a0I gained a better command over Python over the duration of this course. Coming in with absolutely no coding background, I definitely feel that I learnt a lot about Python as a language. Note that this isn't a class that teaches you how to think algorithmically about problem solving in the same manner a CS class might. It definitely, however, teaches you the syntax in a thoroughly enough such that it allows you to configure and implement code that you find online. Coding, surprisingly, wasn't what I took away most from this class. It was, in fact, my entire experience with the research project. I found it incredibly satisfying being able to chart out my entire trajectory from knowing nothing about a topic, to being able to comfortably talk about it to a room full of Astrophysicists in the span of a semester. Coming from a non-astrophysics background, I found that the material was understandable -- though somewhat dry at times. Having said that, Professor Geha managed to take a subject like data cleaning and make interesting! ",
+            "\u00a0In the first half of term, I definitely improved my Python coding ability. This is especially true in image analysis . Later in the term I learn how to effectively manage myself in a recent setting . ",
+            "\u00a0I learned the basics of different astronomical observation methods, including optical, radio, and spectral. ",
+            "\u00a0This course taught me how to use python for astronomy research. Practical skills such as this are not often taught in classes, so it was nice that this class was focused on applications of knowledge that could help us figure out if research is something we would enjoy as a career. ",
+            "\u00a0Being able to use python towards astronomy oriented problems and image/spectra analysis. ",
+            "\u00a0I learned, as the course title suggests, research methods in astrophysics.  That means I know (to some extent) how astronomy is conducted in the real world, and what a career in astronomy looks like.  I know how Python and programming can be useful for astrophysics.  I know how research presentation works.  And I know more about the planets, stars, and universe! ",
+            "\u00a0This course teaches you how astronomers reduce and analyze real data from optical and radio telescopes around the world. You use mostly Python for this, and you continually learn better ways to program what you want. There's also parts of this class focused on observing, such as different types of telescopes, CCDs, atmospheric seeing, etc. Overall, this class gives you a better sense of what being an astronomer actually feels like. "
+        ],
+        [
+            "\u00a0The individual research project was absolutely key. I did what I couldn't image myself doing, and being forced to do real research on my own was crucial to my knowledge and development as an astronomy student. Prof Geha was incredible, and there every step of the way with anything I needed. That being said, Geha's approach to this class was by no means \"hand holding\" -- it was quite the opposite. But, Geha gave us all pushes to get on the right track and gave us the encouragement we needed. The way the course was organized was perfect and was a happy medium between given guidance and also just letting us figure it out. ",
+            "\u00a0I really like the hands-on approach of learning python, but maybe including more programming skills in the lectures (which were mostly about astro) would be helpful. ",
+            "\u00a0The strengths of this course are definitely the instructors. Professor Geha is probably the most wonderful Professor I have had in my three semesters at Yale. She is super knowledgeable about the material she presents to us in class, and is the only professor I have had here who comes to lectures prepared and with a clear lesson outcome in mind. I did not have very much interaction with Professor Geha given the nature of my final project, but from those that did have her as their supervisor, I heard only positive things! Joel is amazing! Quite honestly, THE hardest working Teaching Fellow I have had at Yale. I was lucky enough to work with Joel quite closely since he was the person that was supervising my final project, and I only have great things to say about him. Joel was always prompt when responding to my (increasingly frantic) emails regarding the final project, and was meticulous when it came to distributing the relevant information and guidelines I needed to successfully complete my project on time. I don't think I've met a TF here who puts as much effort into putting together solutions to the problem sets as Joel does -- his ipynbs were absolute gems in terms of being resources that I used to learn more about more sophisticated methodologies in computational astrophysics. He is an incredibly capable coder and always had answers to the technical questions I had -- everything ranging from bias corrections, to manifold learning. ",
+            "\u00a0It's really a great class! I almost wish it was a full-year course. ",
+            "\u00a0Strengths: most of the techniques involve computer programming, so in this sense the course is hands on.\r\nWeaknesses: some of the physical relations of tools are hard to visualize and relate to the programming aspects. ",
+            "\u00a0This course was amazing! Professor Geha is great, and made the material interesting and engaging. However, the learning curve was steep, especially if you didn't have any coding experience. That being said, this kind of coding can really only be taught through practice, so I think that's kind of unavoidable. However, a few more classes focused on coding methods could have been helpful. ",
+            "\u00a0Learning curve is very steep. If you don't know any python, I suggest at least becoming familiar with the syntax beforehand. The more you can learn before going into the class, the easier the class will be. ",
+            "\u00a0The course benefits from its small size, and as a result it had no real shortcomings.  The lectures were always time well-used and packed with good information.  The problem sets were reasonable and there was piazza as a resource if any questions about the problems arose.  The assignments also followed a fairly clear progression, both in topical coverage and coding depth, and some of the psets were guided by objectives which made them more cohesive.  Every student had access to ample attention from the professor and TF, if they ever needed it, since there were only 10 people.  This showed in the final projects, which were excellently structured and interesting.  And Marla was a wonderful professor.  Loved the class overall. ",
+            "\u00a0This is a great course, as Dr. Geha is very good at making sure everybody understands the concepts that we are learning (it helps that only 10 students took the class). The final project is a great experience, giving you a chance to use real data to do real science. The classroom atmosphere is laid-back since everybody gets to know each other fairly well. One suggestion is that I think that we could have covered a bit more material than what we got through. "
+        ],
+        [
+            "\u00a0Absolutely - if you're into computer science and astronomy, this is perfect. (Astro majors have to take this, but would highly recommend to any computer science major) However, if you're just looking for a QR, this is not an ideal class to take. The workload and information is essential for science majors, but for someone not a science major, I don't see a reason to kill yourself over this class. It was an incredible learning experience, but if your coding is shaky and not a science major, don't take it. ",
+            "\u00a0Would definitely recommend to any astro or physics major, especially if you are new to programming or want some practical/appplied cs. An awesome class for learning about careers/internships in the field, it goes beyond the curriculum! ",
+            "\u00a0Yes! I definitely would recommend that other students take this class! If you are not an astrophysics major, I would recommend taking it Credit/D/Fail, as the final project does become super all-consuming, and the problem sets can take a lot of time (especially the problem set where you go asteroid hunting!). Taking it Credit/D/Fail meant that I was able to turn in problem sets at a reasonable enough hour, knowing that I had learnt the main points, without having to agonize over tiny details (since it wasn't necessary for me to get a full score on the problem sets). I highly recommend that should you take this class Credit/D/Fail, that you get started on your research project and chip away at it as much as you can over an extended period of time. I definitely found that it helped me feel considerably less stressed about managing coursework from my other classes. ",
+            "\u00a0Absolutely! It's an enjoyable and informative class which fosters a sense of class camaraderie. ",
+            "\u00a0I would. This class was fantastic for astronomy majors and also is interesting for students interested in any methods of observation within the sciences. It also gives practical CS skills. ",
+            "\u00a0Definitely take this class!! It's hard and there is a lot of work (especially if you don't have coding experience) but it's totally worth it. You'll learn practical skills that are rarely taught in classes, and will get experience with research. The workload is a little uneven, with some easy and some really hard PSETs, but collaboration is encouraged, so as long as you work with your classmates all the PSETs are doable. The midterm is pretty irrelevant and easy, but the final project will take a LOT of time. The final poster fair was really rewarding, and I finished my project very proud of my accomplishments. Even though it's a tough class, its one of the best I've taken at Yale thus far. Take it!! ",
+            "\u00a0I would really highly recommend this course if you're even remotely considering going into astronomy/astrophysics, and if you're a CS person looking for a fun class. ",
+            "\u00a0For astrophysics majors this course is obviously an absolute must-take (I'm a CS major so I don't know the major requirements, but I'm guessing 255 is one of them).  I have no intention of majoring in astrophysics, but after taking this course I feel ready to anyway.  I would also recommend this course to CS majors looking for a science credit in a well-taught and fun class (not really a gut at all but with a manageable workload), with an opportunity to noodle around in Python in some exciting and eye-opening ways.\r\n\r\nI can only imagine the value of this course for an Astro major; the course was explicitly directed towards majors but I got a ton out of it. ",
+            "\u00a0I would definitely recommend this course to anyone remotely interested in astronomical research (and research in the greater physical sciences, for that matter). If you're an astrophysics major, then you have to take this class, but it's really a treat, especially if Dr. Geha is teaching it. "
+        ]
+    ]
+}

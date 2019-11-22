@@ -1,0 +1,77 @@
+{
+    "crn_code": "13581",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            1,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned how to prove quantitative versions of theorems. I also learned how to use the probabilistic method. I learned how different fields of mathematics interact with combinatorics. ",
+            "\u00a0I learned the basics of Ramsey theory and the general approach of \"take n big enough.\" ",
+            "\u00a0Common techniques used in solving Ramsey type problems in the field of combinatorics "
+        ],
+        [
+            "\u00a0I think it was possibly intimidating to some students that the class began with an overview without many proofs of statements.\r\nHowever, the 4-student class was ultimately pretty fun. ",
+            "\u00a0It's always going to be changing because of the nature of the professor changing and choosing what to teach, so it's hard to say much productive. ",
+            "\u00a0Kind of disjointed, but overall a very interesting topic. "
+        ],
+        [
+            "\u00a0Yes!\r\nI learned a lot and had fun. ",
+            "\u00a0It's likely to be a small class every semester, which is probably good for your grade and may be good or bad for your learning depending on who you are. The professor and topic changes every semester, so it's hard to really make a recommendation. Find out who's teaching it and what they're teaching before you decide. ",
+            "\u00a0Yes, it was probably the most interesting math class I've taken at Yale "
+        ]
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Undergraduates require permission of the instructors.", 
+    "description": "A study of the relationship between imperialism and urbanism from the early modern period to the twentieth century. Topics include Roman medieval precedents; the uses and meanings of walls; merchant colonies and Latin Quarters; modernist urban planning and the International Style in Africa and the Middle East; comparative metro system in Paris, Algiers, and Montreal; decolonization and imperial nostalgia. Cities to be discussed include Delhi/New Delhi, New Orleans, Dublin, Cape Town, Tel Aviv, Addis Ababa, and many others.\nUndergraduates require permission of the instructors.", 
+    "title": "Cities of Empire", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "RKZ 05", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11135", 
+        "listings": [
+            {
+                "number": "791", 
+                "subject": "HIST"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Paul Kennedy", 
+        "Jay Gitlin"
+    ], 
+    "long_title": "Cities of Empire", 
+    "extra_info": "A"
+}

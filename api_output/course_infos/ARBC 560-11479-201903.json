@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Study and interpretation of classical Arabic texts for advanced students. The focus this year is medieval prose.", 
+    "title": "Graduate Arabic Seminar: Medie...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "", 
+            "days": [
+                "Tuesday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "11479", 
+        "listings": [
+            {
+                "number": "560", 
+                "subject": "ARBC"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Shawkat Toorawa"
+    ], 
+    "long_title": "Graduate Arabic Seminar: Medieval Prose", 
+    "extra_info": "A"
+}

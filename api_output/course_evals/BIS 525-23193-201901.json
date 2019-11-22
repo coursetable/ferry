@@ -1,0 +1,128 @@
+{
+    "crn_code": "23193",
+    "Evaluation_Questions": [
+        "Overall, how would you rate the <b>workload</b> of this course in comparison to other Yale courses you have taken",
+        "What is your <b>overall assessment</b> of this course",
+        "What is your overall rating of the <b>primary instructor</b>",
+        "The primary instructor's provided students with helpful and timely feedback",
+        "The instructor established a positive learning environment",
+        "The instructor raised questions or problems that encouraged me to think critically"
+    ],
+    "Evaluation_Data": [
+        [
+            13,
+            5,
+            11,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            16,
+            5,
+            12
+        ],
+        [
+            0,
+            0,
+            14,
+            7,
+            11
+        ],
+        [
+            0,
+            0,
+            18,
+            6,
+            8
+        ],
+        [
+            0,
+            0,
+            14,
+            8,
+            10
+        ],
+        [
+            0,
+            0,
+            14,
+            9,
+            9
+        ]
+    ],
+    "Comments_Questions": [
+        "Indicate the total number of hours per week (outside the classroom) you spent on this course",
+        "Looking back on this course, what is your overall assessment of the course:  What are its strengths and weaknesses, and in what ways might it be improved",
+        "Please evaluate the instructor of this course. What are the instructor's strengths and weaknesses, and in what ways might his or her teaching be improved? ",
+        "How would you summarize this course for a fellow student?  Would you recommend it to another student?  Why or why not"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0None. ",
+            "\u00a01 ",
+            "\u00a02 ",
+            "\u00a01-2 ",
+            "\u00a00 ",
+            "\u00a00 hour ",
+            "\u00a00 ",
+            "\u00a01 ",
+            "\u00a00 ",
+            "\u00a00 ",
+            "\u00a00 ",
+            "\u00a00 ",
+            "\u00a0NA ",
+            "\u00a01 hours per week. ",
+            "\u00a00 ",
+            "\u00a0Not applicable. ",
+            "\u00a00.5 ",
+            "\u00a01 hour "
+        ],
+        [
+            "\u00a0It gives us some good ideas. ",
+            "\u00a0Helpful and information. ",
+            "\u00a0Great! ",
+            "\u00a0Many researchers in related fields of biostat were invited to give a talk. Many topics were covered in this course. ",
+            "\u00a0it broadens my horizon in terms of the research method and research topic ",
+            "\u00a0Many interesting topics.  Help me broaden horizons. ",
+            "\u00a0The course is very helpful in in obtaining biostatistics-related knowledge from researchers from other institutions. ",
+            "\u00a0This seminar has guest lecturers that shared their research expertise every week. ",
+            "\u00a0good topics ",
+            "\u00a0Good class ",
+            "\u00a0Great seminar. Would appreciate more speakers that discuss topics that are accessible to first year students. Overall, really enjoyed it. ",
+            "\u00a0good ",
+            "\u00a0The workshops we're enlightening. The topics were very interesting. Somehow for me, I wish there could have been more guests from industry, sharing there experience in the real world. "
+        ],
+        [
+            "\u00a0He is good. ",
+            "\u00a0excellent ",
+            "\u00a0Great! ",
+            "\u00a0good ",
+            "\u00a0nice professor ",
+            "\u00a0good ",
+            "\u00a0Very helpful ",
+            "\u00a0The instructor gives us the opportunity to learn various advancement in statistics and biology. ",
+            "\u00a0Thank you Dr. Kane for organizing the wonderful seminars. ",
+            "\u00a0Good ",
+            "\u00a0Great job organizing and selecting speakers! ",
+            "\u00a0good ",
+            "\u00a0Great "
+        ],
+        [
+            "\u00a0Recommend, ",
+            "\u00a0Yes. Because it is helpful to build background knowledge. ",
+            "\u00a0It is a good way to get familiar with biostatistics research. ",
+            "\u00a0A good course for people who want to learn about others' research. ",
+            "\u00a0good to attend ",
+            "\u00a0I will recommend. There are many interesting topics. ",
+            "\u00a0I would recommend the course because the workload is little but students will gain much. ",
+            "\u00a0This class provides the opportunity to learn the latest breakthroughs in biostatistics. ",
+            "\u00a0attend and learn ",
+            "\u00a0Good ",
+            "\u00a0This is a weekly seminar on a variety of topics related to Biostatistics. Would highly recommend. ",
+            "\u00a0good ",
+            "\u00a0I recommend this course. You could get a grasp of some cutting-edge techniques and project. "
+        ]
+    ]
+}

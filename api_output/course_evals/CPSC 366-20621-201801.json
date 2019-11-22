@@ -1,0 +1,145 @@
+{
+    "crn_code": "20621",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            1,
+            3,
+            7,
+            24
+        ],
+        [
+            0,
+            0,
+            3,
+            10,
+            23
+        ],
+        [
+            0,
+            0,
+            5,
+            10,
+            21
+        ],
+        [
+            1,
+            4,
+            1,
+            16,
+            14
+        ],
+        [
+            0,
+            0,
+            2,
+            8,
+            26
+        ],
+        [
+            0,
+            0,
+            5,
+            8,
+            23
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Knowledge about many common algorithmic approaches to solving many computer science problems. I also felt like I improved a lot in terms of writing rigorous proofs and coming up with solutions to problems that might not seem to have a clear solution and analyzing them for correctness. ",
+            "\u00a0I learned how to solve problems in theory well and efficiently. ",
+            "\u00a0The persistence of keeping thinking about a hard problem for days and not giving up. Also lots of algorithms important for interviews and fun to know! ",
+            "\u00a0In this class, you will learn how to design fast algorithms and prove their correctness. You will learn to think creatively and analyze rigoursly. ",
+            "\u00a0Algorithms and how to prove them (rigorously), from a more mathematical point of view. The course somehow manages to emphasize computing and math at the same time, which makes it hard. You learn a lot of cool algorithms that are very very relevant and slick when you prove their correctness. ",
+            "\u00a0I learned a wide array of algorithms and how to write good proofs ",
+            "\u00a0As a math major, I learned a lot of cool algorithmic ideas. I finally understood dynamic programming, divide and conquer, and lots of other cool stuff. ",
+            "\u00a0algorithm analysis ",
+            "\u00a0This course taught me to think about computational problems logically, mathematically, and systematically. ",
+            "\u00a0The course did a lot to build my foundational understanding of algorithms - like how I might come up with one, confronted with a problem. The course introduced me to different kinds of algorithms and helped sharpened my abilities in analyzing which one is better suited to the task. The course is also very good at showing real-world applications of algorithms and how surprisingly relevant they are, despite how straightforward some may be. ",
+            "\u00a0I learned how to solve problems creatively and efficiently. I learned different paradigms of solving problems. I also learned how to prove my work rigorously. ",
+            "\u00a0A wide variety of topics in algorithm design: greedy algorithms, minimum spanning trees, divide and conquer, dynamic programming, NP hard/complete problems, approximation algorithms, randomized algorithms ",
+            "\u00a0I learned about algorithms and their real world applications, but moreover I learned how to be a better problem solver. ",
+            "\u00a0The scope of topics is similar to algorithms courses you'd find elsewhere (eg MIT's 6.046): greedy, shortest paths, divide and conquer, dynamic programming, max-flow-min-cut, P/NP, a bit of LP, approximation algorithms and randomized algorithms.\r\n\r\nBe warned: this class is not for everybody. It's completely different from 365, which pales in comparison in terms of breadth, depth and rigor. Dan makes the class self-selecting: only those masochistic enough to enjoy the pain of brooding over the same problem for every waking moment of your semester will stay. He wants a class that is passionate and driven enough to stick with him through the wild ride. If you do, however, you will learn much, much more than any class you'll ever take in CS. ",
+            "\u00a0Learnt about different kind of algorithms (greedy, dp, divide and conquer), FFT, Linear programs and ILPs, and their use in algorithms. Also, learnt about NP completeness, and approximation and randomised algorithms. It was very interesting to see how math can be applied effectively to algorithms. ",
+            "\u00a0Various algorithms and algorithm analysis techniques ",
+            "\u00a0I learned a lot about algorithm design and algorithmic thinking. ",
+            "\u00a0Understanding of common algorithm techniques, understanding of what it means to prove \"correctness\" and to rigorously analyze an algorithm, proof skills and general problem solving skills. ",
+            "\u00a0I learnwd to design and evaluate algorithms, and how they are thought about, developed, and applied. ",
+            "\u00a0I developed my problem solving skills and gained a deeper understanding of concepts that are commonly thrown around in the CS world - greedy algorithms, divide and conquer, P vs NP. ",
+            "\u00a0You learn about algorithms and ways to prove them. Types of algorithms covered include: greedy, dynamic programming, divide and conquer, graphs, randomized, and approximate. NP reductions are also covered. The main skills you develop, however, involve designing algorithms and proving their correctness for problems not seen in class. ",
+            "\u00a0Problem solving skills, algorithm design & analysis. ",
+            "\u00a0This class taught some of the main techniques for solving problems with computer assistance, and also let me practice solving some really interesting and challenging problems. ",
+            "\u00a0Learned about greedy algorithms, divide and conquer, dynamic programming, discrete fourier transform, linear programming, approximation algorithms, randomized algorithms, and P/NP complexity and reductions at a very INTENSIVE level. ",
+            "\u00a0This class was an excellent survey of algorithmic techniques and proofs. I learned both broad conceptual and specific detailed information about several key algorithms, and learned how to both analyze and prove correctness and complexity. "
+        ],
+        [
+            "\u00a0The course is very well taught which I think is the biggest strength. Also your peers in the class are really interested in the subject so it motivated me to work harder. The only weakness I can think of is in terms of the amount of office hours available, but that was hard to predict since it was the first time this course was offered. I hope that it will be offered again in the future because it was a really great experience. ",
+            "\u00a0This class was the best class I've ever taken. It can't be improved. ",
+            "\u00a0Pro: It is very hard and challenging. You learn a lot from both lectures and psets.\r\n\r\nCons:  You cannot collaborate, which can sometimes be frustrating. ",
+            "\u00a0I absolutely loved this class. It was by far the most challenging and most time consuming class at Yale, but has been the best class I have taken to date. I would add even more office hours, and certain wait times for office hours were extremely long. ",
+            "\u00a0The major strength to this course was Prof. Spielman. He is amazing at lecturing about extremely complicated ideals. Along with that he provides rather challenging problem set questions that made me want to take the course and to continue taking courses where I get to solve problems.\r\n\r\nA weakness of the course is the nature of the problem sets. They encourage you to think deeply about a single problem. When it came to studying for the final, I realized I knew a lot about certain algorithms and problems, but couldn't recall a more general ideal of the algorithm. ",
+            "\u00a0I think the course was well organized. The 1 on 1 ta times were a bit of a struggle since you had to sign up a couple of days in advance and the slots go by so fast. I think having more ULAs would be better. I think Dan is legitimately the smartest man I have ever met in my life. ",
+            "\u00a0more TA's would be nice ",
+            "\u00a0This class was truly an amazing experience - sometimes the class went by a little too quickly, though. More questions and answers would have been nice. ",
+            "\u00a0There was a very high rigor to this class, which taught us sophisticated ways to solve problems. I also like that no collaboration was allowed, for it gave me confidence that I too could solve problems independently. \r\n\r\nHowever, more mathematical background was assumed than the prerequisites. The instructor could have pointed students to supplementary mathematical material if a problem set required a grasp of these math concepts. ",
+            "\u00a0This was an excellent course. The lectures were engaging, and the problem sets were challenging without being impossible. ",
+            "\u00a0Amazing course!!! Great material lectures and problem sets ",
+            "\u00a0I think this course was very good. I think some improvements may be made as per regard to the solutions handed out in class (giving student solutions as well would be helpful). ",
+            "\u00a0Strengths: Students do not get to collaborate on problems, it's not dreadfully inane like 365, what doesn't kill you makes you stronger. Also Dan is the best -- bless me Fast Dan Transform!\r\n\r\nWeaknesses: Probably needs more ULA support. There was always a long queue at office hours because every session is individual. Some ULAs were offered more constructive advice than others.\r\n\r\nAnother weakness is that we could still have done more  although this is not as much 366s fault, rather a systemic weakness with Yales introductory CS classes. Basic ideas like divide and conquer and dynamic programming should have been introduced way better in intro classes so that theres more room to do *fun* things in 366. ",
+            "\u00a0The best course. It is very well structured, Prof Dan is an amazing teacher, and the material is very interesting. ",
+            "\u00a0Great course! ",
+            "\u00a0The Teaching assistants needed to be more accurate in grading the assignments. ",
+            "\u00a0Strengths are:\r\nExcellent quality of teaching\r\nMaterial that is genuinely interesting and challenging\r\nStudents that are genuinely interested and looking for a challenge\r\nPset system helped me get a lot more out of this class than just knowing what \"NP-Hard\" means\r\n\r\nWeaknesses\r\nThis is understandable for a new class, but the Office Hours system was a mess. If office hours were from 7 to 9, you pretty much had to get there by 7:05 or there was no hope of ever being seen. This is bad in any course but given that there was no collaboration allowed on the homework at all, it often felt like seeing a TA was do or die.\r\nI also sometimes felt like the TA was unsure how to help. They were often struggling to find a hint that was actually helpful without giving away the problem. When different students come in with different partial insights about the problem, they should get different advice. Next year, the staff should meet and lay out what different hints they'll supply in different cases *before* the pset comes out.\r\nIn addition, the grading of the psets sometimes seemed a bit arbitrary. Usually when I lost points there was a minor flaw in my proof or algorithm, but whether that cost me -0.5 or -5 was anybody's guess.\r\n\r\nThese are real but small bugs in an otherwise amazing academic experience. It was a real challenge, but I got more out of it than any of my other classes this year. ",
+            "\u00a0This is the first time it was taught - Dan had a no collaboration policy.\r\n\r\nWhile I admire the idea behind it, I didnt like it because it was unenforceable and while most did not collaborate, it seemed to me that some did. ",
+            "\u00a0This is a crash course in algorithms: it moves at a very fast pace, which can be a strength or a weakness depending on your level of commitment. Dan is incredibly engaging and adeptly explains the course material, but can leave you behind if you're not proactive in asking for help. ",
+            "\u00a0Strengths: Interesting material (personal prior: not super interested in algorithms though open to learning about them, and I ended up really enjoying the class!). A good deal of feedback via timely grading. Well-organized, well-taught, can be inspirational. Spielman is also an amazing and engaging lecturer. \r\n\r\nWeaknesses: Keeping in mind that the algorithms we focus on in class is really abstract, it would be helpful to provide more examples of real-world cases of algorithms that 1) lack provable bounds or qualities or 2) for which big O notation and theoretical runtime don't tell us much about actual performance. Obviously, the bulk of the course should be on provable algorithms, but the remaining 5 min of class (after the core lecture material is over) can be more on things like this. ",
+            "\u00a0This was the first semester the course was offered so a lot will change if it's offered again. Perhaps the most controversial part of the class was the absolutely-no-collaboration policy, which makes sense in principle, but can make the problem sets incredibly difficult to complete (even with a large time budget). Due to this policy, the TA/ULAs are also not allowed to offer much help, which just makes the problem sets that much more difficult. I hope to see a more flexible collaboration policy in the future that maintains the same sentiment without being so punishing. Apart from that, the class is great in essentially all other aspects. ",
+            "\u00a0The course was good.  I would skip the FFT section though. ",
+            "\u00a0Dan Spielman was one of the best professors I have ever had, and I loved listening to him talk. This was one of the few lecture classes I actually wanted to go to. The book was also incredibly helpful to read after lectures. The psets were challenging yet doable. The no-collaboration policy wasn't strictly enforced at times, but I thought it was really helpful for me to actually make me think on my own. ",
+            "\u00a0I thought the course was pretty much flawless. I do think that relaxing the strict no-collaboration policy would help--I certainly spent many many hours on each assignment. Potentially including at least one question per pset on which collaboration is permitted I think would make the class both a little more manageable, and more fun. ",
+            "\u00a0Strengths: Spielman is wonderful and the course content is interesting.  Weakness: I found the grading in this course to be inconsistent and confusing at times (however this may have been a wrinkle that will be smoothed out in later iterations of the course). "
+        ],
+        [
+            "\u00a0Yes! If you enjoy computer science and math and thinking a lot, I would highly recommend the class especially if it is taught by Prof. Spielman. ",
+            "\u00a0Yes. Anyone that wants their money's worth from Yale should take this class. ",
+            "\u00a0Yes, for anyone who love immersing oneself in thinking and enjoy the flash of inspiration. ",
+            "\u00a0I absolutely loved this class. It was by far the most challenging and most time consuming class at Yale, but has been the best class I have taken to date. If you are willing to put in the 20+ hours a week necessary to do well, you will get so so much out of this class. ",
+            "\u00a0Hardest course I have ever taken. If you are looking to be challenged and if you like solving problems, then yes. You need to be willing to put in time to be unproductive so that you will have inspiration and solve the problem. Take this if you like a challenge and math and cs, or any two of the three. ",
+            "\u00a0Yes take this course! CS365 is a gut compared to this class though. ",
+            "\u00a0As a math major, I learned a lot of cool stuff about algorithms and stuff. However, I didn't think it was really motivated. A lot of the constructions of stuff seem ad hoc, like trying things until they work.\r\n\r\nThe problem sets mostly weren't too hard, but there were a couple problems that we really hard. ",
+            "\u00a0YES ",
+            "\u00a0Yes! Absolutely. Dan Spielman is an approachable genius and you don't get many of those. ",
+            "\u00a0I definitely recommend this course if you are looking for a challenge. The course is well taught, the content is interesting, and it really forces you to put in a lot of work and think very hard with each problem set. ",
+            "\u00a0Yes, take this class if you are willing to put in 35-40 hours per problem set and want to learn 25% more content than in 365. Algorithms is one of the two most important classes you have to take for graduate school or software engineering, and it was worthwhile for me to go through 366 even though the highest mathematical background I had was Math 244. ",
+            "\u00a0Take the intensive version of Algorithms. Dans lecturing is clear and extremely engaging, and the problem sets are challenging but enjoyable. ",
+            "\u00a0Absolutely! This is easily in the top 3 classes I've ever taken. Professor Spielman is a great lecturer and incredibly kind and always available to answer questions. The Psets are challenging but also very rewarding as they provide a new understanding of the material ",
+            "\u00a0Yes. This course was very intellectually challenging and I greatly enjoyed the material we learned. ",
+            "\u00a0If you love math, proofs, algorithms, and even remotely care about getting a legitimate CS education, take 366.\r\n\r\nIf you just want to cruise through our sorry excuse of a CS core, take 365. ",
+            "\u00a0Yes. Prof Dan is an amazing teacher, the material is very interesting and well presented, and the class is very well structured. Problem sets and challenging and a lot of fun. ",
+            "\u00a0Yes, learned a lot and big fun ",
+            "\u00a0yes, definitely. ",
+            "\u00a0You really need to know what you're getting into. I think if you're the kind of person who enjoys the struggle of solving problems like this AND who has time this semester to take it seriously, I would recommend it. But I hope this doesn't become a situation where taking 366 becomes a macho show of status or intelligence, thus pressuring people to take it for whom it isn't a good fit. And I also hope the department doesn't let 365 devolve just because the kids who care the most about the material went to 366. All of which is to say, I could recommend this class to someone if they were a good fit, but I would hate to see everyone start sending the message \"take 366 if you're smart\" because then everyone loses. ",
+            "\u00a0Takw this course it you want to really grapple with algorithms, put in the work, and get a lot out of it. Dont take it if you want something easy, hate proofs, or wont put in the time necessary. ",
+            "\u00a0If you liked the pace of CS50, you'll love 366. This is the bashing-your-head-against-the-wall algorithms course, that gives you spectacular results if you're willing to put in the effort. Dan is absolutely incredible, and it's worth taking just to learn from a genius, but if you're not committed to the cause, you will fall behind. Beware. ",
+            "\u00a0Absolutely. You learn a ton in this class, and Spielman is a wonderfully clear and engaging lecturer. The problem sets are interesting and also a lot of work; I would highly recommend starting the problem sets as soon as they're released and taking advantage of the numerous TA office hours. ",
+            "\u00a0Yes! Dan is an incredible professor who really cares about the wellbeing of his students. He put a lot of effort into making lectures engaging and well paced, encouraging feedback throughout the semester. It's a very hard class, but totally worth it if you have the time to keep up with the problem sets. ",
+            "\u00a0If you are interested in problem solving, and have an otherwise easy semester then go for it.  I definitely wouldn't recommend this alongside another hard class though.  The option to drop to 365 makes it definitely worth a shot if you're on the fence. ",
+            "\u00a0Definitely, if you're willing to put in the effort for the course. It's defintiely worth it just to take a course with Dan Spielman, but also be careful because psets are routinely 15+ hours a week. If you're into math as well you can really get a lot out of the course, and we covered topics like fast fourier transform and randomized algorithms much more in depth than 365 did. I really felt like I understood everything at an intuitive level because of Dan. ",
+            "\u00a0I think this is a great course, and I recommend it highly. Be prepared to do a ton of work--I spent a huge amount of time on these psets--but honestly found it both really cool and pretty enjoyable work. ",
+            "\u00a0If you like theoretical computer science and discrete math and feel up for the challenge, take this course.  It is extremely intense but can ultimately be rewarding.  (also, this course can consume _a lot_ of your time.) "
+        ]
+    ]
+}

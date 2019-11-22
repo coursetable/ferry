@@ -1,0 +1,44 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/50420/assignments/syllabus", 
+    "requirements": "Prerequisites: physical chemistry (may be taken concurrently) and biochemistry.", 
+    "description": "An in-depth analysis of macromolecular structure and its elucidation using modern methods of structural biology and biochemistry. Topics include architectural arrangements of proteins, RNA, and DNA; practical methods in structural analysis; and an introduction to diffraction and NMR.\nPrerequisites: physical chemistry (may be taken concurrently) and biochemistry.", 
+    "title": "Macromolecular Structure and B...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 11, 
+            "location": "BASS 405", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 12
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12045", 
+        "listings": [
+            {
+                "number": "720", 
+                "subject": "MB&B"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Yong Xiong", 
+        "Jonathon Howard", 
+        "Nikhil Malvankar", 
+        "Kai Zhang"
+    ], 
+    "long_title": "Macromolecular Structure and Biophysical Analysis", 
+    "extra_info": "A"
+}

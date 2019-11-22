@@ -1,0 +1,90 @@
+{
+    "crn_code": "10678",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            5,
+            1
+        ],
+        [
+            1,
+            3,
+            2,
+            1,
+            1
+        ],
+        [
+            2,
+            1,
+            3,
+            2,
+            0
+        ],
+        [
+            1,
+            0,
+            1,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            2
+        ],
+        [
+            0,
+            0,
+            6,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0None ",
+            "\u00a0I learned how to use supercollider to design sound & manifest musical ideas while also becoming more efficient and proficient in my coding. ",
+            "\u00a0foundational information for both SuperCollider and digital audio as a whole ",
+            "\u00a0This course teaches you how to code in SuperCollider, and speifically create music with that coding language. Yet, one also learns about the larger programming world, and the history of machine-generated music. ",
+            "\u00a0I learned to play around a very cool software (when you actually get it). The first few classes on the history of computer music are also pretty exciting. Scott seems pretty gentle, sweet, and funny in the beginning but can be downright (accidentally?) mean and a hard-ass. ",
+            "\u00a0The supercollider language ",
+            "\u00a0I definitely learned a good foundation for SuperCollider and a lot about coding in general. I feel like I could more easily approach learning another language if I wanted, which is great. "
+        ],
+        [
+            "\u00a0Bad professor ",
+            "\u00a0Very all over the place content and you dont really learn the programming language because it gets theoretical ",
+            "\u00a0The strengths were the small class & discussions which allowed people to collaborate and learn together ",
+            "\u00a0I think this course would benefit from having some kind of section. Even though it is a very small course, there is not enough class time to deal with both the conceptual aspects of digital audio AND the mechanics of SuperCollider. There has to be more time spent on coding in-class, not with in class hackathons but with detailed explanation of code that appears on the projector. ",
+            "\u00a0Scott is an engaging professor, who has a passion that is palpable for what he is teaching. A weakness is that there is a lot of material to go through, and so it's hard to deeply understand all of the concepts. ",
+            "\u00a0I wish we learned how to interact with the software on a more step-by-step basis in class, rather than over readings and extra work you're expected to do. The fact that it was at 9am (on the dot) did not help my intrigue and excitement for the course. Not a lot of people take it, and not everyone met the high standard aimed for in the class, so it can be pretty easy to perform in comparatively. ",
+            "\u00a0It moved extremely fast, and I often felt lost in class. It was intimidating being a beginner coder. However, Prof. Petersen was available for office hours and via email to answer questions. The most I learned was what I figured out by myself or during in-class practice sessions. So I think there should be more of the latter. "
+        ],
+        [
+            "\u00a0No. If you are an athlete dont take it. If you know nothing about music theorem dont take it. If you know nothing about programming dont take it. If youre a first year dont take it. ",
+            "\u00a0No, not unless you are very into CS ",
+            "\u00a0I would! I enjoyed it a lot and you can learn some interesting things ",
+            "\u00a0I would recommend this course to another student, but it could be challenging for students without any experience with computer SOME kind of computer music, even if its only beat-making or musescore ",
+            "\u00a0I would recommend this course to any student who is interested in music and willing to commit themselves to learning a (likely new) coding language. If you are new to coding, this course will likely be challenging, but overall worth it. ",
+            "\u00a0Not really. Not unless you're already well-versed with both computer technology and music. ",
+            "\u00a0If one is interested in computer music ",
+            "\u00a0Yes, if you're actually interested in learning the language, trying out coding, and working with an expert. But be prepared to do a lot of work on the projects - there were only three large projects though and occasional homework assignments. "
+        ]
+    ]
+}

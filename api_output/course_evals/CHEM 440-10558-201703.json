@@ -1,0 +1,77 @@
+{
+    "crn_code": "10558",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            3,
+            1,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A lot of chemical math ",
+            "\u00a0This class filled in many of the holes in my knowledge of the basics of quantum mechanics and spectroscopy - especially the mathematics behind QM and really helped me better understand linear algebra. \r\n\r\nThe section of the class devoted to various methods of spectroscopy was especially enlightening in terms of gaining a better conceptual understanding, seeing the theoretical differences between the methods, the relevance of symmetry in spectroscopy etc. ",
+            "\u00a0The course was a good overview of spectroscopy, starting with a nice review of the relevant quantum chemistry and physics. "
+        ],
+        [
+            "\u00a0A lot of classes were spent trudging through gnarly algebra that was already typed out in the notes! Sometimes Zilm would take the time to write it on the board or run through them on the overhead projectorand while this was sometimes appreciated, it came at the expense of my conceptual understanding.\r\n\r\nI personally would have preferred if there was more time spent on conceptual understanding of WHY we're doing the algebra, or how it fits into the larger framework of the topic. By this point, I can work through the algebra on my own. Or better yet, assign the derivations as a homework problem, or leave them as a \"blank box\" in the lecture notes for us to fill in on our own and we can check with the \"key\" online. ",
+            "\u00a0The class starts out very tame - reviewing the majority of pchem II and some algebra. It picks up very suddenly in November and becomes very hard to follow just because of how fast new material are introduced one after another. \r\n\r\nI think perhaps slightly changing the order in which topics are introduced near the end might be helpful. If lecture 22 was followed by 31, and then 29-30 I would have followed the connection between all the time-dependent theories better. Then we could have talked about electronic, vibrational and rotational spectroscopies. And then devoted a whole uninterrupted section to NMR (25, 26, 33, 35). ",
+            "\u00a0The course is good in that it covers a lot, though I think this may also be its weakness. Sometimes it feels that Professor Zilm is so intent on finishing the content that he significantly sacrifices understanding. For many of the later lectures especially, I know that a fair amount of the students were completely lost. That being said, the tests were fair and Professor Zilm is always willing to meet and help your understanding outside of class. "
+        ],
+        [
+            "\u00a0Yes, it's a good chemistry class if you like math ",
+            "\u00a0If you liked pchem II, this is the natural extension of that class, focusing on quantum mechanics and its applications in spectroscopy. The material is really exciting and well presented. The lectures notes are given to you and make listening to lectures in class a lot more productive and comprehensible. Altogether very well organized and enjoyable class.\r\n\r\nThe homework load is very reasonable (in fact it's almost too kind). And the exams are not that bad - they closely follow the homework questions in material and style.\r\n\r\nProf. Zilm is not as scary as he can sometimes appear, his lectures are never dull and you can learn a great deal from him. And his lecture notes are golden. \r\n\r\nThe only catch is the pace. The first couple of months lull you into a false sense of security. Things develop slowly (in fact the first couple of weeks is a review of pchem II) and the pace picks up suddenly half way through, making it hard to digest a topic before another one is introduced. But by the end of the semester you put the pieces together and wonder at all of the awesomeness you are now privy to. \r\n\r\nI absolutely recommend this course. ",
+            "\u00a0I would definitely recommend this course if you liked Physical Chemistry 2, and you are looking to learn some more quantum/spectroscopy. This course gives you a better understanding of the QM that Chemists actually use, and Professor Zilm is good and always willing to meet for extra help. That being said, he does go very quickly and you will spend a lot of time lost in lecture and then going over the notes yourself trying to understand the material. However, the tests are very fair. "
+        ]
+    ]
+}

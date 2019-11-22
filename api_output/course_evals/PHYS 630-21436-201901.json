@@ -1,0 +1,87 @@
+{
+    "crn_code": "21436",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            3,
+            4,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            4
+        ],
+        [
+            0,
+            0,
+            2,
+            4,
+            4
+        ],
+        [
+            0,
+            0,
+            3,
+            4,
+            3
+        ],
+        [
+            0,
+            1,
+            3,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            3,
+            5,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Standard second semester QFT: one-loop renormalization, gauge theories, spontaneous symmetry breaking, Standard Model. ",
+            "\u00a0Learnt QFT. ",
+            "\u00a0How to work with the tools of QFT in a concrete way to calculate amplitudes for various field theories. ",
+            "\u00a0I developed knowledge/skills into renormalization, nonabelian gauge theory and electro-weak theory and so on. ",
+            "\u00a0Calculation of Feynman diagrams. ",
+            "\u00a0QED, QCD, and Electroweak theory "
+        ],
+        [
+            "\u00a0We should have not spent so much time on renormalization of QED, and spent at least two weeks on EW theory and the standard model. ",
+            "\u00a0Strengths: we learned to calculate things. Weaknesses: calculations can take a long time, and are not the most engaging of tasks. Unclear if there is an alternative, so caveat emptor! Some other topics could be interesting, like exactly solvable models or solitonic solutions. ",
+            "\u00a0very detailed ",
+            "\u00a0The strength of this course was a careful treatment of the tools of the trade for particle theorists, but that somewhat singular focus was also its weakness given the breadth of quantum field theory. ",
+            "\u00a0Strength: this course is very well explained, very well organized. Weakness: none. ",
+            "\u00a0It would've been better if more review from the first semester could be provided at the beginning of the semester "
+        ],
+        [
+            "\u00a0Yes obviously if someone wants to do particle physics or theoretical physics. I would not recommend it to others because its very difficult and a lot of work, however it is possible that other students may benefit from auditing the class. ",
+            "\u00a0Learning to calculate is a prerequisite for any forays into QFT. ",
+            "\u00a0Yes, Of course ",
+            "\u00a0Definitely a must for anyone looking to do anything involving particles. ",
+            "\u00a0Yes. This course gives very well-explained and detailed introduction to quantum field theory. ",
+            "\u00a0Yes, if and only if he or she has decided to study QFT. ",
+            "\u00a0Yes since it's a must for those who ask this question "
+        ]
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "crn_code": "12217",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            2,
+            1,
+            6,
+            5,
+            4
+        ],
+        [
+            2,
+            3,
+            2,
+            7,
+            3
+        ],
+        [
+            2,
+            2,
+            2,
+            7,
+            4
+        ],
+        [
+            2,
+            3,
+            2,
+            8,
+            2
+        ],
+        [
+            2,
+            4,
+            6,
+            3,
+            2
+        ],
+        [
+            2,
+            5,
+            8,
+            1,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I learned SQL language, design and evaluation of database, theory regarding database design like relational algebra. ",
+            "\u00a0Database systems. How to design and use one in an efficient way. ",
+            "\u00a0Database design, SQL. ",
+            "\u00a0How to build a database from scratch. Also learn about some database concepts ",
+            "\u00a0database ",
+            "\u00a0Knowledge of database systems structure, function . Theory of databases, building from ground up, conceptual, comprehensive class. ",
+            "\u00a0By taking this course, I learned basic knowledge on database systems and SQL "
+        ],
+        [
+            "\u00a0The announcements on Canvas made very little sense, there were no clear guidelines for assignments and the project, the website was constantly out of date and missing information and lectures, homeworks and exams had absolutely no feedback (why points were removed), the homework had bad deadlines set, the exams were unfairly written and there was too much focus on subject material that doesn't practically matter. ",
+            "\u00a0The professor has deep understanding of database system. The weakness would be it's a huge class but with too few TAs. ",
+            "\u00a0I think the materials are quite interesting and Avi does try to make the lectures engaging. The class has low lecture attendance but I think this is mostly due to the fact that you can study for exams from the detailed slides that Avi prepared. Whenever I come to lecture, though, I do learn more than what the slides say. ",
+            "\u00a0I think in general it's perfect ",
+            "\u00a0overall good ",
+            "\u00a0Strengths include detailed knowledge on database system, weakness is this class is lack of hands on directions on SQL. "
+        ],
+        [
+            "\u00a0NO. ",
+            "\u00a0Yes ",
+            "\u00a0I'd recommend this course. I know it's commonly known to be easier than other CS electives but that doesn't mean you don't learn anything from the course. I have a better understanding of not only how DB works but also how the OS works. I'd prefer having more dedicated TA's, though. ",
+            "\u00a0Yes. ",
+            "\u00a0I will. This course provide enough knowledge in database area. Based on my interview experiences, the knowledge I learned can handle almost all the questions. ",
+            "\u00a0nice intro to database ",
+            "\u00a0I am willing to recommend this class to another students since database system is pretty important now in now matter for business firms of tech firms. "
+        ]
+    ]
+}

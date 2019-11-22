@@ -1,0 +1,85 @@
+{
+    "crn_code": "24612",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            1,
+            4,
+            3
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            4,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            5,
+            2,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A great introduction to the study of poverty and inequality. A mix of statistical analysis using Stata and theory (mostly Amartya Sen). ",
+            "\u00a0Proficiency in STATA and insight into theories of poverty and inequality. ",
+            "\u00a0Y ",
+            "\u00a0A nuanced understanding of what might be deemed valuable and the possibility of a high range of variation in that. A larger meaning of choice and a more informed grasp on the idea of inequality. And of course, working with survey data on stata. ",
+            "\u00a0to interpret what inequality means conceptually as well as quantitatively ",
+            "\u00a0I learned the literature and concepts regarding the economics of inequality. I also learned how to apply theoretical knowledge in Stata. "
+        ],
+        [
+            "\u00a0It can be conducted twice a week with more focus on conceptual aspects of household surveys and inequality measures ",
+            "\u00a0Y ",
+            "\u00a0Perhaps the technical aspect of the course could be increased. ",
+            "\u00a0strength: professor who genuinely cares about topic and students' interests\r\nweakness: without prior understanding of econ and/or STATA, a slightly steep learning curve for the quant stuff ",
+            "\u00a0The course was divided into the theory/reading and application which I found very beneficial. The organization of the course was great but time-management could have been better. "
+        ],
+        [
+            "\u00a0Absolutely, if you are interested in development work or want to learn some Stata. ",
+            "\u00a0Yes, I would recommend it if you are interested in development economics and want a mix of practical work and theory building. ",
+            "\u00a0Y ",
+            "\u00a0Yes! ",
+            "\u00a0Yes, it was great. The discussions could be facilitated a bit better, maybe with some guiding questions provided before the reading is assigned to prime students for the following class' discussion. Loved that we read Sen's book. I wish more time could have been spent with the lab work, it was very cool to learn how to create social mobility tables and poverty curve together in class, and together interpret their meanings. ",
+            "\u00a0Murray Leibbrant is an incredible teacher and an academic. I feel very lucky to have met him and learning from him. "
+        ]
+    ]
+}

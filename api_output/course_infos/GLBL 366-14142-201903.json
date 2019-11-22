@@ -1,0 +1,42 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/51651/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Interest in and attention to global health has expanded considerably in recent years. Public and private sector investments in solving global health challenges are increasing. Many of the challenges to solving global health problems though are not only in the resources required to close existing gaps. Politics, policy and power are dominant in the global health sphere. Understanding these dynamics is essential to helping to tackle the world\u2019s greatest global health challenges.\u00a0This course examines the intricate and diverse politics of global health and how they shape our inclination, ability, and direction of response to global health challenges. We explore the historical and current day power dynamics affecting health burdens, and which actually have effects on the health system\u2019s ability to care for a population. We explore the principle actors in the global health space, and how they are governed. Discussions also consider how health intersects with economics, national security, the law and regulation, climate change and conflict. Finally we explore the power dynamics within \u201courselves\u201d and how health is valued on a personal level through examination of specific countries health systems; we explore how countries have embraced health as a right (or not)\u00a0 and designed their health systems to care for their complete populations (or not).", 
+    "title": "Politics of Global Health", 
+    "skills": [], 
+    "areas": [
+        "So"
+    ], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WTS A38", 
+            "days": [
+                "Thursday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "14142", 
+        "listings": [
+            {
+                "number": "366", 
+                "subject": "GLBL"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Vanessa Kerry"
+    ], 
+    "long_title": "Politics of Global Health", 
+    "extra_info": "A"
+}

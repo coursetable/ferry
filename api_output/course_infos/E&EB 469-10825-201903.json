@@ -1,0 +1,39 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "", 
+    "description": "Individual or small-group study for qualified students who wish to investigate an area of ecology or evolutionary biology not presently covered by regular courses. A student must be sponsored by a faculty member who sets requirements and meets weekly with the student. One or more written examinations and/or a term paper are required. To register, the student must submit a written plan of study approved by the faculty instructor to the director of undergraduate studies. Students are encouraged to apply during the term preceding the tutorial. Proposals must be submitted no later than the first day of the second week of the term in which the student enrolls in the tutorial. The final paper is due in the hands of the director of undergraduate studies by the last day of reading period in the term of enrollment. In special cases, with approval of the director of undergraduate studies, this course may be elected for more than one term, but only one term may be counted as an elective toward the requirements of the major. Normally, faculty sponsors must be members of the EEB department.", 
+    "title": "Tutorial", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": "1", 
+            "location": "", 
+            "days": [
+                "HTBA"
+            ], 
+            "end_time": "1"
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "10825", 
+        "listings": [
+            {
+                "number": "469", 
+                "subject": "E&EB"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Marta Wells"
+    ], 
+    "long_title": "Tutorial", 
+    "extra_info": "A"
+}

@@ -1,0 +1,77 @@
+{
+    "crn_code": "30048",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            2
+        ],
+        [
+            0,
+            1,
+            0,
+            3,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0A wide range of introductory fundamentals of corporate finance: financial statements, stock valuation, capital investment, corporate governance, arbitrage, risk analysis, etc. ",
+            "\u00a0Very various areas of finance; theories and models are well demonstrated with real-life examples. ",
+            "\u00a0Learning about various financial instruments and valuation methods, how to calculate present value "
+        ],
+        [
+            "\u00a0It is an accelerated course, and therefore, covers a lot of material in a short period of time. Despite the condensed timeframe, instructor does an amazing job at teaching the course with remarkable passion and engagement. Every component of the course is well-structured and organized. The exams are straight-forward and reasonable. ",
+            "\u00a0The course is well-structured, materials are comprehensive and organized. The content is too intense as a one-month summer course. Sometimes the stuffs covered in merely one lesson generally needs to be taught over a semester or more. ",
+            "\u00a0Material felt a bit rushed, but instructor did a superb job considering this was a five-week summer course "
+        ],
+        [
+            "\u00a0I would absolutely recommend this course to anyone interested in going into finance or learning about the subject. If you're looking for a fun and intellectually challenging econ elective, take this. You'll learn practical and applicable fundamentals of finance. The instructor cherishes student engagement in class, so be present, both physically and mentally, engage in discussions, ask questions, and try to have fun. I wish I had taken this course in the fall to get the full experience, but taking it in the summer allowed for a farily intimate classroom environment. Overall, great summer class. ",
+            "\u00a0Yes, but only for the students who already study some finance-related courses before. ",
+            "\u00a0Recommended for any student seeking to go into finance "
+        ]
+    ]
+}

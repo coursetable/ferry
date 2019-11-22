@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/49991/assignments/syllabus", 
+    "requirements": "", 
+    "description": "Basic principles that control the physical and chemical properties of Earth materials. Equation of state, phase transformations, chemical reactions, elastic properties, diffusion, kinetics of reaction, and mass/energy transport.", 
+    "title": "Introduction to the Physics an...", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "KGL 226", 
+            "days": [
+                "Tuesday", 
+                "Thursday"
+            ], 
+            "end_time": 14
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12210", 
+        "listings": [
+            {
+                "number": "519", 
+                "subject": "G&G"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Shun-ichiro Karato"
+    ], 
+    "long_title": "Introduction to the Physics and Chemistry of Earth Materials", 
+    "extra_info": "A"
+}

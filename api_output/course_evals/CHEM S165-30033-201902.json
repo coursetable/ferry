@@ -1,0 +1,74 @@
+{
+    "crn_code": "30033",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            3,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            2,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0I familiarized myself with the math and relationships behind several forms of matter. ",
+            "\u00a0got a good understanding of the fundamentals of chemistry and techniques "
+        ],
+        [
+            "\u00a0The strength is the ability to cover a wide range of topics from simple acid base reactions all the way to nuclear chemistry. The weakness is just that, as there is not nearly enough time to cover everything or allow for more digestion of the material. ",
+            "\u00a0timing was rigorous "
+        ],
+        [
+            "\u00a0Only if they needed to get this course out of the way. It is very stressful at this pace. ",
+            "\u00a0I would absolutely recommend this to another student "
+        ]
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "crn_code": "10394",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            1,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            0,
+            1
+        ],
+        [
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        [
+            1,
+            1,
+            0,
+            0,
+            0
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0This class was invaluable to me in many ways. I was able to get the advice from Professor Dudley--a profound, brilliant and kind professor--on my research. I was able to also get advice from my interlocutors...and often we dont have the time to really sit down and work with one another. In this context, I gained new insights from my peers both concerning my work and in collaborating with them to give advice on other peoples work. Really, such a valuable class! "
+        ],
+        [
+            "\u00a0The class is wonderful. The Professor's plan for the course is wonderful. I think attendance should be mandatory. "
+        ],
+        [
+            "\u00a0Yes! A wonderful space to think through new ideas and forms of ethnography ",
+            "\u00a0Yes, any student that wants a supportive and informative space to develop their work and to help develop the work of others should go here. "
+        ]
+    ]
+}

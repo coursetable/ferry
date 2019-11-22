@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "requirements": "Primarily for Film & Media Studies majors working on senior projects. Prerequisite: FILM 395 or permission of instructor.", 
+    "description": "Students write a feature-length screenplay. Emphasis on multiple drafts and revision. Admission in the fall term based on acceptance of a complete step-sheet outline for the story to be written during the coming year.\nPrimarily for Film & Media Studies majors working on senior projects. Prerequisite: FILM 395 or permission of instructor.", 
+    "title": "Advanced Screenwriting", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 13, 
+            "location": "WLH 202", 
+            "days": [
+                "Monday"
+            ], 
+            "end_time": 15
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12146", 
+        "listings": [
+            {
+                "number": "487", 
+                "subject": "FILM"
+            }
+        ]
+    }, 
+    "extra_flags": [
+        "<a href=\"#\" data-action=\"search-by-attr\" data-crit-field=\"ci_attrs_YFIP\">YC FILM Stud: Production</a>"
+    ], 
+    "professors": [
+        "Marc Lapadula"
+    ], 
+    "long_title": "Advanced Screenwriting", 
+    "extra_info": "A"
+}

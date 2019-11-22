@@ -1,0 +1,78 @@
+{
+    "crn_code": "12118",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was",
+        "What is your overall assessment of this course",
+        "The course was well organized to facilitate student learning",
+        "I received clear feedback that improved my learning",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            3
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            4
+        ],
+        [
+            0,
+            0,
+            0,
+            2,
+            2
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            1
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            1
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course",
+        "What are the strengths and weaknesses of this course and how could it be improved",
+        "Would you recommend this course to another student? Please explain"
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Much of this course was review, but it was extremely helpful to have the information taught to me in a way that was very comprehensive and learnable. ",
+            "\u00a0I learnt the methametic basis for group theory which was very help in understanding an array of inorganic concepts. ",
+            "\u00a0I of course learned a lot about coordination chemistry, but the structure of the class also allowed me to learn about how I best work as well as how to best manage my time. "
+        ],
+        [
+            "\u00a0I do not have any complaints about this course. It was very thorough and well taught. ",
+            "\u00a0This was a great course, well-taught and well-organized. ",
+            "\u00a0There was a lot of course work relative to my other classes, so it was sometimes difficult to keep up with all of the assignments. Though I considered this a negative while taking the course, this is also what allowed me to learn about learning style and time management. "
+        ],
+        [
+            "\u00a0Yes, It was great way to strengthen my foundation in inorganic chemistry and in coordination chemistry. ",
+            "\u00a0Yes, although it is quite specific. I would definitely recommend to any inorganic/physical chemistry student! ",
+            "\u00a0Yes, this is a class for other higher level inorganic classes. ",
+            "\u00a0Yes, with the caveat that it is a time intensive course. "
+        ]
+    ]
+}

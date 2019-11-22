@@ -1,0 +1,41 @@
+{
+    "exam": {
+        "date": "1000-01-01", 
+        "group": 0, 
+        "day_of_week": "", 
+        "time": 0.0
+    }, 
+    "syllabus_url": "https://yale.instructure.com/courses/48816/assignments/syllabus", 
+    "requirements": "", 
+    "description": "", 
+    "title": "RollupsConsolidtnsSerialAquist", 
+    "skills": [], 
+    "areas": [], 
+    "sessions": [
+        {
+            "start_time": 10, 
+            "location": "EVANS 2410", 
+            "days": [
+                "Monday", 
+                "Wednesday"
+            ], 
+            "end_time": 11
+        }
+    ], 
+    "course_codes": {
+        "section": 1, 
+        "oci_id": "12735", 
+        "listings": [
+            {
+                "number": "677", 
+                "subject": "MGT"
+            }
+        ]
+    }, 
+    "extra_flags": [], 
+    "professors": [
+        "Adam Wasserstein"
+    ], 
+    "long_title": "RollupsConsolidtnsSerialAquist", 
+    "extra_info": "A"
+}

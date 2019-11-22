@@ -1,0 +1,79 @@
+{
+    "crn_code": "20923",
+    "Evaluation_Questions": [
+        "Your level of engagement with the course was:",
+        "What is your overall assessment of this course?",
+        "The course was well organized to facilitate student learning.",
+        "I received clear feedback that improved my learning.",
+        "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
+        "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:"
+    ],
+    "Evaluation_Data": [
+        [
+            0,
+            0,
+            2,
+            2,
+            5
+        ],
+        [
+            0,
+            1,
+            1,
+            3,
+            3
+        ],
+        [
+            0,
+            0,
+            2,
+            1,
+            5
+        ],
+        [
+            0,
+            0,
+            2,
+            2,
+            4
+        ],
+        [
+            0,
+            0,
+            5,
+            3,
+            1
+        ],
+        [
+            0,
+            0,
+            1,
+            6,
+            2
+        ]
+    ],
+    "Comments_Questions": [
+        "What knowledge, skills, and insights did you develop by taking this course?",
+        "What are the strengths and weaknesses of this course and how could it be improved?",
+        "Would you recommend this course to another student? Please explain."
+    ],
+    "Comments_List": [
+        [
+            "\u00a0Grammar rules and vocabulary in french ",
+            "\u00a0I greatly improved my ability to understand and speak French. ",
+            "\u00a0I developed my memory skills and my communication skills. I also learnt to balance my written skills and oral skills better. ",
+            "\u00a0I learned more vocabulary and grammar that greatly improved my French. "
+        ],
+        [
+            "\u00a0Strengths were the practice worksheets given. Weakness, the weekly tests and the tests not matching some of the information we learned or too vague in understanding what to study and know for the tests. ",
+            "\u00a0The daily workbook assignments and daily classes helped me to learn French much faster than a class with a lighter schedule. I would have liked to have been able to keep my weekly quizzes so that I could learn from the mistakes I made on those more closely. ",
+            "\u00a0The course is well planned out but I wish there were more avenues for speaking French outside the classroom. ",
+            "\u00a0This class was very intense but met everyday to help practice. I think there could be more speaking exercises in class to make speaking more comfortable. "
+        ],
+        [
+            "\u00a0If they have the time and they are well organized and really want to learn French I would recommend it. ",
+            "\u00a0Yes. It is a good way to learn French and the class is fun, although it does have a lot of work. ",
+            "\u00a0Yes, it was very interactive and was great for studying French. It made everything very practical and had a good balance of literature and culture. "
+        ]
+    ]
+}
