@@ -479,6 +479,67 @@ def exam_from_field(final_exam):
         'time': time_float
     }
 
+# def time_from_float(f, force_minutes = True);
+
+#     time = string(float)
+
+#     dot_pos = time.find('.')
+#     if not dot_pos or force_minutes:
+#         time = time+'.00'
+
+#     if dot_pos:
+#         extra_zeros = dot_pos - len(time) + 3
+
+#         time = time + "0"*extra_zeros
+# ()
+#     return time
+
+# def course_sessions_locations_summary(location_times):
+#     if len(location_times) == []:
+#         return ''
+
+#     summary_string = ''
+
+#     if len(location_times) == 1:
+#         reset($locationTimes);
+#         $summaryString .= key($locationTimes);
+    
+
+#     if (count($locationTimes) > 1) {
+#         $extraLocationTimes = count($locationTimes) - 1;
+#         $summaryString .= " + {$extraLocationTimes}";
+#     }
+
+#     return summary_string
+
+# def retrieve_course_sessions(course_id, sessions_by_id):
+
+#     days_map = {'Monday' : 'M',
+#         'Tuesday' : 'T',
+#         'Wednesday' : 'W',
+#         'Thursday' : 'Th',
+#         'Friday' : 'F',}
+
+#     res = {
+#         "summary":[],
+#         "long_summary":[],
+#         "locations_summary":[],
+#         "by_day":[],
+#         "by_location":[]
+#     }
+
+#     for session in sessions_by_id:
+#         days = "".join([days_map for x in session["days"]])
+#         start_end = str(session["start_time"]) + "-" + str(session["end_time"])
+#         loc = session["location"]
+
+#         res["summary"].append(days + " " + start_end)
+#         res["long_summary"].append(days + " " + start_end + "({})".format(loc))
+#         res["by_day"].append({day: [session["start_time"],session["end_time"],loc] for day in days})
+
+#         res["locations_summary"] = loc
+
+#     return res
 
 def extract_course_info(course_json):
     """
@@ -518,7 +579,7 @@ def extract_course_info(course_json):
 
     # Course title
     if len(course_json["title"]) > 32:
-        course_info["title"] = course_json["title"][:30] + "..."
+        course_info["title"] = course_json["title"][:29] + "..."
     else:
         course_info["title"] = course_json["title"]
 
@@ -537,13 +598,35 @@ def extract_course_info(course_json):
         course_json["instructordetail_html"])
 
     # Codes
-
+    course_info["oci_id"] = course_json["crn"]
+    
     course_info["course_codes"] = course_codes_from_fields(
         course_json["code"],
         course_json["xlist"],
         course_json["section"],
         course_json["crn"]
     )
+
+    if len(course_info["course_codes"]['listings']) > 0:
+
+        num = course_info['course_codes']['listings'][0]['number'].replace("S","")
+        course_info["number"] = num
+
+    if len(course_info["course_codes"]['listings']) > 0:
+
+        course_info["subject"] = course_info["course_codes"]['listings'][0]['subject']
+
+    else:
+
+        course_info["subject"] = None
+
+    course_info['section'] = course_info['course_codes']['section']
+
+    course_info["codes"] = {
+        "subject":course_info["subject"],
+        "number":course_info["number"],
+        "section":course_info["section"],
+    }
 
     # Meeting times
     course_info["sessions"] = course_times_from_fields(
@@ -559,6 +642,7 @@ def extract_course_info(course_json):
 
     # Final exam info
     course_info["exam"] = exam_from_field(course_json["final_exam"])
+    course_info["exam_group"] = course_info["exam"]["group"]
 
     # Additional attributes
     course_info["extra_flags"] = []
@@ -572,6 +656,8 @@ def extract_course_info(course_json):
 
     if len(matched_homepage) > 0:
         course_info["course_home_url"] = matched_homepage[0]
+    else:
+        course_info["course_home_url"] = ''
 
     # Link to syllabus
     matched_syllabus = re.findall(
@@ -579,5 +665,12 @@ def extract_course_info(course_json):
 
     if len(matched_syllabus) > 0:
         course_info["syllabus_url"] = matched_syllabus[0]
+    else:
+        course_info["syllabus_url"] = ''
+
+    # Initialize evaluations fields
+    course_info["average"] = None
+    course_info["evaluations"] = None
+    course_info["num_students"] = None
 
     return course_info

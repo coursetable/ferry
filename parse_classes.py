@@ -6,6 +6,8 @@ from includes.class_processing import *
 from os import listdir
 from os.path import isfile, join
 
+import argparse
+
 """
 ================================================================
 This script loads the class JSON files output by
@@ -14,12 +16,21 @@ current website.
 ================================================================
 """
 
+# allow the user to specify terms (useful for testing and debugging)
+parser = argparse.ArgumentParser(description='Parse classes')
+parser.add_argument('-t', '--terms', nargs='+', help='terms to parse', default=None, required=False)
+
+args = parser.parse_args()
+terms = args.terms
+
 # folder to save course infos to
 parsed_courses_folder = "./api_output/parsed_courses/"
 
-# get the list of all course JSON files as previously fetched
-with open("./api_output/terms.json", "r") as f:
-    terms = json.load(f)
+if terms is None:
+
+    # get the list of all course JSON files as previously fetched
+    with open("./api_output/terms.json", "r") as f:
+        terms = json.load(f)
 
 # load list of classes per term
 for term in terms:
