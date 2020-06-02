@@ -26,7 +26,7 @@ def fetch_terms():
     # Successful response
     if r.status_code == 200:
 
-        terms = re.findall(r'option value="(\d{6})"', r.text)
+        terms = re.findall('option value="(\d{6})"', r.text)
 
         # exclude '999999' catch-all 'Past Terms' term option
 
@@ -36,7 +36,7 @@ def fetch_terms():
 
     # Unsuccessful
     else:
-        raise Exception('Unsuccessful response: code {}'.format(r.status_code))
+        raise Exception('Unsuccessful response: code {}'.format(r.status))
 
 
 def fetch_term_courses(term):
@@ -77,7 +77,7 @@ def fetch_term_courses(term):
 
     # Unsuccessful
     else:
-        raise Exception('Unsuccessful response: code {}'.format(r.status_code))
+        raise Exception('Unsuccessful response: code {}'.format(r.status))
 
 
 def fetch_previous_json(term, evals=False):
@@ -115,7 +115,7 @@ def fetch_previous_json(term, evals=False):
 
     # Unsuccessful
     else:
-        raise Exception('Unsuccessful response: code {}'.format(r.status_code))
+        raise Exception('Unsuccessful response: code {}'.format(r.status))
 
 
 def fetch_course_json(code, crn, srcdb):
@@ -291,7 +291,7 @@ def time_of_day_float_from_string(time_string):
     """
 
     # split time string into hour/minute/AM-PM sections
-    matches = list(re.findall(r'([0-9]*):?([0-9]*)(am|pm)', time_string)[0])
+    matches = list(re.findall('([0-9]*):?([0-9]*)(am|pm)', time_string)[0])
 
     hours = int(matches[0])
 
@@ -358,7 +358,7 @@ def course_times_from_fields(meeting_html, all_sections_remove_children):
             start = time_of_day_float_from_string(times[0])
             end = time_of_day_float_from_string(times[1])
 
-            location_matches = re.findall(r' in ([^<]*)', meeting_text)
+            location_matches = re.findall(' in ([^<]*)', meeting_text)
 
             if len(location_matches) > 0:
                 location = location_matches[0]
@@ -586,7 +586,10 @@ def extract_course_info(course_json):
     course_info["long_title"] = course_json["title"]
 
     # Course status
-    course_info["extra_info"] = course_json["stat"]
+    if course_json["stat"] == "CANCELLED":
+        course_info["extra_info"] = "CANCELLED"
+    else:
+        course_info["extra_info"] = ""
 
     if course_info["extra_info"] == "C":
         course_info["title"] = "CANCELLED"
@@ -599,7 +602,7 @@ def extract_course_info(course_json):
 
     # Codes
     course_info["oci_id"] = course_json["crn"]
-    
+
     course_info["course_codes"] = course_codes_from_fields(
         course_json["code"],
         course_json["xlist"],
@@ -620,7 +623,7 @@ def extract_course_info(course_json):
 
         course_info["subject"] = None
 
-    course_info['section'] = course_info['course_codes']['section']
+    course_info['section'] = course_info['course_codes']['section'].lstrip("0")
 
     course_info["codes"] = {
         "subject":course_info["subject"],
@@ -640,10 +643,6 @@ def extract_course_info(course_json):
     course_info["areas"] = found_items(course_json["yc_attrs"],
                                        areas_map)
 
-    # Final exam info
-    course_info["exam"] = exam_from_field(course_json["final_exam"])
-    course_info["exam_group"] = course_info["exam"]["group"]
-
     # Additional attributes
     course_info["extra_flags"] = []
 
@@ -652,7 +651,7 @@ def extract_course_info(course_json):
 
     # Course homepage
     matched_homepage = re.findall(
-        r'href="([^"]*)"[^>]*>HOMEPAGE</a>', course_json["resources"])
+        'href="([^"]*)"[^>]*>HOMEPAGE</a>', course_json["resources"])
 
     if len(matched_homepage) > 0:
         course_info["course_home_url"] = matched_homepage[0]
@@ -661,7 +660,7 @@ def extract_course_info(course_json):
 
     # Link to syllabus
     matched_syllabus = re.findall(
-        r'href="([^"]*)"[^>]*>SYLLABUS</a>', course_json["resources"])
+        'href="([^"]*)"[^>]*>SYLLABUS</a>', course_json["resources"])
 
     if len(matched_syllabus) > 0:
         course_info["syllabus_url"] = matched_syllabus[0]
