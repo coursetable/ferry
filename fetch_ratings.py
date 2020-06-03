@@ -22,11 +22,15 @@ Online Course Evaluation (OCE), in JSON format.
 # Input NetID and password to login to Yale CAS
 # netid = input("Yale NetID: ")
 # password = getpass.getpass()
+netid = 'hks24'
+with open('./private/netid.txt', 'r') as passwordfile:
+    password = passwordfile.read().strip()
+session = create_session_from_credentials(netid, password)
 
 # Login
-with open('./private/cascookie.txt', 'r') as cookiefile:
-    castgc = cookiefile.read()
-session = create_session_from_cookie(castgc)
+# with open('./private/cascookie.txt', 'r') as cookiefile:
+#     castgc = cookiefile.read().strip()
+# session = create_session_from_cookie(castgc)
 print("Cookies: ", session.cookies.get_dict())
 
 # get the list of all course JSON files as previously fetched
@@ -52,11 +56,8 @@ for season_code in seasons:
         """
 
         try:
-            course_eval , season_has_eval = fetch_course_eval(session,season_course['crn'],season_code)
+            course_eval = fetch_course_eval(session,term_course['crn'],seasoncode)
 
-            if (season_has_eval == -1):
-                raise seasonMissingEvalsError
-            
             with open(output_path, "w") as f:
                 f.write(json.dumps(course_eval, indent=4))
 

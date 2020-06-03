@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, List, Tuple
 import requests
 import json
 import time
@@ -69,7 +69,7 @@ def fetch_questions(session: requests.Session, crn: str, term_code: str) -> Dict
     
     return questions
 
-def fetch_eval_data(session, questionIds):
+def fetch_eval_data(session: requests.Session, questionId: QuestionId) -> Tuple[List[int], List[str]]:
     """
     Get rating data for each question of a course
 
@@ -78,43 +78,36 @@ def fetch_eval_data(session, questionIds):
     session: Requests session
         The current session with login cookie
 
-    questionIds: List of strings
-        The list of questionIds to fetch evaluation
-        data for
+    questionId: string
+        The questionId to fetch evaluation data for
 
     Returns
     -------
-    course_evals: 2D list with evaluation data for each question ID
+    ratings, options: evaluation data for the question ID, and the options
     """
     # JSON data with rating data for each question ID
     url_graphData = "https://oce.app.yale.edu/oce-viewer/studentSummary/graphData" 
 
-    # Holds evals of all questions for this course
-    course_evals = []
+    millis = int(round(time.time() * 1000)) # Get current time in milliseconds
+    question_info = {
+        "questionId": questionId,
+        "_": millis
+    }
 
-    for Id in questionIds:
-        millis = int(round(time.time() * 1000)) # Get current time in milliseconds
-        question_info = {
-            "questionId": Id,
-            "_": millis
-        }
-        page_graphData = session.get(url_graphData, params = question_info) # Fetch ratings data
+    page_graphData = session.get(url_graphData, params = question_info) # Fetch ratings data
+    if page_graphData.status_code != 200:
+        raise CourseMissingEvalsError(f"missing ratings for {questionId}")
+    data_graphData = json.loads(page_graphData.text)
 
-        if page_graphData.status_code != 200:
-            return []
+    ratings = []
+    options = []
+    for item in data_graphData[0]['data']:
+        ratings.append(item[1])
+        options.append(item[0])
 
-        data_graphData = json.loads(page_graphData.text)
-        if (len(data_graphData) == 0):
-            return []
+    return ratings, options
 
-        evals_data = [] # Holds evals for this question
-        for x in range(len(data_graphData[0]['data'])): # Iterate through each 
-            evals_data.append(data_graphData[0]['data'][x][1])
-        course_evals.append(evals_data) # Append to list of evals
-
-    return course_evals
-
-def fetch_comments(session,offset, _max):
+def fetch_comments(session: requests.Session, offset: int, _max: int) -> Tuple[QuestionId, str, List[str]]:
     """
     Get comments for a specific question of this course
 
@@ -131,7 +124,7 @@ def fetch_comments(session,offset, _max):
 
     Returns
     -------
-    question,responses_text: string that holds question and list of strings that hold responses respectively
+    id,question,responses_text: string that holds question and list of strings that hold responses respectively
     """
     # Website with student comments for this question
     url_comments = "https://oce.app.yale.edu/oce-viewer/studentComments/index"
@@ -143,33 +136,76 @@ def fetch_comments(session,offset, _max):
 
     page_comments = session.get(url_comments, params = comment_info)
 
-    if page_comments.status_code != 200: # Question doesn't exist
-        return -1,-1
+    if page_comments.status_code != 200:
+        # Question doesn't exist
+        raise CourseMissingEvalsError('no more evals available')
 
     soup = BeautifulSoup(page_comments.content, 'lxml')
 
     question_html = soup.find(id = "cList")
-    ptags = question_html.find_all("p")
-    question = None
-    isQuestion = 0
-    for tag in ptags:
-        if tag.get_text() == "Q:":
-            isQuestion = 1
-        elif isQuestion == 1:
-            question = tag.get_text() # Find question in html
-            break
 
-    if (question == None or question == ""): # Question doesn't exist
-        return -1,-1
-
+    # Question text.
+    question = question_html.select_one('div > p:nth-of-type(2)').get_text(strip=True)
+    if question == None or question == "":
+        raise CourseMissingEvalsError('no more evals available')
     question = question[0:question.find("\n")]
-    responses = soup.find_all(id = "answer")
+
+    # Question ID.
+    info_area = question_html.select_one('div > p:nth-of-type(3)')
+    questionId = info_area.contents[1].strip()
+
+    # Responses.
     responses_text = [] # List of responses
+    responses = soup.find_all(id = "answer")
+    for answer_area in responses:
+        answer = answer_area.find(id="text").get_text(strip=True)
+        responses_text.append(answer)
 
-    for response in responses:
-        responses_text.append(response.find(id = "text").get_text()) # Append this response to list
+    return questionId, question, responses_text
 
-    return question,responses_text # Return question and responses
+def fetch_course_enrollment(session: requests.Session, crn: str, term_code: str) -> Dict[str, int]:
+    """
+    Get enrollment statistics for this course
+
+    Parameters
+    ----------
+    session: Requests session
+        The current session with login cookie
+
+    crn: string
+        The crn code of the course
+
+    term_code: string
+        The term code that the course belongs to
+
+    Returns
+    -------
+    stats: a dictionary with statistics
+    """
+    # Main website with number of questions
+    url_index = "https://oce.app.yale.edu/oce-viewer/studentSummary/index" 
+
+    class_info = {
+        "crn": crn,
+        "term_code": term_code,
+    }
+    page_index = session.get(url_index, params=class_info)
+    if page_index.status_code != 200: # Evaluation data for this term not available
+        raise CourseMissingEvalsError("missing enrollment data")
+    
+    soup = BeautifulSoup(page_index.content, 'lxml')
+
+    stats = {}
+    stats_area = soup.find(id='status')
+    for item in stats_area.find_all('li'):
+        stat = item.p
+        if not stat.get_text(strip=True):
+            continue
+        name = stat.contents[0].strip()[:-1].lower()
+        value = int(stat.contents[1].get_text())
+        stats[name] = value
+
+    return stats
 
 def fetch_course_eval(session, crn_code,term_code):
 
@@ -189,36 +225,53 @@ def fetch_course_eval(session, crn_code,term_code):
 
     Returns
     -------
-    course_eval,term_has_eval: Dictionary with all evaluation data and integer that specifies 
+    course_eval: Dictionary with all evaluation data and integer that specifies 
                                whether or not this term has eval data respectively
     """
 
-    # Initialize dictionary
+    print("TERM:",term_code,"CRN CODE:",crn_code)
+
+    # Enrollment data.
+    enrollment = fetch_course_enrollment(session, crn_code, term_code)
+
+    # Numeric evaluations data.
+    ratings = []
+    questions = fetch_questions(session, crn_code, term_code)
+    for questionId, text in questions.items():
+        data, options = fetch_eval_data(session, questionId)
+        ratings.append({
+            'question_id': questionId,
+            'question_text': text,
+            'options': options,
+            'data': data,
+        })
+
+    # Narrative evaluations data.
+    narratives = []
+    offset = 0 # Start with first question
+    while True:
+        try:
+            # Get questions with their respective responses
+            questionId, question, comments = fetch_comments(session, offset, 1)
+
+            narratives.append({
+                'question_id': questionId,
+                'question_text': question,
+                'comments': comments,
+            })
+            offset += 1 # Increment to next question
+        except CourseMissingEvalsError as e:
+            if offset == 0:
+                raise CourseMissingEvalsError('cannot fetch narrative comments') from e
+            else:
+                # No more questions are available -- normal situation.
+                break
+
     course_eval = {}
     course_eval["crn_code"] = crn_code
-    course_eval["Evaluation_Questions"] = []
-    course_eval["Evaluation_Data"] = []
-    course_eval["Comments_Questions"] = []
-    course_eval["Comments_List"] = []
+    course_eval["term_code"] = term_code
+    course_eval["enrollment"] = enrollment
+    course_eval["ratings"] = ratings
+    course_eval["narratives"] = narratives
 
-    print("TERM:",term_code,"CRN CODE:",crn_code) # Print data to console for debugging
-
-    questions = fetch_questions(session, crn_code,term_code) # Get questions
-
-    course_eval["Evaluation_Questions"] = list(questions.values())
-    course_eval["Evaluation_Data"] = fetch_eval_data(session, list(questions.keys())) # Get evaluation graph data
-
-    offset = 0 # Start with first question
-    comments_questions = []
-    comments_list = []
-    while (True):
-        question,comments = fetch_comments(session,offset,1) # Get questions with their respective responses
-        if question == -1: # No more questions
-            break
-        comments_questions.append(question)
-        comments_list.append(comments)
-        offset += 1 # Increment to next question
-
-    course_eval["Comments_Questions"] = comments_questions
-    course_eval["Comments_List"] = comments_list
-    return course_eval,1 # Return all eval data in dictionary
+    return course_eval

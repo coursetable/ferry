@@ -5,11 +5,12 @@ def create_session_from_credentials(netId, password):
 
     # Login to CAS.
     _ = session.post(f"https://secure.its.yale.edu/cas/login?username={netId}&password={password}")
-    print("Cookies: ", session.cookies.get_dict())
 
-    # Can't support 2-factor authentication.
-    raise NotImplementedError
-    #return session
+    # Verify that it worked.
+    if 'CASTGC' not in session.cookies.get_dict():
+        raise NotImplementedError('cannot handle 2-factor authentication')
+
+    return session
 
 def create_session_from_cookie(castgc):
     session = requests.Session()
