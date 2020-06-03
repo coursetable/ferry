@@ -44,73 +44,103 @@ The main changes to implement are as follows:
 
 ## Schemas
 
-### Semesters: `semesters`
+### Seasons: `seasons`
 
-| Field      | Type                              | Description                                              |
-| ---------- | --------------------------------- | -------------------------------------------------------- |
-| `courses`  | List of identifiers               | Courses taught during the semester, mapping to `courses` |
-| `season`   | One of `spring`, `summer`, `fall` | Season of the semester                                   |
-| `semester` | String                            | The semester                                             |
-| `year`     | Integer                           | Year of the semester                                     |
+| Field         | Type                                       | Description            |
+| ------------- | ------------------------------------------ | ---------------------- |
+| `season_id`   | Identifier                                 | Season id              |
+| `season_code` | String (e.g. "202001")                     | The season code        |
+| `season`      | String - one of `spring`, `summer`, `fall` | Season of the semester |
+| `year`        | Integer                                    | Year of the semester   |
 
 ### Courses: `courses`
 
+One entry per class. If a class is listed with multiple course codes, it will only get one entry in this database.
 
+| Field                       | Type            | Description                                                  |
+| --------------------------- | --------------- | ------------------------------------------------------------ |
+| `course_id`                 | Identifier      | Course id                                                    |
+| `season`                    | Foreign Key     | The season that the course is being taught in, mapping to `seasons` |
+| `areas`                     | List            | Course areas (humanities, social sciences, sciences)         |
+| `course_home_url`           | String          | Link to the course homepage                                  |
+| `description`               | String          | Course description                                           |
+| `extra_info`                | String          | Additional information (indicates if class has been canceled) |
+| `flags`                     | List of strings | Detailed course areas, currently seems to be a bit broken    |
+| `location_times`            | Nested          | Key-value pairs consisting of `<location>:<list of times>`   |
+| `locations_summary`         | String          | If single location, is `<location>`; otherwise is `<location> + <n_other_locations>` |
+| `num_students`              | Integer         | Student cap                                                  |
+| `num_students_is_same_prof` | Boolean         | Whether or not a different professor taught the class when it was this size |
+| `requirements`              | String          | Recommended requirements/prerequisites for the course        |
+| `section`                   | String          | Which section the course is (each section has its own field, as returned in the original API output) |
+| `short_title`               | String          | Shortened course title                                       |
+| `skills`                    | List            | Skills that the course fulfills (e.g. writing, quantitative reasoning, language levels) |
+| `syllabus_url`              | String          | Link to the syllabus                                         |
+| `times`                     | Nested          | List of times and locations that the course meets            |
+| `title`                     | String          | Complete course title                                        |
+| `average_overall_rating`    | Float           | [computed] Average overall course rating (from this course's evaluations, aggregated across cross-listings) |
+| `average_workload`          | Float           | [computed] Average workload rating ((from this course's evaluations, aggregated across cross-listings) |
 
-| Field                       | Type                | Description                                                  |
-| --------------------------- | ------------------- | ------------------------------------------------------------ |
-| `areas`                     | List                | Course areas (humanities, social sciences, sciences)         |
-| `course_home_url`           | String              | Link to the course homepage                                  |
-| `course_numbering`          | String              | Course numbering code                                        |
-| `description`               | String              | Course description                                           |
-| `evaluation_questions`      | List of identifiers | Short-answer evaluation questions for the course, mapping to `evaluation_questions` |
-| `evaluation_ratings`        | List of identifiers | Categorical ratings for the course, mapping to `evaluation_ratings` |
-| `extra_info`                | String              | Additional information (indicates if class has been cancelled) |
-| `flags`                     | List of strings     | Detailed course areas, currently seems to be a bit broken    |
-| `location_times`            | Nested              | Key-value pairs consisting of `<location>:<list of times>`   |
-| `locations_summary`         | String              | If single location, is `<location>`; otherwise is `<location> + <n_other_locations>` |
-| `num_students`              | Integer             | Student cap                                                  |
-| `num_students_is_same_prof` | Boolean             | Whether or not a different professor taught the class when it was this size |
-| `oci_ids`                   | List of strings     | For when a course has multiple OCI IDs                       |
-| `professors`                | List of identifiers | Who teaches the course, mapping to `professors`              |
-| `requirements`              | string              | Recommended requirements/prerequisites for the course        |
-| `section`                   | String              | Which section the course is (each section has its own field, as returned in the original API output) |
-| `semester`                  | Identifier          | The semester that the course is being taught in, mapping to `semesters` |
-| `short_title`               | String              | Shortened course title                                       |
-| `skills`                    | List                | Skills that the course fulfills (e.g. writing, quantitative reasoning, language levels) |
-| `subject`                   | String              | Course subject code                                          |
-| `syllabus_url`              | String              | Link to the syllabus                                         |
-| `times`                     | Nested              | List of times and locations that the course meets            |
-| `title`                     | String              | Complete course title                                        |
+### Listings: `listings`
+
+Each course code (e.g. "AMST 312") and season will get one entry in this database.
+
+| Field         | Type        | Description                                      |
+| ------------- | ----------- | ------------------------------------------------ |
+| `listing_id`  | Identifier  | Listing ID                                       |
+| `course_id`   | Foreign Key | Course that the listing refers to                |
+| `subject`     | String      | Subject the course is listed under (e.g. "AMST") |
+| `number`      | String      | Course number in the given subject               |
+| `course_code` | String      | [computed] subject + number (e.g. "AMST 312")    |
+| `section `    | String      | Course section for the given subject and number  |
 
 ### Professors: `professors`
 
-| Field            | Type                | Description                                                  |
-| ---------------- | ------------------- | ------------------------------------------------------------ |
-| `average_rating` | Float               | Average rating of the professor assessed via the "Overall assessment" question in courses taught |
-| `courses`        | List of identifiers | List of courses in `courses` that the professor has taught/is teaching |
-| `name`           | String              | Name of the professor                                        |
-
-### Evaluations (short-answer questions): `evaluation_questions`
-
-| Field           | Type                | Description                                             |
-| --------------- | ------------------- | ------------------------------------------------------- |
-| `course`        | Identifier          | Course the question was asked for, mapping to `courses` |
-| `question_text` | String              | The question                                            |
-| `responses`     | List of identifiers | Responses to the question                               |
-
-### Evaluations (short-answer comments): `evaluation_comments`
-
 | Field            | Type       | Description                                                  |
 | ---------------- | ---------- | ------------------------------------------------------------ |
-| `comment`        | String     | Response to the question                                     |
-| `comment_length` | Integer    | Length of the response in characters                         |
-| `question`       | Identifier | Question the answer is a response to, mapping to `evaluation_comments` |
+| `professor_id`   | Identifier | Professor ID                                                 |
+| `average_rating` | Float      | [computed] Average rating of the professor assessed via the "Overall assessment" question in courses taught |
+| `name`           | String     | Name of the professor                                        |
 
-### Evaluations (categorical ratings): `evaluation_ratings`
+### Course-Professor Junction Table `courses_professors`
+
+| Field          | Type        | Description  |
+| -------------- | ----------- | ------------ |
+| `course_id`    | Foreign Key | Course ID    |
+| `professor_id` | Foreign Key | Professor ID |
+
+### Historical Ratings `historical_ratings`
+
+| Field                     | Type                   | Description  |
+| ------------------------- | ---------------------- | ------------ |
+| `course_code`             | String (e.g. CPSC 366) | Course ID    |
+| `professor_id`            | Foreign Key            | Professor ID |
+| `course_rating_all_profs` | Float                  | [computed]   |
+| `course_rating_this_prof` | Float                  | [computed]   |
+| `course_workload`         | Float                  | [computed]   |
+
+### Evaluations (questions): `evaluation_questions`
+
+| Field           | Type                  | Description                                              |
+| --------------- | --------------------- | -------------------------------------------------------- |
+| `question_id`   | Identifier            | Question ID                                              |
+| `question_code` | String (e.g. "YC402") | Question code (from OCE)                                 |
+| `is_narrative`  | Bool                  | True if the question has narrative responses             |
+| `question_text` | String                | The question                                             |
+| `options`       | List of strings       | Possible responses (only if the question is categorical) |
+
+### Evaluations (narrative): `evaluation_narratives`
+
+| Field            | Type        | Description                                                  |
+| ---------------- | ----------- | ------------------------------------------------------------ |
+| `course_id`      | Foreign Key | Course the narrative comment applies to, mapping to `courses` |
+| `question_id`    | Foreign Key | Question the answer is a response to, mapping to `evaluation_questions` |
+| `comment`        | String      | Response to the question                                     |
+| `comment_length` | Integer     | [computed] Length of the response in characters              |
+
+### Evaluations (ratings): `evaluation_ratings`
 
 | Field             | Type             | Description                                                  |
 | ----------------- | ---------------- | ------------------------------------------------------------ |
-| `categories`      | List of strings  | Sorted list of options for the question                      |
-| `category_counts` | List of integers | Number of responses to each corresponding option in `categories` |
-| `course`          | Identifier       | Course the evaluation is corresponding to                    |
+| `course_id`      | Foreign Key | Course the narrative comment applies to, mapping to `courses` |
+| `question_id`    | Foreign Key | Question the answer is a response to, mapping to `evaluation_questions` |
+| `ratings` | List of integers | Number of responses for each option. The options are listed in the `evaluation_questions` table |
