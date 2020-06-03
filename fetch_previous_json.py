@@ -15,27 +15,27 @@ CourseTable website and outputs the following into
 ================================================================
 """
 
-# define list of terms
+# define list of seasons
 
 middle_years = [str(x) for x in range(2010,2020)]
 
-spring_terms = [str(x) + "01" for x in middle_years]
-summer_terms = [str(x) + "02" for x in middle_years]
-winter_terms = [str(x) + "03" for x in middle_years]
+spring_seasons = [str(x) + "01" for x in middle_years]
+summer_seasons = [str(x) + "02" for x in middle_years]
+winter_seasons = [str(x) + "03" for x in middle_years]
 
-terms = ["200903"] + spring_terms + summer_terms + winter_terms + ["202001"]
+seasons = ["200903"] + spring_seasons + summer_seasons + winter_seasons + ["202001"]
 
-# get lists of classes per term
-for term in terms:
+# get lists of classes per season
+for season in seasons:
 
     # evaluations included
-    print("Fetching previous JSON for term {} (with evals)".format(term))
-    previous_json = fetch_previous_json(term, evals=True)
-    with open("./api_output/previous_json/evals_"+term+".json", "w") as f:
+    print("Fetching previous JSON for season {} (with evals)".format(season))
+    previous_json = fetch_previous_json(season, evals=True)
+    with open("./api_output/previous_json/evals_"+season+".json", "w") as f:
         f.write(json.dumps(previous_json, indent=4))
 
     # evaluations excluded
-    print("Fetching previous JSON for term {} (without evals)".format(term))
-    previous_json = fetch_previous_json(term, evals=False)
-    with open("./api_output/previous_json/"+term+".json", "w") as f:
+    print("Fetching previous JSON for season {} (without evals)".format(season))
+    previous_json = fetch_previous_json(season, evals=False)
+    with open("./api_output/previous_json/"+season+".json", "w") as f:
         f.write(json.dumps(previous_json, indent=4))

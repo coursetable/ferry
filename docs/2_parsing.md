@@ -67,11 +67,12 @@ One entry per class. If a class is listed with multiple course codes, it will on
 | `extra_info`                | String          | Additional information (indicates if class has been canceled) |
 | `flags`                     | List of strings | Detailed course areas, currently seems to be a bit broken    |
 | `location_times`            | Nested          | Key-value pairs consisting of `<location>:<list of times>`   |
-| `locations_summary`         | String          | If single location, is `<location>`; otherwise is `<location> + <n_other_locations>` |
+| `locations_summary`         | String          | If single location, is `<location>`; otherwise is `<location> + <n_other_locations>` where the first location is the one with the greatest number of days |
 | `num_students`              | Integer         | Student cap                                                  |
 | `num_students_is_same_prof` | Boolean         | Whether or not a different professor taught the class when it was this size |
 | `requirements`              | String          | Recommended requirements/prerequisites for the course        |
 | `section`                   | String          | Which section the course is (each section has its own field, as returned in the original API output) |
+| `sessions`                  | Nested          | List of dictionaries, each of which specifies meeting at a specific location for a specific time period `'days':[list_of_days]`,`'start_time':<start_time>`, `'end_time':<end_time>`, `'location':<location>` |
 | `short_title`               | String          | Shortened course title                                       |
 | `skills`                    | List            | Skills that the course fulfills (e.g. writing, quantitative reasoning, language levels) |
 | `syllabus_url`              | String          | Link to the syllabus                                         |

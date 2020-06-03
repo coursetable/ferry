@@ -12,7 +12,7 @@ from datetime import datetime
 import calendar
 
 
-def fetch_terms():
+def fetch_seasons():
     """
     Get list of seasons
 
@@ -26,27 +26,27 @@ def fetch_terms():
     # Successful response
     if r.status_code == 200:
 
-        terms = re.findall('option value="(\d{6})"', r.text)
+        seasons = re.findall('option value="(\d{6})"', r.text)
 
-        # exclude '999999' catch-all 'Past Terms' term option
+        # exclude '999999' catch-all 'Past seasons' season option
 
-        terms = [x for x in terms if x != '999999']
+        seasons = [x for x in seasons if x != '999999']
 
-        return terms
+        return seasons
 
     # Unsuccessful
     else:
         raise Exception('Unsuccessful response: code {}'.format(r.status))
 
 
-def fetch_term_courses(term):
+def fetch_season_courses(season):
     """
-    Get preliminary course info for a given term
+    Get preliminary course info for a given season
 
     Parameters
     ----------
-    term: string
-        The term to to get courses for. In the form of
+    season: string
+        The season to to get courses for. In the form of
         YYYYSS(e.g. 201301 for spring, 201302 for summer,
         201303 for fall)
 
@@ -57,7 +57,7 @@ def fetch_term_courses(term):
 
     url = "https://courses.yale.edu/api/?page=fose&route=search"
 
-    payload = {'other': {'srcdb': term}, 'criteria': []}
+    payload = {'other': {'srcdb': season}, 'criteria': []}
 
     r = requests.post(url, data=json.dumps(payload))
 
@@ -80,15 +80,15 @@ def fetch_term_courses(term):
         raise Exception('Unsuccessful response: code {}'.format(r.status))
 
 
-def fetch_previous_json(term, evals=False):
+def fetch_previous_json(season, evals=False):
     """
-    Get existing JSON files for a term from the CourseTable website
-    (at https://coursetable.com/gen/json/data_with_evals_<TERM_CODE>.json)
+    Get existing JSON files for a season from the CourseTable website
+    (at https://coursetable.com/gen/json/data_with_evals_<season_CODE>.json)
 
     Parameters
     ----------
-    term: string
-        The term to to get courses for. In the form of
+    season: string
+        The season to to get courses for. In the form of
         YYYYSS(e.g. 201301 for spring, 201302 for summer,
         201303 for fall)
 
@@ -99,10 +99,10 @@ def fetch_previous_json(term, evals=False):
 
     if evals:
         url = "https://coursetable.com/gen/json/data_with_evals_{}.json".format(
-            term)
+            season)
     elif not evals:
         url = "https://coursetable.com/gen/json/data_{}.json".format(
-            term)
+            season)
 
     r = requests.get(url)
 
@@ -129,7 +129,7 @@ def fetch_course_json(code, crn, srcdb):
     crn: string
         the course registration number
     srcdb: string
-        term the course is in
+        season the course is in
 
     Returns
     -------
@@ -315,9 +315,12 @@ def course_times_from_fields(meeting_html, all_sections_remove_children):
     Parameters
     ----------
     meeting_html: string
-        HTML of course meeting times
+        HTML of course meeting times, specified by
+        the 'meeting_html' key in the Yale API response
     all_sections_remove_children
-        Same parameter as provided in JSON
+        HTML of course sections, specified by the
+        'all_sections_remove_children' key in the
+        Yale API response
 
     Returns
     -------
@@ -327,6 +330,9 @@ def course_times_from_fields(meeting_html, all_sections_remove_children):
 
     soup = BeautifulSoup(meeting_html, features="lxml")
     meetings = soup.find_all("div")
+
+    # if the course time is not specified,
+    # use this as a filler
     found_htba = False
     htba_course_time = {
         "days": ["HTBA"],
@@ -338,11 +344,16 @@ def course_times_from_fields(meeting_html, all_sections_remove_children):
     matched_meetings = []
 
     for meeting in meetings:
+
+        # get the raw text from the meeting HTML
         meeting_text = "".join(meeting.find_all(text=True))
 
+        # if the meeting is empty, ignore it
         if len(meeting_text) == 0:
             pass
 
+        # if the meeting time is specified as
+        # "Hours to be announced", use this
         if "HTBA" in meeting_text:
 
             matched_meetings.append(htba_course_time)
@@ -350,16 +361,25 @@ def course_times_from_fields(meeting_html, all_sections_remove_children):
             found_htba = True
 
         else:
+
+            # meetings are represented in
+            # "<day_of_week> <start_time>-<end_time> in <location>"
             meeting_parts = meeting_text.split(" ")
 
+            # format the days
             days = days_of_week_from_letters(meeting_parts[0])
 
+            # split the times portion to start and end
             times = meeting_parts[1].split("-")
-            start = time_of_day_float_from_string(times[0])
-            end = time_of_day_float_from_string(times[1])
+            # start = time_of_day_float_from_string(times[0])
+            # end = time_of_day_float_from_string(times[1])
+            start = times[0]
+            end = times[1]
 
+            # see if the location is specified
             location_matches = re.findall(' in ([^<]*)', meeting_text)
 
+            # specify the location if it exists
             if len(location_matches) > 0:
                 location = location_matches[0]
             else:
@@ -372,6 +392,9 @@ def course_times_from_fields(meeting_html, all_sections_remove_children):
                 "location": location
             })
 
+    # if no times or HTBA are available for the course, but
+    # the sections contain an HTBA, specify it for all meetings
+    # as a filler
     if not found_htba and len(matched_meetings) == 0 and "HTBA" in all_sections_remove_children:
         matched_meetings.append(htba_course_time)
 
@@ -427,58 +450,6 @@ def found_items(text, mapping):
     return items
 
 
-def exam_from_field(final_exam):
-    """
-    Pull final exam date/time information from
-    provided string
-
-    Parameters
-    ----------
-    final_exam: string
-        Final exam information 
-
-    Returns
-    -------
-    exam_info: dict
-        Date, day of week, and time of final exam
-    """
-
-    no_final = "No regular final examination" in final_exam
-
-    if len(final_exam) == 0 or no_final:
-        return {
-            'group': 0,
-            'date': '1000-01-01',
-            'day_of_week': '',
-            'time': 0.0
-        }
-
-    if "HTBA" in final_exam:
-        return {
-            'group': 1,
-            'date': '1000-01-01',
-            'day_of_week': '',
-            'time': 0.0
-        }
-
-    split_date_time = final_exam.split(" at ")
-
-    date = dateutil.parser.parse(split_date_time[0])
-
-    # encode date as UNIX time
-    date_unix = int(time.mktime(date.timetuple()))
-    date_unix = datetime.fromtimestamp(date_unix)
-
-    # encode exam time as <hours>.<minutes> format
-    time_float = time_of_day_float_from_string(split_date_time[1])
-
-    return {
-        'group': 2,
-        'date': date_unix.strftime('%Y-%m-%d'),
-        'day_of_week': calendar.day_name[date_unix.weekday()],
-        'time': time_float
-    }
-
 # def time_from_float(f, force_minutes = True);
 
 #     time = string(float)
@@ -503,7 +474,7 @@ def exam_from_field(final_exam):
 #     if len(location_times) == 1:
 #         reset($locationTimes);
 #         $summaryString .= key($locationTimes);
-    
+
 
 #     if (count($locationTimes) > 1) {
 #         $extraLocationTimes = count($locationTimes) - 1;
@@ -541,7 +512,7 @@ def exam_from_field(final_exam):
 
 #     return res
 
-def extract_course_info(course_json):
+def extract_course_info(course_json, season):
     """
     Parse the JSON response from the Yale courses API
     into a more useful format
@@ -550,6 +521,10 @@ def extract_course_info(course_json):
     ----------
     course_json: dict
         JSON response from courses API
+    season: string
+        The season that the courses belong to
+        (required because not returned by the
+        Yale API)
 
     Returns
     -------
@@ -558,6 +533,8 @@ def extract_course_info(course_json):
     """
 
     course_info = {}
+
+    course_info["season"] = season
 
     raw_description = BeautifulSoup(
         course_json["description"], features="lxml")
@@ -612,7 +589,8 @@ def extract_course_info(course_json):
 
     if len(course_info["course_codes"]['listings']) > 0:
 
-        num = course_info['course_codes']['listings'][0]['number'].replace("S","")
+        num = course_info['course_codes']['listings'][0]['number'].replace(
+            "S", "")
         course_info["number"] = num
 
     if len(course_info["course_codes"]['listings']) > 0:
@@ -626,9 +604,9 @@ def extract_course_info(course_json):
     course_info['section'] = course_info['course_codes']['section'].lstrip("0")
 
     course_info["codes"] = {
-        "subject":course_info["subject"],
-        "number":course_info["number"],
-        "section":course_info["section"],
+        "subject": course_info["subject"],
+        "number": course_info["number"],
+        "section": course_info["section"],
     }
 
     # Meeting times
@@ -644,10 +622,12 @@ def extract_course_info(course_json):
                                        areas_map)
 
     # Additional attributes
-    course_info["extra_flags"] = []
+    # course_info["extra_flags"] = []
 
-    if len(course_json["ci_attrs"]) > 0:
-        course_info["extra_flags"].append(course_json["ci_attrs"])
+    # if len(course_json["ci_attrs"]) > 0:
+    # course_info["extra_flags"].append(course_json["ci_attrs"])
+
+    course_info["flags"] = course_info.get("ci_attrs", [])
 
     # Course homepage
     matched_homepage = re.findall(
