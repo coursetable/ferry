@@ -6,6 +6,7 @@ import re
 import sys
 from tqdm import tqdm
 from includes.class_processing import fetch_terms
+from includes.cas import create_session_from_cookie
 from includes.rating_processing import *
 
 from os import listdir
@@ -19,12 +20,13 @@ Online Course Evaluation (OCE), in JSON format.
 """
 
 # Input NetID and password to login to Yale CAS
-netid = input("Yale NetID: ")
-password = getpass.getpass()
-session = requests.Session()
+# netid = input("Yale NetID: ")
+# password = getpass.getpass()
 
 # Login
-r = session.post("https://secure.its.yale.edu/cas/login?username="+netid+"&password="+password)
+with open('./private/cascookie.txt', 'r') as cookiefile:
+    castgc = cookiefile.read()
+session = create_session_from_cookie(castgc)
 print("Cookies: ", session.cookies.get_dict())
 
 # get the list of all course JSON files as previously fetched
