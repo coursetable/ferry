@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 QuestionId = str
 
-class TermMissingEvalsError(Exception):
+class SeasonMissingEvalsError(Exception):
     pass
 
 class CourseMissingEvalsError(Exception):
@@ -46,7 +46,7 @@ def fetch_questions(session: requests.Session, crn: str, term_code: str) -> Dict
 
     page_index = session.get(url_index, params=class_info)
     if page_index.status_code != 200: # Evaluation data for this term not available
-        raise TermMissingEvalsError(f"Evaluations for term {term_code} are unavailable")
+        raise SeasonMissingEvalsError(f"Evaluations for term {term_code} are unavailable")
 
     page_show = session.get(url_show)
     if page_show.status_code != 200: # Evaluation data for this course not available
@@ -145,10 +145,9 @@ def fetch_comments(session: requests.Session, offset: int, _max: int) -> Tuple[Q
     question_html = soup.find(id = "cList")
 
     # Question text.
-    question = question_html.select_one('div > p:nth-of-type(2)').get_text(strip=True)
+    question = question_html.select_one('div > p:nth-of-type(2)').contents[0].strip()
     if question == None or question == "":
         raise CourseMissingEvalsError('no more evals available')
-    question = question[0:question.find("\n")]
 
     # Question ID.
     info_area = question_html.select_one('div > p:nth-of-type(3)')

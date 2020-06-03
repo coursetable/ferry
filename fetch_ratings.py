@@ -6,7 +6,7 @@ import re
 import sys
 from tqdm import tqdm
 from includes.class_processing import fetch_seasons
-from includes.cas import create_session_from_cookie
+from includes.cas import create_session_from_cookie, create_session_from_credentials
 from includes.rating_processing import *
 
 from os import listdir
@@ -34,7 +34,7 @@ session = create_session_from_credentials(netid, password)
 print("Cookies: ", session.cookies.get_dict())
 
 # get the list of all course JSON files as previously fetched
-season_jsons_path = "./api_output/season_courses/"
+season_jsons_path = "./api_output/courses/"
 
 seasons = fetch_seasons()
 
@@ -45,9 +45,8 @@ for season_code in seasons:
     with open(season_jsons_path + season_code + ".json", "r") as f:
         season_json = json.load(f)
 
-    for season_course in season_json: # Loop through each course in the season
-        course_unique_id = season_course["code"] + "-" + \
-            season_course["crn"] + "-" + season_course["srcdb"]
+    for course in season_json: # Loop through each course in the season
+        course_unique_id = f"{season_code}-{course['crn']}"
         output_path = "./api_output/course_evals/{}.json".format(course_unique_id)
         """
         if isfile(output_path):
@@ -56,13 +55,13 @@ for season_code in seasons:
         """
 
         try:
-            course_eval = fetch_course_eval(session,term_course['crn'],seasoncode)
+            course_eval = fetch_course_eval(session, course['crn'], season_code)
 
             with open(output_path, "w") as f:
                 f.write(json.dumps(course_eval, indent=4))
 
-            print("Evaluations for course:",course_unique_id,"dumped in JSON")
-        except seasonMissingEvalsError:
+            print(f"Evaluations for course: {course_unique_id} ({course['code']}) dumped in JSON")
+        except SeasonMissingEvalsError:
             print(f"Skipping season {season_code} - missing evals")
             break
         except CourseMissingEvalsError:
