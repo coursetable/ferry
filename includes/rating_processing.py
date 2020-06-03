@@ -136,28 +136,76 @@ def fetch_comments(session: requests.Session, offset: int, _max: int) -> Tuple[Q
 
     page_comments = session.get(url_comments, params = comment_info)
 
-    if page_comments.status_code != 200: # Question doesn't exist
+    if page_comments.status_code != 200:
+        # Question doesn't exist
         raise CourseMissingEvalsError('no more evals available')
 
     soup = BeautifulSoup(page_comments.content, 'lxml')
 
     question_html = soup.find(id = "cList")
 
+    # Question text.
+    question = question_html.select_one('div > p:nth-of-type(2)').get_text(strip=True)
+    if question == None or question == "":
+        raise CourseMissingEvalsError('no more evals available')
+    question = question[0:question.find("\n")]
+
+    # Question ID.
     info_area = question_html.select_one('div > p:nth-of-type(3)')
     questionId = info_area.contents[1].strip()
 
-    question = question_html.select_one('div > p:nth-of-type(2)').get_text(strip=True)
-    question = question[0:question.find("\n")]
-    if question == None or question == "": # Question doesn't exist
-        raise CourseMissingEvalsError('no more evals available')
-
+    # Responses.
     responses_text = [] # List of responses
     responses = soup.find_all(id = "answer")
     for answer_area in responses:
         answer = answer_area.find(id="text").get_text(strip=True)
         responses_text.append(answer)
 
-    return questionId, question, responses_text # Return question and responses
+    return questionId, question, responses_text
+
+def fetch_course_enrollment(session: requests.Session, crn: str, term_code: str) -> Dict[str, int]:
+    """
+    Get enrollment statistics for this course
+
+    Parameters
+    ----------
+    session: Requests session
+        The current session with login cookie
+
+    crn: string
+        The crn code of the course
+
+    term_code: string
+        The term code that the course belongs to
+
+    Returns
+    -------
+    stats: a dictionary with statistics
+    """
+    # Main website with number of questions
+    url_index = "https://oce.app.yale.edu/oce-viewer/studentSummary/index" 
+
+    class_info = {
+        "crn": crn,
+        "term_code": term_code,
+    }
+    page_index = session.get(url_index, params=class_info)
+    if page_index.status_code != 200: # Evaluation data for this term not available
+        raise CourseMissingEvalsError("missing enrollment data")
+    
+    soup = BeautifulSoup(page_index.content, 'lxml')
+
+    stats = {}
+    stats_area = soup.find(id='status')
+    for item in stats_area.find_all('li'):
+        stat = item.p
+        if not stat.get_text(strip=True):
+            continue
+        name = stat.contents[0].strip()[:-1].lower()
+        value = int(stat.contents[1].get_text())
+        stats[name] = value
+
+    return stats
 
 def fetch_course_eval(session, crn_code,term_code):
 
@@ -183,6 +231,9 @@ def fetch_course_eval(session, crn_code,term_code):
 
     print("TERM:",term_code,"CRN CODE:",crn_code)
 
+    # Enrollment data.
+    enrollment = fetch_course_enrollment(session, crn_code, term_code)
+
     # Numeric evaluations data.
     ratings = []
     questions = fetch_questions(session, crn_code, term_code)
@@ -198,7 +249,7 @@ def fetch_course_eval(session, crn_code,term_code):
     # Narrative evaluations data.
     narratives = []
     offset = 0 # Start with first question
-    while (True):
+    while True:
         try:
             # Get questions with their respective responses
             questionId, question, comments = fetch_comments(session, offset, 1)
@@ -216,10 +267,10 @@ def fetch_course_eval(session, crn_code,term_code):
                 # No more questions are available -- normal situation.
                 break
 
-    # TODO: enrollment data
     course_eval = {}
     course_eval["crn_code"] = crn_code
     course_eval["term_code"] = term_code
+    course_eval["enrollment"] = enrollment
     course_eval["ratings"] = ratings
     course_eval["narratives"] = narratives
 
