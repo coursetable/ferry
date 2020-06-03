@@ -308,6 +308,26 @@ def time_of_day_float_from_string(time_string):
     return time
 
 
+def extract_flags(ci_attrs):
+    """
+    Get the course flags from the ci_attrs field
+
+    Parameters
+    ----------
+    ci_attrs: string
+        the field from the Yale API response
+
+    Returns
+    -------
+    flag_texts: list of strings
+        flags (keywords) for the course
+    """
+
+    soup = BeautifulSoup(ci_attrs, features="lxml")
+    flag_texts = [x.get_text() for x in soup.find_all("a")]
+
+    return flag_texts
+
 def course_times_from_fields(meeting_html, all_sections_remove_children):
     """
     Get the course meeting times from provided HTML
@@ -628,7 +648,7 @@ def extract_course_info(course_json, season):
     # if len(course_json["ci_attrs"]) > 0:
     # course_info["extra_flags"].append(course_json["ci_attrs"])
 
-    course_info["flags"] = course_info.get("ci_attrs", [])
+    course_info["flags"] = extract_flags(course_json["ci_attrs"])
 
     # Course homepage
     matched_homepage = re.findall(
