@@ -419,6 +419,15 @@ areas_map = {
     '>Sciences': 'Sc',
 }
 
+# abbreviations for course statuses
+stat_map = {
+    "A":"ACTIVE",
+    "B":"MOVED_TO_SPRING_TERM",
+    "C":"CANCELLED",
+    "D":"MOVED_TO_FALL_TERM",
+    "E":"CLOSED",
+    "N":"NUMBER_CHANGED"
+}
 
 def found_items(text, mapping):
     """
@@ -563,15 +572,7 @@ def extract_course_info(course_json, season):
     course_info["long_title"] = course_json["title"]
 
     # Course status
-    if course_json["stat"] == "CANCELLED":
-        course_info["extra_info"] = "CANCELLED"
-    else:
-        course_info["extra_info"] = ""
-
-    if course_info["extra_info"] == "C":
-        course_info["title"] = "CANCELLED"
-    elif course_info["extra_info"] == "F":
-        course_info["title"] = "FULL:" + course_info["title"]
+    course_info["extra_info"] = stat_map.get(course_json["stat"],"")
 
     # Instructors
     course_info["professors"] = professors_from_html(

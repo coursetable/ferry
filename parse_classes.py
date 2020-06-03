@@ -32,18 +32,18 @@ if seasons is None:
     with open("./api_output/seasons.json", "r") as f:
         seasons = json.load(f)
 
-# load list of classes per term
+# load list of classes per season
 for season in seasons:
 
-    print("Parsing courses for term {}".format(term))
+    print("Parsing courses for season {}".format(season))
 
-    # load raw responses for term
-    with open("./api_output/course_json_cache/{}.json".format(term), "r") as f:
+    # load raw responses for season
+    with open("./api_output/course_json_cache/{}.json".format(season), "r") as f:
         aggregate_term_json = json.load(f)
 
-    # parse course JSON in term
+    # parse course JSON in season
     parsed_course_info = [extract_course_info(x, season) for x in aggregate_term_json]
 
     # write output
-    with open("./api_output/parsed_courses/{}.json".format(term), "w") as f:
+    with open("./api_output/parsed_courses/{}.json".format(season), "w") as f:
         f.write(json.dumps(parsed_course_info, indent=4))
