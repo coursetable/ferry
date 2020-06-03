@@ -6,7 +6,7 @@ import re
 import sys
 from tqdm import tqdm
 from includes.class_processing import fetch_terms
-from includes.cas import create_session_from_cookie
+from includes.cas import create_session_from_cookie, create_session_from_credentials
 from includes.rating_processing import *
 
 from os import listdir
@@ -22,11 +22,15 @@ Online Course Evaluation (OCE), in JSON format.
 # Input NetID and password to login to Yale CAS
 # netid = input("Yale NetID: ")
 # password = getpass.getpass()
+netid = 'hks24'
+with open('./private/netid.txt', 'r') as passwordfile:
+    password = passwordfile.read().strip()
+session = create_session_from_credentials(netid, password)
 
 # Login
-with open('./private/cascookie.txt', 'r') as cookiefile:
-    castgc = cookiefile.read()
-session = create_session_from_cookie(castgc)
+# with open('./private/cascookie.txt', 'r') as cookiefile:
+#     castgc = cookiefile.read().strip()
+# session = create_session_from_cookie(castgc)
 print("Cookies: ", session.cookies.get_dict())
 
 # get the list of all course JSON files as previously fetched
@@ -52,11 +56,8 @@ for term_code in terms:
         """
 
         try:
-            course_eval , term_has_eval = fetch_course_eval(session,term_course['crn'],term_code)
+            course_eval = fetch_course_eval(session,term_course['crn'],term_code)
 
-            if (term_has_eval == -1):
-                raise TermMissingEvalsError
-            
             with open(output_path, "w") as f:
                 f.write(json.dumps(course_eval, indent=4))
 
