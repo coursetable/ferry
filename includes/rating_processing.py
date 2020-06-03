@@ -268,7 +268,7 @@ def fetch_course_eval(session, crn_code,term_code):
 
     course_eval = {}
     course_eval["crn_code"] = crn_code
-    course_eval["term_code"] = term_code
+    course_eval["season"] = term_code
     course_eval["enrollment"] = enrollment
     course_eval["ratings"] = ratings
     course_eval["narratives"] = narratives
