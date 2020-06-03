@@ -36,11 +36,12 @@ terms = fetch_terms()
 
 # load and parse term JSONs
 for term_code in terms:
+    if term_code == '202001' or term_code == '202002':
+        continue
     with open(term_jsons_path + term_code + ".json", "r") as f:
         term_json = json.load(f)
 
     for term_course in term_json: # Loop through each course in the term
-        
         course_unique_id = term_course["code"] + "-" + \
             term_course["crn"] + "-" + term_course["srcdb"]
         output_path = "./api_output/course_evals/{}.json".format(course_unique_id)
@@ -49,12 +50,19 @@ for term_code in terms:
             print("Evaluations for course:",course_unique_id,"already exists")
             continue
         """
-        course_eval , term_has_eval = fetch_course_eval(session,term_course['crn'],term_code)
 
-        if (term_has_eval == -1):
+        try:
+            course_eval , term_has_eval = fetch_course_eval(session,term_course['crn'],term_code)
+
+            if (term_has_eval == -1):
+                raise TermMissingEvalsError
+            
+            with open(output_path, "w") as f:
+                f.write(json.dumps(course_eval, indent=4))
+
+            print("Evaluations for course:",course_unique_id,"dumped in JSON")
+        except TermMissingEvalsError:
+            print(f"Skipping term {term_code} - missing evals")
             break
-        
-        with open(output_path, "w") as f:
-            f.write(json.dumps(course_eval, indent=4))
-
-        print("Evaluations for course:",course_unique_id,"dumped in JSON")
+        except CourseMissingEvalsError:
+            print(f"Skipping course {course_unique_id} - missing evals")

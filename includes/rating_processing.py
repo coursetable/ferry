@@ -1,3 +1,4 @@
+from typing import Dict
 import requests
 import json
 import time
@@ -5,7 +6,15 @@ import lxml
 
 from bs4 import BeautifulSoup
 
-def fetch_questions(session, crn, term_code):
+QuestionId = str
+
+class TermMissingEvalsError(Exception):
+    pass
+
+class CourseMissingEvalsError(Exception):
+    pass
+
+def fetch_questions(session: requests.Session, crn: str, term_code: str) -> Dict[QuestionId, str]:
     """
     Get list of question Ids for a certain course from OCE
 
@@ -22,7 +31,7 @@ def fetch_questions(session, crn, term_code):
 
     Returns
     -------
-    questionText, questionIds: List of strings of question text and List of strings of question Ids respectively
+    questions: Mapping from question IDs to question text
     """
     # Main website with number of questions
     url_index = "https://oce.app.yale.edu/oce-viewer/studentSummary/index" 
@@ -32,39 +41,33 @@ def fetch_questions(session, crn, term_code):
 
     class_info = {
         "crn": crn,
-        "term_code": term_code
+        "term_code": term_code,
     }
 
-    page_index = session.get(url_index,params = class_info)
+    page_index = session.get(url_index, params=class_info)
     if page_index.status_code != 200: # Evaluation data for this term not available
-        print("Evaluations for term:",term_code,"is unavailable")
-        return 0,-2
+        raise TermMissingEvalsError(f"Evaluations for term {term_code} are unavailable")
 
     page_show = session.get(url_show)
     if page_show.status_code != 200: # Evaluation data for this course not available
-        #print("Evaluations for course:",crn,"in term:",term_code,"is unavailable")
-        return 0,-1
+        raise CourseMissingEvalsError(f"Evaluations for course crn={crn} in term={term_code} are unavailable")
     
-    data_show = json.loads(page_show.text)
+    data_show = page_show.json()
     questionList = data_show['questionList']
-    
 
-    # List of question IDs
-    questionIds = []
-    # List of question text
-    questionText = []
+    questions = {}
     for question in questionList:
-        questionIds.append(question['questionId'])
-        questionText.append(question['text'])
-        questionText[-1] = questionText[-1][0:questionText[-1].find("<br/>")]
+        questionId = question['questionId']
+        text = question['text']
+        # Strip out "<br/> \r\n<br/><i>(Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)</i>"
+        text = text[0:text.find("<br/>")]
 
-    numQuestions = len(questionIds)
+        questions[questionId] = text
 
-    if numQuestions == 0: # Evaluation data for this course not available
-        #print("Evaluations for course:",crn,"in term:",term_code,"is unavailable")
-        return 0,-1
+    if len(questions) == 0: # Evaluation data for this course not available
+        raise CourseMissingEvalsError(f"Evaluations for course crn={crn} in term={term_code} are unavailable")
     
-    return questionText, questionIds
+    return questions
 
 def fetch_eval_data(session, questionIds):
     """
@@ -200,14 +203,10 @@ def fetch_course_eval(session, crn_code,term_code):
 
     print("TERM:",term_code,"CRN CODE:",crn_code) # Print data to console for debugging
 
-    questionText, questionIds = fetch_questions(session, crn_code,term_code) # Get questions
-    if (questionIds == -2): # No evals for this term
-        return course_eval,-1
-    elif (questionIds == -1): # No evals for this course
-        return course_eval,1
+    questions = fetch_questions(session, crn_code,term_code) # Get questions
 
-    course_eval["Evaluation_Questions"] = questionText
-    course_eval["Evaluation_Data"] = fetch_eval_data(session, questionIds) # Get evaluation graph data
+    course_eval["Evaluation_Questions"] = list(questions.values())
+    course_eval["Evaluation_Data"] = fetch_eval_data(session, list(questions.keys())) # Get evaluation graph data
 
     offset = 0 # Start with first question
     comments_questions = []
@@ -223,4 +222,3 @@ def fetch_course_eval(session, crn_code,term_code):
     course_eval["Comments_Questions"] = comments_questions
     course_eval["Comments_List"] = comments_list
     return course_eval,1 # Return all eval data in dictionary
-        
