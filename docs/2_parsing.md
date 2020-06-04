@@ -74,28 +74,29 @@ Mappings:
 
 One entry per class. If a class is listed with multiple course codes, it will only get one entry in this database.
 
-| Field                       | Type            | Description                                                  |
-| --------------------------- | --------------- | ------------------------------------------------------------ |
-| `course_id`                 | Primary key     | Course id                                                    |
-| `season_code`               | Foreign key     | The season that the course is being taught in, mapping to `seasons` |
-| `areas`                     | List            | Course areas (humanities, social sciences, sciences)         |
-| `course_home_url`           | String          | Link to the course homepage                                  |
-| `description`               | String          | Course description                                           |
-| `extra_info`                | String          | Additional information (indicates if class has been canceled) |
-| `flags`                     | List of strings | Detailed course areas, currently seems to be a bit broken    |
-| `location_times`            | Nested          | Key-value pairs consisting of `<location>:<list of times>`   |
-| `locations_summary`         | String          | If single location, is `<location>`; otherwise is `<location> + <n_other_locations>` where the first location is the one with the greatest number of days |
-| `num_students`              | Integer         | Student enrollment (retrieved from evaluations, not part of the Courses API) |
-| `num_students_is_same_prof` | Boolean         | Whether or not a different professor taught the class when it was this size |
-| `requirements`              | String          | Recommended requirements/prerequisites for the course        |
-| `section`                   | String          | Which section the course is (each section has its own field, as returned in the original API output) |
-| `sessions`                  | Nested          | List of dictionaries, each of which specifies meeting at a specific location for a specific time period `'days':[list_of_days]`,`'start_time':<start_time>`, `'end_time':<end_time>`, `'location':<location>` |
-| `short_title`               | String          | Shortened course title (first 29 characters + "...") if the length exceeds 32, otherwise just the title itself |
-| `skills`                    | List            | Skills that the course fulfills (e.g. writing, quantitative reasoning, language levels) |
-| `syllabus_url`              | String          | Link to the syllabus                                         |
-| `title`                     | String          | Complete course title                                        |
-| `average_overall_rating`    | Float           | [computed] Average overall course rating (from this course's evaluations, aggregated across cross-listings) |
-| `average_workload`          | Float           | [computed] Average workload rating ((from this course's evaluations, aggregated across cross-listings) |
+| Field                       | Type        | Description                                                  |
+| --------------------------- | ----------- | ------------------------------------------------------------ |
+| `course_id`                 | Primary key | Course id                                                    |
+| `season_code`               | Foreign key | The season that the course is being taught in, mapping to `seasons` |
+| `areas`                     | List        | Course areas (humanities, social sciences, sciences)         |
+| `course_home_url`           | String      | Link to the course homepage                                  |
+| `description`               | String      | Course description                                           |
+| `extra_info`                | String      | Additional information (indicates if class has been canceled) |
+| `location_times`            | Nested      | Key-value pairs consisting of `<location>:<list of times>`   |
+| `locations_summary`         | String      | If single location, is `<location>`; otherwise is `<location> + <n_other_locations>` where the first location is the one with the greatest number of days. Displayed in the "Locations" column in CourseTable. |
+| `num_students`              | Integer     | Student enrollment (retrieved from evaluations, not part of the Courses API) |
+| `num_students_is_same_prof` | Boolean     | Whether or not a different professor taught the class when it was this size |
+| `requirements`              | String      | Recommended requirements/prerequisites for the course        |
+| `section`                   | String      | Which section the course is (each section has its own field, as returned in the original API output) |
+| `times_long_summary`        | String      | Course times and locations, displayed in the "Meets" row in CourseTable course modals |
+| `times_summary`             | String      | Course times, displayed in the "Times" column in CourseTable |
+| `times_by_day`              | Nested      | Course meeting times by day, with days as keys and tuples of `(start_time, end_time, location)` |
+| `short_title`               | String      | Shortened course title (first 29 characters + "...") if the length exceeds 32, otherwise just the title itself |
+| `skills`                    | List        | Skills that the course fulfills (e.g. writing, quantitative reasoning, language levels) |
+| `syllabus_url`              | String      | Link to the syllabus                                         |
+| `title`                     | String      | Complete course title                                        |
+| `average_overall_rating`    | Float       | [computed] Average overall course rating (from this course's evaluations, aggregated across cross-listings) |
+| `average_workload`          | Float       | [computed] Average workload rating ((from this course's evaluations, aggregated across cross-listings) |
 
 ### Listings: `listings`
 
