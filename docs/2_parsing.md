@@ -84,14 +84,14 @@ One entry per class. If a class is listed with multiple course codes, it will on
 
 Each course code (e.g. "AMST 312") and season will get one entry in this database.
 
-| Field         | Type        | Description                                      |
-| ------------- | ----------- | ------------------------------------------------ |
-| `listing_id`  | Identifier  | Listing ID                                       |
-| `course_id`   | Foreign Key | Course that the listing refers to                |
-| `subject`     | String      | Subject the course is listed under (e.g. "AMST") |
-| `number`      | String      | Course number in the given subject               |
-| `course_code` | String      | [computed] subject + number (e.g. "AMST 312")    |
-| `section `    | String      | Course section for the given subject and number  |
+| Field         | Type        | Description                                               |
+| ------------- | ----------- | --------------------------------------------------------- |
+| `listing_id`  | Identifier  | Listing ID                                                |
+| `course_id`   | Foreign Key | Course that the listing refers to                         |
+| `subject`     | String      | Subject the course is listed under (e.g. "AMST")          |
+| `number`      | String      | Course number in the given subject (e.g. "120" or "S120") |
+| `course_code` | String      | [computed] subject + number (e.g. "AMST 312")             |
+| `section `    | String      | Course section for the given subject and number           |
 
 ### Professors: `professors`
 
@@ -130,6 +130,8 @@ Each course code (e.g. "AMST 312") and season will get one entry in this databas
 
 ### Evaluations (narrative): `evaluation_narratives`
 
+Narrative evaluations data.
+
 | Field            | Type        | Description                                                  |
 | ---------------- | ----------- | ------------------------------------------------------------ |
 | `course_id`      | Foreign Key | Course the narrative comment applies to, mapping to `courses` |
@@ -138,6 +140,8 @@ Each course code (e.g. "AMST 312") and season will get one entry in this databas
 | `comment_length` | Integer     | [computed] Length of the response in characters              |
 
 ### Evaluations (ratings): `evaluation_ratings`
+
+Categorical evaluations data.
 
 | Field             | Type             | Description                                                  |
 | ----------------- | ---------------- | ------------------------------------------------------------ |
