@@ -1,4 +1,5 @@
 import requests
+import collections
 import getpass 
 import json
 import time
@@ -8,128 +9,109 @@ from tqdm import tqdm
 from includes.class_processing import fetch_seasons
 from includes.cas import create_session_from_cookie, create_session_from_credentials
 from includes.rating_processing import CourseMissingEvalsError
+from private import extract_db
 
 from os import listdir
 from os.path import isfile, join
 
 """
 ================================================================
-This script fetches evaluations data from coursetable.com and converts
-the JSON formatting into something compatible with the generic
-evaluations crawler in fetch_ratings.py.
+This script fetches evaluations data from the coursetable.com
+database and yields a JSON format similar to the one produced
+by the fetch_ratings.py script.
 ================================================================
 """
 
-def fetch_legacy_ratings(session: requests.Session, legacy_course_id: str, season: str, crn: str):
-    # We need the crn to associate the evaluation entry
-    # with the right crn, since a legacy_course_id can
-    # represent multiple instances of a cross-listing. This
-    # duplication will be reversed when we merge the ratings
-    # back into the system.
+def fetch_legacy_ratings(db, season: str, crn: str):
+    # Fetch Coursetable course_id.
+    with db.cursor() as cursor:
+        sql = "SELECT `course_id` FROM `evaluation_course_names` WHERE `season` = %s AND `crn` = %s LIMIT 1"
+        cursor.execute(sql, (season, crn))
+        course_id = cursor.fetchone()['course_id']
+
+    # Enrollment data.
+    with db.cursor() as cursor:
+        sql = "SELECT `enrollment` FROM `evaluation_courses` WHERE `id` =  %s LIMIT 1"
+        cursor.execute(sql, (course_id,))
+        enrollment = cursor.fetchone()['enrollment']
     
-    url = f"https://coursetable.com/GetEvaluations.php?evaluationIds[]={legacy_course_id}"
+    # Narrative comments.
+    with db.cursor() as cursor:
+        sql = "SELECT `question_id`, `comment` FROM `evaluation_comments` WHERE `course_id` = %s"
+        cursor.execute(sql, (course_id,))
+        data = cursor.fetchall()
 
-    response = session.get(url)
-    if response.status_code != 200:
-        raise CourseMissingEvalsError
+    narrative_comments = collections.defaultdict(lambda: [])
+    for item in data:
+        narrative_comments[item["question_id"]].append(item["comment"])
 
-    full_json = response.json()
-    if not full_json["success"]:
-        raise CourseMissingEvalsError
+    # Ratings.
+    with db.cursor() as cursor:
+        sql = "SELECT `question_id`, `counts` FROM `evaluation_ratings` WHERE `course_id` = %s"
+        cursor.execute(sql, (course_id,))
+        data = cursor.fetchall()
 
-    data = full_json["data"][legacy_course_id]
+    ratings_data = dict()
+    for item in data:
+        ratings_data[item["question_id"]] = json.loads(item["counts"])
+
+    # Question statements.
+    questions_ids = tuple(narrative_comments.keys()) + tuple(ratings_data.keys())
+    with db.cursor() as cursor:
+        where_clause = ','.join(['%s'] * len(questions_ids))
+        sql = f"SELECT `id`, `text`, `options` FROM `evaluation_questions` WHERE `id` IN ({where_clause})"
+        cursor.execute(sql, tuple(questions_ids))
+        data = cursor.fetchall()
+    
+    questions = dict()
+    for item in data:
+        questions[item['id']] = (item['text'], item['options'])
 
     return {
         "crn_code": crn,
         "season": season,
+        "legacy_coursetable_course_id": course_id,
         "enrollment": {
-            "enrolled": int(data["enrollment"]),
+            "enrolled": enrollment,
             "responses": None,
             "declined": None,
             "no response": None,
         },
         "ratings": [
             {
-                "question_id": "YC402",
-                "question_text": "Your level of engagement with the course was:",
-                "options": [ "very low", "low", "medium", "high", "very high" ],
-                "data": data["ratings"]["engagement"],
-            },
-            {
-                "question_id": "YC404",
-                "question_text": "What is your overall assessment of this course?",
-                "options": [ "poor", "fair", "good", "very good", "excellent" ],
-                "data": data["ratings"]["rating"],
-            },
-            {
-                "question_id": "YC405",
-                "question_text": "The course was well organized to facilitate student learning.",
-                "options": [ "strongly disagree", "disagree", "neutral", "agree", "strongly agree" ],
-                "data": data["ratings"]["organization"],
-            },
-            {
-                "question_id": "YC406",
-                "question_text": "I received clear feedback that improved my learning.",
-                "options": [ "strongly disagree", "disagree", "neutral", "agree", "strongly agree" ],
-                "data": data["ratings"]["feedback"],
-            },
-            {
-                "question_id": "YC407",
-                "question_text": "Relative to other courses you have taken at Yale, the level of <u>intellectual challenge</u> of this course was:",
-                "options": [ "much less", "less", "same", "greater", "much greater" ],
-                "data": data["ratings"]["challenge"],
-            },
-            {
-                "question_id": "YC408",
-                "question_text": "Relative to other courses you have taken at Yale, the <u>workload</u> of this course was:",
-                "options": [ "much less", "less", "same", "greater", "much greater" ],
-                "data": data["ratings"]["workload"],
-            },
+                "question_id": question_id,
+                "question_text": questions[question_id][0],
+                "options": json.loads(questions[question_id][1]),
+                "data": data,
+            }
+            for question_id, data in ratings_data.items()
         ],
         "narratives": [
             {
-                "question_id": "YC401",
-                "question_text": "What knowledge, skills, and insights did you develop by taking this course?",
-                "comments": data["comments"]["knowledge"],
-            },
-            {
-                "question_id": "YC403",
-                "question_text": "What are the strengths and weaknesses of this course and how could it be improved?",
-                "comments": data["comments"]["strengthsWeaknesses"],
-            },
-            {
-                "question_id": "YC409",
-                "question_text": "Would you recommend this course to another student? Please explain.",
-                "comments": data["comments"]["recommend"],
-            },
+                "question_id": question_id,
+                "question_text": questions[question_id][0],
+                "comments": comments,
+            }
+            for question_id, comments in narrative_comments.items()
         ],
-        # "raw": data,
     }
 
 
 if __name__ == '__main__':
-    # Input NetID and password to login to Yale CAS
-    # netid = input("Yale NetID: ")
-    # password = getpass.getpass()
-    netid = 'hks24'
-    with open('./private/netid.txt', 'r') as passwordfile:
-        password = passwordfile.read().strip()
-    session = create_session_from_credentials(netid, password)
+    db = extract_db.get_db('yale_advanced_oci')
 
-    # Login
-    # with open('./private/cascookie.txt', 'r') as cookiefile:
-    #     castgc = cookiefile.read().strip()
-    # session = create_session_from_cookie(castgc)
-    print("Cookies: ", session.cookies.get_dict())
-
-    # Test with ACCT 270 from 201903.
     prev = [
-        ["52358", "201903", "11970"],
+        # Test with ACCT 270 from 201903.
+        ("201903", "11970"),
+        # Test with ACCT 170 from 200903.
+        ("200903", "11256"),
+        # Test with ECON 466 01 from 201003. Compare with https://dougmckee.net/aging-evals-fall-2010.pdf.
+        ("201003", "12089"),
     ]
 
-    for legacy_course_id, season, crn in prev:
+    for season, crn in prev:
         output_path = f"./api_output/previous_evals/{season}-{crn}.json"
-        course_eval = fetch_legacy_ratings(session, legacy_course_id, season, crn)
+        course_eval = fetch_legacy_ratings(db, season, crn)
 
         with open(output_path, "w") as f:
             f.write(json.dumps(course_eval, indent=4))
