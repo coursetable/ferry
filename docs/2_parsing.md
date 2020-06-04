@@ -44,14 +44,31 @@ The main changes to implement are as follows:
 
 ## Schemas
 
+Notes:
+
+- All primary keys and foreign keys will be indexed. Additional indexes will be denoted in the type column.
+- Most items have a NOT NULL constraint attached to them.
+- Invariant: `listing.season_code == course.season_code if listing.course_id == course.course_id`. Note, this implies that `listingA.season_code == listingB.season_code if listingA.course_id == listingB.course_id`.
+- Invariant: every course should have at least one listing.
+- Invariant: `evaluation_questions.options is null if evaluation_questions.is_narrative = True`
+
+Mappings:
+
+- seasons -> courses = one to many
+- courses -> listings = one to many
+- courses <-> professors = many to many (junction table in courses_professors)
+- courses -> evaluation_narratives = one to many
+- courses -> evaluation_ratings = one to many
+- evaluation_questions -> evaluation_narratives = one to many
+- evaluation_questions -> evaluation_ratings = one to many
+
 ### Seasons: `seasons`
 
-| Field         | Type                                       | Description            |
-| ------------- | ------------------------------------------ | ---------------------- |
-| `season_id`   | Identifier                                 | Season id              |
-| `season_code` | String (e.g. "202001")                     | The season code        |
-| `season`      | String - one of `spring`, `summer`, `fall` | Season of the semester |
-| `year`        | Integer                                    | Year of the semester   |
+| Field         | Type                                       | Description                       |
+| ------------- | ------------------------------------------ | --------------------------------- |
+| `season_code` | Primary key - String                       | The season code (e.g. "202001")   |
+| `season`      | String - one of `spring`, `summer`, `fall` | [computed] Season of the semester |
+| `year`        | Integer                                    | [computed] Year of the semester   |
 
 ### Courses: `courses`
 
@@ -59,8 +76,8 @@ One entry per class. If a class is listed with multiple course codes, it will on
 
 | Field                       | Type            | Description                                                  |
 | --------------------------- | --------------- | ------------------------------------------------------------ |
-| `course_id`                 | Identifier      | Course id                                                    |
-| `season`                    | Foreign Key     | The season that the course is being taught in, mapping to `seasons` |
+| `course_id`                 | Primary key     | Course id                                                    |
+| `season_code`               | Foreign key     | The season that the course is being taught in, mapping to `seasons` |
 | `areas`                     | List            | Course areas (humanities, social sciences, sciences)         |
 | `course_home_url`           | String          | Link to the course homepage                                  |
 | `description`               | String          | Course description                                           |
@@ -84,22 +101,29 @@ One entry per class. If a class is listed with multiple course codes, it will on
 
 Each course code (e.g. "AMST 312") and season will get one entry in this database.
 
-| Field         | Type        | Description                                               |
-| ------------- | ----------- | --------------------------------------------------------- |
-| `listing_id`  | Identifier  | Listing ID                                                |
-| `course_id`   | Foreign Key | Course that the listing refers to                         |
-| `subject`     | String      | Subject the course is listed under (e.g. "AMST")          |
-| `number`      | String      | Course number in the given subject (e.g. "120" or "S120") |
-| `course_code` | String      | [computed] subject + number (e.g. "AMST 312")             |
-| `section `    | String      | Course section for the given subject and number           |
+| Field         | Type           | Description                                               |
+| ------------- | -------------- | --------------------------------------------------------- |
+| `listing_id`  | Primary key    | Listing ID                                                |
+| `course_id`   | Foreign key    | Course that the listing refers to                         |
+| `subject`     | String (index) | Subject the course is listed under (e.g. "AMST")          |
+| `number`      | String (index) | Course number in the given subject (e.g. "120" or "S120") |
+| `course_code` | String (index) | [computed] subject + number (e.g. "AMST 312")             |
+| `section `    | String (index) | Course section for the given subject and number           |
+| `season_code`               | Foreign key     | When the course/listing is being taught, mapping to `seasons` |
+| `crn`         | Int            | The CRN associated with this listing                      |
+
+Additional constraints:
+
+- unique: (season_code, subject, number, section)
+- unique: (season_code, crn)
 
 ### Professors: `professors`
 
-| Field            | Type       | Description                                                  |
-| ---------------- | ---------- | ------------------------------------------------------------ |
-| `professor_id`   | Identifier | Professor ID                                                 |
-| `average_rating` | Float      | [computed] Average rating of the professor assessed via the "Overall assessment" question in courses taught |
-| `name`           | String     | Name of the professor                                        |
+| Field            | Type           | Description                                                  |
+| ---------------- | -------------- | ------------------------------------------------------------ |
+| `professor_id`   | Primary key    | Professor ID                                                 |
+| `average_rating` | Float          | [computed] Average rating of the professor assessed via the "Overall assessment" question in courses taught |
+| `name`           | String (index) | Name of the professor                                        |
 
 ### Course-Professor Junction Table `courses_professors`
 
@@ -110,23 +134,22 @@ Each course code (e.g. "AMST 312") and season will get one entry in this databas
 
 ### Historical Ratings `historical_ratings`
 
-| Field                     | Type                   | Description  |
-| ------------------------- | ---------------------- | ------------ |
-| `course_code`             | String (e.g. CPSC 366) | Course ID    |
-| `professor_id`            | Foreign Key            | Professor ID |
-| `course_rating_all_profs` | Float                  | [computed]   |
-| `course_rating_this_prof` | Float                  | [computed]   |
-| `course_workload`         | Float                  | [computed]   |
+| Field                     | Type           | Description               |
+| ------------------------- | -------------- | ------------------------- |
+| `course_code`             | String (index) | Course ID (e.g. CPSC 366) |
+| `professor_id`            | Foreign Key    | Professor ID              |
+| `course_rating_all_profs` | Float          | [computed]                |
+| `course_rating_this_prof` | Float          | [computed]                |
+| `course_workload`         | Float          | [computed]                |
 
 ### Evaluations (questions): `evaluation_questions`
 
-| Field           | Type                  | Description                                              |
-| --------------- | --------------------- | -------------------------------------------------------- |
-| `question_id`   | Identifier            | Question ID                                              |
-| `question_code` | String (e.g. "YC402") | Question code (from OCE)                                 |
-| `is_narrative`  | Bool                  | True if the question has narrative responses             |
-| `question_text` | String                | The question                                             |
-| `options`       | List of strings       | Possible responses (only if the question is categorical) |
+| Field           | Type                 | Description                                              |
+| --------------- | -------------------- | -------------------------------------------------------- |
+| `question_code` | Primary key - String | Question code (from OCE, e.g. "YC402")                   |
+| `is_narrative`  | Bool                 | True if the question has narrative responses             |
+| `question_text` | String               | The question                                             |
+| `options`       | List of strings      | Possible responses (only if the question is categorical) |
 
 ### Evaluations (narrative): `evaluation_narratives`
 
@@ -135,7 +158,7 @@ Narrative evaluations data.
 | Field            | Type        | Description                                                  |
 | ---------------- | ----------- | ------------------------------------------------------------ |
 | `course_id`      | Foreign Key | Course the narrative comment applies to, mapping to `courses` |
-| `question_id`    | Foreign Key | Question the answer is a response to, mapping to `evaluation_questions` |
+| `question_code`  | Foreign Key | Question the answer is a response to, mapping to `evaluation_questions` |
 | `comment`        | String      | Response to the question                                     |
 | `comment_length` | Integer     | [computed] Length of the response in characters              |
 
@@ -146,5 +169,5 @@ Categorical evaluations data.
 | Field             | Type             | Description                                                  |
 | ----------------- | ---------------- | ------------------------------------------------------------ |
 | `course_id`      | Foreign Key | Course the narrative comment applies to, mapping to `courses` |
-| `question_id`    | Foreign Key | Question the answer is a response to, mapping to `evaluation_questions` |
+| `question_code` | Foreign Key | Question the answer is a response to, mapping to `evaluation_questions` |
 | `ratings` | List of integers | Number of responses for each option. The options are listed in the `evaluation_questions` table |
