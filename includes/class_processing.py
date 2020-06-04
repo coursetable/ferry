@@ -30,13 +30,114 @@ def fetch_seasons():
 
         # exclude '999999' catch-all 'Past seasons' season option
 
-        seasons = [x for x in seasons if x != '999999']
+        seasons = sorted([x for x in seasons if x != '999999'])
 
         return seasons
 
     # Unsuccessful
     else:
-        raise Exception('Unsuccessful response: code {}'.format(r.status))
+        raise Exception('Unsuccessful response: code {}'.format(r.status_code))
+
+
+def fetch_all_api_seasons():
+    """
+    Get full list of seasons for the 
+    Yale official course API
+
+    Returns
+    -------
+    seasons: list of seasons
+    """
+
+    recent_seasons = fetch_seasons()
+
+    oldest_season = int(recent_seasons[0][:4])
+
+    # oldest season is 201903
+    previous_seasons = [str(x) for x in range(2010, oldest_season+1)]
+    previous_seasons = [[x+"01", x+"02", x+"03"] for x in previous_seasons]
+
+    # flatten
+    previous_seasons = [x for y in previous_seasons for x in y]
+    previous_seasons = ["200903"] + previous_seasons
+    seasons = sorted(list(set(recent_seasons) | set(previous_seasons)))
+
+    return seasons
+
+
+def fetch_season_subjects(season, api_key):
+    """
+    Get list of course subjects in a season,
+    needed for querying the courses later
+
+    Parameters
+    ----------
+    season: string
+        The season to to get courses for. In the form of
+        YYYYSS(e.g. 201301 for spring, 201302 for summer,
+        201303 for fall)
+    api_key: string
+        API key with access to the Yale CourseSubjects API
+        (see https://developers.yale.edu/coursesubjects)
+
+    Returns
+    -------
+    subjects: JSON of season subjects
+    """
+
+    url_template = "https://gw.its.yale.edu/soa-gateway/course/webservice/subjects?termCode={}&mode=json&apiKey={}"
+    url = url_template.format(season, api_key)
+
+    r = requests.get(url)
+
+    # Successful response
+    if r.status_code == 200:
+
+        subjects = json.loads(r.text)
+
+        return subjects
+
+    # Unsuccessful
+    else:
+        raise Exception('Unsuccessful response: code {}'.format(r.status_code))
+
+
+def fetch_season_subject_courses(season, subject, api_key):
+    """
+    Get courses in a season, for a given subject
+
+    Parameters
+    ----------
+    season: string
+        The season to to get courses for. In the form of
+        YYYYSS(e.g. 201301 for spring, 201302 for summer,
+        201303 for fall)
+    subject: string
+        Subject to get courses for. For instance, "CPSC"
+    api_key: string
+        API key with access to the Yale Courses API
+        (see https://developers.yale.edu/courses)
+
+    Returns
+    -------
+    subject_courses: JSON of course subjects
+    """
+
+    url_template = "https://gw.its.yale.edu/soa-gateway/course/webservice/index?termCode={}&subjectCode={}&mode=json&apiKey={}"
+    url = url_template.format(season, subject, api_key)
+
+    r = requests.get(url)
+
+    # Successful response
+    if r.status_code == 200:
+
+        courses = json.loads(r.text)
+
+        return courses
+
+    # Unsuccessful
+    else:
+        raise Exception('Unsuccessful response: code {}'.format(r.status_code))
 
 
 def fetch_season_courses(season):
@@ -77,7 +178,7 @@ def fetch_season_courses(season):
 
     # Unsuccessful
     else:
-        raise Exception('Unsuccessful response: code {}'.format(r.status))
+        raise Exception('Unsuccessful response: code {}'.format(r.status_code))
 
 
 def fetch_previous_json(season, evals=False):
@@ -115,7 +216,7 @@ def fetch_previous_json(season, evals=False):
 
     # Unsuccessful
     else:
-        raise Exception('Unsuccessful response: code {}'.format(r.status))
+        raise Exception('Unsuccessful response: code {}'.format(r.status_code))
 
 
 def fetch_course_json(code, crn, srcdb):
@@ -161,7 +262,7 @@ def fetch_course_json(code, crn, srcdb):
 
     # Unsuccessful
     else:
-        raise Exception('Unsuccessful response: code {}'.format(r.status))
+        raise Exception('Unsuccessful response: code {}'.format(r.status_code))
 
 
 def professors_from_html(html):
@@ -328,6 +429,7 @@ def extract_flags(ci_attrs):
 
     return flag_texts
 
+
 def course_times_from_fields(meeting_html, all_sections_remove_children):
     """
     Get the course meeting times from provided HTML
@@ -441,13 +543,14 @@ areas_map = {
 
 # abbreviations for course statuses
 stat_map = {
-    "A":"ACTIVE",
-    "B":"MOVED_TO_SPRING_TERM",
-    "C":"CANCELLED",
-    "D":"MOVED_TO_FALL_TERM",
-    "E":"CLOSED",
-    "N":"NUMBER_CHANGED"
+    "A": "ACTIVE",
+    "B": "MOVED_TO_SPRING_TERM",
+    "C": "CANCELLED",
+    "D": "MOVED_TO_FALL_TERM",
+    "E": "CLOSED",
+    "N": "NUMBER_CHANGED"
 }
+
 
 def found_items(text, mapping):
     """
@@ -478,68 +581,6 @@ def found_items(text, mapping):
 
     return items
 
-
-# def time_from_float(f, force_minutes = True);
-
-#     time = string(float)
-
-#     dot_pos = time.find('.')
-#     if not dot_pos or force_minutes:
-#         time = time+'.00'
-
-#     if dot_pos:
-#         extra_zeros = dot_pos - len(time) + 3
-
-#         time = time + "0"*extra_zeros
-# ()
-#     return time
-
-# def course_sessions_locations_summary(location_times):
-#     if len(location_times) == []:
-#         return ''
-
-#     summary_string = ''
-
-#     if len(location_times) == 1:
-#         reset($locationTimes);
-#         $summaryString .= key($locationTimes);
-
-
-#     if (count($locationTimes) > 1) {
-#         $extraLocationTimes = count($locationTimes) - 1;
-#         $summaryString .= " + {$extraLocationTimes}";
-#     }
-
-#     return summary_string
-
-# def retrieve_course_sessions(course_id, sessions_by_id):
-
-#     days_map = {'Monday' : 'M',
-#         'Tuesday' : 'T',
-#         'Wednesday' : 'W',
-#         'Thursday' : 'Th',
-#         'Friday' : 'F',}
-
-#     res = {
-#         "summary":[],
-#         "long_summary":[],
-#         "locations_summary":[],
-#         "by_day":[],
-#         "by_location":[]
-#     }
-
-#     for session in sessions_by_id:
-#         days = "".join([days_map for x in session["days"]])
-#         start_end = str(session["start_time"]) + "-" + str(session["end_time"])
-#         loc = session["location"]
-
-#         res["summary"].append(days + " " + start_end)
-#         res["long_summary"].append(days + " " + start_end + "({})".format(loc))
-#         res["by_day"].append({day: [session["start_time"],session["end_time"],loc] for day in days})
-
-#         res["locations_summary"] = loc
-
-#     return res
 
 def extract_course_info(course_json, season):
     """
@@ -585,14 +626,14 @@ def extract_course_info(course_json, season):
 
     # Course title
     if len(course_json["title"]) > 32:
-        course_info["title"] = course_json["title"][:29] + "..."
+        course_info["short_title"] = course_json["title"][:29] + "..."
     else:
-        course_info["title"] = course_json["title"]
+        course_info["short_title"] = course_json["title"]
 
-    course_info["long_title"] = course_json["title"]
+    course_info["title"] = course_json["title"]
 
     # Course status
-    course_info["extra_info"] = stat_map.get(course_json["stat"],"")
+    course_info["extra_info"] = stat_map.get(course_json["stat"], "")
 
     # Instructors
     course_info["professors"] = professors_from_html(
