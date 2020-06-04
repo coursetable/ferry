@@ -22,7 +22,41 @@ by the fetch_ratings.py script.
 ================================================================
 """
 
-def fetch_legacy_ratings(db, season: str, crn: str):
+
+def fetch_course_lists(db, limit=None):
+    limit_string = ""
+    if limit:
+        limit_string = f"LIMIT {limit}"
+    
+    """
+    # Fetch from `course_names`.
+    with db.cursor() as cursor:
+        sql = f"SELECT * FROM `course_names` {limit_string}"
+        cursor.execute(sql)
+        course_names = cursor.fetchall()
+    """
+
+    # Fetch from `evaluation_course_names`.
+    with db.cursor() as cursor:
+        sql = f"SELECT * FROM `evaluation_course_names` {limit_string}"
+        cursor.execute(sql)
+        raw_courses = cursor.fetchall()
+
+    listings = []
+    for c in raw_courses:
+        listings.append((
+            str(c['season']),
+            str(c['crn']),
+            {
+                'subject': c['subject'],
+                'number': c['number'],
+                'section': c['section'],
+            }
+        ))
+    
+    return listings
+
+def fetch_legacy_ratings(db, season: str, crn: str, extras: dict):
     # Fetch Coursetable course_id.
     with db.cursor() as cursor:
         sql = "SELECT `course_id` FROM `evaluation_course_names` WHERE `season` = %s AND `crn` = %s LIMIT 1"
@@ -54,18 +88,25 @@ def fetch_legacy_ratings(db, season: str, crn: str):
     ratings_data = dict()
     for item in data:
         ratings_data[item["question_id"]] = json.loads(item["counts"])
+    
+    # Checks
+    questions_ids = tuple(narrative_comments.keys()) + tuple(ratings_data.keys())
+    # if not questions_ids:
+        # raise CourseMissingEvalsError
 
     # Question statements.
-    questions_ids = tuple(narrative_comments.keys()) + tuple(ratings_data.keys())
-    with db.cursor() as cursor:
-        where_clause = ','.join(['%s'] * len(questions_ids))
-        sql = f"SELECT `id`, `text`, `options` FROM `evaluation_questions` WHERE `id` IN ({where_clause})"
-        cursor.execute(sql, tuple(questions_ids))
-        data = cursor.fetchall()
-    
-    questions = dict()
-    for item in data:
-        questions[item['id']] = (item['text'], item['options'])
+    if questions_ids:
+        with db.cursor() as cursor:
+            where_clause = ','.join(['%s'] * len(questions_ids))
+            sql = f"SELECT `id`, `text`, `options` FROM `evaluation_questions` WHERE `id` IN ({where_clause})"
+            cursor.execute(sql, tuple(questions_ids))
+            data = cursor.fetchall()
+        
+        questions = dict()
+        for item in data:
+            questions[item['id']] = (item['text'], item['options'])
+    else:
+        extras['note'] = "no evaluations in database"
 
     return {
         "crn_code": crn,
@@ -94,24 +135,48 @@ def fetch_legacy_ratings(db, season: str, crn: str):
             }
             for question_id, comments in narrative_comments.items()
         ],
+        # The extras are associated specifically with this CRN, and does not
+        # take into account any cross-listing.
+        "extras": extras,
     }
 
 
 if __name__ == '__main__':
     db = extract_db.get_db('yale_advanced_oci')
 
+    prev = fetch_course_lists(db, limit=None)
+
+    """
     prev = [
         # Test with ACCT 270 from 201903.
-        ("201903", "11970"),
+        ("201903", "11970", {}),
         # Test with ACCT 170 from 200903.
-        ("200903", "11256"),
+        ("200903", "11256", {}),
         # Test with ECON 466 01 from 201003. Compare with https://dougmckee.net/aging-evals-fall-2010.pdf.
-        ("201003", "12089"),
+        ("201003", "12089", {}),
     ]
+    """
 
-    for season, crn in prev:
-        output_path = f"./api_output/previous_evals/{season}-{crn}.json"
-        course_eval = fetch_legacy_ratings(db, season, crn)
+    prev = list(reversed(prev))
+    for season, crn, extras in tqdm(prev):
+        identifier = f"{season}-{crn}"
 
-        with open(output_path, "w") as f:
-            f.write(json.dumps(course_eval, indent=4))
+        output_path = f"./api_output/previous_evals/{identifier}.json"
+        if isfile(output_path):
+            tqdm.write(f"Skipping {identifier} - already exists")
+            continue
+
+        try:
+            tqdm.write(f"Processing {identifier}")
+            course_eval = fetch_legacy_ratings(db, season, crn, extras)
+
+            with open(output_path, "w") as f:
+                f.write(json.dumps(course_eval, indent=4))
+        except KeyError as e:
+            # Some courses produce YC402-YCWR and similar question IDs for ratings data. The new importer can handle this.
+            if season == "201903" or season == "201901":
+                tqdm.write(f"Failed - blacklist {identifier}")
+            else:
+                raise CourseMissingEvalsError from e
+        except CourseMissingEvalsError:
+            tqdm.write(f"Failed to fetch {identifier}")
