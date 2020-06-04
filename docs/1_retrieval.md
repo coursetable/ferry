@@ -9,13 +9,21 @@ The current CourseTable implementation stores classes by term in JSON files at p
 
 The script `fetch_previous_json.py` downloads these JSON files by term and outputs the result to the `/api_output/previous_json` directory.
 
-## Fetching class information from the Yale API
+## Fetching class information from the Yale APIs
 
-To get course information from the Yale Courses API (https://developers.yale.edu/courses), we perform the following steps in `fetch_classes.py`:
+We retrieve course information from two sources: the back-end used for Yale OCS, and the official Yale Courses API (https://developers.yale.edu/courses). These are performed in `fetch_classes.py`.
+
+To retrieve courses from the Yale OCS API, we do the following:
 
 1. Obtain a list of terms that have available course information, which is output to `/api_output/terms.json`.
 2. For each term, obtain a list of the courses, which is output to `/api_output/term_courses`.
 3. For each course, obtain the full course information, which is output to `/api_output/course_json_cache`.
+
+To retrieve courses from the official Yale Courses API, we do the following:
+
+1. Use all seasons since fall 2009 inclusive, which is the furthest the API goes to. This is output to `/api_output/api_seasons.json`.
+2. For each season, obtain a list of subjects, which are required for querying courses (we can only view courses per subject per season). This is output to `/api_output/api_subjects`.
+3. For each season and subject, obtain a list of courses, which we output to `/api_output/api_course_json_cache` (aggregated by season).
 
 ## Fetching evaluations
 

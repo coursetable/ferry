@@ -301,6 +301,33 @@ def professors_from_html(html):
     return names
 
 
+def parse_cross_listings(xlist_html):
+    """
+    Retrieve cross-listings (CRN codes) from the HTML in
+    the 'xlist' field from the Yale API
+    
+    Note that the cross-listings do not include the course
+    itself
+    
+    Parameters
+    ----------
+    xlist_html: string
+        'xlist' field from the Yale API response
+    
+    Returns
+    -------
+    xlist_crns: CRN codes of course cross-listings
+    """
+    
+    xlist_soup = BeautifulSoup(xlist_html, features="lxml")
+    
+    xlist_crns = xlist_soup.find_all("a",{"data-action":"result-detail"})
+    xlist_crns = [x["data-key"] for x in xlist_crns]
+    xlist_crns = [x[4:] for x in xlist_crns if x[:4] == "crn:"]
+    
+    return xlist_crns
+
+
 def course_codes_from_fields(code, xlist, section, crn):
     """
     Parse course code from fields
@@ -642,6 +669,9 @@ def extract_course_info(course_json, season):
     # Codes
     course_info["oci_id"] = course_json["crn"]
 
+    # Cross-listings
+    course_info["oci_ids"] = [course_info["oci_id"]]+parse_cross_listings(course_json["xlist"])
+
     course_info["course_codes"] = course_codes_from_fields(
         course_json["code"],
         course_json["xlist"],
@@ -682,12 +712,6 @@ def extract_course_info(course_json, season):
                                         skills_map)
     course_info["areas"] = found_items(course_json["yc_attrs"],
                                        areas_map)
-
-    # Additional attributes
-    # course_info["extra_flags"] = []
-
-    # if len(course_json["ci_attrs"]) > 0:
-    # course_info["extra_flags"].append(course_json["ci_attrs"])
 
     course_info["flags"] = extract_flags(course_json["ci_attrs"])
 
