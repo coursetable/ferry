@@ -5,6 +5,7 @@ import time
 import re
 import sys
 import csv
+import diskcache
 from tqdm import tqdm
 from includes.class_processing import fetch_seasons
 from includes.cas import create_session_from_cookie, create_session_from_credentials
@@ -39,7 +40,10 @@ season_jsons_path = "./api_output/courses/"
 
 seasons = fetch_seasons()
 
+yale_college_cache = diskcache.Cache("./api_output/yale_college_cache")
 
+
+@yale_college_cache.memoize()
 def is_yale_college(season_code, crn):
     all_params = {
         "other": {"srcdb": season_code},
@@ -52,8 +56,8 @@ def is_yale_college(season_code, crn):
     all_data = all_response.json()
 
     if all_data["count"] < 1:
-        # We don't think this even exists, so just attempt it.
-        return True
+        # We don't think this even exists, so just attempt it - truthy value.
+        return "try it anyways"
 
     yc_params = {
         "other": {"srcdb": season_code},
