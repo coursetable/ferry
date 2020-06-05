@@ -72,7 +72,7 @@ Mappings:
 
 ### Courses: `courses`
 
-One entry per class. If a class is listed with multiple course codes, it will only get one entry in this database.
+One entry per class (sections are unique). If a class is listed with multiple course codes, it will only get one entry in this database.
 
 | Field                       | Type        | Description                                                  |
 | --------------------------- | ----------- | ------------------------------------------------------------ |
@@ -87,7 +87,6 @@ One entry per class. If a class is listed with multiple course codes, it will on
 | `num_students`              | Integer     | Student enrollment (retrieved from evaluations, not part of the Courses API) |
 | `num_students_is_same_prof` | Boolean     | Whether or not a different professor taught the class when it was this size |
 | `requirements`              | String      | Recommended requirements/prerequisites for the course        |
-| `section`                   | String      | Which section the course is (each section has its own field, as returned in the original API output) |
 | `times_long_summary`        | String      | Course times and locations, displayed in the "Meets" row in CourseTable course modals |
 | `times_summary`             | String      | Course times, displayed in the "Times" column in CourseTable |
 | `times_by_day`              | Nested      | Course meeting times by day, with days as keys and tuples of `(start_time, end_time, location)` |
