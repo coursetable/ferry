@@ -67,12 +67,13 @@ Mappings:
 | Field         | Type                                       | Description                       |
 | ------------- | ------------------------------------------ | --------------------------------- |
 | `season_code` | Primary key - String                       | The season code (e.g. "202001")   |
-| `season`      | String - one of `spring`, `summer`, `fall` | [computed] Season of the semester |
+| `term`        | String - one of `spring`, `summer`, `fall` | [computed] Season of the semester |
 | `year`        | Integer                                    | [computed] Year of the semester   |
 
 ### Courses: `courses`
 
 One entry per class. If a class is listed with multiple course codes, it will only get one entry in this database.
+However, different sections of a single class will get multiple entries in this table.
 
 | Field                       | Type        | Description                                                  |
 | --------------------------- | ----------- | ------------------------------------------------------------ |
@@ -100,7 +101,7 @@ One entry per class. If a class is listed with multiple course codes, it will on
 
 ### Listings: `listings`
 
-Each course code (e.g. "AMST 312") and season will get one entry in this database.
+Each course code (e.g. "AMST 312 01") and season will get one entry in this database.
 
 | Field         | Type           | Description                                               |
 | ------------- | -------------- | --------------------------------------------------------- |
@@ -110,7 +111,7 @@ Each course code (e.g. "AMST 312") and season will get one entry in this databas
 | `number`      | String (index) | Course number in the given subject (e.g. "120" or "S120") |
 | `course_code` | String (index) | [computed] subject + number (e.g. "AMST 312")             |
 | `section `    | String (index) | Course section for the given subject and number           |
-| `season_code`               | Foreign key     | When the course/listing is being taught, mapping to `seasons` |
+| `season_code` | Foreign key    | When the course/listing is being taught, mapping to `seasons` |
 | `crn`         | Int            | The CRN associated with this listing                      |
 
 Additional constraints:
