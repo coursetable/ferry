@@ -39,6 +39,38 @@ season_jsons_path = "./api_output/courses/"
 
 seasons = fetch_seasons()
 
+
+def is_yale_college(season_code, crn):
+    all_params = {
+        "other": {"srcdb": season_code},
+        "criteria": [{"field": "crn", "value": crn}],
+    }
+    all_response = requests.post(
+        "https://courses.yale.edu/api/?page=fose&route=search",
+        data=json.dumps(all_params),
+    )
+    all_data = all_response.json()
+
+    if all_data["count"] < 1:
+        # We don't think this even exists, so just attempt it.
+        return True
+
+    yc_params = {
+        "other": {"srcdb": season_code},
+        "criteria": [{"field": "crn", "value": crn}, {"field": "col", "value": "YC"}],
+    }
+    yc_data = requests.post(
+        "https://courses.yale.edu/api/?page=fose&route=search&col=YC",
+        data=json.dumps(yc_params),
+    ).json()
+
+    if yc_data["count"] == 0:
+        # Not available in Yale College.
+        return False
+
+    return True
+
+
 # load and parse season JSONs
 # for season_code in seasons:
 #     if season_code == '202001' or season_code == '202002':
@@ -49,16 +81,19 @@ seasons = fetch_seasons()
 #     for course in season_json: # Loop through each course in the season
 
 queue = []
-with open("./api_output/listings.csv", "r") as csvfile:
+with open("./api_output/listings_with_extra_info.csv", "r") as csvfile:
     reader = csv.reader(csvfile)
-    for _, _, _, _, _, _, season_code, crn in reader:
+    for _, _, _, _, _, _, season_code, crn, extra_info in reader:
+        if "Cancelled" in extra_info:
+            continue
         if season_code in ["201903", "201901", "201803", "201801", "201703"]:
             queue.append((season_code, crn))
 
 # queue = [
-#     ("201903", "11970"),  # basic test
-#     ("201703", "10738"),  # no evaluations available
-#     ("201703", "13958"),
+# ("201903", "11970"),  # basic test
+# ("201703", "10738"),  # no evaluations available
+# ("201703", "13958"),  # DRAM class?
+# ("201703", "10421"),  # APHY 990 (class not in Yale College)
 # ]
 
 for season_code, crn in tqdm(queue):
@@ -71,6 +106,11 @@ for season_code, crn in tqdm(queue):
 
     tqdm.write(f"Working on {course_unique_id} ... ")
     tqdm.write("                            ", end="")
+
+    if not is_yale_college(season_code, crn):
+        tqdm.write("skipping - not in yale college")
+        continue
+
     try:
         session = create_session_from_cookie(castgc)
         course_eval = fetch_course_eval(session, crn, season_code)
