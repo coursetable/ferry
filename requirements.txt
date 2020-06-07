@@ -7,3 +7,5 @@ lxml
 ujson
 PyMySQL
 diskcache
+SQLAlchemy
+sqlalchemy_mixins

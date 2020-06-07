@@ -13,27 +13,17 @@ from sqlalchemy import (
 )
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
+from sqlalchemy_mixins import SerializeMixin
 
 Base = declarative_base()
 
 
-class TimestampMixin(object):
+class BaseModel(Base, SerializeMixin):
+    __abstract__ = True
     pass
-    """
-    # The updated_at attributes may not work.
-    updated_at = Column(
-        DateTime(timezone=True),
-        nullable=False,
-        server_default=func.utcnow(),
-        server_onupdate=func.utcnow(),
-    )
-    created_at = Column(
-        DateTime(timezone=True), nullable=False, server_default=func.utcnow()
-    )
-    """
 
 
-class Season(Base, TimestampMixin):
+class Season(BaseModel):
     __tablename__ = "seasons"
     season_code = Column(
         String(10), primary_key=True, comment="Season code (e.g. '202001')"
@@ -56,7 +46,7 @@ course_professors = Table(
 )
 
 
-class Course(Base, TimestampMixin):
+class Course(BaseModel):
     __tablename__ = "courses"
     course_id = Column(Integer, primary_key=True)
 
@@ -137,7 +127,7 @@ class Course(Base, TimestampMixin):
     )
 
 
-class Listing(Base):
+class Listing(BaseModel):
     __tablename__ = "listings"
     listing_id = Column(Integer, primary_key=True, comment="Listing ID")
 
@@ -184,18 +174,18 @@ class Listing(Base):
 
     __table_args__ = (
         Index(
-            "season_course_section_unique",
+            "idx_season_course_section_unique",
             "season_code",
             "subject",
             "number",
             "section",
             unique=True,
         ),
-        Index("season_crn_unique", "season_code", "crn", unique=True),
+        Index("idx_season_code_crn_unique", "season_code", "crn", unique=True),
     )
 
 
-class Professor(Base):
+class Professor(BaseModel):
     __tablename__ = "professors"
 
     professor_id = Column(Integer, comment="Professor ID", primary_key=True)
@@ -209,3 +199,97 @@ class Professor(Base):
         Float,
         comment='[computed] Average rating of the professor assessed via the "Overall assessment" question in courses taught',
     )
+
+
+class HistoricalRating(BaseModel):
+    __tablename__ = "historical_ratings"
+
+    id = Column(Integer, primary_key=True)
+    course_code = Column(String, comment='Course code (e.g. "CPSC 366"', index=True)
+    professor_id = Column(
+        Integer,
+        ForeignKey("professors.professor_id"),
+        comment="Professor ID",
+        index=True,
+    )
+
+    course_rating_all_profs = Column(
+        Float,
+        comment="[computed] The average rating for this course code, across all professors who taught it",
+    )
+    course_rating_this_prof = Column(
+        Float,
+        comment="[computed] The average rating for this course code when taught by this professor",
+    )
+    course_workload = Column(
+        Float,
+        comment="[computed] The average workload for this course code, across all times it was taught",
+    )
+
+    __table_args__ = (
+        # The (course_code, professor_id) combination should be unique.
+        Index(
+            "idx_historical_ratings_course_code_professor_unique",
+            "course_code",
+            "professor_id",
+            unique=True,
+        ),
+    )
+
+
+class EvaluationQuestion(BaseModel):
+    __tablename__ = "evaluation_questions"
+
+    question_code = Column(
+        String, comment='Question code from OCE (e.g. "YC402")', primary_key=True,
+    )
+    is_narrative = Column(
+        Boolean,
+        comment="True if the question has narrative responses. False if the question has categorica/numerical responses",
+    )
+    question_text = Column(String, comment="The question text",)
+    options = Column(
+        JSON,
+        comment="JSON array of possible responses (only if the question is not a narrative",
+    )
+
+
+class EvaluationNarrative(BaseModel):
+    # Narrative evaluations data.
+    __tablename__ = "evaluation_narratives"
+
+    id = Column(Integer, primary_key=True)
+    course_id = Column(
+        Integer,
+        ForeignKey("courses.course_id"),
+        comment="The course to which this narrative comment applies",
+    )
+    question_code = Column(
+        String,
+        ForeignKey("evaluation_questions.question_code"),
+        comment="Question to which this narrative comment responds",
+    )
+
+    comment = Column(String, comment="Response to the question",)
+    comment_length = Column(
+        Integer, comment="[computed] The length of the comment response",
+    )
+
+
+class EvaluationRating(BaseModel):
+    # Categorical evaluations data.
+    __tablename__ = "evaluation_ratings"
+
+    id = Column(Integer, primary_key=True)
+    course_id = Column(
+        Integer,
+        ForeignKey("courses.course_id"),
+        comment="The course to which this rating applies",
+    )
+    question_code = Column(
+        String,
+        ForeignKey("evaluation_questions.question_code"),
+        comment="Question to which this rating responds",
+    )
+
+    rating = Column(JSON, comment="JSON array of the response counts for each option",)
