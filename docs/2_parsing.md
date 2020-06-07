@@ -96,7 +96,7 @@ However, different sections of a single class will get multiple entries in this 
 | `syllabus_url`              | String      | Link to the syllabus                                         |
 | `title`                     | String      | Complete course title                                        |
 | `average_overall_rating`    | Float       | [computed] Average overall course rating (from this course's evaluations, aggregated across cross-listings) |
-| `average_workload`          | Float       | [computed] Average workload rating ((from this course's evaluations, aggregated across cross-listings) |
+| `average_workload`          | Float       | [computed] Average workload rating (from this course's evaluations, aggregated across cross-listings) |
 
 ### Listings: `listings`
 

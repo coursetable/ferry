@@ -305,26 +305,26 @@ def parse_cross_listings(xlist_html):
     """
     Retrieve cross-listings (CRN codes) from the HTML in
     the 'xlist' field from the Yale API
-    
+
     Note that the cross-listings do not include the course
     itself
-    
+
     Parameters
     ----------
     xlist_html: string
         'xlist' field from the Yale API response
-    
+
     Returns
     -------
     xlist_crns: CRN codes of course cross-listings
     """
-    
+
     xlist_soup = BeautifulSoup(xlist_html, features="lxml")
-    
-    xlist_crns = xlist_soup.find_all("a",{"data-action":"result-detail"})
+
+    xlist_crns = xlist_soup.find_all("a", {"data-action": "result-detail"})
     xlist_crns = [x["data-key"] for x in xlist_crns]
     xlist_crns = [x[4:] for x in xlist_crns if x[:4] == "crn:"]
-    
+
     return xlist_crns
 
 
@@ -364,6 +364,27 @@ def course_codes_from_fields(code, xlist, section, crn):
     }
 
 
+def extract_flags(ci_attrs):
+    """
+    Get the course flags from the ci_attrs field
+
+    Parameters
+    ----------
+    ci_attrs: string
+        the field from the Yale API response
+
+    Returns
+    -------
+    flag_texts: list of strings
+        flags (keywords) for the course
+    """
+
+    soup = BeautifulSoup(ci_attrs, features="lxml")
+    flag_texts = [x.get_text() for x in soup.find_all("a")]
+
+    return flag_texts
+
+
 def days_of_week_from_letters(letters):
     """
     Parse course days from letterings
@@ -401,153 +422,197 @@ def days_of_week_from_letters(letters):
     return days
 
 
-def time_of_day_float_from_string(time_string):
+def format_time(time):
     """
-    Convert a string formatted time to a float format,
-    with hours to the left of the decimal point and minutes
-    to the right
+    Convert Yale API times to 24-hour, full format
 
     Parameters
     ----------
-    time_string: string
-        Course letterings
+    time: string
+        a time from the Yale API 'meeting_html' field
 
     Returns
     -------
-    time: float
-        time of day, float-formatted
+    time: string
+        formatted time
+
     """
 
-    # split time string into hour/minute/AM-PM sections
-    matches = list(re.findall('([0-9]*):?([0-9]*)(am|pm)', time_string)[0])
+    time_stripped = time[:-2]
 
-    hours = int(matches[0])
+    if ":" in time_stripped:
 
-    # convert from AM/PM to 24-hour format
-    if matches[2] == "pm" and hours != 12:
-        hours += 12
+        hour = time_stripped.split(":")[0]
+        minute = time_stripped.split(":")[1]
 
-    # no minutes stated equivalent to zero
-    if len(matches[1]) == 0:
-        matches[1] = "0"
+    else:
 
-    time = hours + int(matches[1])/100
+        hour = time_stripped[0]
+        minute = "00"
 
-    return time
+    if time[-2:] == "pm":
+        hour = str((int(hour) + 12) % 24)
+
+    return hour + ":" + minute
 
 
-def extract_flags(ci_attrs):
+def extract_meetings(meeting_html):
     """
-    Get the course flags from the ci_attrs field
-
-    Parameters
-    ----------
-    ci_attrs: string
-        the field from the Yale API response
-
-    Returns
-    -------
-    flag_texts: list of strings
-        flags (keywords) for the course
-    """
-
-    soup = BeautifulSoup(ci_attrs, features="lxml")
-    flag_texts = [x.get_text() for x in soup.find_all("a")]
-
-    return flag_texts
-
-
-def course_times_from_fields(meeting_html, all_sections_remove_children):
-    """
-    Get the course meeting times from provided HTML
+    Extract course meeting times and locations from the
+    provided HTML
 
     Parameters
     ----------
     meeting_html: string
         HTML of course meeting times, specified by
         the 'meeting_html' key in the Yale API response
-    all_sections_remove_children
-        HTML of course sections, specified by the
-        'all_sections_remove_children' key in the
-        Yale API response
 
     Returns
     -------
-    meeting_times: list of dictionaries
-        course meeting dates/times
+    extracted_times: list of dictionaries
+        list of course meeting dates/times, each with keys
+        'days', 'start_time', 'end_time', 'location'
+    times_summary: string
+        summarization of meeting times; the first listed
+        times are shown while additional ones are collapsed
+        to " + (n-1)"
+    locations_summary: string
+        summarization of meeting locations; the first listed
+        locations are shown while additional ones are collapsed
+        to " + (n-1)"
+    times_long_summary: string
+        summary of meeting times and locations; computed as 
+        comma-joined texts from the meeting_html items
+    times_by_day: dictionary
+        dictionary with keys as days and values consisting of
+        lists of [start_time, end_time, location]
+
     """
 
-    soup = BeautifulSoup(meeting_html, features="lxml")
-    meetings = soup.find_all("div")
+    # identify meeting tags and convert to plaintext
+    meetings = BeautifulSoup(meeting_html, features="lxml")
+    meetings = meetings.find_all("div", {"class": "meet"})
+    meetings = [x.text for x in meetings]
 
-    # if the course time is not specified,
-    # use this as a filler
-    found_htba = False
-    htba_course_time = {
-        "days": ["HTBA"],
-        "start_time": "1",
-        "end_time": "1",
-        "location": ""
-    }
+    only_htba = False
 
-    matched_meetings = []
+    if len(meetings) == 0:
+        only_htba = True
+    else:
+        only_htba = meetings[0] == "HTBA"
 
-    for meeting in meetings:
+    # if no meetings found
+    if only_htba:
 
-        # get the raw text from the meeting HTML
-        meeting_text = "".join(meeting.find_all(text=True))
+        extracted_meetings = [{
+            "days": [],
+            "start_time":"",
+            "end_time":"",
+            "location":""
+        }]
 
-        # if the meeting is empty, ignore it
-        if len(meeting_text) == 0:
-            pass
+        return extracted_meetings, "TBA", "TBA", "TBA", {}
 
-        # if the meeting time is specified as
-        # "Hours to be announced", use this
-        if "HTBA" in meeting_text:
+    # produce long_summary
+    times_long_summary = ",".join(meetings)
 
-            matched_meetings.append(htba_course_time)
+    # split meetings by time
+    for idx, meeting in enumerate(meetings):
 
-            found_htba = True
+        if " in " in meeting:
+
+            sessions, location = meeting.split(" in ")[:2]
+
+            if " " in sessions:
+
+                days, time = sessions.split(" ")[:2]
+
+                meetings[idx] = [days, time, location]
+
+            else:
+
+                meetings[idx] = ["HTBA", "", location]
+
+        elif " " in meeting:
+
+            days, time = meeting.split(" ")[:2]
+
+            meetings[idx] = [days, time, ""]
 
         else:
 
-            # meetings are represented in
-            # "<day_of_week> <start_time>-<end_time> in <location>"
-            meeting_parts = meeting_text.split(" ")
+            meetings[idx] = [meeting, "", ""]
 
-            # format the days
-            days = days_of_week_from_letters(meeting_parts[0])
+    # make times summary as first listed
+    times_summary = meetings[0][0]
 
-            # split the times portion to start and end
-            times = meeting_parts[1].split("-")
-            # start = time_of_day_float_from_string(times[0])
-            # end = time_of_day_float_from_string(times[1])
-            start = times[0]
-            end = times[1]
+    # collapse additional times
+    if len(meetings) > 1:
+        times_summary = times_summary + f" + {len(meetings)-1}"
 
-            # see if the location is specified
-            location_matches = re.findall(' in ([^<]*)', meeting_text)
+    # make locations summary as first listed
+    locations_summary = meetings[0][2]
 
-            # specify the location if it exists
-            if len(location_matches) > 0:
-                location = location_matches[0]
-            else:
-                location = ''
+    # collapse additional locations
+    if len(meetings) > 1:
+        locations_summary = locations_summary + f" + {len(meetings)-1}"
 
-            matched_meetings.append({
+    extracted_meetings = []
+
+    for meeting in meetings:
+
+        if meeting[0] == "HTBA":
+
+            extracted_meetings.append({
+                "days": [],
+                "start_time": "",
+                "end_time": "",
+                "location": ""
+            })
+
+        else:
+
+            days = meeting[0]
+            times = meeting[1]
+            location = meeting[2]
+
+            days = days_of_week_from_letters(days)
+
+            times = times.split("-")
+            start_time = times[0]
+            end_time = times[1]
+
+            # standardize times to 24-hour, full format
+            start_time = format_time(start_time)
+            end_time = format_time(end_time)
+
+            extracted_meetings.append({
                 "days": days,
-                "start_time": start,
-                "end_time": end,
+                "start_time": start_time,
+                "end_time": end_time,
                 "location": location
             })
 
-    # if no times or HTBA are available for the course, but
-    # the sections contain an HTBA, specify it for all meetings
-    # as a filler
-    if not found_htba and len(matched_meetings) == 0 and "HTBA" in all_sections_remove_children:
-        matched_meetings.append(htba_course_time)
+    times_by_day = dict()
 
-    return matched_meetings
+    for meeting in extracted_meetings:
+
+        for day in meeting["days"]:
+
+            session = [
+                meeting["start_time"],
+                meeting["end_time"],
+                meeting["location"]
+            ]
+
+            # if day key already present, append
+            if day in times_by_day.keys():
+                times_by_day[day].append(session)
+            # otherwise, initialize list
+            else:
+                times_by_day[day] = [session]
+
+    return extracted_meetings, times_summary, locations_summary, times_long_summary, times_by_day
 
 
 # abbreviations for skills
@@ -670,7 +735,8 @@ def extract_course_info(course_json, season):
     course_info["oci_id"] = course_json["crn"]
 
     # Cross-listings
-    course_info["oci_ids"] = [course_info["oci_id"]]+parse_cross_listings(course_json["xlist"])
+    course_info["oci_ids"] = [course_info["oci_id"]] + \
+        parse_cross_listings(course_json["xlist"])
 
     course_info["course_codes"] = course_codes_from_fields(
         course_json["code"],
@@ -702,10 +768,13 @@ def extract_course_info(course_json, season):
     }
 
     # Meeting times
-    course_info["sessions"] = course_times_from_fields(
-        course_json["meeting_html"],
-        course_json["all_sections_remove_children"]
-    )
+    (
+        course_info["extracted_meetings"],
+        course_info["times_summary"],
+        course_info["locations_summary"],
+        course_info["times_long_summary"],
+        course_info["times_by_day"],
+    ) = extract_meetings(course_json["meeting_html"])
 
     # Skills and areas
     course_info["skills"] = found_items(course_json["yc_attrs"],
