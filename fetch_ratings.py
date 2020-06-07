@@ -94,10 +94,11 @@ with open("./api_output/listings_with_extra_info.csv", "r") as csvfile:
             queue.append((season_code, crn))
 
 # queue = [
-# ("201903", "11970"),  # basic test
-# ("201703", "10738"),  # no evaluations available
-# ("201703", "13958"),  # DRAM class?
-# ("201703", "10421"),  # APHY 990 (class not in Yale College)
+#     ("201903", "11970"),  # basic test
+#     ("201703", "10738"),  # no evaluations available
+#     ("201703", "13958"),  # DRAM class?
+#     ("201703", "10421"),  # APHY 990 (class not in Yale College)
+#     ("201703", "16119"),  # no evaluations available (doesn't show in OCE)
 # ]
 
 for season_code, crn in tqdm(queue):
@@ -105,15 +106,15 @@ for season_code, crn in tqdm(queue):
     output_path = "./api_output/course_evals/{}.json".format(course_unique_id)
 
     if isfile(output_path):
-        tqdm.write(f"Skipping course {course_unique_id} - already exists")
+        # tqdm.write(f"Skipping course {course_unique_id} - already exists")
+        continue
+
+    if not is_yale_college(season_code, crn):
+        # tqdm.write("skipping - not in yale college")
         continue
 
     tqdm.write(f"Working on {course_unique_id} ... ")
     tqdm.write("                            ", end="")
-
-    if not is_yale_college(season_code, crn):
-        tqdm.write("skipping - not in yale college")
-        continue
 
     try:
         session = create_session_from_cookie(castgc)
@@ -130,5 +131,5 @@ for season_code, crn in tqdm(queue):
     except Exception as e:
         import traceback
 
-        traceback.print_exc()
+        # traceback.print_exc()
         tqdm.write(f"skipped - unknown error {e}")
