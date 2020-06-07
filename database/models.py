@@ -56,7 +56,7 @@ class Course(BaseModel):
         comment="The season the course is being taught in",
         nullable=False,
     )
-    season = relationship("Season", back_populates="course_list")
+    season = relationship("Season", backref="course_list")
 
     professors = relationship(
         "Professor", secondary=course_professors, back_populates="courses"
@@ -264,15 +264,19 @@ class EvaluationNarrative(BaseModel):
         ForeignKey("courses.course_id"),
         comment="The course to which this narrative comment applies",
     )
+    course = relationship("Course", backref="evaluation_narratives")
     question_code = Column(
         String,
         ForeignKey("evaluation_questions.question_code"),
         comment="Question to which this narrative comment responds",
     )
+    question = relationship("Question", backref="evaluation_narratives")
 
     comment = Column(String, comment="Response to the question",)
     comment_length = Column(
-        Integer, comment="[computed] The length of the comment response",
+        # TODO: should we remove this?
+        Integer,
+        comment="[computed] The length of the comment response",
     )
 
 
@@ -286,10 +290,12 @@ class EvaluationRating(BaseModel):
         ForeignKey("courses.course_id"),
         comment="The course to which this rating applies",
     )
+    course = relationship("Course", backref="evaluation_ratings")
     question_code = Column(
         String,
         ForeignKey("evaluation_questions.question_code"),
         comment="Question to which this rating responds",
     )
+    question = relationship("Question", backref="evaluation_ratings")
 
     rating = Column(JSON, comment="JSON array of the response counts for each option",)
