@@ -83,7 +83,6 @@ However, different sections of a single class will get multiple entries in this 
 | `course_home_url`           | String      | Link to the course homepage                                  |
 | `description`               | String      | Course description                                           |
 | `extra_info`                | String      | Additional information (indicates if class has been canceled) |
-| `location_times`            | Nested      | Key-value pairs consisting of `<location>:<list of times>`   |
 | `locations_summary`         | String      | If single location, is `<location>`; otherwise is `<location> + <n_other_locations>` where the first location is the one with the greatest number of days. Displayed in the "Locations" column in CourseTable. |
 | `num_students`              | Integer     | Student enrollment (retrieved from evaluations, not part of the Courses API) |
 | `num_students_is_same_prof` | Boolean     | Whether or not a different professor taught the class when it was this size |

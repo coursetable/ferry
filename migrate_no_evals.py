@@ -1,6 +1,7 @@
 import pandas as pd
 
 from includes.class_processing import *
+from includes.migration import *
 from includes.utils import *
 
 import json
@@ -97,15 +98,22 @@ migrated_courses["extra_info"] = previous_json["extra_info"]
 migrated_courses["flags"] = previous_json["flags"].apply(
     lambda x: extract_flags("".join(x)))
 
-migrated_courses["location_times"] = previous_json["location_times"]
 migrated_courses["locations_summary"] = previous_json["locations_summary"]
 
-migrated_courses["times_long_summary"] = previous_json["times"].apply(
-    lambda x: x.get("long_summary", ""))
-migrated_courses["times_summary"] = previous_json["times"].apply(
-    lambda x: x.get("summary", ""))
-migrated_courses["times_by_day"] = previous_json["times"].apply(
-    lambda x: x.get("by_day", {}))
+# migrated_courses["times_long_summary"] = previous_json["times"].apply(
+#     lambda x: x.get("long_summary", ""))
+# migrated_courses["times_summary"] = previous_json["times"].apply(
+#     lambda x: x.get("summary", ""))
+# migrated_courses["times_by_day"] = previous_json["times"].apply(
+#     lambda x: x.get("by_day", {}))
+
+new_times = previous_json["times"].apply(lambda x: convert_old_meetings(x))
+
+times_summary, times_long_summary, times_by_day = zip(*new_times)
+
+migrated_courses["times_summary"] = times_summary
+migrated_courses["times_long_summary"] = times_long_summary
+migrated_courses["times_by_day"] = times_by_day
 
 migrated_courses["crn"] = previous_json["oci_id"]
 migrated_courses["professors"] = previous_json["professors"]
@@ -210,7 +218,6 @@ course_fields = [
     "course_home_url",
     "description",
     "extra_info",
-    "location_times",
     "locations_summary",
     # "num_students",
     # "num_students_is_same_prof",

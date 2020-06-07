@@ -447,7 +447,7 @@ def format_time(time):
 
     else:
 
-        hour = time_stripped[0]
+        hour = time_stripped
         minute = "00"
 
     if time[-2:] == "pm":
@@ -514,7 +514,7 @@ def extract_meetings(meeting_html):
         return extracted_meetings, "TBA", "TBA", "TBA", {}
 
     # produce long_summary
-    times_long_summary = ",".join(meetings)
+    times_long_summary = "\n".join(meetings)
 
     # split meetings by time
     for idx, meeting in enumerate(meetings):
@@ -544,7 +544,7 @@ def extract_meetings(meeting_html):
             meetings[idx] = [meeting, "", ""]
 
     # make times summary as first listed
-    times_summary = meetings[0][0]
+    times_summary = meetings[0][0]+" "+meetings[0][1]
 
     # collapse additional times
     if len(meetings) > 1:
@@ -769,7 +769,8 @@ def extract_course_info(course_json, season):
 
     # Meeting times
     (
-        course_info["extracted_meetings"],
+        # course_info["extracted_meetings"],
+        _,
         course_info["times_summary"],
         course_info["locations_summary"],
         course_info["times_long_summary"],
