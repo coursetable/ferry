@@ -14,11 +14,11 @@ CourseTable data to the new schema.
 
 In particular, this script outputs CSV files for the following
 tables specified in the schema (docs/2_parsing.md):
-	
-	- `courses`
-	- `listings`
-	- `professors`
-	- `courses_professors`
+    
+    - `courses`
+    - `listings`
+    - `professors`
+    - `courses_professors`
 
 Note that the `courses` and `professors` tables are incomplete
 because this script does not process the evaluations
@@ -35,7 +35,6 @@ parsed_json = []
 for season in parsed_seasons:
 
     season_courses = pd.read_json(f"api_output/parsed_courses/{season}.json")
-    season_courses["season"] = season
 
     parsed_json.append(season_courses)
 
@@ -43,8 +42,8 @@ parsed_json = pd.concat(parsed_json)
 parsed_json = parsed_json.reset_index(drop=True)
 
 # use "<oci_id>_<season>" as temporary course identifiers
-parsed_json["listing_id"] = parsed_json["oci_id"].astype(
-    str) + "_" + parsed_json["season"].astype(str)
+parsed_json["listing_id"] = parsed_json["crn"].astype(
+    str) + "_" + parsed_json["season_code"].astype(str)
 parsed_json = parsed_json.set_index("listing_id")
 
 # load previous course JSON files
@@ -122,20 +121,22 @@ migrated_courses["professors"] = previous_json["professors"]
 print("Formatting and updating cross-listings")
 
 
-def add_xlist_seasons(row):
+def add_xlist_seasons(row, season_identifier, xlist_identifier):
 
-    season = row["season"]
+    season = row[season_identifier]
 
-    oci_ids = [str(x) + "_" + season for x in row["oci_ids"]]
+    listing_ids = [f"{str(x)}_{str(season)}" for x in row[xlist_identifier]]
 
-    return oci_ids
+    return listing_ids
 
 
-previous_json["oci_ids"] = previous_json.apply(add_xlist_seasons, axis=1)
-parsed_json["oci_ids"] = parsed_json.apply(add_xlist_seasons, axis=1)
+previous_json["oci_ids"] = previous_json.apply(
+    add_xlist_seasons, season_identifier="season", xlist_identifier="oci_ids", axis=1)
+parsed_json["crns"] = parsed_json.apply(
+    add_xlist_seasons, season_identifier="season_code", xlist_identifier="crns", axis=1)
 
 # patch the post-2014 cross-listings with those from the API
-previous_json["oci_ids"].update(parsed_json["oci_ids"])
+previous_json["oci_ids"].update(parsed_json["crns"])
 
 # merge cross-listing info
 print("Merging cross-listings")

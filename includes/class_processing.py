@@ -328,42 +328,6 @@ def parse_cross_listings(xlist_html):
     return xlist_crns
 
 
-def course_codes_from_fields(code, xlist, section, crn):
-    """
-    Parse course code from fields
-
-    Parameters
-    ----------
-    code: string
-        The primary course code
-    xlist: string
-        The cross-listed course codes
-    section: string
-        The course section
-    crn: string
-        The course registration number identifier
-
-    Returns
-    -------
-    names: dict
-        Course codes information
-    """
-
-    primary_course_code = code.split(" ")
-
-    course_codes = [
-        {"subject": primary_course_code[0],
-         "number": primary_course_code[1]
-         }
-    ]
-
-    return {
-        "oci_id": crn,
-        "section": section,
-        "listings": course_codes
-    }
-
-
 def extract_flags(ci_attrs):
     """
     Get the course flags from the ci_attrs field
@@ -696,7 +660,7 @@ def extract_course_info(course_json, season):
 
     course_info = {}
 
-    course_info["season"] = season
+    course_info["season_code"] = season
 
     raw_description = BeautifulSoup(
         course_json["description"], features="lxml")
@@ -711,10 +675,9 @@ def extract_course_info(course_json, season):
     else:
         course_info["requirements"] = ""
 
-    # Add course meeting time to description field
+    # Add course credits to description field
     if course_json["hours"] != "1" and course_json["hours"] != "":
-        course_info["description"] += "\n\n" + \
-            course_json["hours"] + " Yale College course credits"
+        course_info["description"] += f"\n\n{course_json['hours']} Yale College course credits"
 
     # Course title
     if len(course_json["title"]) > 32:
@@ -731,41 +694,17 @@ def extract_course_info(course_json, season):
     course_info["professors"] = professors_from_html(
         course_json["instructordetail_html"])
 
-    # Codes
-    course_info["oci_id"] = course_json["crn"]
+    # CRN
+    course_info["crn"] = course_json["crn"]
 
     # Cross-listings
-    course_info["oci_ids"] = [course_info["oci_id"]] + \
-        parse_cross_listings(course_json["xlist"])
+    course_info["crns"] = [course_info["crn"], *parse_cross_listings(course_json["xlist"])]
 
-    course_info["course_codes"] = course_codes_from_fields(
-        course_json["code"],
-        course_json["xlist"],
-        course_json["section"],
-        course_json["crn"]
-    )
-
-    if len(course_info["course_codes"]['listings']) > 0:
-
-        num = course_info['course_codes']['listings'][0]['number'].replace(
-            "S", "")
-        course_info["number"] = num
-
-    if len(course_info["course_codes"]['listings']) > 0:
-
-        course_info["subject"] = course_info["course_codes"]['listings'][0]['subject']
-
-    else:
-
-        course_info["subject"] = None
-
-    course_info['section'] = course_info['course_codes']['section'].lstrip("0")
-
-    course_info["codes"] = {
-        "subject": course_info["subject"],
-        "number": course_info["number"],
-        "section": course_info["section"],
-    }
+    # Subject, numbering, and section
+    course_info["course_code"] = course_json["code"]
+    course_info["subject"] = course_json["code"].split(" ")[0]
+    course_info["number"] = course_json["code"].split(" ")[1]
+    course_info["section"] = course_json['section'].lstrip("0")
 
     # Meeting times
     (
@@ -802,10 +741,5 @@ def extract_course_info(course_json, season):
         course_info["syllabus_url"] = matched_syllabus[0]
     else:
         course_info["syllabus_url"] = ''
-
-    # Initialize evaluations fields
-    course_info["average"] = None
-    course_info["evaluations"] = None
-    course_info["num_students"] = None
 
     return course_info
