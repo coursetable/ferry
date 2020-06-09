@@ -37,11 +37,11 @@ for season in seasons:
     # evaluations included
     print(f"Fetching previous JSON for season {season} (with evals)")
     previous_json = fetch_previous_json(season, evals=True)
-    with open(f"./api_output/previous_json/evals_{season}.json", "w") as f:
+    with open(f"../api_output/previous_json/evals_{season}.json", "w") as f:
         f.write(json.dumps(previous_json, indent=4))
 
     # evaluations excluded
     print(f"Fetching previous JSON for season {season} (without evals)")
     previous_json = fetch_previous_json(season, evals=False)
-    with open(f"./api_output/previous_json/{season}.json", "w") as f:
+    with open(f"../api_output/previous_json/{season}.json", "w") as f:
         f.write(json.dumps(previous_json, indent=4))

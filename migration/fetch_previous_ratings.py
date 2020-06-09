@@ -161,7 +161,7 @@ if __name__ == '__main__':
     for season, crn, extras in tqdm(prev):
         identifier = f"{season}-{crn}"
 
-        output_path = f"./api_output/previous_evals/{identifier}.json"
+        output_path = f"../api_output/previous_evals/{identifier}.json"
         if isfile(output_path):
             tqdm.write(f"Skipping {identifier} - already exists")
             continue

@@ -42,7 +42,7 @@ if seasons is None:
     # list of all available seasons
     seasons = fetch_seasons()
 
-    with open("./api_output/seasons.json", "w") as f:
+    with open("../api_output/seasons.json", "w") as f:
         f.write(json.dumps(seasons, indent=4))
 
 # get lists of classes per season
@@ -52,13 +52,13 @@ for season in seasons:
     season_courses = fetch_season_courses(season)
 
     # cache list of classes
-    with open(f"./api_output/season_courses/{season}.json", "w") as f:
+    with open(f"../api_output/season_courses/{season}.json", "w") as f:
         f.write(json.dumps(season_courses, indent=4))
 
 # fetch detailed info for each class in each season
 for season in seasons:
 
-    with open(f"./api_output/season_courses/{season}.json", "r") as f:
+    with open(f"../api_output/season_courses/{season}.json", "r") as f:
         season_courses = json.load(f)
 
     # track progress for each season
@@ -81,7 +81,7 @@ for season in seasons:
         pbar.update(1)
 
     # cache to JSON for entire season
-    with open(f"./api_output/course_json_cache/{season}.json", "w") as f:
+    with open(f"../api_output/course_json_cache/{season}.json", "w") as f:
         f.write(json.dumps(aggregate_season_json, indent=4))
 
     print()

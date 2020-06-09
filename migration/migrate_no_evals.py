@@ -27,14 +27,14 @@ because this script does not process the evaluations
 
 # load API seasons for post-fall 2014 courses
 print("Loading parsed API responses")
-with open("api_output/seasons.json", "r") as f:
+with open("../api_output/seasons.json", "r") as f:
     parsed_seasons = json.load(f)
 
 # load and merge parsed API outputs
 parsed_json = []
 for season in parsed_seasons:
 
-    season_courses = pd.read_json(f"api_output/parsed_courses/{season}.json")
+    season_courses = pd.read_json(f"../api_output/parsed_courses/{season}.json")
 
     parsed_json.append(season_courses)
 
@@ -48,14 +48,14 @@ parsed_json = parsed_json.set_index("listing_id")
 
 # load previous course JSON files
 print("Loading CourseTable JSON files")
-with open("api_output/api_seasons.json", "r") as f:
+with open("../api_output/api_seasons.json", "r") as f:
     all_seasons = json.load(f)
 
 previous_json = []
 
 for season in all_seasons:
 
-    season_courses = pd.read_json(f"api_output/previous_json/{season}.json")
+    season_courses = pd.read_json(f"../api_output/previous_json/{season}.json")
     season_courses["season"] = season
 
     previous_json.append(season_courses)
@@ -167,7 +167,7 @@ listing_columns = ["course_id",
 
 migrated_listings = migrated_courses[listing_columns].copy(deep=True)
 
-migrated_listings.to_csv("migrated_tables/listings.csv")
+migrated_listings.to_csv("../migrated_tables/listings.csv")
 print("Saved `listings` table")
 
 # construct `professors` table
@@ -181,7 +181,7 @@ migrated_professors.index.name = "professor_id"
 
 migrated_professors = pd.DataFrame(migrated_professors)
 
-migrated_professors.to_csv("migrated_tables/professors_no_evals.csv")
+migrated_professors.to_csv("../migrated_tables/professors_no_evals.csv")
 print("Saved `professors` table")
 
 # dictionary mapping for downstream ease
@@ -204,7 +204,7 @@ courses_professors["professor_id"] = courses_professors["professors"].map(
     professors_to_ids)
 courses_professors = courses_professors.drop("professors", axis=1)
 
-courses_professors.to_csv("migrated_tables/courses_professors.csv")
+courses_professors.to_csv("../migrated_tables/courses_professors.csv")
 print("Saved `courses_professors` table")
 
 # deduplicate and finalize `courses` table
@@ -237,5 +237,5 @@ course_fields = [
 migrated_courses = migrated_courses[course_fields]
 migrated_courses = migrated_courses.set_index("course_id")
 
-migrated_courses.to_csv("migrated_tables/courses_no_evals.csv")
+migrated_courses.to_csv("../migrated_tables/courses_no_evals.csv")
 print("Saved `courses` table")

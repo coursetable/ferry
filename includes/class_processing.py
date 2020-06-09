@@ -99,7 +99,7 @@ def fetch_season_subjects(season, api_key):
 
     # Unsuccessful
     else:
-        raise Exception('Unsuccessful response: code {}'.format(r.status_code))
+        raise Exception(f'Unsuccessful response: code {r.status_code}')
 
 
 def fetch_season_subject_courses(season, subject, api_key):
@@ -137,7 +137,7 @@ def fetch_season_subject_courses(season, subject, api_key):
 
     # Unsuccessful
     else:
-        raise Exception('Unsuccessful response: code {}'.format(r.status_code))
+        raise Exception(f'Unsuccessful response: code {r.status_code}')
 
 
 def fetch_season_courses(season):
@@ -168,8 +168,7 @@ def fetch_season_courses(season):
         r_json = json.loads(r.text)
 
         if "fatal" in r_json.keys():
-            raise Exception(
-                'Unsuccessful response: {}'.format(r_json["fatal"]))
+            raise Exception(f'Unsuccessful response: {r_json["fatal"]}')
 
         if "results" not in r_json.keys():
             raise Exception('Unsuccessful response: no results')
@@ -178,7 +177,7 @@ def fetch_season_courses(season):
 
     # Unsuccessful
     else:
-        raise Exception('Unsuccessful response: code {}'.format(r.status_code))
+        raise Exception(f'Unsuccessful response: code {r.status_code}')
 
 
 def fetch_previous_json(season, evals=False):
@@ -199,11 +198,9 @@ def fetch_previous_json(season, evals=False):
     """
 
     if evals:
-        url = "https://coursetable.com/gen/json/data_with_evals_{}.json".format(
-            season)
+        url = f"https://coursetable.com/gen/json/data_with_evals_{season}.json"
     elif not evals:
-        url = "https://coursetable.com/gen/json/data_{}.json".format(
-            season)
+        url = f"https://coursetable.com/gen/json/data_{season}.json"
 
     r = requests.get(url)
 
