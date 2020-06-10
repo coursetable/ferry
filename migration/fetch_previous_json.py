@@ -1,5 +1,5 @@
 from tqdm import tqdm
-import json
+import ujson
 
 import sys
 sys.path.append("..")
@@ -41,10 +41,10 @@ for season in seasons:
     print(f"Fetching previous JSON for season {season} (with evals)")
     previous_json = fetch_previous_json(season, evals=True)
     with open(f"../api_output/previous_json/evals_{season}.json", "w") as f:
-        f.write(json.dumps(previous_json, indent=4))
+        f.write(ujson.dumps(previous_json, indent=4))
 
     # evaluations excluded
     print(f"Fetching previous JSON for season {season} (without evals)")
     previous_json = fetch_previous_json(season, evals=False)
     with open(f"../api_output/previous_json/{season}.json", "w") as f:
-        f.write(json.dumps(previous_json, indent=4))
+        f.write(ujson.dumps(previous_json, indent=4))
