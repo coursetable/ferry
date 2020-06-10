@@ -98,9 +98,7 @@ class Course(BaseModel):
         comment='Course times and locations, displayed in the "Meets" row in CourseTable course modals',
     )
     times_summary = Column(
-        # TODO: maybe this should be JSON?
-        String,
-        comment='Course times, displayed in the "Times" column in CourseTable',
+        String, comment='Course times, displayed in the "Times" column in CourseTable',
     )
     times_by_day = Column(
         JSON,
@@ -177,7 +175,7 @@ class Listing(BaseModel):
             "subject",
             "number",
             "section",
-            unique=True,
+            # unique=True,  # TODO: it seems this is not actually true
         ),
         Index("idx_season_code_crn_unique", "season_code", "crn", unique=True),
     )

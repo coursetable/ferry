@@ -23,40 +23,45 @@ def import_class(session, course_info):
         session, database.Season, season_code=course_info["season_code"],
     )
 
-    # Create listing.
-    listing, listing_created = database.get_or_create(
-        session, database.Listing, season=season, crn=course_info["crn"],
+    # Find or create appropriate listing and course.
+    listing = (
+        session.query(database.Listing)
+        .filter_by(season=season, crn=course_info["crn"])
+        .one_or_none()
     )
+    if not listing:
+        # Check cross-listings for a potential course_id.
+        crns = course_info["crns"]
+        course_entry = (
+            session.query(database.Listing.course_id)
+            .filter(database.Listing.season == season)
+            .filter(database.Listing.crn.in_(crns))
+            .first()
+        )
+
+        if not course_entry:
+            course = database.Course()
+            session.add(course)
+        else:
+            course = (
+                session.query(database.Course)
+                .filter_by(course_id=course_entry.course_id)
+                .one()
+            )
+
+        listing = database.Listing(season=season, crn=course_info["crn"])
+        listing.course = course
+        session.add(listing)
+
+    # Update listing.
     listing.subject = course_info["subject"]
     listing.number = course_info["number"]
     listing.section = course_info["section"]
 
-    if listing_created:
-        # Search all cross-listings for a possible course ID.
-        possible_course_ids = set()
-        for crn in course_info["crns"]:
-            if crn == course_info["crn"]:
-                continue
-
-            (course_id,) = (
-                session.query(database.Listing.course_id)
-                .filter_by(season=season, crn=crn)
-                .one_or_none()
-            )
-            if course_id:
-                possible_course_ids.add(course_id)
-
-        if len(possible_course_ids) > 1:
-            raise database.InvariantError("multiple possible course IDs for listing")
-        elif possible_course_ids:
-            course_id = possible_course_ids.pop()
-
-            course = session.query(database.Course).filter_by(course_id=course_id).one()
-        else:
-            course = database.Course()
-            # session.add(course)
-
-        listing.course = course
+    # Resolve professors.
+    def resolve_professor(name):
+        professor, _ = database.get_or_create(session, database.Professor, name=name)
+        return professor
 
     # Populate course info.
     course = listing.course  # type: database.Course
@@ -65,7 +70,6 @@ def import_class(session, course_info):
     course.course_home_url = course_info["course_home_url"]
     course.description = course_info["description"]
     course.extra_info = course_info["extra_info"]
-    # TODO: course.location_times = course_info["course_home_url"]
     course.locations_summary = course_info["locations_summary"]
     course.requirements = course_info["requirements"]
     course.section = course_info["section"]
@@ -76,12 +80,10 @@ def import_class(session, course_info):
     course.skills = course_info["skills"]
     course.syllabus_url = course_info["syllabus_url"]
     course.title = course_info["title"]
-
-    # Resolve professors.
-    # TODO: course.professors = []
-
-    breakpoint()
-    pass
+    course.professors = [
+        resolve_professor(prof_name) for prof_name in course_info["professors"]
+    ]
+    # TODO: course.location_times = course_info["TODO"]
 
 
 if __name__ == "__main__":
@@ -110,4 +112,5 @@ if __name__ == "__main__":
 
         for course_info in parsed_course_info:
             with database.session_scope(database.Session) as session:
+                print(f"Importing {course_info}")
                 import_class(session, course_info)
