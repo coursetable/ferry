@@ -2,7 +2,7 @@ import sqlalchemy
 
 from .models import Base
 
-engine = sqlalchemy.create_engine("sqlite:///tmp.db")
+engine = sqlalchemy.create_engine("sqlite:///db/tmp.db")
 Base.metadata.create_all(engine)
 
 Session = sqlalchemy.orm.sessionmaker(bind=engine)

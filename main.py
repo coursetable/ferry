@@ -1,36 +1,34 @@
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI, HTTPException
 from fastapi.encoders import jsonable_encoder
-from pydantic import BaseModel
 
 import sqlalchemy
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import Session, sessionmaker
 
 from database import models
+from api import crud, schemas
+
+from typing import List
 
 # initialize
-engine = sqlalchemy.create_engine("sqlite:///:memory:", echo=True)
+engine = sqlalchemy.create_engine("sqlite:///db/tmp.db", connect_args={"check_same_thread": False})
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-from pydantic import BaseModel
-
+Base = declarative_base()
 
 api = FastAPI()
 
-
-class Season(BaseModel):
-    season_code: str
-    term: str
-    year: int
-
-    class Config:
-        example = {
-            "example": {"season_code": "202001", "term": "spring", "year": "2020",}
-        }
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
 
 
-@api.get("/api/seasons/")
-async def list_seasons():
-    return {"message": "hello world"}
+@api.get("/api/seasons/", response_model=List[schemas.Season])
+async def list_seasons(db: Session = Depends(get_db)):
+    return list(crud.get_seasons(db))
 
 
 @api.get("/api/courses/search")

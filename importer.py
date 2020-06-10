@@ -17,9 +17,13 @@ This script does not recalculate any computed values in the schema.
 
 def import_course(session, course_info):
     # Create season.
-    season, _ = database.get_or_create(
+    season, exists = database.get_or_create(
         session, database.Season, season_code=course_info["season_code"],
     )
+
+    if not exists:
+        season.year = int(course_info["season_code"][:4])
+        season.term = {"1":"spring","2":"summer","3":"fall"}[course_info["season_code"][-1]]
 
     # Find or create appropriate listing and course.
     listing = (
@@ -195,7 +199,7 @@ if __name__ == "__main__":
             with open(f"./api_output/parsed_courses/{season}.json", "r") as f:
                 parsed_course_info = json.load(f)
 
-            for course_info in tqdm(parsed_course_info):
+            for course_info in tqdm(parsed_course_info, desc=f"Importing courses in season {season}"):
                 with database.session_scope(database.Session) as session:
                     # tqdm.write(f"Importing {course_info}")
                     import_course(session, course_info)
