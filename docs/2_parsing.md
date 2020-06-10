@@ -42,7 +42,7 @@ However, different sections of a single class will get multiple entries in this 
 | `description`               | String      | Course description                                           |
 | `extra_info`                | String      | Additional information (indicates if class has been canceled) |
 | `locations_summary`         | String      | If single location, is `<location>`; otherwise is `<location> + <n_other_locations>` where the first location is the one with the greatest number of days. Displayed in the "Locations" column in CourseTable. |
-| `num_students`              | Integer     | Student enrollment (retrieved from evaluations, not part of the Courses API) |
+| `num_students`              | Integer     | [computed] Student enrollment (retrieved from evaluations, not part of the Courses API) |
 | `num_students_is_same_prof` | Boolean     | Whether or not a different professor taught the class when it was this size |
 | `requirements`              | String      | Recommended requirements/prerequisites for the course        |
 | `times_long_summary`        | String      | Course times and locations, displayed in the "Meets" row in CourseTable course modals |
@@ -92,13 +92,13 @@ Additional constraints:
 
 ### Historical Ratings `historical_ratings`
 
-| Field                     | Type           | Description               |
-| ------------------------- | -------------- | ------------------------- |
-| `course_code`             | String (index) | Course ID (e.g. CPSC 366) |
-| `professor_id`            | Foreign Key    | Professor ID              |
-| `course_rating_all_profs` | Float          | [computed]                |
-| `course_rating_this_prof` | Float          | [computed]                |
-| `course_workload`         | Float          | [computed]                |
+| Field                     | Type           | Description  |
+| ------------------------- | -------------- | ------------ |
+| `course_code`             | String (index) | Course ID    |
+| `professor_id`            | Foreign Key    | Professor ID |
+| `course_rating_all_profs` | Float          | [computed]   |
+| `course_rating_this_prof` | Float          | [computed]   |
+| `course_workload`         | Float          | [computed]   |
 
 ### Evaluations (questions): `evaluation_questions`
 

@@ -7,6 +7,22 @@ from tqdm import tqdm
 
 import pandas as pd
 
+"""
+================================================================
+This script uses the previous CourseTable JSON files and
+parsed Yale API files to continue migration of the existing
+CourseTable data to the new schema. 
+
+In particular, this script outputs CSV files for the following
+tables specified in the schema (docs/2_parsing.md):
+    
+    - `evaluation_questions`
+    - `evaluation_narratives`
+    - `evaluation_ratings`
+
+================================================================
+"""
+
 # load listings
 listings = pd.read_csv("../migrated_tables/listings.csv", index_col=0)
 
