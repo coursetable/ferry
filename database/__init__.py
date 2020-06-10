@@ -5,6 +5,7 @@ from .models import (
     Listing,
     Professor,
     HistoricalRating,
+    EvaluationStatistics,
     EvaluationQuestion,
     EvaluationNarrative,
     EvaluationRating,
