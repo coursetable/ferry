@@ -3,10 +3,13 @@ import getpass
 import json
 import time
 import re
-import sys
 import csv
 import diskcache
 from tqdm import tqdm
+
+import sys
+sys.path.append("..")
+
 from includes.class_processing import fetch_seasons
 from includes.cas import create_session_from_cookie, create_session_from_credentials
 from includes.rating_processing import *

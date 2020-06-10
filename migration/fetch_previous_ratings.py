@@ -4,7 +4,10 @@ import getpass
 import json
 import time
 import re
+
 import sys
+sys.path.append("..")
+
 from tqdm import tqdm
 from includes.class_processing import fetch_seasons
 from includes.cas import create_session_from_cookie, create_session_from_credentials
@@ -13,6 +16,7 @@ from private import extract_db
 
 from os import listdir
 from os.path import isfile, join
+
 
 """
 ================================================================

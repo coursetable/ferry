@@ -1,6 +1,9 @@
 from tqdm import tqdm
 import json
 
+import sys
+sys.path.append("..")
+
 from includes.class_processing import *
 
 import argparse

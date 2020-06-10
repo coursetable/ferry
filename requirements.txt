@@ -9,3 +9,5 @@ PyMySQL
 diskcache
 SQLAlchemy
 sqlalchemy_mixins
+fastapi
+uvicorn

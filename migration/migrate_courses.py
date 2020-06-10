@@ -1,5 +1,8 @@
 import pandas as pd
 
+import sys
+sys.path.append("..")
+
 from includes.class_processing import *
 from includes.migration import *
 from includes.utils import *

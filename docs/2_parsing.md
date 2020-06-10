@@ -102,12 +102,13 @@ Additional constraints:
 
 ### Evaluations (questions): `evaluation_questions`
 
-| Field           | Type                 | Description                                              |
-| --------------- | -------------------- | -------------------------------------------------------- |
-| `question_code` | Primary key - String | Question code (from OCE, e.g. "YC402")                   |
-| `is_narrative`  | Bool                 | True if the question has narrative responses             |
-| `question_text` | String               | The question                                             |
-| `options`       | List of strings      | Possible responses (only if the question is categorical) |
+| Field           | Type                 | Description                                                  |
+| --------------- | -------------------- | ------------------------------------------------------------ |
+| `question_code` | Primary key - String | Question code (from OCE, e.g. "YC402")                       |
+| `is_narrative`  | Bool                 | True if the question has narrative responses                 |
+| `question_text` | String               | The question                                                 |
+| `options`       | List of strings      | Possible responses (only if the question is categorical)     |
+| `tag`           | String               | Question type (used for computing ratings, since one question may be coded differently for different respondants) |
 
 ### Evaluations (narrative): `evaluation_narratives`
 
