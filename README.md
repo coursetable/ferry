@@ -6,3 +6,4 @@
 - json text files -> database importer and updater script
 - script to update all computed fields across the database
 - compatability layer shims for existing coursetable
+- update the retrival doc and parsing doc

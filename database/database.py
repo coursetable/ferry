@@ -1,14 +1,18 @@
 import sqlalchemy
-from models import Base
 
-engine = sqlalchemy.create_engine("sqlite:///:memory:", echo=True)
+from .models import Base
 
-
+engine = sqlalchemy.create_engine("sqlite:///:memory:")
 Base.metadata.create_all(engine)
 
-# from sqlalchemy.dialects import mysql
-# from sqlalchemy.schema import CreateTable
+Session = sqlalchemy.orm.sessionmaker(bind=engine)
 
-# print(CreateTable(Season.__table__).compile(dialect=mysql.dialect()))
 
-breakpoint()
+if __name__ == "__main__":
+    # from sqlalchemy.dialects import mysql
+    # from sqlalchemy.schema import CreateTable
+    # from models import Season
+
+    # print(CreateTable(Season.__table__).compile(dialect=mysql.dialect()))
+
+    breakpoint()

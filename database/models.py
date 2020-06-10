@@ -13,12 +13,12 @@ from sqlalchemy import (
 )
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
-from sqlalchemy_mixins import SerializeMixin
+from sqlalchemy_mixins import SerializeMixin, ReprMixin
 
 Base = declarative_base()
 
 
-class BaseModel(Base, SerializeMixin):
+class BaseModel(Base, SerializeMixin, ReprMixin):
     __abstract__ = True
     pass
 
@@ -56,7 +56,7 @@ class Course(BaseModel):
         comment="The season the course is being taught in",
         nullable=False,
     )
-    season = relationship("Season", backref="course_list")
+    season = relationship("Season", backref="courses")
 
     professors = relationship(
         "Professor", secondary=course_professors, back_populates="courses"
@@ -103,8 +103,7 @@ class Course(BaseModel):
         comment='Course times, displayed in the "Times" column in CourseTable',
     )
     times_by_day = Column(
-        # TODO: maybe this should be JSON?
-        String,
+        JSON,
         comment="Course meeting times by day, with days as keys and tuples of `(start_time, end_time, location)`",
     )
     short_title = Column(
@@ -137,6 +136,7 @@ class Listing(BaseModel):
         comment="Course that the listing refers to",
         nullable=False,
     )
+    course = relationship("Course", backref="listings")
 
     subject = Column(
         String,
@@ -149,10 +149,7 @@ class Listing(BaseModel):
         nullable=False,
     )
     course_code = Column(
-        String,
-        comment='[computed] subject + number (e.g. "AMST 312")',
-        nullable=False,
-        index=True,
+        String, comment='[computed] subject + number (e.g. "AMST 312")', index=True,
     )
     section = Column(
         String,
@@ -165,6 +162,7 @@ class Listing(BaseModel):
         comment="When the course/listing is being taught, mapping to `seasons`",
         nullable=False,
     )
+    season = relationship("Season", backref="listings")
     crn = Column(
         Integer,
         comment="The CRN associated with this listing",
@@ -270,7 +268,7 @@ class EvaluationNarrative(BaseModel):
         ForeignKey("evaluation_questions.question_code"),
         comment="Question to which this narrative comment responds",
     )
-    question = relationship("Question", backref="evaluation_narratives")
+    question = relationship("EvaluationQuestion", backref="evaluation_narratives")
 
     comment = Column(String, comment="Response to the question",)
     comment_length = Column(
@@ -296,6 +294,6 @@ class EvaluationRating(BaseModel):
         ForeignKey("evaluation_questions.question_code"),
         comment="Question to which this rating responds",
     )
-    question = relationship("Question", backref="evaluation_ratings")
+    question = relationship("EvaluationQuestion", backref="evaluation_ratings")
 
     rating = Column(JSON, comment="JSON array of the response counts for each option",)
