@@ -1,8 +1,6 @@
 from tqdm import tqdm
 import json
-
-from os import listdir
-from os.path import isfile, join
+import os
 
 import argparse
 
@@ -17,7 +15,7 @@ This script does not recalculate any computed values in the schema.
 """
 
 
-def import_class(session, course_info):
+def import_course(session, course_info):
     # Create season.
     season, _ = database.get_or_create(
         session, database.Season, season_code=course_info["season_code"],
@@ -86,6 +84,84 @@ def import_class(session, course_info):
     # TODO: course.location_times = course_info["TODO"]
 
 
+def import_evaluation(session, evaluation):
+    season_code = str(evaluation["season"])
+    crn = str(evaluation["crn_code"])
+
+    course = (
+        session.query(database.Course)
+        .filter(database.Listing.season_code == season_code)
+        .filter(database.Listing.crn == crn)
+        .filter(database.Listing.course_id == database.Course.course_id)
+        .one()
+    )
+
+    # Enrollment statistics and extras
+    statistics, _ = database.get_or_create(
+        session, database.EvaluationStatistics, course=course,
+    )
+    statistics.enrollment = evaluation["enrollment"]
+    statistics.extras = evaluation["extras"]
+
+    # Resolve questions.
+    def resolve_question(question_code, text, is_narrative, options=None):
+        question, created = database.get_or_create(
+            session, database.EvaluationQuestion, question_code=question_code,
+        )
+        if created:
+            question.question_text = text
+            question.is_narrative = is_narrative
+            question.options = options
+        return question
+
+    # Evaluation ratings.
+    for rating_info in evaluation["ratings"]:
+        question = resolve_question(
+            rating_info["question_id"],
+            rating_info["question_text"],
+            is_narrative=True,
+            options=rating_info["options"],
+        )
+
+        # Update ratings data.
+        rating, _ = database.get_or_create(
+            session, database.EvaluationRating, course=course, question=question
+        )
+        rating.rating = rating_info["data"]
+    # TODO remove extra entries
+
+    # Evaluation narratives.
+    for narrative_info in evaluation["narratives"]:
+        question = resolve_question(
+            narrative_info["question_id"],
+            narrative_info["question_text"],
+            is_narrative=False,
+        )
+
+        # Update narratives using comment list.
+        comments = list(narrative_info["comments"])
+        narratives = (
+            session.query(database.EvaluationNarrative)
+            .filter_by(course=course, question=question)
+            .all()
+        )
+        for narrative in narratives:
+            text = narrative.comment
+            if text in comments:
+                comments.remove(text)
+            else:
+                session.delete(narrative)
+        for text in comments:
+            narrative = database.EvaluationNarrative(
+                course=course, question=question, comment=text
+            )
+            session.add(narrative)
+    # TODO remove extra entries not associated with a listed question
+
+    if session.new or session.deleted:
+        breakpoint()
+
+
 if __name__ == "__main__":
     # allow the user to specify seasons (useful for testing and debugging)
     parser = argparse.ArgumentParser(description="Import classes")
@@ -97,20 +173,53 @@ if __name__ == "__main__":
         default=None,
         required=False,
     )
+    parser.add_argument(
+        "--mode",
+        choices=["evals", "courses", "both"],
+        help="import courses only",
+        default="both",
+        required=False,
+    )
 
     args = parser.parse_args()
-    seasons = args.seasons
 
+    seasons = args.seasons
     if seasons is None:
         # get the list of all course JSON files as previously fetched
         with open("./api_output/seasons.json", "r") as f:
             seasons = json.load(f)
 
-    for season in seasons:
-        with open(f"./api_output/parsed_courses/{season}.json", "r") as f:
-            parsed_course_info = json.load(f)
+    # Course information.
+    if args.mode != "evals":
+        for season in seasons:
+            with open(f"./api_output/parsed_courses/{season}.json", "r") as f:
+                parsed_course_info = json.load(f)
 
-        for course_info in parsed_course_info:
+            for course_info in tqdm(parsed_course_info):
+                with database.session_scope(database.Session) as session:
+                    # tqdm.write(f"Importing {course_info}")
+                    import_course(session, course_info)
+
+    # Course evaluations.
+    if args.mode != "courses":
+        all_evals = set(
+            os.listdir("./api_output/previous_evals/")
+            + os.listdir("./api_output/course_evals/")
+        )
+
+        evals_to_import = sorted(
+            filename for filename in all_evals if filename.split("-")[0] in seasons
+        )
+
+        for filename in evals_to_import:
+            # Read the evaluation, giving preference to current over previous.
+            if os.path.isfile(f"./api_output/course_evals/{filename}"):
+                with open(f"./api_output/course_evals/{filename}", "r") as f:
+                    evaluation = json.load(f)
+            else:
+                with open(f"./api_output/previous_evals/{filename}", "r") as f:
+                    evaluation = json.load(f)
+
             with database.session_scope(database.Session) as session:
-                print(f"Importing {course_info}")
-                import_class(session, course_info)
+                tqdm.write(f"Importing evaluation {evaluation}")
+                import_evaluation(session, evaluation)

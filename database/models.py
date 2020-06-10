@@ -78,12 +78,12 @@ class Course(BaseModel):
     num_students = Column(
         # TODO: should we remove this?
         Integer,
-        comment="Student enrollment (retrieved from evaluations, not part of the Courses API)",
+        comment="[computed] Student enrollment (retrieved from evaluations, not part of the Courses API)",
     )
     num_students_is_same_prof = Column(
         # TODO: should we remove this?
         Boolean,
-        comment="Whether or not a different professor taught the class when it was this size",
+        comment="[computed] Whether or not a different professor taught the class when it was this size",
     )
     requirements = Column(
         String, comment="Recommended requirements/prerequisites for the course"
@@ -233,6 +233,25 @@ class HistoricalRating(BaseModel):
     )
 
 
+class EvaluationStatistics(BaseModel):
+    __tablename__ = "evaluation_statistics"
+
+    id = Column(Integer, primary_key=True)
+    course_id = Column(
+        Integer,
+        ForeignKey("courses.course_id"),
+        comment="The course associated with these statistics",
+    )
+    course = relationship("Course", backref="statistics")
+
+    enrollment = Column(
+        JSON, comment="a JSON dictionary with information about the course's enrollment"
+    )
+    extras = Column(
+        JSON, comment="arbitrary additional information attached to an evaluation"
+    )
+
+
 class EvaluationQuestion(BaseModel):
     __tablename__ = "evaluation_questions"
 
@@ -247,6 +266,11 @@ class EvaluationQuestion(BaseModel):
     options = Column(
         JSON,
         comment="JSON array of possible responses (only if the question is not a narrative",
+    )
+
+    tag = Column(
+        String,
+        comment="[computed] Question type (used for computing ratings, since one question may be coded differently for different respondants)",
     )
 
 
