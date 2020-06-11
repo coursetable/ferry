@@ -1,5 +1,5 @@
 from tqdm import tqdm
-import json
+import ujson
 
 import sys
 sys.path.append("..")
@@ -46,7 +46,7 @@ if seasons is None:
     seasons = fetch_seasons()
 
     with open("../api_output/seasons.json", "w") as f:
-        f.write(json.dumps(seasons, indent=4))
+        f.write(ujson.dumps(seasons, indent=4))
 
 # get lists of classes per season
 for season in seasons:
@@ -56,13 +56,13 @@ for season in seasons:
 
     # cache list of classes
     with open(f"../api_output/season_courses/{season}.json", "w") as f:
-        f.write(json.dumps(season_courses, indent=4))
+        f.write(ujson.dumps(season_courses, indent=4))
 
 # fetch detailed info for each class in each season
 for season in seasons:
 
     with open(f"../api_output/season_courses/{season}.json", "r") as f:
-        season_courses = json.load(f)
+        season_courses = ujson.load(f)
 
     # track progress for each season
     pbar = tqdm(total=len(season_courses), ncols=96)
@@ -85,6 +85,6 @@ for season in seasons:
 
     # cache to JSON for entire season
     with open(f"../api_output/course_json_cache/{season}.json", "w") as f:
-        f.write(json.dumps(aggregate_season_json, indent=4))
+        f.write(ujson.dumps(aggregate_season_json, indent=4))
 
     print()
