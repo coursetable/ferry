@@ -1,7 +1,7 @@
 import requests
 import collections
 import getpass 
-import json
+import ujson
 import time
 import re
 
@@ -91,7 +91,7 @@ def fetch_legacy_ratings(db, season: str, crn: str, extras: dict):
 
     ratings_data = dict()
     for item in data:
-        ratings_data[item["question_id"]] = json.loads(item["counts"])
+        ratings_data[item["question_id"]] = ujson.loads(item["counts"])
     
     # Checks
     questions_ids = tuple(narrative_comments.keys()) + tuple(ratings_data.keys())
@@ -126,7 +126,7 @@ def fetch_legacy_ratings(db, season: str, crn: str, extras: dict):
             {
                 "question_id": question_id,
                 "question_text": questions[question_id][0],
-                "options": json.loads(questions[question_id][1]),
+                "options": ujson.loads(questions[question_id][1]),
                 "data": data,
             }
             for question_id, data in ratings_data.items()
@@ -175,7 +175,7 @@ if __name__ == '__main__':
             course_eval = fetch_legacy_ratings(db, season, crn, extras)
 
             with open(output_path, "w") as f:
-                f.write(json.dumps(course_eval, indent=4))
+                f.write(ujson.dumps(course_eval, indent=4))
         except KeyError as e:
             # Some courses produce YC402-YCWR and similar question IDs for ratings data. The new importer can handle this.
             if season == "201903" or season == "201901":

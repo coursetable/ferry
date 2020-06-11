@@ -1,5 +1,5 @@
 import requests
-import json
+import ujson
 
 from bs4 import BeautifulSoup
 
@@ -93,7 +93,7 @@ def fetch_season_subjects(season, api_key):
     # Successful response
     if r.status_code == 200:
 
-        subjects = json.loads(r.text)
+        subjects = ujson.loads(r.text)
 
         return subjects
 
@@ -131,7 +131,7 @@ def fetch_season_subject_courses(season, subject, api_key):
     # Successful response
     if r.status_code == 200:
 
-        courses = json.loads(r.text)
+        courses = ujson.loads(r.text)
 
         return courses
 
@@ -160,12 +160,12 @@ def fetch_season_courses(season):
 
     payload = {'other': {'srcdb': season}, 'criteria': []}
 
-    r = requests.post(url, data=json.dumps(payload))
+    r = requests.post(url, data=ujson.dumps(payload))
 
     # Successful response
     if r.status_code == 200:
 
-        r_json = json.loads(r.text)
+        r_json = ujson.loads(r.text)
 
         if "fatal" in r_json.keys():
             raise Exception(f'Unsuccessful response: {r_json["fatal"]}')
@@ -207,7 +207,7 @@ def fetch_previous_json(season, evals=False):
     # Successful response
     if r.status_code == 200:
 
-        r_json = json.loads(r.text)
+        r_json = ujson.loads(r.text)
 
         return r_json
 
@@ -244,12 +244,12 @@ def fetch_course_json(code, crn, srcdb):
         "matched": "crn:" + crn + ""
     }
 
-    r = requests.post(url, data=json.dumps(payload))
+    r = requests.post(url, data=ujson.dumps(payload))
 
     # Successful response
     if r.status_code == 200:
 
-        course_json = json.loads(r.text)
+        course_json = ujson.loads(r.text)
 
         if "fatal" in course_json.keys():
             raise Exception(
