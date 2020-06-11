@@ -1,6 +1,6 @@
 from typing import Dict, List, Tuple, Any
 import requests
-import json
+import ujson
 import time
 import lxml
 
@@ -118,7 +118,7 @@ def fetch_eval_data(
     )  # Fetch ratings data
     if page_graphData.status_code != 200:
         raise CrawlerError(f"missing ratings for {questionId}")
-    data_graphData = json.loads(page_graphData.text)
+    data_graphData = ujson.loads(page_graphData.text)
 
     ratings = []
     options = []

@@ -1,5 +1,5 @@
 from tqdm import tqdm
-import json
+import ujson
 import os
 import textdistance
 
@@ -205,13 +205,13 @@ if __name__ == "__main__":
     if seasons is None:
         # get the list of all course JSON files as previously fetched
         with open("./api_output/seasons.json", "r") as f:
-            seasons = json.load(f)
+            seasons = ujson.load(f)
 
     # Course information.
     if args.mode != "evals":
         for season in seasons:
             with open(f"./api_output/parsed_courses/{season}.json", "r") as f:
-                parsed_course_info = json.load(f)
+                parsed_course_info = ujson.load(f)
 
             for course_info in tqdm(parsed_course_info, desc=f"Importing courses in season {season}"):
                 with database.session_scope(database.Session) as session:
@@ -233,10 +233,10 @@ if __name__ == "__main__":
             # Read the evaluation, giving preference to current over previous.
             if os.path.isfile(f"./api_output/course_evals/{filename}"):
                 with open(f"./api_output/course_evals/{filename}", "r") as f:
-                    evaluation = json.load(f)
+                    evaluation = ujson.load(f)
             else:
                 with open(f"./api_output/previous_evals/{filename}", "r") as f:
-                    evaluation = json.load(f)
+                    evaluation = ujson.load(f)
 
             with database.session_scope(database.Session) as session:
                 # tqdm.write(f"Importing evaluation {evaluation}")

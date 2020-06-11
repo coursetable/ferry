@@ -1,6 +1,6 @@
 import requests
 import getpass
-import json
+import ujson
 import time
 import re
 import csv
@@ -54,7 +54,7 @@ def is_yale_college(season_code, crn):
     }
     all_response = requests.post(
         "https://courses.yale.edu/api/?page=fose&route=search",
-        data=json.dumps(all_params),
+        data=ujson.dumps(all_params),
     )
     all_data = all_response.json()
 
@@ -68,7 +68,7 @@ def is_yale_college(season_code, crn):
     }
     yc_data = requests.post(
         "https://courses.yale.edu/api/?page=fose&route=search&col=YC",
-        data=json.dumps(yc_params),
+        data=ujson.dumps(yc_params),
     ).json()
 
     if yc_data["count"] == 0:
@@ -124,7 +124,7 @@ for season_code, crn in tqdm(queue):
         course_eval = fetch_course_eval(session, crn, season_code)
 
         with open(output_path, "w") as f:
-            f.write(json.dumps(course_eval, indent=4))
+            f.write(ujson.dumps(course_eval, indent=4))
 
         tqdm.write(f"dumped in JSON")
     # except SeasonMissingEvalsError:
