@@ -11,3 +11,4 @@ SQLAlchemy
 sqlalchemy_mixins
 fastapi
 uvicorn
+textdistance

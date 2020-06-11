@@ -1,6 +1,7 @@
 from tqdm import tqdm
 import json
 import os
+import textdistance
 
 import argparse
 
@@ -93,15 +94,18 @@ def import_evaluation(session, evaluation):
         .filter(database.Listing.season_code == season_code)
         .filter(database.Listing.crn == crn)
         .filter(database.Listing.course_id == database.Course.course_id)
-        .one()
+        .one_or_none()
     )
+    if not course:
+        print(f"Failed to find course for evaluation {evaluation}")
+        return
 
     # Enrollment statistics and extras
     statistics, _ = database.get_or_create(
         session, database.EvaluationStatistics, course=course,
     )
-    statistics.enrollment = evaluation["enrollment"]
-    statistics.extras = evaluation["extras"]
+    database.update_json(statistics, "enrollment", evaluation["enrollment"])
+    database.update_json(statistics, "extras", evaluation["extras"])
 
     # Resolve questions.
     def resolve_question(question_code, text, is_narrative, options=None):
@@ -112,6 +116,15 @@ def import_evaluation(session, evaluation):
             question.question_text = text
             question.is_narrative = is_narrative
             question.options = options
+        else:
+            # Sanity checks. Allows for variation in question text since sometimes the question
+            # text includes the course code or title.
+            if (
+                question.is_narrative != is_narrative
+                or textdistance.levenshtein.distance(question.question_text, text) > 32
+                or not database.eq_json(question.options, options)
+            ):
+                raise database.InvariantError("Question codes are not consistent")
         return question
 
     # Evaluation ratings.
@@ -159,7 +172,8 @@ def import_evaluation(session, evaluation):
     # TODO remove extra entries not associated with a listed question
 
     if session.new or session.deleted:
-        breakpoint()
+        pass
+        # breakpoint()
 
 
 if __name__ == "__main__":
@@ -211,7 +225,7 @@ if __name__ == "__main__":
             filename for filename in all_evals if filename.split("-")[0] in seasons
         )
 
-        for filename in evals_to_import:
+        for filename in tqdm(evals_to_import):
             # Read the evaluation, giving preference to current over previous.
             if os.path.isfile(f"./api_output/course_evals/{filename}"):
                 with open(f"./api_output/course_evals/{filename}", "r") as f:
@@ -221,5 +235,5 @@ if __name__ == "__main__":
                     evaluation = json.load(f)
 
             with database.session_scope(database.Session) as session:
-                tqdm.write(f"Importing evaluation {evaluation}")
+                # tqdm.write(f"Importing evaluation {evaluation}")
                 import_evaluation(session, evaluation)
