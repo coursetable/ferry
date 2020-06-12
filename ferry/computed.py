@@ -1,3 +1,4 @@
+from typing import List
 import collections
 import csv
 
@@ -79,7 +80,8 @@ def questions_computed(session):
     for question in session.query(
         database.EvaluationQuestion
     ):  # type: database.EvaluationQuestion
-        question.tag = tags[question.question_code]
+        tag = tags[question.question_code]
+        question.tag = tag
 
 
 def question_tag_invariant(session):
@@ -104,6 +106,49 @@ def question_tag_invariant(session):
                 raise database.InvariantError(f"mismatched tag {question.tag}")
 
 
+def evaluation_statistics_computed(session):
+    """
+    Compute fields: evaluation_statistics.{avg_rating, avg_workload}
+    """
+
+    def fetch_ratings(course_id, question_tag) -> List[int]:
+        ratings = (
+            session.query(database.EvaluationRating)
+            .filter(
+                database.EvaluationRating.question_code
+                == database.EvaluationQuestion.question_code
+            )
+            .filter(database.EvaluationRating.course_id == course_id)
+            .filter(database.EvaluationQuestion.tag == question_tag)
+        ).all()
+
+        if not ratings:
+            return None
+
+        # Aggregate responses across question variants.
+        data = [entry.rating for entry in ratings]
+        rating = [sum(x) for x in zip(*data)]
+        return rating
+
+    def average_rating(ratings: List[int]) -> float:
+        if not ratings or not sum(ratings):
+            return None
+        agg = 0
+        for i, rating in enumerate(ratings):
+            multiplier = i + 1
+            agg += multiplier * rating
+        return agg / sum(ratings)
+
+    for evaluation_statistics in session.query(
+        database.EvaluationStatistics
+    ):  # type: database.EvaluationStatistics
+        overall_ratings = fetch_ratings(evaluation_statistics.course_id, "rating")
+        workload_ratings = fetch_ratings(evaluation_statistics.course_id, "workload")
+
+        evaluation_statistics.avg_rating = average_rating(overall_ratings)
+        evaluation_statistics.avg_workload = average_rating(workload_ratings)
+
+
 if __name__ == "__main__":
     items = [
         seasons_computed,
@@ -112,6 +157,7 @@ if __name__ == "__main__":
         question_invariants,
         questions_computed,
         question_tag_invariant,
+        evaluation_statistics_computed,
     ]
 
     for fn in items:
@@ -124,14 +170,12 @@ if __name__ == "__main__":
             fn(session)
 
 """
+TODO: invariants
 Invariant: every course should have at least one listing.
 """
 
 """
-   81:         comment="[computed] Student enrollment (retrieved from evaluations, not part of the Courses API)",
-   86:         comment="[computed] Whether or not a different professor taught the class when it was this size",
-  119:         comment="[computed] Average overall course rating (from this course's evaluations, aggregated across cross-listings)",
-  123:         comment="[computed] Average workload rating ((from this course's evaluations, aggregated across cross-listings)",
+TODO: computed fields
   196:         comment='[computed] Average rating of the professor assessed via the "Overall assessment" question in courses taught',
   214:         comment="[computed] The average rating for this course code, across all professors who taught it",
   218:         comment="[computed] The average rating for this course code when taught by this professor",

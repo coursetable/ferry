@@ -76,12 +76,12 @@ class Course(BaseModel):
         comment='If single location, is `<location>`; otherwise is `<location> + <n_other_locations>` where the first location is the one with the greatest number of days. Displayed in the "Locations" column in CourseTable.',
     )
     num_students = Column(
-        # TODO: should we remove this?
+        # TODO: remove this.
         Integer,
         comment="[computed] Student enrollment (retrieved from evaluations, not part of the Courses API)",
     )
     num_students_is_same_prof = Column(
-        # TODO: should we remove this?
+        # TODO: remove this.
         Boolean,
         comment="[computed] Whether or not a different professor taught the class when it was this size",
     )
@@ -109,14 +109,6 @@ class Course(BaseModel):
     )
     syllabus_url = Column(String, comment="Link to the syllabus")
     title = Column(String, comment="Complete course title")
-    average_overall_rating = Column(
-        Float,
-        comment="[computed] Average overall course rating (from this course's evaluations, aggregated across cross-listings)",
-    )
-    average_workload = Column(
-        Float,
-        comment="[computed] Average workload rating ((from this course's evaluations, aggregated across cross-listings)",
-    )
 
 
 class Listing(BaseModel):
@@ -245,6 +237,8 @@ class EvaluationStatistics(BaseModel):
     extras = Column(
         JSON, comment="arbitrary additional information attached to an evaluation"
     )
+    avg_rating = Column(Float, comment="[computed] Average overall rating")
+    avg_workload = Column(Float, comment="[computed] Average workload rating")
 
 
 class EvaluationQuestion(BaseModel):
