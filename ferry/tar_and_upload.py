@@ -44,7 +44,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "-u",
         "--upload",
-        help="Whether or not to upload to the ferry-data directory (https://drive.google.com/drive/folders/14wl5ibpeLTQaVHK-DNTfLUaWb1N7lY7M?usp=sharing). Leave empty to skip uploading. ",
+        help="Whether or not to upload to the ferry-data directory (https://drive.google.com/drive/folders/14wl5ibpeLTQaVHK-DNTfLUaWb1N7lY7M?usp=sharing).",
         action='store_true'
     )
 
