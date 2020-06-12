@@ -1,5 +1,6 @@
 from functools import reduce
 
+
 def merge_overlapping(sets):
     """
     Given a list of sets, merge sets with
@@ -44,7 +45,7 @@ def merge_overlapping(sets):
     return sets
 
 
-def elementwise_sum(a,b):
+def elementwise_sum(a, b):
     """
     Given two lists of equal length, return
     a list of elementwise sums
@@ -61,10 +62,11 @@ def elementwise_sum(a,b):
     sums: elementwise sums
 
     """
-    
-    assert len(a)==len(b), "a and b must have same size"
-    
+
+    assert len(a) == len(b), "a and b must have same size"
+
     return [sum(x) for x in zip(a, b)]
+
 
 def category_average(categories):
     """
@@ -83,19 +85,25 @@ def category_average(categories):
     n: total number of responses
 
     """
-    
+
     if len(categories) == 0:
         return None, None
-    
+
     categories = reduce(elementwise_sum, categories)
-    
+
     if sum(categories) == 0:
         return None, None
-    
-    categories_sum = sum([categories[i]*(i+1) for i in range(len(categories))])
-    
+
+    categories_sum = sum([categories[i] * (i + 1) for i in range(len(categories))])
+
     n = sum(categories)
-    
-    average = categories_sum/n
-    
+
+    average = categories_sum / n
+
     return average, n
+
+
+def resolve_potentially_callable(val):
+    if callable(val):
+        return val()
+    return val

@@ -11,10 +11,7 @@ from os.path import isfile, join
 
 from ferry import config
 from ferry.includes.class_processing import fetch_seasons
-from ferry.includes.cas import (
-    create_session_from_cookie,
-    create_session_from_credentials,
-)
+from ferry.includes.cas import create_session
 from ferry.includes.rating_processing import *
 
 
@@ -25,18 +22,7 @@ Online Course Evaluation (OCE), in JSON format.
 ================================================================
 """
 
-# Input NetID and password to login to Yale CAS
-# netid = input("Yale NetID: ")
-# password = getpass.getpass()
-# netid = "hks24"
-# with open("./private/netid.txt", "r") as passwordfile:
-#     password = passwordfile.read().strip()
-# session = create_session_from_credentials(netid, password)
-
-# Login
-with open("../private/cascookie.txt", "r") as cookiefile:
-    castgc = cookiefile.read().strip()
-session = create_session_from_cookie(castgc)
+session = create_session()
 print("Cookies: ", session.cookies.get_dict())
 
 # get the list of all course JSON files as previously fetched
@@ -121,7 +107,7 @@ for season_code, crn in tqdm(queue):
     tqdm.write("                            ", end="")
 
     try:
-        session = create_session_from_cookie(castgc)
+        session = create_session()
         course_eval = fetch_course_eval(session, crn, season_code)
 
         with open(output_path, "w") as f:
