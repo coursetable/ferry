@@ -1,10 +1,8 @@
 from tqdm import tqdm
 import ujson
 
-import sys
-sys.path.append("..")
-
-from includes.class_processing import *
+from ferry import config
+from ferry.includes.class_processing import *
 
 """
 ================================================================
@@ -31,7 +29,8 @@ seasons = [
     *spring_seasons,
     *summer_seasons,
     *winter_seasons,
-    "202001", "202002"
+    "202001",
+    "202002",
 ]
 
 # get lists of classes per season
@@ -40,11 +39,11 @@ for season in seasons:
     # evaluations included
     print(f"Fetching previous JSON for season {season} (with evals)")
     previous_json = fetch_previous_json(season, evals=True)
-    with open(f"../api_output/previous_json/evals_{season}.json", "w") as f:
+    with open(f"{config.DATA_DIR}/previous_json/evals_{season}.json", "w") as f:
         f.write(ujson.dumps(previous_json, indent=4))
 
     # evaluations excluded
     print(f"Fetching previous JSON for season {season} (without evals)")
     previous_json = fetch_previous_json(season, evals=False)
-    with open(f"../api_output/previous_json/{season}.json", "w") as f:
+    with open(f"{config.DATA_DIR}/previous_json/{season}.json", "w") as f:
         f.write(ujson.dumps(previous_json, indent=4))

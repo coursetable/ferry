@@ -5,7 +5,8 @@ import textdistance
 
 import argparse
 
-import database
+from ferry import config
+from ferry import database
 
 """
 ================================================================
@@ -199,13 +200,13 @@ if __name__ == "__main__":
     seasons = args.seasons
     if seasons is None:
         # get the list of all course JSON files as previously fetched
-        with open("./api_output/seasons.json", "r") as f:
+        with open(f"{config.DATA_DIR}/seasons.json", "r") as f:
             seasons = ujson.load(f)
 
     # Course information.
     if args.mode != "evals":
         for season in seasons:
-            with open(f"./api_output/parsed_courses/{season}.json", "r") as f:
+            with open(f"{config.DATA_DIR}/parsed_courses/{season}.json", "r") as f:
                 parsed_course_info = ujson.load(f)
 
             for course_info in tqdm(
@@ -218,8 +219,8 @@ if __name__ == "__main__":
     # Course evaluations.
     if args.mode != "courses":
         all_evals = set(
-            os.listdir("./api_output/previous_evals/")
-            + os.listdir("./api_output/course_evals/")
+            os.listdir(f"{config.DATA_DIR}/previous_evals/")
+            + os.listdir(f"{config.DATA_DIR}/course_evals/")
         )
 
         evals_to_import = sorted(
@@ -228,11 +229,11 @@ if __name__ == "__main__":
 
         for filename in tqdm(evals_to_import, desc="Importing evaluations"):
             # Read the evaluation, giving preference to current over previous.
-            if os.path.isfile(f"./api_output/course_evals/{filename}"):
-                with open(f"./api_output/course_evals/{filename}", "r") as f:
+            if os.path.isfile(f"{config.DATA_DIR}/course_evals/{filename}"):
+                with open(f"{config.DATA_DIR}/course_evals/{filename}", "r") as f:
                     evaluation = ujson.load(f)
             else:
-                with open(f"./api_output/previous_evals/{filename}", "r") as f:
+                with open(f"{config.DATA_DIR}/previous_evals/{filename}", "r") as f:
                     evaluation = ujson.load(f)
 
             with database.session_scope(database.Session) as session:

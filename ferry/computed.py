@@ -1,7 +1,9 @@
 from tqdm import tqdm
 import csv
 import collections
-import database
+
+from ferry import config
+from ferry import database
 
 """
 This script recomputes and sets all computed fields in the database.
@@ -67,7 +69,7 @@ def questions_computed(session):
 
     # Build tag lookup table from file.
     tags = collections.defaultdict(lambda: None)
-    with open("./question_tags.csv") as f:
+    with open(f"{config.RESOURCE_DIR}/question_tags.csv") as f:
         for question_code, tag in csv.reader(f):
             if tag:
                 tags[question_code] = tag

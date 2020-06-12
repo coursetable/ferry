@@ -9,6 +9,7 @@ from tqdm import tqdm
 from os import listdir
 from os.path import isfile, join
 
+from ferry import config
 from ferry.includes.class_processing import fetch_seasons
 from ferry.includes.cas import (
     create_session_from_cookie,
@@ -39,11 +40,11 @@ session = create_session_from_cookie(castgc)
 print("Cookies: ", session.cookies.get_dict())
 
 # get the list of all course JSON files as previously fetched
-season_jsons_path = "../api_output/courses/"
+season_jsons_path = f"{config.DATA_DIR}/courses/"
 
 seasons = fetch_seasons()
 
-yale_college_cache = diskcache.Cache("../api_output/yale_college_cache")
+yale_college_cache = diskcache.Cache(f"{config.DATA_DIR}/yale_college_cache")
 
 
 @yale_college_cache.memoize()
@@ -88,7 +89,7 @@ def is_yale_college(season_code, crn):
 #     for course in season_json: # Loop through each course in the season
 
 queue = []
-with open("../api_output/listings_with_extra_info.csv", "r") as csvfile:
+with open(f"{config.DATA_DIR}/listings_with_extra_info.csv", "r") as csvfile:
     reader = csv.reader(csvfile)
     for _, _, _, _, _, _, season_code, crn, extra_info in reader:
         if "Cancelled" in extra_info:
@@ -106,7 +107,7 @@ with open("../api_output/listings_with_extra_info.csv", "r") as csvfile:
 
 for season_code, crn in tqdm(queue):
     course_unique_id = f"{season_code}-{crn}"
-    output_path = "../api_output/course_evals/{}.json".format(course_unique_id)
+    output_path = f"{config.DATA_DIR}/course_evals/{course_unique_id}.json"
 
     if isfile(output_path):
         # tqdm.write(f"Skipping course {course_unique_id} - already exists")

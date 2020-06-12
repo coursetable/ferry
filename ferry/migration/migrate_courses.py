@@ -1,17 +1,13 @@
-import pandas as pd
-
-import sys
-sys.path.append("..")
-
-from includes.class_processing import *
-from includes.migration import *
-from includes.utils import *
-
 import ujson
 
 import argparse
 
 from tqdm import tqdm
+
+from ferry import config
+from ferry.includes.class_processing import *
+from ferry.includes.migration import *
+from ferry.includes.utils import *
 
 """
 ================================================================
@@ -34,20 +30,21 @@ args = parser.parse_args()
 seasons = args.seasons
 
 if seasons is None:
-
-    with open("../api_output/api_seasons.json", "r") as f:
+    with open(f"{config.DATA_DIR}/api_seasons.json", "r") as f:
         seasons = ujson.load(f)
 
 for season in seasons:
-    
+
     migrated_courses = []
-    
-    with open(f"../api_output/previous_json/{season}.json","r") as f:
-        
+
+    with open(f"{config.DATA_DIR}/previous_json/{season}.json", "r") as f:
+
         previous_json = ujson.load(f)
-        
-        for course in tqdm(previous_json,desc=f"Processing courses in season {season}"):
-    
+
+        for course in tqdm(
+            previous_json, desc=f"Processing courses in season {season}"
+        ):
+
             migrated_course = dict()
 
             migrated_course["season_code"] = str(season)
@@ -65,27 +62,28 @@ for season in seasons:
 
             migrated_course["subject"] = course["subject"]
             migrated_course["number"] = str(course["number"])
-            migrated_course["course_code"] = f"{course['subject']} {migrated_course['number']}"
+            migrated_course[
+                "course_code"
+            ] = f"{course['subject']} {migrated_course['number']}"
 
             migrated_course["section"] = course["section"]
 
             (
-            migrated_course["times_summary"],
-            migrated_course["times_long_summary"],
-            migrated_course["times_by_day"]
+                migrated_course["times_summary"],
+                migrated_course["times_long_summary"],
+                migrated_course["times_by_day"],
             ) = convert_old_meetings(course["times"])
 
             migrated_course["locations_summary"] = course["locations_summary"]
 
             migrated_course["skills"] = course["skills"]
             migrated_course["areas"] = course["areas"]
-
             migrated_course["course_home_url"] = course["course_home_url"]
             migrated_course["syllabus_url"] = course["syllabus_url"]
 
             migrated_course["flags"] = extract_flags("".join(course["flags"]))
-            
+
             migrated_courses.append(migrated_course)
 
-    with open(f"../api_output/migrated_courses/{season}.json","w") as f:
+    with open(f"{config.DATA_DIR}/migrated_courses/{season}.json", "w") as f:
         f.write(ujson.dumps(migrated_courses))

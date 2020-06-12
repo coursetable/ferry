@@ -5,14 +5,13 @@ import ujson
 import time
 import re
 
-import sys
-
-sys.path.append("..")
-
 from tqdm import tqdm
-from includes.class_processing import fetch_seasons
-from includes.cas import create_session_from_cookie, create_session_from_credentials
-from includes.rating_processing import CourseMissingEvalsError
+from ferry.includes.class_processing import fetch_seasons
+from ferry.includes.cas import (
+    create_session_from_cookie,
+    create_session_from_credentials,
+)
+from ferry.includes.rating_processing import CrawlerError
 from private import extract_db
 
 from os import listdir
@@ -202,6 +201,6 @@ if __name__ == "__main__":
             if season == "201903" or season == "201901":
                 tqdm.write(f"Failed - blacklist {identifier}")
             else:
-                raise CourseMissingEvalsError from e
-        except CourseMissingEvalsError:
+                raise CrawlerError from e
+        except CrawlerError:
             tqdm.write(f"Failed to fetch {identifier}")
