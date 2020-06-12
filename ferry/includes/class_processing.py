@@ -11,6 +11,8 @@ import time
 from datetime import datetime
 import calendar
 
+class FetchClassesError(Exception):
+    pass
 
 def fetch_seasons():
     """
@@ -36,7 +38,7 @@ def fetch_seasons():
 
     # Unsuccessful
     else:
-        raise Exception('Unsuccessful response: code {}'.format(r.status_code))
+        raise FetchClassesError(f'Unsuccessful response: code {r.status_code}')
 
 
 def fetch_all_api_seasons():
@@ -99,7 +101,7 @@ def fetch_season_subjects(season, api_key):
 
     # Unsuccessful
     else:
-        raise Exception(f'Unsuccessful response: code {r.status_code}')
+        raise FetchClassesError(f'Unsuccessful response: code {r.status_code}')
 
 
 def fetch_season_subject_courses(season, subject, api_key):
@@ -137,7 +139,7 @@ def fetch_season_subject_courses(season, subject, api_key):
 
     # Unsuccessful
     else:
-        raise Exception(f'Unsuccessful response: code {r.status_code}')
+        raise FetchClassesError(f'Unsuccessful response: code {r.status_code}')
 
 
 def fetch_season_courses(season):
@@ -168,16 +170,16 @@ def fetch_season_courses(season):
         r_json = ujson.loads(r.text)
 
         if "fatal" in r_json.keys():
-            raise Exception(f'Unsuccessful response: {r_json["fatal"]}')
+            raise FetchClassesError(f'Unsuccessful response: {r_json["fatal"]}')
 
         if "results" not in r_json.keys():
-            raise Exception('Unsuccessful response: no results')
+            raise FetchClassesError('Unsuccessful response: no results')
 
         return r_json["results"]
 
     # Unsuccessful
     else:
-        raise Exception(f'Unsuccessful response: code {r.status_code}')
+        raise FetchClassesError(f'Unsuccessful response: code {r.status_code}')
 
 
 def fetch_previous_json(season, evals=False):
@@ -213,7 +215,7 @@ def fetch_previous_json(season, evals=False):
 
     # Unsuccessful
     else:
-        raise Exception('Unsuccessful response: code {}'.format(r.status_code))
+        raise FetchClassesError('Unsuccessful response: code {}'.format(r.status_code))
 
 
 def fetch_course_json(code, crn, srcdb):
@@ -252,14 +254,14 @@ def fetch_course_json(code, crn, srcdb):
         course_json = ujson.loads(r.text)
 
         if "fatal" in course_json.keys():
-            raise Exception(
+            raise FetchClassesError(
                 'Unsuccessful response: {}'.format(course_json["fatal"]))
 
         return course_json
 
     # Unsuccessful
     else:
-        raise Exception('Unsuccessful response: code {}'.format(r.status_code))
+        raise FetchClassesError('Unsuccessful response: code {}'.format(r.status_code))
 
 
 def professors_from_html(html):

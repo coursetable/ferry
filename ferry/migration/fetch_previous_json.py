@@ -38,12 +38,24 @@ for season in seasons:
 
     # evaluations included
     print(f"Fetching previous JSON for season {season} (with evals)")
-    previous_json = fetch_previous_json(season, evals=True)
-    with open(f"{config.DATA_DIR}/previous_json/evals_{season}.json", "w") as f:
-        f.write(ujson.dumps(previous_json, indent=4))
+
+    try:
+        previous_json = fetch_previous_json(season, evals=True)
+
+        with open(f"{config.DATA_DIR}/previous_json/evals_{season}.json", "w") as f:
+            f.write(ujson.dumps(previous_json, indent=4))
+
+    except FetchClassesError:
+        print("JSON not found.")
 
     # evaluations excluded
     print(f"Fetching previous JSON for season {season} (without evals)")
-    previous_json = fetch_previous_json(season, evals=False)
-    with open(f"{config.DATA_DIR}/previous_json/{season}.json", "w") as f:
-        f.write(ujson.dumps(previous_json, indent=4))
+
+    try:
+        previous_json = fetch_previous_json(season, evals=False)
+        with open(f"{config.DATA_DIR}/previous_json/{season}.json", "w") as f:
+            f.write(ujson.dumps(previous_json, indent=4))
+
+    except FetchClassesError:
+        print("JSON not found.")
+
