@@ -18,13 +18,9 @@ This script does not recalculate any computed values in the schema.
 
 def import_course(session, course_info):
     # Create season.
-    season, exists = database.get_or_create(
+    season, _ = database.get_or_create(
         session, database.Season, season_code=course_info["season_code"],
     )
-
-    if not exists:
-        season.year = int(course_info["season_code"][:4])
-        season.term = {"1":"spring","2":"summer","3":"fall"}[course_info["season_code"][-1]]
 
     # Find or create appropriate listing and course.
     listing = (
@@ -75,7 +71,6 @@ def import_course(session, course_info):
     course.extra_info = course_info["extra_info"]
     course.locations_summary = course_info["locations_summary"]
     course.requirements = course_info["requirements"]
-    course.section = course_info["section"]
     course.times_long_summary = course_info["times_long_summary"]
     course.times_summary = course_info["times_summary"]
     course.times_by_day = course_info["times_by_day"]
@@ -136,7 +131,7 @@ def import_evaluation(session, evaluation):
         question = resolve_question(
             rating_info["question_id"],
             rating_info["question_text"],
-            is_narrative=True,
+            is_narrative=False,
             options=rating_info["options"],
         )
 
@@ -152,7 +147,7 @@ def import_evaluation(session, evaluation):
         question = resolve_question(
             narrative_info["question_id"],
             narrative_info["question_text"],
-            is_narrative=False,
+            is_narrative=True,
         )
 
         # Update narratives using comment list.
@@ -213,7 +208,9 @@ if __name__ == "__main__":
             with open(f"./api_output/parsed_courses/{season}.json", "r") as f:
                 parsed_course_info = ujson.load(f)
 
-            for course_info in tqdm(parsed_course_info, desc=f"Importing courses in season {season}"):
+            for course_info in tqdm(
+                parsed_course_info, desc=f"Importing courses in season {season}"
+            ):
                 with database.session_scope(database.Session) as session:
                     # tqdm.write(f"Importing {course_info}")
                     import_course(session, course_info)
@@ -229,7 +226,7 @@ if __name__ == "__main__":
             filename for filename in all_evals if filename.split("-")[0] in seasons
         )
 
-        for filename in tqdm(evals_to_import):
+        for filename in tqdm(evals_to_import, desc="Importing evaluations"):
             # Read the evaluation, giving preference to current over previous.
             if os.path.isfile(f"./api_output/course_evals/{filename}"):
                 with open(f"./api_output/course_evals/{filename}", "r") as f:

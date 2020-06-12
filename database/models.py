@@ -88,11 +88,6 @@ class Course(BaseModel):
     requirements = Column(
         String, comment="Recommended requirements/prerequisites for the course"
     )
-    section = Column(
-        # TODO: should we remove this?
-        String,
-        comment="Which section the course is (each section has its own field, as returned in the original API output)",
-    )
     times_long_summary = Column(
         String,
         comment='Course times and locations, displayed in the "Meets" row in CourseTable course modals',
