@@ -1,4 +1,7 @@
 {
     "editor.formatOnSave": true,
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "files.watcherExclude": {
+        "**/api_output/**": true
+    }
 }

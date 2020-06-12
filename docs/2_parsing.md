@@ -20,6 +20,10 @@ Mappings:
 - evaluation_questions -> evaluation_narratives = one to many
 - evaluation_questions -> evaluation_ratings = one to many
 
+## Layout
+
+![schema](./db_diagram.png)
+
 ### Seasons: `seasons`
 
 | Field         | Type                                       | Description                       |
