@@ -1,6 +1,6 @@
-import os
-import getpass
 import functools
+import getpass
+import os
 
 """
 Contains configurations and settings used by the rest of the project.

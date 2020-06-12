@@ -1,9 +1,10 @@
-from tqdm import tqdm
-import csv
 import collections
+import csv
 
-from ferry import config
-from ferry import database
+from tqdm import tqdm
+
+from ferry import config, database
+
 
 """
 This script recomputes and sets all computed fields in the database.

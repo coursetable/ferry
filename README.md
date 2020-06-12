@@ -5,6 +5,7 @@ A crawler for Yale courses and evaluation data. Integrates with Coursetable.
 Run `poetry install` to setup the virtualenv, install dependencies, and bootstrap the project.
 
 ## TODO
+- automatically apply black and isort
 - save the raw HTML from OCE in the evaluations crawler
 - script to update all computed fields across the database
 - script to check all database invariants

@@ -1,12 +1,12 @@
-from tqdm import tqdm
-import ujson
-import os
-import textdistance
-
 import argparse
+import os
 
-from ferry import config
-from ferry import database
+import textdistance
+import ujson
+from tqdm import tqdm
+
+from ferry import config, database
+
 
 """
 ================================================================
