@@ -1,14 +1,12 @@
 from tqdm import tqdm
 import ujson
 
-import sys
-sys.path.append("..")
-from includes.class_processing import *
-
 from os import listdir
 from os.path import isfile, join
 
 import argparse
+
+from ferry.includes.class_processing import *
 
 """
 ================================================================
@@ -19,13 +17,15 @@ current website.
 """
 
 # allow the user to specify seasons (useful for testing and debugging)
-parser = argparse.ArgumentParser(description='Parse classes')
-parser.add_argument('-s', 
-                    '--seasons', 
-                    nargs='+', 
-                    help='seasons to parse (leave empty to parse all)', 
-                    default=None, 
-                    required=False)
+parser = argparse.ArgumentParser(description="Parse classes")
+parser.add_argument(
+    "-s",
+    "--seasons",
+    nargs="+",
+    help="seasons to parse (leave empty to parse all)",
+    default=None,
+    required=False,
+)
 
 args = parser.parse_args()
 seasons = args.seasons

@@ -1,10 +1,7 @@
 from tqdm import tqdm
 import ujson
 
-import sys
-sys.path.append("..")
-
-from includes.class_processing import *
+from ferry.includes.class_processing import *
 
 import argparse
 
@@ -29,13 +26,15 @@ Courses API, in JSON format:
 # -----------------------------------------
 
 # allow the user to specify seasons (useful for testing and debugging)
-parser = argparse.ArgumentParser(description='Fetch classes')
-parser.add_argument('-s',
-                    '--seasons',
-                    nargs='+',
-                    help='seasons to fetch (leave empty to fetch all)',
-                    default=None,
-                    required=False)
+parser = argparse.ArgumentParser(description="Fetch classes")
+parser.add_argument(
+    "-s",
+    "--seasons",
+    nargs="+",
+    help="seasons to fetch (leave empty to fetch all)",
+    default=None,
+    required=False,
+)
 
 args = parser.parse_args()
 seasons = args.seasons
@@ -73,11 +72,7 @@ for season in seasons:
 
     for course in season_courses:
 
-        course_json = fetch_course_json(
-            course["code"],
-            course["crn"],
-            course["srcdb"]
-        )
+        course_json = fetch_course_json(course["code"], course["crn"], course["srcdb"])
 
         aggregate_season_json.append(course_json)
 

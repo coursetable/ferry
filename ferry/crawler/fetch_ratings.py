@@ -6,16 +6,16 @@ import re
 import csv
 import diskcache
 from tqdm import tqdm
-
-import sys
-sys.path.append("..")
-
-from includes.class_processing import fetch_seasons
-from includes.cas import create_session_from_cookie, create_session_from_credentials
-from includes.rating_processing import *
-
 from os import listdir
 from os.path import isfile, join
+
+from ferry.includes.class_processing import fetch_seasons
+from ferry.includes.cas import (
+    create_session_from_cookie,
+    create_session_from_credentials,
+)
+from ferry.includes.rating_processing import *
+
 
 """
 ================================================================

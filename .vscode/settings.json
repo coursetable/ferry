@@ -3,5 +3,6 @@
     "python.formatting.provider": "black",
     "files.watcherExclude": {
         "**/api_output/**": true
-    }
+    },
+    "python.pythonPath": "/home/hsheth/.cache/pypoetry/virtualenvs/ferry--0gT71nU-py3.8/bin/python"
 }
