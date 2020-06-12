@@ -1,11 +1,12 @@
 import requests
 import collections
-import getpass 
+import getpass
 import ujson
 import time
 import re
 
 import sys
+
 sys.path.append("..")
 
 from tqdm import tqdm
@@ -23,6 +24,23 @@ from os.path import isfile, join
 This script fetches evaluations data from the coursetable.com
 database and yields a JSON format similar to the one produced
 by the fetch_ratings.py script.
+
+To use this script, you'll need to create an extract_db.py file
+in the private directory, and it should contain a function get_db()
+which returns a handle to a MySQL database using pymysql. It would
+be preferable if this handle were read-only. An example:
+
+    # private/extract_db.py (sample)
+    import pymysql
+
+    def get_db(db: str):
+        connection = pymysql.connect(host='localhost',
+                                    user='sample',
+                                    password='sample',
+                                    db=db,
+                                    cursorclass=pymysql.cursors.DictCursor)
+        return connection
+
 ================================================================
 """
 
@@ -31,7 +49,7 @@ def fetch_course_lists(db, limit=None):
     limit_string = ""
     if limit:
         limit_string = f"LIMIT {limit}"
-    
+
     """
     # Fetch from `course_names`.
     with db.cursor() as cursor:
@@ -48,31 +66,34 @@ def fetch_course_lists(db, limit=None):
 
     listings = []
     for c in raw_courses:
-        listings.append((
-            str(c['season']),
-            str(c['crn']),
-            {
-                'subject': c['subject'],
-                'number': c['number'],
-                'section': c['section'],
-            }
-        ))
-    
+        listings.append(
+            (
+                str(c["season"]),
+                str(c["crn"]),
+                {
+                    "subject": c["subject"],
+                    "number": c["number"],
+                    "section": c["section"],
+                },
+            )
+        )
+
     return listings
+
 
 def fetch_legacy_ratings(db, season: str, crn: str, extras: dict):
     # Fetch Coursetable course_id.
     with db.cursor() as cursor:
         sql = "SELECT `course_id` FROM `evaluation_course_names` WHERE `season` = %s AND `crn` = %s LIMIT 1"
         cursor.execute(sql, (season, crn))
-        course_id = cursor.fetchone()['course_id']
+        course_id = cursor.fetchone()["course_id"]
 
     # Enrollment data.
     with db.cursor() as cursor:
         sql = "SELECT `enrollment` FROM `evaluation_courses` WHERE `id` =  %s LIMIT 1"
         cursor.execute(sql, (course_id,))
-        enrollment = cursor.fetchone()['enrollment']
-    
+        enrollment = cursor.fetchone()["enrollment"]
+
     # Narrative comments.
     with db.cursor() as cursor:
         sql = "SELECT `question_id`, `comment` FROM `evaluation_comments` WHERE `course_id` = %s"
@@ -92,25 +113,25 @@ def fetch_legacy_ratings(db, season: str, crn: str, extras: dict):
     ratings_data = dict()
     for item in data:
         ratings_data[item["question_id"]] = ujson.loads(item["counts"])
-    
+
     # Checks
     questions_ids = tuple(narrative_comments.keys()) + tuple(ratings_data.keys())
     # if not questions_ids:
-        # raise CourseMissingEvalsError
+    # raise CourseMissingEvalsError
 
     # Question statements.
     if questions_ids:
         with db.cursor() as cursor:
-            where_clause = ','.join(['%s'] * len(questions_ids))
+            where_clause = ",".join(["%s"] * len(questions_ids))
             sql = f"SELECT `id`, `text`, `options` FROM `evaluation_questions` WHERE `id` IN ({where_clause})"
             cursor.execute(sql, tuple(questions_ids))
             data = cursor.fetchall()
-        
+
         questions = dict()
         for item in data:
-            questions[item['id']] = (item['text'], item['options'])
+            questions[item["id"]] = (item["text"], item["options"])
     else:
-        extras['note'] = "no evaluations in database"
+        extras["note"] = "no evaluations in database"
 
     return {
         "crn_code": crn,
@@ -145,8 +166,8 @@ def fetch_legacy_ratings(db, season: str, crn: str, extras: dict):
     }
 
 
-if __name__ == '__main__':
-    db = extract_db.get_db('yale_advanced_oci')
+if __name__ == "__main__":
+    db = extract_db.get_db("yale_advanced_oci")
 
     prev = fetch_course_lists(db, limit=None)
 
