@@ -6,6 +6,7 @@ import argparse
 from pydrive.drive import GoogleDrive
 from pydrive.auth import GoogleAuth
 
+from ferry import config
 
 # tar a directory
 def tar(directory, output_filename):
@@ -55,13 +56,13 @@ if __name__ == "__main__":
     if directories_to_tar is None:
 
         directories_to_tar = [
-            "./api_output/course_evals",
-            "./api_output/course_json_cache",
-            "./api_output/migrated_courses",
-            "./api_output/parsed_courses",
-            "./api_output/previous_evals",
-            "./api_output/previous_json",
-            "./api_output/season_courses",
+            f"{config.DATA_DIR}/course_evals",
+            f"{config.DATA_DIR}/course_json_cache",
+            f"{config.DATA_DIR}/migrated_courses",
+            f"{config.DATA_DIR}/parsed_courses",
+            f"{config.DATA_DIR}/previous_evals",
+            f"{config.DATA_DIR}/previous_json",
+            f"{config.DATA_DIR}/season_courses",
         ]
 
     for directory_path in directories_to_tar:
