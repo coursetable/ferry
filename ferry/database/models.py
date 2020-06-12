@@ -75,16 +75,6 @@ class Course(BaseModel):
         String,
         comment='If single location, is `<location>`; otherwise is `<location> + <n_other_locations>` where the first location is the one with the greatest number of days. Displayed in the "Locations" column in CourseTable.',
     )
-    num_students = Column(
-        # TODO: remove this.
-        Integer,
-        comment="[computed] Student enrollment (retrieved from evaluations, not part of the Courses API)",
-    )
-    num_students_is_same_prof = Column(
-        # TODO: remove this.
-        Boolean,
-        comment="[computed] Whether or not a different professor taught the class when it was this size",
-    )
     requirements = Column(
         String, comment="Recommended requirements/prerequisites for the course"
     )
@@ -282,11 +272,6 @@ class EvaluationNarrative(BaseModel):
     question = relationship("EvaluationQuestion", backref="evaluation_narratives")
 
     comment = Column(String, comment="Response to the question",)
-    comment_length = Column(
-        # TODO: should we remove this?
-        Integer,
-        comment="[computed] The length of the comment response",
-    )
 
 
 class EvaluationRating(BaseModel):

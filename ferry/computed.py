@@ -2,6 +2,7 @@ from typing import List
 import collections
 import csv
 
+import sqlalchemy
 from tqdm import tqdm
 
 from ferry import config, database
@@ -149,10 +150,29 @@ def evaluation_statistics_computed(session):
         evaluation_statistics.avg_workload = average_rating(workload_ratings)
 
 
+def course_invariants(session):
+    """
+    Invariant: every course should have at least one listing.
+    """
+    courses_no_listings = (
+        session.query(database.Course)
+        .select_from(database.Listing)
+        .join(database.Listing.course)
+        .group_by(database.Course.course_id)
+        .having(sqlalchemy.func.count(database.Listing.listing_id) == 0)
+    ).all()
+
+    if courses_no_listings:
+        raise database.InvariantError(
+            f"the following courses have no listings: {', '.join(str(course) for course in courses_no_listings)}"
+        )
+
+
 if __name__ == "__main__":
     items = [
         seasons_computed,
         listing_invariants,
+        course_invariants,
         listings_computed,
         question_invariants,
         questions_computed,
@@ -169,10 +189,6 @@ if __name__ == "__main__":
         with database.session_scope(database.Session) as session:
             fn(session)
 
-"""
-TODO: invariants
-Invariant: every course should have at least one listing.
-"""
 
 """
 TODO: computed fields
@@ -180,5 +196,4 @@ TODO: computed fields
   214:         comment="[computed] The average rating for this course code, across all professors who taught it",
   218:         comment="[computed] The average rating for this course code when taught by this professor",
   222:         comment="[computed] The average workload for this course code, across all times it was taught",
-  299:         comment="[computed] The length of the comment response",
 """
