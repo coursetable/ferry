@@ -258,8 +258,8 @@ if __name__ == "__main__":
         questions_computed,
         question_tag_invariant,
         evaluation_statistics_computed,
-        professors_computed,
         historial_ratings_computed,
+        professors_computed,
     ]
 
     for fn in items:

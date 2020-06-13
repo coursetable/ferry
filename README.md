@@ -18,7 +18,4 @@ eventual
 - add database config into config.py
 
 current:
-- [harshal] script to update all computed fields across the database
-- [harshal] script to check all database invariants
-- [kevin] integration with google drive for data
 - [kevin] rerun the full pipeline with a clean slate
