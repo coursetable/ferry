@@ -9,8 +9,10 @@ import requests
 import ujson
 from tqdm import tqdm
 
-from ferry.includes.cas import (create_session_from_cookie,
-                                create_session_from_credentials)
+from ferry.includes.cas import (
+    create_session_from_cookie,
+    create_session_from_credentials,
+)
 from ferry.includes.class_processing import fetch_seasons
 from ferry.includes.rating_processing import CrawlerError
 from private import extract_db

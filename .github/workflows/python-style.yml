@@ -1,4 +1,4 @@
-name: "Run Python linting: black + isort"
+name: "Python lint"
 on: [push, pull_request]
 
 jobs:
