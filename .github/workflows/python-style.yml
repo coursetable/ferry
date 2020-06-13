@@ -1,4 +1,4 @@
-name: Run Python linting: black + isort
+name: "Run Python linting: black + isort"
 on: [push, pull_request]
 
 jobs:
@@ -9,8 +9,8 @@ jobs:
       - name: black formatting
         uses: lgeiger/black-action@master
         with:
-          args: "--check ."
+          args: "--check ferry"
       - name: isort formatting
         uses: olance/isort-action@v1.0.0
-        args: "-c -rc ."
-
+        with:
+          args: "-c -rc ferry"
