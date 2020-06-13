@@ -1,5 +1,6 @@
 from .database import Session
 from .models import (
+    course_professors,
     Course,
     Season,
     Listing,

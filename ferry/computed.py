@@ -157,7 +157,7 @@ def course_invariants(session):
     courses_no_listings = (
         session.query(database.Course)
         .select_from(database.Listing)
-        .join(database.Listing.course)
+        .join(database.Listing.course, isouter=True)
         .group_by(database.Course.course_id)
         .having(sqlalchemy.func.count(database.Listing.listing_id) == 0)
     ).all()
@@ -166,6 +166,31 @@ def course_invariants(session):
         raise database.InvariantError(
             f"the following courses have no listings: {', '.join(str(course) for course in courses_no_listings)}"
         )
+
+
+def historial_ratings_computed(session):
+    # TODO
+    pass
+
+
+def professors_computed(session):
+    """
+    Compute field: professor.average_rating
+    """
+    query = (
+        session.query(
+            database.Professor,
+            sqlalchemy.func.avg(database.EvaluationStatistics.avg_rating),
+        )
+        .select_from(database.course_professors)
+        .join(database.Course)
+        .join(database.EvaluationStatistics)
+        .join(database.Professor)
+        .group_by(database.Professor.professor_id)
+    )
+
+    for professor, average_rating in query:
+        professor.average_rating = average_rating
 
 
 if __name__ == "__main__":
@@ -178,6 +203,8 @@ if __name__ == "__main__":
         questions_computed,
         question_tag_invariant,
         evaluation_statistics_computed,
+        historial_ratings_computed,
+        professors_computed,
     ]
 
     for fn in items:
@@ -192,7 +219,6 @@ if __name__ == "__main__":
 
 """
 TODO: computed fields
-  196:         comment='[computed] Average rating of the professor assessed via the "Overall assessment" question in courses taught',
   214:         comment="[computed] The average rating for this course code, across all professors who taught it",
   218:         comment="[computed] The average rating for this course code when taught by this professor",
   222:         comment="[computed] The average workload for this course code, across all times it was taught",

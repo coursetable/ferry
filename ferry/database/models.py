@@ -12,7 +12,7 @@ from sqlalchemy import (
     Index,
 )
 from sqlalchemy.sql import func
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, backref
 from sqlalchemy_mixins import SerializeMixin, ReprMixin
 
 Base = declarative_base()
@@ -219,7 +219,7 @@ class EvaluationStatistics(BaseModel):
         ForeignKey("courses.course_id"),
         comment="The course associated with these statistics",
     )
-    course = relationship("Course", backref="statistics")
+    course = relationship("Course", backref=backref("statistics", uselist=False))
 
     enrollment = Column(
         JSON, comment="a JSON dictionary with information about the course's enrollment"
