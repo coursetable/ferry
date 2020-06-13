@@ -11,6 +11,6 @@ jobs:
         with:
           args: "--check ferry"
       - name: isort formatting
-        uses: olance/isort-action@v1.0.0
+        uses: hsheth2/isort-action@master
         with:
-          args: "-c -rc ferry"
+          args: "--check-only --recursive ferry"
