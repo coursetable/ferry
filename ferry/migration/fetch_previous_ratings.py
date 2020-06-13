@@ -6,12 +6,8 @@ import time
 import re
 
 from tqdm import tqdm
-from ferry.includes.class_processing import fetch_seasons
-from ferry.includes.cas import (
-    create_session_from_cookie,
-    create_session_from_credentials,
-)
 from ferry.includes.rating_processing import CrawlerError
+from ferry import config
 from private import extract_db
 
 from os import listdir
@@ -185,7 +181,7 @@ if __name__ == "__main__":
     for season, crn, extras in tqdm(prev):
         identifier = f"{season}-{crn}"
 
-        output_path = f"../api_output/previous_evals/{identifier}.json"
+        output_path = f"{config.DATA_DIR}/previous_evals/{identifier}.json"
         if isfile(output_path):
             tqdm.write(f"Skipping {identifier} - already exists")
             continue
