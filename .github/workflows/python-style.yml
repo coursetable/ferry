@@ -13,4 +13,4 @@ jobs:
       - name: isort formatting
         uses: hsheth2/isort-action@master
         with:
-          args: "--check-only --recursive ferry"
+          args: "--check-only --diff --recursive ferry"
