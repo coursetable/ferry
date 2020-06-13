@@ -26,6 +26,7 @@ pydrive = "^1.3.1"
 eralchemy = "^1.2.10"
 pylint = "^2.5.3"
 black = "^19.10b0"
+isort = "^4.3.21"
 
 [build-system]
 requires = ["poetry>=0.12"]

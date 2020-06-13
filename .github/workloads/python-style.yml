@@ -1,0 +1,16 @@
+name: Run Python linting: black + isort
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: black formatting
+        uses: lgeiger/black-action@master
+        with:
+          args: "--check ."
+      - name: isort formatting
+        uses: olance/isort-action@v1.0.0
+        args: "-c -rc ."
+
