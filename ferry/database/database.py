@@ -1,6 +1,6 @@
 import sqlalchemy
 
-from .models import Base
+from ferry.database.models import Base
 
 engine = sqlalchemy.create_engine("sqlite:///db/tmp.db")
 Base.metadata.create_all(engine)

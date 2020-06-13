@@ -1,7 +1,6 @@
-import ujson
-
 import argparse
 
+import ujson
 from tqdm import tqdm
 
 from ferry import config

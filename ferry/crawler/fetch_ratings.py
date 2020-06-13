@@ -1,19 +1,19 @@
-import requests
-import getpass
-import ujson
-import time
-import re
 import csv
-import diskcache
-from tqdm import tqdm
+import getpass
+import re
+import time
 from os import listdir
 from os.path import isfile, join
 
-from ferry import config
-from ferry.includes.class_processing import fetch_seasons
-from ferry.includes.cas import create_session
-from ferry.includes.rating_processing import *
+import diskcache
+import requests
+import ujson
+from tqdm import tqdm
 
+from ferry import config
+from ferry.includes.cas import create_session
+from ferry.includes.class_processing import fetch_seasons
+from ferry.includes.rating_processing import *
 
 """
 ================================================================

@@ -1,0 +1,16 @@
+name: "Python lint"
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: black formatting
+        uses: lgeiger/black-action@master
+        with:
+          args: "--check ferry"
+      - name: isort formatting
+        uses: hsheth2/isort-action@master
+        with:
+          args: "--check-only --diff --recursive ferry"

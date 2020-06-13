@@ -1,10 +1,9 @@
-from tqdm import tqdm
-import ujson
-
+import argparse
 from os import listdir
 from os.path import isfile, join
 
-import argparse
+import ujson
+from tqdm import tqdm
 
 from ferry import config
 from ferry.includes.class_processing import *

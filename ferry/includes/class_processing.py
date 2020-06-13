@@ -1,18 +1,18 @@
-import requests
-import ujson
-
-from bs4 import BeautifulSoup
-
-import unidecode
+import calendar
 import re
-
-import dateutil.parser
 import time
 from datetime import datetime
-import calendar
+
+import dateutil.parser
+import requests
+import ujson
+import unidecode
+from bs4 import BeautifulSoup
+
 
 class FetchClassesError(Exception):
     pass
+
 
 def fetch_seasons():
     """
@@ -32,13 +32,13 @@ def fetch_seasons():
 
         # exclude '999999' catch-all 'Past seasons' season option
 
-        seasons = sorted([x for x in seasons if x != '999999'])
+        seasons = sorted([x for x in seasons if x != "999999"])
 
         return seasons
 
     # Unsuccessful
     else:
-        raise FetchClassesError(f'Unsuccessful response: code {r.status_code}')
+        raise FetchClassesError(f"Unsuccessful response: code {r.status_code}")
 
 
 def fetch_all_api_seasons():
@@ -56,8 +56,8 @@ def fetch_all_api_seasons():
     oldest_season = int(recent_seasons[0][:4])
 
     # oldest season is 201903
-    previous_seasons = [str(x) for x in range(2010, oldest_season+1)]
-    previous_seasons = [[x+"01", x+"02", x+"03"] for x in previous_seasons]
+    previous_seasons = [str(x) for x in range(2010, oldest_season + 1)]
+    previous_seasons = [[x + "01", x + "02", x + "03"] for x in previous_seasons]
 
     # flatten
     previous_seasons = [x for y in previous_seasons for x in y]
@@ -101,7 +101,7 @@ def fetch_season_subjects(season, api_key):
 
     # Unsuccessful
     else:
-        raise FetchClassesError(f'Unsuccessful response: code {r.status_code}')
+        raise FetchClassesError(f"Unsuccessful response: code {r.status_code}")
 
 
 def fetch_season_subject_courses(season, subject, api_key):
@@ -139,7 +139,7 @@ def fetch_season_subject_courses(season, subject, api_key):
 
     # Unsuccessful
     else:
-        raise FetchClassesError(f'Unsuccessful response: code {r.status_code}')
+        raise FetchClassesError(f"Unsuccessful response: code {r.status_code}")
 
 
 def fetch_season_courses(season):
@@ -160,7 +160,7 @@ def fetch_season_courses(season):
 
     url = "https://courses.yale.edu/api/?page=fose&route=search"
 
-    payload = {'other': {'srcdb': season}, 'criteria': []}
+    payload = {"other": {"srcdb": season}, "criteria": []}
 
     r = requests.post(url, data=ujson.dumps(payload))
 
@@ -173,13 +173,13 @@ def fetch_season_courses(season):
             raise FetchClassesError(f'Unsuccessful response: {r_json["fatal"]}')
 
         if "results" not in r_json.keys():
-            raise FetchClassesError('Unsuccessful response: no results')
+            raise FetchClassesError("Unsuccessful response: no results")
 
         return r_json["results"]
 
     # Unsuccessful
     else:
-        raise FetchClassesError(f'Unsuccessful response: code {r.status_code}')
+        raise FetchClassesError(f"Unsuccessful response: code {r.status_code}")
 
 
 def fetch_previous_json(season, evals=False):
@@ -215,7 +215,7 @@ def fetch_previous_json(season, evals=False):
 
     # Unsuccessful
     else:
-        raise FetchClassesError('Unsuccessful response: code {}'.format(r.status_code))
+        raise FetchClassesError("Unsuccessful response: code {}".format(r.status_code))
 
 
 def fetch_course_json(code, crn, srcdb):
@@ -243,7 +243,7 @@ def fetch_course_json(code, crn, srcdb):
         "group": "code:" + code + "",
         "key": "crn:" + crn + "",
         "srcdb": "" + srcdb + "",
-        "matched": "crn:" + crn + ""
+        "matched": "crn:" + crn + "",
     }
 
     r = requests.post(url, data=ujson.dumps(payload))
@@ -255,13 +255,14 @@ def fetch_course_json(code, crn, srcdb):
 
         if "fatal" in course_json.keys():
             raise FetchClassesError(
-                'Unsuccessful response: {}'.format(course_json["fatal"]))
+                "Unsuccessful response: {}".format(course_json["fatal"])
+            )
 
         return course_json
 
     # Unsuccessful
     else:
-        raise FetchClassesError('Unsuccessful response: code {}'.format(r.status_code))
+        raise FetchClassesError("Unsuccessful response: code {}".format(r.status_code))
 
 
 def professors_from_html(html):
@@ -364,7 +365,7 @@ def days_of_week_from_letters(letters):
     """
 
     if letters == "M-F":
-        return ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+        return ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
     days = []
 
@@ -373,7 +374,7 @@ def days_of_week_from_letters(letters):
         "(T[^h]|T$)": "Tuesday",  # avoid misidentification as Thursday
         "W": "Wednesday",
         "Th": "Thursday",
-        "F": "Friday"
+        "F": "Friday",
     }
 
     letters = letters + " "
@@ -467,12 +468,9 @@ def extract_meetings(meeting_html):
     # if no meetings found
     if only_htba:
 
-        extracted_meetings = [{
-            "days": [],
-            "start_time":"",
-            "end_time":"",
-            "location":""
-        }]
+        extracted_meetings = [
+            {"days": [], "start_time": "", "end_time": "", "location": ""}
+        ]
 
         return extracted_meetings, "TBA", "TBA", "TBA", {}
 
@@ -507,7 +505,7 @@ def extract_meetings(meeting_html):
             meetings[idx] = [meeting, "", ""]
 
     # make times summary as first listed
-    times_summary = meetings[0][0]+" "+meetings[0][1]
+    times_summary = meetings[0][0] + " " + meetings[0][1]
 
     # collapse additional times
     if len(meetings) > 1:
@@ -526,12 +524,9 @@ def extract_meetings(meeting_html):
 
         if meeting[0] == "HTBA":
 
-            extracted_meetings.append({
-                "days": [],
-                "start_time": "",
-                "end_time": "",
-                "location": ""
-            })
+            extracted_meetings.append(
+                {"days": [], "start_time": "", "end_time": "", "location": ""}
+            )
 
         else:
 
@@ -549,12 +544,14 @@ def extract_meetings(meeting_html):
             start_time = format_time(start_time)
             end_time = format_time(end_time)
 
-            extracted_meetings.append({
-                "days": days,
-                "start_time": start_time,
-                "end_time": end_time,
-                "location": location
-            })
+            extracted_meetings.append(
+                {
+                    "days": days,
+                    "start_time": start_time,
+                    "end_time": end_time,
+                    "location": location,
+                }
+            )
 
     times_by_day = dict()
 
@@ -562,11 +559,7 @@ def extract_meetings(meeting_html):
 
         for day in meeting["days"]:
 
-            session = [
-                meeting["start_time"],
-                meeting["end_time"],
-                meeting["location"]
-            ]
+            session = [meeting["start_time"], meeting["end_time"], meeting["location"]]
 
             # if day key already present, append
             if day in times_by_day.keys():
@@ -575,25 +568,31 @@ def extract_meetings(meeting_html):
             else:
                 times_by_day[day] = [session]
 
-    return extracted_meetings, times_summary, locations_summary, times_long_summary, times_by_day
+    return (
+        extracted_meetings,
+        times_summary,
+        locations_summary,
+        times_long_summary,
+        times_by_day,
+    )
 
 
 # abbreviations for skills
 skills_map = {
-    'Writing': 'WR',
-    'Quantitative Reasoning': 'QR',
-    'Language (1)': 'L1',
-    'Language (2)': 'L2',
-    'Language (3)': 'L3',
-    'Language (4)': 'L4',
-    'Language (5)': 'L5'
+    "Writing": "WR",
+    "Quantitative Reasoning": "QR",
+    "Language (1)": "L1",
+    "Language (2)": "L2",
+    "Language (3)": "L3",
+    "Language (4)": "L4",
+    "Language (5)": "L5",
 }
 
 # abbreviations for areas
 areas_map = {
-    'Humanities': 'Hu',
-    'Social Sciences': 'So',
-    '>Sciences': 'Sc',
+    "Humanities": "Hu",
+    "Social Sciences": "So",
+    ">Sciences": "Sc",
 }
 
 # abbreviations for course statuses
@@ -603,7 +602,7 @@ stat_map = {
     "C": "CANCELLED",
     "D": "MOVED_TO_FALL_TERM",
     "E": "CLOSED",
-    "N": "NUMBER_CHANGED"
+    "N": "NUMBER_CHANGED",
 }
 
 
@@ -661,8 +660,7 @@ def extract_course_info(course_json, season):
 
     course_info["season_code"] = season
 
-    raw_description = BeautifulSoup(
-        course_json["description"], features="lxml")
+    raw_description = BeautifulSoup(course_json["description"], features="lxml")
 
     # Course description
     course_info["description"] = raw_description.get_text()
@@ -676,7 +674,9 @@ def extract_course_info(course_json, season):
 
     # Add course credits to description field
     if course_json["hours"] != "1" and course_json["hours"] != "":
-        course_info["description"] += f"\n\n{course_json['hours']} Yale College course credits"
+        course_info[
+            "description"
+        ] += f"\n\n{course_json['hours']} Yale College course credits"
 
     # Course title
     if len(course_json["title"]) > 32:
@@ -691,19 +691,23 @@ def extract_course_info(course_json, season):
 
     # Instructors
     course_info["professors"] = professors_from_html(
-        course_json["instructordetail_html"])
+        course_json["instructordetail_html"]
+    )
 
     # CRN
     course_info["crn"] = course_json["crn"]
 
     # Cross-listings
-    course_info["crns"] = [course_info["crn"], *parse_cross_listings(course_json["xlist"])]
+    course_info["crns"] = [
+        course_info["crn"],
+        *parse_cross_listings(course_json["xlist"]),
+    ]
 
     # Subject, numbering, and section
     course_info["course_code"] = course_json["code"]
     course_info["subject"] = course_json["code"].split(" ")[0]
     course_info["number"] = course_json["code"].split(" ")[1]
-    course_info["section"] = course_json['section'].lstrip("0")
+    course_info["section"] = course_json["section"].lstrip("0")
 
     # Meeting times
     (
@@ -716,29 +720,29 @@ def extract_course_info(course_json, season):
     ) = extract_meetings(course_json["meeting_html"])
 
     # Skills and areas
-    course_info["skills"] = found_items(course_json["yc_attrs"],
-                                        skills_map)
-    course_info["areas"] = found_items(course_json["yc_attrs"],
-                                       areas_map)
+    course_info["skills"] = found_items(course_json["yc_attrs"], skills_map)
+    course_info["areas"] = found_items(course_json["yc_attrs"], areas_map)
 
     course_info["flags"] = extract_flags(course_json["ci_attrs"])
 
     # Course homepage
     matched_homepage = re.findall(
-        'href="([^"]*)"[^>]*>HOMEPAGE</a>', course_json["resources"])
+        'href="([^"]*)"[^>]*>HOMEPAGE</a>', course_json["resources"]
+    )
 
     if len(matched_homepage) > 0:
         course_info["course_home_url"] = matched_homepage[0]
     else:
-        course_info["course_home_url"] = ''
+        course_info["course_home_url"] = ""
 
     # Link to syllabus
     matched_syllabus = re.findall(
-        'href="([^"]*)"[^>]*>SYLLABUS</a>', course_json["resources"])
+        'href="([^"]*)"[^>]*>SYLLABUS</a>', course_json["resources"]
+    )
 
     if len(matched_syllabus) > 0:
         course_info["syllabus_url"] = matched_syllabus[0]
     else:
-        course_info["syllabus_url"] = ''
+        course_info["syllabus_url"] = ""
 
     return course_info

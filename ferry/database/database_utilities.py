@@ -1,5 +1,9 @@
-import ujson
 from contextlib import contextmanager
+from typing import TypeVar
+
+import ujson
+
+M = TypeVar("M")
 
 
 class InvariantError(Exception):
@@ -20,7 +24,7 @@ def session_scope(Session, *args, **kwargs):
         session.close()
 
 
-def get_or_create(session, model, **kwargs):
+def get_or_create(session, model: M, **kwargs) -> M:
     """Creates an object or returns the object if exists."""
     # Credit to Kevin @ StackOverflow.
     # From: http://stackoverflow.com/questions/2546207/does-sqlalchemy-have-an-equivalent-of-djangos-get-or-create

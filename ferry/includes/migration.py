@@ -41,7 +41,7 @@ def convert_old_time(time, revert_12hour=False, truncate_minute=False):
         hour = int(hour)
 
         if hour > 12:
-            hour = hour-12
+            hour = hour - 12
 
             formatted_time = f"{str(hour)}:{minute}pm"
 
@@ -61,7 +61,7 @@ def convert_old_time(time, revert_12hour=False, truncate_minute=False):
 
         if truncate_minute and minute == "00":
 
-            formatted_time = formatted_time.split(":")[0]+formatted_time[-2:]
+            formatted_time = formatted_time.split(":")[0] + formatted_time[-2:]
 
     return formatted_time
 
@@ -108,14 +108,10 @@ def convert_old_meetings(times):
 
         # convert 24-hour float-based time formats to colon-based 12 hour ones
         times_start = convert_old_time(
-            start_end[0],
-            revert_12hour=True,
-            truncate_minute=True
+            start_end[0], revert_12hour=True, truncate_minute=True
         )
         times_end = convert_old_time(
-            start_end[1],
-            revert_12hour=True,
-            truncate_minute=True
+            start_end[1], revert_12hour=True, truncate_minute=True
         )
 
         # reconstruct summary string
@@ -145,14 +141,10 @@ def convert_old_meetings(times):
 
             # convert 24-hour float-based time formats to colon-based 12 hour ones
             times_start = convert_old_time(
-                start_end[0],
-                revert_12hour=True,
-                truncate_minute=True
+                start_end[0], revert_12hour=True, truncate_minute=True
             )
             times_end = convert_old_time(
-                start_end[1],
-                revert_12hour=True,
-                truncate_minute=True
+                start_end[1], revert_12hour=True, truncate_minute=True
             )
 
             # reconstruct summary string
@@ -194,6 +186,8 @@ def convert_old_meetings(times):
             if day != "HTBA":
 
                 new_times_by_day[day] = [
-                    [convert_old_time(x[0]), convert_old_time(x[1]), x[2]] for x in times_locations]
+                    [convert_old_time(x[0]), convert_old_time(x[1]), x[2]]
+                    for x in times_locations
+                ]
 
     return new_times_summary, new_times_long_summary, new_times_by_day

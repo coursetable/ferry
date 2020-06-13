@@ -1,13 +1,14 @@
-from .database import Session
-from .models import (
+from ferry.database.database import Session
+from ferry.database.database_utilities import *
+from ferry.database.models import (
     Course,
-    Season,
+    EvaluationNarrative,
+    EvaluationQuestion,
+    EvaluationRating,
+    EvaluationStatistics,
+    HistoricalRating,
     Listing,
     Professor,
-    HistoricalRating,
-    EvaluationStatistics,
-    EvaluationQuestion,
-    EvaluationNarrative,
-    EvaluationRating,
+    Season,
+    course_professors,
 )
-from .database_utilities import *

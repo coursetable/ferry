@@ -1,19 +1,19 @@
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import (
-    Column,
-    Integer,
-    String,
-    ForeignKey,
     JSON,
     Boolean,
-    Float,
+    Column,
     DateTime,
-    Table,
+    Float,
+    ForeignKey,
     Index,
+    Integer,
+    String,
+    Table,
 )
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import backref, relationship
 from sqlalchemy.sql import func
-from sqlalchemy.orm import relationship
-from sqlalchemy_mixins import SerializeMixin, ReprMixin
+from sqlalchemy_mixins import ReprMixin, SerializeMixin
 
 Base = declarative_base()
 
@@ -54,6 +54,7 @@ class Course(BaseModel):
         String(10),
         ForeignKey("seasons.season_code"),
         comment="The season the course is being taught in",
+        index=True,
         nullable=False,
     )
     season = relationship("Season", backref="courses")
@@ -109,6 +110,7 @@ class Listing(BaseModel):
         Integer,
         ForeignKey("courses.course_id"),
         comment="Course that the listing refers to",
+        index=True,
         nullable=False,
     )
     course = relationship("Course", backref="listings")
@@ -135,14 +137,15 @@ class Listing(BaseModel):
         String(10),
         ForeignKey("seasons.season_code"),
         comment="When the course/listing is being taught, mapping to `seasons`",
+        index=True,
         nullable=False,
     )
     season = relationship("Season", backref="listings")
     crn = Column(
         Integer,
         comment="The CRN associated with this listing",
-        nullable=False,
         index=True,
+        nullable=False,
     )
 
     __table_args__ = (
@@ -184,6 +187,7 @@ class HistoricalRating(BaseModel):
         ForeignKey("professors.professor_id"),
         comment="Professor ID",
         index=True,
+        nullable=False,
     )
 
     course_rating_all_profs = Column(
@@ -218,8 +222,10 @@ class EvaluationStatistics(BaseModel):
         Integer,
         ForeignKey("courses.course_id"),
         comment="The course associated with these statistics",
+        index=True,
+        nullable=False,
     )
-    course = relationship("Course", backref="statistics")
+    course = relationship("Course", backref=backref("statistics", uselist=False))
 
     enrollment = Column(
         JSON, comment="a JSON dictionary with information about the course's enrollment"
@@ -262,12 +268,16 @@ class EvaluationNarrative(BaseModel):
         Integer,
         ForeignKey("courses.course_id"),
         comment="The course to which this narrative comment applies",
+        index=True,
+        nullable=False,
     )
     course = relationship("Course", backref="evaluation_narratives")
     question_code = Column(
         String,
         ForeignKey("evaluation_questions.question_code"),
         comment="Question to which this narrative comment responds",
+        index=True,
+        nullable=False,
     )
     question = relationship("EvaluationQuestion", backref="evaluation_narratives")
 
@@ -283,12 +293,16 @@ class EvaluationRating(BaseModel):
         Integer,
         ForeignKey("courses.course_id"),
         comment="The course to which this rating applies",
+        index=True,
+        nullable=False,
     )
     course = relationship("Course", backref="evaluation_ratings")
     question_code = Column(
         String,
         ForeignKey("evaluation_questions.question_code"),
         comment="Question to which this rating responds",
+        index=True,
+        nullable=False,
     )
     question = relationship("EvaluationQuestion", backref="evaluation_ratings")
 

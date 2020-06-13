@@ -1,17 +1,16 @@
-import requests
 import collections
 import getpass
-import ujson
-import time
 import re
+import time
+from os import listdir
+from os.path import isfile, join
 
+import requests
+import ujson
 from tqdm import tqdm
 from ferry.includes.rating_processing import CrawlerError
 from ferry import config
 from private import extract_db
-
-from os import listdir
-from os.path import isfile, join
 
 
 """
