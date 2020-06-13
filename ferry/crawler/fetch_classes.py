@@ -1,10 +1,10 @@
-from tqdm import tqdm
+import argparse
+
 import ujson
+from tqdm import tqdm
 
 from ferry import config
 from ferry.includes.class_processing import *
-
-import argparse
 
 """
 ================================================================

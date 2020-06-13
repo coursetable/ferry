@@ -1,19 +1,9 @@
+from sqlalchemy import (JSON, Boolean, Column, DateTime, Float, ForeignKey,
+                        Index, Integer, String, Table)
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import (
-    Column,
-    Integer,
-    String,
-    ForeignKey,
-    JSON,
-    Boolean,
-    Float,
-    DateTime,
-    Table,
-    Index,
-)
+from sqlalchemy.orm import backref, relationship
 from sqlalchemy.sql import func
-from sqlalchemy.orm import relationship, backref
-from sqlalchemy_mixins import SerializeMixin, ReprMixin
+from sqlalchemy_mixins import ReprMixin, SerializeMixin
 
 Base = declarative_base()
 

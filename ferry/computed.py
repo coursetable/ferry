@@ -1,6 +1,6 @@
-from typing import List
 import collections
 import csv
+from typing import List
 
 import sqlalchemy
 from tqdm import tqdm

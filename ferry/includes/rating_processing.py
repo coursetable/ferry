@@ -1,9 +1,9 @@
-from typing import Dict, List, Tuple, Any
+import time
+from typing import Any, Dict, List, Tuple
+
+import lxml
 import requests
 import ujson
-import time
-import lxml
-
 from bs4 import BeautifulSoup
 
 QuestionId = str

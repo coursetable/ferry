@@ -1,21 +1,19 @@
-import requests
 import collections
 import getpass
-import ujson
-import time
 import re
-
-from tqdm import tqdm
-from ferry.includes.class_processing import fetch_seasons
-from ferry.includes.cas import (
-    create_session_from_cookie,
-    create_session_from_credentials,
-)
-from ferry.includes.rating_processing import CrawlerError
-from private import extract_db
-
+import time
 from os import listdir
 from os.path import isfile, join
+
+import requests
+import ujson
+from tqdm import tqdm
+
+from ferry.includes.cas import (create_session_from_cookie,
+                                create_session_from_credentials)
+from ferry.includes.class_processing import fetch_seasons
+from ferry.includes.rating_processing import CrawlerError
+from private import extract_db
 
 
 """

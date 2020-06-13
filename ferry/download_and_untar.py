@@ -1,10 +1,9 @@
-import tarfile
-import os.path
-
 import argparse
+import os.path
+import tarfile
 
-from pydrive.drive import GoogleDrive
 from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
 
 from ferry import config
 
@@ -19,13 +18,14 @@ def untar(tar_filename):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
-        description="Download and uncompress directories from Google Drive")
+        description="Download and uncompress directories from Google Drive"
+    )
 
     parser.add_argument(
         "-e",
         "--extract",
         help="Whether or not to extract the downloaded tar archives. False by default.",
-        action='store_true'
+        action="store_true",
     )
 
     args = parser.parse_args()
@@ -40,7 +40,8 @@ if __name__ == "__main__":
 
     # get files in directory
     file_list = drive.ListFile(
-        {'q': f"'{parent_id}' in parents and trashed=false"}).GetList()
+        {"q": f"'{parent_id}' in parents and trashed=false"}
+    ).GetList()
 
     # download each file in directory
     for file in file_list:

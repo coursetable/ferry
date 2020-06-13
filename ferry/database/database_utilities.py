@@ -1,5 +1,5 @@
-from typing import TypeVar
 from contextlib import contextmanager
+from typing import TypeVar
 
 import ujson
 

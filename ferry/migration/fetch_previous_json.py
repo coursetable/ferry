@@ -1,5 +1,5 @@
-from tqdm import tqdm
 import ujson
+from tqdm import tqdm
 
 from ferry import config
 from ferry.includes.class_processing import *
@@ -58,4 +58,3 @@ for season in seasons:
 
     except FetchClassesError:
         print("JSON not found.")
-

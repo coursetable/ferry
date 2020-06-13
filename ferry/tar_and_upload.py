@@ -1,17 +1,18 @@
-import tarfile
-import os.path
-
 import argparse
+import os.path
+import tarfile
 
-from pydrive.drive import GoogleDrive
 from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
 
 from ferry import config
+
 
 # tar a directory
 def tar(directory, output_filename):
     with tarfile.open(output_filename, "w:gz") as tar:
         tar.add(directory, arcname=os.path.basename(directory))
+
 
 # from https://stackoverflow.com/questions/1094841/reusable-library-to-get-human-readable-version-of-file-size,
 # answer by Sridhar Ratnakumar
@@ -19,18 +20,19 @@ def tar(directory, output_filename):
 # get human readable file size
 
 
-def sizeof_fmt(num, suffix='B'):
-    for unit in ['', 'Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi']:
+def sizeof_fmt(num, suffix="B"):
+    for unit in ["", "Ki", "Mi", "Gi", "Ti", "Pi", "Ei", "Zi"]:
         if abs(num) < 1024.0:
             return "%3.1f%s%s" % (num, unit, suffix)
         num /= 1024.0
-    return "%.1f%s%s" % (num, 'Yi', suffix)
+    return "%.1f%s%s" % (num, "Yi", suffix)
 
 
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
-        description="Compress and upload directories to Google Drive")
+        description="Compress and upload directories to Google Drive"
+    )
 
     parser.add_argument(
         "-d",
@@ -45,7 +47,7 @@ if __name__ == "__main__":
         "-u",
         "--upload",
         help="Whether or not to upload to the ferry-data directory (https://drive.google.com/drive/folders/14wl5ibpeLTQaVHK-DNTfLUaWb1N7lY7M?usp=sharing).",
-        action='store_true'
+        action="store_true",
     )
 
     args = parser.parse_args()
@@ -75,12 +77,16 @@ if __name__ == "__main__":
         output_file = f"{directory_path}.tar.gz"
         tar(directory_path, output_file)
 
-        print(f"Compressed {directory_path}. Output size: {sizeof_fmt(os.stat(output_file).st_size)}")
+        print(
+            f"Compressed {directory_path}. Output size: {sizeof_fmt(os.stat(output_file).st_size)}"
+        )
 
     if args.upload:
 
         # set up authentication
-        print("Please authenticate Google account for uploading (Yale account required):")
+        print(
+            "Please authenticate Google account for uploading (Yale account required):"
+        )
         gauth = GoogleAuth(settings_file="./pydrive_settings.yaml")
         gauth.LocalWebserverAuth()
         drive = GoogleDrive(gauth)
@@ -96,11 +102,12 @@ if __name__ == "__main__":
 
             # check if file already created
             file_list = drive.ListFile(
-                {'q': f"'{parent_id}' in parents and trashed=false"}).GetList()
+                {"q": f"'{parent_id}' in parents and trashed=false"}
+            ).GetList()
 
             # check if file is already present
             for file in file_list:
-                if file['title'] == uploaded_filename:
+                if file["title"] == uploaded_filename:
 
                     file.SetContentFile(output_file)
                     file.Upload()
@@ -111,11 +118,13 @@ if __name__ == "__main__":
 
             if not updated:
 
-                    # if not yet created, make and upload
-                file = drive.CreateFile({
-                    'title': uploaded_filename,
-                    'parents': [{'id': parent_id, "kind": "drive#fileLink"}]
-                })
+                # if not yet created, make and upload
+                file = drive.CreateFile(
+                    {
+                        "title": uploaded_filename,
+                        "parents": [{"id": parent_id, "kind": "drive#fileLink"}],
+                    }
+                )
 
                 file.SetContentFile(output_file)
                 file.Upload()
