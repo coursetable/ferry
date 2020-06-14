@@ -29,4 +29,4 @@ jobs:
         poetry run black --check ferry
     - name: Lint with isort
       run: |
-        poetry run isort --check-only -diff --recursive ferry
+        poetry run isort --check-only --diff --recursive ferry
