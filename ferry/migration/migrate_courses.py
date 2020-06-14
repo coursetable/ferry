@@ -29,8 +29,7 @@ args = parser.parse_args()
 seasons = args.seasons
 
 if seasons is None:
-    with open(f"{config.DATA_DIR}/api_seasons.json", "r") as f:
-        seasons = ujson.load(f)
+    seasons = fetch_previous_seasons()
 
 for season in seasons:
 

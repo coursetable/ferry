@@ -17,21 +17,7 @@ CourseTable website and outputs the following into
 """
 
 # define list of seasons
-
-middle_years = [str(x) for x in range(2010, 2020)]
-
-spring_seasons = [str(x) + "01" for x in middle_years]
-summer_seasons = [str(x) + "02" for x in middle_years]
-winter_seasons = [str(x) + "03" for x in middle_years]
-
-seasons = [
-    "200903",
-    *spring_seasons,
-    *summer_seasons,
-    *winter_seasons,
-    "202001",
-    "202002",
-]
+seasons = fetch_previous_seasons()
 
 # get lists of classes per season
 for season in seasons:
