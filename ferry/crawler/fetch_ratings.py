@@ -1,4 +1,5 @@
 import csv
+import datetime
 import getpass
 import re
 import time
@@ -14,8 +15,6 @@ from ferry import config
 from ferry.includes.cas import create_session
 from ferry.includes.class_processing import fetch_seasons
 from ferry.includes.rating_processing import *
-
-import datetime
 
 """
 ================================================================
@@ -33,6 +32,7 @@ season_jsons_path = f"{config.DATA_DIR}/season_courses/"
 seasons = fetch_seasons()
 
 yale_college_cache = diskcache.Cache(f"{config.DATA_DIR}/yale_college_cache")
+
 
 @yale_college_cache.memoize()
 def is_yale_college(season_code, crn):
@@ -65,6 +65,7 @@ def is_yale_college(season_code, crn):
 
     return True
 
+
 now = datetime.datetime.now()
 
 # load and parse season JSONs
@@ -72,13 +73,17 @@ queue = []
 
 for season_code in seasons:
 
-    if season_code == '202001' or season_code == '202002' or int(season_code[:4]) < now.year-3:
+    if (
+        season_code == "202001"
+        or season_code == "202002"
+        or int(season_code[:4]) < now.year - 3
+    ):
         continue
 
     with open(season_jsons_path + season_code + ".json", "r") as f:
         season_json = ujson.load(f)
 
-    for course in season_json: # Loop through each course in the season
+    for course in season_json:  # Loop through each course in the season
 
         queue.append((season_code, course["crn"]))
 

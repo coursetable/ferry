@@ -82,8 +82,7 @@ def fetch_all_api_seasons():
 
     # oldest season is 201903
     previous_seasons = [str(x) for x in range(2010, oldest_season + 1)]
-    previous_seasons = [[x + "01", x + "02", x + "03"]
-                        for x in previous_seasons]
+    previous_seasons = [[x + "01", x + "02", x + "03"] for x in previous_seasons]
 
     # flatten
     previous_seasons = [x for y in previous_seasons for x in y]
@@ -241,8 +240,7 @@ def fetch_previous_json(season, evals=False):
 
     # Unsuccessful
     else:
-        raise FetchClassesError(
-            "Unsuccessful response: code {}".format(r.status_code))
+        raise FetchClassesError("Unsuccessful response: code {}".format(r.status_code))
 
 
 def fetch_course_json(code, crn, srcdb):
@@ -289,8 +287,7 @@ def fetch_course_json(code, crn, srcdb):
 
     # Unsuccessful
     else:
-        raise FetchClassesError(
-            "Unsuccessful response: code {}".format(r.status_code))
+        raise FetchClassesError("Unsuccessful response: code {}".format(r.status_code))
 
 
 def professors_from_html(html):
@@ -587,8 +584,7 @@ def extract_meetings(meeting_html):
 
         for day in meeting["days"]:
 
-            session = [meeting["start_time"],
-                       meeting["end_time"], meeting["location"]]
+            session = [meeting["start_time"], meeting["end_time"], meeting["location"]]
 
             # if day key already present, append
             if day in times_by_day.keys():
@@ -689,8 +685,7 @@ def extract_course_info(course_json, season):
 
     course_info["season_code"] = season
 
-    raw_description = BeautifulSoup(
-        course_json["description"], features="lxml")
+    raw_description = BeautifulSoup(course_json["description"], features="lxml")
 
     # Course description
     course_info["description"] = raw_description.get_text()
