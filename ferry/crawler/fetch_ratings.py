@@ -15,6 +15,8 @@ from ferry.includes.cas import create_session
 from ferry.includes.class_processing import fetch_seasons
 from ferry.includes.rating_processing import *
 
+import datetime
+
 """
 ================================================================
 This script fetches course evaluation data from the Yale 
@@ -26,12 +28,11 @@ session = create_session()
 print("Cookies: ", session.cookies.get_dict())
 
 # get the list of all course JSON files as previously fetched
-season_jsons_path = f"{config.DATA_DIR}/courses/"
+season_jsons_path = f"{config.DATA_DIR}/season_courses/"
 
 seasons = fetch_seasons()
 
 yale_college_cache = diskcache.Cache(f"{config.DATA_DIR}/yale_college_cache")
-
 
 @yale_college_cache.memoize()
 def is_yale_college(season_code, crn):
@@ -64,24 +65,30 @@ def is_yale_college(season_code, crn):
 
     return True
 
+now = datetime.datetime.now()
 
 # load and parse season JSONs
-# for season_code in seasons:
-#     if season_code == '202001' or season_code == '202002':
-#         continue
-#     with open(season_jsons_path + season_code + ".json", "r") as f:
-#         season_json = json.load(f)
-
-#     for course in season_json: # Loop through each course in the season
-
 queue = []
-with open(f"{config.DATA_DIR}/listings_with_extra_info.csv", "r") as csvfile:
-    reader = csv.reader(csvfile)
-    for _, _, _, _, _, _, season_code, crn, extra_info in reader:
-        if "Cancelled" in extra_info:
-            continue
-        if season_code in ["201903", "201901", "201803", "201801", "201703"]:
-            queue.append((season_code, crn))
+
+for season_code in seasons:
+
+    if season_code == '202001' or season_code == '202002' or int(season_code[:4]) < now.year-3:
+        continue
+
+    with open(season_jsons_path + season_code + ".json", "r") as f:
+        season_json = ujson.load(f)
+
+    for course in season_json: # Loop through each course in the season
+
+        queue.append((season_code, course["crn"]))
+
+# with open(f"{config.DATA_DIR}/listings_with_extra_info.csv", "r") as csvfile:
+#     reader = csv.reader(csvfile)
+#     for _, _, _, _, _, _, season_code, crn, extra_info in reader:
+#         if "Cancelled" in extra_info:
+#             continue
+#         if season_code in ["201903", "201901", "201803", "201801", "201703"]:
+#             queue.append((season_code, crn))
 
 # queue = [
 #     ("201903", "11970"),  # basic test
