@@ -235,18 +235,22 @@ if __name__ == "__main__":
 
     # Course evaluations.
     if args.mode != "courses":
-        all_evals = set(
-            os.listdir(f"{config.DATA_DIR}/previous_evals/")
-            + os.listdir(f"{config.DATA_DIR}/course_evals/")
-        )
+        all_evals = [
+            filename
+            for filename in set(
+                os.listdir(f"{config.DATA_DIR}/previous_evals/")
+                + os.listdir(f"{config.DATA_DIR}/course_evals/")
+            )
+            if filename[0] != "."
+        ]
 
         # Filter by seasons.
-        if seasons is None:
+        if seasons is not None:
             evals_to_import = sorted(
                 filename for filename in all_evals if filename.split("-")[0] in seasons
             )
         else:
-            evals_to_import = all_evals
+            evals_to_import = sorted(list(all_evals))
 
         for filename in tqdm(evals_to_import, desc="Importing evaluations"):
             # Read the evaluation, giving preference to current over previous.
