@@ -196,18 +196,31 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-
     seasons = args.seasons
-    if seasons is None:
-        # get the list of all course JSON files as previously fetched
-        with open(f"{config.DATA_DIR}/seasons.json", "r") as f:
-            seasons = ujson.load(f)
 
     # Course information.
+    if seasons is None:
+        course_seasons = [
+            file.split(".")[0]  # remove the .json extension
+            for file in set(
+                os.listdir(f"{config.DATA_DIR}/migrated_courses/")
+                + os.listdir(f"{config.DATA_DIR}/parsed_courses/")
+            )
+        ]
+    else:
+        course_seasons = seasons
+
     if args.mode != "evals":
-        for season in seasons:
-            with open(f"{config.DATA_DIR}/parsed_courses/{season}.json", "r") as f:
-                parsed_course_info = ujson.load(f)
+        for season in course_seasons:
+            # Read the course listings, giving preference to freshly parsed over migrated ones.
+            if os.path.isfile(f"{config.DATA_DIR}/parsed_courses/{season}.json"):
+                with open(f"{config.DATA_DIR}/parsed_courses/{season}.json", "r") as f:
+                    parsed_course_info = ujson.load(f)
+            else:
+                with open(
+                    f"{config.DATA_DIR}/migrated_courses/{season}.json", "r"
+                ) as f:
+                    parsed_course_info = ujson.load(f)
 
             for course_info in tqdm(
                 parsed_course_info, desc=f"Importing courses in season {season}"
@@ -223,9 +236,13 @@ if __name__ == "__main__":
             + os.listdir(f"{config.DATA_DIR}/course_evals/")
         )
 
-        evals_to_import = sorted(
-            filename for filename in all_evals if filename.split("-")[0] in seasons
-        )
+        # Filter by seasons.
+        if seasons is None:
+            evals_to_import = sorted(
+                filename for filename in all_evals if filename.split("-")[0] in seasons
+            )
+        else:
+            evals_to_import = all_evals
 
         for filename in tqdm(evals_to_import, desc="Importing evaluations"):
             # Read the evaluation, giving preference to current over previous.

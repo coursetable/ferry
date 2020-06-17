@@ -140,9 +140,9 @@ def evaluation_statistics_computed(session):
             agg += multiplier * rating
         return agg / sum(ratings)
 
-    for evaluation_statistics in tqdm(session.query(
-        database.EvaluationStatistics
-    ).all()):  # type: database.EvaluationStatistics
+    for evaluation_statistics in tqdm(
+        session.query(database.EvaluationStatistics).all()
+    ):  # type: database.EvaluationStatistics
         overall_ratings = fetch_ratings(evaluation_statistics.course_id, "rating")
         workload_ratings = fetch_ratings(evaluation_statistics.course_id, "workload")
 
