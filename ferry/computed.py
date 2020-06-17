@@ -140,9 +140,9 @@ def evaluation_statistics_computed(session):
             agg += multiplier * rating
         return agg / sum(ratings)
 
-    for evaluation_statistics in session.query(
+    for evaluation_statistics in tqdm(session.query(
         database.EvaluationStatistics
-    ):  # type: database.EvaluationStatistics
+    ).all()):  # type: database.EvaluationStatistics
         overall_ratings = fetch_ratings(evaluation_statistics.course_id, "rating")
         workload_ratings = fetch_ratings(evaluation_statistics.course_id, "workload")
 
@@ -178,7 +178,7 @@ def historial_ratings_computed(session):
         .options(sqlalchemy.orm.joinedload(database.Course.professors))
     )
 
-    for course_code, course in query:
+    for course_code, course in tqdm(query.all()):
         for professor in course.professors:
             historical_ratings, _ = database.get_or_create(
                 session,

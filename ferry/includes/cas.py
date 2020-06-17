@@ -52,3 +52,10 @@ if __name__ == "__main__":
     session = create_session()
     print(session)
     print("Cookies: ", session.cookies.get_dict())
+
+    res = session.get("https://secure.its.yale.edu/cas/login")
+    if res.text.find("Login Successful") < 0:
+        print("failed to login")
+        breakpoint()
+    else:
+        print("success")

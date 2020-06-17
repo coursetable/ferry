@@ -76,6 +76,7 @@ for season_code in seasons:
     if (
         season_code == "202001"
         or season_code == "202002"
+        or season_code == "201701" or season_code == "201702"  # spring/summer 2017 is no longer available
         or int(season_code[:4]) < now.year - 3
     ):
         continue

@@ -2,7 +2,8 @@ import sqlalchemy
 
 from ferry.database.models import Base
 
-engine = sqlalchemy.create_engine("sqlite:///db/tmp.db")
+_db_string = "postgresql+psycopg2://postgres:thisisapassword@localhost/postgres"
+engine = sqlalchemy.create_engine(_db_string)
 Base.metadata.create_all(engine)
 
 Session = sqlalchemy.orm.sessionmaker(bind=engine)
