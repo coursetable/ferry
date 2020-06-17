@@ -742,7 +742,7 @@ def extract_course_info(course_json, season):
         course_info["locations_summary"],
         course_info["times_long_summary"],
         course_info["times_by_day"],
-    ) = extract_meetings(course_json["meeting_html"])
+    ) = extract_meetings(course_json.get("meeting_html",""))
 
     # Skills and areas
     course_info["skills"] = found_items(course_json["yc_attrs"], skills_map)
