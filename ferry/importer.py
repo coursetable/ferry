@@ -200,17 +200,21 @@ if __name__ == "__main__":
 
     # Course information.
     if seasons is None:
-        course_seasons = [
-            file.split(".")[0]  # remove the .json extension
-            for file in set(
-                os.listdir(f"{config.DATA_DIR}/migrated_courses/")
-                + os.listdir(f"{config.DATA_DIR}/parsed_courses/")
-            )
-        ]
+        course_seasons = sorted(
+            [
+                filename.split(".")[0]  # remove the .json extension
+                for filename in set(
+                    os.listdir(f"{config.DATA_DIR}/migrated_courses/")
+                    + os.listdir(f"{config.DATA_DIR}/parsed_courses/")
+                )
+                if filename[0] != "."
+            ]
+        )
     else:
         course_seasons = seasons
 
     if args.mode != "evals":
+        print(f"Importing courses for season(s): {course_seasons}")
         for season in course_seasons:
             # Read the course listings, giving preference to freshly parsed over migrated ones.
             if os.path.isfile(f"{config.DATA_DIR}/parsed_courses/{season}.json"):
