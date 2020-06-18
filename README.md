@@ -2,12 +2,24 @@
 A crawler for Yale courses and evaluation data. Integrates with Coursetable.
 
 ## Setup
-Run `poetry install` to setup the virtualenv, install dependencies, and bootstrap the project.
+Dependencies:
+- Python 3.8 or newer.
+- graphviz, which we use to generate schema diagrams.
+- Postgres, our backend database that enables fast queries.
 
-The following dependencies are required besides the ones handled by Poetry (if these are not installed, Poetry may report some errors)
+These steps will install the necessary system dependencies, setup the virtualenv, install Python package dependencies, and bootstrap the project.
+```
+# macOS
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+brew install graphviz postgresql
+poetry install
 
-- We use the `graphviz` module to generate schema graphs, which requires additional libraries to be installed. On macOS, run `brew install graphviz`, and on Linux, run `sudo apt-get install python3.8-dev graphviz libgraphviz-dev pkg-config`.
-- The server is implemented in `postgresql`. To install, run `brew install postgresql` on macOS, `sudo apt-get install libpq-dev` on Ubuntu.
+# Ubuntu
+sudo apt-get install python-dev pkg-config graphviz libgraphviz-dev libpq-dev
+poetry install
+```
+
+Known issues:
 - On post-Sierra versions of macOS, running `poetry install` may report an error during `psycopg2` installation stating that `ld: library not found for -lssl`. To fix this, make sure OpenSSL installed (for instance, after running `brew install openssl`), and add its libraries to the path with `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`.
 
 ## Data Files
