@@ -543,12 +543,12 @@ def extract_meetings(meeting_html):
         times_summary = times_summary + f" + {len(meetings)-1}"
 
     # make locations summary as first listed
-    # locations_summary = meetings[0][2]
-    locations_summary = location_urls[0] if len(location_urls) else ""
+    locations_summary = meetings[0][2]
+    #locations_summary = location_urls[0] if len(location_urls) else ""
 
     # collapse additional locations
-    # if len(meetings) > 1:
-    #     locations_summary = locations_summary + f" + {len(meetings)-1}"
+    if len(meetings) > 1:
+        locations_summary = locations_summary + f" + {len(meetings)-1}"
 
     extracted_meetings = []
 
