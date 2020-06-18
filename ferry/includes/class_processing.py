@@ -480,6 +480,12 @@ def extract_meetings(meeting_html):
 
     # identify meeting tags and convert to plaintext
     meetings = BeautifulSoup(meeting_html, features="lxml")
+
+    # list that holds the urls of each location
+    location_urls = []
+    for a in meetings.find_all('a',href=True):
+        location_urls.append(a['href'])
+    
     meetings = meetings.find_all("div", {"class": "meet"})
     meetings = [x.text for x in meetings]
 
@@ -537,16 +543,17 @@ def extract_meetings(meeting_html):
         times_summary = times_summary + f" + {len(meetings)-1}"
 
     # make locations summary as first listed
-    locations_summary = meetings[0][2]
+    # locations_summary = meetings[0][2]
+    locations_summary = location_urls[0] if len(location_urls) else ""
 
     # collapse additional locations
-    if len(meetings) > 1:
-        locations_summary = locations_summary + f" + {len(meetings)-1}"
+    # if len(meetings) > 1:
+    #     locations_summary = locations_summary + f" + {len(meetings)-1}"
 
     extracted_meetings = []
 
     for meeting in meetings:
-
+        location_indx = 0 # variable to loop through location_urls list
         if meeting[0] == "HTBA":
 
             extracted_meetings.append(
@@ -557,7 +564,8 @@ def extract_meetings(meeting_html):
 
             days = meeting[0]
             times = meeting[1]
-            location = meeting[2]
+            location = location_urls[location_indx] if location_indx < len(location_urls) else ""
+            location_indx += 1
 
             days = days_of_week_from_letters(days)
 

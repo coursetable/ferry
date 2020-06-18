@@ -53,4 +53,4 @@ for season in seasons:
 
     # write output
     with open(f"{config.DATA_DIR}/parsed_courses/{season}.json", "w") as f:
-        f.write(ujson.dumps(parsed_course_info, indent=4))
+        f.write(ujson.dumps(parsed_course_info, indent=4, escape_forward_slashes=False))
