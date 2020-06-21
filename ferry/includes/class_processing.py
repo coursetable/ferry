@@ -483,9 +483,9 @@ def extract_meetings(meeting_html):
 
     # list that holds the urls of each location
     location_urls = []
-    for a in meetings.find_all('a',href=True):
-        location_urls.append(a['href'])
-    
+    for a in meetings.find_all("a", href=True):
+        location_urls.append(a["href"])
+
     meetings = meetings.find_all("div", {"class": "meet"})
     meetings = [x.text for x in meetings]
 
@@ -544,7 +544,7 @@ def extract_meetings(meeting_html):
 
     # make locations summary as first listed
     locations_summary = meetings[0][2]
-    #locations_summary = location_urls[0] if len(location_urls) else ""
+    # locations_summary = location_urls[0] if len(location_urls) else ""
 
     # collapse additional locations
     if len(meetings) > 1:
@@ -553,7 +553,7 @@ def extract_meetings(meeting_html):
     extracted_meetings = []
 
     for meeting in meetings:
-        location_indx = 0 # variable to loop through location_urls list
+        location_indx = 0  # variable to loop through location_urls list
         if meeting[0] == "HTBA":
 
             extracted_meetings.append(
@@ -564,7 +564,12 @@ def extract_meetings(meeting_html):
 
             days = meeting[0]
             times = meeting[1]
-            location = location_urls[location_indx] if location_indx < len(location_urls) else ""
+            location = meeting[2]
+            location_url = (
+                location_urls[location_indx]
+                if location_indx < len(location_urls)
+                else ""
+            )
             location_indx += 1
 
             days = days_of_week_from_letters(days)
@@ -583,6 +588,7 @@ def extract_meetings(meeting_html):
                     "start_time": start_time,
                     "end_time": end_time,
                     "location": location,
+                    "location_url": location_url,
                 }
             )
 
@@ -592,7 +598,12 @@ def extract_meetings(meeting_html):
 
         for day in meeting["days"]:
 
-            session = [meeting["start_time"], meeting["end_time"], meeting["location"]]
+            session = [
+                meeting["start_time"],
+                meeting["end_time"],
+                meeting["location"],
+                meeting.get("location_url", ""),
+            ]
 
             # if day key already present, append
             if day in times_by_day.keys():
