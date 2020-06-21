@@ -32,13 +32,9 @@ We have uploaded these compressed folders to a [Google Drive folder](https://dri
 
 ## TODO
 eventual
-- automatically apply black and isort
 - save the raw HTML from OCE in the evaluations crawler
-- compatability layer shims for existing coursetable
 - use poetry scripts for easier execution
 - transition everything from /private to config_private.py
-- add database config into config.py
-- in `fetch_ratings.py`, change the courses list from `listings_with_extra_info.csv` to the outputs from `fetch_classes.py`
 
 current:
-- [kevin] rerun the full pipeline with a clean slate
+- [harshal] change main coursetable site to use legacy api from ferry
