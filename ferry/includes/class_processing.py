@@ -9,8 +9,6 @@ import ujson
 import unidecode
 from bs4 import BeautifulSoup
 
-import copy
-
 
 class FetchClassesError(Exception):
     pass
@@ -294,6 +292,22 @@ def fetch_course_json(code, crn, srcdb):
         raise FetchClassesError(
             "Unsuccessful response: code {}".format(r.status_code))
 
+
+def convert_unicode(text):
+
+    # handle incorrectly coded em dash
+    text = re.sub(r'\u00e2\u20ac\u201c',"–",text)
+    text = re.sub(r'\u00c2\u00a0','\u00a0',text)
+
+    # convert utf-8 bytestrings
+    # (from https://stackoverflow.com/questions/5842115/converting-a-string-which-contains-both-utf-8-encoded-bytestrings-and-codepoints)
+    text = re.sub(
+        r'[\xc2-\xf4][\x80-\xbf]+',
+        lambda m: m.group(0).encode('latin1').decode('unicode-escape'),
+        text
+    )
+
+    return text
 
 def professors_from_html(html):
     """
@@ -711,13 +725,15 @@ def extract_course_info(course_json, season):
 
     description_html = course_json["description"]
 
-    raw_description = BeautifulSoup(description_html, features="lxml")
+    raw_description = BeautifulSoup(convert_unicode(description_html), features="lxml")
 
-    # Course prerequisites
+    # course prerequisites
     prereqs = raw_description.findAll("p", {"class": "prerequisites"})
     if len(prereqs) >= 1:
-        course_info["requirements"] = "\n".join(
-            [x.get_text() for x in prereqs])
+        prereqs = "\n".join([x.get_text() for x in prereqs])
+
+        course_info["requirements"] = prereqs
+
     else:
         course_info["requirements"] = ""
 
@@ -726,22 +742,6 @@ def extract_course_info(course_json, season):
         div.decompose()
 
     description_text = raw_description.get_text().rstrip()
-
-    # handle incorrectly coded em dash
-    description_text = re.sub(r'\u00e2\u20ac\u201c',
-                              "–", description_text)
-
-    # convert utf-8 bytestrings 
-    # (from https://stackoverflow.com/questions/5842115/converting-a-string-which-contains-both-utf-8-encoded-bytestrings-and-codepoints)
-    try:
-        description_text = re.sub(r'[\xc2-\xf4][\x80-\xbf]+',
-                                  lambda m: m.group(0).encode('latin1').decode('unicode-escape'),
-                                  description_text)
-
-    except Exception as e:
-        print(e)
-        print(description_text)
-        print(description_text.encode('latin1'))
 
     # Course description
     course_info["description"] = description_text
