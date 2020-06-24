@@ -47,7 +47,7 @@ for season in seasons:
 
             migrated_course["season_code"] = str(season)
 
-            migrated_course["description"] = course["description"]
+            migrated_course["description"] = convert_old_description(course["description"])
             migrated_course["requirements"] = course["requirements"]
             migrated_course["short_title"] = course["title"]
             migrated_course["title"] = course["long_title"]

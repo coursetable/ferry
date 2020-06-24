@@ -9,6 +9,8 @@ import ujson
 import unidecode
 from bs4 import BeautifulSoup
 
+import copy
+
 
 class FetchClassesError(Exception):
     pass
@@ -82,7 +84,8 @@ def fetch_all_api_seasons():
 
     # oldest season is 201903
     previous_seasons = [str(x) for x in range(2010, oldest_season + 1)]
-    previous_seasons = [[x + "01", x + "02", x + "03"] for x in previous_seasons]
+    previous_seasons = [[x + "01", x + "02", x + "03"]
+                        for x in previous_seasons]
 
     # flatten
     previous_seasons = [x for y in previous_seasons for x in y]
@@ -240,7 +243,8 @@ def fetch_previous_json(season, evals=False):
 
     # Unsuccessful
     else:
-        raise FetchClassesError("Unsuccessful response: code {}".format(r.status_code))
+        raise FetchClassesError(
+            "Unsuccessful response: code {}".format(r.status_code))
 
 
 def fetch_course_json(code, crn, srcdb):
@@ -287,7 +291,8 @@ def fetch_course_json(code, crn, srcdb):
 
     # Unsuccessful
     else:
-        raise FetchClassesError("Unsuccessful response: code {}".format(r.status_code))
+        raise FetchClassesError(
+            "Unsuccessful response: code {}".format(r.status_code))
 
 
 def professors_from_html(html):
@@ -704,23 +709,42 @@ def extract_course_info(course_json, season):
 
     course_info["season_code"] = season
 
-    raw_description = BeautifulSoup(course_json["description"], features="lxml")
+    description_html = course_json["description"]
 
-    # Course description
-    course_info["description"] = raw_description.get_text()
+    raw_description = BeautifulSoup(description_html, features="lxml")
 
     # Course prerequisites
     prereqs = raw_description.findAll("p", {"class": "prerequisites"})
-    if len(prereqs) == 1:
-        course_info["requirements"] = prereqs[-1].get_text()
+    if len(prereqs) >= 1:
+        course_info["requirements"] = "\n".join(
+            [x.get_text() for x in prereqs])
     else:
         course_info["requirements"] = ""
 
-    # Add course credits to description field
-    if course_json["hours"] != "1" and course_json["hours"] != "":
-        course_info[
-            "description"
-        ] += f"\n\n{course_json['hours']} Yale College course credits"
+    # remove prereqs from the description
+    for div in raw_description.find_all("p", {"class": "prerequisites"}):
+        div.decompose()
+
+    description_text = raw_description.get_text().rstrip()
+
+    # handle incorrectly coded em dash
+    description_text = re.sub(r'\u00e2\u20ac\u201c',
+                              "–", description_text)
+
+    # convert utf-8 bytestrings 
+    # (from https://stackoverflow.com/questions/5842115/converting-a-string-which-contains-both-utf-8-encoded-bytestrings-and-codepoints)
+    try:
+        description_text = re.sub(r'[\xc2-\xf4][\x80-\xbf]+',
+                                  lambda m: m.group(0).encode('latin1').decode('unicode-escape'),
+                                  description_text)
+
+    except Exception as e:
+        print(e)
+        print(description_text)
+        print(description_text.encode('latin1'))
+
+    # Course description
+    course_info["description"] = description_text
 
     # Course title
     if len(course_json["title"]) > 32:
