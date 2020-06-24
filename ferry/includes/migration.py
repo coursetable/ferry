@@ -112,17 +112,14 @@ def convert_old_meetings(times):
     times_long_summary = times["long_summary"]
     times_by_day = times["by_day"]
 
-    if times == ["HTBA"]:
-        return "TBA", "", {}
-
     # ---------------------
     # process times summary
     # ---------------------
 
     # unknown times
-    if times_summary in ["1 HTBA", "2 HTBA", "HTBA", ""]:
+    if times == ["HTBA"] or times_summary in ["1 HTBA", "2 HTBA", "HTBA", ""]:
 
-        new_times_summary = "TBA"
+        return "TBA", "TBA", {}
 
     else:
 

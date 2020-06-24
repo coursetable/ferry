@@ -84,6 +84,8 @@ for season in seasons:
             ) = convert_old_meetings(course["times"])
 
             migrated_course["locations_summary"] = course["locations_summary"]
+            if migrated_course["locations_summary"] == "":
+            	migrated_course["locations_summary"] = "TBA"
 
             migrated_course["skills"] = course["skills"]
             migrated_course["areas"] = course["areas"]

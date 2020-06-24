@@ -650,6 +650,14 @@ def extract_meetings(meeting_html):
             else:
                 times_by_day[day] = [session]
 
+    # some final touches
+    times_summary = times_summary.replace("MTWThF","M-F")
+    locations_summary = locations_summary.replace("MTWThF","M-F")
+    times_long_summary = times_long_summary.replace("MTWThF","M-F")
+
+    if locations_summary == "" or locations_summary[:3] == " + ":
+        locations_summary = "TBA"
+
     return (
         extracted_meetings,
         times_summary,
