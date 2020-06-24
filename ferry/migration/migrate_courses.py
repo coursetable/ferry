@@ -47,13 +47,24 @@ for season in seasons:
 
             migrated_course["season_code"] = str(season)
 
-            migrated_course["description"] = convert_old_description(course["description"])
+            migrated_course["description"] = convert_old_description(
+                course["description"])
             migrated_course["requirements"] = course["requirements"]
-            migrated_course["short_title"] = course["title"]
+
+            def truncate_title(x): return f"{x[:29]}..." if len(x) > 32 else x
+
+            migrated_course["short_title"] = truncate_title(
+                course["long_title"])
+
             migrated_course["title"] = course["long_title"]
 
-            migrated_course["extra_info"] = course["extra_info"]
-            migrated_course["professors"] = course["professors"]
+            extra_info_map = {
+                "Cancelled": "CANCELLED",
+                "": "ACTIVE"
+            }
+
+            migrated_course["extra_info"] = extra_info_map[course["extra_info"]]
+            migrated_course["professors"] = sorted(course["professors"])
 
             migrated_course["crn"] = course["oci_id"]
             migrated_course["crns"] = course["oci_ids"]

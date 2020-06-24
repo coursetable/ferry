@@ -117,6 +117,7 @@ def fetch_season_subjects(season, api_key):
     url = url_template.format(season, api_key)
 
     r = requests.get(url)
+    r.encoding = 'utf-8'
 
     # Successful response
     if r.status_code == 200:
@@ -155,6 +156,7 @@ def fetch_season_subject_courses(season, subject, api_key):
     url = url_template.format(season, subject, api_key)
 
     r = requests.get(url)
+    r.encoding = 'utf-8'
 
     # Successful response
     if r.status_code == 200:
@@ -189,6 +191,7 @@ def fetch_season_courses(season):
     payload = {"other": {"srcdb": season}, "criteria": []}
 
     r = requests.post(url, data=ujson.dumps(payload))
+    r.encoding = 'utf-8'
 
     # Successful response
     if r.status_code == 200:
@@ -231,6 +234,7 @@ def fetch_previous_json(season, evals=False):
         url = f"https://coursetable.com/gen/json/data_{season}.json"
 
     r = requests.get(url)
+    r.encoding = 'utf-8'
 
     # Successful response
     if r.status_code == 200:
@@ -274,6 +278,7 @@ def fetch_course_json(code, crn, srcdb):
     }
 
     r = requests.post(url, data=ujson.dumps(payload))
+    r.encoding = 'utf-8'
 
     # Successful response
     if r.status_code == 200:
@@ -296,8 +301,22 @@ def fetch_course_json(code, crn, srcdb):
 def convert_unicode(text):
 
     # handle incorrectly coded em dash
-    text = re.sub(r'\u00e2\u20ac\u201c',"–",text)
-    text = re.sub(r'\u00c2\u00a0','\u00a0',text)
+
+    unicode_exceptions = {
+        r'\u00e2\u20ac\u201c':"–",
+        r'\u00c2\u00a0':'\u00a0',
+        r'\u00c3\u00a7':'ç',
+        r'\u00c3\u00bc':'ü',
+        r'\u00c3\u00a1':'á',
+        r'\u00c3\u00a9':'é',
+        r'\u00c3\u00ab':'ë',
+        r'\u00c3\u00ae':'î',
+        r'\u00c3\u00bc':'ü',
+        r'\u00c3\u00b1':'ñ'
+    }
+
+    for bad_unicode, replacement in unicode_exceptions.items():
+        text = re.sub(bad_unicode,replacement,text)
 
     # convert utf-8 bytestrings
     # (from https://stackoverflow.com/questions/5842115/converting-a-string-which-contains-both-utf-8-encoded-bytestrings-and-codepoints)
@@ -342,7 +361,7 @@ def professors_from_html(html):
             if len(name) > 0 and name != "Staff":
                 names.append(name)
 
-    return names
+    return sorted(names)
 
 
 def parse_cross_listings(xlist_html):
@@ -747,10 +766,8 @@ def extract_course_info(course_json, season):
     course_info["description"] = description_text
 
     # Course title
-    if len(course_json["title"]) > 32:
-        course_info["short_title"] = course_json["title"][:29] + "..."
-    else:
-        course_info["short_title"] = course_json["title"]
+    truncate_title = lambda x: f"{x[:29]}..." if len(x) > 32 else x
+    course_info["short_title"] = truncate_title(course_json["title"])
 
     course_info["title"] = course_json["title"]
 
@@ -759,7 +776,7 @@ def extract_course_info(course_json, season):
 
     # Instructors
     course_info["professors"] = professors_from_html(
-        course_json["instructordetail_html"]
+        convert_unicode(course_json["instructordetail_html"])
     )
 
     # CRN
