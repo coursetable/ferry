@@ -13,13 +13,14 @@ def convert_old_description(old_description):
         formatted description closer to the new parser
 
     """
-    
+
     if old_description[:10] == "Cancelled.":
         old_description = old_description[10:]
-        
-    old_description = old_description.replace("&quot;","\"")
-            
+
+    old_description = old_description.replace("&quot;", '"')
+
     return old_description
+
 
 def convert_old_time(time, revert_12hour=False, truncate_minute=False):
     """

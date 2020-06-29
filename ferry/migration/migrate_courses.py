@@ -56,13 +56,14 @@ for season in seasons:
             migrated_course["season_code"] = str(season)
 
             migrated_course["description"] = convert_old_description(
-                course["description"])
+                course["description"]
+            )
             migrated_course["requirements"] = course["requirements"]
 
-            def truncate_title(x): return f"{x[:29]}..." if len(x) > 32 else x
+            def truncate_title(x):
+                return f"{x[:29]}..." if len(x) > 32 else x
 
-            migrated_course["short_title"] = truncate_title(
-                course["long_title"])
+            migrated_course["short_title"] = truncate_title(course["long_title"])
 
             migrated_course["title"] = course["long_title"]
 
