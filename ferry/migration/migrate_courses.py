@@ -3,6 +3,8 @@ import argparse
 import ujson
 from tqdm import tqdm
 
+import os
+
 from ferry import config
 from ferry.includes.class_processing import *
 from ferry.includes.migration import *
@@ -29,7 +31,13 @@ args = parser.parse_args()
 seasons = args.seasons
 
 if seasons is None:
-    seasons = fetch_previous_seasons()
+    seasons = [
+        filename.split(".")[0] 
+        for filename in os.listdir(f"{config.DATA_DIR}/previous_json/") 
+        if filename[-4:] == "json" and filename[:5] != "evals"
+    ]
+
+    seasons = sorted(seasons)
 
 for season in seasons:
 
@@ -60,7 +68,13 @@ for season in seasons:
 
             extra_info_map = {
                 "Cancelled": "CANCELLED",
-                "": "ACTIVE"
+                "": "ACTIVE",
+                "Moved to spring term": "MOVED TO SPRING TERM",
+                "Number changed-See description": "NUMBER CHANGED",
+                "Moved to preceding fall term": "MOVED TO FALL TERM",
+                "The": "ACTIVE",  # ? no idea what this means, so assuming active
+                # ? no idea what this means, so assuming active
+                "Closed to further enrollments": "CLOSED",
             }
 
             migrated_course["extra_info"] = extra_info_map[course["extra_info"]]
@@ -85,10 +99,10 @@ for season in seasons:
 
             migrated_course["locations_summary"] = course["locations_summary"]
             if migrated_course["locations_summary"] == "":
-            	migrated_course["locations_summary"] = "TBA"
+                migrated_course["locations_summary"] = "TBA"
 
-            migrated_course["skills"] = course["skills"]
-            migrated_course["areas"] = course["areas"]
+            migrated_course["skills"] = sorted(course["skills"])
+            migrated_course["areas"] = sorted(course["areas"])
             migrated_course["course_home_url"] = course["course_home_url"]
             migrated_course["syllabus_url"] = course["syllabus_url"]
 

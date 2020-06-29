@@ -723,7 +723,7 @@ def found_items(text, mapping):
         if search_text in text:
             items.append(code)
 
-    return items
+    return sorted(items)
 
 
 def extract_course_info(course_json, season):
