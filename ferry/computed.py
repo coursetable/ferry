@@ -21,9 +21,11 @@ def seasons_computed(session):
     for season in session.query(database.Season):  # type: database.Season
         season_code = season.season_code
         if len(season_code) != 6:
-            raise database.InvariantError("season code is not formatted correctly")
+            raise database.InvariantError(
+                "season code is not formatted correctly")
         season.year = int(season_code[:4])
-        season.term = {"1": "spring", "2": "summer", "3": "fall"}[season_code[-1]]
+        season.term = {"1": "spring", "2": "summer",
+                       "3": "fall"}[season_code[-1]]
 
 
 def listings_computed(session):
@@ -91,7 +93,8 @@ def question_tag_invariant(session):
     """
     # Dictionary of question_code -> (is_narrative, len(options))
     tag_cache = {}
-    optlen = lambda l: len(l) if l else -1
+
+    def optlen(l): return len(l) if l else -1
 
     for question in session.query(
         database.EvaluationQuestion
@@ -100,7 +103,8 @@ def question_tag_invariant(session):
             continue
 
         if question.tag not in tag_cache:
-            tag_cache[question.tag] = (question.is_narrative, optlen(question.options))
+            tag_cache[question.tag] = (
+                question.is_narrative, optlen(question.options))
         else:
             narrative, count = tag_cache[question.tag]
             if question.is_narrative != narrative or count != optlen(question.options):
@@ -143,8 +147,10 @@ def evaluation_statistics_computed(session):
     for evaluation_statistics in tqdm(
         session.query(database.EvaluationStatistics).all()
     ):  # type: database.EvaluationStatistics
-        overall_ratings = fetch_ratings(evaluation_statistics.course_id, "rating")
-        workload_ratings = fetch_ratings(evaluation_statistics.course_id, "workload")
+        overall_ratings = fetch_ratings(
+            evaluation_statistics.course_id, "rating")
+        workload_ratings = fetch_ratings(
+            evaluation_statistics.course_id, "workload")
 
         evaluation_statistics.avg_rating = average_rating(overall_ratings)
         evaluation_statistics.avg_workload = average_rating(workload_ratings)
@@ -172,43 +178,45 @@ def historial_ratings_computed(session):
     """
     Update: historical_ratings (create entries as needed)
     """
-    query = (
-        session.query(database.Listing.course_code, database.Course)
-        .join(database.Course)
-        .options(sqlalchemy.orm.joinedload(database.Course.professors))
-    )
 
-    for course_code, course in tqdm(query.all()):
+    query = session.query(database.Course)
+
+    for course in tqdm(query.all()):
+
+        course_id = course.course_id
+
         for professor in course.professors:
             historical_ratings, _ = database.get_or_create(
                 session,
                 database.HistoricalRating,
-                course_code=course_code,
+                course_id=course_id,
                 professor_id=professor.professor_id,
             )
 
             # Course rating - all professors.
             rating_all = (
                 session.query(
-                    sqlalchemy.func.avg(database.EvaluationStatistics.avg_rating)
+                    sqlalchemy.func.avg(
+                        database.EvaluationStatistics.avg_rating)
                 )
                 .select_from(database.Listing)
                 .join(database.Course)
                 .join(database.EvaluationStatistics)
-                .filter(database.Listing.course_code == course_code)
+                .filter(database.Listing.course_id == course_id)
             )
             historical_ratings.course_rating_all_profs = rating_all.scalar()
 
             # Course rating - this professor.
             rating_this = (
                 session.query(
-                    sqlalchemy.func.avg(database.EvaluationStatistics.avg_rating)
+                    sqlalchemy.func.avg(
+                        database.EvaluationStatistics.avg_rating)
                 )
                 .select_from(database.Listing)
                 .join(database.Course)
                 .join(database.EvaluationStatistics)
                 .join(database.course_professors)
-                .filter(database.Listing.course_code == course_code)
+                .filter(database.Listing.course_id == course_id)
                 .filter(
                     database.course_professors.c.professor_id == professor.professor_id
                 )
@@ -218,12 +226,13 @@ def historial_ratings_computed(session):
             # Course workload.
             workload_all = (
                 session.query(
-                    sqlalchemy.func.avg(database.EvaluationStatistics.avg_workload)
+                    sqlalchemy.func.avg(
+                        database.EvaluationStatistics.avg_workload)
                 )
                 .select_from(database.Listing)
                 .join(database.Course)
                 .join(database.EvaluationStatistics)
-                .filter(database.Listing.course_code == course_code)
+                .filter(database.Listing.course_id == course_id)
             )
             historical_ratings.course_workload = workload_all.scalar()
 
@@ -250,14 +259,14 @@ def professors_computed(session):
 
 if __name__ == "__main__":
     items = [
-        seasons_computed,
-        listing_invariants,
-        course_invariants,
-        listings_computed,
-        question_invariants,
-        questions_computed,
-        question_tag_invariant,
-        evaluation_statistics_computed,
+        # seasons_computed,
+        # listing_invariants,
+        # course_invariants,
+        # listings_computed,
+        # question_invariants,
+        # questions_computed,
+        # question_tag_invariant,
+        # evaluation_statistics_computed,
         historial_ratings_computed,
         professors_computed,
     ]

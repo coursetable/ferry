@@ -42,7 +42,8 @@ course_professors = Table(
     "course_professors",
     Base.metadata,
     Column("course_id", ForeignKey("courses.course_id"), primary_key=True),
-    Column("professor_id", ForeignKey("professors.professor_id"), primary_key=True),
+    Column("professor_id", ForeignKey(
+        "professors.professor_id"), primary_key=True),
 )
 
 
@@ -63,7 +64,8 @@ class Course(BaseModel):
         "Professor", secondary=course_professors, back_populates="courses"
     )
 
-    areas = Column(JSON, comment="Course areas (humanities, social sciences, sciences)")
+    areas = Column(
+        JSON, comment="Course areas (humanities, social sciences, sciences)")
     course_home_url = Column(String, comment="Link to the course homepage")
     description = Column(String, comment="Course description")
     extra_info = Column(
@@ -165,7 +167,8 @@ class Professor(BaseModel):
     __tablename__ = "professors"
 
     professor_id = Column(Integer, comment="Professor ID", primary_key=True)
-    name = Column(String, comment="Name of the professor", index=True, nullable=False)
+    name = Column(String, comment="Name of the professor",
+                  index=True, nullable=False)
 
     courses = relationship(
         "Course", secondary=course_professors, back_populates="professors"
@@ -181,7 +184,15 @@ class HistoricalRating(BaseModel):
     __tablename__ = "historical_ratings"
 
     id = Column(Integer, primary_key=True)
-    course_code = Column(String, comment='Course code (e.g. "CPSC 366"', index=True)
+
+    course_id = Column(
+        Integer,
+        ForeignKey("courses.course_id"),
+        comment="The course associated with these statistics",
+        index=True,
+        nullable=False,
+    )
+
     professor_id = Column(
         Integer,
         ForeignKey("professors.professor_id"),
@@ -207,7 +218,7 @@ class HistoricalRating(BaseModel):
         # The (course_code, professor_id) combination should be unique.
         Index(
             "idx_historical_ratings_course_code_professor_unique",
-            "course_code",
+            "course_id",
             "professor_id",
             unique=True,
         ),
@@ -225,7 +236,8 @@ class EvaluationStatistics(BaseModel):
         index=True,
         nullable=False,
     )
-    course = relationship("Course", backref=backref("statistics", uselist=False))
+    course = relationship("Course", backref=backref(
+        "statistics", uselist=False))
 
     enrollment = Column(
         JSON, comment="a JSON dictionary with information about the course's enrollment"
@@ -279,7 +291,8 @@ class EvaluationNarrative(BaseModel):
         index=True,
         nullable=False,
     )
-    question = relationship("EvaluationQuestion", backref="evaluation_narratives")
+    question = relationship("EvaluationQuestion",
+                            backref="evaluation_narratives")
 
     comment = Column(String, comment="Response to the question",)
 
@@ -306,4 +319,5 @@ class EvaluationRating(BaseModel):
     )
     question = relationship("EvaluationQuestion", backref="evaluation_ratings")
 
-    rating = Column(JSON, comment="JSON array of the response counts for each option",)
+    rating = Column(
+        JSON, comment="JSON array of the response counts for each option",)

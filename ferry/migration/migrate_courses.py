@@ -74,7 +74,6 @@ for season in seasons:
                 "Number changed-See description": "NUMBER CHANGED",
                 "Moved to preceding fall term": "MOVED TO FALL TERM",
                 "The": "ACTIVE",  # ? no idea what this means, so assuming active
-                # ? no idea what this means, so assuming active
                 "Closed to further enrollments": "CLOSED",
             }
 
