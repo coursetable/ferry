@@ -254,6 +254,8 @@ def search_view(session):
     """
     Create materialized search view and index
     """
+    # See this blog post for information on postgres full-text search:
+    # http://rachbelaid.com/postgres-full-text-search-is-good-enough/
 
     sql_materialized_view = """
     CREATE MATERIALIZED VIEW IF NOT EXISTS course_info_table AS
@@ -299,6 +301,8 @@ def search_function(session):
     """
     Create search function for usage in hasura
     """
+    # See this Hasura blog post for more information:
+    # https://hasura.io/blog/full-text-search-with-hasura-graphql-api-postgres/
     sql_search_function = """
     CREATE OR REPLACE FUNCTION search_courses(query text)
     returns setof courses AS $$
