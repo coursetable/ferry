@@ -26,6 +26,11 @@ CAS_CREDENTIAL_PASSWORD = functools.lru_cache(lambda: getpass.getpass())
 CAS_COOKIE_CASTGC = functools.lru_cache(lambda: input("CASTGC Cookie: "))
 
 
+# Database
+DATABASE_CONNECT_STRING = (
+    "postgresql+psycopg2://postgres:thisisapassword@localhost/postgres"
+)
+
 # Enable overrides from config_private.py
 try:
     from ferry.config_private import *

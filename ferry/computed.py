@@ -250,18 +250,83 @@ def professors_computed(session):
         professor.average_rating = average_rating
 
 
+def search_view(session):
+    """
+    Create materialized search view and index
+    """
+
+    sql_materialized_view = """
+    CREATE MATERIALIZED VIEW IF NOT EXISTS course_info_table AS
+    WITH course_info (course_id, title, description, course_codes, professor_names)
+        AS (
+            SELECT courses.course_id,
+                   courses.title,
+                   courses.description,
+                   (SELECT string_agg(listings.course_code, ', ')
+                    FROM listings
+                    WHERE listings.course_id = courses.course_id
+                    GROUP BY listings.course_id)          AS course_codes,
+                   (SELECT string_agg(p.name, ', ')
+                    FROM course_professors
+                             JOIN professors p on course_professors.professor_id = p.professor_id
+                    WHERE course_professors.course_id = courses.course_id
+                    GROUP BY course_professors.course_id) AS professor_names
+            FROM courses
+        )
+    SELECT course_id,
+           title,
+           description,
+           course_codes,
+           professor_names,
+           (setweight(to_tsvector('english', title), 'A') ||
+            setweight(to_tsvector('english', coalesce(description, '')), 'C') ||
+            setweight(to_tsvector('english', coalesce(course_codes, '')), 'A') ||
+            setweight(to_tsvector('english', coalesce(professor_names, '')), 'B')
+           ) AS info
+    FROM course_info
+    ;
+    REFRESH MATERIALIZED VIEW course_info_table
+    """
+
+    sql_create_index = """
+    CREATE INDEX IF NOT EXISTS idx_course_search ON course_info_table USING gin(info)
+    """
+    session.execute(sql_materialized_view)
+    session.execute(sql_create_index)
+
+
+def search_function(session):
+    """
+    Create search function for usage in hasura
+    """
+    sql_search_function = """
+    CREATE OR REPLACE FUNCTION search_courses(query text)
+    returns setof courses AS $$
+        SELECT courses.*
+        FROM courses
+        JOIN course_info_table cit on courses.course_id = cit.course_id
+        WHERE cit.info @@ websearch_to_tsquery('english', query)
+        ORDER BY ts_rank(cit.info, websearch_to_tsquery('english', query)) DESC
+    $$ language sql stable;
+    """
+
+    session.execute(sql_search_function)
+
+
 if __name__ == "__main__":
     items = [
-        # seasons_computed,
-        # listing_invariants,
-        # course_invariants,
-        # listings_computed,
-        # question_invariants,
-        # questions_computed,
-        # question_tag_invariant,
-        # evaluation_statistics_computed,
+        seasons_computed,
+        listing_invariants,
+        course_invariants,
+        listings_computed,
+        question_invariants,
+        questions_computed,
+        question_tag_invariant,
+        evaluation_statistics_computed,
         historial_ratings_computed,
         professors_computed,
+        search_view,
+        search_function,
     ]
 
     for fn in items:
