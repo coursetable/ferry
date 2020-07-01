@@ -1,9 +1,8 @@
 import argparse
+import os
 
 import ujson
 from tqdm import tqdm
-
-import os
 
 from ferry import config
 from ferry.includes.class_processing import *
@@ -32,8 +31,8 @@ seasons = args.seasons
 
 if seasons is None:
     seasons = [
-        filename.split(".")[0] 
-        for filename in os.listdir(f"{config.DATA_DIR}/previous_json/") 
+        filename.split(".")[0]
+        for filename in os.listdir(f"{config.DATA_DIR}/previous_json/")
         if filename[-4:] == "json" and filename[:5] != "evals"
     ]
 
