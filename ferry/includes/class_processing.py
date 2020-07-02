@@ -436,6 +436,8 @@ def days_of_week_from_letters(letters):
         "W": "Wednesday",
         "Th": "Thursday",
         "F": "Friday",
+        "Sa": "Saturday",
+        "Su": "Saturday",
     }
 
     letters = letters + " "
@@ -475,8 +477,20 @@ def format_time(time):
         hour = time_stripped
         minute = "00"
 
-    if time[-2:] == "pm":
-        hour = str((int(hour) + 12) % 24)
+    hour = int(hour)
+
+    if time[-2:] == "am":
+
+        if hour == 12:
+            hour = 0
+
+    elif time[-2:] == "pm":
+
+        if hour >= 1 and hour <= 11:
+
+            hour = hour + 12
+
+    hour = str(hour)
 
     return hour + ":" + minute
 
@@ -665,6 +679,112 @@ def extract_meetings(meeting_html):
     )
 
 
+def format_undelimited_time(time):
+    """
+    Convert an undelimited time string (e.g. "1430") to a
+    delimited one (e.g. "14:30")
+    """
+
+    hours, minutes = time[:-2], time[-2:]
+
+    return f"{hours}:{minutes}"
+
+
+days_map = {
+    "0": "Monday",
+    "1": "Tuesday",
+    "2": "Wednesday",
+    "3": "Thursday",
+    "4": "Friday",
+    "5": "Saturday",
+    "6": "Sunday",
+}
+
+
+def extract_meetings_alternate(course_json):
+
+    """
+    Extract course meeting times from the allInGroup key rather than
+    meeting_html. Note that this does not return locations because they are
+    not specified.
+
+    Parameters
+    ----------
+    course_json: dict
+        course_json object read from course_json_cache
+
+    Returns
+    -------
+    times_summary: string
+        summarization of meeting times; the first listed
+        times are shown while additional ones are collapsed
+        to " + (n-1)"
+    locations_summary: string
+        summarization of meeting locations; the first listed
+        locations are shown while additional ones are collapsed
+        to " + (n-1)"
+    times_long_summary: string
+        summary of meeting times and locations; computed as 
+        comma-joined texts from the meeting_html items
+    times_by_day: dictionary
+        dictionary with keys as days and values consisting of
+        lists of [start_time, end_time, location]
+
+    """
+
+    locations_summary = "TBA"
+    times_by_day = dict()
+
+    # check if there is a valid listing
+
+    listings = course_json.get("allInGroup", "[]")
+
+    if len(listings) >= 0:
+
+        # use the first listing (for when a course has multiple)
+
+        primary_listing = listings[0]
+
+        times_summary = primary_listing["meets"]
+
+        if times_summary == "HTBA":
+            times_summary = "TBA"
+
+        meeting_times = ujson.loads(primary_listing["meetingTimes"])
+
+        for meeting_time in meeting_times:
+
+            meeting_day = days_map[meeting_time["meet_day"]]
+
+            session = [
+                format_undelimited_time(meeting_time["start_time"]),
+                format_undelimited_time(meeting_time["end_time"]),
+                "",
+                "",
+            ]
+
+            if meeting_day in times_by_day.keys():
+                times_by_day[meeting_day].append(session)
+
+            else:
+                times_by_day[meeting_day] = [session]
+
+    # if no valid listing, then return the default missing values
+    else:
+
+        times_summary = "TBA"
+
+    # since there are no locations, just set this to times_summary
+    times_long_summary = times_summary
+
+    return (
+        times_summary,
+        locations_summary,
+        times_long_summary,
+        times_by_day,
+    )
+
+
 # abbreviations for skills
 skills_map = {
     "Writing": "WR",
@@ -783,7 +903,7 @@ def extract_course_info(course_json, season):
     # Number of credits
 
     # non-Yale College courses don't have listed credits, so assume they are 1
-    if course_json["hours"] == '':
+    if course_json["hours"] == "":
         course_info["credits"] = 1
     else:
         course_info["credits"] = float(course_json["hours"])
@@ -812,14 +932,26 @@ def extract_course_info(course_json, season):
     course_info["section"] = course_json["section"].lstrip("0")
 
     # Meeting times
-    (
-        # course_info["extracted_meetings"],
-        _,
-        course_info["times_summary"],
-        course_info["locations_summary"],
-        course_info["times_long_summary"],
-        course_info["times_by_day"],
-    ) = extract_meetings(course_json.get("meeting_html", ""))
+    if course_json.get("meeting_html", "") != "":
+
+        (
+            # course_info["extracted_meetings"],
+            _,
+            course_info["times_summary"],
+            course_info["locations_summary"],
+            course_info["times_long_summary"],
+            course_info["times_by_day"],
+        ) = extract_meetings(course_json["meeting_html"])
+
+    # Fall 2020 courses do not have meeting_htmls because most are online
+    else:
+
+        (
+            course_info["times_summary"],
+            course_info["locations_summary"],
+            course_info["times_long_summary"],
+            course_info["times_by_day"],
+        ) = extract_meetings_alternate(course_json)
 
     # Skills and areas
     course_info["skills"] = found_items(course_json["yc_attrs"], skills_map)
