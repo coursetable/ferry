@@ -182,13 +182,15 @@ class HistoricalRating(BaseModel):
 
     id = Column(Integer, primary_key=True)
 
-    course_id = Column(
-        Integer,
-        ForeignKey("courses.course_id"),
-        comment="The course associated with these statistics",
-        index=True,
-        nullable=False,
-    )
+    course_code = Column(String, comment='Course code (e.g. "CPSC 366"', index=True)
+
+    # course_id = Column(
+    #     Integer,
+    #     ForeignKey("courses.course_id"),
+    #     comment="The course associated with these statistics",
+    #     index=True,
+    #     nullable=False,
+    # )
 
     professor_id = Column(
         Integer,
@@ -215,7 +217,7 @@ class HistoricalRating(BaseModel):
         # The (course_code, professor_id) combination should be unique.
         Index(
             "idx_historical_ratings_course_code_professor_unique",
-            "course_id",
+            "course_code",
             "professor_id",
             unique=True,
         ),

@@ -175,17 +175,18 @@ def historial_ratings_computed(session):
     Update: historical_ratings (create entries as needed)
     """
 
-    query = session.query(database.Course)
+    query = (
+        session.query(database.Listing.course_code, database.Course)
+        .join(database.Course)
+        .options(sqlalchemy.orm.joinedload(database.Course.professors))
+    )
 
-    for course in tqdm(query.all()):
-
-        course_id = course.course_id
-
+    for course_code, course in tqdm(query.all()):
         for professor in course.professors:
             historical_ratings, _ = database.get_or_create(
                 session,
                 database.HistoricalRating,
-                course_id=course_id,
+                course_code=course_code,
                 professor_id=professor.professor_id,
             )
 
@@ -197,7 +198,7 @@ def historial_ratings_computed(session):
                 .select_from(database.Listing)
                 .join(database.Course)
                 .join(database.EvaluationStatistics)
-                .filter(database.Listing.course_id == course_id)
+                .filter(database.Listing.course_code == course_code)
             )
             historical_ratings.course_rating_all_profs = rating_all.scalar()
 
@@ -210,7 +211,7 @@ def historial_ratings_computed(session):
                 .join(database.Course)
                 .join(database.EvaluationStatistics)
                 .join(database.course_professors)
-                .filter(database.Listing.course_id == course_id)
+                .filter(database.Listing.course_code == course_code)
                 .filter(
                     database.course_professors.c.professor_id == professor.professor_id
                 )
@@ -225,10 +226,9 @@ def historial_ratings_computed(session):
                 .select_from(database.Listing)
                 .join(database.Course)
                 .join(database.EvaluationStatistics)
-                .filter(database.Listing.course_id == course_id)
+                .filter(database.Listing.course_code == course_code)
             )
             historical_ratings.course_workload = workload_all.scalar()
-
 
 def professors_computed(session):
     """
