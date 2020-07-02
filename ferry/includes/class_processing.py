@@ -777,6 +777,17 @@ def extract_course_info(course_json, season):
 
     course_info["title"] = course_json["title"]
 
+    # Course school (Yale College, SOM, graduate, etc.)
+    course_info["school"] = course_json["col"]
+
+    # Number of credits
+
+    # non-Yale College courses don't have listed credits, so assume they are 1
+    if course_json["hours"] == '':
+        course_info["credits"] = 1
+    else:
+        course_info["credits"] = float(course_json["hours"])
+
     # Course status
     course_info["extra_info"] = stat_map.get(course_json["stat"], "")
 

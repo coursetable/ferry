@@ -66,6 +66,8 @@ class Course(BaseModel):
     areas = Column(JSON, comment="Course areas (humanities, social sciences, sciences)")
     course_home_url = Column(String, comment="Link to the course homepage")
     description = Column(String, comment="Course description")
+    school = Column(String, comment="School (e.g. YC, GS, MG) that the course is taught in")
+    credits = Column(Float, comment="Number of course credits")
     extra_info = Column(
         String, comment="Additional information (indicates if class has been cancelled)"
     )
