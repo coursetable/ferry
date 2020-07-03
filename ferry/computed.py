@@ -1,3 +1,4 @@
+import argparse
 import collections
 import csv
 from typing import List
@@ -175,8 +176,33 @@ def historial_course_ratings_computed(session):
     Update: courses.average_{rating,workload}
     """
 
-    # TODO: this
-    pass
+    def average(nums):
+        nums = list(filter(lambda x: x is not None, nums))
+        if not nums:
+            return None
+        return sum(nums) / len(nums)
+
+    # Specifies how far back to look when computing historical ratings.
+    # We limit the averages computed to the last 6 times the course was taught.
+    MAX_HISTORICAL_COURSES_IN_RATING = 6
+
+    for course in tqdm(session.query(database.Course).all()):  # type: database.Course
+        # Get all possible course codes for this course.
+        codes = [listing.course_code for listing in course.listings]
+
+        historical_stats = (
+            session.query(database.EvaluationStatistics)
+            .select_from(database.Listing)
+            .join(database.Course)
+            .join(database.EvaluationStatistics)
+            .filter(database.Listing.course_code.in_(codes))
+            # .filter(database.Listing.season_code < course.season_code)
+            .order_by(database.Course.season_code.desc())
+            .limit(MAX_HISTORICAL_COURSES_IN_RATING)
+        ).all()  # type: List[database.EvaluationStatistics]
+
+        course.average_rating = average(s.avg_rating for s in historical_stats)
+        course.average_workload = average(s.avg_workload for s in historical_stats)
 
 
 def professors_computed(session):
@@ -267,7 +293,7 @@ def search_function(session):
 
 
 if __name__ == "__main__":
-    items = [
+    all_items = [
         seasons_computed,
         listing_invariants,
         course_invariants,
@@ -281,6 +307,25 @@ if __name__ == "__main__":
         search_view,
         search_function,
     ]
+
+    def _match(name):
+        for fn in all_items:
+            if fn.__name__ == name:
+                return fn
+        raise ValueError(f"cannot find item with name {name}")
+
+    parser = argparse.ArgumentParser(
+        description="Generate computed fields and check invariants"
+    )
+    parser.add_argument(
+        "--items", nargs="+", help="which items to run", default=None, required=False,
+    )
+
+    args = parser.parse_args()
+    if args.items:
+        items = [_match(name) for name in args.items]
+    else:
+        items = all_items
 
     for fn in items:
         if fn.__doc__:
