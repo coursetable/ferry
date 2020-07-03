@@ -69,8 +69,8 @@ def import_course(session, course_info):
     course.areas = course_info["areas"]
     course.course_home_url = course_info["course_home_url"]
     course.description = course_info["description"]
-    course.school = course_info["school"]
-    course.credits = course_info["credits"]
+    course.school = course_info.get("school", None)
+    course.credits = course_info.get("credits", None)
     course.extra_info = course_info["extra_info"]
     course.locations_summary = course_info["locations_summary"]
     course.requirements = course_info["requirements"]
