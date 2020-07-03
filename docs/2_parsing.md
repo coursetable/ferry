@@ -15,10 +15,11 @@ Mappings:
 - seasons -> courses = one to many
 - courses -> listings = one to many
 - courses <-> professors = many to many (junction table in courses_professors)
+- course -> evaluation_statistics = one to one
 - courses -> evaluation_narratives = one to many
 - courses -> evaluation_ratings = one to many
-- evaluation_questions -> evaluation_narratives = one to many
-- evaluation_questions -> evaluation_ratings = one to many
+- evaluation_narratives <- evaluation_questions = many to one
+- evaluation_ratings <- evaluation_questions = many to one
 
 ## Layout
 
@@ -56,7 +57,7 @@ However, different sections of a single class will get multiple entries in this 
 | `skills`                    | List        | Skills that the course fulfills (e.g. writing, quantitative reasoning, language levels) |
 | `syllabus_url`              | String      | Link to the syllabus                                         |
 | `title`                     | String      | Complete course title                                        |
-| `average_overall_rating`    | Float       | [computed] Average overall course rating (from this course's evaluations, aggregated across cross-listings) |
+| `average_rating`            | Float       | [computed] Average overall course rating (from this course's evaluations, aggregated across cross-listings) |
 | `average_workload`          | Float       | [computed] Average workload rating (from this course's evaluations, aggregated across cross-listings) |
 
 ### Listings: `listings`
@@ -93,16 +94,6 @@ Additional constraints:
 | -------------- | ----------- | ------------ |
 | `course_id`    | Foreign Key | Course ID    |
 | `professor_id` | Foreign Key | Professor ID |
-
-### Historical Ratings `historical_ratings`
-
-| Field                     | Type           | Description  |
-| ------------------------- | -------------- | ------------ |
-| `course_code`             | String (index) | Course ID    |
-| `professor_id`            | Foreign Key    | Professor ID |
-| `course_rating_all_profs` | Float          | [computed]   |
-| `course_rating_this_prof` | Float          | [computed]   |
-| `course_workload`         | Float          | [computed]   |
 
 ### Evaluations (questions): `evaluation_questions`
 

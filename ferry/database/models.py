@@ -66,7 +66,9 @@ class Course(BaseModel):
     areas = Column(JSON, comment="Course areas (humanities, social sciences, sciences)")
     course_home_url = Column(String, comment="Link to the course homepage")
     description = Column(String, comment="Course description")
-    school = Column(String, comment="School (e.g. YC, GS, MG) that the course is taught in")
+    school = Column(
+        String, comment="School (e.g. YC, GS, MG) that the course is taught in"
+    )
     credits = Column(Float, comment="Number of course credits")
     extra_info = Column(
         String, comment="Additional information (indicates if class has been cancelled)"
@@ -102,6 +104,15 @@ class Course(BaseModel):
     )
     syllabus_url = Column(String, comment="Link to the syllabus")
     title = Column(String, comment="Complete course title")
+
+    average_rating = Column(
+        Float,
+        comment="[computed] Historical average course rating for this course code, aggregated across all cross-listings",
+    )
+    average_workload = Column(
+        Float,
+        comment="[computed] Historical average workload rating, aggregated across all cross-listings",
+    )
 
 
 class Listing(BaseModel):
@@ -179,60 +190,13 @@ class Professor(BaseModel):
     )
 
 
-class HistoricalRating(BaseModel):
-    __tablename__ = "historical_ratings"
-
-    id = Column(Integer, primary_key=True)
-
-    course_code = Column(String, comment='Course code (e.g. "CPSC 366"', index=True)
-
-    # course_id = Column(
-    #     Integer,
-    #     ForeignKey("courses.course_id"),
-    #     comment="The course associated with these statistics",
-    #     index=True,
-    #     nullable=False,
-    # )
-
-    professor_id = Column(
-        Integer,
-        ForeignKey("professors.professor_id"),
-        comment="Professor ID",
-        index=True,
-        nullable=False,
-    )
-
-    course_rating_all_profs = Column(
-        Float,
-        comment="[computed] The average rating for this course code, across all professors who taught it",
-    )
-    course_rating_this_prof = Column(
-        Float,
-        comment="[computed] The average rating for this course code when taught by this professor",
-    )
-    course_workload = Column(
-        Float,
-        comment="[computed] The average workload for this course code, across all times it was taught",
-    )
-
-    __table_args__ = (
-        # The (course_code, professor_id) combination should be unique.
-        Index(
-            "idx_historical_ratings_course_code_professor_unique",
-            "course_code",
-            "professor_id",
-            unique=True,
-        ),
-    )
-
-
 class EvaluationStatistics(BaseModel):
     __tablename__ = "evaluation_statistics"
 
-    id = Column(Integer, primary_key=True)
     course_id = Column(
         Integer,
         ForeignKey("courses.course_id"),
+        primary_key=True,
         comment="The course associated with these statistics",
         index=True,
         nullable=False,

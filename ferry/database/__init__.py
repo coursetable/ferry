@@ -6,7 +6,6 @@ from ferry.database.models import (
     EvaluationQuestion,
     EvaluationRating,
     EvaluationStatistics,
-    HistoricalRating,
     Listing,
     Professor,
     Season,

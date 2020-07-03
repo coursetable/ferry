@@ -170,65 +170,14 @@ def course_invariants(session):
         )
 
 
-def historial_ratings_computed(session):
+def historial_course_ratings_computed(session):
     """
-    Update: historical_ratings (create entries as needed)
+    Update: courses.average_{rating,workload}
     """
 
-    query = (
-        session.query(database.Listing.course_code, database.Course)
-        .join(database.Course)
-        .options(sqlalchemy.orm.joinedload(database.Course.professors))
-    )
+    # TODO: this
+    pass
 
-    for course_code, course in tqdm(query.all()):
-        for professor in course.professors:
-            historical_ratings, _ = database.get_or_create(
-                session,
-                database.HistoricalRating,
-                course_code=course_code,
-                professor_id=professor.professor_id,
-            )
-
-            # Course rating - all professors.
-            rating_all = (
-                session.query(
-                    sqlalchemy.func.avg(database.EvaluationStatistics.avg_rating)
-                )
-                .select_from(database.Listing)
-                .join(database.Course)
-                .join(database.EvaluationStatistics)
-                .filter(database.Listing.course_code == course_code)
-            )
-            historical_ratings.course_rating_all_profs = rating_all.scalar()
-
-            # Course rating - this professor.
-            rating_this = (
-                session.query(
-                    sqlalchemy.func.avg(database.EvaluationStatistics.avg_rating)
-                )
-                .select_from(database.Listing)
-                .join(database.Course)
-                .join(database.EvaluationStatistics)
-                .join(database.course_professors)
-                .filter(database.Listing.course_code == course_code)
-                .filter(
-                    database.course_professors.c.professor_id == professor.professor_id
-                )
-            )
-            historical_ratings.course_rating_this_prof = rating_this.scalar()
-
-            # Course workload.
-            workload_all = (
-                session.query(
-                    sqlalchemy.func.avg(database.EvaluationStatistics.avg_workload)
-                )
-                .select_from(database.Listing)
-                .join(database.Course)
-                .join(database.EvaluationStatistics)
-                .filter(database.Listing.course_code == course_code)
-            )
-            historical_ratings.course_workload = workload_all.scalar()
 
 def professors_computed(session):
     """
@@ -327,7 +276,7 @@ if __name__ == "__main__":
         questions_computed,
         question_tag_invariant,
         evaluation_statistics_computed,
-        historial_ratings_computed,
+        historial_course_ratings_computed,
         professors_computed,
         search_view,
         search_function,
