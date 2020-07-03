@@ -1,4 +1,4 @@
--- This script sets up a materialized view, which aggregates course information
+-- This script sets up a computed table, which aggregates course information
 -- from across the many tables. Furthermore, it creates a search function which
 -- enables Hasura to use this table.
 
@@ -8,9 +8,10 @@
 -- See this Hasura blog post for more information on the search function:
 -- https://hasura.io/blog/full-text-search-with-hasura-graphql-api-postgres/
 
-DROP MATERIALIZED VIEW IF EXISTS course_info_table CASCADE;
+DROP FUNCTION IF EXISTS search_course_info;
+DROP TABLE IF EXISTS computed_course_info CASCADE;
 
-CREATE MATERIALIZED VIEW IF NOT EXISTS course_info_table AS
+CREATE TABLE computed_course_info AS
 WITH course_info
     AS (
         SELECT courses.*,
@@ -29,8 +30,12 @@ SELECT course_id,
        season_code,
        title,
        description,
+       school,
+       credits,
        times_summary,
+       times_by_day,
        locations_summary,
+       requirements,
        course_codes,
        professor_names,
        average_rating,
@@ -42,27 +47,19 @@ SELECT course_id,
         setweight(jsonb_to_tsvector('english', course_codes, '"all"'), 'A') ||
         setweight(jsonb_to_tsvector('english', professor_names, '"all"'), 'B')
        ) AS info
-FROM course_info
-;
+FROM course_info ;
 
--- REFRESH MATERIALIZED VIEW course_info_table;
-
-CREATE INDEX idx_course_search ON course_info_table USING gin(info) ;
--- TODO: create index on basically every column
+-- Create an index for basically every column.
+ALTER TABLE computed_course_info ADD FOREIGN KEY (course_id) REFERENCES courses (course_id);
+CREATE INDEX idx_computed_course_search ON computed_course_info USING gin (info);
+CREATE INDEX idx_computed_course_skills ON computed_course_info USING gin (skills);
+CREATE INDEX idx_computed_course_areas ON computed_course_info USING gin (areas);
+CREATE INDEX idx_computed_course_season ON computed_course_info (season_code);
 
 CREATE FUNCTION search_course_info(query text)
-RETURNS SETOF course_info_table AS $$
+RETURNS SETOF computed_course_info AS $$
     SELECT *
-    FROM course_info_table
+    FROM computed_course_info
     WHERE info @@ websearch_to_tsquery('english', query)
     ORDER BY ts_rank(info, websearch_to_tsquery('english', query)) DESC
-$$ language sql stable;
-
-CREATE OR REPLACE FUNCTION search_courses(query text)
-RETURNS SETOF courses AS $$
-    SELECT courses.*
-    FROM courses
-    JOIN course_info_table cit on courses.course_id = cit.course_id
-    WHERE cit.info @@ websearch_to_tsquery('english', query)
-    ORDER BY ts_rank(cit.info, websearch_to_tsquery('english', query)) DESC
 $$ language sql stable;
