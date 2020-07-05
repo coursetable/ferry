@@ -3,144 +3,177 @@
 # Github: https://github.com/iamdanzhao/yale-popular-classes
 # README: https://github.com/iamdanzhao/yale-popular-classes/blob/master/data-guide/course_data_guide.md
 
-# 1. Import packages -----
+# Import packages -----
 
-from requests import get
-from bs4 import BeautifulSoup
-
+import argparse
 import os
 import sys
 from datetime import datetime
 
-import numpy as np
-import pandas as pd
+import requests
+import ujson
+from bs4 import BeautifulSoup
 
 from ferry import config
 
 startTime = datetime.now()
 
-# 2. Set working directory -----
-# Be sure to escape '\' with another '\'
-# Be sure to create the folder beforehand — otherwise, Python will return an error
-# This is the directory where the CSV files will land
 
+class FetchDemandError(Exception):
+    pass
+
+
+# Set working directory
+# Be sure to create the folder beforehand — otherwise, Python will return an error
+# This is the directory where the JSON files will land
 wd = f"{config.DATA_DIR}/demand_stats/"
 os.chdir(wd)
 
-# 3. Set semester -----
-# Manually input or pass using command line arguments
+# Set season
+# Pass using command line arguments
 # Examples: 202001 = 2020 Spring, 201903 = 2019 Fall
+# If no season is provided, the program will scrape all available seasons
+parser = argparse.ArgumentParser(description="Import demand stats")
+parser.add_argument(
+    "-s",
+    "--seasons",
+    nargs="+",
+    help="seasons to import",
+    default=None,
+    required=False,
+)
+args = parser.parse_args()
+seasons = args.seasons
 
-# TODO: Before we ship, we'll want to change this to set dynamically to reflect the upcoming term (leaving as spring 2020 now for debugging purposes)
-semester = '202001'
+# Get all possible season values
+url = "https://ivy.yale.edu/course-stats/"
+r = requests.get(url)
+s = BeautifulSoup(r.text, "html.parser")
+season_elems = s.select("#termCode option[value]")
+all_viable_seasons = [elem.get("value") for elem in season_elems]
 
-if len(sys.argv) > 1:
-    semester = str(sys.argv[1])
+# If user doesn't specify any seasons, scrape data from all available seasons
+if seasons is None:
+    course_seasons = all_viable_seasons
+else:
+    # Check to make sure user-inputted seasons are valid
+    if all(season in all_viable_seasons for season in seasons):
+        course_seasons = seasons
+    else:
+        raise FetchDemandError("Invalid season.")
 
-# 4. Get list of subjects -----
-
-def getSubjects(fileName):
+# Get list of subjects
+def getSubjects():
     # get URL and pass to BeautifulSoup
-    url = 'https://ivy.yale.edu/course-stats/'
-    r = get(url)
-    s = BeautifulSoup(r.text, 'html.parser')
+    url = "https://ivy.yale.edu/course-stats/"
+    r = requests.get(url)
+    s = BeautifulSoup(r.text, "html.parser")
 
     # get all the dropdown options and split into subject code + subject name
-    subjects_elems = s.select('#subjectCode option')
-    subjects_codes = [elem.text.split(" - ", 2)[0] for elem in subjects_elems[1:]]
-    subjects_names = [elem.text.split(" - ", 2)[1] for elem in subjects_elems[1:]]
+    subject_elems = s.select("#subjectCode option")
+    subject_codes = [elem.text.split(" - ", 2)[0] for elem in subject_elems[1:]]
+    subject_names = [elem.text.split(" - ", 2)[1] for elem in subject_elems[1:]]
+    subject_dicts = [
+        {"code": elem[0], "full_subject_name": elem[1]}
+        for elem in zip(subject_codes, subject_names)
+    ]
 
-    # make a dataframe and save it to csv
-    pd.DataFrame({
-        'subject': subjects_codes, 
-        'name': subjects_names
-    }).to_csv(fileName, index=False)
+    with open(f"{config.DATA_DIR}/demand_stats/subjects.json", "w") as f:
+        f.write(ujson.dumps(subject_dicts, indent=4))
 
-    return subjects_codes
+    return subject_codes
 
-subjects = getSubjects('subjects.csv')
 
-# 5. Get the array of dates -----
-
+# Get the array of dates -----
 def getDates(sem):
     # get URL and pass to BeautifulSoup
     # using AMTH as arbitary subject
-    url = 'https://ivy.yale.edu/course-stats/?termCode=' + sem + '&subjectCode=AMTH'
-    r = get(url)
-    s = BeautifulSoup(r.text, 'html.parser')
+    url = f"https://ivy.yale.edu/course-stats/?termCode={sem}&subjectCode=AMTH"
+    r = requests.get(url)
+    s = BeautifulSoup(r.text, "html.parser")
 
     # select date elements
-    dates_elems = s.select('table table')[0].select('td')
-    
+    dates_elems = s.select("table table")[0].select("td")
+
     return [date.text.strip() for date in dates_elems]
 
-dates = getDates(semester)
 
-# 6. Scrape courses
-# Most of the code here is to deal with cross-listed courses, and to avoid having duplicate data
+subjects = getSubjects()
+for season in course_seasons:
+    dates = getDates(season)
 
-courses = [] # containers for courses: format is id, code, name
-demands = [] # container for demand: format is id, date, count
-i = 1 # iterator for assigning course id
+    # Scrape courses
+    # Most of the code here is to deal with cross-listed courses, and to avoid having duplicate data
 
-for subject in subjects:
-    # get URL and pass to BeautifulSoup
-    # '.replace("&", "%26")' escapes the ampersand
-    url = 'https://ivy.yale.edu/course-stats/?termCode=' + semester + '&subjectCode=' + subject.replace("&", "%26")
-    r = get(url)
-    s = BeautifulSoup(r.text, 'html.parser')
+    courses = []  # containers for courses: format is title, codes, demand
+    numCourses = 1
 
-    # selects all the courses info and demand info
-    # each element in course_containers contains code, name, and demand for one course
-    course_containers = s.select("div#content > div > table > tbody > tr")
+    for subject in subjects:
+        # get URL and pass to BeautifulSoup
+        # '.replace("&", "%26")' escapes the ampersand
+        url = f'https://ivy.yale.edu/course-stats/?termCode={season}&subjectCode={subject.replace("&", "%26")}'
+        r = requests.get(url)
+        s = BeautifulSoup(r.text, "html.parser")
 
-    for container in course_containers:
-        # extract name and code
-        code = container.select("td a")[0].text.strip().replace(";", "")
-        name = container.select("td span")[0].text.strip().replace(";", "")
+        # selects all the courses info and demand info
+        # each element in course_containers contains code, name, and demand for one course
+        course_containers = s.select("div#content > div > table > tbody > tr")
 
-        # 'code' might be a long list of cross-listed couses (e.g. 'S&DS 262/S&DS 562/CPSC 262'),
-        # so we need to split all of the codes and look at them separately
-        full_strings_all = code.split("/")
+        for container in course_containers:
+            course = []
+            demands = {}
 
-        # sometimes we'll get a course code that isn't actually an academic subject,
-        # so this line filters that out
-        full_strings = [string for string in full_strings_all if string.split(" ")[0] in subjects]
+            # extract name and code
+            code = container.select("td a")[0].text.strip().replace(";", "")
+            name = container.select("td span")[0].text.strip().replace(";", "")
 
-        # now, we need to identify the course code corresponding to the subject we're working
-        # on in the loop — this finds the course code with 'subject' in it
-        code_this_subject = [string for string in full_strings if subject in string][0]
+            # 'code' might be a long list of cross-listed couses (e.g. 'S&DS 262/S&DS 562/CPSC 262'),
+            # so we need to split all of the codes and look at them separately
+            full_strings_all = code.split("/")
 
-        # Test if we've already added the demand for this course (due to cross-listing) into the 
-        # data structure. We don't want duplicate data, so if we already have the demand, we simply skip it
-        if full_strings.index(code_this_subject) == 0:
-            # if this is our first time coming across this course, we need to add all of the
-            # cross-listed course numbers into our 'courses' list
-            for string in full_strings:
-                courses.append([i, string, name])
+            # sometimes we'll get a course code that isn't actually an academic subject,
+            # so this line filters that out
+            full_strings = [
+                string
+                for string in full_strings_all
+                if string.split(" ")[0] in subjects
+            ]
 
-            # selects each of the individual counts
-            # each element in count is one count corresponding to one day
-            counts = container.select("td.trendCell")
+            # now, we need to identify the course code corresponding to the subject we're working
+            # on in the loop — this finds the course code with 'subject' in it
+            code_this_subject = [
+                string for string in full_strings if subject in string
+            ][0]
 
-            # add the count for each into our 'demands' list
-            for j in range(len(dates)):
-                demands.append([i, dates[j], counts[j].text.strip()])
-        
-        i += 1
+            # Test if we've already added the demand for this course (due to cross-listing) into the
+            # data structure. We don't want duplicate data, so if we already have the demand, we simply skip it
+            if full_strings.index(code_this_subject) == 0:
+                # if this is our first time coming across this course, we need to add all of the
+                # cross-listed course numbers into our 'courses' list
 
-    print('Scraped ' + str(i) + ' courses up to ' + subject + ', ' + str(datetime.now() - startTime) + ' elapsed')
+                # selects each of the individual counts
+                # each element in count is one count corresponding to one day
+                counts = container.select("td.trendCell")
 
-# write courses to csv
-pd.DataFrame(
-    courses,
-    columns = ['id', 'code', 'name']
-).to_csv('courses.csv', index = False)
+                # add the count for each into our 'demands' list
+                for j in range(len(dates)):
+                    demands[dates[j]] = counts[j].text.strip()
 
-# write demand to csv
-pd.DataFrame(
-    demands,
-    columns = ['id', 'date', 'count']
-).to_csv('demand.csv', index = False)
+                course = {
+                    "title": name,
+                    "codes": full_strings,
+                    "demand": demands,
+                }
 
-print('Complete, ' + str(datetime.now() - startTime) + ' elapsed')
+                courses.append(course)
+
+            numCourses += 1
+
+        print(
+            f"Scraped {str(numCourses)} courses up to {subject}, {str(datetime.now() - startTime)} elapsed"
+        )
+
+    with open(f"{config.DATA_DIR}/demand_stats/{season}_demand.json", "w") as f:
+        f.write(ujson.dumps(courses, indent=4))
+
+    print(f"Completed scraping {season}, {str(datetime.now() - startTime)} elapsed")
