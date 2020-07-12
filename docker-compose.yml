@@ -9,29 +9,18 @@ services:
     network_mode: "host"
     environment:
       POSTGRES_PASSWORD: "thisisapassword"
-  graphql-engine:
-    image: hasura/graphql-engine:v1.2.2
-    ports:
-      - "8080:8080"
-    network_mode: "host"
-    depends_on:
-    - "db"
-    restart: always
-    environment:
-      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:thisisapassword@localhost:5432/postgres
-      HASURA_GRAPHQL_ENABLE_CONSOLE: "true" # set to "false" to disable console
-      HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
-      ## uncomment next line to set an admin secret
-      # HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
-      #    labels:
-      #      traefik.enable: true
-      #      traefik.http.routers.coursetable-ferry.rule: Host(`ferry.sheth.io`)
-      #      traefik.http.routers.coursetable-ferry.tls: true
-      #      traefik.http.routers.coursetable-ferry.middlewares: SecureTLS
-      #    networks:
-      #      - traefik
-      #      - default
+#  graphql-engine:
+#    image: hasura/graphql-engine:latest
+#    ports:
+#      - "8080:8080"
+#    network_mode: "host"
+#    depends_on:
+#    - "db"
+#    restart: always
+#    environment:
+#      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:thisisapassword@localhost:5432/postgres
+#      HASURA_GRAPHQL_ENABLE_CONSOLE: "true" # set to "false" to disable console
+#      HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
+#      ## uncomment next line to set an admin secret
+#      # HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
 
-# networks:
-#   traefik:
-#     external: true
