@@ -99,6 +99,7 @@ def getDates(sem):
 
 
 subjects = getSubjects()
+# subjects = ['ART']
 for season in course_seasons:
     dates = getDates(season)
 
@@ -121,9 +122,10 @@ for season in course_seasons:
 
         for container in course_containers:
             course = []
-            demands = {}
+            overall_demand = {}
 
             # extract name and code
+            course_url = f'https://ivy.yale.edu{container.select("td a")[0]["href"]}'
             code = container.select("td a")[0].text.strip().replace(";", "")
             name = container.select("td span")[0].text.strip().replace(";", "")
 
@@ -145,6 +147,22 @@ for season in course_seasons:
                 string for string in full_strings if subject in string
             ][0]
 
+            # Get section data, if applicable
+            course_r = requests.get(course_url)
+            course_s = BeautifulSoup(course_r.text, "html.parser")
+            section_dict = {}
+
+            # Check whether the page has a table with section data
+            section_text = course_s.find("th", text="Section\xa0\xa0")
+            if section_text:
+                section_table = section_text.find_parent("table")
+                section_table_rows = section_table.select("tbody tr")
+                for row in section_table_rows:
+                    cells = row.select("td")
+                    section_name = cells[0].string.strip()
+                    section_demand = cells[2].string.strip()
+                    section_dict[section_name] = section_demand
+
             # Test if we've already added the demand for this course (due to cross-listing) into the
             # data structure. We don't want duplicate data, so if we already have the demand, we simply skip it
             if full_strings.index(code_this_subject) == 0:
@@ -155,14 +173,15 @@ for season in course_seasons:
                 # each element in count is one count corresponding to one day
                 counts = container.select("td.trendCell")
 
-                # add the count for each into our 'demands' list
+                # add the count for each into our overall_demand list
                 for j in range(len(dates)):
-                    demands[dates[j]] = counts[j].text.strip()
+                    overall_demand[dates[j]] = counts[j].text.strip()
 
                 course = {
                     "title": name,
                     "codes": full_strings,
-                    "demand": demands,
+                    "overall_demand": overall_demand,
+                    "section_demand": section_dict,
                 }
 
                 courses.append(course)
