@@ -69,9 +69,9 @@ for season in seasons:
             extra_info_map = {
                 "Cancelled": "CANCELLED",
                 "": "ACTIVE",
-                "Moved to spring term": "MOVED TO SPRING TERM",
-                "Number changed-See description": "NUMBER CHANGED",
-                "Moved to preceding fall term": "MOVED TO FALL TERM",
+                "Moved to spring term": "MOVED_TO_SPRING_TERM",
+                "Number changed-See description": "NUMBER_CHANGED",
+                "Moved to preceding fall term": "MOVED_TO_FALL_TERM",
                 "The": "ACTIVE",  # ? no idea what this means, so assuming active
                 "Closed to further enrollments": "CLOSED",
             }

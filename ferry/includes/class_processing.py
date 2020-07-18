@@ -909,7 +909,7 @@ def extract_course_info(course_json, season):
         course_info["credits"] = float(course_json["hours"])
 
     # Course status
-    course_info["extra_info"] = stat_map.get(course_json["stat"], "")
+    course_info["extra_info"] = stat_map.get(course_json["stat"], "ACTIVE")
 
     # Instructors
     course_info["professors"] = professors_from_html(
