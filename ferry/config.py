@@ -1,16 +1,16 @@
 import functools
 import getpass
-import os
+import pathlib
 
 """
 Contains configurations and settings used by the rest of the project.
 Any settings in here can be overriden by config_private.py.
 """
 
-_PROJECT_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..")
+_PROJECT_DIR = pathlib.Path(__file__).resolve().parent.parent
 
-DATA_DIR = os.path.join(_PROJECT_DIR, "api_output")
-RESOURCE_DIR = os.path.join(_PROJECT_DIR, "resources")
+DATA_DIR = _PROJECT_DIR / "api_output"
+RESOURCE_DIR = _PROJECT_DIR / "resources"
 
 # CAS Authentication
 #
