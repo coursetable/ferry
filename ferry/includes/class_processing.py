@@ -10,6 +10,12 @@ import unidecode
 from bs4 import BeautifulSoup
 
 
+PROFESSOR_EXCEPTIONS = {
+    "Kim Shirkhani": "Kimberly Shirkhani",
+    "Derek Green": "John Green",
+}
+
+
 class FetchClassesError(Exception):
     pass
 
@@ -355,6 +361,9 @@ def professors_from_html(html):
 
             # remove accents from professor names
             name = unidecode.unidecode(text)
+
+            if name in PROFESSOR_EXCEPTIONS.keys():
+                name = PROFESSOR_EXCEPTIONS[name]
 
             if len(name) > 0 and name != "Staff":
                 names.append(name)
