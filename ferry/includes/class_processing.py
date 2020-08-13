@@ -348,27 +348,59 @@ def professors_from_html(html):
     """
 
     soup = BeautifulSoup(html, features="lxml")
-    matched_divs = soup.findAll("div", {"class": "instructor-name"})
+    instructor_divs = soup.findAll("div", {"class": "instructor-detail"})
 
     names = []
+    emails = []
+    ids = [] # Yale course search's internal professor ID
 
-    for div in matched_divs:
+    for div in instructor_divs:
 
-        text = div.get_text()
+        instructor_name = div.find("div", {"class": "instructor-name"})
+        instructor_email = div.find("div", {"class": "instructor-email"})
+        instructor_id = "" # default
 
-        # disregard email fields
-        if "mailto:" not in text:
+        if instructor_name:
 
-            # remove accents from professor names
-            name = unidecode.unidecode(text)
+            # check if the professor has an associated ID
+            instructor_search = instructor_name.find("a", {"data-action": "search"})
 
-            if name in PROFESSOR_EXCEPTIONS.keys():
-                name = PROFESSOR_EXCEPTIONS[name]
+            if instructor_search:
+                instructor_id = instructor_search["data-id"]
 
-            if len(name) > 0 and name != "Staff":
-                names.append(name)
+            # extract the name in plaintext
+            instructor_name = instructor_name.get_text()
+        else:
+            instructor_name = ""
 
-    return sorted(names)
+        if instructor_email:
+
+            # extract the email in plaintext
+            instructor_email = instructor_email.get_text()
+        else:
+            instructor_email = ""
+
+        # remove accents from professor names
+        instructor_name = unidecode.unidecode(instructor_name)
+
+        # patch certain professor names manually
+        if instructor_name in PROFESSOR_EXCEPTIONS.keys():
+            instructor_name = PROFESSOR_EXCEPTIONS[instructor_name]
+
+        # if the professor has a name and is not listed as staff, add it
+        if len(instructor_name) > 0 and instructor_name != "Staff":
+            names.append(instructor_name)
+            emails.append(instructor_email)
+            ids.append(instructor_id)
+
+    # skip sorting and return empty
+    if len(names) == 0:
+        return [], [], []
+
+    # parallel sort by instructor name
+    names, emails, ids = zip(*sorted(zip(names, emails, ids)))
+
+    return names, emails, ids
 
 
 def parse_cross_listings(xlist_html):
@@ -921,9 +953,11 @@ def extract_course_info(course_json, season):
     course_info["extra_info"] = stat_map.get(course_json["stat"], "ACTIVE")
 
     # Instructors
-    course_info["professors"] = professors_from_html(
-        convert_unicode(course_json["instructordetail_html"])
-    )
+    (
+        course_info["professors"],
+        course_info["professor_emails"],
+        course_info["professor_ids"],
+    ) = professors_from_html(convert_unicode(course_json["instructordetail_html"]))
 
     # CRN
     course_info["crn"] = course_json["crn"]
