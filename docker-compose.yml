@@ -6,7 +6,6 @@ services:
     restart: always
     ports:
       - "5432:5432"
-    network_mode: "host"
     environment:
       POSTGRES_PASSWORD: "thisisapassword"
 #  graphql-engine:
