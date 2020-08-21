@@ -15,7 +15,9 @@ CREATE TABLE computed_listing_info AS
 WITH listing_info
     AS (
         SELECT listings.listing_id,
-           listings.course_code,
+               listings.crn,
+               listings.section,
+               listings.course_code,
            courses.*,
            (SELECT jsonb_agg(listings.course_code)
             FROM listings
@@ -25,11 +27,20 @@ WITH listing_info
             FROM course_professors
                      JOIN professors p on course_professors.professor_id = p.professor_id
             WHERE course_professors.course_id = courses.course_id
-            GROUP BY course_professors.course_id), '[]'::jsonb) AS professor_names
+            GROUP BY course_professors.course_id), '[]'::jsonb) AS professor_names,
+           (SELECT avg(p.average_rating)
+            FROM course_professors
+                     JOIN professors p on course_professors.professor_id = p.professor_id
+            WHERE course_professors.course_id = courses.course_id
+            GROUP BY course_professors.course_id) AS average_professor,
+           (SELECT enrollment FROM evaluation_statistics
+            WHERE evaluation_statistics.course_id = listings.course_id) as enrollment
         FROM listings
         JOIN courses on listings.course_id = courses.course_id
     )
 SELECT listing_id,
+       crn,
+       section,
        course_code,
        course_id,
        season_code,
@@ -41,10 +52,14 @@ SELECT listing_id,
        times_by_day,
        locations_summary,
        requirements,
+       syllabus_url,
+       extra_info,
        all_course_codes,
        professor_names,
+       average_professor,
        average_rating,
        average_workload,
+       enrollment,
        to_jsonb(skills) as skills,
        to_jsonb(areas) as areas,
        (setweight(to_tsvector('english', title), 'A') ||
