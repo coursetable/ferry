@@ -182,23 +182,21 @@ def historial_course_ratings_computed(session):
             return None
         return sum(nums) / len(nums)
 
-    # Specifies how far back to look when computing historical ratings.
-    # We limit the averages computed to the last 6 times the course was taught.
-    MAX_HISTORICAL_COURSES_IN_RATING = 6
-
     for course in tqdm(session.query(database.Course).all()):  # type: database.Course
         # Get all possible course codes for this course.
-        codes = [listing.course_code for listing in course.listings]
+        codes = [x[0] for x in (
+            session.query(database.Listing.course_code)
+            .filter(database.Listing.course_id == course.course_id)
+        ).all()]
 
+        # Get all course evaluation stats with a matching course code.
         historical_stats = (
             session.query(database.EvaluationStatistics)
             .select_from(database.Listing)
             .join(database.Course)
             .join(database.EvaluationStatistics)
             .filter(database.Listing.course_code.in_(codes))
-            # .filter(database.Listing.season_code < course.season_code)
             .order_by(database.Course.season_code.desc())
-            .limit(MAX_HISTORICAL_COURSES_IN_RATING)
         ).all()  # type: List[database.EvaluationStatistics]
 
         course.average_rating = average(s.avg_rating for s in historical_stats)
