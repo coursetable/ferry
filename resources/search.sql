@@ -68,7 +68,8 @@ SELECT listing_id,
         setweight(jsonb_to_tsvector('english', all_course_codes, '"all"'), 'B') ||
         setweight(jsonb_to_tsvector('english', professor_names, '"all"'), 'B')
        ) AS info
-FROM listing_info ;
+FROM listing_info
+ORDER BY course_code, section ;
 
 -- Create an index for basically every column.
 ALTER TABLE computed_listing_info ADD FOREIGN KEY (course_id) REFERENCES courses (course_id);
@@ -83,7 +84,7 @@ RETURNS SETOF computed_listing_info AS $$
 BEGIN
     CASE
         WHEN websearch_to_tsquery('english', query) <@ ''::tsquery THEN
-            RETURN QUERY SELECT * FROM computed_listing_info ORDER BY course_code ;
+            RETURN QUERY SELECT * FROM computed_listing_info ;
         ELSE
             RETURN QUERY SELECT *
             FROM computed_listing_info
