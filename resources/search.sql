@@ -69,7 +69,7 @@ SELECT listing_id,
         setweight(jsonb_to_tsvector('english', professor_names, '"all"'), 'B')
        ) AS info
 FROM listing_info
-ORDER BY course_code, section ;
+ORDER BY course_code, course_id ;
 
 -- Create an index for basically every column.
 ALTER TABLE computed_listing_info ADD FOREIGN KEY (course_id) REFERENCES courses (course_id);
