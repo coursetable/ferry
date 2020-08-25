@@ -27,7 +27,8 @@ CAS_COOKIE_CASTGC = functools.lru_cache(lambda: input("CASTGC Cookie: "))
 
 
 # Database
-DATABASE_CONNECT_STRING = (
+DATABASE_CONNECT_STRING = os.environ.get(
+    "POSTGRES_URI",
     "postgresql+psycopg2://postgres:thisisapassword@localhost/postgres"
 )
 

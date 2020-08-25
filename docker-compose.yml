@@ -1,4 +1,4 @@
-version: '2'
+version: "2"
 
 services:
   db:
@@ -8,6 +8,16 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_PASSWORD: "thisisapassword"
+  cron:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.cron
+    restart: always
+    environment:
+      POSTGRES_URI: "postgresql+psycopg2://postgres:thisisapassword@db/postgres"
+    volumes:
+      - ./api_output:/app/api_output
+      - ./drive_cache.tar.gz:/app/drive_cache.tar.gz
 #  graphql-engine:
 #    image: hasura/graphql-engine:latest
 #    ports:
