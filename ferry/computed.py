@@ -184,10 +184,14 @@ def historial_course_ratings_computed(session):
 
     for course in tqdm(session.query(database.Course).all()):  # type: database.Course
         # Get all possible course codes for this course.
-        codes = [x[0] for x in (
-            session.query(database.Listing.course_code)
-            .filter(database.Listing.course_id == course.course_id)
-        ).all()]
+        codes = [
+            x[0]
+            for x in (
+                session.query(database.Listing.course_code).filter(
+                    database.Listing.course_id == course.course_id
+                )
+            ).all()
+        ]
 
         # Get all course evaluation stats with a matching course code.
         historical_stats = (

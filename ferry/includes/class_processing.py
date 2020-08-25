@@ -9,7 +9,6 @@ import ujson
 import unidecode
 from bs4 import BeautifulSoup
 
-
 PROFESSOR_EXCEPTIONS = {
     "Kim Shirkhani": "Kimberly Shirkhani",
     "Derek Green": "John Green",
@@ -352,13 +351,13 @@ def professors_from_html(html):
 
     names = []
     emails = []
-    ids = [] # Yale course search's internal professor ID
+    ids = []  # Yale course search's internal professor ID
 
     for div in instructor_divs:
 
         instructor_name = div.find("div", {"class": "instructor-name"})
         instructor_email = div.find("div", {"class": "instructor-email"})
-        instructor_id = "" # default
+        instructor_id = ""  # default
 
         if instructor_name:
 
