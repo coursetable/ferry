@@ -46,6 +46,4 @@ Stages 3 and 4 make use of the database, which is documented in [parsing docs](d
 ## TODO
 - save the raw HTML from OCE in the evaluations crawler
 - transition everything from /private to config_private.py
-- course demand statistics
-- fetch number of course credits for each class
 - get full names of subjects/departments in addition to the abbreviations (could be done in computed.py with a static table)
