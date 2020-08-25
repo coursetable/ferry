@@ -1,3 +1,4 @@
+import argparse
 import csv
 import datetime
 import getpass
@@ -21,15 +22,71 @@ Online Course Evaluation (OCE), in JSON format.
 ================================================================
 """
 
+EXCLUDE_SEASONS = [
+    "201701",
+    "201702",
+    "202001",
+    "202002",
+    "202003",
+    "202101",
+]
+
+# allow the user to specify seasons
+parser = argparse.ArgumentParser(description="Fetch ratings")
+parser.add_argument(
+    "-s",
+    "--seasons",
+    nargs="+",
+    help="seasons to fetch (leave empty to fetch all)",
+    default=None,
+    required=False,
+)
+
+args = parser.parse_args()
+
+# list of seasons previously from fetch_seasons.py
+with open(f"{config.DATA_DIR}/course_seasons.json", "r") as f:
+    all_viable_seasons = ujson.loads(f.read())
+
+# if no seasons supplied, use all
+if args.seasons is None:
+
+    seasons = all_viable_seasons
+
+    print(f"Fetching ratings for all seasons: {seasons}")
+
+else:
+
+    seasons_latest = len(args.seasons) == 1 and args.seasons[0].startswith("LATEST")
+
+    # if fetching latest n seasons, truncate the list and log it
+    if seasons_latest:
+
+        num_latest = int(args.seasons[0].split("_")[1])
+
+        seasons = all_viable_seasons[-num_latest:]
+
+        print(f"Fetching ratings for latest {num_latest} seasons: {seasons}")
+
+    # otherwise, use and check the user-supplied seasons
+    else:
+
+        # Check to make sure user-inputted seasons are valid
+        if all(season in all_viable_seasons for season in args.seasons):
+
+            seasons = args.seasons
+            print(f"Fetching ratings for supplied seasons: {seasons}")
+
+        else:
+            raise FetchClassesError("Invalid season.")
+
+
+# initiate Yale session to access ratings
 session = create_session()
 print("Cookies: ", session.cookies.get_dict())
 
 # get the list of all course JSON files as previously fetched
 season_jsons_path = f"{config.DATA_DIR}/season_courses/"
-
-# list of seasons previously from fetch_seasons.py
-with open(f"{config.DATA_DIR}/course_seasons.json", "r") as f:
-    seasons = ujson.loads(f.read())
 
 yale_college_cache = diskcache.Cache(f"{config.DATA_DIR}/yale_college_cache")
 
@@ -66,6 +123,7 @@ def is_yale_college(season_code, crn):
     return True
 
 
+# get current date to exclude old seasons w/o evaluations
 now = datetime.datetime.now()
 
 # load and parse season JSONs
@@ -73,14 +131,11 @@ queue = []
 
 for season_code in seasons:
 
-    if (
-        season_code == "202001"
-        or season_code == "202002"
-        or season_code == "201701"
-        or season_code == "201702"  # spring/summer 2017 is no longer available
-        or int(season_code[:4]) < now.year - 3
-    ):
+    if season_code in EXCLUDE_SEASONS or int(season_code[:4]) < now.year - 3:
+        print(f"Skipping season {season_code}")
         continue
+
+    print(f"Adding season {season_code}")
 
     with open(season_jsons_path + season_code + ".json", "r") as f:
         season_json = ujson.load(f)

@@ -15,13 +15,13 @@ current website.
 ================================================================
 """
 
-# allow the user to specify seasons (useful for testing and debugging)
+# allow the user to specify seasons
 parser = argparse.ArgumentParser(description="Parse classes")
 parser.add_argument(
     "-s",
     "--seasons",
     nargs="+",
-    help="seasons to parse (leave empty to parse all)",
+    help="seasons to parse (leave empty to parse all fetched classes)",
     default=None,
     required=False,
 )
@@ -36,7 +36,7 @@ if seasons is None:
     seasons = [
         filename.split(".")[0]
         for filename in listdir(f"{config.DATA_DIR}/course_json_cache/")
-        if filename[-4:] == "json"
+        if filename.endswith(".json")
     ]
 
     seasons = sorted(seasons)

@@ -3,9 +3,8 @@ import os
 
 import textdistance
 import ujson
-from tqdm import tqdm
-
 from ferry import config, database
+from tqdm import tqdm
 
 
 """
@@ -185,7 +184,7 @@ if __name__ == "__main__":
         "-s",
         "--seasons",
         nargs="+",
-        help="seasons to import",
+        help="seasons to import (if empty, import all migrated+parsed courses)",
         default=None,
         required=False,
     )

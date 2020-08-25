@@ -9,6 +9,7 @@ from ferry import config
 """
 ================================================================
 This script fetches a list of all seasons for the following:
+
     (1) courses (/api_output/course_seasons.json)
     (2) demand (/api_output/demand_seasons.json)
 

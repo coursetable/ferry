@@ -48,7 +48,7 @@ if args.seasons is None:
 
     seasons = all_viable_seasons
 
-    print(f"Fetching all seasons: {seasons}")
+    print(f"Fetching courses for all seasons: {seasons}")
 
 else:
 
@@ -61,7 +61,7 @@ else:
 
         seasons = all_viable_seasons[-num_latest:]
 
-        print(f"Fetching latest {num_latest} seasons: {seasons}")
+        print(f"Fetching courses for latest {num_latest} seasons: {seasons}")
 
     # otherwise, use and check the user-supplied seasons
     else:
@@ -70,7 +70,7 @@ else:
         if all(season in all_viable_seasons for season in args.seasons):
 
             seasons = args.seasons
-            print(f"Fetching supplied seasons: {seasons}")
+            print(f"Fetching courses for supplied seasons: {seasons}")
 
         else:
             raise FetchClassesError("Invalid season.")
