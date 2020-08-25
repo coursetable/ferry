@@ -1,10 +1,13 @@
 import argparse
 
 import ujson
-from tqdm import tqdm
-
 from ferry import config
-from ferry.includes.class_processing import *
+from ferry.includes.class_processing import (
+    fetch_course_json,
+    fetch_season_courses,
+    fetch_seasons,
+)
+from tqdm import tqdm
 
 """
 ================================================================
@@ -32,21 +35,45 @@ parser.add_argument(
     "-s",
     "--seasons",
     nargs="+",
-    help="seasons to fetch (leave empty to fetch all)",
+    help="seasons to fetch (leave empty to fetch all, or LATEST_[n] to fetch n latest)",
     default=None,
     required=False,
 )
 
 args = parser.parse_args()
-seasons = args.seasons
 
-if seasons is None:
+seasons_latest = False
 
-    # list of all available seasons
+if args.seasons is not None:
+    seasons_latest = len(args.seasons) == 1 and args.seasons[0].startswith("LATEST")
+
+if args.seasons is None or seasons_latest:
+
+    # get sorted list of all available seasons
     seasons = fetch_seasons()
 
     with open(f"{config.DATA_DIR}/seasons.json", "w") as f:
         f.write(ujson.dumps(seasons, indent=4))
+
+    if args.seasons is None:
+
+        print(f"Fetching all seasons: {seasons}")
+
+
+    # if fetching latest n seasons, truncate the list
+    if seasons_latest:
+
+        num_latest = int(args.seasons[0].split("_")[1])
+
+        seasons = seasons[-num_latest:]
+
+        print(f"Fetching latest {num_latest} seasons: {seasons}")
+
+else:
+
+    seasons = args.seasons
+
+    print(f"Fetching supplied seasons: {seasons}")
 
 # get lists of classes per season
 for season in seasons:
@@ -78,6 +105,8 @@ for season in seasons:
         aggregate_season_json.append(course_json)
 
         pbar.update(1)
+
+    pbar.close()
 
     # cache to JSON for entire season
     with open(f"{config.DATA_DIR}/course_json_cache/{season}.json", "w") as f:
