@@ -9,12 +9,10 @@ from os.path import isfile, join
 import diskcache
 import requests
 import ujson
-from tqdm import tqdm
-
 from ferry import config
 from ferry.includes.cas import create_session
-from ferry.includes.class_processing import fetch_seasons
 from ferry.includes.rating_processing import *
+from tqdm import tqdm
 
 """
 ================================================================
@@ -29,7 +27,9 @@ print("Cookies: ", session.cookies.get_dict())
 # get the list of all course JSON files as previously fetched
 season_jsons_path = f"{config.DATA_DIR}/season_courses/"
 
-seasons = fetch_seasons()
+# list of seasons previously from fetch_seasons.py
+with open(f"{config.DATA_DIR}/course_seasons.json", "r") as f:
+    seasons = ujson.loads(f.read())
 
 yale_college_cache = diskcache.Cache(f"{config.DATA_DIR}/yale_college_cache")
 

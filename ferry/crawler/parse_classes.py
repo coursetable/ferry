@@ -3,10 +3,9 @@ from os import listdir
 from os.path import isfile, join
 
 import ujson
-from tqdm import tqdm
-
 from ferry import config
-from ferry.includes.class_processing import *
+from ferry.includes.class_processing import extract_course_info
+from tqdm import tqdm
 
 """
 ================================================================

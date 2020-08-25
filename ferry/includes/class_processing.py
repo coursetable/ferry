@@ -44,59 +44,6 @@ def fetch_previous_seasons():
     return seasons
 
 
-def fetch_seasons():
-    """
-    Get list of seasons
-
-    Returns
-    -------
-    seasons: list of seasons
-    """
-
-    r = requests.post("https://courses.yale.edu/")
-
-    # Successful response
-    if r.status_code == 200:
-
-        seasons = re.findall('option value="(\d{6})"', r.text)
-
-        # exclude '999999' catch-all 'Past seasons' season option
-
-        seasons = sorted([x for x in seasons if x != "999999"])
-
-        return seasons
-
-    # Unsuccessful
-    else:
-        raise FetchClassesError(f"Unsuccessful response: code {r.status_code}")
-
-
-def fetch_all_api_seasons():
-    """
-    Get full list of seasons for the 
-    Yale official course API
-
-    Returns
-    -------
-    seasons: list of seasons
-    """
-
-    recent_seasons = fetch_seasons()
-
-    oldest_season = int(recent_seasons[0][:4])
-
-    # oldest season is 201903
-    previous_seasons = [str(x) for x in range(2010, oldest_season + 1)]
-    previous_seasons = [[x + "01", x + "02", x + "03"] for x in previous_seasons]
-
-    # flatten
-    previous_seasons = [x for y in previous_seasons for x in y]
-    previous_seasons = ["200903"] + previous_seasons
-    seasons = sorted(list(set(recent_seasons) | set(previous_seasons)))
-
-    return seasons
-
-
 def fetch_season_subjects(season, api_key):
     """
     Get list of course subjects in a season,

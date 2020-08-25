@@ -13,7 +13,6 @@ from datetime import datetime
 import requests
 import ujson
 from bs4 import BeautifulSoup
-
 from ferry import config
 
 startTime = datetime.now()
@@ -45,12 +44,9 @@ parser.add_argument(
 args = parser.parse_args()
 seasons = args.seasons
 
-# Get all possible season values
-url = "https://ivy.yale.edu/course-stats/"
-r = requests.get(url)
-s = BeautifulSoup(r.text, "html.parser")
-season_elems = s.select("#termCode option[value]")
-all_viable_seasons = [elem.get("value") for elem in season_elems]
+# list of seasons previously from fetch_seasons.py
+with open(f"{config.DATA_DIR}/demand_seasons.json", "r") as f:
+    all_viable_seasons = ujson.loads(f.read())
 
 # If user doesn't specify any seasons, scrape data from all available seasons
 if seasons is None:
