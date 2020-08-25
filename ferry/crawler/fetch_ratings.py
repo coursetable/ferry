@@ -37,7 +37,7 @@ parser.add_argument(
     "-s",
     "--seasons",
     nargs="+",
-    help="seasons to fetch (leave empty to fetch all)",
+    help="seasons to fetch (leave empty to fetch all, or LATEST_[n] to fetch n latest)",
     default=None,
     required=False,
 )

@@ -37,26 +37,48 @@ parser.add_argument(
     "-s",
     "--seasons",
     nargs="+",
-    help="seasons to import",
+    help="seasons to fetch (leave empty to fetch all, or LATEST_[n] to fetch n latest)",
     default=None,
     required=False,
 )
+
 args = parser.parse_args()
-seasons = args.seasons
 
 # list of seasons previously from fetch_seasons.py
 with open(f"{config.DATA_DIR}/demand_seasons.json", "r") as f:
     all_viable_seasons = ujson.loads(f.read())
 
-# If user doesn't specify any seasons, scrape data from all available seasons
-if seasons is None:
-    course_seasons = all_viable_seasons
+# if no seasons supplied, use all
+if args.seasons is None:
+
+    seasons = all_viable_seasons
+
+    print(f"Fetching ratings for all seasons: {seasons}")
+
 else:
-    # Check to make sure user-inputted seasons are valid
-    if all(season in all_viable_seasons for season in seasons):
-        course_seasons = seasons
+
+    seasons_latest = len(args.seasons) == 1 and args.seasons[0].startswith("LATEST")
+
+    # if fetching latest n seasons, truncate the list and log it
+    if seasons_latest:
+
+        num_latest = int(args.seasons[0].split("_")[1])
+
+        seasons = all_viable_seasons[-num_latest:]
+
+        print(f"Fetching ratings for latest {num_latest} seasons: {seasons}")
+
+    # otherwise, use and check the user-supplied seasons
     else:
-        raise FetchDemandError("Invalid season.")
+
+        # Check to make sure user-inputted seasons are valid
+        if all(season in all_viable_seasons for season in args.seasons):
+
+            seasons = args.seasons
+            print(f"Fetching ratings for supplied seasons: {seasons}")
+
+        else:
+            raise FetchClassesError("Invalid season.")
 
 # Get list of subjects
 def getSubjects():
@@ -95,8 +117,8 @@ def getDates(sem):
 
 
 subjects = getSubjects()
-# subjects = ['ART']
-for season in course_seasons:
+
+for season in seasons:
     dates = getDates(season)
 
     # Scrape courses
