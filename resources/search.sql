@@ -84,12 +84,21 @@ RETURNS SETOF computed_listing_info AS $$
 BEGIN
     CASE
         WHEN websearch_to_tsquery('english', query) <@ ''::tsquery THEN
+            -- If the query is completely empty, then we want to return everything,
+            -- rather than the default behavior of matching nothing.
             RETURN QUERY SELECT * FROM computed_listing_info ;
         ELSE
             RETURN QUERY SELECT *
             FROM computed_listing_info
             WHERE info @@ websearch_to_tsquery('english', query)
-            ORDER BY ts_rank(info, websearch_to_tsquery('english', query)) DESC ;
+            ORDER BY
+                    -- If the ranking is above 0.5, then the query matches an "A" level (title or course_code),
+                    -- in which case we want to order by the course code and id. If the ranking is below 0.5,
+                    -- then we simply use the course_code and course_id as a fallback for ordering.
+                    -- This way, searches for a specific department will have that department first, followed
+                    -- by any matches on other metadata.
+                    LEAST(0.5, ts_rank(info, websearch_to_tsquery('english', query))) DESC,
+                    course_code, course_id ;
     END CASE;
 END;
 $$ language plpgsql stable;
