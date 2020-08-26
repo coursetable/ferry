@@ -14,7 +14,7 @@ import requests
 import ujson
 from bs4 import BeautifulSoup
 from ferry import config
-from ferry.includes.demand_processing import get_dates, get_subjects
+from ferry.includes.demand_processing import get_dates
 
 
 class FetchDemandError(Exception):
@@ -77,7 +77,10 @@ else:
             raise FetchClassesError("Invalid season.")
 
 print("Retrieving subjects list... ", end="")
-subjects = get_subjects()
+with open(f"{config.DATA_DIR}/demand_subjects.json", "r") as f:
+    subjects = ujson.loads(f.read())
+    subject_codes = subjects.keys()
+
 print("ok")
 
 for season in seasons:
@@ -92,10 +95,10 @@ for season in seasons:
     courses = []  # containers for courses: format is title, codes, demand
     num_courses = 1
 
-    for subject in subjects:
+    for subject_code in subject_codes:
         # get URL and pass to BeautifulSoup
         # '.replace("&", "%26")' escapes the ampersand
-        url = f'https://ivy.yale.edu/course-stats/?termCode={season}&subjectCode={subject.replace("&", "%26")}'
+        url = f'https://ivy.yale.edu/course-stats/?termCode={season}&subjectCode={subject_code.replace("&", "%26")}'
         r = requests.get(url)
         s = BeautifulSoup(r.text, "html.parser")
 
@@ -121,13 +124,13 @@ for season in seasons:
             full_strings = [
                 string
                 for string in full_strings_all
-                if string.split(" ")[0] in subjects
+                if string.split(" ")[0] in subject_codes
             ]
 
             # now, we need to identify the course code corresponding to the subject we're working
             # on in the loop — this finds the course code with 'subject' in it
             code_this_subject = [
-                string for string in full_strings if subject in string
+                string for string in full_strings if subject_code in string
             ][0]
 
             # Get section data, if applicable
@@ -172,7 +175,7 @@ for season in seasons:
             num_courses += 1
 
         print(
-            f"Scraped {str(num_courses)} courses up to {subject}, {str(datetime.now() - startTime)} elapsed"
+            f"Scraped {str(num_courses)} courses up to {subject_code}, {str(datetime.now() - startTime)} elapsed"
         )
 
     with open(f"{config.DATA_DIR}/demand_stats/{season}_demand.json", "w") as f:
