@@ -44,7 +44,5 @@ Stages 1 and 2 are documented in the [retrieval docs](docs/1_retrieval.md), and 
 Stages 3 and 4 make use of the database, which is documented in [parsing docs](docs/2_parsing.md). Moreover, the database schema is defined with SQLAlchemy in `ferry/database/models.py`. Stage 3 is implemented by `ferry/importer.py`, and Stage 4 is implemented by `ferry/computed.py`. Both stages 3 and 4 are fully idempotent.
 
 ## TODO
-- save the raw HTML from OCE in the evaluations crawler
 - import course demand statistics
 - transition everything from /private to config_private.py
-- get full names of subjects/departments in addition to the abbreviations (could be done in computed.py with a static table)
