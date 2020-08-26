@@ -14,19 +14,15 @@ import requests
 import ujson
 from bs4 import BeautifulSoup
 from ferry import config
-
-startTime = datetime.now()
+from ferry.includes.demand_processing import get_dates, get_subjects
 
 
 class FetchDemandError(Exception):
     pass
 
 
-# Set working directory
-# Be sure to create the folder beforehand — otherwise, Python will return an error
-# This is the directory where the JSON files will land
-wd = f"{config.DATA_DIR}/demand_stats/"
-os.chdir(wd)
+# keep track of courses fetched over time
+startTime = datetime.now()
 
 # Set season
 # Pass using command line arguments
@@ -80,52 +76,21 @@ else:
         else:
             raise FetchClassesError("Invalid season.")
 
-# Get list of subjects
-def getSubjects():
-    # get URL and pass to BeautifulSoup
-    url = "https://ivy.yale.edu/course-stats/"
-    r = requests.get(url)
-    s = BeautifulSoup(r.text, "html.parser")
-
-    # get all the dropdown options and split into subject code + subject name
-    subject_elems = s.select("#subjectCode option")
-    subject_codes = [elem.text.split(" - ", 2)[0] for elem in subject_elems[1:]]
-    subject_names = [elem.text.split(" - ", 2)[1] for elem in subject_elems[1:]]
-    subject_dicts = [
-        {"code": elem[0], "full_subject_name": elem[1]}
-        for elem in zip(subject_codes, subject_names)
-    ]
-
-    with open(f"{config.DATA_DIR}/demand_stats/subjects.json", "w") as f:
-        f.write(ujson.dumps(subject_dicts, indent=4))
-
-    return subject_codes
-
-
-# Get the array of dates -----
-def getDates(sem):
-    # get URL and pass to BeautifulSoup
-    # using AMTH as arbitary subject
-    url = f"https://ivy.yale.edu/course-stats/?termCode={sem}&subjectCode=AMTH"
-    r = requests.get(url)
-    s = BeautifulSoup(r.text, "html.parser")
-
-    # select date elements
-    dates_elems = s.select("table table")[0].select("td")
-
-    return [date.text.strip() for date in dates_elems]
-
-
-subjects = getSubjects()
+print("Retrieving subjects list... ", end="")
+subjects = get_subjects()
+print("ok")
 
 for season in seasons:
-    dates = getDates(season)
+
+    print("Retrieving dates with demand... ", end="")
+    dates = get_dates(season)
+    print("ok")
 
     # Scrape courses
     # Most of the code here is to deal with cross-listed courses, and to avoid having duplicate data
 
     courses = []  # containers for courses: format is title, codes, demand
-    numCourses = 1
+    num_courses = 1
 
     for subject in subjects:
         # get URL and pass to BeautifulSoup
@@ -183,7 +148,7 @@ for season in seasons:
 
             # Test if we've already added the demand for this course (due to cross-listing) into the
             # data structure. We don't want duplicate data, so if we already have the demand, we simply skip it
-            if full_strings.index(code_this_subject) == 0:
+            if full_strings[0] == code_this_subject:
                 # if this is our first time coming across this course, we need to add all of the
                 # cross-listed course numbers into our 'courses' list
 
@@ -204,13 +169,13 @@ for season in seasons:
 
                 courses.append(course)
 
-            numCourses += 1
+            num_courses += 1
 
         print(
-            f"Scraped {str(numCourses)} courses up to {subject}, {str(datetime.now() - startTime)} elapsed"
+            f"Scraped {str(num_courses)} courses up to {subject}, {str(datetime.now() - startTime)} elapsed"
         )
 
     with open(f"{config.DATA_DIR}/demand_stats/{season}_demand.json", "w") as f:
-        f.write(ujson.dumps(courses, indent=4))
+        f.write(ujson.dumps(courses))
 
     print(f"Completed scraping {season}, {str(datetime.now() - startTime)} elapsed")
