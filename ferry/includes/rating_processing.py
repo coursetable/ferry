@@ -5,6 +5,7 @@ import lxml
 import requests
 import ujson
 from bs4 import BeautifulSoup
+from ferry import config
 
 QuestionId = str
 
@@ -53,6 +54,12 @@ def fetch_questions(
     if page_index.status_code != 200:  # Evaluation data for this term not available
         raise CrawlerError(f"Evaluations for term {term_code} are unavailable")
 
+    # save raw HTML in case we ever need it
+    with open(
+        config.DATA_DIR / f"rating_cache/questions_index/{term_code}_{crn}.html", "w"
+    ) as f:
+        f.write(str(page_index.content))
+
     page_show = session.get(url_show)
     if page_show.status_code != 200:  # Evaluation data for this course not available
         raise CrawlerError(
@@ -60,6 +67,12 @@ def fetch_questions(
         )
 
     data_show = page_show.json()
+
+    # save raw JSON in case we ever need it
+    with open(
+        config.DATA_DIR / f"rating_cache/questions_show/{term_code}_{crn}.json", "w"
+    ) as f:
+        f.write(ujson.dumps(data_show))
 
     if data_show["minEnrollment"] == "N":
         raise _EvaluationsNotViewableError("No minimum enrollment to view.")
@@ -90,7 +103,7 @@ def fetch_questions(
 
 
 def fetch_eval_data(
-    session: requests.Session, questionId: QuestionId
+    session: requests.Session, questionId: QuestionId, crn: str, term_code: str
 ) -> Tuple[List[int], List[str]]:
     """
     Get rating data for each question of a course
@@ -102,6 +115,12 @@ def fetch_eval_data(
 
     questionId: string
         The questionId to fetch evaluation data for
+
+    crn: string
+        The crn code of the course
+
+    term_code: string
+        The term code that the course belongs to
 
     Returns
     -------
@@ -120,6 +139,14 @@ def fetch_eval_data(
         raise CrawlerError(f"missing ratings for {questionId}")
     data_graphData = ujson.loads(page_graphData.text)
 
+    # save raw JSON in case we ever need it
+    with open(
+        config.DATA_DIR
+        / f"rating_cache/graph_data/{term_code}_{crn}_{questionId}.json",
+        "w",
+    ) as f:
+        f.write(ujson.dumps(data_graphData))
+
     ratings = []
     options = []
     for item in data_graphData[0]["data"]:
@@ -130,7 +157,7 @@ def fetch_eval_data(
 
 
 def fetch_comments(
-    session: requests.Session, offset: int, _max: int
+    session: requests.Session, offset: int, _max: int, crn: str, term_code: str
 ) -> Tuple[QuestionId, str, List[str]]:
     """
     Get comments for a specific question of this course
@@ -145,6 +172,12 @@ def fetch_comments(
 
     _max: integer
         Always 1. Just passed into get function
+
+    crn: string
+        The crn code of the course
+
+    term_code: string
+        The term code that the course belongs to
 
     Returns
     -------
@@ -162,6 +195,14 @@ def fetch_comments(
         raise CrawlerError("no more evals available")
 
     soup = BeautifulSoup(page_comments.content, "lxml")
+
+    # save raw HTML in case we ever need it
+    with open(
+        config.DATA_DIR
+        / f"rating_cache/comments/{term_code}_{crn}_{offset}_{_max}.html",
+        "w",
+    ) as f:
+        f.write(str(soup))
 
     question_html = soup.find(id="cList")
 
@@ -274,7 +315,7 @@ def fetch_course_eval(session, crn_code, term_code):
     # Numeric evaluations data.
     ratings = []
     for questionId, text in questions.items():
-        data, options = fetch_eval_data(session, questionId)
+        data, options = fetch_eval_data(session, questionId, crn_code, term_code)
         ratings.append(
             {
                 "question_id": questionId,
@@ -290,7 +331,9 @@ def fetch_course_eval(session, crn_code, term_code):
     while questions:  # serves as an if + while True
         try:
             # Get questions with their respective responses
-            questionId, question, comments = fetch_comments(session, offset, 1)
+            questionId, question, comments = fetch_comments(
+                session, offset, 1, crn_code, term_code
+            )
 
             narratives.append(
                 {

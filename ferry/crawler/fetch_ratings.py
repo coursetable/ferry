@@ -7,13 +7,14 @@ import time
 from os import listdir
 from os.path import isfile, join
 
+from tqdm import tqdm
+
 import diskcache
 import requests
 import ujson
 from ferry import config
 from ferry.includes.cas import create_session
-from ferry.includes.rating_processing import *
-from tqdm import tqdm
+from ferry.includes.rating_processing import fetch_course_eval
 
 """
 ================================================================
