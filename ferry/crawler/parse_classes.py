@@ -33,10 +33,13 @@ seasons = args.seasons
 parsed_courses_folder = f"{config.DATA_DIR}/parsed_courses/"
 
 if seasons is None:
+
+    # get seasons from fetched raw JSON file names
     seasons = [
         filename.split(".")[0]
         for filename in listdir(f"{config.DATA_DIR}/course_json_cache/")
         if filename.endswith(".json")
+        and not filename.startswith("._")  # ignore invisible Google Drive files
     ]
 
     seasons = sorted(seasons)

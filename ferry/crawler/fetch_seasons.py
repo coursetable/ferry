@@ -13,6 +13,8 @@ This script fetches a list of all seasons for the following:
     (1) courses (/api_output/course_seasons.json)
     (2) demand (/api_output/demand_seasons.json)
 
+This list of seasons is then used and required by
+fetch_classes.py, fetch_demand.py, and fetch_ratings.py.
 ================================================================
 """
 
@@ -20,8 +22,10 @@ This script fetches a list of all seasons for the following:
 class FetchSeasonsError(Exception):
     pass
 
+# -----------------------------------------
+# Retrieve seasons from unofficial Yale API
+# -----------------------------------------
 
-# get sorted list of all available course seasons
 print("Fetching course seasons")
 r = requests.post("https://courses.yale.edu/")
 
@@ -44,7 +48,10 @@ else:
     )
 
 
-# get course demand seasons
+# ----------------------------------------------
+# Retrieve seasons from course statistics portal
+# ----------------------------------------------
+
 print("Fetching demand seasons")
 r = requests.get("https://ivy.yale.edu/course-stats/")
 
