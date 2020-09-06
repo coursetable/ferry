@@ -3,8 +3,9 @@ import os
 
 import textdistance
 import ujson
-from ferry import config, database
 from tqdm import tqdm
+
+from ferry import config, database
 
 
 """

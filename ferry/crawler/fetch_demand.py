@@ -13,6 +13,7 @@ from datetime import datetime
 import requests
 import ujson
 from bs4 import BeautifulSoup
+
 from ferry import config
 from ferry.includes.demand_processing import get_dates
 

@@ -29,8 +29,7 @@ CAS_COOKIE_CASTGC = functools.lru_cache(lambda: input("CASTGC Cookie: "))
 
 # Database
 DATABASE_CONNECT_STRING = os.environ.get(
-    "POSTGRES_URI",
-    "postgresql+psycopg2://postgres:thisisapassword@localhost/postgres"
+    "POSTGRES_URI", "postgresql+psycopg2://postgres:thisisapassword@localhost/postgres"
 )
 
 # Enable overrides from config_private.py

@@ -1,13 +1,14 @@
 import argparse
 
 import ujson
+from tqdm import tqdm
+
 from ferry import config
 from ferry.includes.class_processing import (
     FetchClassesError,
     fetch_course_json,
     fetch_season_courses,
 )
-from tqdm import tqdm
 
 """
 ================================================================

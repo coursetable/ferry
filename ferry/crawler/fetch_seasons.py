@@ -3,6 +3,7 @@ import re
 import requests
 import ujson
 from bs4 import BeautifulSoup
+
 from ferry import config
 
 
@@ -21,6 +22,7 @@ fetch_classes.py, fetch_demand.py, and fetch_ratings.py.
 
 class FetchSeasonsError(Exception):
     pass
+
 
 # -----------------------------------------
 # Retrieve seasons from unofficial Yale API
