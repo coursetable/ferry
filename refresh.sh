@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Exit upon any error.
+set -e
+
 # bold headers for readability
 bold=$(tput bold)
 normal=$(tput sgr0)
@@ -12,7 +15,7 @@ announce () {
 cd $(dirname $0)
 
 # install any new dependencies
-poetry install 
+poetry install
 
 announce "Fetching course+demand seasons"
 poetry run python ./ferry/crawler/fetch_seasons.py
