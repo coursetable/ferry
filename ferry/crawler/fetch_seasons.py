@@ -45,7 +45,7 @@ if r.status_code == 200:
 
 # Unsuccessful
 else:
-    raise FetchClassesError(
+    raise FetchSeasonsError(
         f"Unsuccessful course seasons response: code {r.status_code}"
     )
 
@@ -71,6 +71,6 @@ if r.status_code == 200:
 
 # Unsuccessful
 else:
-    raise FetchClassesError(
+    raise FetchSeasonsError(
         f"Unsuccessful demand seasons response: code {r.status_code}"
     )

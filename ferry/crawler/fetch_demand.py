@@ -75,7 +75,7 @@ else:
             print(f"Fetching ratings for supplied seasons: {seasons}")
 
         else:
-            raise FetchClassesError("Invalid season.")
+            raise FetchDemandError("Invalid season.")
 
 print("Retrieving subjects list... ", end="")
 with open(f"{config.DATA_DIR}/demand_subjects.json", "r") as f:

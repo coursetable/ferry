@@ -23,6 +23,11 @@ Online Course Evaluation (OCE), in JSON format.
 ================================================================
 """
 
+
+class FetchRatingsError(Exception):
+    pass
+
+
 EXCLUDE_SEASONS = [
     "201701",
     "201702",
@@ -79,7 +84,7 @@ else:
             print(f"Fetching ratings for supplied seasons: {seasons}")
 
         else:
-            raise FetchClassesError("Invalid season.")
+            raise FetchRatingsError("Invalid season.")
 
 
 # initiate Yale session to access ratings
