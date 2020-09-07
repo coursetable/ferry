@@ -3,9 +3,9 @@
 # Exit upon any error.
 set -e
 
-# bold headers for readability
-bold=$(tput bold)
-normal=$(tput sgr0)
+# Bold headers for readability. Fails gracefully when the terminal doesn't support it.
+bold=$(tput bold || true)
+normal=$(tput sgr0 || true)
 
 announce () {
   printf "\n${bold}[$1]${normal}\n"
