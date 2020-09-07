@@ -10,11 +10,11 @@ from os.path import isfile, join
 import diskcache
 import requests
 import ujson
-from tqdm import tqdm
-
 from ferry import config
 from ferry.includes.cas import create_session
 from ferry.includes.rating_processing import fetch_course_eval
+from tqdm import tqdm
+
 
 """
 ================================================================
@@ -174,7 +174,7 @@ for season_code, crn in tqdm(queue):
         # tqdm.write(f"Skipping course {course_unique_id} - already exists")
         continue
 
-    if not is_yale_college(season_code, crn):
+    if season_code[-2:] != "02" and not is_yale_college(season_code, crn):
         # tqdm.write("skipping - not in yale college")
         continue
 
