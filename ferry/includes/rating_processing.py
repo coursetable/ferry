@@ -208,7 +208,7 @@ def fetch_comments(
     question_html = soup.find(id="cList")
 
     # Question text.
-    question = question_html.select_one("div > p:nth-of-type(2)").get_text()
+    question = question_html.select_one("div > p:nth-of-type(2)").text
     if question == None or question == "":
         raise CrawlerError("no more evals available")
 
