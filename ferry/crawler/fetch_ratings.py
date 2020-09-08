@@ -10,10 +10,11 @@ from os.path import isfile, join
 import diskcache
 import requests
 import ujson
+from tqdm import tqdm
+
 from ferry import config
 from ferry.includes.cas import create_session
 from ferry.includes.rating_processing import fetch_course_eval
-from tqdm import tqdm
 
 
 """
@@ -164,6 +165,7 @@ for season_code in seasons:
 #     ("201703", "13958"),  # DRAM class?
 #     ("201703", "10421"),  # APHY 990 (class not in Yale College)
 #     ("201703", "16119"),  # no evaluations available (doesn't show in OCE)
+#     ("201802", "30348"),  # summer session course
 # ]
 
 for season_code, crn in tqdm(queue):
