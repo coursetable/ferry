@@ -126,12 +126,7 @@ def import_evaluation(session, evaluation):
                 or textdistance.levenshtein.distance(question.question_text, text) > 32
                 or not database.eq_json(question.options, options)
             ):
-                print(
-                    f"Updating {question_code} '{question.question_text}' -> '{text}'"
-                )
-                question.question_text = text
-
-                # raise database.InvariantError("Question codes are not consistent")
+                raise database.InvariantError("Question codes are not consistent")
         return question
 
     # Evaluation ratings.
