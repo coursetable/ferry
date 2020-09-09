@@ -72,18 +72,30 @@ def questions_computed(session):
     """
 
     # Build tag lookup table from file.
-    tags = collections.defaultdict(lambda: None)
+    tags = dict()
     with open(f"{config.RESOURCE_DIR}/question_tags.csv") as f:
         for question_code, tag in csv.reader(f):
-            if tag:
-                tags[question_code] = tag
+            tags[question_code] = tag
 
     # Set tags on questions.
     for question in session.query(
         database.EvaluationQuestion
     ):  # type: database.EvaluationQuestion
-        tag = tags[question.question_code]
-        question.tag = tag
+        code = question.question_code
+
+        # Remove these suffixes for tag resolution.
+        strip_suffixes = ["-YCWR", "-YXWR", "-SA"]
+        for suffix in strip_suffixes:
+            if code.endswith(suffix):
+                code = code[:-len(suffix)]
+                break
+
+        # Set the appropriate question tag.
+        try:
+            tag = tags[code]
+            question.tag = tag
+        except KeyError as e:
+            raise database.InvariantError(f"no associated tag for question code {code} with text {question.question_text}")
 
 
 def question_tag_invariant(session):
