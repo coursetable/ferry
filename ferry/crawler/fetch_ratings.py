@@ -20,7 +20,14 @@ from ferry.includes.rating_processing import fetch_course_eval
 """
 ================================================================
 This script fetches course evaluation data from the Yale 
-Online Course Evaluation (OCE), in JSON format.
+Online Course Evaluation (OCE), in JSON format through the
+following steps:
+    
+    1. Selection of seasons to fetch ratings
+    2. Construction of a cached check for Yale College courses
+    3. Aggregation of all season courses into a queue
+    4. Fetch and save OCE data for each course in the queue
+
 ================================================================
 """
 
@@ -30,12 +37,11 @@ class FetchRatingsError(Exception):
 
 
 EXCLUDE_SEASONS = [
-    "201701",
-    "201702",
-    "202001",
-    "202002",
-    "202003",
-    "202101",
+    "201701",  # too old
+    "201702",  # too old
+    "202001",  # not evaluated because of COVID
+    "202003",  # too new
+    "202101",  # too new
 ]
 
 # allow the user to specify seasons
@@ -49,7 +55,18 @@ parser.add_argument(
     required=False,
 )
 
+parser.add_argument(
+    "-f",
+    "--force",
+    action="store_true",
+    help="force overwrite existing evaluation outputs",
+)
+
 args = parser.parse_args()
+
+# --------------------------------------------------------
+# Load all seasons and compare with selection if specified
+# --------------------------------------------------------
 
 # list of seasons previously from fetch_seasons.py
 with open(f"{config.DATA_DIR}/course_seasons.json", "r") as f:
@@ -87,13 +104,10 @@ else:
         else:
             raise FetchRatingsError("Invalid season.")
 
-
-# initiate Yale session to access ratings
-session = create_session()
-print("Cookies: ", session.cookies.get_dict())
-
-# get the list of all course JSON files as previously fetched
-season_jsons_path = f"{config.DATA_DIR}/season_courses/"
+# --------------------------------------------------------
+# Helper function to check if course is in Yale College
+# (only Yale College and Summer Session courses are rated)
+# --------------------------------------------------------
 
 yale_college_cache = diskcache.Cache(f"{config.DATA_DIR}/yale_college_cache")
 
@@ -130,6 +144,24 @@ def is_yale_college(season_code, crn):
     return True
 
 
+# -----------------------------------
+# Queue courses to query from seasons
+# -----------------------------------
+
+# Test cases----------------------------------------------------------------
+# queue = [
+#     ("201903", "11970"),  # basic test
+#     ("201703", "10738"),  # no evaluations available
+#     ("201703", "13958"),  # DRAM class?
+#     ("201703", "10421"),  # APHY 990 (class not in Yale College)
+#     ("201703", "16119"),  # no evaluations available (doesn't show in OCE)
+#     ("201802", "30348"),  # summer session course
+# ]
+# --------------------------------------------------------------------------
+
+# get the list of all course JSON files as previously fetched
+season_jsons_path = f"{config.DATA_DIR}/season_courses/"
+
 # get current date to exclude old seasons w/o evaluations
 now = datetime.datetime.now()
 
@@ -151,28 +183,19 @@ for season_code in seasons:
 
         queue.append((season_code, course["crn"]))
 
-# with open(f"{config.DATA_DIR}/listings_with_extra_info.csv", "r") as csvfile:
-#     reader = csv.reader(csvfile)
-#     for _, _, _, _, _, _, season_code, crn, extra_info in reader:
-#         if "Cancelled" in extra_info:
-#             continue
-#         if season_code in ["201903", "201901", "201803", "201801", "201703"]:
-#             queue.append((season_code, crn))
+# -------------------------------
+# Fetch course ratings from queue
+# -------------------------------
 
-# queue = [
-#     ("201903", "11970"),  # basic test
-#     ("201703", "10738"),  # no evaluations available
-#     ("201703", "13958"),  # DRAM class?
-#     ("201703", "10421"),  # APHY 990 (class not in Yale College)
-#     ("201703", "16119"),  # no evaluations available (doesn't show in OCE)
-#     ("201802", "30348"),  # summer session course
-# ]
+# initiate Yale session to access ratings
+session = create_session()
+print("Cookies: ", session.cookies.get_dict())
 
 for season_code, crn in tqdm(queue):
     course_unique_id = f"{season_code}-{crn}"
     output_path = f"{config.DATA_DIR}/course_evals/{course_unique_id}.json"
 
-    if isfile(output_path):
+    if isfile(output_path) and not args.force:
         # tqdm.write(f"Skipping course {course_unique_id} - already exists")
         continue
 
