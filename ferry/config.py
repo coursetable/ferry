@@ -10,7 +10,7 @@ Any settings in here can be overriden by config_private.py.
 
 _PROJECT_DIR = pathlib.Path(__file__).resolve().parent.parent
 
-DATA_DIR = _PROJECT_DIR / "api_output"
+DATA_DIR = _PROJECT_DIR / "data"
 RESOURCE_DIR = _PROJECT_DIR / "resources"
 
 # CAS Authentication
