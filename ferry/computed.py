@@ -4,9 +4,9 @@ import csv
 from typing import List
 
 import sqlalchemy
-from tqdm import tqdm
 
 from ferry import config, database
+from ferry.includes.tqdm import tqdm
 
 
 """

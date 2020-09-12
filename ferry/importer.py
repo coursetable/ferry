@@ -3,9 +3,9 @@ import os
 
 import textdistance
 import ujson
-from tqdm import tqdm
 
 from ferry import config, database
+from ferry.includes.tqdm import tqdm
 
 
 """
@@ -228,9 +228,8 @@ if __name__ == "__main__":
                 ) as f:
                     parsed_course_info = ujson.load(f)
 
-            for course_info in tqdm(
-                parsed_course_info, desc=f"Importing courses in season {season}"
-            ):
+            tqdm.write(f"Importing courses in season {season}")
+            for course_info in tqdm(parsed_course_info):
                 with database.session_scope(database.Session) as session:
                     # tqdm.write(f"Importing {course_info}")
                     import_course(session, course_info)
@@ -254,7 +253,8 @@ if __name__ == "__main__":
         else:
             evals_to_import = sorted(list(all_evals))
 
-        for filename in tqdm(evals_to_import, desc="Importing evaluations"):
+        tqdm.write("Importing evaluations")
+        for filename in tqdm(evals_to_import):
             # Read the evaluation, giving preference to current over previous.
             if os.path.isfile(f"{config.DATA_DIR}/course_evals/{filename}"):
                 with open(f"{config.DATA_DIR}/course_evals/{filename}", "r") as f:

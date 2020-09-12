@@ -1,7 +1,5 @@
 #!/bin/bash
-
-# Exit upon any error.
-set -e
+set -euo pipefail
 
 # Bold headers for readability. Fails gracefully when the terminal doesn't support it.
 bold=$(tput bold || true)
@@ -29,8 +27,12 @@ poetry run python ./ferry/crawler/parse_classes.py
 # announce "Fetching demand statistics for latest year"
 # poetry run python ./ferry/crawler/fetch_demand.py -s LATEST_3
 
-announce "Creating and uploading Google Drive backup"
-sh ./drive_push.sh
+announce "Pushing data changes to remote"
+pushd data
+git add -A
+git commit -m "automatic update on $(date)"
+git push
+popd
 
 announce "Importing courses to database"
 poetry run python ./ferry/importer.py --mode courses

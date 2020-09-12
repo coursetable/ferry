@@ -1,7 +1,6 @@
 import argparse
 
 import ujson
-from tqdm import tqdm
 
 from ferry import config
 from ferry.includes.class_processing import (
@@ -9,6 +8,7 @@ from ferry.includes.class_processing import (
     fetch_course_json,
     fetch_season_courses,
 )
+from ferry.includes.tqdm import tqdm
 
 """
 ================================================================
@@ -93,8 +93,8 @@ for season in seasons:
         season_courses = ujson.load(f)
 
     # track progress for each season
+    tqdm.write(f"Fetching class information for season {season}")
     pbar = tqdm(total=len(season_courses), ncols=96)
-    pbar.set_description(f"Fetching class information for season {season}")
 
     # merge all the JSON results per season
     aggregate_season_json = []

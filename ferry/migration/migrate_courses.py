@@ -46,9 +46,8 @@ for season in seasons:
 
         previous_json = ujson.load(f)
 
-        for course in tqdm(
-            previous_json, desc=f"Processing courses in season {season}"
-        ):
+        tqdm.write(f"Processing courses in season {season}")
+        for course in tqdm(previous_json):
 
             migrated_course = dict()
 
