@@ -87,7 +87,7 @@ def questions_computed(session):
         strip_suffixes = ["-YCWR", "-YXWR", "-SA"]
         for suffix in strip_suffixes:
             if code.endswith(suffix):
-                code = code[:-len(suffix)]
+                code = code[: -len(suffix)]
                 break
 
         # Set the appropriate question tag.
@@ -95,7 +95,9 @@ def questions_computed(session):
             tag = tags[code]
             question.tag = tag
         except KeyError as e:
-            raise database.InvariantError(f"no associated tag for question code {code} with text {question.question_text}")
+            raise database.InvariantError(
+                f"no associated tag for question code {code} with text {question.question_text}"
+            )
 
 
 def question_tag_invariant(session):
