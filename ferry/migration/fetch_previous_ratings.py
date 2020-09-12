@@ -7,10 +7,10 @@ from os.path import isfile, join
 
 import requests
 import ujson
-from tqdm import tqdm
 
 from ferry import config
 from ferry.includes.rating_processing import CrawlerError
+from ferry.includes.tqdm import tqdm
 from private import extract_db
 
 
