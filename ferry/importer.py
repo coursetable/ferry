@@ -59,8 +59,39 @@ def import_course(session, course_info):
     listing.section = course_info["section"]
 
     # Resolve professors.
-    def resolve_professor(name):
-        professor, _ = database.get_or_create(session, database.Professor, name=name)
+    def resolve_professor(name, email, ocs_id):
+        professor, professor_new = database.get_or_create(
+            session, database.Professor, name=name
+        )
+
+        # if we just added a new professor, set the email+ocs_id as well
+        if professor_new:
+            professor.email = email
+            professor.ocs_id = ocs_id
+
+            return professor
+
+        # otherwise, if the professor already exists, update email and ID if nonempty
+        if professor.email != email and email != "":
+
+            # if the old email is nonempty, log the change
+            if professor.email != "":
+                print(
+                    f"Updated email for professor '{name}': '{professor.email}'->'{email}'"
+                )
+
+            professor.email = email
+
+        if professor.ocs_id != ocs_id and ocs_id != "":
+
+            # if the old OCS ID is nonempty, log the change
+            if professor.ocs_id != "":
+                print(
+                    f"Updated OCS ID for professor '{name}': '{professor.ocs_id}'->'{ocs_id}'"
+                )
+
+            professor.ocs_id = ocs_id
+
         return professor
 
     # Populate course info.
@@ -81,9 +112,31 @@ def import_course(session, course_info):
     course.skills = course_info["skills"]
     course.syllabus_url = course_info["syllabus_url"]
     course.title = course_info["title"]
-    course.professors = [
-        resolve_professor(prof_name) for prof_name in course_info["professors"]
-    ]
+
+    course_professors = []
+
+    # if professor emails and ids provided, add them in
+    if "professor_emails" in course_info and "professor_ids" in course_info:
+
+        for professor, professor_email, professor_id in zip(
+            course_info["professors"],
+            course_info["professor_emails"],
+            course_info["professor_ids"],
+        ):
+
+            course_professors.append(
+                resolve_professor(professor, professor_email, professor_id)
+            )
+
+    # otherwise (for instance, when importing from migrated legacy files, only add the name)
+    else:
+
+        for professor in course_info["professors"]:
+
+            course_professors.append(resolve_professor(professor, "", ""))
+
+    course.professors = course_professors
+
     # TODO: course.location_times = course_info["TODO"]
 
 
