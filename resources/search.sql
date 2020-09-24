@@ -28,6 +28,11 @@ WITH listing_info
                      JOIN professors p on course_professors.professor_id = p.professor_id
             WHERE course_professors.course_id = courses.course_id
             GROUP BY course_professors.course_id), '[]'::jsonb) AS professor_names,
+           coalesce((SELECT jsonb_agg(json_build_object('name', p.name, 'email', p.email, 'average_rating', p.average_rating))
+            FROM course_professors
+                     JOIN professors p on course_professors.professor_id = p.professor_id
+            WHERE course_professors.course_id = courses.course_id
+            GROUP BY course_professors.course_id), '[]'::jsonb) AS professor_info,
            (SELECT avg(p.average_rating)
             FROM course_professors
                      JOIN professors p on course_professors.professor_id = p.professor_id
@@ -55,7 +60,8 @@ SELECT listing_id,
        syllabus_url,
        extra_info,
        all_course_codes,
-       professor_names,
+       professor_names, -- TODO: remove
+       professor_info,
        average_professor,
        average_rating,
        average_workload,

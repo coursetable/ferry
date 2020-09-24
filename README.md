@@ -46,4 +46,4 @@ Stages 3 and 4 make use of the database, which is documented in [parsing docs](d
 ## TODO
 - import course demand statistics
 - transition everything from /private to config_private.py
-- crash drive_{push,fetch}.sh on error
+- update docs about the data files; also api_output => data
