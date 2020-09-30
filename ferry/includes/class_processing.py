@@ -657,6 +657,16 @@ def extract_meetings(meeting_html):
     if locations_summary == "" or locations_summary[:3] == " + ":
         locations_summary = "TBA"
 
+    # handle redundant dash-delimited format (introduced in fall 2020)
+    if locations_summary.count(" - ") == 1:
+
+        locations_1, locations_2 = locations_summary.split(" - ")
+
+        # if location is redundant
+        if locations_2.startswith(locations_1):
+
+            locations_summary = locations_2
+
     return (
         extracted_meetings,
         times_summary,
