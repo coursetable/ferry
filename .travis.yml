@@ -3,10 +3,10 @@ python:
   - "3.8"
 
 # Enable caching - see https://docs.travis-ci.com/user/caching/.
-# cache:
-#   pip: true
-#   directories:
-#     - "$HOME/.cache/pypoetry"
+cache:
+  pip: true
+  directories:
+    - "$HOME/.cache/pypoetry"
 
 git:
   submodules: false
