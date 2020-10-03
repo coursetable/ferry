@@ -2,10 +2,9 @@ import re
 
 import nltk
 import spacy
-
-from nltk.stem import WordNetLemmatizer
-from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import sent_tokenize, word_tokenize
 
 nltk.download("averaged_perceptron_tagger")
 nltk.download("wordnet")
