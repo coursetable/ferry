@@ -15,7 +15,7 @@ before_install:
   - sudo apt-get -y install graphviz libgraphviz-dev
 
 install:
-  - python -m pip install poetry
+  - python -m pip install -U poetry
   - poetry install
 
 script:
