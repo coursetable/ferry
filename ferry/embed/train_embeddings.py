@@ -4,7 +4,7 @@ from ferry import config
 
 model = fasttext.train_unsupervised(
     str(config.DATA_DIR / "description_embeddings/descriptions_corpus.txt"),
-    model="cbow",
+    model="skipgram",
     lr=0.05,
     dim=100,
     ws=5,

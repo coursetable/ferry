@@ -28,7 +28,7 @@ fig.update_traces(
     marker=dict(size=6, opacity=0.8), marker_line=dict(width=0, color="DarkSlateGray")
 )
 
-fig.write_html(config.DATA_DIR / "description_embeddings/all_courses_umap.html")
+fig.write_html(str(config.DATA_DIR / "description_embeddings/all_courses_umap.html"))
 
 fig = px.scatter(
     courses[courses["season_code"] == 202003],
@@ -45,4 +45,4 @@ fig.update_traces(
     marker=dict(size=6, opacity=0.8), marker_line=dict(width=0, color="DarkSlateGray")
 )
 
-fig.write_html(config.DATA_DIR / "description_embeddings/202003_umap.html")
+fig.write_html(str(config.DATA_DIR / "description_embeddings/202003_umap.html"))
