@@ -5,6 +5,10 @@ python:
 git:
   submodules: false
 
+before_install:
+  - sudo apt-get -y install graphviz libgraphviz-dev
+
+# TODO: enable pip caching - https://docs.travis-ci.com/user/caching/
 install:
   - python -m pip install poetry
   - poetry install
