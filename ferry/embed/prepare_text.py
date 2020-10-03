@@ -6,7 +6,6 @@ from tqdm import tqdm
 from ferry import config
 from ferry.includes.embedding_processing import preprocess_description
 
-
 migrated_courses_files = sorted(list(config.DATA_DIR.glob("migrated_courses/*.json")))
 parsed_courses_files = sorted(list(config.DATA_DIR.glob("parsed_courses/*.json")))
 

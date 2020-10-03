@@ -1,6 +1,6 @@
 import pandas as pd
-from sklearn.preprocessing import StandardScaler
 import umap
+from sklearn.preprocessing import StandardScaler
 
 from ferry import config
 
