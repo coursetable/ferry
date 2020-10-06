@@ -15,7 +15,7 @@ import ujson
 from bs4 import BeautifulSoup
 
 from ferry import config
-from ferry.includes.demand_processing import get_dates
+from ferry.includes.demand_processing import get_dates, fetch_season_subject_demand
 
 
 class FetchDemandError(Exception):
@@ -80,106 +80,34 @@ else:
 print("Retrieving subjects list... ", end="")
 with open(f"{config.DATA_DIR}/demand_subjects.json", "r") as f:
     subjects = ujson.loads(f.read())
-    subject_codes = subjects.keys()
+    subject_codes = sorted(list(subjects.keys()))
 
 print("ok")
 
 for season in seasons:
 
-    print("Retrieving dates with demand... ", end="")
+    print(f"Retrieving demand for season {season}")
+
     dates = get_dates(season)
-    print("ok")
 
-    # Scrape courses
-    # Most of the code here is to deal with cross-listed courses, and to avoid having duplicate data
-
-    courses = []  # containers for courses: format is title, codes, demand
-    num_courses = 1
+    season_courses = []
 
     for subject_code in subject_codes:
-        # get URL and pass to BeautifulSoup
-        # '.replace("&", "%26")' escapes the ampersand
-        url = f'https://ivy.yale.edu/course-stats/?termCode={season}&subjectCode={subject_code.replace("&", "%26")}'
-        r = requests.get(url)
-        s = BeautifulSoup(r.text, "html.parser")
 
-        # selects all the courses info and demand info
-        # each element in course_containers contains code, name, and demand for one course
-        course_containers = s.select("div#content > div > table > tbody > tr")
+        print(f"\tRetrieving demand for subject code {subject_code}")
 
-        for container in course_containers:
-            course = []
-            overall_demand = {}
-
-            # extract name and code
-            course_url = f'https://ivy.yale.edu{container.select("td a")[0]["href"]}'
-            code = container.select("td a")[0].text.strip().replace(";", "")
-            name = container.select("td span")[0].text.strip().replace(";", "")
-
-            # 'code' might be a long list of cross-listed couses (e.g. 'S&DS 262/S&DS 562/CPSC 262'),
-            # so we need to split all of the codes and look at them separately
-            full_strings_all = code.split("/")
-
-            # sometimes we'll get a course code that isn't actually an academic subject,
-            # so this line filters that out
-            full_strings = [
-                string
-                for string in full_strings_all
-                if string.split(" ")[0] in subject_codes
-            ]
-
-            # now, we need to identify the course code corresponding to the subject we're working
-            # on in the loop — this finds the course code with 'subject' in it
-            code_this_subject = [
-                string for string in full_strings if subject_code in string
-            ][0]
-
-            # Get section data, if applicable
-            course_r = requests.get(course_url)
-            course_s = BeautifulSoup(course_r.text, "html.parser")
-            section_dict = {}
-
-            # Check whether the page has a table with section data
-            section_text = course_s.find("th", text="Section\xa0\xa0")
-            if section_text:
-                section_table = section_text.find_parent("table")
-                section_table_rows = section_table.select("tbody tr")
-                for row in section_table_rows:
-                    cells = row.select("td")
-                    section_name = cells[0].string.strip()
-                    section_demand = cells[2].string.strip()
-                    section_dict[section_name] = section_demand
-
-            # Test if we've already added the demand for this course (due to cross-listing) into the
-            # data structure. We don't want duplicate data, so if we already have the demand, we simply skip it
-            if full_strings[0] == code_this_subject:
-                # if this is our first time coming across this course, we need to add all of the
-                # cross-listed course numbers into our 'courses' list
-
-                # selects each of the individual counts
-                # each element in count is one count corresponding to one day
-                counts = container.select("td.trendCell")
-
-                # add the count for each into our overall_demand list
-                for j in range(len(dates)):
-                    overall_demand[dates[j]] = counts[j].text.strip()
-
-                course = {
-                    "title": name,
-                    "codes": full_strings,
-                    "overall_demand": overall_demand,
-                    "section_demand": section_dict,
-                }
-
-                courses.append(course)
-
-            num_courses += 1
-
-        print(
-            f"Scraped {str(num_courses)} courses up to {subject_code}, {str(datetime.now() - startTime)} elapsed"
+        courses = fetch_season_subject_demand(
+            season, subject_code, subject_codes, dates
         )
 
-    with open(f"{config.DATA_DIR}/demand_stats/{season}_demand.json", "w") as f:
-        f.write(ujson.dumps(courses))
+        season_courses.append(courses)
 
-    print(f"Completed scraping {season}, {str(datetime.now() - startTime)} elapsed")
+    # flatten season courses
+    season_courses = [x for y in season_courses for x in y]
+
+    # sort courses by title (for consistency with ferry-data)
+    season_courses = sorted(season_courses, key=lambda x: x["title"])
+
+    with open(f"{config.DATA_DIR}/demand_stats/{season}_demand.json", "w") as f:
+
+        f.write(ujson.dumps(season_courses, indent=4))
