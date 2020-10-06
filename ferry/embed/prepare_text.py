@@ -32,12 +32,22 @@ for course_file in parsed_courses_files:
     merged_courses.append(courses)
 
 merged_courses = pd.concat(merged_courses, axis=0)
+
+# remove courses without descriptions
+merged_courses = merged_courses[~merged_courses["description"].isna()]
+merged_courses = merged_courses[
+    ~merged_courses["description"].isin(["", "NA", "n/a", "N/A"])
+]
+
+# sort in order of newest first
 merged_courses = merged_courses.sort_values(by="season_code", ascending=False)
 print(f"Total courses: {len(merged_courses)}")
 
+# drop exact description duplicates
 merged_courses = merged_courses.drop_duplicates(subset=["description"], keep="first")
 print(f"Total courses (unique descriptions): {len(merged_courses)}")
 
+# drop title duplicates
 merged_courses = merged_courses.drop_duplicates(subset=["title"], keep="first")
 print(f"Total courses (unique titles): {len(merged_courses)}")
 
