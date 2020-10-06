@@ -38,6 +38,36 @@ def get_dates(season):
 
 def fetch_season_subject_demand(season, subject_code, subject_codes, dates):
 
+    """
+    Get course demand statistics for a specific subject and season
+
+    Parameters
+    ----------
+    season: string
+        The season to to get course demand for. In the form of
+        YYYYSS(e.g. 201301 for spring, 201302 for summer,
+        201303 for fall)
+
+    subject_code: string
+        Subject code to get course demand for.
+
+    subject_codes: list of strings
+        List of all subject codes (for validity checks)
+
+    dates: list of strings
+        List of all dates of interest (returned from get_dates)
+
+    Returns
+    -------
+    demand: list
+        list of {
+            title
+            codes
+            overall_demand
+            section_demand
+        }
+    """
+
     courses = []
 
     # get URL and pass to BeautifulSoup
