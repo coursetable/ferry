@@ -1,5 +1,4 @@
 from functools import reduce
-import multiprocessing.pool as mpp
 
 
 def merge_overlapping(sets):

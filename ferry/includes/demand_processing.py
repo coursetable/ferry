@@ -1,8 +1,16 @@
 import requests
 import ujson
+from requests.adapters import HTTPAdapter
+
 from bs4 import BeautifulSoup
 
 from ferry import config
+
+MAX_RETRIES = 16
+
+SESSION = requests.Session()
+SESSION.mount("http://", HTTPAdapter(max_retries=MAX_RETRIES))
+SESSION.mount("https://", HTTPAdapter(max_retries=MAX_RETRIES))
 
 
 def get_dates(season):
@@ -25,7 +33,7 @@ def get_dates(season):
     # get URL and pass to BeautifulSoup
     # using AMTH as arbitary subject
     url = f"https://ivy.yale.edu/course-stats/?termCode={season}&subjectCode=AMTH"
-    r = requests.get(url)
+    r = SESSION.get(url)
     s = BeautifulSoup(r.text, "html.parser")
 
     # select date elements
@@ -73,7 +81,7 @@ def fetch_season_subject_demand(season, subject_code, subject_codes, dates):
     # get URL and pass to BeautifulSoup
     # '.replace("&", "%26")' escapes the ampersand
     url = f'https://ivy.yale.edu/course-stats/?termCode={season}&subjectCode={subject_code.replace("&", "%26")}'
-    r = requests.get(url)
+    r = SESSION.get(url)
     s = BeautifulSoup(r.text, "html.parser")
 
     # selects all the courses info and demand info
@@ -108,7 +116,7 @@ def fetch_season_subject_demand(season, subject_code, subject_codes, dates):
         ][0]
 
         # Get section data, if applicable
-        course_r = requests.get(course_url)
+        course_r = SESSION.get(course_url)
         course_s = BeautifulSoup(course_r.text, "html.parser")
         section_dict = {}
 
