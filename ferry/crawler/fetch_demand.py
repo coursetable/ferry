@@ -8,25 +8,27 @@
 import argparse
 import os
 import sys
+
 from datetime import datetime
 from multiprocessing import Pool
 
 import requests
 import ujson
 from bs4 import BeautifulSoup
+from tqdm import tqdm
 
 from ferry import config
 from ferry.includes.demand_processing import get_dates, fetch_season_subject_demand
 
 
-def handle_season_subject_demand(season, subject_code, subject_codes, dates):
+def handle_season_subject_demand(args):
 
     """
     Handler for fetching subject codes to be passed into
     Pool()
     """
 
-    print(f"\t{subject_code}")
+    season, subject_code, subject_codes, dates = args
 
     courses = fetch_season_subject_demand(season, subject_code, subject_codes, dates)
 
@@ -97,23 +99,30 @@ if __name__ == "__main__":
 
     print("ok")
 
+    # set up parallel processing pool
+    pool = Pool(processes=64)
+
     for season in seasons:
 
-        print(f"Retrieving demand for season {season}")
+        print(f"Retrieving demand by subject for season {season}")
 
         dates = get_dates(season)
-
-        # set up parallel processing pool
-        pool = Pool(processes=64)
 
         pool_args = [
             [season, subject_code, subject_codes, dates]
             for subject_code in subject_codes
         ]
 
-        season_courses = pool.starmap(handle_season_subject_demand, pool_args)
+        season_courses = []
 
-        print()
+        # use imap_unordered to report to tqdm
+        with tqdm(total=len(pool_args), desc="Subjects retrieved") as pbar:
+            for i, result in enumerate(
+                pool.imap_unordered(handle_season_subject_demand, pool_args)
+            ):
+                pbar.update()
+
+                season_courses.append(result)
 
         # flatten season courses
         season_courses = [x for y in season_courses for x in y]
@@ -122,5 +131,7 @@ if __name__ == "__main__":
         season_courses = sorted(season_courses, key=lambda x: x["title"])
 
         with open(f"{config.DATA_DIR}/demand_stats/{season}_demand.json", "w") as f:
-
             f.write(ujson.dumps(season_courses, indent=4))
+
+    # release pool
+    pool.terminate()
