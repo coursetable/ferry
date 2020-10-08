@@ -1,8 +1,7 @@
 import requests
 import ujson
-from requests.adapters import HTTPAdapter
-
 from bs4 import BeautifulSoup
+from requests.adapters import HTTPAdapter
 
 from ferry import config
 

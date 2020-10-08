@@ -8,7 +8,6 @@
 import argparse
 import os
 import sys
-
 from datetime import datetime
 from multiprocessing import Pool
 
@@ -18,7 +17,7 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 
 from ferry import config
-from ferry.includes.demand_processing import get_dates, fetch_season_subject_demand
+from ferry.includes.demand_processing import fetch_season_subject_demand, get_dates
 
 
 def handle_season_subject_demand(args):
