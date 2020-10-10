@@ -4,7 +4,7 @@ A crawler for Yale courses and evaluation data. Integrates with Coursetable.
 
 ## Setup
 
-Dependencies:
+### Dependencies
 
 - Python 3.8 or newer.
 - graphviz, which we use to generate schema diagrams.
@@ -16,24 +16,38 @@ These steps will install the necessary system dependencies, setup the virtualenv
 # macOS
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
 brew install graphviz postgresql
-poetry install
 
 # Ubuntu
 sudo apt-get install python-dev pkg-config graphviz libgraphviz-dev libpq-dev
-poetry install
 ```
 
 Known issues:
 
 - On post-Sierra versions of macOS, running `poetry install` may report an error during `psycopg2` installation stating that `ld: library not found for -lssl`. To fix this, make sure OpenSSL installed (for instance, after running `brew install openssl`), and add its libraries to the path with `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`.
 
-## Data Files
+### Install
 
-The data files are stored in the `data` directory. This includes course and evaluations data back to 2009, caches, raw HTML for debugging, and course demand statistics.
+```
+python3 -m pip install poetry
+poetry install
 
+# Run this for every new terminal shell!
+poetry shell
+```
+
+### Data Files
+
+The data files are stored in the `data` directory.
 The course evaluations data are private, and should only be accessible to Yale students and faculty. As such, we store these files in a private Git submodule.
 
-If you want to use this data and already have access to it via official Yale systems, but don't want to crawl it yourself, please reach out and we can grant access.
+```
+# Download data files from private repository into the /data directory.
+git submodule update --init
+```
+
+It includes course and evaluations data back to 2009 and more recent course demand statistics, as well as, caches and raw HTML files for debugging purposes.
+
+_If you want to use this data but don't want to crawl it yourself, please reach out and we can grant access to our archives._
 
 ## Ferry Design
 
