@@ -33,7 +33,7 @@ embeddings = StandardScaler().fit_transform(embeddings)
 
 # initialize annoy index w/ angular distance metric
 embed_dim = 100
-annoy_index = AnnoyIndex(embed_dim, metric="angular")
+annoy_index = AnnoyIndex(embed_dim, metric="euclidean")
 
 # add items to index
 for i in tqdm(range(num_courses), desc="Adding embeddings to index"):
