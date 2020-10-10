@@ -27,6 +27,7 @@ umap-learn = "^0.4.6"
 plotly = "^4.11.0"
 pandas = "^1.1.2"
 en_core_web_sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz" } # the English language model for SpaCy
+annoy = "^1.17.0"
 
 [tool.poetry.dev-dependencies]
 eralchemy = "^1.2.10"

@@ -33,6 +33,9 @@ for course_file in parsed_courses_files:
 
 merged_courses = pd.concat(merged_courses, axis=0)
 
+# remove future season courses
+merged_courses = merged_courses[merged_courses["season_code"] != 202101]
+
 # remove courses without descriptions
 merged_courses = merged_courses[~merged_courses["description"].isna()]
 merged_courses = merged_courses[
