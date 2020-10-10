@@ -1,9 +1,9 @@
-import spacy
-import pytextrank
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import nltk.data
+import spacy
 
-from load_json import get_all_courses, get_current_courses, get_columns
+import pytextrank
+from load_json import get_columns, get_current_courses
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 # "YC401": "What knowledge, skills, and insights did you develop by taking this course?"
 # "YC403": "What are the strengths and weaknesses of this course and how could it be improved?"

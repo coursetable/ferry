@@ -1,8 +1,5 @@
+from load_json import get_columns, get_current_courses
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-
-import matplotlib.pyplot as plt
-
-from load_json import get_all_courses, get_current_courses, get_columns
 
 data = get_current_courses()
 columns = get_columns(data)
@@ -72,9 +69,3 @@ print()
 best = sorted(courses.items(), key=lambda x: x[1], reverse=True)[:5]
 print(best)
 print()
-
-"""
-fig, ax = plt.subplots()
-ax.hist(courses.values(), bins=20)
-plt.show()
-"""

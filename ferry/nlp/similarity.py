@@ -1,8 +1,8 @@
 import numpy as np
-from gensim import corpora, models, similarities
 
-from load_json import get_all_courses, get_current_courses, get_columns
-from preprocess import preprocess_sentences, preprocess_sentences_simple
+from gensim import corpora, models, similarities
+from load_json import get_all_courses, get_columns, get_current_courses
+from preprocess import preprocess_sentences
 
 """MODEL CREATION"""
 

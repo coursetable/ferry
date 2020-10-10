@@ -1,9 +1,8 @@
-from collections import defaultdict, Counter
+from collections import defaultdict
 
 import spacy
-from nltk.corpus import stopwords
 
-from load_json import get_all_courses, get_current_courses, get_columns
+from load_json import get_columns, get_current_courses
 from preprocess import clean_keyword as clean
 
 # "YC401": "What knowledge, skills, and insights did you develop by taking this course?"

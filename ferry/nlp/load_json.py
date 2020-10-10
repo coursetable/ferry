@@ -1,6 +1,7 @@
+import json
 from collections import defaultdict
 from os import listdir
-import json
+
 
 """
 with open("data/evals/201903.txt", "r+") as infile:

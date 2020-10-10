@@ -1,6 +1,6 @@
-import requests
 import json
 
+import requests
 
 url = "http://localhost:8085/v1/graphql"
 

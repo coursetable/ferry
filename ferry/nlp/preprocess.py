@@ -5,9 +5,8 @@ from nltk.corpus import stopwords, wordnet
 from nltk.stem import WordNetLemmatizer
 from nltk.tag import pos_tag
 
-from gensim.models.phrases import Phraser, Phrases
-
 import enchant
+from gensim.models.phrases import Phraser, Phrases
 
 punc = string.punctuation + "“" + "”" + "1234567890"
 sw = stopwords.words("english")
