@@ -33,7 +33,7 @@ embeddings = StandardScaler().fit_transform(embeddings)
 
 # initialize annoy index w/ angular distance metric
 embed_dim = 100
-annoy_index = AnnoyIndex(embed_dim, metric="euclidean")
+annoy_index = AnnoyIndex(embed_dim, metric="angular")
 
 # add items to index
 for i in tqdm(range(num_courses), desc="Adding embeddings to index"):
@@ -43,7 +43,7 @@ for i in tqdm(range(num_courses), desc="Adding embeddings to index"):
 annoy_index.build(n_trees=16, n_jobs=-1)
 
 # number of nearest-neighbors to find
-nearest_num = 8
+nearest_num = 16
 
 course_similars = []
 
@@ -53,6 +53,13 @@ for i in tqdm(range(num_courses), desc="Finding similar courses"):
     # remove course itself
     similars = [x for x in similars if x != i]
     course_similars.append(similars)
+
+# symmmmetric filtering
+for course_index, similars in enumerate(course_similars):
+
+    course_similars[course_index] = [
+        x for x in similars if course_index in course_similars[x]
+    ]
 
 # pull out course titles
 course_similars = [list(courses.loc[x, "code_title"]) for x in course_similars]
