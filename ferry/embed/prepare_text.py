@@ -55,9 +55,12 @@ merged_courses = merged_courses.drop_duplicates(subset=["title"], keep="first")
 print(f"Total courses (unique titles): {len(merged_courses)}")
 
 tqdm.pandas(desc="Preprocessing description texts")
-merged_courses["preembed_description"] = merged_courses["description"].progress_apply(
-    preprocess_description
+merged_courses["title_description"] = (
+    merged_courses["title"] + " " + merged_courses["description"]
 )
+merged_courses["preembed_description"] = merged_courses[
+    "title_description"
+].progress_apply(preprocess_description)
 
 merged_courses.to_csv(
     config.DATA_DIR / "description_embeddings/courses_description_deduplicated.csv"
