@@ -3,10 +3,10 @@ import sqlalchemy
 from ferry.config import DATABASE_CONNECT_STRING
 from ferry.database.models import Base
 
-engine = sqlalchemy.create_engine(DATABASE_CONNECT_STRING)
-Base.metadata.create_all(engine)
+Engine = sqlalchemy.create_engine(DATABASE_CONNECT_STRING)
+Base.metadata.create_all(Engine)
 
-Session = sqlalchemy.orm.sessionmaker(bind=engine)
+Session = sqlalchemy.orm.sessionmaker(bind=Engine)
 
 
 if __name__ == "__main__":
