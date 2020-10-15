@@ -86,6 +86,33 @@ This submodule includes course and evaluation data dating back to 2009 (many of 
 
 _If you want to use these data but don't want to crawl it yourself, please reach out and we can grant access to our archives._
 
+## Starting from scratch
+
+To illustrate how the database might be constructed, we provide an workflow to run to build everything from scratch (assuming all dependencies have been accounted for).
+
+### Extraction
+
+To extract data from Yale's websites, we use the scripts provided in `/ferry/crawler`.
+
+1. Before retrieving any data, we have to have a sense of which semesters, or **seasons**, we want to fetch. To retrieve a list of seasons, we run `fetch_seasons.py`. This gives us a list of valid seasons for course listings and demand statistics (we get the list of seasons for evaluations separately).
+2. To retrieve our classes, we run `fetch_classes.py`, which downloads raw JSON data from Yale, followed by `parse_classes.py`, which does some pre-processing such as parsing syllabus links and cross-listings from various HTML fields. 
+3. To retrieve evaluations, we run `fetch_ratings.py`. For each class found, this script will download all evaluation info, namely categorical and written evaluation responses.
+4. To retrieve demand statistics, we also need a list of course subject codes that the demand statistics are indexed by. These can be found using `fetch_subjects.py`. Once this has been done, we can get demand subjects using `fetch_demand.py`.
+
+Note that `fetch_classes.py`, `parse_classes.py`, `fetch_ratings.py`, and `fetch_subjects.py` all have an `--season` argument that allows one to manually filter which seasons to retrieve. This script is useful for periodic updates in which we don't need to process older seasons (see [refresh.sh](https://github.com/coursetable/ferry/blob/master/refresh_courses.sh)) and for testing.
+
+### Importation
+
+Once extraction is complete, our data can be imported into the Postgres database. As mentioned above, the only step here is to run `/ferry/importer.py`.
+
+### Post-processing
+
+After the initial data has been imported into Postgres, we run `/ferry/computed.py` to do the following:
+
+- Check invariants (e.g. the season codes in our listings and courses tables match)
+- Compute numerical ratings (overall rating and workload) per course
+- Compute historical ratings for courses and professors over all past offerings
+
 ## TODO
 
 - import course demand statistics
