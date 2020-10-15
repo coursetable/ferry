@@ -44,6 +44,8 @@ brew install graphviz postgresql
 sudo apt-get install python-dev pkg-config graphviz libgraphviz-dev libpq-dev
 ```
 
+Installing Graphviz and PyGraphViz may be a bit difficult on Windows – note that these are only used for generating the [database schema diagram](docs/db_diagram.png) in [`/ferry/generate_db_diagram.py`](/ferry/generate_db_diagram.py) and can be disregarded otherwise.
+
 Known issues:
 
 - On post-Sierra versions of macOS, running `poetry install` may report an error during `psycopg2` installation stating that `ld: library not found for -lssl`. To fix this, make sure OpenSSL is installed (such as through `brew install openssl`) and rerun the above command block.
