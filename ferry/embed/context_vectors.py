@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+
 from ferry import config, database
 
 courses = pd.read_sql_table("courses", con=database.Engine)

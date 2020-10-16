@@ -2,9 +2,9 @@ import numpy as np
 import pandas as pd
 import ujson
 import umap
+from annoy import AnnoyIndex
 from sklearn.preprocessing import StandardScaler
 from tqdm import tqdm
-from annoy import AnnoyIndex
 
 from ferry import config
 
