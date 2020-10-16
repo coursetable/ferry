@@ -2,6 +2,17 @@
 
 A crawler for Yale courses and evaluation data. Integrates with Coursetable.
 
+## Table of contents
+<!--ts-->
+   * [Design](#design)
+   * [Dependencies](#dependencies)
+   * [Usage](#usage)
+   * [Data files](#data-files)
+   * [Starting from scratch](#starting-from-scratch)
+   * [Contributing](#contributing)
+   * [TODO](#todo)
+<!--te-->
+
 ## Design
 
 We want the crawler to be reproducible and reliable. As such, we designed the crawling pipeline as a number of stages able to be independently inspected and rerun.
@@ -114,6 +125,18 @@ After the initial data has been imported into Postgres, we run `/ferry/computed.
 - Check invariants (e.g. the season codes in our listings and courses tables match)
 - Compute numerical ratings (overall rating and workload) per course
 - Compute historical ratings for courses and professors over all past offerings
+
+## Contributing
+
+To contribute to this repository, please create a branch and open a pull request once you are ready to merge your changes into master. 
+
+Note that we run two Python style checks via Travis CI: [black](https://github.com/psf/black) (for general code formatting) and [isort](https://github.com/PyCQA/isort) (for import ordering). You can run these two manually or by using our provided [pre-commit](https://pre-commit.com/) configuration, which can be installed after activating the Poetry enviroment with
+
+```
+pre-commit install
+```
+
+This will install pre-commit [Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) that will automatically apply black and isort before you make a commit. If there are any reported changes, the initial commit will be aborted and you can re-commit to apply the changes.
 
 ## TODO
 
