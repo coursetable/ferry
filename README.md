@@ -52,7 +52,7 @@ export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
 brew install graphviz postgresql
 
 # Ubuntu
-sudo apt-get install python-dev pkg-config graphviz libgraphviz-dev libpq-dev
+sudo apt-get install python3-dev pkg-config graphviz libgraphviz-dev libpq-dev
 ```
 
 Installing Graphviz and PyGraphViz may be a bit difficult on Windows – note that these are only used for generating the [database schema diagram](docs/db_diagram.png) in [`/ferry/generate_db_diagram.py`](/ferry/generate_db_diagram.py) and can be disregarded otherwise.
