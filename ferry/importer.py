@@ -160,8 +160,6 @@ def import_demand(session, season, demand_info):
             f"Could not find a course matching {demand_info['codes']} in season {season}"
         )
         return
-    else:
-        course_id = unique_course_ids.pop()
 
     demand_info["overall_demand"] = {
         date: int(count) for date, count in demand_info["overall_demand"].items()
@@ -174,6 +172,7 @@ def import_demand(session, season, demand_info):
         demand_stats, _ = database.get_or_create(
             session, database.DemandStatistics, course_id=course_id
         )
+
         demand_stats.demand = demand_info["overall_demand"]
 
 
