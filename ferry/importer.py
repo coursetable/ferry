@@ -331,19 +331,21 @@ if __name__ == "__main__":
     # Course demand.
     if args.mode == "demand" or args.mode == "all":
         # Compute seasons.
-        if seasons is None:
-            demand_seasons = sorted(
-                [
-                    filename.split("_")[0]  # remove the _demand.json suffix
-                    for filename in os.listdir(f"{config.DATA_DIR}/demand_stats/")
-                    if filename[0] != "." and filename != "subjects.json"
-                ]
-            )
-        else:
-            demand_seasons = seasons
+        demand_seasons = sorted(
+            [
+                filename.split("_")[0]  # remove the _demand.json suffix
+                for filename in os.listdir(f"{config.DATA_DIR}/demand_stats/")
+                if filename[0] != "." and filename != "subjects.json"
+            ]
+        )
 
         print(f"Importing demand stats for seasons: {demand_seasons}")
-        for season in demand_seasons:
+        for season in seasons:
+
+            if season not in demand_seasons:
+                print(f"Skipping season {season}: not found in demand files")
+                continue
+
             with open(f"{config.DATA_DIR}/demand_stats/{season}_demand.json") as f:
                 demand_stats = ujson.load(f)
 
