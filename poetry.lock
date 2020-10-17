@@ -411,6 +411,18 @@ six = "*"
 
 [[package]]
 category = "dev"
+description = "Simple git hooks with poetry"
+name = "poetry-githooks"
+optional = false
+python-versions = ">=3.6,<4.0"
+version = "1.1.2"
+
+[package.dependencies]
+click = ">=7.1.2,<8.0.0"
+toml = ">=0.10.0,<0.11.0"
+
+[[package]]
+category = "dev"
 description = "A framework for managing and maintaining multi-language pre-commit hooks."
 name = "pre-commit"
 optional = false
@@ -853,7 +865,7 @@ python-versions = "*"
 version = "1.12.1"
 
 [metadata]
-content-hash = "ef7679befc6d380bb7e3e9ad23fbf86127fda65c3002bacc466bfa71dd1a6d2b"
+content-hash = "ddd71e818f9f567e571a91383b20a731fed8b671b7308c3fbad804536024d3a2"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -1181,6 +1193,10 @@ plac = [
 plotly = [
     {file = "plotly-4.11.0-py2.py3-none-any.whl", hash = "sha256:584b3dc685c84b652198166969742115b31892de61c86556f909f3f0f9ccd0d3"},
     {file = "plotly-4.11.0.tar.gz", hash = "sha256:b6ad5c3d2cbf056a782e3c6833a334c45a5453a12dc8a48df971602509e8d3d6"},
+]
+poetry-githooks = [
+    {file = "poetry-githooks-1.1.2.tar.gz", hash = "sha256:32d54550ba727603e2e5db32c49d1407f07e72a8f3b40da221c76f09554805f8"},
+    {file = "poetry_githooks-1.1.2-py3-none-any.whl", hash = "sha256:c09abab8deec8aa36db5bc08886c9be9b337fff370703fe1b3ee68348c877fd7"},
 ]
 pre-commit = [
     {file = "pre_commit-2.7.1-py2.py3-none-any.whl", hash = "sha256:810aef2a2ba4f31eed1941fc270e72696a1ad5590b9751839c90807d0fff6b9a"},
