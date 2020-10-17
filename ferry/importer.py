@@ -1,9 +1,9 @@
 import argparse
 import os
+from pathlib import Path
 
 import textdistance
 import ujson
-
 from ferry import config, database
 from ferry.includes.tqdm import tqdm
 
@@ -307,6 +307,8 @@ if __name__ == "__main__":
 
     # Course information.
     if seasons is None:
+
+        # get full list of course seasons from files
         course_seasons = sorted(
             [
                 filename.split(".")[0]  # remove the .json extension
@@ -317,38 +319,8 @@ if __name__ == "__main__":
                 if filename[0] != "."
             ]
         )
-    else:
-        course_seasons = seasons
 
-    # Course listings.
-    if args.mode == "courses" or args.mode == "all":
-        print(f"Importing courses for season(s): {course_seasons}")
-        for season in course_seasons:
-            # Read the course listings, giving preference to freshly parsed over migrated ones.
-            if os.path.isfile(f"{config.DATA_DIR}/parsed_courses/{season}.json"):
-                with open(f"{config.DATA_DIR}/parsed_courses/{season}.json", "r") as f:
-                    parsed_course_info = ujson.load(f)
-            else:
-                if not os.path.isfile(
-                    f"{config.DATA_DIR}/migrated_courses/{season}.json"
-                ):
-                    print(
-                        f"Skipping season {season}: not found in parsed or migrated courses."
-                    )
-                with open(
-                    f"{config.DATA_DIR}/migrated_courses/{season}.json", "r"
-                ) as f:
-                    parsed_course_info = ujson.load(f)
-
-            tqdm.write(f"Importing courses in season {season}")
-            for course_info in tqdm(parsed_course_info):
-                with database.session_scope(database.Session) as session:
-                    # tqdm.write(f"Importing {course_info}")
-                    import_course(session, course_info)
-
-    # Course demand.
-    if args.mode == "demand" or args.mode == "all":
-        # Compute seasons.
+        # get full list of demand seasons from files
         demand_seasons = sorted(
             [
                 filename.split("_")[0]  # remove the _demand.json suffix
@@ -356,19 +328,62 @@ if __name__ == "__main__":
                 if filename[0] != "." and filename != "subjects.json"
             ]
         )
+    else:
+        course_seasons = seasons
+        demand_seasons = seasons
+
+    # Course listings.
+    if args.mode == "courses" or args.mode == "all":
+        print(f"Importing courses for season(s): {course_seasons}")
+        for season in course_seasons:
+            # Read the course listings, giving preference to freshly parsed over migrated ones.
+            parsed_courses_file = Path(
+                f"{config.DATA_DIR}/parsed_courses/{season}.json"
+            )
+
+            if parsed_courses_file.is_file():
+                with open(parsed_courses_file, "r") as f:
+                    parsed_course_info = ujson.load(f)
+            else:
+                # check migrated courses as a fallback
+                migrated_courses_file = Path(
+                    f"{config.DATA_DIR}/migrated_courses/{season}.json"
+                )
+
+                if not migrated_courses_file.is_file():
+                    print(
+                        f"Skipping season {season}: not found in parsed or migrated courses."
+                    )
+                    continue
+                with open(migrated_courses_file, "r") as f:
+                    parsed_course_info = ujson.load(f)
+
+            for course_info in tqdm(
+                parsed_course_info, desc=f"Importing courses in season {season}"
+            ):
+                with database.session_scope(database.Session) as session:
+                    # tqdm.write(f"Importing {course_info}")
+                    import_course(session, course_info)
+
+    # Course demand.
+    if args.mode == "demand" or args.mode == "all":
+        # Compute seasons.
 
         print(f"Importing demand stats for seasons: {demand_seasons}")
-        for season in seasons:
+        for season in demand_seasons:
 
-            if season not in demand_seasons:
-                print(f"Skipping season {season}: not found in demand files")
+            demand_file = Path(f"{config.DATA_DIR}/demand_stats/{season}_demand.json")
+
+            if not demand_file.is_file():
+                print(f"Skipping season {season}: demand statistics file not found.")
                 continue
 
-            with open(f"{config.DATA_DIR}/demand_stats/{season}_demand.json") as f:
+            with open(demand_file, "r") as f:
                 demand_stats = ujson.load(f)
 
-            for demand_info in tqdm(demand_stats, desc=f"Demand stats for {season}"):
-
+            for demand_info in tqdm(
+                demand_stats, desc=f"Importing demand stats for {season}"
+            ):
                 with database.session_scope(database.Session) as session:
                     import_demand(session, season, demand_info)
 
@@ -384,18 +399,20 @@ if __name__ == "__main__":
         ]
 
         # Filter by seasons.
-        if seasons is not None:
+        if seasons is None:
+            evals_to_import = sorted(list(all_evals))
+
+        else:
             evals_to_import = sorted(
                 filename for filename in all_evals if filename.split("-")[0] in seasons
             )
-        else:
-            evals_to_import = sorted(list(all_evals))
 
-        tqdm.write("Importing evaluations")
-        for filename in tqdm(evals_to_import):
+        for filename in tqdm(evals_to_import, desc="Importing evaluations"):
             # Read the evaluation, giving preference to current over previous.
-            if os.path.isfile(f"{config.DATA_DIR}/course_evals/{filename}"):
-                with open(f"{config.DATA_DIR}/course_evals/{filename}", "r") as f:
+            current_evals_file = Path(f"{config.DATA_DIR}/course_evals/{filename}")
+
+            if current_evals_file.is_file():
+                with open(current_evals_file, "r") as f:
                     evaluation = ujson.load(f)
             else:
                 with open(f"{config.DATA_DIR}/previous_evals/{filename}", "r") as f:
