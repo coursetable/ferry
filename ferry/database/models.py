@@ -174,6 +174,21 @@ class Listing(BaseModel):
     )
 
 
+class DemandStatistics(BaseModel):
+    # Course demand statistics.
+    __tablename__ = "demand_statistics"
+
+    course_id = Column(
+        Integer,
+        ForeignKey("courses.course_id"),
+        primary_key=True,
+        comment="The course to which these demand statistics apply",
+    )
+    course = relationship("Course", backref="demand_statistics")
+
+    demand = Column(JSON, comment="JSON dict containing demand stats by day",)
+
+
 class Professor(BaseModel):
     __tablename__ = "professors"
 

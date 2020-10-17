@@ -7,7 +7,6 @@ import ujson
 from ferry import config, database
 from ferry.includes.tqdm import tqdm
 
-
 """
 ================================================================
 This script imports the parsed course and evaluation data into the database.
@@ -56,6 +55,7 @@ def import_course(session, course_info):
     # Update listing.
     listing.subject = course_info["subject"]
     listing.number = course_info["number"]
+    listing.course_code = f"{listing.subject} {listing.number}"
     listing.section = course_info["section"]
 
     # Resolve professors.
@@ -138,6 +138,39 @@ def import_course(session, course_info):
     course.professors = course_professors
 
     # TODO: course.location_times = course_info["TODO"]
+
+
+def import_demand(session, season, demand_info):
+
+    # Find the associated course.
+    possible_course_ids = (
+        session.query(
+            database.Listing.course_code,
+            database.Listing.course_id,
+            database.Listing.section,
+        )
+        .filter(database.Listing.course_code.in_(demand_info["codes"]))
+        .filter(database.Listing.season_code == season)
+    ).all()
+
+    unique_course_ids = set(listing[1] for listing in possible_course_ids)
+
+    if len(unique_course_ids) < 1:
+        print(
+            f"Could not find a course matching {demand_info['codes']} in season {season}"
+        )
+        return
+    else:
+        course_id = unique_course_ids.pop()
+
+    # allow multiple matching course IDs due to different sections for now
+    for course_id in list(unique_course_ids):
+
+        # Set demand information.
+        demand_stats, _ = database.get_or_create(
+            session, database.DemandStatistics, course_id=course_id
+        )
+        demand_stats.demand = demand_info["overall_demand"]
 
 
 def import_evaluation(session, evaluation):
@@ -243,10 +276,11 @@ if __name__ == "__main__":
         required=False,
     )
     parser.add_argument(
+        "-m",
         "--mode",
-        choices=["evals", "courses", "both"],
-        help="import courses only",
-        default="both",
+        choices=["courses", "evals", "demand", "all"],
+        help="information to import: courses, evals, demand, or all (default)",
+        default="all",
         required=False,
     )
 
@@ -268,7 +302,8 @@ if __name__ == "__main__":
     else:
         course_seasons = seasons
 
-    if args.mode != "evals":
+    # Course listings.
+    if args.mode == "courses" or args.mode == "all":
         print(f"Importing courses for season(s): {course_seasons}")
         for season in course_seasons:
             # Read the course listings, giving preference to freshly parsed over migrated ones.
@@ -276,6 +311,12 @@ if __name__ == "__main__":
                 with open(f"{config.DATA_DIR}/parsed_courses/{season}.json", "r") as f:
                     parsed_course_info = ujson.load(f)
             else:
+                if not os.path.isfile(
+                    f"{config.DATA_DIR}/migrated_courses/{season}.json"
+                ):
+                    print(
+                        f"Skipping season {season}: not found in parsed or migrated courses."
+                    )
                 with open(
                     f"{config.DATA_DIR}/migrated_courses/{season}.json", "r"
                 ) as f:
@@ -287,8 +328,31 @@ if __name__ == "__main__":
                     # tqdm.write(f"Importing {course_info}")
                     import_course(session, course_info)
 
+    # Course demand.
+    if args.mode == "demand" or args.mode == "all":
+        # Compute seasons.
+        if seasons is None:
+            demand_seasons = sorted(
+                [
+                    filename.split("_")[0]  # remove the _demand.json suffix
+                    for filename in os.listdir(f"{config.DATA_DIR}/demand_stats/")
+                    if filename[0] != "." and filename != "subjects.json"
+                ]
+            )
+        else:
+            demand_seasons = seasons
+
+        print(f"Importing demand stats for seasons: {demand_seasons}")
+        for season in demand_seasons:
+            with open(f"{config.DATA_DIR}/demand_stats/{season}_demand.json") as f:
+                demand_stats = ujson.load(f)
+
+            for demand_info in tqdm(demand_stats, desc=f"Demand stats for {season}"):
+                with database.session_scope(database.Session) as session:
+                    import_demand(session, season, demand_info)
+
     # Course evaluations.
-    if args.mode != "courses":
+    if args.mode == "evals" or args.mode == "all":
         all_evals = [
             filename
             for filename in set(
