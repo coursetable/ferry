@@ -7,6 +7,7 @@ import ujson
 from ferry import config, database
 from ferry.includes.tqdm import tqdm
 
+
 """
 ================================================================
 This script imports the parsed course and evaluation data into the database.
