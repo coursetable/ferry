@@ -163,6 +163,10 @@ def import_demand(session, season, demand_info):
     else:
         course_id = unique_course_ids.pop()
 
+    demand_info["overall_demand"] = {
+        date: int(count) for date, count in demand_info["overall_demand"].items()
+    }
+
     # allow multiple matching course IDs due to different sections for now
     for course_id in list(unique_course_ids):
 
@@ -350,6 +354,7 @@ if __name__ == "__main__":
                 demand_stats = ujson.load(f)
 
             for demand_info in tqdm(demand_stats, desc=f"Demand stats for {season}"):
+
                 with database.session_scope(database.Session) as session:
                     import_demand(session, season, demand_info)
 
