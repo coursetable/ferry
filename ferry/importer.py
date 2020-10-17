@@ -148,9 +148,7 @@ def import_demand(session, season, demand_info):
             database.Listing.course_code,
             database.Listing.course_id,
             database.Listing.section,
-        )
-        .filter(database.Listing.course_code.in_(demand_info["codes"]))
-        .filter(database.Listing.season_code == season)
+        ).filter(database.Listing.course_code.in_(demand_info["codes"]))
     ).all()
 
     unique_course_ids = set(listing[1] for listing in possible_course_ids)
@@ -165,6 +163,20 @@ def import_demand(session, season, demand_info):
         date: int(count) for date, count in demand_info["overall_demand"].items()
     }
 
+    sorted_demand = list(demand_info["overall_demand"].items())
+
+    def date_to_int(date):
+        month, day = date.split("/")
+
+        month = int(month)
+        day = int(day)
+
+        return month * 100 + day
+
+    sorted_demand.sort(key=lambda x: date_to_int(x[0]))
+
+    latest_demand_date, latest_demand = sorted_demand[-1]
+
     # allow multiple matching course IDs due to different sections for now
     for course_id in list(unique_course_ids):
 
@@ -174,6 +186,8 @@ def import_demand(session, season, demand_info):
         )
 
         demand_stats.demand = demand_info["overall_demand"]
+        demand_stats.latest_demand = latest_demand
+        demand_stats.latest_demand_date = latest_demand_date
 
 
 def import_evaluation(session, evaluation):

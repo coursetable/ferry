@@ -184,6 +184,8 @@ class DemandStatistics(BaseModel):
         primary_key=True,
         comment="The course to which these demand statistics apply",
     )
+    latest_demand = Column(Integer, comment="Latest demand count",)
+    latest_demand_date = Column(String, comment="Latest demand date",)
     course = relationship("Course", backref="demand_statistics")
 
     demand = Column(JSON, comment="JSON dict containing demand stats by day",)
