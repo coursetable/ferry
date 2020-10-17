@@ -112,7 +112,7 @@ To extract data from Yale's websites, we use the scripts provided in `/ferry/cra
 3. To retrieve evaluations, we run `fetch_ratings.py`. For each class found, this script will download all evaluation info, namely categorical and written evaluation responses.
 4. To retrieve demand statistics, we also need a list of course subject codes that the demand statistics are indexed by. These can be found using `fetch_subjects.py`. Once this has been done, we can get demand subjects using `fetch_demand.py`.
 
-Note that `fetch_classes.py`, `parse_classes.py`, `fetch_ratings.py`, and `fetch_subjects.py` all have an `--season` argument that allows one to manually filter which seasons to retrieve. This script is useful for periodic updates in which we don't need to process older seasons (see [refresh.sh](https://github.com/coursetable/ferry/blob/master/refresh_courses.sh)) and for testing.
+Note that `fetch_classes.py`, `parse_classes.py`, `fetch_ratings.py`, `fetch_subjects.py`, and `fetch_demand.py` all have a `--season` argument that allows one to manually filter which seasons to retrieve. This script is useful for periodic updates in which we don't need to process older seasons (see [refresh.sh](https://github.com/coursetable/ferry/blob/master/refresh_courses.sh)) and for testing.
 
 ### Importation
 
@@ -130,15 +130,14 @@ After the initial data has been imported into Postgres, we run `/ferry/computed.
 
 To contribute to this repository, please create a branch and open a pull request once you are ready to merge your changes into master. 
 
-Note that we run two Python style checks via Travis CI: [black](https://github.com/psf/black) (for general code formatting) and [isort](https://github.com/PyCQA/isort) (for import ordering). You can run these two manually or by using our provided [pre-commit](https://pre-commit.com/) configuration, which can be installed after activating the Poetry enviroment with
+Note that we run two Python style checks via Travis CI: [black](https://github.com/psf/black) (for general code formatting) and [isort](https://github.com/PyCQA/isort) (for import ordering). You can run these two manually or by attaching them via pre-commit hooks, which can be installed with
 
 ```
-pre-commit install
+poetry run githooks setup
 ```
 
 This will install pre-commit [Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) that will automatically apply black and isort before you make a commit. If there are any reported changes, the initial commit will be aborted and you can re-commit to apply the changes.
 
 ## TODO
 
-- import course demand statistics
 - transition everything from /private to config_private.py
