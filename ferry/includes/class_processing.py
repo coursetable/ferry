@@ -235,6 +235,10 @@ def fetch_course_json(code, crn, srcdb):
 
         course_json = ujson.loads(r.text)
 
+        # exclude Yale's last-updated field (we use our own later on)
+        if "last_updated" in course_json:
+            del course_json["last_updated"]
+
         if "fatal" in course_json.keys():
             raise FetchClassesError(
                 "Unsuccessful response: {}".format(course_json["fatal"])
