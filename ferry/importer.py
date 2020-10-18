@@ -4,6 +4,7 @@ from pathlib import Path
 
 import textdistance
 import ujson
+
 from ferry import config, database
 from ferry.includes.tqdm import tqdm
 
