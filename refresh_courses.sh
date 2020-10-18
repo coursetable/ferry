@@ -24,8 +24,8 @@ poetry run python ./ferry/crawler/fetch_classes.py -s LATEST_3
 announce "Parsing all classes"
 poetry run python ./ferry/crawler/parse_classes.py
 
-# announce "Fetching demand statistics for latest year"
-# poetry run python ./ferry/crawler/fetch_demand.py -s LATEST_3
+announce "Fetching and parsing demand statistics for latest year"
+poetry run python ./ferry/crawler/fetch_demand.py -s LATEST_3
 
 announce "Pushing data changes to remote"
 pushd data
@@ -36,6 +36,9 @@ popd
 
 announce "Importing courses to database"
 poetry run python ./ferry/importer.py --mode courses
+
+announce "Importing demand to database"
+poetry run python ./ferry/importer.py --mode demand
 
 announce "Generating computed database fields"
 poetry run python ./ferry/computed.py
