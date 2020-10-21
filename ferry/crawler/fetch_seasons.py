@@ -6,7 +6,6 @@ from bs4 import BeautifulSoup
 
 from ferry import config
 
-
 """
 ================================================================
 This script fetches a list of all seasons for the following:

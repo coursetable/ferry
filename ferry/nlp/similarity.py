@@ -1,5 +1,4 @@
 import numpy as np
-
 from gensim import corpora, models, similarities
 from load_json import get_all_courses, get_columns, get_current_courses
 from preprocess import preprocess_sentences
@@ -81,7 +80,11 @@ def query(data, course_num):
     for i, sim in enumerate(sims):
         sims[i] = calc_score(enrollments, listings, course_num, i, sim)
 
-    top3 = sorted(enumerate(sims), key=lambda x: x[1], reverse=True,)[:4]
+    top3 = sorted(
+        enumerate(sims),
+        key=lambda x: x[1],
+        reverse=True,
+    )[:4]
     return [x for x in top3 if x[1] > 0.5 and x[0] != course_num]
 
 

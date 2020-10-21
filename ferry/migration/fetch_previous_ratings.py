@@ -13,7 +13,6 @@ from ferry.includes.rating_processing import CrawlerError
 from ferry.includes.tqdm import tqdm
 from private import extract_db
 
-
 """
 ================================================================
 This script fetches evaluations data from the coursetable.com

@@ -1,7 +1,6 @@
 from collections import defaultdict
 
 import spacy
-
 from load_json import get_columns, get_current_courses
 from preprocess import clean_keyword as clean
 

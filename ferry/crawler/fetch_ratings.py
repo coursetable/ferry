@@ -16,7 +16,6 @@ from ferry.includes.cas import create_session
 from ferry.includes.rating_processing import fetch_course_eval
 from ferry.includes.tqdm import tqdm
 
-
 """
 ================================================================
 This script fetches course evaluation data from the Yale 
