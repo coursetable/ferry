@@ -104,7 +104,6 @@ for season in seasons:
 
         aggregate_season_json.append(course_json)
 
-
     # cache to JSON for entire season
     with open(f"{config.DATA_DIR}/course_json_cache/{season}.json", "w") as f:
         f.write(ujson.dumps(aggregate_season_json, indent=4))

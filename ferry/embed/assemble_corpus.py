@@ -1,21 +1,20 @@
 from pathlib import Path
 
 import pandas as pd
-from tqdm import tqdm
 
 from ferry import config, database
 from ferry.includes.embedding_processing import preprocess_description
+from ferry.includes.tqdm import tqdm
 
+print("Reading courses table from database")
 courses = pd.read_sql_table("courses", con=database.Engine)
 
-# remove future season courses
-courses = courses[courses["season_code"] != 202101]
-
+print("Removing courses without descriptions")
 # remove courses without descriptions
 courses = courses[~courses["description"].isna()]
 courses = courses[~courses["description"].isin(["", "NA", "n/a", "N/A"])]
 
-# sort in order of newest first
+# sort in order of newest first for deduplication (we want to keep the newest ones first)
 courses = courses.sort_values(by="season_code", ascending=False)
 print(f"Total courses: {len(courses)}")
 
