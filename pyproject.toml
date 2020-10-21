@@ -5,20 +5,26 @@ description = ""
 authors = []
 
 [tool.poetry.dependencies]
+# General
 python = "^3.8"
 requests = "^2.23.0"
 tqdm = "^4.46.1"
+
+# Crawling
 unidecode = "^1.1.1"
 python-dateutil = "^2.8.1"
 lxml = "^4.5.1"
-ujson = "^3.0.0"
-PyMySQL = "^0.9.3"
+ujson = "^4.0.1"
 diskcache = "^4.1.0"
+beautifulsoup4 = "^4.9.1"
+
+# Database
 SQLAlchemy = "^1.3.17"
 sqlalchemy_mixins = "^1.2.1"
 textdistance = "^4.2.0"
-beautifulsoup4 = "^4.9.1"
 psycopg2 = "^2.8.5"
+
+# NLP
 nltk = "^3.5"
 spacy = "^2.3.2"
 fasttext = "^0.9.2"
@@ -26,13 +32,12 @@ tables = "^3.6.1"
 pandas = "^1.1.2"
 en_core_web_sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz" } # the English language model for SpaCy
 annoy = "^1.17.0"
-virtualenv = "^20.0.35"
 
 [tool.poetry.dev-dependencies]
 eralchemy = "^1.2.10"
 pylint = "^2.5.3"
-black = "^19.10b0"
-isort = {extras = ["pyproject"], version = "^4.3.21"}
+black = "^20.8b1"
+isort = "^5.6.4"
 poetry-githooks = "^1.1.2"
 umap-learn = "^0.4.6"
 plotly = "^4.11.0"
@@ -43,11 +48,10 @@ include_trailing_comma = true
 force_grid_wrap = 0
 use_parentheses = true
 line_length = 88
-known_first_party = "ferry"
 
 [tool.githooks]
-pre-commit = "poetry run black ./ferry && poetry run isort --recursive ferry"
+pre-commit = "poetry run black ./ferry && poetry run isort ferry"
 
 [build-system]
-requires = ["poetry>=0.12"]
+requires = ["poetry>=1.1.3"]
 build-backend = "poetry.masonry.api"

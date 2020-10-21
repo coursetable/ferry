@@ -2,7 +2,6 @@ import json
 from collections import defaultdict
 from os import listdir
 
-
 """
 with open("data/evals/201903.txt", "r+") as infile:
     current_courses = json.load(infile)

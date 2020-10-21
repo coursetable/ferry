@@ -8,7 +8,6 @@ import sqlalchemy
 from ferry import config, database
 from ferry.includes.tqdm import tqdm
 
-
 """
 This script recomputes and sets all computed fields in the database.
 It also checks the database invariants in the process.
@@ -276,7 +275,11 @@ if __name__ == "__main__":
         description="Generate computed fields and check invariants"
     )
     parser.add_argument(
-        "--items", nargs="+", help="which items to run", default=None, required=False,
+        "--items",
+        nargs="+",
+        help="which items to run",
+        default=None,
+        required=False,
     )
 
     args = parser.parse_args()

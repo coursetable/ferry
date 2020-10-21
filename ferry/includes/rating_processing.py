@@ -297,7 +297,7 @@ def fetch_course_eval(session, crn_code, term_code):
 
     Returns
     -------
-    course_eval: Dictionary with all evaluation data and integer that specifies 
+    course_eval: Dictionary with all evaluation data and integer that specifies
                                whether or not this term has eval data respectively
     """
 

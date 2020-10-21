@@ -70,8 +70,8 @@ def elementwise_sum(a, b):
 
 def category_average(categories):
     """
-    Given a list-like of n category counts, 
-    aggregate and return the average where each 
+    Given a list-like of n category counts,
+    aggregate and return the average where each
     category denotes counts of [1,2,...n]
 
     Parameters

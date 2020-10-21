@@ -511,7 +511,7 @@ def extract_meetings(meeting_html):
         locations are shown while additional ones are collapsed
         to " + (n-1)"
     times_long_summary: string
-        summary of meeting times and locations; computed as 
+        summary of meeting times and locations; computed as
         comma-joined texts from the meeting_html items
     times_by_day: dictionary
         dictionary with keys as days and values consisting of
@@ -725,7 +725,7 @@ def extract_meetings_alternate(course_json):
         locations are shown while additional ones are collapsed
         to " + (n-1)"
     times_long_summary: string
-        summary of meeting times and locations; computed as 
+        summary of meeting times and locations; computed as
         comma-joined texts from the meeting_html items
     times_by_day: dictionary
         dictionary with keys as days and values consisting of
@@ -817,9 +817,9 @@ stat_map = {
 
 def found_items(text, mapping):
     """
-    Given an input string, see if any of the 
+    Given an input string, see if any of the
     keys in the provided mapping are present. If so,
-    for each key return the matched value. (useful for 
+    for each key return the matched value. (useful for
     fetching skills and areas from codes)
 
     Parameters
