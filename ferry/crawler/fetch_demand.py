@@ -14,10 +14,10 @@ from multiprocessing import Pool
 import requests
 import ujson
 from bs4 import BeautifulSoup
-from tqdm import tqdm
 
 from ferry import config
 from ferry.includes.demand_processing import fetch_season_subject_demand, get_dates
+from ferry.includes.tqdm import tqdm
 
 
 def handle_season_subject_demand(args):
