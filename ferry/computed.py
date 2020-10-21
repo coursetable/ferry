@@ -1,7 +1,7 @@
 import argparse
 import collections
 import csv
-from typing import List
+from typing import List, Optional
 
 import sqlalchemy
 
@@ -128,7 +128,7 @@ def evaluation_statistics_computed(session):
     Compute fields: evaluation_statistics.{avg_rating, avg_workload}
     """
 
-    def fetch_ratings(course_id, question_tag) -> List[int]:
+    def fetch_ratings(course_id, question_tag) -> Optional[List[int]]:
         ratings = (
             session.query(database.EvaluationRating)
             .filter(
@@ -147,7 +147,7 @@ def evaluation_statistics_computed(session):
         rating = [sum(x) for x in zip(*data)]
         return rating
 
-    def average_rating(ratings: List[int]) -> float:
+    def average_rating(ratings: List[int]) -> Optional[float]:
         if not ratings or not sum(ratings):
             return None
         agg = 0
@@ -195,7 +195,8 @@ def historial_course_ratings_computed(session):
             return None
         return sum(nums) / len(nums)
 
-    for course in tqdm(session.query(database.Course).all()):  # type: database.Course
+    course: database.Course
+    for course in tqdm(session.query(database.Course).all()):
         # Get all possible course codes for this course.
         codes = [
             x[0]
@@ -207,14 +208,14 @@ def historial_course_ratings_computed(session):
         ]
 
         # Get all course evaluation stats with a matching course code.
-        historical_stats = (
+        historical_stats: List[database.EvaluationStatistics] = (
             session.query(database.EvaluationStatistics)
             .select_from(database.Listing)
             .join(database.Course)
             .join(database.EvaluationStatistics)
             .filter(database.Listing.course_code.in_(codes))
             .order_by(database.Course.season_code.desc())
-        ).all()  # type: List[database.EvaluationStatistics]
+        ).all()
 
         course.average_rating = average(s.avg_rating for s in historical_stats)
         course.average_workload = average(s.avg_workload for s in historical_stats)

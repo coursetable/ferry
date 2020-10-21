@@ -1,5 +1,5 @@
 from contextlib import contextmanager
-from typing import TypeVar
+from typing import Tuple, TypeVar
 
 import ujson
 
@@ -24,7 +24,7 @@ def session_scope(Session, *args, **kwargs):
         session.close()
 
 
-def get_or_create(session, model: M, **kwargs) -> M:
+def get_or_create(session, model: M, **kwargs) -> Tuple[M, bool]:
     """Creates an object or returns the object if exists."""
     # Credit to Kevin @ StackOverflow.
     # From: http://stackoverflow.com/questions/2546207/does-sqlalchemy-have-an-equivalent-of-djangos-get-or-create
