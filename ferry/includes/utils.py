@@ -45,6 +45,17 @@ def merge_overlapping(sets):
     return sets
 
 
+def invert_dict_of_lists(d):
+
+    inverted = {}
+
+    for k, v in d.items():
+        for x in v:
+            inverted[x] = k
+
+    return inverted
+
+
 def elementwise_sum(a, b):
     """
     Given two lists of equal length, return

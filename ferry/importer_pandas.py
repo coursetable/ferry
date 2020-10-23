@@ -4,10 +4,12 @@ from pathlib import Path
 
 import textdistance
 import ujson
+import pandas as pd
 
 from ferry import config, database
-from ferry.includes.tqdm import tqdm
 from ferry.includes.importer import get_all_tables
+from ferry.includes.tqdm import tqdm
+from ferry.includes.utils import merge_overlapping, invert_dict_of_lists
 
 """
 ================================================================
@@ -18,7 +20,62 @@ This script does not recalculate any computed values in the schema.
 """
 
 
-# def import_courses(tables, parsed_course_info):
+def import_courses(tables, parsed_course_info, season):
+
+    cross_listing_groups = merge_overlapping(parsed_course_info["crns"].apply(set))
+    crn_to_temp_id = invert_dict_of_lists(dict(enumerate(cross_listing_groups)))
+    parsed_course_info["temp_course_id"] = (
+        parsed_course_info["crn"].astype(str).apply(crn_to_temp_id.get)
+    )
+
+    listings_update = parsed_course_info.loc[:, ["subject", "number", "section", "crn"]]
+    listings_update["course_code"] = (
+        listings_update["subject"] + " " + listings_update["number"]
+    )
+    listings_update["season_code"] = season
+    listings_update = listings_update.set_index("crn", drop=False)
+    # extract old listings for current season
+    listings_old = tables["listings"].copy(deep=True)
+    listings_old = listings_old[listings_old["season_code"] == season]
+    listings_old = listings_old.set_index("crn", drop=False)
+
+    # combine listings (priority given to new values)
+    listings = listings_update.combine_first(listings_old)
+
+    # now, we need to fill in course_id and listing_id
+
+    courses_update = parsed_course_info[
+        [
+            "areas",
+            "course_home_url",
+            "description",
+            "school",
+            "credits",
+            "extra_info",
+            "locations_summary",
+            "requirements",
+            "times_long_summary",
+            "times_summary",
+            "times_by_day",
+            "short_title",
+            "skills",
+            "syllabus_url",
+            "title",
+        ]
+    ]
+    courses_update["season"] = season
+
+    # collapse courses by cross-listing
+
+    # update listings
+
+    # update courses
+
+    # update professors
+    parsed_course_info["professor_infos"] = parsed_course_info.apply(
+        lambda x: list(zip(x["professors"], x["professor_emails"], x["professor_ids"])),
+        axis=1,
+    )
 
 
 if __name__ == "__main__":
@@ -84,8 +141,7 @@ if __name__ == "__main__":
             )
 
             if parsed_courses_file.is_file():
-                with open(parsed_courses_file, "r") as f:
-                    parsed_course_info = ujson.load(f)
+                parsed_course_info = pd.read_json(parsed_courses_file)
             else:
                 # check migrated courses as a fallback
                 migrated_courses_file = Path(
@@ -98,9 +154,9 @@ if __name__ == "__main__":
                     )
                     continue
                 with open(migrated_courses_file, "r") as f:
-                    parsed_course_info = ujson.load(f)
+                    parsed_course_info = pd.read_json(parsed_courses_file)
 
-            import_courses(tables, parsed_course_info)
+            import_courses(tables, parsed_course_info, season)
 
             #     with database.session_scope(database.Session) as session:
             #         # tqdm.write(f"Importing {course_info}")
