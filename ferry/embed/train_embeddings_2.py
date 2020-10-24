@@ -4,7 +4,6 @@ from gensim import corpora, models, similarities
 
 from ferry import config
 
-
 with open(config.DATA_DIR / "description_embeddings/descriptions_corpus.txt", "r") as f:
     words = [line.split() for line in f]
 
