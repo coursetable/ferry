@@ -2,14 +2,14 @@ import argparse
 import os
 from pathlib import Path
 
+import pandas as pd
 import textdistance
 import ujson
-import pandas as pd
 
 from ferry import config, database
 from ferry.includes.importer import get_all_tables
 from ferry.includes.tqdm import tqdm
-from ferry.includes.utils import merge_overlapping, invert_dict_of_lists
+from ferry.includes.utils import invert_dict_of_lists, merge_overlapping
 
 """
 ================================================================
@@ -34,6 +34,7 @@ def import_courses(tables, parsed_course_info, season):
     )
     listings_update["season_code"] = season
     listings_update = listings_update.set_index("crn", drop=False)
+
     # extract old listings for current season
     listings_old = tables["listings"].copy(deep=True)
     listings_old = listings_old[listings_old["season_code"] == season]
@@ -43,6 +44,15 @@ def import_courses(tables, parsed_course_info, season):
     listings = listings_update.combine_first(listings_old)
 
     # now, we need to fill in course_id and listing_id
+
+    # add new listing IDs based on old ones
+    max_listing_id = max(tables["listings"]["listing_id"])
+    needs_listing_ids = listings.index[listings["listing_id"].isna()]
+    new_listing_ids = pd.Series(
+        range(max_listing_id + 1, max_listing_id + len(needs_listing_ids) + 1),
+        index=needs_listing_ids,
+    )
+    listings["listing_id"].update(new_listing_ids)
 
     courses_update = parsed_course_info[
         [
