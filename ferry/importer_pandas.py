@@ -3,6 +3,7 @@ import os
 from collections import Counter
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import textdistance
 import ujson
@@ -123,6 +124,7 @@ def import_courses(tables, parsed_course_info, season):
     professors_update = courses_professors[["name", "email", "ocs_id"]]
     # assume OCS ID is unique professor identifier within a season
     professors_update = professors_update.drop_duplicates("ocs_id")
+    professors_update = professors_update.reset_index(drop=True)
 
     old_professors = tables["professors"].copy(deep=True)
     names_ids = old_professors.groupby("name")["professor_id"].apply(list).to_dict()
@@ -145,13 +147,27 @@ def import_courses(tables, parsed_course_info, season):
         + professors_update["ocs_matched_ids"]
     )
 
+    # determine professor IDs
     professors_update["matched_ids_aggregate"] = professors_update[
         "matched_ids_aggregate"
-    ].apply(lambda x: x if x == x else [None])
+    ].apply(lambda x: x if len(x) > 0 else [None])
 
-    professors_update["matched_id"] = professors_update["matched_ids_aggregate"].apply(
-        lambda x: Counter(x).most_common(1)[0][0]
+    professors_update["professor_id"] = professors_update[
+        "matched_ids_aggregate"
+    ].apply(lambda x: Counter(x).most_common(1)[0][0])
+
+    # create new professor IDs
+    max_professor_id = max(tables["professors"]["professor_id"])
+    needs_professor_ids = professors_update.index[
+        professors_update["professor_id"].isna()
+    ]
+    new_professor_ids = pd.Series(
+        range(max_professor_id + 1, max_professor_id + len(needs_professor_ids) + 1),
+        index=needs_professor_ids,
+        dtype=np.float64,
     )
+    professors_update["professor_id"].update(new_professor_ids)
+    professors_update["professor_id"] = professors_update["professor_id"].astype(int)
 
 
 if __name__ == "__main__":
