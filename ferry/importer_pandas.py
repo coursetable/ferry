@@ -22,64 +22,84 @@ This script does not recalculate any computed values in the schema.
 
 def import_courses(tables, parsed_course_info, season):
 
+    # get cross-listing groups
     cross_listing_groups = merge_overlapping(parsed_course_info["crns"].apply(set))
+    # set temporary course IDs for cross-listing deduplication
     crn_to_temp_id = invert_dict_of_lists(dict(enumerate(cross_listing_groups)))
     parsed_course_info["temp_course_id"] = (
         parsed_course_info["crn"].astype(str).apply(crn_to_temp_id.get)
     )
+    # specify season
+    parsed_course_info["season_code"] = season
 
-    listings_update = parsed_course_info.loc[:, ["subject", "number", "section", "crn"]]
+    listings_update = parsed_course_info.loc[
+        :, ["subject", "number", "section", "crn", "season_code"]
+    ]
     listings_update["course_code"] = (
         listings_update["subject"] + " " + listings_update["number"]
     )
-    listings_update["season_code"] = season
     listings_update = listings_update.set_index("crn", drop=False)
 
     # extract old listings for current season
-    listings_old = tables["listings"].copy(deep=True)
-    listings_old = listings_old[listings_old["season_code"] == season]
-    listings_old = listings_old.set_index("crn", drop=False)
+    old_listings = tables["listings"].copy(deep=True)
+    old_listings = old_listings[old_listings["season_code"] == season]
+    old_listings = old_listings.set_index("crn", drop=False)
 
     # combine listings (priority given to new values)
-    listings = listings_update.combine_first(listings_old)
-
-    # now, we need to fill in course_id and listing_id
+    listings = listings_update.combine_first(old_listings)
 
     # add new listing IDs based on old ones
     max_listing_id = max(tables["listings"]["listing_id"])
     needs_listing_ids = listings.index[listings["listing_id"].isna()]
     new_listing_ids = pd.Series(
         range(max_listing_id + 1, max_listing_id + len(needs_listing_ids) + 1),
-        index=needs_listing_ids,
+        index=needs_listing_ids.index,
     )
     listings["listing_id"].update(new_listing_ids)
+    listings["listing_id"] = listings["listing_id"].astype(int)
+    listings = listings.reset_index(drop=True)
 
-    courses_update = parsed_course_info[
-        [
-            "areas",
-            "course_home_url",
-            "description",
-            "school",
-            "credits",
-            "extra_info",
-            "locations_summary",
-            "requirements",
-            "times_long_summary",
-            "times_summary",
-            "times_by_day",
-            "short_title",
-            "skills",
-            "syllabus_url",
-            "title",
-        ]
-    ]
-    courses_update["season"] = season
+    # create new courses
+    # we add a new course whenever any of its CRNs is not in listings yet
+    # so we want the CRN groups that do not intersect with the CRNs in listings
+    old_listing_crns = set(old_listings["crn"])
+    new_crn_groups = [x for x in cross_listing_groups if len(x & old_listing_crns) == 0]
+    # since cross-listings should be the same courses, just take the first ones
+    new_crn_groups = [sorted(list(x))[0] for x in new_crn_groups]
 
-    # collapse courses by cross-listing
+    old_courses = tables["courses"].copy(deep=True)
+    old_courses = old_courses[old_courses["season_code"] == season]
 
-    # update listings
+    crn_to_course_id = dict(zip(listings["crn"], listings["course_id"]))
+    parsed_course_info["course_id"] = parsed_course_info["crn"].apply(
+        crn_to_course_id.get
+    )
 
-    # update courses
+    # remove cross-listed courses (prefer ones with existing course ID)
+    parsed_course_info = parsed_course_info.sort_values(
+        by="course_id", na_position="last"
+    )
+    courses = parsed_course_info.drop_duplicates(
+        subset="temp_course_id", keep="first"
+    ).copy(deep=True)
+
+    # assign new course IDs
+    max_course_id = max(tables["courses"]["course_id"])
+    needs_course_ids = courses.index[courses["course_id"].isna()]
+    new_course_ids = pd.Series(
+        range(max_course_id + 1, max_course_id + len(needs_course_ids) + 1),
+        index=needs_course_ids,
+    )
+    courses["course_id"].update(new_course_ids)
+    courses["course_id"] = courses["course_id"].astype(int)
+
+    # update course_ids in listings
+    temp_id_to_course_id = dict(zip(courses["temp_course_id"], courses["course_id"]))
+    new_crn_to_course_id = {
+        int(crn): temp_id_to_course_id[temp_id]
+        for crn, temp_id in crn_to_temp_id.items()
+    }
+    listings["course_id"] = listings["crn"].apply(new_crn_to_course_id.get)
 
     # update professors
     parsed_course_info["professor_infos"] = parsed_course_info.apply(
