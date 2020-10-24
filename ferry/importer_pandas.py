@@ -1,5 +1,6 @@
 import argparse
 import os
+from collections import Counter
 from pathlib import Path
 
 import pandas as pd
@@ -102,9 +103,54 @@ def import_courses(tables, parsed_course_info, season):
     listings["course_id"] = listings["crn"].apply(new_crn_to_course_id.get)
 
     # update professors
-    parsed_course_info["professor_infos"] = parsed_course_info.apply(
+    courses["professor_infos"] = courses.apply(
         lambda x: list(zip(x["professors"], x["professor_emails"], x["professor_ids"])),
         axis=1,
+    )
+
+    # initialize courses-to-professors
+    courses_with_professors = courses[courses["professor_infos"].apply(len) > 0]
+    courses_professors = courses_with_professors.loc[
+        :, ["course_id", "professor_infos"]
+    ].explode("professor_infos")
+
+    # expand professor info tuples to own columns
+    courses_professors[["name", "email", "ocs_id"]] = pd.DataFrame(
+        courses_professors["professor_infos"].tolist(), index=courses_professors.index
+    )
+
+    # get professors only
+    professors_update = courses_professors[["name", "email", "ocs_id"]]
+    # assume OCS ID is unique professor identifier within a season
+    professors_update = professors_update.drop_duplicates("ocs_id")
+
+    old_professors = tables["professors"].copy(deep=True)
+    names_ids = old_professors.groupby("name")["professor_id"].apply(list).to_dict()
+    emails_ids = old_professors.groupby("email")["professor_id"].apply(list).to_dict()
+    ocs_ids = old_professors.groupby("ocs_id")["professor_id"].apply(list).to_dict()
+
+    professors_update["name_matched_ids"] = professors_update["name"].apply(
+        lambda x: names_ids.get(x, [])
+    )
+    professors_update["email_matched_ids"] = professors_update["email"].apply(
+        lambda x: emails_ids.get(x, [])
+    )
+    professors_update["ocs_matched_ids"] = professors_update["ocs_id"].apply(
+        lambda x: ocs_ids.get(x, [])
+    )
+
+    professors_update["matched_ids_aggregate"] = (
+        professors_update["name_matched_ids"]
+        + professors_update["email_matched_ids"]
+        + professors_update["ocs_matched_ids"]
+    )
+
+    professors_update["matched_ids_aggregate"] = professors_update[
+        "matched_ids_aggregate"
+    ].apply(lambda x: x if x == x else [None])
+
+    professors_update["matched_id"] = professors_update["matched_ids_aggregate"].apply(
+        lambda x: Counter(x).most_common(1)[0][0]
     )
 
 
