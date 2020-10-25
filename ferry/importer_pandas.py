@@ -226,6 +226,91 @@ def import_courses(merged_course_info, seasons):
     return courses, listings, course_professors, professors
 
 
+def import_demand(merged_demand_info, listings, seasons):
+
+    demand_statistics = merged_demand_info.copy(deep=True)
+
+    # construct outer season grouping
+    season_code_to_course_id = listings[
+        ["season_code", "course_code", "course_id", "crn"]
+    ].groupby("season_code")
+
+    # construct inner course_code to course_id mapping
+    season_code_to_course_id = season_code_to_course_id.apply(
+        lambda x: x[["course_code", "course_id"]]
+        .groupby("course_code")["course_id"]
+        .apply(list)
+        .to_dict()
+    )
+
+    # cast outer season mapping to dictionary
+    season_code_to_course_id = season_code_to_course_id.to_dict()
+
+    def match_demand_to_courses(row):
+        season_code = int(row["season_code"])
+
+        course_ids = [
+            season_code_to_course_id.get(season_code, {}).get(x, None)
+            for x in row["codes"]
+        ]
+
+        course_ids = [set(x) for x in course_ids if x is not None]
+
+        if course_ids == []:
+            return []
+
+        # union all course IDs
+        course_ids = set.union(*course_ids)
+        course_ids = sorted(list(course_ids))
+
+        return course_ids
+
+    demand_statistics["course_id"] = demand_statistics.apply(
+        match_demand_to_courses, axis=1
+    )
+
+    demand_statistics = demand_statistics.loc[
+        demand_statistics["course_id"].apply(len) > 0, :
+    ]
+
+    def date_to_int(date):
+        month, day = date.split("/")
+
+        month = int(month)
+        day = int(day)
+
+        return month * 100 + day
+
+    def get_most_recent_demand(row):
+
+        sorted_demand = list(row["overall_demand"].items())
+        sorted_demand.sort(key=lambda x: date_to_int(x[0]))
+        latest_demand_date, latest_demand = sorted_demand[-1]
+
+        return [latest_demand, latest_demand_date]
+
+    # get most recent demand date
+    latest = demand_statistics.apply(get_most_recent_demand, axis=1)
+    demand_statistics[["latest_demand", "latest_demand_date"]] = pd.DataFrame(
+        latest.values.tolist()
+    )
+
+    # expand course_id list to one per row
+    demand_statistics = demand_statistics.explode("course_id")
+
+    # rename demand JSON column to match database
+    demand_statistics = demand_statistics.rename(
+        {"overall_demand": "demand"}, axis="columns"
+    )
+
+    # return columns of interest
+    demand_statistics = demand_statistics.loc[
+        :, ["course_id", "latest_demand", "latest_demand_date", "demand"]
+    ]
+
+    return demand_statistics
+
+
 if __name__ == "__main__":
     # allow the user to specify seasons (useful for testing and debugging)
     parser = argparse.ArgumentParser(description="Import classes")
@@ -277,38 +362,35 @@ if __name__ == "__main__":
         demand_seasons = seasons
 
     # Course listings.
-    if args.mode == "courses" or args.mode == "all":
-        print(f"Importing courses for season(s): {course_seasons}")
+    print(f"Importing courses for season(s): {course_seasons.map(int)}")
 
-        merged_course_info = []
+    merged_course_info = []
 
-        for season in course_seasons:
-            # Read the course listings, giving preference to freshly parsed over migrated ones.
-            parsed_courses_file = Path(
-                f"{config.DATA_DIR}/parsed_courses/{season}.json"
+    for season in course_seasons:
+        # Read the course listings, giving preference to freshly parsed over migrated ones.
+        parsed_courses_file = Path(f"{config.DATA_DIR}/parsed_courses/{season}.json")
+
+        if parsed_courses_file.is_file():
+            parsed_course_info = pd.read_json(parsed_courses_file)
+        else:
+            # check migrated courses as a fallback
+            migrated_courses_file = Path(
+                f"{config.DATA_DIR}/migrated_courses/{season}.json"
             )
 
-            if parsed_courses_file.is_file():
-                parsed_course_info = pd.read_json(parsed_courses_file)
-            else:
-                # check migrated courses as a fallback
-                migrated_courses_file = Path(
-                    f"{config.DATA_DIR}/migrated_courses/{season}.json"
+            if not migrated_courses_file.is_file():
+                print(
+                    f"Skipping season {season}: not found in parsed or migrated courses."
                 )
+                continue
+            with open(migrated_courses_file, "r") as f:
+                parsed_course_info = pd.read_json(migrated_courses_file)
 
-                if not migrated_courses_file.is_file():
-                    print(
-                        f"Skipping season {season}: not found in parsed or migrated courses."
-                    )
-                    continue
-                with open(migrated_courses_file, "r") as f:
-                    parsed_course_info = pd.read_json(migrated_courses_file)
+        parsed_course_info["season_code"] = season
+        merged_course_info.append(parsed_course_info)
 
-            parsed_course_info["season_code"] = season
-            merged_course_info.append(parsed_course_info)
-
-        merged_course_info = pd.concat(merged_course_info, axis=0, sort=True)
-        merged_course_info = merged_course_info.reset_index(drop=True)
+    merged_course_info = pd.concat(merged_course_info, axis=0, sort=True)
+    merged_course_info = merged_course_info.reset_index(drop=True)
 
     courses, listings, course_professors, professors = import_courses(
         merged_course_info, course_seasons
@@ -319,63 +401,28 @@ if __name__ == "__main__":
     print(f"Total course-professors: {len(course_professors)}")
     print(f"Total professors: {len(professors)}")
 
-    #     with database.session_scope(database.Session) as session:
-    #         # tqdm.write(f"Importing {course_info}")
-    #         import_course(session, course_info)
+    # Course demand.
 
-    # # Course demand.
-    # if args.mode == "demand" or args.mode == "all":
-    #     # Compute seasons.
+    merged_demand_info = []
 
-    #     print(f"Importing demand stats for seasons: {demand_seasons}")
-    #     for season in demand_seasons:
+    print(f"Importing demand stats for seasons: {demand_seasons.map(int)}")
+    for season in demand_seasons:
 
-    #         demand_file = Path(f"{config.DATA_DIR}/demand_stats/{season}_demand.json")
+        demand_file = Path(f"{config.DATA_DIR}/demand_stats/{season}_demand.json")
 
-    #         if not demand_file.is_file():
-    #             print(f"Skipping season {season}: demand statistics file not found.")
-    #             continue
+        if not demand_file.is_file():
+            print(f"Skipping season {season}: demand statistics file not found.")
+            continue
 
-    #         with open(demand_file, "r") as f:
-    #             demand_stats = ujson.load(f)
+        with open(demand_file, "r") as f:
+            demand_info = pd.read_json(f)
 
-    #         for demand_info in tqdm(
-    #             demand_stats, desc=f"Importing demand stats for {season}"
-    #         ):
-    #             with database.session_scope(database.Session) as session:
-    #                 import_demand(session, season, demand_info)
+        demand_info["season_code"] = season
+        merged_demand_info.append(demand_info)
 
-    # # Course evaluations.
-    # if args.mode == "evals" or args.mode == "all":
-    #     all_evals = [
-    #         filename
-    #         for filename in set(
-    #             os.listdir(f"{config.DATA_DIR}/previous_evals/")
-    #             + os.listdir(f"{config.DATA_DIR}/course_evals/")
-    #         )
-    #         if filename[0] != "."
-    #     ]
+    merged_demand_info = pd.concat(merged_demand_info, axis=0, sort=True)
+    merged_demand_info = merged_demand_info.reset_index(drop=True)
 
-    #     # Filter by seasons.
-    #     if seasons is None:
-    #         evals_to_import = sorted(list(all_evals))
+    demand_statistics = import_demand(merged_demand_info, listings, seasons)
 
-    #     else:
-    #         evals_to_import = sorted(
-    #             filename for filename in all_evals if filename.split("-")[0] in seasons
-    #         )
-
-    #     for filename in tqdm(evals_to_import, desc="Importing evaluations"):
-    #         # Read the evaluation, giving preference to current over previous.
-    #         current_evals_file = Path(f"{config.DATA_DIR}/course_evals/{filename}")
-
-    #         if current_evals_file.is_file():
-    #             with open(current_evals_file, "r") as f:
-    #                 evaluation = ujson.load(f)
-    #         else:
-    #             with open(f"{config.DATA_DIR}/previous_evals/{filename}", "r") as f:
-    #                 evaluation = ujson.load(f)
-
-    #         with database.session_scope(database.Session) as session:
-    #             # tqdm.write(f"Importing evaluation {evaluation}")
-    #             import_evaluation(session, evaluation)
+    print(f"Total demand statistics: {len(demand_statistics)}")
