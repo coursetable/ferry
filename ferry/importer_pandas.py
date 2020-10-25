@@ -362,7 +362,7 @@ if __name__ == "__main__":
         demand_seasons = seasons
 
     # Course listings.
-    print(f"Importing courses for season(s): {course_seasons.map(int)}")
+    print(f"Importing courses for season(s): {', '.join(course_seasons)}")
 
     merged_course_info = []
 
@@ -405,7 +405,7 @@ if __name__ == "__main__":
 
     merged_demand_info = []
 
-    print(f"Importing demand stats for seasons: {demand_seasons.map(int)}")
+    print(f"Importing demand stats for seasons: {', '.join(demand_seasons)}")
     for season in demand_seasons:
 
         demand_file = Path(f"{config.DATA_DIR}/demand_stats/{season}_demand.json")

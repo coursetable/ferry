@@ -1,4 +1,7 @@
 from functools import reduce
+from itertools import combinations
+
+import networkx
 
 
 def merge_overlapping(sets):
@@ -19,34 +22,17 @@ def merge_overlapping(sets):
 
     # deduplicate sets to improve performance
     sets = set([frozenset(x) for x in sets])
-    sets = [set(x) for x in list(sets)]
+    sets = list(sets)
 
-    is_merged = True
+    g = networkx.Graph()
+    for sub_set in sets:
+        for edge in combinations(list(sub_set), 2):
+            g.add_edge(*edge)
 
-    while is_merged:
+    merged = networkx.connected_components(g)
+    merged = [set(x) for x in merged]
 
-        is_merged = False
-        temp_merged = []
-
-        while len(sets) > 0:
-
-            common, rest = sets[0], sets[1:]
-            sets = []
-
-            for x in rest:
-
-                if x.isdisjoint(common):
-                    sets.append(x)
-
-                else:
-                    is_merged = True
-                    common |= x
-
-            temp_merged.append(common)
-
-        sets = temp_merged
-
-    return sets
+    return merged
 
 
 def invert_dict_of_lists(d):
