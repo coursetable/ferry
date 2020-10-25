@@ -1,6 +1,7 @@
 import argparse
 import os
 from collections import Counter
+from itertools import combinations
 from pathlib import Path
 
 import numpy as np
@@ -348,12 +349,16 @@ def import_evaluations(merged_evaluations_info, listings):
     evaluations = evaluations.dropna(subset=["course_id"], axis=0)
     evaluations["course_id"] = evaluations["course_id"].astype(int)
 
+    evaluation_questions = []
+
     # extract evaluation narratives
     evaluation_narratives = evaluations[evaluations["narratives"].apply(len) > 0].copy(
         deep=True
     )
 
-    evaluation_narratives = evaluation_narratives.loc[:, ["course_id", "narratives"]]
+    evaluation_narratives = evaluation_narratives.loc[
+        :, ["course_id", "narratives", "season"]
+    ]
 
     # expand each question into own column
     evaluation_narratives = evaluation_narratives.explode("narratives")
@@ -365,6 +370,13 @@ def import_evaluations(merged_evaluations_info, listings):
     )
     evaluation_narratives["comment"] = evaluation_narratives["narratives"].apply(
         lambda x: x["comments"]
+    )
+
+    evaluation_narratives["is_narrative"] = True
+    evaluation_questions.append(
+        evaluation_narratives.loc[
+            :, ["season", "question_code", "is_narrative", "question_text"]
+        ].copy(deep=True)
     )
 
     # subset and explode
@@ -379,7 +391,7 @@ def import_evaluations(merged_evaluations_info, listings):
         deep=True
     )
 
-    evaluation_ratings = evaluation_ratings.loc[:, ["course_id", "ratings"]]
+    evaluation_ratings = evaluation_ratings.loc[:, ["course_id", "ratings", "season"]]
     evaluation_ratings = evaluation_ratings.explode("ratings")
 
     evaluation_ratings["question_code"] = evaluation_ratings["ratings"].apply(
@@ -395,28 +407,97 @@ def import_evaluations(merged_evaluations_info, listings):
         lambda x: x["data"]
     )
 
+    evaluation_ratings["is_narrative"] = False
+    evaluation_questions.append(
+        evaluation_ratings.loc[
+            :, ["question_code", "is_narrative", "question_text", "options", "season"]
+        ].copy(deep=True)
+    )
+
     # extract evaluation statistics
-    evaluations_statistics = evaluations.loc[
+    evaluation_statistics = evaluations.loc[
         :, ["course_id", "enrollment", "extras"]
     ].copy(deep=True)
-    evaluations_statistics["enrolled"] = evaluations_statistics["enrollment"].apply(
+    evaluation_statistics["enrolled"] = evaluation_statistics["enrollment"].apply(
         lambda x: x["enrolled"]
     )
-    evaluations_statistics["responses"] = evaluations_statistics["enrollment"].apply(
+    evaluation_statistics["responses"] = evaluation_statistics["enrollment"].apply(
         lambda x: x["responses"]
     )
-    evaluations_statistics["declined"] = evaluations_statistics["enrollment"].apply(
+    evaluation_statistics["declined"] = evaluation_statistics["enrollment"].apply(
         lambda x: x["declined"]
     )
-    evaluations_statistics["no_response"] = evaluations_statistics["enrollment"].apply(
+    evaluation_statistics["no_response"] = evaluation_statistics["enrollment"].apply(
         lambda x: x["no response"]
     )
 
-    evaluations_statistics = evaluations_statistics.loc[
+    evaluation_statistics = evaluation_statistics.loc[
         :, ["course_id", "enrolled", "responses", "declined", "no_response", "extras"]
     ]
 
-    return evaluations
+    evaluation_questions = pd.concat(evaluation_questions, axis=0, sort=True)
+    evaluation_questions = evaluation_questions.reset_index(drop=True)
+
+    # consistency checks
+    print("Checking question text consistency")
+    text_by_code = evaluation_questions.groupby("question_code")["question_text"].apply(
+        set
+    )
+
+    # focus on question texts with multiple variations
+    text_by_code = text_by_code[text_by_code.apply(len) > 1]
+    max_diff_texts = max(text_by_code.apply(len))
+    print(f"Maximum number of different texts per question code: {max_diff_texts}")
+
+    def min_pairwise_distance(texts):
+
+        pairs = combinations(texts, 2)
+        distances = [textdistance.levenshtein.distance(*pair) for pair in pairs]
+
+        return max(distances)
+
+    distances_by_code = text_by_code.apply(min_pairwise_distance)
+    max_all_distances = max(distances_by_code)
+
+    print(f"Maximum text divergence within codes: {max_all_distances}")
+
+    if not all(distances_by_code < 32):
+
+        inconsistent_codes = distances_by_code[distances_by_code >= 32]
+        inconsistent_codes = list(inconsistent_codes.index)
+        inconsistent_codes = ", ".join(inconsistent_codes)
+
+        raise database.InvariantError(
+            f"Error: question codes {inconsistent_codes} have divergent texts"
+        )
+
+    print("Checking question type (narrative/rating) consistency")
+    is_narrative_by_code = evaluation_questions.groupby("question_code")[
+        "is_narrative"
+    ].apply(set)
+
+    if not all(is_narrative_by_code.apply(len) == 1):
+        inconsistent_codes = is_narrative_by_code[is_narrative_by_code.apply(len) != 1]
+        inconsistent_codes = list(inconsistent_codes.index)
+        inconsistent_codes = ", ".join(inconsistent_codes)
+        raise database.InvariantError(
+            f"Error: question codes {inconsistent_codes} have both narratives and ratings"
+        )
+
+    # deduplicate questions and keep most recent
+    evaluation_questions = evaluation_questions.sort_values(
+        by="season", ascending=False
+    )
+    evaluation_questions = evaluation_questions.drop_duplicates(
+        subset=["question_code"], keep="first"
+    )
+
+    return (
+        evaluation_narratives,
+        evaluation_ratings,
+        evaluation_statistics,
+        evaluation_questions,
+    )
 
 
 if __name__ == "__main__":
@@ -571,8 +652,8 @@ if __name__ == "__main__":
     merged_evaluations_info = pd.DataFrame(merged_evaluations_info)
 
     (
-        evaluation_questions,
-        evaluation_statistics,
         evaluation_narratives,
         evaluation_ratings,
+        evaluation_statistics,
+        evaluation_questions,
     ) = import_evaluations(merged_evaluations_info, listings)
