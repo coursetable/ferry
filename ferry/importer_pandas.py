@@ -179,7 +179,7 @@ def import_courses(merged_course_info, seasons):
 
         season_professors["matched_ids_aggregate"] = season_professors[
             "matched_ids_aggregate"
-        ].apply(lambda x: x if len(x) > 0 else [None])
+        ].apply(lambda x: x if len(x) > 0 else [np.nan])
 
         professor_ids = season_professors["matched_ids_aggregate"].apply(
             lambda x: Counter(x).most_common(1)[0][0]
@@ -199,9 +199,10 @@ def import_courses(merged_course_info, seasons):
             season_professors, professors
         )
 
-        professors_update = season_professors.drop_duplicates("professors_info").copy(
-            deep=True
-        )
+        professors_update = season_professors.drop_duplicates(
+            subset=["name", "email", "ocs_id"], keep="first"
+        ).copy(deep=True)
+
         new_professors = professors_update[professors_update["professor_id"].isna()]
 
         max_professor_id = max(list(professors["professor_id"]) + [0])
@@ -211,9 +212,17 @@ def import_courses(merged_course_info, seasons):
             dtype=np.float64,
         )
         professors_update["professor_id"].update(new_professor_ids)
+        professors_update["professor_id"] = professors_update["professor_id"].astype(
+            int
+        )
+        professors_update = professors_update.drop_duplicates(
+            subset=["professor_id"], keep="first"
+        )
+        professors_update = professors_update.set_index("professor_id")
 
+        professors = professors.set_index("professor_id", drop=True)
         professors = professors_update[professors.columns].combine_first(professors)
-        professors["professor_id"] = professors["professor_id"].astype(int)
+        professors = professors.reset_index(drop=False)
 
         # second-pass
         season_professors["professor_id"] = match_professors(
@@ -491,6 +500,11 @@ def import_evaluations(merged_evaluations_info, listings):
     evaluation_questions = evaluation_questions.drop_duplicates(
         subset=["question_code"], keep="first"
     )
+
+    print(f"Total evaluation narratives: {len(evaluation_narratives)}")
+    print(f"Total evaluation ratings: {len(evaluation_ratings)}")
+    print(f"Total evaluation statistics: {len(evaluation_statistics)}")
+    print(f"Total evaluation questions: {len(evaluation_questions)}")
 
     return (
         evaluation_narratives,
