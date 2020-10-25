@@ -232,7 +232,7 @@ def import_demand(merged_demand_info, listings, seasons):
 
     # construct outer season grouping
     season_code_to_course_id = listings[
-        ["season_code", "course_code", "course_id", "crn"]
+        ["season_code", "course_code", "course_id"]
     ].groupby("season_code")
 
     # construct inner course_code to course_id mapping
@@ -309,6 +309,46 @@ def import_demand(merged_demand_info, listings, seasons):
     ]
 
     return demand_statistics
+
+
+def import_evaluations(merged_evaluations_info, listings):
+
+    evaluations = merged_evaluations_info.copy(deep=True)
+
+    # construct outer season grouping
+    season_crn_to_course_id = listings[["season_code", "course_id", "crn"]].groupby(
+        "season_code"
+    )
+
+    # construct inner course_code to course_id mapping
+    season_crn_to_course_id = season_crn_to_course_id.apply(
+        lambda x: x[["crn", "course_id"]].set_index("crn")["course_id"].to_dict()
+    )
+
+    # cast outer season mapping to dictionary
+    season_crn_to_course_id = season_crn_to_course_id.to_dict()
+
+    # convert evaluation season and crn types for matching
+    evaluations["season"] = evaluations["season"].astype(int)
+    evaluations["crn_code"] = evaluations["crn_code"].astype(int)
+
+    # find course codes for evaluations
+    evaluations["course_id"] = evaluations.apply(
+        lambda row: season_crn_to_course_id.get(row["season"], {}).get(
+            row["crn_code"], None
+        ),
+        axis=1,
+    )
+
+    # report number of evaluations with missing course codes
+    nan_total = evaluations["course_id"].isna().sum()
+    print(f"Removing {nan_total}/{len(evaluations)} evaluated courses without matches")
+
+    # remove evaluations with missing course codes
+    evaluations = evaluations.dropna(subset=["course_id"], axis=0)
+    evaluations["course_id"] = evaluations["course_id"].astype(int)
+
+    return evaluations
 
 
 if __name__ == "__main__":
@@ -426,3 +466,45 @@ if __name__ == "__main__":
     demand_statistics = import_demand(merged_demand_info, listings, seasons)
 
     print(f"Total demand statistics: {len(demand_statistics)}")
+
+    all_evals = [
+        filename
+        for filename in set(
+            os.listdir(f"{config.DATA_DIR}/previous_evals/")
+            + os.listdir(f"{config.DATA_DIR}/course_evals/")
+        )
+        if filename[0] != "."
+    ]
+
+    # Filter by seasons.
+    if seasons is None:
+        evals_to_import = sorted(list(all_evals))
+
+    else:
+        evals_to_import = sorted(
+            filename for filename in all_evals if filename.split("-")[0] in seasons
+        )
+
+    merged_evaluations_info = []
+
+    for filename in tqdm(evals_to_import, desc="Importing evaluations"):
+        # Read the evaluation, giving preference to current over previous.
+        current_evals_file = Path(f"{config.DATA_DIR}/course_evals/{filename}")
+
+        if current_evals_file.is_file():
+            with open(current_evals_file, "r") as f:
+                evaluation = ujson.load(f)
+        else:
+            with open(f"{config.DATA_DIR}/previous_evals/{filename}", "r") as f:
+                evaluation = ujson.load(f)
+
+        merged_evaluations_info.append(evaluation)
+
+    merged_evaluations_info = pd.DataFrame(merged_evaluations_info)
+
+    (
+        evaluation_questions,
+        evaluation_statistics,
+        evaluation_narratives,
+        evaluation_ratings,
+    ) = import_evaluations(merged_evaluations_info, listings)
