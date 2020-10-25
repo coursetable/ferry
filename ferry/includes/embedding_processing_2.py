@@ -5,7 +5,6 @@ from gensim.models.phrases import Phraser, Phrases
 from nltk.corpus import stopwords, wordnet
 from nltk.stem import WordNetLemmatizer
 from nltk.tag import pos_tag
-
 from unidecode import unidecode
 
 punc = string.punctuation + "“" + "”" + "1234567890"
