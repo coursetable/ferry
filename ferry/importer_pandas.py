@@ -367,6 +367,7 @@ def import_evaluations(merged_evaluations_info, listings):
         lambda x: x["comments"]
     )
 
+    # subset and explode
     evaluation_narratives = evaluation_narratives.loc[
         :, ["course_id", "question_code", "comment"]
     ]
@@ -393,6 +394,27 @@ def import_evaluations(merged_evaluations_info, listings):
     evaluation_ratings["rating"] = evaluation_ratings["ratings"].apply(
         lambda x: x["data"]
     )
+
+    # extract evaluation statistics
+    evaluations_statistics = evaluations.loc[
+        :, ["course_id", "enrollment", "extras"]
+    ].copy(deep=True)
+    evaluations_statistics["enrolled"] = evaluations_statistics["enrollment"].apply(
+        lambda x: x["enrolled"]
+    )
+    evaluations_statistics["responses"] = evaluations_statistics["enrollment"].apply(
+        lambda x: x["responses"]
+    )
+    evaluations_statistics["declined"] = evaluations_statistics["enrollment"].apply(
+        lambda x: x["declined"]
+    )
+    evaluations_statistics["no_response"] = evaluations_statistics["enrollment"].apply(
+        lambda x: x["no response"]
+    )
+
+    evaluations_statistics = evaluations_statistics.loc[
+        :, ["course_id", "enrolled", "responses", "declined", "no_response", "extras"]
+    ]
 
     return evaluations
 
