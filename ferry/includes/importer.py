@@ -1,25 +1,52 @@
 from collections import Counter
 from itertools import combinations
+from typing import List, Dict
 
 import numpy as np
 import pandas as pd
 import textdistance
 from sqlalchemy import inspect
 
-
 from ferry import config, database
-
 from ferry.includes.utils import invert_dict_of_lists, merge_overlapping
 
 
 def get_table(table: str):
+    """
+    Read one of the tables from the database
+    into Pandas dataframe (assuming SQL storage format)
+
+    Parameters
+    ----------
+    table: name of table to retrieve
+
+    Returns
+    -------
+    Pandas DataFrame
+
+    """
+
     return pd.read_sql_table(table, con=database.Engine)
 
 
-def get_all_tables(select_schemas: list):
+def get_all_tables(select_schemas: List[str]) -> Dict:
+    """
+    Get all the tables under given schemas as a dictionary
+    of Pandas dataframes
+
+    Parameters
+    ----------
+    select_schemas: schemas to retrieve tables for
+
+    Returns
+    -------
+    Dictionary of Pandas DataFrames
+
+    """
 
     tables = []
 
+    # inspect and get schema names
     inspector = inspect(database.Engine)
     schemas = inspector.get_schema_names()
 
@@ -36,7 +63,21 @@ def get_all_tables(select_schemas: list):
     return tables
 
 
-def import_courses(merged_course_info, seasons):
+def import_courses(merged_course_info, seasons: List[str]):
+    """
+    Import courses into Pandas DataFrames.
+
+    Parameters
+    ----------
+    merged_course_info: Pandas DataFrame of raw course information
+    from JSON files
+    seasons: list of seasons for sorting purposes
+
+    Returns
+    -------
+    courses, listings, course_professors, professors
+
+    """
 
     # seasons must be sorted in ascending order
 
@@ -254,7 +295,21 @@ def import_courses(merged_course_info, seasons):
     return courses, listings, course_professors, professors
 
 
-def import_demand(merged_demand_info, listings, seasons):
+def import_demand(merged_demand_info, listings, seasons: List[str]):
+    """
+    Import demand statistics into Pandas DataFrame.
+
+    Parameters
+    ----------
+    merged_demand_info: Pandas DataFrame of raw demand information
+    from JSON files
+    listings: listings DataFrame from import_courses
+
+    Returns
+    -------
+    demand_statistics
+
+    """
 
     demand_statistics = merged_demand_info.copy(deep=True)
 
@@ -342,6 +397,23 @@ def import_demand(merged_demand_info, listings, seasons):
 
 
 def import_evaluations(merged_evaluations_info, listings):
+    """
+    Import course evaluations into Pandas DataFrame.
+
+    Parameters
+    ----------
+    merged_evaluations_info: Pandas DataFrame of raw evaluation
+    information from JSON files
+    listings: listings DataFrame from import_courses
+
+    Returns
+    -------
+    evaluation_narratives,
+    evaluation_ratings,
+    evaluation_statistics,
+    evaluation_questions
+
+    """
 
     evaluations = merged_evaluations_info.copy(deep=True)
 

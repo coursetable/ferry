@@ -1,10 +1,11 @@
 from functools import reduce
 from itertools import combinations
+from typing import List, Set, Dict
 
 import networkx
 
 
-def merge_overlapping(sets):
+def merge_overlapping(sets: List[Set]) -> List:
     """
     Given a list of sets, merge sets with
     a nonempty intersection until all sets
@@ -35,7 +36,22 @@ def merge_overlapping(sets):
     return merged
 
 
-def invert_dict_of_lists(d):
+def invert_dict_of_lists(d: Dict) -> Dict:
+    """
+    Given a dictionary mapping x -> [a, b, c],
+    invert such that it now maps all a, b, c -> x.
+    If same value in multiple keys, then inverted
+    dictionary overwrites arbitrarily.
+
+    Parameters
+    ----------
+    d: input dictionary of lists
+
+    Returns
+    -------
+    inverted: output inverted dictionary
+
+    """
 
     inverted = {}
 
@@ -46,7 +62,7 @@ def invert_dict_of_lists(d):
     return inverted
 
 
-def elementwise_sum(a, b):
+def elementwise_sum(a: List, b: List) -> List:
     """
     Given two lists of equal length, return
     a list of elementwise sums
@@ -69,7 +85,7 @@ def elementwise_sum(a, b):
     return [sum(x) for x in zip(a, b)]
 
 
-def category_average(categories):
+def category_average(categories: List):
     """
     Given a list-like of n category counts,
     aggregate and return the average where each
@@ -77,7 +93,7 @@ def category_average(categories):
 
     Parameters
     ----------
-    categories: list-like of lists
+    categories: list-like
         categories
 
     Returns
