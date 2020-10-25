@@ -348,6 +348,31 @@ def import_evaluations(merged_evaluations_info, listings):
     evaluations = evaluations.dropna(subset=["course_id"], axis=0)
     evaluations["course_id"] = evaluations["course_id"].astype(int)
 
+    # extract evaluation narratives
+    evaluation_narratives = evaluations[evaluations["narratives"].apply(len) > 0].copy(
+        deep=True
+    )
+
+    evaluation_narratives = evaluation_narratives.loc[:, ["course_id", "narratives"]]
+
+    # expand each question into own column
+    evaluation_narratives = evaluation_narratives.explode("narratives")
+    evaluation_narratives["question_code"] = evaluation_narratives["narratives"].apply(
+        lambda x: x["question_id"]
+    )
+    evaluation_narratives["question_text"] = evaluation_narratives["narratives"].apply(
+        lambda x: x["question_text"]
+    )
+    evaluation_narratives["comment"] = evaluation_narratives["narratives"].apply(
+        lambda x: x["comments"]
+    )
+
+    evaluation_narratives = evaluation_narratives.loc[
+        :, ["course_id", "question_code", "comment"]
+    ]
+    evaluation_narratives = evaluation_narratives.explode("comment")
+    evaluation_narratives = evaluation_narratives.reset_index(drop=True)
+
     return evaluations
 
 
