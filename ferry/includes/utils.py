@@ -17,6 +17,10 @@ def merge_overlapping(sets):
 
     """
 
+    # deduplicate sets to improve performance
+    sets = set([frozenset(x) for x in sets])
+    sets = [set(x) for x in list(sets)]
+
     is_merged = True
 
     while is_merged:

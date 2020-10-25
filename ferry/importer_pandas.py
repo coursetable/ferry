@@ -22,152 +22,208 @@ This script does not recalculate any computed values in the schema.
 """
 
 
-def import_courses(tables, parsed_course_info, season):
+def import_courses(merged_course_info, seasons):
 
-    # get cross-listing groups
-    cross_listing_groups = merge_overlapping(parsed_course_info["crns"].apply(set))
-    # set temporary course IDs for cross-listing deduplication
-    crn_to_temp_id = invert_dict_of_lists(dict(enumerate(cross_listing_groups)))
-    parsed_course_info["temp_course_id"] = (
-        parsed_course_info["crn"].astype(str).apply(crn_to_temp_id.get)
+    # seasons must be sorted in ascending order
+
+    print("Aggregating cross-listings")
+    merged_course_info["season_code"] = merged_course_info["season_code"].astype(int)
+    merged_course_info["crn"] = merged_course_info["crn"].astype(int)
+    merged_course_info["crns"] = merged_course_info["crns"].apply(lambda x: map(int, x))
+
+    # group CRNs by season for cross-listing deduplication
+    crns_by_season = merged_course_info.groupby("season_code")["crns"].apply(list)
+    # convert CRN groups to sets for resolution
+    crns_by_season = crns_by_season.apply(lambda x: [set(y) for y in x])
+    # resolve overlapping CRN sets
+    crn_groups_by_season = crns_by_season.apply(merge_overlapping)
+
+    print("Mapping out cross-listings")
+    # map CRN groups to IDs
+    temp_course_ids_by_season = crns_by_season.apply(
+        lambda x: invert_dict_of_lists(dict(enumerate(x)))
     )
-    # specify season
-    parsed_course_info["season_code"] = season
+    temp_course_ids_by_season = temp_course_ids_by_season.to_dict()
 
-    listings_update = parsed_course_info.loc[
-        :, ["subject", "number", "section", "crn", "season_code"]
+    # assign season-specific ID based on CRN group IDs
+    merged_course_info["season_course_id"] = merged_course_info.apply(
+        lambda row: temp_course_ids_by_season[row["season_code"]][row["crn"]], axis=1
+    )
+    # temporary string-based unique course identifier
+    merged_course_info["temp_course_id"] = merged_course_info.apply(
+        lambda x: f"{x['season_code']}_{x['season_course_id']}", axis=1
+    )
+
+    print("Creating courses table")
+    # initialize courses table
+    courses = merged_course_info.drop_duplicates(subset="temp_course_id").copy(
+        deep=True
+    )
+    courses["course_id"] = range(len(courses))
+
+    print("Creating listings table")
+    temp_to_course_id = dict(zip(courses["temp_course_id"], courses["course_id"]))
+
+    # initialize listings table
+    listings = merged_course_info.copy(deep=True)
+    listings["listing_id"] = range(len(listings))
+    listings["course_id"] = listings["temp_course_id"].apply(temp_to_course_id.get)
+
+    print("Creating professors table")
+    # initialize professors table
+    professors_prep = courses.loc[
+        :,
+        ["season_code", "course_id", "professors", "professor_emails", "professor_ids"],
     ]
-    listings_update["course_code"] = (
-        listings_update["subject"] + " " + listings_update["number"]
+
+    print("Resolving professor attributes")
+    professors_prep["professors"] = professors_prep["professors"].apply(
+        lambda x: x if x == x else []
     )
-    listings_update = listings_update.set_index("crn", drop=False)
-
-    # extract old listings for current season
-    old_listings = tables["listings"].copy(deep=True)
-    old_listings = old_listings[old_listings["season_code"] == season]
-    old_listings = old_listings.set_index("crn", drop=False)
-
-    # combine listings (priority given to new values)
-    listings = listings_update.combine_first(old_listings)
-
-    # add new listing IDs based on old ones
-    max_listing_id = max(tables["listings"]["listing_id"])
-    needs_listing_ids = listings.index[listings["listing_id"].isna()]
-    new_listing_ids = pd.Series(
-        range(max_listing_id + 1, max_listing_id + len(needs_listing_ids) + 1),
-        index=needs_listing_ids.index,
+    professors_prep["professor_emails"] = professors_prep["professor_emails"].apply(
+        lambda x: x if x == x else []
     )
-    listings["listing_id"].update(new_listing_ids)
-    listings["listing_id"] = listings["listing_id"].astype(int)
-    listings = listings.reset_index(drop=True)
-
-    # create new courses
-    # we add a new course whenever any of its CRNs is not in listings yet
-    # so we want the CRN groups that do not intersect with the CRNs in listings
-    old_listing_crns = set(old_listings["crn"])
-    new_crn_groups = [x for x in cross_listing_groups if len(x & old_listing_crns) == 0]
-    # since cross-listings should be the same courses, just take the first ones
-    new_crn_groups = [sorted(list(x))[0] for x in new_crn_groups]
-
-    old_courses = tables["courses"].copy(deep=True)
-    old_courses = old_courses[old_courses["season_code"] == season]
-
-    crn_to_course_id = dict(zip(listings["crn"], listings["course_id"]))
-    parsed_course_info["course_id"] = parsed_course_info["crn"].apply(
-        crn_to_course_id.get
+    professors_prep["professor_ids"] = professors_prep["professor_ids"].apply(
+        lambda x: x if x == x else []
     )
 
-    # remove cross-listed courses (prefer ones with existing course ID)
-    parsed_course_info = parsed_course_info.sort_values(
-        by="course_id", na_position="last"
-    )
-    courses = parsed_course_info.drop_duplicates(
-        subset="temp_course_id", keep="first"
-    ).copy(deep=True)
+    professors_prep["professors_info"] = professors_prep[
+        ["professors", "professor_emails", "professor_ids"]
+    ].to_dict(orient="split")["data"]
 
-    # assign new course IDs
-    max_course_id = max(tables["courses"]["course_id"])
-    needs_course_ids = courses.index[courses["course_id"].isna()]
-    new_course_ids = pd.Series(
-        range(max_course_id + 1, max_course_id + len(needs_course_ids) + 1),
-        index=needs_course_ids,
-    )
-    courses["course_id"].update(new_course_ids)
-    courses["course_id"] = courses["course_id"].astype(int)
+    def zip_professors_info(professors_info):
 
-    # update course_ids in listings
-    temp_id_to_course_id = dict(zip(courses["temp_course_id"], courses["course_id"]))
-    new_crn_to_course_id = {
-        int(crn): temp_id_to_course_id[temp_id]
-        for crn, temp_id in crn_to_temp_id.items()
-    }
-    listings["course_id"] = listings["crn"].apply(new_crn_to_course_id.get)
+        names, emails, ocs_ids = professors_info
 
-    # update professors
-    courses["professor_infos"] = courses.apply(
-        lambda x: list(zip(x["professors"], x["professor_emails"], x["professor_ids"])),
-        axis=1,
+        names = list(filter(lambda x: x != "", names))
+        emails = list(filter(lambda x: x != "", emails))
+        ocs_ids = list(filter(lambda x: x != "", ocs_ids))
+
+        if len(names) == 0:
+            return []
+
+        # account for inconsistent lengths before zipping
+        if len(emails) != len(names):
+            emails = [None] * len(names)
+        if len(ocs_ids) != len(names):
+            ocs_ids = [None] * len(names)
+
+        return list(zip(names, emails, ocs_ids))
+
+    professors_prep["professors_info"] = professors_prep["professors_info"].apply(
+        zip_professors_info
     )
 
-    # initialize courses-to-professors
-    courses_with_professors = courses[courses["professor_infos"].apply(len) > 0]
-    courses_professors = courses_with_professors.loc[
-        :, ["course_id", "professor_infos"]
-    ].explode("professor_infos")
+    professors_prep = professors_prep[professors_prep["professors_info"].apply(len) > 0]
 
-    # expand professor info tuples to own columns
-    courses_professors[["name", "email", "ocs_id"]] = pd.DataFrame(
-        courses_professors["professor_infos"].tolist(), index=courses_professors.index
+    # expand courses with multiple professors
+    professors_prep = professors_prep.loc[
+        :, ["season_code", "course_id", "professors_info"]
+    ].explode("professors_info")
+    professors_prep = professors_prep.reset_index(drop=True)
+
+    # expand professor info columns
+    professors_prep[["name", "email", "ocs_id"]] = pd.DataFrame(
+        professors_prep["professors_info"].tolist(), index=professors_prep.index
     )
 
-    # get professors only
-    professors_update = courses_professors[["name", "email", "ocs_id"]]
-    # assume OCS ID is unique professor identifier within a season
-    professors_update = professors_update.drop_duplicates("ocs_id")
-    professors_update = professors_update.reset_index(drop=True)
+    print("Constructing professors table in chronological order")
+    professors = pd.DataFrame(columns=["professor_id", "name", "email", "ocs_id"])
 
-    old_professors = tables["professors"].copy(deep=True)
-    names_ids = old_professors.groupby("name")["professor_id"].apply(list).to_dict()
-    emails_ids = old_professors.groupby("email")["professor_id"].apply(list).to_dict()
-    ocs_ids = old_professors.groupby("ocs_id")["professor_id"].apply(list).to_dict()
+    professors_by_season = professors_prep.groupby("season_code")
 
-    professors_update["name_matched_ids"] = professors_update["name"].apply(
-        lambda x: names_ids.get(x, [])
-    )
-    professors_update["email_matched_ids"] = professors_update["email"].apply(
-        lambda x: emails_ids.get(x, [])
-    )
-    professors_update["ocs_matched_ids"] = professors_update["ocs_id"].apply(
-        lambda x: ocs_ids.get(x, [])
-    )
+    def get_professor_identifiers(professors):
 
-    professors_update["matched_ids_aggregate"] = (
-        professors_update["name_matched_ids"]
-        + professors_update["email_matched_ids"]
-        + professors_update["ocs_matched_ids"]
-    )
+        names_ids = (
+            professors.dropna(subset=["name"])
+            .groupby("name")["professor_id"]
+            .apply(list)
+            .to_dict()
+        )
+        emails_ids = (
+            professors.dropna(subset=["email"])
+            .groupby("email")["professor_id"]
+            .apply(list)
+            .to_dict()
+        )
+        ocs_ids = (
+            professors.dropna(subset=["ocs_id"])
+            .groupby("ocs_id")["professor_id"]
+            .apply(list)
+            .to_dict()
+        )
 
-    # determine professor IDs
-    professors_update["matched_ids_aggregate"] = professors_update[
-        "matched_ids_aggregate"
-    ].apply(lambda x: x if len(x) > 0 else [None])
+        return names_ids, emails_ids, ocs_ids
 
-    professors_update["professor_id"] = professors_update[
-        "matched_ids_aggregate"
-    ].apply(lambda x: Counter(x).most_common(1)[0][0])
+    def match_professors(season_professors, professors):
 
-    # create new professor IDs
-    max_professor_id = max(tables["professors"]["professor_id"])
-    needs_professor_ids = professors_update.index[
-        professors_update["professor_id"].isna()
-    ]
-    new_professor_ids = pd.Series(
-        range(max_professor_id + 1, max_professor_id + len(needs_professor_ids) + 1),
-        index=needs_professor_ids,
-        dtype=np.float64,
-    )
-    professors_update["professor_id"].update(new_professor_ids)
-    professors_update["professor_id"] = professors_update["professor_id"].astype(int)
+        names_ids, emails_ids, ocs_ids = get_professor_identifiers(professors)
+
+        # get ID matches by field
+        season_professors["name_matched_ids"] = season_professors["name"].apply(
+            lambda x: names_ids.get(x, [])
+        )
+        season_professors["email_matched_ids"] = season_professors["email"].apply(
+            lambda x: emails_ids.get(x, [])
+        )
+        season_professors["ocs_matched_ids"] = season_professors["ocs_id"].apply(
+            lambda x: ocs_ids.get(x, [])
+        )
+
+        season_professors["matched_ids_aggregate"] = (
+            season_professors["name_matched_ids"]
+            + season_professors["email_matched_ids"]
+            + season_professors["ocs_matched_ids"]
+        )
+
+        season_professors["matched_ids_aggregate"] = season_professors[
+            "matched_ids_aggregate"
+        ].apply(lambda x: x if len(x) > 0 else [None])
+
+        professor_ids = season_professors["matched_ids_aggregate"].apply(
+            lambda x: Counter(x).most_common(1)[0][0]
+        )
+
+        return professor_ids
+
+    course_professors = []
+
+    # build professors table in order of seasons
+    for season in seasons:
+
+        season_professors = professors_by_season.get_group(int(season)).copy(deep=True)
+
+        # first-pass
+        season_professors["professor_id"] = match_professors(
+            season_professors, professors
+        )
+
+        professors_update = season_professors.drop_duplicates("professors_info").copy(
+            deep=True
+        )
+        new_professors = professors_update[professors_update["professor_id"].isna()]
+
+        max_professor_id = max(list(professors["professor_id"]) + [0])
+        new_professor_ids = pd.Series(
+            range(max_professor_id + 1, max_professor_id + len(new_professors) + 1),
+            index=new_professors.index,
+            dtype=np.float64,
+        )
+        professors_update["professor_id"].update(new_professor_ids)
+
+        professors = professors_update[professors.columns].combine_first(professors)
+        professors["professor_id"] = professors["professor_id"].astype(int)
+
+        # second-pass
+        season_professors["professor_id"] = match_professors(
+            season_professors, professors
+        )
+
+        course_professors.append(season_professors[["course_id", "professor_id"]])
+
+    course_professors = pd.concat(course_professors, axis=0, sort=True)
+
+    return courses, listings, course_professors, professors
 
 
 if __name__ == "__main__":
@@ -192,9 +248,6 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     seasons = args.seasons
-
-    # load all tables into Pandas
-    tables = get_all_tables(["public"])
 
     # Course information.
     if seasons is None:
@@ -226,6 +279,9 @@ if __name__ == "__main__":
     # Course listings.
     if args.mode == "courses" or args.mode == "all":
         print(f"Importing courses for season(s): {course_seasons}")
+
+        merged_course_info = []
+
         for season in course_seasons:
             # Read the course listings, giving preference to freshly parsed over migrated ones.
             parsed_courses_file = Path(
@@ -246,13 +302,26 @@ if __name__ == "__main__":
                     )
                     continue
                 with open(migrated_courses_file, "r") as f:
-                    parsed_course_info = pd.read_json(parsed_courses_file)
+                    parsed_course_info = pd.read_json(migrated_courses_file)
 
-            import_courses(tables, parsed_course_info, season)
+            parsed_course_info["season_code"] = season
+            merged_course_info.append(parsed_course_info)
 
-            #     with database.session_scope(database.Session) as session:
-            #         # tqdm.write(f"Importing {course_info}")
-            #         import_course(session, course_info)
+        merged_course_info = pd.concat(merged_course_info, axis=0, sort=True)
+        merged_course_info = merged_course_info.reset_index(drop=True)
+
+    courses, listings, course_professors, professors = import_courses(
+        merged_course_info, course_seasons
+    )
+
+    print(f"Total courses: {len(courses)}")
+    print(f"Total listings: {len(listings)}")
+    print(f"Total course-professors: {len(course_professors)}")
+    print(f"Total professors: {len(professors)}")
+
+    #     with database.session_scope(database.Session) as session:
+    #         # tqdm.write(f"Importing {course_info}")
+    #         import_course(session, course_info)
 
     # # Course demand.
     # if args.mode == "demand" or args.mode == "all":
