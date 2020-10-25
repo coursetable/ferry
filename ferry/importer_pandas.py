@@ -373,6 +373,27 @@ def import_evaluations(merged_evaluations_info, listings):
     evaluation_narratives = evaluation_narratives.explode("comment")
     evaluation_narratives = evaluation_narratives.reset_index(drop=True)
 
+    # extract evaluation ratings
+    evaluation_ratings = evaluations[evaluations["ratings"].apply(len) > 0].copy(
+        deep=True
+    )
+
+    evaluation_ratings = evaluation_ratings.loc[:, ["course_id", "ratings"]]
+    evaluation_ratings = evaluation_ratings.explode("ratings")
+
+    evaluation_ratings["question_code"] = evaluation_ratings["ratings"].apply(
+        lambda x: x["question_id"]
+    )
+    evaluation_ratings["question_text"] = evaluation_ratings["ratings"].apply(
+        lambda x: x["question_text"]
+    )
+    evaluation_ratings["options"] = evaluation_ratings["ratings"].apply(
+        lambda x: x["options"]
+    )
+    evaluation_ratings["rating"] = evaluation_ratings["ratings"].apply(
+        lambda x: x["data"]
+    )
+
     return evaluations
 
 
