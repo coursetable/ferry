@@ -1,6 +1,6 @@
 from functools import reduce
 from itertools import combinations
-from typing import List, Set, Dict
+from typing import Dict, List, Set
 
 import networkx
 

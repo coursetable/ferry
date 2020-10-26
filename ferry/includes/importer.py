@@ -1,6 +1,6 @@
 from collections import Counter
 from itertools import combinations
-from typing import List, Dict
+from typing import Dict, List
 
 import numpy as np
 import pandas as pd
@@ -441,6 +441,9 @@ def import_evaluations(merged_evaluations_info, listings):
         ),
         axis=1,
     )
+
+    # remove cross-listed evaluations arbitrarily
+    evaluations = evaluations.drop_duplicates(subset=["course_id"], keep="first")
 
     # report number of evaluations with missing course codes
     nan_total = evaluations["course_id"].isna().sum()
