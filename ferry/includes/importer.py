@@ -442,9 +442,6 @@ def import_evaluations(merged_evaluations_info, listings):
         axis=1,
     )
 
-    # remove cross-listed evaluations arbitrarily
-    evaluations = evaluations.drop_duplicates(subset=["course_id"], keep="first")
-
     # report number of evaluations with missing course codes
     nan_total = evaluations["course_id"].isna().sum()
     print(f"Removing {nan_total}/{len(evaluations)} evaluated courses without matches")
@@ -474,6 +471,11 @@ def import_evaluations(merged_evaluations_info, listings):
     )
     evaluation_narratives["comment"] = evaluation_narratives["narratives"].apply(
         lambda x: x["comments"]
+    )
+
+    # drop duplicate course_id-question_code combinations (cross-listings)
+    evaluation_narratives = evaluation_narratives.drop_duplicates(
+        ["course_id", "question_code"], keep="first"
     )
 
     evaluation_narratives["is_narrative"] = True
@@ -509,6 +511,11 @@ def import_evaluations(merged_evaluations_info, listings):
     )
     evaluation_ratings["rating"] = evaluation_ratings["ratings"].apply(
         lambda x: x["data"]
+    )
+
+    # drop duplicate course_id-question_code combinations (cross-listings)
+    evaluation_ratings = evaluation_ratings.drop_duplicates(
+        ["course_id", "question_code"], keep="first"
     )
 
     evaluation_ratings["is_narrative"] = False
