@@ -94,7 +94,7 @@ def import_courses(merged_course_info, seasons: List[str]):
     crn_groups_by_season = crns_by_season.apply(merge_overlapping)
 
     print("Mapping out cross-listings")
-    # map CRN groups to IDs
+    # map CRN groups to temporary IDs within each season
     temp_course_ids_by_season = crns_by_season.apply(
         lambda x: invert_dict_of_lists(dict(enumerate(x)))
     )
@@ -114,9 +114,11 @@ def import_courses(merged_course_info, seasons: List[str]):
     courses = merged_course_info.drop_duplicates(subset="temp_course_id").copy(
         deep=True
     )
+    # global course IDs
     courses["course_id"] = range(len(courses))
 
     print("Creating listings table")
+    # map temporary season-specific IDs to global course IDs
     temp_to_course_id = dict(zip(courses["temp_course_id"], courses["course_id"]))
 
     # initialize listings table
@@ -132,6 +134,7 @@ def import_courses(merged_course_info, seasons: List[str]):
     ]
 
     print("Resolving professor attributes")
+    # set default empty value for exploding later on
     professors_prep["professors"] = professors_prep["professors"].apply(
         lambda x: x if x == x else []
     )
@@ -142,18 +145,25 @@ def import_courses(merged_course_info, seasons: List[str]):
         lambda x: x if x == x else []
     )
 
+    # reshape professor attributes array
     professors_prep["professors_info"] = professors_prep[
         ["professors", "professor_emails", "professor_ids"]
     ].to_dict(orient="split")["data"]
 
     def zip_professors_info(professors_info):
+        # helper function to convert professors_info
+        # from [[names...],[emails...],[ocs_ids...]] format
+        # to [[name,email,ocs_id]...] format
 
         names, emails, ocs_ids = professors_info
 
+        # exclude empty attributes
         names = list(filter(lambda x: x != "", names))
         emails = list(filter(lambda x: x != "", emails))
         ocs_ids = list(filter(lambda x: x != "", ocs_ids))
 
+        # if no names, return empty regardless of others
+        # (professors need to be named)
         if len(names) == 0:
             return []
 
@@ -169,6 +179,7 @@ def import_courses(merged_course_info, seasons: List[str]):
         zip_professors_info
     )
 
+    # exclude instances with empty/bad professor infos
     professors_prep = professors_prep[professors_prep["professors_info"].apply(len) > 0]
 
     # expand courses with multiple professors
@@ -188,6 +199,8 @@ def import_courses(merged_course_info, seasons: List[str]):
     professors_by_season = professors_prep.groupby("season_code")
 
     def get_professor_identifiers(professors):
+        # return dictionaries mapping professors to
+        # professor_id primary keys by names, emails, and ocs_ids
 
         names_ids = (
             professors.dropna(subset=["name"])
@@ -211,6 +224,7 @@ def import_courses(merged_course_info, seasons: List[str]):
         return names_ids, emails_ids, ocs_ids
 
     def match_professors(season_professors, professors):
+        # match professors within a season to main professors
 
         names_ids, emails_ids, ocs_ids = get_professor_identifiers(professors)
 
@@ -225,22 +239,27 @@ def import_courses(merged_course_info, seasons: List[str]):
             lambda x: ocs_ids.get(x, [])
         )
 
+        # aggregate found IDs
         season_professors["matched_ids_aggregate"] = (
             season_professors["name_matched_ids"]
             + season_professors["email_matched_ids"]
             + season_professors["ocs_matched_ids"]
         )
 
+        # aggregate ID matches
         season_professors["matched_ids_aggregate"] = season_professors[
             "matched_ids_aggregate"
         ].apply(lambda x: x if len(x) > 0 else [np.nan])
 
+        # use the most-common matched ID
         professor_ids = season_professors["matched_ids_aggregate"].apply(
             lambda x: Counter(x).most_common(1)[0][0]
         )
 
         return professor_ids
 
+    # course-professors junction table
+    # store as list of DataFrames before concatenation
     course_professors = []
 
     # build professors table in order of seasons
@@ -269,8 +288,8 @@ def import_courses(merged_course_info, seasons: List[str]):
         professors_update["professor_id"] = professors_update["professor_id"].astype(
             int
         )
-        professors_update = professors_update.drop_duplicates(
-            subset=["professor_id"], keep="first"
+        professors_update.drop_duplicates(
+            subset=["professor_id"], keep="first", inplace=True
         )
         professors_update = professors_update.set_index("professor_id")
 
@@ -287,6 +306,7 @@ def import_courses(merged_course_info, seasons: List[str]):
 
     course_professors = pd.concat(course_professors, axis=0, sort=True)
 
+    print("[SUMMARY]")
     print(f"Total courses: {len(courses)}")
     print(f"Total listings: {len(listings)}")
     print(f"Total course-professors: {len(course_professors)}")
@@ -373,9 +393,8 @@ def import_demand(merged_demand_info, listings, seasons: List[str]):
         return [latest_demand, latest_demand_date]
 
     # get most recent demand date
-    latest = demand_statistics.apply(get_most_recent_demand, axis=1)
-    demand_statistics[["latest_demand", "latest_demand_date"]] = pd.DataFrame(
-        latest.values.tolist()
+    demand_statistics["latest_demand"], demand_statistics["latest_demand_date"] = zip(
+        *demand_statistics.apply(get_most_recent_demand, axis=1)
     )
 
     # expand course_id list to one per row
@@ -391,6 +410,7 @@ def import_demand(merged_demand_info, listings, seasons: List[str]):
         :, ["course_id", "latest_demand", "latest_demand_date", "demand"]
     ]
 
+    print("[SUMMARY]")
     print(f"Total demand statistics: {len(demand_statistics)}")
 
     return demand_statistics
@@ -421,19 +441,16 @@ def import_evaluations(merged_evaluations_info, listings):
     season_crn_to_course_id = listings[["season_code", "course_id", "crn"]].groupby(
         "season_code"
     )
-
     # construct inner course_code to course_id mapping
     season_crn_to_course_id = season_crn_to_course_id.apply(
         lambda x: x[["crn", "course_id"]].set_index("crn")["course_id"].to_dict()
     )
-
     # cast outer season mapping to dictionary
     season_crn_to_course_id = season_crn_to_course_id.to_dict()
 
     # convert evaluation season and crn types for matching
     evaluations["season"] = evaluations["season"].astype(int)
     evaluations["crn_code"] = evaluations["crn_code"].astype(int)
-
     # find course codes for evaluations
     evaluations["course_id"] = evaluations.apply(
         lambda row: season_crn_to_course_id.get(row["season"], {}).get(
@@ -445,11 +462,11 @@ def import_evaluations(merged_evaluations_info, listings):
     # report number of evaluations with missing course codes
     nan_total = evaluations["course_id"].isna().sum()
     print(f"Removing {nan_total}/{len(evaluations)} evaluated courses without matches")
-
     # remove evaluations with missing course codes
     evaluations = evaluations.dropna(subset=["course_id"], axis=0)
     evaluations["course_id"] = evaluations["course_id"].astype(int)
 
+    # keep track of unique questions
     evaluation_questions = []
 
     # extract evaluation narratives
@@ -457,27 +474,29 @@ def import_evaluations(merged_evaluations_info, listings):
         deep=True
     )
 
+    # subset and explode
     evaluation_narratives = evaluation_narratives.loc[
         :, ["course_id", "narratives", "season"]
     ]
-
-    # expand each question into own column
     evaluation_narratives = evaluation_narratives.explode("narratives")
-    evaluation_narratives["question_code"] = evaluation_narratives["narratives"].apply(
-        lambda x: x["question_id"]
-    )
-    evaluation_narratives["question_text"] = evaluation_narratives["narratives"].apply(
-        lambda x: x["question_text"]
-    )
-    evaluation_narratives["comment"] = evaluation_narratives["narratives"].apply(
-        lambda x: x["comments"]
+
+    # extract attributes into separate columns
+    (
+        evaluation_narratives["question_code"],
+        evaluation_narratives["question_text"],
+        evaluation_narratives["comment"],
+    ) = zip(
+        *evaluation_narratives["narratives"].map(
+            lambda x: [x["question_id"], x["question_text"], x["comments"]]
+        )
     )
 
     # drop duplicate course_id-question_code combinations (cross-listings)
-    evaluation_narratives = evaluation_narratives.drop_duplicates(
-        ["course_id", "question_code"], keep="first"
+    evaluation_narratives.drop_duplicates(
+        ["course_id", "question_code"], keep="first", inplace=True
     )
 
+    # add narratives to questions
     evaluation_narratives["is_narrative"] = True
     evaluation_questions.append(
         evaluation_narratives.loc[
@@ -497,27 +516,28 @@ def import_evaluations(merged_evaluations_info, listings):
         deep=True
     )
 
+    # subset and explode
     evaluation_ratings = evaluation_ratings.loc[:, ["course_id", "ratings", "season"]]
     evaluation_ratings = evaluation_ratings.explode("ratings")
 
-    evaluation_ratings["question_code"] = evaluation_ratings["ratings"].apply(
-        lambda x: x["question_id"]
-    )
-    evaluation_ratings["question_text"] = evaluation_ratings["ratings"].apply(
-        lambda x: x["question_text"]
-    )
-    evaluation_ratings["options"] = evaluation_ratings["ratings"].apply(
-        lambda x: x["options"]
-    )
-    evaluation_ratings["rating"] = evaluation_ratings["ratings"].apply(
-        lambda x: x["data"]
+    # extract attributes into separate columns
+    (
+        evaluation_ratings["question_code"],
+        evaluation_ratings["question_text"],
+        evaluation_ratings["options"],
+        evaluation_ratings["rating"],
+    ) = zip(
+        *evaluation_ratings["ratings"].map(
+            lambda x: [x["question_id"], x["question_text"], x["options"], x["data"]]
+        )
     )
 
     # drop duplicate course_id-question_code combinations (cross-listings)
-    evaluation_ratings = evaluation_ratings.drop_duplicates(
-        ["course_id", "question_code"], keep="first"
+    evaluation_ratings.drop_duplicates(
+        ["course_id", "question_code"], keep="first", inplace=True
     )
 
+    # add ratings to questions
     evaluation_ratings["is_narrative"] = False
     evaluation_questions.append(
         evaluation_ratings.loc[
@@ -529,17 +549,15 @@ def import_evaluations(merged_evaluations_info, listings):
     evaluation_statistics = evaluations.loc[
         :, ["course_id", "enrollment", "extras"]
     ].copy(deep=True)
-    evaluation_statistics["enrolled"] = evaluation_statistics["enrollment"].apply(
-        lambda x: x["enrolled"]
-    )
-    evaluation_statistics["responses"] = evaluation_statistics["enrollment"].apply(
-        lambda x: x["responses"]
-    )
-    evaluation_statistics["declined"] = evaluation_statistics["enrollment"].apply(
-        lambda x: x["declined"]
-    )
-    evaluation_statistics["no_response"] = evaluation_statistics["enrollment"].apply(
-        lambda x: x["no response"]
+    (
+        evaluation_statistics["enrolled"],
+        evaluation_statistics["responses"],
+        evaluation_statistics["declined"],
+        evaluation_statistics["no_response"],
+    ) = zip(
+        *evaluation_statistics["enrollment"].map(
+            lambda x: [x["enrolled"], x["responses"], x["declined"], x["no response"]],
+        )
     )
 
     evaluation_statistics = evaluation_statistics.loc[
@@ -557,7 +575,8 @@ def import_evaluations(merged_evaluations_info, listings):
 
     # focus on question texts with multiple variations
     text_by_code = text_by_code[text_by_code.apply(len) > 1]
-    max_diff_texts = max(text_by_code.apply(len))
+
+    max_diff_texts = max(list(text_by_code.apply(len)) + [0])
     print(f"Maximum number of different texts per question code: {max_diff_texts}")
 
     def min_pairwise_distance(texts):
@@ -568,7 +587,7 @@ def import_evaluations(merged_evaluations_info, listings):
         return max(distances)
 
     distances_by_code = text_by_code.apply(min_pairwise_distance)
-    max_all_distances = max(distances_by_code)
+    max_all_distances = max(list(distances_by_code) + [0])
 
     print(f"Maximum text divergence within codes: {max_all_distances}")
 
@@ -599,10 +618,11 @@ def import_evaluations(merged_evaluations_info, listings):
     evaluation_questions = evaluation_questions.sort_values(
         by="season", ascending=False
     )
-    evaluation_questions = evaluation_questions.drop_duplicates(
-        subset=["question_code"], keep="first"
+    evaluation_questions.drop_duplicates(
+        subset=["question_code"], keep="first", inplace=True
     )
 
+    print("[SUMMARY]")
     print(f"Total evaluation narratives: {len(evaluation_narratives)}")
     print(f"Total evaluation ratings: {len(evaluation_ratings)}")
     print(f"Total evaluation statistics: {len(evaluation_statistics)}")

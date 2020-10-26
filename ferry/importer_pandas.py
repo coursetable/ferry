@@ -77,13 +77,12 @@ if __name__ == "__main__":
     # Import course listings
     # ----------------------
 
-    # Course listings.
     print("\n[Importing courses]")
     print(f"Season(s): {', '.join(course_seasons)}")
 
     merged_course_info = []
 
-    for season in course_seasons:
+    for season in tqdm(course_seasons, desc="Loading course JSONs"):
         # Read the course listings, giving preference to freshly parsed over migrated ones.
         parsed_courses_file = Path(f"{config.DATA_DIR}/parsed_courses/{season}.json")
 
@@ -121,7 +120,7 @@ if __name__ == "__main__":
 
     print("\n[Importing demand statistics]")
     print(f"Season(s): {', '.join(demand_seasons)}")
-    for season in demand_seasons:
+    for season in tqdm(demand_seasons, desc="Loading demand JSONs"):
 
         demand_file = Path(f"{config.DATA_DIR}/demand_stats/{season}_demand.json")
 
@@ -146,14 +145,14 @@ if __name__ == "__main__":
 
     print("\n[Importing course evaluations]")
 
-    all_evals = [
-        filename
-        for filename in set(
-            os.listdir(f"{config.DATA_DIR}/previous_evals/")
-            + os.listdir(f"{config.DATA_DIR}/course_evals/")
-        )
-        if filename[0] != "."
-    ]
+    # list available evaluation files
+    previous_eval_files = Path(config.DATA_DIR / "previous_evals").glob("*.json")
+    new_eval_files = Path(config.DATA_DIR / "course_evals").glob("*.json")
+
+    previous_eval_files = [x.name for x in previous_eval_files]
+    new_eval_files = [x.name for x in new_eval_files]
+
+    all_evals = list(set(previous_eval_files + new_eval_files))
 
     # Filter by seasons.
     if seasons is None:
@@ -166,7 +165,7 @@ if __name__ == "__main__":
 
     merged_evaluations_info = []
 
-    for filename in tqdm(evals_to_import, desc="Loading evaluations"):
+    for filename in tqdm(evals_to_import, desc="Loading evaluation JSONs"):
         # Read the evaluation, giving preference to current over previous.
         current_evals_file = Path(f"{config.DATA_DIR}/course_evals/{filename}")
 
