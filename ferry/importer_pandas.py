@@ -24,54 +24,30 @@ This script does not recalculate any computed values in the schema.
 """
 
 if __name__ == "__main__":
-    # allow the user to specify seasons (useful for testing and debugging)
-    parser = argparse.ArgumentParser(description="Import classes")
-    parser.add_argument(
-        "-s",
-        "--seasons",
-        nargs="+",
-        help="seasons to import (if empty, import all migrated+parsed courses)",
-        default=None,
-        required=False,
-    )
-    parser.add_argument(
-        "-m",
-        "--mode",
-        choices=["courses", "evals", "demand", "all"],
-        help="information to import: courses, evals, demand, or all (default)",
-        default="all",
-        required=False,
+
+    # ---------------------
+    # Get seasons to import
+    # ---------------------
+    # get full list of course seasons from files
+    course_seasons = sorted(
+        [
+            filename.split(".")[0]  # remove the .json extension
+            for filename in set(
+                os.listdir(f"{config.DATA_DIR}/migrated_courses/")
+                + os.listdir(f"{config.DATA_DIR}/parsed_courses/")
+            )
+            if filename[0] != "."
+        ]
     )
 
-    args = parser.parse_args()
-    seasons = args.seasons
-
-    # Course information.
-    if seasons is None:
-
-        # get full list of course seasons from files
-        course_seasons = sorted(
-            [
-                filename.split(".")[0]  # remove the .json extension
-                for filename in set(
-                    os.listdir(f"{config.DATA_DIR}/migrated_courses/")
-                    + os.listdir(f"{config.DATA_DIR}/parsed_courses/")
-                )
-                if filename[0] != "."
-            ]
-        )
-
-        # get full list of demand seasons from files
-        demand_seasons = sorted(
-            [
-                filename.split("_")[0]  # remove the _demand.json suffix
-                for filename in os.listdir(f"{config.DATA_DIR}/demand_stats/")
-                if filename[0] != "." and filename != "subjects.json"
-            ]
-        )
-    else:
-        course_seasons = seasons
-        demand_seasons = seasons
+    # get full list of demand seasons from files
+    demand_seasons = sorted(
+        [
+            filename.split("_")[0]  # remove the _demand.json suffix
+            for filename in os.listdir(f"{config.DATA_DIR}/demand_stats/")
+            if filename[0] != "." and filename != "subjects.json"
+        ]
+    )
 
     # ----------------------
     # Import course listings
@@ -186,5 +162,3 @@ if __name__ == "__main__":
         evaluation_statistics,
         evaluation_questions,
     ) = import_evaluations(merged_evaluations_info, listings)
-
-    # breakpoint()
