@@ -113,7 +113,7 @@ if __name__ == "__main__":
     merged_demand_info = pd.concat(merged_demand_info, axis=0, sort=True)
     merged_demand_info = merged_demand_info.reset_index(drop=True)
 
-    demand_statistics = import_demand(merged_demand_info, listings, seasons)
+    demand_statistics = import_demand(merged_demand_info, listings, demand_seasons)
 
     # -------------------------
     # Import course evaluations
@@ -128,20 +128,11 @@ if __name__ == "__main__":
     previous_eval_files = [x.name for x in previous_eval_files]
     new_eval_files = [x.name for x in new_eval_files]
 
-    all_evals = list(set(previous_eval_files + new_eval_files))
-
-    # Filter by seasons.
-    if seasons is None:
-        evals_to_import = sorted(list(all_evals))
-
-    else:
-        evals_to_import = sorted(
-            filename for filename in all_evals if filename.split("-")[0] in seasons
-        )
+    all_evals = sorted(list(set(previous_eval_files + new_eval_files)))
 
     merged_evaluations_info = []
 
-    for filename in tqdm(evals_to_import, desc="Loading evaluation JSONs"):
+    for filename in tqdm(all_evals, desc="Loading evaluation JSONs"):
         # Read the evaluation, giving preference to current over previous.
         current_evals_file = Path(f"{config.DATA_DIR}/course_evals/{filename}")
 
