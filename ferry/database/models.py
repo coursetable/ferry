@@ -88,8 +88,7 @@ class Course(BaseModel):
         comment='Course times and locations, displayed in the "Meets" row in CourseTable course modals',
     )
     times_summary = Column(
-        String,
-        comment='Course times, displayed in the "Times" column in CourseTable',
+        String, comment='Course times, displayed in the "Times" column in CourseTable',
     )
     times_by_day = Column(
         JSON,
@@ -140,9 +139,7 @@ class Listing(BaseModel):
         nullable=False,
     )
     course_code = Column(
-        String,
-        comment='[computed] subject + number (e.g. "AMST 312")',
-        index=True,
+        String, comment='[computed] subject + number (e.g. "AMST 312")', index=True,
     )
     section = Column(
         String,
@@ -187,20 +184,11 @@ class DemandStatistics(BaseModel):
         primary_key=True,
         comment="The course to which these demand statistics apply",
     )
-    latest_demand = Column(
-        Integer,
-        comment="Latest demand count",
-    )
-    latest_demand_date = Column(
-        String,
-        comment="Latest demand date",
-    )
+    latest_demand = Column(Integer, comment="Latest demand count",)
+    latest_demand_date = Column(String, comment="Latest demand date",)
     course = relationship("Course", backref="demand_statistics")
 
-    demand = Column(
-        JSON,
-        comment="JSON dict containing demand stats by day",
-    )
+    demand = Column(JSON, comment="JSON dict containing demand stats by day",)
 
 
 class Professor(BaseModel):
@@ -234,11 +222,12 @@ class EvaluationStatistics(BaseModel):
     )
     course = relationship("Course", backref=backref("statistics", uselist=False))
 
-    enrollment = Column(
-        JSON, comment="a JSON dictionary with information about the course's enrollment"
-    )
+    enrolled = Column(Integer, comment="Number of students enrolled in course")
+    responses = Column(Integer, comment="Number of responses")
+    declined = Column(Integer, comment="Number of students who declined to respond")
+    no_response = Column(Integer, comment="Number of students who did not respond")
     extras = Column(
-        JSON, comment="arbitrary additional information attached to an evaluation"
+        JSON, comment="Arbitrary additional information attached to an evaluation"
     )
     avg_rating = Column(Float, comment="[computed] Average overall rating")
     avg_workload = Column(Float, comment="[computed] Average workload rating")
@@ -248,18 +237,13 @@ class EvaluationQuestion(BaseModel):
     __tablename__ = "evaluation_questions"
 
     question_code = Column(
-        String,
-        comment='Question code from OCE (e.g. "YC402")',
-        primary_key=True,
+        String, comment='Question code from OCE (e.g. "YC402")', primary_key=True,
     )
     is_narrative = Column(
         Boolean,
         comment="True if the question has narrative responses. False if the question has categorica/numerical responses",
     )
-    question_text = Column(
-        String,
-        comment="The question text",
-    )
+    question_text = Column(String, comment="The question text",)
     options = Column(
         JSON,
         comment="JSON array of possible responses (only if the question is not a narrative",
@@ -293,10 +277,7 @@ class EvaluationNarrative(BaseModel):
     )
     question = relationship("EvaluationQuestion", backref="evaluation_narratives")
 
-    comment = Column(
-        String,
-        comment="Response to the question",
-    )
+    comment = Column(String, comment="Response to the question",)
 
 
 class EvaluationRating(BaseModel):
@@ -321,7 +302,4 @@ class EvaluationRating(BaseModel):
     )
     question = relationship("EvaluationQuestion", backref="evaluation_ratings")
 
-    rating = Column(
-        JSON,
-        comment="JSON array of the response counts for each option",
-    )
+    rating = Column(JSON, comment="JSON array of the response counts for each option",)

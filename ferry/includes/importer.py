@@ -29,6 +29,24 @@ def get_table(table: str):
     return pd.read_sql_table(table, con=database.Engine)
 
 
+def get_table_columns(table):
+    """
+    Get column names of a table, where table is
+    a SQLalchemy model (e.g. ferry.database.models.Course)
+
+    Parameters
+    ----------
+    table: name of table to retrieve
+
+    Returns
+    -------
+    Pandas DataFrame
+
+    """
+
+    return [column.key for column in table.__table__.columns]
+
+
 def get_all_tables(select_schemas: List[str]) -> Dict:
     """
     Get all the tables under given schemas as a dictionary
@@ -306,6 +324,18 @@ def import_courses(merged_course_info, seasons: List[str]):
 
     course_professors = pd.concat(course_professors, axis=0, sort=True)
 
+    # explicitly specify missing columns to be filled in later
+    courses[["location_times", "average_rating", "average_workload"]] = np.nan
+    professors["average_rating"] = np.nan
+
+    # extract columns to match database
+    courses = courses.loc[:, get_table_columns(database.models.Course)]
+    listings = listings.loc[:, get_table_columns(database.models.Listing)]
+    course_professors = course_professors.loc[
+        :, [column.key for column in database.models.course_professors.columns]
+    ]
+    professors = professors.loc[:, get_table_columns(database.models.Professor)]
+
     print("[SUMMARY]")
     print(f"Total courses: {len(courses)}")
     print(f"Total listings: {len(listings)}")
@@ -410,6 +440,11 @@ def import_demand(merged_demand_info, listings, seasons: List[str]):
         :, ["course_id", "latest_demand", "latest_demand_date", "demand"]
     ]
 
+    # extract columns to match database
+    demand_statistics = demand_statistics.loc[
+        :, get_table_columns(database.models.DemandStatistics)
+    ]
+
     print("[SUMMARY]")
     print(f"Total demand statistics: {len(demand_statistics)}")
 
@@ -510,6 +545,8 @@ def import_evaluations(merged_evaluations_info, listings):
     ]
     evaluation_narratives = evaluation_narratives.explode("comment")
     evaluation_narratives = evaluation_narratives.reset_index(drop=True)
+    # id column for database primary key
+    evaluation_narratives["id"] = range(len(evaluation_narratives))
 
     # extract evaluation ratings
     evaluation_ratings = evaluations[evaluations["ratings"].apply(len) > 0].copy(
@@ -536,6 +573,8 @@ def import_evaluations(merged_evaluations_info, listings):
     evaluation_ratings.drop_duplicates(
         ["course_id", "question_code"], keep="first", inplace=True
     )
+    # id column for database primary key
+    evaluation_ratings["id"] = range(len(evaluation_ratings))
 
     # add ratings to questions
     evaluation_ratings["is_narrative"] = False
@@ -549,6 +588,9 @@ def import_evaluations(merged_evaluations_info, listings):
     evaluation_statistics = evaluations.loc[
         :, ["course_id", "enrollment", "extras"]
     ].copy(deep=True)
+    evaluation_statistics.drop_duplicates(
+        subset=["course_id"], keep="first", inplace=True
+    )
     (
         evaluation_statistics["enrolled"],
         evaluation_statistics["responses"],
@@ -621,6 +663,24 @@ def import_evaluations(merged_evaluations_info, listings):
     evaluation_questions.drop_duplicates(
         subset=["question_code"], keep="first", inplace=True
     )
+
+    # explicitly specify missing columns to be filled in later
+    evaluation_statistics[["avg_rating", "avg_workload"]] = np.nan
+    evaluation_questions["tag"] = ""
+
+    # extract columns to match database
+    evaluation_narratives = evaluation_narratives.loc[
+        :, get_table_columns(database.models.EvaluationNarrative)
+    ]
+    evaluation_ratings = evaluation_ratings.loc[
+        :, get_table_columns(database.models.EvaluationRating)
+    ]
+    evaluation_statistics = evaluation_statistics.loc[
+        :, get_table_columns(database.models.EvaluationStatistics)
+    ]
+    evaluation_questions = evaluation_questions.loc[
+        :, get_table_columns(database.models.EvaluationQuestion)
+    ]
 
     print("[SUMMARY]")
     print(f"Total evaluation narratives: {len(evaluation_narratives)}")
