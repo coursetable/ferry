@@ -11,6 +11,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 from ferry import config, database
 from ferry.config import DATABASE_CONNECT_STRING
+from ferry.includes.computed import questions_computed, evaluation_statistics_computed
 from ferry.includes.importer import (
     copy_from_stringio,
     get_all_tables,
@@ -18,7 +19,6 @@ from ferry.includes.importer import (
     import_demand,
     import_evaluations,
 )
-from ferry.includes.computed import questions_computed
 from ferry.includes.tqdm import tqdm
 
 """
@@ -179,11 +179,16 @@ if __name__ == "__main__":
             seasons["season_code"].astype(str).apply(lambda x: x[:4]).astype(int)
         )
 
-        # ------------------------------
-        # Computing secondary attributes
-        # ------------------------------
+        # ----------------------------
+        # Compute secondary attributes
+        # ----------------------------
 
+        print("\n[Computing secondary attributes]")
+
+        print("Assigning question tags")
         evaluation_questions = questions_computed(evaluation_questions)
+        print("Computing average ratings by course")
+        evaluation_statistics = evaluation_statistics_computed(evaluation_statistics, evaluation_ratings, evaluation_questions)
 
         # -----------------------------
         # Output tables to disk as CSVs
