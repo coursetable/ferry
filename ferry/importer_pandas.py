@@ -5,7 +5,6 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-import psycopg2
 import ujson
 from sqlalchemy import MetaData
 from sqlalchemy.ext.declarative import declarative_base
@@ -177,33 +176,28 @@ if __name__ == "__main__":
 
     print("\n[Updating database]")
 
-    conn = psycopg2.connect(
-        host="localhost",
-        database="postgres",
-        user="postgres",
-        password="thisisapassword",
-    )
+    raw_conn = database.Engine.raw_connection()
 
     # insert new tables
     seasons = pd.DataFrame(course_seasons, columns=["season_code"], dtype=int)
     seasons["term"] = np.nan
     seasons["year"] = np.nan
-    copy_from_stringio(conn, seasons, "seasons")
+    copy_from_stringio(raw_conn, seasons, "seasons")
 
     # courses
-    copy_from_stringio(conn, courses, "courses")
-    copy_from_stringio(conn, listings, "listings")
-    copy_from_stringio(conn, professors, "professors")
-    copy_from_stringio(conn, course_professors, "course_professors")
+    copy_from_stringio(raw_conn, courses, "courses")
+    copy_from_stringio(raw_conn, listings, "listings")
+    copy_from_stringio(raw_conn, professors, "professors")
+    copy_from_stringio(raw_conn, course_professors, "course_professors")
 
     # demand statistics
-    copy_from_stringio(conn, demand_statistics, "demand_statistics")
+    copy_from_stringio(raw_conn, demand_statistics, "demand_statistics")
 
     # evaluations
-    copy_from_stringio(conn, evaluation_questions, "evaluation_questions")
-    copy_from_stringio(conn, evaluation_narratives, "evaluation_narratives")
-    copy_from_stringio(conn, evaluation_ratings, "evaluation_ratings")
-    copy_from_stringio(conn, evaluation_statistics, "evaluation_statistics")
+    copy_from_stringio(raw_conn, evaluation_questions, "evaluation_questions")
+    copy_from_stringio(raw_conn, evaluation_narratives, "evaluation_narratives")
+    copy_from_stringio(raw_conn, evaluation_ratings, "evaluation_ratings")
+    copy_from_stringio(raw_conn, evaluation_statistics, "evaluation_statistics")
 
     print("Committing new tables")
-    conn.commit()
+    raw_conn.commit()
