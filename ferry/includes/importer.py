@@ -1,5 +1,4 @@
 import csv
-import psycopg2
 from collections import Counter
 from io import StringIO
 from itertools import combinations
@@ -7,6 +6,7 @@ from typing import Dict, List
 
 import numpy as np
 import pandas as pd
+import psycopg2
 import textdistance
 import ujson
 from sqlalchemy import inspect

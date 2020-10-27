@@ -13,14 +13,13 @@ from sqlalchemy.ext.declarative import declarative_base
 from ferry import config, database
 from ferry.config import DATABASE_CONNECT_STRING
 from ferry.includes.importer import (
+    copy_from_stringio,
     get_all_tables,
     import_courses,
     import_demand,
     import_evaluations,
-    copy_from_stringio,
 )
 from ferry.includes.tqdm import tqdm
-
 
 """
 ================================================================
