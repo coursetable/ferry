@@ -3,6 +3,9 @@ from itertools import combinations
 from typing import Dict, FrozenSet, Iterable, List, Tuple, TypeVar
 
 import networkx
+import pandas as pd
+
+from ferry import config, database
 
 
 def merge_overlapping(sets: List[FrozenSet]) -> List:
@@ -121,3 +124,73 @@ def resolve_potentially_callable(val):
     if callable(val):
         return val()
     return val
+
+
+def get_table(table: str):
+    """
+    Read one of the tables from the database
+    into Pandas dataframe (assuming SQL storage format)
+
+    Parameters
+    ----------
+    table: name of table to retrieve
+
+    Returns
+    -------
+    Pandas DataFrame
+
+    """
+
+    return pd.read_sql_table(table, con=database.Engine)
+
+
+def get_table_columns(table):
+    """
+    Get column names of a table, where table is
+    a SQLalchemy model (e.g. ferry.database.models.Course)
+
+    Parameters
+    ----------
+    table: name of table to retrieve
+
+    Returns
+    -------
+    Pandas DataFrame
+
+    """
+
+    return [column.key for column in table.__table__.columns]
+
+
+def get_all_tables(select_schemas: List[str]) -> Dict:
+    """
+    Get all the tables under given schemas as a dictionary
+    of Pandas dataframes
+
+    Parameters
+    ----------
+    select_schemas: schemas to retrieve tables for
+
+    Returns
+    -------
+    Dictionary of Pandas DataFrames
+
+    """
+
+    tables = []
+
+    # inspect and get schema names
+    inspector = inspect(database.Engine)
+    schemas = inspector.get_schema_names()
+
+    select_schemas = [x for x in schemas if x in select_schemas]
+
+    for schema in select_schemas:
+
+        schema_tables = inspector.get_table_names(schema=schema)
+
+        tables = tables + schema_tables
+
+    tables = {table: get_table(table) for table in tables}
+
+    return tables

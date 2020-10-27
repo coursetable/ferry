@@ -11,10 +11,13 @@ from sqlalchemy.ext.declarative import declarative_base
 
 from ferry import config, database
 from ferry.config import DATABASE_CONNECT_STRING
-from ferry.includes.computed import questions_computed, evaluation_statistics_computed
+from ferry.includes.computed import (
+    courses_computed,
+    evaluation_statistics_computed,
+    questions_computed,
+)
 from ferry.includes.importer import (
     copy_from_stringio,
-    get_all_tables,
     import_courses,
     import_demand,
     import_evaluations,
@@ -188,7 +191,11 @@ if __name__ == "__main__":
         print("Assigning question tags")
         evaluation_questions = questions_computed(evaluation_questions)
         print("Computing average ratings by course")
-        evaluation_statistics = evaluation_statistics_computed(evaluation_statistics, evaluation_ratings, evaluation_questions)
+        evaluation_statistics = evaluation_statistics_computed(
+            evaluation_statistics, evaluation_ratings, evaluation_questions
+        )
+        print("Computing historical ratings for courses")
+        courses = courses_computed(courses, listings, evaluation_statistics)
 
         # -----------------------------
         # Output tables to disk as CSVs

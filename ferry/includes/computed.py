@@ -5,6 +5,7 @@ import pandas as pd
 import ujson
 
 from ferry import config, database
+from ferry.includes.utils import get_table_columns
 
 QUESTION_TAGS = dict()
 with open(f"{config.RESOURCE_DIR}/question_tags.csv") as f:
@@ -37,12 +38,19 @@ def questions_computed(evaluation_questions):
 
     return evaluation_questions
 
-def evaluation_statistics_computed(evaluation_statistics, evaluation_ratings, evaluation_questions):
 
-    question_code_map = dict(zip(evaluation_questions["question_code"],evaluation_questions["tag"]))
+def evaluation_statistics_computed(
+    evaluation_statistics, evaluation_ratings, evaluation_questions
+):
+
+    question_code_map = dict(
+        zip(evaluation_questions["question_code"], evaluation_questions["tag"])
+    )
 
     evaluation_ratings = evaluation_ratings.copy(deep=True)
-    evaluation_ratings["tag"] = evaluation_ratings["question_code"].apply(question_code_map.get)
+    evaluation_ratings["tag"] = evaluation_ratings["question_code"].apply(
+        question_code_map.get
+    )
 
     def average_rating(ratings: List[int]) -> float:
         if not ratings or not sum(ratings):
@@ -55,11 +63,15 @@ def evaluation_statistics_computed(evaluation_statistics, evaluation_ratings, ev
 
     def average_by_course(tag, n_categories):
 
-        tagged_ratings = evaluation_ratings[evaluation_ratings["tag"]==tag].copy(deep=True)
+        tagged_ratings = evaluation_ratings[evaluation_ratings["tag"] == tag].copy(
+            deep=True
+        )
         rating_by_course = tagged_ratings.groupby("course_id")["rating"].apply(list)
 
         # Aggregate responses across question variants.
-        rating_by_course = rating_by_course.apply(lambda data: [sum(x) for x in zip(*data)])
+        rating_by_course = rating_by_course.apply(
+            lambda data: [sum(x) for x in zip(*data)]
+        )
 
         lengths_invalid = rating_by_course.apply(len) != n_categories
 
@@ -76,7 +88,61 @@ def evaluation_statistics_computed(evaluation_statistics, evaluation_ratings, ev
     overall_by_course = average_by_course("rating", 5)
     workload_by_course = average_by_course("workload", 5)
 
-    evaluation_statistics["avg_rating"] = evaluation_statistics["course_id"].apply(overall_by_course.get)
-    evaluation_statistics["avg_workload"] = evaluation_statistics["course_id"].apply(workload_by_course.get)
+    evaluation_statistics["avg_rating"] = evaluation_statistics["course_id"].apply(
+        overall_by_course.get
+    )
+    evaluation_statistics["avg_workload"] = evaluation_statistics["course_id"].apply(
+        workload_by_course.get
+    )
 
     return evaluation_statistics
+
+
+def courses_computed(courses, listings, evaluation_statistics):
+
+    courses = courses.copy(deep=True)
+
+    course_to_codes = listings.groupby("course_id")["course_code"].apply(list).to_dict()
+    code_to_courses = listings.groupby("course_code")["course_id"].apply(list).to_dict()
+
+    courses["codes"] = courses["course_id"].apply(course_to_codes.get)
+    courses["coded_courses"] = courses["codes"].apply(
+        lambda x: [code_to_courses[code] for code in x]
+    )
+
+    def flatten_list_of_lists(list_of_lists):
+
+        flattened = [x for y in list_of_lists for x in y]
+
+        return flattened
+
+    courses["coded_courses"] = courses["coded_courses"].apply(flatten_list_of_lists)
+    courses["coded_courses"] = courses["coded_courses"].apply(lambda x: list(set(x)))
+
+    def average(nums):
+        nums = list(filter(lambda x: x is not None, nums))
+        nums = list(filter(lambda x: x == x, nums))
+        if not nums:
+            return None
+        return sum(nums) / len(nums)
+
+    course_to_overall = dict(
+        zip(evaluation_statistics["course_id"], evaluation_statistics["avg_rating"])
+    )
+    course_to_workload = dict(
+        zip(evaluation_statistics["course_id"], evaluation_statistics["avg_workload"])
+    )
+
+    courses["average_rating"] = courses["coded_courses"].apply(
+        lambda courses: [course_to_overall.get(x, None) for x in courses]
+    )
+    courses["average_workload"] = courses["coded_courses"].apply(
+        lambda courses: [course_to_workload.get(x, None) for x in courses]
+    )
+
+    courses["average_rating"] = courses["average_rating"].apply(average)
+    courses["average_workload"] = courses["average_workload"].apply(average)
+
+    courses = courses.loc[:, get_table_columns(database.models.Course)]
+
+    return courses
