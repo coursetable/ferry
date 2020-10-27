@@ -57,10 +57,13 @@ class Course(BaseModel):
         index=True,
         nullable=False,
     )
-    season = relationship("Season", backref="courses")
+    season = relationship("Season", backref="courses", cascade="all")
 
     professors = relationship(
-        "Professor", secondary=course_professors, back_populates="courses"
+        "Professor",
+        secondary=course_professors,
+        back_populates="courses",
+        cascade="all",
     )
 
     areas = Column(JSON, comment="Course areas (humanities, social sciences, sciences)")
@@ -88,8 +91,7 @@ class Course(BaseModel):
         comment='Course times and locations, displayed in the "Meets" row in CourseTable course modals',
     )
     times_summary = Column(
-        String,
-        comment='Course times, displayed in the "Times" column in CourseTable',
+        String, comment='Course times, displayed in the "Times" column in CourseTable',
     )
     times_by_day = Column(
         JSON,
@@ -127,7 +129,7 @@ class Listing(BaseModel):
         index=True,
         nullable=False,
     )
-    course = relationship("Course", backref="listings")
+    course = relationship("Course", backref="listings", cascade="all")
 
     subject = Column(
         String,
@@ -140,9 +142,7 @@ class Listing(BaseModel):
         nullable=False,
     )
     course_code = Column(
-        String,
-        comment='[computed] subject + number (e.g. "AMST 312")',
-        index=True,
+        String, comment='[computed] subject + number (e.g. "AMST 312")', index=True,
     )
     section = Column(
         String,
@@ -156,7 +156,7 @@ class Listing(BaseModel):
         index=True,
         nullable=False,
     )
-    season = relationship("Season", backref="listings")
+    season = relationship("Season", backref="listings", cascade="all")
     crn = Column(
         Integer,
         comment="The CRN associated with this listing",
@@ -187,20 +187,11 @@ class DemandStatistics(BaseModel):
         primary_key=True,
         comment="The course to which these demand statistics apply",
     )
-    latest_demand = Column(
-        Integer,
-        comment="Latest demand count",
-    )
-    latest_demand_date = Column(
-        String,
-        comment="Latest demand date",
-    )
-    course = relationship("Course", backref="demand_statistics")
+    latest_demand = Column(Integer, comment="Latest demand count",)
+    latest_demand_date = Column(String, comment="Latest demand date",)
+    course = relationship("Course", backref="demand_statistics", cascade="all")
 
-    demand = Column(
-        JSON,
-        comment="JSON dict containing demand stats by day",
-    )
+    demand = Column(JSON, comment="JSON dict containing demand stats by day",)
 
 
 class Professor(BaseModel):
@@ -208,11 +199,14 @@ class Professor(BaseModel):
 
     professor_id = Column(Integer, comment="Professor ID", primary_key=True)
     name = Column(String, comment="Name of the professor", index=True, nullable=False)
-    email = Column(String, comment="Email address of the professor", nullable=False)
-    ocs_id = Column(String, comment="Professor ID used by Yale OCS", nullable=False)
+    email = Column(String, comment="Email address of the professor", nullable=True)
+    ocs_id = Column(String, comment="Professor ID used by Yale OCS", nullable=True)
 
     courses = relationship(
-        "Course", secondary=course_professors, back_populates="professors"
+        "Course",
+        secondary=course_professors,
+        back_populates="professors",
+        cascade="all",
     )
 
     average_rating = Column(
@@ -232,7 +226,9 @@ class EvaluationStatistics(BaseModel):
         index=True,
         nullable=False,
     )
-    course = relationship("Course", backref=backref("statistics", uselist=False))
+    course = relationship(
+        "Course", backref=backref("statistics", uselist=False), cascade="all",
+    )
 
     enrolled = Column(Integer, comment="Number of students enrolled in course")
     responses = Column(Integer, comment="Number of responses")
@@ -249,18 +245,13 @@ class EvaluationQuestion(BaseModel):
     __tablename__ = "evaluation_questions"
 
     question_code = Column(
-        String,
-        comment='Question code from OCE (e.g. "YC402")',
-        primary_key=True,
+        String, comment='Question code from OCE (e.g. "YC402")', primary_key=True,
     )
     is_narrative = Column(
         Boolean,
         comment="True if the question has narrative responses. False if the question has categorica/numerical responses",
     )
-    question_text = Column(
-        String,
-        comment="The question text",
-    )
+    question_text = Column(String, comment="The question text",)
     options = Column(
         JSON,
         comment="JSON array of possible responses (only if the question is not a narrative",
@@ -284,7 +275,7 @@ class EvaluationNarrative(BaseModel):
         index=True,
         nullable=False,
     )
-    course = relationship("Course", backref="evaluation_narratives")
+    course = relationship("Course", backref="evaluation_narratives", cascade="all")
     question_code = Column(
         String,
         ForeignKey("evaluation_questions.question_code"),
@@ -292,12 +283,11 @@ class EvaluationNarrative(BaseModel):
         index=True,
         nullable=False,
     )
-    question = relationship("EvaluationQuestion", backref="evaluation_narratives")
-
-    comment = Column(
-        String,
-        comment="Response to the question",
+    question = relationship(
+        "EvaluationQuestion", backref="evaluation_narratives", cascade="all",
     )
+
+    comment = Column(String, comment="Response to the question",)
 
 
 class EvaluationRating(BaseModel):
@@ -312,7 +302,7 @@ class EvaluationRating(BaseModel):
         index=True,
         nullable=False,
     )
-    course = relationship("Course", backref="evaluation_ratings")
+    course = relationship("Course", backref="evaluation_ratings", cascade="all")
     question_code = Column(
         String,
         ForeignKey("evaluation_questions.question_code"),
@@ -320,9 +310,8 @@ class EvaluationRating(BaseModel):
         index=True,
         nullable=False,
     )
-    question = relationship("EvaluationQuestion", backref="evaluation_ratings")
-
-    rating = Column(
-        JSON,
-        comment="JSON array of the response counts for each option",
+    question = relationship(
+        "EvaluationQuestion", backref="evaluation_ratings", cascade="all"
     )
+
+    rating = Column(JSON, comment="JSON array of the response counts for each option",)

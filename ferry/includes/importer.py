@@ -5,6 +5,7 @@ from typing import Dict, List
 import numpy as np
 import pandas as pd
 import textdistance
+import ujson
 from sqlalchemy import inspect
 
 from ferry import config, database
@@ -134,6 +135,17 @@ def import_courses(merged_course_info, seasons: List[str]):
     )
     # global course IDs
     courses["course_id"] = range(len(courses))
+    # convert to JSON string for postgres
+    courses["areas"] = courses["areas"].apply(ujson.dumps)
+    courses["times_by_day"] = courses["times_by_day"].apply(ujson.dumps)
+    courses["skills"] = courses["skills"].apply(ujson.dumps)
+    # replace carriage returns for tsv-based migration
+    courses["description"] = courses["description"].apply(lambda x: x.replace("\r", ""))
+    courses["title"] = courses["title"].apply(lambda x: x.replace("\r", ""))
+    courses["short_title"] = courses["short_title"].apply(lambda x: x.replace("\r", ""))
+    courses["requirements"] = courses["requirements"].apply(
+        lambda x: x.replace("\r", "")
+    )
 
     print("Creating listings table")
     # map temporary season-specific IDs to global course IDs
@@ -336,7 +348,7 @@ def import_courses(merged_course_info, seasons: List[str]):
     ]
     professors = professors.loc[:, get_table_columns(database.models.Professor)]
 
-    print("[SUMMARY]")
+    print("[Summary]")
     print(f"Total courses: {len(courses)}")
     print(f"Total listings: {len(listings)}")
     print(f"Total course-professors: {len(course_professors)}")
@@ -429,23 +441,21 @@ def import_demand(merged_demand_info, listings, seasons: List[str]):
 
     # expand course_id list to one per row
     demand_statistics = demand_statistics.explode("course_id")
+    demand_statistics.drop_duplicates(subset=["course_id"], keep="first", inplace=True)
 
     # rename demand JSON column to match database
     demand_statistics = demand_statistics.rename(
         {"overall_demand": "demand"}, axis="columns"
     )
 
-    # return columns of interest
-    demand_statistics = demand_statistics.loc[
-        :, ["course_id", "latest_demand", "latest_demand_date", "demand"]
-    ]
+    demand_statistics["demand"] = demand_statistics["demand"].apply(ujson.dumps)
 
     # extract columns to match database
     demand_statistics = demand_statistics.loc[
         :, get_table_columns(database.models.DemandStatistics)
     ]
 
-    print("[SUMMARY]")
+    print("[Summary]")
     print(f"Total demand statistics: {len(demand_statistics)}")
 
     return demand_statistics
@@ -544,6 +554,11 @@ def import_evaluations(merged_evaluations_info, listings):
         :, ["course_id", "question_code", "comment"]
     ]
     evaluation_narratives = evaluation_narratives.explode("comment")
+    evaluation_narratives.dropna(subset=["comment"], inplace=True)
+    # replace carriage returns for csv-based migration
+    evaluation_narratives["comment"] = evaluation_narratives["comment"].apply(
+        lambda x: x.replace("\r", "")
+    )
     evaluation_narratives = evaluation_narratives.reset_index(drop=True)
     # id column for database primary key
     evaluation_narratives["id"] = range(len(evaluation_narratives))
@@ -605,6 +620,8 @@ def import_evaluations(merged_evaluations_info, listings):
     evaluation_statistics = evaluation_statistics.loc[
         :, ["course_id", "enrolled", "responses", "declined", "no_response", "extras"]
     ]
+    # convert to JSON string for postgres
+    evaluation_statistics["extras"] = evaluation_statistics["extras"].apply(ujson.dumps)
 
     evaluation_questions = pd.concat(evaluation_questions, axis=0, sort=True)
     evaluation_questions = evaluation_questions.reset_index(drop=True)
@@ -664,6 +681,11 @@ def import_evaluations(merged_evaluations_info, listings):
         subset=["question_code"], keep="first", inplace=True
     )
 
+    evaluation_questions["options"] = evaluation_questions["options"].apply(ujson.dumps)
+    evaluation_questions["options"] = evaluation_questions["options"].replace(
+        "NaN", "[]"
+    )
+
     # explicitly specify missing columns to be filled in later
     evaluation_statistics[["avg_rating", "avg_workload"]] = np.nan
     evaluation_questions["tag"] = ""
@@ -682,7 +704,7 @@ def import_evaluations(merged_evaluations_info, listings):
         :, get_table_columns(database.models.EvaluationQuestion)
     ]
 
-    print("[SUMMARY]")
+    print("[Summary]")
     print(f"Total evaluation narratives: {len(evaluation_narratives)}")
     print(f"Total evaluation ratings: {len(evaluation_ratings)}")
     print(f"Total evaluation statistics: {len(evaluation_statistics)}")

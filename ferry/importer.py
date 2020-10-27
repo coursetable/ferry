@@ -149,7 +149,9 @@ def import_demand(session, season, demand_info):
             database.Listing.course_code,
             database.Listing.course_id,
             database.Listing.section,
-        ).filter(database.Listing.course_code.in_(demand_info["codes"]))
+        )
+        .filter(database.Listing.course_code.in_(demand_info["codes"]))
+        .filter(database.Listing.season_code == season)
     ).all()
 
     unique_course_ids = set(listing[1] for listing in possible_course_ids)
