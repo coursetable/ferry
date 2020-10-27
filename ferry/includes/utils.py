@@ -1,6 +1,6 @@
 from functools import reduce
 from itertools import combinations
-from typing import Dict, Iterable, List, Tuple, FrozenSet, TypeVar
+from typing import Dict, FrozenSet, Iterable, List, Tuple, TypeVar
 
 import networkx
 
