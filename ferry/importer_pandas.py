@@ -1,21 +1,20 @@
 import argparse
+import contextlib
 import csv
 import os
 from io import StringIO
 from pathlib import Path
 
-
-import contextlib
 import d6tstack
 import numpy as np
 import pandas as pd
-import ujson
 import psycopg2
+import ujson
 from sqlalchemy import MetaData
-from ferry.config import DATABASE_CONNECT_STRING
 from sqlalchemy.ext.declarative import declarative_base
 
 from ferry import config, database
+from ferry.config import DATABASE_CONNECT_STRING
 from ferry.includes.importer import (
     get_all_tables,
     import_courses,

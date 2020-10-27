@@ -20,7 +20,9 @@ This script does not recalculate any computed values in the schema.
 def import_course(session, course_info):
     # Create season.
     season, _ = database.get_or_create(
-        session, database.Season, season_code=course_info["season_code"],
+        session,
+        database.Season,
+        season_code=course_info["season_code"],
     )
 
     # Find or create appropriate listing and course.
@@ -210,7 +212,9 @@ def import_evaluation(session, evaluation):
 
     # Enrollment statistics and extras
     statistics, _ = database.get_or_create(
-        session, database.EvaluationStatistics, course=course,
+        session,
+        database.EvaluationStatistics,
+        course=course,
     )
     statistics.enrolled = evaluation["enrollment"].get("enrolled", None)
     statistics.responses = evaluation["enrollment"].get("responses", None)
@@ -222,7 +226,9 @@ def import_evaluation(session, evaluation):
     # Resolve questions.
     def resolve_question(question_code, text, is_narrative, options=None):
         question, created = database.get_or_create(
-            session, database.EvaluationQuestion, question_code=question_code,
+            session,
+            database.EvaluationQuestion,
+            question_code=question_code,
         )
         if created:
             question.question_text = text
