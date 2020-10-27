@@ -294,6 +294,22 @@ def import_courses(merged_course_info, seasons: List[str]):
             lambda x: Counter(x).most_common(1)[0][0]
         )
 
+        ties = season_professors["matched_ids_aggregate"].apply(
+            lambda x: Counter(x).most_common(2)
+        )
+        ties = ties.apply(lambda x: False if len(x) != 2 else x[0][1] == x[1][1])
+
+        tied_professors = season_professors[ties]
+
+        def print_ties(row):
+            print(
+                f"Professor {row['name']} ({row['email']}, {row['ocs_id']}) has tied matches: ",
+                end="",
+            )
+            print(sorted(list(set(row["matched_ids_aggregate"]))))
+
+        tied_professors.apply(print_ties, axis=1)
+
         return professor_ids
 
     # course-professors junction table
