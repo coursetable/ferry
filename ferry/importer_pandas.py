@@ -159,6 +159,37 @@ if __name__ == "__main__":
         evaluation_questions,
     ) = import_evaluations(merged_evaluations_info, listings)
 
+    # define seasons table for import
+    seasons = pd.DataFrame(course_seasons, columns=["season_code"], dtype=int)
+    seasons["term"] = seasons["season_code"].apply(
+        lambda x: {"1": "spring", "2": "summer", "3": "fall"}[str(x)[-1]]
+    )
+    seasons["year"] = (
+        seasons["season_code"].astype(str).apply(lambda x: x[:4]).astype(int)
+    )
+
+    # -----------------------------
+    # Output tables to disk as CSVs
+    # -----------------------------
+
+    print("\n[Writing tables to disk as CSVs]")
+
+    csv_dir = config.DATA_DIR / "importer_dumps"
+
+    seasons.to_csv(csv_dir / "seasons.csv")
+
+    courses.to_csv(csv_dir / "courses.csv")
+    listings.to_csv(csv_dir / "listings.csv")
+    professors.to_csv(csv_dir / "professors.csv")
+    course_professors.to_csv(csv_dir / "course_professors.csv")
+
+    demand_statistics.to_csv(csv_dir / "demand_statistics.csv")
+
+    evaluation_questions.to_csv(csv_dir / "evaluation_questions.csv")
+    evaluation_narratives.to_csv(csv_dir / "evaluation_narratives.csv")
+    evaluation_ratings.to_csv(csv_dir / "evaluation_ratings.csv")
+    evaluation_statistics.to_csv(csv_dir / "evaluation_statistics.csv")
+
     # ------------------------
     # Replace tables in database
     # ------------------------
@@ -178,10 +209,7 @@ if __name__ == "__main__":
 
     raw_conn = database.Engine.raw_connection()
 
-    # insert new tables
-    seasons = pd.DataFrame(course_seasons, columns=["season_code"], dtype=int)
-    seasons["term"] = np.nan
-    seasons["year"] = np.nan
+    # seasons
     copy_from_stringio(raw_conn, seasons, "seasons")
 
     # courses

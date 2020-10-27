@@ -115,7 +115,7 @@ def import_courses(merged_course_info, seasons: List[str]):
     # group CRNs by season for cross-listing deduplication
     crns_by_season = merged_course_info.groupby("season_code")["crns"].apply(list)
     # convert CRN groups to sets for resolution
-    crns_by_season = crns_by_season.apply(lambda x: [set(y) for y in x])
+    crns_by_season = crns_by_season.apply(lambda x: [frozenset(y) for y in x])
     # resolve overlapping CRN sets
     crn_groups_by_season = crns_by_season.apply(merge_overlapping)
 
@@ -745,8 +745,7 @@ def copy_from_stringio(conn, df, table: str):
     # create in-memory buffer for DataFrame
     buffer = StringIO()
 
-    df.to_csv(
-        buffer,
+    csv_kwargs = dict(
         index_label="id",
         header=False,
         index=False,
@@ -755,6 +754,9 @@ def copy_from_stringio(conn, df, table: str):
         escapechar="\\",
         na_rep="NULL",
     )
+
+    df.to_csv(buffer, **csv_kwargs)
+
     buffer.seek(0)
 
     cursor = conn.cursor()
