@@ -18,6 +18,7 @@ from ferry.includes.importer import (
     import_demand,
     import_evaluations,
 )
+from ferry.includes.computed import questions_computed
 from ferry.includes.tqdm import tqdm
 
 """
@@ -178,6 +179,12 @@ if __name__ == "__main__":
             seasons["season_code"].astype(str).apply(lambda x: x[:4]).astype(int)
         )
 
+        # ------------------------------
+        # Computing secondary attributes
+        # ------------------------------
+
+        evaluation_questions = questions_computed(evaluation_questions)
+
         # -----------------------------
         # Output tables to disk as CSVs
         # -----------------------------
@@ -228,9 +235,9 @@ if __name__ == "__main__":
             csv_dir / "evaluation_statistics.csv", index_col=0
         )
 
-    # ------------------------
+    # --------------------------
     # Replace tables in database
-    # ------------------------
+    # --------------------------
     print("\n[Clearing database]")
 
     meta = MetaData(bind=database.Engine, reflect=True)
