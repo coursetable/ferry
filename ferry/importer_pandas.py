@@ -1,11 +1,8 @@
 import argparse
 import contextlib
-import csv
 import os
-from io import StringIO
 from pathlib import Path
 
-import d6tstack
 import numpy as np
 import pandas as pd
 import psycopg2
@@ -20,12 +17,9 @@ from ferry.includes.importer import (
     import_courses,
     import_demand,
     import_evaluations,
+    copy_from_stringio,
 )
 from ferry.includes.tqdm import tqdm
-
-
-class DatabaseError(Exception):
-    print
 
 
 """
@@ -184,74 +178,29 @@ if __name__ == "__main__":
 
     print("\n[Updating database]")
 
-    db_args = {"conn": database.Engine, "if_exists": "append", "index": False}
-
-    seasons = pd.DataFrame(course_seasons, columns=["season_code"], dtype=int)
-    seasons["term"] = -1
-    seasons["year"] = -1
-
-    def copy_from_stringio(conn, df, table: str):
-        """
-        Save DataFrame in-memory and migrate
-        to database with copy_from().
-
-        Parameters
-        ----------
-        conn: psycopg2 connection object
-
-        df: DataFrame to import
-
-        table: name of target table
-
-        Returns
-        -------
-        """
-
-        # create in-memory buffer for DataFrame
-        buffer = StringIO()
-
-        df.to_csv(
-            buffer,
-            index_label="id",
-            header=False,
-            index=False,
-            sep="\t",
-            quoting=csv.QUOTE_NONE,
-            escapechar="\\",
-            na_rep="NULL",
-        )
-        buffer.seek(0)
-
-        cursor = conn.cursor()
-
-        try:
-            cursor.copy_from(buffer, table, columns=df.columns, sep="\t", null="NULL")
-        except (Exception, psycopg2.DatabaseError) as error:
-            cursor.rollback()
-            cursor.close()
-            raise DatabaseError
-
-        print(f"Successfully copied {table}")
-        cursor.close()
-
     conn = psycopg2.connect(
-        **{
-            "host": "localhost",
-            "database": "postgres",
-            "user": "postgres",
-            "password": "thisisapassword",
-        }
+        host="localhost",
+        database="postgres",
+        user="postgres",
+        password="thisisapassword",
     )
 
+    # insert new tables
+    seasons = pd.DataFrame(course_seasons, columns=["season_code"], dtype=int)
+    seasons["term"] = np.nan
+    seasons["year"] = np.nan
     copy_from_stringio(conn, seasons, "seasons")
 
+    # courses
     copy_from_stringio(conn, courses, "courses")
     copy_from_stringio(conn, listings, "listings")
     copy_from_stringio(conn, professors, "professors")
     copy_from_stringio(conn, course_professors, "course_professors")
 
+    # demand statistics
     copy_from_stringio(conn, demand_statistics, "demand_statistics")
 
+    # evaluations
     copy_from_stringio(conn, evaluation_questions, "evaluation_questions")
     copy_from_stringio(conn, evaluation_narratives, "evaluation_narratives")
     copy_from_stringio(conn, evaluation_ratings, "evaluation_ratings")

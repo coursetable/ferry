@@ -1,4 +1,7 @@
+import csv
+import psycopg2
 from collections import Counter
+from io import StringIO
 from itertools import combinations
 from typing import Dict, List
 
@@ -10,6 +13,10 @@ from sqlalchemy import inspect
 
 from ferry import config, database
 from ferry.includes.utils import invert_dict_of_lists, merge_overlapping
+
+
+class DatabaseError(Exception):
+    print
 
 
 def get_table(table: str):
@@ -716,3 +723,48 @@ def import_evaluations(merged_evaluations_info, listings):
         evaluation_statistics,
         evaluation_questions,
     )
+
+
+def copy_from_stringio(conn, df, table: str):
+    """
+    Save DataFrame in-memory and migrate
+    to database with copy_from().
+
+    Parameters
+    ----------
+    conn: psycopg2 connection object
+
+    df: DataFrame to import
+
+    table: name of target table
+
+    Returns
+    -------
+    """
+
+    # create in-memory buffer for DataFrame
+    buffer = StringIO()
+
+    df.to_csv(
+        buffer,
+        index_label="id",
+        header=False,
+        index=False,
+        sep="\t",
+        quoting=csv.QUOTE_NONE,
+        escapechar="\\",
+        na_rep="NULL",
+    )
+    buffer.seek(0)
+
+    cursor = conn.cursor()
+
+    try:
+        cursor.copy_from(buffer, table, columns=df.columns, sep="\t", null="NULL")
+    except (Exception, psycopg2.DatabaseError) as error:
+        cursor.rollback()
+        cursor.close()
+        raise DatabaseError
+
+    print(f"Successfully copied {table}")
+    cursor.close()
