@@ -35,6 +35,10 @@ def get_dates(season):
     r = SESSION.get(url)
     s = BeautifulSoup(r.text, "html.parser")
 
+    if s.title.text == "Error":
+        print(f"Warning: no course demand dates found for season {season}")
+        return []
+
     # select date elements
     dates_elems = s.select("table table")[0].select("td")
 
