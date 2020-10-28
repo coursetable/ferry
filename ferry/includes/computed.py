@@ -14,6 +14,21 @@ with open(f"{config.RESOURCE_DIR}/question_tags.csv") as f:
 
 
 def questions_computed(evaluation_questions):
+    """
+    Populate computed question fields:
+        tags: question tags for ratings aggregation
+
+    Parameters
+    ----------
+    Pandas tables post-import:
+        evaluation_questions
+
+    Returns
+    -------
+    evaluation_questions: table with computed fields
+
+    """
+
     def assign_code(row):
 
         code = row["question_code"]
@@ -42,16 +57,36 @@ def questions_computed(evaluation_questions):
 def evaluation_statistics_computed(
     evaluation_statistics, evaluation_ratings, evaluation_questions
 ):
+    """
+    Populate computed question fields:
+        avg_rating: average course rating
+        avg_workload: average course workload
 
+    Parameters
+    ----------
+    Pandas tables post-import:
+        evaluation_statistics
+        evaluation_ratings
+        evaluation_questions
+
+    Returns
+    -------
+    evaluation_statistics: table with computed fields
+
+    """
+
+    # create local deep copy    
+    evaluation_ratings = evaluation_ratings.copy(deep=True)
+
+    # match tags to ratings
     question_code_map = dict(
         zip(evaluation_questions["question_code"], evaluation_questions["tag"])
     )
-
-    evaluation_ratings = evaluation_ratings.copy(deep=True)
     evaluation_ratings["tag"] = evaluation_ratings["question_code"].apply(
         question_code_map.get
     )
 
+    # compute average rating of responses array
     def average_rating(ratings: List[int]) -> float:
         if not ratings or not sum(ratings):
             return None
@@ -61,6 +96,7 @@ def evaluation_statistics_computed(
             agg += multiplier * rating
         return agg / sum(ratings)
 
+    # Get average rating for each course with a specified tag
     def average_by_course(tag, n_categories):
 
         tagged_ratings = evaluation_ratings[evaluation_ratings["tag"] == tag].copy(
@@ -73,6 +109,7 @@ def evaluation_statistics_computed(
             lambda data: [sum(x) for x in zip(*data)]
         )
 
+        # check that all the response arrays are the expected length
         lengths_invalid = rating_by_course.apply(len) != n_categories
 
         if any(lengths_invalid):
@@ -85,6 +122,7 @@ def evaluation_statistics_computed(
 
         return rating_by_course
 
+    # get overall and workload ratings
     overall_by_course = average_by_course("rating", 5)
     workload_by_course = average_by_course("workload", 5)
 
@@ -99,17 +137,36 @@ def evaluation_statistics_computed(
 
 
 def courses_computed(courses, listings, evaluation_statistics):
+    """
+    Populate computed course fields:
+        average_rating: average course rating over all past instances
+        average_workload: average course workload over all past instances
 
+    Parameters
+    ----------
+    Pandas tables post-import:
+        courses
+        listings
+        evaluation_statistics
+
+    Returns
+    -------
+    courses: table with computed fields
+
+    """
+
+    # create local deep copy    
     courses = courses.copy(deep=True)
 
+    # map courses to codes and codes to courses for historical offerings
     course_to_codes = listings.groupby("course_id")["course_code"].apply(list).to_dict()
     code_to_courses = listings.groupby("course_code")["course_id"].apply(list).to_dict()
-
     courses["codes"] = courses["course_id"].apply(course_to_codes.get)
     courses["coded_courses"] = courses["codes"].apply(
         lambda x: [code_to_courses[code] for code in x]
     )
 
+    # transform a list of lists into a single list
     def flatten_list_of_lists(list_of_lists):
 
         flattened = [x for y in list_of_lists for x in y]
@@ -119,6 +176,7 @@ def courses_computed(courses, listings, evaluation_statistics):
     courses["coded_courses"] = courses["coded_courses"].apply(flatten_list_of_lists)
     courses["coded_courses"] = courses["coded_courses"].apply(lambda x: list(set(x)))
 
+    # calculate the average of an array
     def average(nums):
         nums = list(filter(lambda x: x is not None, nums))
         nums = list(filter(lambda x: x == x, nums))
@@ -126,6 +184,7 @@ def courses_computed(courses, listings, evaluation_statistics):
             return None
         return sum(nums) / len(nums)
 
+    # map courses to ratings
     course_to_overall = dict(
         zip(evaluation_statistics["course_id"], evaluation_statistics["avg_rating"])
     )
@@ -133,6 +192,7 @@ def courses_computed(courses, listings, evaluation_statistics):
         zip(evaluation_statistics["course_id"], evaluation_statistics["avg_workload"])
     )
 
+    # get ratings
     courses["average_rating"] = courses["coded_courses"].apply(
         lambda courses: [course_to_overall.get(x, None) for x in courses]
     )
@@ -140,9 +200,11 @@ def courses_computed(courses, listings, evaluation_statistics):
         lambda courses: [course_to_workload.get(x, None) for x in courses]
     )
 
+    # calculate averages over past offerings
     courses["average_rating"] = courses["average_rating"].apply(average)
     courses["average_workload"] = courses["average_workload"].apply(average)
 
+    # remove intermediate columns
     courses = courses.loc[:, get_table_columns(database.models.Course)]
 
     return courses
@@ -150,6 +212,24 @@ def courses_computed(courses, listings, evaluation_statistics):
 
 def professors_computed(professors, course_professors, evaluation_statistics):
 
+    """
+    Populate computed professor fields:
+        average_rating: average overall rating of classes taught
+
+    Parameters
+    ----------
+    Pandas tables post-import:
+        professors
+        course_professors
+        evaluation_statistics
+
+    Returns
+    -------
+    professors: table with computed fields
+
+    """
+
+    # create local deep copy    
     course_professors = course_professors.copy(deep=True)
 
     course_to_overall = dict(
