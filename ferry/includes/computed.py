@@ -75,7 +75,7 @@ def evaluation_statistics_computed(
 
     """
 
-    # create local deep copy    
+    # create local deep copy
     evaluation_ratings = evaluation_ratings.copy(deep=True)
 
     # match tags to ratings
@@ -155,7 +155,7 @@ def courses_computed(courses, listings, evaluation_statistics):
 
     """
 
-    # create local deep copy    
+    # create local deep copy
     courses = courses.copy(deep=True)
 
     # map courses to codes and codes to courses for historical offerings
@@ -229,7 +229,7 @@ def professors_computed(professors, course_professors, evaluation_statistics):
 
     """
 
-    # create local deep copy    
+    # create local deep copy
     course_professors = course_professors.copy(deep=True)
 
     course_to_overall = dict(

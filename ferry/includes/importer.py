@@ -96,7 +96,8 @@ def import_courses(merged_course_info, seasons: List[str]):
     listings = merged_course_info.copy(deep=True)
     listings["listing_id"] = range(len(listings))
     listings["course_id"] = listings["temp_course_id"].apply(temp_to_course_id.get)
-    listings["section"] = listings["section"].apply(lambda x: x if x == x else 0)
+    listings["section"] = listings["section"].apply(lambda x: x if x == x else "0")
+    listings["section"] = listings["section"].fillna("0").astype(str)
 
     print("Creating professors table")
     # initialize professors table

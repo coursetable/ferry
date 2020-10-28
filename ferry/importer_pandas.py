@@ -252,10 +252,19 @@ if __name__ == "__main__":
             csv_dir / "evaluation_statistics.csv", index_col=0
         )
 
+        # fix datatype assumptions by pandas
+        listings["section"] = listings["section"].astype(str)
+        evaluation_statistics["enrolled"] = evaluation_statistics["enrolled"].astype("Int64")
+        evaluation_statistics["responses"] = evaluation_statistics["responses"].astype("Int64")
+        evaluation_statistics["declined"] = evaluation_statistics["declined"].astype("Int64")
+        evaluation_statistics["no_response"] = evaluation_statistics["no_response"].astype("Int64")
+
     # --------------------------
     # Replace tables in database
     # --------------------------
     print("\n[Clearing database]")
+
+    print("Creating/clearing staging tables")
 
     meta = MetaData(bind=database.Engine, reflect=True)
     staging_tables = []
@@ -265,8 +274,7 @@ if __name__ == "__main__":
             args = []
             for column in table.columns:
                 args.append(column.copy())
-            for constraint in table.constraints:
-                args.append(constraint.copy())
+            # note that we exclude constraints from the staging tables
             staging_tables.append(
                 Table(
                     f"{table.name}_staged", table.metadata, extend_existing=True, *args
@@ -275,7 +283,7 @@ if __name__ == "__main__":
 
     meta.create_all(tables=staging_tables)
 
-    # drop old tables
+    # # drop old tables
     conn = database.Engine.connect()
     delete = conn.begin()
     for table in meta.sorted_tables:
@@ -307,5 +315,18 @@ if __name__ == "__main__":
     copy_from_stringio(raw_conn, evaluation_ratings, "evaluation_ratings_staged")
     copy_from_stringio(raw_conn, evaluation_statistics, "evaluation_statistics_staged")
 
-    print("Committing new tables")
+    print("Committing new staged tables")
     raw_conn.commit()
+
+    print("Replacing old tables with staged")
+
+    replace = conn.begin()
+    conn.execute("SET CONSTRAINTS ALL DEFERRED;")
+
+    # drop and update tables in reverse dependnecy order
+    for table in meta.sorted_tables[::-1]:
+        if not table.name.endswith("_staged"):
+            print(f"Updating table {table.name}")
+            conn.execute(f"DROP TABLE IF EXISTS {table.name};")
+            conn.execute(f'ALTER TABLE "{table.name}_staged" RENAME TO {table.name};')
+    replace.commit()
