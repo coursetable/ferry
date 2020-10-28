@@ -15,6 +15,7 @@ from ferry.includes.computed import (
     courses_computed,
     evaluation_statistics_computed,
     questions_computed,
+    professors_computed
 )
 from ferry.includes.importer import (
     copy_from_stringio,
@@ -196,6 +197,8 @@ if __name__ == "__main__":
         )
         print("Computing historical ratings for courses")
         courses = courses_computed(courses, listings, evaluation_statistics)
+        print("Computing ratings for professors")
+        professors = professors_computed(professors, course_professors, evaluation_statistics)
 
         # -----------------------------
         # Output tables to disk as CSVs

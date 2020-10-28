@@ -146,3 +146,24 @@ def courses_computed(courses, listings, evaluation_statistics):
     courses = courses.loc[:, get_table_columns(database.models.Course)]
 
     return courses
+
+def professors_computed(professors, course_professors, evaluation_statistics):
+
+    course_professors = course_professors.copy(deep=True)
+
+    course_to_overall = dict(
+        zip(evaluation_statistics["course_id"], evaluation_statistics["avg_rating"])
+    )
+    # course_to_workload = dict(
+    #     zip(evaluation_statistics["course_id"], evaluation_statistics["avg_workload"])
+    # )
+
+    course_professors["average_rating"] = course_professors["course_id"].apply(course_to_overall.get)
+    # course_professors["average_workload"] = course_professors["course_id"].apply(course_to_workload.get)
+
+    rating_by_professor = course_professors.dropna(subset=["average_rating"]).groupby("professor_id")["average_rating"].mean().to_dict()
+    # workload_by_professor = course_professors.dropna("average_workload").groupby("professor_id").mean().to_dict()
+
+    professors["average_rating"] = professors["professor_id"].apply(rating_by_professor.get)
+
+    return professors
