@@ -151,7 +151,9 @@ def import_demand(session, season, demand_info):
             database.Listing.course_code,
             database.Listing.course_id,
             database.Listing.section,
-        ).filter(database.Listing.course_code.in_(demand_info["codes"]))
+        )
+        .filter(database.Listing.course_code.in_(demand_info["codes"]))
+        .filter(database.Listing.season_code == season)
     ).all()
 
     unique_course_ids = set(listing[1] for listing in possible_course_ids)
@@ -214,7 +216,11 @@ def import_evaluation(session, evaluation):
         database.EvaluationStatistics,
         course=course,
     )
-    database.update_json(statistics, "enrollment", evaluation["enrollment"])
+    statistics.enrolled = evaluation["enrollment"].get("enrolled", None)
+    statistics.responses = evaluation["enrollment"].get("responses", None)
+    statistics.declined = evaluation["enrollment"].get("declined", None)
+    statistics.no_response = evaluation["enrollment"].get("no response", None)
+
     database.update_json(statistics, "extras", evaluation["extras"])
 
     # Resolve questions.

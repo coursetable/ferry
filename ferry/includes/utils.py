@@ -1,7 +1,14 @@
 from functools import reduce
+from itertools import combinations
+from typing import Dict, FrozenSet, Iterable, List, Tuple, TypeVar
+
+import networkx
+import pandas as pd
+
+from ferry import config, database
 
 
-def merge_overlapping(sets):
+def merge_overlapping(sets: List[FrozenSet]) -> List:
     """
     Given a list of sets, merge sets with
     a nonempty intersection until all sets
@@ -17,35 +24,50 @@ def merge_overlapping(sets):
 
     """
 
-    is_merged = True
+    # deduplicate sets to improve performance
+    sets = list(set(sets))
 
-    while is_merged:
+    g = networkx.Graph()
+    for sub_set in sets:
+        for edge in combinations(list(sub_set), 2):
+            g.add_edge(*edge)
 
-        is_merged = False
-        temp_merged = []
+    merged = networkx.connected_components(g)
+    merged = [set(x) for x in merged]
 
-        while len(sets) > 0:
-
-            common, rest = sets[0], sets[1:]
-            sets = []
-
-            for x in rest:
-
-                if x.isdisjoint(common):
-                    sets.append(x)
-
-                else:
-                    is_merged = True
-                    common |= x
-
-            temp_merged.append(common)
-
-        sets = temp_merged
-
-    return sets
+    return merged
 
 
-def elementwise_sum(a, b):
+def invert_dict_of_lists(d: Dict) -> Dict:
+    """
+    Given a dictionary mapping x -> [a, b, c],
+    invert such that it now maps all a, b, c -> x.
+    If same value in multiple keys, then inverted
+    dictionary overwrites arbitrarily.
+
+    Parameters
+    ----------
+    d: input dictionary of lists
+
+    Returns
+    -------
+    inverted: output inverted dictionary
+
+    """
+
+    inverted = {}
+
+    for k, v in d.items():
+        for x in v:
+            inverted[x] = k
+
+    return inverted
+
+
+N = TypeVar("N", int, float)
+
+
+def elementwise_sum(a: List[N], b: List[N]) -> List[N]:
     """
     Given two lists of equal length, return
     a list of elementwise sums
@@ -68,7 +90,7 @@ def elementwise_sum(a, b):
     return [sum(x) for x in zip(a, b)]
 
 
-def category_average(categories):
+def category_average(categories: List[int]) -> Tuple[float, int]:
     """
     Given a list-like of n category counts,
     aggregate and return the average where each
@@ -76,7 +98,7 @@ def category_average(categories):
 
     Parameters
     ----------
-    categories: list-like of lists
+    categories: list-like
         categories
 
     Returns
@@ -87,12 +109,7 @@ def category_average(categories):
     """
 
     if len(categories) == 0:
-        return None, None
-
-    categories = reduce(elementwise_sum, categories)
-
-    if sum(categories) == 0:
-        return None, None
+        return 0, -1
 
     categories_sum = sum([categories[i] * (i + 1) for i in range(len(categories))])
 
@@ -107,3 +124,73 @@ def resolve_potentially_callable(val):
     if callable(val):
         return val()
     return val
+
+
+def get_table(table: str):
+    """
+    Read one of the tables from the database
+    into Pandas dataframe (assuming SQL storage format)
+
+    Parameters
+    ----------
+    table: name of table to retrieve
+
+    Returns
+    -------
+    Pandas DataFrame
+
+    """
+
+    return pd.read_sql_table(table, con=database.Engine)
+
+
+def get_table_columns(table):
+    """
+    Get column names of a table, where table is
+    a SQLalchemy model (e.g. ferry.database.models.Course)
+
+    Parameters
+    ----------
+    table: name of table to retrieve
+
+    Returns
+    -------
+    Pandas DataFrame
+
+    """
+
+    return [column.key for column in table.__table__.columns]
+
+
+def get_all_tables(select_schemas: List[str]) -> Dict:
+    """
+    Get all the tables under given schemas as a dictionary
+    of Pandas dataframes
+
+    Parameters
+    ----------
+    select_schemas: schemas to retrieve tables for
+
+    Returns
+    -------
+    Dictionary of Pandas DataFrames
+
+    """
+
+    tables = []
+
+    # inspect and get schema names
+    inspector = inspect(database.Engine)
+    schemas = inspector.get_schema_names()
+
+    select_schemas = [x for x in schemas if x in select_schemas]
+
+    for schema in select_schemas:
+
+        schema_tables = inspector.get_table_names(schema=schema)
+
+        tables = tables + schema_tables
+
+    tables = {table: get_table(table) for table in tables}
+
+    return tables
