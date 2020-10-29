@@ -26,7 +26,7 @@ class BaseModel(Base, SerializeMixin, ReprMixin):
 class Season(BaseModel):
     __tablename__ = "seasons"
     season_code = Column(
-        String(10), primary_key=True, comment="Season code (e.g. '202001')"
+        String(10), primary_key=True, comment="Season code (e.g. '202001')", index=True
     )
 
     term = Column(
@@ -41,14 +41,14 @@ class Season(BaseModel):
 course_professors = Table(
     "course_professors",
     Base.metadata,
-    Column("course_id", ForeignKey("courses.course_id"), primary_key=True),
-    Column("professor_id", ForeignKey("professors.professor_id"), primary_key=True),
+    Column("course_id", ForeignKey("courses.course_id"), primary_key=True, index=True),
+    Column("professor_id", ForeignKey("professors.professor_id"), primary_key=True, index=True),
 )
 
 
 class Course(BaseModel):
     __tablename__ = "courses"
-    course_id = Column(Integer, primary_key=True)
+    course_id = Column(Integer, primary_key=True, index=True)
 
     season_code = Column(
         String(10),
@@ -188,6 +188,7 @@ class DemandStatistics(BaseModel):
         Integer,
         ForeignKey("courses.course_id"),
         primary_key=True,
+        index=True,
         comment="The course to which these demand statistics apply",
     )
     latest_demand = Column(
@@ -262,6 +263,7 @@ class EvaluationQuestion(BaseModel):
         String,
         comment='Question code from OCE (e.g. "YC402")',
         primary_key=True,
+        index=True
     )
     is_narrative = Column(
         Boolean,

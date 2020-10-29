@@ -8,6 +8,13 @@
 -- See this Hasura blog post for more information on the search function:
 -- https://hasura.io/blog/full-text-search-with-hasura-graphql-api-postgres/
 
+-- encourage index usage
+SET enable_seqscan = OFF;
+SET enable_indexscan = ON;
+SET random_page_cost = 1;
+SET seq_page_cost = 1;
+SET enable_hashjoin = OFF;
+
 DROP FUNCTION IF EXISTS search_listing_info;
 DROP TABLE IF EXISTS computed_listing_info CASCADE;
 
