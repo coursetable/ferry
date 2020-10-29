@@ -1,6 +1,6 @@
 from sqlalchemy import MetaData, Table
-from sqlalchemy.inspection import inspect
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.inspection import inspect
 
 from ferry.database.database import Engine, Session
 from ferry.database.database_utilities import *

@@ -14,6 +14,7 @@ from ferry.includes.tqdm import tqdm
 This script checks the database invariants.
 """
 
+
 def listing_invariants(session):
     """
     Check invariant: listing.season_code == course.season_code if listing.course_id == course.course_id.
@@ -69,7 +70,6 @@ def question_tag_invariant(session):
                 raise database.InvariantError(f"mismatched tag {question.tag}")
 
 
-
 def course_invariants(session):
     """
     Invariant: every course should have at least one listing.
@@ -86,6 +86,7 @@ def course_invariants(session):
         raise database.InvariantError(
             f"the following courses have no listings: {', '.join(str(course) for course in courses_no_listings)}"
         )
+
 
 def search_setup(session):
     """
@@ -122,13 +123,14 @@ if __name__ == "__main__":
         required=False,
     )
 
-
-    print("[Replacing old tables with staged]")
+    print("\n[Replacing old tables with staged]")
 
     conn = database.Engine.connect()
     meta = MetaData(bind=database.Engine)
     meta.reflect()
 
+    # keep track of main table constraints and indexes
+    # because staged tables do not have foreign key relationships
     constraints = []
     indexes = []
 
@@ -143,16 +145,19 @@ if __name__ == "__main__":
                 indexes.append(index)
             for constraint in table.constraints:
                 constraints.append(constraint)
-            conn.execute(f'DROP TABLE IF EXISTS {table.name}_old;')
+            # remove the old table if it is present before
+            conn.execute(f"DROP TABLE IF EXISTS {table.name}_old;")
+            # rename current main table to _old
             conn.execute(f'ALTER TABLE "{table.name}" RENAME TO {table.name}_old;')
+            # rename staged table to main
             conn.execute(f'ALTER TABLE "{table.name}_staged" RENAME TO {table.name};')
 
     replace.commit()
 
-    # attempt to update tables with staged, checking invariants
+    # check invariants
     try:
 
-        print("[Checking table invariants]")
+        print("\n[Checking table invariants]")
 
         # check invariants
         args = parser.parse_args()
@@ -183,26 +188,27 @@ if __name__ == "__main__":
         for table in meta.sorted_tables[::-1]:
             if not table.name.endswith("_staged"):
                 print(f"Reverting table {table.name}")
-                conn.execute(f'ALTER TABLE "{table.name}" RENAME TO {table.name}_staged;')
+                conn.execute(
+                    f'ALTER TABLE "{table.name}" RENAME TO {table.name}_staged;'
+                )
                 conn.execute(f'ALTER TABLE "{table.name}_old" RENAME TO {table.name};')
 
         revert.commit()
         raise
 
-
-    print("Deleting temporary old tables")
-    meta.reflect()
+    print("\n[Deleting temporary old tables]")
+    meta.reflect()  # update the models to reflect postgres
     delete = conn.begin()
     conn.execute("SET CONSTRAINTS ALL DEFERRED;")
     for table in meta.sorted_tables[::-1]:
         if table.name.endswith("_old"):
             print(f"Dropping table {table.name}")
-            conn.execute(f'DROP TABLE IF EXISTS {table.name}')
+            conn.execute(f"DROP TABLE IF EXISTS {table.name} CASCADE;")
 
     delete.commit()
 
     # add back the foreign key constraints
-    print("Regenerating constraints")
+    print("\n[Regenerating constraints]")
     regen_constraints = conn.begin()
     for constraint in constraints:
         if isinstance(constraint, ForeignKeyConstraint):
@@ -211,12 +217,11 @@ if __name__ == "__main__":
 
     def index_exists(name):
         result = conn.execute(
-            "SELECT exists(SELECT 1 from pg_indexes where indexname = '{}') as ix_exists;"
-                .format(name)
+            f"SELECT exists(SELECT 1 from pg_indexes where indexname = '{name}') as ix_exists;"
         ).first()
         return result.ix_exists
 
-    print("Regenerating indexes")
+    print("\n[Regenerating indexes]")
     regen_indexes = conn.begin()
     for index in indexes:
         if index_exists(index.name):
@@ -224,17 +229,19 @@ if __name__ == "__main__":
         conn.execute(schema.CreateIndex(index))
     regen_indexes.commit()
 
-    print("Reindexing")
+    print("\n[Reindexing]")
     conn.execution_options(isolation_level="AUTOCOMMIT").execute("VACUUM;")
-    conn.execution_options(isolation_level="AUTOCOMMIT").execute("REINDEX DATABASE postgres;")
+    conn.execution_options(isolation_level="AUTOCOMMIT").execute(
+        "REINDEX DATABASE postgres;"
+    )
 
     # generate computed tables and full-text-search
-    print("Setting up search")
+    print("\n[Setting up search]")
     with database.session_scope(database.Session) as session:
         search_setup(session)
 
     # Print row counts for each table.
-    tqdm.write("\nTable Statistics")
+    tqdm.write("\n[Table Statistics]")
     with database.session_scope(database.Session) as session:
         # Via https://stackoverflow.om/a/2611745/5004662.
         sql = """

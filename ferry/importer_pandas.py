@@ -272,7 +272,6 @@ if __name__ == "__main__":
     # --------------------------
     print("\n[Clearing staging tables]")
 
-
     meta = MetaData(bind=database.Engine)
     meta.reflect()
 
@@ -295,10 +294,12 @@ if __name__ == "__main__":
                 args.append(column.copy())
             # note that we exclude constraints from the staging tables
             # for constraint in table.constraints:
-                # print(constraint)
-            staging_tables.append(Table(
+            # print(constraint)
+            staging_tables.append(
+                Table(
                     f"{table.name}_staged", table.metadata, extend_existing=True, *args
-                ))
+                )
+            )
 
     meta.create_all(tables=staging_tables)
 
