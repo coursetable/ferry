@@ -22,11 +22,12 @@ We want the crawler to be reproducible and reliable. As such, we designed the cr
   - Course evaluations
   - Course demand statistics
 - **Importation**: We import the preprocessed data files into our Postgres database.
-- **Post-processing**: We verify the imported data and compute/modify additional attributes such as numerical ratings.
 
 Extraction is documented in the [retrieval docs](docs/1_retrieval.md) and implemented in the `ferry/crawler` directory. We also needed to migrate data from the previous CourseTable databases in a similar fashion. This process is documented in the [migration docs](docs/0_migration.md) and implemented in the `ferry/migration` directory.
 
-Importation and post-processing make use of the database, which is documented in [parsing docs](docs/2_parsing.md). Moreover, the database schema is defined with SQLAlchemy in `ferry/database/models.py`. Importation is implemented by `ferry/importer.py`, and post-processing is implemented by `ferry/computed.py`. Both importation and post-processing are fully idempotent.
+Importation and post-processing make use of the database, which is documented in [parsing docs](docs/2_parsing.md). Moreover, the database schema is defined with SQLAlchemy in `ferry/database/models.py`. 
+
+Importation is a two-step process. In the first step (`stage.py`), we use Pandas to construct tables from preprocessed files, which are then uploaded to staging tables (identified with a `_staged` suffix) in the database. These staged tables are then validated in `deploy.py`, after which they are pushed to the main tables if all checks are successful. Both importation and post-processing are fully idempotent. Note that `deploy.py` **must** be run after `stage.py` each time, as it removes the staging tables by renaming them to main ones.
 
 ## Dependencies
 
@@ -112,19 +113,22 @@ To extract data from Yale's websites, we use the scripts provided in `/ferry/cra
 3. To retrieve evaluations, we run `fetch_ratings.py`. For each class found, this script will download all evaluation info, namely categorical and written evaluation responses.
 4. To retrieve demand statistics, we also need a list of course subject codes that the demand statistics are indexed by. These can be found using `fetch_subjects.py`. Once this has been done, we can get demand subjects using `fetch_demand.py`.
 
-Note that `fetch_classes.py`, `parse_classes.py`, `fetch_ratings.py`, `fetch_subjects.py`, and `fetch_demand.py` all have a `--season` argument that allows one to manually filter which seasons to retrieve. This script is useful for periodic updates in which we don't need to process older seasons (see [refresh.sh](https://github.com/coursetable/ferry/blob/master/refresh_courses.sh)) and for testing.
+Note that `fetch_classes.py`, `parse_classes.py`, `fetch_ratings.py`, `fetch_subjects.py`, and `fetch_demand.py` all have a `--season` argument that allows one to manually filter which seasons to retrieve. This script is useful for periodic updates in which we don't need to process older seasons (see [refresh.sh](/refresh_courses.sh)) and for testing.
 
 ### Importation
 
-Once extraction is complete, our data can be imported into the Postgres database. As mentioned above, the only step here is to run `/ferry/importer.py`.
+As mentioned above, the only step here is to run `/ferry/stage.py`. With our full dataset, this takes about 2 minutes.
 
 ### Post-processing
 
-After the initial data has been imported into Postgres, we run `/ferry/computed.py` to do the following:
+After the initial tables have been staged in Postgres, we run `/ferry/deploy.py` to do the following:
 
 - Check invariants (e.g. the season codes in our listings and courses tables match)
-- Compute numerical ratings (overall rating and workload) per course
-- Compute historical ratings for courses and professors over all past offerings
+- If checks are successful, promote our staging tables to the main ones
+- Reindex the entire database
+- Regenerate materialized tables and add full-text search capability
+
+With our full dataset, this takes about a minute.
 
 ## Contributing
 
