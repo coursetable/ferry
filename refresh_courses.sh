@@ -12,6 +12,9 @@ announce () {
 # go to ferry root for poetry to work
 cd $(dirname $0)
 
+# ensure the data is up to date
+(cd data && git checkout master && git pull)
+
 # install any new dependencies
 poetry install
 
