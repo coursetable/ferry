@@ -185,6 +185,29 @@ class Listing(BaseModel):
     )
 
 
+class Flag(BaseModel):
+    # Course flags
+    __tablename__ = "flags"
+
+    flag_id = Column(Integer, comment="Flag ID", primary_key=True)
+
+    flag_text = Column(String, comment="Flag text", index=True, nullable=False)
+
+
+# Course-Flag association/junction table.
+course_flags = Table(
+    "course_flags",
+    Base.metadata,
+    Column("course_id", ForeignKey("courses.course_id"), primary_key=True, index=True),
+    Column(
+        "flag_id",
+        ForeignKey("flags.flag_id"),
+        primary_key=True,
+        index=True,
+    ),
+)
+
+
 class DemandStatistics(BaseModel):
     # Course demand statistics.
     __tablename__ = "demand_statistics"

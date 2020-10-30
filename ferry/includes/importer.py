@@ -299,6 +299,19 @@ def import_courses(merged_course_info, seasons: List[str]):
     courses[["location_times", "average_rating", "average_workload"]] = np.nan
     professors["average_rating"] = np.nan
 
+    # construct courses and flags mapping
+    print("Adding course flags")
+    course_flags = courses[["course_id", "flags"]].copy(deep=True)
+    course_flags = course_flags[course_flags["flags"].apply(len) > 0]
+    course_flags = course_flags.explode("flags")
+
+    flags = course_flags.drop_duplicates(subset=["flags"], keep="first").copy(deep=True)
+    flags["flag_text"] = flags["flags"]
+    flags["flag_id"] = range(len(flags))
+
+    flag_text_to_id = dict(zip(flags["flag_text"], flags["flag_id"]))
+    course_flags["flag_id"] = course_flags["flags"].apply(flag_text_to_id.get)
+
     # extract columns to match database
     courses = courses.loc[:, get_table_columns(database.models.Course)]
     listings = listings.loc[:, get_table_columns(database.models.Listing)]
@@ -306,14 +319,20 @@ def import_courses(merged_course_info, seasons: List[str]):
         :, [column.key for column in database.models.course_professors.columns]
     ]
     professors = professors.loc[:, get_table_columns(database.models.Professor)]
+    flags = flags.loc[:, get_table_columns(database.models.Flag)]
+    course_flags = course_flags.loc[
+        :, [column.key for column in database.models.course_flags.columns]
+    ]
 
     print("[Summary]")
     print(f"Total courses: {len(courses)}")
     print(f"Total listings: {len(listings)}")
     print(f"Total course-professors: {len(course_professors)}")
     print(f"Total professors: {len(professors)}")
+    print(f"Total course-flags: {len(course_flags)}")
+    print(f"Total flags: {len(flags)}")
 
-    return courses, listings, course_professors, professors
+    return courses, listings, course_professors, professors, course_flags, flags
 
 
 def import_demand(merged_demand_info, listings, seasons: List[str]):

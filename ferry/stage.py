@@ -1,8 +1,8 @@
 import pandas as pd
 import ujson
-from sqlalchemy import MetaData, Table, schema
+from sqlalchemy import ForeignKey, MetaData, Table, schema
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.sql.schema import ForeignKeyConstraint
+from sqlalchemy.sql.schema import ForeignKeyConstraint, PrimaryKeyConstraint
 
 from ferry import config, database
 from ferry.config import DATABASE_CONNECT_STRING
@@ -27,6 +27,8 @@ if __name__ == "__main__":
     listings = pd.read_csv(csv_dir / "listings.csv", index_col=0)
     professors = pd.read_csv(csv_dir / "professors.csv", index_col=0)
     course_professors = pd.read_csv(csv_dir / "course_professors.csv", index_col=0)
+    flags = pd.read_csv(csv_dir / "flags.csv", index_col=0)
+    course_flags = pd.read_csv(csv_dir / "course_flags.csv", index_col=0)
 
     demand_statistics = pd.read_csv(csv_dir / "demand_statistics.csv", index_col=0)
 
@@ -75,16 +77,15 @@ if __name__ == "__main__":
     for table in db_meta.sorted_tables[::-1]:
         if table.name.endswith("_staged"):
             print(f"Dropping table {table.name}")
-            conn.execute(f'ALTER TABLE IF EXISTS "{table}" DISABLE TRIGGER ALL;')
-            conn.execute(table.delete())
-            conn.execute(f'ALTER TABLE IF EXISTS "{table}" ENABLE TRIGGER ALL;')
-
-            # also drop all staged table constraints from before
-            for constraint in table.constraints:
-                conn.execute(schema.DropConstraint(constraint))
+            conn.execute(f"DROP TABLE IF EXISTS {table.name} CASCADE;")
     delete.commit()
 
-    staging_tables = []
+    # rename foreign key to staged
+    def rename_fkey(fkey_name):
+        fkey_table, fkey_col = fkey_name.split(".", 1)
+        return f"{fkey_table}_staged.{fkey_col}"
+
+    staging_tables = {}
 
     # create staging tables based on SQLAlchemy models
     for table in alchemy_tables:
@@ -93,22 +94,45 @@ if __name__ == "__main__":
 
         args = []
         for column in table.columns:
-            args.append(column.copy())
+            column_copy = column.copy()
+
+            # point column foreign keys towards staged ones
+            # (tables are created in dependency order)
+            column_copy.foreign_keys = set(
+                [
+                    ForeignKey(rename_fkey(fkey._colspec))
+                    for fkey in column_copy.foreign_keys
+                ]
+            )
+
+            args.append(column_copy)
 
         for constraint in table.constraints:
-            if not isinstance(constraint, ForeignKeyConstraint):
-                args.append(constraint.copy())
+            constraint_copy = constraint.copy()
 
-        staging_tables.append(
-            Table(
-                f"{table.name}_staged",
-                table.metadata,
-                extend_existing=True,
-                *args,
-            )
+            # point referred table (if exists) towards staged one
+            if hasattr(constraint_copy, "_referred_table"):
+                referred_table = constraint_copy._referred_table
+                constraint_copy._referred_table = staging_tables[referred_table.name]
+
+            # point foreign key elements (if any) towards staged one
+            if hasattr(constraint_copy, "elements"):
+                constraint_copy.elements = set(
+                    [
+                        ForeignKey(rename_fkey(elem._colspec))
+                        for elem in constraint_copy.elements
+                        if isinstance(elem, ForeignKey)
+                    ]
+                )
+            args.append(constraint_copy)
+
+        staged_table = Table(
+            f"{table.name}_staged", table.metadata, extend_existing=True, *args
         )
 
-    db_meta.create_all(tables=staging_tables)
+        staging_tables[table.name] = staged_table
+
+    db_meta.create_all(tables=staging_tables.values())
 
     print("\n[Staging new tables]")
 
@@ -122,6 +146,8 @@ if __name__ == "__main__":
     copy_from_stringio(raw_conn, listings, "listings_staged")
     copy_from_stringio(raw_conn, professors, "professors_staged")
     copy_from_stringio(raw_conn, course_professors, "course_professors_staged")
+    copy_from_stringio(raw_conn, flags, "flags_staged")
+    copy_from_stringio(raw_conn, course_flags, "course_flags_staged")
 
     # demand statistics
     copy_from_stringio(raw_conn, demand_statistics, "demand_statistics_staged")

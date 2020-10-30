@@ -157,8 +157,6 @@ if __name__ == "__main__":
 
     # keep track of main table constraints and indexes
     # because staged tables do not have foreign key relationships
-    constraints = []
-    indexes = []
 
     replace = conn.begin()
     conn.execute("SET CONSTRAINTS ALL DEFERRED;")
@@ -166,15 +164,9 @@ if __name__ == "__main__":
     # drop and update tables in reverse dependnecy order
     for table in alchemy_tables:
         print(f"Updating table {table.name}")
-        for index in table.indexes:
-            indexes.append(index)
-        for constraint in table.constraints:
-            # we include all the other constraints in
-            # stage.py
-            if isinstance(constraint, ForeignKeyConstraint):
-                constraints.append(constraint)
+
         # remove the old table if it is present before
-        conn.execute(f"DROP TABLE IF EXISTS {table.name}_old;")
+        conn.execute(f"DROP TABLE IF EXISTS {table.name}_old CASCADE;")
         # rename current main table to _old
         # (keep the old tables instead of dropping them
         # so we can rollback if invariants don't pass)
@@ -248,35 +240,6 @@ if __name__ == "__main__":
 
     delete.commit()
 
-    # ---------------
-    # Add constraints
-    # ---------------
-
-    # add back the foreign key constraints
-    print(f"\n[Regenerating constraints ({len(constraints)})]")
-    regen_constraints = conn.begin()
-    for constraint in constraints:
-        conn.execute(schema.AddConstraint(constraint))
-    regen_constraints.commit()
-
-    # --------------
-    # Create indexes
-    # --------------
-
-    def index_exists(name):
-        result = conn.execute(
-            f"SELECT exists(SELECT 1 from pg_indexes where indexname = '{name}') as ix_exists;"
-        ).first()
-        return result.ix_exists
-
-    print(f"\n[Regenerating indexes ({len(indexes)})]")
-    regen_indexes = conn.begin()
-    for index in indexes:
-        if index_exists(index.name):
-            conn.execute(schema.DropIndex(index))
-        conn.execute(schema.CreateIndex(index))
-    regen_indexes.commit()
-
     # ----------------------
     # Rename _staged indexes
     # ----------------------
@@ -290,7 +253,9 @@ if __name__ == "__main__":
         for index in table.indexes:
             # remove the staged indexes
             if "_staged" in index.name:
-                conn.execute(schema.DropIndex(index))
+                # conn.execute(schema.DropIndex(index))
+                renamed = index.name.replace("_staged", "")
+                conn.execute(f"ALTER INDEX IF EXISTS {index.name} RENAME TO {renamed};")
         # primary key indexes are not listed under table.indexes
         # so just rename these if they exist
         conn.execute(

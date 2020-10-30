@@ -84,9 +84,14 @@ if __name__ == "__main__":
     merged_course_info = pd.concat(merged_course_info, axis=0)
     merged_course_info = merged_course_info.reset_index(drop=True)
 
-    courses, listings, course_professors, professors = import_courses(
-        merged_course_info, course_seasons
-    )
+    (
+        courses,
+        listings,
+        course_professors,
+        professors,
+        course_flags,
+        flags,
+    ) = import_courses(merged_course_info, course_seasons)
 
     # ------------------------
     # Import demand statistics
@@ -196,6 +201,8 @@ if __name__ == "__main__":
     listings.to_csv(csv_dir / "listings.csv")
     professors.to_csv(csv_dir / "professors.csv")
     course_professors.to_csv(csv_dir / "course_professors.csv")
+    flags.to_csv(csv_dir / "flags.csv")
+    course_flags.to_csv(csv_dir / "course_flags.csv")
 
     demand_statistics.to_csv(csv_dir / "demand_statistics.csv")
 
