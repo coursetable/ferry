@@ -8,6 +8,8 @@
 -- See this Hasura blog post for more information on the search function:
 -- https://hasura.io/blog/full-text-search-with-hasura-graphql-api-postgres/
 
+BEGIN;
+
 -- encourage index usage
 SET enable_seqscan = OFF;
 SET enable_indexscan = ON;
@@ -45,14 +47,20 @@ WITH listing_info
                      JOIN professors p on course_professors.professor_id = p.professor_id
             WHERE course_professors.course_id = courses.course_id
             GROUP BY course_professors.course_id) AS average_professor,
-           (SELECT enrolled FROM evaluation_statistics
-            WHERE evaluation_statistics.course_id = listings.course_id) as enrolled,
-           (SELECT responses FROM evaluation_statistics
-            WHERE evaluation_statistics.course_id = listings.course_id) as responses,
-           (SELECT declined FROM evaluation_statistics
-            WHERE evaluation_statistics.course_id = listings.course_id) as declined,
-           (SELECT no_response FROM evaluation_statistics
-            WHERE evaluation_statistics.course_id = listings.course_id) as no_response
+           (SELECT enrollment FROM evaluation_statistics
+            WHERE evaluation_statistics.course_id = listings.course_id) as enrollment,
+           0 as enrolled,
+           0 as responses,
+           0 as declined,
+           0 as no_response
+           --(SELECT enrolled FROM evaluation_statistics
+           -- WHERE evaluation_statistics.course_id = listings.course_id) as enrolled,
+           --(SELECT responses FROM evaluation_statistics
+           -- WHERE evaluation_statistics.course_id = listings.course_id) as responses,
+           --(SELECT declined FROM evaluation_statistics
+           -- WHERE evaluation_statistics.course_id = listings.course_id) as declined,
+           --(SELECT no_response FROM evaluation_statistics
+           -- WHERE evaluation_statistics.course_id = listings.course_id) as no_response
         FROM listings
         JOIN courses on listings.course_id = courses.course_id
     )
@@ -78,6 +86,7 @@ SELECT listing_id,
        average_professor,
        average_rating,
        average_workload,
+       enrollment,
        enrolled,
        responses,
        declined,
@@ -87,7 +96,7 @@ SELECT listing_id,
        (setweight(to_tsvector('english', title), 'A') ||
         setweight(to_tsvector('english', coalesce(description, '')), 'C') ||
         setweight(to_tsvector('english', course_code), 'A') ||
-        setweight(jsonb_to_tsvector('english', all_course_codes, '"all"'), 'B') ||
+        --setweight(jsonb_to_tsvector('english', all_course_codes, '"all"'), 'B') ||
         setweight(jsonb_to_tsvector('english', professor_names, '"all"'), 'B')
        ) AS info
 FROM listing_info
@@ -108,19 +117,23 @@ BEGIN
         WHEN websearch_to_tsquery('english', query) <@ ''::tsquery THEN
             -- If the query is completely empty, then we want to return everything,
             -- rather than the default behavior of matching nothing.
-            RETURN QUERY SELECT * FROM computed_listing_info ;
+            RETURN QUERY SELECT * FROM computed_listing_info
+            ORDER BY course_code, course_id ;
         ELSE
             RETURN QUERY SELECT *
             FROM computed_listing_info
             WHERE info @@ websearch_to_tsquery('english', query)
-            ORDER BY
-                    -- If the ranking is above 0.5, then the query matches an "A" level (title or course_code),
-                    -- in which case we want to order by the course code and id. If the ranking is below 0.5,
-                    -- then we simply use the course_code and course_id as a fallback for ordering.
-                    -- This way, searches for a specific department will have that department first, followed
-                    -- by any matches on other metadata.
-                    LEAST(0.5, ts_rank(info, websearch_to_tsquery('english', query))) DESC,
-                    course_code, course_id ;
+            ORDER BY course_code, course_id ;
+            --ORDER BY
+            --        -- If the ranking is above 0.5, then the query matches an "A" level (title or course_code),
+            --        -- in which case we want to order by the course code and id. If the ranking is below 0.5,
+            --        -- then we simply use the course_code and course_id as a fallback for ordering.
+            --        -- This way, searches for a specific department will have that department first, followed
+            --        -- by any matches on other metadata.
+            --        LEAST(0.5, ts_rank(info, websearch_to_tsquery('english', query))) DESC,
+            --        course_code, course_id ;
     END CASE;
 END;
 $$ language plpgsql stable;
+
+COMMIT;
