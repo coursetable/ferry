@@ -37,11 +37,8 @@ git commit -m "automatic update on $(date)"
 git push
 popd
 
-announce "Importing courses to database"
-poetry run python ./ferry/importer.py --mode courses
+announce "Importing and staging tables"
+poetry run python ./ferry/stage.py
 
-announce "Importing demand to database"
-poetry run python ./ferry/importer.py --mode demand
-
-announce "Generating computed database fields"
-poetry run python ./ferry/computed.py
+announce "Deploying staged tables"
+poetry run python ./ferry/deploy.py
