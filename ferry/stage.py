@@ -1,6 +1,6 @@
 import pandas as pd
 import ujson
-from sqlalchemy import MetaData, Table
+from sqlalchemy import MetaData, Table, schema
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql.schema import ForeignKeyConstraint
 
@@ -78,6 +78,10 @@ if __name__ == "__main__":
             conn.execute(f'ALTER TABLE IF EXISTS "{table}" DISABLE TRIGGER ALL;')
             conn.execute(table.delete())
             conn.execute(f'ALTER TABLE IF EXISTS "{table}" ENABLE TRIGGER ALL;')
+
+            # also drop all staged table constraints from before
+            for constraint in table.constraints:
+                conn.execute(schema.DropConstraint(constraint))
     delete.commit()
 
     staging_tables = []
