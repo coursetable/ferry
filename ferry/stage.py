@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import ujson
-from sqlalchemy import MetaData, Table
+from sqlalchemy import Column, MetaData, Table
 from sqlalchemy.ext.declarative import declarative_base
 
 from ferry import config, database
@@ -272,36 +272,47 @@ if __name__ == "__main__":
     # --------------------------
     print("\n[Clearing staging tables]")
 
-    meta = MetaData(bind=database.Engine)
-    meta.reflect()
+    # ordered tables defined only in our model
+    alchemy_tables = database.Base.metadata.sorted_tables
 
-    # # drop old tables
+    # sorted tables in the database
+    db_meta = MetaData(bind=database.Engine)
+    db_meta.reflect()
+
+    # drop old staging tables
     conn = database.Engine.connect()
     delete = conn.begin()
-    for table in meta.sorted_tables:
+    # loop in reverse sorted order to handle dependencies
+    for table in db_meta.sorted_tables[::-1]:
         if table.name.endswith("_staged"):
-            conn.execute(f'ALTER TABLE "{table.name}" DISABLE TRIGGER ALL;')
+            print(f"Dropping table {table.name}")
+            conn.execute(f'ALTER TABLE IF EXISTS "{table}" DISABLE TRIGGER ALL;')
             conn.execute(table.delete())
-            conn.execute(f'ALTER TABLE "{table.name}" ENABLE TRIGGER ALL;')
+            conn.execute(f'ALTER TABLE IF EXISTS "{table}" ENABLE TRIGGER ALL;')
     delete.commit()
 
     staging_tables = []
 
-    for table in meta.sorted_tables:
-        if not table.name.endswith("_staged"):
-            args = []
-            for column in table.columns:
-                args.append(column.copy())
-            # note that we exclude constraints from the staging tables
-            # for constraint in table.constraints:
-            # print(constraint)
-            staging_tables.append(
-                Table(
-                    f"{table.name}_staged", table.metadata, extend_existing=True, *args
-                )
-            )
+    # create staging tables based on SQLAlchemy models
+    for table in alchemy_tables:
 
-    meta.create_all(tables=staging_tables)
+        print(f"Creating table {table.name}_staged")
+
+        args = []
+        for column in table.columns:
+            column_copy = column.copy()
+            args.append(column_copy)
+
+        staging_tables.append(
+            Table(
+                f"{table.name}_staged",
+                table.metadata,
+                extend_existing=True,
+                *args,
+            )
+        )
+
+    db_meta.create_all(tables=staging_tables)
 
     print("\n[Staging new tables]")
 

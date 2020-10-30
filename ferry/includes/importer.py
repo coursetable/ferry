@@ -713,7 +713,7 @@ def copy_from_stringio(conn, df, table: str):
     try:
         cursor.copy_from(buffer, table, columns=df.columns, sep="\t", null="NULL")
     except (Exception, psycopg2.DatabaseError) as error:
-        cursor.rollback()
+        conn.rollback()
         cursor.close()
         raise DatabaseError
 

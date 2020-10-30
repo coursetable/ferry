@@ -99,6 +99,11 @@ def search_setup(session):
 
 
 if __name__ == "__main__":
+
+    # ------------------------------------
+    # Specify invariant checking functions
+    # ------------------------------------
+
     all_items = [
         listing_invariants,
         course_invariants,
@@ -123,11 +128,32 @@ if __name__ == "__main__":
         required=False,
     )
 
+    # --------------------------------------
+    # Check if all staged tables are present
+    # --------------------------------------
+
+    # sorted tables in the database
+    db_meta = MetaData(bind=database.Engine)
+    db_meta.reflect()
+
+    # ordered tables defined only in our model
+    alchemy_tables = database.Base.metadata.sorted_tables
+
+    db_tables = set([x.name for x in db_meta.sorted_tables])
+
+    if any(f"{table.name}_staged" not in db_tables for table in alchemy_tables):
+
+        raise database.MissingTablesError(
+            "Not all staged tables are present. Run stage.py again?"
+        )
+
+    # -------------------------------------
+    # Upgrade staged tables to primary ones
+    # -------------------------------------
+
     print("\n[Replacing old tables with staged]")
 
     conn = database.Engine.connect()
-    meta = MetaData(bind=database.Engine)
-    meta.reflect()
 
     # keep track of main table constraints and indexes
     # because staged tables do not have foreign key relationships
@@ -138,21 +164,30 @@ if __name__ == "__main__":
     conn.execute("SET CONSTRAINTS ALL DEFERRED;")
 
     # drop and update tables in reverse dependnecy order
-    for table in meta.sorted_tables[::-1]:
-        if not table.name.endswith("_staged"):
-            print(f"Updating table {table.name}")
-            for index in table.indexes:
-                indexes.append(index)
-            for constraint in table.constraints:
-                constraints.append(constraint)
-            # remove the old table if it is present before
-            conn.execute(f"DROP TABLE IF EXISTS {table.name}_old;")
-            # rename current main table to _old
-            conn.execute(f'ALTER TABLE "{table.name}" RENAME TO {table.name}_old;')
-            # rename staged table to main
-            conn.execute(f'ALTER TABLE "{table.name}_staged" RENAME TO {table.name};')
+    for table in alchemy_tables:
+        print(f"Updating table {table.name}")
+        for index in table.indexes:
+            indexes.append(index)
+        for constraint in table.constraints:
+            constraints.append(constraint)
+        # remove the old table if it is present before
+        conn.execute(f"DROP TABLE IF EXISTS {table.name}_old;")
+        # rename current main table to _old
+        # (keep the old tables instead of dropping them
+        # so we can rollback if invariants don't pass)
+        conn.execute(
+            f'ALTER TABLE IF EXISTS "{table.name}" RENAME TO {table.name}_old;'
+        )
+        # rename staged table to main
+        conn.execute(
+            f'ALTER TABLE IF EXISTS "{table.name}_staged" RENAME TO {table.name};'
+        )
 
     replace.commit()
+
+    # ------------------------------
+    # Check invariants on new tables
+    # ------------------------------
 
     # check invariants
     try:
@@ -185,35 +220,42 @@ if __name__ == "__main__":
         revert = conn.begin()
         conn.execute("SET CONSTRAINTS ALL DEFERRED;")
 
-        for table in meta.sorted_tables[::-1]:
-            if not table.name.endswith("_staged"):
-                print(f"Reverting table {table.name}")
-                conn.execute(
-                    f'ALTER TABLE "{table.name}" RENAME TO {table.name}_staged;'
-                )
-                conn.execute(f'ALTER TABLE "{table.name}_old" RENAME TO {table.name};')
+        for table in alchemy_tables:
+            print(f"Reverting table {table.name}")
+            conn.execute(f'ALTER TABLE "{table.name}" RENAME TO {table.name}_staged;')
+            conn.execute(f'ALTER TABLE "{table.name}_old" RENAME TO {table.name};')
 
         revert.commit()
         raise
 
+    # -----------------
+    # Remove old tables
+    # -----------------
+
     print("\n[Deleting temporary old tables]")
-    meta.reflect()  # update the models to reflect postgres
     delete = conn.begin()
     conn.execute("SET CONSTRAINTS ALL DEFERRED;")
-    for table in meta.sorted_tables[::-1]:
-        if table.name.endswith("_old"):
-            print(f"Dropping table {table.name}")
-            conn.execute(f"DROP TABLE IF EXISTS {table.name} CASCADE;")
+    for table in alchemy_tables:
+        print(f"Dropping table {table.name}_old")
+        conn.execute(f"DROP TABLE IF EXISTS {table.name}_old CASCADE;")
 
     delete.commit()
 
+    # ---------------
+    # Add constraints
+    # ---------------
+
     # add back the foreign key constraints
-    print("\n[Regenerating constraints]")
+    print(f"\n[Regenerating constraints ({len(constraints)})]")
     regen_constraints = conn.begin()
     for constraint in constraints:
         if isinstance(constraint, ForeignKeyConstraint):
             conn.execute(schema.AddConstraint(constraint))
     regen_constraints.commit()
+
+    # --------------
+    # Create indexes
+    # --------------
 
     def index_exists(name):
         result = conn.execute(
@@ -221,7 +263,7 @@ if __name__ == "__main__":
         ).first()
         return result.ix_exists
 
-    print("\n[Regenerating indexes]")
+    print(f"\n[Regenerating indexes ({len(indexes)})]")
     regen_indexes = conn.begin()
     for index in indexes:
         if index_exists(index.name):
@@ -229,16 +271,44 @@ if __name__ == "__main__":
         conn.execute(schema.CreateIndex(index))
     regen_indexes.commit()
 
+    # ----------------------
+    # Rename _staged indexes
+    # ----------------------
+
+    # sorted tables in the database
+    db_meta.reflect()
+
+    # delete previous staged indexes
+    delete_indexes = conn.begin()
+    for table in db_meta.sorted_tables:
+        for index in table.indexes:
+            # remove the staged indexes
+            if "_staged" in index.name:
+                conn.execute(schema.DropIndex(index))
+        # primary key indexes are not listed under table.indexes
+        # so just rename these if they exist
+        conn.execute(
+            f"ALTER INDEX IF EXISTS {table.name}_staged_pkey RENAME TO {table.name}_pkey;"
+        )
+    delete_indexes.commit()
+
     print("\n[Reindexing]")
-    conn.execution_options(isolation_level="AUTOCOMMIT").execute("VACUUM;")
     conn.execution_options(isolation_level="AUTOCOMMIT").execute(
         "REINDEX DATABASE postgres;"
     )
 
+    # -----------------------------------
+    # Set up materialized view and search
+    # -----------------------------------
+
     # generate computed tables and full-text-search
-    print("\n[Setting up search]")
-    with database.session_scope(database.Session) as session:
-        search_setup(session)
+    # print("\n[Setting up full-text search]")
+    # with database.session_scope(database.Session) as session:
+    #     search_setup(session)
+
+    # -------------
+    # Final summary
+    # -------------
 
     # Print row counts for each table.
     tqdm.write("\n[Table Statistics]")
