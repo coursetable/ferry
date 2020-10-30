@@ -72,7 +72,7 @@ def question_tag_invariant(session):
 
 def course_invariants(session):
     """
-    Invariant: every course should have at least one listing.
+    Check invariant: every course should have at least one listing.
     """
     courses_no_listings = (
         session.query(database.Course)
@@ -222,8 +222,12 @@ if __name__ == "__main__":
 
         for table in alchemy_tables:
             print(f"Reverting table {table.name}")
-            conn.execute(f'ALTER TABLE "{table.name}" RENAME TO {table.name}_staged;')
-            conn.execute(f'ALTER TABLE "{table.name}_old" RENAME TO {table.name};')
+            conn.execute(
+                f'ALTER TABLE IF EXISTS "{table.name}" RENAME TO {table.name}_staged;'
+            )
+            conn.execute(
+                f'ALTER TABLE IF EXISTS "{table.name}_old" RENAME TO {table.name};'
+            )
 
         revert.commit()
         raise
@@ -302,9 +306,9 @@ if __name__ == "__main__":
     # -----------------------------------
 
     # generate computed tables and full-text-search
-    # print("\n[Setting up full-text search]")
-    # with database.session_scope(database.Session) as session:
-    #     search_setup(session)
+    print("\n[Setting up full-text search]")
+    with database.session_scope(database.Session) as session:
+        search_setup(session)
 
     # -------------
     # Final summary

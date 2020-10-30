@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import ujson
-from sqlalchemy import Column, MetaData, Table
+from sqlalchemy import MetaData, Table
 from sqlalchemy.ext.declarative import declarative_base
 
 from ferry import config, database
