@@ -575,10 +575,7 @@ def import_evaluations(merged_evaluations_info, listings):
             lambda x: [x["enrolled"], x["responses"], x["declined"], x["no response"]],
         )
     )
-
-    evaluation_statistics = evaluation_statistics.loc[
-        :, ["course_id", "enrolled", "responses", "declined", "no_response", "extras"]
-    ]
+    evaluation_statistics["enrollment"] = np.nan
     # convert to JSON string for postgres
     evaluation_statistics["extras"] = evaluation_statistics["extras"].apply(ujson.dumps)
 

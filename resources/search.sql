@@ -49,18 +49,18 @@ WITH listing_info
             GROUP BY course_professors.course_id) AS average_professor,
            (SELECT enrollment FROM evaluation_statistics
             WHERE evaluation_statistics.course_id = listings.course_id) as enrollment,
-           0 as enrolled,
-           0 as responses,
-           0 as declined,
-           0 as no_response
-           --(SELECT enrolled FROM evaluation_statistics
-           -- WHERE evaluation_statistics.course_id = listings.course_id) as enrolled,
-           --(SELECT responses FROM evaluation_statistics
-           -- WHERE evaluation_statistics.course_id = listings.course_id) as responses,
-           --(SELECT declined FROM evaluation_statistics
-           -- WHERE evaluation_statistics.course_id = listings.course_id) as declined,
-           --(SELECT no_response FROM evaluation_statistics
-           -- WHERE evaluation_statistics.course_id = listings.course_id) as no_response
+           -- 0 as enrolled,
+           -- 0 as responses,
+           -- 0 as declined,
+           -- 0 as no_response
+           (SELECT enrolled FROM evaluation_statistics
+           WHERE evaluation_statistics.course_id = listings.course_id) as enrolled,
+           (SELECT responses FROM evaluation_statistics
+           WHERE evaluation_statistics.course_id = listings.course_id) as responses,
+           (SELECT declined FROM evaluation_statistics
+           WHERE evaluation_statistics.course_id = listings.course_id) as declined,
+           (SELECT no_response FROM evaluation_statistics
+           WHERE evaluation_statistics.course_id = listings.course_id) as no_response
         FROM listings
         JOIN courses on listings.course_id = courses.course_id
     )
