@@ -25,8 +25,10 @@ WITH listing_info
     AS (
         SELECT listings.listing_id,
                listings.crn,
-               listings.section,
                listings.course_code,
+               listings.subject,
+               listings.number,
+               listings.section,
            courses.*,
            (SELECT jsonb_agg(listings.course_code)
             FROM listings
@@ -66,6 +68,8 @@ WITH listing_info
     )
 SELECT listing_id,
        crn,
+       subject,
+       number,
        section,
        course_code,
        course_id,
