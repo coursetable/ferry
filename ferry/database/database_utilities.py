@@ -10,6 +10,10 @@ class InvariantError(Exception):
     pass
 
 
+class MissingTablesError(Exception):
+    pass
+
+
 @contextmanager
 def session_scope(Session, *args, **kwargs):
     """Provide a transactional scope around a series of operations."""
