@@ -37,7 +37,10 @@ git commit -m "automatic update on $(date)"
 git push
 popd
 
-announce "Importing and staging tables"
+announce "Constructing tables"
+poetry run python ./ferry/transform.py
+
+announce "Staging tables"
 poetry run python ./ferry/stage.py
 
 announce "Deploying staged tables"
