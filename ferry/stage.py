@@ -2,6 +2,7 @@ import pandas as pd
 import ujson
 from sqlalchemy import MetaData, Table
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.sql.schema import ForeignKeyConstraint
 
 from ferry import config, database
 from ferry.config import DATABASE_CONNECT_STRING
@@ -88,8 +89,11 @@ if __name__ == "__main__":
 
         args = []
         for column in table.columns:
-            column_copy = column.copy()
-            args.append(column_copy)
+            args.append(column.copy())
+
+        for constraint in table.constraints:
+            if not isinstance(constraint, ForeignKeyConstraint):
+                args.append(constraint.copy())
 
         staging_tables.append(
             Table(

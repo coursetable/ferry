@@ -169,7 +169,10 @@ if __name__ == "__main__":
         for index in table.indexes:
             indexes.append(index)
         for constraint in table.constraints:
-            constraints.append(constraint)
+            # we include all the other constraints in
+            # stage.py
+            if isinstance(constraint, ForeignKeyConstraint):
+                constraints.append(constraint)
         # remove the old table if it is present before
         conn.execute(f"DROP TABLE IF EXISTS {table.name}_old;")
         # rename current main table to _old
@@ -253,8 +256,7 @@ if __name__ == "__main__":
     print(f"\n[Regenerating constraints ({len(constraints)})]")
     regen_constraints = conn.begin()
     for constraint in constraints:
-        if isinstance(constraint, ForeignKeyConstraint):
-            conn.execute(schema.AddConstraint(constraint))
+        conn.execute(schema.AddConstraint(constraint))
     regen_constraints.commit()
 
     # --------------
