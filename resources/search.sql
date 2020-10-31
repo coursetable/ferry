@@ -51,6 +51,10 @@ WITH listing_info
             GROUP BY course_professors.course_id) AS average_professor,
            (SELECT enrollment FROM evaluation_statistics
             WHERE evaluation_statistics.course_id = listings.course_id) as enrollment,
+           -- 0 as enrolled,
+           -- 0 as responses,
+           -- 0 as declined,
+           -- 0 as no_response
            (SELECT enrolled FROM evaluation_statistics
            WHERE evaluation_statistics.course_id = listings.course_id) as enrolled,
            (SELECT responses FROM evaluation_statistics
@@ -105,12 +109,14 @@ ORDER BY course_code, course_id ;
 -- Create an index for basically every column.
 ALTER TABLE computed_listing_info ADD FOREIGN KEY (course_id) REFERENCES courses (course_id);
 ALTER TABLE computed_listing_info ADD FOREIGN KEY (listing_id) REFERENCES listings (listing_id);
+CREATE INDEX idx_computed_listing_course_id ON computed_listing_info (course_id);
+CREATE UNIQUE INDEX idx_computed_listing_listing_id ON computed_listing_info (listing_id);
 CREATE INDEX idx_computed_listing_search ON computed_listing_info USING gin (info);
+CREATE INDEX idx_computed_listing_order_def ON computed_listing_info (course_code ASC, course_id ASC);
 CREATE INDEX idx_computed_listing_skills ON computed_listing_info USING gin (skills);
 CREATE INDEX idx_computed_listing_areas ON computed_listing_info USING gin (areas);
 CREATE INDEX idx_computed_listing_season ON computed_listing_info (season_code);
-CREATE INDEX idx_computed_listing_info_course_id_fkey ON computed_listing_info (course_id);
-CREATE INDEX idx_computed_listing_info_listing_id_fkey ON computed_listing_info (listing_id);
+CREATE INDEX idx_computed_listing_season_hash ON computed_listing_info USING hash (season_code);
 
 CREATE OR REPLACE FUNCTION search_listing_info(query text)
 RETURNS SETOF computed_listing_info AS $$

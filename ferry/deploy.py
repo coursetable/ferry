@@ -138,14 +138,40 @@ if __name__ == "__main__":
 
     # ordered tables defined only in our model
     alchemy_tables = database.Base.metadata.sorted_tables
+    target_tables = [table.name[:-7] for table in alchemy_tables]
 
     db_tables = set([x.name for x in db_meta.sorted_tables])
 
-    if any(f"{table.name}_staged" not in db_tables for table in alchemy_tables):
+    if any(table.name not in db_tables for table in alchemy_tables):
 
         raise database.MissingTablesError(
             "Not all staged tables are present. Run stage.py again?"
         )
+
+    # ------------------------------
+    # Check invariants on new tables
+    # ------------------------------
+
+    # check invariants
+    print("\n[Checking table invariants]")
+
+    # check invariants
+    args = parser.parse_args()
+    if args.items:
+        items = [_match(name) for name in args.items]
+    else:
+        items = all_items
+
+    for fn in items:
+        if fn.__doc__:
+            tqdm.write(f"{fn.__doc__.strip()}")
+        else:
+            tqdm.write(f"Running: {fn.__name__}")
+
+        with database.session_scope(database.Session) as session:
+            fn(session)
+
+    print("All invariants passed")
 
     # -------------------------------------
     # Upgrade staged tables to primary ones
@@ -162,70 +188,20 @@ if __name__ == "__main__":
     conn.execute("SET CONSTRAINTS ALL DEFERRED;")
 
     # drop and update tables in reverse dependnecy order
-    for table in alchemy_tables:
-        print(f"Updating table {table.name}")
+    for table in target_tables:
+
+        print(f"Updating table {table}")
 
         # remove the old table if it is present before
-        conn.execute(f"DROP TABLE IF EXISTS {table.name}_old CASCADE;")
+        conn.execute(f"DROP TABLE IF EXISTS {table}_old CASCADE;")
         # rename current main table to _old
         # (keep the old tables instead of dropping them
         # so we can rollback if invariants don't pass)
-        conn.execute(
-            f'ALTER TABLE IF EXISTS "{table.name}" RENAME TO {table.name}_old;'
-        )
+        conn.execute(f'ALTER TABLE IF EXISTS "{table}" RENAME TO {table}_old;')
         # rename staged table to main
-        conn.execute(
-            f'ALTER TABLE IF EXISTS "{table.name}_staged" RENAME TO {table.name};'
-        )
+        conn.execute(f'ALTER TABLE IF EXISTS "{table}_staged" RENAME TO {table};')
 
     replace.commit()
-
-    # ------------------------------
-    # Check invariants on new tables
-    # ------------------------------
-
-    # check invariants
-    try:
-
-        print("\n[Checking table invariants]")
-
-        # check invariants
-        args = parser.parse_args()
-        if args.items:
-            items = [_match(name) for name in args.items]
-        else:
-            items = all_items
-
-        for fn in items:
-            if fn.__doc__:
-                tqdm.write(f"{fn.__doc__.strip()}")
-            else:
-                tqdm.write(f"Running: {fn.__name__}")
-
-            with database.session_scope(database.Session) as session:
-                fn(session)
-
-        print("All invariants passed")
-
-    # if invariant checking fails, revert the replacements
-    except:
-
-        print("Invariant checking failed. Reverting tables.")
-
-        revert = conn.begin()
-        conn.execute("SET CONSTRAINTS ALL DEFERRED;")
-
-        for table in alchemy_tables:
-            print(f"Reverting table {table.name}")
-            conn.execute(
-                f'ALTER TABLE IF EXISTS "{table.name}" RENAME TO {table.name}_staged;'
-            )
-            conn.execute(
-                f'ALTER TABLE IF EXISTS "{table.name}_old" RENAME TO {table.name};'
-            )
-
-        revert.commit()
-        raise
 
     # -----------------
     # Remove old tables
@@ -234,15 +210,17 @@ if __name__ == "__main__":
     print("\n[Deleting temporary old tables]")
     delete = conn.begin()
     conn.execute("SET CONSTRAINTS ALL DEFERRED;")
-    for table in alchemy_tables:
-        print(f"Dropping table {table.name}_old")
-        conn.execute(f"DROP TABLE IF EXISTS {table.name}_old CASCADE;")
+    for table in target_tables:
+        print(f"Dropping table {table}_old")
+        conn.execute(f"DROP TABLE IF EXISTS {table}_old CASCADE;")
 
     delete.commit()
 
     # ----------------------
     # Rename _staged indexes
     # ----------------------
+
+    print("\n[Renaming indexes]")
 
     # sorted tables in the database
     db_meta.reflect()
@@ -259,9 +237,13 @@ if __name__ == "__main__":
         # primary key indexes are not listed under table.indexes
         # so just rename these if they exist
         conn.execute(
-            f"ALTER INDEX IF EXISTS {table.name}_staged_pkey RENAME TO {table.name}_pkey;"
+            f"ALTER INDEX IF EXISTS pk_{table.name}_staged RENAME TO pk_{table.name};"
         )
     delete_indexes.commit()
+
+    # -------
+    # Reindex
+    # -------
 
     print("\n[Reindexing]")
     conn.execution_options(isolation_level="AUTOCOMMIT").execute(

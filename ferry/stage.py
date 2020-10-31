@@ -1,11 +1,16 @@
+import pprint
+from collections import defaultdict
+
 import pandas as pd
 import ujson
 from sqlalchemy import ForeignKey, MetaData, Table, schema
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.sql.expression import ColumnCollection
 from sqlalchemy.sql.schema import ForeignKeyConstraint, PrimaryKeyConstraint
 
 from ferry import config, database
 from ferry.config import DATABASE_CONNECT_STRING
+from ferry.database.models import Base
 from ferry.includes.importer import copy_from_stringio
 from ferry.includes.tqdm import tqdm
 
@@ -80,59 +85,11 @@ if __name__ == "__main__":
             conn.execute(f"DROP TABLE IF EXISTS {table.name} CASCADE;")
     delete.commit()
 
-    # rename foreign key to staged
-    def rename_fkey(fkey_name):
-        fkey_table, fkey_col = fkey_name.split(".", 1)
-        return f"{fkey_table}_staged.{fkey_col}"
+    Base.metadata.create_all(database.Engine)
 
-    staging_tables = {}
-
-    # create staging tables based on SQLAlchemy models
-    for table in alchemy_tables:
-
-        print(f"Creating table {table.name}_staged")
-
-        args = []
-        for column in table.columns:
-            column_copy = column.copy()
-
-            # point column foreign keys towards staged ones
-            # (tables are created in dependency order)
-            column_copy.foreign_keys = set(
-                [
-                    ForeignKey(rename_fkey(fkey._colspec))
-                    for fkey in column_copy.foreign_keys
-                ]
-            )
-
-            args.append(column_copy)
-
-        for constraint in table.constraints:
-            constraint_copy = constraint.copy()
-
-            # point referred table (if exists) towards staged one
-            if hasattr(constraint_copy, "_referred_table"):
-                referred_table = constraint_copy._referred_table
-                constraint_copy._referred_table = staging_tables[referred_table.name]
-
-            # point foreign key elements (if any) towards staged one
-            if hasattr(constraint_copy, "elements"):
-                constraint_copy.elements = set(
-                    [
-                        ForeignKey(rename_fkey(elem._colspec))
-                        for elem in constraint_copy.elements
-                        if isinstance(elem, ForeignKey)
-                    ]
-                )
-            args.append(constraint_copy)
-
-        staged_table = Table(
-            f"{table.name}_staged", table.metadata, extend_existing=True, *args
-        )
-
-        staging_tables[table.name] = staged_table
-
-    db_meta.create_all(tables=staging_tables.values())
+    # -------------
+    # Update tables
+    # -------------
 
     print("\n[Staging new tables]")
 
