@@ -49,12 +49,13 @@ WITH listing_info
                      JOIN professors p on course_professors.professor_id = p.professor_id
             WHERE course_professors.course_id = courses.course_id
             GROUP BY course_professors.course_id) AS average_professor,
+           coalesce((SELECT jsonb_agg(f.flag_text)
+            FROM course_flags
+                     JOIN flags f on course_flags.flag_id = f.flag_id
+            WHERE course_flags.course_id = courses.course_id
+            GROUP BY course_flags.course_id), '[]'::jsonb) AS flag_info,
            (SELECT enrollment FROM evaluation_statistics
             WHERE evaluation_statistics.course_id = listings.course_id) as enrollment,
-           -- 0 as enrolled,
-           -- 0 as responses,
-           -- 0 as declined,
-           -- 0 as no_response
            (SELECT enrolled FROM evaluation_statistics
            WHERE evaluation_statistics.course_id = listings.course_id) as enrolled,
            (SELECT responses FROM evaluation_statistics
@@ -88,6 +89,7 @@ SELECT listing_id,
        professor_names, -- TODO: remove
        professor_info,
        average_professor,
+       flag_info,
        average_rating,
        average_workload,
        enrollment,

@@ -1,11 +1,16 @@
+import pprint
+from collections import defaultdict
+
 import pandas as pd
 import ujson
-from sqlalchemy import MetaData, Table, schema
+from sqlalchemy import ForeignKey, MetaData, Table, schema
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.sql.schema import ForeignKeyConstraint
+from sqlalchemy.sql.expression import ColumnCollection
+from sqlalchemy.sql.schema import ForeignKeyConstraint, PrimaryKeyConstraint
 
 from ferry import config, database
 from ferry.config import DATABASE_CONNECT_STRING
+from ferry.database.models import Base
 from ferry.includes.importer import copy_from_stringio
 from ferry.includes.tqdm import tqdm
 
@@ -27,6 +32,8 @@ if __name__ == "__main__":
     listings = pd.read_csv(csv_dir / "listings.csv", index_col=0)
     professors = pd.read_csv(csv_dir / "professors.csv", index_col=0)
     course_professors = pd.read_csv(csv_dir / "course_professors.csv", index_col=0)
+    flags = pd.read_csv(csv_dir / "flags.csv", index_col=0)
+    course_flags = pd.read_csv(csv_dir / "course_flags.csv", index_col=0)
 
     demand_statistics = pd.read_csv(csv_dir / "demand_statistics.csv", index_col=0)
 
@@ -75,40 +82,14 @@ if __name__ == "__main__":
     for table in db_meta.sorted_tables[::-1]:
         if table.name.endswith("_staged"):
             print(f"Dropping table {table.name}")
-            conn.execute(f'ALTER TABLE IF EXISTS "{table}" DISABLE TRIGGER ALL;')
-            conn.execute(table.delete())
-            conn.execute(f'ALTER TABLE IF EXISTS "{table}" ENABLE TRIGGER ALL;')
-
-            # also drop all staged table constraints from before
-            for constraint in table.constraints:
-                conn.execute(schema.DropConstraint(constraint))
+            conn.execute(f"DROP TABLE IF EXISTS {table.name} CASCADE;")
     delete.commit()
 
-    staging_tables = []
+    Base.metadata.create_all(database.Engine)
 
-    # create staging tables based on SQLAlchemy models
-    for table in alchemy_tables:
-
-        print(f"Creating table {table.name}_staged")
-
-        args = []
-        for column in table.columns:
-            args.append(column.copy())
-
-        for constraint in table.constraints:
-            if not isinstance(constraint, ForeignKeyConstraint):
-                args.append(constraint.copy())
-
-        staging_tables.append(
-            Table(
-                f"{table.name}_staged",
-                table.metadata,
-                extend_existing=True,
-                *args,
-            )
-        )
-
-    db_meta.create_all(tables=staging_tables)
+    # -------------
+    # Update tables
+    # -------------
 
     print("\n[Staging new tables]")
 
@@ -122,6 +103,8 @@ if __name__ == "__main__":
     copy_from_stringio(raw_conn, listings, "listings_staged")
     copy_from_stringio(raw_conn, professors, "professors_staged")
     copy_from_stringio(raw_conn, course_professors, "course_professors_staged")
+    copy_from_stringio(raw_conn, flags, "flags_staged")
+    copy_from_stringio(raw_conn, course_flags, "course_flags_staged")
 
     # demand statistics
     copy_from_stringio(raw_conn, demand_statistics, "demand_statistics_staged")
