@@ -98,7 +98,6 @@ for season in seasons:
     # cache list of classes
     with open(f"{config.DATA_DIR}/season_courses/{season}_fysem.json", "w") as f:
         f.write(ujson.dumps(season_courses, indent=4))
-exit()
 
 # fetch detailed info for each class in each season
 for season in seasons:
