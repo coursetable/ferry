@@ -845,7 +845,7 @@ def found_items(text, mapping):
     return sorted(items)
 
 
-def extract_course_info(course_json, season):
+def extract_course_info(course_json, season, fysem):
     """
     Parse the JSON response from the Yale courses API
     into a more useful format
@@ -981,5 +981,8 @@ def extract_course_info(course_json, season):
         course_info["syllabus_url"] = matched_syllabus[0]
     else:
         course_info["syllabus_url"] = ""
+
+    # if first-year seminar
+    course_info["fysem"] = course_info["crn"] in fysem
 
     return course_info
