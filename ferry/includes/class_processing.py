@@ -121,7 +121,7 @@ def fetch_season_subject_courses(season, subject, api_key):
         raise FetchClassesError(f"Unsuccessful response: code {r.status_code}")
 
 
-def fetch_season_courses(season):
+def fetch_season_courses(season, criteria):
     """
     Get preliminary course info for a given season
 
@@ -139,7 +139,7 @@ def fetch_season_courses(season):
 
     url = "https://courses.yale.edu/api/?page=fose&route=search"
 
-    payload = {"other": {"srcdb": season}, "criteria": []}
+    payload = {"other": {"srcdb": season}, "criteria": criteria}
 
     r = requests.post(url, data=ujson.dumps(payload))
     r.encoding = "utf-8"
