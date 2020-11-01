@@ -130,6 +130,10 @@ class Course(BaseModel):
     )
     syllabus_url = Column(String, comment="Link to the syllabus")
     title = Column(String, comment="Complete course title")
+    fysem = Column(
+        Boolean,
+        comment="True if the course is a first-year seminar. False otherwise.",
+    )
 
     average_rating = Column(
         Float,

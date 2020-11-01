@@ -1,6 +1,7 @@
 import argparse
 from os import listdir
 from os.path import isfile, join
+from pathlib import Path
 
 import ujson
 
@@ -52,13 +53,25 @@ for season in seasons:
 
     print(f"Parsing courses for season {season}")
 
+    fysem_file = Path(f"{config.DATA_DIR}/season_courses/{season}_fysem.json")
+
+    if fysem_file.is_file():
+        with open(fysem_file, "r") as f:
+            fysem = ujson.load(f)
+            fysem = set([x["crn"] for x in fysem])
+        print(f"Loaded first-year seminars")
+    else:
+        print(f"First-year seminars filter missing")
+        fysem = set()
+
     # load raw responses for season
     with open(f"{config.DATA_DIR}/course_json_cache/{season}.json", "r") as f:
         aggregate_term_json = ujson.load(f)
 
     # parse course JSON in season
     parsed_course_info = [
-        extract_course_info(x, season) for x in tqdm(aggregate_term_json, ncols=96)
+        extract_course_info(x, season, fysem)
+        for x in tqdm(aggregate_term_json, ncols=96)
     ]
 
     # write output

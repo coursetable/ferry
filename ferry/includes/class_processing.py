@@ -121,7 +121,7 @@ def fetch_season_subject_courses(season, subject, api_key):
         raise FetchClassesError(f"Unsuccessful response: code {r.status_code}")
 
 
-def fetch_season_courses(season):
+def fetch_season_courses(season, criteria):
     """
     Get preliminary course info for a given season
 
@@ -139,7 +139,7 @@ def fetch_season_courses(season):
 
     url = "https://courses.yale.edu/api/?page=fose&route=search"
 
-    payload = {"other": {"srcdb": season}, "criteria": []}
+    payload = {"other": {"srcdb": season}, "criteria": criteria}
 
     r = requests.post(url, data=ujson.dumps(payload))
     r.encoding = "utf-8"
@@ -845,7 +845,7 @@ def found_items(text, mapping):
     return sorted(items)
 
 
-def extract_course_info(course_json, season):
+def extract_course_info(course_json, season, fysem):
     """
     Parse the JSON response from the Yale courses API
     into a more useful format
@@ -981,5 +981,8 @@ def extract_course_info(course_json, season):
         course_info["syllabus_url"] = matched_syllabus[0]
     else:
         course_info["syllabus_url"] = ""
+
+    # if first-year seminar
+    course_info["fysem"] = course_info["crn"] in fysem
 
     return course_info

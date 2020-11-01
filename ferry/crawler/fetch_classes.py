@@ -80,10 +80,23 @@ else:
 for season in seasons:
     print(f"Fetching class list for season {season}")
 
-    season_courses = fetch_season_courses(season)
+    season_courses = fetch_season_courses(season, criteria=[])
 
     # cache list of classes
     with open(f"{config.DATA_DIR}/season_courses/{season}.json", "w") as f:
+        f.write(ujson.dumps(season_courses, indent=4))
+
+
+# get lists of classes per season
+for season in seasons:
+    print(f"Fetching first-year seminars for season {season}")
+
+    season_courses = fetch_season_courses(
+        season, criteria=[{"field": "fsem_attrs", "value": "Y"}]
+    )
+
+    # cache list of classes
+    with open(f"{config.DATA_DIR}/season_courses/{season}_fysem.json", "w") as f:
         f.write(ujson.dumps(season_courses, indent=4))
 
 # fetch detailed info for each class in each season
