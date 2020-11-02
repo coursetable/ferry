@@ -302,6 +302,7 @@ def import_courses(merged_course_info, seasons: List[str]):
             "location_times",
             "average_rating",
             "average_workload",
+            "last_offered_course_id",
             "last_enrollment_course_id",
             "last_enrollment",
             "last_enrollment_season_code",

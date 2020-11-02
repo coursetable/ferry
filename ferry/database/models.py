@@ -153,6 +153,21 @@ class Course(BaseModel):
         comment="[computed] Historical average workload rating, aggregated across all cross-listings",
     )
 
+    last_offered_course_id = Column(
+        Integer,
+        ForeignKey("courses_staged.course_id"),
+        comment="[computed] Most recent previous offering of course (excluding future ones)",
+        index=True,
+    )
+
+    last_offered_course = relationship(
+        "Course",
+        backref="courses_staged",
+        cascade="all",
+        remote_side="Course.course_id",
+        foreign_keys="Course.last_offered_course_id",
+    )
+
     last_enrollment_course_id = Column(
         Integer,
         ForeignKey("courses_staged.course_id"),
@@ -162,9 +177,10 @@ class Course(BaseModel):
 
     last_enrollment_course = relationship(
         "Course",
-        backref="courses_staged",
+        backref="courses_staged_",
         cascade="all",
         remote_side="Course.course_id",
+        foreign_keys="Course.last_enrollment_course_id",
     )
 
     last_enrollment = Column(

@@ -8,8 +8,6 @@ from ferry import config, database
 from ferry.includes.tqdm import tqdm
 from ferry.includes.utils import get_table_columns
 
-tqdm.pandas()
-
 QUESTION_TAGS = dict()
 with open(f"{config.RESOURCE_DIR}/question_tags.csv") as f:
     for question_code, tag in csv.reader(f):
@@ -181,19 +179,43 @@ def courses_computed(courses, listings, evaluation_statistics, course_professors
 
     print("Computing last offering statistics")
 
+    # course_id for all evaluated courses
     evaluated_courses = set(
         evaluation_statistics.dropna(subset=["enrolled"], axis=0)["course_id"]
     )
 
+    # map course_id to season
     course_to_season = dict(zip(courses["course_id"], courses["season_code"]))
 
+    # map course_id to number enrolled
     course_to_enrollment = dict(
         zip(evaluation_statistics["course_id"], evaluation_statistics["enrolled"])
     )
+    # map course_id to professor_ids
     course_to_professors = course_professors.groupby("course_id")["professor_id"].apply(
         set
     )
 
+    # get last course offering in general (with or without enrollment)
+    def get_last_offered(course_row):
+        coded_courses = course_row["coded_courses"]
+
+        coded_courses = [
+            x for x in coded_courses if course_to_season[x] < course_row["season_code"]
+        ]
+
+        if len(coded_courses) == 0:
+            return None
+
+        coded_courses = [x for x in coded_courses if x is not course_row["course_id"]]
+        if len(coded_courses) == 0:
+            return None
+
+        last_offered_course = max(coded_courses, key=lambda x: course_to_season[x])
+
+        return last_offered_course
+
+    # helper function for getting enrollment fields of last-offered course
     def get_last_offered_enrollment(course_row):
         coded_courses = course_row["coded_courses"]
 
@@ -236,6 +258,10 @@ def courses_computed(courses, listings, evaluation_statistics, course_professors
             last_enrollment_same_professors,
         )
 
+    tqdm.pandas(desc="Finding last-offered course")
+    courses["last_offered_course_id"] = courses.progress_apply(get_last_offered, axis=1)
+
+    tqdm.pandas(desc="Finding last-offered enrollment")
     # getting last-offered enrollment
     (
         courses["last_enrollment_course_id"],

@@ -41,6 +41,7 @@ if __name__ == "__main__":
         "courses",
         {
             "dtype": {
+                "last_offered_course_id": "Int64",
                 "last_enrollment_course_id": "Int64",
                 "last_enrollment": "Int64",
                 "last_enrollment_season_code": "Int64",

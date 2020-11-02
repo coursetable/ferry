@@ -961,7 +961,7 @@ def extract_course_info(course_json, season, fysem):
     course_info["areas"] = found_items(course_json["yc_attrs"], areas_map)
 
     course_info["flags"] = extract_flags(course_json["ci_attrs"])
-    course_info["regnotes"] = course_json["ci_attrs"]
+    course_info["regnotes"] = course_json["regnotes"]
 
     # Course homepage
     matched_homepage = re.findall(
