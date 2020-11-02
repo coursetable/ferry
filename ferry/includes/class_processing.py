@@ -960,9 +960,20 @@ def extract_course_info(course_json, season, fysem):
     course_info["skills"] = found_items(course_json["yc_attrs"], skills_map)
     course_info["areas"] = found_items(course_json["yc_attrs"], areas_map)
 
+    # additional info fields
     course_info["flags"] = extract_flags(course_json["ci_attrs"])
     course_info["regnotes"] = (
         BeautifulSoup(course_json["regnotes"], features="lxml")
+        .get_text()
+        .replace("  ", " ")
+    )
+    course_info["rp_attr"] = (
+        BeautifulSoup(course_json["rp_attr"], features="lxml")
+        .get_text()
+        .replace("  ", " ")
+    )
+    course_info["classnotes"] = (
+        BeautifulSoup(course_json.get("clssnotes", ""), features="lxml")
         .get_text()
         .replace("  ", " ")
     )
