@@ -113,8 +113,7 @@ class Course(BaseModel):
         comment='Course times and locations, displayed in the "Meets" row in CourseTable course modals',
     )
     times_summary = Column(
-        String,
-        comment='Course times, displayed in the "Times" column in CourseTable',
+        String, comment='Course times, displayed in the "Times" column in CourseTable',
     )
     times_by_day = Column(
         JSON,
@@ -131,8 +130,7 @@ class Course(BaseModel):
     syllabus_url = Column(String, comment="Link to the syllabus")
     title = Column(String, comment="Complete course title")
     fysem = Column(
-        Boolean,
-        comment="True if the course is a first-year seminar. False otherwise.",
+        Boolean, comment="True if the course is a first-year seminar. False otherwise.",
     )
     regnotes = Column(
         String,
@@ -146,6 +144,38 @@ class Course(BaseModel):
     average_workload = Column(
         Float,
         comment="[computed] Historical average workload rating, aggregated across all cross-listings",
+    )
+
+    last_enrollment_course_id = Column(
+        Integer,
+        ForeignKey("courses_staged.course_id"),
+        comment="[computed] Course from which last enrollment offering was pulled",
+        index=True,
+    )
+
+    last_enrollment_course = relationship(
+        "Course", backref="courses_staged", cascade="all"
+    )
+
+    last_enrollment = Column(
+        Integer,
+        comment="[computed] Number of students enrolled in last offering of course",
+    )
+
+    last_enrollment_season_code = Column(
+        String(10),
+        ForeignKey("seasons_staged.season_code"),
+        comment="[computed] Season in which last enrollment offering is from",
+        index=True,
+    )
+
+    last_enrollment_season = relationship(
+        "Season", backref="courses_staged", cascade="all"
+    )
+
+    last_enrollment_same_professors = Column(
+        Boolean,
+        comment="[computed] Whether last enrollment offering is with same professor as current.",
     )
 
 
@@ -173,9 +203,7 @@ class Listing(BaseModel):
         nullable=False,
     )
     course_code = Column(
-        String,
-        comment='[computed] subject + number (e.g. "AMST 312")',
-        index=True,
+        String, comment='[computed] subject + number (e.g. "AMST 312")', index=True,
     )
     section = Column(
         String,
@@ -230,10 +258,7 @@ course_flags = Table(
         index=True,
     ),
     Column(
-        "flag_id",
-        ForeignKey("flags_staged.flag_id"),
-        primary_key=True,
-        index=True,
+        "flag_id", ForeignKey("flags_staged.flag_id"), primary_key=True, index=True,
     ),
 )
 
@@ -249,20 +274,11 @@ class DemandStatistics(BaseModel):
         index=True,
         comment="The course to which these demand statistics apply",
     )
-    latest_demand = Column(
-        Integer,
-        comment="Latest demand count",
-    )
-    latest_demand_date = Column(
-        String,
-        comment="Latest demand date",
-    )
+    latest_demand = Column(Integer, comment="Latest demand count",)
+    latest_demand_date = Column(String, comment="Latest demand date",)
     course = relationship("Course", backref="demand_statistics_staged", cascade="all")
 
-    demand = Column(
-        JSON,
-        comment="JSON dict containing demand stats by day",
-    )
+    demand = Column(JSON, comment="JSON dict containing demand stats by day",)
 
 
 class Professor(BaseModel):
@@ -331,10 +347,7 @@ class EvaluationQuestion(BaseModel):
         Boolean,
         comment="True if the question has narrative responses. False if the question has categorica/numerical responses",
     )
-    question_text = Column(
-        String,
-        comment="The question text",
-    )
+    question_text = Column(String, comment="The question text",)
     options = Column(
         JSON,
         comment="JSON array of possible responses (only if the question is not a narrative",
@@ -369,15 +382,10 @@ class EvaluationNarrative(BaseModel):
         nullable=False,
     )
     question = relationship(
-        "EvaluationQuestion",
-        backref="evaluation_narratives_staged",
-        cascade="all",
+        "EvaluationQuestion", backref="evaluation_narratives_staged", cascade="all",
     )
 
-    comment = Column(
-        String,
-        comment="Response to the question",
-    )
+    comment = Column(String, comment="Response to the question",)
 
 
 class EvaluationRating(BaseModel):
@@ -404,7 +412,4 @@ class EvaluationRating(BaseModel):
         "EvaluationQuestion", backref="evaluation_ratings_staged", cascade="all"
     )
 
-    rating = Column(
-        JSON,
-        comment="JSON array of the response counts for each option",
-    )
+    rating = Column(JSON, comment="JSON array of the response counts for each option",)

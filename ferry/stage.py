@@ -37,7 +37,16 @@ if __name__ == "__main__":
 
     seasons = load_csv("seasons")
 
-    courses = load_csv("courses")
+    courses = load_csv(
+        "courses",
+        {
+            "dtype": {
+                "last_enrollment_course_id": "Int64",
+                "last_enrollment": "Int64",
+                "last_enrollment_season_code": "Int64",
+            }
+        },
+    )
     listings = load_csv("listings", {"dtype": {"section": str}})
     professors = load_csv("professors")
     course_professors = load_csv("course_professors")
@@ -60,20 +69,6 @@ if __name__ == "__main__":
             }
         },
     )
-
-    # # fix datatype assumptions by pandas
-    # evaluation_statistics["enrolled"] = evaluation_statistics["enrolled"].astype(
-    #     "Int64"
-    # )
-    # evaluation_statistics["responses"] = evaluation_statistics["responses"].astype(
-    #     "Int64"
-    # )
-    # evaluation_statistics["declined"] = evaluation_statistics["declined"].astype(
-    #     "Int64"
-    # )
-    # evaluation_statistics["no_response"] = evaluation_statistics["no_response"].astype(
-    #     "Int64"
-    # )
 
     # --------------------------
     # Replace tables in database
