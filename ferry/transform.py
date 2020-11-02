@@ -180,8 +180,10 @@ if __name__ == "__main__":
     evaluation_statistics = evaluation_statistics_computed(
         evaluation_statistics, evaluation_ratings, evaluation_questions
     )
-    print("Computing historical ratings for courses")
-    courses = courses_computed(courses, listings, evaluation_statistics)
+    print("Computing courses")
+    courses = courses_computed(
+        courses, listings, evaluation_statistics, course_professors
+    )
     print("Computing ratings for professors")
     professors = professors_computed(
         professors, course_professors, evaluation_statistics

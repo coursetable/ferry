@@ -297,7 +297,18 @@ def import_courses(merged_course_info, seasons: List[str]):
     course_professors = pd.concat(course_professors, axis=0, sort=True)
 
     # explicitly specify missing columns to be filled in later
-    courses[["location_times", "average_rating", "average_workload"]] = np.nan
+    courses[
+        [
+            "location_times",
+            "average_rating",
+            "average_workload",
+            "last_offered_course_id",
+            "last_enrollment_course_id",
+            "last_enrollment",
+            "last_enrollment_season_code",
+            "last_enrollment_same_professors",
+        ]
+    ] = np.nan
     professors["average_rating"] = np.nan
 
     # construct courses and flags mapping

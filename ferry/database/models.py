@@ -79,7 +79,12 @@ class Course(BaseModel):
         index=True,
         nullable=False,
     )
-    season = relationship("Season", backref="courses_staged", cascade="all")
+    season = relationship(
+        "Season",
+        backref="courses_staged",
+        cascade="all",
+        foreign_keys="Course.season_code",
+    )
 
     professors = relationship(
         "Professor",
@@ -146,6 +151,60 @@ class Course(BaseModel):
     average_workload = Column(
         Float,
         comment="[computed] Historical average workload rating, aggregated across all cross-listings",
+    )
+
+    last_offered_course_id = Column(
+        Integer,
+        ForeignKey("courses_staged.course_id"),
+        comment="[computed] Most recent previous offering of course (excluding future ones)",
+        index=True,
+    )
+
+    last_offered_course = relationship(
+        "Course",
+        backref="courses_staged",
+        cascade="all",
+        remote_side="Course.course_id",
+        foreign_keys="Course.last_offered_course_id",
+    )
+
+    last_enrollment_course_id = Column(
+        Integer,
+        ForeignKey("courses_staged.course_id"),
+        comment="[computed] Course from which last enrollment offering was pulled",
+        index=True,
+    )
+
+    last_enrollment_course = relationship(
+        "Course",
+        backref="courses_staged_",
+        cascade="all",
+        remote_side="Course.course_id",
+        foreign_keys="Course.last_enrollment_course_id",
+    )
+
+    last_enrollment = Column(
+        Integer,
+        comment="[computed] Number of students enrolled in last offering of course",
+    )
+
+    last_enrollment_season_code = Column(
+        String(10),
+        ForeignKey("seasons_staged.season_code"),
+        comment="[computed] Season in which last enrollment offering is from",
+        index=True,
+    )
+
+    last_enrollment_season = relationship(
+        "Season",
+        backref="courses_staged_",
+        cascade="all",
+        foreign_keys="Course.last_enrollment_season_code",
+    )
+
+    last_enrollment_same_professors = Column(
+        Boolean,
+        comment="[computed] Whether last enrollment offering is with same professor as current.",
     )
 
 
