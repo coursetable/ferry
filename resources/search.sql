@@ -104,6 +104,8 @@ SELECT listing_id,
        (setweight(to_tsvector('english', title), 'A') ||
         setweight(to_tsvector('english', coalesce(description, '')), 'C') ||
         setweight(to_tsvector('english', course_code), 'A') ||
+        setweight(to_tsvector('english', (left(number, 2))::text), 'B') ||
+        setweight(to_tsvector('english', (left(number, 1))::text), 'C') ||
         --setweight(jsonb_to_tsvector('english', all_course_codes, '"all"'), 'B') ||
         setweight(jsonb_to_tsvector('english', professor_names, '"all"'), 'B')
        ) AS info
