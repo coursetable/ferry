@@ -26,42 +26,54 @@ if __name__ == "__main__":
 
     csv_dir = config.DATA_DIR / "importer_dumps"
 
-    seasons = pd.read_csv(csv_dir / "seasons.csv", index_col=0)
+    # common pd.read_csv arguments
+    general_csv_kwargs = {"index_col": 0, "low_memory": False}
 
-    courses = pd.read_csv(csv_dir / "courses.csv", index_col=0)
-    listings = pd.read_csv(csv_dir / "listings.csv", index_col=0)
-    professors = pd.read_csv(csv_dir / "professors.csv", index_col=0)
-    course_professors = pd.read_csv(csv_dir / "course_professors.csv", index_col=0)
-    flags = pd.read_csv(csv_dir / "flags.csv", index_col=0)
-    course_flags = pd.read_csv(csv_dir / "course_flags.csv", index_col=0)
+    # helper function to load table CSVs
+    def load_csv(table_name, csv_kwargs={}):
+        return pd.read_csv(
+            csv_dir / f"{table_name}.csv", **general_csv_kwargs, **csv_kwargs
+        )
 
-    demand_statistics = pd.read_csv(csv_dir / "demand_statistics.csv", index_col=0)
+    seasons = load_csv("seasons")
 
-    evaluation_questions = pd.read_csv(
-        csv_dir / "evaluation_questions.csv", index_col=0
-    )
-    evaluation_narratives = pd.read_csv(
-        csv_dir / "evaluation_narratives.csv", index_col=0
-    )
-    evaluation_ratings = pd.read_csv(csv_dir / "evaluation_ratings.csv", index_col=0)
-    evaluation_statistics = pd.read_csv(
-        csv_dir / "evaluation_statistics.csv", index_col=0
+    courses = load_csv("courses")
+    listings = load_csv("listings", {"dtype": {"section": str}})
+    professors = load_csv("professors")
+    course_professors = load_csv("course_professors")
+    flags = load_csv("flags")
+    course_flags = load_csv("course_flags")
+
+    demand_statistics = load_csv("demand_statistics")
+
+    evaluation_questions = load_csv("evaluation_questions")
+    evaluation_narratives = load_csv("evaluation_narratives")
+    evaluation_ratings = load_csv("evaluation_ratings")
+    evaluation_statistics = load_csv(
+        "evaluation_statistics",
+        {
+            "dtype": {
+                "enrolled": "Int64",
+                "responses": "Int64",
+                "declined": "Int64",
+                "no_response": "Int64",
+            }
+        },
     )
 
-    # fix datatype assumptions by pandas
-    listings["section"] = listings["section"].astype(str)
-    evaluation_statistics["enrolled"] = evaluation_statistics["enrolled"].astype(
-        "Int64"
-    )
-    evaluation_statistics["responses"] = evaluation_statistics["responses"].astype(
-        "Int64"
-    )
-    evaluation_statistics["declined"] = evaluation_statistics["declined"].astype(
-        "Int64"
-    )
-    evaluation_statistics["no_response"] = evaluation_statistics["no_response"].astype(
-        "Int64"
-    )
+    # # fix datatype assumptions by pandas
+    # evaluation_statistics["enrolled"] = evaluation_statistics["enrolled"].astype(
+    #     "Int64"
+    # )
+    # evaluation_statistics["responses"] = evaluation_statistics["responses"].astype(
+    #     "Int64"
+    # )
+    # evaluation_statistics["declined"] = evaluation_statistics["declined"].astype(
+    #     "Int64"
+    # )
+    # evaluation_statistics["no_response"] = evaluation_statistics["no_response"].astype(
+    #     "Int64"
+    # )
 
     # --------------------------
     # Replace tables in database

@@ -134,6 +134,10 @@ class Course(BaseModel):
         Boolean,
         comment="True if the course is a first-year seminar. False otherwise.",
     )
+    regnotes = Column(
+        String,
+        comment="Registrar's notes (e.g. preference selection links, optional writing credits, etc.)",
+    )
 
     average_rating = Column(
         Float,
