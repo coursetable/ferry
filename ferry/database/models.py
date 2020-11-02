@@ -93,16 +93,27 @@ class Course(BaseModel):
         cascade="all",
     )
 
-    areas = Column(JSON, comment="Course areas (humanities, social sciences, sciences)")
-    course_home_url = Column(String, comment="Link to the course homepage")
+    # ------------------------
+    # Basic course descriptors
+    # ------------------------
+
+    title = Column(String, comment="Complete course title")
+    short_title = Column(
+        String,
+        comment='Shortened course title (first 29 characters + "...") if the length exceeds 32, otherwise just the title itself',
+    )
     description = Column(String, comment="Course description")
+    requirements = Column(
+        String, comment="Recommended requirements/prerequisites for the course"
+    )
+
     school = Column(
         String, comment="School (e.g. YC, GS, MG) that the course is taught in"
     )
-    credits = Column(Float, comment="Number of course credits")
-    extra_info = Column(
-        String, comment="Additional information (indicates if class has been cancelled)"
-    )
+
+    # -------------------
+    # Times and locations
+    # -------------------
     location_times = Column(
         String, comment="Key-value pairs consisting of `<location>:<list of times>`"
     )
@@ -110,9 +121,7 @@ class Course(BaseModel):
         String,
         comment='If single location, is `<location>`; otherwise is `<location> + <n_other_locations>` where the first location is the one with the greatest number of days. Displayed in the "Locations" column in CourseTable.',
     )
-    requirements = Column(
-        String, comment="Recommended requirements/prerequisites for the course"
-    )
+
     times_long_summary = Column(
         String,
         comment='Course times and locations, displayed in the "Meets" row in CourseTable course modals',
@@ -125,24 +134,44 @@ class Course(BaseModel):
         JSON,
         comment="Course meeting times by day, with days as keys and tuples of `(start_time, end_time, location)`",
     )
-    short_title = Column(
-        String,
-        comment='Shortened course title (first 29 characters + "...") if the length exceeds 32, otherwise just the title itself',
-    )
+
+    # ----------------------
+    # Skills, areas, credits
+    # ----------------------
+
     skills = Column(
         JSON,
         comment="Skills that the course fulfills (e.g. writing, quantitative reasoning, language levels)",
     )
+
+    areas = Column(JSON, comment="Course areas (humanities, social sciences, sciences)")
+
+    credits = Column(Float, comment="Number of course credits")
+
+    # ----------------------
+    # Additional info fields
+    # ----------------------
+
     syllabus_url = Column(String, comment="Link to the syllabus")
-    title = Column(String, comment="Complete course title")
-    fysem = Column(
-        Boolean,
-        comment="True if the course is a first-year seminar. False otherwise.",
-    )
+    course_home_url = Column(String, comment="Link to the course homepage")
     regnotes = Column(
         String,
         comment="Registrar's notes (e.g. preference selection links, optional writing credits, etc.)",
     )
+    extra_info = Column(
+        String, comment="Additional information (indicates if class has been cancelled)"
+    )
+    rp_attr = Column(String, comment="Reading period notes")
+    classnotes = Column(String, comment="Additional class notes")
+    final_exam = Column(String, comment="Final exam information")
+    fysem = Column(
+        Boolean,
+        comment="True if the course is a first-year seminar. False otherwise.",
+    )
+
+    # ----------------
+    # Computed ratings
+    # ----------------
 
     average_rating = Column(
         Float,
@@ -159,6 +188,10 @@ class Course(BaseModel):
         comment="[computed] Most recent previous offering of course (excluding future ones)",
         index=True,
     )
+
+    # -----------------------
+    # Last-offered statistics
+    # -----------------------
 
     last_offered_course = relationship(
         "Course",

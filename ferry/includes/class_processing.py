@@ -977,6 +977,7 @@ def extract_course_info(course_json, season, fysem):
         .get_text()
         .replace("  ", " ")
     )
+    course_info["final_exam"] = course_json["final_exam"]
 
     # Course homepage
     matched_homepage = re.findall(
