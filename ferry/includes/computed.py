@@ -5,8 +5,8 @@ import pandas as pd
 import ujson
 
 from ferry import config, database
-from ferry.includes.utils import get_table_columns
 from ferry.includes.tqdm import tqdm
+from ferry.includes.utils import get_table_columns
 
 tqdm.pandas()
 
