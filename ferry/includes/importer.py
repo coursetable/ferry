@@ -519,7 +519,7 @@ def import_evaluations(merged_evaluations_info, listings):
     (
         evaluation_narratives["question_code"],
         evaluation_narratives["question_text"],
-        evaluation_narratives["comment"],
+        evaluation_narratives["comments"],
     ) = zip(
         *evaluation_narratives["narratives"].map(
             lambda x: [x["question_id"], x["question_text"], x["comments"]]
@@ -541,10 +541,29 @@ def import_evaluations(merged_evaluations_info, listings):
 
     # subset and explode
     evaluation_narratives = evaluation_narratives.loc[
-        :, ["course_id", "question_code", "comment"]
+        :, ["course_id", "question_code", "comments"]
     ]
-    evaluation_narratives = evaluation_narratives.explode("comment")
+    evaluation_narratives = evaluation_narratives.explode("comments")
+    evaluation_narratives.dropna(subset=["comments"], inplace=True)
+    (
+        evaluation_narratives["comment"],
+        evaluation_narratives["comment_neg"],
+        evaluation_narratives["comment_neu"],
+        evaluation_narratives["comment_pos"],
+        evaluation_narratives["comment_compound"],
+    ) = zip(
+        *evaluation_narratives["comments"].map(
+            lambda x: [x["comment"], x["neg"], x["neu"], x["pos"], x["compound"]],
+        )
+    )
+
+    # filter out missing or short comments
     evaluation_narratives.dropna(subset=["comment"], inplace=True)
+
+    MIN_COMMENT_LENGTH = 2
+    evaluation_narratives = evaluation_narratives[
+        evaluation_narratives["comment"].apply(len) > 2
+    ]
     # replace carriage returns for csv-based migration
     evaluation_narratives["comment"] = evaluation_narratives["comment"].apply(
         lambda x: x.replace("\r", "")

@@ -32,8 +32,6 @@ def process_narratives(narratives):
     return processed_narratives
 
 
-print("\n[Importing course evaluations]")
-
 # list available evaluation files
 previous_eval_files = Path(config.DATA_DIR / "previous_evals").glob("*.json")
 new_eval_files = Path(config.DATA_DIR / "course_evals").glob("*.json")
