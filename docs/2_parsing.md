@@ -6,7 +6,7 @@ Because we extract and construct several fields from courses (e.g. formatted mee
 
 ## Importing
 
-As detailed in the [README](README.md), our importing process is composed of three stages: transforming, staging, and deploying. Each stage is intended to be as independent as possible (although deploying requires that staging be run before) for ease of development.
+As detailed in the [README](/README.md), our importing process is composed of three stages: transforming, staging, and deploying. Each stage is intended to be as independent as possible (although deploying requires that staging be run before) for ease of development.
 
 ### Transforming: `/ferry/transform.py`
 
