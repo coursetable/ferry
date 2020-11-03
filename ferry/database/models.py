@@ -471,6 +471,26 @@ class EvaluationNarrative(BaseModel):
         comment="Response to the question",
     )
 
+    comment_neg = Column(
+        Float,
+        comment="VADER sentiment 'neg' score (negativity)",
+    )
+
+    comment_neu = Column(
+        Float,
+        comment="VADER sentiment 'neu' score (neutrality)",
+    )
+
+    comment_pos = Column(
+        Float,
+        comment="VADER sentiment 'pos' score (positivity)",
+    )
+
+    comment_compound = Column(
+        Float,
+        comment="VADER sentiment 'compound' score (valence aggregate of neg, neu, pos)",
+    )
+
 
 class EvaluationRating(BaseModel):
     # Categorical evaluations data.

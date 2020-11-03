@@ -126,38 +126,14 @@ if __name__ == "__main__":
 
     print("\n[Importing course evaluations]")
 
-    # list available evaluation files
-    previous_eval_files = Path(config.DATA_DIR / "previous_evals").glob("*.json")
-    new_eval_files = Path(config.DATA_DIR / "course_evals").glob("*.json")
-
-    previous_eval_files = [x.name for x in previous_eval_files]
-    new_eval_files = [x.name for x in new_eval_files]
-
-    all_evals = sorted(list(set(previous_eval_files + new_eval_files)))
-
-    merged_evaluations_info = []
-
-    for filename in tqdm(all_evals, desc="Loading evaluation JSONs"):
-        # Read the evaluation, giving preference to current over previous.
-        current_evals_file = Path(f"{config.DATA_DIR}/course_evals/{filename}")
-
-        if current_evals_file.is_file():
-            with open(current_evals_file, "r") as f:
-                evaluation = ujson.load(f)
-        else:
-            with open(f"{config.DATA_DIR}/previous_evals/{filename}", "r") as f:
-                evaluation = ujson.load(f)
-
-        merged_evaluations_info.append(evaluation)
-
-    merged_evaluations_info = pd.DataFrame(merged_evaluations_info)
+    merged_evaluations = pd.read_json(f"{config.DATA_DIR}/merged_evaluations.json")
 
     (
         evaluation_narratives,
         evaluation_ratings,
         evaluation_statistics,
         evaluation_questions,
-    ) = import_evaluations(merged_evaluations_info, listings)
+    ) = import_evaluations(merged_evaluations, listings)
 
     # define seasons table for import
     seasons = pd.DataFrame(course_seasons, columns=["season_code"], dtype=int)
