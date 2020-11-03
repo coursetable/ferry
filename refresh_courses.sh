@@ -27,6 +27,9 @@ poetry run python ./ferry/crawler/fetch_classes.py -s LATEST_3
 announce "Parsing all classes"
 poetry run python ./ferry/crawler/parse_classes.py
 
+announce "Parsing all evaluations"
+poetry run python ./ferry/crawler/parse_ratings.py
+
 announce "Fetching and parsing demand statistics for latest year"
 poetry run python ./ferry/crawler/fetch_demand.py -s LATEST_3
 

@@ -127,7 +127,8 @@ class Course(BaseModel):
         comment='Course times and locations, displayed in the "Meets" row in CourseTable course modals',
     )
     times_summary = Column(
-        String, comment='Course times, displayed in the "Times" column in CourseTable',
+        String,
+        comment='Course times, displayed in the "Times" column in CourseTable',
     )
     times_by_day = Column(
         JSON,
@@ -164,7 +165,8 @@ class Course(BaseModel):
     classnotes = Column(String, comment="Additional class notes")
     final_exam = Column(String, comment="Final exam information")
     fysem = Column(
-        Boolean, comment="True if the course is a first-year seminar. False otherwise.",
+        Boolean,
+        comment="True if the course is a first-year seminar. False otherwise.",
     )
 
     # ----------------
@@ -263,7 +265,9 @@ class Listing(BaseModel):
         nullable=False,
     )
     course_code = Column(
-        String, comment='[computed] subject + number (e.g. "AMST 312")', index=True,
+        String,
+        comment='[computed] subject + number (e.g. "AMST 312")',
+        index=True,
     )
     section = Column(
         String,
@@ -318,7 +322,10 @@ course_flags = Table(
         index=True,
     ),
     Column(
-        "flag_id", ForeignKey("flags_staged.flag_id"), primary_key=True, index=True,
+        "flag_id",
+        ForeignKey("flags_staged.flag_id"),
+        primary_key=True,
+        index=True,
     ),
 )
 
@@ -334,11 +341,20 @@ class DemandStatistics(BaseModel):
         index=True,
         comment="The course to which these demand statistics apply",
     )
-    latest_demand = Column(Integer, comment="Latest demand count",)
-    latest_demand_date = Column(String, comment="Latest demand date",)
+    latest_demand = Column(
+        Integer,
+        comment="Latest demand count",
+    )
+    latest_demand_date = Column(
+        String,
+        comment="Latest demand date",
+    )
     course = relationship("Course", backref="demand_statistics_staged", cascade="all")
 
-    demand = Column(JSON, comment="JSON dict containing demand stats by day",)
+    demand = Column(
+        JSON,
+        comment="JSON dict containing demand stats by day",
+    )
 
 
 class Professor(BaseModel):
@@ -407,7 +423,10 @@ class EvaluationQuestion(BaseModel):
         Boolean,
         comment="True if the question has narrative responses. False if the question has categorica/numerical responses",
     )
-    question_text = Column(String, comment="The question text",)
+    question_text = Column(
+        String,
+        comment="The question text",
+    )
     options = Column(
         JSON,
         comment="JSON array of possible responses (only if the question is not a narrative",
@@ -442,16 +461,30 @@ class EvaluationNarrative(BaseModel):
         nullable=False,
     )
     question = relationship(
-        "EvaluationQuestion", backref="evaluation_narratives_staged", cascade="all",
+        "EvaluationQuestion",
+        backref="evaluation_narratives_staged",
+        cascade="all",
     )
 
-    comment = Column(String, comment="Response to the question",)
+    comment = Column(
+        String,
+        comment="Response to the question",
+    )
 
-    comment_neg = Column(Float, comment="VADER sentiment 'neg' score (negativity)",)
+    comment_neg = Column(
+        Float,
+        comment="VADER sentiment 'neg' score (negativity)",
+    )
 
-    comment_neu = Column(Float, comment="VADER sentiment 'neu' score (neutrality)",)
+    comment_neu = Column(
+        Float,
+        comment="VADER sentiment 'neu' score (neutrality)",
+    )
 
-    comment_pos = Column(Float, comment="VADER sentiment 'pos' score (positivity)",)
+    comment_pos = Column(
+        Float,
+        comment="VADER sentiment 'pos' score (positivity)",
+    )
 
     comment_compound = Column(
         Float,
@@ -483,4 +516,7 @@ class EvaluationRating(BaseModel):
         "EvaluationQuestion", backref="evaluation_ratings_staged", cascade="all"
     )
 
-    rating = Column(JSON, comment="JSON array of the response counts for each option",)
+    rating = Column(
+        JSON,
+        comment="JSON array of the response counts for each option",
+    )
