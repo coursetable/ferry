@@ -1,11 +1,17 @@
+"""
+This script fetches course evaluation data from the Yale
+Online Course Evaluation (OCE), in JSON format through the
+following steps:
+
+    1. Selection of seasons to fetch ratings
+    2. Construction of a cached check for Yale College courses
+    3. Aggregation of all season courses into a queue
+    4. Fetch and save OCE data for each course in the queue
+
+"""
 import argparse
-import csv
 import datetime
-import getpass
-import re
-import time
-from os import listdir
-from os.path import isfile, join
+from os.path import isfile
 
 import diskcache
 import requests
@@ -16,22 +22,12 @@ from ferry.includes.cas import create_session
 from ferry.includes.rating_processing import fetch_course_eval
 from ferry.includes.tqdm import tqdm
 
-"""
-================================================================
-This script fetches course evaluation data from the Yale 
-Online Course Evaluation (OCE), in JSON format through the
-following steps:
-    
-    1. Selection of seasons to fetch ratings
-    2. Construction of a cached check for Yale College courses
-    3. Aggregation of all season courses into a queue
-    4. Fetch and save OCE data for each course in the queue
-
-================================================================
-"""
-
 
 class FetchRatingsError(Exception):
+    """
+    Error object for fetch ratings exceptions.
+    """
+
     pass
 
 
@@ -103,19 +99,21 @@ else:
         else:
             raise FetchRatingsError("Invalid season.")
 
-# --------------------------------------------------------
-# Helper function to check if course is in Yale College
-# (only Yale College and Summer Session courses are rated)
-# --------------------------------------------------------
 
 yale_college_cache = diskcache.Cache(f"{config.DATA_DIR}/yale_college_cache")
 
 
 @yale_college_cache.memoize()
-def is_yale_college(season_code, crn):
+def is_yale_college(course_season_code, course_crn):
+
+    """
+    Helper function to check if course is in Yale College
+    (only Yale College and Summer Session courses are rated)
+    """
+
     all_params = {
-        "other": {"srcdb": season_code},
-        "criteria": [{"field": "crn", "value": crn}],
+        "other": {"srcdb": course_season_code},
+        "criteria": [{"field": "crn", "value": course_crn}],
     }
     all_response = requests.post(
         "https://courses.yale.edu/api/?page=fose&route=search",
@@ -128,8 +126,11 @@ def is_yale_college(season_code, crn):
         return "try it anyways"
 
     yc_params = {
-        "other": {"srcdb": season_code},
-        "criteria": [{"field": "crn", "value": crn}, {"field": "col", "value": "YC"}],
+        "other": {"srcdb": course_season_code},
+        "criteria": [
+            {"field": "crn", "value": course_crn},
+            {"field": "col", "value": "YC"},
+        ],
     }
     yc_data = requests.post(
         "https://courses.yale.edu/api/?page=fose&route=search&col=YC",
@@ -212,13 +213,12 @@ for season_code, crn in tqdm(queue):
         with open(output_path, "w") as f:
             f.write(ujson.dumps(course_eval, indent=4))
 
-        tqdm.write(f"dumped in JSON")
+        tqdm.write("dumped in JSON")
     # except SeasonMissingEvalsError:
     #     tqdm.write(f"Skipping season {season_code} - missing evals")
     # except CrawlerError:
     #     tqdm.write(f"skipped - missing evals")
-    except Exception as e:
-        import traceback
+    except Exception as error:
 
         # traceback.print_exc()
-        tqdm.write(f"skipped - unknown error {e}")
+        tqdm.write(f"skipped - unknown error {error}")
