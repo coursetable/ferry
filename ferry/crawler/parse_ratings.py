@@ -113,7 +113,7 @@ def process_ratings(evaluation):
         rating["season"] = evaluation["season"]
         rating["crn"] = evaluation["crn_code"]
         rating["question_code"] = raw_rating["question_id"]
-        rating["rating"] = raw_rating["data"]
+        rating["rating"] = ujson.dumps(raw_rating["data"])
 
         ratings_writer.writerow(rating)
 
@@ -140,7 +140,7 @@ def process_questions(evaluation):
         question["question_code"] = rating["question_id"]
         question["question_text"] = rating["question_text"]
         question["is_narrative"] = False
-        question["options"] = rating["options"]
+        question["options"] = ujson.dumps(rating["options"])
 
         questions_writer.writerow(question)
 

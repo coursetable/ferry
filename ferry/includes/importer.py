@@ -535,6 +535,10 @@ def import_evaluations(
     evaluation_ratings.dropna(subset=["course_id"], axis=0, inplace=True)
     evaluation_statistics.dropna(subset=["course_id"], axis=0, inplace=True)
 
+    evaluation_narratives["course_id"] = evaluation_narratives["course_id"].astype(int)
+    evaluation_ratings["course_id"] = evaluation_ratings["course_id"].astype(int)
+    evaluation_statistics["course_id"] = evaluation_statistics["course_id"].astype(int)
+
     evaluation_statistics.drop_duplicates(
         subset=["course_id"], inplace=True, keep="first"
     )
