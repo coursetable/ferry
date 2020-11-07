@@ -133,7 +133,11 @@ if __name__ == "__main__":
         description="Generate computed fields and check invariants"
     )
     parser.add_argument(
-        "--items", nargs="+", help="which items to run", default=None, required=False,
+        "--items",
+        nargs="+",
+        help="which items to run",
+        default=None,
+        required=False,
     )
 
     # --------------------------------------

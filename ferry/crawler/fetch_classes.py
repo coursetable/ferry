@@ -1,3 +1,13 @@
+"""
+Fetches the following information from the Yale Courses API, in JSON format:
+
+    (1) A list of all courses for each season
+        (/api_output/season_courses/)
+
+    (2) Detailed information for each course, for each season
+        (/api_output/course_json_cache/)
+"""
+
 import argparse
 
 import ujson
@@ -9,19 +19,6 @@ from ferry.includes.class_processing import (
     fetch_season_courses,
 )
 from ferry.includes.tqdm import tqdm
-
-"""
-================================================================
-This script fetches the following information from the Yale 
-Courses API, in JSON format:
-
-    (1) A list of all courses for each season
-        (/api_output/season_courses/)
-
-    (2) Detailed information for each course, for each season
-        (/api_output/course_json_cache/)
-================================================================
-"""
 
 # -----------------------------------------
 # Retrieve courses from unofficial Yale API

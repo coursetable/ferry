@@ -1,35 +1,39 @@
-# Modified from Dan Zhao
-# Original article: https://yaledailynews.com/blog/2020/01/10/yales-most-popular-courses/
-# Github: https://github.com/iamdanzhao/yale-popular-classes
-# README: https://github.com/iamdanzhao/yale-popular-classes/blob/master/data-guide/course_data_guide.md
+"""
+Fetches demand statistics.
 
-# Import packages -----
+Modified from Dan Zhao
+
+Original article:
+https://yaledailynews.com/blog/2020/01/10/yales-most-popular-courses/
+
+Github:
+https://github.com/iamdanzhao/yale-popular-classes
+
+README:
+https://github.com/iamdanzhao/yale-popular-classes/blob/master/data-guide/course_data_guide.md
+"""
 
 import argparse
-import os
-import sys
-from datetime import datetime
 from multiprocessing import Pool
 
-import requests
 import ujson
-from bs4 import BeautifulSoup
 
 from ferry import config
 from ferry.includes.demand_processing import fetch_season_subject_demand, get_dates
 from ferry.includes.tqdm import tqdm
 
 
-def handle_season_subject_demand(args):
+def handle_season_subject_demand(demand_args):
 
     """
-    Handler for fetching subject codes to be passed into
-    Pool()
+    Handler for fetching subject codes to be passed into Pool()
     """
 
-    season, subject_code, subject_codes, dates = args
+    demand_season, demand_subject_code, demand_subject_codes, demand_dates = demand_args
 
-    courses = fetch_season_subject_demand(season, subject_code, subject_codes, dates)
+    courses = fetch_season_subject_demand(
+        demand_season, demand_subject_code, demand_subject_codes, demand_dates
+    )
 
     return courses
 
@@ -37,6 +41,10 @@ def handle_season_subject_demand(args):
 if __name__ == "__main__":
 
     class FetchDemandError(Exception):
+        """
+        Error object for demand fetching exceptions.
+        """
+
         pass
 
     # Set season
