@@ -531,14 +531,17 @@ def import_evaluations(
         f"Removing {nan_total}/{len(evaluation_statistics)} evaluated courses without matches"
     )
 
+    # remove unmatched courses
     evaluation_narratives.dropna(subset=["course_id"], axis=0, inplace=True)
     evaluation_ratings.dropna(subset=["course_id"], axis=0, inplace=True)
     evaluation_statistics.dropna(subset=["course_id"], axis=0, inplace=True)
 
+    # change from float to integer type for import
     evaluation_narratives["course_id"] = evaluation_narratives["course_id"].astype(int)
     evaluation_ratings["course_id"] = evaluation_ratings["course_id"].astype(int)
     evaluation_statistics["course_id"] = evaluation_statistics["course_id"].astype(int)
 
+    # drop cross-listing duplicates
     evaluation_statistics.drop_duplicates(
         subset=["course_id"], inplace=True, keep="first"
     )
@@ -562,24 +565,31 @@ def import_evaluations(
     # focus on question texts with multiple variations
     text_by_code = text_by_code[text_by_code.apply(len) > 1]
 
+    # add [0] at the end to account for empty lists
     max_diff_texts = max(list(text_by_code.apply(len)) + [0])
     print(f"Maximum number of different texts per question code: {max_diff_texts}")
 
-    def min_pairwise_distance(texts):
+    # get the maximum distance between a set of texts
+    def max_pairwise_distance(texts):
 
         pairs = combinations(texts, 2)
         distances = [textdistance.levenshtein.distance(*pair) for pair in pairs]
 
         return max(distances)
 
-    distances_by_code = text_by_code.apply(min_pairwise_distance)
+    distances_by_code = text_by_code.apply(max_pairwise_distance)
+    # add [0] at the end to account for empty lists
     max_all_distances = max(list(distances_by_code) + [0])
 
     print(f"Maximum text divergence within codes: {max_all_distances}")
 
-    if not all(distances_by_code < 32):
+    # maximum question divergence to allow
+    QUESTION_DIVERGENCE_CUTOFF = 32
+    if not all(distances_by_code < QUESTION_DIVERGENCE_CUTOFF):
 
-        inconsistent_codes = distances_by_code[distances_by_code >= 32]
+        inconsistent_codes = distances_by_code[
+            distances_by_code >= QUESTION_DIVERGENCE_CUTOFF
+        ]
         inconsistent_codes = list(inconsistent_codes.index)
         inconsistent_codes = ", ".join(inconsistent_codes)
 
@@ -592,6 +602,7 @@ def import_evaluations(
         "is_narrative"
     ].apply(set)
 
+    # check that a question code is always narrative or always rating
     if not all(is_narrative_by_code.apply(len) == 1):
         inconsistent_codes = is_narrative_by_code[is_narrative_by_code.apply(len) != 1]
         inconsistent_codes = list(inconsistent_codes.index)
@@ -616,6 +627,8 @@ def import_evaluations(
     # Clean up and subset
     # -------------------
 
+    # evaluation narratives ----------------
+
     # filter out missing or short comments
     evaluation_narratives.dropna(subset=["comment"], inplace=True)
 
@@ -631,13 +644,19 @@ def import_evaluations(
     evaluation_narratives.loc[:, "id"] = range(len(evaluation_narratives))
     evaluation_narratives.reset_index(drop=True, inplace=True)
 
+    # evaluation ratings ----------------
+
     # id column for database primary key
     evaluation_ratings.loc[:, "id"] = range(len(evaluation_ratings))
     evaluation_ratings.reset_index(drop=True, inplace=True)
 
+    # evaluation questions ----------------
+
     # tag to be added later
     evaluation_questions["tag"] = ""
     evaluation_questions.reset_index(drop=True, inplace=True)
+
+    # evaluation statistics ----------------
 
     # explicitly specify missing columns to be filled in later
     evaluation_statistics[["avg_rating", "avg_workload", "enrollment"]] = np.nan
@@ -647,7 +666,7 @@ def import_evaluations(
     )
     evaluation_statistics.reset_index(drop=True, inplace=True)
 
-    # extract columns to match database
+    # extract columns to match database  ----------------
     evaluation_narratives = evaluation_narratives.loc[
         :, get_table_columns(database.models.EvaluationNarrative)
     ]

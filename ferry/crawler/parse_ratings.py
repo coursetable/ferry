@@ -167,37 +167,39 @@ def process_evaluation(evaluation):
     return
 
 
-# ----------------------------
-# Load and process evaluations
-# ----------------------------
+if __name__ == "__main__":
 
-# list available evaluation files
-previous_eval_files = Path(config.DATA_DIR / "previous_evals").glob("*.json")
-new_eval_files = Path(config.DATA_DIR / "course_evals").glob("*.json")
+    # ----------------------------
+    # Load and process evaluations
+    # ----------------------------
 
-# extract file names (<season> + <crn> format) for merging
-previous_eval_files = [x.name for x in previous_eval_files]
-new_eval_files = [x.name for x in new_eval_files]
+    # list available evaluation files
+    previous_eval_files = Path(config.DATA_DIR / "previous_evals").glob("*.json")
+    new_eval_files = Path(config.DATA_DIR / "course_evals").glob("*.json")
 
-all_eval_files = sorted(list(set(previous_eval_files + new_eval_files)))
+    # extract file names (<season> + <crn> format) for merging
+    previous_eval_files = [x.name for x in previous_eval_files]
+    new_eval_files = [x.name for x in new_eval_files]
 
-merged_evaluations = []
+    all_eval_files = sorted(list(set(previous_eval_files + new_eval_files)))
 
-for filename in tqdm(all_eval_files, desc="Processing evaluations"):
-    # Read the evaluation, giving preference to current over previous.
-    current_evals_file = Path(f"{config.DATA_DIR}/course_evals/{filename}")
+    merged_evaluations = []
 
-    if current_evals_file.is_file():
-        with open(current_evals_file, "r") as f:
-            evaluation = ujson.load(f)
-    else:
-        with open(f"{config.DATA_DIR}/previous_evals/{filename}", "r") as f:
-            evaluation = ujson.load(f)
+    for filename in tqdm(all_eval_files, desc="Processing evaluations"):
+        # Read the evaluation, giving preference to current over previous.
+        current_evals_file = Path(f"{config.DATA_DIR}/course_evals/{filename}")
 
-    process_evaluation(evaluation)
+        if current_evals_file.is_file():
+            with open(current_evals_file, "r") as f:
+                evaluation = ujson.load(f)
+        else:
+            with open(f"{config.DATA_DIR}/previous_evals/{filename}", "r") as f:
+                evaluation = ujson.load(f)
 
-# close CSV files
-questions_file.close()
-narratives_file.close()
-ratings_file.close()
-statistics_file.close()
+        process_evaluation(evaluation)
+
+    # close CSV files
+    questions_file.close()
+    narratives_file.close()
+    ratings_file.close()
+    statistics_file.close()
