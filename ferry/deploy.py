@@ -1,23 +1,26 @@
+"""
+Deploy staged tables to main ones and regenerate database.
+
+- Checks the database invariants on staged tables.
+- If invariants pass, promotes staged tables to actual ones,
+  updates indexes, and recomputes search views
+- If any invariant fails, exits with no changes to tables.
+
+"""
+
 import argparse
-import collections
-import csv
-from typing import List
 
 import sqlalchemy
-from sqlalchemy import MetaData, schema
-from sqlalchemy.sql.schema import ForeignKeyConstraint
+from sqlalchemy import MetaData
 
 from ferry import config, database
 from ferry.includes.tqdm import tqdm
 
-"""
-This script checks the database invariants.
-"""
-
 
 def listing_invariants(session):
     """
-    Check invariant: listing.season_code == course.season_code if listing.course_id == course.course_id.
+    Check invariant:
+        listing.season_code == course.season_code if listing.course_id == course.course_id.
     """
     for listing_id, course_id, listing_season_code, course_season_code in session.query(
         database.Listing.listing_id,
@@ -33,7 +36,8 @@ def listing_invariants(session):
 
 def question_invariants(session):
     """
-    Check invariant: evaluation_questions.options is null iff evaluation_questions.is_narrative = True
+    Check invariant:
+        evaluation_questions.options is null iff evaluation_questions.is_narrative = True
     """
     for question in session.query(
         database.EvaluationQuestion
@@ -48,13 +52,14 @@ def question_invariants(session):
 
 def question_tag_invariant(session):
     """
-    Check invariant: all questions sharing a tag also share is_narrative and len(options)
+    Check invariant:
+        all questions sharing a tag also share is_narrative and len(options)
     """
     # Dictionary of question_code -> (is_narrative, len(options))
     tag_cache = {}
 
-    def optlen(l):
-        return len(l) if l else -1
+    def optlen(options):
+        return len(options) if options else -1
 
     for question in session.query(
         database.EvaluationQuestion
@@ -72,7 +77,8 @@ def question_tag_invariant(session):
 
 def course_invariants(session):
     """
-    Check invariant: every course should have at least one listing.
+    Check invariant:
+        every course should have at least one listing.
     """
     courses_no_listings = (
         session.query(database.Course)
@@ -83,18 +89,21 @@ def course_invariants(session):
     ).all()
 
     if courses_no_listings:
+
+        no_listing_courses = [str(course) for course in courses_no_listings]
+
         raise database.InvariantError(
-            f"the following courses have no listings: {', '.join(str(course) for course in courses_no_listings)}"
+            f"the following courses have no listings: {', '.join(no_listing_courses)}"
         )
 
 
 def search_setup(session):
     """
-    Setup materialized view and search function
+    Set up materialized view and search function
     """
 
-    with open(f"{config.RESOURCE_DIR}/search.sql") as f:
-        sql = f.read()
+    with open(f"{config.RESOURCE_DIR}/search.sql") as file:
+        sql = file.read()
     session.execute(sql)
 
 
@@ -111,21 +120,20 @@ if __name__ == "__main__":
         question_tag_invariant,
     ]
 
-    def _match(name):
-        for fn in all_items:
-            if fn.__name__ == name:
-                return fn
+    def _match(name: str):
+        """
+        Get a function object by name (string)
+        """
+        for checking_function in all_items:
+            if checking_function.__name__ == name:
+                return checking_function
         raise ValueError(f"cannot find item with name {name}")
 
     parser = argparse.ArgumentParser(
         description="Generate computed fields and check invariants"
     )
     parser.add_argument(
-        "--items",
-        nargs="+",
-        help="which items to run",
-        default=None,
-        required=False,
+        "--items", nargs="+", help="which items to run", default=None, required=False,
     )
 
     # --------------------------------------
@@ -140,7 +148,7 @@ if __name__ == "__main__":
     alchemy_tables = database.Base.metadata.sorted_tables
     target_tables = [table.name[:-7] for table in alchemy_tables]
 
-    db_tables = set([x.name for x in db_meta.sorted_tables])
+    db_tables = {x.name for x in db_meta.sorted_tables}
 
     if any(table.name not in db_tables for table in alchemy_tables):
 
@@ -168,8 +176,8 @@ if __name__ == "__main__":
         else:
             tqdm.write(f"Running: {fn.__name__}")
 
-        with database.session_scope(database.Session) as session:
-            fn(session)
+        with database.session_scope(database.Session) as db_session:
+            fn(db_session)
 
     print("All invariants passed")
 
@@ -256,8 +264,8 @@ if __name__ == "__main__":
 
     # generate computed tables and full-text-search
     print("\n[Setting up full-text search]")
-    with database.session_scope(database.Session) as session:
-        search_setup(session)
+    with database.session_scope(database.Session) as db_session:
+        search_setup(db_session)
 
     # -------------
     # Final summary
@@ -265,9 +273,9 @@ if __name__ == "__main__":
 
     # Print row counts for each table.
     tqdm.write("\n[Table Statistics]")
-    with database.session_scope(database.Session) as session:
+    with database.session_scope(database.Session) as db_session:
         # Via https://stackoverflow.om/a/2611745/5004662.
-        sql = """
+        SUMMARY_SQL = """
         select table_schema,
             table_name,
             (xpath('/row/cnt/text()', xml_count))[1]::text::int as row_count
@@ -279,6 +287,6 @@ if __name__ == "__main__":
         ) t
         """
 
-        result = session.execute(sql)
+        result = db_session.execute(SUMMARY_SQL)
         for table_counts in result:
             print(f"{table_counts[1]:>25} - {table_counts[2]:6} rows")
