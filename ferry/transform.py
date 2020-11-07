@@ -1,12 +1,14 @@
+"""
+This script imports the parsed course and evaluation data into
+CSVs generated with Pandas.
+"""
 import os
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 import ujson
 
 from ferry import config
-from ferry.config import DATABASE_CONNECT_STRING
 from ferry.includes.computed import (
     courses_computed,
     evaluation_statistics_computed,
@@ -15,13 +17,6 @@ from ferry.includes.computed import (
 )
 from ferry.includes.importer import import_courses, import_demand, import_evaluations
 from ferry.includes.tqdm import tqdm
-
-"""
-================================================================
-This script imports the parsed course and evaluation data into
-CSVs generated with Pandas.
-================================================================
-"""
 
 if __name__ == "__main__":
 
@@ -197,7 +192,14 @@ if __name__ == "__main__":
 
     csv_dir = config.DATA_DIR / "importer_dumps"
 
-    def export_csv(table, table_name, csv_kwargs={}):
+    def export_csv(table, table_name, csv_kwargs=None):
+        """
+        Exports a table to a CSV file with provided name.
+        """
+
+        if csv_kwargs is None:
+            csv_kwargs = {}
+
         table.to_csv(csv_dir / f"{table_name}.csv", **csv_kwargs)
 
     export_csv(seasons, "seasons")
