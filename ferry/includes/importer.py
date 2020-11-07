@@ -41,6 +41,28 @@ def import_courses(merged_course_info, seasons: List[str]):
 
     # seasons must be sorted in ascending order
 
+    # prioritize Yale College courses when deduplicating listings
+
+    print("Sorting by season and if-undergrad")
+
+    def classify_yc(row):
+        if row["school"] == "YC":
+            return True
+
+        if row["school"] != row["school"]:
+            # check number of numbers in course number
+            # (some courses have letters in them)
+            num_nums = len([x for x in row["number"] if x.isnumeric()])
+            # if the course number is in the 000s to 400s range it's undergrad
+            if row["number"][0] in ["0", "1", "2", "3", "4"] and num_nums < 4:
+                return True
+        return False
+
+    merged_course_info["is_yc"] = merged_course_info.apply(classify_yc, axis=1)
+    merged_course_info = merged_course_info.sort_values(
+        by=["season_code", "is_yc"], ascending=[True, False]
+    )
+
     print("Aggregating cross-listings")
     merged_course_info["season_code"] = merged_course_info["season_code"].astype(int)
     merged_course_info["crn"] = merged_course_info["crn"].astype(int)
