@@ -24,7 +24,6 @@ class DatabaseError(Exception):
 
 
 # for memory profiling
-@profile
 def import_courses(merged_course_info, seasons: List[str]):
     """
     Import courses into Pandas DataFrames.
@@ -371,7 +370,6 @@ def import_courses(merged_course_info, seasons: List[str]):
     return courses, listings, course_professors, professors, course_flags, flags
 
 
-@profile
 def import_demand(merged_demand_info, listings, seasons: List[str]):
     """
     Import demand statistics into Pandas DataFrame.
@@ -476,8 +474,13 @@ def import_demand(merged_demand_info, listings, seasons: List[str]):
     return demand_statistics
 
 
-@profile
-def import_evaluations(evaluations, listings):
+def import_evaluations(
+    evaluation_narratives,
+    evaluation_ratings,
+    evaluation_statistics,
+    evaluation_questions,
+    listings,
+):
     """
     Import course evaluations into Pandas DataFrame.
 
@@ -496,6 +499,8 @@ def import_evaluations(evaluations, listings):
 
     """
 
+    print("Matching evaluations to courses")
+
     # construct outer season grouping
     season_crn_to_course_id = listings[["season_code", "course_id", "crn"]].groupby(
         "season_code"
@@ -507,179 +512,42 @@ def import_evaluations(evaluations, listings):
     # cast outer season mapping to dictionary
     season_crn_to_course_id = season_crn_to_course_id.to_dict()
 
-    # convert evaluation season and crn types for matching
-    evaluations["season"] = evaluations["season"].astype(int)
-    evaluations["crn_code"] = evaluations["crn_code"].astype(int)
-    # find course codes for evaluations
-    evaluations["course_id"] = evaluations.apply(
-        lambda row: season_crn_to_course_id.get(row["season"], {}).get(
-            row["crn_code"], None
-        ),
-        axis=1,
+    def get_course_id(row):
+        course_id = season_crn_to_course_id.get(row["season"], {}).get(row["crn"], None)
+        return course_id
+
+    # get course IDs
+    evaluation_narratives["course_id"] = evaluation_narratives.apply(
+        get_course_id, axis=1
+    )
+    evaluation_ratings["course_id"] = evaluation_ratings.apply(get_course_id, axis=1)
+    evaluation_statistics["course_id"] = evaluation_statistics.apply(
+        get_course_id, axis=1
     )
 
-    # report number of evaluations with missing course codes
-    nan_total = evaluations["course_id"].isna().sum()
-    print(f"Removing {nan_total}/{len(evaluations)} evaluated courses without matches")
-    # remove evaluations with missing course codes
-    evaluations = evaluations.dropna(subset=["course_id"], axis=0)
-    evaluations["course_id"] = evaluations["course_id"].astype(int)
-
-    # keep track of unique questions
-    evaluation_questions = []
-
-    # -----------------------------------------
-    # Evaluation narratives (written responses)
-    # -----------------------------------------
-
-    # extract evaluation narratives
-    evaluation_narratives = evaluations.loc[
-        :, ["course_id", "narratives", "season"]
-    ].copy(deep=True)
-    evaluation_narratives = evaluation_narratives[
-        evaluation_narratives["narratives"].apply(len) > 0
-    ]
-
-    # subset and explode
-    evaluation_narratives = evaluation_narratives.explode("narratives")
-
-    # extract attributes into separate columns
-    (
-        evaluation_narratives["question_code"],
-        evaluation_narratives["question_text"],
-        evaluation_narratives["comments"],
-    ) = zip(
-        *evaluation_narratives["narratives"].map(
-            lambda x: [x["question_id"], x["question_text"], x["comments"]]
-        )
-    )
-    evaluation_narratives.drop(["narratives"], axis=1, inplace=True)
-
-    # drop duplicate course_id-question_code combinations (cross-listings)
-    evaluation_narratives.drop_duplicates(
-        ["course_id", "question_code"], keep="first", inplace=True
+    # each course must have exactly one statistic, so use this for reporting
+    nan_total = evaluation_statistics["course_id"].isna().sum()
+    print(
+        f"Removing {nan_total}/{len(evaluation_statistics)} evaluated courses without matches"
     )
 
-    # add narratives to questions
-    evaluation_narratives["is_narrative"] = True
-    evaluation_questions.append(
-        evaluation_narratives.loc[
-            :, ["season", "question_code", "is_narrative", "question_text"]
-        ].copy(deep=True)
-    )
+    evaluation_narratives.dropna(subset=["course_id"], axis=0, inplace=True)
+    evaluation_ratings.dropna(subset=["course_id"], axis=0, inplace=True)
+    evaluation_statistics.dropna(subset=["course_id"], axis=0, inplace=True)
 
-    # subset and explode
-    evaluation_narratives = evaluation_narratives.loc[
-        :, ["course_id", "question_code", "comments"]
-    ]
-    evaluation_narratives = evaluation_narratives.explode("comments")
-    evaluation_narratives.dropna(subset=["comments"], inplace=True)
-    (
-        evaluation_narratives["comment"],
-        evaluation_narratives["comment_neg"],
-        evaluation_narratives["comment_neu"],
-        evaluation_narratives["comment_pos"],
-        evaluation_narratives["comment_compound"],
-    ) = zip(
-        *evaluation_narratives["comments"].map(
-            lambda x: [x["comment"], x["neg"], x["neu"], x["pos"], x["compound"]],
-        )
-    )
-
-    # drop old comment column
-    evaluation_narratives.drop(["comments"], axis=1, inplace=True)
-
-    # filter out missing or short comments
-    evaluation_narratives.dropna(subset=["comment"], inplace=True)
-
-    MIN_COMMENT_LENGTH = 2
-    evaluation_narratives = evaluation_narratives[
-        evaluation_narratives["comment"].apply(len) > 2
-    ]
-    # replace carriage returns for csv-based migration
-    evaluation_narratives["comment"] = evaluation_narratives["comment"].apply(
-        lambda x: x.replace("\r", "")
-    )
-    evaluation_narratives = evaluation_narratives.reset_index(drop=True)
-    # id column for database primary key
-    evaluation_narratives["id"] = range(len(evaluation_narratives))
-
-    # ------------------------------------------
-    # Evaluation ratings (categorical responses)
-    # ------------------------------------------
-
-    # subset and explode
-    evaluation_ratings = evaluations.loc[:, ["course_id", "ratings", "season"]].copy(
-        deep=True
-    )
-
-    # extract evaluation ratings
-    evaluation_ratings = evaluation_ratings[
-        evaluation_ratings["ratings"].apply(len) > 0
-    ]
-
-    evaluation_ratings = evaluation_ratings.explode("ratings")
-
-    # extract attributes into separate columns
-    (
-        evaluation_ratings["question_code"],
-        evaluation_ratings["question_text"],
-        evaluation_ratings["options"],
-        evaluation_ratings["rating"],
-    ) = zip(
-        *evaluation_ratings["ratings"].map(
-            lambda x: [x["question_id"], x["question_text"], x["options"], x["data"]]
-        )
-    )
-    # drop old ratings column
-    evaluation_ratings.drop(["ratings"], axis=1, inplace=True)
-
-    # drop duplicate course_id-question_code combinations (cross-listings)
-    evaluation_ratings.drop_duplicates(
-        ["course_id", "question_code"], keep="first", inplace=True
-    )
-    # id column for database primary key
-    evaluation_ratings["id"] = range(len(evaluation_ratings))
-
-    # add ratings to questions
-    evaluation_ratings["is_narrative"] = False
-    evaluation_questions.append(
-        evaluation_ratings.loc[
-            :, ["question_code", "is_narrative", "question_text", "options", "season"]
-        ].copy(deep=True)
-    )
-
-    # ----------------------------------
-    # Evaluation statistics (enrollment)
-    # ----------------------------------
-
-    # extract evaluation statistics
-    evaluation_statistics = evaluations.loc[
-        :, ["course_id", "enrollment", "extras"]
-    ].copy(deep=True)
     evaluation_statistics.drop_duplicates(
-        subset=["course_id"], keep="first", inplace=True
+        subset=["course_id"], inplace=True, keep="first"
     )
-    (
-        evaluation_statistics["enrolled"],
-        evaluation_statistics["responses"],
-        evaluation_statistics["declined"],
-        evaluation_statistics["no_response"],
-    ) = zip(
-        *evaluation_statistics["enrollment"].map(
-            lambda x: [x["enrolled"], x["responses"], x["declined"], x["no response"]],
-        )
+    evaluation_ratings.drop_duplicates(
+        subset=["course_id", "question_code"], inplace=True, keep="first"
     )
-    evaluation_statistics["enrollment"] = np.nan
-    # convert to JSON string for postgres
-    evaluation_statistics["extras"] = evaluation_statistics["extras"].apply(ujson.dumps)
+    evaluation_narratives.drop_duplicates(
+        subset=["course_id", "question_code", "comment"], inplace=True, keep="first"
+    )
 
-    # --------------------
-    # Evaluation questions
-    # --------------------
-
-    evaluation_questions = pd.concat(evaluation_questions, axis=0, sort=True)
-    evaluation_questions = evaluation_questions.reset_index(drop=True)
+    # -------------------
+    # Aggregate questions
+    # -------------------
 
     # consistency checks
     print("Checking question text consistency")
@@ -736,7 +604,6 @@ def import_evaluations(evaluations, listings):
         subset=["question_code"], keep="first", inplace=True
     )
 
-    evaluation_questions["options"] = evaluation_questions["options"].apply(ujson.dumps)
     evaluation_questions["options"] = evaluation_questions["options"].replace(
         "NaN", "[]"
     )
@@ -745,9 +612,36 @@ def import_evaluations(evaluations, listings):
     # Clean up and subset
     # -------------------
 
-    # explicitly specify missing columns to be filled in later
-    evaluation_statistics[["avg_rating", "avg_workload"]] = np.nan
+    # filter out missing or short comments
+    evaluation_narratives.dropna(subset=["comment"], inplace=True)
+
+    # MIN_COMMENT_LENGTH = 2
+    evaluation_narratives = evaluation_narratives.loc[
+        evaluation_narratives["comment"].apply(len) > 2
+    ]
+    # replace carriage returns for csv-based migration
+    evaluation_narratives.loc[:, "comment"] = evaluation_narratives["comment"].apply(
+        lambda x: x.replace("\r", "")
+    )
+    # id column for database primary key
+    evaluation_narratives.loc[:, "id"] = range(len(evaluation_narratives))
+    evaluation_narratives.reset_index(drop=True, inplace=True)
+
+    # id column for database primary key
+    evaluation_ratings.loc[:, "id"] = range(len(evaluation_ratings))
+    evaluation_ratings.reset_index(drop=True, inplace=True)
+
+    # tag to be added later
     evaluation_questions["tag"] = ""
+    evaluation_questions.reset_index(drop=True, inplace=True)
+
+    # explicitly specify missing columns to be filled in later
+    evaluation_statistics[["avg_rating", "avg_workload", "enrollment"]] = np.nan
+    # convert to JSON string for postgres
+    evaluation_statistics.loc[:, "extras"] = evaluation_statistics["extras"].apply(
+        ujson.dumps
+    )
+    evaluation_statistics.reset_index(drop=True, inplace=True)
 
     # extract columns to match database
     evaluation_narratives = evaluation_narratives.loc[
@@ -777,7 +671,6 @@ def import_evaluations(evaluations, listings):
     )
 
 
-@profile
 def copy_from_stringio(conn, df, table: str):
     """
     Save DataFrame in-memory and migrate

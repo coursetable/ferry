@@ -127,14 +127,37 @@ if __name__ == "__main__":
 
     print("\n[Importing course evaluations]")
 
-    merged_evaluations = pd.read_json(f"{config.DATA_DIR}/merged_evaluations.json")
+    evaluation_narratives = pd.read_csv(
+        config.DATA_DIR / "parsed_evaluations/evaluation_narratives.csv",
+        dtype={"season": int, "crn": int},
+    )
+    evaluation_ratings = pd.read_csv(
+        config.DATA_DIR / "parsed_evaluations/evaluation_ratings.csv",
+        dtype={"season": int, "crn": int},
+    )
+    evaluation_statistics = pd.read_csv(
+        config.DATA_DIR / "parsed_evaluations/evaluation_statistics.csv",
+        dtype={"season": int, "crn": int},
+    )
+    evaluation_questions = pd.read_csv(
+        config.DATA_DIR / "parsed_evaluations/evaluation_questions.csv",
+        dtype={"season": int, "crn": int},
+    )
+
+    evaluation_ratings["rating"] = evaluation_ratings["rating"].apply(ujson.loads)
 
     (
         evaluation_narratives,
         evaluation_ratings,
         evaluation_statistics,
         evaluation_questions,
-    ) = import_evaluations(merged_evaluations, listings)
+    ) = import_evaluations(
+        evaluation_narratives,
+        evaluation_ratings,
+        evaluation_statistics,
+        evaluation_questions,
+        listings,
+    )
 
     # define seasons table for import
     seasons = pd.DataFrame(course_seasons, columns=["season_code"], dtype=int)
@@ -174,18 +197,21 @@ if __name__ == "__main__":
 
     csv_dir = config.DATA_DIR / "importer_dumps"
 
-    seasons.to_csv(csv_dir / "seasons.csv")
+    def export_csv(table, table_name, csv_kwargs={}):
+        table.to_csv(csv_dir / f"{table_name}.csv", **csv_kwargs)
 
-    courses.to_csv(csv_dir / "courses.csv")
-    listings.to_csv(csv_dir / "listings.csv")
-    professors.to_csv(csv_dir / "professors.csv")
-    course_professors.to_csv(csv_dir / "course_professors.csv")
-    flags.to_csv(csv_dir / "flags.csv")
-    course_flags.to_csv(csv_dir / "course_flags.csv")
+    export_csv(seasons, "seasons")
 
-    demand_statistics.to_csv(csv_dir / "demand_statistics.csv")
+    export_csv(courses, "courses")
+    export_csv(listings, "listings")
+    export_csv(professors, "professors")
+    export_csv(course_professors, "course_professors")
+    export_csv(flags, "flags")
+    export_csv(course_flags, "course_flags")
 
-    evaluation_questions.to_csv(csv_dir / "evaluation_questions.csv")
-    evaluation_narratives.to_csv(csv_dir / "evaluation_narratives.csv")
-    evaluation_ratings.to_csv(csv_dir / "evaluation_ratings.csv")
-    evaluation_statistics.to_csv(csv_dir / "evaluation_statistics.csv")
+    export_csv(demand_statistics, "demand_statistics")
+
+    export_csv(evaluation_questions, "evaluation_questions")
+    export_csv(evaluation_narratives, "evaluation_narratives")
+    export_csv(evaluation_ratings, "evaluation_ratings")
+    export_csv(evaluation_statistics, "evaluation_statistics")

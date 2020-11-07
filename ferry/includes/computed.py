@@ -14,7 +14,6 @@ with open(f"{config.RESOURCE_DIR}/question_tags.csv") as f:
         QUESTION_TAGS[question_code] = tag
 
 
-@profile
 def questions_computed(evaluation_questions):
     """
     Populate computed question fields:
@@ -56,7 +55,6 @@ def questions_computed(evaluation_questions):
     return evaluation_questions
 
 
-@profile
 def evaluation_statistics_computed(
     evaluation_statistics, evaluation_ratings, evaluation_questions
 ):
@@ -139,7 +137,6 @@ def evaluation_statistics_computed(
     return evaluation_statistics
 
 
-@profile
 def courses_computed(courses, listings, evaluation_statistics, course_professors):
     """
     Populate computed course fields:
@@ -309,7 +306,6 @@ def courses_computed(courses, listings, evaluation_statistics, course_professors
     return courses
 
 
-@profile
 def professors_computed(professors, course_professors, evaluation_statistics):
 
     """

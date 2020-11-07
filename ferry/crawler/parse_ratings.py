@@ -25,6 +25,8 @@ analyzer = SentimentIntensityAnalyzer()
 # ------------------
 
 questions_headers = [
+    "season",
+    "crn",
     "question_code",
     "is_narrative",
     "question_text",
@@ -131,9 +133,10 @@ def process_statistics(evaluation):
 
 
 def process_questions(evaluation):
-    questions = []
     for rating in evaluation["ratings"]:
         question = {}
+        question["season"] = evaluation["season"]
+        question["crn"] = evaluation["crn_code"]
         question["question_code"] = rating["question_id"]
         question["question_text"] = rating["question_text"]
         question["is_narrative"] = False
@@ -144,6 +147,8 @@ def process_questions(evaluation):
     for narrative in evaluation["narratives"]:
 
         question = {}
+        question["season"] = evaluation["season"]
+        question["crn"] = evaluation["crn_code"]
         question["question_code"] = narrative["question_id"]
         question["question_text"] = narrative["question_text"]
         question["is_narrative"] = True
