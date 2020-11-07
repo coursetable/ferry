@@ -11,13 +11,13 @@ from pathlib import Path
 import ujson
 
 from ferry import config
-from ferry.includes.tqdm import tqdm
 from ferry.includes.rating_parsing import (
     process_narratives,
+    process_questions,
     process_ratings,
     process_statistics,
-    process_questions,
 )
+from ferry.includes.tqdm import tqdm
 
 # ------------------
 # CSV output headers

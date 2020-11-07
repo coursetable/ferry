@@ -13,7 +13,6 @@ from ferry import config
 from ferry.includes.class_processing import extract_course_info
 from ferry.includes.tqdm import tqdm
 
-
 # allow the user to specify seasons
 parser = argparse.ArgumentParser(description="Parse classes")
 parser.add_argument(
