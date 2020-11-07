@@ -45,6 +45,8 @@ poetry-githooks = "^1.1.2"
 umap-learn = "^0.4.6"
 plotly = "^4.11.0"
 ipython = "^7.18.1"
+memory-profiler = "^0.58.0"
+matplotlib = "^3.3.2"
 
 [tool.isort]
 multi_line_output = 3

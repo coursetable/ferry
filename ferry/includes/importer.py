@@ -23,6 +23,8 @@ class DatabaseError(Exception):
     print
 
 
+# for memory profiling
+@profile
 def import_courses(merged_course_info, seasons: List[str]):
     """
     Import courses into Pandas DataFrames.
@@ -369,6 +371,7 @@ def import_courses(merged_course_info, seasons: List[str]):
     return courses, listings, course_professors, professors, course_flags, flags
 
 
+@profile
 def import_demand(merged_demand_info, listings, seasons: List[str]):
     """
     Import demand statistics into Pandas DataFrame.
@@ -473,7 +476,8 @@ def import_demand(merged_demand_info, listings, seasons: List[str]):
     return demand_statistics
 
 
-def import_evaluations(merged_evaluations_info, listings):
+@profile
+def import_evaluations(evaluations, listings):
     """
     Import course evaluations into Pandas DataFrame.
 
@@ -491,8 +495,6 @@ def import_evaluations(merged_evaluations_info, listings):
     evaluation_questions
 
     """
-
-    evaluations = merged_evaluations_info.copy(deep=True)
 
     # construct outer season grouping
     season_crn_to_course_id = listings[["season_code", "course_id", "crn"]].groupby(
@@ -527,15 +529,18 @@ def import_evaluations(merged_evaluations_info, listings):
     evaluation_questions = []
 
     # extract evaluation narratives
-    evaluation_narratives = evaluations[evaluations["narratives"].apply(len) > 0].copy(
-        deep=True
-    )
+    evaluation_narratives = evaluations.loc[
+        :, ["course_id", "narratives", "season"]
+    ].copy(deep=True)
+    evaluation_narratives = evaluation_narratives[
+        evaluation_narratives["narratives"].apply(len) > 0
+    ]
 
     # subset and explode
-    evaluation_narratives = evaluation_narratives.loc[
-        :, ["course_id", "narratives", "season"]
-    ]
     evaluation_narratives = evaluation_narratives.explode("narratives")
+
+    # narratives = pd.DataFrame(evaluation_narratives["narratives"].values.tolist(),index=evaluation_narratives.index)
+    # narratives = narratives.rename({"question_id":"question_code","question_text":"question_text","comments":"comments"},axis=1)
 
     # extract attributes into separate columns
     (
@@ -547,6 +552,7 @@ def import_evaluations(merged_evaluations_info, listings):
             lambda x: [x["question_id"], x["question_text"], x["comments"]]
         )
     )
+    evaluation_narratives.drop(["narratives"], axis=1, inplace=True)
 
     # drop duplicate course_id-question_code combinations (cross-listings)
     evaluation_narratives.drop_duplicates(
@@ -578,6 +584,8 @@ def import_evaluations(merged_evaluations_info, listings):
             lambda x: [x["comment"], x["neg"], x["neu"], x["pos"], x["compound"]],
         )
     )
+    # drop old comment column
+    evaluation_narratives.drop(["comments"], axis=1, inplace=True)
 
     # filter out missing or short comments
     evaluation_narratives.dropna(subset=["comment"], inplace=True)
@@ -594,13 +602,16 @@ def import_evaluations(merged_evaluations_info, listings):
     # id column for database primary key
     evaluation_narratives["id"] = range(len(evaluation_narratives))
 
-    # extract evaluation ratings
-    evaluation_ratings = evaluations[evaluations["ratings"].apply(len) > 0].copy(
+    # subset and explode
+    evaluation_ratings = evaluations.loc[:, ["course_id", "ratings", "season"]].copy(
         deep=True
     )
 
-    # subset and explode
-    evaluation_ratings = evaluation_ratings.loc[:, ["course_id", "ratings", "season"]]
+    # extract evaluation ratings
+    evaluation_ratings = evaluation_ratings[
+        evaluation_ratings["ratings"].apply(len) > 0
+    ]
+
     evaluation_ratings = evaluation_ratings.explode("ratings")
 
     # extract attributes into separate columns
@@ -614,6 +625,8 @@ def import_evaluations(merged_evaluations_info, listings):
             lambda x: [x["question_id"], x["question_text"], x["options"], x["data"]]
         )
     )
+    # drop old ratings column
+    evaluation_ratings.drop(["ratings"], axis=1, inplace=True)
 
     # drop duplicate course_id-question_code combinations (cross-listings)
     evaluation_ratings.drop_duplicates(
@@ -746,6 +759,7 @@ def import_evaluations(merged_evaluations_info, listings):
     )
 
 
+@profile
 def copy_from_stringio(conn, df, table: str):
     """
     Save DataFrame in-memory and migrate
