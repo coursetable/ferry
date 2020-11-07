@@ -528,6 +528,10 @@ def import_evaluations(evaluations, listings):
     # keep track of unique questions
     evaluation_questions = []
 
+    # -----------------------------------------
+    # Evaluation narratives (written responses)
+    # -----------------------------------------
+
     # extract evaluation narratives
     evaluation_narratives = evaluations.loc[
         :, ["course_id", "narratives", "season"]
@@ -538,9 +542,6 @@ def import_evaluations(evaluations, listings):
 
     # subset and explode
     evaluation_narratives = evaluation_narratives.explode("narratives")
-
-    # narratives = pd.DataFrame(evaluation_narratives["narratives"].values.tolist(),index=evaluation_narratives.index)
-    # narratives = narratives.rename({"question_id":"question_code","question_text":"question_text","comments":"comments"},axis=1)
 
     # extract attributes into separate columns
     (
@@ -584,6 +585,7 @@ def import_evaluations(evaluations, listings):
             lambda x: [x["comment"], x["neg"], x["neu"], x["pos"], x["compound"]],
         )
     )
+
     # drop old comment column
     evaluation_narratives.drop(["comments"], axis=1, inplace=True)
 
@@ -601,6 +603,10 @@ def import_evaluations(evaluations, listings):
     evaluation_narratives = evaluation_narratives.reset_index(drop=True)
     # id column for database primary key
     evaluation_narratives["id"] = range(len(evaluation_narratives))
+
+    # ------------------------------------------
+    # Evaluation ratings (categorical responses)
+    # ------------------------------------------
 
     # subset and explode
     evaluation_ratings = evaluations.loc[:, ["course_id", "ratings", "season"]].copy(
@@ -643,6 +649,10 @@ def import_evaluations(evaluations, listings):
         ].copy(deep=True)
     )
 
+    # ----------------------------------
+    # Evaluation statistics (enrollment)
+    # ----------------------------------
+
     # extract evaluation statistics
     evaluation_statistics = evaluations.loc[
         :, ["course_id", "enrollment", "extras"]
@@ -663,6 +673,10 @@ def import_evaluations(evaluations, listings):
     evaluation_statistics["enrollment"] = np.nan
     # convert to JSON string for postgres
     evaluation_statistics["extras"] = evaluation_statistics["extras"].apply(ujson.dumps)
+
+    # --------------------
+    # Evaluation questions
+    # --------------------
 
     evaluation_questions = pd.concat(evaluation_questions, axis=0, sort=True)
     evaluation_questions = evaluation_questions.reset_index(drop=True)
@@ -726,6 +740,10 @@ def import_evaluations(evaluations, listings):
     evaluation_questions["options"] = evaluation_questions["options"].replace(
         "NaN", "[]"
     )
+
+    # -------------------
+    # Clean up and subset
+    # -------------------
 
     # explicitly specify missing columns to be filled in later
     evaluation_statistics[["avg_rating", "avg_workload"]] = np.nan

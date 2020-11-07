@@ -92,6 +92,7 @@ if __name__ == "__main__":
         course_flags,
         flags,
     ) = import_courses(merged_course_info, course_seasons)
+    del merged_course_info
 
     # ------------------------
     # Import demand statistics
