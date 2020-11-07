@@ -1,24 +1,23 @@
-import csv
-from pathlib import Path
-
-import pandas as pd
-import ujson
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-
-from ferry import config
-from ferry.includes.tqdm import tqdm
-
 """
-=================================================================
-This script loads the ratings JSON files from fetch_ratings.py
+Loads the ratings JSON files from fetch_ratings.py
 and compiles them into tables for questions, ratings, statistics,
 and narratives for input into transform.py. It also computes
 sentiment intensity estimates over the narratives with VADER.
-=================================================================
 """
 
-# initialize sentiment intensity analyzer
-analyzer = SentimentIntensityAnalyzer()
+import csv
+from pathlib import Path
+
+import ujson
+
+from ferry import config
+from ferry.includes.tqdm import tqdm
+from ferry.includes.rating_parsing import (
+    process_narratives,
+    process_ratings,
+    process_statistics,
+    process_questions,
+)
 
 # ------------------
 # CSV output headers
@@ -83,90 +82,6 @@ statistics_writer = csv.DictWriter(statistics_file, statistics_headers)
 statistics_writer.writeheader()
 
 
-def process_narratives(evaluation):
-
-    for narrative_group in evaluation["narratives"]:
-
-        for raw_narrative in narrative_group["comments"]:
-
-            narrative = {}
-            narrative["season"] = evaluation["season"]
-            narrative["crn"] = evaluation["crn_code"]
-            narrative["question_code"] = narrative_group["question_id"]
-            narrative["comment"] = raw_narrative
-
-            sentiment = analyzer.polarity_scores(raw_narrative)
-
-            narrative["comment_neg"] = sentiment["neg"]
-            narrative["comment_neu"] = sentiment["neu"]
-            narrative["comment_pos"] = sentiment["pos"]
-            narrative["comment_compound"] = sentiment["compound"]
-
-            narratives_writer.writerow(narrative)
-
-
-def process_ratings(evaluation):
-
-    for raw_rating in evaluation["ratings"]:
-        rating = {}
-
-        rating["season"] = evaluation["season"]
-        rating["crn"] = evaluation["crn_code"]
-        rating["question_code"] = raw_rating["question_id"]
-        rating["rating"] = ujson.dumps(raw_rating["data"])
-
-        ratings_writer.writerow(rating)
-
-
-def process_statistics(evaluation):
-
-    statistics = {}
-    statistics["season"] = evaluation["season"]
-    statistics["crn"] = evaluation["crn_code"]
-    statistics["enrolled"] = evaluation["enrollment"]["enrolled"]
-    statistics["responses"] = evaluation["enrollment"]["responses"]
-    statistics["declined"] = evaluation["enrollment"]["declined"]
-    statistics["no_response"] = evaluation["enrollment"]["no response"]
-    statistics["extras"] = evaluation["extras"]
-
-    statistics_writer.writerow(statistics)
-
-
-def process_questions(evaluation):
-    for rating in evaluation["ratings"]:
-        question = {}
-        question["season"] = evaluation["season"]
-        question["crn"] = evaluation["crn_code"]
-        question["question_code"] = rating["question_id"]
-        question["question_text"] = rating["question_text"]
-        question["is_narrative"] = False
-        question["options"] = ujson.dumps(rating["options"])
-
-        questions_writer.writerow(question)
-
-    for narrative in evaluation["narratives"]:
-
-        question = {}
-        question["season"] = evaluation["season"]
-        question["crn"] = evaluation["crn_code"]
-        question["question_code"] = narrative["question_id"]
-        question["question_text"] = narrative["question_text"]
-        question["is_narrative"] = True
-        question["options"] = None
-
-        questions_writer.writerow(question)
-
-
-def process_evaluation(evaluation):
-
-    process_narratives(evaluation)
-    process_ratings(evaluation)
-    process_statistics(evaluation)
-    process_questions(evaluation)
-
-    return
-
-
 if __name__ == "__main__":
 
     # ----------------------------
@@ -196,7 +111,10 @@ if __name__ == "__main__":
             with open(f"{config.DATA_DIR}/previous_evals/{filename}", "r") as f:
                 evaluation = ujson.load(f)
 
-        process_evaluation(evaluation)
+        process_narratives(evaluation, narratives_writer)
+        process_ratings(evaluation, ratings_writer)
+        process_questions(evaluation, questions_writer)
+        process_statistics(evaluation, statistics_writer)
 
     # close CSV files
     questions_file.close()
