@@ -1,24 +1,13 @@
-import pprint
-from collections import defaultdict
+"""
+This script loads transformed CSVs into staged database tables.
+"""
 
 import pandas as pd
-import ujson
-from sqlalchemy import ForeignKey, MetaData, Table, schema
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.sql.expression import ColumnCollection
-from sqlalchemy.sql.schema import ForeignKeyConstraint, PrimaryKeyConstraint
+from sqlalchemy import MetaData
 
 from ferry import config, database
-from ferry.config import DATABASE_CONNECT_STRING
 from ferry.database.models import Base
 from ferry.includes.importer import copy_from_stringio
-from ferry.includes.tqdm import tqdm
-
-"""
-===============================================================
-This script loads transformed CSVs into staged database tables.
-===============================================================
-"""
 
 if __name__ == "__main__":
 
@@ -29,8 +18,14 @@ if __name__ == "__main__":
     # common pd.read_csv arguments
     general_csv_kwargs = {"index_col": 0, "low_memory": False}
 
-    # helper function to load table CSVs
-    def load_csv(table_name, csv_kwargs={}):
+    def load_csv(table_name, csv_kwargs=None):
+        """
+        Loads a CSV given a table name.
+        """
+
+        if csv_kwargs is None:
+            csv_kwargs = {}
+
         return pd.read_csv(
             csv_dir / f"{table_name}.csv", **general_csv_kwargs, **csv_kwargs
         )
