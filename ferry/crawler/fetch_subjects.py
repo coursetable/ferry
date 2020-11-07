@@ -1,3 +1,13 @@
+"""
+Fetches a list of all seasons for the following:
+
+    (1) courses (/api_output/course_subjects.json)
+    (2) demand (/api_output/demand_subjects.json)
+
+This list of seasons is then used and required by
+fetch_classes.py, fetch_demand.py, and fetch_ratings.py.
+"""
+
 import requests
 import ujson
 from bs4 import BeautifulSoup
@@ -6,6 +16,10 @@ from ferry import config
 
 
 class FetchSubjectsError(Exception):
+    """
+    Error object for fetch subjects exceptions.
+    """
+
     pass
 
 
