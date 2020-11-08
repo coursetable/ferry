@@ -1,12 +1,14 @@
-from functools import reduce
+"""
+Miscellaneous abstract utilities.
+"""
 from itertools import combinations
-from typing import Dict, FrozenSet, Iterable, List, Tuple, TypeVar
+from typing import Dict, FrozenSet, List, Tuple, TypeVar
 
 import networkx
 import pandas as pd
 from sqlalchemy import inspect
 
-from ferry import config, database
+from ferry import database
 
 
 def flatten_list_of_lists(list_of_lists):
@@ -47,18 +49,18 @@ def merge_overlapping(sets: List[FrozenSet]) -> List:
     # deduplicate sets to improve performance
     sets = list(set(sets))
 
-    g = networkx.Graph()
+    sets_graph = networkx.Graph()
     for sub_set in sets:
         for edge in combinations(list(sub_set), 2):
-            g.add_edge(*edge)
+            sets_graph.add_edge(*edge)
 
-    merged = networkx.connected_components(g)
+    merged = networkx.connected_components(sets_graph)
     merged = [set(x) for x in merged]
 
     return merged
 
 
-def invert_dict_of_lists(d: Dict) -> Dict:
+def invert_dict_of_lists(dict_of_lists: Dict) -> Dict:
     """
     Given a dictionary mapping x -> [a, b, c],
     invert such that it now maps all a, b, c -> x.
@@ -77,17 +79,17 @@ def invert_dict_of_lists(d: Dict) -> Dict:
 
     inverted = {}
 
-    for k, v in d.items():
-        for x in v:
-            inverted[x] = k
+    for key, val in dict_of_lists.items():
+        for item in val:
+            inverted[item] = key
 
     return inverted
 
 
-N = TypeVar("N", int, float)
+Numeric = TypeVar("N", int, float)
 
 
-def elementwise_sum(a: List[N], b: List[N]) -> List[N]:
+def elementwise_sum(list_a: List[Numeric], list_b: List[Numeric]) -> List[Numeric]:
     """
     Given two lists of equal length, return
     a list of elementwise sums
@@ -105,9 +107,9 @@ def elementwise_sum(a: List[N], b: List[N]) -> List[N]:
 
     """
 
-    assert len(a) == len(b), "a and b must have same size"
+    assert len(list_a) == len(list_b), "a and b must have same size"
 
-    return [sum(x) for x in zip(a, b)]
+    return [sum(x) for x in zip(list_a, list_b)]
 
 
 def category_average(categories: List[int]) -> Tuple[float, int]:
@@ -124,7 +126,7 @@ def category_average(categories: List[int]) -> Tuple[float, int]:
     Returns
     -------
     average: average category
-    n: total number of responses
+    total: total number of responses
 
     """
 
@@ -133,14 +135,18 @@ def category_average(categories: List[int]) -> Tuple[float, int]:
 
     categories_sum = sum([categories[i] * (i + 1) for i in range(len(categories))])
 
-    n = sum(categories)
+    total = sum(categories)
 
-    average = categories_sum / n
+    average = categories_sum / total
 
-    return average, n
+    return average, total
 
 
 def resolve_potentially_callable(val):
+    """
+    Check if a value is callable, and return its result if so.
+
+    """
     if callable(val):
         return val()
     return val
