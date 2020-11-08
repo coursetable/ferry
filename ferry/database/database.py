@@ -1,3 +1,6 @@
+"""
+Database module for connecting to Postgres with SQLAlchemy
+"""
 import sqlalchemy
 
 from ferry.config import DATABASE_CONNECT_STRING

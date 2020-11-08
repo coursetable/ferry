@@ -29,3 +29,6 @@ jobs:
       - name: Lint with isort
         run: |
           poetry run isort --check-only --diff ./ferry
+      - name: Lint with pylint
+        run: |
+          poetry run pylint ./ferry

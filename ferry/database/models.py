@@ -1,8 +1,12 @@
+"""
+SQLAlchemy database models. Note that these are for the staged tables
+that are then upgraded to the main ones in /ferry/deploy.py.
+"""
+
 from sqlalchemy import (
     JSON,
     Boolean,
     Column,
-    DateTime,
     Float,
     ForeignKey,
     Index,
@@ -13,12 +17,10 @@ from sqlalchemy import (
 )
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import backref, relationship
-from sqlalchemy.sql import func
 from sqlalchemy_mixins import ReprMixin, SerializeMixin
 
 meta = MetaData(
     naming_convention={
-        "ix": "ix_%(column_0_label)s_staged",
         "ix": "ix_%(column_0_label)s_staged",
         "uq": "uq_%(table_name)s_%(column_0_name)s_staged",
         "ck": "ck_%(table_name)s_%(constraint_name)s_staged",
@@ -31,11 +33,21 @@ Base = declarative_base(metadata=meta)
 
 
 class BaseModel(Base, SerializeMixin, ReprMixin):
+    """
+    BaseModel class for all tables.
+    """
+
     __abstract__ = True
+
+    # pylint: disable=unnecessary-pass
     pass
 
 
 class Season(BaseModel):
+    """
+    Seasons table.
+    """
+
     __tablename__ = "seasons_staged"
     season_code = Column(
         String(10), primary_key=True, comment="Season code (e.g. '202001')", index=True
@@ -69,6 +81,10 @@ course_professors = Table(
 
 
 class Course(BaseModel):
+    """
+    Courses table.
+    """
+
     __tablename__ = "courses_staged"
     course_id = Column(Integer, primary_key=True, index=True)
 
@@ -100,7 +116,8 @@ class Course(BaseModel):
     title = Column(String, comment="Complete course title")
     short_title = Column(
         String,
-        comment='Shortened course title (first 29 characters + "...") if the length exceeds 32, otherwise just the title itself',
+        comment="""Shortened course title (first 29 characters + "...")
+        if the length exceeds 32, otherwise just the title itself""",
     )
     description = Column(String, comment="Course description")
     requirements = Column(
@@ -119,12 +136,16 @@ class Course(BaseModel):
     )
     locations_summary = Column(
         String,
-        comment='If single location, is `<location>`; otherwise is `<location> + <n_other_locations>` where the first location is the one with the greatest number of days. Displayed in the "Locations" column in CourseTable.',
+        comment="""If single location, is `<location>`; otherwise is
+        `<location> + <n_other_locations>` where the first location is the one
+        with the greatest number of days. Displayed in the "Locations" column
+        in CourseTable.""",
     )
 
     times_long_summary = Column(
         String,
-        comment='Course times and locations, displayed in the "Meets" row in CourseTable course modals',
+        comment="""Course times and locations, displayed in the "Meets"
+         row in CourseTable course modals""",
     )
     times_summary = Column(
         String,
@@ -132,7 +153,8 @@ class Course(BaseModel):
     )
     times_by_day = Column(
         JSON,
-        comment="Course meeting times by day, with days as keys and tuples of `(start_time, end_time, location)`",
+        comment="""Course meeting times by day, with days as keys and
+        tuples of `(start_time, end_time, location)`""",
     )
 
     # ----------------------
@@ -141,7 +163,8 @@ class Course(BaseModel):
 
     skills = Column(
         JSON,
-        comment="Skills that the course fulfills (e.g. writing, quantitative reasoning, language levels)",
+        comment="""Skills that the course fulfills (e.g. writing,
+        quantitative reasoning, language levels)""",
     )
 
     areas = Column(JSON, comment="Course areas (humanities, social sciences, sciences)")
@@ -156,7 +179,8 @@ class Course(BaseModel):
     course_home_url = Column(String, comment="Link to the course homepage")
     regnotes = Column(
         String,
-        comment="Registrar's notes (e.g. preference selection links, optional writing credits, etc.)",
+        comment="""Registrar's notes (e.g. preference selection links,
+        optional writing credits, etc.)""",
     )
     extra_info = Column(
         String, comment="Additional information (indicates if class has been cancelled)"
@@ -175,17 +199,20 @@ class Course(BaseModel):
 
     average_rating = Column(
         Float,
-        comment="[computed] Historical average course rating for this course code, aggregated across all cross-listings",
+        comment="""[computed] Historical average course rating for this course code,
+        aggregated across all cross-listings""",
     )
     average_workload = Column(
         Float,
-        comment="[computed] Historical average workload rating, aggregated across all cross-listings",
+        comment="""[computed] Historical average workload rating,
+        aggregated across all cross-listings""",
     )
 
     last_offered_course_id = Column(
         Integer,
         ForeignKey("courses_staged.course_id"),
-        comment="[computed] Most recent previous offering of course (excluding future ones)",
+        comment="""[computed] Most recent previous offering of
+        course (excluding future ones)""",
         index=True,
     )
 
@@ -237,11 +264,16 @@ class Course(BaseModel):
 
     last_enrollment_same_professors = Column(
         Boolean,
-        comment="[computed] Whether last enrollment offering is with same professor as current.",
+        comment="""[computed] Whether last enrollment offering
+        is with same professor as current.""",
     )
 
 
 class Listing(BaseModel):
+    """
+    Listings table.
+    """
+
     __tablename__ = "listings_staged"
     listing_id = Column(Integer, primary_key=True, comment="Listing ID")
 
@@ -296,14 +328,16 @@ class Listing(BaseModel):
             "subject",
             "number",
             "section",
-            # unique=True,  # TODO: it seems this is not actually true
         ),
         Index("idx_season_code_crn_unique_staged", "season_code", "crn", unique=True),
     )
 
 
 class Flag(BaseModel):
-    # Course flags
+    """
+    Course flags table.
+    """
+
     __tablename__ = "flags_staged"
 
     flag_id = Column(Integer, comment="Flag ID", primary_key=True)
@@ -331,7 +365,10 @@ course_flags = Table(
 
 
 class DemandStatistics(BaseModel):
-    # Course demand statistics.
+    """
+    Course demand statistics table.
+    """
+
     __tablename__ = "demand_statistics_staged"
 
     course_id = Column(
@@ -358,6 +395,10 @@ class DemandStatistics(BaseModel):
 
 
 class Professor(BaseModel):
+    """
+    Professors table.
+    """
+
     __tablename__ = "professors_staged"
 
     professor_id = Column(Integer, comment="Professor ID", primary_key=True)
@@ -374,11 +415,16 @@ class Professor(BaseModel):
 
     average_rating = Column(
         Float,
-        comment='[computed] Average rating of the professor assessed via the "Overall assessment" question in courses taught',
+        comment="""[computed] Average rating of the professor assessed via
+        the "Overall assessment" question in courses taught""",
     )
 
 
 class EvaluationStatistics(BaseModel):
+    """
+    Evaluation statistics table.
+    """
+
     __tablename__ = "evaluation_statistics_staged"
 
     course_id = Column(
@@ -411,6 +457,10 @@ class EvaluationStatistics(BaseModel):
 
 
 class EvaluationQuestion(BaseModel):
+    """
+    Evaluation questions table.
+    """
+
     __tablename__ = "evaluation_questions_staged"
 
     question_code = Column(
@@ -421,7 +471,8 @@ class EvaluationQuestion(BaseModel):
     )
     is_narrative = Column(
         Boolean,
-        comment="True if the question has narrative responses. False if the question has categorica/numerical responses",
+        comment="""True if the question has narrative responses.
+        False if the question has categorica/numerical responses""",
     )
     question_text = Column(
         String,
@@ -434,12 +485,16 @@ class EvaluationQuestion(BaseModel):
 
     tag = Column(
         String,
-        comment="[computed] Question type (used for computing ratings, since one question may be coded differently for different respondants)",
+        comment="""[computed] Question type (used for computing ratings, since one
+        question may be coded differently for different respondants)""",
     )
 
 
 class EvaluationNarrative(BaseModel):
-    # Narrative evaluations data.
+    """
+    Evaluation narratives (written ones) table.
+    """
+
     __tablename__ = "evaluation_narratives_staged"
 
     id = Column(Integer, primary_key=True)
@@ -493,7 +548,10 @@ class EvaluationNarrative(BaseModel):
 
 
 class EvaluationRating(BaseModel):
-    # Categorical evaluations data.
+    """
+    Evaluation ratings (categorical ones) table.
+    """
+
     __tablename__ = "evaluation_ratings_staged"
 
     id = Column(Integer, primary_key=True)
