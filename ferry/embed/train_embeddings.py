@@ -1,3 +1,4 @@
+# pylint: skip-file
 import fasttext
 
 from ferry import config

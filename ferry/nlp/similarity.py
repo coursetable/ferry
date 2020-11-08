@@ -1,3 +1,4 @@
+# pylint: skip-file
 import numpy as np
 from gensim import corpora, models, similarities
 from load_json import get_all_courses, get_columns, get_current_courses
