@@ -1,15 +1,24 @@
+"""
+Functions for processing demand statistics.
+Used by /ferry/crawler/fetch_demand.py
+"""
 import requests
-import ujson
 from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
-
-from ferry import config
 
 MAX_RETRIES = 16
 
 SESSION = requests.Session()
 SESSION.mount("http://", HTTPAdapter(max_retries=MAX_RETRIES))
 SESSION.mount("https://", HTTPAdapter(max_retries=MAX_RETRIES))
+
+
+class FetchDemandError(Exception):
+    """
+    Object for demand fetching exceptions.
+    """
+
+    pass
 
 
 def get_dates(season):
@@ -32,15 +41,20 @@ def get_dates(season):
     # get URL and pass to BeautifulSoup
     # using AMTH as arbitary subject
     url = f"https://ivy.yale.edu/course-stats/?termCode={season}&subjectCode=AMTH"
-    r = SESSION.get(url)
-    s = BeautifulSoup(r.text, "html.parser")
+    req = SESSION.get(url)
 
-    if s.title.text == "Error":
+    if req.status_code != 200:
+
+        raise FetchDemandError(f"Unsuccessful response: code {req.status_code}")
+
+    dates_soup = BeautifulSoup(req.text, "html.parser")
+
+    if dates_soup.title.text == "Error":
         print(f"Warning: no course demand dates found for season {season}")
         return []
 
     # select date elements
-    dates_elems = s.select("table table")[0].select("td")
+    dates_elems = dates_soup.select("table table")[0].select("td")
 
     dates = [date.text.strip() for date in dates_elems]
 
@@ -83,13 +97,20 @@ def fetch_season_subject_demand(season, subject_code, subject_codes, dates):
 
     # get URL and pass to BeautifulSoup
     # '.replace("&", "%26")' escapes the ampersand
-    url = f'https://ivy.yale.edu/course-stats/?termCode={season}&subjectCode={subject_code.replace("&", "%26")}'
-    r = SESSION.get(url)
-    s = BeautifulSoup(r.text, "html.parser")
+    demand_endpoint = "https://ivy.yale.edu/course-stats/"
+    demand_args = f'?termCode={season}&subjectCode={subject_code.replace("&", "%26")}'
+    url = f"{demand_endpoint}{demand_args}"
+    req = SESSION.get(url)
+
+    if req.status_code != 200:
+
+        raise FetchDemandError(f"Unsuccessful response: code {req.status_code}")
+
+    demand_soup = BeautifulSoup(req.text, "html.parser")
 
     # selects all the courses info and demand info
     # each element in course_containers contains code, name, and demand for one course
-    course_containers = s.select("div#content > div > table > tbody > tr")
+    course_containers = demand_soup.select("div#content > div > table > tbody > tr")
 
     for container in course_containers:
         course = []
@@ -135,7 +156,9 @@ def fetch_season_subject_demand(season, subject_code, subject_codes, dates):
                 section_dict[section_name] = section_demand
 
         # Test if we've already added the demand for this course (due to cross-listing) into the
-        # data structure. We don't want duplicate data, so if we already have the demand, we simply skip it
+        # data structure. We don't want duplicate data, so if we already have the demand,
+        # we simply skip it.
+
         if full_strings[0] == code_this_subject:
             # if this is our first time coming across this course, we need to add all of the
             # cross-listed course numbers into our 'courses' list
@@ -145,8 +168,8 @@ def fetch_season_subject_demand(season, subject_code, subject_codes, dates):
             counts = container.select("td.trendCell")
 
             # add the count for each into our overall_demand list
-            for j in range(len(dates)):
-                overall_demand[dates[j]] = counts[j].text.strip()
+            for date, count in zip(dates, counts):
+                overall_demand[date] = count.text.strip()
 
             course = {
                 "title": name,
