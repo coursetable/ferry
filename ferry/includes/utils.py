@@ -4,8 +4,28 @@ from typing import Dict, FrozenSet, Iterable, List, Tuple, TypeVar
 
 import networkx
 import pandas as pd
+from sqlalchemy import inspect
 
 from ferry import config, database
+
+
+def flatten_list_of_lists(list_of_lists):
+    """
+    Flatten a list of lists into a single list.
+
+    Parameters
+    ----------
+    list_of_lists : list of lists
+
+    Returns
+    -------
+    flattened: flattened list
+
+    """
+
+    flattened = [x for y in list_of_lists for x in y]
+
+    return flattened
 
 
 def merge_overlapping(sets: List[FrozenSet]) -> List:

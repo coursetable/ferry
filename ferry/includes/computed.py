@@ -1,12 +1,14 @@
-import csv
-from typing import List
+"""
+Handles computed fields in the tables. Used by /ferry/transform.py.
+"""
 
-import pandas as pd
-import ujson
+import csv
+import math
+from typing import List
 
 from ferry import config, database
 from ferry.includes.tqdm import tqdm
-from ferry.includes.utils import get_table_columns
+from ferry.includes.utils import flatten_list_of_lists, get_table_columns
 
 QUESTION_TAGS = dict()
 with open(f"{config.RESOURCE_DIR}/question_tags.csv") as f:
@@ -45,10 +47,10 @@ def questions_computed(evaluation_questions):
         # Set the appropriate question tag.
         try:
             return QUESTION_TAGS[code]
-        except KeyError as e:
+        except KeyError as err:
             raise database.InvariantError(
                 f"No associated tag for question code {code} with text {row['question_text']}"
-            )
+            ) from err
 
     evaluation_questions["tag"] = evaluation_questions.apply(assign_code, axis=1)
 
@@ -98,11 +100,11 @@ def evaluation_statistics_computed(
         return agg / sum(ratings)
 
     # Get average rating for each course with a specified tag
-    def average_by_course(tag, n_categories):
+    def average_by_course(question_tag, n_categories):
 
-        tagged_ratings = evaluation_ratings[evaluation_ratings["tag"] == tag].copy(
-            deep=True
-        )
+        tagged_ratings = evaluation_ratings[
+            evaluation_ratings["tag"] == question_tag
+        ].copy(deep=True)
         rating_by_course = tagged_ratings.groupby("course_id")["rating"].apply(list)
 
         # Aggregate responses across question variants.
@@ -115,7 +117,10 @@ def evaluation_statistics_computed(
 
         if any(lengths_invalid):
             raise database.InvariantError(
-                f"Invalid workload responses, expected length of 5: {rating_by_course[lengths_invalid]}"
+                f"""
+                Invalid workload responses\n
+                \tExpected length of 5: {rating_by_course[lengths_invalid]}
+                """
             )
 
         rating_by_course = rating_by_course.apply(average_rating)
@@ -166,13 +171,6 @@ def courses_computed(courses, listings, evaluation_statistics, course_professors
     courses["coded_courses"] = courses["codes"].apply(
         lambda x: [code_to_courses[code] for code in x]
     )
-
-    # transform a list of lists into a single list
-    def flatten_list_of_lists(list_of_lists):
-
-        flattened = [x for y in list_of_lists for x in y]
-
-        return flattened
 
     courses["coded_courses"] = courses["coded_courses"].apply(flatten_list_of_lists)
     courses["coded_courses"] = courses["coded_courses"].apply(lambda x: list(set(x)))
@@ -275,7 +273,7 @@ def courses_computed(courses, listings, evaluation_statistics, course_professors
     # calculate the average of an array
     def average(nums):
         nums = list(filter(lambda x: x is not None, nums))
-        nums = list(filter(lambda x: x == x, nums))
+        nums = list(filter(lambda x: not math.isnan(), nums))
         if not nums:
             return None
         return sum(nums) / len(nums)
@@ -338,7 +336,9 @@ def professors_computed(professors, course_professors, evaluation_statistics):
     course_professors["average_rating"] = course_professors["course_id"].apply(
         course_to_overall.get
     )
-    # course_professors["average_workload"] = course_professors["course_id"].apply(course_to_workload.get)
+    # course_professors["average_workload"] = course_professors["course_id"].apply(
+    #     course_to_workload.get
+    # )
 
     rating_by_professor = (
         course_professors.dropna(subset=["average_rating"])
@@ -346,7 +346,12 @@ def professors_computed(professors, course_professors, evaluation_statistics):
         .mean()
         .to_dict()
     )
-    # workload_by_professor = course_professors.dropna("average_workload").groupby("professor_id").mean().to_dict()
+    # workload_by_professor = (
+    #     course_professors.dropna("average_workload")
+    #     .groupby("professor_id")
+    #     .mean()
+    #     .to_dict()
+    # )
 
     professors["average_rating"] = professors["professor_id"].apply(
         rating_by_professor.get
