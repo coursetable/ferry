@@ -1,7 +1,10 @@
+"""
+Functions for processing ratings.
+Used by /ferry/crawler/fetch_ratings.py.
+"""
 import time
 from typing import Any, Dict, List, Tuple
 
-import lxml
 import requests
 import ujson
 from bs4 import BeautifulSoup
@@ -12,10 +15,20 @@ QuestionId = str
 
 
 class _EvaluationsNotViewableError(Exception):
+    """
+    Object for inaccessible evaluations exceptions.
+    """
+
+    # pylint: disable=unnecessary-pass
     pass
 
 
 class CrawlerError(Exception):
+    """
+    Object for crawler exceptions.
+    """
+
+    # pylint: disable=unnecessary-pass
     pass
 
 
@@ -58,8 +71,8 @@ def fetch_questions(
     # save raw HTML in case we ever need it
     with open(
         config.DATA_DIR / f"rating_cache/questions_index/{term_code}_{crn}.html", "w"
-    ) as f:
-        f.write(str(page_index.content))
+    ) as file:
+        file.write(str(page_index.content))
 
     page_show = session.get(url_show)
     if page_show.status_code != 200:  # Evaluation data for this course not available
@@ -72,8 +85,8 @@ def fetch_questions(
     # save raw JSON in case we ever need it
     with open(
         config.DATA_DIR / f"rating_cache/questions_show/{term_code}_{crn}.json", "w"
-    ) as f:
-        f.write(ujson.dumps(data_show))
+    ) as file:
+        file.write(ujson.dumps(data_show))
 
     if data_show["minEnrollment"] == "N":
         raise _EvaluationsNotViewableError("No minimum enrollment to view.")
@@ -81,19 +94,24 @@ def fetch_questions(
         raise _EvaluationsNotViewableError("No minimum evaluations completed to view.")
     if data_show["gradesSubmitted"] == "N":
         raise CrawlerError(
-            "These evaluations are not viewable. Not all grades have been submitted for this course."
+            "These evaluations are not viewable. Not all grades have been submitted."
         )
 
-    questionList = data_show["questionList"]
+    question_list = data_show["questionList"]
 
     questions = {}
-    for question in questionList:
-        questionId = question["questionId"]
+    for question in question_list:
+        question_id = question["questionId"]
         text = question["text"]
-        # Strip out "<br/> \r\n<br/><i>(Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)</i>"
+        # Strip out
+        #   "
+        #    <br/> \r\n<br/><i>(Your anonymous response to this question may
+        #   be viewed by Yale College students, faculty, and advisers to aid
+        #   in course selection and evaluating teaching.)</i>
+        #   "
         text = text[0 : text.find("<br/>")]
 
-        questions[questionId] = text
+        questions[question_id] = text
 
     if len(questions) == 0:  # Evaluation data for this course not available
         raise CrawlerError(
@@ -104,7 +122,7 @@ def fetch_questions(
 
 
 def fetch_eval_data(
-    session: requests.Session, questionId: QuestionId, crn: str, term_code: str
+    session: requests.Session, question_id: QuestionId, crn: str, term_code: str
 ) -> Tuple[List[int], List[str]]:
     """
     Get rating data for each question of a course
@@ -114,7 +132,7 @@ def fetch_eval_data(
     session: Requests session
         The current session with login cookie
 
-    questionId: string
+    question_id: string
         The questionId to fetch evaluation data for
 
     crn: string
@@ -128,29 +146,29 @@ def fetch_eval_data(
     ratings, options: evaluation data for the question ID, and the options
     """
     # JSON data with rating data for each question ID
-    url_graphData = "https://oce.app.yale.edu/oce-viewer/studentSummary/graphData"
+    url_graphdata = "https://oce.app.yale.edu/oce-viewer/studentSummary/graphData"
 
     millis = int(round(time.time() * 1000))  # Get current time in milliseconds
-    question_info = {"questionId": questionId, "_": millis}
+    question_info = {"questionId": question_id, "_": millis}
 
-    page_graphData = session.get(
-        url_graphData, params=question_info
+    page_graphdata = session.get(
+        url_graphdata, params=question_info
     )  # Fetch ratings data
-    if page_graphData.status_code != 200:
-        raise CrawlerError(f"missing ratings for {questionId}")
-    data_graphData = ujson.loads(page_graphData.text)
+    if page_graphdata.status_code != 200:
+        raise CrawlerError(f"missing ratings for {question_id}")
+    data_graphdata = ujson.loads(page_graphdata.text)
 
     # save raw JSON in case we ever need it
     with open(
         config.DATA_DIR
-        / f"rating_cache/graph_data/{term_code}_{crn}_{questionId}.json",
+        / f"rating_cache/graph_data/{term_code}_{crn}_{question_id}.json",
         "w",
-    ) as f:
-        f.write(ujson.dumps(data_graphData))
+    ) as file:
+        file.write(ujson.dumps(data_graphdata))
 
     ratings = []
     options = []
-    for item in data_graphData[0]["data"]:
+    for item in data_graphdata[0]["data"]:
         ratings.append(item[1])
         options.append(item[0])
 
@@ -182,14 +200,13 @@ def fetch_comments(
 
     Returns
     -------
-    id,question,responses_text: string that holds question and list of strings that hold responses respectively
+    id,question,responses_text:
+        string that holds question and list of strings that hold responses respectively
     """
     # Website with student comments for this question
     url_comments = "https://oce.app.yale.edu/oce-viewer/studentComments/index"
 
-    comment_info = {"offset": offset, "max": _max}
-
-    page_comments = session.get(url_comments, params=comment_info)
+    page_comments = session.get(url_comments, params={"offset": offset, "max": _max})
 
     if page_comments.status_code != 200:
         # Question doesn't exist
@@ -202,28 +219,31 @@ def fetch_comments(
         config.DATA_DIR
         / f"rating_cache/comments/{term_code}_{crn}_{offset}_{_max}.html",
         "w",
-    ) as f:
-        f.write(str(soup))
+    ) as file:
+        file.write(str(soup))
 
     question_html = soup.find(id="cList")
 
     # Question text.
-    question = question_html.select_one("div > p:nth-of-type(2)").text
-    if question == None or question == "":
+    question_text = question_html.select_one("div > p:nth-of-type(2)").text
+    if question_text is None or question_text == "":
         raise CrawlerError("no more evals available")
 
     # Question ID.
     info_area = question_html.select_one("div > p:nth-of-type(3)")
-    questionId = info_area.contents[1].strip()
+    question_id = info_area.contents[1].strip()
 
     # Responses.
-    responses_text = []  # List of responses
-    responses = soup.find_all(id="answer")
-    for answer_area in responses:
+    comments = []  # List of responses
+    for answer_area in soup.find_all(id="answer"):
         answer = answer_area.find(id="text").get_text(strip=True)
-        responses_text.append(answer)
+        comments.append(answer)
 
-    return questionId, question, responses_text
+    return {
+        "question_id": question_id,
+        "question_text": question_text,
+        "comments": comments,
+    }
 
 
 def fetch_course_enrollment(
@@ -309,17 +329,17 @@ def fetch_course_eval(session, crn_code, term_code):
     # Fetch ratings questions.
     try:
         questions = fetch_questions(session, crn_code, term_code)
-    except _EvaluationsNotViewableError as e:
+    except _EvaluationsNotViewableError as err:
         questions = {}
-        extras["not_viewable"] = str(e)
+        extras["not_viewable"] = str(err)
 
     # Numeric evaluations data.
     ratings = []
-    for questionId, text in questions.items():
-        data, options = fetch_eval_data(session, questionId, crn_code, term_code)
+    for question_id, text in questions.items():
+        data, options = fetch_eval_data(session, question_id, crn_code, term_code)
         ratings.append(
             {
-                "question_id": questionId,
+                "question_id": question_id,
                 "question_text": text,
                 "options": options,
                 "data": data,
@@ -332,24 +352,13 @@ def fetch_course_eval(session, crn_code, term_code):
     while questions:  # serves as an if + while True
         try:
             # Get questions with their respective responses
-            questionId, question, comments = fetch_comments(
-                session, offset, 1, crn_code, term_code
-            )
-
-            narratives.append(
-                {
-                    "question_id": questionId,
-                    "question_text": question,
-                    "comments": comments,
-                }
-            )
+            narratives.append(fetch_comments(session, offset, 1, crn_code, term_code))
             offset += 1  # Increment to next question
-        except CrawlerError as e:
+        except CrawlerError as err:
             if offset == 0:
-                raise CrawlerError("cannot fetch narrative comments") from e
-            else:
-                # No more questions are available -- normal situation.
-                break
+                raise CrawlerError("cannot fetch narrative comments") from err
+            # No more questions are available -- normal situation.
+            break
 
     course_eval = {}
     course_eval["crn_code"] = crn_code

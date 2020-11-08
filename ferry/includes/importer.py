@@ -1,49 +1,56 @@
+"""
+Functions for importing information into tables.
+Used by /ferry/transform.py.
+"""
 import csv
 from collections import Counter
 from io import StringIO
 from itertools import combinations
-from typing import Dict, List
+from typing import List
 
 import numpy as np
 import pandas as pd
-import psycopg2
 import textdistance
 import ujson
-from sqlalchemy import inspect
 
-from ferry import config, database
+from ferry import database
 from ferry.includes.utils import (
     get_table_columns,
     invert_dict_of_lists,
     merge_overlapping,
 )
 
+# maximum question divergence to allow
+QUESTION_DIVERGENCE_CUTOFF = 32
 
-class DatabaseError(Exception):
-    print
 
-
-# for memory profiling
-def import_courses(merged_course_info, seasons: List[str]):
+class DatabaseImportError(Exception):
     """
-    Import courses into Pandas DataFrames.
+    Object for import exceptions.
+    """
+
+    # pylint: disable=unnecessary-pass
+    pass
+
+
+def resolve_cross_listings(merged_course_info):
+
+    """
+    Resolve course cross-listings by computing unique course_ids.
 
     Parameters
     ----------
     merged_course_info: Pandas DataFrame of raw course information
     from JSON files
-    seasons: list of seasons for sorting purposes
 
     Returns
     -------
-    courses, listings, course_professors, professors
+    merged_course_info with 'temp_course_id' field added
 
     """
 
     # seasons must be sorted in ascending order
-
     # prioritize Yale College courses when deduplicating listings
-
     print("Sorting by season and if-undergrad")
 
     def classify_yc(row):
@@ -67,14 +74,16 @@ def import_courses(merged_course_info, seasons: List[str]):
     print("Aggregating cross-listings")
     merged_course_info["season_code"] = merged_course_info["season_code"].astype(int)
     merged_course_info["crn"] = merged_course_info["crn"].astype(int)
-    merged_course_info["crns"] = merged_course_info["crns"].apply(lambda x: map(int, x))
+    merged_course_info["crns"] = merged_course_info["crns"].apply(
+        lambda crns: [int(crn) for crn in crns]
+    )
 
     # group CRNs by season for cross-listing deduplication
     crns_by_season = merged_course_info.groupby("season_code")["crns"].apply(list)
     # convert CRN groups to sets for resolution
     crns_by_season = crns_by_season.apply(lambda x: [frozenset(y) for y in x])
     # resolve overlapping CRN sets
-    crn_groups_by_season = crns_by_season.apply(merge_overlapping)
+    crns_by_season = crns_by_season.apply(merge_overlapping)
 
     print("Mapping out cross-listings")
     # map CRN groups to temporary IDs within each season
@@ -92,36 +101,24 @@ def import_courses(merged_course_info, seasons: List[str]):
         lambda x: f"{x['season_code']}_{x['season_course_id']}", axis=1
     )
 
-    print("Creating courses table")
-    # initialize courses table
-    courses = merged_course_info.drop_duplicates(subset="temp_course_id").copy(
-        deep=True
-    )
-    # global course IDs
-    courses["course_id"] = range(len(courses))
-    # convert to JSON string for postgres
-    courses["areas"] = courses["areas"].apply(ujson.dumps)
-    courses["times_by_day"] = courses["times_by_day"].apply(ujson.dumps)
-    courses["skills"] = courses["skills"].apply(ujson.dumps)
-    # replace carriage returns for tsv-based migration
-    courses["description"] = courses["description"].apply(lambda x: x.replace("\r", ""))
-    courses["title"] = courses["title"].apply(lambda x: x.replace("\r", ""))
-    courses["short_title"] = courses["short_title"].apply(lambda x: x.replace("\r", ""))
-    courses["requirements"] = courses["requirements"].apply(
-        lambda x: x.replace("\r", "")
-    )
+    return merged_course_info
 
-    print("Creating listings table")
-    # map temporary season-specific IDs to global course IDs
-    temp_to_course_id = dict(zip(courses["temp_course_id"], courses["course_id"]))
 
-    # initialize listings table
-    listings = merged_course_info.copy(deep=True)
-    listings["listing_id"] = range(len(listings))
-    listings["course_id"] = listings["temp_course_id"].apply(temp_to_course_id.get)
-    listings["section"] = listings["section"].apply(lambda x: x if x == x else "0")
-    listings["section"] = listings["section"].fillna("0").astype(str)
-    listings["section"] = listings["section"].replace({"": "0"})
+def aggregate_professors(courses):
+
+    """
+    Aggregate professor info columns in preparation for matching.
+
+    Parameters
+    ----------
+    courses: Pandas DataFrame
+        intermediate courses table from import_courses()
+
+    Returns
+    -------
+    professors_prep: professor attributes DataFrame
+
+    """
 
     print("Creating professors table")
     # initialize professors table
@@ -133,13 +130,13 @@ def import_courses(merged_course_info, seasons: List[str]):
     print("Resolving professor attributes")
     # set default empty value for exploding later on
     professors_prep["professors"] = professors_prep["professors"].apply(
-        lambda x: x if x == x else []
+        lambda x: [] if not isinstance(x, list) else x
     )
     professors_prep["professor_emails"] = professors_prep["professor_emails"].apply(
-        lambda x: x if x == x else []
+        lambda x: [] if not isinstance(x, list) else x
     )
     professors_prep["professor_ids"] = professors_prep["professor_ids"].apply(
-        lambda x: x if x == x else []
+        lambda x: [] if not isinstance(x, list) else x
     )
 
     # reshape professor attributes array
@@ -190,7 +187,28 @@ def import_courses(merged_course_info, seasons: List[str]):
         professors_prep["professors_info"].tolist(), index=professors_prep.index
     )
 
+    return professors_prep
+
+
+def resolve_professors(professors_prep, seasons: List[str]):
+
+    """
+    Resolve course-professor mappings and professors table
+
+    Parameters
+    ----------
+    professors_prep: Pandas DataFrame
+        professor attributes from aggregate_professors()
+    seasons: list of seasons for sorting purposes
+
+    Returns
+    -------
+    professors, course_professors
+
+    """
+
     print("Constructing professors table in chronological order")
+
     professors = pd.DataFrame(columns=["professor_id", "name", "email", "ocs_id"])
 
     professors_by_season = professors_prep.groupby("season_code")
@@ -319,6 +337,63 @@ def import_courses(merged_course_info, seasons: List[str]):
 
     course_professors = pd.concat(course_professors, axis=0, sort=True)
 
+    return professors, course_professors
+
+
+# for memory profiling
+def import_courses(merged_course_info, seasons: List[str]):
+    """
+    Import courses into Pandas DataFrames.
+
+    Parameters
+    ----------
+    merged_course_info: Pandas DataFrame of raw course information
+    from JSON files
+    seasons: list of seasons for sorting purposes
+
+    Returns
+    -------
+    courses, listings, course_professors, professors
+
+    """
+
+    merged_course_info = resolve_cross_listings(merged_course_info)
+
+    print("Creating courses table")
+    # initialize courses table
+    courses = merged_course_info.drop_duplicates(subset="temp_course_id").copy(
+        deep=True
+    )
+    # global course IDs
+    courses["course_id"] = range(len(courses))
+    # convert to JSON string for postgres
+    courses["areas"] = courses["areas"].apply(ujson.dumps)
+    courses["times_by_day"] = courses["times_by_day"].apply(ujson.dumps)
+    courses["skills"] = courses["skills"].apply(ujson.dumps)
+    # replace carriage returns for tsv-based migration
+    courses["description"] = courses["description"].apply(lambda x: x.replace("\r", ""))
+    courses["title"] = courses["title"].apply(lambda x: x.replace("\r", ""))
+    courses["short_title"] = courses["short_title"].apply(lambda x: x.replace("\r", ""))
+    courses["requirements"] = courses["requirements"].apply(
+        lambda x: x.replace("\r", "")
+    )
+
+    print("Creating listings table")
+    # map temporary season-specific IDs to global course IDs
+    temp_to_course_id = dict(zip(courses["temp_course_id"], courses["course_id"]))
+
+    # initialize listings table
+    listings = merged_course_info.copy(deep=True)
+    listings["listing_id"] = range(len(listings))
+    listings["course_id"] = listings["temp_course_id"].apply(temp_to_course_id.get)
+    listings["section"] = listings["section"].apply(lambda x: "0" if x is None else x)
+    listings["section"] = listings["section"].fillna("0").astype(str)
+    listings["section"] = listings["section"].replace({"": "0"})
+
+    professors_prep = aggregate_professors(courses)
+
+    professors, course_professors = resolve_professors(professors_prep, seasons)
+
     # explicitly specify missing columns to be filled in later
     courses[
         [
@@ -351,12 +426,12 @@ def import_courses(merged_course_info, seasons: List[str]):
     courses = courses.loc[:, get_table_columns(database.models.Course)]
     listings = listings.loc[:, get_table_columns(database.models.Listing)]
     course_professors = course_professors.loc[
-        :, [column.key for column in database.models.course_professors.columns]
+        :, get_table_columns(database.models.course_professors, not_class=True)
     ]
     professors = professors.loc[:, get_table_columns(database.models.Professor)]
     flags = flags.loc[:, get_table_columns(database.models.Flag)]
     course_flags = course_flags.loc[
-        :, [column.key for column in database.models.course_flags.columns]
+        :, get_table_columns(database.models.course_flags, not_class=True)
     ]
 
     print("[Summary]")
@@ -370,7 +445,7 @@ def import_courses(merged_course_info, seasons: List[str]):
     return courses, listings, course_professors, professors, course_flags, flags
 
 
-def import_demand(merged_demand_info, listings, seasons: List[str]):
+def import_demand(merged_demand_info, listings):
     """
     Import demand statistics into Pandas DataFrame.
 
@@ -474,20 +549,21 @@ def import_demand(merged_demand_info, listings, seasons: List[str]):
     return demand_statistics
 
 
-def import_evaluations(
+def match_evaluations_to_courses(
     evaluation_narratives,
     evaluation_ratings,
     evaluation_statistics,
-    evaluation_questions,
     listings,
 ):
+
     """
-    Import course evaluations into Pandas DataFrame.
+    Match evaluations to course IDs.
 
     Parameters
     ----------
-    merged_evaluations_info: Pandas DataFrame of raw evaluation
-    information from JSON files
+    evaluation_narratives: DataFrame of narratives
+    evaluation_ratings: DataFrame of ratings
+    evaluation_statistics: DataFrame of statistics
     listings: listings DataFrame from import_courses
 
     Returns
@@ -552,6 +628,47 @@ def import_evaluations(
         subset=["course_id", "question_code", "comment"], inplace=True, keep="first"
     )
 
+    return evaluation_statistics, evaluation_narratives, evaluation_ratings
+
+
+def import_evaluations(
+    evaluation_narratives,
+    evaluation_ratings,
+    evaluation_statistics,
+    evaluation_questions,
+    listings,
+):
+    """
+    Import course evaluations into Pandas DataFrame.
+
+    Parameters
+    ----------
+    evaluation_narratives: DataFrame of narratives
+    evaluation_ratings: DataFrame of ratings
+    evaluation_statistics: DataFrame of statistics
+    evaluation_questions: DataFrame of questions
+    listings: listings DataFrame from import_courses
+
+    Returns
+    -------
+    evaluation_narratives,
+    evaluation_ratings,
+    evaluation_statistics,
+    evaluation_questions
+
+    """
+
+    (
+        evaluation_statistics,
+        evaluation_narratives,
+        evaluation_ratings,
+    ) = match_evaluations_to_courses(
+        evaluation_narratives,
+        evaluation_ratings,
+        evaluation_statistics,
+        listings,
+    )
+
     # -------------------
     # Aggregate questions
     # -------------------
@@ -583,8 +700,6 @@ def import_evaluations(
 
     print(f"Maximum text divergence within codes: {max_all_distances}")
 
-    # maximum question divergence to allow
-    QUESTION_DIVERGENCE_CUTOFF = 32
     if not all(distances_by_code < QUESTION_DIVERGENCE_CUTOFF):
 
         inconsistent_codes = distances_by_code[
@@ -694,7 +809,7 @@ def import_evaluations(
     )
 
 
-def copy_from_stringio(conn, df, table: str):
+def copy_from_stringio(conn, table, table_name: str):
     """
     Save DataFrame in-memory and migrate
     to database with copy_from().
@@ -703,9 +818,9 @@ def copy_from_stringio(conn, df, table: str):
     ----------
     conn: psycopg2 connection object
 
-    df: DataFrame to import
+    table: DataFrame to import
 
-    table: name of target table
+    table_name: name of target table
 
     Returns
     -------
@@ -724,18 +839,20 @@ def copy_from_stringio(conn, df, table: str):
         na_rep="NULL",
     )
 
-    df.to_csv(buffer, **csv_kwargs)
+    table.to_csv(buffer, **csv_kwargs)
 
     buffer.seek(0)
 
     cursor = conn.cursor()
 
     try:
-        cursor.copy_from(buffer, table, columns=df.columns, sep="\t", null="NULL")
-    except (Exception, psycopg2.DatabaseError) as error:
+        cursor.copy_from(
+            buffer, table_name, columns=table.columns, sep="\t", null="NULL"
+        )
+    except Exception as error:
         conn.rollback()
         cursor.close()
-        raise DatabaseError
+        raise DatabaseImportError from error
 
-    print(f"Successfully copied {table}")
+    print(f"Successfully copied {table_name}")
     cursor.close()

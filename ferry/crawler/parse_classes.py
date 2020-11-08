@@ -1,32 +1,22 @@
+"""
+Loads the class JSON files output by fetch_classes.py and
+formats them for input into transform.py
+"""
+
 import argparse
 from os import listdir
-from os.path import isfile, join
 from pathlib import Path
 
 import ujson
 
 from ferry import config
-from ferry.includes.class_processing import extract_course_info
+from ferry.crawler.common_args import add_seasons_args
+from ferry.includes.class_parsing import extract_course_info
 from ferry.includes.tqdm import tqdm
-
-"""
-================================================================
-This script loads the class JSON files output by
-fetch_classes.py and formats them to be loadable into the
-current website.
-================================================================
-"""
 
 # allow the user to specify seasons
 parser = argparse.ArgumentParser(description="Parse classes")
-parser.add_argument(
-    "-s",
-    "--seasons",
-    nargs="+",
-    help="seasons to parse (leave empty to parse all fetched classes)",
-    default=None,
-    required=False,
-)
+add_seasons_args(parser)
 
 args = parser.parse_args()
 seasons = args.seasons
@@ -58,10 +48,10 @@ for season in seasons:
     if fysem_file.is_file():
         with open(fysem_file, "r") as f:
             fysem = ujson.load(f)
-            fysem = set([x["crn"] for x in fysem])
-        print(f"Loaded first-year seminars")
+            fysem = {x["crn"] for x in fysem}
+        print("Loaded first-year seminars")
     else:
-        print(f"First-year seminars filter missing")
+        print("First-year seminars filter missing")
         fysem = set()
 
     # load raw responses for season

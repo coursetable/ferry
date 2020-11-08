@@ -1,3 +1,4 @@
+# pylint: skip-file
 import nltk.data
 import pytextrank
 import spacy

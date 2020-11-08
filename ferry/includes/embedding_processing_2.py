@@ -1,3 +1,4 @@
+# pylint: skip-file
 import string
 from collections import Counter
 

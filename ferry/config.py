@@ -1,12 +1,13 @@
-import functools
-import getpass
-import os
-import pathlib
-
+# pylint: skip-file
 """
 Contains configurations and settings used by the rest of the project.
 Any settings in here can be overriden by config_private.py.
 """
+
+import functools
+import getpass
+import os
+import pathlib
 
 _PROJECT_DIR = pathlib.Path(__file__).resolve().parent.parent
 
@@ -23,7 +24,7 @@ RESOURCE_DIR = _PROJECT_DIR / "resources"
 # specified setting when called.
 CAS_USE_COOKIE = True
 CAS_CREDENTIAL_NETID = functools.lru_cache(lambda: input("Yale NetId: "))
-CAS_CREDENTIAL_PASSWORD = functools.lru_cache(lambda: getpass.getpass())
+CAS_CREDENTIAL_PASSWORD = functools.lru_cache(getpass.getpass)
 CAS_COOKIE_CASTGC = functools.lru_cache(lambda: input("CASTGC Cookie: "))
 
 

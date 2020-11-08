@@ -1,3 +1,7 @@
+"""
+Init all submodules for import.
+"""
+
 from sqlalchemy import MetaData, Table
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.inspection import inspect
