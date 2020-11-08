@@ -164,20 +164,24 @@ def get_table(table: str):
     return pd.read_sql_table(table, con=database.Engine)
 
 
-def get_table_columns(table):
+def get_table_columns(table, not_class=False):
     """
     Get column names of a table, where table is
-    a SQLalchemy model (e.g. ferry.database.models.Course)
+    a SQLalchemy model or object (e.g. ferry.database.models.Course)
 
     Parameters
     ----------
     table: name of table to retrieve
+    not_class: if the table is not a class (for instance, a junction table)
 
     Returns
     -------
-    Pandas DataFrame
+    list of column names
 
     """
+
+    if not_class:
+        return [column.key for column in table.columns]
 
     return [column.key for column in table.__table__.columns]
 

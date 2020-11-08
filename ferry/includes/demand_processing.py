@@ -123,14 +123,12 @@ def fetch_season_subject_demand(season, subject_code, subject_codes, dates):
 
         # 'code' might be a long list of cross-listed couses (e.g. 'S&DS 262/S&DS 562/CPSC 262'),
         # so we need to split all of the codes and look at them separately
-        full_strings_all = code.split("/")
+        full_strings = code.split("/")
 
         # sometimes we'll get a course code that isn't actually an academic subject,
         # so this line filters that out
         full_strings = [
-            string
-            for string in full_strings_all
-            if string.split(" ")[0] in subject_codes
+            string for string in full_strings if string.split(" ")[0] in subject_codes
         ]
 
         # now, we need to identify the course code corresponding to the subject we're working
