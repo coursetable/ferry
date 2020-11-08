@@ -33,6 +33,7 @@ import ujson
 from ferry import config
 from ferry.includes.rating_processing import CrawlerError
 from ferry.includes.tqdm import tqdm
+# pylint: disable=no-name-in-module
 from private import extract_db
 
 
