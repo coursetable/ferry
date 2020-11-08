@@ -1,3 +1,4 @@
+# pylint: disable=no-name-in-module
 """
 This script fetches evaluations data from the coursetable.com
 database and yields a JSON format similar to the one produced
@@ -33,7 +34,6 @@ import ujson
 from ferry import config
 from ferry.includes.rating_processing import CrawlerError
 from ferry.includes.tqdm import tqdm
-# pylint: disable=no-name-in-module
 from private import extract_db
 
 
