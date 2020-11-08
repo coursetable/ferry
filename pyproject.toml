@@ -56,7 +56,7 @@ use_parentheses = true
 line_length = 88
 
 [tool.githooks]
-pre-commit = "poetry run black ./ferry && poetry run isort ferry"
+pre-commit = "poetry run black ./ferry && poetry run isort ./ferry && poetry run pylint ./ferry"
 
 [build-system]
 requires = ["poetry>=1.1.3"]
