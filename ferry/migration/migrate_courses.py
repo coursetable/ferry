@@ -4,7 +4,7 @@ import os
 import ujson
 
 from ferry import config
-from ferry.includes.class_processing import extract_flags
+from ferry.includes.class_parsing import extract_flags
 from ferry.includes.migration import (
     convert_old_description,
     convert_old_meetings,

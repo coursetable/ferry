@@ -1,7 +1,11 @@
 import ujson
 
 from ferry import config
-from ferry.includes.class_processing import *
+from ferry.includes.class_processing import (
+    FetchClassesError,
+    fetch_previous_json,
+    fetch_previous_seasons,
+)
 from ferry.includes.tqdm import tqdm
 
 """

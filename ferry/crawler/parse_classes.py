@@ -10,7 +10,7 @@ from pathlib import Path
 import ujson
 
 from ferry import config
-from ferry.includes.class_processing import extract_course_info
+from ferry.includes.class_parsing import extract_course_info
 from ferry.includes.tqdm import tqdm
 
 # allow the user to specify seasons
