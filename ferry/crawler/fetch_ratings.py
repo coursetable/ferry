@@ -18,6 +18,7 @@ import requests
 import ujson
 
 from ferry import config
+from ferry.crawler.common_args import add_seasons_args, parse_seasons_arg
 from ferry.includes.cas import create_session
 from ferry.includes.rating_processing import fetch_course_eval
 from ferry.includes.tqdm import tqdm
@@ -28,6 +29,7 @@ class FetchRatingsError(Exception):
     Error object for fetch ratings exceptions.
     """
 
+    # pylint: disable=unnecessary-pass
     pass
 
 
@@ -41,14 +43,7 @@ EXCLUDE_SEASONS = [
 
 # allow the user to specify seasons
 parser = argparse.ArgumentParser(description="Fetch ratings")
-parser.add_argument(
-    "-s",
-    "--seasons",
-    nargs="+",
-    help="seasons to fetch (leave empty to fetch all, or LATEST_[n] to fetch n latest)",
-    default=None,
-    required=False,
-)
+add_seasons_args(parser)
 
 parser.add_argument(
     "-f",
@@ -67,37 +62,7 @@ args = parser.parse_args()
 with open(f"{config.DATA_DIR}/course_seasons.json", "r") as f:
     all_viable_seasons = ujson.loads(f.read())
 
-# if no seasons supplied, use all
-if args.seasons is None:
-
-    seasons = all_viable_seasons
-
-    print(f"Fetching ratings for all seasons: {seasons}")
-
-else:
-
-    seasons_latest = len(args.seasons) == 1 and args.seasons[0].startswith("LATEST")
-
-    # if fetching latest n seasons, truncate the list and log it
-    if seasons_latest:
-
-        num_latest = int(args.seasons[0].split("_")[1])
-
-        seasons = all_viable_seasons[-num_latest:]
-
-        print(f"Fetching ratings for latest {num_latest} seasons: {seasons}")
-
-    # otherwise, use and check the user-supplied seasons
-    else:
-
-        # Check to make sure user-inputted seasons are valid
-        if all(season in all_viable_seasons for season in args.seasons):
-
-            seasons = args.seasons
-            print(f"Fetching ratings for supplied seasons: {seasons}")
-
-        else:
-            raise FetchRatingsError("Invalid season.")
+seasons = parse_seasons_arg(args.seasons, all_viable_seasons)
 
 
 yale_college_cache = diskcache.Cache(f"{config.DATA_DIR}/yale_college_cache")
@@ -218,6 +183,8 @@ for season_code, crn in tqdm(queue):
     #     tqdm.write(f"Skipping season {season_code} - missing evals")
     # except CrawlerError:
     #     tqdm.write(f"skipped - missing evals")
+
+    # pylint: disable=broad-except
     except Exception as error:
 
         # traceback.print_exc()

@@ -20,6 +20,7 @@ class FetchSubjectsError(Exception):
     Error object for fetch subjects exceptions.
     """
 
+    # pylint: disable=unnecessary-pass
     pass
 
 

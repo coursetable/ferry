@@ -19,6 +19,7 @@ from multiprocessing import Pool
 import ujson
 
 from ferry import config
+from ferry.crawler.common_args import add_seasons_args, parse_seasons_arg
 from ferry.includes.demand_processing import fetch_season_subject_demand, get_dates
 from ferry.includes.tqdm import tqdm
 
@@ -45,6 +46,7 @@ if __name__ == "__main__":
         Error object for demand fetching exceptions.
         """
 
+        # pylint: disable=unnecessary-pass
         pass
 
     # Set season
@@ -52,14 +54,7 @@ if __name__ == "__main__":
     # Examples: 202001 = 2020 Spring, 201903 = 2019 Fall
     # If no season is provided, the program will scrape all available seasons
     parser = argparse.ArgumentParser(description="Import demand stats")
-    parser.add_argument(
-        "-s",
-        "--seasons",
-        nargs="+",
-        help="seasons to fetch (leave empty to fetch all, or LATEST_[n] to fetch n latest)",
-        default=None,
-        required=False,
-    )
+    add_seasons_args(parser)
 
     args = parser.parse_args()
 
@@ -67,37 +62,7 @@ if __name__ == "__main__":
     with open(f"{config.DATA_DIR}/demand_seasons.json", "r") as f:
         all_viable_seasons = ujson.loads(f.read())
 
-    # if no seasons supplied, use all
-    if args.seasons is None:
-
-        seasons = all_viable_seasons
-
-        print(f"Fetching ratings for all seasons: {seasons}")
-
-    else:
-
-        seasons_latest = len(args.seasons) == 1 and args.seasons[0].startswith("LATEST")
-
-        # if fetching latest n seasons, truncate the list and log it
-        if seasons_latest:
-
-            num_latest = int(args.seasons[0].split("_")[1])
-
-            seasons = all_viable_seasons[-num_latest:]
-
-            print(f"Fetching ratings for latest {num_latest} seasons: {seasons}")
-
-        # otherwise, use and check the user-supplied seasons
-        else:
-
-            # Check to make sure user-inputted seasons are valid
-            if all(season in all_viable_seasons for season in args.seasons):
-
-                seasons = args.seasons
-                print(f"Fetching ratings for supplied seasons: {seasons}")
-
-            else:
-                raise FetchDemandError("Invalid season.")
+    seasons = parse_seasons_arg(args.seasons, all_viable_seasons)
 
     print("Retrieving subjects list... ", end="")
     with open(f"{config.DATA_DIR}/demand_subjects.json", "r") as f:

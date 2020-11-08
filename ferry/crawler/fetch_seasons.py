@@ -22,6 +22,7 @@ class FetchSeasonsError(Exception):
     Error object for fetch seasons exceptions.
     """
 
+    # pylint: disable=unnecessary-pass
     pass
 
 
