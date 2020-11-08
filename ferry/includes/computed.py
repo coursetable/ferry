@@ -273,7 +273,7 @@ def courses_computed(courses, listings, evaluation_statistics, course_professors
     # calculate the average of an array
     def average(nums):
         nums = list(filter(lambda x: x is not None, nums))
-        nums = list(filter(lambda x: not math.isnan(), nums))
+        nums = list(filter(lambda x: not math.isnan(x), nums))
         if not nums:
             return None
         return sum(nums) / len(nums)

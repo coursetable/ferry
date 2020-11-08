@@ -114,7 +114,7 @@ if __name__ == "__main__":
     merged_demand_info = pd.concat(merged_demand_info, axis=0)
     merged_demand_info = merged_demand_info.reset_index(drop=True)
 
-    demand_statistics = import_demand(merged_demand_info, listings, demand_seasons)
+    demand_statistics = import_demand(merged_demand_info, listings)
 
     # -------------------------
     # Import course evaluations

@@ -4,13 +4,18 @@ Used by /ferry/crawler/fetch_demand.py
 """
 import requests
 from bs4 import BeautifulSoup
-from requests.adapters import HTTPAdapter
+from requests.adapters import HTTPAdapter, Retry
 
 MAX_RETRIES = 16
 
+retry_strategy = Retry(
+    total=MAX_RETRIES,
+    status_forcelist=[429, 500, 502, 503, 504],
+)
+
 SESSION = requests.Session()
-SESSION.mount("http://", HTTPAdapter(max_retries=MAX_RETRIES))
-SESSION.mount("https://", HTTPAdapter(max_retries=MAX_RETRIES))
+SESSION.mount("http://", HTTPAdapter(max_retries=retry_strategy))
+SESSION.mount("https://", HTTPAdapter(max_retries=retry_strategy))
 
 
 class FetchDemandError(Exception):

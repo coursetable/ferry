@@ -74,7 +74,9 @@ def resolve_cross_listings(merged_course_info):
     print("Aggregating cross-listings")
     merged_course_info["season_code"] = merged_course_info["season_code"].astype(int)
     merged_course_info["crn"] = merged_course_info["crn"].astype(int)
-    merged_course_info["crns"] = merged_course_info["crns"].apply(lambda x: map(int, x))
+    merged_course_info["crns"] = merged_course_info["crns"].apply(
+        lambda crns: [int(crn) for crn in crns]
+    )
 
     # group CRNs by season for cross-listing deduplication
     crns_by_season = merged_course_info.groupby("season_code")["crns"].apply(list)
@@ -128,13 +130,13 @@ def aggregate_professors(courses):
     print("Resolving professor attributes")
     # set default empty value for exploding later on
     professors_prep["professors"] = professors_prep["professors"].apply(
-        lambda x: [] if x is None or math.isnan(x) else x
+        lambda x: [] if not isinstance(x, list) else x
     )
     professors_prep["professor_emails"] = professors_prep["professor_emails"].apply(
-        lambda x: [] if x is None or math.isnan(x) else x
+        lambda x: [] if not isinstance(x, list) else x
     )
     professors_prep["professor_ids"] = professors_prep["professor_ids"].apply(
-        lambda x: [] if x is None or math.isnan(x) else x
+        lambda x: [] if not isinstance(x, list) else x
     )
 
     # reshape professor attributes array
@@ -384,9 +386,7 @@ def import_courses(merged_course_info, seasons: List[str]):
     listings = merged_course_info.copy(deep=True)
     listings["listing_id"] = range(len(listings))
     listings["course_id"] = listings["temp_course_id"].apply(temp_to_course_id.get)
-    listings["section"] = listings["section"].apply(
-        lambda x: "0" if math.isnan(x) else x
-    )
+    listings["section"] = listings["section"].apply(lambda x: "0" if x is None else x)
     listings["section"] = listings["section"].fillna("0").astype(str)
     listings["section"] = listings["section"].replace({"": "0"})
 

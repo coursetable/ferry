@@ -51,11 +51,21 @@ def merge_overlapping(sets: List[FrozenSet]) -> List:
 
     sets_graph = networkx.Graph()
     for sub_set in sets:
-        for edge in combinations(list(sub_set), 2):
-            sets_graph.add_edge(*edge)
+        # if single listing, add it (does nothing if already present)
+        if len(sub_set) == 1:
+            sets_graph.add_node(tuple(sub_set)[0])
+        # otherwise, add all pairwise listings
+        else:
+            for edge in combinations(list(sub_set), 2):
+                sets_graph.add_edge(*edge)
 
+    # get overlapping listings as connected components
     merged = networkx.connected_components(sets_graph)
     merged = [set(x) for x in merged]
+
+    # handle courses with no cross-listings
+    singles = networkx.isolates(sets_graph)
+    merged += [{x} for x in singles]
 
     return merged
 
