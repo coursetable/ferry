@@ -19,6 +19,7 @@ class _EvaluationsNotViewableError(Exception):
     Object for inaccessible evaluations exceptions.
     """
 
+    # pylint: disable=unnecessary-pass
     pass
 
 
@@ -27,6 +28,7 @@ class CrawlerError(Exception):
     Object for crawler exceptions.
     """
 
+    # pylint: disable=unnecessary-pass
     pass
 
 

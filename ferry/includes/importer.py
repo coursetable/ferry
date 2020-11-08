@@ -3,7 +3,6 @@ Functions for importing information into tables.
 Used by /ferry/transform.py.
 """
 import csv
-import math
 from collections import Counter
 from io import StringIO
 from itertools import combinations
@@ -30,6 +29,7 @@ class DatabaseImportError(Exception):
     Object for import exceptions.
     """
 
+    # pylint: disable=unnecessary-pass
     pass
 
 

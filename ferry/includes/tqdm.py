@@ -1,3 +1,4 @@
+# pylint: skip-file
 """
 tqdm handler for customization
 (i.e. disable progress bars in production)

@@ -23,6 +23,7 @@ class FetchDemandError(Exception):
     Object for demand fetching exceptions.
     """
 
+    # pylint: disable=unnecessary-pass
     pass
 
 
@@ -67,6 +68,8 @@ def get_dates(season):
 
 
 def fetch_season_subject_demand(season, subject_code, subject_codes, dates):
+
+    # pylint: disable=too-many-locals
 
     """
     Get course demand statistics for a specific subject and season

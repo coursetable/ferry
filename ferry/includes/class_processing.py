@@ -14,6 +14,7 @@ class FetchClassesError(Exception):
     Object for class fetching exceptions.
     """
 
+    # pylint: disable=unnecessary-pass
     pass
 
 

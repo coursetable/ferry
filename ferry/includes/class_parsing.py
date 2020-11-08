@@ -46,6 +46,7 @@ def convert_unicode(text):
         text = re.sub(bad_unicode, replacement, text)
 
     # convert utf-8 bytestrings
+    # pylint: disable=line-too-long
     # from https://stackoverflow.com/questions/5842115/converting-a-string-which-contains-both-utf-8-encoded-bytestrings-and-codepoints
     text = re.sub(
         r"[\xc2-\xf4][\x80-\xbf]+",
