@@ -15,15 +15,22 @@ A crawler for Yale courses and evaluation data. Integrates with Coursetable.
 
 ## Design
 
+![architecture](./docs/architecture.png)
+
+(see also: [PDF version](./docs/architecture.pdf))
+
 We want the crawler to be reproducible and reliable. As such, we designed the crawling pipeline as a number of stages able to be independently inspected and rerun.
 
-- **Extraction**: We pull and preprocess raw data from Yale's websites to fetch the following:
-  - Course listings
-  - Course demand statistics
-  - Course evaluations
-- **Importation**: We import the preprocessed data files into our Postgres database.
+1. **Retrieval**: We pull and preprocess raw data from Yale's websites to fetch the following:
+   - Course listings
+   - Course demand statistics
+   - Course evaluations
 
-Extraction is documented in the [retrieval docs](docs/1_retrieval.md) and implemented in the `/ferry/crawler` directory. We also needed to migrate data from the previous CourseTable databases in a similar fashion. This process is documented in the [migration docs](docs/0_migration.md) and implemented in the `/ferry/migration` directory.
+2. **Preprocessing**: We preprocess course listing files and evaluations to make them easier to import.
+
+3. **Importation**: We import the preprocessed data files into our Postgres database.
+
+Retrieval is documented in the [retrieval docs](docs/1_retrieval.md) and implemented in the `/ferry/crawler` directory along with preprocessing. We also needed to migrate data from the previous CourseTable databases in a similar fashion. This process is documented in the [migration docs](docs/0_migration.md) and implemented in the `/ferry/migration` directory.
 
 Importation and post-processing make use of the database, which is documented in [parsing docs](docs/2_parsing.md). Moreover, the database schema is defined with SQLAlchemy in `/ferry/database/models.py`. 
 
@@ -108,16 +115,23 @@ _If you want to use these data but don't want to crawl it yourself, please reach
 
 To illustrate how the database might be constructed, we provide an workflow to run to build everything from scratch (assuming all dependencies have been accounted for).
 
-### Extraction
+### Retrieval
 
 To extract data from Yale's websites, we use the scripts provided in `/ferry/crawler`.
 
 1. Before retrieving any data, we have to have a sense of which semesters, or **seasons**, we want to fetch. To retrieve a list of seasons, we run `fetch_seasons.py`. This gives us a list of valid seasons for course listings and demand statistics (we get the list of seasons for evaluations separately).
-2. To retrieve our classes, we run `fetch_classes.py`, which downloads raw JSON data from Yale, followed by `parse_classes.py`, which does some pre-processing such as parsing syllabus links and cross-listings from various HTML fields. 
-3. To retrieve evaluations, we run `fetch_ratings.py`. For each class found, this script will download all evaluation info, namely categorical and written evaluation responses.
+2. To retrieve our classes, we run `fetch_classes.py`, which downloads raw JSON data from Yale.
+3. To retrieve evaluations, we run `fetch_ratings.py`. For each valid class found in `fetch_classes.py`, this script will download all evaluation info, namely categorical and written evaluation responses.
 4. To retrieve demand statistics, we also need a list of course subject codes that the demand statistics are indexed by. These can be found using `fetch_subjects.py`. Once this has been done, we can get demand subjects using `fetch_demand.py`.
 
 Note that `fetch_classes.py`, `parse_classes.py`, `fetch_ratings.py`, `fetch_subjects.py`, and `fetch_demand.py` all have a `--season` argument that allows one to manually filter which seasons to retrieve. This script is useful for periodic updates in which we don't need to process older seasons (see [refresh.sh](/refresh_courses.sh)) and for testing.
+
+### Preprocessing
+
+We also preprocess our classes and ratings data to make them easier to import. In particular:
+
+1. We run `parse_classes.py`, which does some pre-processing such as parsing syllabus links and cross-listings from various HTML fields. 
+2. We run `parse_ratings.py`, which takes all of the individual ratings JSONs per class and aggregates them into CSV tables for all questions, narrative (written) evaluations, categorical evaluations, and enrollment/response statistics. This step also calculates sentiment scores on the narrative evaluations using [VADER](https://github.com/cjhutto/vaderSentiment).
 
 ### Importation
 
@@ -138,13 +152,23 @@ With our full dataset, this takes about a minute.
 
 To contribute to this repository, please create a branch and open a pull request once you are ready to merge your changes into master. 
 
-Note that we run two Python style checks via Travis CI: [black](https://github.com/psf/black) (for general code formatting) and [isort](https://github.com/PyCQA/isort) (for import ordering). You can run these two manually or by attaching them via pre-commit hooks, which can be installed with
+Note that we run three Python style checks via GitHub Actions: [black](https://github.com/psf/black) (for general code formatting), [isort](https://github.com/PyCQA/isort) (for import ordering), and [pylint](https://github.com/PyCQA/pylint) (for general quality checks). You can run these three manually from the repository root via
+
+```
+poetry run black ./ferry
+poetry run isort ./ferry
+poetry run pylint ./ferry
+```
+
+You can also attach these commands via pre-commit hooks, which can be installed with
 
 ```
 poetry run githooks setup
 ```
 
 This will install pre-commit [Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) that will automatically apply black and isort before you make a commit. If there are any reported changes, the initial commit will be aborted and you can re-commit to apply the changes.
+
+Plugins are also available for text editors such as VS Code and Sublime.
 
 ## TODO
 
