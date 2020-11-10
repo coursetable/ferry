@@ -645,15 +645,15 @@ def import_evaluations(
 
     Parameters
     ----------
-    evaluation_narratives: Pandas DataFrame
+    evaluation_narratives:
         Table of narratives from /ferry/crawler/parse_ratings.py
-    evaluation_ratings: Pandas DataFrame
+    evaluation_ratings:
         Table of ratings from /ferry/crawler/parse_ratings.py
-    evaluation_statistics: Pandas DataFrame
+    evaluation_statistics:
         Table of statistics from /ferry/crawler/parse_ratings.py
-    evaluation_questions: Pandas DataFrame
+    evaluation_questions:
         Table of questions from /ferry/crawler/parse_ratings.py
-    listings: Pandas DataFrame
+    listings:
         Table of listings from import_courses
 
     Returns
