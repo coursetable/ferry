@@ -12,6 +12,14 @@ announce () {
 # go to ferry root for poetry to work
 cd $(dirname $0)
 
+# load .env file if present
+if [ -f .env ]; then
+    announce "Loading environment config"
+    source .env
+    echo 'done loading'
+    echo
+fi
+
 # ensure the data is up to date
 (cd data && git checkout master && git pull)
 
@@ -48,3 +56,6 @@ poetry run python ./ferry/stage.py
 
 announce "Deploying staged tables"
 poetry run python ./ferry/deploy.py
+
+announce "Regenerating static files on server"
+curl -H "X-FERRY-SECRET: ${FERRY_SECRET}" https://coursetable.com/api/catalog/refresh
