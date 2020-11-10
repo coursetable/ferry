@@ -7,7 +7,7 @@ from sqlalchemy import MetaData
 
 from ferry import config, database
 from ferry.database.models import Base
-from ferry.includes.importer import copy_from_stringio
+from ferry.includes.staging import copy_from_stringio
 
 if __name__ == "__main__":
 

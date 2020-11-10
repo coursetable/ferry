@@ -2,11 +2,9 @@
 Functions for importing information into tables.
 Used by /ferry/transform.py.
 """
-import csv
 from collections import Counter
-from io import StringIO
 from itertools import combinations
-from typing import List
+from typing import List, Tuple
 
 import numpy as np
 import pandas as pd
@@ -24,24 +22,15 @@ from ferry.includes.utils import (
 QUESTION_DIVERGENCE_CUTOFF = 32
 
 
-class DatabaseImportError(Exception):
-    """
-    Object for import exceptions.
-    """
-
-    # pylint: disable=unnecessary-pass
-    pass
-
-
-def resolve_cross_listings(merged_course_info):
+def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
 
     """
     Resolve course cross-listings by computing unique course_ids.
 
     Parameters
     ----------
-    merged_course_info: Pandas DataFrame of raw course information
-    from JSON files
+    merged_course_info:
+        Raw course information from JSON files
 
     Returns
     -------
@@ -104,14 +93,14 @@ def resolve_cross_listings(merged_course_info):
     return merged_course_info
 
 
-def aggregate_professors(courses):
+def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
 
     """
     Aggregate professor info columns in preparation for matching.
 
     Parameters
     ----------
-    courses: Pandas DataFrame
+    courses:
         intermediate courses table from import_courses()
 
     Returns
@@ -190,16 +179,19 @@ def aggregate_professors(courses):
     return professors_prep
 
 
-def resolve_professors(professors_prep, seasons: List[str]):
+def resolve_professors(
+    professors_prep: pd.DataFrame, seasons: List[str]
+) -> Tuple[pd.DataFrame, pd.DataFrame]:
 
     """
     Resolve course-professor mappings and professors table
 
     Parameters
     ----------
-    professors_prep: Pandas DataFrame
+    professors_prep:
         professor attributes from aggregate_professors()
-    seasons: list of seasons for sorting purposes
+    seasons:
+        list of seasons for sorting purposes
 
     Returns
     -------
@@ -341,15 +333,18 @@ def resolve_professors(professors_prep, seasons: List[str]):
 
 
 # for memory profiling
-def import_courses(merged_course_info, seasons: List[str]):
+def import_courses(
+    merged_course_info: pd.DataFrame, seasons: List[str]
+) -> Tuple[pd.DataFrame, ...]:
     """
     Import courses into Pandas DataFrames.
 
     Parameters
     ----------
-    merged_course_info: Pandas DataFrame of raw course information
-    from JSON files
-    seasons: list of seasons for sorting purposes
+    merged_course_info:
+        Raw course information from JSON files
+    seasons:
+        list of seasons for sorting purposes
 
     Returns
     -------
@@ -445,15 +440,18 @@ def import_courses(merged_course_info, seasons: List[str]):
     return courses, listings, course_professors, professors, course_flags, flags
 
 
-def import_demand(merged_demand_info, listings):
+def import_demand(
+    merged_demand_info: pd.DataFrame, listings: pd.DataFrame
+) -> pd.DataFrame:
     """
     Import demand statistics into Pandas DataFrame.
 
     Parameters
     ----------
-    merged_demand_info: Pandas DataFrame of raw demand information
-    from JSON files
-    listings: listings DataFrame from import_courses
+    merged_demand_info:
+        Raw demand information from JSON files
+    listings:
+        Listings table from import_courses
 
     Returns
     -------
@@ -550,21 +548,25 @@ def import_demand(merged_demand_info, listings):
 
 
 def match_evaluations_to_courses(
-    evaluation_narratives,
-    evaluation_ratings,
-    evaluation_statistics,
-    listings,
-):
+    evaluation_narratives: pd.DataFrame,
+    evaluation_ratings: pd.DataFrame,
+    evaluation_statistics: pd.DataFrame,
+    listings: pd.DataFrame,
+) -> Tuple[pd.DataFrame, ...]:
 
     """
     Match evaluations to course IDs.
 
     Parameters
     ----------
-    evaluation_narratives: DataFrame of narratives
-    evaluation_ratings: DataFrame of ratings
-    evaluation_statistics: DataFrame of statistics
-    listings: listings DataFrame from import_courses
+    evaluation_narratives:
+        DataFrame of narratives
+    evaluation_ratings:
+        DataFrame of ratings
+    evaluation_statistics:
+        DataFrame of statistics
+    listings:
+        listings DataFrame from import_courses
 
     Returns
     -------
@@ -632,22 +634,27 @@ def match_evaluations_to_courses(
 
 
 def import_evaluations(
-    evaluation_narratives,
-    evaluation_ratings,
-    evaluation_statistics,
-    evaluation_questions,
-    listings,
-):
+    evaluation_narratives: pd.DataFrame,
+    evaluation_ratings: pd.DataFrame,
+    evaluation_statistics: pd.DataFrame,
+    evaluation_questions: pd.DataFrame,
+    listings: pd.DataFrame,
+) -> Tuple[pd.DataFrame, ...]:
     """
     Import course evaluations into Pandas DataFrame.
 
     Parameters
     ----------
-    evaluation_narratives: DataFrame of narratives
-    evaluation_ratings: DataFrame of ratings
-    evaluation_statistics: DataFrame of statistics
-    evaluation_questions: DataFrame of questions
-    listings: listings DataFrame from import_courses
+    evaluation_narratives:
+        Table of narratives from /ferry/crawler/parse_ratings.py
+    evaluation_ratings:
+        Table of ratings from /ferry/crawler/parse_ratings.py
+    evaluation_statistics:
+        Table of statistics from /ferry/crawler/parse_ratings.py
+    evaluation_questions:
+        Table of questions from /ferry/crawler/parse_ratings.py
+    listings:
+        Table of listings from import_courses
 
     Returns
     -------
@@ -807,52 +814,3 @@ def import_evaluations(
         evaluation_statistics,
         evaluation_questions,
     )
-
-
-def copy_from_stringio(conn, table, table_name: str):
-    """
-    Save DataFrame in-memory and migrate
-    to database with copy_from().
-
-    Parameters
-    ----------
-    conn: psycopg2 connection object
-
-    table: DataFrame to import
-
-    table_name: name of target table
-
-    Returns
-    -------
-    """
-
-    # create in-memory buffer for DataFrame
-    buffer = StringIO()
-
-    csv_kwargs = dict(
-        index_label="id",
-        header=False,
-        index=False,
-        sep="\t",
-        quoting=csv.QUOTE_NONE,
-        escapechar="\\",
-        na_rep="NULL",
-    )
-
-    table.to_csv(buffer, **csv_kwargs)
-
-    buffer.seek(0)
-
-    cursor = conn.cursor()
-
-    try:
-        cursor.copy_from(
-            buffer, table_name, columns=table.columns, sep="\t", null="NULL"
-        )
-    except Exception as error:
-        conn.rollback()
-        cursor.close()
-        raise DatabaseImportError from error
-
-    print(f"Successfully copied {table_name}")
-    cursor.close()
