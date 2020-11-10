@@ -19,7 +19,8 @@ with open(f"{config.RESOURCE_DIR}/question_tags.csv") as f:
 def questions_computed(evaluation_questions):
     """
     Populate computed question fields:
-        tags: question tags for ratings aggregation
+        tags:
+            question tags for ratings aggregation
 
     Parameters
     ----------
@@ -62,8 +63,10 @@ def evaluation_statistics_computed(
 ):
     """
     Populate computed question fields:
-        avg_rating: average course rating
-        avg_workload: average course workload
+        avg_rating:
+            average course rating
+        avg_workload:
+            average course workload
 
     Parameters
     ----------
@@ -144,9 +147,23 @@ def evaluation_statistics_computed(
 
 def courses_computed(courses, listings, evaluation_statistics, course_professors):
     """
-    Populate computed course fields:
-        average_rating: average course rating over all past instances
-        average_workload: average course workload over all past instances
+    Populates computed course rating fields:
+        average_rating:
+            average course rating over all past instances
+        average_workload:
+            average course workload over all past instances
+
+    Also populates last-offered course fields:
+        last_offered_course_id:
+            course_id of the most recent previous offering
+        last_enrollment_course_id:
+            course_id of the most recent previous offering with enrollment statistics
+        last_enrollment:
+            number of students in most recent previous offering with enrollment statistics
+        last_enrollment_season_code:
+            season of recent previous offering with enrollment statistics
+        last_enrollment_same_professors:
+            if recent previous offering with enrollment statistics was with same professors
 
     Parameters
     ----------
@@ -154,6 +171,7 @@ def courses_computed(courses, listings, evaluation_statistics, course_professors
         courses
         listings
         evaluation_statistics
+        course_professors
 
     Returns
     -------

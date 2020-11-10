@@ -29,8 +29,8 @@ def resolve_cross_listings(merged_course_info):
 
     Parameters
     ----------
-    merged_course_info: Pandas DataFrame of raw course information
-    from JSON files
+    merged_course_info: Pandas DataFrame
+        Raw course information from JSON files
 
     Returns
     -------
@@ -188,7 +188,8 @@ def resolve_professors(professors_prep, seasons: List[str]):
     ----------
     professors_prep: Pandas DataFrame
         professor attributes from aggregate_professors()
-    seasons: list of seasons for sorting purposes
+    seasons:
+        list of seasons for sorting purposes
 
     Returns
     -------
@@ -336,9 +337,10 @@ def import_courses(merged_course_info, seasons: List[str]):
 
     Parameters
     ----------
-    merged_course_info: Pandas DataFrame of raw course information
-    from JSON files
-    seasons: list of seasons for sorting purposes
+    merged_course_info: Pandas DataFrame
+        Raw course information from JSON files
+    seasons:
+        list of seasons for sorting purposes
 
     Returns
     -------
@@ -440,9 +442,10 @@ def import_demand(merged_demand_info, listings):
 
     Parameters
     ----------
-    merged_demand_info: Pandas DataFrame of raw demand information
-    from JSON files
-    listings: listings DataFrame from import_courses
+    merged_demand_info: Pandas DataFrame
+        Raw demand information from JSON files
+    listings: Pandas DataFrame
+        Listings table from import_courses
 
     Returns
     -------
@@ -550,10 +553,14 @@ def match_evaluations_to_courses(
 
     Parameters
     ----------
-    evaluation_narratives: DataFrame of narratives
-    evaluation_ratings: DataFrame of ratings
-    evaluation_statistics: DataFrame of statistics
-    listings: listings DataFrame from import_courses
+    evaluation_narratives: Pandas DataFrame
+        DataFrame of narratives
+    evaluation_ratings: Pandas DataFrame
+        DataFrame of ratings
+    evaluation_statistics: Pandas DataFrame
+        DataFrame of statistics
+    listings: Pandas DataFrame
+        listings DataFrame from import_courses
 
     Returns
     -------
@@ -632,11 +639,16 @@ def import_evaluations(
 
     Parameters
     ----------
-    evaluation_narratives: DataFrame of narratives
-    evaluation_ratings: DataFrame of ratings
-    evaluation_statistics: DataFrame of statistics
-    evaluation_questions: DataFrame of questions
-    listings: listings DataFrame from import_courses
+    evaluation_narratives: Pandas DataFrame
+        Table of narratives from /ferry/crawler/parse_ratings.py
+    evaluation_ratings: Pandas DataFrame
+        Table of ratings from /ferry/crawler/parse_ratings.py
+    evaluation_statistics: Pandas DataFrame
+        Table of statistics from /ferry/crawler/parse_ratings.py
+    evaluation_questions: Pandas DataFrame
+        Table of questions from /ferry/crawler/parse_ratings.py
+    listings: Pandas DataFrame
+        Table of listings from import_courses
 
     Returns
     -------
