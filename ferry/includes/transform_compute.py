@@ -230,8 +230,23 @@ def courses_computed(courses, listings, evaluation_statistics, course_professors
         if len(coded_courses) == 0:
             return [None, None, None, None]
 
-        # extract the latest offering
-        last_enrollment_course = max(coded_courses, key=lambda x: course_to_season[x])
+        current_professors = course_to_professors.get(course_row["course_id"], set())
+
+        # sort courses newest-first
+        coded_courses = sorted(
+            coded_courses, key=lambda x: course_to_season[x], reverse=True
+        )
+
+        # get the newest course with the same professors, otherwise just the newest course
+        last_enrollment_course = next(
+            (
+                prev_course
+                for prev_course in coded_courses
+                if course_to_professors.get(prev_course, set()) == current_professors
+            ),
+            # default to newest course if no previous course has same profs
+            coded_courses[0],
+        )
 
         # number of students last taking course
         last_enrollment = course_to_enrollment[last_enrollment_course]
@@ -241,8 +256,6 @@ def courses_computed(courses, listings, evaluation_statistics, course_professors
         last_enrollment_professors = course_to_professors.get(
             last_enrollment_course, set()
         )
-
-        current_professors = course_to_professors.get(course_row["course_id"], set())
 
         # if last enrollment is with same professors
         last_enrollment_same_professors = (
