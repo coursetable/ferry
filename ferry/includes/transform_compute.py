@@ -6,6 +6,8 @@ import csv
 import math
 from typing import List
 
+import pandas as pd
+
 from ferry import config, database
 from ferry.includes.tqdm import tqdm
 from ferry.includes.utils import flatten_list_of_lists, get_table_columns
@@ -16,10 +18,11 @@ with open(f"{config.RESOURCE_DIR}/question_tags.csv") as f:
         QUESTION_TAGS[question_code] = tag
 
 
-def questions_computed(evaluation_questions):
+def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
     """
     Populate computed question fields:
-        tags: question tags for ratings aggregation
+        tags:
+            question tags for ratings aggregation
 
     Parameters
     ----------
@@ -58,12 +61,16 @@ def questions_computed(evaluation_questions):
 
 
 def evaluation_statistics_computed(
-    evaluation_statistics, evaluation_ratings, evaluation_questions
-):
+    evaluation_statistics: pd.DataFrame,
+    evaluation_ratings: pd.DataFrame,
+    evaluation_questions: pd.DataFrame,
+) -> pd.DataFrame:
     """
     Populate computed question fields:
-        avg_rating: average course rating
-        avg_workload: average course workload
+        avg_rating:
+            average course rating
+        avg_workload:
+            average course workload
 
     Parameters
     ----------
@@ -142,11 +149,30 @@ def evaluation_statistics_computed(
     return evaluation_statistics
 
 
-def courses_computed(courses, listings, evaluation_statistics, course_professors):
+def courses_computed(
+    courses: pd.DataFrame,
+    listings: pd.DataFrame,
+    evaluation_statistics: pd.DataFrame,
+    course_professors: pd.DataFrame,
+) -> pd.DataFrame:
     """
-    Populate computed course fields:
-        average_rating: average course rating over all past instances
-        average_workload: average course workload over all past instances
+    Populates computed course rating fields:
+        average_rating:
+            average course rating over all past instances
+        average_workload:
+            average course workload over all past instances
+
+    Also populates last-offered course fields:
+        last_offered_course_id:
+            course_id of the most recent previous offering
+        last_enrollment_course_id:
+            course_id of the most recent previous offering with enrollment statistics
+        last_enrollment:
+            number of students in most recent previous offering with enrollment statistics
+        last_enrollment_season_code:
+            season of recent previous offering with enrollment statistics
+        last_enrollment_same_professors:
+            if recent previous offering with enrollment statistics was with same professors
 
     Parameters
     ----------
@@ -154,6 +180,7 @@ def courses_computed(courses, listings, evaluation_statistics, course_professors
         courses
         listings
         evaluation_statistics
+        course_professors
 
     Returns
     -------
@@ -317,7 +344,11 @@ def courses_computed(courses, listings, evaluation_statistics, course_professors
     return courses
 
 
-def professors_computed(professors, course_professors, evaluation_statistics):
+def professors_computed(
+    professors: pd.DataFrame,
+    course_professors: pd.DataFrame,
+    evaluation_statistics: pd.DataFrame,
+) -> pd.DataFrame:
 
     """
     Populate computed professor fields:

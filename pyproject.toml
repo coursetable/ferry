@@ -47,6 +47,8 @@ plotly = "^4.11.0"
 ipython = "^7.18.1"
 memory-profiler = "^0.58.0"
 matplotlib = "^3.3.2"
+mypy = "^0.790"
+data-science-types = "^0.2.20"
 
 [tool.isort]
 multi_line_output = 3

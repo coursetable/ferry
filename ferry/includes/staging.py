@@ -5,6 +5,8 @@ Used by /ferry/stage.py.
 import csv
 from io import StringIO
 
+import pandas as pd
+
 
 class DatabaseStagingError(Exception):
     """
@@ -15,7 +17,7 @@ class DatabaseStagingError(Exception):
     pass
 
 
-def copy_from_stringio(conn, table, table_name: str):
+def copy_from_stringio(conn, table: pd.DataFrame, table_name: str):
     """
     Save DataFrame in-memory and migrate
     to database with copy_from().

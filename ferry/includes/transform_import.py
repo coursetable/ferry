@@ -4,7 +4,7 @@ Used by /ferry/transform.py.
 """
 from collections import Counter
 from itertools import combinations
-from typing import List
+from typing import List, Tuple
 
 import numpy as np
 import pandas as pd
@@ -22,15 +22,15 @@ from ferry.includes.utils import (
 QUESTION_DIVERGENCE_CUTOFF = 32
 
 
-def resolve_cross_listings(merged_course_info):
+def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
 
     """
     Resolve course cross-listings by computing unique course_ids.
 
     Parameters
     ----------
-    merged_course_info: Pandas DataFrame of raw course information
-    from JSON files
+    merged_course_info:
+        Raw course information from JSON files
 
     Returns
     -------
@@ -93,14 +93,14 @@ def resolve_cross_listings(merged_course_info):
     return merged_course_info
 
 
-def aggregate_professors(courses):
+def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
 
     """
     Aggregate professor info columns in preparation for matching.
 
     Parameters
     ----------
-    courses: Pandas DataFrame
+    courses:
         intermediate courses table from import_courses()
 
     Returns
@@ -179,16 +179,19 @@ def aggregate_professors(courses):
     return professors_prep
 
 
-def resolve_professors(professors_prep, seasons: List[str]):
+def resolve_professors(
+    professors_prep: pd.DataFrame, seasons: List[str]
+) -> Tuple[pd.DataFrame, pd.DataFrame]:
 
     """
     Resolve course-professor mappings and professors table
 
     Parameters
     ----------
-    professors_prep: Pandas DataFrame
+    professors_prep:
         professor attributes from aggregate_professors()
-    seasons: list of seasons for sorting purposes
+    seasons:
+        list of seasons for sorting purposes
 
     Returns
     -------
@@ -330,15 +333,18 @@ def resolve_professors(professors_prep, seasons: List[str]):
 
 
 # for memory profiling
-def import_courses(merged_course_info, seasons: List[str]):
+def import_courses(
+    merged_course_info: pd.DataFrame, seasons: List[str]
+) -> Tuple[pd.DataFrame, ...]:
     """
     Import courses into Pandas DataFrames.
 
     Parameters
     ----------
-    merged_course_info: Pandas DataFrame of raw course information
-    from JSON files
-    seasons: list of seasons for sorting purposes
+    merged_course_info:
+        Raw course information from JSON files
+    seasons:
+        list of seasons for sorting purposes
 
     Returns
     -------
@@ -434,15 +440,18 @@ def import_courses(merged_course_info, seasons: List[str]):
     return courses, listings, course_professors, professors, course_flags, flags
 
 
-def import_demand(merged_demand_info, listings):
+def import_demand(
+    merged_demand_info: pd.DataFrame, listings: pd.DataFrame
+) -> pd.DataFrame:
     """
     Import demand statistics into Pandas DataFrame.
 
     Parameters
     ----------
-    merged_demand_info: Pandas DataFrame of raw demand information
-    from JSON files
-    listings: listings DataFrame from import_courses
+    merged_demand_info:
+        Raw demand information from JSON files
+    listings:
+        Listings table from import_courses
 
     Returns
     -------
@@ -539,21 +548,25 @@ def import_demand(merged_demand_info, listings):
 
 
 def match_evaluations_to_courses(
-    evaluation_narratives,
-    evaluation_ratings,
-    evaluation_statistics,
-    listings,
-):
+    evaluation_narratives: pd.DataFrame,
+    evaluation_ratings: pd.DataFrame,
+    evaluation_statistics: pd.DataFrame,
+    listings: pd.DataFrame,
+) -> Tuple[pd.DataFrame, ...]:
 
     """
     Match evaluations to course IDs.
 
     Parameters
     ----------
-    evaluation_narratives: DataFrame of narratives
-    evaluation_ratings: DataFrame of ratings
-    evaluation_statistics: DataFrame of statistics
-    listings: listings DataFrame from import_courses
+    evaluation_narratives:
+        DataFrame of narratives
+    evaluation_ratings:
+        DataFrame of ratings
+    evaluation_statistics:
+        DataFrame of statistics
+    listings:
+        listings DataFrame from import_courses
 
     Returns
     -------
@@ -621,22 +634,27 @@ def match_evaluations_to_courses(
 
 
 def import_evaluations(
-    evaluation_narratives,
-    evaluation_ratings,
-    evaluation_statistics,
-    evaluation_questions,
-    listings,
-):
+    evaluation_narratives: pd.DataFrame,
+    evaluation_ratings: pd.DataFrame,
+    evaluation_statistics: pd.DataFrame,
+    evaluation_questions: pd.DataFrame,
+    listings: pd.DataFrame,
+) -> Tuple[pd.DataFrame, ...]:
     """
     Import course evaluations into Pandas DataFrame.
 
     Parameters
     ----------
-    evaluation_narratives: DataFrame of narratives
-    evaluation_ratings: DataFrame of ratings
-    evaluation_statistics: DataFrame of statistics
-    evaluation_questions: DataFrame of questions
-    listings: listings DataFrame from import_courses
+    evaluation_narratives: Pandas DataFrame
+        Table of narratives from /ferry/crawler/parse_ratings.py
+    evaluation_ratings: Pandas DataFrame
+        Table of ratings from /ferry/crawler/parse_ratings.py
+    evaluation_statistics: Pandas DataFrame
+        Table of statistics from /ferry/crawler/parse_ratings.py
+    evaluation_questions: Pandas DataFrame
+        Table of questions from /ferry/crawler/parse_ratings.py
+    listings: Pandas DataFrame
+        Table of listings from import_courses
 
     Returns
     -------
