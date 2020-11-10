@@ -9,14 +9,18 @@ import pandas as pd
 import ujson
 
 from ferry import config
-from ferry.includes.computed import (
+from ferry.includes.tqdm import tqdm
+from ferry.includes.transform_compute import (
     courses_computed,
     evaluation_statistics_computed,
     professors_computed,
     questions_computed,
 )
-from ferry.includes.importer import import_courses, import_demand, import_evaluations
-from ferry.includes.tqdm import tqdm
+from ferry.includes.transform_import import (
+    import_courses,
+    import_demand,
+    import_evaluations,
+)
 
 if __name__ == "__main__":
 
