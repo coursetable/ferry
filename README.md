@@ -97,6 +97,14 @@ docker-compose up
 
 from the project root. This will automatically download and install the Docker files and start the Postgres server.
 
+Note that CourseTable proper interacts with ferry via an additional GraphQL endpoint provided by Hasura on CourseTable's end (see [coursetable/docker/docker-compose.yml](https://github.com/coursetable/coursetable/blob/master/docker/docker-compose.yml)). For development purposes, you can also host the GraphQL endpoint from ferry by running
+
+```
+docker-compose -f docker-compose.yml -f docker-compose.hasura.yml up
+```
+
+This command will start Hasura in addition to the Postgres container specified in the default compose file.
+
 ## Data Files
 
 The data files – outputs from the extraction stage – are stored in the `/data` directory.
