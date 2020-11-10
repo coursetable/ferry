@@ -117,11 +117,11 @@ To illustrate how the database might be constructed, we provide an workflow to r
 
 ### Retrieval
 
-To extract data from Yale's websites, we use the scripts provided in `/ferry/crawler`.
+To extract data from Yale's websites, we use the scripts provided in `/ferry/crawler`. 
 
 1. Before retrieving any data, we have to have a sense of which semesters, or **seasons**, we want to fetch. To retrieve a list of seasons, we run `fetch_seasons.py`. This gives us a list of valid seasons for course listings and demand statistics (we get the list of seasons for evaluations separately).
 2. To retrieve our classes, we run `fetch_classes.py`, which downloads raw JSON data from Yale.
-3. To retrieve evaluations, we run `fetch_ratings.py`. For each valid class found in `fetch_classes.py`, this script will download all evaluation info, namely categorical and written evaluation responses.
+3. To retrieve evaluations, we run `fetch_ratings.py`. For each valid class found in `fetch_classes.py`, this script will download all evaluation info, namely categorical and written evaluation responses. Yale credentials are required for this step – see `/ferry/config.py` for details on setting these.
 4. To retrieve demand statistics, we also need a list of course subject codes that the demand statistics are indexed by. These can be found using `fetch_subjects.py`. Once this has been done, we can get demand subjects using `fetch_demand.py`.
 
 Note that `fetch_classes.py`, `parse_classes.py`, `fetch_ratings.py`, `fetch_subjects.py`, and `fetch_demand.py` all have a `--season` argument that allows one to manually filter which seasons to retrieve. This script is useful for periodic updates in which we don't need to process older seasons (see [refresh.sh](/refresh_courses.sh)) and for testing.
