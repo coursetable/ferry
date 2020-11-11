@@ -1,3 +1,4 @@
+# pylint: skip-file
 import pandas as pd
 import umap
 from sklearn.preprocessing import StandardScaler

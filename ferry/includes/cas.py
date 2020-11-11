@@ -1,15 +1,19 @@
+"""
+Functions for authenticating with Yale Central Authentication System (CAS).
+"""
+
 import requests
 
 from ferry import config
 from ferry.includes.utils import resolve_potentially_callable
 
 
-def _create_session_from_credentials(netId, password):
+def _create_session_from_credentials(net_id, password):
     session = requests.Session()
 
     # Login to CAS.
     _ = session.post(
-        f"https://secure.its.yale.edu/cas/login?username={netId}&password={password}"
+        f"https://secure.its.yale.edu/cas/login?username={net_id}&password={password}"
     )
 
     # Verify that it worked.
@@ -36,24 +40,28 @@ def _create_session_from_cookie(castgc):
 
 
 def create_session():
+    """
+    Create a session using parameters from /ferry/config.py.
+    """
+
     if config.CAS_USE_COOKIE:
         castgc = resolve_potentially_callable(config.CAS_COOKIE_CASTGC)
         return _create_session_from_cookie(castgc)
-    else:
-        netId = resolve_potentially_callable(config.CAS_CREDENTIAL_NETID)
-        password = resolve_potentially_callable(config.CAS_CREDENTIAL_PASSWORD)
-        return _create_session_from_credentials(netId, password)
+
+    net_id = resolve_potentially_callable(config.CAS_CREDENTIAL_NETID)
+    password = resolve_potentially_callable(config.CAS_CREDENTIAL_PASSWORD)
+    return _create_session_from_credentials(net_id, password)
 
 
 if __name__ == "__main__":
     # Create a session twice to test resolution.
-    session = create_session()
-    print(session)
-    session = create_session()
-    print(session)
-    print("Cookies: ", session.cookies.get_dict())
+    session_test = create_session()
+    print(session_test)
+    session_test = create_session()
+    print(session_test)
+    print("Cookies: ", session_test.cookies.get_dict())
 
-    res = session.get("https://secure.its.yale.edu/cas/login")
+    res = session_test.get("https://secure.its.yale.edu/cas/login")
     if res.text.find("Login Successful") < 0:
         print("failed to login")
         breakpoint()

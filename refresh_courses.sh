@@ -12,6 +12,17 @@ announce () {
 # go to ferry root for poetry to work
 cd $(dirname $0)
 
+# load .env file if present
+if [ -f .env ]; then
+    announce "Loading environment config"
+    source .env
+    echo 'done loading'
+    echo
+fi
+
+# ensure the data is up to date
+(cd data && git checkout master && git pull)
+
 # install any new dependencies
 poetry install
 
@@ -24,6 +35,9 @@ poetry run python ./ferry/crawler/fetch_classes.py -s LATEST_3
 announce "Parsing all classes"
 poetry run python ./ferry/crawler/parse_classes.py
 
+announce "Parsing all evaluations"
+poetry run python ./ferry/crawler/parse_ratings.py
+
 announce "Fetching and parsing demand statistics for latest year"
 poetry run python ./ferry/crawler/fetch_demand.py -s LATEST_3
 
@@ -34,11 +48,14 @@ git commit -m "automatic update on $(date)"
 git push
 popd
 
-announce "Importing courses to database"
-poetry run python ./ferry/importer.py --mode courses
+announce "Constructing tables"
+poetry run python ./ferry/transform.py
 
-announce "Importing demand to database"
-poetry run python ./ferry/importer.py --mode demand
+announce "Staging tables"
+poetry run python ./ferry/stage.py
 
-announce "Generating computed database fields"
-poetry run python ./ferry/computed.py
+announce "Deploying staged tables"
+poetry run python ./ferry/deploy.py
+
+announce "Regenerating static files on server"
+curl -H "X-FERRY-SECRET: ${FERRY_SECRET}" https://coursetable.com/api/catalog/refresh

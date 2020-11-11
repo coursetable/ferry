@@ -1,31 +1,22 @@
+"""
+Loads the class JSON files output by fetch_classes.py and
+formats them for input into transform.py
+"""
+
 import argparse
 from os import listdir
-from os.path import isfile, join
+from pathlib import Path
 
 import ujson
 
 from ferry import config
-from ferry.includes.class_processing import extract_course_info
+from ferry.crawler.common_args import add_seasons_args
+from ferry.includes.class_parsing import extract_course_info
 from ferry.includes.tqdm import tqdm
-
-"""
-================================================================
-This script loads the class JSON files output by
-fetch_classes.py and formats them to be loadable into the
-current website.
-================================================================
-"""
 
 # allow the user to specify seasons
 parser = argparse.ArgumentParser(description="Parse classes")
-parser.add_argument(
-    "-s",
-    "--seasons",
-    nargs="+",
-    help="seasons to parse (leave empty to parse all fetched classes)",
-    default=None,
-    required=False,
-)
+add_seasons_args(parser)
 
 args = parser.parse_args()
 seasons = args.seasons
@@ -52,13 +43,25 @@ for season in seasons:
 
     print(f"Parsing courses for season {season}")
 
+    fysem_file = Path(f"{config.DATA_DIR}/season_courses/{season}_fysem.json")
+
+    if fysem_file.is_file():
+        with open(fysem_file, "r") as f:
+            fysem = ujson.load(f)
+            fysem = {x["crn"] for x in fysem}
+        print("Loaded first-year seminars")
+    else:
+        print("First-year seminars filter missing")
+        fysem = set()
+
     # load raw responses for season
     with open(f"{config.DATA_DIR}/course_json_cache/{season}.json", "r") as f:
         aggregate_term_json = ujson.load(f)
 
     # parse course JSON in season
     parsed_course_info = [
-        extract_course_info(x, season) for x in tqdm(aggregate_term_json, ncols=96)
+        extract_course_info(x, season, fysem)
+        for x in tqdm(aggregate_term_json, ncols=96)
     ]
 
     # write output

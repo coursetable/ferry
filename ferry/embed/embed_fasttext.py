@@ -1,3 +1,6 @@
+"""
+Trains and embeds a FastText model on the course texts.
+"""
 import fasttext
 import numpy as np
 import pandas as pd

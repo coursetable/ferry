@@ -1,19 +1,37 @@
+"""
+Utility functions used by database.py
+"""
+
 from contextlib import contextmanager
-from typing import Tuple, TypeVar
+from typing import TypeVar
 
 import ujson
 
-M = TypeVar("M")
+Model = TypeVar("M")
 
 
 class InvariantError(Exception):
+    """
+    Object for invariant checking exceptions.
+    """
+
+    # pylint: disable=unnecessary-pass
+    pass
+
+
+class MissingTablesError(Exception):
+    """
+    Object for missing table exceptions.
+    """
+
+    # pylint: disable=unnecessary-pass
     pass
 
 
 @contextmanager
-def session_scope(Session, *args, **kwargs):
+def session_scope(session_context, *args, **kwargs):
     """Provide a transactional scope around a series of operations."""
-    session = Session(*args, **kwargs)
+    session = session_context(*args, **kwargs)
     try:
         yield session
         session.commit()
@@ -24,7 +42,9 @@ def session_scope(Session, *args, **kwargs):
         session.close()
 
 
-def get_or_create(session, model: M, **kwargs) -> Tuple[M, bool]:
+def get_or_create(session, model: Model, **kwargs) -> Model:
+    # pylint: disable=line-too-long
+
     """Creates an object or returns the object if exists."""
     # Credit to Kevin @ StackOverflow.
     # From: http://stackoverflow.com/questions/2546207/does-sqlalchemy-have-an-equivalent-of-djangos-get-or-create
@@ -32,14 +52,17 @@ def get_or_create(session, model: M, **kwargs) -> Tuple[M, bool]:
     instance = session.query(model).filter_by(**kwargs).one_or_none()
     if instance:
         return instance, False
-    else:
-        instance = model(**kwargs)
-        session.add(instance)
-        return instance, True
+
+    instance = model(**kwargs)
+    session.add(instance)
+    return instance, True
 
 
-def eq_json(a, b) -> bool:
-    return ujson.dumps(a) == ujson.dumps(b)
+def eq_json(json_a, json_b) -> bool:
+    """
+    Check if two JSON objects are equal.
+    """
+    return ujson.dumps(json_a) == ujson.dumps(json_b)
 
 
 def update_json(obj, attr, new_val):

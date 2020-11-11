@@ -1,3 +1,8 @@
+"""
+Migration utilities for moving from old CourseTable class JSONs.
+"""
+
+
 def convert_old_description(old_description):
     """
     Format old course descriptions.
@@ -122,24 +127,20 @@ def convert_old_meetings(times):
 
         return "TBA", "TBA", {}
 
-    else:
+    times_summary = times_summary.split(" ")
+    start_end = times_summary[1].split("-")
 
-        times_summary = times_summary.split(" ")
-        start_end = times_summary[1].split("-")
+    # convert 24-hour float-based time formats to colon-based 12 hour ones
+    times_start = convert_old_time(
+        start_end[0], revert_12hour=True, truncate_minute=True
+    )
+    times_end = convert_old_time(start_end[1], revert_12hour=True, truncate_minute=True)
 
-        # convert 24-hour float-based time formats to colon-based 12 hour ones
-        times_start = convert_old_time(
-            start_end[0], revert_12hour=True, truncate_minute=True
-        )
-        times_end = convert_old_time(
-            start_end[1], revert_12hour=True, truncate_minute=True
-        )
+    # reconstruct summary string
+    start_end = times_start + "-" + times_end
+    times_summary[1] = start_end
 
-        # reconstruct summary string
-        start_end = times_start + "-" + times_end
-        times_summary[1] = start_end
-
-        new_times_summary = " ".join(times_summary)
+    new_times_summary = " ".join(times_summary)
 
     # -----------------------------------
     # process time-locations long summary

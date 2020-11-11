@@ -1,10 +1,15 @@
-from typing import Any, Generic, Iterable, Iterator, TypeVar
-
+# pylint: skip-file
+"""
+tqdm handler for customization
+(i.e. disable progress bars in production)
+"""
 from tqdm import tqdm as std_tqdm
 
-_T = TypeVar("_T")
 
+class tqdm(std_tqdm):
+    """
+    Custom tqdm handler
+    """
 
-class tqdm(std_tqdm, Iterator[_T], Generic[_T]):
-    def __init__(self, iterable: Iterable[_T], *args: Any, **kwargs: Any) -> None:
-        super().__init__(iterable, *args, disable=None, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, disable=None, **kwargs)

@@ -8,43 +8,72 @@
 -- See this Hasura blog post for more information on the search function:
 -- https://hasura.io/blog/full-text-search-with-hasura-graphql-api-postgres/
 
-DROP FUNCTION IF EXISTS search_listing_info;
-DROP TABLE IF EXISTS computed_listing_info CASCADE;
+-- Encourage index usage.
+SET enable_seqscan = OFF;
+SET enable_indexscan = ON;
+SET random_page_cost = 1;
+SET seq_page_cost = 1;
+SET enable_hashjoin = OFF;
 
-CREATE TABLE computed_listing_info AS
+-- Create temporary listings table.
+DROP TABLE IF EXISTS computed_listing_info_tmp;
+CREATE TABLE computed_listing_info_tmp AS
 WITH listing_info
-    AS (
+         AS (
         SELECT listings.listing_id,
                listings.crn,
-               listings.section,
                listings.course_code,
-           courses.*,
-           (SELECT jsonb_agg(listings.course_code)
-            FROM listings
-            WHERE listings.course_id = courses.course_id
-            GROUP BY listings.course_id) AS all_course_codes,
-           coalesce((SELECT jsonb_agg(p.name)
-            FROM course_professors
-                     JOIN professors p on course_professors.professor_id = p.professor_id
-            WHERE course_professors.course_id = courses.course_id
-            GROUP BY course_professors.course_id), '[]'::jsonb) AS professor_names,
-           coalesce((SELECT jsonb_agg(json_build_object('name', p.name, 'email', p.email, 'average_rating', p.average_rating))
-            FROM course_professors
-                     JOIN professors p on course_professors.professor_id = p.professor_id
-            WHERE course_professors.course_id = courses.course_id
-            GROUP BY course_professors.course_id), '[]'::jsonb) AS professor_info,
-           (SELECT avg(p.average_rating)
-            FROM course_professors
-                     JOIN professors p on course_professors.professor_id = p.professor_id
-            WHERE course_professors.course_id = courses.course_id
-            GROUP BY course_professors.course_id) AS average_professor,
-           (SELECT enrollment FROM evaluation_statistics
-            WHERE evaluation_statistics.course_id = listings.course_id) as enrollment
+               listings.subject,
+               listings.number,
+               listings.section,
+               courses.*,
+               (SELECT jsonb_agg(listings.course_code)
+                FROM listings
+                WHERE listings.course_id = courses.course_id
+                GROUP BY listings.course_id)                                 AS all_course_codes,
+               coalesce((SELECT jsonb_agg(p.name)
+                         FROM course_professors
+                                  JOIN professors p on course_professors.professor_id = p.professor_id
+                         WHERE course_professors.course_id = courses.course_id
+                         GROUP BY course_professors.course_id), '[]'::jsonb) AS professor_names,
+               coalesce((SELECT jsonb_agg(json_build_object('name', p.name, 'email', p.email, 'average_rating',
+                                                            p.average_rating))
+                         FROM course_professors
+                                  JOIN professors p on course_professors.professor_id = p.professor_id
+                         WHERE course_professors.course_id = courses.course_id
+                         GROUP BY course_professors.course_id), '[]'::jsonb) AS professor_info,
+               (SELECT avg(p.average_rating)
+                FROM course_professors
+                         JOIN professors p on course_professors.professor_id = p.professor_id
+                WHERE course_professors.course_id = courses.course_id
+                GROUP BY course_professors.course_id)                        AS average_professor,
+               coalesce((SELECT jsonb_agg(f.flag_text)
+                         FROM course_flags
+                                  JOIN flags f on course_flags.flag_id = f.flag_id
+                         WHERE course_flags.course_id = courses.course_id
+                         GROUP BY course_flags.course_id), '[]'::jsonb)      AS flag_info,
+               (SELECT enrollment
+                FROM evaluation_statistics
+                WHERE evaluation_statistics.course_id = listings.course_id)  AS enrollment,
+               (SELECT enrolled
+                FROM evaluation_statistics
+                WHERE evaluation_statistics.course_id = listings.course_id)  AS enrolled,
+               (SELECT responses
+                FROM evaluation_statistics
+                WHERE evaluation_statistics.course_id = listings.course_id)  AS responses,
+               (SELECT declined
+                FROM evaluation_statistics
+                WHERE evaluation_statistics.course_id = listings.course_id)  AS declined,
+               (SELECT no_response
+                FROM evaluation_statistics
+                WHERE evaluation_statistics.course_id = listings.course_id)  AS no_response
         FROM listings
-        JOIN courses on listings.course_id = courses.course_id
+                 JOIN courses on listings.course_id = courses.course_id
     )
 SELECT listing_id,
        crn,
+       subject,
+       number,
        section,
        course_code,
        course_id,
@@ -63,48 +92,87 @@ SELECT listing_id,
        professor_names, -- TODO: remove
        professor_info,
        average_professor,
+       flag_info,
+       fysem,
+       regnotes,
+       rp_attr,
+       classnotes,
+       final_exam,
        average_rating,
        average_workload,
+       (average_rating - average_workload) as average_gut_rating,
+       last_offered_course_id,
+       last_enrollment_course_id,
+       last_enrollment,
+       last_enrollment_season_code,
+       last_enrollment_same_professors,
        enrollment,
+       enrolled,
+       responses,
+       declined,
+       no_response,
        to_jsonb(skills) as skills,
-       to_jsonb(areas) as areas,
+       to_jsonb(areas)  as areas,
        (setweight(to_tsvector('english', title), 'A') ||
         setweight(to_tsvector('english', coalesce(description, '')), 'C') ||
         setweight(to_tsvector('english', course_code), 'A') ||
-        setweight(jsonb_to_tsvector('english', all_course_codes, '"all"'), 'B') ||
+        setweight(to_tsvector('english', (left(number, 2))::text), 'B') ||
+        setweight(to_tsvector('english', (left(number, 1))::text), 'C') ||
+           --setweight(jsonb_to_tsvector('english', all_course_codes, '"all"'), 'B') ||
         setweight(jsonb_to_tsvector('english', professor_names, '"all"'), 'B')
-       ) AS info
+           )            AS info
 FROM listing_info
-ORDER BY course_code, course_id ;
+ORDER BY course_code, course_id;
+
+
+BEGIN TRANSACTION;
+
+-- Swap the new table in and update the search function.
+DROP FUNCTION IF EXISTS search_listing_info;
+DROP TABLE IF EXISTS computed_listing_info CASCADE;
+ALTER TABLE computed_listing_info_tmp
+    RENAME TO computed_listing_info;
 
 -- Create an index for basically every column.
-ALTER TABLE computed_listing_info ADD FOREIGN KEY (course_id) REFERENCES courses (course_id);
-ALTER TABLE computed_listing_info ADD FOREIGN KEY (listing_id) REFERENCES listings (listing_id);
+ALTER TABLE computed_listing_info
+    ADD FOREIGN KEY (course_id) REFERENCES courses (course_id);
+ALTER TABLE computed_listing_info
+    ADD FOREIGN KEY (listing_id) REFERENCES listings (listing_id);
+CREATE INDEX idx_computed_listing_course_id ON computed_listing_info (course_id);
+CREATE UNIQUE INDEX idx_computed_listing_listing_id ON computed_listing_info (listing_id);
 CREATE INDEX idx_computed_listing_search ON computed_listing_info USING gin (info);
+CREATE INDEX idx_computed_listing_order_def ON computed_listing_info (course_code ASC, course_id ASC);
 CREATE INDEX idx_computed_listing_skills ON computed_listing_info USING gin (skills);
 CREATE INDEX idx_computed_listing_areas ON computed_listing_info USING gin (areas);
 CREATE INDEX idx_computed_listing_season ON computed_listing_info (season_code);
+CREATE INDEX idx_computed_listing_season_hash ON computed_listing_info USING hash (season_code);
 
 CREATE OR REPLACE FUNCTION search_listing_info(query text)
-RETURNS SETOF computed_listing_info AS $$
+    RETURNS SETOF computed_listing_info AS
+$$
 BEGIN
     CASE
         WHEN websearch_to_tsquery('english', query) <@ ''::tsquery THEN
             -- If the query is completely empty, then we want to return everything,
             -- rather than the default behavior of matching nothing.
-            RETURN QUERY SELECT * FROM computed_listing_info ;
+            RETURN QUERY SELECT *
+                         FROM computed_listing_info
+                         ORDER BY course_code, course_id;
         ELSE
             RETURN QUERY SELECT *
-            FROM computed_listing_info
-            WHERE info @@ websearch_to_tsquery('english', query)
-            ORDER BY
-                    -- If the ranking is above 0.5, then the query matches an "A" level (title or course_code),
-                    -- in which case we want to order by the course code and id. If the ranking is below 0.5,
-                    -- then we simply use the course_code and course_id as a fallback for ordering.
-                    -- This way, searches for a specific department will have that department first, followed
-                    -- by any matches on other metadata.
-                    LEAST(0.5, ts_rank(info, websearch_to_tsquery('english', query))) DESC,
-                    course_code, course_id ;
-    END CASE;
+                         FROM computed_listing_info
+                         WHERE info @@ websearch_to_tsquery('english', query)
+                         ORDER BY course_code, course_id;
+        --ORDER BY
+        --        -- If the ranking is above 0.5, then the query matches an "A" level (title or course_code),
+        --        -- in which case we want to order by the course code and id. If the ranking is below 0.5,
+        --        -- then we simply use the course_code and course_id as a fallback for ordering.
+        --        -- This way, searches for a specific department will have that department first, followed
+        --        -- by any matches on other metadata.
+        --        LEAST(0.5, ts_rank(info, websearch_to_tsquery('english', query))) DESC,
+        --        course_code, course_id ;
+        END CASE;
 END;
 $$ language plpgsql stable;
+
+COMMIT;

@@ -1,35 +1,40 @@
-# Modified from Dan Zhao
-# Original article: https://yaledailynews.com/blog/2020/01/10/yales-most-popular-courses/
-# Github: https://github.com/iamdanzhao/yale-popular-classes
-# README: https://github.com/iamdanzhao/yale-popular-classes/blob/master/data-guide/course_data_guide.md
+"""
+Fetches demand statistics.
 
-# Import packages -----
+Modified from Dan Zhao
+
+Original article:
+https://yaledailynews.com/blog/2020/01/10/yales-most-popular-courses/
+
+Github:
+https://github.com/iamdanzhao/yale-popular-classes
+
+README:
+https://github.com/iamdanzhao/yale-popular-classes/blob/master/data-guide/course_data_guide.md
+"""
 
 import argparse
-import os
-import sys
-from datetime import datetime
 from multiprocessing import Pool
 
-import requests
 import ujson
-from bs4 import BeautifulSoup
 
 from ferry import config
+from ferry.crawler.common_args import add_seasons_args, parse_seasons_arg
 from ferry.includes.demand_processing import fetch_season_subject_demand, get_dates
 from ferry.includes.tqdm import tqdm
 
 
-def handle_season_subject_demand(args):
+def handle_season_subject_demand(demand_args):
 
     """
-    Handler for fetching subject codes to be passed into
-    Pool()
+    Handler for fetching subject codes to be passed into Pool()
     """
 
-    season, subject_code, subject_codes, dates = args
+    demand_season, demand_subject_code, demand_subject_codes, demand_dates = demand_args
 
-    courses = fetch_season_subject_demand(season, subject_code, subject_codes, dates)
+    courses = fetch_season_subject_demand(
+        demand_season, demand_subject_code, demand_subject_codes, demand_dates
+    )
 
     return courses
 
@@ -37,6 +42,11 @@ def handle_season_subject_demand(args):
 if __name__ == "__main__":
 
     class FetchDemandError(Exception):
+        """
+        Error object for demand fetching exceptions.
+        """
+
+        # pylint: disable=unnecessary-pass
         pass
 
     # Set season
@@ -44,14 +54,7 @@ if __name__ == "__main__":
     # Examples: 202001 = 2020 Spring, 201903 = 2019 Fall
     # If no season is provided, the program will scrape all available seasons
     parser = argparse.ArgumentParser(description="Import demand stats")
-    parser.add_argument(
-        "-s",
-        "--seasons",
-        nargs="+",
-        help="seasons to fetch (leave empty to fetch all, or LATEST_[n] to fetch n latest)",
-        default=None,
-        required=False,
-    )
+    add_seasons_args(parser)
 
     args = parser.parse_args()
 
@@ -59,37 +62,7 @@ if __name__ == "__main__":
     with open(f"{config.DATA_DIR}/demand_seasons.json", "r") as f:
         all_viable_seasons = ujson.loads(f.read())
 
-    # if no seasons supplied, use all
-    if args.seasons is None:
-
-        seasons = all_viable_seasons
-
-        print(f"Fetching ratings for all seasons: {seasons}")
-
-    else:
-
-        seasons_latest = len(args.seasons) == 1 and args.seasons[0].startswith("LATEST")
-
-        # if fetching latest n seasons, truncate the list and log it
-        if seasons_latest:
-
-            num_latest = int(args.seasons[0].split("_")[1])
-
-            seasons = all_viable_seasons[-num_latest:]
-
-            print(f"Fetching ratings for latest {num_latest} seasons: {seasons}")
-
-        # otherwise, use and check the user-supplied seasons
-        else:
-
-            # Check to make sure user-inputted seasons are valid
-            if all(season in all_viable_seasons for season in args.seasons):
-
-                seasons = args.seasons
-                print(f"Fetching ratings for supplied seasons: {seasons}")
-
-            else:
-                raise FetchDemandError("Invalid season.")
+    seasons = parse_seasons_arg(args.seasons, all_viable_seasons)
 
     print("Retrieving subjects list... ", end="")
     with open(f"{config.DATA_DIR}/demand_subjects.json", "r") as f:

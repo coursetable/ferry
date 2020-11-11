@@ -1,20 +1,5 @@
-import collections
-import getpass
-import re
-import time
-from os import listdir
-from os.path import isfile, join
-
-import requests
-import ujson
-
-from ferry import config
-from ferry.includes.rating_processing import CrawlerError
-from ferry.includes.tqdm import tqdm
-from private import extract_db
-
+# pylint: disable=no-name-in-module
 """
-================================================================
 This script fetches evaluations data from the coursetable.com
 database and yields a JSON format similar to the one produced
 by the fetch_ratings.py script.
@@ -35,39 +20,54 @@ be preferable if this handle were read-only. An example:
                                     cursorclass=pymysql.cursors.DictCursor)
         return connection
 
-================================================================
+(Note that as of October 2020, this script no longer works as we have upgraded
+the main site. However, the data files it produces are archived in our
+ferry-data repository. If you are not part of the CourseTable team and are
+interested in accessing these data, please contact us.)
 """
 
+import collections
+from os.path import isfile
 
-def fetch_course_lists(db, limit=None):
+import ujson
+
+from ferry import config
+from ferry.includes.rating_processing import CrawlerError
+from ferry.includes.tqdm import tqdm
+from private import extract_db
+
+
+def fetch_course_lists(db_connection, limit=None):
+    """
+    Fetch list of courses with evaluations.
+    """
+
     limit_string = ""
     if limit:
         limit_string = f"LIMIT {limit}"
 
-    """
     # Fetch from `course_names`.
-    with db.cursor() as cursor:
-        sql = f"SELECT * FROM `course_names` {limit_string}"
-        cursor.execute(sql)
-        course_names = cursor.fetchall()
-    """
+    # with db_connection.cursor() as cursor:
+    #    sql = f"SELECT * FROM `course_names` {limit_string}"
+    #    cursor.execute(sql)
+    #    course_names = cursor.fetchall()
 
     # Fetch from `evaluation_course_names`.
-    with db.cursor() as cursor:
+    with db_connection.cursor() as cursor:
         sql = f"SELECT * FROM `evaluation_course_names` {limit_string}"
         cursor.execute(sql)
         raw_courses = cursor.fetchall()
 
     listings = []
-    for c in raw_courses:
+    for course in raw_courses:
         listings.append(
             (
-                str(c["season"]),
-                str(c["crn"]),
+                str(course["season"]),
+                str(course["crn"]),
                 {
-                    "subject": c["subject"],
-                    "number": c["number"],
-                    "section": c["section"],
+                    "subject": course["subject"],
+                    "number": course["number"],
+                    "section": course["section"],
                 },
             )
         )
@@ -75,22 +75,29 @@ def fetch_course_lists(db, limit=None):
     return listings
 
 
-def fetch_legacy_ratings(db, season: str, crn: str, extras: dict):
+def fetch_legacy_ratings(db_connection, season: str, crn: str, extras: dict):
+    """
+    Fetch ratings for a given season and CRN.
+    """
+
     # Fetch Coursetable course_id.
-    with db.cursor() as cursor:
-        sql = "SELECT `course_id` FROM `evaluation_course_names` WHERE `season` = %s AND `crn` = %s LIMIT 1"
+    with db_connection.cursor() as cursor:
+        sql = """SELECT `course_id` FROM `evaluation_course_names`
+                 WHERE `season` = %s AND `crn` = %s LIMIT 1"""
         cursor.execute(sql, (season, crn))
         course_id = cursor.fetchone()["course_id"]
 
     # Enrollment data.
-    with db.cursor() as cursor:
-        sql = "SELECT `enrollment` FROM `evaluation_courses` WHERE `id` =  %s LIMIT 1"
+    with db_connection.cursor() as cursor:
+        sql = """SELECT `enrollment` FROM `evaluation_courses`
+                 WHERE `id` =  %s LIMIT 1"""
         cursor.execute(sql, (course_id,))
         enrollment = cursor.fetchone()["enrollment"]
 
     # Narrative comments.
-    with db.cursor() as cursor:
-        sql = "SELECT `question_id`, `comment` FROM `evaluation_comments` WHERE `course_id` = %s"
+    with db_connection.cursor() as cursor:
+        sql = """SELECT `question_id`, `comment` FROM `evaluation_comments`
+                 WHERE `course_id` = %s"""
         cursor.execute(sql, (course_id,))
         data = cursor.fetchall()
 
@@ -99,8 +106,9 @@ def fetch_legacy_ratings(db, season: str, crn: str, extras: dict):
         narrative_comments[item["question_id"]].append(item["comment"])
 
     # Ratings.
-    with db.cursor() as cursor:
-        sql = "SELECT `question_id`, `counts` FROM `evaluation_ratings` WHERE `course_id` = %s"
+    with db_connection.cursor() as cursor:
+        sql = """SELECT `question_id`, `counts` FROM `evaluation_ratings`
+                 WHERE `course_id` = %s"""
         cursor.execute(sql, (course_id,))
         data = cursor.fetchall()
 
@@ -115,9 +123,10 @@ def fetch_legacy_ratings(db, season: str, crn: str, extras: dict):
 
     # Question statements.
     if questions_ids:
-        with db.cursor() as cursor:
+        with db_connection.cursor() as cursor:
             where_clause = ",".join(["%s"] * len(questions_ids))
-            sql = f"SELECT `id`, `text`, `options` FROM `evaluation_questions` WHERE `id` IN ({where_clause})"
+            sql = f"""SELECT `id`, `text`, `options` FROM `evaluation_questions`
+                      WHERE `id` IN ({where_clause})"""
             cursor.execute(sql, tuple(questions_ids))
             data = cursor.fetchall()
 
@@ -161,9 +170,9 @@ def fetch_legacy_ratings(db, season: str, crn: str, extras: dict):
 
 
 if __name__ == "__main__":
-    db = extract_db.get_db("yale_advanced_oci")
+    connection = extract_db.get_db("yale_advanced_oci")
 
-    prev = fetch_course_lists(db, limit=None)
+    prev = fetch_course_lists(connection, limit=None)
 
     """
     prev = [
@@ -171,14 +180,15 @@ if __name__ == "__main__":
         ("201903", "11970", {}),
         # Test with ACCT 170 from 200903.
         ("200903", "11256", {}),
-        # Test with ECON 466 01 from 201003. Compare with https://dougmckee.net/aging-evals-fall-2010.pdf.
+        # Test with ECON 466 01 from 201003.
+        # Compare with https://dougmckee.net/aging-evals-fall-2010.pdf.
         ("201003", "12089", {}),
     ]
     """
 
     prev = list(reversed(prev))
-    for season, crn, extras in tqdm(prev):
-        identifier = f"{season}-{crn}"
+    for course_season, course_crn, course_extras in tqdm(prev):
+        identifier = f"{course_season}-{course_crn}"
 
         output_path = f"{config.DATA_DIR}/previous_evals/{identifier}.json"
         if isfile(output_path):
@@ -187,15 +197,18 @@ if __name__ == "__main__":
 
         try:
             tqdm.write(f"Processing {identifier}")
-            course_eval = fetch_legacy_ratings(db, season, crn, extras)
+            course_eval = fetch_legacy_ratings(
+                connection, course_season, course_crn, course_extras
+            )
 
-            with open(output_path, "w") as f:
-                f.write(ujson.dumps(course_eval, indent=4))
-        except KeyError as e:
-            # Some courses produce YC402-YCWR and similar question IDs for ratings data. The new importer can handle this.
-            if season == "201903" or season == "201901":
+            with open(output_path, "w") as file:
+                file.write(ujson.dumps(course_eval, indent=4))
+        except KeyError as err:
+            # Some courses produce YC402-YCWR and similar question IDs for ratings data.
+            # The new importer can handle this.
+            if course_season in ("201903", "201901"):
                 tqdm.write(f"Failed - blacklist {identifier}")
             else:
-                raise CrawlerError from e
+                raise CrawlerError from err
         except CrawlerError:
             tqdm.write(f"Failed to fetch {identifier}")
