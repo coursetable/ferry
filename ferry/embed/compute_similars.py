@@ -10,11 +10,11 @@ from tqdm import tqdm
 from ferry import config
 
 courses = pd.read_csv(
-    config.DATA_DIR / "description_embeddings/courses_description_deduplicated.csv",
+    config.DATA_DIR / "course_embeddings/courses_deduplicated.csv",
     index_col=0,
 )
 embeddings = pd.read_hdf(
-    config.DATA_DIR / "description_embeddings/description_embeddings.h5",
+    config.DATA_DIR / "course_embeddings/fasttext_embeddings.h5",
     key="embeddings",
 )
 
