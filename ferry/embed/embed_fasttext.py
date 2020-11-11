@@ -14,7 +14,7 @@ model = fasttext.train_unsupervised(
     model="skipgram",
     lr=0.1,
     dim=100,
-    ws=5,
+    ws=8,
     epoch=100,
 )
 

@@ -10,8 +10,8 @@ from ferry.includes.tqdm import tqdm
 
 MIN_DESCRIPTION_LENGTH = 8
 
-print("Reading courses table from database")
-courses = pd.read_sql_table("courses", con=database.Engine)
+print("Reading courses table")
+courses = pd.read_csv(config.DATA_DIR / "importer_dumps/courses.csv", index_col=0)
 
 print("Removing courses without descriptions")
 # remove courses without descriptions
@@ -35,6 +35,7 @@ courses["prepared_fasttext"] = courses["title_description"].progress_apply(
 print("Preprocessing texts for TF-IDF")
 courses["prepared_tfidf"] = preprocess_tfidf(courses["title_description"].tolist())
 
+courses["embed_index"] = range(len(courses))
 courses.to_csv(config.DATA_DIR / "course_embeddings/courses_deduplicated.csv")
 
 with open(config.DATA_DIR / "course_embeddings/fasttext_corpus.txt", "w") as f:
