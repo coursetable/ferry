@@ -78,4 +78,10 @@ def get_nearest_neighbors(
             x for x in neighbors if node_id in nodes_neighbors[x]
         }
 
+    nodes_neighbors = {
+        node_id: neighbors
+        for node_id, neighbors in nodes_neighbors.items()
+        if len(neighbors) > 0
+    }
+
     return nodes_neighbors

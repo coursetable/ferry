@@ -79,6 +79,42 @@ course_professors = Table(
     ),
 )
 
+# Similar courses with FastText
+course_fasttext_similars = Table(
+    "fasttext_similars_staged",
+    Base.metadata,
+    Column(
+        "source",
+        ForeignKey("courses_staged.course_id"),
+        primary_key=True,
+        index=True,
+    ),
+    Column(
+        "target",
+        ForeignKey("courses_staged.course_id"),
+        primary_key=True,
+        index=True,
+    ),
+)
+
+# Similar courses with FastText
+course_tfidf_similars = Table(
+    "tfidf_similars_staged",
+    Base.metadata,
+    Column(
+        "source",
+        ForeignKey("courses_staged.course_id"),
+        primary_key=True,
+        index=True,
+    ),
+    Column(
+        "target",
+        ForeignKey("courses_staged.course_id"),
+        primary_key=True,
+        index=True,
+    ),
+)
+
 
 class Course(BaseModel):
     """
@@ -107,6 +143,22 @@ class Course(BaseModel):
         secondary=course_professors,
         back_populates="courses",
         cascade="all",
+    )
+
+    fasttext_similars = relationship(
+        "Course",
+        secondary=course_fasttext_similars,
+        back_populates="course_fasttext_similars",
+        cascade="all",
+        remote_side="Course.course_id",
+    )
+
+    tfidf_similars = relationship(
+        "Course",
+        secondary=course_tfidf_similars,
+        back_populates="course_tfidf_similars",
+        cascade="all",
+        remote_side="Course.course_id",
     )
 
     # ------------------------

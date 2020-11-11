@@ -66,6 +66,13 @@ if __name__ == "__main__":
         },
     )
 
+    fasttext_similars = load_csv(
+        "fasttext_similars", {"dtype": {"source": "Int64", "target": "Int64"}}
+    )
+    tfidf_similars = load_csv(
+        "tfidf_similars", {"dtype": {"source": "Int64", "target": "Int64"}}
+    )
+
     # --------------------------
     # Replace tables in database
     # --------------------------
@@ -117,5 +124,9 @@ if __name__ == "__main__":
     copy_from_stringio(raw_conn, evaluation_narratives, "evaluation_narratives_staged")
     copy_from_stringio(raw_conn, evaluation_ratings, "evaluation_ratings_staged")
     copy_from_stringio(raw_conn, evaluation_statistics, "evaluation_statistics_staged")
+
+    # similar courses
+    copy_from_stringio(raw_conn, fasttext_similars, "fasttext_similars_staged")
+    copy_from_stringio(raw_conn, tfidf_similars, "tfidf_similars_staged")
 
     raw_conn.commit()
