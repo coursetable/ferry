@@ -2,7 +2,7 @@
 Methods used for finding similar vectors. Used by /ferry/embed/compute_similars.py
 """
 
-from typing import List, Set, Union, Dict
+from typing import Dict, List, Set, Union
 
 import numpy as np
 from annoy import AnnoyIndex
