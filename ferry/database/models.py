@@ -148,17 +148,17 @@ class Course(BaseModel):
     fasttext_similars = relationship(
         "Course",
         secondary=course_fasttext_similars,
-        back_populates="course_fasttext_similars",
         cascade="all",
-        remote_side="Course.course_id",
+        primaryjoin=course_id == course_fasttext_similars.c.source,
+        secondaryjoin=course_id == course_fasttext_similars.c.target,
     )
 
     tfidf_similars = relationship(
         "Course",
         secondary=course_tfidf_similars,
-        back_populates="course_tfidf_similars",
         cascade="all",
-        remote_side="Course.course_id",
+        primaryjoin=course_id == course_tfidf_similars.c.source,
+        secondaryjoin=course_id == course_tfidf_similars.c.target,
     )
 
     # ------------------------
