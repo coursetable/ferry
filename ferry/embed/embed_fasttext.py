@@ -10,24 +10,24 @@ from ferry import config
 print("Training FastText model")
 
 model = fasttext.train_unsupervised(
-    str(config.DATA_DIR / "description_embeddings/descriptions_corpus.txt"),
+    str(config.DATA_DIR / "course_embeddings/fasttext_corpus.txt"),
     model="skipgram",
-    lr=0.05,
+    lr=0.1,
     dim=100,
     ws=5,
     epoch=100,
 )
 
-model.save_model(str(config.DATA_DIR / "description_embeddings/fasttext_model.bin"))
+model.save_model(str(config.DATA_DIR / "course_embeddings/fasttext_model.bin"))
 
 print("Computing embeddings")
 
 courses = pd.read_csv(
-    config.DATA_DIR / "description_embeddings/courses_description_deduplicated.csv",
+    config.DATA_DIR / "course_embeddings/courses_deduplicated.csv",
     index_col=0,
 )
 
-with open(config.DATA_DIR / "description_embeddings/descriptions_corpus.txt", "r") as f:
+with open(config.DATA_DIR / "course_embeddings/fasttext_corpus.txt", "r") as f:
     preembed_descriptions = list(f.readlines())
 
     # remove newlines at the end
@@ -44,7 +44,7 @@ course_embeddings = pd.DataFrame(
 )
 
 course_embeddings.to_hdf(
-    config.DATA_DIR / "description_embeddings/description_embeddings.h5",
+    config.DATA_DIR / "course_embeddings/fasttext_embeddings.h5",
     key="embeddings",
     mode="w",
 )

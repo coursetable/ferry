@@ -58,11 +58,9 @@ def remove_small(sentences):
 
 
 def remove_rare(sentences):
-    words = []
+    counts = Counter()
     for sentence in sentences:
-        for word in sentence:
-            words.append(word)
-    counts = Counter(words)
+        counts.update(sentence)
     return [[word for word in sentence if counts[word] > 1] for sentence in sentences]
 
 
@@ -80,7 +78,7 @@ def lemmatize_sentences(sentences):
     return [lemmatize_words(desc) for desc in sentences]
 
 
-def preprocess_sentences(sentences, rare=True):
+def preprocess_tfidf(sentences, rare=True):
     sentences = [
         " ".join(sentence.lower().split("-")).split(" ") for sentence in sentences
     ]

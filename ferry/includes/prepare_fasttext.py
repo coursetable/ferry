@@ -96,7 +96,7 @@ def lemmatize(text):
     return [x.lemma_ for x in text]
 
 
-def preprocess_description(description):
+def preprocess_fasttext(description):
     """
     Preprocess a course description for downstream embedding training
 
