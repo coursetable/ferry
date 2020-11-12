@@ -79,21 +79,19 @@ for season in seasons:
     fasttext_similars.update(season_fasttext_similars)
     tfidf_similars.update(season_tfidf_similars)
 
+
 print("Aggregating similar courses")
 # convert dictionary result to DataFrames
 fasttext_similars = pd.Series(fasttext_similars).apply(list).explode()
 tfidf_similars = pd.Series(tfidf_similars).apply(list).explode()
 
-fasttext_similars = pd.DataFrame.from_dict(
-    dict(zip(fasttext_similars.index, fasttext_similars.values))
+# extract targets and ranks from column tuples
+fasttext_similars = pd.DataFrame(
+    fasttext_similars.values.tolist(), index=fasttext_similars.index
 )
-tfidf_similars = pd.DataFrame.from_dict(
-    dict(zip(tfidf_similars.index, tfidf_similars.values))
+tfidf_similars = pd.DataFrame(
+    tfidf_similars.values.tolist(), index=tfidf_similars.index
 )
-
-# take transpose to make each edge a row
-fasttext_similars = fasttext_similars.T
-tfidf_similars = tfidf_similars.T
 
 # reset the courses index to its own column
 fasttext_similars.reset_index(drop=False, inplace=True)
