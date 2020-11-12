@@ -66,14 +66,21 @@ for season in seasons:
 fasttext_similars = pd.Series(fasttext_similars).apply(list).explode()
 tfidf_similars = pd.Series(tfidf_similars).apply(list).explode()
 
-fasttext_similars = pd.DataFrame(fasttext_similars)
-tfidf_similars = pd.DataFrame(tfidf_similars)
+fasttext_similars = pd.DataFrame.from_dict(
+    dict(zip(fasttext_similars.index, fasttext_similars.values))
+)
+tfidf_similars = pd.DataFrame.from_dict(
+    dict(zip(tfidf_similars.index, tfidf_similars.values))
+)
+
+fasttext_similars = fasttext_similars.T
+tfidf_similars = tfidf_similars.T
 
 fasttext_similars.reset_index(drop=False, inplace=True)
 tfidf_similars.reset_index(drop=False, inplace=True)
 
-fasttext_similars.columns = ["source", "target"]
-tfidf_similars.columns = ["source", "target"]
+fasttext_similars.columns = ["source", "target", "rank"]
+tfidf_similars.columns = ["source", "target", "rank"]
 
 fasttext_similars.to_csv(config.DATA_DIR / "importer_dumps/fasttext_similars.csv")
 tfidf_similars.to_csv(config.DATA_DIR / "importer_dumps/tfidf_similars.csv")

@@ -66,7 +66,7 @@ def get_nearest_neighbors(
         neighbors = annoy_index.get_nns_by_item(node_id, num_nearest + 1)
 
         # remove course itself
-        neighbors = {x for x in neighbors if x != node_id}
+        neighbors = [x for x in neighbors if x != node_id]
 
         # set neighbors
         nodes_neighbors[node_id] = neighbors
@@ -74,12 +74,12 @@ def get_nearest_neighbors(
     # symmmmetric filtering
     for node_id, neighbors in nodes_neighbors.items():
 
-        nodes_neighbors[node_id] = {
-            x for x in neighbors if node_id in nodes_neighbors[x]
-        }
+        filter_nodes = [x for x in neighbors if node_id in nodes_neighbors[x]]
+
+        nodes_neighbors[node_id] = filter_nodes
 
     nodes_neighbors = {
-        node_id: neighbors
+        node_id: list(zip(neighbors, range(len(neighbors))))
         for node_id, neighbors in nodes_neighbors.items()
         if len(neighbors) > 0
     }
