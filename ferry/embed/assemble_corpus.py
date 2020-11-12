@@ -1,9 +1,11 @@
-# pylint: skip-file
-from pathlib import Path
+"""
+Assembles the text corpuses for use by FastText and TF-IDF.
 
+Also outputs list of deduplicated courses (by title).
+"""
 import pandas as pd
 
-from ferry import config, database
+from ferry import config
 from ferry.includes.prepare_fasttext import preprocess_fasttext
 from ferry.includes.prepare_tfidf import preprocess_tfidf
 from ferry.includes.tqdm import tqdm
@@ -12,6 +14,10 @@ MIN_DESCRIPTION_LENGTH = 8
 
 print("Reading courses table")
 courses = pd.read_csv(config.DATA_DIR / "importer_dumps/courses.csv", index_col=0)
+
+# --------------------------------
+# Clean up and deduplicate courses
+# --------------------------------
 
 print("Removing courses without descriptions")
 # remove courses without descriptions
@@ -27,6 +33,13 @@ print(f"Total courses: {len(courses)}")
 courses = courses.drop_duplicates(subset=["title"], keep="first")
 print(f"Total courses (unique titles and descriptions): {len(courses)}")
 
+# index for mapping courses to embedding vectors
+courses["embed_index"] = range(len(courses))
+
+# -------------
+# Preprocessing
+# -------------
+
 tqdm.pandas(desc="Preprocessing texts for FastText")
 courses["title_description"] = courses["title"] + " " + courses["description"]
 courses["prepared_fasttext"] = courses["title_description"].progress_apply(
@@ -35,7 +48,10 @@ courses["prepared_fasttext"] = courses["title_description"].progress_apply(
 print("Preprocessing texts for TF-IDF")
 courses["prepared_tfidf"] = preprocess_tfidf(courses["title_description"].tolist())
 
-courses["embed_index"] = range(len(courses))
+# -------------
+# Write outputs
+# -------------
+
 courses.to_csv(config.DATA_DIR / "course_embeddings/courses_deduplicated.csv")
 
 with open(config.DATA_DIR / "course_embeddings/fasttext_corpus.txt", "w") as f:

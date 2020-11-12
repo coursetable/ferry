@@ -95,6 +95,11 @@ course_fasttext_similars = Table(
         primary_key=True,
         index=True,
     ),
+    Column(
+        "rank",
+        Integer,
+        comment="Target course similarity rank relative to all targets of a source",
+    ),
 )
 
 # Similar courses with FastText
@@ -112,6 +117,11 @@ course_tfidf_similars = Table(
         ForeignKey("courses_staged.course_id"),
         primary_key=True,
         index=True,
+    ),
+    Column(
+        "rank",
+        Integer,
+        comment="Target course similarity rank relative to all targets of a source",
     ),
 )
 
