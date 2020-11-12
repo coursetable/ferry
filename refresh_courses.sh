@@ -51,6 +51,18 @@ popd
 announce "Constructing tables"
 poetry run python ./ferry/transform.py
 
+announce "Constructing text embedding corpuses"
+poetry run python ./ferry/embed/assemble_corpus.py
+
+announce "Computing FastText embeddings"
+poetry run python ./ferry/embed/embed_fasttext.py
+
+announce "Computing TF-IDF embeddings"
+poetry run python ./ferry/embed/embed_tfidf.py
+
+announce "Computing course adjacency lists from embeddings"
+poetry run python ./ferry/embed/compute_similars.py
+
 announce "Staging tables"
 poetry run python ./ferry/stage.py
 

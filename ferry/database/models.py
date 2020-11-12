@@ -79,6 +79,52 @@ course_professors = Table(
     ),
 )
 
+# Similar courses with FastText
+course_fasttext_similars = Table(
+    "fasttext_similars_staged",
+    Base.metadata,
+    Column(
+        "source",
+        ForeignKey("courses_staged.course_id"),
+        primary_key=True,
+        index=True,
+    ),
+    Column(
+        "target",
+        ForeignKey("courses_staged.course_id"),
+        primary_key=True,
+        index=True,
+    ),
+    Column(
+        "rank",
+        Integer,
+        comment="Target course similarity rank relative to all targets of a source",
+    ),
+)
+
+# Similar courses with FastText
+course_tfidf_similars = Table(
+    "tfidf_similars_staged",
+    Base.metadata,
+    Column(
+        "source",
+        ForeignKey("courses_staged.course_id"),
+        primary_key=True,
+        index=True,
+    ),
+    Column(
+        "target",
+        ForeignKey("courses_staged.course_id"),
+        primary_key=True,
+        index=True,
+    ),
+    Column(
+        "rank",
+        Integer,
+        comment="Target course similarity rank relative to all targets of a source",
+    ),
+)
+
 
 class Course(BaseModel):
     """
@@ -107,6 +153,22 @@ class Course(BaseModel):
         secondary=course_professors,
         back_populates="courses",
         cascade="all",
+    )
+
+    fasttext_similars = relationship(
+        "Course",
+        secondary=course_fasttext_similars,
+        cascade="all",
+        primaryjoin=course_id == course_fasttext_similars.c.source,
+        secondaryjoin=course_id == course_fasttext_similars.c.target,
+    )
+
+    tfidf_similars = relationship(
+        "Course",
+        secondary=course_tfidf_similars,
+        cascade="all",
+        primaryjoin=course_id == course_tfidf_similars.c.source,
+        secondaryjoin=course_id == course_tfidf_similars.c.target,
     )
 
     # ------------------------

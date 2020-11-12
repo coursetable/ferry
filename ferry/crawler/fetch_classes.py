@@ -64,20 +64,15 @@ for season in seasons:
 
     # track progress for each season
     tqdm.write(f"Fetching class information for season {season}")
-    pbar = tqdm(total=len(season_courses), ncols=96)
 
     # merge all the JSON results per season
     aggregate_season_json = []
 
-    for course in season_courses:
+    for course in tqdm(season_courses):
 
         course_json = fetch_course_json(course["code"], course["crn"], course["srcdb"])
 
         aggregate_season_json.append(course_json)
-
-        pbar.update(1)
-
-    pbar.close()
 
     # cache to JSON for entire season
     with open(f"{config.DATA_DIR}/course_json_cache/{season}.json", "w") as f:
