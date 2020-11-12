@@ -43,6 +43,8 @@ course_embeddings = pd.DataFrame(
     columns=np.arange(course_embeddings.shape[1]),
 )
 
+print("Writing embedding outputs")
+
 course_embeddings.to_hdf(
     config.DATA_DIR / "course_embeddings/fasttext_embeddings.h5",
     key="embeddings",
