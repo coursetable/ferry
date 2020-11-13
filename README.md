@@ -50,6 +50,13 @@ Before running, make sure the following are installed and configured:
 - [Postgres](https://www.postgresql.org/download/), our backend database that enables fast queries.
 - [Docker](https://docs.docker.com/get-docker/), which we use to host the backend database.
 
+If your default Python version is below 3.8, we recommend that you use pyenv to create a virtual environment rather than adding yet another Python installation to your path. For instance, creating and activating an environment with Python 3.8.6 can be done with
+
+```
+pyenv install 3.8.6
+pyenv local 3.8.6  # Activate Python 3.8.6 for the current project
+```
+
 To install Poetry, make sure Python is installed and run
 
 ```
@@ -72,6 +79,7 @@ Installing Graphviz and PyGraphViz may be a bit difficult on Windows – note th
 Known issues:
 
 - On post-Sierra versions of macOS, running `poetry install` may report an error during `psycopg2` installation stating that `ld: library not found for -lssl`. To fix this, make sure OpenSSL is installed (such as through `brew install openssl`) and rerun the above command block.
+- On macOS Big Sur, the new version number may cause Poetry to attempt to compile several modules such as Numpy and SpaCy from scratch rather than using prebuilt binaries. This can be avoided by setting the flag `SYSTEM_VERSION_COMPAT=1`.
 
 To install Python dependencies via Poetry, run
 
