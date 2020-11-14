@@ -9,6 +9,13 @@ announce () {
   printf "\n${bold}[$1]${normal}\n"
 }
 
+# Check arguments
+SKIP_FETCH=0
+if [ $# -gt 0 ] && [ "$1" = "--skip-fetch" ]; then
+	SKIP_FETCH=1
+fi
+[ "$SKIP_FETCH" ] && echo 'skipping fetch commands'
+
 # go to ferry root for poetry to work
 cd $(dirname $0)
 
@@ -26,11 +33,15 @@ fi
 # install any new dependencies
 poetry install
 
+[ ! "$SKIP_FETCH" ] && {
 announce "Fetching course+demand seasons"
 poetry run python ./ferry/crawler/fetch_seasons.py
+}
 
+[ ! "$SKIP_FETCH" ] && {
 announce "Fetching classes for latest year"
 poetry run python ./ferry/crawler/fetch_classes.py -s LATEST_3
+}
 
 announce "Parsing all classes"
 poetry run python ./ferry/crawler/parse_classes.py
@@ -38,8 +49,10 @@ poetry run python ./ferry/crawler/parse_classes.py
 announce "Parsing all evaluations"
 poetry run python ./ferry/crawler/parse_ratings.py
 
+[ ! "$SKIP_FETCH" ] && {
 announce "Fetching and parsing demand statistics for latest year"
 poetry run python ./ferry/crawler/fetch_demand.py -s LATEST_3
+}
 
 announce "Pushing data changes to remote"
 pushd data
