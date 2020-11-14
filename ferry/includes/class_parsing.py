@@ -752,7 +752,9 @@ def extract_prereqs(raw_description):
     return ""
 
 
-def is_fysem(course_json, description_text: str, fysem: set) -> bool:
+def is_fysem(
+    course_json, description_text: str, requirements_text: str, fysem: set
+) -> bool:
     """
     Indicate if a course is a first-year seminar.
 
@@ -764,6 +766,9 @@ def is_fysem(course_json, description_text: str, fysem: set) -> bool:
     description_text:
         extracted description text from extract_course_info()
 
+    requirements_text:
+        extracted requirements info from extract_course_info()
+
     fysem:
         CRNs of first-year seminars
 
@@ -772,11 +777,18 @@ def is_fysem(course_json, description_text: str, fysem: set) -> bool:
     if course_json["crn"] in fysem:
         return True
 
-    if "Enrollment limited to first-year students" in description_text:
-        return True
+    flagged_text = [
+        "Enrollment limited to first-year students",
+        "First-Year Seminar Program",
+        "Enrollment limited to freshmen",
+        "Freshman Seminar Program",
+    ]
 
-    if "First-Year Seminar Program" in description_text:
-        return True
+    for text in flagged_text:
+        if text in description_text:
+            return True
+        if text in requirements_text:
+            return True
 
     # directed studies courses are basically first-year seminars
     if course_json["code"].startswith("DRST 0"):
@@ -936,6 +948,8 @@ def extract_course_info(course_json, season: str, fysem: set):
         course_info["syllabus_url"] = ""
 
     # if first-year seminar
-    course_info["fysem"] = is_fysem(course_json, description_text, fysem)
+    course_info["fysem"] = is_fysem(
+        course_json, description_text, course_info["requirements"], fysem
+    )
 
     return course_info
