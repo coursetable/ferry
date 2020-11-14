@@ -752,7 +752,40 @@ def extract_prereqs(raw_description):
     return ""
 
 
-def extract_course_info(course_json, season, fysem):
+def is_fysem(course_json, description_text: str, fysem: set) -> bool:
+    """
+    Indicate if a course is a first-year seminar.
+
+    Parameters
+    ----------
+    course_json: dict
+        JSON response from courses API
+
+    description_text:
+        extracted description text from extract_course_info()
+
+    fysem:
+        CRNs of first-year seminars
+
+    """
+
+    if course_json["crn"] in fysem:
+        return True
+
+    if "Enrollment limited to first-year students" in description_text:
+        return True
+
+    if "First-Year Seminar Program" in description_text:
+        return True
+
+    # directed studies courses are basically first-year seminars
+    if course_json["code"].startswith("DRST 0"):
+        return True
+
+    return False
+
+
+def extract_course_info(course_json, season: str, fysem: set):
     """
     Parse the JSON response from the Yale courses API
     into a more useful format
@@ -761,10 +794,14 @@ def extract_course_info(course_json, season, fysem):
     ----------
     course_json: dict
         JSON response from courses API
-    season: string
+
+    season:
         The season that the courses belong to
         (required because not returned by the
         Yale API)
+
+    fysem:
+        CRNs of first-year seminars
 
     Returns
     -------
@@ -899,6 +936,6 @@ def extract_course_info(course_json, season, fysem):
         course_info["syllabus_url"] = ""
 
     # if first-year seminar
-    course_info["fysem"] = course_info["crn"] in fysem
+    course_info["fysem"] = is_fysem(course_json, description_text, fysem)
 
     return course_info
