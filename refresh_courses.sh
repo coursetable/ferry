@@ -33,12 +33,12 @@ fi
 # install any new dependencies
 poetry install
 
-[ ! "$SKIP_FETCH" ] && {
+[ "$SKIP_FETCH" ] || {
 announce "Fetching course+demand seasons"
 poetry run python ./ferry/crawler/fetch_seasons.py
 }
 
-[ ! "$SKIP_FETCH" ] && {
+[ "$SKIP_FETCH" ] || {
 announce "Fetching classes for latest year"
 poetry run python ./ferry/crawler/fetch_classes.py -s LATEST_3
 }
@@ -49,17 +49,19 @@ poetry run python ./ferry/crawler/parse_classes.py
 announce "Parsing all evaluations"
 poetry run python ./ferry/crawler/parse_ratings.py
 
-[ ! "$SKIP_FETCH" ] && {
+[ "$SKIP_FETCH" ] || {
 announce "Fetching and parsing demand statistics for latest year"
 poetry run python ./ferry/crawler/fetch_demand.py -s LATEST_3
 }
 
 announce "Pushing data changes to remote"
-pushd data
+(
+# Via https://stackoverflow.com/a/8123841/5004662.
+cd data
 git add -A
-git commit -m "automatic update on $(date)"
+git diff-index --quiet HEAD || git commit -m "automatic update on $(date)"
 git push
-popd
+)
 
 announce "Constructing tables"
 poetry run python ./ferry/transform.py
