@@ -10,11 +10,12 @@ announce () {
 }
 
 # Check arguments
-SKIP_FETCH=0
+SKIP_FETCH=""
 if [ $# -gt 0 ] && [ "$1" = "--skip-fetch" ]; then
-	SKIP_FETCH=1
+	SKIP_FETCH="yes"
 fi
 [ "$SKIP_FETCH" ] && echo 'skipping fetch commands'
+[ "$SKIP_FETCH" ] || echo 'running fetch commands'
 
 # go to ferry root for poetry to work
 cd $(dirname $0)
