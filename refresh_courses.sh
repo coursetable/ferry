@@ -70,7 +70,7 @@ announce "Constructing text embedding corpuses"
 poetry run python ./ferry/embed/assemble_corpus.py
 
 announce "Computing FastText embeddings"
-poetry run python ./ferry/embed/embed_fasttext.py
+#poetry run python ./ferry/embed/embed_fasttext.py
 
 announce "Computing TF-IDF embeddings"
 poetry run python ./ferry/embed/embed_tfidf.py
@@ -85,4 +85,4 @@ announce "Deploying staged tables"
 poetry run python ./ferry/deploy.py
 
 announce "Regenerating static files on server"
-curl -H "X-FERRY-SECRET: ${FERRY_SECRET}" https://coursetable.com/api/catalog/refresh
+curl --silent --show-error -H "X-FERRY-SECRET: ${FERRY_SECRET}" https://coursetable.com/api/catalog/refresh
