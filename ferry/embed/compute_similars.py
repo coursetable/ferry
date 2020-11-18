@@ -6,6 +6,7 @@ foreign keys match.
 Outputs the fasttext_similars and tfidf_similars tables into /data/importer_dumps ready
 for input into /ferry/stage.py.
 """
+import numpy as np
 import pandas as pd
 
 from ferry import config
@@ -67,12 +68,17 @@ for season in seasons:
     season_fasttext = fasttext_embeddings[season_embed_indices]
     season_tfidf = tfidf_embeddings[season_embed_indices]
 
+    # exclude NaN values in TF-IDF embeddings
+    season_tfidf_valids = np.all(np.isfinite(season_tfidf), axis=1)
+
     # get similar courses
     season_fasttext_similars = get_nearest_neighbors(
         season_course_ids, season_fasttext, MAX_NEAREST_NEIGHBORS
     )
     season_tfidf_similars = get_nearest_neighbors(
-        season_course_ids, season_tfidf, MAX_NEAREST_NEIGHBORS
+        season_course_ids[season_tfidf_valids],
+        season_tfidf[season_tfidf_valids],
+        MAX_NEAREST_NEIGHBORS,
     )
 
     # update dictionary for season

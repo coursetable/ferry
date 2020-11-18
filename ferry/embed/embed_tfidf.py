@@ -7,6 +7,8 @@ from gensim import corpora, models
 
 from ferry import config
 
+EMBED_DIM = 100
+
 with open(config.DATA_DIR / "course_embeddings/tfidf_corpus.txt", "r") as f:
     words = [line.split() for line in f]
 
@@ -23,12 +25,20 @@ corpus_tfidf = tfidf_model[corpus_bow]
 
 # latent semantic indexing model for retrieval
 print("Indexing TF-IDF corpus")
-lsi_model = models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=100)
+lsi_model = models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=EMBED_DIM)
 corpus_lsi = lsi_model[corpus_tfidf]
 
-course_embeddings = np.array(
-    [np.array([x[1] for x in corpus_lsi[i]]) for i, course in enumerate(words)]
-)
+# shape is (num_courses, embed_dim)
+course_embeddings = np.zeros((len(words), EMBED_DIM), dtype=np.float64)
+
+for idx, course in enumerate(words):
+
+    embedding = [x[1] for x in corpus_lsi[idx]]
+
+    if len(embedding) == EMBED_DIM:
+        course_embeddings[idx] = embedding
+    else:
+        course_embeddings[idx] = np.nan
 
 print("Writing embedding outputs")
 courses = pd.read_csv(
