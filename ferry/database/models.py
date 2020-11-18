@@ -270,6 +270,17 @@ class Course(BaseModel):
         aggregated across all cross-listings""",
     )
 
+    average_rating_same_professors = Column(
+        Float,
+        comment="""[computed] Historical average course rating for this course code,
+        aggregated across all cross-listings with same set of professors""",
+    )
+    average_workload_same_professors = Column(
+        Float,
+        comment="""[computed] Historical average workload rating,
+        aggregated across all cross-listings with same set of professors""",
+    )
+
     last_offered_course_id = Column(
         Integer,
         ForeignKey("courses_staged.course_id"),

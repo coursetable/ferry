@@ -395,6 +395,8 @@ def import_courses(
             "location_times",
             "average_rating",
             "average_workload",
+            "average_rating_same_professors",
+            "average_workload_same_professors",
             "last_offered_course_id",
             "last_enrollment_course_id",
             "last_enrollment",

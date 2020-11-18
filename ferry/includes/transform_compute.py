@@ -191,7 +191,7 @@ def courses_computed(
     # create local deep copy
     courses = courses.copy(deep=True)
 
-    # map courses to codes and codes to courses for historical offerings
+    # map courses to codes and codes to courses for historical offerings (overall)
     course_to_codes = listings.groupby("course_id")["course_code"].apply(list).to_dict()
     code_to_courses = listings.groupby("course_code")["course_id"].apply(list).to_dict()
     courses["codes"] = courses["course_id"].apply(course_to_codes.get)
@@ -201,6 +201,36 @@ def courses_computed(
 
     courses["coded_courses"] = courses["coded_courses"].apply(flatten_list_of_lists)
     courses["coded_courses"] = courses["coded_courses"].apply(lambda x: list(set(x)))
+
+    # map course_id to professor_ids
+    # use frozenset because it is hashable (set is not), needed for groupby
+    course_to_professors = course_professors.groupby("course_id")["professor_id"].apply(
+        frozenset
+    )
+    # get historical offerings with same professors
+    listings["professors"] = listings["course_id"].apply(course_to_professors.get)
+    courses["professors"] = courses["course_id"].apply(course_to_professors.get)
+
+    # map (course_code, professors) to course codes
+    code_profs_to_courses = (
+        listings.groupby(["course_code", "professors"])["course_id"]
+        .apply(list)
+        .to_dict()
+    )
+
+    courses["coded_courses_same_profs"] = courses[["codes", "professors"]].apply(
+        lambda x: [
+            code_profs_to_courses.get((code, x["professors"]), [])
+            for code in x["codes"]
+        ],
+        axis=1,
+    )
+    courses["coded_courses_same_profs"] = courses["coded_courses_same_profs"].apply(
+        flatten_list_of_lists
+    )
+    courses["coded_courses_same_profs"] = courses["coded_courses_same_profs"].apply(
+        lambda x: list(set(x))
+    )
 
     print("Computing last offering statistics")
 
@@ -215,10 +245,6 @@ def courses_computed(
     # map course_id to number enrolled
     course_to_enrollment = dict(
         zip(evaluation_statistics["course_id"], evaluation_statistics["enrolled"])
-    )
-    # map course_id to professor_ids
-    course_to_professors = course_professors.groupby("course_id")["professor_id"].apply(
-        set
     )
 
     # get last course offering in general (with or without enrollment)
@@ -334,9 +360,23 @@ def courses_computed(
         lambda courses: [course_to_workload.get(x, None) for x in courses]
     )
 
+    courses["average_rating_same_professors"] = courses[
+        "coded_courses_same_professors"
+    ].apply(lambda courses: [course_to_overall.get(x, None) for x in courses])
+    courses["average_workload_same_professors"] = courses[
+        "coded_courses_same_professors"
+    ].apply(lambda courses: [course_to_workload.get(x, None) for x in courses])
+
     # calculate averages over past offerings
     courses["average_rating"] = courses["average_rating"].apply(average)
     courses["average_workload"] = courses["average_workload"].apply(average)
+
+    courses["average_rating_same_professors"] = courses[
+        "average_rating_same_professors"
+    ].apply(average)
+    courses["average_workload_same_professors"] = courses[
+        "average_workload_same_professors"
+    ].apply(average)
 
     # remove intermediate columns
     courses = courses.loc[:, get_table_columns(database.models.Course)]
