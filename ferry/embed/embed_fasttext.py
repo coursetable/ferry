@@ -1,24 +1,46 @@
 """
 Trains and embeds a FastText model on the course texts.
 """
+import argparse
+
 import fasttext
 import numpy as np
 import pandas as pd
 
 from ferry import config
 
-print("Training FastText model")
-
-model = fasttext.train_unsupervised(
-    str(config.DATA_DIR / "course_embeddings/fasttext_corpus.txt"),
-    model="skipgram",
-    lr=0.1,
-    dim=100,
-    ws=8,
-    epoch=100,
+parser = argparse.ArgumentParser(description="")
+parser.add_argument(
+    "-r",
+    "--retrain",
+    action="store_true",
+    help="include to retrain the model from scratch (otherwise loads the previous model)",
 )
 
-model.save_model(str(config.DATA_DIR / "course_embeddings/fasttext_model.bin"))
+args = parser.parse_args()
+
+if args.retrain:
+
+    print("Training FastText model")
+
+    model = fasttext.train_unsupervised(
+        str(config.DATA_DIR / "course_embeddings/fasttext_corpus.txt"),
+        model="skipgram",
+        lr=0.1,
+        dim=100,
+        ws=8,
+        epoch=100,
+    )
+
+    model.save_model(str(config.DATA_DIR / "course_embeddings/fasttext_model.bin"))
+
+else:
+
+    print("Loading FastText model")
+
+    model = fasttext.load_model(
+        str(config.DATA_DIR / "course_embeddings/fasttext_model.bin")
+    )
 
 print("Computing embeddings")
 
