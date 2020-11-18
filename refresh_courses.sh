@@ -71,7 +71,7 @@ announce "Constructing text embedding corpuses"
 poetry run python ./ferry/embed/assemble_corpus.py
 
 announce "Computing FastText embeddings"
-#poetry run python ./ferry/embed/embed_fasttext.py
+poetry run python ./ferry/embed/embed_fasttext.py
 
 announce "Computing TF-IDF embeddings"
 poetry run python ./ferry/embed/embed_tfidf.py
