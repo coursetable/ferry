@@ -264,10 +264,41 @@ class Course(BaseModel):
         comment="""[computed] Historical average course rating for this course code,
         aggregated across all cross-listings""",
     )
+    average_rating_n = Column(
+        Integer,
+        comment="""[computed] Number of courses used to compute `average_rating`""",
+    )
+
     average_workload = Column(
         Float,
         comment="""[computed] Historical average workload rating,
         aggregated across all cross-listings""",
+    )
+    average_workload_n = Column(
+        Integer,
+        comment="""[computed] Number of courses used to compute `average_workload`""",
+    )
+
+    average_rating_same_professors = Column(
+        Float,
+        comment="""[computed] Historical average course rating for this course code,
+        aggregated across all cross-listings with same set of professors""",
+    )
+    average_rating_same_professors_n = Column(
+        Integer,
+        comment="""[[computed] Number of courses used to compute
+        `average_rating_same_professors`""",
+    )
+
+    average_workload_same_professors = Column(
+        Float,
+        comment="""[computed] Historical average workload rating,
+        aggregated across all cross-listings with same set of professors""",
+    )
+    average_workload_same_professors_n = Column(
+        Integer,
+        comment="""[[computed] Number of courses used to compute
+        `average_workload_same_professors`""",
     )
 
     last_offered_course_id = Column(
@@ -479,6 +510,11 @@ class Professor(BaseModel):
         Float,
         comment="""[computed] Average rating of the professor assessed via
         the "Overall assessment" question in courses taught""",
+    )
+
+    average_rating_n = Column(
+        Integer,
+        comment="""[computed] Number of courses used to compute `average_rating`""",
     )
 
 
