@@ -188,6 +188,10 @@ def courses_computed(
 
     """
 
+    listings = listings.copy(deep=True)
+    evaluation_statistics = evaluation_statistics.copy(deep=True)
+    course_professors = course_professors.copy(deep=True)
+
     # map courses to codes and codes to courses for historical offerings (overall)
     course_to_codes = listings.groupby("course_id")["course_code"].apply(list).to_dict()
     code_to_courses = listings.groupby("course_code")["course_id"].apply(list).to_dict()

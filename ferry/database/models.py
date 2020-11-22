@@ -285,7 +285,7 @@ class Course(BaseModel):
         aggregated across all cross-listings with same set of professors""",
     )
     average_rating_same_professors_n = Column(
-        Float,
+        Integer,
         comment="""[[computed] Number of courses used to compute
         `average_rating_same_professors`""",
     )
@@ -296,7 +296,7 @@ class Course(BaseModel):
         aggregated across all cross-listings with same set of professors""",
     )
     average_workload_same_professors_n = Column(
-        Float,
+        Integer,
         comment="""[[computed] Number of courses used to compute
         `average_workload_same_professors`""",
     )

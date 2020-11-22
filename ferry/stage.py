@@ -36,6 +36,10 @@ if __name__ == "__main__":
         "courses",
         {
             "dtype": {
+                "average_rating_n": "Int64",
+                "average_workload_n": "Int64",
+                "average_rating_same_professors_n": "Int64",
+                "average_workload_same_professors_n": "Int64",
                 "last_offered_course_id": "Int64",
                 "last_enrollment_course_id": "Int64",
                 "last_enrollment": "Int64",
