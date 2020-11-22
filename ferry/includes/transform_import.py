@@ -408,7 +408,7 @@ def import_courses(
             "last_enrollment_same_professors",
         ]
     ] = np.nan
-    professors["average_rating"] = np.nan
+    professors[["average_rating", "average_rating_n"]] = np.nan
 
     # construct courses and flags mapping
     print("Adding course flags")

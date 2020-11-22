@@ -430,6 +430,13 @@ def professors_computed(
         .mean()
         .to_dict()
     )
+
+    rating_by_professor_n = (
+        course_professors.dropna(subset=["average_rating"])
+        .groupby("professor_id")["average_rating"]
+        .count()
+        .to_dict()
+    )
     # workload_by_professor = (
     #     course_professors.dropna("average_workload")
     #     .groupby("professor_id")
@@ -439,6 +446,10 @@ def professors_computed(
 
     professors["average_rating"] = professors["professor_id"].apply(
         rating_by_professor.get
+    )
+
+    professors["average_rating_n"] = professors["professor_id"].apply(
+        rating_by_professor_n.get
     )
 
     return professors

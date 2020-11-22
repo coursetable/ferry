@@ -274,7 +274,7 @@ class Course(BaseModel):
         comment="""[computed] Historical average workload rating,
         aggregated across all cross-listings""",
     )
-    average_rating_n = Column(
+    average_workload_n = Column(
         Integer,
         comment="""[computed] Number of courses used to compute `average_workload`""",
     )
@@ -510,6 +510,11 @@ class Professor(BaseModel):
         Float,
         comment="""[computed] Average rating of the professor assessed via
         the "Overall assessment" question in courses taught""",
+    )
+
+    average_rating_n = Column(
+        Integer,
+        comment="""[computed] Number of courses used to compute `average_rating`""",
     )
 
 
