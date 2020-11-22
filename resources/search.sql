@@ -1,12 +1,5 @@
 -- This script sets up a computed table, which aggregates course information
--- from across the many tables. Furthermore, it creates a search function which
--- enables Hasura to use this table.
-
--- See this blog post for information on postgres full-text search:
--- http://rachbelaid.com/postgres-full-text-search-is-good-enough/
-
--- See this Hasura blog post for more information on the search function:
--- https://hasura.io/blog/full-text-search-with-hasura-graphql-api-postgres/
+-- from across the many tables.
 
 -- Encourage index usage.
 SET enable_seqscan = OFF;
@@ -89,7 +82,7 @@ SELECT listing_id,
        syllabus_url,
        extra_info,
        all_course_codes,
-       professor_names, -- TODO: remove
+       professor_names,
        professor_info,
        average_professor,
        flag_info,
@@ -112,15 +105,7 @@ SELECT listing_id,
        declined,
        no_response,
        to_jsonb(skills) as skills,
-       to_jsonb(areas)  as areas,
-       (setweight(to_tsvector('english', title), 'A') ||
-        setweight(to_tsvector('english', coalesce(description, '')), 'C') ||
-        setweight(to_tsvector('english', course_code), 'A') ||
-        setweight(to_tsvector('english', (left(number, 2))::text), 'B') ||
-        setweight(to_tsvector('english', (left(number, 1))::text), 'C') ||
-           --setweight(jsonb_to_tsvector('english', all_course_codes, '"all"'), 'B') ||
-        setweight(jsonb_to_tsvector('english', professor_names, '"all"'), 'B')
-           )            AS info
+       to_jsonb(areas)  as areas
 FROM listing_info
 ORDER BY course_code, course_id;
 
@@ -128,7 +113,6 @@ ORDER BY course_code, course_id;
 BEGIN TRANSACTION;
 
 -- Swap the new table in and update the search function.
-DROP FUNCTION IF EXISTS search_listing_info;
 DROP TABLE IF EXISTS computed_listing_info CASCADE;
 ALTER TABLE computed_listing_info_tmp
     RENAME TO computed_listing_info;
@@ -146,33 +130,5 @@ CREATE INDEX idx_computed_listing_skills ON computed_listing_info USING gin (ski
 CREATE INDEX idx_computed_listing_areas ON computed_listing_info USING gin (areas);
 CREATE INDEX idx_computed_listing_season ON computed_listing_info (season_code);
 CREATE INDEX idx_computed_listing_season_hash ON computed_listing_info USING hash (season_code);
-
-CREATE OR REPLACE FUNCTION search_listing_info(query text)
-    RETURNS SETOF computed_listing_info AS
-$$
-BEGIN
-    CASE
-        WHEN websearch_to_tsquery('english', query) <@ ''::tsquery THEN
-            -- If the query is completely empty, then we want to return everything,
-            -- rather than the default behavior of matching nothing.
-            RETURN QUERY SELECT *
-                         FROM computed_listing_info
-                         ORDER BY course_code, course_id;
-        ELSE
-            RETURN QUERY SELECT *
-                         FROM computed_listing_info
-                         WHERE info @@ websearch_to_tsquery('english', query)
-                         ORDER BY course_code, course_id;
-        --ORDER BY
-        --        -- If the ranking is above 0.5, then the query matches an "A" level (title or course_code),
-        --        -- in which case we want to order by the course code and id. If the ranking is below 0.5,
-        --        -- then we simply use the course_code and course_id as a fallback for ordering.
-        --        -- This way, searches for a specific department will have that department first, followed
-        --        -- by any matches on other metadata.
-        --        LEAST(0.5, ts_rank(info, websearch_to_tsquery('english', query))) DESC,
-        --        course_code, course_id ;
-        END CASE;
-END;
-$$ language plpgsql stable;
 
 COMMIT;
