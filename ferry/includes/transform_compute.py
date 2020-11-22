@@ -188,19 +188,17 @@ def courses_computed(
 
     """
 
-    # create local deep copy
-    courses = courses.copy(deep=True)
-
     # map courses to codes and codes to courses for historical offerings (overall)
     course_to_codes = listings.groupby("course_id")["course_code"].apply(list).to_dict()
     code_to_courses = listings.groupby("course_code")["course_id"].apply(list).to_dict()
+
     courses["codes"] = courses["course_id"].apply(course_to_codes.get)
     courses["coded_courses"] = courses["codes"].apply(
         lambda x: [code_to_courses[code] for code in x]
     )
-
-    courses["coded_courses"] = courses["coded_courses"].apply(flatten_list_of_lists)
-    courses["coded_courses"] = courses["coded_courses"].apply(lambda x: list(set(x)))
+    courses["coded_courses"] = courses["coded_courses"].apply(
+        lambda x: list(set(flatten_list_of_lists(x)))
+    )
 
     # map course_id to professor_ids
     # use frozenset because it is hashable (set is not), needed for groupby
@@ -218,19 +216,16 @@ def courses_computed(
         .to_dict()
     )
 
-    courses["coded_courses_same_profs"] = courses[["codes", "professors"]].apply(
+    courses["coded_courses_same_professors"] = courses[["codes", "professors"]].apply(
         lambda x: [
             code_profs_to_courses.get((code, x["professors"]), [])
             for code in x["codes"]
         ],
         axis=1,
     )
-    courses["coded_courses_same_profs"] = courses["coded_courses_same_profs"].apply(
-        flatten_list_of_lists
-    )
-    courses["coded_courses_same_profs"] = courses["coded_courses_same_profs"].apply(
-        lambda x: list(set(x))
-    )
+    courses["coded_courses_same_professors"] = courses[
+        "coded_courses_same_professors"
+    ].apply(lambda x: list(set(flatten_list_of_lists(x))))
 
     print("Computing last offering statistics")
 
@@ -336,14 +331,6 @@ def courses_computed(
 
     print("Computing historical ratings for courses")
 
-    # calculate the average of an array
-    def average(nums):
-        nums = list(filter(lambda x: x is not None, nums))
-        nums = list(filter(lambda x: not math.isnan(x), nums))
-        if not nums:
-            return None
-        return sum(nums) / len(nums)
-
     # map courses to ratings
     course_to_overall = dict(
         zip(evaluation_statistics["course_id"], evaluation_statistics["avg_rating"])
@@ -367,16 +354,25 @@ def courses_computed(
         "coded_courses_same_professors"
     ].apply(lambda courses: [course_to_workload.get(x, None) for x in courses])
 
-    # calculate averages over past offerings
-    courses["average_rating"] = courses["average_rating"].apply(average)
-    courses["average_workload"] = courses["average_workload"].apply(average)
+    # calculate the average of an array
+    def average(nums):
+        nums = list(filter(lambda x: x is not None, nums))
+        nums = list(filter(lambda x: not math.isnan(x), nums))
+        if not nums:
+            return [None, None]
+        num_obs = len(nums)
+        return (sum(nums) / num_obs, num_obs)
 
-    courses["average_rating_same_professors"] = courses[
-        "average_rating_same_professors"
-    ].apply(average)
-    courses["average_workload_same_professors"] = courses[
-        "average_workload_same_professors"
-    ].apply(average)
+    # calculate averages over past offerings
+    for average_col, num_col in [
+        ("average_rating", "average_rating_n"),
+        ("average_workload", "average_workload_n"),
+        ("average_rating_same_professors", "average_rating_same_professors_n"),
+        ("average_workload_same_professors", "average_workload_same_professors_n"),
+    ]:
+        courses[average_col], courses[num_col] = zip(
+            *courses[average_col].apply(average)
+        )
 
     # remove intermediate columns
     courses = courses.loc[:, get_table_columns(database.models.Course)]

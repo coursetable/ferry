@@ -394,9 +394,13 @@ def import_courses(
         [
             "location_times",
             "average_rating",
+            "average_rating_n",
             "average_workload",
+            "average_workload_n",
             "average_rating_same_professors",
+            "average_rating_same_professors_n",
             "average_workload_same_professors",
+            "average_workload_same_professors_n",
             "last_offered_course_id",
             "last_enrollment_course_id",
             "last_enrollment",
