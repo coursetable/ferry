@@ -124,7 +124,6 @@ ALTER TABLE computed_listing_info
     ADD FOREIGN KEY (listing_id) REFERENCES listings (listing_id);
 CREATE INDEX idx_computed_listing_course_id ON computed_listing_info (course_id);
 CREATE UNIQUE INDEX idx_computed_listing_listing_id ON computed_listing_info (listing_id);
-CREATE INDEX idx_computed_listing_search ON computed_listing_info USING gin (info);
 CREATE INDEX idx_computed_listing_order_def ON computed_listing_info (course_code ASC, course_id ASC);
 CREATE INDEX idx_computed_listing_skills ON computed_listing_info USING gin (skills);
 CREATE INDEX idx_computed_listing_areas ON computed_listing_info USING gin (areas);
