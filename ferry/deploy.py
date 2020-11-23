@@ -267,7 +267,7 @@ if __name__ == "__main__":
     # -----------------------------------
 
     # generate computed tables and full-text-search
-    print("\n[Setting up full-text search]")
+    print("\n[Setting up computed tables]")
     with database.session_scope(database.Session) as db_session:
         search_setup(db_session)
 
