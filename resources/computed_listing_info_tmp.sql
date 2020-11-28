@@ -16,6 +16,7 @@ WITH listing_info
         SELECT listings.listing_id,
                listings.crn,
                listings.course_code,
+               listings.school,
                listings.subject,
                listings.number,
                listings.section,
