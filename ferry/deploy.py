@@ -109,10 +109,10 @@ def search_setup(session):
 
     print("Setting columns to not null if possible")
     table_name = "computed_listing_info_tmp"
-    for (column_name,) in session.execute(
+    for (_, _, column_name) in session.execute(
         # Get the list of columns in the table.
         f"""
-        SELECT *
+        SELECT table_schema, table_name, column_name
         FROM information_schema.columns
         WHERE table_name = '{table_name}';
         """
@@ -121,13 +121,14 @@ def search_setup(session):
             f"""
             SELECT count(*) FROM {table_name} WHERE {column_name} IS NULL ;
             """
-        )[0]
+        ).first()
         if null_count == 0:
             session.execute(
                 f"""
-                ALTER TABLE {table_name} ALTER COLUMN {column_name} SET NOT NULL
+                ALTER TABLE {table_name} ALTER COLUMN {column_name} SET NOT NULL ;
                 """
             )
+            print(f"  {column_name} not null")
 
     print("Swapping in the table")
     with open(f"{config.RESOURCE_DIR}/computed_listing_info_swap.sql") as swap_file:
