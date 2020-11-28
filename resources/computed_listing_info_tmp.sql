@@ -1,5 +1,5 @@
--- This script sets up a computed table, which aggregates course information
--- from across the many tables.
+-- This script sets up the temporary computed table, which aggregates course 
+-- information from across the many tables.
 
 -- Encourage index usage.
 SET enable_seqscan = OFF;
@@ -110,30 +110,7 @@ SELECT listing_id,
        responses,
        declined,
        no_response,
-       to_jsonb(skills) as skills,
-       to_jsonb(areas)  as areas
+       to_jsonb(skills)                    as skills,
+       to_jsonb(areas)                     as areas
 FROM listing_info
 ORDER BY course_code, course_id;
-
-
-BEGIN TRANSACTION;
-
--- Swap the new table in and update the search function.
-DROP TABLE IF EXISTS computed_listing_info CASCADE;
-ALTER TABLE computed_listing_info_tmp
-    RENAME TO computed_listing_info;
-
--- Create an index for basically every column.
-ALTER TABLE computed_listing_info
-    ADD FOREIGN KEY (course_id) REFERENCES courses (course_id);
-ALTER TABLE computed_listing_info
-    ADD FOREIGN KEY (listing_id) REFERENCES listings (listing_id);
-CREATE INDEX idx_computed_listing_course_id ON computed_listing_info (course_id);
-CREATE UNIQUE INDEX idx_computed_listing_listing_id ON computed_listing_info (listing_id);
-CREATE INDEX idx_computed_listing_order_def ON computed_listing_info (course_code ASC, course_id ASC);
-CREATE INDEX idx_computed_listing_skills ON computed_listing_info USING gin (skills);
-CREATE INDEX idx_computed_listing_areas ON computed_listing_info USING gin (areas);
-CREATE INDEX idx_computed_listing_season ON computed_listing_info (season_code);
-CREATE INDEX idx_computed_listing_season_hash ON computed_listing_info USING hash (season_code);
-
-COMMIT;

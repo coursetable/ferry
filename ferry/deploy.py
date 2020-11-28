@@ -99,12 +99,41 @@ def course_invariants(session):
 
 def search_setup(session):
     """
-    Set up materialized view and search function
+    Set up an aggregated course information table.
     """
 
-    with open(f"{config.RESOURCE_DIR}/search.sql") as file:
-        sql = file.read()
-    session.execute(sql)
+    print("Creating tmp table")
+    with open(f"{config.RESOURCE_DIR}/computed_listing_info_tmp.sql") as tmp_file:
+        tmp_sql = tmp_file.read()
+        session.execute(tmp_sql)
+
+    print("Setting columns to not null if possible")
+    table_name = "computed_listing_info_tmp"
+    for (_, _, column_name) in session.execute(
+        # Get the list of columns in the table.
+        f"""
+        SELECT table_schema, table_name, column_name
+        FROM information_schema.columns
+        WHERE table_name = '{table_name}';
+        """
+    ):
+        (null_count,) = session.execute(
+            f"""
+            SELECT count(*) FROM {table_name} WHERE {column_name} IS NULL ;
+            """
+        ).first()
+        if null_count == 0:
+            session.execute(
+                f"""
+                ALTER TABLE {table_name} ALTER COLUMN {column_name} SET NOT NULL ;
+                """
+            )
+            print(f"  {column_name} not null")
+
+    print("Swapping in the table")
+    with open(f"{config.RESOURCE_DIR}/computed_listing_info_swap.sql") as swap_file:
+        swap_sql = swap_file.read()
+        session.execute(swap_sql)
 
 
 if __name__ == "__main__":
@@ -164,10 +193,8 @@ if __name__ == "__main__":
     # Check invariants on new tables
     # ------------------------------
 
-    # check invariants
     print("\n[Checking table invariants]")
 
-    # check invariants
     args = parser.parse_args()
     if args.items:
         items = [_match(name) for name in args.items]
@@ -199,7 +226,7 @@ if __name__ == "__main__":
     replace = conn.begin()
     conn.execute("SET CONSTRAINTS ALL DEFERRED;")
 
-    # drop and update tables in reverse dependnecy order
+    # drop and update tables in reverse dependency order
     for table in target_tables:
 
         print(f"Updating table {table}")
@@ -278,18 +305,8 @@ if __name__ == "__main__":
     # Print row counts for each table.
     tqdm.write("\n[Table Statistics]")
     with database.session_scope(database.Session) as db_session:
-        # Via https://stackoverflow.om/a/2611745/5004662.
-        SUMMARY_SQL = """
-        select table_schema,
-            table_name,
-            (xpath('/row/cnt/text()', xml_count))[1]::text::int as row_count
-        from (
-        select table_name, table_schema,
-                query_to_xml(format('select count(*) as cnt from %I.%I', table_schema, table_name), false, true, '') as xml_count
-        from information_schema.tables
-        where table_schema = 'public' --<< change here for the schema you want
-        ) t
-        """
+        with open(f"{config.RESOURCE_DIR}/table_sizes.sql") as file:
+            SUMMARY_SQL = file.read()
 
         result = db_session.execute(SUMMARY_SQL)
         for table_counts in result:
