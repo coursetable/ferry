@@ -4,5 +4,8 @@
   "files.watcherExclude": {
     "**/api_output/**": true,
     "**/data/**": true
-  }
+  },
+  "cSpell.words": [
+    "tqdm"
+  ]
 }

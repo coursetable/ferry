@@ -286,7 +286,7 @@ class Course(BaseModel):
     )
     average_rating_same_professors_n = Column(
         Integer,
-        comment="""[[computed] Number of courses used to compute
+        comment="""[computed] Number of courses used to compute
         `average_rating_same_professors`""",
     )
 
@@ -297,7 +297,7 @@ class Course(BaseModel):
     )
     average_workload_same_professors_n = Column(
         Integer,
-        comment="""[[computed] Number of courses used to compute
+        comment="""[computed] Number of courses used to compute
         `average_workload_same_professors`""",
     )
 
