@@ -186,10 +186,6 @@ class Course(BaseModel):
         String, comment="Recommended requirements/prerequisites for the course"
     )
 
-    school = Column(
-        String, comment="School (e.g. YC, GS, MG) that the course is taught in"
-    )
-
     # -------------------
     # Times and locations
     # -------------------
@@ -378,6 +374,10 @@ class Listing(BaseModel):
         nullable=False,
     )
     course = relationship("Course", backref="listings_staged", cascade="all")
+
+    school = Column(
+        String, comment="School (e.g. YC, GS, MG) that the course is listed under"
+    )
 
     subject = Column(
         String,
