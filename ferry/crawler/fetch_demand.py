@@ -60,13 +60,13 @@ if __name__ == "__main__":
 
     # list of seasons previously from fetch_seasons.py
     with open(f"{config.DATA_DIR}/demand_seasons.json", "r") as f:
-        all_viable_seasons = ujson.loads(f.read())
+        all_viable_seasons = ujson.load(f)
 
     seasons = parse_seasons_arg(args.seasons, all_viable_seasons)
 
     print("Retrieving subjects list... ", end="")
     with open(f"{config.DATA_DIR}/demand_subjects.json", "r") as f:
-        subjects = ujson.loads(f.read())
+        subjects = ujson.load(f)
         subject_codes = sorted(list(subjects.keys()))
 
     print("ok")

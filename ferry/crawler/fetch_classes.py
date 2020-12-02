@@ -29,7 +29,7 @@ args = parser.parse_args()
 
 # list of seasons previously from fetch_seasons.py
 with open(f"{config.DATA_DIR}/course_seasons.json", "r") as f:
-    all_viable_seasons = ujson.loads(f.read())
+    all_viable_seasons = ujson.load(f)
 
 seasons = parse_seasons_arg(args.seasons, all_viable_seasons)
 
