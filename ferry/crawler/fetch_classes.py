@@ -41,7 +41,7 @@ for season in seasons:
 
     # cache list of classes
     with open(f"{config.DATA_DIR}/season_courses/{season}.json", "w") as f:
-        f.write(ujson.dumps(season_courses, indent=4))
+        ujson.dump(season_courses, f, indent=4)
 
 
 # get lists of classes per season
@@ -76,6 +76,6 @@ for season in seasons:
 
     # cache to JSON for entire season
     with open(f"{config.DATA_DIR}/course_json_cache/{season}.json", "w") as f:
-        f.write(ujson.dumps(aggregate_season_json, indent=4))
+        ujson.dumps(aggregate_season_json, f, indent=4)
 
     print()

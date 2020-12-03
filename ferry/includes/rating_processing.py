@@ -86,7 +86,7 @@ def fetch_questions(
     with open(
         config.DATA_DIR / f"rating_cache/questions_show/{term_code}_{crn}.json", "w"
     ) as file:
-        file.write(ujson.dumps(data_show))
+        ujson.dump(data_show, file, indent=4)
 
     if data_show["minEnrollment"] == "N":
         raise _EvaluationsNotViewableError("No minimum enrollment to view.")
@@ -164,7 +164,7 @@ def fetch_eval_data(
         / f"rating_cache/graph_data/{term_code}_{crn}_{question_id}.json",
         "w",
     ) as file:
-        file.write(ujson.dumps(data_graphdata))
+        ujson.dump(data_graphdata, file, indent=4)
 
     ratings = []
     options = []

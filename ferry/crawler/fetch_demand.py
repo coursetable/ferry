@@ -103,7 +103,7 @@ if __name__ == "__main__":
         season_courses = sorted(season_courses, key=lambda x: x["title"])
 
         with open(f"{config.DATA_DIR}/demand_stats/{season}_demand.json", "w") as f:
-            f.write(ujson.dumps(season_courses, indent=4))
+            ujson.dump(season_courses, f, indent=4)
 
     # release pool
     pool.terminate()
