@@ -202,7 +202,7 @@ if __name__ == "__main__":
             )
 
             with open(output_path, "w") as file:
-                file.write(ujson.dumps(course_eval, indent=4))
+                ujson.dump(course_eval, file, indent=4)
         except KeyError as err:
             # Some courses produce YC402-YCWR and similar question IDs for ratings data.
             # The new importer can handle this.

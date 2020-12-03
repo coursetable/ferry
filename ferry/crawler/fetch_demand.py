@@ -60,13 +60,13 @@ if __name__ == "__main__":
 
     # list of seasons previously from fetch_seasons.py
     with open(f"{config.DATA_DIR}/demand_seasons.json", "r") as f:
-        all_viable_seasons = ujson.loads(f.read())
+        all_viable_seasons = ujson.load(f)
 
     seasons = parse_seasons_arg(args.seasons, all_viable_seasons)
 
     print("Retrieving subjects list... ", end="")
     with open(f"{config.DATA_DIR}/demand_subjects.json", "r") as f:
-        subjects = ujson.loads(f.read())
+        subjects = ujson.load(f)
         subject_codes = sorted(list(subjects.keys()))
 
     print("ok")
@@ -103,7 +103,7 @@ if __name__ == "__main__":
         season_courses = sorted(season_courses, key=lambda x: x["title"])
 
         with open(f"{config.DATA_DIR}/demand_stats/{season}_demand.json", "w") as f:
-            f.write(ujson.dumps(season_courses, indent=4))
+            ujson.dump(season_courses, f, indent=4)
 
     # release pool
     pool.terminate()
