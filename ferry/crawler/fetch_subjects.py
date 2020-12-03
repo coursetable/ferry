@@ -44,7 +44,7 @@ if r.status_code == 200:
 
     # write subjects list for use later
     with open(f"{config.DATA_DIR}/course_subjects.json", "w") as f:
-        ujson.dumps(course_subjects, f, indent=4)
+        ujson.dump(course_subjects, f, indent=4)
 
     print("ok")
 
@@ -74,7 +74,7 @@ if r.status_code == 200:
 
     # save the subjects for use in fetch_demand.py
     with open(f"{config.DATA_DIR}/demand_subjects.json", "w") as f:
-        ujson.dumps(demand_subjects, f, indent=4)
+        ujson.dump(demand_subjects, f, indent=4)
 
     print("ok")
 

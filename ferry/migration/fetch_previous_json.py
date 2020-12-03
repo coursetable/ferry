@@ -34,7 +34,7 @@ for season in seasons:
         previous_json = fetch_previous_json(season, evals=True)
 
         with open(f"{config.DATA_DIR}/previous_json/evals_{season}.json", "w") as f:
-            ujson.dumps(previous_json, f, indent=4)
+            ujson.dump(previous_json, f, indent=4)
 
     except FetchClassesError:
         print("JSON not found.")
