@@ -16,6 +16,24 @@ PROFESSOR_EXCEPTIONS = {
     "Derek Green": "John Green",
 }
 
+COLLEGE_SEMINAR_CODES = {
+    "CSBF": "Coll Sem:Ben Franklin Coll",
+    "CSBK": "Coll Sem:Berkeley Coll",
+    "CSBR": "Coll Sem:Branford Coll",
+    "CSDC": "Coll Sem:Davenport Coll",
+    "CSES": "Coll Sem:Ezra Stiles Coll",
+    "CSGH": "Coll Sem:Grace Hopper Coll",
+    "CSJE": "Coll Sem:Jonathan Edwards Coll",
+    "CSMC": "Coll Sem:Morse Coll",
+    "CSMY": "Coll Sem:Pauli Murray Coll",
+    "CSPC": "Coll Sem:Pierson Coll",
+    "CSSM": "Coll Sem:Silliman Coll",
+    "CSSY": "Coll Sem:Saybrook Coll",
+    "CSTC": "Coll Sem:Trumbull Coll",
+    "CSTD": "Coll Sem:Timothy Dwight Coll",
+    "CSYC": "Coll Sem: Yale Coll",
+}
+
 
 def professors_from_html(html):
     """
@@ -980,5 +998,7 @@ def extract_course_info(course_json, season: str, fysem: set):
         description_text,
         course_info["requirements"],
     )
+
+    course_info["colsem"] = course_info["course_code"] in COLLEGE_SEMINAR_CODES
 
     return course_info
