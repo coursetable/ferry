@@ -999,6 +999,6 @@ def extract_course_info(course_json, season: str, fysem: set):
         course_info["requirements"],
     )
 
-    course_info["colsem"] = course_info["course_code"] in COLLEGE_SEMINAR_CODES
+    course_info["colsem"] = course_info["subject"] in COLLEGE_SEMINAR_CODES
 
     return course_info
