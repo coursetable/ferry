@@ -738,11 +738,11 @@ def is_fysem(
         return True
 
     flagged_text = [
-        "Enrollment limited to first-year students",
         "Freshman Seminar Program",
         "First-Year Seminar Program",
         "Enrollment limited to freshmen",
         "Enrollment limited to first-years",
+        "Enrollment limited to first-year students",
         "Intended for freshmen",
         "Intended for first-year students",
         "Priority to freshmen",
