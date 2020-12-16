@@ -1,6 +1,7 @@
 """
 Miscellaneous abstract utilities.
 """
+import re
 from itertools import combinations
 from typing import Dict, FrozenSet, List, Tuple, TypeVar
 
@@ -9,6 +10,48 @@ import pandas as pd
 from sqlalchemy import inspect
 
 from ferry import database
+
+
+def convert_unicode(text):
+    """
+    Replace unicode exceptions
+
+    Parameters
+    ----------
+    text: string
+
+    Returns
+    -------
+    properly formatted text
+    """
+
+    # handle incorrectly coded em dash
+
+    unicode_exceptions = {
+        r"\u00e2\u20ac\u201c": "–",
+        r"\u00c2\u00a0": "\u00a0",
+        r"\u00c3\u00a7": "ç",
+        r"\u00c3\u00a1": "á",
+        r"\u00c3\u00a9": "é",
+        r"\u00c3\u00ab": "ë",
+        r"\u00c3\u00ae": "î",
+        r"\u00c3\u00bc": "ü",
+        r"\u00c3\u00b1": "ñ",
+    }
+
+    for bad_unicode, replacement in unicode_exceptions.items():
+        text = re.sub(bad_unicode, replacement, text)
+
+    # convert utf-8 bytestrings
+    # pylint: disable=line-too-long
+    # from https://stackoverflow.com/questions/5842115/converting-a-string-which-contains-both-utf-8-encoded-bytestrings-and-codepoints
+    text = re.sub(
+        r"[\xc2-\xf4][\x80-\xbf]+",
+        lambda m: m.group(0).encode("latin1").decode("unicode-escape"),
+        text,
+    )
+
+    return text
 
 
 def flatten_list_of_lists(list_of_lists):

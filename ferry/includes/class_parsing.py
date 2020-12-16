@@ -9,52 +9,30 @@ import ujson
 import unidecode
 from bs4 import BeautifulSoup
 
+from ferry.includes.utils import convert_unicode
+
 PROFESSOR_EXCEPTIONS = {
     "Kim Shirkhani": "Kimberly Shirkhani",
     "Derek Green": "John Green",
 }
 
-
-def convert_unicode(text):
-    """
-    Replace unicode exceptions
-
-    Parameters
-    ----------
-    text: string
-
-    Returns
-    -------
-    properly formatted text
-    """
-
-    # handle incorrectly coded em dash
-
-    unicode_exceptions = {
-        r"\u00e2\u20ac\u201c": "–",
-        r"\u00c2\u00a0": "\u00a0",
-        r"\u00c3\u00a7": "ç",
-        r"\u00c3\u00a1": "á",
-        r"\u00c3\u00a9": "é",
-        r"\u00c3\u00ab": "ë",
-        r"\u00c3\u00ae": "î",
-        r"\u00c3\u00bc": "ü",
-        r"\u00c3\u00b1": "ñ",
-    }
-
-    for bad_unicode, replacement in unicode_exceptions.items():
-        text = re.sub(bad_unicode, replacement, text)
-
-    # convert utf-8 bytestrings
-    # pylint: disable=line-too-long
-    # from https://stackoverflow.com/questions/5842115/converting-a-string-which-contains-both-utf-8-encoded-bytestrings-and-codepoints
-    text = re.sub(
-        r"[\xc2-\xf4][\x80-\xbf]+",
-        lambda m: m.group(0).encode("latin1").decode("unicode-escape"),
-        text,
-    )
-
-    return text
+COLLEGE_SEMINAR_CODES = {
+    "CSBF": "Coll Sem:Ben Franklin Coll",
+    "CSBK": "Coll Sem:Berkeley Coll",
+    "CSBR": "Coll Sem:Branford Coll",
+    "CSDC": "Coll Sem:Davenport Coll",
+    "CSES": "Coll Sem:Ezra Stiles Coll",
+    "CSGH": "Coll Sem:Grace Hopper Coll",
+    "CSJE": "Coll Sem:Jonathan Edwards Coll",
+    "CSMC": "Coll Sem:Morse Coll",
+    "CSMY": "Coll Sem:Pauli Murray Coll",
+    "CSPC": "Coll Sem:Pierson Coll",
+    "CSSM": "Coll Sem:Silliman Coll",
+    "CSSY": "Coll Sem:Saybrook Coll",
+    "CSTC": "Coll Sem:Trumbull Coll",
+    "CSTD": "Coll Sem:Timothy Dwight Coll",
+    "CSYC": "Coll Sem: Yale Coll",
+}
 
 
 def professors_from_html(html):
@@ -778,10 +756,19 @@ def is_fysem(
         return True
 
     flagged_text = [
-        "Enrollment limited to first-year students",
+        "Freshman Seminar Program",
         "First-Year Seminar Program",
         "Enrollment limited to freshmen",
-        "Freshman Seminar Program",
+        "Enrollment limited to first-years",
+        "Enrollment limited to first-year students",
+        "Intended for freshmen",
+        "Intended for first-year students",
+        "Priority to freshmen",
+        "Priority to first-years",
+        "preference to freshmen",
+        "preference to first-years",
+        "primarily for freshmen",
+        "primarily for first-years",
     ]
 
     for text in flagged_text:
@@ -793,6 +780,56 @@ def is_fysem(
     # directed studies courses are basically first-year seminars
     if course_json["code"].startswith("DRST 0"):
         return True
+
+    return False
+
+
+def is_sysem(title_text: str, description_text: str, requirements_text: str) -> bool:
+    """
+    Indicate if a course is a sophomore seminar.
+
+    Parameters
+    ----------
+
+    title_text:
+        extracted title text from course JSON
+
+    description_text:
+        extracted description text from extract_course_info()
+
+    requirements_text:
+        extracted requirements info from extract_course_info()
+
+    """
+
+    flagged_text = [
+        "Enrollment limited to sophomores",
+        "Sophomore Seminar",
+        "Registration preference to sophomores"
+        "Registration preference given to sophomores",
+        "Registration preference is given to sophomores"
+        "Enrollment limited to freshmen and sophomores",
+        "Enrollment limited to first-years and sophomores",
+        "Enrollment limited to sophomores",
+        "Preference to sophomores",
+        "Sophomore standing required",
+        "Recommended for sophomores",
+        "Intended for freshmen and sophomores",
+        "Intended for first-year students and sophomores",
+        "Priority to sophomores",
+        "preference to freshmen and sophomores",
+        "preference to first-years and sophomores",
+        "primarily for freshmen and sophomores",
+        "primarily for first-years and sophomores",
+    ]
+
+    for text in flagged_text:
+        if text in title_text:
+            return True
+        if text in description_text:
+            return True
+        if text in requirements_text:
+            return True
 
     return False
 
@@ -949,7 +986,19 @@ def extract_course_info(course_json, season: str, fysem: set):
 
     # if first-year seminar
     course_info["fysem"] = is_fysem(
-        course_json, description_text, course_info["requirements"], fysem
+        course_json,
+        description_text,
+        course_info["requirements"],
+        fysem,
     )
+
+    # if sophomore seminar
+    course_info["sysem"] = is_sysem(
+        course_info["title"],
+        description_text,
+        course_info["requirements"],
+    )
+
+    course_info["colsem"] = course_info["subject"] in COLLEGE_SEMINAR_CODES
 
     return course_info

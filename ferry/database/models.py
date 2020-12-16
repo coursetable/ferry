@@ -250,6 +250,14 @@ class Course(BaseModel):
         Boolean,
         comment="True if the course is a first-year seminar. False otherwise.",
     )
+    sysem = Column(
+        Boolean,
+        comment="True if the course is a sophomore seminar. False otherwise.",
+    )
+    colsem = Column(
+        Boolean,
+        comment="True if the course is a college seminar. False otherwise.",
+    )
 
     # ----------------
     # Computed ratings
