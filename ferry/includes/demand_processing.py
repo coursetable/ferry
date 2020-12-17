@@ -29,7 +29,7 @@ class FetchDemandError(Exception):
     pass
 
 
-def get_dates(season: str):
+def get_dates(season: str) -> List[str]:
 
     """
     Get dates with available course demand.

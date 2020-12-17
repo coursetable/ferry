@@ -1,6 +1,7 @@
 # pylint: skip-file
 import string
 from collections import Counter
+from typing import Any, List
 
 from gensim.models.phrases import Phraser, Phrases
 from nltk.corpus import stopwords, wordnet
@@ -27,7 +28,7 @@ wordnet_map = {"N": wordnet.NOUN, "V": wordnet.VERB, "J": wordnet.ADJ, "R": word
 lemmatizer = WordNetLemmatizer()
 
 
-def remove_punc(sentences):
+def remove_punc(sentences: List[List[str]]) -> List[List[str]]:
     # removes common punctuation
     return [
         [
@@ -39,32 +40,32 @@ def remove_punc(sentences):
     ]
 
 
-def remove_stopwords(sentences):
+def remove_stopwords(sentences: List[List[str]]) -> List[List[str]]:
     return [
         [word for word in sentence if word not in sw and len(word) > 0]
         for sentence in sentences
     ]
 
 
-def remove_common(sentences):
+def remove_common(sentences: List[List[str]]) -> List[List[str]]:
     return [
         [word for word in sentence if word not in common and len(word) > 0]
         for sentence in sentences
     ]
 
 
-def remove_small(sentences):
+def remove_small(sentences: List[List[str]]) -> List[List[str]]:
     return [[word for word in sentence if len(word) > 2] for sentence in sentences]
 
 
-def remove_rare(sentences):
-    counts = Counter()
+def remove_rare(sentences: List[List[str]]) -> List[List[str]]:
+    counts: Counter = Counter()
     for sentence in sentences:
         counts.update(sentence)
     return [[word for word in sentence if counts[word] > 1] for sentence in sentences]
 
 
-def lemmatize_words(text):
+def lemmatize_words(text: List[str]) -> List[Any]:
     if len(text) == 0:
         return []
     pos_tagged_text = pos_tag(text)
@@ -74,20 +75,20 @@ def lemmatize_words(text):
     ]
 
 
-def lemmatize_sentences(sentences):
+def lemmatize_sentences(sentences: List[List[str]]) -> List[List[str]]:
     return [lemmatize_words(desc) for desc in sentences]
 
 
-def preprocess_tfidf(sentences, rare=True):
-    sentences = [
-        " ".join(sentence.lower().split("-")).split(" ") for sentence in sentences
+def preprocess_tfidf(sentences: List[str], rare=True) -> List[str]:
+    sentences_split = [sentence.lower().split("-") for sentence in sentences]
+    sentences_split = [
+        [unidecode(word) for word in sentence] for sentence in sentences_split
     ]
-    sentences = [[unidecode(word) for word in sentence] for sentence in sentences]
-    sentences = remove_punc(sentences)
-    sentences = remove_stopwords(sentences)
-    sentences = remove_common(sentences)
-    sentences = remove_small(sentences)
+    sentences_split = remove_punc(sentences_split)
+    sentences_split = remove_stopwords(sentences_split)
+    sentences_split = remove_common(sentences_split)
+    sentences_split = remove_small(sentences_split)
     if rare:
-        sentences = remove_rare(sentences)
-    sentences = lemmatize_sentences(sentences)
-    return [" ".join(sentence) for sentence in sentences]
+        sentences_split = remove_rare(sentences_split)
+    sentences_split = lemmatize_sentences(sentences_split)
+    return [" ".join(sentence) for sentence in sentences_split]
