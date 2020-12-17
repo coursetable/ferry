@@ -3,11 +3,11 @@ Utility functions used by database.py
 """
 
 from contextlib import contextmanager
-from typing import TypeVar
+from typing import Tuple, TypeVar
 
 import ujson
 
-Model = TypeVar("M")
+Model = TypeVar("Model")
 
 
 class InvariantError(Exception):
@@ -42,7 +42,7 @@ def session_scope(session_context, *args, **kwargs):
         session.close()
 
 
-def get_or_create(session, model: Model, **kwargs) -> Model:
+def get_or_create(session, model: Model, **kwargs) -> Tuple[Model, bool]:
     # pylint: disable=line-too-long
 
     """Creates an object or returns the object if exists."""

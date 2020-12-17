@@ -139,7 +139,7 @@ def invert_dict_of_lists(dict_of_lists: Dict) -> Dict:
     return inverted
 
 
-Numeric = TypeVar("N", int, float)
+Numeric = TypeVar("Numeric", int, float)
 
 
 def elementwise_sum(list_a: List[Numeric], list_b: List[Numeric]) -> List[Numeric]:
@@ -245,7 +245,7 @@ def get_table_columns(table, not_class=False):
     return [column.key for column in table.__table__.columns]
 
 
-def get_all_tables(select_schemas: List[str]) -> Dict:
+def get_all_tables(select_schemas: List[str]) -> Dict[str, pd.DataFrame]:
     """
     Get all the tables under given schemas as a dictionary
     of Pandas dataframes
@@ -260,7 +260,7 @@ def get_all_tables(select_schemas: List[str]) -> Dict:
 
     """
 
-    tables = []
+    tables: List[str] = []
 
     # inspect and get schema names
     inspector = inspect(database.Engine)
@@ -274,6 +274,6 @@ def get_all_tables(select_schemas: List[str]) -> Dict:
 
         tables = tables + schema_tables
 
-    tables = {table: get_table(table) for table in tables}
+    mapped_tables = {table: get_table(table) for table in tables}
 
-    return tables
+    return mapped_tables

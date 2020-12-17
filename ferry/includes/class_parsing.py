@@ -4,6 +4,7 @@ Functions for parsing raw course JSONs used by
 """
 
 import re
+from typing import Any, Dict
 
 import ujson
 import unidecode
@@ -834,7 +835,7 @@ def is_sysem(title_text: str, description_text: str, requirements_text: str) -> 
     return False
 
 
-def extract_course_info(course_json, season: str, fysem: set):
+def extract_course_info(course_json: Dict[str, Any], season: str, fysem: set):
     """
     Parse the JSON response from the Yale courses API
     into a more useful format
@@ -858,7 +859,7 @@ def extract_course_info(course_json, season: str, fysem: set):
         Processed course information
     """
 
-    course_info = {}
+    course_info: Dict[str, Any] = {}
 
     course_info["season_code"] = season
 
