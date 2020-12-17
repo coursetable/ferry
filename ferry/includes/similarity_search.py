@@ -19,7 +19,7 @@ class SimilaritySearchError(Exception):
 
 
 def get_nearest_neighbors(
-    node_ids: List[Union[int, str]], embeddings: np.array, num_nearest: int
+    node_ids: List[Union[int, str]], embeddings: np.ndarray, num_nearest: int
 ) -> Dict[Union[int, str], Set[Union[int, str]]]:
 
     """
