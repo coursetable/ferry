@@ -4,6 +4,9 @@ Contains configurations and settings used by the rest of the project.
 Any settings in here can be overriden by config_private.py.
 """
 
+from typing import Union
+from _functools import _lru_cache_wrapper
+
 import functools
 import getpass
 import os
@@ -25,7 +28,9 @@ RESOURCE_DIR = _PROJECT_DIR / "resources"
 CAS_USE_COOKIE = True
 CAS_CREDENTIAL_NETID = functools.lru_cache(lambda: input("Yale NetId: "))
 CAS_CREDENTIAL_PASSWORD = functools.lru_cache(getpass.getpass)
-CAS_COOKIE_CASTGC = functools.lru_cache(lambda: input("CASTGC Cookie: "))
+CAS_COOKIE_CASTGC: Union[str, _lru_cache_wrapper[str]] = functools.lru_cache(
+    lambda: input("CASTGC Cookie: ")
+)
 
 
 # Database

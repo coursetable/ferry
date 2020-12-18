@@ -160,7 +160,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "data-science-types"
-version = "0.2.20"
+version = "0.2.22"
 description = "Type stubs for Python machine learning libraries"
 category = "dev"
 optional = false
@@ -1268,8 +1268,8 @@ cython = [
     {file = "Cython-0.29.14.tar.gz", hash = "sha256:e4d6bb8703d0319eb04b7319b12ea41580df44fd84d83ccda13ea463c6801414"},
 ]
 data-science-types = [
-    {file = "data-science-types-0.2.20.tar.gz", hash = "sha256:2c3c92eb3f7e5cfd07f4b53f8d1b32cc6218cb78a5a9049889a01e6f6a416f84"},
-    {file = "data_science_types-0.2.20-py3-none-any.whl", hash = "sha256:9add9c732925e283d7aa95d7539e6c8f2d6388c39aea68f956c4bce39a0f7b24"},
+    {file = "data-science-types-0.2.22.tar.gz", hash = "sha256:5b6bb2ca4cb6b8c467c799382e12156816f38122522bdaafd882d5a3828c7345"},
+    {file = "data_science_types-0.2.22-py3-none-any.whl", hash = "sha256:065475a4c5ee9b5f30883e65cdcffdd1b09a9d2e203857af25d21ffb336fece0"},
 ]
 decorator = [
     {file = "decorator-4.4.2-py2.py3-none-any.whl", hash = "sha256:41fa54c2a0cc4ba648be4fd43cff00aedf5b9465c9bf18d64325bc225f08f760"},
