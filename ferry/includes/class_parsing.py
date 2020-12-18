@@ -4,7 +4,7 @@ Functions for parsing raw course JSONs used by
 """
 
 import re
-from typing import Any, Dict, Tuple, List
+from typing import Any, Dict, List, Tuple
 
 import ujson
 import unidecode
