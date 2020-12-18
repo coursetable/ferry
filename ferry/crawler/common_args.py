@@ -2,8 +2,8 @@
 Common command-line arguments
 """
 
-from typing import List, Any
 from argparse import ArgumentParser
+from typing import Any, List
 
 
 class InvalidSeasonError(Exception):
