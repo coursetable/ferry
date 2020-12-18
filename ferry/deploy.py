@@ -266,17 +266,17 @@ if __name__ == "__main__":
 
     # delete previous staged indexes
     delete_indexes = conn.begin()
-    for table in db_meta.sorted_tables:
-        for index in table.indexes:
+    for meta_table in db_meta.sorted_tables:
+        for index in meta_table.indexes:
             # remove the staged indexes
             if "_staged" in index.name:
                 # conn.execute(schema.DropIndex(index))
                 renamed = index.name.replace("_staged", "")
                 conn.execute(f"ALTER INDEX IF EXISTS {index.name} RENAME TO {renamed};")
-        # primary key indexes are not listed under table.indexes
+        # primary key indexes are not listed under meta_table.indexes
         # so just rename these if they exist
         conn.execute(
-            f"ALTER INDEX IF EXISTS pk_{table.name}_staged RENAME TO pk_{table.name};"
+            f"ALTER INDEX IF EXISTS pk_{meta_table.name}_staged RENAME TO pk_{meta_table.name};"
         )
     delete_indexes.commit()
 

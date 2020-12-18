@@ -13,9 +13,9 @@ README:
 https://github.com/iamdanzhao/yale-popular-classes/blob/master/data-guide/course_data_guide.md
 """
 
-from typing import Tuple, List
 import argparse
 from multiprocessing import Pool
+from typing import List, Tuple
 
 import ujson
 
