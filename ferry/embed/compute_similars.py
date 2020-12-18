@@ -48,8 +48,8 @@ courses_by_season = courses.set_index("course_id").groupby("season_code")["embed
 
 seasons = courses_by_season.groups.keys()
 
-fasttext_similars = dict()
-tfidf_similars = dict()
+fasttext_similars_ = dict()
+tfidf_similars_ = dict()
 
 print("Computing similar courses by season")
 for season in seasons:
@@ -82,31 +82,31 @@ for season in seasons:
     )
 
     # update dictionary for season
-    fasttext_similars.update(season_fasttext_similars)
-    tfidf_similars.update(season_tfidf_similars)
+    fasttext_similars_.update(season_fasttext_similars)
+    tfidf_similars_.update(season_tfidf_similars)
 
 
 print("Aggregating similar courses")
 # convert dictionary result to DataFrames
-fasttext_similars = pd.Series(fasttext_similars).apply(list).explode()
-tfidf_similars = pd.Series(tfidf_similars).apply(list).explode()
+fasttext_similars = pd.Series(fasttext_similars_).apply(list).explode()
+tfidf_similars = pd.Series(tfidf_similars_).apply(list).explode()
 
 # extract targets and ranks from column tuples
-fasttext_similars = pd.DataFrame(
+fasttext_similars_df = pd.DataFrame(
     fasttext_similars.values.tolist(), index=fasttext_similars.index
 )
-tfidf_similars = pd.DataFrame(
+tfidf_similars_df = pd.DataFrame(
     tfidf_similars.values.tolist(), index=tfidf_similars.index
 )
 
 # reset the courses index to its own column
-fasttext_similars.reset_index(drop=False, inplace=True)
-tfidf_similars.reset_index(drop=False, inplace=True)
+fasttext_similars_df.reset_index(drop=False, inplace=True)
+tfidf_similars_df.reset_index(drop=False, inplace=True)
 
 # specify column names for database compatibility
-fasttext_similars.columns = ["source", "target", "rank"]
-tfidf_similars.columns = ["source", "target", "rank"]
+fasttext_similars_df.columns = ["source", "target", "rank"]
+tfidf_similars_df.columns = ["source", "target", "rank"]
 
 print("Writing output tables")
-fasttext_similars.to_csv(config.DATA_DIR / "importer_dumps/fasttext_similars.csv")
-tfidf_similars.to_csv(config.DATA_DIR / "importer_dumps/tfidf_similars.csv")
+fasttext_similars_df.to_csv(config.DATA_DIR / "importer_dumps/fasttext_similars.csv")
+tfidf_similars_df.to_csv(config.DATA_DIR / "importer_dumps/tfidf_similars.csv")
