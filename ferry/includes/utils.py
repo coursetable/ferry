@@ -3,7 +3,7 @@ Miscellaneous abstract utilities.
 """
 import re
 from itertools import combinations
-from typing import Dict, FrozenSet, List, Tuple, TypeVar
+from typing import Any, Dict, FrozenSet, List, Set, Tuple, TypeVar
 
 import networkx
 import pandas as pd
@@ -12,7 +12,7 @@ from sqlalchemy import inspect
 from ferry import database
 
 
-def convert_unicode(text):
+def convert_unicode(text: str) -> str:
     """
     Replace unicode exceptions
 
@@ -54,7 +54,7 @@ def convert_unicode(text):
     return text
 
 
-def flatten_list_of_lists(list_of_lists):
+def flatten_list_of_lists(list_of_lists: List[List[Any]]) -> List[Any]:
     """
     Flatten a list of lists into a single list.
 
@@ -73,7 +73,7 @@ def flatten_list_of_lists(list_of_lists):
     return flattened
 
 
-def merge_overlapping(sets: List[FrozenSet]) -> List:
+def merge_overlapping(sets: List[FrozenSet[Any]]) -> List[Set[Any]]:
     """
     Given a list of sets, merge sets with
     a nonempty intersection until all sets
@@ -113,7 +113,7 @@ def merge_overlapping(sets: List[FrozenSet]) -> List:
     return merged
 
 
-def invert_dict_of_lists(dict_of_lists: Dict) -> Dict:
+def invert_dict_of_lists(dict_of_lists: Dict[Any, List[Any]]) -> Dict[Any, Any]:
     """
     Given a dictionary mapping x -> [a, b, c],
     invert such that it now maps all a, b, c -> x.
@@ -195,7 +195,7 @@ def category_average(categories: List[int]) -> Tuple[float, int]:
     return average, total
 
 
-def resolve_potentially_callable(val):
+def resolve_potentially_callable(val: Any) -> Any:
     """
     Check if a value is callable, and return its result if so.
 
@@ -205,7 +205,7 @@ def resolve_potentially_callable(val):
     return val
 
 
-def get_table(table: str):
+def get_table(table: str) -> pd.DataFrame:
     """
     Read one of the tables from the database
     into Pandas dataframe (assuming SQL storage format)
@@ -223,7 +223,7 @@ def get_table(table: str):
     return pd.read_sql_table(table, con=database.Engine)
 
 
-def get_table_columns(table, not_class=False):
+def get_table_columns(table, not_class=False) -> List[str]:
     """
     Get column names of a table, where table is
     a SQLalchemy model or object (e.g. ferry.database.models.Course)
