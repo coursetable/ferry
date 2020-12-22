@@ -3,7 +3,7 @@ Common command-line arguments
 """
 
 from argparse import ArgumentParser
-from typing import Any, List
+from typing import Any, List, Optional
 
 
 class InvalidSeasonError(Exception):
@@ -36,7 +36,7 @@ def add_seasons_args(parser: ArgumentParser):
     )
 
 
-def parse_seasons_arg(arg_seasons: List[Any], all_viable_seasons: List[Any]):
+def parse_seasons_arg(arg_seasons: Optional[List[str]], all_viable_seasons: List[Any]):
 
     """
     Parse and handle seasons from add_seasons_args.
