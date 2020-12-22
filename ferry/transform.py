@@ -111,8 +111,7 @@ if __name__ == "__main__":
             print(f"Skipping season {season}: demand statistics file not found.")
             continue
 
-        with open(demand_file, "r") as file:
-            demand_info = pd.DataFrame(pd.read_json(str(file)))
+        demand_info = pd.DataFrame(pd.read_json(demand_file))
 
         demand_info["season_code"] = season
         merged_demand_info_.append(demand_info)
