@@ -17,7 +17,7 @@ from ferry import config, database
 from ferry.includes.tqdm import tqdm
 
 
-def listing_invariants(session):
+def listing_invariants(session: sqlalchemy.orm.session.Session):
     """
     Check invariant:
         listing.season_code == course.season_code if listing.course_id == course.course_id.
@@ -34,7 +34,7 @@ def listing_invariants(session):
             )
 
 
-def question_invariants(session):
+def question_invariants(session: sqlalchemy.orm.session.Session):
     """
     Check invariant:
         evaluation_questions.options is null iff evaluation_questions.is_narrative = True
@@ -50,7 +50,7 @@ def question_invariants(session):
             raise database.InvariantError(f"ratings question {question} lacks options")
 
 
-def question_tag_invariant(session):
+def question_tag_invariant(session: sqlalchemy.orm.session.Session):
     """
     Check invariant:
         all questions sharing a tag also share is_narrative and len(options)
@@ -75,7 +75,7 @@ def question_tag_invariant(session):
                 raise database.InvariantError(f"mismatched tag {question.tag}")
 
 
-def course_invariants(session):
+def course_invariants(session: sqlalchemy.orm.session.Session):
     """
     Check invariant:
         every course should have at least one listing.
@@ -97,7 +97,7 @@ def course_invariants(session):
         )
 
 
-def search_setup(session):
+def search_setup(session: sqlalchemy.orm.session.Session):
     """
     Set up an aggregated course information table.
     """

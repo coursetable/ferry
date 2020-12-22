@@ -1,7 +1,7 @@
 """
 This script loads transformed CSVs into staged database tables.
 """
-from typing import Dict, Any
+from typing import Any, Dict
 
 import pandas as pd
 from sqlalchemy import MetaData
