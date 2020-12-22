@@ -37,17 +37,16 @@ def copy_from_stringio(conn, table: pd.DataFrame, table_name: str):
     # create in-memory buffer for DataFrame
     buffer = StringIO()
 
-    csv_kwargs = dict(
+    table.to_csv(
+        buffer,  # type: ignore
         index_label="id",
         header=False,
         index=False,
         sep="\t",
         quoting=csv.QUOTE_NONE,
-        escapechar="\\",
+        escapechar="\\",  # type: ignore
         na_rep="NULL",
     )
-
-    table.to_csv(buffer, **csv_kwargs)
 
     buffer.seek(0)
 

@@ -177,7 +177,7 @@ def fetch_eval_data(
 
 def fetch_comments(
     session: requests.Session, offset: int, _max: int, crn: str, term_code: str
-) -> Tuple[QuestionId, str, List[str]]:
+) -> Dict[str, Any]:
     """
     Get comments for a specific question of this course
 
@@ -299,7 +299,9 @@ def fetch_course_enrollment(
     return stats, {"title": title}
 
 
-def fetch_course_eval(session, crn_code, term_code):
+def fetch_course_eval(
+    session: requests.Session, crn_code: str, term_code: str
+) -> Dict[str, Any]:
 
     """
     Gets evaluation data and comments for the specified course in specified term
@@ -360,7 +362,7 @@ def fetch_course_eval(session, crn_code, term_code):
             # No more questions are available -- normal situation.
             break
 
-    course_eval = {}
+    course_eval: Dict[str, Any] = {}
     course_eval["crn_code"] = crn_code
     course_eval["season"] = term_code
     course_eval["enrollment"] = enrollment

@@ -15,6 +15,7 @@ https://github.com/iamdanzhao/yale-popular-classes/blob/master/data-guide/course
 
 import argparse
 from multiprocessing import Pool
+from typing import List, Tuple
 
 import ujson
 
@@ -24,7 +25,7 @@ from ferry.includes.demand_processing import fetch_season_subject_demand, get_da
 from ferry.includes.tqdm import tqdm
 
 
-def handle_season_subject_demand(demand_args):
+def handle_season_subject_demand(demand_args: Tuple[str, str, List[str], List[str]]):
 
     """
     Handler for fetching subject codes to be passed into Pool()
@@ -81,7 +82,7 @@ if __name__ == "__main__":
         dates = get_dates(season)
 
         pool_args = [
-            [season, subject_code, subject_codes, dates]
+            (season, subject_code, subject_codes, dates)
             for subject_code in subject_codes
         ]
 

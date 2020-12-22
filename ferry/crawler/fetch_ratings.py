@@ -12,6 +12,7 @@ following steps:
 import argparse
 import datetime
 from os.path import isfile
+from typing import Union
 
 import diskcache
 import requests
@@ -69,7 +70,7 @@ yale_college_cache = diskcache.Cache(f"{config.DATA_DIR}/yale_college_cache")
 
 
 @yale_college_cache.memoize()
-def is_yale_college(course_season_code, course_crn):
+def is_yale_college(course_season_code: str, course_crn: str) -> Union[str, bool]:
 
     """
     Helper function to check if course is in Yale College

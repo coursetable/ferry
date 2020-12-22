@@ -8,6 +8,7 @@ import functools
 import getpass
 import os
 import pathlib
+from typing import Callable
 
 _PROJECT_DIR = pathlib.Path(__file__).resolve().parent.parent
 
@@ -23,9 +24,13 @@ RESOURCE_DIR = _PROJECT_DIR / "resources"
 # The latter three settings can also be set to a function. The function should return the
 # specified setting when called.
 CAS_USE_COOKIE = True
-CAS_CREDENTIAL_NETID = functools.lru_cache(lambda: input("Yale NetId: "))
-CAS_CREDENTIAL_PASSWORD = functools.lru_cache(getpass.getpass)
-CAS_COOKIE_CASTGC = functools.lru_cache(lambda: input("CASTGC Cookie: "))
+CAS_CREDENTIAL_NETID: Callable[[], str] = functools.lru_cache(
+    lambda: input("Yale NetId: ")
+)
+CAS_CREDENTIAL_PASSWORD: Callable[[], str] = functools.lru_cache(getpass.getpass)
+CAS_COOKIE_CASTGC: Callable[[], str] = functools.lru_cache(
+    lambda: input("CASTGC Cookie: ")
+)
 
 
 # Database

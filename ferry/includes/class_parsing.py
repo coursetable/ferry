@@ -4,6 +4,7 @@ Functions for parsing raw course JSONs used by
 """
 
 import re
+from typing import Any, Dict, List, Tuple
 
 import ujson
 import unidecode
@@ -35,7 +36,7 @@ COLLEGE_SEMINAR_CODES = {
 }
 
 
-def professors_from_html(html):
+def professors_from_html(html: str) -> Tuple[List[str], List[str], List[str]]:
     """
     Parse course instructors from provided HTML field
 
@@ -106,7 +107,7 @@ def professors_from_html(html):
     return names, emails, ids
 
 
-def parse_cross_listings(xlist_html):
+def parse_cross_listings(xlist_html: str) -> List[str]:
     """
     Retrieve cross-listings (CRN codes) from the HTML in
     the 'xlist' field from the Yale API
@@ -133,7 +134,7 @@ def parse_cross_listings(xlist_html):
     return xlist_crns
 
 
-def extract_flags(ci_attrs):
+def extract_flags(ci_attrs: str) -> List[str]:
     """
     Get the course flags from the ci_attrs field
 
@@ -154,7 +155,7 @@ def extract_flags(ci_attrs):
     return flag_texts
 
 
-def days_of_week_from_letters(letters):
+def days_of_week_from_letters(letters: str) -> List[str]:
     """
     Parse course days from letterings
 
@@ -193,7 +194,7 @@ def days_of_week_from_letters(letters):
     return days
 
 
-def format_time(time):
+def format_time(time: str) -> str:
     """
     Convert Yale API times to 24-hour, full format
 
@@ -221,20 +222,20 @@ def format_time(time):
         hour = time_stripped
         minute = "00"
 
-    hour = int(hour)
+    hour_num = int(hour)
 
-    if time[-2:] == "am" and hour == 12:
-        hour = 0
+    if time[-2:] == "am" and hour_num == 12:
+        hour_num = 0
 
-    elif time[-2:] == "pm" and 1 <= hour <= 11:
-        hour = hour + 12
+    elif time[-2:] == "pm" and 1 <= hour_num <= 11:
+        hour_num = hour_num + 12
 
-    hour = str(hour)
+    hour = str(hour_num)
 
     return hour + ":" + minute
 
 
-def extract_split_meetings(meetings):
+def extract_split_meetings(meetings: List[str]) -> List[Tuple[str, str, str]]:
     """
     Split meeting strings into [days, time, location] tuples.
 
@@ -256,7 +257,7 @@ def extract_split_meetings(meetings):
     # split meetings by time
     for meeting in meetings:
 
-        split_meeting = [meeting, "", ""]
+        split_meeting = (meeting, "", "")
 
         if " in " in meeting:
 
@@ -266,28 +267,30 @@ def extract_split_meetings(meetings):
 
                 days, time = sessions.split(" ")[:2]
 
-                split_meeting = [days, time, location]
+                split_meeting = (days, time, location)
 
             else:
 
-                split_meeting = ["HTBA", "", location]
+                split_meeting = ("HTBA", "", location)
 
         elif " " in meeting:
 
             days, time = meeting.split(" ")[:2]
 
-            split_meeting = [days, time, ""]
+            split_meeting = (days, time, "")
 
         else:
 
-            split_meeting = [meeting, "", ""]
+            split_meeting = (meeting, "", "")
 
         split_meetings.append(split_meeting)
 
     return split_meetings
 
 
-def extract_meeting_summaries(meetings, split_meetings):
+def extract_meeting_summaries(
+    meetings: List[str], split_meetings: List[Tuple[str, str, str]]
+) -> Tuple[str, str, str]:
 
     """
     Get meeting time and location summary strings.
@@ -346,7 +349,9 @@ def extract_meeting_summaries(meetings, split_meetings):
     return times_summary, locations_summary, times_long_summary
 
 
-def extract_formatted_meetings(split_meetings, location_urls):
+def extract_formatted_meetings(
+    split_meetings: List[Tuple[str, str, str]], location_urls: List[str]
+) -> List[Dict[str, Any]]:
 
     """
     Extract formatted meetings in
@@ -394,11 +399,11 @@ def extract_formatted_meetings(split_meetings, location_urls):
             )
             location_indx += 1
 
-            days = days_of_week_from_letters(days)
+            days_split = days_of_week_from_letters(days)
 
-            times = times.split("-")
-            start_time = times[0]
-            end_time = times[1]
+            times_split = times.split("-")
+            start_time = times_split[0]
+            end_time = times_split[1]
 
             # standardize times to 24-hour, full format
             start_time = format_time(start_time)
@@ -406,7 +411,7 @@ def extract_formatted_meetings(split_meetings, location_urls):
 
             formatted_meetings.append(
                 {
-                    "days": days,
+                    "days": days_split,
                     "start_time": start_time,
                     "end_time": end_time,
                     "location": location,
@@ -417,7 +422,9 @@ def extract_formatted_meetings(split_meetings, location_urls):
     return formatted_meetings
 
 
-def extract_meetings_by_day(formatted_meetings):
+def extract_meetings_by_day(
+    formatted_meetings: List[Dict[str, Any]]
+) -> Dict[str, List[Tuple[str, str, str, str]]]:
 
     """
     Transform formatted meetings in
@@ -448,18 +455,18 @@ def extract_meetings_by_day(formatted_meetings):
     meetings_by_day
     """
 
-    meetings_by_day = dict()
+    meetings_by_day: Dict[str, List[Tuple[str, str, str, str]]] = dict()
 
     for meeting in formatted_meetings:
 
         for day in meeting["days"]:
 
-            session = [
+            session = (
                 meeting["start_time"],
                 meeting["end_time"],
                 meeting["location"],
                 meeting.get("location_url", ""),
-            ]
+            )
 
             # if day key already present, append
             if day in meetings_by_day.keys():
@@ -471,7 +478,11 @@ def extract_meetings_by_day(formatted_meetings):
     return meetings_by_day
 
 
-def extract_meetings(meeting_html):
+def extract_meetings(
+    meeting_html: str,
+) -> Tuple[
+    List[Dict[str, Any]], str, str, str, Dict[str, List[Tuple[str, str, str, str]]]
+]:
     """
     Extract course meeting times and locations from the
     provided HTML
@@ -541,7 +552,7 @@ def extract_meetings(meeting_html):
     )
 
 
-def format_undelimited_time(time):
+def format_undelimited_time(time: str) -> str:
     """
     Convert an undelimited time string (e.g. "1430") to a
     delimited one (e.g. "14:30")
@@ -563,7 +574,9 @@ days_map = {
 }
 
 
-def extract_meetings_alternate(course_json):
+def extract_meetings_alternate(
+    course_json: Dict[str, Any]
+) -> Tuple[str, str, str, Dict[str, List[Tuple[str, str, str, str]]]]:
 
     """
     Extract course meeting times from the allInGroup key rather than
@@ -595,7 +608,7 @@ def extract_meetings_alternate(course_json):
     """
 
     locations_summary = "TBA"
-    times_by_day = dict()
+    times_by_day: Dict[str, List[Tuple[str, str, str, str]]] = dict()
 
     # check if there is a valid listing
 
@@ -618,12 +631,12 @@ def extract_meetings_alternate(course_json):
 
             meeting_day = days_map[meeting_time["meet_day"]]
 
-            session = [
+            session = (
                 format_undelimited_time(meeting_time["start_time"]),
                 format_undelimited_time(meeting_time["end_time"]),
                 "",
                 "",
-            ]
+            )
 
             if meeting_day in times_by_day.keys():
                 times_by_day[meeting_day].append(session)
@@ -676,7 +689,7 @@ stat_map = {
 }
 
 
-def found_items(text, mapping):
+def found_items(text: str, mapping: Dict[str, Any]) -> List[Any]:
     """
     Given an input string, see if any of the
     keys in the provided mapping are present. If so,
@@ -706,7 +719,7 @@ def found_items(text, mapping):
     return sorted(items)
 
 
-def extract_prereqs(raw_description):
+def extract_prereqs(raw_description: BeautifulSoup) -> str:
     """
     Parse prerequisites from description beautifulsoup.
 
@@ -731,7 +744,10 @@ def extract_prereqs(raw_description):
 
 
 def is_fysem(
-    course_json, description_text: str, requirements_text: str, fysem: set
+    course_json: Dict[str, Any],
+    description_text: str,
+    requirements_text: str,
+    fysem: set,
 ) -> bool:
     """
     Indicate if a course is a first-year seminar.
@@ -834,7 +850,9 @@ def is_sysem(title_text: str, description_text: str, requirements_text: str) -> 
     return False
 
 
-def extract_course_info(course_json, season: str, fysem: set):
+def extract_course_info(
+    course_json: Dict[str, Any], season: str, fysem: set
+) -> Dict[str, Any]:
     """
     Parse the JSON response from the Yale courses API
     into a more useful format
@@ -858,7 +876,7 @@ def extract_course_info(course_json, season: str, fysem: set):
         Processed course information
     """
 
-    course_info = {}
+    course_info: Dict[str, Any] = {}
 
     course_info["season_code"] = season
 

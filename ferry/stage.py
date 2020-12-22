@@ -1,6 +1,7 @@
 """
 This script loads transformed CSVs into staged database tables.
 """
+from typing import Any, Dict
 
 import pandas as pd
 from sqlalchemy import MetaData
@@ -18,7 +19,7 @@ if __name__ == "__main__":
     # common pd.read_csv arguments
     general_csv_kwargs = {"index_col": 0, "low_memory": False}
 
-    def load_csv(table_name, csv_kwargs=None):
+    def load_csv(table_name: str, csv_kwargs: Dict[Any, Any] = None) -> pd.DataFrame:
         """
         Loads a CSV given a table name.
         """

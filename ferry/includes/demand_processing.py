@@ -2,6 +2,8 @@
 Functions for processing demand statistics.
 Used by /ferry/crawler/fetch_demand.py
 """
+from typing import Any, Dict, List
+
 import requests
 from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter, Retry
@@ -27,7 +29,7 @@ class FetchDemandError(Exception):
     pass
 
 
-def get_dates(season):
+def get_dates(season: str) -> List[str]:
 
     """
     Get dates with available course demand.
@@ -67,7 +69,9 @@ def get_dates(season):
     return dates
 
 
-def fetch_season_subject_demand(season, subject_code, subject_codes, dates):
+def fetch_season_subject_demand(
+    season: str, subject_code: str, subject_codes: List[str], dates: List[str]
+) -> List[Dict[str, Any]]:
 
     # pylint: disable=too-many-locals
 
@@ -121,7 +125,6 @@ def fetch_season_subject_demand(season, subject_code, subject_codes, dates):
     course_containers = demand_soup.select("div#content > div > table > tbody > tr")
 
     for container in course_containers:
-        course = []
         overall_demand = {}
 
         # extract name and code

@@ -55,14 +55,14 @@ if __name__ == "__main__":
     print("[Importing courses]")
     print(f"Season(s): {', '.join(course_seasons)}")
 
-    merged_course_info = []
+    merged_course_info_ = []
 
     for season in tqdm(course_seasons, desc="Loading course JSONs"):
         # Read the course listings, giving preference to freshly parsed over migrated ones.
         parsed_courses_file = Path(f"{config.DATA_DIR}/parsed_courses/{season}.json")
 
         if parsed_courses_file.is_file():
-            parsed_course_info = pd.read_json(parsed_courses_file)
+            parsed_course_info = pd.read_json(str(parsed_courses_file))
         else:
             # check migrated courses as a fallback
             migrated_courses_file = Path(
@@ -75,12 +75,14 @@ if __name__ == "__main__":
                 )
                 continue
             with open(migrated_courses_file, "r") as f:
-                parsed_course_info = pd.read_json(migrated_courses_file)
+                parsed_course_info = pd.DataFrame(
+                    pd.read_json(str(migrated_courses_file))
+                )
 
         parsed_course_info["season_code"] = season
-        merged_course_info.append(parsed_course_info)
+        merged_course_info_.append(parsed_course_info)
 
-    merged_course_info = pd.concat(merged_course_info, axis=0)
+    merged_course_info = pd.concat(merged_course_info_, axis=0)
     merged_course_info = merged_course_info.reset_index(drop=True)
 
     (
@@ -97,7 +99,7 @@ if __name__ == "__main__":
     # Import demand statistics
     # ------------------------
 
-    merged_demand_info = []
+    merged_demand_info_ = []
 
     print("\n[Importing demand statistics]")
     print(f"Season(s): {', '.join(demand_seasons)}")
@@ -109,13 +111,12 @@ if __name__ == "__main__":
             print(f"Skipping season {season}: demand statistics file not found.")
             continue
 
-        with open(demand_file, "r") as f:
-            demand_info = pd.read_json(f)
+        demand_info = pd.DataFrame(pd.read_json(demand_file))
 
         demand_info["season_code"] = season
-        merged_demand_info.append(demand_info)
+        merged_demand_info_.append(demand_info)
 
-    merged_demand_info = pd.concat(merged_demand_info, axis=0)
+    merged_demand_info = pd.concat(merged_demand_info_, axis=0)
     merged_demand_info = merged_demand_info.reset_index(drop=True)
 
     demand_statistics = import_demand(merged_demand_info, listings)

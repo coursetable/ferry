@@ -8,7 +8,7 @@ from ferry import config
 from ferry.includes.utils import resolve_potentially_callable
 
 
-def _create_session_from_credentials(net_id, password):
+def _create_session_from_credentials(net_id: str, password: str) -> requests.Session:
     session = requests.Session()
 
     # Login to CAS.
@@ -23,7 +23,7 @@ def _create_session_from_credentials(net_id, password):
     return session
 
 
-def _create_session_from_cookie(castgc):
+def _create_session_from_cookie(castgc: str) -> requests.Session:
     session = requests.Session()
 
     # Manually set cookie.
@@ -39,7 +39,7 @@ def _create_session_from_cookie(castgc):
     return session
 
 
-def create_session():
+def create_session() -> requests.Session:
     """
     Create a session using parameters from /ferry/config.py.
     """

@@ -5,6 +5,8 @@ Course fetching functions used by:
     /ferry/crawler/fetch_classes.py
 """
 
+from typing import Any, Dict, List
+
 import requests
 import ujson
 
@@ -43,7 +45,7 @@ def fetch_previous_seasons():
     return seasons
 
 
-def fetch_season_subjects(season, api_key):
+def fetch_season_subjects(season: str, api_key: str) -> List[str]:
     """
     Get list of course subjects in a season,
     needed for querying the courses later
@@ -82,7 +84,7 @@ def fetch_season_subjects(season, api_key):
     raise FetchClassesError(f"Unsuccessful response: code {req.status_code}")
 
 
-def fetch_season_subject_courses(season, subject, api_key):
+def fetch_season_subject_courses(season: str, subject: str, api_key: str):
     """
     Get courses in a season, for a given subject
 
@@ -123,7 +125,7 @@ def fetch_season_subject_courses(season, subject, api_key):
     raise FetchClassesError(f"Unsuccessful response: code {req.status_code}")
 
 
-def fetch_season_courses(season, criteria):
+def fetch_season_courses(season: str, criteria: Dict[str, Any]) -> List[Dict[str, Any]]:
     """
     Get preliminary course info for a given season
 
@@ -163,7 +165,7 @@ def fetch_season_courses(season, criteria):
     raise FetchClassesError(f"Unsuccessful response: code {req.status_code}")
 
 
-def fetch_previous_json(season, evals=False):
+def fetch_previous_json(season: str, evals=False) -> List[Dict[str, Any]]:
     """
     Get existing JSON files for a season from the CourseTable website
     (at https://coursetable.com/gen/json/data_with_evals_<season_CODE>.json)
@@ -199,7 +201,7 @@ def fetch_previous_json(season, evals=False):
     raise FetchClassesError("Unsuccessful response: code {}".format(req.status_code))
 
 
-def fetch_course_json(code, crn, srcdb):
+def fetch_course_json(code: str, crn: str, srcdb: str) -> Dict[str, Any]:
     """
     Fetch information for a course from the API
 

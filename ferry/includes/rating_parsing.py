@@ -1,6 +1,8 @@
 """
 Functions for use by /ferry/crawler/parse_ratings.py
 """
+import csv
+from typing import Any, Dict
 
 import ujson
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
@@ -9,7 +11,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 analyzer = SentimentIntensityAnalyzer()
 
 
-def process_narratives(evaluation, narratives_writer):
+def process_narratives(evaluation: Dict[str, Any], narratives_writer: csv.DictWriter):
     """
     Process written evaluations. Appends to narratives CSV with
     global writer object.
@@ -35,7 +37,7 @@ def process_narratives(evaluation, narratives_writer):
             narratives_writer.writerow(narrative)
 
 
-def process_ratings(evaluation, ratings_writer):
+def process_ratings(evaluation: Dict[str, Any], ratings_writer: csv.DictWriter):
     """
     Process categorical evaluations. Appends to ratings CSV with
     global writer object.
@@ -52,7 +54,7 @@ def process_ratings(evaluation, ratings_writer):
         ratings_writer.writerow(rating)
 
 
-def process_statistics(evaluation, statistics_writer):
+def process_statistics(evaluation: Dict[str, Any], statistics_writer: csv.DictWriter):
     """
     Process evaluation statistics. Appends to statistics CSV with
     global writer object.
@@ -70,7 +72,7 @@ def process_statistics(evaluation, statistics_writer):
     statistics_writer.writerow(statistics)
 
 
-def process_questions(evaluation, questions_writer):
+def process_questions(evaluation: Dict[str, Any], questions_writer: csv.DictWriter):
     """
     Process evaluation questions. Appends to questions CSV with
     global writer object.
