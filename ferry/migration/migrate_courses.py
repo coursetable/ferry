@@ -57,7 +57,7 @@ if __name__ == "__main__":
                 )
                 migrated_course["requirements"] = course["requirements"]
 
-                def truncate_title(title):
+                def truncate_title(title: str) -> str:
                     """
                     Shorten a title if it is over 32 characters long.
                     """

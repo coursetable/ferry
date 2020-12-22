@@ -104,8 +104,8 @@ fasttext_similars_df.reset_index(drop=False, inplace=True)
 tfidf_similars_df.reset_index(drop=False, inplace=True)
 
 # specify column names for database compatibility
-fasttext_similars_df.columns = ["source", "target", "rank"]
-tfidf_similars_df.columns = ["source", "target", "rank"]
+fasttext_similars_df.set_axis(["source", "target", "rank"], axis=1, inplace=True)
+tfidf_similars_df.set_axis(["source", "target", "rank"], axis=1, inplace=True)
 
 print("Writing output tables")
 fasttext_similars_df.to_csv(config.DATA_DIR / "importer_dumps/fasttext_similars.csv")
