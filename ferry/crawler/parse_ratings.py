@@ -9,8 +9,8 @@ import csv
 from pathlib import Path
 from typing import List
 
-import ujson
 import pandas as pd
+import ujson
 
 from ferry import config
 from ferry.includes.rating_parsing import (
