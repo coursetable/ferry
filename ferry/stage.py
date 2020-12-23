@@ -17,7 +17,7 @@ if __name__ == "__main__":
     csv_dir = config.DATA_DIR / "importer_dumps"
 
     # common pd.read_csv arguments
-    general_csv_kwargs = {"index_col": 0, "low_memory": False}
+    general_csv_kwargs: Dict[Any, Any] = {"index_col": 0, "low_memory": False}
 
     def load_csv(table_name: str, csv_kwargs: Dict[Any, Any] = None) -> pd.DataFrame:
         """
@@ -27,9 +27,10 @@ if __name__ == "__main__":
         if csv_kwargs is None:
             csv_kwargs = {}
 
-        return pd.read_csv(
-            csv_dir / f"{table_name}.csv", **general_csv_kwargs, **csv_kwargs
-        )
+        merged_kwargs = general_csv_kwargs.copy()
+        merged_kwargs.update(csv_kwargs)
+
+        return pd.read_csv(csv_dir / f"{table_name}.csv", **merged_kwargs)
 
     seasons = load_csv("seasons")
 

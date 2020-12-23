@@ -4,8 +4,8 @@ import pandas as pd
 
 from ferry import config, database
 
-courses = pd.read_sql_table("courses", con=database.Engine)
-listings = pd.read_sql_table("listings", con=database.Engine)
+courses = pd.read_sql_table("courses", con=database.Engine)  # type: ignore
+listings = pd.read_sql_table("listings", con=database.Engine)  # type: ignore
 
 # set course id as index for both
 courses = courses.set_index("course_id")
@@ -49,7 +49,7 @@ credits = pivot_binary(credits)
 subjects = pivot_binary(subjects)
 
 # join all binary matrices along variable axis
-context_vectors = pd.concat(
+context_vectors = pd.concat(  # type: ignore
     [areas, skills, schools, credits, subjects], join="outer", axis=1
 )
 
@@ -57,7 +57,7 @@ context_vectors = pd.concat(
 context_vectors = context_vectors.fillna(0)
 
 # export to HDF5
-context_vectors.to_hdf(
+context_vectors.to_hdf(  # type: ignore
     config.DATA_DIR / "description_embeddings/context_vectors.h5",
     key="context_vectors",
     mode="w",

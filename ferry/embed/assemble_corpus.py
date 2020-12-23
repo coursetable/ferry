@@ -30,7 +30,7 @@ courses = courses.sort_values(by="season_code", ascending=False)
 print(f"Total courses: {len(courses)}")
 
 # drop exact title duplicates
-courses = courses.drop_duplicates(subset=["title"], keep="first")
+courses = courses.drop_duplicates(subset=["title"], keep="first")  # type: ignore
 print(f"Total courses (unique titles and descriptions): {len(courses)}")
 
 # index for mapping courses to embedding vectors
@@ -41,8 +41,11 @@ courses["embed_index"] = range(len(courses))
 # -------------
 
 tqdm.pandas(desc="Preprocessing texts for FastText")
-courses["title_description"] = courses["title"] + " " + courses["description"]
-courses["prepared_fasttext"] = courses["title_description"].progress_apply(
+
+courses["title_description"] = courses[["title", "description"]].agg(
+    " ".join, axis=1
+)  # type: ignore
+courses["prepared_fasttext"] = courses["title_description"].progress_apply(  # type: ignore
     preprocess_fasttext
 )
 print("Preprocessing texts for TF-IDF")
