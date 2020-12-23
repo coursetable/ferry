@@ -7,8 +7,10 @@ sentiment intensity estimates over the narratives with VADER.
 
 import csv
 from pathlib import Path
+from typing import List
 
 import ujson
+import pandas as pd
 
 from ferry import config
 from ferry.includes.rating_parsing import (
@@ -93,12 +95,12 @@ if __name__ == "__main__":
     new_eval_files = Path(config.DATA_DIR / "course_evals").glob("*.json")
 
     # extract file names (<season> + <crn> format) for merging
-    previous_eval_files = [x.name for x in previous_eval_files]
-    new_eval_files = [x.name for x in new_eval_files]
+    previous_eval_filenames = [x.name for x in previous_eval_files]
+    new_eval_filenames = [x.name for x in new_eval_files]
 
-    all_eval_files = sorted(list(set(previous_eval_files + new_eval_files)))
+    all_eval_files = sorted(list(set(previous_eval_filenames + new_eval_filenames)))
 
-    merged_evaluations = []
+    merged_evaluations: List[pd.DataFrame] = []
 
     for filename in tqdm(all_eval_files, desc="Processing evaluations"):
         # Read the evaluation, giving preference to current over previous.
