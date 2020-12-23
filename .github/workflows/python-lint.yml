@@ -32,3 +32,6 @@ jobs:
       - name: Lint with pylint
         run: |
           poetry run pylint ./ferry
+      - name: Type checking with mypy (ignore errors)
+        run: |
+          poetry run mypy ferry || true
