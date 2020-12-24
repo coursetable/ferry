@@ -52,20 +52,20 @@ Before running, make sure the following are installed and configured:
 
 If your default Python version is below 3.8, we recommend that you use pyenv to create a virtual environment rather than adding yet another Python installation to your path. For instance, creating and activating an environment with Python 3.8.6 can be done with
 
-```
+```bash
 pyenv install 3.8.6
 pyenv local 3.8.6  # Activate Python 3.8.6 for the current project
 ```
 
 To install Poetry, make sure Python is installed and run
 
-```
+```bash
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 ```
 
 Graphviz and Postgres can be installed on macOS and Ubuntu as follows:
 
-```
+```bash
 # macOS
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
 brew install graphviz postgresql
@@ -83,7 +83,7 @@ Known issues:
 
 To install Python dependencies via Poetry, run
 
-```
+```bash
 poetry install
 ```
 
@@ -93,13 +93,13 @@ from anywhere within this project.
 
 To run the Python scripts correctly, activate the virtual environment created by Poetry by running
 
-```
+```bash
 poetry shell
 ```
 
 The stages prior to the database import consist of Python scripts, so Poetry alone is sufficient. However, to run the database importer and additional post-processing steps, the Docker container, which provides the Postgres database, must be started. This can be done by running
 
-```
+```bash
 docker-compose up
 ```
 
@@ -107,7 +107,7 @@ from the project root. This will automatically download and install the Docker f
 
 Note that CourseTable proper interacts with ferry via an additional GraphQL endpoint provided by Hasura on CourseTable's end (see [coursetable/docker/docker-compose.yml](https://github.com/coursetable/coursetable/blob/master/docker/docker-compose.yml)). For development purposes, you can also host the GraphQL endpoint from ferry by running
 
-```
+```bash
 docker-compose -f docker-compose.yml -f docker-compose.hasura.yml up
 ```
 
@@ -118,7 +118,7 @@ This command will start Hasura in addition to the Postgres container specified i
 The data files – outputs from the extraction stage – are stored in the `/data` directory.
 The course evaluations data are private and should only be accessible to Yale students and faculty. As such, we store these files in a private Git submodule.
 
-```
+```bash
 # Download data files from private repository into the /data directory.
 git submodule update --init
 ```
@@ -170,7 +170,7 @@ To contribute to this repository, please create a branch and open a pull request
 
 Note that we run three Python style checks via GitHub Actions: [black](https://github.com/psf/black) (for general code formatting), [isort](https://github.com/PyCQA/isort) (for import ordering), and [pylint](https://github.com/PyCQA/pylint) (for general quality checks). You can run these three manually from the repository root via
 
-```
+```bash
 poetry run black ./ferry
 poetry run isort ./ferry
 poetry run pylint ./ferry
@@ -178,7 +178,7 @@ poetry run pylint ./ferry
 
 You can also attach these commands via pre-commit hooks, which can be installed with
 
-```
+```bash
 poetry run githooks setup
 ```
 
