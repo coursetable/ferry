@@ -59,7 +59,7 @@ course_embeddings = np.array(
     [model.get_sentence_vector(x) for x in preembed_descriptions]
 )
 
-course_embeddings = pd.DataFrame(
+course_embeddings_df = pd.DataFrame(
     course_embeddings,
     index=courses.index,
     columns=np.arange(course_embeddings.shape[1]),
@@ -67,8 +67,8 @@ course_embeddings = pd.DataFrame(
 
 print("Writing embedding outputs")
 
-course_embeddings.to_hdf(
+course_embeddings_df.to_hdf(
     config.DATA_DIR / "course_embeddings/fasttext_embeddings.h5",
     key="embeddings",
     mode="w",
-)
+)  # type: ignore

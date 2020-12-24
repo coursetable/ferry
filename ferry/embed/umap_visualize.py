@@ -11,8 +11,9 @@ courses = pd.read_csv(
     index_col=0,
 )
 
+# mypy: ignore-errors
 courses["full_title"] = (
-    courses["title"] + " (" + courses["season_code"].astype(str) + ")"
+    courses[["title", "season_code"]].astype(str).agg("-".join, axis=1)
 )
 
 fig = px.scatter(

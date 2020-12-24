@@ -4,6 +4,7 @@ CSVs generated with Pandas.
 """
 import os
 from pathlib import Path
+from typing import List
 
 import pandas as pd
 import ujson
@@ -55,14 +56,14 @@ if __name__ == "__main__":
     print("[Importing courses]")
     print(f"Season(s): {', '.join(course_seasons)}")
 
-    merged_course_info_ = []
+    merged_course_info_: List[pd.DataFrame] = []
 
     for season in tqdm(course_seasons, desc="Loading course JSONs"):
         # Read the course listings, giving preference to freshly parsed over migrated ones.
         parsed_courses_file = Path(f"{config.DATA_DIR}/parsed_courses/{season}.json")
 
         if parsed_courses_file.is_file():
-            parsed_course_info = pd.read_json(str(parsed_courses_file))
+            parsed_course_info = pd.DataFrame(pd.read_json(str(parsed_courses_file)))
         else:
             # check migrated courses as a fallback
             migrated_courses_file = Path(
@@ -111,7 +112,7 @@ if __name__ == "__main__":
             print(f"Skipping season {season}: demand statistics file not found.")
             continue
 
-        demand_info = pd.DataFrame(pd.read_json(demand_file))
+        demand_info = pd.DataFrame(pd.read_json(str(demand_file)))
 
         demand_info["season_code"] = season
         merged_demand_info_.append(demand_info)

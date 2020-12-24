@@ -22,11 +22,11 @@ unique_courses = pd.read_csv(
     config.DATA_DIR / "course_embeddings/courses_deduplicated.csv",
     index_col=0,
 )
-fasttext_embeddings = pd.read_hdf(
+fasttext_embeddings = pd.read_hdf(  # type: ignore
     config.DATA_DIR / "course_embeddings/fasttext_embeddings.h5",
     key="embeddings",
 )
-tfidf_embeddings = pd.read_hdf(
+tfidf_embeddings = pd.read_hdf(  # type: ignore
     config.DATA_DIR / "course_embeddings/tfidf_embeddings.h5",
     key="embeddings",
 )
@@ -46,7 +46,7 @@ courses["embed_index"] = courses["embed_index"].astype(int)
 # group embedding indices
 courses_by_season = courses.set_index("course_id").groupby("season_code")["embed_index"]
 
-seasons = courses_by_season.groups.keys()
+seasons = courses_by_season.groups.keys()  # type: ignore
 
 fasttext_similars_ = dict()
 tfidf_similars_ = dict()
@@ -56,7 +56,7 @@ for season in seasons:
 
     print(f"Computing similar courses for season {season}")
 
-    season_courses = courses_by_season.get_group(season)
+    season_courses = courses_by_season.get_group(season)  # type: ignore
 
     # course_ids for database foreign keys
     season_course_ids = season_courses.index.values
@@ -69,7 +69,7 @@ for season in seasons:
     season_tfidf = tfidf_embeddings[season_embed_indices]
 
     # exclude NaN values in TF-IDF embeddings
-    season_tfidf_valids = np.all(np.isfinite(season_tfidf), axis=1)
+    season_tfidf_valids = np.all(np.isfinite(season_tfidf), axis=1)  # type: ignore
 
     # get similar courses
     season_fasttext_similars = get_nearest_neighbors(
@@ -88,8 +88,8 @@ for season in seasons:
 
 print("Aggregating similar courses")
 # convert dictionary result to DataFrames
-fasttext_similars = pd.Series(fasttext_similars_).apply(list).explode()
-tfidf_similars = pd.Series(tfidf_similars_).apply(list).explode()
+fasttext_similars = pd.Series(fasttext_similars_).apply(list).explode()  # type: ignore
+tfidf_similars = pd.Series(tfidf_similars_).apply(list).explode()  # type: ignore
 
 # extract targets and ranks from column tuples
 fasttext_similars_df = pd.DataFrame(
@@ -104,8 +104,8 @@ fasttext_similars_df.reset_index(drop=False, inplace=True)
 tfidf_similars_df.reset_index(drop=False, inplace=True)
 
 # specify column names for database compatibility
-fasttext_similars_df.set_axis(["source", "target", "rank"], axis=1, inplace=True)
-tfidf_similars_df.set_axis(["source", "target", "rank"], axis=1, inplace=True)
+fasttext_similars_df.set_axis(["source", "target", "rank"], axis=1, inplace=True)  # type: ignore
+tfidf_similars_df.set_axis(["source", "target", "rank"], axis=1, inplace=True)  # type: ignore
 
 print("Writing output tables")
 fasttext_similars_df.to_csv(config.DATA_DIR / "importer_dumps/fasttext_similars.csv")

@@ -4,7 +4,7 @@ Handles computed fields in the tables. Used by /ferry/transform.py.
 
 import csv
 import math
-from typing import List
+from typing import List, Optional
 
 import pandas as pd
 
@@ -97,7 +97,7 @@ def evaluation_statistics_computed(
     )
 
     # compute average rating of responses array
-    def average_rating(ratings: List[int]) -> float:
+    def average_rating(ratings: List[int]) -> Optional[float]:
         if not ratings or not sum(ratings):
             return None
         agg = 0
@@ -193,8 +193,16 @@ def courses_computed(
     course_professors = course_professors.copy(deep=True)
 
     # map courses to codes and codes to courses for historical offerings (overall)
-    course_to_codes = listings.groupby("course_id")["course_code"].apply(list).to_dict()
-    code_to_courses = listings.groupby("course_code")["course_id"].apply(list).to_dict()
+    course_to_codes = (
+        listings.groupby("course_id")["course_code"]  # type: ignore
+        .apply(list)
+        .to_dict()
+    )
+    code_to_courses = (
+        listings.groupby("course_code")["course_id"]  # type: ignore
+        .apply(list)
+        .to_dict()
+    )
 
     courses["codes"] = courses["course_id"].apply(course_to_codes.get)
     courses["coded_courses"] = courses["codes"].apply(
@@ -206,9 +214,10 @@ def courses_computed(
 
     # map course_id to professor_ids
     # use frozenset because it is hashable (set is not), needed for groupby
-    course_to_professors = course_professors.groupby("course_id")["professor_id"].apply(
-        frozenset
-    )
+    course_to_professors = course_professors.groupby("course_id")[  # type: ignore
+        "professor_id"
+    ].apply(frozenset)
+
     # get historical offerings with same professors
     listings["professors"] = listings["course_id"].apply(course_to_professors.get)
     courses["professors"] = courses["course_id"].apply(course_to_professors.get)
@@ -216,7 +225,7 @@ def courses_computed(
     # map (course_code, professors) to course codes
     code_profs_to_courses = (
         listings.groupby(["course_code", "professors"])["course_id"]
-        .apply(list)
+        .apply(list)  # type: ignore
         .to_dict()
     )
 
@@ -322,7 +331,9 @@ def courses_computed(
         )
 
     tqdm.pandas(desc="Finding last-offered course")
-    courses["last_offered_course_id"] = courses.progress_apply(get_last_offered, axis=1)
+    courses["last_offered_course_id"] = courses.progress_apply(  # type: ignore
+        get_last_offered, axis=1
+    )
 
     tqdm.pandas(desc="Finding last-offered enrollment")
     # getting last-offered enrollment
@@ -331,7 +342,9 @@ def courses_computed(
         courses["last_enrollment"],
         courses["last_enrollment_season_code"],
         courses["last_enrollment_same_professors"],
-    ) = zip(*courses.progress_apply(get_last_offered_enrollment, axis=1))
+    ) = zip(
+        *courses.progress_apply(get_last_offered_enrollment, axis=1)  # type: ignore
+    )
 
     print("Computing historical ratings for courses")
 

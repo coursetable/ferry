@@ -46,14 +46,14 @@ courses = pd.read_csv(
     index_col=0,
 )
 
-course_embeddings = pd.DataFrame(
+course_embeddings_df = pd.DataFrame(
     course_embeddings,
     index=courses.index,
     columns=np.arange(course_embeddings.shape[1]),
 )
 
-course_embeddings.to_hdf(
+course_embeddings_df.to_hdf(
     config.DATA_DIR / "course_embeddings/tfidf_embeddings.h5",
     key="embeddings",
     mode="w",
-)
+)  # type: ignore

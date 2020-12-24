@@ -12,6 +12,8 @@ courses = pd.read_csv(
     config.DATA_DIR / "course_embeddings/courses_deduplicated.csv",
     index_col=0,
 )
+
+# mypy: ignore-errors
 embeddings = pd.read_hdf(
     config.DATA_DIR / "course_embeddings/fasttext_embeddings.h5",
     key="embeddings",
