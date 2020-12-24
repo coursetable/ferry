@@ -68,7 +68,10 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
     )
 
     # group CRNs by season for cross-listing deduplication
-    crns_by_season = merged_course_info.groupby("season_code")["crns"].apply(list)
+
+    crns_by_season = merged_course_info.groupby("season_code")[  # type: ignore
+        "crns"
+    ].apply(list)
     # convert CRN groups to sets for resolution
     crns_by_season = crns_by_season.apply(lambda x: [frozenset(y) for y in x])
     # resolve overlapping CRN sets

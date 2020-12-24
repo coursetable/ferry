@@ -125,7 +125,9 @@ def fetch_season_subject_courses(season: str, subject: str, api_key: str):
     raise FetchClassesError(f"Unsuccessful response: code {req.status_code}")
 
 
-def fetch_season_courses(season: str, criteria: Dict[str, Any]) -> List[Dict[str, Any]]:
+def fetch_season_courses(
+    season: str, criteria: List[Dict[str, Any]]
+) -> List[Dict[str, Any]]:
     """
     Get preliminary course info for a given season
 
