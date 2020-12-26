@@ -191,11 +191,11 @@ def resolve_historical_courses(
         same_courses.edges(data=False), desc="Building filtered same-courses graph"
     ):
 
-        title_1 = course_to_title.get(course_1, "")
-        title_2 = course_to_title.get(course_2, "")
+        title_1 = course_to_title.get(course_1, [""])[0]
+        title_2 = course_to_title.get(course_2, [""])[0]
 
-        description_1 = course_to_description.get(course_1, "")
-        description_2 = course_to_description.get(course_2, "")
+        description_1 = course_to_description.get(course_1, [""])[0]
+        description_2 = course_to_description.get(course_2, [""])[0]
 
         if is_same_course(title_1, title_2, description_1, description_2):
 
@@ -216,10 +216,10 @@ def resolve_historical_courses(
 
     # map courses to unique same-courses ID, and map same-courses ID to courses
 
-    same_courses = pd.Series(connected_codes, name="course_id")
-    same_course_to_courses = same_courses.to_dict()
+    connected_courses = pd.Series(connected_codes, name="course_id")
+    same_course_to_courses = connected_courses.to_dict()
 
-    same_courses_explode = same_courses.explode()
+    same_courses_explode = connected_courses.explode()
     course_to_same_course = dict(
         zip(same_courses_explode.values, same_courses_explode.index)
     )
