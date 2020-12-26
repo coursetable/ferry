@@ -77,7 +77,13 @@ def is_same_course(
         by dividing by the length of the longer text.
         """
 
-        raw_dist = edlib.align(text_1, text_2)["editDistance"]
+        # make sure the longer text comes first for infix (HW) edit distance
+        if len(text_1) > len(text_2):
+            text_1, text_2 = text_2, text_1
+
+        # use the infix alignment, where gaps at start/end are not penalized
+        # see https://github.com/Martinsos/edlib#alignment-methods
+        raw_dist = edlib.align(text_1, text_2, mode="HW")["editDistance"]
 
         max_len = max(len(text_1), len(text_2))
 
