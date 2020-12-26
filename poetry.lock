@@ -197,6 +197,14 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "edlib"
+version = "1.3.8.post2"
+description = "Lightweight, super fast library for sequence alignment using edit (Levenshtein) distance."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "en-core-web-sm"
 version = "2.3.1"
 description = "English multi-task CNN trained on OntoNotes. Assigns context-specific token vectors, POS tags, dependency parse and named entities."
@@ -1146,7 +1154,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "0b47516b0ead5f4ba6a5a0af790f87ffc061226075269bc31ab5e2e2178321da"
+content-hash = "6d00816234729ccbdc1bb383914fd98952ed2f8eed40b0413ed9615b92da9e6f"
 
 [metadata.files]
 annoy = [
@@ -1282,6 +1290,24 @@ dill = [
 diskcache = [
     {file = "diskcache-4.1.0-py2.py3-none-any.whl", hash = "sha256:69b253a6ffe95bb4bafb483b97c24fca3c2c6c47b82e92b36486969a7e80d47d"},
     {file = "diskcache-4.1.0.tar.gz", hash = "sha256:bcee5a59f9c264e2809e58d01be6569a3bbb1e36a1e0fb83f7ef9b2075f95ce0"},
+]
+edlib = [
+    {file = "edlib-1.3.8.post2-cp35-cp35m-macosx_10_9_x86_64.whl", hash = "sha256:d3e28890c156b3edf9059b6ef516ad20804d445e0ff059e3f649604879814cc2"},
+    {file = "edlib-1.3.8.post2-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:e87d92e0198f48a42c3784dac2870eca9b3197eaca426d0d65906a7bd3f6f6a6"},
+    {file = "edlib-1.3.8.post2-cp35-cp35m-manylinux2010_x86_64.whl", hash = "sha256:bbe250e01b037042bf1fe19b5ef5084cf3303ab9d5c107baf41d178154430e3d"},
+    {file = "edlib-1.3.8.post2-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:ff53e5dd4513fa29b1660dbbd4a92f32cc58acc105824a6672daa68a6a6dffae"},
+    {file = "edlib-1.3.8.post2-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:efe71267e2b8135e6bdf468395767326f94ea576438a2664f7e6419db755a758"},
+    {file = "edlib-1.3.8.post2-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:5cf99cd84c4f491aa5586ced098f44b44c27cc569925bba4d56b5d494146f7d3"},
+    {file = "edlib-1.3.8.post2-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:33096f876dd0aaa0ad36c3ee855df1d27b2ca849a5e65b44b504d4eb4dafe3fa"},
+    {file = "edlib-1.3.8.post2-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:0f2a02fa4f19e42739aa59ba36fb30c592cc783960c06348aef453352163403e"},
+    {file = "edlib-1.3.8.post2-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:26af1075fd8f6fef990cd6ce11c4976170ac0893b1e43efe3b9ff4c613d81f83"},
+    {file = "edlib-1.3.8.post2-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:ff7f68fd2171fe4589888fcbfbaf78a552c8808787cf0f3bf97516fc1c1614ae"},
+    {file = "edlib-1.3.8.post2-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:1f8ba12265cd1521a048880bdd7a1a6d4c0ccbc2fd1b41b6009d4a555db961e6"},
+    {file = "edlib-1.3.8.post2-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:193701a1f0cb785bc1e27081a60d9431f6420c7bcccbfa6ae558341f49daae69"},
+    {file = "edlib-1.3.8.post2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:fd86d1785f04ca45018a7660866a3a3775e335e0445f2d9f310ea585695d05e6"},
+    {file = "edlib-1.3.8.post2-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:20b6746a3aec3665cf2b2ca70053e5f0d81b47d48da4a00965ef9a3d00724f75"},
+    {file = "edlib-1.3.8.post2-cp39-cp39-manylinux2010_x86_64.whl", hash = "sha256:ce60714e23472b91cdd5f41c19bdf727711d6d1b659d3ff36f16a8532a856b1d"},
+    {file = "edlib-1.3.8.post2.tar.gz", hash = "sha256:58c08103174a39cacc0cc01eee93a433b4382fbe85146a627986570d3b2ab79b"},
 ]
 en-core-web-sm = []
 eralchemy = [
