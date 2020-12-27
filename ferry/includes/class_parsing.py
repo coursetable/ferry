@@ -455,7 +455,7 @@ def extract_meetings_by_day(
     meetings_by_day
     """
 
-    meetings_by_day: Dict[str, List[Tuple[str, str, str, str]]] = dict()
+    meetings_by_day: Dict[str, List[Tuple[str, str, str, str]]] = {}
 
     for meeting in formatted_meetings:
 
@@ -608,7 +608,7 @@ def extract_meetings_alternate(
     """
 
     locations_summary = "TBA"
-    times_by_day: Dict[str, List[Tuple[str, str, str, str]]] = dict()
+    times_by_day: Dict[str, List[Tuple[str, str, str, str]]] = {}
 
     # check if there is a valid listing
 

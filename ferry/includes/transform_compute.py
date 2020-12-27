@@ -12,7 +12,7 @@ from ferry import config, database
 from ferry.includes.tqdm import tqdm
 from ferry.includes.utils import flatten_list_of_lists, get_table_columns
 
-QUESTION_TAGS = dict()
+QUESTION_TAGS = {}
 with open(f"{config.RESOURCE_DIR}/question_tags.csv") as f:
     for question_code, tag in csv.reader(f):
         QUESTION_TAGS[question_code] = tag

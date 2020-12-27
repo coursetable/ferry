@@ -48,7 +48,7 @@ if __name__ == "__main__":
             tqdm.write(f"Processing courses in season {season}")
             for course in tqdm(previous_json):
 
-                migrated_course = dict()
+                migrated_course = {}
 
                 migrated_course["season_code"] = str(season)
 

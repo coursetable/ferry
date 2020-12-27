@@ -112,7 +112,7 @@ def fetch_legacy_ratings(db_connection, season: str, crn: str, extras: dict):
         cursor.execute(sql, (course_id,))
         data = cursor.fetchall()
 
-    ratings_data = dict()
+    ratings_data = {}
     for item in data:
         ratings_data[item["question_id"]] = ujson.loads(item["counts"])
 
@@ -130,7 +130,7 @@ def fetch_legacy_ratings(db_connection, season: str, crn: str, extras: dict):
             cursor.execute(sql, tuple(questions_ids))
             data = cursor.fetchall()
 
-        questions = dict()
+        questions = {}
         for item in data:
             questions[item["id"]] = (item["text"], item["options"])
     else:
