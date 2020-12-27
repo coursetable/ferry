@@ -201,7 +201,7 @@ def convert_old_meetings(
     # process times_by_day
     # -----------------------------
 
-    new_times_by_day = dict()
+    new_times_by_day = {}
 
     # handle cases where misformatted as list
     if times_by_day != []:
