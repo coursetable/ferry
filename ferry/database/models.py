@@ -322,6 +322,8 @@ class Course(BaseModel):
         comment="""[computed] Unique ID for grouping courses by historical offering.
         All courses with a given ID are identical offerings across different semesters.
         """,
+        index=True,
+        nullable=False,
     )
 
     same_course_and_profs_id = Column(
@@ -331,6 +333,8 @@ class Course(BaseModel):
         Same as 'same_course_id' with the constraint that all courses in a group were
         taught by the same professors.
         """,
+        index=True,
+        nullable=False,
     )
 
     # -----------------------
