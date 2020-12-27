@@ -48,8 +48,8 @@ courses_by_season = courses.set_index("course_id").groupby("season_code")["embed
 
 seasons = courses_by_season.groups.keys()  # type: ignore
 
-fasttext_similars_ = dict()
-tfidf_similars_ = dict()
+fasttext_similars_ = {}
+tfidf_similars_ = {}
 
 print("Computing similar courses by season")
 for season in seasons:
