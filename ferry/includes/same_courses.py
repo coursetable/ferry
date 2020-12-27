@@ -192,9 +192,9 @@ def resolve_historical_courses(
         listings, "course_id", "course_code"
     )
 
-    courses_codes = courses.set_index("course_id", drop=False)["course_id"].apply(
-        course_to_codes.get
-    )
+    courses_codes = courses.set_index("course_id", drop=False)[  # type: ignore
+        "course_id"
+    ].apply(course_to_codes.get)
     courses_shared_code = courses_codes.apply(
         lambda x: [code_to_courses[code] for code in x]
     )
