@@ -20,7 +20,7 @@ MAX_DESCRIPTION_DIST = 0.25
 
 def map_to_groups(
     dataframe: pd.DataFrame, left: str, right: str
-) -> Dict[Any, List[Any]]:
+) -> Tuple[Dict[Any, List[Any]], Dict[Any, List[Any]]]:
 
     """
     Given a dataframe and two columns 'left' and 'right', construct dictionaries
@@ -130,7 +130,7 @@ def is_same_course(
 
 def get_connected_courses(
     graph: networkx.Graph,
-) -> Tuple[Dict[int, int], Dict[int, List[int]]]:
+) -> Tuple[Dict[Any, Any], Dict[Any, Any]]:
 
     """
     Get connected courses in courses graph.
@@ -146,10 +146,10 @@ def get_connected_courses(
 
     # map courses to unique same-courses ID, and map same-courses ID to courses
 
-    connected_courses = pd.Series(connected_codes, name="course_id")
+    connected_courses = pd.Series(connected_codes, name="course_id")  # type: ignore
     same_course_to_courses = connected_courses.to_dict()
 
-    same_courses_explode = connected_courses.explode()
+    same_courses_explode = connected_courses.explode()  # type: ignore
     course_to_same_course = dict(
         zip(same_courses_explode.values, same_courses_explode.index)
     )
@@ -199,12 +199,15 @@ def resolve_historical_courses(
     courses_shared_code = courses_shared_code.apply(
         lambda x: list(set(flatten_list_of_lists(x)))
     )
-    courses_shared_code.index = courses["course_id"]
+    courses_shared_code = courses_shared_code.reindex(courses["course_id"])  # type: ignore
 
     # filter out titles and descriptions for matching
-    long_titles = courses[courses["title"].fillna("").apply(len) >= MIN_TITLE_MATCH_LEN]
-    long_descriptions = courses[
-        courses["description"].fillna("").apply(len) >= MIN_DESCRIPTION_MATCH_LEN
+    long_titles = courses.loc[
+        courses["title"].fillna("").apply(len) >= MIN_TITLE_MATCH_LEN  # type: ignore
+    ]
+    long_descriptions = courses.loc[
+        courses["description"].fillna("").apply(len)  # type: ignore
+        >= MIN_DESCRIPTION_MATCH_LEN
     ]
 
     course_to_title, _ = map_to_groups(long_titles, "course_id", "title")
@@ -225,7 +228,7 @@ def resolve_historical_courses(
         same_courses.add_node(course)
 
     for course, shared_code_courses in tqdm(
-        courses_shared_code.iteritems(),
+        courses_shared_code.iteritems(),  # type: ignore
         total=len(courses_shared_code),
         desc="Populating initial same-courses graph",
     ):
@@ -300,15 +303,17 @@ def split_same_professors(
     """
 
     same_course_profs = pd.DataFrame(
-        pd.Series(course_to_same_course_filtered).rename("same_course_id")
+        pd.Series(course_to_same_course_filtered).rename("same_course_id")  # type: ignore
     )
 
-    same_course_profs.index.name = "course_id"
+    same_course_profs.index.rename("course_id", inplace=True)  # type: ignore
     same_course_profs = same_course_profs.reset_index(drop=False)
 
     course_to_professors = course_professors.groupby("course_id")[  # type: ignore
         "professor_id"
-    ].apply(frozenset)
+    ].apply(
+        frozenset
+    )  # type: ignore
 
     same_course_profs["professors"] = same_course_profs.index.map(
         lambda x: course_to_professors.get(x, frozenset())
@@ -316,7 +321,7 @@ def split_same_professors(
 
     professors_grouped = (
         same_course_profs.groupby(["same_course_id", "professors"])["course_id"]
-        .apply(list)
+        .apply(list)  # type: ignore
         .reset_index()
     )
 
