@@ -192,14 +192,15 @@ def resolve_historical_courses(
         listings, "course_id", "course_code"
     )
 
-    courses_codes = courses["course_id"].apply(course_to_codes.get)
+    courses_codes = courses.set_index("course_id", drop=False)["course_id"].apply(
+        course_to_codes.get
+    )
     courses_shared_code = courses_codes.apply(
         lambda x: [code_to_courses[code] for code in x]
     )
     courses_shared_code = courses_shared_code.apply(
         lambda x: list(set(flatten_list_of_lists(x)))
     )
-    courses_shared_code = courses_shared_code.reindex(courses["course_id"])  # type: ignore
 
     # filter out titles and descriptions for matching
     long_titles = courses.loc[
