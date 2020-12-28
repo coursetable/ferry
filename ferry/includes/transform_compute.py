@@ -203,25 +203,34 @@ def courses_computed(
         same_course_to_courses_filtered,
     ) = resolve_historical_courses(courses, listings)
 
+    # partition ID of same-codes courses (not used anymore, useful for debugging)
     courses["shared_code_id"] = courses["course_id"].apply(course_to_same_course.get)
+    # connected courses with the same code (not used anymore, useful for debugging)
     courses["shared_code_courses"] = courses["shared_code_id"].apply(
         same_course_to_courses.get
     )
+
+    # unique ID for each partition of the same courses
     courses["same_course_id"] = courses["course_id"].apply(
         course_to_same_course_filtered.get
     )
 
+    # list of course_ids that are the same course per course_id
     courses["same_courses"] = courses["same_course_id"].apply(
         same_course_to_courses_filtered.get
     )
 
+    # split same-course partition by same-professors
     course_to_same_prof_course, same_prof_course_to_courses = split_same_professors(
         course_to_same_course_filtered, course_professors
     )
 
+    # unique ID for each partition of the same courses taught by the same set of profs
     courses["same_course_and_profs_id"] = courses["course_id"].apply(
         course_to_same_prof_course.get
     )
+
+    # list of course_ids that are the same course and taught by same profs per course_id
     courses["same_courses_and_profs"] = courses["same_course_and_profs_id"].apply(
         same_prof_course_to_courses.get
     )

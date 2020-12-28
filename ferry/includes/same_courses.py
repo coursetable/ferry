@@ -145,10 +145,10 @@ def get_connected_courses(
     connected_codes += [[x] for x in singles]
 
     # map courses to unique same-courses ID, and map same-courses ID to courses
-
     connected_courses = pd.Series(connected_codes, name="course_id")  # type: ignore
     same_course_to_courses = connected_courses.to_dict()
 
+    # map course_id to same-course partition ID
     same_courses_explode = connected_courses.explode()  # type: ignore
     course_to_same_course = dict(
         zip(same_courses_explode.values, same_courses_explode.index)
@@ -192,12 +192,16 @@ def resolve_historical_courses(
         listings, "course_id", "course_code"
     )
 
+    # map course_id to course codes
     courses_codes = courses.set_index("course_id", drop=False)[  # type: ignore
         "course_id"
     ].apply(course_to_codes.get)
+
+    # map course_id to all other courses with overlapping codes
     courses_shared_code = courses_codes.apply(
         lambda x: [code_to_courses[code] for code in x]
     )
+    # flatten courses with overlapping codes
     courses_shared_code = courses_shared_code.apply(
         lambda x: list(set(flatten_list_of_lists(x)))
     )
@@ -210,11 +214,6 @@ def resolve_historical_courses(
         courses["description"].fillna("").apply(len)  # type: ignore
         >= MIN_DESCRIPTION_MATCH_LEN
     ]
-
-    course_to_title, _ = map_to_groups(long_titles, "course_id", "title")
-    course_to_description, _ = map_to_groups(
-        long_descriptions, "course_id", "description"
-    )
 
     # construct initial graph of courses:
     # each node is a unique course from the 'courses' table, and two courses are
@@ -245,6 +244,12 @@ def resolve_historical_courses(
     for course_id in courses["course_id"]:
         same_courses_filtered.add_node(course_id)
 
+    # course_id to title and description for graph pruning
+    course_to_title, _ = map_to_groups(long_titles, "course_id", "title")
+    course_to_description, _ = map_to_groups(
+        long_descriptions, "course_id", "description"
+    )
+
     for course_1, course_2 in tqdm(
         same_courses.edges(data=False), desc="Building filtered same-courses graph"
     ):
@@ -255,6 +260,7 @@ def resolve_historical_courses(
         description_1 = course_to_description.get(course_1, [""])[0]
         description_2 = course_to_description.get(course_2, [""])[0]
 
+        # if title and description are similar enough, keep the edge
         if is_same_course(title_1, title_2, description_1, description_2):
 
             same_courses_filtered.add_edge(course_1, course_2)
@@ -264,6 +270,7 @@ def resolve_historical_courses(
 
     print("Identifying same courses by connected components")
 
+    # get same-course mappings from connected components
     course_to_same_course, same_course_to_courses = get_connected_courses(same_courses)
     (
         course_to_same_course_filtered,
@@ -303,6 +310,7 @@ def split_same_professors(
         mapping from resolved same_course id to group of identical courses
     """
 
+    # initialize same-courses with same-professors mapping
     same_course_profs = pd.DataFrame(
         pd.Series(course_to_same_course_filtered).rename("same_course_id")  # type: ignore
     )
@@ -310,22 +318,27 @@ def split_same_professors(
     same_course_profs.index.rename("course_id", inplace=True)  # type: ignore
     same_course_profs = same_course_profs.reset_index(drop=False)
 
+    # construct course_id to course_professors mapping
     course_to_professors = course_professors.groupby("course_id")[  # type: ignore
         "professor_id"
     ].apply(
         frozenset
     )  # type: ignore
 
+    # map each course to frozenset of professors
     same_course_profs["professors"] = same_course_profs.index.map(
         lambda x: course_to_professors.get(x, frozenset())
     )
 
+    # group by previous same-course partition, then split by same-professors, and
+    # reset the index to obtain a partitioning by same-course and same-professors
     professors_grouped = (
         same_course_profs.groupby(["same_course_id", "professors"])["course_id"]
         .apply(list)  # type: ignore
         .reset_index()
     )
 
+    # explode the course_id groups to get same-course to course_id mapping
     same_prof_explode = professors_grouped.explode("course_id")
 
     course_to_same_prof_course = dict(
