@@ -4,6 +4,7 @@ A major part of CourseTable's appeal is our ability to provide historical inform
 
 1. The historical mean rating and workload for a class, as well as the same values but subsetted by previous offerings taught with the same set of professors.
 2. The most recent offering of a class, and its associated attributes (enrollment in particular).
+3. Any statistical analysis on how courses may have changed over time.
 
 However, telling two classes apart is not as trivial as it may seem.
 
