@@ -1,4 +1,11 @@
-def convert_old_description(old_description):
+"""
+Migration utilities for moving from old CourseTable class JSONs.
+"""
+
+from typing import Any, Dict, List, Tuple
+
+
+def convert_old_description(old_description: str) -> str:
     """
     Format old course descriptions.
 
@@ -22,7 +29,7 @@ def convert_old_description(old_description):
     return old_description
 
 
-def convert_old_time(time, revert_12hour=False, truncate_minute=False):
+def convert_old_time(time: str, revert_12hour=False, truncate_minute=False) -> str:
     """
     Convert previous float-formatted times to 24-hour, full format
 
@@ -62,26 +69,26 @@ def convert_old_time(time, revert_12hour=False, truncate_minute=False):
 
     if revert_12hour:
 
-        hour = int(hour)
+        hour_num = int(hour)
 
-        if hour > 12:
-            hour = hour - 12
+        if hour_num > 12:
+            hour_num = hour_num - 12
 
-            formatted_time = f"{str(hour)}:{minute}pm"
+            formatted_time = f"{str(hour_num)}:{minute}pm"
 
-        elif hour == 12:
+        elif hour_num == 12:
 
-            formatted_time = f"{str(hour)}:{minute}pm"
+            formatted_time = f"{str(hour_num)}:{minute}pm"
 
-        elif hour == 0:
+        elif hour_num == 0:
 
-            hour = 12
+            hour_num = 12
 
-            formatted_time = f"{str(hour)}:{minute}am"
+            formatted_time = f"{str(hour_num)}:{minute}am"
 
         else:
 
-            formatted_time = f"{str(hour)}:{minute}am"
+            formatted_time = f"{str(hour_num)}:{minute}am"
 
         if truncate_minute and minute == "00":
 
@@ -90,7 +97,9 @@ def convert_old_time(time, revert_12hour=False, truncate_minute=False):
     return formatted_time
 
 
-def convert_old_meetings(times):
+def convert_old_meetings(
+    times: Dict[str, Any]
+) -> Tuple[str, str, Dict[str, List[List[Any]]]]:
     """
     Convert previous meeting times format to new one
 
@@ -122,24 +131,20 @@ def convert_old_meetings(times):
 
         return "TBA", "TBA", {}
 
-    else:
+    times_summary = times_summary.split(" ")
+    start_end = times_summary[1].split("-")
 
-        times_summary = times_summary.split(" ")
-        start_end = times_summary[1].split("-")
+    # convert 24-hour float-based time formats to colon-based 12 hour ones
+    times_start = convert_old_time(
+        start_end[0], revert_12hour=True, truncate_minute=True
+    )
+    times_end = convert_old_time(start_end[1], revert_12hour=True, truncate_minute=True)
 
-        # convert 24-hour float-based time formats to colon-based 12 hour ones
-        times_start = convert_old_time(
-            start_end[0], revert_12hour=True, truncate_minute=True
-        )
-        times_end = convert_old_time(
-            start_end[1], revert_12hour=True, truncate_minute=True
-        )
+    # reconstruct summary string
+    start_end = times_start + "-" + times_end
+    times_summary[1] = start_end
 
-        # reconstruct summary string
-        start_end = times_start + "-" + times_end
-        times_summary[1] = start_end
-
-        new_times_summary = " ".join(times_summary)
+    new_times_summary = " ".join(times_summary)
 
     # -----------------------------------
     # process time-locations long summary
@@ -190,13 +195,13 @@ def convert_old_meetings(times):
             new_times_long_summary.append(summary)
 
     # change delimiter to newlines
-    new_times_long_summary = "\n".join(new_times_long_summary)
+    new_times_long_summary_join = "\n".join(new_times_long_summary)
 
     # -----------------------------
     # process times_by_day
     # -----------------------------
 
-    new_times_by_day = dict()
+    new_times_by_day = {}
 
     # handle cases where misformatted as list
     if times_by_day != []:
@@ -211,4 +216,4 @@ def convert_old_meetings(times):
                     for x in times_locations
                 ]
 
-    return new_times_summary, new_times_long_summary, new_times_by_day
+    return new_times_summary, new_times_long_summary_join, new_times_by_day

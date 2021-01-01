@@ -1,3 +1,4 @@
+# pylint: skip-file
 from load_json import get_columns, get_current_courses
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 

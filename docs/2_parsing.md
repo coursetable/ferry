@@ -1,4 +1,34 @@
-# Parsing
+# Parsing and importing
+
+## Parsing courses
+
+Because we extract and construct several fields from courses (e.g. formatted meeting times, syllabus links, cross-listings, cleaned description HTML, etc.) we have a pre-processing step implemented in `/ferry/crawler/parse_classes.py`. This outputs parsed class JSONs per season to `/data/parsed_courses/`.
+
+## Importing
+
+As detailed in the [README](/README.md), our importing process is composed of three stages: transforming, staging, and deploying. Each stage is intended to be as independent as possible (although deploying requires that staging be run before) for ease of development.
+
+### Transforming: `/ferry/transform.py`
+
+Up until this point, most of courses, demand statistics, and evaluations are stored in various JSON files. In this step, we pull together these JSON files and shape them into tables based on our schema with Pandas.
+
+As with retrieval, our tables can be grouped into roughly three categories:
+
+1. Courses
+2. Demand statistics
+3. Evaluations (and enrollment)
+
+We construct the courses table first, from which we link demand statistics and evaluations. The construction functions are detailed in `/ferry/includes/importer.py`.
+
+After initial construction of the tables, we also populate several "computed" fields. These include mean ratings over the categorical responses, historical ratings over all past offerings of a course, the enrollment for a course the last time it was offered, and others. The computation functions are detailed in `/ferry/includes/computed.py`. An important requirement for these computed fields is identifying the equivalent offerings of a course over several semesters, which is detailed [here](ferry/docs/4_same_classes.md).
+
+### Staging: `/ferry/stage.py`
+
+The staging step is relatively straightforward. We already have CSV tables from the transforming stage, so we just read in these tables and upload them to the database. Note that we wipe all the staging tables at the start of each run, so this step can be rerun before eventual deployment.
+
+### Deploying: `/ferry/deploy.py`
+
+Once our tables are staged, we first check a few invariants (for instance: does every listing have an associated course?). If these variant checks are successful, we upgrade our staged tables to primary ones through SQL rename operations. After this, we reindex the entire database and execute `/resources/search.sql` to set up a [materialized view](https://en.wikipedia.org/wiki/Materialized_view) and full-text search for the website to use.
 
 ## Schemas
 
@@ -21,107 +51,9 @@ Mappings:
 - evaluation_narratives <- evaluation_questions = many to one
 - evaluation_ratings <- evaluation_questions = many to one
 
+A full description of the schema, along with comments for each field, is available in the SQLAlchemy model: [`/ferry/database/models.py`](ferry/database/models.py).
+
 ## Layout
 
 ![schema](./db_diagram.png)
 
-### Seasons: `seasons`
-
-| Field         | Type                                       | Description                       |
-| ------------- | ------------------------------------------ | --------------------------------- |
-| `season_code` | Primary key - String                       | The season code (e.g. "202001")   |
-| `term`        | String - one of `spring`, `summer`, `fall` | [computed] Season of the semester |
-| `year`        | Integer                                    | [computed] Year of the semester   |
-
-### Courses: `courses`
-
-One entry per class. If a class is listed with multiple course codes, it will only get one entry in this database.
-However, different sections of a single class will get multiple entries in this table.
-
-| Field                       | Type        | Description                                                  |
-| --------------------------- | ----------- | ------------------------------------------------------------ |
-| `course_id`                 | Primary key | Course id                                                    |
-| `season_code`               | Foreign key | The season that the course is being taught in, mapping to `seasons` |
-| `areas`                     | List        | Course areas (humanities, social sciences, sciences)         |
-| `course_home_url`           | String      | Link to the course homepage                                  |
-| `description`               | String      | Course description                                           |
-| `extra_info`                | String      | Additional information (indicates if class has been canceled) |
-| `locations_summary`         | String      | If single location, is `<location>`; otherwise is `<location> + <n_other_locations>` where the first location is the one with the greatest number of days. Displayed in the "Locations" column in CourseTable. |
-| `num_students`              | Integer     | [computed] Student enrollment (retrieved from evaluations, not part of the Courses API) |
-| `num_students_is_same_prof` | Boolean     | Whether or not a different professor taught the class when it was this size |
-| `requirements`              | String      | Recommended requirements/prerequisites for the course        |
-| `times_long_summary`        | String      | Course times and locations, displayed in the "Meets" row in CourseTable course modals |
-| `times_summary`             | String      | Course times, displayed in the "Times" column in CourseTable |
-| `times_by_day`              | Nested      | Course meeting times by day, with days as keys and tuples of `(start_time, end_time, location)` |
-| `short_title`               | String      | Shortened course title (first 29 characters + "...") if the length exceeds 32, otherwise just the title itself |
-| `skills`                    | List        | Skills that the course fulfills (e.g. writing, quantitative reasoning, language levels) |
-| `syllabus_url`              | String      | Link to the syllabus                                         |
-| `title`                     | String      | Complete course title                                        |
-| `average_rating`            | Float       | [computed] Average overall course rating (from this course's evaluations, aggregated across cross-listings) |
-| `average_workload`          | Float       | [computed] Average workload rating (from this course's evaluations, aggregated across cross-listings) |
-
-### Listings: `listings`
-
-Each course code (e.g. "AMST 312 1") and season will get one entry in this database.
-
-| Field         | Type           | Description                                               |
-| ------------- | -------------- | --------------------------------------------------------- |
-| `listing_id`  | Primary key    | Listing ID                                                |
-| `course_id`   | Foreign key    | Course that the listing refers to                         |
-| `subject`     | String (index) | Subject the course is listed under (e.g. "AMST")          |
-| `number`      | String (index) | Course number in the given subject (e.g. "120" or "S120") |
-| `course_code` | String (index) | [computed] subject + number (e.g. "AMST 312")             |
-| `section `    | String (index) | Course section for the given subject and number           |
-| `season_code` | Foreign key    | When the course/listing is being taught, mapping to `seasons` |
-| `crn`         | Int            | The CRN associated with this listing                      |
-
-Additional constraints:
-
-- unique: (season_code, subject, number, section)
-- unique: (season_code, crn)
-
-### Professors: `professors`
-
-| Field            | Type           | Description                                                  |
-| ---------------- | -------------- | ------------------------------------------------------------ |
-| `professor_id`   | Primary key    | Professor ID                                                 |
-| `average_rating` | Float          | [computed] Average rating of the professor assessed via the "Overall assessment" question in courses taught |
-| `name`           | String (index) | Name of the professor                                        |
-
-### Course-Professor Junction Table `courses_professors`
-
-| Field          | Type        | Description  |
-| -------------- | ----------- | ------------ |
-| `course_id`    | Foreign Key | Course ID    |
-| `professor_id` | Foreign Key | Professor ID |
-
-### Evaluations (questions): `evaluation_questions`
-
-| Field           | Type                 | Description                                                  |
-| --------------- | -------------------- | ------------------------------------------------------------ |
-| `question_code` | Primary key - String | Question code (from OCE, e.g. "YC402")                       |
-| `is_narrative`  | Bool                 | True if the question has narrative responses                 |
-| `question_text` | String               | The question                                                 |
-| `options`       | List of strings      | Possible responses (only if the question is categorical)     |
-| `tag`           | String               | Question type (used for computing ratings, since one question may be coded differently for different respondants) |
-
-### Evaluations (narrative): `evaluation_narratives`
-
-Narrative evaluations data.
-
-| Field            | Type        | Description                                                  |
-| ---------------- | ----------- | ------------------------------------------------------------ |
-| `course_id`      | Foreign Key | Course the narrative comment applies to, mapping to `courses` |
-| `question_code`  | Foreign Key | Question the answer is a response to, mapping to `evaluation_questions` |
-| `comment`        | String      | Response to the question                                     |
-| `comment_length` | Integer     | [computed] Length of the response in characters              |
-
-### Evaluations (ratings): `evaluation_ratings`
-
-Categorical evaluations data.
-
-| Field             | Type             | Description                                                  |
-| ----------------- | ---------------- | ------------------------------------------------------------ |
-| `course_id`      | Foreign Key | Course the narrative comment applies to, mapping to `courses` |
-| `question_code` | Foreign Key | Question the answer is a response to, mapping to `evaluation_questions` |
-| `ratings` | List of integers | Number of responses for each option. The options are listed in the `evaluation_questions` table |

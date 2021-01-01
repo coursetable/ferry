@@ -1,37 +1,36 @@
+"""
+This script fetches course evaluation data from the Yale
+Online Course Evaluation (OCE), in JSON format through the
+following steps:
+
+    1. Selection of seasons to fetch ratings
+    2. Construction of a cached check for Yale College courses
+    3. Aggregation of all season courses into a queue
+    4. Fetch and save OCE data for each course in the queue
+
+"""
 import argparse
-import csv
 import datetime
-import getpass
-import re
-import time
-from os import listdir
-from os.path import isfile, join
+from os.path import isfile
+from typing import Union
 
 import diskcache
 import requests
 import ujson
 
 from ferry import config
+from ferry.crawler.common_args import add_seasons_args, parse_seasons_arg
 from ferry.includes.cas import create_session
 from ferry.includes.rating_processing import fetch_course_eval
 from ferry.includes.tqdm import tqdm
 
-"""
-================================================================
-This script fetches course evaluation data from the Yale 
-Online Course Evaluation (OCE), in JSON format through the
-following steps:
-    
-    1. Selection of seasons to fetch ratings
-    2. Construction of a cached check for Yale College courses
-    3. Aggregation of all season courses into a queue
-    4. Fetch and save OCE data for each course in the queue
-
-================================================================
-"""
-
 
 class FetchRatingsError(Exception):
+    """
+    Error object for fetch ratings exceptions.
+    """
+
+    # pylint: disable=unnecessary-pass
     pass
 
 
@@ -45,14 +44,7 @@ EXCLUDE_SEASONS = [
 
 # allow the user to specify seasons
 parser = argparse.ArgumentParser(description="Fetch ratings")
-parser.add_argument(
-    "-s",
-    "--seasons",
-    nargs="+",
-    help="seasons to fetch (leave empty to fetch all, or LATEST_[n] to fetch n latest)",
-    default=None,
-    required=False,
-)
+add_seasons_args(parser)
 
 parser.add_argument(
     "-f",
@@ -69,53 +61,25 @@ args = parser.parse_args()
 
 # list of seasons previously from fetch_seasons.py
 with open(f"{config.DATA_DIR}/course_seasons.json", "r") as f:
-    all_viable_seasons = ujson.loads(f.read())
+    all_viable_seasons = ujson.load(f)
 
-# if no seasons supplied, use all
-if args.seasons is None:
+seasons = parse_seasons_arg(args.seasons, all_viable_seasons)
 
-    seasons = all_viable_seasons
-
-    print(f"Fetching ratings for all seasons: {seasons}")
-
-else:
-
-    seasons_latest = len(args.seasons) == 1 and args.seasons[0].startswith("LATEST")
-
-    # if fetching latest n seasons, truncate the list and log it
-    if seasons_latest:
-
-        num_latest = int(args.seasons[0].split("_")[1])
-
-        seasons = all_viable_seasons[-num_latest:]
-
-        print(f"Fetching ratings for latest {num_latest} seasons: {seasons}")
-
-    # otherwise, use and check the user-supplied seasons
-    else:
-
-        # Check to make sure user-inputted seasons are valid
-        if all(season in all_viable_seasons for season in args.seasons):
-
-            seasons = args.seasons
-            print(f"Fetching ratings for supplied seasons: {seasons}")
-
-        else:
-            raise FetchRatingsError("Invalid season.")
-
-# --------------------------------------------------------
-# Helper function to check if course is in Yale College
-# (only Yale College and Summer Session courses are rated)
-# --------------------------------------------------------
 
 yale_college_cache = diskcache.Cache(f"{config.DATA_DIR}/yale_college_cache")
 
 
 @yale_college_cache.memoize()
-def is_yale_college(season_code, crn):
+def is_yale_college(course_season_code: str, course_crn: str) -> Union[str, bool]:
+
+    """
+    Helper function to check if course is in Yale College
+    (only Yale College and Summer Session courses are rated)
+    """
+
     all_params = {
-        "other": {"srcdb": season_code},
-        "criteria": [{"field": "crn", "value": crn}],
+        "other": {"srcdb": course_season_code},
+        "criteria": [{"field": "crn", "value": course_crn}],
     }
     all_response = requests.post(
         "https://courses.yale.edu/api/?page=fose&route=search",
@@ -128,8 +92,11 @@ def is_yale_college(season_code, crn):
         return "try it anyways"
 
     yc_params = {
-        "other": {"srcdb": season_code},
-        "criteria": [{"field": "crn", "value": crn}, {"field": "col", "value": "YC"}],
+        "other": {"srcdb": course_season_code},
+        "criteria": [
+            {"field": "crn", "value": course_crn},
+            {"field": "col", "value": "YC"},
+        ],
     }
     yc_data = requests.post(
         "https://courses.yale.edu/api/?page=fose&route=search&col=YC",
@@ -212,13 +179,14 @@ for season_code, crn in tqdm(queue):
         with open(output_path, "w") as f:
             f.write(ujson.dumps(course_eval, indent=4))
 
-        tqdm.write(f"dumped in JSON")
+        tqdm.write("dumped in JSON")
     # except SeasonMissingEvalsError:
     #     tqdm.write(f"Skipping season {season_code} - missing evals")
     # except CrawlerError:
     #     tqdm.write(f"skipped - missing evals")
-    except Exception as e:
-        import traceback
+
+    # pylint: disable=broad-except
+    except Exception as error:
 
         # traceback.print_exc()
-        tqdm.write(f"skipped - unknown error {e}")
+        tqdm.write(f"skipped - unknown error {error}")

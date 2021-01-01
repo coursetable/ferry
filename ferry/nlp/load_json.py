@@ -1,3 +1,4 @@
+# pylint: skip-file
 import json
 from collections import defaultdict
 from os import listdir

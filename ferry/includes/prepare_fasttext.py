@@ -1,4 +1,6 @@
+# pylint: skip-file
 import re
+from typing import List
 
 import nltk
 import spacy
@@ -14,7 +16,7 @@ nltk.download("stopwords")
 spacy_en = spacy.load("en_core_web_sm", disable=["parser", "ner"])
 
 
-def remove_punctuation(text):
+def remove_punctuation(text: str) -> str:
     """
     Remove non-alphanumeric characters from a text, replacing them with spaces.
 
@@ -38,7 +40,7 @@ def remove_punctuation(text):
     return text
 
 
-def collapse_numbers(text):
+def collapse_numbers(text: str) -> str:
 
     """
     Collapse consecutive numeric characters to a single '#' symbol
@@ -61,7 +63,7 @@ def collapse_numbers(text):
 stop_words = set(stopwords.words("english"))
 
 
-def remove_stop_words(text):
+def remove_stop_words(text: str) -> List[str]:
     """
     Remove stop words from a list of tokens.
 
@@ -77,7 +79,7 @@ def remove_stop_words(text):
     return [x for x in text if x not in stop_words]
 
 
-def lemmatize(text):
+def lemmatize(text: str) -> List[str]:
     """
     Lemmatize tokens in a list
 
@@ -90,12 +92,12 @@ def lemmatize(text):
     -------
     text
     """
-    text = spacy_en(text)
+    text_spacy: spacy.tokens.doc.Doc = spacy_en(text)
 
-    return [x.lemma_ for x in text]
+    return [x.lemma_ for x in text_spacy]
 
 
-def preprocess_description(description):
+def preprocess_fasttext(description: str) -> str:
     """
     Preprocess a course description for downstream embedding training
 
@@ -115,11 +117,11 @@ def preprocess_description(description):
     description = remove_punctuation(description)
     description = collapse_numbers(description)
 
-    description = word_tokenize(description)
-    description = remove_stop_words(description)
+    description_split = word_tokenize(description)
+    description_split = remove_stop_words(description_split)
 
-    description = " ".join(description)
-    description = lemmatize(description)
-    description = " ".join(description)
+    description = " ".join(description_split)
+    description_split = lemmatize(description)
+    description = " ".join(description_split)
 
     return description

@@ -1,3 +1,13 @@
+"""
+Fetches a list of all seasons for the following:
+
+    (1) courses (/api_output/course_seasons.json)
+    (2) demand (/api_output/demand_seasons.json)
+
+This list of seasons is then used and required by
+fetch_classes.py, fetch_demand.py, and fetch_ratings.py.
+"""
+
 import re
 
 import requests
@@ -6,20 +16,13 @@ from bs4 import BeautifulSoup
 
 from ferry import config
 
-"""
-================================================================
-This script fetches a list of all seasons for the following:
-
-    (1) courses (/api_output/course_seasons.json)
-    (2) demand (/api_output/demand_seasons.json)
-
-This list of seasons is then used and required by
-fetch_classes.py, fetch_demand.py, and fetch_ratings.py.
-================================================================
-"""
-
 
 class FetchSeasonsError(Exception):
+    """
+    Error object for fetch seasons exceptions.
+    """
+
+    # pylint: disable=unnecessary-pass
     pass
 
 
@@ -33,14 +36,14 @@ r = requests.post("https://courses.yale.edu/")
 # Successful response
 if r.status_code == 200:
 
-    course_seasons = re.findall('option value="(\d{6})"', r.text)
+    course_seasons = re.findall(r'option value="(\d{6})"', r.text)
 
     # exclude '999999' catch-all 'Past seasons' season option
     course_seasons = sorted([x for x in course_seasons if x != "999999"])
 
     # write seasons list for use later
     with open(f"{config.DATA_DIR}/course_seasons.json", "w") as f:
-        f.write(ujson.dumps(course_seasons, indent=4))
+        ujson.dump(course_seasons, f, indent=4)
 
 # Unsuccessful
 else:
@@ -66,7 +69,7 @@ if r.status_code == 200:
 
     # write seasons list for use later
     with open(f"{config.DATA_DIR}/demand_seasons.json", "w") as f:
-        f.write(ujson.dumps(demand_seasons, indent=4))
+        ujson.dump(demand_seasons, f, indent=4)
 
 # Unsuccessful
 else:

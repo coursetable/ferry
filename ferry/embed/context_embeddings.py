@@ -1,3 +1,4 @@
+# pylint: skip-file
 import numpy as np
 import pandas as pd
 import umap
@@ -5,10 +6,10 @@ from sklearn.preprocessing import StandardScaler
 
 from ferry import config, database
 
-courses = pd.read_sql_table("courses", con=database.Engine)
+courses = pd.read_sql_table("courses", con=database.Engine)  # type: ignore
 courses = courses.set_index("course_id")
 
-context_vectors = pd.read_hdf(
+context_vectors = pd.read_hdf(  # type: ignore
     config.DATA_DIR / "description_embeddings/context_vectors.h5",
     key="context_vectors",
 )
