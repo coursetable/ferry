@@ -7,5 +7,6 @@
   },
   "cSpell.words": [
     "tqdm"
-  ]
+  ],
+  "python.linting.pylintEnabled": true
 }
