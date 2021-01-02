@@ -3,7 +3,7 @@
 {
 	"name": "ferry-image",
 	// path inside the container to init
-	"workspaceFolder": "/workspace/ferry",
+	"workspaceFolder": "/ferry",
 	// list of compose files to use (later ones overwrite earlier ones)
 	"dockerComposeFile": [
 		"../docker-compose.yml",
@@ -22,8 +22,7 @@
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
-		5432,
-		8080
+		5432
 	],
 	// Uncomment the next line to run commands after the container is created - for example installing curl.
 	// "postCreateCommand": "apt-get update && apt-get install -y curl",
