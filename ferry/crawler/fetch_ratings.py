@@ -11,8 +11,9 @@ following steps:
 """
 import argparse
 import datetime
+from multiprocessing import Pool
 from os.path import isfile
-from typing import Union
+from typing import Tuple, Union
 
 import diskcache
 import requests
@@ -37,8 +38,8 @@ class FetchRatingsError(Exception):
 EXCLUDE_SEASONS = [
     "201701",  # too old
     "201702",  # too old
+    "201703",  # too old
     "202001",  # not evaluated because of COVID
-    "202003",  # too new
     "202101",  # too new
 ]
 
@@ -157,31 +158,47 @@ for season_code in seasons:
 session = create_session()
 print("Cookies: ", session.cookies.get_dict())
 
-for season_code, crn in tqdm(queue):
-    course_unique_id = f"{season_code}-{crn}"
+
+def handle_course_evals(function_args: Tuple[str, str]):
+
+    """
+    Main course evaluations fetching function, called by process pool worker.
+
+    Parameters
+    ----------
+    function_args:
+        Tuple of (handler_season_code, )
+    """
+
+    course_season_code, course_crn = function_args
+
+    course_unique_id = f"{course_season_code}-{course_crn}"
     output_path = f"{config.DATA_DIR}/course_evals/{course_unique_id}.json"
-
-    if isfile(output_path) and not args.force:
-        # tqdm.write(f"Skipping course {course_unique_id} - already exists")
-        continue
-
-    if season_code[-2:] != "02" and not is_yale_college(season_code, crn):
-        # tqdm.write("skipping - not in yale college")
-        continue
 
     tqdm.write(f"Working on {course_unique_id} ... ")
     tqdm.write("                            ", end="")
 
+    if isfile(output_path) and not args.force:
+        tqdm.write(f"Skipping course {course_unique_id} - already exists")
+        return
+
+    # if course is not a summer course and not a Yale college one
+    if course_season_code[-2:] != "02" and not is_yale_college(
+        course_season_code, course_crn
+    ):
+        tqdm.write("Skipping - not in Yale College")
+        return
+
     try:
-        session = create_session()
-        course_eval = fetch_course_eval(session, crn, season_code)
+        handler_session = create_session()
+        course_eval = fetch_course_eval(handler_session, course_crn, course_season_code)
 
-        with open(output_path, "w") as f:
-            f.write(ujson.dumps(course_eval, indent=4))
+        with open(output_path, "w") as file:
+            ujson.dump(course_eval, file, indent=4)
 
-        tqdm.write("dumped in JSON")
+        tqdm.write("Dumped in JSON")
     # except SeasonMissingEvalsError:
-    #     tqdm.write(f"Skipping season {season_code} - missing evals")
+    #     tqdm.write(f"Skipping season {course_season_code} - missing evals")
     # except CrawlerError:
     #     tqdm.write(f"skipped - missing evals")
 
@@ -189,4 +206,15 @@ for season_code, crn in tqdm(queue):
     except Exception as error:
 
         # traceback.print_exc()
-        tqdm.write(f"skipped - unknown error {error}")
+        tqdm.write(f"Skipped - unknown error {error}")
+
+
+# fetch ratings in parallel
+pool = Pool(processes=16)
+
+# use imap_unordered to report to tqdm
+with tqdm(total=len(queue), desc="Subjects retrieved") as pbar:
+    for i, result in enumerate(pool.imap_unordered(handle_course_evals, queue)):
+        pbar.update()
+
+pool.terminate()
