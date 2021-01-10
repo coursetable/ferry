@@ -10,6 +10,10 @@ import os
 import pathlib
 from typing import Any, Callable
 
+import stackprinter
+
+stackprinter.set_excepthook(style="darkbg")  # easier to read stack traces
+
 _PROJECT_DIR = pathlib.Path(__file__).resolve().parent.parent
 
 DATA_DIR = _PROJECT_DIR / "data"
