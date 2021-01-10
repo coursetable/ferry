@@ -10,7 +10,6 @@ import os
 import pathlib
 from typing import Any, Callable
 
-
 import stackprinter
 
 stackprinter.set_excepthook(style="darkbg")  # easier to read stack traces
