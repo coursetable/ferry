@@ -13,7 +13,7 @@ from typing import Any, Callable
 
 import stackprinter
 
-stackprinter.set_excepthook(style="darkbg2")  # easier to read stack traces
+stackprinter.set_excepthook(style="darkbg")  # easier to read stack traces
 
 _PROJECT_DIR = pathlib.Path(__file__).resolve().parent.parent
 
