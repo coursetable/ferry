@@ -37,8 +37,8 @@ class FetchRatingsError(Exception):
 EXCLUDE_SEASONS = [
     "201701",  # too old
     "201702",  # too old
+    "201703",  # too old
     "202001",  # not evaluated because of COVID
-    "202003",  # too new
     "202101",  # too new
 ]
 
