@@ -71,7 +71,6 @@ def is_same_course(
     """
 
     def text_distance(text_1: str, text_2: str) -> float:
-
         """
         Get edit distance between two texts.
 
