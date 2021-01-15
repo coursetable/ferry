@@ -22,6 +22,12 @@ from ferry.includes.utils import (
 QUESTION_DIVERGENCE_CUTOFF = 32
 
 
+# extraneous texts to remove
+REMOVE_TEXTS = [
+    "(Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)"  # pylint: disable=line-too-long
+]
+
+
 def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
 
     """
@@ -707,6 +713,26 @@ def import_evaluations(
 
     # focus on question texts with multiple variations
     text_by_code = text_by_code[text_by_code.apply(len) > 1]
+
+    def amend_texts(texts: set) -> set:
+        """
+        Remove extraneous texts.
+
+        Parameters
+        ----------
+
+        texts:
+
+            set of texts to amend
+        """
+
+        for remove_text in REMOVE_TEXTS:
+
+            texts = {text.replace(remove_text, "") for text in texts}
+
+        return texts
+
+    text_by_code = text_by_code.apply(amend_texts)
 
     # add [0] at the end to account for empty lists
     max_diff_texts = max(list(text_by_code.apply(len)) + [0])
