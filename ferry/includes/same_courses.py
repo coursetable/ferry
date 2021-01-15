@@ -42,7 +42,6 @@ def map_to_groups(
     -------
     left_to_right and right_to_left mappings
     """
-
     left_to_right = dataframe.groupby(left)[right].apply(list).to_dict()  # type: ignore
     right_to_left = dataframe.groupby(right)[left].apply(list).to_dict()  # type: ignore
 
@@ -75,10 +74,9 @@ def is_same_course(
 
         """
         Get edit distance between two texts.
-        
+
         Normalized to [0,1] range by dividing by the length of the longer text.
         """
-
         # return maximum distance if any being compared is empty
         if text_1 == "" or text_2 == "":
             return 1
@@ -141,7 +139,6 @@ def get_connected_courses(
     graph:
         Graph where nodes represent courses.
     """
-
     # get overlapping listings as connected components
     connected_codes = networkx.connected_components(graph)
     connected_codes = [list(x) for x in connected_codes]
@@ -193,7 +190,6 @@ def resolve_historical_courses(
         mapping from resolved same_course id to group of identical courses, with title/
         description filtering
     """
-
     # map course to codes and code to courses
     course_to_codes, code_to_courses = map_to_groups(
         listings, "course_id", "course_code"
@@ -314,7 +310,6 @@ def split_same_professors(
     same_prof_course_to_courses:
         mapping from resolved same_course id to group of identical courses
     """
-
     # initialize same-courses with same-professors mapping
     same_course_profs = pd.DataFrame(
         pd.Series(course_to_same_course_filtered).rename(  # type: ignore
