@@ -1,5 +1,7 @@
 """
-Find historical offerings of a course. Used by transform_compute.py
+Find historical offerings of a course.
+
+Used by transform_compute.py
 """
 
 from typing import Any, Dict, List, Tuple
@@ -23,13 +25,15 @@ def map_to_groups(
 ) -> Tuple[Dict[Any, List[Any]], Dict[Any, List[Any]]]:
 
     """
-    Given a dataframe and two columns 'left' and 'right', construct dictionaries
+    Make grouped dictionary mappings from a DataFrame.
+
+    Given a DataFrame and two columns 'left' and 'right', construct dictionaries
     mapping from 'left' to list-grouped 'right' values and vice-versa.
 
     Parameters
     ----------
     dataframe:
-        host dataframe
+        host DataFrame
     left:
         name of 'left' column
     right:
@@ -134,6 +138,12 @@ def get_connected_courses(
 
     """
     Get connected courses in courses graph.
+
+    Parameters
+    ----------
+    graph:
+        Graph where nodes represent courses.
+
     """
 
     # get overlapping listings as connected components
@@ -161,9 +171,10 @@ def resolve_historical_courses(
     courses: pd.DataFrame, listings: pd.DataFrame
 ) -> Tuple[Dict[int, int], Dict[int, List[int]], Dict[int, int], Dict[int, List[int]]]:
     """
-    Among courses, identify historical offerings of a course. This is equivalent to
-    constructing a partition of course_ids such that each partition contains the same
-    courses, offered over different terms.
+    Among courses, identify historical offerings of a course.
+    
+    This is equivalent to constructing a partition of course_ids such that each partition
+    contains the same courses, offered over different terms.
 
     Parameters
     ----------
@@ -290,8 +301,7 @@ def split_same_professors(
 ) -> Tuple[Dict[int, int], Dict[int, List[int]]]:
 
     """
-    Given a partitioning of courses into same-course groups, further partition these
-    by same-professor.
+    Split an equivalent-courses partitioning further by same-professor.
 
     Parameters
     ----------

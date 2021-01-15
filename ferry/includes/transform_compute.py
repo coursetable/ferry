@@ -363,18 +363,18 @@ def courses_computed(
 
     # get ratings
     courses["average_rating"] = courses["same_courses"].apply(
-        lambda courses: [course_to_overall.get(x, None) for x in courses]
+        lambda courses: [course_to_overall.get(x) for x in courses]
     )
     courses["average_workload"] = courses["same_courses"].apply(
-        lambda courses: [course_to_workload.get(x, None) for x in courses]
+        lambda courses: [course_to_workload.get(x) for x in courses]
     )
 
     courses["average_rating_same_professors"] = courses["same_courses_and_profs"].apply(
-        lambda courses: [course_to_overall.get(x, None) for x in courses]
+        lambda courses: [course_to_overall.get(x) for x in courses]
     )
     courses["average_workload_same_professors"] = courses[
         "same_courses_and_profs"
-    ].apply(lambda courses: [course_to_workload.get(x, None) for x in courses])
+    ].apply(lambda courses: [course_to_workload.get(x) for x in courses])
 
     # calculate the average of an array
     def average(nums):
