@@ -23,7 +23,6 @@ MAX_DESCRIPTION_DIST = 0.25
 def map_to_groups(
     dataframe: pd.DataFrame, left: str, right: str
 ) -> Tuple[Dict[Any, List[Any]], Dict[Any, List[Any]]]:
-
     """
     Make grouped dictionary mappings from a DataFrame.
 
@@ -42,7 +41,6 @@ def map_to_groups(
     Returns
     -------
     left_to_right and right_to_left mappings
-
     """
 
     left_to_right = dataframe.groupby(left)[right].apply(list).to_dict()  # type: ignore
@@ -54,7 +52,6 @@ def map_to_groups(
 def is_same_course(
     title_1: str, title_2: str, description_1: str, description_2: str
 ) -> bool:
-
     """
     Based on titles and descriptions, judge if two courses are the same.
 
@@ -77,8 +74,9 @@ def is_same_course(
     def text_distance(text_1: str, text_2: str) -> float:
 
         """
-        Get edit distance between two texts, normalized to [0,1] range
-        by dividing by the length of the longer text.
+        Get edit distance between two texts.
+        
+        Normalized to [0,1] range by dividing by the length of the longer text.
         """
 
         # return maximum distance if any being compared is empty
@@ -135,7 +133,6 @@ def is_same_course(
 def get_connected_courses(
     graph: networkx.Graph,
 ) -> Tuple[Dict[Any, Any], Dict[Any, Any]]:
-
     """
     Get connected courses in courses graph.
 
@@ -143,7 +140,6 @@ def get_connected_courses(
     ----------
     graph:
         Graph where nodes represent courses.
-
     """
 
     # get overlapping listings as connected components
@@ -172,9 +168,9 @@ def resolve_historical_courses(
 ) -> Tuple[Dict[int, int], Dict[int, List[int]], Dict[int, int], Dict[int, List[int]]]:
     """
     Among courses, identify historical offerings of a course.
-    
-    This is equivalent to constructing a partition of course_ids such that each partition
-    contains the same courses, offered over different terms.
+
+    This is equivalent to constructing a partition of course_ids such that each
+    partition contains the same courses, offered over different terms.
 
     Parameters
     ----------
@@ -299,7 +295,6 @@ def resolve_historical_courses(
 def split_same_professors(
     course_to_same_course_filtered: Dict[int, int], course_professors: pd.DataFrame
 ) -> Tuple[Dict[int, int], Dict[int, List[int]]]:
-
     """
     Split an equivalent-courses partitioning further by same-professor.
 
@@ -322,7 +317,9 @@ def split_same_professors(
 
     # initialize same-courses with same-professors mapping
     same_course_profs = pd.DataFrame(
-        pd.Series(course_to_same_course_filtered).rename("same_course_id")  # type: ignore
+        pd.Series(course_to_same_course_filtered).rename(  # type: ignore
+            "same_course_id"
+        )
     )
 
     same_course_profs.index.rename("course_id", inplace=True)  # type: ignore
