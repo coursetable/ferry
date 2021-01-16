@@ -16,7 +16,7 @@ from ferry.includes.utils import flatten_list_of_lists
 MIN_TITLE_MATCH_LEN = 8
 MIN_DESCRIPTION_MATCH_LEN = 32
 
-MAX_TITLE_DIST = 0.15
+MAX_TITLE_DIST = 0.25
 MAX_DESCRIPTION_DIST = 0.25
 
 
@@ -48,6 +48,31 @@ def map_to_groups(
     return left_to_right, right_to_left
 
 
+def text_distance(text_1: str, text_2: str) -> float:
+    """
+    Get edit distance between two texts.
+
+    Normalized by dividing by the length of the smaller text.
+    """
+    # return maximum distance if any being compared is empty
+    if text_1 == "" or text_2 == "":
+        return 1
+
+    # make sure the shorter text comes first for infix (HW) edit distance
+    if len(text_1) > len(text_2):
+        text_1, text_2 = text_2, text_1
+
+    # use the infix alignment, where gaps at start/end are not penalized
+    # see https://github.com/Martinsos/edlib#alignment-methods
+    raw_dist = edlib.align(text_1, text_2, mode="HW")["editDistance"]
+
+    min_len = min(len(text_1), len(text_2))
+
+    normal_dist = raw_dist / min_len
+
+    return normal_dist
+
+
 def is_same_course(
     title_1: str, title_2: str, description_1: str, description_2: str
 ) -> bool:
@@ -69,30 +94,6 @@ def is_same_course(
     -------
     Whether or not the courses are judged to be the same
     """
-
-    def text_distance(text_1: str, text_2: str) -> float:
-        """
-        Get edit distance between two texts.
-
-        Normalized to [0,1] range by dividing by the length of the longer text.
-        """
-        # return maximum distance if any being compared is empty
-        if text_1 == "" or text_2 == "":
-            return 1
-
-        # make sure the shorter text comes first for infix (HW) edit distance
-        if len(text_1) > len(text_2):
-            text_1, text_2 = text_2, text_1
-
-        # use the infix alignment, where gaps at start/end are not penalized
-        # see https://github.com/Martinsos/edlib#alignment-methods
-        raw_dist = edlib.align(text_1, text_2, mode="HW")["editDistance"]
-
-        max_len = max(len(text_1), len(text_2))
-
-        normal_dist = raw_dist / max_len
-
-        return normal_dist
 
     # if titles or descriptions match, consider the courses to be the same
     # give short-title / short-description courses the benefit of the doubt
