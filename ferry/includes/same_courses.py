@@ -94,7 +94,6 @@ def is_same_course(
     -------
     Whether or not the courses are judged to be the same
     """
-
     # if titles or descriptions match, consider the courses to be the same
     # give short-title / short-description courses the benefit of the doubt
     if title_1 == title_2 and title_1 != "":
