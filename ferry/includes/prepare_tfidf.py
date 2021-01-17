@@ -11,10 +11,10 @@ from nltk.stem import WordNetLemmatizer
 from nltk.tag import pos_tag
 from unidecode import unidecode
 
-STOP_WORDS = stopwords.words("english")
+STOP_WORDS = set(stopwords.words("english"))
 
 # super common words to ignore
-COMMON_WORDS = [
+COMMON_WORDS = {
     "students",
     "course",
     "study",
@@ -76,7 +76,7 @@ COMMON_WORDS = [
     "something",
     "end",
     "professor",
-]
+}
 
 
 WORDNET_MAP = {"N": wordnet.NOUN, "V": wordnet.VERB, "J": wordnet.ADJ, "R": wordnet.ADV}

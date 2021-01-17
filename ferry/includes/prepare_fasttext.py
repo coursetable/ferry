@@ -9,8 +9,7 @@ from typing import List
 import nltk
 import spacy
 from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
-from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.tokenize import word_tokenize
 
 nltk.download("averaged_perceptron_tagger")
 nltk.download("wordnet")
@@ -57,11 +56,11 @@ def collapse_numbers(text: str) -> str:
     text
     """
     if bool(re.search(r"\d", text)):
-        text = re.sub("(^|\s)[0-9]+", "#", text)
+        text = re.sub(r'(^|\s)[0-9]+', "#", text)
     return text
 
 
-stop_words = set(stopwords.words("english"))
+STOP_WORDS = set(stopwords.words("english"))
 
 
 def remove_stop_words(text: str) -> List[str]:
@@ -77,7 +76,7 @@ def remove_stop_words(text: str) -> List[str]:
     -------
     text
     """
-    return [x for x in text if x not in stop_words]
+    return [x for x in text if x not in STOP_WORDS]
 
 
 def lemmatize(text: str) -> List[str]:
