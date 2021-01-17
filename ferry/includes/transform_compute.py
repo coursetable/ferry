@@ -25,20 +25,16 @@ with open(f"{config.RESOURCE_DIR}/question_tags.csv") as f:
 def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
     """
     Populate computed question fields:
-        tags:
-            question tags for ratings aggregation
 
     Parameters
     ----------
-    Pandas tables post-import:
-        evaluation_questions
+    evaluation_questions:
+        Pandas tables post-import
 
     Returns
     -------
     evaluation_questions: table with computed fields
-
     """
-
     def assign_code(row):
 
         code = row["question_code"]
@@ -86,9 +82,7 @@ def evaluation_statistics_computed(
     Returns
     -------
     evaluation_statistics: table with computed fields
-
     """
-
     # create local deep copy
     evaluation_ratings = evaluation_ratings.copy(deep=True)
 
@@ -189,9 +183,7 @@ def courses_computed(
     Returns
     -------
     courses: table with computed fields
-
     """
-
     listings = listings.copy(deep=True)
     evaluation_statistics = evaluation_statistics.copy(deep=True)
     course_professors = course_professors.copy(deep=True)
@@ -422,9 +414,7 @@ def professors_computed(
     Returns
     -------
     professors: table with computed fields
-
     """
-
     # create local deep copy
     course_professors = course_professors.copy(deep=True)
 

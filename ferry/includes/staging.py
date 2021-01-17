@@ -24,11 +24,14 @@ def copy_from_stringio(conn, table: pd.DataFrame, table_name: str):
 
     Parameters
     ----------
-    conn: psycopg2 connection object
+    conn:
+        psycopg2 connection object
 
-    table: DataFrame to import
+    table:
+        DataFrame to import
 
-    table_name: name of target table
+    table_name:
+        name of target table
 
     Returns
     -------
