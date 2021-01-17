@@ -29,17 +29,15 @@ def get_nearest_neighbors(
     Parameters
     ----------
     node_ids:
-        names of each embedding sample
-
+        Names of each embedding sample.
     embeddings:
-        embedding vectors of shape (num_total, embed_dim)
-
+        Embedding vectors of shape (num_total, embed_dim).
     num_nearest:
-        number of nearest-neighbors to find
+        Number of nearest-neighbors to find.
 
     Returns
     -------
-    dict mapping node_id's to nearest-neighbors
+    Dictionary mapping node_id's to nearest-neighbors
     """
     num_total = embeddings.shape[0]
     embed_dim = embeddings.shape[1]

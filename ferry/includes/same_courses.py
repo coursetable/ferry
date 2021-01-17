@@ -32,15 +32,15 @@ def map_to_groups(
     Parameters
     ----------
     dataframe:
-        host DataFrame
+        Host DataFrame.
     left:
-        name of 'left' column
+        Name of 'left' column.
     right:
-        name of 'right' column
+        Name of 'right' column.
 
     Returns
     -------
-    left_to_right and right_to_left mappings
+    left_to_right and right_to_left mappings.
     """
     left_to_right = dataframe.groupby(left)[right].apply(list).to_dict()  # type: ignore
     right_to_left = dataframe.groupby(right)[left].apply(list).to_dict()  # type: ignore
@@ -82,17 +82,17 @@ def is_same_course(
     Parameters
     ----------
     title_1:
-        title of first course
+        Title of first course.
     title_2:
-        title of second course
+        Title of second course.
     description_1:
-        description of first course
+        Description of first course.
     description_2:
-        description of second course
+        Description of second course.
 
     Returns
     -------
-    Whether or not the courses are judged to be the same
+    Whether or not the courses are judged to be the same.
     """
     # if titles or descriptions match, consider the courses to be the same
     # give short-title / short-description courses the benefit of the doubt
@@ -171,23 +171,21 @@ def resolve_historical_courses(
     Parameters
     ----------
     courses:
-        'courses' table
+        'courses' table.
     listings:
-        'listings' table
+        'listings' table.
 
     Returns
     -------
     course_to_same_course:
-        mapping from course_id to resolved same_course id
+        Mapping from course_id to resolved same_course id.
     same_course_to_courses:
-        mapping from resolved same_course id to group of identical courses
-
+        Mapping from resolved same_course id to group of identical courses.
     course_to_same_course_filtered:
-        mapping from course_id to resolved same_course id, with title/description
-        filtering
+        Mapping from course_id to resolved same_course id, with title/description filtering.
     same_course_to_courses_filtered:
-        mapping from resolved same_course id to group of identical courses, with title/
-        description filtering
+        Mapping from resolved same_course id to group of identical courses, with
+        title/description filtering.
     """
     # map course to codes and code to courses
     course_to_codes, code_to_courses = map_to_groups(
@@ -296,18 +294,17 @@ def split_same_professors(
     Parameters
     ----------
     course_to_same_course_filtered:
-        mapping from course_id to a unique identifier for each group of same-courses,
-        produced by resolve_historical_courses()
-
+        Mapping from course_id to a unique identifier for each group of same-courses, produced by
+        resolve_historical_courses.
     course_professors:
-        junction table of course_ids and professor_ids produced by import
+        Junction table of course_ids and professor_ids produced by import.
 
     Returns
     -------
     course_to_same_prof_course:
-        mapping from course_id to resolved same_course id
+        Mapping from course_id to resolved same_course id,
     same_prof_course_to_courses:
-        mapping from resolved same_course id to group of identical courses
+        Mapping from resolved same_course id to group of identical courses.
     """
     # initialize same-courses with same-professors mapping
     same_course_profs = pd.DataFrame(

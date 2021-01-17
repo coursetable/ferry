@@ -1,5 +1,6 @@
 """
 Functions for staging tables from CSVs to the Postgres database.
+
 Used by /ferry/stage.py.
 """
 import csv
@@ -12,31 +13,26 @@ class DatabaseStagingError(Exception):
     """
     Object for import exceptions.
     """
-
     # pylint: disable=unnecessary-pass
     pass
 
 
 def copy_from_stringio(conn, table: pd.DataFrame, table_name: str):
     """
-    Save DataFrame in-memory and migrate
-    to database with copy_from().
+    Save DataFrame in-memory and migrate to database with copy_from().
 
     Parameters
     ----------
     conn:
-        psycopg2 connection object
-
+        psycopg2 connection object.
     table:
-        DataFrame to import
-
+        DataFrame to import.
     table_name:
-        name of target table
+        name of target table.
 
     Returns
     -------
     """
-
     # create in-memory buffer for DataFrame
     buffer = StringIO()
 

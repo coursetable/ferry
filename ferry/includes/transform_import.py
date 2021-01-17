@@ -1,5 +1,6 @@
 """
 Functions for importing information into tables.
+
 Used by /ferry/transform.py.
 """
 from collections import Counter
@@ -29,19 +30,17 @@ REMOVE_TEXTS = [
 
 
 def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
-
     """
     Resolve course cross-listings by computing unique course_ids.
 
     Parameters
     ----------
     merged_course_info:
-        Raw course information from JSON files
+        Raw course information from JSON files.
 
     Returns
     -------
-    merged_course_info with 'temp_course_id' field added
-
+    merged_course_info with 'temp_course_id' field added.
     """
 
     # seasons must be sorted in ascending order
@@ -103,21 +102,18 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
 
 
 def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
-
     """
     Aggregate professor info columns in preparation for matching.
 
     Parameters
     ----------
     courses:
-        intermediate courses table from import_courses()
+        intermediate courses table from import_courses.
 
     Returns
     -------
     professors_prep: professor attributes DataFrame
-
     """
-
     print("Creating professors table")
     # initialize professors table
     professors_prep = courses.loc[
@@ -191,21 +187,19 @@ def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
 def resolve_professors(
     professors_prep: pd.DataFrame, seasons: List[str]
 ) -> Tuple[pd.DataFrame, pd.DataFrame]:
-
     """
     Resolve course-professor mappings and professors table
 
     Parameters
     ----------
     professors_prep:
-        professor attributes from aggregate_professors()
+        Professor attributes from aggregate_professors.
     seasons:
-        list of seasons for sorting purposes
+        List of seasons for sorting purposes.
 
     Returns
     -------
     professors, course_professors
-
     """
 
     print("Constructing professors table in chronological order")
@@ -239,9 +233,17 @@ def resolve_professors(
 
         return names_ids, emails_ids, ocs_ids
 
-    def match_professors(season_professors, professors):
-        # match professors within a season to main professors
+    def match_professors(season_professors: pd.DataFrame, professors: pd.DataFrame) -> pd.Series:
+        """
+        Match professors within a season to main professors.
 
+        Parameters
+        ----------
+        season_professors:
+            Professors and attributes for a given season
+        professors:
+            Main professors table to pull attributes from.
+        """
         names_ids, emails_ids, ocs_ids = get_professor_identifiers(professors)
 
         # get ID matches by field
@@ -355,16 +357,14 @@ def import_courses(
     Parameters
     ----------
     merged_course_info:
-        Raw course information from JSON files
+        Raw course information from JSON files.
     seasons:
-        list of seasons for sorting purposes
+        List of seasons for sorting purposes.
 
     Returns
     -------
     courses, listings, course_professors, professors
-
     """
-
     merged_course_info = resolve_cross_listings(merged_course_info)
 
     print("Creating courses table")
@@ -472,16 +472,14 @@ def import_demand(
     Parameters
     ----------
     merged_demand_info:
-        Raw demand information from JSON files
+        Raw demand information from JSON files.
     listings:
-        Listings table from import_courses
+        Listings table from import_courses.
 
     Returns
     -------
     demand_statistics
-
     """
-
     demand_statistics = merged_demand_info.copy(deep=True)
 
     # construct outer season grouping
@@ -578,20 +576,19 @@ def match_evaluations_to_courses(
     evaluation_statistics: pd.DataFrame,
     listings: pd.DataFrame,
 ) -> Tuple[pd.DataFrame, ...]:
-
     """
     Match evaluations to course IDs.
 
     Parameters
     ----------
     evaluation_narratives:
-        DataFrame of narratives
+        DataFrame of narratives.
     evaluation_ratings:
-        DataFrame of ratings
+        DataFrame of ratings.
     evaluation_statistics:
-        DataFrame of statistics
+        DataFrame of statistics.
     listings:
-        listings DataFrame from import_courses
+        Listings DataFrame from import_courses.
 
     Returns
     -------
@@ -599,9 +596,7 @@ def match_evaluations_to_courses(
     evaluation_ratings,
     evaluation_statistics,
     evaluation_questions
-
     """
-
     print("Matching evaluations to courses")
 
     # construct outer season grouping
@@ -671,15 +666,15 @@ def import_evaluations(
     Parameters
     ----------
     evaluation_narratives:
-        Table of narratives from /ferry/crawler/parse_ratings.py
+        Table of narratives from /ferry/crawler/parse_ratings.py.
     evaluation_ratings:
-        Table of ratings from /ferry/crawler/parse_ratings.py
+        Table of ratings from /ferry/crawler/parse_ratings.py.
     evaluation_statistics:
-        Table of statistics from /ferry/crawler/parse_ratings.py
+        Table of statistics from /ferry/crawler/parse_ratings.py.
     evaluation_questions:
-        Table of questions from /ferry/crawler/parse_ratings.py
+        Table of questions from /ferry/crawler/parse_ratings.py.
     listings:
-        Table of listings from import_courses
+        Table of listings from import_courses.
 
     Returns
     -------
@@ -687,9 +682,7 @@ def import_evaluations(
     evaluation_ratings,
     evaluation_statistics,
     evaluation_questions
-
     """
-
     (
         evaluation_statistics,
         evaluation_narratives,
@@ -720,10 +713,8 @@ def import_evaluations(
 
         Parameters
         ----------
-
         texts:
-
-            set of texts to amend
+            Set of texts to amend.
         """
 
         for remove_text in REMOVE_TEXTS:
