@@ -40,6 +40,13 @@ from private import extract_db
 def fetch_course_lists(db_connection, limit=None):
     """
     Fetch list of courses with evaluations.
+
+    Parameters
+    ----------
+    db_connection:
+        SQLAlchemy connection to database
+    limit:
+        limit number of rows
     """
 
     limit_string = ""
@@ -78,6 +85,17 @@ def fetch_course_lists(db_connection, limit=None):
 def fetch_legacy_ratings(db_connection, season: str, crn: str, extras: dict):
     """
     Fetch ratings for a given season and CRN.
+
+    Parameters
+    ----------
+    db_connection:
+        SQLAlchemy connection to database
+    season:
+        season code to fetch ratings for
+    crn:
+        course CRN (registration number)
+    extras:
+        additional notes to make
     """
 
     # Fetch Coursetable course_id.

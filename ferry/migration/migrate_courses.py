@@ -1,6 +1,7 @@
 """
-Migrates the old CourseTable JSON files to the
-new format used for the course JSONs.
+Migrates the old CourseTable JSON files to the new format used for the course JSONs.
+
+Used immediately after fetch_previous_json.py.
 """
 
 import argparse
@@ -60,6 +61,11 @@ if __name__ == "__main__":
                 def truncate_title(title: str) -> str:
                     """
                     Shorten a title if it is over 32 characters long.
+
+                    Parameters
+                    ----------
+                    title:
+                        title to truncate.
                     """
                     return f"{title[:29]}..." if len(title) > 32 else title
 
