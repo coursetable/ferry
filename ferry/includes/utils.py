@@ -160,7 +160,8 @@ def elementwise_sum(list_a: List[Numeric], list_b: List[Numeric]) -> List[Numeri
 
     """
 
-    assert len(list_a) == len(list_b), "a and b must have same size"
+    if len(list_a) != len(list_b):
+        raise ValueError("a and b must have same size")
 
     return [sum(x) for x in zip(list_a, list_b)]
 

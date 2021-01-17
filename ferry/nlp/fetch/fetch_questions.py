@@ -16,7 +16,7 @@ def fetch_questions():
     }
     """
 
-    r = requests.post(url, json={"query": query}, verify=False)
+    r = requests.post(url, json={"query": query}, verify=True)
     raw_data = json.loads(r.text)["data"]["evaluation_questions"]
 
     clean_data = {}
