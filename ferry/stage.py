@@ -1,5 +1,7 @@
 """
 This script loads transformed CSVs into staged database tables.
+
+Used immediately after transform.py and immediately before deploy.py.
 """
 from typing import Any, Dict
 
@@ -19,9 +21,16 @@ if __name__ == "__main__":
     # common pd.read_csv arguments
     general_csv_kwargs: Dict[Any, Any] = {"index_col": 0, "low_memory": False}
 
-    def load_csv(table_name: str, csv_kwargs: Dict[Any, Any] = None) -> pd.DataFrame:
+    def load_csv(table_name: str, csv_kwargs: Dict[str, Any] = None) -> pd.DataFrame:
         """
         Loads a CSV given a table name.
+
+        Parameters
+        ----------
+        table_name:
+            name of table to load
+        csv_kwargs:
+            additional arguments to pass to pandas.read_csv
         """
 
         if csv_kwargs is None:
