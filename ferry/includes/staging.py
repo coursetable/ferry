@@ -13,6 +13,7 @@ class DatabaseStagingError(Exception):
     """
     Object for import exceptions.
     """
+
     # pylint: disable=unnecessary-pass
     pass
 

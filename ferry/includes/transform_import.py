@@ -233,7 +233,9 @@ def resolve_professors(
 
         return names_ids, emails_ids, ocs_ids
 
-    def match_professors(season_professors: pd.DataFrame, professors: pd.DataFrame) -> pd.Series:
+    def match_professors(
+        season_professors: pd.DataFrame, professors: pd.DataFrame
+    ) -> pd.Series:
         """
         Match professors within a season to main professors.
 

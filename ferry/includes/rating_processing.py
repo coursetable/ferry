@@ -19,6 +19,7 @@ class _EvaluationsNotViewableError(Exception):
     """
     Object for inaccessible evaluations exceptions.
     """
+
     # pylint: disable=unnecessary-pass
     pass
 
@@ -27,6 +28,7 @@ class CrawlerError(Exception):
     """
     Object for crawler exceptions.
     """
+
     # pylint: disable=unnecessary-pass
     pass
 
@@ -256,7 +258,7 @@ def fetch_course_enrollment(
         Term code that the course belongs to.
     Returns
     -------
-    stats, extras: 
+    stats, extras:
         A dictionary with statistics, a dictionary with extra info
     """
     # Main website with number of questions
