@@ -22,14 +22,13 @@ def remove_punctuation(text: str) -> str:
 
     Parameters
     ----------
-    text: string
+    text:
         Text to process
 
     Returns
     -------
     text
     """
-
     # replace non-alphanumeric symbols with spaces
     pattern = r"[^a-zA-Z0-9\s]"
     text = re.sub(pattern, " ", text)
@@ -41,20 +40,18 @@ def remove_punctuation(text: str) -> str:
 
 
 def collapse_numbers(text: str) -> str:
-
     """
     Collapse consecutive numeric characters to a single '#' symbol
 
     Parameters
     ----------
-    text: string
+    text:
         Text to process
 
     Returns
     -------
     text
     """
-
     if bool(re.search(r"\d", text)):
         text = re.sub("(^|\s)[0-9]+", "#", text)
     return text
@@ -69,7 +66,7 @@ def remove_stop_words(text: str) -> List[str]:
 
     Parameters
     ----------
-    text: list-like
+    text:
         Text to process
 
     Returns
@@ -85,7 +82,7 @@ def lemmatize(text: str) -> List[str]:
 
     Parameters
     ----------
-    text: list-like
+    text:
         Text to process
 
     Returns
@@ -103,14 +100,13 @@ def preprocess_fasttext(description: str) -> str:
 
     Parameters
     ----------
-    description: string
+    description:
         Description text to process
 
     Returns
     -------
     text
     """
-
     description = description.lower()
     description = description.replace("\n", " ").replace("\r", "")
 
