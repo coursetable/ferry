@@ -1,4 +1,8 @@
-import string
+"""
+Preprocess text for TF-IDF embeddings.
+
+Used by /ferry/embed/assemble_corpus.py.
+"""
 from collections import Counter
 from typing import Any, List
 

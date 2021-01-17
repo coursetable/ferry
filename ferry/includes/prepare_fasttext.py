@@ -1,4 +1,8 @@
-# pylint: skip-file
+"""
+Preprocess text for FastText embeddings.
+
+Used by /ferry/embed/assemble_corpus.py.
+"""
 import re
 from typing import List
 
@@ -23,7 +27,7 @@ def remove_punctuation(text: str) -> str:
     Parameters
     ----------
     text:
-        Text to process
+        Text to process.
 
     Returns
     -------
@@ -41,12 +45,12 @@ def remove_punctuation(text: str) -> str:
 
 def collapse_numbers(text: str) -> str:
     """
-    Collapse consecutive numeric characters to a single '#' symbol
+    Collapse consecutive numeric characters to a single '#' symbol.
 
     Parameters
     ----------
     text:
-        Text to process
+        Text to process.
 
     Returns
     -------
@@ -78,12 +82,12 @@ def remove_stop_words(text: str) -> List[str]:
 
 def lemmatize(text: str) -> List[str]:
     """
-    Lemmatize tokens in a list
+    Lemmatize tokens in a list.
 
     Parameters
     ----------
     text:
-        Text to process
+        Text to process.
 
     Returns
     -------
@@ -96,12 +100,12 @@ def lemmatize(text: str) -> List[str]:
 
 def preprocess_fasttext(description: str) -> str:
     """
-    Preprocess a course description for downstream embedding training
+    Preprocess a course description for downstream embedding training.
 
     Parameters
     ----------
     description:
-        Description text to process
+        Description text to process.
 
     Returns
     -------

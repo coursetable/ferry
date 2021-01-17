@@ -39,17 +39,17 @@ COLLEGE_SEMINAR_CODES = {
 
 def professors_from_html(html: str) -> Tuple[List[str], List[str], List[str]]:
     """
-    Parse course instructors from provided HTML field
+    Parse course instructors from provided HTML field.
 
     Parameters
     ----------
     html:
-        HTML containing instructors
+        HTML containing instructors.
 
     Returns
     -------
     names:
-        course instructors
+        Course instructors.
     """
     soup = BeautifulSoup(html, features="lxml")
     instructor_divs = soup.findAll("div", {"class": "instructor-detail"})
@@ -109,21 +109,19 @@ def professors_from_html(html: str) -> Tuple[List[str], List[str], List[str]]:
 
 def parse_cross_listings(xlist_html: str) -> List[str]:
     """
-    Retrieve cross-listings (CRN codes) from the HTML in
-    the 'xlist' field from the Yale API
+    Retrieve cross-listings (CRN codes) from the HTML in the 'xlist' field from the Yale API.
 
-    Note that the cross-listings do not include the course
-    itself
+    Note that the cross-listings do not include the course itself.
 
     Parameters
     ----------
     xlist_html:
-        'xlist' field from the Yale API response
+        'xlist' field from the Yale API response.
 
     Returns
     -------
     xlist_crns:
-        CRN codes of course cross-listings
+        CRN codes of course cross-listings.
     """
     xlist_soup = BeautifulSoup(xlist_html, features="lxml")
 
@@ -136,17 +134,17 @@ def parse_cross_listings(xlist_html: str) -> List[str]:
 
 def extract_flags(ci_attrs: str) -> List[str]:
     """
-    Get the course flags from the ci_attrs field
+    Get the course flags from the ci_attrs field.
 
     Parameters
     ----------
     ci_attrs:
-        the field from the Yale API response
+        the field from the Yale API response.
 
     Returns
     -------
-    flag_texts: list of strings
-        flags (keywords) for the course
+    flag_texts:
+        Flags (keywords) for the course.
     """
     soup = BeautifulSoup(ci_attrs, features="lxml")
     flag_texts = [x.get_text() for x in soup.find_all("a")]
@@ -156,17 +154,17 @@ def extract_flags(ci_attrs: str) -> List[str]:
 
 def days_of_week_from_letters(letters: str) -> List[str]:
     """
-    Parse course days from letterings
+    Parse course days from letterings.
 
     Parameters
     ----------
     letters:
-        Course meeting days, abbreviated
+        Course meeting days, abbreviated.
 
     Returns
     -------
     days:
-        Days on which course meets
+        Days on which course meets.
     """
     if letters == "M-F":
         return ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
@@ -194,12 +192,12 @@ def days_of_week_from_letters(letters: str) -> List[str]:
 
 def format_time(time: str) -> str:
     """
-    Convert Yale API times to 24-hour, full format
+    Convert Yale API times to 24-hour, full format.
 
     Parameters
     ----------
     time:
-        a time from the Yale API 'meeting_html' field
+        A time from the Yale API 'meeting_html' field.
 
     Returns
     -------
@@ -240,7 +238,7 @@ def extract_split_meetings(meetings: List[str]) -> List[Tuple[str, str, str]]:
     Parameters
     ----------
     meetings:
-        meeting strings from extract_meetings
+        Meeting strings from extract_meetings.
 
     Returns
     -------
@@ -294,9 +292,8 @@ def extract_meeting_summaries(
     ----------
     meetings:
         meeting strings from extract_meetings
-
     split_meetings:
-        split meetings from extract_split_meetings. list of meeting [days, time, location]
+        split meetings from extract_split_meetings. List of meeting [days, time, location]
 
     Returns
     -------
@@ -360,9 +357,9 @@ def extract_formatted_meetings(
     Parameters
     ----------
     split_meetings:
-        split meetings from extract_split_meetings.  list of meeting [days, time, location]
+        Split meetings from extract_split_meetings. List of meeting [days, time, location]
     location_urls:
-        links to Yale map of meeting buildings
+        Links to Yale map of meeting locations.
 
     Returns
     -------
@@ -435,12 +432,12 @@ def extract_meetings_by_day(
             ]
         }
 
-    Used in extract_meetings()
+    Used in extract_meetings().
 
     Parameters
     ----------
     formatted_meetings:
-        formatted meetings from extract_formatted_meetings()
+        Formatted meetings from extract_formatted_meetings().
 
     Returns
     -------
@@ -475,34 +472,30 @@ def extract_meetings(
     List[Dict[str, Any]], str, str, str, Dict[str, List[Tuple[str, str, str, str]]]
 ]:
     """
-    Extract course meeting times and locations from the
-    provided HTML
+    Extract course meeting times and locations from the provided HTML.
 
     Parameters
     ----------
     meeting_html:
-        HTML of course meeting times, specified by
-        the 'meeting_html' key in the Yale API response
+        HTML of course meeting times, specified by the 'meeting_html' key in the Yale API response.
 
     Returns
     -------
     formatted_meetings:
-        list of course meeting dates/times, each with keys
+        List of course meeting dates/times, each with keys
         'days', 'start_time', 'end_time', 'location'
     times_summary: string
-        summarization of meeting times; the first listed
-        times are shown while additional ones are collapsed
-        to " + (n-1)"
+        Summary of meeting times; the first listed times are shown while additional ones are
+        collapsed to " + (n-1)".
     locations_summary:
-        summarization of meeting locations; the first listed
-        locations are shown while additional ones are collapsed
-        to " + (n-1)"
+        Summary of meeting locations; the first listed ocations are shown while additional ones
+        are collapsed to " + (n-1)".
     times_long_summary:
-        summary of meeting times and locations; computed as
-        comma-joined texts from the meeting_html items
+        Summary of meeting times and locations; computed as comma-joined texts from the
+        meeting_html items.
     meetings_by_day:
-        dictionary with keys as days and values consisting of
-        lists of [start_time, end_time, location]
+        Dictionary with keys as days and values consisting of lists of
+        [start_time, end_time, location]
     """
     # identify meeting tags and convert to plaintext
     meetings = BeautifulSoup(meeting_html, features="lxml")
@@ -543,7 +536,7 @@ def extract_meetings(
 
 def format_undelimited_time(time: str) -> str:
     """
-    Convert an undelimited time string (e.g. "1430") to a delimited one (e.g. "14:30")
+    Convert an undelimited time string (e.g. "1430") to a delimited one (e.g. "14:30").
 
     Parameters
     ----------
@@ -570,31 +563,28 @@ def extract_meetings_alternate(
     course_json: Dict[str, Any]
 ) -> Tuple[str, str, str, Dict[str, List[Tuple[str, str, str, str]]]]:
     """
-    Extract course meeting times from the allInGroup key rather than
-    meeting_html. Note that this does not return locations because they are
-    not specified.
+    Extract course meeting times from the allInGroup key rather than meeting_html. Note that this
+    does not return locations because they are not specified.
 
     Parameters
     ----------
     course_json:
-        course_json object read from course_json_cache
+        course_json object read from course_json_cache.
 
     Returns
     -------
     times_summary:
-        summarization of meeting times; the first listed
-        times are shown while additional ones are collapsed
-        to " + (n-1)"
+        Summary of meeting times; the first listed times are shown while additional ones are
+        collapsed to " + (n-1)"
     locations_summary:
-        summarization of meeting locations; the first listed
-        locations are shown while additional ones are collapsed
-        to " + (n-1)"
+        Summary of meeting locations; the first listed locations are shown while additional
+        ones are collapsed to " + (n-1)"
     times_long_summary:
-        summary of meeting times and locations; computed as
-        comma-joined texts from the meeting_html items
+        Summary of meeting times and locations; computed as comma-joined texts from the
+        meeting_html items.
     times_by_day:
-        dictionary with keys as days and values consisting of
-        lists of [start_time, end_time, location]
+        Dictionary with keys as days and values consisting of lists of
+        [start_time, end_time, location]
     """
     locations_summary = "TBA"
     times_by_day: Dict[str, List[Tuple[str, str, str, str]]] = {}
@@ -680,17 +670,15 @@ STAT_MAP = {
 
 def found_items(text: str, mapping: Dict[str, Any]) -> List[Any]:
     """
-    Given an input string, see if any of the
-    keys in the provided mapping are present. If so,
-    for each key return the matched value. (useful for
-    fetching skills and areas from codes)
+    Given an input string, see if any of the keys in the provided mapping are present. If so, for
+    each key return the matched value. (useful for fetching skills and areas from codes)
 
     Parameters
     ----------
     text:
-        Text to search over
+        Text to search over.
     mapping:
-        Keys+values to pull from text
+        Keys+values to pull from text.
 
     Returns
     -------
@@ -741,11 +729,11 @@ def is_fysem(
     Parameters
     ----------
     course_json:
-        JSON response from courses API
+        JSON response from courses API.
     description_text:
-        extracted description text from extract_course_info()
+        extracted description text from extract_course_info().
     requirements_text:
-        extracted requirements info from extract_course_info()
+        extracted requirements info from extract_course_info().
     fysem:
         CRNs of first-year seminars
     """
@@ -787,13 +775,12 @@ def is_sysem(title_text: str, description_text: str, requirements_text: str) -> 
 
     Parameters
     ----------
-
     title_text:
-        extracted title text from course JSON
+        Extracted title text from course JSON.
     description_text:
-        extracted description text from extract_course_info()
+        Extracted description text from extract_course_info().
     requirements_text:
-        extracted requirements info from extract_course_info()
+        Extracted requirements info from extract_course_info().
     """
     flagged_text = [
         "Enrollment limited to sophomores",
@@ -831,19 +818,16 @@ def extract_course_info(
     course_json: Dict[str, Any], season: str, fysem: set
 ) -> Dict[str, Any]:
     """
-    Parse the JSON response from the Yale courses API
-    into a more useful format
+    Parse the JSON response from the Yale courses API into a more useful format.
 
     Parameters
     ----------
     course_json:
-        JSON response from courses API
+        JSON response from courses API.
     season:
-        The season that the courses belong to
-        (required because not returned by the
-        Yale API)
+        The season that the courses belong to (required because not returned by the Yale API).
     fysem:
-        CRNs of first-year seminars
+        CRNs of first-year seminars.
 
     Returns
     -------
@@ -872,12 +856,12 @@ def extract_course_info(
     # Course title
     def truncate_title(title):
         """
-        Get shortened course title
+        Get shortened course title.
         """
         if len(title) > 32:
             return f"{title[:29]}..."
-        else:
-            return title
+
+        return title
 
     course_info["short_title"] = truncate_title(course_json["title"])
 
