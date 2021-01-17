@@ -1,5 +1,7 @@
 """
-Functions for use by /ferry/crawler/parse_ratings.py
+Functions for processing course rating JSONs into aggregate CSVs.
+
+Used by /ferry/crawler/parse_ratings.py
 """
 import csv
 from typing import Any, Dict
@@ -13,10 +15,15 @@ analyzer = SentimentIntensityAnalyzer()
 
 def process_narratives(evaluation: Dict[str, Any], narratives_writer: csv.DictWriter):
     """
-    Process written evaluations. Appends to narratives CSV with
-    global writer object.
-    """
+    Process written evaluations. Appends to narratives CSV with global writer object.
 
+    Parameters
+    ----------
+    evaluation:
+        evaluation object for a course.
+    narratives_writer:
+        CSV writer to narratives output file.
+    """
     for narrative_group in evaluation["narratives"]:
 
         for raw_narrative in narrative_group["comments"]:
@@ -39,10 +46,15 @@ def process_narratives(evaluation: Dict[str, Any], narratives_writer: csv.DictWr
 
 def process_ratings(evaluation: Dict[str, Any], ratings_writer: csv.DictWriter):
     """
-    Process categorical evaluations. Appends to ratings CSV with
-    global writer object.
-    """
+    Process categorical evaluations. Appends to ratings CSV with global writer object.
 
+    Parameters
+    ----------
+    evaluation:
+        evaluation object for a course.
+    ratings_writer:
+        CSV writer to ratings output file.
+    """
     for raw_rating in evaluation["ratings"]:
         rating = {}
 
@@ -56,10 +68,15 @@ def process_ratings(evaluation: Dict[str, Any], ratings_writer: csv.DictWriter):
 
 def process_statistics(evaluation: Dict[str, Any], statistics_writer: csv.DictWriter):
     """
-    Process evaluation statistics. Appends to statistics CSV with
-    global writer object.
-    """
+    Process evaluation statistics. Appends to statistics CSV with global writer object.
 
+    Parameters
+    ----------
+    evaluation:
+        evaluation object for a course.
+    statistics_writer:
+        CSV writer to course statistics output file.
+    """
     statistics = {}
     statistics["season"] = evaluation["season"]
     statistics["crn"] = evaluation["crn_code"]
@@ -74,10 +91,15 @@ def process_statistics(evaluation: Dict[str, Any], statistics_writer: csv.DictWr
 
 def process_questions(evaluation: Dict[str, Any], questions_writer: csv.DictWriter):
     """
-    Process evaluation questions. Appends to questions CSV with
-    global writer object.
-    """
+    Process evaluation questions. Appends to questions CSV with global writer object.
 
+    Parameters
+    ----------
+    evaluation:
+        evaluation object for a course.
+    questions_writer:
+        CSV writer to questions output file.
+    """
     for rating in evaluation["ratings"]:
         question = {}
         question["season"] = evaluation["season"]
