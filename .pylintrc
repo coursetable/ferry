@@ -3,7 +3,7 @@
 # A comma-separated list of package or module names from where C extensions may
 # be loaded. Extensions are loading into the active Python interpreter and may
 # run arbitrary code.
-extension-pkg-whitelist=ujson
+extension-pkg-whitelist=ujson, edlib
 
 # Add files or directories to the blacklist. They should be base names, not
 # paths.
@@ -514,7 +514,7 @@ max-bool-expr=5
 max-branches=12
 
 # Maximum number of locals for function / method body.
-max-locals=25
+max-locals=30
 
 # Maximum number of parents for a class (see R0901).
 max-parents=7

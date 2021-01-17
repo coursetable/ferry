@@ -9,8 +9,12 @@ from typing import List, Optional
 import pandas as pd
 
 from ferry import config, database
+from ferry.includes.same_courses import (
+    resolve_historical_courses,
+    split_same_professors,
+)
 from ferry.includes.tqdm import tqdm
-from ferry.includes.utils import flatten_list_of_lists, get_table_columns
+from ferry.includes.utils import get_table_columns
 
 QUESTION_TAGS = {}
 with open(f"{config.RESOURCE_DIR}/question_tags.csv") as f:
@@ -192,24 +196,43 @@ def courses_computed(
     evaluation_statistics = evaluation_statistics.copy(deep=True)
     course_professors = course_professors.copy(deep=True)
 
-    # map courses to codes and codes to courses for historical offerings (overall)
-    course_to_codes = (
-        listings.groupby("course_id")["course_code"]  # type: ignore
-        .apply(list)
-        .to_dict()
-    )
-    code_to_courses = (
-        listings.groupby("course_code")["course_id"]  # type: ignore
-        .apply(list)
-        .to_dict()
+    (
+        course_to_same_course,
+        same_course_to_courses,
+        course_to_same_course_filtered,
+        same_course_to_courses_filtered,
+    ) = resolve_historical_courses(courses, listings)
+
+    # partition ID of same-codes courses (not used anymore, useful for debugging)
+    courses["shared_code_id"] = courses["course_id"].apply(course_to_same_course.get)
+    # connected courses with the same code (not used anymore, useful for debugging)
+    courses["shared_code_courses"] = courses["shared_code_id"].apply(
+        same_course_to_courses.get
     )
 
-    courses["codes"] = courses["course_id"].apply(course_to_codes.get)
-    courses["coded_courses"] = courses["codes"].apply(
-        lambda x: [code_to_courses[code] for code in x]
+    # unique ID for each partition of the same courses
+    courses["same_course_id"] = courses["course_id"].apply(
+        course_to_same_course_filtered.get
     )
-    courses["coded_courses"] = courses["coded_courses"].apply(
-        lambda x: list(set(flatten_list_of_lists(x)))
+
+    # list of course_ids that are the same course per course_id
+    courses["same_courses"] = courses["same_course_id"].apply(
+        same_course_to_courses_filtered.get
+    )
+
+    # split same-course partition by same-professors
+    course_to_same_prof_course, same_prof_course_to_courses = split_same_professors(
+        course_to_same_course_filtered, course_professors
+    )
+
+    # unique ID for each partition of the same courses taught by the same set of profs
+    courses["same_course_and_profs_id"] = courses["course_id"].apply(
+        course_to_same_prof_course.get
+    )
+
+    # list of course_ids that are the same course and taught by same profs per course_id
+    courses["same_courses_and_profs"] = courses["same_course_and_profs_id"].apply(
+        same_prof_course_to_courses.get
     )
 
     # map course_id to professor_ids
@@ -221,24 +244,6 @@ def courses_computed(
     # get historical offerings with same professors
     listings["professors"] = listings["course_id"].apply(course_to_professors.get)
     courses["professors"] = courses["course_id"].apply(course_to_professors.get)
-
-    # map (course_code, professors) to course codes
-    code_profs_to_courses = (
-        listings.groupby(["course_code", "professors"])["course_id"]
-        .apply(list)  # type: ignore
-        .to_dict()
-    )
-
-    courses["coded_courses_same_professors"] = courses[["codes", "professors"]].apply(
-        lambda x: [
-            code_profs_to_courses.get((code, x["professors"]), [])
-            for code in x["codes"]
-        ],
-        axis=1,
-    )
-    courses["coded_courses_same_professors"] = courses[
-        "coded_courses_same_professors"
-    ].apply(lambda x: list(set(flatten_list_of_lists(x))))
 
     print("Computing last offering statistics")
 
@@ -257,56 +262,56 @@ def courses_computed(
 
     # get last course offering in general (with or without enrollment)
     def get_last_offered(course_row):
-        coded_courses = course_row["coded_courses"]
+        same_courses = course_row["same_courses"]
 
-        coded_courses = [
-            x for x in coded_courses if course_to_season[x] < course_row["season_code"]
+        same_courses = [
+            x for x in same_courses if course_to_season[x] < course_row["season_code"]
         ]
 
-        if len(coded_courses) == 0:
+        if len(same_courses) == 0:
             return None
 
-        coded_courses = [x for x in coded_courses if x is not course_row["course_id"]]
-        if len(coded_courses) == 0:
+        same_courses = [x for x in same_courses if x is not course_row["course_id"]]
+        if len(same_courses) == 0:
             return None
 
-        last_offered_course = max(coded_courses, key=lambda x: course_to_season[x])
+        last_offered_course = max(same_courses, key=lambda x: course_to_season[x])
 
         return last_offered_course
 
     # helper function for getting enrollment fields of last-offered course
     def get_last_offered_enrollment(course_row):
-        coded_courses = course_row["coded_courses"]
+        same_courses = course_row["same_courses"]
 
         # keep course only if distinct, has enrollment statistics, and is before current
-        coded_courses = [
+        same_courses = [
             x
-            for x in coded_courses
+            for x in same_courses
             if x in evaluated_courses
             and course_to_season[x] < course_row["season_code"]
         ]
-        if len(coded_courses) == 0:
+        if len(same_courses) == 0:
             return [None, None, None, None]
-        coded_courses = [x for x in coded_courses if x is not course_row["course_id"]]
-        if len(coded_courses) == 0:
+        same_courses = [x for x in same_courses if x is not course_row["course_id"]]
+        if len(same_courses) == 0:
             return [None, None, None, None]
 
         current_professors = course_to_professors.get(course_row["course_id"], set())
 
         # sort courses newest-first
-        coded_courses = sorted(
-            coded_courses, key=lambda x: course_to_season[x], reverse=True
+        same_courses = sorted(
+            same_courses, key=lambda x: course_to_season[x], reverse=True
         )
 
         # get the newest course with the same professors, otherwise just the newest course
         last_enrollment_course = next(
             (
                 prev_course
-                for prev_course in coded_courses
+                for prev_course in same_courses
                 if course_to_professors.get(prev_course, set()) == current_professors
             ),
             # default to newest course if no previous course has same profs
-            coded_courses[0],
+            same_courses[0],
         )
 
         # number of students last taking course
@@ -357,19 +362,19 @@ def courses_computed(
     )
 
     # get ratings
-    courses["average_rating"] = courses["coded_courses"].apply(
-        lambda courses: [course_to_overall.get(x, None) for x in courses]
+    courses["average_rating"] = courses["same_courses"].apply(
+        lambda courses: [course_to_overall.get(x) for x in courses]
     )
-    courses["average_workload"] = courses["coded_courses"].apply(
-        lambda courses: [course_to_workload.get(x, None) for x in courses]
+    courses["average_workload"] = courses["same_courses"].apply(
+        lambda courses: [course_to_workload.get(x) for x in courses]
     )
 
-    courses["average_rating_same_professors"] = courses[
-        "coded_courses_same_professors"
-    ].apply(lambda courses: [course_to_overall.get(x, None) for x in courses])
+    courses["average_rating_same_professors"] = courses["same_courses_and_profs"].apply(
+        lambda courses: [course_to_overall.get(x) for x in courses]
+    )
     courses["average_workload_same_professors"] = courses[
-        "coded_courses_same_professors"
-    ].apply(lambda courses: [course_to_workload.get(x, None) for x in courses])
+        "same_courses_and_profs"
+    ].apply(lambda courses: [course_to_workload.get(x) for x in courses])
 
     # calculate the average of an array
     def average(nums):

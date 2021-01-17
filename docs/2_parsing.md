@@ -20,7 +20,7 @@ As with retrieval, our tables can be grouped into roughly three categories:
 
 We construct the courses table first, from which we link demand statistics and evaluations. The construction functions are detailed in `/ferry/includes/importer.py`.
 
-After initial construction of the tables, we also populate several "computed" fields. These include mean ratings over the categorical responses, historical ratings over all past offerings of a course, the enrollment for a course the last time it was offered, and others. The computation functions are detailed in `/ferry/includes/computed.py`.
+After initial construction of the tables, we also populate several "computed" fields. These include mean ratings over the categorical responses, historical ratings over all past offerings of a course, the enrollment for a course the last time it was offered, and others. The computation functions are detailed in `/ferry/includes/computed.py`. An important requirement for these computed fields is identifying the equivalent offerings of a course over several semesters, which is detailed [here](ferry/docs/4_same_classes.md).
 
 ### Staging: `/ferry/stage.py`
 
