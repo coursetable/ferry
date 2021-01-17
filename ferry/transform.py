@@ -198,7 +198,9 @@ if __name__ == "__main__":
 
     csv_dir = config.DATA_DIR / "importer_dumps"
 
-    def export_csv(table:pd.DataFrame, table_name:str, csv_kwargs:Dict[str, Any]=None):
+    def export_csv(
+        table: pd.DataFrame, table_name: str, csv_kwargs: Dict[str, Any] = None
+    ):
         """
         Exports a table to a CSV file with provided name.
 

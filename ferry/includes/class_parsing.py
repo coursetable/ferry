@@ -1,6 +1,7 @@
 """
-Functions for parsing raw course JSONs used by
-/ferry/crawler/parse_classes.py.
+Functions for parsing raw course JSONs.
+
+Used by /ferry/crawler/parse_classes.py.
 """
 
 import re
@@ -42,15 +43,14 @@ def professors_from_html(html: str) -> Tuple[List[str], List[str], List[str]]:
 
     Parameters
     ----------
-    html: string
+    html:
         HTML containing instructors
 
     Returns
     -------
-    names: list
+    names:
         course instructors
     """
-
     soup = BeautifulSoup(html, features="lxml")
     instructor_divs = soup.findAll("div", {"class": "instructor-detail"})
 
@@ -117,14 +117,14 @@ def parse_cross_listings(xlist_html: str) -> List[str]:
 
     Parameters
     ----------
-    xlist_html: string
+    xlist_html:
         'xlist' field from the Yale API response
 
     Returns
     -------
-    xlist_crns: CRN codes of course cross-listings
+    xlist_crns:
+        CRN codes of course cross-listings
     """
-
     xlist_soup = BeautifulSoup(xlist_html, features="lxml")
 
     xlist_crns = xlist_soup.find_all("a", {"data-action": "result-detail"})
@@ -140,7 +140,7 @@ def extract_flags(ci_attrs: str) -> List[str]:
 
     Parameters
     ----------
-    ci_attrs: string
+    ci_attrs:
         the field from the Yale API response
 
     Returns
@@ -148,7 +148,6 @@ def extract_flags(ci_attrs: str) -> List[str]:
     flag_texts: list of strings
         flags (keywords) for the course
     """
-
     soup = BeautifulSoup(ci_attrs, features="lxml")
     flag_texts = [x.get_text() for x in soup.find_all("a")]
 
@@ -161,15 +160,14 @@ def days_of_week_from_letters(letters: str) -> List[str]:
 
     Parameters
     ----------
-    letters: string
+    letters:
         Course meeting days, abbreviated
 
     Returns
     -------
-    days: list of strings
+    days:
         Days on which course meets
     """
-
     if letters == "M-F":
         return ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
@@ -200,16 +198,14 @@ def format_time(time: str) -> str:
 
     Parameters
     ----------
-    time: string
+    time:
         a time from the Yale API 'meeting_html' field
 
     Returns
     -------
-    time: string
+    time:
         formatted time
-
     """
-
     time_stripped = time[:-2]
 
     if ":" in time_stripped:
@@ -239,19 +235,17 @@ def extract_split_meetings(meetings: List[str]) -> List[Tuple[str, str, str]]:
     """
     Split meeting strings into [days, time, location] tuples.
 
-    Used in extract_meetings()
+    Used in extract_meetings.
 
     Parameters
     ----------
-    meetings: list of strings
+    meetings:
         meeting strings from extract_meetings
 
     Returns
     -------
     split meeting strings into days, time, location
-
     """
-
     split_meetings = []
 
     # split meetings by time
@@ -291,25 +285,23 @@ def extract_split_meetings(meetings: List[str]) -> List[Tuple[str, str, str]]:
 def extract_meeting_summaries(
     meetings: List[str], split_meetings: List[Tuple[str, str, str]]
 ) -> Tuple[str, str, str]:
-
     """
     Get meeting time and location summary strings.
 
-    Used in extract_meetings()
+    Used in extract_meetings.
 
     Parameters
     ----------
-    meetings: list of strings
+    meetings:
         meeting strings from extract_meetings
 
-    split_meetings: list of meeting [days, time, location]
-        split meetings from extract_split_meetings()
+    split_meetings:
+        split meetings from extract_split_meetings. list of meeting [days, time, location]
 
     Returns
     -------
     times_summary, locations_summary
     """
-
     # produce long_summary
     times_long_summary = "\n".join(meetings)
 
@@ -352,31 +344,30 @@ def extract_meeting_summaries(
 def extract_formatted_meetings(
     split_meetings: List[Tuple[str, str, str]], location_urls: List[str]
 ) -> List[Dict[str, Any]]:
-
     """
-    Extract formatted meetings in
+    Extract formatted meetings.
+
+    Returned meeting format:
         {
             days: [days]
             start_time:
             end_time:
             location:
         }
-    format.
 
     Used in extract_meetings()
 
     Parameters
     ----------
-    split_meetings: list of meeting [days, time, location]
-        split meetings from extract_split_meetings()
-    location_urls: list of strings
+    split_meetings:
+        split meetings from extract_split_meetings.  list of meeting [days, time, location]
+    location_urls:
         links to Yale map of meeting buildings
 
     Returns
     -------
     formatted_meetings
     """
-
     formatted_meetings = []
 
     for meeting in split_meetings:
@@ -425,36 +416,36 @@ def extract_formatted_meetings(
 def extract_meetings_by_day(
     formatted_meetings: List[Dict[str, Any]]
 ) -> Dict[str, List[Tuple[str, str, str, str]]]:
-
     """
-    Transform formatted meetings in
+    Transform formatted meetings.
+
+    Input format:
         {
             days: [days]
             start_time:
             end_time:
             location:
         }
-    format to
+
+    Output format:
         {
             day: [
                 [start_time, end_time, location, location_url]
                 ...
             ]
         }
-    format.
 
     Used in extract_meetings()
 
     Parameters
     ----------
-    formatted_meetings: list of dictionaries
+    formatted_meetings:
         formatted meetings from extract_formatted_meetings()
 
     Returns
     -------
     meetings_by_day
     """
-
     meetings_by_day: Dict[str, List[Tuple[str, str, str, str]]] = {}
 
     for meeting in formatted_meetings:
@@ -489,32 +480,30 @@ def extract_meetings(
 
     Parameters
     ----------
-    meeting_html: string
+    meeting_html:
         HTML of course meeting times, specified by
         the 'meeting_html' key in the Yale API response
 
     Returns
     -------
-    formatted_meetings: list of dictionaries
+    formatted_meetings:
         list of course meeting dates/times, each with keys
         'days', 'start_time', 'end_time', 'location'
     times_summary: string
         summarization of meeting times; the first listed
         times are shown while additional ones are collapsed
         to " + (n-1)"
-    locations_summary: string
+    locations_summary:
         summarization of meeting locations; the first listed
         locations are shown while additional ones are collapsed
         to " + (n-1)"
-    times_long_summary: string
+    times_long_summary:
         summary of meeting times and locations; computed as
         comma-joined texts from the meeting_html items
-    meetings_by_day: dictionary
+    meetings_by_day:
         dictionary with keys as days and values consisting of
         lists of [start_time, end_time, location]
-
     """
-
     # identify meeting tags and convert to plaintext
     meetings = BeautifulSoup(meeting_html, features="lxml")
 
@@ -554,16 +543,19 @@ def extract_meetings(
 
 def format_undelimited_time(time: str) -> str:
     """
-    Convert an undelimited time string (e.g. "1430") to a
-    delimited one (e.g. "14:30")
-    """
+    Convert an undelimited time string (e.g. "1430") to a delimited one (e.g. "14:30")
 
+    Parameters
+    ----------
+    time:
+        input time
+    """
     hours, minutes = time[:-2], time[-2:]
 
     return f"{hours}:{minutes}"
 
 
-days_map = {
+DAYS_MAP = {
     "0": "Monday",
     "1": "Tuesday",
     "2": "Wednesday",
@@ -577,7 +569,6 @@ days_map = {
 def extract_meetings_alternate(
     course_json: Dict[str, Any]
 ) -> Tuple[str, str, str, Dict[str, List[Tuple[str, str, str, str]]]]:
-
     """
     Extract course meeting times from the allInGroup key rather than
     meeting_html. Note that this does not return locations because they are
@@ -585,28 +576,26 @@ def extract_meetings_alternate(
 
     Parameters
     ----------
-    course_json: dict
+    course_json:
         course_json object read from course_json_cache
 
     Returns
     -------
-    times_summary: string
+    times_summary:
         summarization of meeting times; the first listed
         times are shown while additional ones are collapsed
         to " + (n-1)"
-    locations_summary: string
+    locations_summary:
         summarization of meeting locations; the first listed
         locations are shown while additional ones are collapsed
         to " + (n-1)"
-    times_long_summary: string
+    times_long_summary:
         summary of meeting times and locations; computed as
         comma-joined texts from the meeting_html items
-    times_by_day: dictionary
+    times_by_day:
         dictionary with keys as days and values consisting of
         lists of [start_time, end_time, location]
-
     """
-
     locations_summary = "TBA"
     times_by_day: Dict[str, List[Tuple[str, str, str, str]]] = {}
 
@@ -629,7 +618,7 @@ def extract_meetings_alternate(
 
         for meeting_time in meeting_times:
 
-            meeting_day = days_map[meeting_time["meet_day"]]
+            meeting_day = DAYS_MAP[meeting_time["meet_day"]]
 
             session = (
                 format_undelimited_time(meeting_time["start_time"]),
@@ -661,7 +650,7 @@ def extract_meetings_alternate(
 
 
 # abbreviations for skills
-skills_map = {
+SKILLS_MAP = {
     "Writing": "WR",
     "Quantitative Reasoning": "QR",
     "Language (1)": "L1",
@@ -672,14 +661,14 @@ skills_map = {
 }
 
 # abbreviations for areas
-areas_map = {
+AREAS_MAP = {
     "Humanities": "Hu",
     "Social Sciences": "So",
     ">Sciences": "Sc",
 }
 
 # abbreviations for course statuses
-stat_map = {
+STAT_MAP = {
     "A": "ACTIVE",
     "B": "MOVED_TO_SPRING_TERM",
     "C": "CANCELLED",
@@ -698,18 +687,16 @@ def found_items(text: str, mapping: Dict[str, Any]) -> List[Any]:
 
     Parameters
     ----------
-    text: string
+    text:
         Text to search over
-
-    mapping: dict
+    mapping:
         Keys+values to pull from text
 
     Returns
     -------
-    items: list
+    items:
         Encoded values found in the text
     """
-
     items = []
 
     for search_text, code in mapping.items():
@@ -725,14 +712,13 @@ def extract_prereqs(raw_description: BeautifulSoup) -> str:
 
     Parameters
     ----------
-    raw_description: BeautifulSoup object
+    raw_description:
         BeautifulSoup of course description HTML
 
     Returns
     -------
     prerequisites text
     """
-
     # course prerequisites
     prereqs = raw_description.findAll("p", {"class": "prerequisites"})
     if len(prereqs) >= 1:
@@ -754,20 +740,15 @@ def is_fysem(
 
     Parameters
     ----------
-    course_json: dict
+    course_json:
         JSON response from courses API
-
     description_text:
         extracted description text from extract_course_info()
-
     requirements_text:
         extracted requirements info from extract_course_info()
-
     fysem:
         CRNs of first-year seminars
-
     """
-
     if course_json["crn"] in fysem:
         return True
 
@@ -809,15 +790,11 @@ def is_sysem(title_text: str, description_text: str, requirements_text: str) -> 
 
     title_text:
         extracted title text from course JSON
-
     description_text:
         extracted description text from extract_course_info()
-
     requirements_text:
         extracted requirements info from extract_course_info()
-
     """
-
     flagged_text = [
         "Enrollment limited to sophomores",
         "Sophomore Seminar",
@@ -859,23 +836,20 @@ def extract_course_info(
 
     Parameters
     ----------
-    course_json: dict
+    course_json:
         JSON response from courses API
-
     season:
         The season that the courses belong to
         (required because not returned by the
         Yale API)
-
     fysem:
         CRNs of first-year seminars
 
     Returns
     -------
-    course_info: dict
+    course_info:
         Processed course information
     """
-
     course_info: Dict[str, Any] = {}
 
     course_info["season_code"] = season
@@ -921,7 +895,7 @@ def extract_course_info(
         course_info["credits"] = float(course_json["hours"])
 
     # Course status
-    course_info["extra_info"] = stat_map.get(course_json["stat"], "ACTIVE")
+    course_info["extra_info"] = STAT_MAP.get(course_json["stat"], "ACTIVE")
 
     # Instructors
     (
@@ -968,8 +942,8 @@ def extract_course_info(
         ) = extract_meetings_alternate(course_json)
 
     # Skills and areas
-    course_info["skills"] = found_items(course_json["yc_attrs"], skills_map)
-    course_info["areas"] = found_items(course_json["yc_attrs"], areas_map)
+    course_info["skills"] = found_items(course_json["yc_attrs"], SKILLS_MAP)
+    course_info["areas"] = found_items(course_json["yc_attrs"], AREAS_MAP)
 
     # additional info fields
     course_info["flags"] = extract_flags(course_json["ci_attrs"])

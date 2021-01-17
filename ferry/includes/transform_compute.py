@@ -35,6 +35,7 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
     -------
     evaluation_questions: table with computed fields
     """
+
     def assign_code(row):
 
         code = row["question_code"]

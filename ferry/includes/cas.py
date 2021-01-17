@@ -1,5 +1,7 @@
 """
 Functions for authenticating with Yale Central Authentication System (CAS).
+
+Used by config.py.
 """
 
 import requests

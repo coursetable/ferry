@@ -15,6 +15,7 @@ class SimilaritySearchError(Exception):
     """
     Object for similarity search exceptions.
     """
+
     # pylint: disable=unnecessary-pass
     pass
 
