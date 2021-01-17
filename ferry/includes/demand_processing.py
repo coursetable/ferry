@@ -30,22 +30,19 @@ class FetchDemandError(Exception):
 
 
 def get_dates(season: str) -> List[str]:
-
     """
     Get dates with available course demand.
 
     Parameters
     ----------
     season: string
-        The season to to get dates for. In the form of
-        YYYYSS(e.g. 201301 for spring, 201302 for summer,
-        201303 for fall)
+        The season to to get dates for. In the form of YYYYSS.
+        (e.g. 201301 for spring, 201302 for summer, 201303 for fall)
 
     Returns
     -------
     dates
     """
-
     # get URL and pass to BeautifulSoup
     # using AMTH as arbitary subject
     url = f"https://ivy.yale.edu/course-stats/?termCode={season}&subjectCode=AMTH"
@@ -72,26 +69,20 @@ def get_dates(season: str) -> List[str]:
 def fetch_season_subject_demand(
     season: str, subject_code: str, subject_codes: List[str], dates: List[str]
 ) -> List[Dict[str, Any]]:
-
     # pylint: disable=too-many-locals
-
     """
     Get course demand statistics for a specific subject and season
 
     Parameters
     ----------
-    season: string
-        The season to to get course demand for. In the form of
-        YYYYSS(e.g. 201301 for spring, 201302 for summer,
-        201303 for fall)
-
-    subject_code: string
+    season:
+        The season to to get course demand for. In the form of YYYYSS.
+        (e.g. 201301 for spring, 201302 for summer, 201303 for fall)
+    subject_code:
         Subject code to get course demand for.
-
-    subject_codes: list of strings
+    subject_codes:
         List of all subject codes (for validity checks)
-
-    dates: list of strings
+    dates:
         List of all dates of interest (returned from get_dates)
 
     Returns
@@ -104,7 +95,6 @@ def fetch_season_subject_demand(
             section_demand
         }
     """
-
     courses = []
 
     # get URL and pass to BeautifulSoup
