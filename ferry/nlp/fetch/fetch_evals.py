@@ -36,7 +36,7 @@ def fetch_evals(term, dump=True):
         """
     )
 
-    r = requests.post(url, json={"query": query}, verify=True)
+    r = requests.post(url, json={"query": query}, verify=False)
     data = json.loads(r.text)["data"]["courses"]
 
     if dump:
