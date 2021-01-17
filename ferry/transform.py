@@ -4,7 +4,7 @@ CSVs generated with Pandas.
 """
 import os
 from pathlib import Path
-from typing import List
+from typing import Any, Dict, List
 
 import pandas as pd
 import ujson
@@ -198,9 +198,18 @@ if __name__ == "__main__":
 
     csv_dir = config.DATA_DIR / "importer_dumps"
 
-    def export_csv(table, table_name, csv_kwargs=None):
+    def export_csv(table:pd.DataFrame, table_name:str, csv_kwargs:Dict[str, Any]=None):
         """
         Exports a table to a CSV file with provided name.
+
+        Parameters
+        ----------
+        table:
+            table to export
+        table_name:
+            name of table to export
+        csv_kwargs:
+            additional arguments to pass to export function
         """
 
         if csv_kwargs is None:
