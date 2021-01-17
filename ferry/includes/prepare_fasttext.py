@@ -56,7 +56,7 @@ def collapse_numbers(text: str) -> str:
     text
     """
     if bool(re.search(r"\d", text)):
-        text = re.sub(r'(^|\s)[0-9]+', "#", text)
+        text = re.sub(r"(^|\s)[0-9]+", "#", text)
     return text
 
 
