@@ -896,7 +896,16 @@ def extract_course_info(
     course_info["description"] = description_text
 
     # Course title
-    truncate_title = lambda x: f"{x[:29]}..." if len(x) > 32 else x
+    def truncate_title(title):
+        """
+        Get shortened course title
+        """
+
+        if len(x) > 32:
+            return f"{x[:29]}..."
+        else:
+            return x
+
     course_info["short_title"] = truncate_title(course_json["title"])
 
     course_info["title"] = course_json["title"]
