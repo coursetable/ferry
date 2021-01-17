@@ -857,6 +857,11 @@ def extract_course_info(
     def truncate_title(title):
         """
         Get shortened course title.
+
+        Parameters
+        ----------
+        title:
+            Title to truncate.
         """
         if len(title) > 32:
             return f"{title[:29]}..."

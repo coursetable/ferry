@@ -1,6 +1,7 @@
 """
-This script imports the parsed course and evaluation data into
-CSVs generated with Pandas.
+Import the parsed course and evaluation data into CSVs generated with Pandas.
+
+Used immediately before stage.py as the first step in the import process.
 """
 import os
 from pathlib import Path

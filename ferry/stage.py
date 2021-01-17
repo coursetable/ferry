@@ -1,5 +1,5 @@
 """
-This script loads transformed CSVs into staged database tables.
+Load transformed CSVs into staged database tables.
 
 Used immediately after transform.py and immediately before deploy.py.
 """
