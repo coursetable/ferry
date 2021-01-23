@@ -6,19 +6,19 @@ A crawler for Yale courses and evaluation data. Integrates with [Coursetable](ht
 
 The crawler scripts are structured as follows:
 
-- `/data`: Complete data files output by scraping and preprocessing. This folder is currently a private submodule.
+- `/data`: Data files output by scraping and preprocessing. This folder is a private submodule because it contains course evaluations..
 - `/docs`: Documentation on how the crawler works.
-- `/ferry`: The primary crawler module. Besides the main scripts for database import after crawled files have been fetched and preprocessed, contains the following folders:
+- `/ferry`: The primary crawler module. Besides the main scripts for database import after crawled files have been fetched and preprocessed, this module contains the following folders:
   - `/ferry/crawler`: Scripts for crawling Yale's various course information sites.
   - `/ferry/database`: The SQLAlchemy database model and configuration.
-  - `/ferry/embed`: Scripts for generating and computing Word2Vec and TF-IDF embeddings of course titles and descriptions.
+  - `/ferry/embed`: Scripts for generating and computing Word2Vec and TF-IDF embeddings from course titles and descriptions.
   - `/ferry/includes`: Helper functions used across Ferry.
   - `/ferry/migration`: Scripts we used to migrate the old (pre-summer 2020) database to the current one. No longer maintained, but retained just in case.
   - `/nlp`: Past scripts used for NLP analysis of course titles, descriptions, and evaluations.
 
 ## Architecture
 
-The below diagram summarizes the workflow used to produce the final database. We run a subset of this pipeline every day using a cron job, as detailed in [refresh_courses.sh](refresh_courses.sh). See [the workflow overview](docs/0_workflow.md) for a more detailed description of each component.
+The below diagram summarizes the workflow used to produce the final database. We run a subset of this pipeline every day as a cron job, which is performed by [refresh_courses.sh](refresh_courses.sh). See [the workflow overview](docs/0_workflow.md) for a more detailed description of each component.
 
 ![architecture](./docs/architecture.png)
 

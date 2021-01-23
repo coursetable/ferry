@@ -2,68 +2,68 @@
 
 ## Initial development environment setup
 
-Before running, make sure the following are installed and configured:
+1. Install [Visual Studio Code](https://code.visualstudio.com/Download).
 
-- Python 3.8 or newer.
-- [Poetry](https://python-poetry.org/docs/), which we use for Python dependency management.
-- [Graphviz](https://graphviz.org/download/), which we use to generate schema diagrams. (Note: this is a development dependency required only for generating [the database diagram](docs/db_diagram.png) and can be ignored.)
-- [Docker](https://docs.docker.com/get-docker/), which we use to run our Postgres database.
+   >**For Windows**: When installing, make sure `Add to PATH (requires shell restart)` option is checked. You can make sure that it was added by going to  Control Panel -> System and Security -> System -> Advanced  System Settings -> Environment Variables... -> Under your user  variables double-click `Path`. Here you should see an entry that looks like `C:\Users\<your-user-name-here>\AppData\Local\Programs\Microsoft VS Code\bin`. If you don't, click `New` and add it here.
 
-If your default Python version is below 3.8, we recommend that you use pyenv to create a virtual environment rather than adding yet another Python installation to your path. For instance, creating and activating an environment with Python 3.8.6 can be done with
+2. Join our GitHub organization and clone the repository.
 
-```bash
-pyenv install 3.8.6
-pyenv local 3.8.6  # Activate Python 3.8.6 for the current project
-```
+   - Make sure that you're added to the [CourseTable GitHub organization](https://github.com/coursetable).
 
-To install Poetry, make sure Python is installed and run
+   - Clone the [coursetable/coursetable repository](https://github.com/coursetable/coursetable) by running `git clone https://github.com/coursetable/coursetable.git`.
 
-```bash
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-```
+     >**For Windows**: Make sure to clone the repository in your  Linux filesystem in Ubuntu using Windows Terminal (NOT your Windows  filesystem). This will allow React hot reloading to work. After cloning, cd to the repository. Open the repository in VSCode by  running the command `code .`. This should open it using WSL, and you should see a green bar on the bottom left of your VSCode editor that says `WSL: Ubuntu-20.04`. Also, make sure that the bar in the bottom right says `LF` and not `CRLF`.
 
-Graphviz and Postgres can be installed on macOS and Ubuntu as follows:
+3. Install Docker.
 
-```bash
-# macOS
-export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
-brew install graphviz
+   - MacOS or Windows: Install [Docker Desktop](https://www.docker.com/products/docker-desktop).
 
-# Ubuntu
-sudo apt-get install build-essential python3-dev pkg-config graphviz libgraphviz-dev libpq-dev
-```
+     > **For Windows**: Make sure `Enable WSL 2 Windows Features` is checked during installation.
 
-Finally, to install Python dependencies via Poetry, run
+   - Linux: Install [Docker CE](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/).
 
-```bash
-poetry install
-```
+4. Install Python 3.8 or newer. If not already installed, just download an installer from the [Python site](https://www.python.org/downloads/). If you already have a Python installation below 3.8 but don't want to add another one, use Pyenv to create a virtual environment:
 
-from anywhere within this project.
+   ```shell
+   pyenv install 3.8.6
+   pyenv local 3.8.6  # Activate Python 3.8.6 for the current project
+   ```
+
+5. Install Poetry (the package manager we use for Python). Make sure Python is installed and added to PATH, and run
+
+   ```shell
+   curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+   ```
+
+6. Install Python dependencies with Poetry: run `poetry install`.
 
 ## Starting up
 
-To run the Python scripts correctly, activate the virtual environment created by Poetry by running
+1. Activate Poetry by running `poetry shell`. Alternatively, you can run a single script from within the Poetry environment through `poetry run <command>` while within Ferry.
 
-```bash
-poetry shell
-```
+2. Start Docker by running `docker-compose up`.
 
-The stages prior to the database import consist of Python scripts, so Poetry alone is sufficient. However, to run the database importer and additional post-processing steps, the Docker container, which provides the Postgres database, must be started. This can be done by running
-
-```bash
-docker-compose up
-```
-
-from the project root. This will automatically download and install the Docker files and start the Postgres server.
-
-Note that CourseTable proper interacts with ferry via an additional GraphQL endpoint provided by Hasura on CourseTable's end (see [coursetable/docker/docker-compose.yml](https://github.com/coursetable/coursetable/blob/master/docker/docker-compose.yml)). For development purposes, you can also host the GraphQL endpoint from ferry by running
+CourseTable proper interacts with Ferry via an additional GraphQL endpoint provided by [Hasura](https://hasura.io/) on CourseTable's end (see [coursetable/docker/docker-compose.yml](https://github.com/coursetable/coursetable/blob/master/docker/docker-compose.yml)). For development purposes, you can host the GraphQL endpoint from Ferry by running
 
 ```bash
 docker-compose -f docker-compose.yml -f docker-compose.hasura.yml up
 ```
 
 This command will start Hasura in addition to the Postgres container specified in the default compose file.
+
+## Troubleshooting
+
+- On MacOS, setup may report an error that OpenSSL has not been installed. To fix this, try installing openssl from Homebrew and run
+
+  ```shell
+  export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+  ```
+
+- On post-Sierra versions of macOS, running `poetry install` may report an error during `psycopg2` installation stating that `ld: library not found for -lssl`. To fix this, make sure OpenSSL is installed (such as through `brew install openssl`) and rerun the above command block.
+
+- On macOS Big Sur, the new version number may cause Poetry to attempt to compile several modules such as NumPy and SpaCy from scratch rather than using prebuilt binaries. This can be avoided by setting the flag `SYSTEM_VERSION_COMPAT=1`.
+
+- ARM Macs currently do not have good support for NumPy and several other compiled Python packages, so we recommend that you [run terminal with Rosetta2](https://www.notion.so/Run-x86-Apps-including-homebrew-in-the-Terminal-on-Apple-Silicon-8350b43d97de4ce690f283277e958602) or use the provided [VSCode DevContainer](https://code.visualstudio.com/docs/remote/containers).
 
 ## Starting from scratch
 
@@ -89,22 +89,18 @@ We also preprocess our classes and ratings data to make them easier to import. I
 
 ### Importation
 
-As mentioned above, the only step here is to run `/ferry/stage.py`. With our full dataset, this takes about 2 minutes.
+With all our data preprocessed, we can now begin assembly into tables for import into the database. This is performed by `/ferry/transform.py`, which pulls together all of these previous files and outputs a collection of CSVs in `/data/importer_dumps`.
+
+After these tables have been constructed, we run `/ferry/stage.py` to read and copy our CSVs into Postgres. With our full dataset, this takes about two minutes.
 
 ### Post-processing
 
 After the initial tables have been staged in Postgres, we run `/ferry/deploy.py` to do the following:
 
-- Check invariants (e.g. the season codes in our listings and courses tables match)
-- If checks are successful, promote our staging tables to the main ones
-- Reindex the entire database
-- Regenerate materialized tables and add full-text search capability
+- Check invariants (e.g. the season codes in our listings and courses tables match).
+- If checks are successful, promote our staging tables to the main ones.
+- Reindex the entire database.
+- Regenerate materialized tables (namely, `computed_listing_info`).
+- Ping CourseTable to download JSON dumps for courses per season. These JSONs are used for fast catalog search, which is done on the frontend rather than via requests with Ferry.
 
 With our full dataset, this takes about a minute.
-
-## Troubleshooting
-
-- On post-Sierra versions of macOS, running `poetry install` may report an error during `psycopg2` installation stating that `ld: library not found for -lssl`. To fix this, make sure OpenSSL is installed (such as through `brew install openssl`) and rerun the above command block.
-- On macOS Big Sur, the new version number may cause Poetry to attempt to compile several modules such as NumPy and SpaCy from scratch rather than using prebuilt binaries. This can be avoided by setting the flag `SYSTEM_VERSION_COMPAT=1`.
-- ARM Macs currently do not have good support for NumPy and several other compiled Python packages, so we recommend that you [run terminal with Rosetta2](https://www.notion.so/Run-x86-Apps-including-homebrew-in-the-Terminal-on-Apple-Silicon-8350b43d97de4ce690f283277e958602) or use the provided [VSCode DevContainer](https://code.visualstudio.com/docs/remote/containers).
-
