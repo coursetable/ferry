@@ -22,22 +22,46 @@
 
    - Linux: Install [Docker CE](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/).
 
-4. Install Python 3.8 or newer. If not already installed, just download an installer from the [Python site](https://www.python.org/downloads/). If you already have a Python installation below 3.8 but don't want to add another one, use Pyenv to create a virtual environment:
+4. Install Postgres. Although we run Postgres through docker, some bindings are required by the SQLAlchemy ORM that interfaces between Python and the database.
+
+   - MacOS: run `brew install postgres`.
+   - Linux: run `sudo apt-get install postgresql`
+   - Windows: use the [interactive installer](https://www.postgresql.org/download/windows/).
+
+5. Install Python 3.8 or newer. If not already installed, just download an installer from the [Python site](https://www.python.org/downloads/). If you already have a Python installation below 3.8 but don't want to add another one, use Pyenv to create a virtual environment:
 
    ```shell
    pyenv install 3.8.6
    pyenv local 3.8.6  # Activate Python 3.8.6 for the current project
    ```
 
-5. Install Poetry (the package manager we use for Python). Make sure Python is installed and added to PATH, and run
+6. Install Poetry, the package manager we use for Python dependencies. Make sure Python is installed and added to PATH, and run
 
    ```shell
    curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
    ```
 
-6. Install Python dependencies with Poetry: run `poetry install`.
+7. Install Python dependencies with Poetry: run `poetry install` from the repository root.
 
-## Starting up
+## Aside: a quick explainer on docker-compose
+
+`docker-compose` is a tool we use to orchestrate a bunch  of different things, all running in parallel. It also enables us to  avoid most cross-platform compatibility issues.
+
+Our setup is declared in the [docker-compose.yml](https://github.com/coursetable/coursetable/blob/master/docker/docker-compose.yml) file.
+
+Some useful commands:
+
+- `docker-compose up` starts all the services
+- `docker-compose up -d` starts everything in the background
+- `docker-compose ps` tells you what services are running
+- `docker-compose stop` stops everything
+- `docker-compose down` stops and removes everything
+- `docker-compose restart` restarts everything
+- `docker-compose logs -f` gets and "follows" (via `-f`) the logs from all the services. It's totally safe to control-C on this command - it won't stop anything
+- `docker-compose logs -f <service>` gets the logs for a specific service. For example, `docker-compose logs -f api` gets the logs for the backend API.
+- `docker-compose build` builds all the services. This  probably won't be necessary for our development environment, since we're building everything on the fly
+
+## Starting Ferry
 
 1. Activate Poetry by running `poetry shell`. Alternatively, you can run a single script from within the Poetry environment through `poetry run <command>` while within Ferry.
 
@@ -49,7 +73,7 @@ CourseTable proper interacts with Ferry via an additional GraphQL endpoint provi
 docker-compose -f docker-compose.yml -f docker-compose.hasura.yml up
 ```
 
-This command will start Hasura in addition to the Postgres container specified in the default compose file.
+This command will start Hasura in addition to the Postgres container specified in the default compose file. The console can be viewed at [localhost:8080](https://localhost:8080).
 
 ## Troubleshooting
 
