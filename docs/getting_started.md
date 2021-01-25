@@ -10,9 +10,11 @@
 
    - Make sure that you're added to the [CourseTable GitHub organization](https://github.com/coursetable).
 
-   - Clone the [coursetable/coursetable repository](https://github.com/coursetable/coursetable) by running `git clone https://github.com/coursetable/coursetable.git`.
+   - Clone the [coursetable/ferry repository](https://github.com/coursetable/ferry) by running `git clone https://github.com/coursetable/ferry.git`.
 
      >**For Windows**: Make sure to clone the repository in your  Linux filesystem in Ubuntu using Windows Terminal (NOT your Windows  filesystem). This will allow React hot reloading to work. After cloning, cd to the repository. Open the repository in VSCode by  running the command `code .`. This should open it using WSL, and you should see a green bar on the bottom left of your VSCode editor that says `WSL: Ubuntu-20.04`. Also, make sure that the bar in the bottom right says `LF` and not `CRLF`.
+     
+   - **Note**: If you'd also like to clone the private submodule containing all our scraped data, enter the repository root and run `git submodule init` followed by `git submodule update`.
 
 3. Install Docker.
 
