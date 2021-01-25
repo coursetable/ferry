@@ -6,7 +6,7 @@ A crawler for Yale courses and evaluation data. Integrates with [Coursetable](ht
 
 The crawler scripts are structured as follows:
 
-- `/data`: Data files output by scraping and preprocessing. This folder is a private submodule because it contains course evaluations..
+- `/data`: Data files output by scraping and preprocessing. This folder is a private submodule because it contains course evaluations.
 - `/docs`: Documentation on how the crawler works.
 - `/ferry`: The primary crawler module. Besides the main scripts for database import after crawled files have been fetched and preprocessed, this module contains the following folders:
   - `/ferry/crawler`: Scripts for crawling Yale's various course information sites.
@@ -38,6 +38,11 @@ Check out [the getting started guide](docs/getting_started.md).
 4. Once you believe your changes are ready to be integrated into main/master, create a pull request and add a few reviewers. In the pull request, be sure to reference any relevant issue numbers.
 5. Once the pull request has been approved, merge it into the master branch.
 
+**Considerations:**
+
+- If modifying the database schema, make sure to run `/ferry/generate_db_diagram.py` to update the [database diagram](docs/db_diagram.png).
+- If making major changes to the overall workflow (i.e. adding another script, data source, or removing a module) please update the [architecture diagram](docs/architecture.pdf) accordingly.
+
 **Style**:
 
 - For general code formatting, we use [black](https://github.com/psf/black).
@@ -63,11 +68,6 @@ Plugins are also available for text editors such as VS Code and Sublime, which c
 
 The data files – outputs from the extraction stage – are stored in the `/data` directory.
 The course evaluations data are private and should only be accessible to Yale students and faculty. As such, we store these files in a private Git submodule.
-
-```bash
-# Download data files from private repository into the /data directory.
-git submodule update --init
-```
 
 This submodule includes course and evaluation data dating back to 2009 (many of which are no longer available through Yale), more recent course demand statistics, and caches and raw HTML files for debugging purposes.
 

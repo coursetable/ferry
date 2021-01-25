@@ -13,11 +13,11 @@ We want the crawler to be reproducible and reliable. As such, we designed the cr
 
 Retrieval is documented in the [retrieval docs](docs/1_retrieval.md) and implemented in the `/ferry/crawler` directory along with preprocessing. We also needed to migrate data from the previous CourseTable databases in a similar fashion. This process is documented in the [migration docs](docs/0_migration.md) and implemented in the `/ferry/migration` directory.
 
-Importation and post-processing make use of the database, which is documented in [parsing docs](docs/2_parsing.md). Moreover, the database schema is defined with SQLAlchemy in `/ferry/database/models.py`. A key part of importation is the identification of past occurrences of a class, which is detailed [here](docs/3_same_classes.md). 
+Importation and post-processing make use of the database, which is documented in [parsing docs](docs/2_parsing.md). Moreover, the database schema is defined with SQLAlchemy in `/ferry/database/models.py`. A key part of importation is the identification of past offerings of a class, which is detailed [here](docs/3_same_classes.md). 
 
 In the middle of importing our tables, we also generate FastText and TF-IDF embeddings of courses based on the text contained in titles and descriptions, which helps us recommend similar courses. This embedding workflow is described [here](docs/4_embedding.md).
 
-Finally, importation is a three-step process:
+In general, importation is a three-step process:
 
 1. **Transforming:** We first pull everything together in `/ferry/transform.py`, where we use Pandas to construct tables from various preprocessed files. These are then saved to CSVs per table in `/data/importer_dumps/`. These tables are intended to mirror the SQLAlchemy schema. 
 2. **Staging**: In `/ferry/stage.py`, we read the previously-generated CSVs and upload them to staging tables (identified with a `_staged` suffix) in the database. Note that the schema itself describes the tables with `_staged` prefixes that are removed after deployment.

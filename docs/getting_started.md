@@ -14,7 +14,7 @@
 
      >**For Windows**: Make sure to clone the repository in your  Linux filesystem in Ubuntu using Windows Terminal (NOT your Windows  filesystem). This will allow React hot reloading to work. After cloning, cd to the repository. Open the repository in VSCode by  running the command `code .`. This should open it using WSL, and you should see a green bar on the bottom left of your VSCode editor that says `WSL: Ubuntu-20.04`. Also, make sure that the bar in the bottom right says `LF` and not `CRLF`.
      
-   - **Note**: If you'd also like to clone the private submodule containing all our scraped data, enter the repository root and run `git submodule init` followed by `git submodule update`.
+   - **Note**: If you'd also like to clone the private submodule containing all our scraped data, run `git submodule init` followed by `git submodule update` within the repository. Access to this submodule requires you to be a member of our GitHub organization.
 
 3. Install Docker.
 
@@ -24,20 +24,20 @@
 
    - Linux: Install [Docker CE](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/).
 
-4. Install Postgres. Although we run Postgres through docker, some bindings are required by the SQLAlchemy ORM that interfaces between Python and the database.
+4. Install Postgres. Although we run Postgres through Docker, some bindings are required by the SQLAlchemy ORM that interfaces between Python and the database.
 
    - MacOS: run `brew install postgres`.
    - Linux: run `sudo apt-get install postgresql`
    - Windows: use the [interactive installer](https://www.postgresql.org/download/windows/).
 
-5. Install Python 3.8 or newer. If not already installed, just download an installer from the [Python site](https://www.python.org/downloads/). If you already have a Python installation below 3.8 but don't want to add another one, use Pyenv to create a virtual environment:
+5. Install Python 3.8 or newer. If not already installed, download an installer from the [Python site](https://www.python.org/downloads/). If you already have a Python installation below 3.8 but don't want to add another one, use Pyenv to create a virtual environment with a version of your choice:
 
    ```shell
    pyenv install 3.8.6
    pyenv local 3.8.6  # Activate Python 3.8.6 for the current project
    ```
 
-6. Install Poetry, the package manager we use for Python dependencies. Make sure Python is installed and added to PATH, and run
+6. Install [Poetry](https://python-poetry.org/), the package manager we use for Python dependencies. To install, make sure Python is installed and added to PATH, and run
 
    ```shell
    curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
@@ -69,23 +69,23 @@ Some useful commands:
 
 2. Start Docker by running `docker-compose up`.
 
-CourseTable proper interacts with Ferry via an additional GraphQL endpoint provided by [Hasura](https://hasura.io/) on CourseTable's end (see [coursetable/docker/docker-compose.yml](https://github.com/coursetable/coursetable/blob/master/docker/docker-compose.yml)). For development purposes, you can host the GraphQL endpoint from Ferry by running
+CourseTable proper interacts with Ferry via an additional GraphQL endpoint provided by [Hasura](https://hasura.io/) on CourseTable's end (see [coursetable/docker/docker-compose.yml](https://github.com/coursetable/coursetable/blob/master/docker/docker-compose.yml)). For development purposes, you can optionally host the GraphQL endpoint from Ferry by running
 
 ```bash
 docker-compose -f docker-compose.yml -f docker-compose.hasura.yml up
 ```
 
-This command will start Hasura in addition to the Postgres container specified in the default compose file. The console can be viewed at [localhost:8080](https://localhost:8080).
+This command will start Hasura in addition to the Postgres container specified in the default compose file. The Hasura console can be viewed at [localhost:8080](https://localhost:8080).
 
 ## Troubleshooting
 
-- On MacOS, setup may report an error that OpenSSL has not been installed. To fix this, try installing openssl from Homebrew and run
+- On MacOS, setup may report an error that OpenSSL headers are missing. To fix this, try installing OpenSSL from Homebrew and run
 
   ```shell
   export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
   ```
 
-- On post-Sierra versions of macOS, running `poetry install` may report an error during `psycopg2` installation stating that `ld: library not found for -lssl`. To fix this, make sure OpenSSL is installed (such as through `brew install openssl`) and rerun the above command block.
+- On post-Sierra versions of macOS, running `poetry install` may report an error during `psycopg2` installation stating that `ld: library not found for -lssl`. To fix this, make sure OpenSSL is installed and linked as described above and rerun the above command block.
 
 - On macOS Big Sur, the new version number may cause Poetry to attempt to compile several modules such as NumPy and SpaCy from scratch rather than using prebuilt binaries. This can be avoided by setting the flag `SYSTEM_VERSION_COMPAT=1`.
 
