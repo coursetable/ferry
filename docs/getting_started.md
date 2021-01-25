@@ -85,6 +85,10 @@ docker-compose -f docker-compose.yml -f docker-compose.hasura.yml up
 
 This command will start Hasura in addition to the Postgres container specified in the default compose file. The Hasura console can be viewed at [localhost:8080](https://localhost:8080).
 
+## Additional steps
+
+1. The FastText embeddings are quite large (~800MB), so we have excluded them from the data directory. You can generate these by running `poetry run python /ferry/embed/embed_fasttext.py --retrain`, assuming you have already prepared the corpus with `/ferry/embed/assemble_corpus.py`. This step should take about 10 minutes on recent hardware.
+
 ## Troubleshooting
 
 - On MacOS, setup may report an error that OpenSSL headers are missing. To fix this, try installing OpenSSL from Homebrew and run
