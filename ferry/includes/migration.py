@@ -1,5 +1,7 @@
 """
 Migration utilities for moving from old CourseTable class JSONs.
+
+Used by scripts under /ferry/migration/.
 """
 
 from typing import Any, Dict, List, Tuple
@@ -11,16 +13,14 @@ def convert_old_description(old_description: str) -> str:
 
     Parameters
     ----------
-    old_description: string
+    old_description:
         input course description
 
     Returns
     -------
-    description: string
+    description:
         formatted description closer to the new parser
-
     """
-
     if old_description[:10] == "Cancelled.":
         old_description = old_description[10:]
 
@@ -35,20 +35,18 @@ def convert_old_time(time: str, revert_12hour=False, truncate_minute=False) -> s
 
     Parameters
     ----------
-    time: string
+    time:
         a time from the previous CourseTable format
-    revert_12hour: bool
+    revert_12hour:
         whether or not to convert back to 12-hour format
-    truncate_minute: bool
+    truncate_minute:
         whether or not to remove the minute if it is :00
 
     Returns
     -------
     time: string
         formatted time
-
     """
-
     if "." in time:
 
         hour = time.split(".")[0]
@@ -105,19 +103,18 @@ def convert_old_meetings(
 
     Parameters
     ----------
-    times: dictionary
+    times:
         previous 'times' field, with keys "summary", "long_summary", "by_day"
 
     Returns
     -------
-    new_times_summary: string
+    new_times_summary:
         reformatted "summary" field
-    new_times_long_summary: string
+    new_times_long_summary:
         reformatted "long_summary" field
-    by_day: dictionary
+    by_day:
         reformatted "by_day" field
     """
-
     times_summary = times["summary"]
     times_long_summary = times["long_summary"]
     times_by_day = times["by_day"]

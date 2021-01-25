@@ -1,12 +1,15 @@
-# pylint: skip-file
+"""
+Preprocess text for FastText embeddings.
+
+Used by /ferry/embed/assemble_corpus.py.
+"""
 import re
 from typing import List
 
 import nltk
 import spacy
 from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
-from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.tokenize import word_tokenize
 
 nltk.download("averaged_perceptron_tagger")
 nltk.download("wordnet")
@@ -22,14 +25,13 @@ def remove_punctuation(text: str) -> str:
 
     Parameters
     ----------
-    text: string
-        Text to process
+    text:
+        Text to process.
 
     Returns
     -------
     text
     """
-
     # replace non-alphanumeric symbols with spaces
     pattern = r"[^a-zA-Z0-9\s]"
     text = re.sub(pattern, " ", text)
@@ -41,26 +43,24 @@ def remove_punctuation(text: str) -> str:
 
 
 def collapse_numbers(text: str) -> str:
-
     """
-    Collapse consecutive numeric characters to a single '#' symbol
+    Collapse consecutive numeric characters to a single '#' symbol.
 
     Parameters
     ----------
-    text: string
-        Text to process
+    text:
+        Text to process.
 
     Returns
     -------
     text
     """
-
     if bool(re.search(r"\d", text)):
-        text = re.sub("(^|\s)[0-9]+", "#", text)
+        text = re.sub(r"(^|\s)[0-9]+", "#", text)
     return text
 
 
-stop_words = set(stopwords.words("english"))
+STOP_WORDS = set(stopwords.words("english"))
 
 
 def remove_stop_words(text: str) -> List[str]:
@@ -69,24 +69,24 @@ def remove_stop_words(text: str) -> List[str]:
 
     Parameters
     ----------
-    text: list-like
+    text:
         Text to process
 
     Returns
     -------
     text
     """
-    return [x for x in text if x not in stop_words]
+    return [x for x in text if x not in STOP_WORDS]
 
 
 def lemmatize(text: str) -> List[str]:
     """
-    Lemmatize tokens in a list
+    Lemmatize tokens in a list.
 
     Parameters
     ----------
-    text: list-like
-        Text to process
+    text:
+        Text to process.
 
     Returns
     -------
@@ -99,18 +99,17 @@ def lemmatize(text: str) -> List[str]:
 
 def preprocess_fasttext(description: str) -> str:
     """
-    Preprocess a course description for downstream embedding training
+    Preprocess a course description for downstream embedding training.
 
     Parameters
     ----------
-    description: string
-        Description text to process
+    description:
+        Description text to process.
 
     Returns
     -------
     text
     """
-
     description = description.lower()
     description = description.replace("\n", " ").replace("\r", "")
 

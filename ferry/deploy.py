@@ -5,9 +5,7 @@ Deploy staged tables to main ones and regenerate database.
 - If invariants pass, promotes staged tables to actual ones,
   updates indexes, and recomputes search views
 - If any invariant fails, exits with no changes to tables.
-
 """
-
 import argparse
 
 import sqlalchemy
@@ -19,6 +17,8 @@ from ferry.includes.tqdm import tqdm
 
 def listing_invariants(session: sqlalchemy.orm.session.Session):
     """
+    Check listing invariants.
+
     Check invariant:
         listing.season_code == course.season_code if listing.course_id == course.course_id.
     """
@@ -36,6 +36,8 @@ def listing_invariants(session: sqlalchemy.orm.session.Session):
 
 def question_invariants(session: sqlalchemy.orm.session.Session):
     """
+    Check question invariants.
+
     Check invariant:
         evaluation_questions.options is null iff evaluation_questions.is_narrative = True
     """
@@ -52,6 +54,8 @@ def question_invariants(session: sqlalchemy.orm.session.Session):
 
 def question_tag_invariant(session: sqlalchemy.orm.session.Session):
     """
+    Check question tag invariants.
+
     Check invariant:
         all questions sharing a tag also share is_narrative and len(options)
     """
@@ -77,6 +81,8 @@ def question_tag_invariant(session: sqlalchemy.orm.session.Session):
 
 def course_invariants(session: sqlalchemy.orm.session.Session):
     """
+    Check course invariants.
+
     Check invariant:
         every course should have at least one listing.
     """
@@ -100,8 +106,9 @@ def course_invariants(session: sqlalchemy.orm.session.Session):
 def search_setup(session: sqlalchemy.orm.session.Session):
     """
     Set up an aggregated course information table.
-    """
 
+    Used by CourseTable to pull JSONs for client-side catalog browsing.
+    """
     print("Creating tmp table")
     with open(f"{config.RESOURCE_DIR}/computed_listing_info_tmp.sql") as tmp_file:
         tmp_sql = tmp_file.read()

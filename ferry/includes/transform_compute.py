@@ -1,7 +1,8 @@
 """
-Handles computed fields in the tables. Used by /ferry/transform.py.
-"""
+Handles computed fields in the tables.
 
+Used by /ferry/transform.py.
+"""
 import csv
 import math
 from typing import List, Optional
@@ -25,18 +26,16 @@ with open(f"{config.RESOURCE_DIR}/question_tags.csv") as f:
 def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
     """
     Populate computed question fields:
-        tags:
-            question tags for ratings aggregation
 
     Parameters
     ----------
-    Pandas tables post-import:
-        evaluation_questions
+    evaluation_questions:
+        Pandas tables post-import.
 
     Returns
     -------
-    evaluation_questions: table with computed fields
-
+    evaluation_questions:
+        table with computed fields.
     """
 
     def assign_code(row):
@@ -72,9 +71,9 @@ def evaluation_statistics_computed(
     """
     Populate computed question fields:
         avg_rating:
-            average course rating
+            Average course rating.
         avg_workload:
-            average course workload
+            Average course workload.
 
     Parameters
     ----------
@@ -85,10 +84,9 @@ def evaluation_statistics_computed(
 
     Returns
     -------
-    evaluation_statistics: table with computed fields
-
+    evaluation_statistics:
+        Table with computed fields.
     """
-
     # create local deep copy
     evaluation_ratings = evaluation_ratings.copy(deep=True)
 
@@ -162,21 +160,21 @@ def courses_computed(
     """
     Populates computed course rating fields:
         average_rating:
-            average course rating over all past instances
+            Average course rating over all past instances.
         average_workload:
-            average course workload over all past instances
+            Average course workload over all past instances.
 
     Also populates last-offered course fields:
         last_offered_course_id:
-            course_id of the most recent previous offering
+            course_id of the most recent previous offering.
         last_enrollment_course_id:
-            course_id of the most recent previous offering with enrollment statistics
+            course_id of the most recent previous offering with enrollment statistics.
         last_enrollment:
-            number of students in most recent previous offering with enrollment statistics
+            Number of students in most recent previous offering with enrollment statistics.
         last_enrollment_season_code:
-            season of recent previous offering with enrollment statistics
+            Season of recent previous offering with enrollment statistics.
         last_enrollment_same_professors:
-            if recent previous offering with enrollment statistics was with same professors
+            If recent previous offering with enrollment statistics was with same professors.
 
     Parameters
     ----------
@@ -188,10 +186,9 @@ def courses_computed(
 
     Returns
     -------
-    courses: table with computed fields
-
+    courses:
+        Table with computed fields.
     """
-
     listings = listings.copy(deep=True)
     evaluation_statistics = evaluation_statistics.copy(deep=True)
     course_professors = course_professors.copy(deep=True)
@@ -407,10 +404,10 @@ def professors_computed(
     course_professors: pd.DataFrame,
     evaluation_statistics: pd.DataFrame,
 ) -> pd.DataFrame:
-
     """
     Populate computed professor fields:
-        average_rating: average overall rating of classes taught
+        average_rating:
+            Average overall rating of classes taught.
 
     Parameters
     ----------
@@ -421,10 +418,9 @@ def professors_computed(
 
     Returns
     -------
-    professors: table with computed fields
-
+    professors:
+        Table with computed fields.
     """
-
     # create local deep copy
     course_professors = course_professors.copy(deep=True)
 

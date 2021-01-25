@@ -1,9 +1,9 @@
 # pylint: skip-file
 """
 Contains configurations and settings used by the rest of the project.
+
 Any settings in here can be overriden by config_private.py.
 """
-
 import functools
 import getpass
 import os

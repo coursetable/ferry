@@ -1,5 +1,7 @@
 """
-Methods used for finding similar vectors. Used by /ferry/embed/compute_similars.py
+Methods used for finding similar vectors.
+
+Used by /ferry/embed/compute_similars.py
 """
 
 from typing import Dict, List, Set, Union
@@ -21,26 +23,22 @@ class SimilaritySearchError(Exception):
 def get_nearest_neighbors(
     node_ids: List[Union[int, str]], embeddings: np.ndarray, num_nearest: int
 ) -> Dict[Union[int, str], Set[Union[int, str]]]:
-
     """
     Compute similar nodes among a set of embeddings.
 
     Parameters
     ----------
     node_ids:
-                names of each embedding sample
-
+        Names of each embedding sample.
     embeddings:
-                embedding vectors of shape (num_total, embed_dim)
-
+        Embedding vectors of shape (num_total, embed_dim).
     num_nearest:
-        number of nearest-neighbors to find
+        Number of nearest-neighbors to find.
 
     Returns
     -------
-    dict mapping node_id's to nearest-neighbors
+    Dictionary mapping node_id's to nearest-neighbors
     """
-
     num_total = embeddings.shape[0]
     embed_dim = embeddings.shape[1]
 

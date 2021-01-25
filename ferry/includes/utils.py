@@ -1,5 +1,7 @@
 """
 Miscellaneous abstract utilities.
+
+Used for processing course JSONs, resolving cross-listings, etc.
 """
 import re
 from itertools import combinations
@@ -14,19 +16,17 @@ from ferry import database
 
 def convert_unicode(text: str) -> str:
     """
-    Replace unicode exceptions
+    Replace unicode exceptions.
 
     Parameters
     ----------
-    text: string
+    text:
+        Text to process.
 
     Returns
     -------
-    properly formatted text
+        Properly formatted text.
     """
-
-    # handle incorrectly coded em dash
-
     unicode_exceptions = {
         r"\u00e2\u20ac\u201c": "–",
         r"\u00c2\u00a0": "\u00a0",
@@ -60,14 +60,14 @@ def flatten_list_of_lists(list_of_lists: List[List[Any]]) -> List[Any]:
 
     Parameters
     ----------
-    list_of_lists : list of lists
+    list_of_lists:
+        List of lists.
 
     Returns
     -------
-    flattened: flattened list
-
+    flattened:
+        Flattened list.
     """
-
     flattened = [x for y in list_of_lists for x in y]
 
     return flattened
@@ -75,20 +75,18 @@ def flatten_list_of_lists(list_of_lists: List[List[Any]]) -> List[Any]:
 
 def merge_overlapping(sets: List[FrozenSet[Any]]) -> List[Set[Any]]:
     """
-    Given a list of sets, merge sets with
-    a nonempty intersection until all sets
-    are disjoint
+    Given a list of FrozenSets, merge sets with a nonempty intersection until all sets are disjoint.
 
     Parameters
     ----------
-    sets: input list of sets
+    sets:
+        Input list of FrozenSets.
 
     Returns
     -------
-    sets: output list of merged sets
-
+    sets:
+        Output list of merged sets.
     """
-
     # deduplicate sets to improve performance
     sets = list(set(sets))
 
@@ -115,21 +113,19 @@ def merge_overlapping(sets: List[FrozenSet[Any]]) -> List[Set[Any]]:
 
 def invert_dict_of_lists(dict_of_lists: Dict[Any, List[Any]]) -> Dict[Any, Any]:
     """
-    Given a dictionary mapping x -> [a, b, c],
-    invert such that it now maps all a, b, c -> x.
-    If same value in multiple keys, then inverted
-    dictionary overwrites arbitrarily.
+    Given a dictionary mapping x -> [a, b, c], invert such that it now maps all a, b, c -> x.
+    If same value in multiple keys, then inverted dictionary overwrites arbitrarily.
 
     Parameters
     ----------
-    d: input dictionary of lists
+    dict_of_lists:
+        Input dictionary of lists.
 
     Returns
     -------
-    inverted: output inverted dictionary
-
+    Inverted:
+        Output inverted dictionary.
     """
-
     inverted = {}
 
     for key, val in dict_of_lists.items():
@@ -149,18 +145,18 @@ def elementwise_sum(list_a: List[Numeric], list_b: List[Numeric]) -> List[Numeri
 
     Parameters
     ----------
-    a: list
-        first list
-    b: list
-        second list
+    list_a:
+        First list.
+    list_b:
+        Second list.
 
     Returns
     -------
-    sums: elementwise sums
-
+    sums:
+        elementwise sums
     """
-
-    assert len(list_a) == len(list_b), "a and b must have same size"
+    if len(list_a) != len(list_b):
+        raise ValueError("a and b must have same size")
 
     return [sum(x) for x in zip(list_a, list_b)]
 
@@ -173,16 +169,16 @@ def category_average(categories: List[int]) -> Tuple[float, int]:
 
     Parameters
     ----------
-    categories: list-like
-        categories
+    Categories:
+        Categories and counts.
 
     Returns
     -------
-    average: average category
-    total: total number of responses
-
+    average:
+        Average value.
+    total:
+        Total number of responses.
     """
-
     if len(categories) == 0:
         return 0, -1
 
@@ -199,6 +195,10 @@ def resolve_potentially_callable(val: Any) -> Any:
     """
     Check if a value is callable, and return its result if so.
 
+    Parameters
+    ----------
+    val:
+        Value to check.
     """
     if callable(val):
         return val()
@@ -207,19 +207,17 @@ def resolve_potentially_callable(val: Any) -> Any:
 
 def get_table(table: str) -> pd.DataFrame:
     """
-    Read one of the tables from the database
-    into Pandas dataframe (assuming SQL storage format)
+    Read one of the tables from the database into Pandas dataframe (assuming SQL storage format).
 
     Parameters
     ----------
-    table: name of table to retrieve
+    table:
+        Name of table to retrieve.
 
     Returns
     -------
     Pandas DataFrame
-
     """
-
     # the Pandas stubs we're using don't have read_sql_table yet
     return pd.read_sql_table(table, con=database.Engine)  # type: ignore
 
@@ -231,15 +229,15 @@ def get_table_columns(table, not_class=False) -> List[str]:
 
     Parameters
     ----------
-    table: name of table to retrieve
-    not_class: if the table is not a class (for instance, a junction table)
+    table:
+        Name of table to retrieve.
+    not_class:
+        If the table is not a class (for instance, a junction table).
 
     Returns
     -------
-    list of column names
-
+    List of column names
     """
-
     if not_class:
         return [column.key for column in table.columns]
 
@@ -248,19 +246,17 @@ def get_table_columns(table, not_class=False) -> List[str]:
 
 def get_all_tables(select_schemas: List[str]) -> Dict[str, pd.DataFrame]:
     """
-    Get all the tables under given schemas as a dictionary
-    of Pandas dataframes
+    Get all the tables under given schemas as a dictionary of Pandas dataframes.
 
     Parameters
     ----------
-    select_schemas: schemas to retrieve tables for
+    select_schemas:
+        Schemas to retrieve tables for.
 
     Returns
     -------
-    Dictionary of Pandas DataFrames
-
+    Dictionary of Pandas DataFrames.
     """
-
     tables: List[str] = []
 
     # inspect and get schema names

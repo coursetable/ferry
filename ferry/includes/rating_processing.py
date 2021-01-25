@@ -1,5 +1,6 @@
 """
 Functions for processing ratings.
+
 Used by /ferry/crawler/fetch_ratings.py.
 """
 import time
@@ -36,22 +37,20 @@ def fetch_questions(
     session: requests.Session, crn: str, term_code: str
 ) -> Dict[QuestionId, str]:
     """
-    Get list of question Ids for a certain course from OCE
+    Get list of question Ids for a certain course from OCE.
 
     Parameters
     ----------
-    session: Requests session
-        The current session with login cookie
-
-    crn: string
-        The crn code of the course
-
-    term_code: string
-        The term code that the course belongs to
-
+    session:
+        Current session with login cookie.
+    crn:
+        CRN of the course
+    term_code:
+        Term code that the course belongs to.
     Returns
     -------
-    questions: Mapping from question IDs to question text
+    questions:
+        Map from question IDs to question text.
     """
     # Main website with number of questions
     url_index = "https://oce.app.yale.edu/oce-viewer/studentSummary/index"
@@ -125,25 +124,22 @@ def fetch_eval_data(
     session: requests.Session, question_id: QuestionId, crn: str, term_code: str
 ) -> Tuple[List[int], List[str]]:
     """
-    Get rating data for each question of a course
+    Get rating data for each question of a course.
 
     Parameters
     ----------
-    session: Requests session
-        The current session with login cookie
-
-    question_id: string
-        The questionId to fetch evaluation data for
-
-    crn: string
-        The crn code of the course
-
-    term_code: string
-        The term code that the course belongs to
-
+    session:
+        Current session with login cookie.
+    question_id:
+        questionId to fetch evaluation data for.
+    crn:
+        CRN of the course.
+    term_code:
+        Term code that the course belongs to.
     Returns
     -------
-    ratings, options: evaluation data for the question ID, and the options
+    ratings, options:
+        Evaluation data for the question ID, and the response options.
     """
     # JSON data with rating data for each question ID
     url_graphdata = "https://oce.app.yale.edu/oce-viewer/studentSummary/graphData"
@@ -179,29 +175,29 @@ def fetch_comments(
     session: requests.Session, offset: int, _max: int, crn: str, term_code: str
 ) -> Dict[str, Any]:
     """
-    Get comments for a specific question of this course
+    Get comments for a specific question of this course.
 
     Parameters
     ----------
-    session: Requests session
-        The current session with login cookie
-
-    offset: integer
-        The question to fetch comments for. 0-indexed
-
-    _max: integer
-        Always 1. Just passed into get function
-
-    crn: string
-        The crn code of the course
-
-    term_code: string
-        The term code that the course belongs to
+    session:
+        Current session with login cookie.
+    offset:
+        Question to fetch comments for. 0-indexed.
+    _max:
+        Always 1. Just passed into get function.
+    crn:
+        CRN of the course.
+    term_code:
+        Term code that the course belongs to.
 
     Returns
     -------
-    id,question,responses_text:
-        string that holds question and list of strings that hold responses respectively
+    Dictionary of
+        {
+            question_id
+            question_text
+            comments
+        }
     """
     # Website with student comments for this question
     url_comments = "https://oce.app.yale.edu/oce-viewer/studentComments/index"
@@ -250,22 +246,20 @@ def fetch_course_enrollment(
     session: requests.Session, crn: str, term_code: str
 ) -> Tuple[Dict[str, int], Dict[str, Any]]:
     """
-    Get enrollment statistics for this course
+    Get enrollment statistics for this course.
 
     Parameters
     ----------
-    session: Requests session
-        The current session with login cookie
-
-    crn: string
-        The crn code of the course
-
-    term_code: string
-        The term code that the course belongs to
-
+    session:
+        Current session with login cookie
+    crn:
+        CRN of the course.
+    term_code:
+        Term code that the course belongs to.
     Returns
     -------
-    stats, extras: a dictionary with statistics, a dictionary with extra info
+    stats, extras:
+        A dictionary with statistics, a dictionary with extra info
     """
     # Main website with number of questions
     url_index = "https://oce.app.yale.edu/oce-viewer/studentSummary/index"
@@ -304,23 +298,21 @@ def fetch_course_eval(
 ) -> Dict[str, Any]:
 
     """
-    Gets evaluation data and comments for the specified course in specified term
+    Gets evaluation data and comments for the specified course in specified term.
 
     Parameters
     ----------
-    session: Requests session
-        The current session with login cookie
-
-    crn_code: string
-        crn code of this course
-
-    term_code: string
-        term code of this course
+    session:
+        The current session with login cookie.
+    crn_code:
+        CRN of this course.
+    term_code:
+        term code of this course.
 
     Returns
     -------
-    course_eval: Dictionary with all evaluation data and integer that specifies
-                               whether or not this term has eval data respectively
+    course_eval:
+        Dictionary with all evaluation data.
     """
 
     # print("TERM:",term_code,"CRN CODE:",crn_code)
