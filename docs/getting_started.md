@@ -27,23 +27,31 @@
 4. Install Postgres. Although we run Postgres through Docker, some bindings are required by the SQLAlchemy ORM that interfaces between Python and the database.
 
    - MacOS: run `brew install postgres`.
-   - Linux: run `sudo apt-get install postgresql`
+   - Linux: run `sudo apt-get install postgresql libpq-dev`.
    - Windows: use the [interactive installer](https://www.postgresql.org/download/windows/).
 
-5. Install Python 3.8 or newer. If not already installed, download an installer from the [Python site](https://www.python.org/downloads/). If you already have a Python installation below 3.8 but don't want to add another one, use Pyenv to create a virtual environment with a version of your choice:
+5. Install graphviz.
+
+   - MacOS: run `brew install graphviz`.
+   - Linux: run `sudo apt-get install graphviz libgraphviz-dev `.
+   - Windows: use the [interactive installer](https://graphviz.org/download/).
+
+   **Note**: you can skip this if you do not want to generate the database diagram, for which you will need to also run `poetry install --no-dev` later.
+
+6. Install Python 3.8 or newer. If not already installed, download an installer from the [Python site](https://www.python.org/downloads/). If you already have a Python installation below 3.8 but don't want to add another one, use Pyenv to create a virtual environment with a version of your choice:
 
    ```shell
    pyenv install 3.8.6
    pyenv local 3.8.6  # Activate Python 3.8.6 for the current project
    ```
 
-6. Install [Poetry](https://python-poetry.org/), the package manager we use for Python dependencies. To install, make sure Python is installed and added to PATH, and run
+7. Install [Poetry](https://python-poetry.org/), the package manager we use for Python dependencies. To install, make sure Python is installed and added to PATH, and run
 
    ```shell
    curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
    ```
 
-7. Install Python dependencies with Poetry: run `poetry install` from the repository root.
+8. Install Python dependencies with Poetry: run `poetry install` from the repository root.
 
 ## Aside: a quick explainer on docker-compose
 
