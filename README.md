@@ -1,6 +1,6 @@
 # Ferry
 
-A crawler for Yale courses and evaluation data. Integrates with [Coursetable](https://github.com/coursetable/coursetable).
+A crawler for Yale courses and evaluation data. Integrates with [CourseTable](https://github.com/coursetable/coursetable).
 
 ## Repository layout
 
