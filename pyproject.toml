@@ -39,6 +39,7 @@ gensim = "^3.8.3"
 edlib = "^1.3.8"
 stackprinter = "^0.2.5"
 numpy = "^1.19.5"
+tabula-py = "^2.2.0"
 
 [tool.poetry.dev-dependencies]
 eralchemy = "^1.2.10"
