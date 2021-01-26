@@ -1188,7 +1188,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "fb8aa1822ab62037412c5fba4d8aa89e4fa9efb0b59cdad185dfb0d7fb1aaf8c"
+content-hash = "6d693a13e5e2a1777ce23ff13b28b2fc077785b84176d8bfd8fa3038dc71c853"
 
 [metadata.files]
 annoy = [
