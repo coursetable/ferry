@@ -44,6 +44,10 @@
    pyenv install 3.8.6
    pyenv local 3.8.6  # Activate Python 3.8.6 for the current project
    ```
+   
+   Alternatively, you can configure Poetry to use a preset Python version with `poetry env use <python_command>`.
+   
+   **Note**: Python3.9 on MacOS is currently incompatible, as NumPy fails to install due to an OS version error. This should be fixed once NumPy 1.20 is released in a few weeks.
 
 7. Install [Poetry](https://python-poetry.org/), the package manager we use for Python dependencies. To install, make sure Python is installed and added to PATH, and run
 
