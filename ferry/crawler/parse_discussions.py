@@ -51,9 +51,46 @@ def parse_location_times(raw_time):
         location = time_split[2]
 
     start_time, end_time = time.split("-")
-    
 
-    return day, start_time, end_time, location
+    # ambiguous evening times have a 'p' appended
+    end_p = end_time[-1] == "p"
+    if end_p:
+        end_time = end_time[:-1]
+    
+    start_hour_, start_minute_ = start_time.split(".")
+    end_hour_, end_minute_ = end_time.split(".")
+
+    start_hour = int(start_hour_)
+    start_minute = int(start_minute_)
+    end_hour = int(end_hour_)
+    end_minute = int(end_minute_)
+
+    start_pm = False
+    end_pm = False
+
+    # if start hour is probably in the afternoon
+    if 1 <= start_hour <= 6:
+        start_pm = True
+
+    # if end hour is probably in the afternoon
+    if 1 <= end_hour <= 6:
+
+        end_pm = True
+
+    # handle cases where the start hour is
+    # 7, 8, 9... pm
+    if end_p:
+
+        start_pm = True
+        end_pm = True
+    
+    if start_pm:
+        start_hour += 12
+    if end_pm:
+        end_hour+=12
+
+    return start_hour, end_hour, time
+    # return day, start_time, end_time, start_hour, end_hour, location, time
 
 # load list of classes per season
 for season in seasons:
