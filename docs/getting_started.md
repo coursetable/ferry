@@ -105,7 +105,21 @@ This command will start Hasura in addition to the Postgres container specified i
 
 - On macOS Big Sur, the new version number may cause Poetry to attempt to compile several modules such as NumPy and SpaCy from scratch rather than using prebuilt binaries. This can be avoided by setting the flag `SYSTEM_VERSION_COMPAT=1`.
 
-- ARM Macs currently do not have good support for NumPy and several other compiled Python packages, so we recommend that you [run terminal with Rosetta2](https://www.notion.so/Run-x86-Apps-including-homebrew-in-the-Terminal-on-Apple-Silicon-8350b43d97de4ce690f283277e958602) or use the provided [VSCode DevContainer](https://code.visualstudio.com/docs/remote/containers).
+- ARM Macs currently do not have good support for NumPy and several other compiled Python packages, so we recommend that you [run terminal with Rosetta2](https://www.notion.so/Run-x86-Apps-including-homebrew-in-the-Terminal-on-Apple-Silicon-8350b43d97de4ce690f283277e958602) or use the provided [VSCode DevContainer](https://code.visualstudio.com/docs/remote/containers) (see below).
+
+## Running the DevContainer
+The entire development environment can be run inside of [a Docker image](https://hub.docker.com/repository/docker/coursetable/ferry) that we have set up with all of the dependencies preinstalled. Using VSCode's DevContainer feature, ferry can be developed from this container. When starting VSCode, the editor should automatically detect the DevContainer and prompt with the option to 'Reopen folder to develop in a container'. Otherwise, try installing the [Remote Development extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) and search for 'Reopen-Containers: Reopen Folder in Container' in the Command Palette (`ctrl-shift-b`).
+
+If making changes to the Dockerfile, make sure to build and push as follows:
+
+```shell
+# build without context
+docker image build -t coursetable/ferry - < Dockerfile
+
+# push to Docker hub (authentication required)
+# to authenticate, use `docker login` after having joined the Docker org
+docker push coursetable/ferry:latest
+```
 
 ## Starting from scratch
 
