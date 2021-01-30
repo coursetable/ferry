@@ -389,6 +389,49 @@ class Course(BaseModel):
         is with same professor as current.""",
     )
 
+class Discussion(BaseModel):
+    """
+    Discussion sections.
+    """
+    __tablename__ = "discussions_staged"
+    discussion_id = Column(Integer, primary_key=True, comment="Discussion section ID")
+
+    course_id = Column(
+        Integer,
+        ForeignKey("courses_staged.course_id"),
+        comment="Course that the discussion section is for",
+        index=True,
+        nullable=False,
+    )
+    course = relationship("Course", backref="listings_staged", cascade="all")
+    
+    number = Column(String, comment="Discussion section number", nullable=False)
+    comment = Column(String, comment="Additional discussion section notes")
+
+    location_times = Column(
+        String, comment="""Key-value pairs consisting of `<location>:<list of times>`
+                           Same format as for courses."""
+    )
+    locations_summary = Column(
+        String,
+        comment="""If single location, is `<location>`; otherwise is
+        `<location> + <n_other_locations>` where the first location is the one
+        with the greatest number of days. Same format as for courses.""",
+    )
+
+    times_long_summary = Column(
+        String,
+        comment="""Course times and locations. Same format as for courses.""",
+    )
+    times_summary = Column(
+        String,
+        comment='Course times. Same format as for courses.',
+    )
+    times_by_day = Column(
+        JSON,
+        comment="""Course meeting times by day, with days as keys and
+        tuples of `(start_time, end_time, location)`. Same format as for courses.""",
+    )
 
 class Listing(BaseModel):
     """
