@@ -13,6 +13,8 @@ RUN apt-get -y install gcc g++ musl-dev libffi-dev libpq-dev
 RUN apt-get -y install libhdf5-dev python-tables
 # for network visualization
 RUN apt-get -y install graphviz libgraphviz-dev
+# for Java (required by tabula)
+RUN apt-get -y install openjdk-8-jre
 
 # Install poetry:
 RUN python -m pip install poetry
