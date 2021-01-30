@@ -14,7 +14,12 @@ RUN apt-get -y install libhdf5-dev python-tables
 # for network visualization
 RUN apt-get -y install graphviz libgraphviz-dev
 # for Java (required by tabula)
-RUN apt-get -y install openjdk-8-jre
+RUN apt-get -y install software-properties-common
+RUN apt-add-repository -y 'deb http://security.debian.org/debian-security stretch/updates main'
+RUN apt-get -y update
+# see https://github.com/geerlingguy/ansible-role-java/issues/64#issuecomment-393299088
+RUN mkdir -p /usr/share/man/man1
+RUN apt-get -y install openjdk-8-jdk
 
 # Install poetry:
 RUN python -m pip install poetry
