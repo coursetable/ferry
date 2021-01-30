@@ -405,8 +405,9 @@ class Discussion(BaseModel):
     )
     course = relationship("Course", backref="listings_staged", cascade="all")
     
+    code = Column(String, comment="Discussion section code", nullable=False)
     number = Column(String, comment="Discussion section number", nullable=False)
-    comment = Column(String, comment="Additional discussion section notes")
+    info = Column(String, comment="Additional discussion section notes")
 
     location_times = Column(
         String, comment="""Key-value pairs consisting of `<location>:<list of times>`
