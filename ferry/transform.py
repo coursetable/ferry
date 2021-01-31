@@ -21,6 +21,7 @@ from ferry.includes.transform_compute import (
 from ferry.includes.transform_import import (
     import_courses,
     import_demand,
+    import_discussions,
     import_evaluations,
 )
 
@@ -131,8 +132,7 @@ if __name__ == "__main__":
     merged_discussions_info = pd.concat(merged_discussions_info_, axis=0)
     merged_discussions_info = merged_discussions_info.reset_index(drop=True)
 
-    print(merged_discussions_info)
-    exit()
+    discussions = import_discussions(merged_discussions_info, listings)
 
     # ------------------------
     # Import demand statistics

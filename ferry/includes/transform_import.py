@@ -465,6 +465,37 @@ def import_courses(
     return courses, listings, course_professors, professors, course_flags, flags
 
 
+def import_discussions(merged_discussions_info: pd.DataFrame, listings: pd.DataFrame)->pd.DataFrame:
+    """
+    Import discussion sections into Pandas DataFrame.
+
+    Parameters
+    ----------
+    merged_discussions_info:
+        Parsed discussion sections information from CSV files.
+    listings:
+        Listings table from import_courses.
+
+    Returns
+    -------
+    discussions
+    """
+    discussions = merged_discussions_info.copy(deep=True)
+    # construct outer season grouping
+    season_code_to_course_id = listings[
+        ["season_code", "course_code", "course_id"]
+    ].groupby("season_code")
+
+    # construct inner course_code to course_id mapping
+    season_code_to_course_id = season_code_to_course_id.apply(  # type: ignore
+        lambda x: x[["course_code", "course_id"]]
+        .groupby("course_code")["course_id"]
+        .apply(list)
+        .to_dict()
+    )
+    
+
+
 def import_demand(
     merged_demand_info: pd.DataFrame, listings: pd.DataFrame
 ) -> pd.DataFrame:
