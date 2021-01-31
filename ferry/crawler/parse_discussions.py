@@ -170,7 +170,7 @@ for season in seasons:
 
     # load raw responses for season
     season_discussions = pd.read_csv(
-        config.DATA_DIR / "discussion_sections" / "raw_csvs" / f"{season}.csv"
+        config.DATA_DIR / "discussion_sections" / "raw_csvs" / f"{season}.csv", dtype={"section":str,"section_crn":"Int64"}
     )
 
     season_discussions["time"] = season_discussions["time"].fillna("")
