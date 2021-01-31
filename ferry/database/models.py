@@ -481,13 +481,6 @@ class Discussion(BaseModel):
     __tablename__ = "discussions_staged"
     discussion_id = Column(Integer, primary_key=True, comment="Discussion section ID")
 
-    course_id = Column(
-        Integer,
-        ForeignKey("courses_staged.course_id"),
-        comment="Course that the discussion section is for",
-        index=True,
-        nullable=False,
-    )
     courses = relationship(
         "Course",
         secondary=course_discussions,
@@ -495,7 +488,7 @@ class Discussion(BaseModel):
         cascade="all",
     )
 
-    code = Column(String, comment="Discussion section code", nullable=False)
+    subject = Column(String, comment="Discussion section subject", nullable=False)
     number = Column(String, comment="Discussion section number", nullable=False)
     info = Column(String, comment="Additional discussion section notes")
 
