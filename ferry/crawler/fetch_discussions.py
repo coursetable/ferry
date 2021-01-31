@@ -68,6 +68,9 @@ def fetch_discussions():
         pages="all",
     )[0]
 
+    discussions["section_crn"] = discussions["section_crn"].astype("Int64")
+    discussions["section"] = discussions["section"].astype("Int64")
+
     discussions.to_csv(
         DATA_DIR / "discussion_sections" / "raw_csvs" / f"{season}.csv", index=False
     )

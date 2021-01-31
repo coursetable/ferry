@@ -42,11 +42,20 @@ if __name__ == "__main__":
     )
 
     # get full list of demand seasons from files
-    demand_seasons = sorted(
+    discussion_seasons = sorted(
         [
             filename.split("_")[0]  # remove the _demand.json suffix
             for filename in os.listdir(f"{config.DATA_DIR}/demand_stats/")
             if filename[0] != "." and filename != "subjects.json"
+        ]
+    )
+
+    # get full list of demand seasons from files
+    discussion_sections = sorted(
+        [
+            filename.split(".")[0]  # remove the _demand.json suffix
+            for filename in os.listdir(f"{config.DATA_DIR}/discussion_sections/parsed_csvs/")
+            if filename[0] != "."
         ]
     )
 
@@ -97,6 +106,34 @@ if __name__ == "__main__":
     ) = import_courses(merged_course_info, course_seasons)
     del merged_course_info
 
+    # --------------------------
+    # Import discussion sections
+    # --------------------------
+
+    print("\n[Importing discussion sections]")
+    print(f"Season(s): {', '.join(discussion_seasons)}")
+
+    merged_discussions_info_ = []
+
+    for season in tqdm(discussion_seasons, desc="Loading discussion section CSVs"):
+
+        discussions_file = Path(config.DATA_DIR / "discussion_sections" / "parsed_csvs" / f"{season}.csv")
+
+        if not discussions_file.is_file():
+            print(f"Skipping season {season}: discussion sections file not found.")
+            continue
+
+        season_discussions = pd.read_csv(discussions_file,)
+
+        season_discussions["season_code"] = season
+        merged_discussions_info_.append(season_discussions)
+
+    merged_discussions_info = pd.concat(merged_discussions_info_, axis=0)
+    merged_discussions_info = merged_discussions_info.reset_index(drop=True)
+
+    print(merged_discussions_info)
+    exit()
+
     # ------------------------
     # Import demand statistics
     # ------------------------
@@ -146,6 +183,7 @@ if __name__ == "__main__":
         dtype={"season": int, "crn": int},
     )
 
+    # serialize rating objects
     evaluation_ratings["rating"] = evaluation_ratings["rating"].apply(ujson.loads)
 
     (
