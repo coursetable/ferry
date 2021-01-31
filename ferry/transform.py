@@ -43,7 +43,7 @@ if __name__ == "__main__":
     )
 
     # get full list of demand seasons from files
-    discussion_seasons = sorted(
+    demand_seasons = sorted(
         [
             filename.split("_")[0]  # remove the _demand.json suffix
             for filename in os.listdir(f"{config.DATA_DIR}/demand_stats/")
@@ -51,10 +51,10 @@ if __name__ == "__main__":
         ]
     )
 
-    # get full list of demand seasons from files
-    discussion_sections = sorted(
+    # get full list of discussion seasons from files
+    discussion_seasons = sorted(
         [
-            filename.split(".")[0]  # remove the _demand.json suffix
+            filename.split(".")[0]  # remove the .csv suffix
             for filename in os.listdir(f"{config.DATA_DIR}/discussion_sections/parsed_csvs/")
             if filename[0] != "."
         ]
