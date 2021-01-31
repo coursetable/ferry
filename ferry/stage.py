@@ -71,6 +71,9 @@ if __name__ == "__main__":
     flags = load_csv("flags")
     course_flags = load_csv("course_flags")
 
+    discussions = load_csv("discussions")
+    course_discussions = load_csv("course_discussions")
+
     demand_statistics = load_csv("demand_statistics")
 
     evaluation_questions = load_csv("evaluation_questions")
@@ -137,6 +140,10 @@ if __name__ == "__main__":
     copy_from_stringio(raw_conn, course_professors, "course_professors_staged")
     copy_from_stringio(raw_conn, flags, "flags_staged")
     copy_from_stringio(raw_conn, course_flags, "course_flags_staged")
+
+    # discussion sections
+    copy_from_stringio(raw_conn, discussions, "discussions_staged")
+    copy_from_stringio(raw_conn, course_discussions, "course_discussions_staged")
 
     # demand statistics
     copy_from_stringio(raw_conn, demand_statistics, "demand_statistics_staged")

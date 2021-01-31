@@ -183,7 +183,7 @@ if __name__ == "__main__":
         dtype={"season": int, "crn": int},
     )
 
-    # serialize rating objects
+    # parse rating objects
     evaluation_ratings["rating"] = evaluation_ratings["rating"].apply(ujson.loads)
 
     (
@@ -266,6 +266,9 @@ if __name__ == "__main__":
     export_csv(course_professors, "course_professors")
     export_csv(flags, "flags")
     export_csv(course_flags, "course_flags")
+
+    export_csv(discussions, "discussions")
+    export_csv(course_discussions, "course_discussions")
 
     export_csv(demand_statistics, "demand_statistics")
 

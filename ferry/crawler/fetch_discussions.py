@@ -68,8 +68,24 @@ def fetch_discussions():
         pages="all",
     )[0]
 
+    discussions.fillna({"subject":"","number":"","info":"","time":""},inplace=True)
+
+    def patch_code(row):
+        """
+        Fix discussion section code parse errors.
+
+        Sometimes tabula parses the subject and code into the same column.
+        """
+
+        if " " in row["subject"]:
+            row["subject"], row["number"] = row["subject"].split(" ", maxsplit=1)
+        
+        return row
+
+    discussions = discussions.apply(patch_code,axis=1)
+
     discussions["section_crn"] = discussions["section_crn"].astype("Int64")
-    discussions["section"] = discussions["section"].astype("Int64")
+    discussions["section"] = discussions["section"].astype(str)
 
     discussions.to_csv(
         DATA_DIR / "discussion_sections" / "raw_csvs" / f"{season}.csv", index=False

@@ -483,6 +483,9 @@ def import_discussions(merged_discussions_info: pd.DataFrame, listings: pd.DataF
     discussions = merged_discussions_info.copy(deep=True)
     discussions["discussion_id"] = range(len(discussions))
 
+    # serialize objects for loading
+    discussions["times_by_day"] = discussions["times_by_day"].apply(ujson.dumps)
+
     # construct outer season grouping
     season_code_to_course_id = listings[
         ["season_code", "course_code", "course_id"]
@@ -521,6 +524,8 @@ def import_discussions(merged_discussions_info: pd.DataFrame, listings: pd.DataF
     discussions["course_ids"] = discussions.apply(match_discussion_to_courses,axis=1)
     course_discussions = discussions.loc[:,["course_ids","discussion_id"]].explode("course_ids")
     course_discussions = course_discussions.rename(columns={"course_ids":"course_id"})
+    course_discussions.dropna(subset=["course_id"],inplace=True)
+    course_discussions.loc[:, "course_id"] = course_discussions["course_id"].astype(int)
 
     course_discussions = course_discussions.loc[
         :, get_table_columns(database.models.course_discussions, not_class=True)
