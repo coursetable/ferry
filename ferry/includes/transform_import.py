@@ -465,7 +465,7 @@ def import_courses(
     return courses, listings, course_professors, professors, course_flags, flags
 
 
-def import_discussions(merged_discussions_info: pd.DataFrame, listings: pd.DataFrame)->pd.DataFrame:
+def import_discussions(merged_discussions_info: pd.DataFrame, listings: pd.DataFrame)->Tuple[pd.DataFrame,pd.DataFrame]:
     """
     Import discussion sections into Pandas DataFrame.
 
@@ -481,6 +481,8 @@ def import_discussions(merged_discussions_info: pd.DataFrame, listings: pd.DataF
     discussions
     """
     discussions = merged_discussions_info.copy(deep=True)
+    discussions["discussion_id"] = range(len(discussions))
+
     # construct outer season grouping
     season_code_to_course_id = listings[
         ["season_code", "course_code", "course_id"]
@@ -493,8 +495,39 @@ def import_discussions(merged_discussions_info: pd.DataFrame, listings: pd.DataF
         .apply(list)
         .to_dict()
     )
-    
 
+    # cast outer season mapping to dictionary
+    season_code_to_course_id = season_code_to_course_id.to_dict()  # type: ignore
+
+    discussions["subject"].fillna("",inplace=True)
+    discussions["number"].fillna("",inplace=True)
+
+    def get_course_code(row):
+        if row["subject"] != ""  and row["number"] != "":
+            # remove the 'D' at the end of the code for matching
+            return row["subject"] + " " + row["number"][:-1]
+        return ""
+    
+    discussions["course_code"] = discussions.apply(get_course_code,axis=1)
+
+    def match_discussion_to_courses(row):
+        season_code = int(row["season_code"])
+
+        course_ids = season_code_to_course_id.get(season_code, {}).get(row["course_code"], [])
+        course_ids = sorted(list(course_ids))
+
+        return course_ids
+    
+    discussions["course_ids"] = discussions.apply(match_discussion_to_courses,axis=1)
+    course_discussions = discussions.loc[:,["course_ids","discussion_id"]].explode("course_ids")
+    course_discussions = course_discussions.rename(columns={"course_ids":"course_id"})
+
+    course_discussions = course_discussions.loc[
+        :, get_table_columns(database.models.course_discussions, not_class=True)
+    ]
+    discussions = discussions.loc[:, get_table_columns(database.models.Discussion)]
+
+    return discussions, course_discussions
 
 def import_demand(
     merged_demand_info: pd.DataFrame, listings: pd.DataFrame

@@ -132,7 +132,7 @@ if __name__ == "__main__":
     merged_discussions_info = pd.concat(merged_discussions_info_, axis=0)
     merged_discussions_info = merged_discussions_info.reset_index(drop=True)
 
-    discussions = import_discussions(merged_discussions_info, listings)
+    discussions, course_discussions = import_discussions(merged_discussions_info, listings)
 
     # ------------------------
     # Import demand statistics
