@@ -189,9 +189,6 @@ class Course(BaseModel):
     # -------------------
     # Times and locations
     # -------------------
-    location_times = Column(
-        String, comment="Key-value pairs consisting of `<location>:<list of times>`"
-    )
     locations_summary = Column(
         String,
         comment="""If single location, is `<location>`; otherwise is
@@ -409,10 +406,6 @@ class Discussion(BaseModel):
     number = Column(String, comment="Discussion section number", nullable=False)
     info = Column(String, comment="Additional discussion section notes")
 
-    location_times = Column(
-        String, comment="""Key-value pairs consisting of `<location>:<list of times>`
-                           Same format as for courses."""
-    )
     locations_summary = Column(
         String,
         comment="""If single location, is `<location>`; otherwise is

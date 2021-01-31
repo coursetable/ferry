@@ -36,14 +36,26 @@ if seasons is None:
 
 print(f"Parsing discussion sections for season(s): {seasons}")
 
+DAYS_MAP = {
+    "M": "Monday",
+    "T": "Tuesday",
+    "W": "Wednesday",
+    "Th": "Thursday",
+    "F": "Friday",
+    "Sa": "Saturday",
+    "Su": "Sunday",
+}
+
 def parse_location_times(raw_time):
     if raw_time == "":
         return ("","","","")
     
     time_split = raw_time.split(" ",maxsplit=2)
 
-    day = time_split[0]
+    day_ = time_split[0]
     time = time_split[1]
+
+    day = DAYS_MAP[day]
 
     location = ""
 
@@ -89,8 +101,31 @@ def parse_location_times(raw_time):
     if end_pm:
         end_hour+=12
 
-    return start_hour, end_hour, time
+    am_pm = {
+        False:"am",
+        True: "pm"
+    }
+
+    start_time_formatted = f"{start_hour_}:{start_minute:02d}{am_pm[start_pm]}"
+    end_time_formatted = f"{end_hour_}:{end_minute:02d}{am_pm[end_pm]}"
+
+    start_time_24_formatted = f"{start_hour}:{start_minute:02d}"
+    end_time_24_formatted = f"{end_hour}:{end_minute:02d}"
+
+    times_summary = f"{day} {start_time_formatted}-{end_time_formatted}"
+    locations_summary = location
+    times_long_summary = f"{times_summary} in {locations_summary}"
+    times_by_day = {
+        day: [
+            start_time_24_formatted,
+            end_time_24_formatted,
+            location,
+        ]
+    }
+
+    # return start_hour, end_hour, time
     # return day, start_time, end_time, start_hour, end_hour, location, time
+    # return day
 
 # load list of classes per season
 for season in seasons:
