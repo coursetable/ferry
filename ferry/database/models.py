@@ -386,10 +386,12 @@ class Course(BaseModel):
         is with same professor as current.""",
     )
 
+
 class Discussion(BaseModel):
     """
     Discussion sections.
     """
+
     __tablename__ = "discussions_staged"
     discussion_id = Column(Integer, primary_key=True, comment="Discussion section ID")
 
@@ -401,7 +403,7 @@ class Discussion(BaseModel):
         nullable=False,
     )
     course = relationship("Course", backref="listings_staged", cascade="all")
-    
+
     code = Column(String, comment="Discussion section code", nullable=False)
     number = Column(String, comment="Discussion section number", nullable=False)
     info = Column(String, comment="Additional discussion section notes")
@@ -419,13 +421,14 @@ class Discussion(BaseModel):
     )
     times_summary = Column(
         String,
-        comment='Course times. Same format as for courses.',
+        comment="Course times. Same format as for courses.",
     )
     times_by_day = Column(
         JSON,
         comment="""Course meeting times by day, with days as keys and
         tuples of `(start_time, end_time, location)`. Same format as for courses.""",
     )
+
 
 class Listing(BaseModel):
     """

@@ -3,9 +3,9 @@ Loads the class JSON files output by fetch_classes.py and
 formats them for input into transform.py
 """
 
-from typing import Tuple, Dict
 import argparse
 from os import listdir
+from typing import Dict, Tuple
 
 import pandas as pd
 
@@ -47,7 +47,10 @@ DAYS_MAP = {
     "Su": "Sunday",
 }
 
-def parse_location_times(raw_time: str) -> Tuple[str,str,str,Dict[str,Tuple[str,str,str]]]:
+
+def parse_location_times(
+    raw_time: str,
+) -> Tuple[str, str, str, Dict[str, Tuple[str, str, str]]]:
     """
     Parse out meeting times and locations for database.
 
@@ -56,7 +59,7 @@ def parse_location_times(raw_time: str) -> Tuple[str,str,str,Dict[str,Tuple[str,
     raw_time:
         The raw time (and location if specified) extracted from the rightmost column of the
         discussion sections PDF.
-    
+
     Returns
     -------
     times_summary:
@@ -74,8 +77,8 @@ def parse_location_times(raw_time: str) -> Tuple[str,str,str,Dict[str,Tuple[str,
     # return empty values if raw time string is itself empty
     if raw_time == "":
         return "", "", "", {}
-    
-    time_split = raw_time.split(" ",maxsplit=2)
+
+    time_split = raw_time.split(" ", maxsplit=2)
 
     day_ = time_split[0]
     time = time_split[1]
@@ -94,7 +97,7 @@ def parse_location_times(raw_time: str) -> Tuple[str,str,str,Dict[str,Tuple[str,
     end_p = end_time[-1] == "p"
     if end_p:
         end_time = end_time[:-1]
-    
+
     start_hour_, start_minute_ = start_time.split(".")
     end_hour_, end_minute_ = end_time.split(".")
 
@@ -121,17 +124,14 @@ def parse_location_times(raw_time: str) -> Tuple[str,str,str,Dict[str,Tuple[str,
 
         start_pm = True
         end_pm = True
-    
+
     if start_pm:
         start_hour += 12
     if end_pm:
-        end_hour+=12
+        end_hour += 12
 
     # quick map for AM/PM for formatting
-    am_pm = {
-        False:"am",
-        True: "pm"
-    }
+    am_pm = {False: "am", True: "pm"}
 
     # AM/PM formatted start and end times
     start_time_formatted = f"{start_hour_}:{start_minute:02d}{am_pm[start_pm]}"
@@ -154,7 +154,8 @@ def parse_location_times(raw_time: str) -> Tuple[str,str,str,Dict[str,Tuple[str,
         ]
     }
 
-    return times_summary,locations_summary,times_long_summary,times_by_day
+    return times_summary, locations_summary, times_long_summary, times_by_day
+
 
 # load list of classes per season
 for season in seasons:
@@ -162,9 +163,17 @@ for season in seasons:
     print(f"Parsing discussion sections for season {season}")
 
     # load raw responses for season
-    season_discussions = pd.read_csv(config.DATA_DIR / "discussion_sections" / "raw_csvs" / f"{season}.csv")
+    season_discussions = pd.read_csv(
+        config.DATA_DIR / "discussion_sections" / "raw_csvs" / f"{season}.csv"
+    )
 
     season_discussions["time"] = season_discussions["time"].fillna("")
+    (
+        season_discussions["times_summary"],
+        season_discussions["locations_summary"],
+        season_discussions["times_long_summary"],
+        season_discussions["times_by_day"],
+    ) = season_discussions["time"].apply(parse_location_times)
 
     print(season_discussions)
 
