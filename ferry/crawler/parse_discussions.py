@@ -86,7 +86,11 @@ def parse_location_times(
 
     # replace Thursday so single-letter matching works
     # otherwise, Tuesday (T) also gets matched
-    days = [day_full for day_short, day_full in DAYS_MAP.items() if day_short in days_raw.replace("Th", "H")]
+    days = [
+        day_full
+        for day_short, day_full in DAYS_MAP.items()
+        if day_short in days_raw.replace("Th", "H")
+    ]
 
     # location isn't always provided (especially with online courses, so set an empty default)
     location = ""
@@ -150,11 +154,11 @@ def parse_location_times(
     if location != "":
         times_long_summary = f"{times_summary} in {location}"
     times_by_day = {
-        day: [
+        day: (
             start_time_24_formatted,
             end_time_24_formatted,
             location,
-        ]
+        )
         for day in days
     }
 
