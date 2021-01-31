@@ -59,9 +59,10 @@ def fetch_discussions():
     season = f"{year}{season_code}"
 
     discussions = tabula.read_pdf(
-        temp_output_path,
+        DATA_DIR / "discussion_sections" / "raw_pdfs" / f"{season}.pdf",
         pandas_options={
-            "names": ["section_crn", "subject", "number", "section", "info", "time"]
+            "names": ["section_crn", "subject", "number", "section", "info", "time"],
+            "dtype": {"section":str}
         },
         multiple_tables=False,
         stream=True,
@@ -85,7 +86,6 @@ def fetch_discussions():
     discussions = discussions.apply(patch_code,axis=1)
 
     discussions["section_crn"] = discussions["section_crn"].astype("Int64")
-    discussions["section"] = discussions["section"].astype(str)
 
     discussions.to_csv(
         DATA_DIR / "discussion_sections" / "raw_csvs" / f"{season}.csv", index=False
