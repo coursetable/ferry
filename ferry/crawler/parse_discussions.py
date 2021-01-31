@@ -81,12 +81,12 @@ def parse_location_times(
 
     time_split = raw_time.split(" ", maxsplit=2)
 
-    # replace Thursday so single-letter matching works
-    # otherwise, Tuesday (T) also gets matched
-    days_raw = time_split[0].replace("Th", "H")
+    days_raw = time_split[0]
     time = time_split[1]
 
-    days = [day_full for day_short, day_full in DAYS_MAP.items()]
+    # replace Thursday so single-letter matching works
+    # otherwise, Tuesday (T) also gets matched
+    days = [day_full for day_short, day_full in DAYS_MAP.items() if day_short in days_raw.replace("Th", "H")]
 
     # location isn't always provided (especially with online courses, so set an empty default)
     location = ""
@@ -180,4 +180,4 @@ for season in seasons:
     ) = zip(*season_discussions["time"].apply(parse_location_times))
 
     # write output
-    season_discussions.to_csv(parsed_discussions_folder / "{season}.csv", index=False)
+    season_discussions.to_csv(parsed_discussions_folder / f"{season}.csv", index=False)
