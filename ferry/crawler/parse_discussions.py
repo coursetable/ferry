@@ -8,6 +8,7 @@ from os import listdir
 from typing import Dict, Tuple
 
 import pandas as pd
+import ujson
 
 from ferry import config
 from ferry.crawler.common_args import add_seasons_args
@@ -41,7 +42,7 @@ DAYS_MAP = {
     "M": "Monday",
     "T": "Tuesday",
     "W": "Wednesday",
-    "Th": "Thursday",
+    "H": "Thursday",
     "F": "Friday",
     "Sa": "Saturday",
     "Su": "Sunday",
@@ -80,10 +81,12 @@ def parse_location_times(
 
     time_split = raw_time.split(" ", maxsplit=2)
 
-    day_ = time_split[0]
+    # replace Thursday so single-letter matching works
+    # otherwise, Tuesday (T) also gets matched
+    days_raw = time_split[0].replace("Th", "H")
     time = time_split[1]
 
-    day = DAYS_MAP[day]
+    days = [day_full for day_short, day_full in DAYS_MAP.items()]
 
     # location isn't always provided (especially with online courses, so set an empty default)
     location = ""
@@ -141,7 +144,7 @@ def parse_location_times(
     start_time_24_formatted = f"{start_hour}:{start_minute:02d}"
     end_time_24_formatted = f"{end_hour}:{end_minute:02d}"
 
-    times_summary = f"{day} {start_time_formatted}-{end_time_formatted}"
+    times_summary = f"{days_raw} {start_time_formatted}-{end_time_formatted}"
     locations_summary = location
     times_long_summary = f"{times_summary}"
     if location != "":
@@ -152,6 +155,7 @@ def parse_location_times(
             end_time_24_formatted,
             location,
         ]
+        for day in days
     }
 
     return times_summary, locations_summary, times_long_summary, times_by_day
@@ -173,10 +177,7 @@ for season in seasons:
         season_discussions["locations_summary"],
         season_discussions["times_long_summary"],
         season_discussions["times_by_day"],
-    ) = season_discussions["time"].apply(parse_location_times)
+    ) = zip(*season_discussions["time"].apply(parse_location_times))
 
-    print(season_discussions)
-
-    # # write output
-    # with open(parsed_courses_folder / "{season}.csv", "w") as f:
-    #     ujson.dump(parsed_course_info, f, indent=4)
+    # write output
+    season_discussions.to_csv(parsed_discussions_folder / "{season}.csv", index=False)
