@@ -3,6 +3,7 @@ Loads the class JSON files output by fetch_classes.py and
 formats them for input into transform.py
 """
 
+from typing import Tuple, Dict
 import argparse
 from os import listdir
 
@@ -46,9 +47,33 @@ DAYS_MAP = {
     "Su": "Sunday",
 }
 
-def parse_location_times(raw_time):
+def parse_location_times(raw_time: str) -> Tuple[str,str,str,Dict[str,Tuple[str,str,str]]]:
+    """
+    Parse out meeting times and locations for database.
+
+    Parameters
+    ----------
+    raw_time:
+        The raw time (and location if specified) extracted from the rightmost column of the
+        discussion sections PDF.
+    
+    Returns
+    -------
+    times_summary:
+        Summary of meeting times. Note: all discussion sections appear to have at most one meet day.
+    locations_summary:
+        Summary of meeting location(s). Note: all discussion sections appear to have
+        at most one location.
+    times_long_summary:
+        Summary of meeting times and locations. Currently '{times_summary} in {locations_summary}' if
+        location is specified, and equivalent to times_summary if location not specified.
+    times_by_day:
+        Dictionary with keys as days and values consisting of lists of
+        [start_time, end_time, location].
+    """
+    # return empty values if raw time string is itself empty
     if raw_time == "":
-        return ("","","","")
+        return "", "", "", {}
     
     time_split = raw_time.split(" ",maxsplit=2)
 
@@ -57,6 +82,7 @@ def parse_location_times(raw_time):
 
     day = DAYS_MAP[day]
 
+    # location isn't always provided (especially with online courses, so set an empty default)
     location = ""
 
     if len(time_split) == 3:
@@ -101,20 +127,25 @@ def parse_location_times(raw_time):
     if end_pm:
         end_hour+=12
 
+    # quick map for AM/PM for formatting
     am_pm = {
         False:"am",
         True: "pm"
     }
 
+    # AM/PM formatted start and end times
     start_time_formatted = f"{start_hour_}:{start_minute:02d}{am_pm[start_pm]}"
     end_time_formatted = f"{end_hour_}:{end_minute:02d}{am_pm[end_pm]}"
 
+    # 24-hour formatted start and end times
     start_time_24_formatted = f"{start_hour}:{start_minute:02d}"
     end_time_24_formatted = f"{end_hour}:{end_minute:02d}"
 
     times_summary = f"{day} {start_time_formatted}-{end_time_formatted}"
     locations_summary = location
-    times_long_summary = f"{times_summary} in {locations_summary}"
+    times_long_summary = f"{times_summary}"
+    if location != "":
+        times_long_summary = f"{times_summary} in {location}"
     times_by_day = {
         day: [
             start_time_24_formatted,
@@ -123,9 +154,7 @@ def parse_location_times(raw_time):
         ]
     }
 
-    # return start_hour, end_hour, time
-    # return day, start_time, end_time, start_hour, end_hour, location, time
-    # return day
+    return times_summary,locations_summary,times_long_summary,times_by_day
 
 # load list of classes per season
 for season in seasons:
