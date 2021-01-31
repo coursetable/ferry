@@ -8,7 +8,6 @@ from os import listdir
 from typing import Dict, Tuple
 
 import pandas as pd
-import ujson
 
 from ferry import config
 from ferry.crawler.common_args import add_seasons_args
@@ -64,13 +63,12 @@ def parse_location_times(
     Returns
     -------
     times_summary:
-        Summary of meeting times. Note: all discussion sections appear to have at most one meet day.
+        Summary of meeting times.
     locations_summary:
-        Summary of meeting location(s). Note: all discussion sections appear to have
-        at most one location.
+        Summary of meeting location(s).
     times_long_summary:
-        Summary of meeting times and locations. Currently '{times_summary} in {locations_summary}' if
-        location is specified, and equivalent to times_summary if location not specified.
+        Summary of meeting times and locations. Currently '{times_summary} in {locations_summary}'
+        if location is specified, and equivalent to times_summary if location not specified.
     times_by_day:
         Dictionary with keys as days and values consisting of lists of
         [start_time, end_time, location].

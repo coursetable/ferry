@@ -54,8 +54,8 @@ for season in seasons:
         fysem = set()
 
     # load raw responses for season
-    with open(f"{config.DATA_DIR}/course_json_cache/{season}.json", "r") as f:
-        aggregate_term_json = ujson.load(f)
+    with open(f"{config.DATA_DIR}/course_json_cache/{season}.json", "r") as file:
+        aggregate_term_json = ujson.load(file)
 
     # parse course JSON in season
     parsed_course_info = [
@@ -64,5 +64,5 @@ for season in seasons:
     ]
 
     # write output
-    with open(f"{config.DATA_DIR}/parsed_courses/{season}.json", "w") as f:
-        ujson.dump(parsed_course_info, f, indent=4)
+    with open(f"{config.DATA_DIR}/parsed_courses/{season}.json", "w") as file:
+        ujson.dump(parsed_course_info, file, indent=4)

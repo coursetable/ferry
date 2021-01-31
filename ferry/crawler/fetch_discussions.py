@@ -34,12 +34,12 @@ def fetch_discussions():
     )
     if discussions.status_code == 200:
 
-        with open(temp_output_path, "wb") as f:
-            f.write(discussions.content)
+        with open(temp_output_path, "wb") as file:
+            file.write(discussions.content)
     # Unsuccessful
     else:
         raise FetchDiscussionsError(
-            f"Unsuccessful discussion sections response: code {r.status_code}"
+            f"Unsuccessful discussion sections response: code {discussions.status_code}"
         )
 
     # get text dump of PDF
