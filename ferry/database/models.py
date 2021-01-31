@@ -79,6 +79,24 @@ course_professors = Table(
     ),
 )
 
+# Course-Discussion association/junction table.
+course_discussions = Table(
+    "course_discussions_staged",
+    Base.metadata,
+    Column(
+        "course_id",
+        ForeignKey("courses_staged.course_id"),
+        primary_key=True,
+        index=True,
+    ),
+    Column(
+        "discussion_id",
+        ForeignKey("discussions_staged.discussion_id"),
+        primary_key=True,
+        index=True,
+    ),
+)
+
 # Similar courses with FastText
 course_fasttext_similars = Table(
     "fasttext_similars_staged",
@@ -387,49 +405,6 @@ class Course(BaseModel):
     )
 
 
-class Discussion(BaseModel):
-    """
-    Discussion sections.
-    """
-
-    __tablename__ = "discussions_staged"
-    discussion_id = Column(Integer, primary_key=True, comment="Discussion section ID")
-
-    course_id = Column(
-        Integer,
-        ForeignKey("courses_staged.course_id"),
-        comment="Course that the discussion section is for",
-        index=True,
-        nullable=False,
-    )
-    course = relationship("Course", backref="listings_staged", cascade="all")
-
-    code = Column(String, comment="Discussion section code", nullable=False)
-    number = Column(String, comment="Discussion section number", nullable=False)
-    info = Column(String, comment="Additional discussion section notes")
-
-    locations_summary = Column(
-        String,
-        comment="""If single location, is `<location>`; otherwise is
-        `<location> + <n_other_locations>` where the first location is the one
-        with the greatest number of days. Same format as for courses.""",
-    )
-
-    times_long_summary = Column(
-        String,
-        comment="""Course times and locations. Same format as for courses.""",
-    )
-    times_summary = Column(
-        String,
-        comment="Course times. Same format as for courses.",
-    )
-    times_by_day = Column(
-        JSON,
-        comment="""Course meeting times by day, with days as keys and
-        tuples of `(start_time, end_time, location)`. Same format as for courses.""",
-    )
-
-
 class Listing(BaseModel):
     """
     Listings table.
@@ -495,6 +470,54 @@ class Listing(BaseModel):
             "section",
         ),
         Index("idx_season_code_crn_unique_staged", "season_code", "crn", unique=True),
+    )
+
+
+class Discussion(BaseModel):
+    """
+    Discussion sections.
+    """
+
+    __tablename__ = "discussions_staged"
+    discussion_id = Column(Integer, primary_key=True, comment="Discussion section ID")
+
+    course_id = Column(
+        Integer,
+        ForeignKey("courses_staged.course_id"),
+        comment="Course that the discussion section is for",
+        index=True,
+        nullable=False,
+    )
+    courses = relationship(
+        "Course",
+        secondary=course_discussions,
+        back_populates="discussions",
+        cascade="all",
+    )
+
+    code = Column(String, comment="Discussion section code", nullable=False)
+    number = Column(String, comment="Discussion section number", nullable=False)
+    info = Column(String, comment="Additional discussion section notes")
+
+    locations_summary = Column(
+        String,
+        comment="""If single location, is `<location>`; otherwise is
+        `<location> + <n_other_locations>` where the first location is the one
+        with the greatest number of days. Same format as for courses.""",
+    )
+
+    times_long_summary = Column(
+        String,
+        comment="""Course times and locations. Same format as for courses.""",
+    )
+    times_summary = Column(
+        String,
+        comment="Course times. Same format as for courses.",
+    )
+    times_by_day = Column(
+        JSON,
+        comment="""Course meeting times by day, with days as keys and
+        tuples of `(start_time, end_time, location)`. Same format as for courses.""",
     )
 
 
