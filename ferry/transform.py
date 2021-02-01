@@ -55,7 +55,9 @@ if __name__ == "__main__":
     discussion_seasons = sorted(
         [
             filename.split(".")[0]  # remove the .csv suffix
-            for filename in os.listdir(f"{config.DATA_DIR}/discussion_sections/parsed_csvs/")
+            for filename in os.listdir(
+                f"{config.DATA_DIR}/discussion_sections/parsed_csvs/"
+            )
             if filename[0] != "."
         ]
     )
@@ -118,13 +120,18 @@ if __name__ == "__main__":
 
     for season in tqdm(discussion_seasons, desc="Loading discussion section CSVs"):
 
-        discussions_file = Path(config.DATA_DIR / "discussion_sections" / "parsed_csvs" / f"{season}.csv")
+        discussions_file = Path(
+            config.DATA_DIR / "discussion_sections" / "parsed_csvs" / f"{season}.csv"
+        )
 
         if not discussions_file.is_file():
             print(f"Skipping season {season}: discussion sections file not found.")
             continue
 
-        season_discussions = pd.read_csv(discussions_file,)
+        season_discussions = pd.read_csv(
+            discussions_file,
+            dtype={"section_crn":"Int64","section":str}
+        )
 
         season_discussions["season_code"] = season
         merged_discussions_info_.append(season_discussions)
@@ -132,7 +139,9 @@ if __name__ == "__main__":
     merged_discussions_info = pd.concat(merged_discussions_info_, axis=0)
     merged_discussions_info = merged_discussions_info.reset_index(drop=True)
 
-    discussions, course_discussions = import_discussions(merged_discussions_info, listings)
+    discussions, course_discussions = import_discussions(
+        merged_discussions_info, listings
+    )
 
     # ------------------------
     # Import demand statistics

@@ -7,7 +7,6 @@ import os
 
 import regex as re
 import requests
-import tabula
 from tika import parser
 
 from ferry.config import DATA_DIR
@@ -57,39 +56,6 @@ def fetch_discussions():
     season_raw = season.split(" ")[0]
     season_code = {"Spring": "01", "Summer": "02", "Fall": "03"}[season_raw]
     season = f"{year}{season_code}"
-
-    discussions = tabula.read_pdf(
-        DATA_DIR / "discussion_sections" / "raw_pdfs" / f"{season}.pdf",
-        pandas_options={
-            "names": ["section_crn", "subject", "number", "section", "info", "time"],
-            "dtype": {"section":str}
-        },
-        multiple_tables=False,
-        stream=True,
-        pages="all",
-    )[0]
-
-    discussions.fillna({"subject":"","number":"","info":"","time":""},inplace=True)
-
-    def patch_code(row):
-        """
-        Fix discussion section code parse errors.
-
-        Sometimes tabula parses the subject and code into the same column.
-        """
-
-        if " " in row["subject"]:
-            row["subject"], row["number"] = row["subject"].split(" ", maxsplit=1)
-        
-        return row
-
-    discussions = discussions.apply(patch_code,axis=1)
-
-    discussions["section_crn"] = discussions["section_crn"].astype("Int64")
-
-    discussions.to_csv(
-        DATA_DIR / "discussion_sections" / "raw_csvs" / f"{season}.csv", index=False
-    )
 
     # rename the PDF to its season
     os.rename(

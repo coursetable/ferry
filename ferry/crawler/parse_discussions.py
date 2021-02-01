@@ -8,9 +8,11 @@ from os import listdir
 from typing import Dict, Tuple
 
 import pandas as pd
+import tabula
 
 from ferry import config
 from ferry.crawler.common_args import add_seasons_args
+
 
 # allow the user to specify seasons
 parser = argparse.ArgumentParser(description="Parse discussion sections")
@@ -20,7 +22,7 @@ args = parser.parse_args()
 seasons = args.seasons
 
 # folder to load discussion sections from
-raw_discussions_folder = config.DATA_DIR / "discussion_sections" / "raw_csvs"
+raw_discussions_folder = config.DATA_DIR / "discussion_sections" / "raw_pdfs"
 # folder to save discussion sections to
 parsed_discussions_folder = config.DATA_DIR / "discussion_sections" / "parsed_csvs"
 
@@ -30,7 +32,7 @@ if seasons is None:
     seasons = [
         filename.split(".")[0]
         for filename in listdir(raw_discussions_folder)
-        if filename.endswith(".csv")
+        if filename.endswith(".pdf")
     ]
 
     seasons = sorted(seasons)
@@ -163,23 +165,56 @@ def parse_location_times(
     return times_summary, locations_summary, times_long_summary, times_by_day
 
 
+def parse_discussions(season:str):
+    discussions = tabula.read_pdf(
+        config.DATA_DIR / "discussion_sections" / "raw_pdfs" / f"{season}.pdf",
+        pandas_options={
+            "names": ["section_crn", "subject", "number", "section", "info", "time"],
+            "dtype": {"section": str},
+        },
+        multiple_tables=False,
+        stream=True,
+        pages="all",
+    )[0]
+
+    discussions["subject"].fillna(method="ffill",inplace=True)
+    discussions["number"].fillna(method="ffill",inplace=True)
+    discussions["info"].fillna(method="ffill",inplace=True)
+    discussions["time"].fillna(value="",inplace=True)
+
+    def patch_code(row):
+        """
+        Fix discussion section code parse errors.
+
+        Sometimes tabula parses the subject and code into the same column.
+        """
+
+        if " " in row["subject"]:
+            row["subject"], row["number"] = row["subject"].split(" ", maxsplit=1)
+
+        return row
+
+    discussions = discussions.apply(patch_code, axis=1)
+
+    discussions["section_crn"] = discussions["section_crn"].astype("Int64")
+
+    discussions["time"] = discussions["time"].fillna("")
+
+    (
+        discussions["times_summary"],
+        discussions["locations_summary"],
+        discussions["times_long_summary"],
+        discussions["times_by_day"],
+    ) = zip(*discussions["time"].apply(parse_location_times))
+
+    discussions.to_csv(
+        config.DATA_DIR / "discussion_sections" / "parsed_csvs" / f"{season}.csv", index=False
+    )
+
+
 # load list of classes per season
 for season in seasons:
 
     print(f"Parsing discussion sections for season {season}")
 
-    # load raw responses for season
-    season_discussions = pd.read_csv(
-        config.DATA_DIR / "discussion_sections" / "raw_csvs" / f"{season}.csv", dtype={"section":str,"section_crn":"Int64"}
-    )
-
-    season_discussions["time"] = season_discussions["time"].fillna("")
-    (
-        season_discussions["times_summary"],
-        season_discussions["locations_summary"],
-        season_discussions["times_long_summary"],
-        season_discussions["times_by_day"],
-    ) = zip(*season_discussions["time"].apply(parse_location_times))
-
-    # write output
-    season_discussions.to_csv(parsed_discussions_folder / f"{season}.csv", index=False)
+    parse_discussions(season)
