@@ -8,7 +8,6 @@ import argparse
 from os import listdir
 from typing import Dict, Tuple
 
-import pandas as pd
 import tabula
 
 from ferry import config
@@ -220,8 +219,8 @@ if __name__ == "__main__":
     print(f"Parsing discussion sections for season(s): {seasons}")
 
     # load list of classes per season
-    for season in seasons:
+    for discussions_season in seasons:
 
-        print(f"Parsing discussion sections for season {season}")
+        print(f"Parsing discussion sections for season {discussions_season}")
 
-        parse_discussions(season)
+        parse_discussions(discussions_season)
