@@ -173,6 +173,13 @@ class Course(BaseModel):
         cascade="all",
     )
 
+    discussions = relationship(
+        "Discussion",
+        secondary=course_discussions,
+        back_populates="courses",
+        cascade="all",
+    )
+
     fasttext_similars = relationship(
         "Course",
         secondary=course_fasttext_similars,

@@ -179,6 +179,7 @@ def parse_discussions(season:str):
 
     discussions["subject"].fillna(method="ffill",inplace=True)
     discussions["number"].fillna(method="ffill",inplace=True)
+    discussions["section"].fillna(method="ffill",inplace=True)
     discussions["info"].fillna(method="ffill",inplace=True)
     discussions["time"].fillna(value="",inplace=True)
 
