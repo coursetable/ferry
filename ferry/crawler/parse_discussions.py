@@ -165,7 +165,7 @@ def parse_location_times(
     return times_summary, locations_summary, times_long_summary, times_by_day
 
 
-def parse_discussions(season:str):
+def parse_discussions(season: str):
     discussions = tabula.read_pdf(
         config.DATA_DIR / "discussion_sections" / "raw_pdfs" / f"{season}.pdf",
         pandas_options={
@@ -177,11 +177,11 @@ def parse_discussions(season:str):
         pages="all",
     )[0]
 
-    discussions["subject"].fillna(method="ffill",inplace=True)
-    discussions["number"].fillna(method="ffill",inplace=True)
-    discussions["section"].fillna(method="ffill",inplace=True)
-    discussions["info"].fillna(method="ffill",inplace=True)
-    discussions["time"].fillna(value="",inplace=True)
+    discussions["subject"].fillna(method="ffill", inplace=True)
+    discussions["number"].fillna(method="ffill", inplace=True)
+    discussions["section"].fillna(method="ffill", inplace=True)
+    discussions["info"].fillna(method="ffill", inplace=True)
+    discussions["time"].fillna(value="", inplace=True)
 
     def patch_code(row):
         """
@@ -209,7 +209,8 @@ def parse_discussions(season:str):
     ) = zip(*discussions["time"].apply(parse_location_times))
 
     discussions.to_csv(
-        config.DATA_DIR / "discussion_sections" / "parsed_csvs" / f"{season}.csv", index=False
+        config.DATA_DIR / "discussion_sections" / "parsed_csvs" / f"{season}.csv",
+        index=False,
     )
 
 

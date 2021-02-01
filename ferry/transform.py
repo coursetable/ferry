@@ -129,8 +129,7 @@ if __name__ == "__main__":
             continue
 
         season_discussions = pd.read_csv(
-            discussions_file,
-            dtype={"section_crn":"Int64","section":str}
+            discussions_file, dtype={"section_crn": "Int64", "section": str}
         )
 
         season_discussions["season_code"] = season

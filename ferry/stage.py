@@ -71,7 +71,9 @@ if __name__ == "__main__":
     flags = load_csv("flags")
     course_flags = load_csv("course_flags")
 
-    discussions = load_csv("discussions", {"dtype":{"section_crn":"Int64","section":str}})
+    discussions = load_csv(
+        "discussions", {"dtype": {"section_crn": "Int64", "section": str}}
+    )
     course_discussions = load_csv("course_discussions")
 
     demand_statistics = load_csv("demand_statistics")
