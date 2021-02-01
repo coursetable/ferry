@@ -504,10 +504,10 @@ def import_discussions(
     # cast outer season mapping to dictionary
     season_code_to_course_id = season_code_to_course_id.to_dict()  # type: ignore
 
-    discussions["subject"].fillna("", inplace=True)
-    discussions["number"].fillna("", inplace=True)
-
     def get_course_code(row):
+        """
+        Formats the course code for course ID matching.
+        """
         if row["subject"] != "" and row["number"] != "":
             # remove the 'D' at the end of the code for matching
             return row["subject"] + " " + row["number"][:-1]
@@ -516,6 +516,9 @@ def import_discussions(
     discussions["course_code"] = discussions.apply(get_course_code, axis=1)
 
     def match_discussion_to_courses(row):
+        """
+        Matches discussion section course code to course ID (in 'courses' table).
+        """
         season_code = int(row["season_code"])
 
         course_ids = season_code_to_course_id.get(season_code, {}).get(
@@ -526,6 +529,8 @@ def import_discussions(
         return course_ids
 
     discussions["course_ids"] = discussions.apply(match_discussion_to_courses, axis=1)
+
+    # create course_discussions junction table
     course_discussions = discussions.loc[:, ["course_ids", "discussion_id"]].explode(
         "course_ids"
     )
@@ -533,6 +538,7 @@ def import_discussions(
     course_discussions.dropna(subset=["course_id"], inplace=True)
     course_discussions.loc[:, "course_id"] = course_discussions["course_id"].astype(int)
 
+    # subset for actual columns used in Postgres
     course_discussions = course_discussions.loc[
         :, get_table_columns(database.models.course_discussions, not_class=True)
     ]

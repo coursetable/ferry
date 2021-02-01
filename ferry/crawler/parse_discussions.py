@@ -14,7 +14,6 @@ import tabula
 from ferry import config
 from ferry.crawler.common_args import add_seasons_args
 
-
 DAYS_MAP = {
     "M": "Monday",
     "T": "Tuesday",
