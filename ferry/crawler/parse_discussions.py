@@ -1,6 +1,7 @@
 """
-Loads the class JSON files output by fetch_classes.py and
-formats them for input into transform.py
+Loads discussion section PDFs output by fetch_discussions.py.
+
+Extracts tables to Pandas DataFrames with tabula-py and outputs to /data/discussions/parsed_csvs
 """
 
 import argparse
@@ -13,31 +14,6 @@ import tabula
 from ferry import config
 from ferry.crawler.common_args import add_seasons_args
 
-
-# allow the user to specify seasons
-parser = argparse.ArgumentParser(description="Parse discussion sections")
-add_seasons_args(parser)
-
-args = parser.parse_args()
-seasons = args.seasons
-
-# folder to load discussion sections from
-raw_discussions_folder = config.DATA_DIR / "discussion_sections" / "raw_pdfs"
-# folder to save discussion sections to
-parsed_discussions_folder = config.DATA_DIR / "discussion_sections" / "parsed_csvs"
-
-if seasons is None:
-
-    # get seasons from fetched raw JSON file names
-    seasons = [
-        filename.split(".")[0]
-        for filename in listdir(raw_discussions_folder)
-        if filename.endswith(".pdf")
-    ]
-
-    seasons = sorted(seasons)
-
-print(f"Parsing discussion sections for season(s): {seasons}")
 
 DAYS_MAP = {
     "M": "Monday",
@@ -166,6 +142,9 @@ def parse_location_times(
 
 
 def parse_discussions(season: str):
+    """
+    Parse the discussion sections for a given season from PDF to CSV.
+    """
     discussions = tabula.read_pdf(
         config.DATA_DIR / "discussion_sections" / "raw_pdfs" / f"{season}.pdf",
         pandas_options={
@@ -214,9 +193,36 @@ def parse_discussions(season: str):
     )
 
 
-# load list of classes per season
-for season in seasons:
+if __name__ == "__main__":
 
-    print(f"Parsing discussion sections for season {season}")
+    # allow the user to specify seasons
+    parser = argparse.ArgumentParser(description="Parse discussion sections")
+    add_seasons_args(parser)
 
-    parse_discussions(season)
+    args = parser.parse_args()
+    seasons = args.seasons
+
+    # folder to load discussion sections from
+    raw_discussions_folder = config.DATA_DIR / "discussion_sections" / "raw_pdfs"
+    # folder to save discussion sections to
+    parsed_discussions_folder = config.DATA_DIR / "discussion_sections" / "parsed_csvs"
+
+    if seasons is None:
+
+        # get seasons from fetched raw JSON file names
+        seasons = [
+            filename.split(".")[0]
+            for filename in listdir(raw_discussions_folder)
+            if filename.endswith(".pdf")
+        ]
+
+        seasons = sorted(seasons)
+
+    print(f"Parsing discussion sections for season(s): {seasons}")
+
+    # load list of classes per season
+    for season in seasons:
+
+        print(f"Parsing discussion sections for season {season}")
+
+        parse_discussions(season)

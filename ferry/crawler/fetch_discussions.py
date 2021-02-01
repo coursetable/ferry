@@ -1,7 +1,7 @@
 """
 Fetch discussion sections.
 
-Pulls the discussion sections and locations PDF and parses to a CSV.
+Pulls the discussion sections and locations PDF.
 """
 import os
 
