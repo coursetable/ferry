@@ -531,7 +531,9 @@ def import_discussions(
     discussions["course_ids"] = discussions.apply(match_discussion_to_courses, axis=1)
 
     # create course_discussions junction table
-    course_discussions = discussions.loc[:, ["course_ids", "discussion_id"]].explode(  # type: ignore
+    course_discussions = discussions.loc[
+        :, ["course_ids", "discussion_id"]
+    ].explode(  # type: ignore
         "course_ids"
     )
     course_discussions = course_discussions.rename(columns={"course_ids": "course_id"})
