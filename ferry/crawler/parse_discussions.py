@@ -154,6 +154,8 @@ def parse_discussions(season: str):
         pages="all",
     )[0]
 
+    # forward-fill missing values with previous row
+    # see CHEM 136D in 202003 for example of why this is done
     discussions["subject"].fillna(method="ffill", inplace=True)
     discussions["number"].fillna(method="ffill", inplace=True)
     discussions["section"].fillna(method="ffill", inplace=True)
@@ -174,10 +176,11 @@ def parse_discussions(season: str):
 
     discussions = discussions.apply(patch_code, axis=1)
 
+    # use correct types
     discussions["section_crn"] = discussions["section_crn"].astype("Int64")
-
     discussions["time"] = discussions["time"].fillna("")
 
+    # parse out locations and times
     (
         discussions["times_summary"],
         discussions["locations_summary"],

@@ -521,6 +521,8 @@ def import_discussions(
         """
         season_code = int(row["season_code"])
 
+        # get matching course IDs by season and section code
+        # (assumes section code is just course code + "D" suffix)
         course_ids = season_code_to_course_id.get(season_code, {}).get(
             row["course_code"], []
         )
