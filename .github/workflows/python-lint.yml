@@ -17,21 +17,38 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
+
       - name: Install system dependencies
         run: sudo apt-get -y install graphviz libgraphviz-dev
+
+      - name: Install Poetry
+        run: python -m pip install poetry
+
+      - name: Load cached dependencies
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/poetry
+          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-poetry-
+
       - name: Install Python dependencies
-        run: |
-          python -m pip install poetry
-          poetry install
+        run: poetry install
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+
       - name: Lint with black
         run: |
           poetry run black --check ./ferry
+
       - name: Lint with isort
         run: |
           poetry run isort --check-only --diff ./ferry
+
       - name: Lint with pylint
         run: |
           poetry run pylint ./ferry
+
       - name: Type checking with mypy
         run: |
           poetry run mypy ferry
