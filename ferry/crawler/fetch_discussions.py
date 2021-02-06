@@ -28,6 +28,8 @@ def fetch_discussions():
     """
     temp_output_path = DATA_DIR / "discussion_sections" / "raw_pdfs" / "temp.pdf"
 
+    print("Downloading PDF")
+
     discussions = requests.get(
         "https://www.sis.yale.edu/buildings/Discussion_locations.pdf"
     )
@@ -44,6 +46,7 @@ def fetch_discussions():
     # get text dump of PDF
     raw = parser.from_file(str(temp_output_path))
 
+    print("Getting discussion sections season")
     # match season from parsed text
     matches = re.search(
         r"Discussion section locations for ([A-Za-z0-9 ]+) Last generated on",
@@ -57,6 +60,7 @@ def fetch_discussions():
     season_code = {"Spring": "01", "Summer": "02", "Fall": "03"}[season_raw]
     season = f"{year}{season_code}"
 
+    print("Saving final PDF")
     # rename the PDF to its season
     os.rename(
         temp_output_path,
