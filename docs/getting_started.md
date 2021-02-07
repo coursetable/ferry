@@ -30,7 +30,13 @@
    - Linux: run `sudo apt-get install postgresql libpq-dev`.
    - Windows: use the [interactive installer](https://www.postgresql.org/download/windows/).
 
-5. Install graphviz.
+5. Install Java (8 or newer). This is only used for parsing discussion sections – we use a tool called [tabula](https://tabula.technology/) to automatically extract these from a PDF that Yale posts.
+
+   - MacOS: run `brew install openjdk@8`.
+   - Linux: run `sudo apt-get install openjdk-8-jre`.
+   - Windows: use the [interactive installer](http://openjdk.java.net/install/).
+
+6. Install graphviz.
 
    - MacOS: run `brew install graphviz`.
    - Linux: run `sudo apt-get install graphviz libgraphviz-dev `.
@@ -38,24 +44,24 @@
 
    **Note**: you can skip this if you do not want to generate the database diagram, for which you will need to also run `poetry install --no-dev` later.
 
-6. Install Python 3.8 or newer. If not already installed, download an installer from the [Python site](https://www.python.org/downloads/). If you already have a Python installation below 3.8 but don't want to add another one, use Pyenv to create a virtual environment with a version of your choice:
+7. Install Python 3.8 or newer. If not already installed, download an installer from the [Python site](https://www.python.org/downloads/). If you already have a Python installation below 3.8 but don't want to add another one, use Pyenv to create a virtual environment with a version of your choice:
 
    ```shell
    pyenv install 3.8.6
    pyenv local 3.8.6  # Activate Python 3.8.6 for the current project
    ```
-   
+
    Alternatively, you can configure Poetry to use a preset Python version with `poetry env use <python_command>`.
-   
+
    **Note**: Python3.9 on MacOS is currently incompatible, as NumPy fails to install due to an OS version error. This should be fixed once NumPy 1.20 is released in a few weeks.
 
-7. Install [Poetry](https://python-poetry.org/), the package manager we use for Python dependencies. To install, make sure Python is installed and added to PATH, and run
+8. Install [Poetry](https://python-poetry.org/), the package manager we use for Python dependencies. To install, make sure Python is installed and added to PATH, and run
 
    ```shell
    curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
    ```
 
-8. Install Python dependencies with Poetry: run `poetry install` from the repository root.
+9. Install Python dependencies with Poetry: run `poetry install` from the repository root.
 
 ## Aside: a quick explainer on docker-compose
 
@@ -105,7 +111,23 @@ This command will start Hasura in addition to the Postgres container specified i
 
 - On macOS Big Sur, the new version number may cause Poetry to attempt to compile several modules such as NumPy and SpaCy from scratch rather than using prebuilt binaries. This can be avoided by setting the flag `SYSTEM_VERSION_COMPAT=1`.
 
-- ARM Macs currently do not have good support for NumPy and several other compiled Python packages, so we recommend that you [run terminal with Rosetta2](https://www.notion.so/Run-x86-Apps-including-homebrew-in-the-Terminal-on-Apple-Silicon-8350b43d97de4ce690f283277e958602) or use the provided [VSCode DevContainer](https://code.visualstudio.com/docs/remote/containers).
+- ARM Macs currently do not have good support for NumPy and several other compiled Python packages, so we recommend that you [run terminal with Rosetta2](https://www.notion.so/Run-x86-Apps-including-homebrew-in-the-Terminal-on-Apple-Silicon-8350b43d97de4ce690f283277e958602) or use the provided [VSCode DevContainer](https://code.visualstudio.com/docs/remote/containers) (see below).
+
+## Running the DevContainer
+The entire development environment can be run inside of [a Docker image](https://hub.docker.com/repository/docker/coursetable/ferry) that we have set up with all of the dependencies preinstalled. Using VSCode's DevContainer feature, Ferry can be developed from this container. Note that after starting the DevContainer, you still need to run `poetry install` and `poetry shell` – the container only contain all non-Python background dependencies.
+
+When starting VSCode, the editor should automatically detect the DevContainer and prompt with the option to 'Reopen folder to develop in a container'. Otherwise, try installing the [Remote Development extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) and search for 'Reopen-Containers: Reopen Folder in Container' in the Command Palette (`ctrl-shift-b`).
+
+If making changes to the Dockerfile, make sure to build and push as follows:
+
+```shell
+# build without context
+docker image build -t coursetable/ferry - < Dockerfile
+
+# push to Docker hub (authentication required)
+# to authenticate, use `docker login` after having joined the Docker org
+docker push coursetable/ferry:latest
+```
 
 ## Starting from scratch
 

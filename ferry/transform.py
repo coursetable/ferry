@@ -21,6 +21,7 @@ from ferry.includes.transform_compute import (
 from ferry.includes.transform_import import (
     import_courses,
     import_demand,
+    import_discussions,
     import_evaluations,
 )
 
@@ -36,6 +37,17 @@ if __name__ == "__main__":
             for filename in set(
                 os.listdir(f"{config.DATA_DIR}/migrated_courses/")
                 + os.listdir(f"{config.DATA_DIR}/parsed_courses/")
+            )
+            if filename[0] != "."
+        ]
+    )
+
+    # get full list of discussion seasons from files
+    discussion_seasons = sorted(
+        [
+            filename.split(".")[0]  # remove the .csv suffix
+            for filename in os.listdir(
+                f"{config.DATA_DIR}/discussion_sections/parsed_csvs/"
             )
             if filename[0] != "."
         ]
@@ -97,6 +109,39 @@ if __name__ == "__main__":
     ) = import_courses(merged_course_info, course_seasons)
     del merged_course_info
 
+    # --------------------------
+    # Import discussion sections
+    # --------------------------
+
+    print("\n[Importing discussion sections]")
+    print(f"Season(s): {', '.join(discussion_seasons)}")
+
+    merged_discussions_info_ = []
+
+    for season in tqdm(discussion_seasons, desc="Loading discussion section CSVs"):
+
+        discussions_file = Path(
+            config.DATA_DIR / "discussion_sections" / "parsed_csvs" / f"{season}.csv"
+        )
+
+        if not discussions_file.is_file():
+            print(f"Skipping season {season}: discussion sections file not found.")
+            continue
+
+        season_discussions = pd.read_csv(
+            discussions_file, dtype={"section_crn": "Int64", "section": str}
+        )
+
+        season_discussions["season_code"] = season
+        merged_discussions_info_.append(season_discussions)
+
+    merged_discussions_info = pd.concat(merged_discussions_info_, axis=0)
+    merged_discussions_info = merged_discussions_info.reset_index(drop=True)
+
+    discussions, course_discussions = import_discussions(
+        merged_discussions_info, listings
+    )
+
     # ------------------------
     # Import demand statistics
     # ------------------------
@@ -146,6 +191,7 @@ if __name__ == "__main__":
         dtype={"season": int, "crn": int},
     )
 
+    # parse rating objects
     evaluation_ratings["rating"] = evaluation_ratings["rating"].apply(ujson.loads)
 
     (
@@ -228,6 +274,9 @@ if __name__ == "__main__":
     export_csv(course_professors, "course_professors")
     export_csv(flags, "flags")
     export_csv(course_flags, "course_flags")
+
+    export_csv(discussions, "discussions")
+    export_csv(course_discussions, "course_discussions")
 
     export_csv(demand_statistics, "demand_statistics")
 
