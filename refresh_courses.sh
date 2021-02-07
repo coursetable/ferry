@@ -44,11 +44,19 @@ announce "Fetching classes for latest year"
 poetry run python ./ferry/crawler/fetch_classes.py -s LATEST_3
 }
 
+[ "$SKIP_FETCH" ] || {
+announce "Fetching current discussion sections"
+poetry run python ./ferry/crawler/fetch_discussions.py
+}
+
 announce "Parsing all classes"
 poetry run python ./ferry/crawler/parse_classes.py
 
 announce "Parsing all evaluations"
 poetry run python ./ferry/crawler/parse_ratings.py
+
+announce "Parsing all discussion sections"
+poetry run python ./ferry/crawler/parse_discussions.py
 
 [ "$SKIP_FETCH" ] || {
 announce "Fetching and parsing demand statistics for latest year"
