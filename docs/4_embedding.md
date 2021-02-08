@@ -15,4 +15,3 @@ The embedding scripts are all located within [`/ferry/embed/`](https://github.co
 ## Notes
 
 The outputs from the embedding scripts are stored under [`/data/description_embeddings`](https://github.com/coursetable/ferry-data/tree/master/description_embeddings), which is part of the ferry-data submodule. However, all outputs are currently ignored due to size (the model file is over 800 MB) and redundancy (these outputs can all be generated from existing files in a few minutes).
-

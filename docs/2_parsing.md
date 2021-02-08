@@ -56,4 +56,3 @@ A full description of the schema, along with comments for each field, is availab
 ## Layout
 
 ![schema](./db_diagram.png)
-

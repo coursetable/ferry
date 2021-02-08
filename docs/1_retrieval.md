@@ -11,7 +11,7 @@ The script `/ferry/migration/fetch_previous_json.py` downloads these JSON files 
 
 ## Fetching class information from the Yale APIs
 
-We retrieve course information from two sources: the back-end used for Yale OCS, ~~and the official Yale Courses API (https://developers.yale.edu/courses)~~. (*Note: we have scripts to call the official courses API, but these are not in use currently because they only contain Yale College courses*). These are performed in `fetch_classes.py`.
+We retrieve course information from two sources: the back-end used for Yale OCS, ~~and the official Yale Courses API (https://developers.yale.edu/courses)~~. (_Note: we have scripts to call the official courses API, but these are not in use currently because they only contain Yale College courses_). These are performed in `fetch_classes.py`.
 
 To retrieve courses from the Yale OCS API, we do the following:
 
@@ -39,4 +39,3 @@ There is no API available to Yale students for querying course evaluations, but 
 The evaluations crawler is implemented in `/ferry/crawler/fetch_ratings.py`. The seasons to crawl are specified manually. For each season, we crawl courses based on the CRN values from lists in`/data/season_courses/`. The evaluations are then output per CRN to `/data/course_evals/`. Note that we also output the raw HTML to `/data/rating_cache/` for debugging purposes.
 
 Note that evaluations typically only go back a couple of years. For earlier evaluation info since 2011, we migrated those from the previous CourseTable site (see `/ferry/migration/fetch_previous_ratings.py`).
-

@@ -33,7 +33,7 @@ Check out [the getting started guide](docs/getting_started.md).
 **Contributing code**:
 
 1. Create a branch with your feature. This can usually be done with `git checkout -b <username>/<feature_name>`.
-2. *make changes*.
+2. _make changes_.
 3. Create some commits and push your changes to the origin (i.e. GitHub). If your branch does not yet exist on GitHub, use `git push --set-upstream origin <branch_name>`.
 4. Once you believe your changes are ready to be integrated into main/master, create a pull request and add a few reviewers. In the pull request, be sure to reference any relevant issue numbers.
 5. Once the pull request has been approved, merge it into the master branch.
@@ -72,5 +72,3 @@ The course evaluations data are private and should only be accessible to Yale st
 This submodule includes course and evaluation data dating back to 2009 (many of which are no longer available through Yale), more recent course demand statistics, and caches and raw HTML files for debugging purposes.
 
 _If you want to use these data but don't want to crawl it yourself, please reach out and we can grant access to our archives._
-
-

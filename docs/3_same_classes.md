@@ -22,15 +22,15 @@ Our input data source is a table of classes as well as one of listings – the `
 
 The stated objective is to find all equivalent offerings for a given course. Since this amounts to evaluating an equivalence relationship on our set of courses, we can reformulate this task as computing a partition of our set of courses into groups of equivalent courses. Each group contains different offerings of the same course, and our set of groups is pairwise disjoint. Therefore, we just assign a unique group label to each course.
 
-Note that our previous strategy of identifying equivalent courses by shared code does not amount to an equivalence relationship – it's possible for courses *A*, *B* as well as *B*, *C* to have common codes but *A* and *C* to have no common ones, which violates the transitivity condition. This pattern sometimes occurs when course codes drift over time.
+Note that our previous strategy of identifying equivalent courses by shared code does not amount to an equivalence relationship – it's possible for courses _A_, _B_ as well as _B_, _C_ to have common codes but _A_ and _C_ to have no common ones, which violates the transitivity condition. This pattern sometimes occurs when course codes drift over time.
 
-To find these groups of equivalent courses, or equivalence classes, we model the set of courses as nodes in a graph, where each course is represented by a node. We then connect two nodes if and only if they are the same course. As a result, finding groups of equivalent courses amounts to finding [connected components](https://en.wikipedia.org/wiki/Component_(graph_theory)) in this graph, and it is easy to see that connected components are themselves a partition of the set of courses as desired. In fact, we previously used connected components when resolving cross-listings (sometimes Yale's cross-listings are incomplete).
+To find these groups of equivalent courses, or equivalence classes, we model the set of courses as nodes in a graph, where each course is represented by a node. We then connect two nodes if and only if they are the same course. As a result, finding groups of equivalent courses amounts to finding [connected components](<https://en.wikipedia.org/wiki/Component_(graph_theory)>) in this graph, and it is easy to see that connected components are themselves a partition of the set of courses as desired. In fact, we previously used connected components when resolving cross-listings (sometimes Yale's cross-listings are incomplete).
 
 Therefore, our methodology is as follows:
 
 1. For each course in `courses`, create a node in the graph corresponding to the course.
 2. Connect the pairs of courses that share at least one code in common.
-3. Prune the edges to remove false positives. Given an edge between two courses *A* and *B*, keep it only if at least one of the following applies:
+3. Prune the edges to remove false positives. Given an edge between two courses _A_ and _B_, keep it only if at least one of the following applies:
    - A and B have the exact same title or description.
    - The normalized text distance between the titles is below some threshold.
    - The normalized text distance between the descriptions is below some threshold.
@@ -38,4 +38,3 @@ Therefore, our methodology is as follows:
 4. Across our filtered graph, extract the connected components.
 5. Assign each course the ID of its connected component as our desired partition ID.
 6. Further split these connected component partitions by groups of same-professors for calculating same-course same-professor values.
-
