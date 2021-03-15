@@ -878,10 +878,10 @@ def extract_course_info(
     # Number of credits
 
     # non-Yale College courses don't have listed credits, so assume they are 1
-    if course_json["hours"] == "":
-        course_info["credits"] = 1
-    else:
+    try:
         course_info["credits"] = float(course_json["hours"])
+    except ValueError:
+        course_info["credits"] = 1
 
     # Course status
     course_info["extra_info"] = STAT_MAP.get(course_json["stat"], "ACTIVE")
