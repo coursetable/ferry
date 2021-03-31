@@ -1,5 +1,8 @@
 # Ferry
-[![Maintainability](https://api.codeclimate.com/v1/badges/5f6f9f67a8ee990c41c3/maintainability)](https://codeclimate.com/github/coursetable/ferry/maintainability) [![HitCount](http://hits.dwyl.com/coursetable/ferry.svg)](http://hits.dwyl.com/coursetable/ferry)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5f6f9f67a8ee990c41c3/maintainability)](https://codeclimate.com/github/coursetable/ferry/maintainability) 
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/coursetable/ferry?style=flat-square)](https://github.com/coursetable/ferry/pulls)
+[![GitHub contributors](https://img.shields.io/github/contributors/coursetable/ferry?style=flat-square)](https://github.com/coursetable/ferry/graphs/contributors)
+[![HitCount](http://hits.dwyl.com/coursetable/coursetable.svg)](http://hits.dwyl.com/coursetable/coursetable)
 
 A crawler for Yale courses and evaluation data. Integrates with [CourseTable](https://github.com/coursetable/coursetable).
 
