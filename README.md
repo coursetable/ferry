@@ -1,4 +1,5 @@
 # Ferry
+[![Maintainability](https://api.codeclimate.com/v1/badges/5f6f9f67a8ee990c41c3/maintainability)](https://codeclimate.com/github/coursetable/ferry/maintainability) [![HitCount](http://hits.dwyl.com/coursetable/ferry.svg)](http://hits.dwyl.com/coursetable/ferry)
 
 A crawler for Yale courses and evaluation data. Integrates with [CourseTable](https://github.com/coursetable/coursetable).
 
