@@ -32,7 +32,6 @@ spacy = "^2.3.2"
 fasttext = "^0.9.2"
 tables = "^3.6.1"
 en_core_web_sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz" } # the English language model for SpaCy
-annoy = "^1.17.0"
 vaderSentiment = "^3.3.2"
 pandarallel = "^1.5.1"
 gensim = "^3.8.3"
