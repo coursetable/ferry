@@ -41,6 +41,7 @@ numpy = "^1.19.5"
 tabula-py = "^2.2.0"
 click = "^7.1.2"
 tika = "^1.24"
+annoy = "^1.17.0"
 
 [tool.poetry.dev-dependencies]
 eralchemy = "^1.2.10"
