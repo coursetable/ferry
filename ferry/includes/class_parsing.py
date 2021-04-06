@@ -885,6 +885,8 @@ def extract_course_info(
         # in Fall 2021, Yale switched to a new credits format under the 'credits' field
         elif course_json.get("credit_html", "").endswith(
             " credit for Yale College students"
+        ) or course_json.get("credit_html", "").endswith(
+            " credits for Yale College students"
         ):
             course_info["credits"] = float(course_json["credit_html"][:-33])
         else:
