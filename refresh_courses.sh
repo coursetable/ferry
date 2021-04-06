@@ -94,4 +94,4 @@ announce "Deploying staged tables"
 poetry run python ./ferry/deploy.py
 
 announce "Regenerating static files on server"
-curl --silent --show-error -H "X-FERRY-SECRET: ${FERRY_SECRET}" https://coursetable.com/api/catalog/refresh
+curl --silent --show-error -H "X-FERRY-SECRET: ${FERRY_SECRET}" https://api.coursetable.com/api/catalog/refresh
