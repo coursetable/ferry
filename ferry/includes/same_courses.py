@@ -324,7 +324,7 @@ def split_same_professors(
     )  # type: ignore
 
     # map each course to frozenset of professors
-    same_course_profs["professors"] = same_course_profs.index.map(
+    same_course_profs["professors"] = same_course_profs["course_id"].map(
         lambda x: course_to_professors.get(x, frozenset())
     )
 
@@ -336,14 +336,16 @@ def split_same_professors(
         .reset_index()
     )
 
+    professors_grouped["same_prof_course_id"] = list(range(len(professors_grouped)))
+
     # explode the course_id groups to get same-course to course_id mapping
     same_prof_explode = professors_grouped.explode("course_id")
 
     course_to_same_prof_course = dict(
-        zip(same_prof_explode["course_id"], same_prof_explode.index)
+        zip(same_prof_explode["course_id"], same_prof_explode["same_prof_course_id"])
     )
     same_prof_course_to_courses = dict(
-        zip(professors_grouped.index, professors_grouped["course_id"])
+        zip(professors_grouped["same_prof_course_id"], professors_grouped["course_id"])
     )
 
     return course_to_same_prof_course, same_prof_course_to_courses
