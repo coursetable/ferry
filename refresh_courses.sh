@@ -55,8 +55,9 @@ poetry run python ./ferry/crawler/parse_classes.py
 announce "Parsing all evaluations"
 poetry run python ./ferry/crawler/parse_ratings.py
 
-announce "Parsing all discussion sections"
-poetry run python ./ferry/crawler/parse_discussions.py
+# temporarily disable this for now since discussions sections are now in CSVs
+# announce "Parsing all discussion sections"
+# poetry run python ./ferry/crawler/parse_discussions.py
 
 [ "$SKIP_FETCH" ] || {
 announce "Fetching and parsing demand statistics for latest year"
