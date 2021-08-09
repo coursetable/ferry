@@ -41,10 +41,18 @@ course_to_embed_index = dict(
 )
 courses["embed_index"] = courses["title"].apply(course_to_embed_index.get)
 courses.dropna(subset=["embed_index"], inplace=True)
-courses["embed_index"] = courses["embed_index"].astype(int)
+courses[  # pylint: disable=unsupported-assignment-operation, unsubscriptable-object
+    "embed_index"
+] = courses[  # pylint: disable=unsubscriptable-object
+    "embed_index"
+].astype(
+    int
+)
 
 # group embedding indices
-courses_by_season = courses.set_index("course_id").groupby("season_code")["embed_index"]
+courses_by_season = courses.set_index("course_id").groupby(  # pylint: disable=no-member
+    "season_code"
+)["embed_index"]
 
 seasons = courses_by_season.groups.keys()  # type: ignore
 

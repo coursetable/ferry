@@ -34,7 +34,9 @@ fig.update_traces(
 fig.write_html(str(config.DATA_DIR / "course_embeddings/all_courses_umap.html"))
 
 fig = px.scatter(
-    courses[courses["season_code"] == 202003],
+    courses[  # pylint: disable=unsubscriptable-object
+        courses["season_code"] == 202003  # pylint: disable=unsubscriptable-object
+    ],
     x="umap1",
     y="umap2",
     render_mode="webgl",

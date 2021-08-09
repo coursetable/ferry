@@ -324,7 +324,11 @@ def split_same_professors(
     )  # type: ignore
 
     # map each course to frozenset of professors
-    same_course_profs["professors"] = same_course_profs["course_id"].map(
+    same_course_profs[  # pylint: disable=unsupported-assignment-operation,unsubscriptable-object
+        "professors"
+    ] = same_course_profs[  # pylint: disable=unsupported-assignment-operation,unsubscriptable-object
+        "course_id"
+    ].map(
         lambda x: course_to_professors.get(x, frozenset())
     )
 

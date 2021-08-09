@@ -73,38 +73,35 @@ if __name__ == "__main__":
     print("ok")
 
     # set up parallel processing pool
-    pool = Pool(processes=64)
+    with Pool(processes=64) as pool:
 
-    for season in seasons:
+        for season in seasons:
 
-        print(f"Retrieving demand by subject for season {season}")
+            print(f"Retrieving demand by subject for season {season}")
 
-        dates = get_dates(season)
+            dates = get_dates(season)
 
-        pool_args = [
-            (season, subject_code, subject_codes, dates)
-            for subject_code in subject_codes
-        ]
+            pool_args = [
+                (season, subject_code, subject_codes, dates)
+                for subject_code in subject_codes
+            ]
 
-        season_courses = []
+            season_courses = []
 
-        # use imap_unordered to report to tqdm
-        with tqdm(total=len(pool_args), desc="Subjects retrieved") as pbar:
-            for i, result in enumerate(
-                pool.imap_unordered(handle_season_subject_demand, pool_args)
-            ):
-                pbar.update()
+            # use imap_unordered to report to tqdm
+            with tqdm(total=len(pool_args), desc="Subjects retrieved") as pbar:
+                for i, result in enumerate(
+                    pool.imap_unordered(handle_season_subject_demand, pool_args)
+                ):
+                    pbar.update()
 
-                season_courses.append(result)
+                    season_courses.append(result)
 
-        # flatten season courses
-        season_courses = [x for y in season_courses for x in y]
+            # flatten season courses
+            season_courses = [x for y in season_courses for x in y]
 
-        # sort courses by title (for consistency with ferry-data)
-        season_courses = sorted(season_courses, key=lambda x: x["title"])
+            # sort courses by title (for consistency with ferry-data)
+            season_courses = sorted(season_courses, key=lambda x: x["title"])
 
-        with open(f"{config.DATA_DIR}/demand_stats/{season}_demand.json", "w") as f:
-            ujson.dump(season_courses, f, indent=4)
-
-    # release pool
-    pool.terminate()
+            with open(f"{config.DATA_DIR}/demand_stats/{season}_demand.json", "w") as f:
+                ujson.dump(season_courses, f, indent=4)

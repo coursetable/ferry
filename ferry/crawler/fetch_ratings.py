@@ -210,11 +210,9 @@ def handle_course_evals(function_args: Tuple[str, str]):
 
 
 # fetch ratings in parallel
-pool = Pool(processes=16)
+with Pool(processes=16) as pool:
 
-# use imap_unordered to report to tqdm
-with tqdm(total=len(queue), desc="Subjects retrieved") as pbar:
-    for i, result in enumerate(pool.imap_unordered(handle_course_evals, queue)):
-        pbar.update()
-
-pool.terminate()
+    # use imap_unordered to report to tqdm
+    with tqdm(total=len(queue), desc="Subjects retrieved") as pbar:
+        for i, result in enumerate(pool.imap_unordered(handle_course_evals, queue)):
+            pbar.update()

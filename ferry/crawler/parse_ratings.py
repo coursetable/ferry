@@ -67,19 +67,19 @@ narratives_path = config.DATA_DIR / "parsed_evaluations/evaluation_narratives.cs
 # CSV output writers
 # ------------------
 
-questions_file = open(questions_path, "w")
+questions_file = open(questions_path, "w")  # pylint: disable=consider-using-with
 questions_writer = csv.DictWriter(questions_file, questions_headers)
 questions_writer.writeheader()
 
-narratives_file = open(narratives_path, "w")
+narratives_file = open(narratives_path, "w")  # pylint: disable=consider-using-with
 narratives_writer = csv.DictWriter(narratives_file, narratives_headers)
 narratives_writer.writeheader()
 
-ratings_file = open(ratings_path, "w")
+ratings_file = open(ratings_path, "w")  # pylint: disable=consider-using-with
 ratings_writer = csv.DictWriter(ratings_file, ratings_headers)
 ratings_writer.writeheader()
 
-statistics_file = open(statistics_path, "w")
+statistics_file = open(statistics_path, "w")  # pylint: disable=consider-using-with
 statistics_writer = csv.DictWriter(statistics_file, statistics_headers)
 statistics_writer.writeheader()
 
