@@ -208,7 +208,7 @@ if __name__ == "__main__":
     )
 
     # define seasons table for import
-    seasons = pd.DataFrame(course_seasons, columns=["season_code"], dtype=int)
+    seasons = pd.DataFrame([int(x) for x in course_seasons], columns=["season_code"], dtype=int)
     seasons["term"] = seasons["season_code"].apply(
         lambda x: {"1": "spring", "2": "summer", "3": "fall"}[str(x)[-1]]
     )
