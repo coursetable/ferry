@@ -11,9 +11,8 @@ following steps:
 """
 import argparse
 import datetime
-from multiprocessing import Pool
 from os.path import isfile
-from typing import Tuple, Union
+from typing import Union
 
 import diskcache
 import requests
@@ -24,6 +23,7 @@ from ferry.crawler.common_args import add_seasons_args, parse_seasons_arg
 from ferry.includes.cas import create_session
 from ferry.includes.rating_processing import fetch_course_eval
 from ferry.includes.tqdm import tqdm
+
 
 class FetchRatingsError(Exception):
     """
