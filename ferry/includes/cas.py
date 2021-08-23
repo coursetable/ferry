@@ -31,7 +31,7 @@ def _create_session_from_cookie(tgc: str) -> requests.Session:
     # Set user-agent for requests to work
     session.headers.update(
         {
-            "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:83.0) Gecko/20100101 Firefox/83.0"  # pylint: disable=line-too-long
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36"  # pylint: disable=line-too-long
         }
     )
 
