@@ -734,6 +734,12 @@ def match_evaluations_to_courses(
     evaluation_ratings.drop_duplicates(  # type: ignore
         subset=["course_id", "question_code"], inplace=True, keep="first"
     )
+    evaluation_narratives["comment"] = (
+        evaluation_narratives["comment"]
+        .str.replace("\r", " ")
+        .str.replace("\n", " ")
+        .str.replace("  ", " ")
+    )
     evaluation_narratives.drop_duplicates(  # type: ignore
         subset=["course_id", "question_code", "comment"], inplace=True, keep="first"
     )
