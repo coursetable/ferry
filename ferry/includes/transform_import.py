@@ -735,7 +735,7 @@ def match_evaluations_to_courses(
         subset=["course_id", "question_code"], inplace=True, keep="first"
     )
     evaluation_narratives["comment"] = (
-        evaluation_narratives["comment"]
+        evaluation_narratives["comment"]  # type: ignore
         .str.replace("\r", " ")
         .str.replace("\n", " ")
         .str.replace("  ", " ")
