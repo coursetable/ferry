@@ -246,6 +246,8 @@ def resolve_professors(
         season_professors["email_matched_ids"] = season_professors["email"].apply(
             lambda x: emails_ids.get(x, [])
         )
+        # NOTE: at one point we also used the ocs_id field to do matching. However, it turns out
+        # that Yale recycles OCS IDs, so we can't use it without a bunch of wrong matches.
 
         # aggregate found IDs
         season_professors["matched_ids_aggregate"] = (
