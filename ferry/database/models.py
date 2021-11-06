@@ -592,7 +592,7 @@ class Professor(BaseModel):
     professor_id = Column(Integer, comment="Professor ID", primary_key=True)
     name = Column(String, comment="Name of the professor", index=True, nullable=False)
     email = Column(String, comment="Email address of the professor", nullable=True)
-    ocs_id = Column(String, comment="Professor ID used by Yale OCS", nullable=True)
+    # ocs_id = Column(String, comment="Professor ID used by Yale OCS", nullable=True)
 
     courses = relationship(
         "Course",

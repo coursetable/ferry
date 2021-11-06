@@ -135,20 +135,19 @@ def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
 
     # reshape professor attributes array
     professors_prep["professors_info"] = professors_prep[  # type: ignore
-        ["professors", "professor_emails", "professor_ids"]
+        ["professors", "professor_emails"]
     ].to_dict(orient="split")["data"]
 
     def zip_professors_info(professors_info):
         # helper function to convert professors_info
-        # from [[names...],[emails...],[ocs_ids...]] format
-        # to [[name,email,ocs_id]...] format
+        # from [[names...],[emails...]] format
+        # to [[name,email]...] format
 
-        names, emails, ocs_ids = professors_info
+        names, emails = professors_info
 
         # exclude empty attributes
         names = list(filter(lambda x: x != "", names))
         emails = list(filter(lambda x: x != "", emails))
-        ocs_ids = list(filter(lambda x: x != "", ocs_ids))
 
         # if no names, return empty regardless of others
         # (professors need to be named)
@@ -158,10 +157,8 @@ def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
         # account for inconsistent lengths before zipping
         if len(emails) != len(names):
             emails = [None] * len(names)
-        if len(ocs_ids) != len(names):
-            ocs_ids = [None] * len(names)
 
-        return list(zip(names, emails, ocs_ids))
+        return list(zip(names, emails))
 
     professors_prep["professors_info"] = professors_prep["professors_info"].apply(
         zip_professors_info
@@ -177,7 +174,7 @@ def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
     professors_prep = professors_prep.reset_index(drop=True)
 
     # expand professor info columns
-    professors_prep[["name", "email", "ocs_id"]] = pd.DataFrame(
+    professors_prep[["name", "email"]] = pd.DataFrame(
         professors_prep["professors_info"].tolist(), index=professors_prep.index
     )
 
@@ -204,13 +201,13 @@ def resolve_professors(
 
     print("Constructing professors table in chronological order")
 
-    professors = pd.DataFrame(columns=["professor_id", "name", "email", "ocs_id"])
+    professors = pd.DataFrame(columns=["professor_id", "name", "email"])
 
     professors_by_season = professors_prep.groupby("season_code")
 
     def get_professor_identifiers(professors):
         # return dictionaries mapping professors to
-        # professor_id primary keys by names, emails, and ocs_ids
+        # professor_id primary keys by names, emails
 
         names_ids = (
             professors.dropna(subset=["name"])
@@ -224,14 +221,8 @@ def resolve_professors(
             .apply(list)
             .to_dict()
         )
-        ocs_ids = (
-            professors.dropna(subset=["ocs_id"])
-            .groupby("ocs_id")["professor_id"]
-            .apply(list)
-            .to_dict()
-        )
 
-        return names_ids, emails_ids, ocs_ids
+        return names_ids, emails_ids
 
     def match_professors(
         season_professors: pd.DataFrame, professors: pd.DataFrame
@@ -246,7 +237,7 @@ def resolve_professors(
         professors:
             Main professors table to pull attributes from.
         """
-        names_ids, emails_ids, ocs_ids = get_professor_identifiers(professors)
+        names_ids, emails_ids = get_professor_identifiers(professors)
 
         # get ID matches by field
         season_professors["name_matched_ids"] = season_professors["name"].apply(
@@ -255,15 +246,11 @@ def resolve_professors(
         season_professors["email_matched_ids"] = season_professors["email"].apply(
             lambda x: emails_ids.get(x, [])
         )
-        season_professors["ocs_matched_ids"] = season_professors["ocs_id"].apply(
-            lambda x: ocs_ids.get(x, [])
-        )
 
         # aggregate found IDs
         season_professors["matched_ids_aggregate"] = (
             season_professors["name_matched_ids"]
             + season_professors["email_matched_ids"]
-            + season_professors["ocs_matched_ids"]
         )
 
         # aggregate ID matches
@@ -285,7 +272,7 @@ def resolve_professors(
 
         def print_ties(row):
             print(
-                f"Professor {row['name']} ({row['email']}, {row['ocs_id']}) has tied matches: ",
+                f"Professor {row['name']} ({row['email']}) has tied matches: ",
                 end="",
             )
             print(sorted(list(set(row["matched_ids_aggregate"]))))
@@ -311,7 +298,7 @@ def resolve_professors(
         )
 
         professors_update = season_professors.drop_duplicates(
-            subset=["name", "email", "ocs_id"], keep="first"
+            subset=["name", "email"], keep="first"
         ).copy(deep=True)
 
         new_professors = professors_update[professors_update["professor_id"].isna()]
