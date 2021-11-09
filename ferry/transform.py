@@ -25,6 +25,8 @@ from ferry.includes.transform_import import (
     import_evaluations,
 )
 
+config.init_sentry()
+
 if __name__ == "__main__":
 
     # ---------------------

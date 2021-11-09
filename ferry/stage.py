@@ -12,6 +12,8 @@ from ferry import config, database
 from ferry.database.models import Base
 from ferry.includes.staging import copy_from_stringio
 
+config.init_sentry()
+
 if __name__ == "__main__":
 
     print("\n[Reading in tables from CSVs]")

@@ -9,7 +9,9 @@ import regex as re
 import requests
 from tika import parser
 
-from ferry.config import DATA_DIR
+from ferry.config import DATA_DIR, init_sentry
+
+init_sentry()
 
 
 class FetchDiscussionsError(Exception):

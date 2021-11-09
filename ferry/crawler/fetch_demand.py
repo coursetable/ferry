@@ -24,6 +24,8 @@ from ferry.crawler.common_args import add_seasons_args, parse_seasons_arg
 from ferry.includes.demand_processing import fetch_season_subject_demand, get_dates
 from ferry.includes.tqdm import tqdm
 
+config.init_sentry()
+
 
 def handle_season_subject_demand(demand_args: Tuple[str, str, List[str], List[str]]):
 

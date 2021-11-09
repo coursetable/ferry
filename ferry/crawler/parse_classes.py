@@ -14,6 +14,8 @@ from ferry.crawler.common_args import add_seasons_args
 from ferry.includes.class_parsing import extract_course_info
 from ferry.includes.tqdm import tqdm
 
+config.init_sentry()
+
 # allow the user to specify seasons
 parser = argparse.ArgumentParser(description="Parse classes")
 add_seasons_args(parser)
