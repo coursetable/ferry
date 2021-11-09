@@ -17,6 +17,8 @@ from ferry.crawler.common_args import add_seasons_args, parse_seasons_arg
 from ferry.includes.class_processing import fetch_course_json, fetch_season_courses
 from ferry.includes.tqdm import tqdm
 
+config.init_sentry()
+
 # -----------------------------------------
 # Retrieve courses from unofficial Yale API
 # -----------------------------------------

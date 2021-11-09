@@ -21,6 +21,8 @@ from ferry.includes.rating_parsing import (
 )
 from ferry.includes.tqdm import tqdm
 
+config.init_sentry()
+
 # ------------------
 # CSV output headers
 # ------------------

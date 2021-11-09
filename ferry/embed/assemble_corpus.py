@@ -10,6 +10,8 @@ from ferry.includes.prepare_fasttext import preprocess_fasttext
 from ferry.includes.prepare_tfidf import preprocess_tfidf
 from ferry.includes.tqdm import tqdm
 
+config.init_sentry()
+
 MIN_DESCRIPTION_LENGTH = 8
 
 print("Reading courses table")

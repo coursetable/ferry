@@ -12,6 +12,8 @@ import pandas as pd
 from ferry import config
 from ferry.includes.similarity_search import get_nearest_neighbors
 
+config.init_sentry()
+
 MAX_NEAREST_NEIGHBORS = 16
 
 print("Loading courses and embeddings")

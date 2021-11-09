@@ -9,6 +9,8 @@ import pandas as pd
 
 from ferry import config
 
+config.init_sentry()
+
 parser = argparse.ArgumentParser(description="")
 parser.add_argument(
     "-r",

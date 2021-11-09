@@ -14,6 +14,8 @@ from sqlalchemy import MetaData
 from ferry import config, database
 from ferry.includes.tqdm import tqdm
 
+config.init_sentry()
+
 
 def listing_invariants(session: sqlalchemy.orm.session.Session):
     """

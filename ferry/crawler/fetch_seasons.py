@@ -16,6 +16,8 @@ from bs4 import BeautifulSoup
 
 from ferry import config
 
+config.init_sentry()
+
 
 class FetchSeasonsError(Exception):
     """

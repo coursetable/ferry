@@ -10,6 +10,7 @@ import os
 import pathlib
 from typing import Any, Callable
 
+import sentry_sdk
 import stackprinter
 
 stackprinter.set_excepthook(style="darkbg")  # easier to read stack traces
@@ -47,3 +48,22 @@ try:
     from ferry.config_private import *
 except ModuleNotFoundError:
     pass
+
+
+def init_sentry():
+
+    sentry_url = os.environ.get("SENTRY_URL")
+
+    if sentry_url is None:
+
+        print("Warning: SENTRY_URL is not set.")
+
+        return
+
+    return sentry_sdk.init(
+        sentry_url,
+        # Set traces_sample_rate to 1.0 to capture 100%
+        # of transactions for performance monitoring.
+        # We recommend adjusting this value in production.
+        traces_sample_rate=1.0,
+    )

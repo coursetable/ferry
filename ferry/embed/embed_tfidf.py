@@ -7,6 +7,8 @@ from gensim import corpora, models
 
 from ferry import config
 
+config.init_sentry()
+
 EMBED_DIM = 100
 
 with open(config.DATA_DIR / "course_embeddings/tfidf_corpus.txt", "r") as f:
