@@ -200,7 +200,7 @@ def fetch_previous_json(season: str, evals=False) -> List[Dict[str, Any]]:
         return r_json
 
     # Unsuccessful
-    raise FetchClassesError("Unsuccessful response: code {}".format(req.status_code))
+    raise FetchClassesError(f"Unsuccessful response: code {req.status_code}")
 
 
 def fetch_course_json(code: str, crn: str, srcdb: str) -> Dict[str, Any]:
@@ -244,11 +244,9 @@ def fetch_course_json(code: str, crn: str, srcdb: str) -> Dict[str, Any]:
             del course_json["last_updated"]
 
         if "fatal" in course_json.keys():
-            raise FetchClassesError(
-                "Unsuccessful response: {}".format(course_json["fatal"])
-            )
+            raise FetchClassesError(f"Unsuccessful response: {course_json['fatal']}")
 
         return course_json
 
     # Unsuccessful
-    raise FetchClassesError("Unsuccessful response: code {}".format(req.status_code))
+    raise FetchClassesError("Unsuccessful response: code {req.status_code}")

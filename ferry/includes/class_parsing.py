@@ -88,8 +88,9 @@ def professors_from_html(html: str) -> Tuple[List[str], List[str], List[str]]:
         instructor_name = unidecode.unidecode(instructor_name)
 
         # patch certain professor names manually
-        if instructor_name in PROFESSOR_EXCEPTIONS.keys():
-            instructor_name = PROFESSOR_EXCEPTIONS[instructor_name]
+        instructor_name = PROFESSOR_EXCEPTIONS.get(
+            PROFESSOR_EXCEPTIONS, instructor_name
+        )
 
         # if the professor has a name and is not listed as staff, add it
         if len(instructor_name) > 0 and instructor_name != "Staff":
@@ -457,7 +458,7 @@ def extract_meetings_by_day(
             )
 
             # if day key already present, append
-            if day in meetings_by_day.keys():
+            if day in meetings_by_day:
                 meetings_by_day[day].append(session)
             # otherwise, initialize list
             else:
@@ -617,7 +618,7 @@ def extract_meetings_alternate(
                 "",
             )
 
-            if meeting_day in times_by_day.keys():
+            if meeting_day in times_by_day:
                 times_by_day[meeting_day].append(session)
 
             else:

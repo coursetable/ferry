@@ -73,6 +73,6 @@ if __name__ == "__main__":
     res = session_test.get("https://secure.its.yale.edu/cas/login")
     if res.text.find("Login Successful") < 0:
         print("failed to login")
-        breakpoint()
+        breakpoint()  # pylint: disable=forgotten-debug-statement
     else:
         print("success")
