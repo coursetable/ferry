@@ -88,7 +88,7 @@ def professors_from_html(html: str) -> Tuple[List[str], List[str], List[str]]:
         instructor_name = unidecode.unidecode(instructor_name)
 
         # patch certain professor names manually
-        instructor_name = PROFESSOR_EXCEPTIONS.get( # type: ignore
+        instructor_name = PROFESSOR_EXCEPTIONS.get(  # type: ignore
             PROFESSOR_EXCEPTIONS, instructor_name
         )
 
