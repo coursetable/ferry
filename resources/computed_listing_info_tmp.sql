@@ -30,7 +30,7 @@ WITH listing_info
                                   JOIN professors p on course_professors.professor_id = p.professor_id
                          WHERE course_professors.course_id = courses.course_id
                          GROUP BY course_professors.course_id), '[]'::jsonb) AS professor_names,
-                coalesce((SELECT jsonb_agg(p.professor_id::varchar(8))
+                coalesce((SELECT jsonb_agg(p.professor_id::varchar(8)) -- stringify the professor IDs for GraphQL jsonb filtering
                          FROM course_professors
                                   JOIN professors p on course_professors.professor_id = p.professor_id
                          WHERE course_professors.course_id = courses.course_id
