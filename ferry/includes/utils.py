@@ -37,6 +37,8 @@ def convert_unicode(text: str) -> str:
         r"\u00c3\u00ae": "î",
         r"\u00c3\u00bc": "ü",
         r"\u00c3\u00b1": "ñ",
+        r"\u201c": "\"",
+        r"\u201d": "\"",
     }
 
     for bad_unicode, replacement in unicode_exceptions.items():

@@ -14,8 +14,8 @@ from bs4 import BeautifulSoup
 from ferry.includes.utils import convert_unicode
 
 PROFESSOR_EXCEPTIONS = {
-    "Kim Shirkhani": "Kimberly Shirkhani",
-    "Derek Green": "John Green",
+    "Kimberly Shirkhani": "Kim Shirkhani",
+    "John Green": "Derek Green",
 }
 
 COLLEGE_SEMINAR_CODES = {
@@ -89,7 +89,7 @@ def professors_from_html(html: str) -> Tuple[List[str], List[str], List[str]]:
 
         # patch certain professor names manually
         instructor_name = PROFESSOR_EXCEPTIONS.get(  # type: ignore
-            PROFESSOR_EXCEPTIONS, instructor_name
+            instructor_name, instructor_name
         )
 
         # if the professor has a name and is not listed as staff, add it
