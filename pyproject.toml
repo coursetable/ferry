@@ -14,7 +14,7 @@ tqdm = "^4.46.1"
 unidecode = "^1.1.1"
 python-dateutil = "^2.8.1"
 lxml = "^4.5.1"
-ujson = "^4.0.1"
+ujson = "^5.0.0"
 diskcache = "^4.1.0"
 beautifulsoup4 = "^4.9.1"
 
