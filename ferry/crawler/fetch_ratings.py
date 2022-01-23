@@ -39,8 +39,11 @@ EXCLUDE_SEASONS = [
     "201702",  # too old
     "201703",  # too old
     "201801",  # too old
+    "201901",  # too old
+    "201902",  # too old
+    "201903",  # too old
     "202001",  # not evaluated because of COVID
-    "202103",  # too new
+    "202002",  # too old
 ]
 
 # allow the user to specify seasons
