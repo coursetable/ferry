@@ -87,25 +87,6 @@ def fetch_questions(
 
 
 def fetch_eval_data(page, question_id) -> Tuple[List[int], List[str]]:
-    """
-    Get rating data for each question of a course.
-
-    Parameters
-    ----------
-    session:
-        Current session with login cookie.
-    question_id:
-        questionId to fetch evaluation data for.
-    crn:
-        CRN of the course.
-    term_code:
-        Term code that the course belongs to.
-    Returns
-    -------
-    ratings, options:
-        Evaluation data for the question ID, and the response options.
-    """
-
     soup = BeautifulSoup(page.content, "lxml")
 
     table = soup.find("table", id="answers" + str(question_id))
@@ -193,9 +174,7 @@ def fetch_comments(
     }
 
 
-def fetch_course_enrollment(
-    session: requests.Session, crn: str, term_code: str
-) -> Tuple[Dict[str, int], Dict[str, Any]]:
+def fetch_course_enrollment(page) -> Tuple[Dict[str, int], Dict[str, Any]]:
     """
     Get enrollment statistics for this course.
 
@@ -212,33 +191,30 @@ def fetch_course_enrollment(
     stats, extras:
         A dictionary with statistics, a dictionary with extra info
     """
-    # Main website with number of questions
-    url_index = "https://oce.app.yale.edu/oce-viewer/studentSummary/index"
 
-    class_info = {
-        "crn": crn,
-        "term_code": term_code,
-    }
-    page_index = session.get(url_index, params=class_info)
-    if page_index.status_code != 200:  # Evaluation data for this term not available
-        raise CrawlerError("missing enrollment data")
-
-    soup = BeautifulSoup(page_index.content, "lxml")
+    soup = BeautifulSoup(page.content, "lxml")
 
     stats = {}
-    stats_area = soup.find(id="status")
-    for item in stats_area.find_all("li"):
-        stat = item.p
-        if not stat.get_text(strip=True):
-            continue
-        name = stat.contents[0].strip()[:-1].lower()
-        value = int(stat.contents[1].get_text())
-        stats[name] = value
+
+    infos = (
+        soup.find("div", id="courseHeader")
+        .find("div")
+        .findAll("div")[-1]
+        .findAll("div")
+    )
+
+    enrolled = infos[0].findAll("div")[-1].text.strip()
+    responded = infos[1].findAll("div")[-1].text.strip()
+
+    stats["enrolled"] = int(enrolled)
+    stats["responded"] = int(responded)
 
     title = (
-        stats_area.parent.find(text=" Overview of Evaluations : ")
-        .parent.findNext("b")
-        .text
+        soup.find("div", id="courseHeader")
+        .find("div")
+        .findAll("div")[1]
+        .findAll("span")[1]
+        .text.strip()
     )
 
     return stats, {"title": title}
