@@ -52,40 +52,7 @@ def fetch_questions(
     questions:
         Map from question IDs to question text.
     """
-    # Main website with number of questions
-    url_index = "https://oce.app.yale.edu/oce-viewer/studentSummary/index"
-
-    # JSON data with question IDs
-    url_show = "https://oce.app.yale.edu/oce-viewer/studentSummary/show"
-
-    class_info = {
-        "crn": crn,
-        "term_code": term_code,
-    }
-
-    page_index = session.get(url_index, params=class_info)
-    if page_index.status_code != 200:  # Evaluation data for this term not available
-        raise CrawlerError(f"Evaluations for term {term_code} are unavailable")
-
-    # save raw HTML in case we ever need it
-    with open(
-        config.DATA_DIR / f"rating_cache/questions_index/{term_code}_{crn}.html", "w"
-    ) as file:
-        file.write(str(page_index.content))
-
-    page_show = session.get(url_show)
-    if page_show.status_code != 200:  # Evaluation data for this course not available
-        raise CrawlerError(
-            f"Evaluations for course crn={crn} in term={term_code} are unavailable"
-        )
-
-    data_show = page_show.json()
-
-    # save raw JSON in case we ever need it
-    with open(
-        config.DATA_DIR / f"rating_cache/questions_show/{term_code}_{crn}.json", "w"
-    ) as file:
-        ujson.dump(data_show, file, indent=4)
+    
 
     if data_show["minEnrollment"] == "N":
         raise _EvaluationsNotViewableError("No minimum enrollment to view.")
@@ -317,12 +284,30 @@ def fetch_course_eval(
 
     # print("TERM:",term_code,"CRN CODE:",crn_code)
 
+    # Main website with number of questions
+    url_index = "https://oce.app.yale.edu/ocedashboard/studentViewer/courseSummary"
+
+    class_info = {
+        "crn": crn_code,
+        "termCode": term_code,
+    }
+
+    page_index = session.get(url_index, params=class_info)
+    if page_index.status_code != 200:  # Evaluation data for this term not available
+        raise CrawlerError(f"Evaluations for term {term_code} are unavailable")
+
+    # save raw HTML in case we ever need it
+    with open(
+        config.DATA_DIR / f"rating_cache/questions_index/{term_code}_{crn}.html", "w"
+    ) as file:
+        file.write(str(page_index.content))
+
     # Enrollment data.
-    enrollment, extras = fetch_course_enrollment(session, crn_code, term_code)
+    enrollment, extras = fetch_course_enrollment(page_index)
 
     # Fetch ratings questions.
     try:
-        questions = fetch_questions(session, crn_code, term_code)
+        questions = fetch_questions(page_index)
     except _EvaluationsNotViewableError as err:
         questions = {}
         extras["not_viewable"] = str(err)
@@ -330,7 +315,7 @@ def fetch_course_eval(
     # Numeric evaluations data.
     ratings = []
     for question_id, text in questions.items():
-        data, options = fetch_eval_data(session, question_id, crn_code, term_code)
+        data, options = fetch_eval_data(page_index, question_id)
         ratings.append(
             {
                 "question_id": question_id,
@@ -346,7 +331,7 @@ def fetch_course_eval(
     while questions:  # serves as an if + while True
         try:
             # Get questions with their respective responses
-            narratives.append(fetch_comments(session, offset, 1, crn_code, term_code))
+            narratives.append(fetch_comments(page, offset, 1))
             offset += 1  # Increment to next question
         except CrawlerError as err:
             if offset == 0:
