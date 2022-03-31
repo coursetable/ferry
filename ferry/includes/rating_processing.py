@@ -86,7 +86,9 @@ def fetch_questions(
     return questions
 
 
-def fetch_eval_data(page, question_id) -> Tuple[List[int], List[str]]:
+def fetch_eval_data(
+    page: requests.Response, question_id: str
+) -> Tuple[List[int], List[str]]:
     soup = BeautifulSoup(page.content, "lxml")
 
     qid = (
@@ -180,7 +182,9 @@ def fetch_comments(
     }
 
 
-def fetch_course_enrollment(page) -> Tuple[Dict[str, int], Dict[str, Any]]:
+def fetch_course_enrollment(
+    page: requests.Response,
+) -> Tuple[Dict[str, int], Dict[str, Any]]:
     """
     Get enrollment statistics for this course.
 
