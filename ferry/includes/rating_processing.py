@@ -52,7 +52,6 @@ def fetch_questions(
     questions:
         Map from question IDs to question text.
     """
-    
 
     if data_show["minEnrollment"] == "N":
         raise _EvaluationsNotViewableError("No minimum enrollment to view.")
@@ -87,9 +86,7 @@ def fetch_questions(
     return questions
 
 
-def fetch_eval_data(
-    session: requests.Session, question_id: QuestionId, crn: str, term_code: str
-) -> Tuple[List[int], List[str]]:
+def fetch_eval_data(page, question_id) -> Tuple[List[int], List[str]]:
     """
     Get rating data for each question of a course.
 
@@ -108,30 +105,17 @@ def fetch_eval_data(
     ratings, options:
         Evaluation data for the question ID, and the response options.
     """
-    # JSON data with rating data for each question ID
-    url_graphdata = "https://oce.app.yale.edu/oce-viewer/studentSummary/graphData"
 
-    millis = int(round(time.time() * 1000))  # Get current time in milliseconds
-    question_info = {"questionId": question_id, "_": millis}
+    soup = BeautifulSoup(page.content, "lxml")
 
-    page_graphdata = session.get(
-        url_graphdata, params=question_info
-    )  # Fetch ratings data
-    if page_graphdata.status_code != 200:
-        raise CrawlerError(f"missing ratings for {question_id}")
-    data_graphdata = ujson.loads(page_graphdata.text)
+    table = soup.find("table", id="answers" + str(question_id))
 
-    # save raw JSON in case we ever need it
-    with open(
-        config.DATA_DIR
-        / f"rating_cache/graph_data/{term_code}_{crn}_{question_id}.json",
-        "w",
-    ) as file:
-        ujson.dump(data_graphdata, file, indent=4)
+    rows = table.findChildren("tr")
 
     ratings = []
     options = []
-    for item in data_graphdata[0]["data"]:
+    for row in rows:
+        item = row.findChildren("td")
         ratings.append(item[1])
         options.append(item[0])
 
