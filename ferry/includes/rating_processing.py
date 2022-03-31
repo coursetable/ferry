@@ -89,7 +89,13 @@ def fetch_questions(
 def fetch_eval_data(page, question_id) -> Tuple[List[int], List[str]]:
     soup = BeautifulSoup(page.content, "lxml")
 
-    table = soup.find("table", id="answers" + str(question_id))
+    qid = (
+        soup.find("td", text=str(question_id))
+        .parent.get("id")
+        .replace("questionRow", "")
+    )
+
+    table = soup.find("table", id="answers" + str(qid))
 
     rows = table.findChildren("tr")
 
