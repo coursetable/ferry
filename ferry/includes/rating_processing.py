@@ -75,10 +75,18 @@ def fetch_questions(page) -> Dict[QuestionId, str]:
     return questions
 
 
-def fetch_eval_data(page, question_id) -> Tuple[List[int], List[str]]:
+def fetch_eval_data(
+    page: requests.Response, question_id: str
+) -> Tuple[List[int], List[str]]:
     soup = BeautifulSoup(page.content, "lxml")
 
-    table = soup.find("table", id="answers" + str(question_id))
+    qid = (
+        soup.find("td", text=str(question_id))
+        .parent.get("id")
+        .replace("questionRow", "")
+    )
+
+    table = soup.find("table", id="answers" + str(qid))
 
     rows = table.findChildren("tr")
 
@@ -163,7 +171,9 @@ def fetch_comments(
     }
 
 
-def fetch_course_enrollment(page) -> Tuple[Dict[str, int], Dict[str, Any]]:
+def fetch_course_enrollment(
+    page: requests.Response,
+) -> Tuple[Dict[str, int], Dict[str, Any]]:
     """
     Get enrollment statistics for this course.
 
