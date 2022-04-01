@@ -33,9 +33,7 @@ class CrawlerError(Exception):
     pass
 
 
-def fetch_questions(
-    session: requests.Session, crn: str, term_code: str
-) -> Dict[QuestionId, str]:
+def fetch_questions(page) -> Dict[QuestionId, str]:
     """
     Get list of question Ids for a certain course from OCE.
 
@@ -53,30 +51,21 @@ def fetch_questions(
         Map from question IDs to question text.
     """
 
-    if data_show["minEnrollment"] == "N":
-        raise _EvaluationsNotViewableError("No minimum enrollment to view.")
-    if data_show["minCompleted"] == "N":
-        raise _EvaluationsNotViewableError("No minimum evaluations completed to view.")
-    if data_show["gradesSubmitted"] == "N":
-        raise CrawlerError(
-            "These evaluations are not viewable. Not all grades have been submitted."
-        )
+    soup = BeautifulSoup(page.content, "lxml")
 
-    question_list = data_show["questionList"]
+    infos = (
+        soup.find("table", id="questions")
+        .find("tbody")
+        .findAll("tr")
+    )
 
     questions = {}
-    for question in question_list:
-        question_id = question["questionId"]
-        text = question["text"]
-        # Strip out
-        #   "
-        #    <br/> \r\n<br/><i>(Your anonymous response to this question may
-        #   be viewed by Yale College students, faculty, and advisers to aid
-        #   in course selection and evaluating teaching.)</i>
-        #   "
-        text = text[0 : text.find("<br/>")]
 
-        questions[question_id] = text
+    for questionRow in infos:
+        question_id = questionRow.findAll("td")[2].text.strip()
+        question_text = questionRow.findAll("div", {"class": "Question"})[0].text.strip()
+
+        questions[question_id] = question_text
 
     if len(questions) == 0:  # Evaluation data for this course not available
         raise CrawlerError(
