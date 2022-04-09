@@ -3,11 +3,9 @@ Functions for processing ratings.
 
 Used by /ferry/crawler/fetch_ratings.py.
 """
-import time
 from typing import Any, Dict, List, Tuple
 
 import requests
-import ujson
 from bs4 import BeautifulSoup
 
 from ferry import config
@@ -57,9 +55,9 @@ def fetch_questions(page, crn, term_code) -> Dict[QuestionId, str]:
 
     questions = {}
 
-    for questionRow in infos:
-        question_id = questionRow.findAll("td")[2].text.strip()
-        question_text = questionRow.findAll("div", {"class": "Question"})[
+    for question_row in infos:
+        question_id = question_row.findAll("td")[2].text.strip()
+        question_text = question_row.findAll("div", {"class": "Question"})[
             0
         ].text.strip()
 
@@ -76,6 +74,9 @@ def fetch_questions(page, crn, term_code) -> Dict[QuestionId, str]:
 def fetch_eval_data(
     page: requests.Response, question_id: str
 ) -> Tuple[List[int], List[str]]:
+    """
+    does something
+    """
     soup = BeautifulSoup(page.content, "lxml")
 
     qid = (
@@ -99,6 +100,9 @@ def fetch_eval_data(
 
 
 def fetch_comments(page: requests.Response, qid: str) -> Dict[str, Any]:
+    """
+    does something
+    """
     soup = BeautifulSoup(page.content, "lxml")
     anchor = soup.find("td", text=qid).parent
     idd = anchor.get("id").replace("questionRow", "")
