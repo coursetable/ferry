@@ -33,7 +33,7 @@ class CrawlerError(Exception):
     pass
 
 
-def fetch_questions(page) -> Dict[QuestionId, str]:
+def fetch_questions(page, crn, term_code) -> Dict[QuestionId, str]:
     """
     Get list of question Ids for a certain course from OCE.
 
@@ -53,17 +53,15 @@ def fetch_questions(page) -> Dict[QuestionId, str]:
 
     soup = BeautifulSoup(page.content, "lxml")
 
-    infos = (
-        soup.find("table", id="questions")
-        .find("tbody")
-        .findAll("tr")
-    )
+    infos = soup.find("table", id="questions").find("tbody").findAll("tr")
 
     questions = {}
 
     for questionRow in infos:
         question_id = questionRow.findAll("td")[2].text.strip()
-        question_text = questionRow.findAll("div", {"class": "Question"})[0].text.strip()
+        question_text = questionRow.findAll("div", {"class": "Question"})[
+            0
+        ].text.strip()
 
         questions[question_id] = question_text
 
@@ -100,73 +98,21 @@ def fetch_eval_data(
     return ratings, options
 
 
-def fetch_comments(
-    session: requests.Session, offset: int, _max: int, crn: str, term_code: str
-) -> Dict[str, Any]:
-    """
-    Get comments for a specific question of this course.
-
-    Parameters
-    ----------
-    session:
-        Current session with login cookie.
-    offset:
-        Question to fetch comments for. 0-indexed.
-    _max:
-        Always 1. Just passed into get function.
-    crn:
-        CRN of the course.
-    term_code:
-        Term code that the course belongs to.
-
-    Returns
-    -------
-    Dictionary of
-        {
-            question_id
-            question_text
-            comments
-        }
-    """
-    # Website with student comments for this question
-    url_comments = "https://oce.app.yale.edu/oce-viewer/studentComments/index"
-
-    page_comments = session.get(url_comments, params={"offset": offset, "max": _max})
-
-    if page_comments.status_code != 200:
-        # Question doesn't exist
-        raise CrawlerError("no more evals available")
-
-    soup = BeautifulSoup(page_comments.content, "lxml")
-
-    # save raw HTML in case we ever need it
-    with open(
-        config.DATA_DIR
-        / f"rating_cache/comments/{term_code}_{crn}_{offset}_{_max}.html",
-        "w",
-    ) as file:
-        file.write(str(soup))
-
-    question_html = soup.find(id="cList")
-
-    # Question text.
-    question_text = question_html.select_one("div > p:nth-of-type(2)").text
-    if question_text is None or question_text == "":
-        raise CrawlerError("no more evals available")
-
-    # Question ID.
-    info_area = question_html.select_one("div > p:nth-of-type(3)")
-    question_id = info_area.contents[1].strip()
-
-    # Responses.
-    comments = []  # List of responses
-    for answer_area in soup.find_all(id="answer"):
-        answer = answer_area.find(id="text").get_text(strip=True)
-        comments.append(answer)
+def fetch_comments(page: requests.Response, qid: str) -> Dict[str, Any]:
+    soup = BeautifulSoup(page.content, "lxml")
+    anchor = soup.find("td", text=qid).parent
+    idd = anchor.get("id").replace("questionRow", "")
+    txt = anchor.find("td", {"class": "Question"}).text.strip()
+    table = soup.find("table", id="answers" + str(idd))
+    rows = table.findChildren("tr")
+    comments = []
+    for row in rows:
+        item = row.findChildren("td")
+        comments.append(item[1])
 
     return {
-        "question_id": question_id,
-        "question_text": question_text,
+        "question_id": qid,
+        "question_text": txt,
         "comments": comments,
     }
 
@@ -257,7 +203,8 @@ def fetch_course_eval(
 
     # save raw HTML in case we ever need it
     with open(
-        config.DATA_DIR / f"rating_cache/questions_index/{term_code}_{crn}.html", "w"
+        config.DATA_DIR / f"rating_cache/questions_index/{term_code}_{crn_code}.html",
+        "w",
     ) as file:
         file.write(str(page_index.content))
 
@@ -266,7 +213,7 @@ def fetch_course_eval(
 
     # Fetch ratings questions.
     try:
-        questions = fetch_questions(page_index)
+        questions = fetch_questions(page_index, crn_code, term_code)
     except _EvaluationsNotViewableError as err:
         questions = {}
         extras["not_viewable"] = str(err)
@@ -286,6 +233,10 @@ def fetch_course_eval(
 
     # Narrative evaluations data.
     narratives = []
+    qids = ["YC409", "YC403", "YC401"]
+    for qid in qids:
+        narratives.append(fetch_comments(page_index, qid))
+    """
     offset = 0  # Start with first question
     while questions:  # serves as an if + while True
         try:
@@ -297,6 +248,7 @@ def fetch_course_eval(
                 raise CrawlerError("cannot fetch narrative comments") from err
             # No more questions are available -- normal situation.
             break
+    """
 
     course_eval: Dict[str, Any] = {}
     course_eval["crn_code"] = crn_code
