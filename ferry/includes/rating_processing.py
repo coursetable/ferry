@@ -240,19 +240,6 @@ def fetch_course_eval(
     qids = ["YC409", "YC403", "YC401"]
     for qid in qids:
         narratives.append(fetch_comments(page_index, qid))
-    """
-    offset = 0  # Start with first question
-    while questions:  # serves as an if + while True
-        try:
-            # Get questions with their respective responses
-            narratives.append(fetch_comments(page, offset, 1))
-            offset += 1  # Increment to next question
-        except CrawlerError as err:
-            if offset == 0:
-                raise CrawlerError("cannot fetch narrative comments") from err
-            # No more questions are available -- normal situation.
-            break
-    """
 
     course_eval: Dict[str, Any] = {}
     course_eval["crn_code"] = crn_code
