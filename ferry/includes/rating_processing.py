@@ -1,7 +1,7 @@
 """
 Functions for processing ratings.
 
-Used by /ferry/crawler/fetch_ratings.py.
+fetch_course_eval is used by /ferry/crawler/fetch_ratings.py.
 """
 from typing import Any, Dict, List, Tuple
 
@@ -191,7 +191,7 @@ def fetch_course_eval(
         Dictionary with all evaluation data.
     """
 
-    # print("TERM:",term_code,"CRN CODE:",crn_code)
+    print("In fetch_course_eval: TERM: ", term_code,"CRN CODE: ", crn_code)
 
     # Main website with number of questions
     url_index = "https://oce.app.yale.edu/ocedashboard/studentViewer/courseSummary"
@@ -202,51 +202,56 @@ def fetch_course_eval(
     }
 
     page_index = session.get(url_index, params=class_info)
-    if page_index.status_code != 200:  # Evaluation data for this term not available
-        raise CrawlerError(f"Evaluations for term {term_code} are unavailable")
 
-    # save raw HTML in case we ever need it
-    with open(
-        config.DATA_DIR / f"rating_cache/questions_index/{term_code}_{crn_code}.html",
-        "w",
-    ) as file:
-        file.write(str(page_index.content))
+    # print(page_index.request.headers)
+    print(page_index.content)
 
-    # Enrollment data.
-    enrollment, extras = fetch_course_enrollment(page_index)
+    # if page_index.status_code != 200:  # Evaluation data for this term not available
+    #     raise CrawlerError(f"Evaluations for term {term_code} are unavailable")
 
-    # Fetch ratings questions.
-    try:
-        questions = fetch_questions(page_index, crn_code, term_code)
-    except _EvaluationsNotViewableError as err:
-        questions = {}
-        extras["not_viewable"] = str(err)
+    # # save raw HTML in case we ever need it
+    # with open(
+    #     config.DATA_DIR / f"rating_cache/questions_index/{term_code}_{crn_code}.html",
+    #     "w",
+    # ) as file:
+    #     # print(str(page_index.content))
+    #     file.write(str(page_index.content))
 
-    # Numeric evaluations data.
-    ratings = []
-    for question_id, text in questions.items():
-        data, options = fetch_eval_data(page_index, question_id)
-        ratings.append(
-            {
-                "question_id": question_id,
-                "question_text": text,
-                "options": options,
-                "data": data,
-            }
-        )
+    # # Enrollment data.
+    # enrollment, extras = fetch_course_enrollment(page_index)
 
-    # Narrative evaluations data.
-    narratives = []
-    qids = ["YC409", "YC403", "YC401"]
-    for qid in qids:
-        narratives.append(fetch_comments(page_index, qid))
+    # # Fetch ratings questions.
+    # try:
+    #     questions = fetch_questions(page_index, crn_code, term_code)
+    # except _EvaluationsNotViewableError as err:
+    #     questions = {}
+    #     extras["not_viewable"] = str(err)
 
-    course_eval: Dict[str, Any] = {}
-    course_eval["crn_code"] = crn_code
-    course_eval["season"] = term_code
-    course_eval["enrollment"] = enrollment
-    course_eval["ratings"] = ratings
-    course_eval["narratives"] = narratives
-    course_eval["extras"] = extras
+    # # Numeric evaluations data.
+    # ratings = []
+    # for question_id, text in questions.items():
+    #     data, options = fetch_eval_data(page_index, question_id)
+    #     ratings.append(
+    #         {
+    #             "question_id": question_id,
+    #             "question_text": text,
+    #             "options": options,
+    #             "data": data,
+    #         }
+    #     )
 
-    return course_eval
+    # # Narrative evaluations data.
+    # narratives = []
+    # qids = ["YC409", "YC403", "YC401"]
+    # for qid in qids:
+    #     narratives.append(fetch_comments(page_index, qid))
+
+    # course_eval: Dict[str, Any] = {}
+    # course_eval["crn_code"] = crn_code
+    # course_eval["season"] = term_code
+    # course_eval["enrollment"] = enrollment
+    # course_eval["ratings"] = ratings
+    # course_eval["narratives"] = narratives
+    # course_eval["extras"] = extras
+
+    # return course_eval
