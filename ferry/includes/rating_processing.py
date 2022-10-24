@@ -37,8 +37,8 @@ def fetch_questions(page, crn, term_code) -> Dict[QuestionId, str]:
 
     Parameters
     ----------
-    session:
-        Current session with login cookie.
+    page:
+        OCE page for the course
     crn:
         CRN of the course
     term_code:
@@ -51,16 +51,15 @@ def fetch_questions(page, crn, term_code) -> Dict[QuestionId, str]:
 
     soup = BeautifulSoup(page.content, "lxml")
 
-    infos = soup.find("table", id="questions").find("tbody").findAll("tr")
+    infos = soup.find("table", id="questions").find("tbody").find_all("tr")
 
     questions = {}
 
     for question_row in infos:
-        question_id = question_row.findAll("td")[2].text.strip()
-        question_text = question_row.findAll("div", {"class": "Question"})[
-            0
-        ].text.strip()
-
+        question_id = question_row.find_all("td")[2].text.strip()
+        question_text = question_row.find("td", class_="Question", recursive=False).find(text=True).text.strip()
+        
+        # print(question_id, question_text)
         questions[question_id] = question_text
 
     if len(questions) == 0:  # Evaluation data for this course not available
@@ -71,70 +70,103 @@ def fetch_questions(page, crn, term_code) -> Dict[QuestionId, str]:
     return questions
 
 
-def fetch_eval_data(
+def fetch_eval_ratings(
     page: requests.Response, question_id: str
 ) -> Tuple[List[int], List[str]]:
     """
-    does something
+    Fetch the evaluation ratings for the given question.
+
+    Parameters
+    ----------
+    page:
+        OCE page for the course
+    question_id:
+        Question ID
+    Returns
+    -------
+    data:
+        Response data for the question.
+    options:
+        Options for the question.
     """
     soup = BeautifulSoup(page.content, "lxml")
 
-    qid = (
+	# Get the 0-indexed question index
+    q_index = (
         soup.find("td", text=str(question_id))
         .parent.get("id")
         .replace("questionRow", "")
     )
 
-    table = soup.find("table", id="answers" + str(qid))
+    table = soup.find("table", id="answers" + str(q_index))
 
-    rows = table.findChildren("tr")
+    rows = table.find("tbody").find_all("tr")
 
     ratings = []
     options = []
     for row in rows:
-        item = row.findChildren("td")
-        ratings.append(item[1])
-        options.append(item[0])
+        item = row.find_all("td")
+        options.append(item[0].text.strip()) # e.g. "very low"
+        ratings.append(int(item[1].text.strip())) # e.g. 8
+
+    # print(options, ratings)
 
     return ratings, options
 
 
-def fetch_comments(page: requests.Response, qid: str) -> Dict[str, Any]:
+def fetch_eval_comments(
+    page: requests.Response, questions: Dict[QuestionId, str], question_id: str
+) -> Dict[str, Any]:
     """
-    does something
+    Fetch the comments for the given narrative question.
+
+    Parameters
+    ----------
+    page:
+        OCE page for the course
+    questions:
+        Map from question IDs to question text.
+    question_id:
+        Question ID
+    Returns
+    -------
+    Question ID, question text, and the comments for the question.
     """
     soup = BeautifulSoup(page.content, "lxml")
-    anchor = soup.find("td", text=qid).parent
-    idd = anchor.get("id").replace("questionRow", "")
-    txt = anchor.find("td", {"class": "Question"}).text.strip()
-    table = soup.find("table", id="answers" + str(idd))
-    rows = table.findChildren("tr")
+
+    # Get the 0-indexed question index
+    q_index = (
+        soup.find("td", text=str(question_id))
+        .parent.get("id")
+        .replace("questionRow", "")
+    )
+
+    table = soup.find("table", id="answers" + str(q_index))
+    rows = table.find("tbody").find_all("tr")
     comments = []
     for row in rows:
-        item = row.findChildren("td")
-        comments.append(item[1])
+        comment = row.find_all("td")[1].text.strip()
+        comments.append(comment)
+
+    # print("Question ID: ", question_id)
+    # print("Question text: ", questions[question_id])
+    # print("Comments:", comments)
 
     return {
-        "question_id": qid,
-        "question_text": txt,
+        "question_id": question_id,
+        "question_text": questions[question_id],
         "comments": comments,
     }
 
 
-def fetch_course_enrollment(
-    page: requests.Response,
-) -> Tuple[Dict[str, int], Dict[str, Any]]:
+def fetch_course_enrollment(page: requests.Response) -> Tuple[Dict[str, int], Dict[str, Any]]:
     """
     Get enrollment statistics for this course.
 
     Parameters
     ----------
-    session:
-        Current session with login cookie
-    crn:
-        CRN of the course.
-    term_code:
-        Term code that the course belongs to.
+    page:
+        OCE page for the course
     Returns
     -------
     stats, extras:
@@ -147,25 +179,25 @@ def fetch_course_enrollment(
 
     infos = (
         soup.find("div", id="courseHeader")
-        .find("div")
-        .findAll("div")[-1]
-        .findAll("div")
+        .find_all("div", class_="row")[0]
+		.find_all("div", recursive=False)[-1]
     )
 
-    enrolled = infos[0].findAll("div")[-1].text.strip()
-    responded = infos[1].findAll("div")[-1].text.strip()
+    enrolled = infos.find_all("div", class_='row')[0].find_all("div")[-1].text.strip()
+    responded = infos.find_all("div", class_='row')[1].find_all("div")[-1].text.strip()
 
     stats["enrolled"] = int(enrolled)
     stats["responded"] = int(responded)
 
     title = (
         soup.find("div", id="courseHeader")
-        .find("div")
-        .findAll("div")[1]
-        .findAll("span")[1]
+        .find_all("div", class_="row")[0]
+        .find_all("div", recursive=False)[1]
+        .find_all("span")[1]
         .text.strip()
     )
 
+    # print(stats, title)
     return stats, {"title": title}
 
 
@@ -191,9 +223,7 @@ def fetch_course_eval(
         Dictionary with all evaluation data.
     """
 
-    print("In fetch_course_eval: TERM: ", term_code,"CRN CODE: ", crn_code)
-
-    # Main website with number of questions
+    # OCE website for evaluations
     url_index = "https://oce.app.yale.edu/ocedashboard/studentViewer/courseSummary"
 
     class_info = {
@@ -203,55 +233,57 @@ def fetch_course_eval(
 
     page_index = session.get(url_index, params=class_info)
 
-    # print(page_index.request.headers)
-    print(page_index.content)
+    if page_index.status_code != 200:  # Evaluation data for this term not available
+        raise CrawlerError(f"Evaluations for term {term_code} are unavailable")
 
-    # if page_index.status_code != 200:  # Evaluation data for this term not available
-    #     raise CrawlerError(f"Evaluations for term {term_code} are unavailable")
+    # save raw HTML in case we ever need it
+    with open(
+        config.DATA_DIR / f"rating_cache/questions_index/{term_code}_{crn_code}.html",
+        "w",
+    ) as file:
+        file.write(str(page_index.content))
 
-    # # save raw HTML in case we ever need it
-    # with open(
-    #     config.DATA_DIR / f"rating_cache/questions_index/{term_code}_{crn_code}.html",
-    #     "w",
-    # ) as file:
-    #     # print(str(page_index.content))
-    #     file.write(str(page_index.content))
+    # Enrollment data.
+    enrollment, extras = fetch_course_enrollment(page_index)
 
-    # # Enrollment data.
-    # enrollment, extras = fetch_course_enrollment(page_index)
+    # Fetch ratings questions.
+    try:
+        questions = fetch_questions(page_index, crn_code, term_code)
+    except _EvaluationsNotViewableError as err:
+        questions = {}
+        extras["not_viewable"] = str(err)
 
-    # # Fetch ratings questions.
-    # try:
-    #     questions = fetch_questions(page_index, crn_code, term_code)
-    # except _EvaluationsNotViewableError as err:
-    #     questions = {}
-    #     extras["not_viewable"] = str(err)
+    # List of all narrative data.
+    narrative_qids = ["YC401", "YC403", "YC409"]
 
-    # # Numeric evaluations data.
-    # ratings = []
-    # for question_id, text in questions.items():
-    #     data, options = fetch_eval_data(page_index, question_id)
-    #     ratings.append(
-    #         {
-    #             "question_id": question_id,
-    #             "question_text": text,
-    #             "options": options,
-    #             "data": data,
-    #         }
-    #     )
+    # Numeric evaluations data.
+    ratings = []
+    for question_id, text in questions.items():
+        # Only process rating data here
+        if(question_id not in narrative_qids):
+            data, options = fetch_eval_ratings(page_index, question_id)
+            ratings.append(
+                {
+                    "question_id": question_id,
+                    "question_text": text,
+                    "options": options,
+                    "data": data,
+                }
+            )
 
-    # # Narrative evaluations data.
-    # narratives = []
-    # qids = ["YC409", "YC403", "YC401"]
-    # for qid in qids:
-    #     narratives.append(fetch_comments(page_index, qid))
+    # Narrative evaluations data.
+    narratives = []
+    for qid in narrative_qids:
+        narratives.append(fetch_eval_comments(page_index, questions, qid))
 
-    # course_eval: Dict[str, Any] = {}
-    # course_eval["crn_code"] = crn_code
-    # course_eval["season"] = term_code
-    # course_eval["enrollment"] = enrollment
-    # course_eval["ratings"] = ratings
-    # course_eval["narratives"] = narratives
-    # course_eval["extras"] = extras
+    course_eval: Dict[str, Any] = {}
+    course_eval["crn_code"] = crn_code
+    course_eval["season"] = term_code
+    course_eval["enrollment"] = enrollment
+    course_eval["ratings"] = ratings
+    course_eval["narratives"] = narratives
+    course_eval["extras"] = extras
 
-    # return course_eval
+    print(course_eval)
+
+    return course_eval
