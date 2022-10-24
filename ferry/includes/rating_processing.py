@@ -57,8 +57,12 @@ def fetch_questions(page, crn, term_code) -> Dict[QuestionId, str]:
 
     for question_row in infos:
         question_id = question_row.find_all("td")[2].text.strip()
-        question_text = question_row.find("td", class_="Question", recursive=False).find(text=True).text.strip()
-        
+        question_text = (
+            question_row.find("td", class_="Question", recursive=False)
+            .find(text=True)
+            .text.strip()
+        )
+
         # print(question_id, question_text)
         questions[question_id] = question_text
 
@@ -91,7 +95,7 @@ def fetch_eval_ratings(
     """
     soup = BeautifulSoup(page.content, "lxml")
 
-	# Get the 0-indexed question index
+    # Get the 0-indexed question index
     q_index = (
         soup.find("td", text=str(question_id))
         .parent.get("id")
@@ -106,8 +110,8 @@ def fetch_eval_ratings(
     options = []
     for row in rows:
         item = row.find_all("td")
-        options.append(item[0].text.strip()) # e.g. "very low"
-        ratings.append(int(item[1].text.strip())) # e.g. 8
+        options.append(item[0].text.strip())  # e.g. "very low"
+        ratings.append(int(item[1].text.strip()))  # e.g. 8
 
     # print(options, ratings)
 
@@ -159,7 +163,9 @@ def fetch_eval_comments(
     }
 
 
-def fetch_course_enrollment(page: requests.Response) -> Tuple[Dict[str, int], Dict[str, Any]]:
+def fetch_course_enrollment(
+    page: requests.Response,
+) -> Tuple[Dict[str, int], Dict[str, Any]]:
     """
     Get enrollment statistics for this course.
 
@@ -180,11 +186,11 @@ def fetch_course_enrollment(page: requests.Response) -> Tuple[Dict[str, int], Di
     infos = (
         soup.find("div", id="courseHeader")
         .find_all("div", class_="row")[0]
-		.find_all("div", recursive=False)[-1]
+        .find_all("div", recursive=False)[-1]
     )
 
-    enrolled = infos.find_all("div", class_='row')[0].find_all("div")[-1].text.strip()
-    responded = infos.find_all("div", class_='row')[1].find_all("div")[-1].text.strip()
+    enrolled = infos.find_all("div", class_="row")[0].find_all("div")[-1].text.strip()
+    responded = infos.find_all("div", class_="row")[1].find_all("div")[-1].text.strip()
 
     stats["enrolled"] = int(enrolled)
     stats["responded"] = int(responded)
@@ -260,7 +266,7 @@ def fetch_course_eval(
     ratings = []
     for question_id, text in questions.items():
         # Only process rating data here
-        if(question_id not in narrative_qids):
+        if question_id not in narrative_qids:
             data, options = fetch_eval_ratings(page_index, question_id)
             ratings.append(
                 {

@@ -53,7 +53,7 @@ def create_session() -> requests.Session:
     Create a session using parameters from /ferry/config.py.
     """
 
-    if config.CAS_USE_COOKIE: # will be using cookie for CAS login
+    if config.CAS_USE_COOKIE:  # will be using cookie for CAS login
         cookie = resolve_potentially_callable(config.CAS_COOKIE)
         return _create_session_from_cookie(cookie)
 
