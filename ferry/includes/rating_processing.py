@@ -266,7 +266,7 @@ def fetch_course_eval(
     ratings = []
     for question_id, text in questions.items():
         # Only process rating data here
-        if question_id not in narrative_qids:
+        if question_id.startswith(tuple(narrative_qids)) is False:
             data, options = fetch_eval_ratings(page_index, question_id)
             ratings.append(
                 {
@@ -279,8 +279,10 @@ def fetch_course_eval(
 
     # Narrative evaluations data.
     narratives = []
-    for qid in narrative_qids:
-        narratives.append(fetch_eval_comments(page_index, questions, qid))
+    for question_id, text in questions.items():
+        # Only process narrative evaluation data here
+        if question_id.startswith(tuple(narrative_qids)):
+            narratives.append(fetch_eval_comments(page_index, questions, question_id))
 
     course_eval: Dict[str, Any] = {}
     course_eval["crn_code"] = crn_code
