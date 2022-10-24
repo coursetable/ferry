@@ -11,6 +11,7 @@ from ferry.includes.utils import resolve_potentially_callable
 
 
 def _create_session_from_credentials(net_id: str, password: str) -> requests.Session:
+    """
     session = requests.Session()
 
     # Login to CAS.
@@ -40,6 +41,8 @@ def _create_session_from_credentials(net_id: str, password: str) -> requests.Ses
         raise NotImplementedError("cannot handle 2-factor authentication")
 
     return session
+    """
+    return None
 
 
 def _create_session_from_cookie(cookie: str) -> requests.Session:
