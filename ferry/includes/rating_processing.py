@@ -284,6 +284,6 @@ def fetch_course_eval(
     course_eval["narratives"] = narratives
     course_eval["extras"] = extras
 
-    print(course_eval)
+    # print(course_eval)
 
     return course_eval
