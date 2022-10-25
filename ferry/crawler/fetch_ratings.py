@@ -11,8 +11,8 @@ following steps:
 """
 import argparse
 import datetime
-from os.path import isfile
 import os
+from os.path import isfile
 from typing import Union
 
 import diskcache
@@ -46,7 +46,7 @@ EXCLUDE_SEASONS = [
     "202001",  # not evaluated because of COVID
     "202002",  # too old
     "202003",
-	"202101",
+    "202101",
 ]
 
 # allow the user to specify seasons

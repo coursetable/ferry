@@ -3,7 +3,7 @@ Functions for processing ratings.
 
 fetch_course_eval is used by /ferry/crawler/fetch_ratings.py.
 """
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 import requests
 from bs4 import BeautifulSoup
@@ -31,7 +31,9 @@ class CrawlerError(Exception):
     pass
 
 
-def fetch_questions(page, crn, term_code) -> Tuple[Dict[QuestionId, str], Dict[QuestionId, bool]]:
+def fetch_questions(
+    page, crn, term_code
+) -> Tuple[Dict[QuestionId, str], Dict[QuestionId, bool]]:
     """
     Get list of question Ids for a certain course from OCE.
 
@@ -60,17 +62,20 @@ def fetch_questions(page, crn, term_code) -> Tuple[Dict[QuestionId, str], Dict[Q
 
     for question_row in infos:
         question_id = question_row.find_all("td")[2].text.strip()
-        question_text = (
-            question_row.find("td", class_="Question", recursive=False)
-            .find(text=True)
-        )
+        question_text = question_row.find(
+            "td", class_="Question", recursive=False
+        ).find(text=True)
 
         if question_text is None:
             # skip any empty questions (which is possible due to errors in OCE)
             continue
-        
+
         # Check if question is narrative
-        question_response = question_row.find_all("td", class_="Responses")[0].find_all("span", class_="show-for-print")[0].find(text=True)
+        question_response = (
+            question_row.find_all("td", class_="Responses")[0]
+            .find_all("span", class_="show-for-print")[0]
+            .find(text=True)
+        )
         if "Narrative" in question_response:
             question_is_narrative[question_id] = True
         else:
@@ -107,7 +112,7 @@ def fetch_eval_ratings(
         Options for the question.
     """
     soup = BeautifulSoup(page.content, "lxml")
-    
+
     # Get the 0-indexed question index
     q_index = (
         soup.find("td", text=str(question_id))
@@ -181,9 +186,10 @@ def fetch_eval_comments(
         "comments": comments,
     }
 
+
 def fetch_course_enrollment(
     page: requests.Response,
-) -> Tuple[Dict[str, int], Dict[str, Any]]:
+) -> Tuple[Dict[str, Optional[int]], Dict[str, Any]]:
     """
     Get enrollment statistics for this course.
 
@@ -199,7 +205,7 @@ def fetch_course_enrollment(
 
     soup = BeautifulSoup(page.content, "lxml")
 
-    stats = {}
+    stats: Dict[str, Optional[int]] = {}
 
     infos = (
         soup.find("div", id="courseHeader")
@@ -212,8 +218,8 @@ def fetch_course_enrollment(
 
     stats["enrolled"] = int(enrolled)
     stats["responses"] = int(responded)
-    stats["declined"] = None # legacy: used to have "declined" stats
-    stats["no response"] = None # legacy: used to have "no response" stats
+    stats["declined"] = None  # legacy: used to have "declined" stats
+    stats["no response"] = None  # legacy: used to have "no response" stats
 
     title = (
         soup.find("div", id="courseHeader")
@@ -274,7 +280,9 @@ def fetch_course_eval(
 
     # Fetch questions.
     try:
-        questions, question_is_narrative = fetch_questions(page_index, crn_code, term_code)
+        questions, question_is_narrative = fetch_questions(
+            page_index, crn_code, term_code
+        )
     except _EvaluationsNotViewableError as err:
         questions = {}
         extras["not_viewable"] = str(err)
