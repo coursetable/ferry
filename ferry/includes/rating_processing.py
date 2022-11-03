@@ -1,13 +1,11 @@
 """
 Functions for processing ratings.
 
-Used by /ferry/crawler/fetch_ratings.py.
+fetch_course_eval is used by /ferry/crawler/fetch_ratings.py.
 """
-import time
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 import requests
-import ujson
 from bs4 import BeautifulSoup
 
 from ferry import config
@@ -34,15 +32,15 @@ class CrawlerError(Exception):
 
 
 def fetch_questions(
-    session: requests.Session, crn: str, term_code: str
-) -> Dict[QuestionId, str]:
+    page, crn, term_code
+) -> Tuple[Dict[QuestionId, str], Dict[QuestionId, bool]]:
     """
     Get list of question Ids for a certain course from OCE.
 
     Parameters
     ----------
-    session:
-        Current session with login cookie.
+    page:
+        OCE page for the course
     crn:
         CRN of the course
     term_code:
@@ -51,245 +49,187 @@ def fetch_questions(
     -------
     questions:
         Map from question IDs to question text.
+    question_is_narrative:
+        Map from question IDs to whether the question is a narrative question.
     """
-    # Main website with number of questions
-    url_index = "https://oce.app.yale.edu/oce-viewer/studentSummary/index"
 
-    # JSON data with question IDs
-    url_show = "https://oce.app.yale.edu/oce-viewer/studentSummary/show"
+    soup = BeautifulSoup(page.content, "lxml")
 
-    class_info = {
-        "crn": crn,
-        "term_code": term_code,
-    }
-
-    page_index = session.get(url_index, params=class_info)
-    if page_index.status_code != 200:  # Evaluation data for this term not available
-        raise CrawlerError(f"Evaluations for term {term_code} are unavailable")
-
-    # save raw HTML in case we ever need it
-    with open(
-        config.DATA_DIR / f"rating_cache/questions_index/{term_code}_{crn}.html", "w"
-    ) as file:
-        file.write(str(page_index.content))
-
-    page_show = session.get(url_show)
-    if page_show.status_code != 200:  # Evaluation data for this course not available
-        raise CrawlerError(
-            f"Evaluations for course crn={crn} in term={term_code} are unavailable"
-        )
-
-    data_show = page_show.json()
-
-    # save raw JSON in case we ever need it
-    with open(
-        config.DATA_DIR / f"rating_cache/questions_show/{term_code}_{crn}.json", "w"
-    ) as file:
-        ujson.dump(data_show, file, indent=4)
-
-    if data_show["minEnrollment"] == "N":
-        raise _EvaluationsNotViewableError("No minimum enrollment to view.")
-    if data_show["minCompleted"] == "N":
-        raise _EvaluationsNotViewableError("No minimum evaluations completed to view.")
-    if data_show["gradesSubmitted"] == "N":
-        raise CrawlerError(
-            "These evaluations are not viewable. Not all grades have been submitted."
-        )
-
-    question_list = data_show["questionList"]
+    infos = soup.find("table", id="questions").find("tbody").find_all("tr")
 
     questions = {}
-    for question in question_list:
-        question_id = question["questionId"]
-        text = question["text"]
-        # Strip out
-        #   "
-        #    <br/> \r\n<br/><i>(Your anonymous response to this question may
-        #   be viewed by Yale College students, faculty, and advisers to aid
-        #   in course selection and evaluating teaching.)</i>
-        #   "
-        text = text[0 : text.find("<br/>")]
+    question_is_narrative = {}
 
-        questions[question_id] = text
+    for question_row in infos:
+        question_id = question_row.find_all("td")[2].text.strip()
+        question_text = question_row.find(
+            "td", class_="Question", recursive=False
+        ).find(text=True)
+
+        if question_text is None:
+            # skip any empty questions (which is possible due to errors in OCE)
+            continue
+
+        # Check if question is narrative
+        question_response = (
+            question_row.find_all("td", class_="Responses")[0]
+            .find_all("span", class_="show-for-print")[0]
+            .find(text=True)
+        )
+        if "Narrative" in question_response:
+            question_is_narrative[question_id] = True
+        else:
+            question_is_narrative[question_id] = False
+
+        questions[question_id] = question_text.text.strip()
+        # print(question_id, question_is_narrative[question_id], questions[question_id])
 
     if len(questions) == 0:  # Evaluation data for this course not available
         raise CrawlerError(
             f"Evaluations for course crn={crn} in term={term_code} are unavailable"
         )
 
-    return questions
+    return questions, question_is_narrative
 
 
-def fetch_eval_data(
-    session: requests.Session, question_id: QuestionId, crn: str, term_code: str
+def fetch_eval_ratings(
+    page: requests.Response, question_id: str
 ) -> Tuple[List[int], List[str]]:
     """
-    Get rating data for each question of a course.
+    Fetch the evaluation ratings for the given question.
 
     Parameters
     ----------
-    session:
-        Current session with login cookie.
+    page:
+        OCE page for the course
     question_id:
-        questionId to fetch evaluation data for.
-    crn:
-        CRN of the course.
-    term_code:
-        Term code that the course belongs to.
+        Question ID
     Returns
     -------
-    ratings, options:
-        Evaluation data for the question ID, and the response options.
+    data:
+        Response data for the question.
+    options:
+        Options for the question.
     """
-    # JSON data with rating data for each question ID
-    url_graphdata = "https://oce.app.yale.edu/oce-viewer/studentSummary/graphData"
+    soup = BeautifulSoup(page.content, "lxml")
 
-    millis = int(round(time.time() * 1000))  # Get current time in milliseconds
-    question_info = {"questionId": question_id, "_": millis}
+    # Get the 0-indexed question index
+    q_index = (
+        soup.find("td", text=str(question_id))
+        .parent.get("id")
+        .replace("questionRow", "")
+    )
 
-    page_graphdata = session.get(
-        url_graphdata, params=question_info
-    )  # Fetch ratings data
-    if page_graphdata.status_code != 200:
-        raise CrawlerError(f"missing ratings for {question_id}")
-    data_graphdata = ujson.loads(page_graphdata.text)
+    table = soup.find("table", id="answers" + str(q_index))
 
-    # save raw JSON in case we ever need it
-    with open(
-        config.DATA_DIR
-        / f"rating_cache/graph_data/{term_code}_{crn}_{question_id}.json",
-        "w",
-    ) as file:
-        ujson.dump(data_graphdata, file, indent=4)
+    rows = table.find("tbody").find_all("tr")
 
     ratings = []
     options = []
-    for item in data_graphdata[0]["data"]:
-        ratings.append(item[1])
-        options.append(item[0])
+    for row in rows:
+        item = row.find_all("td")
+        options.append(item[0].text.strip())  # e.g. "very low"
+        ratings.append(int(item[1].text.strip()))  # e.g. 8
+
+    # print(options, ratings)
 
     return ratings, options
 
 
-def fetch_comments(
-    session: requests.Session, offset: int, _max: int, crn: str, term_code: str
+def fetch_eval_comments(
+    page: requests.Response, questions: Dict[QuestionId, str], question_id: str
 ) -> Dict[str, Any]:
     """
-    Get comments for a specific question of this course.
+    Fetch the comments for the given narrative question.
 
     Parameters
     ----------
-    session:
-        Current session with login cookie.
-    offset:
-        Question to fetch comments for. 0-indexed.
-    _max:
-        Always 1. Just passed into get function.
-    crn:
-        CRN of the course.
-    term_code:
-        Term code that the course belongs to.
-
+    page:
+        OCE page for the course
+    questions:
+        Map from question IDs to question text.
+    question_id:
+        Question ID
     Returns
     -------
-    Dictionary of
-        {
-            question_id
-            question_text
-            comments
-        }
+    Question ID, question text, and the comments for the question.
     """
-    # Website with student comments for this question
-    url_comments = "https://oce.app.yale.edu/oce-viewer/studentComments/index"
+    soup = BeautifulSoup(page.content, "lxml")
 
-    page_comments = session.get(url_comments, params={"offset": offset, "max": _max})
+    if question_id == "SU124":
+        # account for question 10 of summer courses
+        response_table_id = "answers{i}"
+    else:
+        # Get the 0-indexed question index
+        q_index = (
+            soup.find("td", text=str(question_id))
+            .parent.get("id")
+            .replace("questionRow", "")
+        )
+        response_table_id = "answers" + str(q_index)
 
-    if page_comments.status_code != 200:
-        # Question doesn't exist
-        raise CrawlerError("no more evals available")
+    table = soup.find("table", id=response_table_id)
 
-    soup = BeautifulSoup(page_comments.content, "lxml")
+    rows = table.find("tbody").find_all("tr")
+    comments = []
+    for row in rows:
+        comment = row.find_all("td")[1].text.strip()
+        comments.append(comment)
 
-    # save raw HTML in case we ever need it
-    with open(
-        config.DATA_DIR
-        / f"rating_cache/comments/{term_code}_{crn}_{offset}_{_max}.html",
-        "w",
-    ) as file:
-        file.write(str(soup))
-
-    question_html = soup.find(id="cList")
-
-    # Question text.
-    question_text = question_html.select_one("div > p:nth-of-type(2)").text
-    if question_text is None or question_text == "":
-        raise CrawlerError("no more evals available")
-
-    # Question ID.
-    info_area = question_html.select_one("div > p:nth-of-type(3)")
-    question_id = info_area.contents[1].strip()
-
-    # Responses.
-    comments = []  # List of responses
-    for answer_area in soup.find_all(id="answer"):
-        answer = answer_area.find(id="text").get_text(strip=True)
-        comments.append(answer)
+    # print("Question ID: ", question_id)
+    # print("Question text: ", questions[question_id])
+    # print("Comments:", comments)
 
     return {
         "question_id": question_id,
-        "question_text": question_text,
+        "question_text": questions[question_id],
         "comments": comments,
     }
 
 
 def fetch_course_enrollment(
-    session: requests.Session, crn: str, term_code: str
-) -> Tuple[Dict[str, int], Dict[str, Any]]:
+    page: requests.Response,
+) -> Tuple[Dict[str, Optional[int]], Dict[str, Any]]:
     """
     Get enrollment statistics for this course.
 
     Parameters
     ----------
-    session:
-        Current session with login cookie
-    crn:
-        CRN of the course.
-    term_code:
-        Term code that the course belongs to.
+    page:
+        OCE page for the course
     Returns
     -------
     stats, extras:
         A dictionary with statistics, a dictionary with extra info
     """
-    # Main website with number of questions
-    url_index = "https://oce.app.yale.edu/oce-viewer/studentSummary/index"
 
-    class_info = {
-        "crn": crn,
-        "term_code": term_code,
-    }
-    page_index = session.get(url_index, params=class_info)
-    if page_index.status_code != 200:  # Evaluation data for this term not available
-        raise CrawlerError("missing enrollment data")
+    soup = BeautifulSoup(page.content, "lxml")
 
-    soup = BeautifulSoup(page_index.content, "lxml")
+    stats: Dict[str, Optional[int]] = {}
 
-    stats = {}
-    stats_area = soup.find(id="status")
-    for item in stats_area.find_all("li"):
-        stat = item.p
-        if not stat.get_text(strip=True):
-            continue
-        name = stat.contents[0].strip()[:-1].lower()
-        value = int(stat.contents[1].get_text())
-        stats[name] = value
-
-    title = (
-        stats_area.parent.find(text=" Overview of Evaluations : ")
-        .parent.findNext("b")
-        .text
+    infos = (
+        soup.find("div", id="courseHeader")
+        .find_all("div", class_="row")[0]
+        .find_all("div", recursive=False)[-1]
     )
 
+    enrolled = infos.find_all("div", class_="row")[0].find_all("div")[-1].text.strip()
+    responded = infos.find_all("div", class_="row")[1].find_all("div")[-1].text.strip()
+
+    stats["enrolled"] = int(enrolled)
+    stats["responses"] = int(responded)
+    stats["declined"] = None  # legacy: used to have "declined" stats
+    stats["no response"] = None  # legacy: used to have "no response" stats
+
+    title = (
+        soup.find("div", id="courseHeader")
+        .find_all("div", class_="row")[0]
+        .find_all("div", recursive=False)[1]
+        .find_all("span")[1]
+        .text.strip()
+    )
+
+    # print(stats, title)
     return stats, {"title": title}
 
 
@@ -315,44 +255,56 @@ def fetch_course_eval(
         Dictionary with all evaluation data.
     """
 
-    # print("TERM:",term_code,"CRN CODE:",crn_code)
+    # OCE website for evaluations
+    url_index = "https://oce.app.yale.edu/ocedashboard/studentViewer/courseSummary"
+
+    class_info = {
+        "crn": crn_code,
+        "termCode": term_code,
+    }
+
+    page_index = session.get(url_index, params=class_info)
+
+    if page_index.status_code != 200:  # Evaluation data for this term not available
+        raise CrawlerError(f"Evaluations for term {term_code} are unavailable")
+
+    # save raw HTML in case we ever need it
+    with open(
+        config.DATA_DIR / f"rating_cache/questions_index/{term_code}_{crn_code}.html",
+        "w",
+    ) as file:
+        file.write(str(page_index.content))
 
     # Enrollment data.
-    enrollment, extras = fetch_course_enrollment(session, crn_code, term_code)
+    enrollment, extras = fetch_course_enrollment(page_index)
 
-    # Fetch ratings questions.
+    # Fetch questions.
     try:
-        questions = fetch_questions(session, crn_code, term_code)
+        questions, question_is_narrative = fetch_questions(
+            page_index, crn_code, term_code
+        )
     except _EvaluationsNotViewableError as err:
         questions = {}
         extras["not_viewable"] = str(err)
 
-    # Numeric evaluations data.
+    # Fetch question responses based on whether they are narrative or rating.
     ratings = []
-    for question_id, text in questions.items():
-        data, options = fetch_eval_data(session, question_id, crn_code, term_code)
-        ratings.append(
-            {
-                "question_id": question_id,
-                "question_text": text,
-                "options": options,
-                "data": data,
-            }
-        )
-
-    # Narrative evaluations data.
     narratives = []
-    offset = 0  # Start with first question
-    while questions:  # serves as an if + while True
-        try:
-            # Get questions with their respective responses
-            narratives.append(fetch_comments(session, offset, 1, crn_code, term_code))
-            offset += 1  # Increment to next question
-        except CrawlerError as err:
-            if offset == 0:
-                raise CrawlerError("cannot fetch narrative comments") from err
-            # No more questions are available -- normal situation.
-            break
+    for question_id, text in questions.items():
+        if question_is_narrative[question_id]:
+            # fetch narrative responses
+            narratives.append(fetch_eval_comments(page_index, questions, question_id))
+        else:
+            # fetch rating responses
+            data, options = fetch_eval_ratings(page_index, question_id)
+            ratings.append(
+                {
+                    "question_id": question_id,
+                    "question_text": text,
+                    "options": options,
+                    "data": data,
+                }
+            )
 
     course_eval: Dict[str, Any] = {}
     course_eval["crn_code"] = crn_code
@@ -361,5 +313,7 @@ def fetch_course_eval(
     course_eval["ratings"] = ratings
     course_eval["narratives"] = narratives
     course_eval["extras"] = extras
+
+    # print(course_eval)
 
     return course_eval

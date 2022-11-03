@@ -33,9 +33,7 @@ CAS_CREDENTIAL_NETID: Callable[[Any], str] = functools.lru_cache(
     lambda: input("Yale NetId: ")
 )
 CAS_CREDENTIAL_PASSWORD: Callable[[Any], str] = functools.lru_cache(getpass.getpass)
-CAS_COOKIE_TGC: Callable[[Any], str] = functools.lru_cache(
-    lambda: input("TGC Cookie: ")
-)
+CAS_COOKIE: Callable[[Any], str] = functools.lru_cache(lambda: input("Cookie: "))
 
 
 # Database

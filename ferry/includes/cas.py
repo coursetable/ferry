@@ -18,22 +18,14 @@ def _create_session_from_credentials(net_id: str, password: str) -> requests.Ses
         f"https://secure.its.yale.edu/cas/login?username={net_id}&password={password}"
     )
 
-    # Verify that it worked.
-    if "TGC" not in session.cookies.get_dict():
-        raise NotImplementedError("cannot handle 2-factor authentication")
-
-    return session
-
-
-def _create_session_from_cookie(tgc: str) -> requests.Session:
-    session = requests.Session()
-
     # Set user-agent for requests to work
     session.headers.update(
         {
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36"  # pylint: disable=line-too-long
         }
     )
+
+    tgc = None
 
     # Manually set cookie.
     cookie = requests.cookies.create_cookie(
@@ -45,6 +37,16 @@ def _create_session_from_cookie(tgc: str) -> requests.Session:
     )
     session.cookies.set_cookie(cookie)
 
+    # Verify that it worked.
+    if "TGC" not in session.cookies.get_dict():
+        raise NotImplementedError("cannot handle 2-factor authentication")
+
+    return session
+
+
+def _create_session_from_cookie(cookie: str) -> requests.Session:
+    session = requests.Session()
+    session.headers.update({"Cookie": cookie})
     return session
 
 
@@ -53,9 +55,9 @@ def create_session() -> requests.Session:
     Create a session using parameters from /ferry/config.py.
     """
 
-    if config.CAS_USE_COOKIE:
-        tgc = resolve_potentially_callable(config.CAS_COOKIE_TGC)
-        return _create_session_from_cookie(tgc)
+    if config.CAS_USE_COOKIE:  # will be using cookie for CAS login
+        cookie = resolve_potentially_callable(config.CAS_COOKIE)
+        return _create_session_from_cookie(cookie)
 
     net_id = resolve_potentially_callable(config.CAS_CREDENTIAL_NETID)
     password = resolve_potentially_callable(config.CAS_CREDENTIAL_PASSWORD)

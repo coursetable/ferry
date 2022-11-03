@@ -11,6 +11,7 @@ following steps:
 """
 import argparse
 import datetime
+import os
 from os.path import isfile
 from typing import Union
 
@@ -44,6 +45,8 @@ EXCLUDE_SEASONS = [
     "201903",  # too old
     "202001",  # not evaluated because of COVID
     "202002",  # too old
+    "202003",
+    "202101",
 ]
 
 # allow the user to specify seasons
@@ -159,9 +162,13 @@ for season_code in seasons:
 
 # initiate Yale session to access ratings
 session = create_session()
-print("Cookies: ", session.cookies.get_dict())
 
 for season_code, crn in tqdm(queue):
+    # Create directory if doesn't exist
+    output_dir = f"{config.DATA_DIR}/course_evals/"
+    if os.path.exists(output_dir) is False:
+        os.makedirs(output_dir)
+
     course_unique_id = f"{season_code}-{crn}"
     output_path = f"{config.DATA_DIR}/course_evals/{course_unique_id}.json"
 
@@ -177,10 +184,9 @@ for season_code, crn in tqdm(queue):
     tqdm.write("                            ", end="")
 
     try:
-        session = create_session()
         course_eval = fetch_course_eval(session, crn, season_code)
 
-        with open(output_path, "w") as f:
+        with open(output_path, "w+") as f:
             f.write(ujson.dumps(course_eval, indent=4))
 
         tqdm.write("dumped in JSON")
