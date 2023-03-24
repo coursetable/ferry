@@ -29,7 +29,6 @@ networkx = "^2.5"
 # NLP
 nltk = "^3.5"
 spacy = "^2.3.2"
-fasttext = "^0.9.2"
 tables = "^3.6.1"
 en_core_web_sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz" } # the English language model for SpaCy
 vaderSentiment = "^3.3.2"
@@ -43,6 +42,7 @@ click = "^7.1.2"
 tika = "^1.24"
 annoy = "^1.17.0"
 sentry-sdk = "^1.4.3"
+fasttext-wheel = "^0.9.2"
 
 [tool.poetry.dev-dependencies]
 eralchemy = "^1.2.10"

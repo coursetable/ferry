@@ -84,10 +84,10 @@ poetry run python ./ferry/embed/embed_fasttext.py
 
 announce "Computing TF-IDF embeddings"
 poetry run python ./ferry/embed/embed_tfidf.py
-
+<<com
 announce "Computing course adjacency lists from embeddings"
 poetry run python ./ferry/embed/compute_similars.py
-
+com
 announce "Staging tables"
 poetry run python ./ferry/stage.py
 
