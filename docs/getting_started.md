@@ -58,7 +58,7 @@
 8. Install [Poetry](https://python-poetry.org/), the package manager we use for Python dependencies. To install, make sure Python is installed and added to PATH, and run
 
    ```shell
-   curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+   curl -sSL https://install.python-poetry.org | python3 -
    ```
 
 9. Install Python dependencies with Poetry: run `poetry install` from the repository root.
