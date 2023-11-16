@@ -26,7 +26,7 @@
 
 4. Install Postgres. Although we run Postgres through Docker, some bindings are required by the SQLAlchemy ORM that interfaces between Python and the database.
 
-   - MacOS: run `brew install postgres`.
+   - MacOS: run `brew install postgresql`.
    - Linux: run `sudo apt-get install postgresql libpq-dev`.
    - Windows: use the [interactive installer](https://www.postgresql.org/download/windows/).
 
