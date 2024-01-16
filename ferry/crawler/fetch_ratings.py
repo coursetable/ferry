@@ -161,11 +161,11 @@ for season_code in seasons:
 # -------------------------------
 
 # initiate Yale session to access ratings
-#session = create_session()
+session = create_session()
 # try new way
-with open('cascookie.txt', 'r') as cookiefile:
+"""with open('cascookie.txt', 'r') as cookiefile:
         castgc = cookiefile.read()
-        session = _create_session_from_cookie(castgc)
+        session = _create_session_from_cookie(castgc)"""
 
 for season_code, crn in tqdm(queue):
     # Create directory if doesn't exist
