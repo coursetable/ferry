@@ -21,7 +21,7 @@ import ujson
 
 from ferry import config
 from ferry.crawler.common_args import add_seasons_args, parse_seasons_arg
-from ferry.includes.cas import create_session
+from ferry.includes.cas import create_session, _create_session_from_cookie
 from ferry.includes.rating_processing import fetch_course_eval
 from ferry.includes.tqdm import tqdm
 
@@ -161,7 +161,11 @@ for season_code in seasons:
 # -------------------------------
 
 # initiate Yale session to access ratings
-session = create_session()
+#session = create_session()
+# try new way
+with open('cascookie.txt', 'r') as cookiefile:
+        castgc = cookiefile.read()
+        session = _create_session_from_cookie(castgc)
 
 for season_code, crn in tqdm(queue):
     # Create directory if doesn't exist
