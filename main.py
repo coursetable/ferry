@@ -40,7 +40,7 @@ async def start_crawl(args):
     )
 
     # Fetch ratings/evals
-    ratings = await fetch_ratings(
+    await fetch_ratings(
         cas_cookie=args.cas_cookie,
         seasons=seasons,
         data_dir=args.data_dir,
@@ -48,12 +48,6 @@ async def start_crawl(args):
     )
 
     print("-" * 80)
-
-    return classes, ratings
-
-
-# release run cmd
-# doppler run --command "python main.py --release"
 
 
 async def main():
@@ -84,7 +78,7 @@ async def main():
         print("Running in dev mode. Sentry not initialized.")
 
     # Start the crawl - fetch classes + ratings
-    classes, ratings = await start_crawl(args)
+    await start_crawl(args)
 
     # Close HTTPX client
     await args.client.aclose()
