@@ -18,6 +18,8 @@ DONE:
  - Modernized args
     - `argparse` with config file support
  - Season, class, and ratings fetch are now parallel (`async`)
+    - Ratings fetch uses lambda invocation to emulate native concurrency because CAS cookie is unstable otherwise.
+    - See [`lambda/`](https://github.com/coursetable/ferry/blob/v2/lambda/README.md) for details.
  - Season, class, and ratings parse are now parallel (`multiprocessing`)
  - Consistent and modern utility functions
     - `pathlib.Path` everywhere, etc.
