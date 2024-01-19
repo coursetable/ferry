@@ -7,8 +7,10 @@ Course fetching functions used by:
 
 from typing import Any, Dict, List
 
-import requests
 import ujson
+from httpx import AsyncClient
+
+from ferry.utils import request
 
 
 class FetchClassesError(Exception):
@@ -20,113 +22,10 @@ class FetchClassesError(Exception):
     pass
 
 
-def fetch_previous_seasons():
-    """
-    Get list of seasons from previous CourseTable
-
-    Returns
-    -------
-    seasons: list of seasons
-    """
-    middle_years = [str(x) for x in range(2014, 2020)]
-
-    spring_seasons = [str(x) + "01" for x in middle_years]
-    summer_seasons = [str(x) + "02" for x in middle_years]
-    winter_seasons = [str(x) + "03" for x in middle_years]
-
-    seasons = [
-        *spring_seasons,
-        *summer_seasons,
-        *winter_seasons,
-        "202001",
-        "202002",
-    ]
-
-    return seasons
-
-
-def fetch_season_subjects(season: str, api_key: str) -> List[str]:
-    """
-    Get list of course subjects in a season,
-    needed for querying the courses later
-
-    Parameters
-    ----------
-    season: string
-        The season to to get courses for. In the form of
-        YYYYSS(e.g. 201301 for spring, 201302 for summer,
-        201303 for fall)
-    api_key: string
-        API key with access to the Yale CourseSubjects API
-        (see https://developers.yale.edu/coursesubjects)
-
-    Returns
-    -------
-    subjects: JSON of season subjects
-    """
-
-    endpoint = "https://gw.its.yale.edu/soa-gateway/course/webservice/subjects"
-    endpoint_args = f"?termCode={season}&mode=json&apiKey={api_key}"
-
-    url = f"{endpoint}{endpoint_args}"
-
-    req = requests.get(url)
-    req.encoding = "utf-8"
-
-    # Successful response
-    if req.status_code == 200:
-
-        subjects = ujson.loads(req.text)
-
-        return subjects
-
-    # Unsuccessful
-    raise FetchClassesError(f"Unsuccessful response: code {req.status_code}")
-
-
-def fetch_season_subject_courses(season: str, subject: str, api_key: str):
-    """
-    Get courses in a season, for a given subject
-
-    Parameters
-    ----------
-    season: string
-        The season to to get courses for. In the form of
-        YYYYSS(e.g. 201301 for spring, 201302 for summer,
-        201303 for fall)
-    subject: string
-        Subject to get courses for. For instance, "CPSC"
-    api_key: string
-        API key with access to the Yale Courses API
-        (see https://developers.yale.edu/courses)
-
-    Returns
-    -------
-    subject_courses: JSON of course subjects
-    """
-
-    endpoint = "https://gw.its.yale.edu/soa-gateway/course/webservice/index"
-    endpoint_args = (
-        f"?termCode={season}&subjectCode={subject}&mode=json&apiKey={api_key}"
-    )
-    url = f"{endpoint}{endpoint_args}"
-
-    req = requests.get(url)
-    req.encoding = "utf-8"
-
-    # Successful response
-    if req.status_code == 200:
-
-        courses = ujson.loads(req.text)
-
-        return courses
-
-    # Unsuccessful
-    raise FetchClassesError(f"Unsuccessful response: code {req.status_code}")
-
-
-def fetch_season_courses(
-    season: str, criteria: List[Dict[str, Any]]
+async def fetch_season_courses_util(
+    season: str,
+    criteria: List[Dict[str, Any]],
+    client: AsyncClient = AsyncClient(timeout=None),
 ) -> List[Dict[str, Any]]:
     """
     Get preliminary course info for a given season
@@ -147,12 +46,13 @@ def fetch_season_courses(
 
     payload = {"other": {"srcdb": season}, "criteria": criteria}
 
-    req = requests.post(url, data=ujson.dumps(payload))
+    req = await request(
+        method="POST", client=client, url=url, data=ujson.dumps(payload)
+    )
     req.encoding = "utf-8"
 
     # Successful response
     if req.status_code == 200:
-
         r_json = ujson.loads(req.text)
 
         if "fatal" in r_json.keys():
@@ -167,43 +67,9 @@ def fetch_season_courses(
     raise FetchClassesError(f"Unsuccessful response: code {req.status_code}")
 
 
-def fetch_previous_json(season: str, evals=False) -> List[Dict[str, Any]]:
-    """
-    Get existing JSON files for a season from the CourseTable website
-    (at https://coursetable.com/gen/json/data_with_evals_<season_CODE>.json)
-
-    Parameters
-    ----------
-    season: string
-        The season to to get courses for. In the form of
-        YYYYSS(e.g. 201301 for spring, 201302 for summer,
-        201303 for fall)
-
-    Returns
-    -------
-    r: JSON-formatted course information
-    """
-
-    if evals:
-        url = f"https://coursetable.com/gen/json/data_with_evals_{season}.json"
-    elif not evals:
-        url = f"https://coursetable.com/gen/json/data_{season}.json"
-
-    req = requests.get(url)
-    req.encoding = "utf-8"
-
-    # Successful response
-    if req.status_code == 200:
-
-        r_json = ujson.loads(req.text)
-
-        return r_json
-
-    # Unsuccessful
-    raise FetchClassesError(f"Unsuccessful response: code {req.status_code}")
-
-
-def fetch_course_json(code: str, crn: str, srcdb: str) -> Dict[str, Any]:
+async def fetch_course_json(
+    code: str, crn: str, srcdb: str, client: AsyncClient = None
+) -> Dict[str, Any]:
     """
     Fetch information for a course from the API
 
@@ -231,12 +97,15 @@ def fetch_course_json(code: str, crn: str, srcdb: str) -> Dict[str, Any]:
         "matched": "crn:" + crn + "",
     }
 
-    req = requests.post(url, data=ujson.dumps(payload))
+    # retry up to 10 times
+    req = await request(
+        method="POST", client=client, url=url, data=ujson.dumps(payload), attempts=10
+    )
+
     req.encoding = "utf-8"
 
     # Successful response
     if req.status_code == 200:
-
         course_json = ujson.loads(req.text)
 
         # exclude Yale's last-updated field (we use our own later on)

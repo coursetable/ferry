@@ -5,13 +5,16 @@ Used by /ferry/crawler/parse_classes.py.
 """
 
 import re
+import warnings
 from typing import Any, Dict, List, Tuple
 
 import ujson
 import unidecode
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 
 from ferry.includes.utils import convert_unicode
+
+warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning, module="bs4")
 
 PROFESSOR_EXCEPTIONS = {
     "Kimberly Shirkhani": "Kim Shirkhani",
@@ -59,13 +62,11 @@ def professors_from_html(html: str) -> Tuple[List[str], List[str], List[str]]:
     ids = []  # Yale course search's internal professor ID
 
     for div in instructor_divs:
-
         instructor_name = div.find("div", {"class": "instructor-name"})
         instructor_email = div.find("div", {"class": "instructor-email"})
         instructor_id = ""  # default
 
         if instructor_name:
-
             # check if the professor has an associated ID
             instructor_search = instructor_name.find("a", {"data-action": "search"})
 
@@ -78,7 +79,6 @@ def professors_from_html(html: str) -> Tuple[List[str], List[str], List[str]]:
             instructor_name = ""
 
         if instructor_email:
-
             # extract the email in plaintext
             instructor_email = instructor_email.get_text()
         else:
@@ -205,15 +205,13 @@ def format_time(time: str) -> str:
     time:
         formatted time
     """
-    time_stripped = time[:-2]
+    time_stripped = time.replace(";", "")[:-2]
 
     if ":" in time_stripped:
-
         hour = time_stripped.split(":")[0]
         minute = time_stripped.split(":")[1]
 
     else:
-
         hour = time_stripped
         minute = "00"
 
@@ -249,31 +247,25 @@ def extract_split_meetings(meetings: List[str]) -> List[Tuple[str, str, str]]:
 
     # split meetings by time
     for meeting in meetings:
-
         split_meeting = (meeting, "", "")
 
         if " in " in meeting:
-
             sessions, location = meeting.split(" in ")[:2]
 
             if " " in sessions:
-
                 days, time = sessions.split(" ")[:2]
 
                 split_meeting = (days, time, location)
 
             else:
-
                 split_meeting = ("HTBA", "", location)
 
         elif " " in meeting:
-
             days, time = meeting.split(" ")[:2]
 
             split_meeting = (days, time, "")
 
         else:
-
             split_meeting = (meeting, "", "")
 
         split_meetings.append(split_meeting)
@@ -328,12 +320,10 @@ def extract_meeting_summaries(
 
     # handle redundant dash-delimited format (introduced in fall 2020)
     if locations_summary.count(" - ") == 1:
-
         locations_1, locations_2 = locations_summary.split(" - ")
 
         # if location is redundant
         if locations_2.startswith(locations_1):
-
             locations_summary = locations_2
 
     return times_summary, locations_summary, times_long_summary
@@ -371,13 +361,11 @@ def extract_formatted_meetings(
     for meeting in split_meetings:
         location_indx = 0  # variable to loop through location_urls list
         if meeting[0] == "HTBA":
-
             formatted_meetings.append(
                 {"days": [], "start_time": "", "end_time": "", "location": ""}
             )
 
         else:
-
             days = meeting[0]
             times = meeting[1]
             location = meeting[2]
@@ -447,9 +435,7 @@ def extract_meetings_by_day(
     meetings_by_day: Dict[str, List[Tuple[str, str, str, str]]] = {}
 
     for meeting in formatted_meetings:
-
         for day in meeting["days"]:
-
             session = (
                 meeting["start_time"],
                 meeting["end_time"],
@@ -510,7 +496,6 @@ def extract_meetings(
     meetings = [x.text for x in meetings]
 
     if len(meetings) == 0 or meetings[0] == "HTBA":
-
         formatted_meetings = [
             {"days": [], "start_time": "", "end_time": "", "location": ""}
         ]
@@ -595,7 +580,6 @@ def extract_meetings_alternate(
     listings = course_json.get("allInGroup", "[]")
 
     if len(listings) >= 0:
-
         # use the first listing (for when a course has multiple)
 
         primary_listing = listings[0]
@@ -608,7 +592,6 @@ def extract_meetings_alternate(
         meeting_times = ujson.loads(primary_listing["meetingTimes"])
 
         for meeting_time in meeting_times:
-
             meeting_day = DAYS_MAP[meeting_time["meet_day"]]
 
             session = (
@@ -626,7 +609,6 @@ def extract_meetings_alternate(
 
     # if no valid listing, then return the default missing values
     else:
-
         times_summary = "TBA"
 
     # since there are no locations, just set this to times_summary
@@ -922,7 +904,6 @@ def extract_course_info(
 
     # Meeting times
     if course_json.get("meeting_html", "") != "":
-
         (
             # course_info["extracted_meetings"],
             _,
@@ -934,7 +915,6 @@ def extract_course_info(
 
     # Fall 2020 courses do not have meeting_htmls because most are online
     else:
-
         (
             course_info["times_summary"],
             course_info["locations_summary"],

@@ -4,16 +4,166 @@ Functions for processing course rating JSONs into aggregate CSVs.
 Used by /ferry/crawler/parse_ratings.py
 """
 import csv
-from typing import Any, Dict
+from typing import Any, Dict, List
 
 import ujson
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 # initialize sentiment intensity analyzer
 analyzer = SentimentIntensityAnalyzer()
+import asyncio
+import concurrent.futures
+import csv
+from pathlib import Path
+
+import ujson
+from tqdm.asyncio import tqdm_asyncio
+
+# ------------------
+# CSV output headers
+# ------------------
+
+questions_headers = [
+    "season",
+    "crn",
+    "question_code",
+    "is_narrative",
+    "question_text",
+    "options",
+]
+ratings_headers = ["season", "crn", "question_code", "rating"]
+statistics_headers = [
+    "season",
+    "crn",
+    "enrolled",
+    "responses",
+    "declined",
+    "no_response",
+    "extras",
+]
+narratives_headers = [
+    "season",
+    "crn",
+    "question_code",
+    "comment",
+    "comment_neg",
+    "comment_neu",
+    "comment_pos",
+    "comment_compound",
+]
+
+# ----------------
+# CSV output paths
+# ----------------
 
 
-def process_narratives(evaluation: Dict[str, Any], narratives_writer: csv.DictWriter):
+def parse_rating(
+    data_dir: str,
+    filename: str,
+):
+    # Read the evaluation, giving preference to current over previous.
+    current_evals_file = Path(f"{data_dir}/course_evals/{filename}")
+
+    if current_evals_file.is_file():
+        with open(current_evals_file, "r") as f:
+            evaluation = ujson.load(f)
+    else:
+        with open(f"{data_dir}/previous_evals/{filename}", "r") as f:
+            evaluation = ujson.load(f)
+
+    return (
+        process_narratives(evaluation),
+        process_ratings(evaluation),
+        process_questions(evaluation),
+        process_statistics(evaluation),
+    )
+
+
+async def parse_ratings(data_dir: str):
+    data_dir = Path(data_dir)
+    (data_dir / "parsed_evaluations").mkdir(parents=True, exist_ok=True)
+    questions_path = data_dir / "parsed_evaluations/evaluation_questions.csv"
+    ratings_path = data_dir / "parsed_evaluations/evaluation_ratings.csv"
+    statistics_path = data_dir / "parsed_evaluations/evaluation_statistics.csv"
+    narratives_path = data_dir / "parsed_evaluations/evaluation_narratives.csv"
+
+    # ------------------
+    # CSV output writers
+    # ------------------
+
+    questions_file = open(questions_path, "w")  # pylint: disable=consider-using-with
+    questions_writer = csv.DictWriter(questions_file, questions_headers)
+    questions_writer.writeheader()
+
+    narratives_file = open(narratives_path, "w")  # pylint: disable=consider-using-with
+    narratives_writer = csv.DictWriter(narratives_file, narratives_headers)
+    narratives_writer.writeheader()
+
+    ratings_file = open(ratings_path, "w")  # pylint: disable=consider-using-with
+    ratings_writer = csv.DictWriter(ratings_file, ratings_headers)
+    ratings_writer.writeheader()
+
+    statistics_file = open(statistics_path, "w")  # pylint: disable=consider-using-with
+    statistics_writer = csv.DictWriter(statistics_file, statistics_headers)
+    statistics_writer.writeheader()
+
+    # ----------------------------
+    # Load and process evaluations
+    # ----------------------------
+
+    # list available evaluation files
+    previous_eval_files = Path(data_dir / "previous_evals").glob("*.json")
+    new_eval_files = Path(data_dir / "course_evals").glob("*.json")
+
+    # extract file names (<season> + <crn> format) for merging
+    previous_eval_filenames = [x.name for x in previous_eval_files]
+    new_eval_filenames = [x.name for x in new_eval_files]
+
+    all_eval_files = sorted(list(set(previous_eval_filenames + new_eval_filenames)))
+
+    with concurrent.futures.ProcessPoolExecutor() as executor:
+        loop = asyncio.get_event_loop()
+        futures = [
+            loop.run_in_executor(
+                executor,
+                parse_rating,
+                data_dir,
+                filename,
+            )
+            for filename in all_eval_files
+        ]
+        results: List[(List, List, List, Dict)] = await tqdm_asyncio.gather(
+            *futures, leave=False, desc=f"Parsing all ratings"
+        )
+        # results: [ ( narratives: List, ratings: List, questions: List, statistics: Dict ) ]
+
+    # Must be done in serial, as the CSV writers are not thread-safe.
+    for narratives, ratings, questions, statistics in results:
+        # write narratives to CSV
+        narratives_writer.writerows(narratives)
+
+        # write ratings to CSV
+        ratings_writer.writerows(ratings)
+
+        # write questions to CSV
+        questions_writer.writerows(questions)
+
+        # write statistics to CSV
+        statistics_writer.writerow(statistics)
+
+    # close CSV files
+    questions_file.close()
+    narratives_file.close()
+    ratings_file.close()
+    statistics_file.close()
+
+
+####################
+# Helper Functions #
+####################
+
+
+def process_narratives(evaluation: Dict[str, Any]):
     """
     Process written evaluations. Appends to narratives CSV with global writer object.
 
@@ -24,10 +174,9 @@ def process_narratives(evaluation: Dict[str, Any], narratives_writer: csv.DictWr
     narratives_writer:
         CSV writer to narratives output file.
     """
+    narratives = []
     for narrative_group in evaluation["narratives"]:
-
         for raw_narrative in narrative_group["comments"]:
-
             narrative = {}
             narrative["season"] = evaluation["season"]
             narrative["crn"] = evaluation["crn_code"]
@@ -41,10 +190,12 @@ def process_narratives(evaluation: Dict[str, Any], narratives_writer: csv.DictWr
             narrative["comment_pos"] = sentiment["pos"]
             narrative["comment_compound"] = sentiment["compound"]
 
-            narratives_writer.writerow(narrative)
+            narratives.append(narrative)
+
+    return narratives
 
 
-def process_ratings(evaluation: Dict[str, Any], ratings_writer: csv.DictWriter):
+def process_ratings(evaluation: Dict[str, Any]):
     """
     Process categorical evaluations. Appends to ratings CSV with global writer object.
 
@@ -55,6 +206,7 @@ def process_ratings(evaluation: Dict[str, Any], ratings_writer: csv.DictWriter):
     ratings_writer:
         CSV writer to ratings output file.
     """
+    ratings = []
     for raw_rating in evaluation["ratings"]:
         rating = {}
 
@@ -63,10 +215,12 @@ def process_ratings(evaluation: Dict[str, Any], ratings_writer: csv.DictWriter):
         rating["question_code"] = raw_rating["question_id"]
         rating["rating"] = ujson.dumps(raw_rating["data"])
 
-        ratings_writer.writerow(rating)
+        ratings.append(rating)
+
+    return ratings
 
 
-def process_statistics(evaluation: Dict[str, Any], statistics_writer: csv.DictWriter):
+def process_statistics(evaluation: Dict[str, Any]):
     """
     Process evaluation statistics. Appends to statistics CSV with global writer object.
 
@@ -86,10 +240,10 @@ def process_statistics(evaluation: Dict[str, Any], statistics_writer: csv.DictWr
     statistics["no_response"] = evaluation["enrollment"]["no response"]
     statistics["extras"] = evaluation["extras"]
 
-    statistics_writer.writerow(statistics)
+    return statistics
 
 
-def process_questions(evaluation: Dict[str, Any], questions_writer: csv.DictWriter):
+def process_questions(evaluation: Dict[str, Any]):
     """
     Process evaluation questions. Appends to questions CSV with global writer object.
 
@@ -100,6 +254,8 @@ def process_questions(evaluation: Dict[str, Any], questions_writer: csv.DictWrit
     questions_writer:
         CSV writer to questions output file.
     """
+    questions = []
+
     for rating in evaluation["ratings"]:
         question = {}
         question["season"] = evaluation["season"]
@@ -108,11 +264,9 @@ def process_questions(evaluation: Dict[str, Any], questions_writer: csv.DictWrit
         question["question_text"] = rating["question_text"]
         question["is_narrative"] = False
         question["options"] = ujson.dumps(rating["options"])
-
-        questions_writer.writerow(question)
+        questions.append(question)
 
     for narrative in evaluation["narratives"]:
-
         question = {}
         question["season"] = evaluation["season"]
         question["crn"] = evaluation["crn_code"]
@@ -120,5 +274,6 @@ def process_questions(evaluation: Dict[str, Any], questions_writer: csv.DictWrit
         question["question_text"] = narrative["question_text"]
         question["is_narrative"] = True
         question["options"] = None
+        questions.append(question)
 
-        questions_writer.writerow(question)
+    return questions

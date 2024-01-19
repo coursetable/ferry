@@ -4,77 +4,34 @@ Functions for authenticating with Yale Central Authentication System (CAS).
 Used by config.py.
 """
 
-import requests
+import httpx
 
-from ferry import config
 from ferry.includes.utils import resolve_potentially_callable
 
 
-def _create_session_from_credentials(net_id: str, password: str) -> requests.Session:
-    session = requests.Session()
+def _create_client_from_cookie(cas_cookie: str) -> httpx.AsyncClient:
+    limits = httpx.Limits(max_connections=None, keepalive_expiry=None)
+    client = httpx.AsyncClient(timeout=None, limits=limits)
 
-    # Login to CAS.
-    _ = session.post(
-        f"https://secure.its.yale.edu/cas/login?username={net_id}&password={password}"
-    )
+    client.cas_cookie = cas_cookie
+    client.url = "https://aa6j3dg4vknlw2zp5hrji4oh540triws.lambda-url.us-east-2.on.aws/"  # proxy lambda function for concurrency requests
+    client.headers.update(
+        {"auth_header": "123"}
+    )  # auth_header for proxy lambda function
+    client.chunk_size = 10  # concurrency limit for proxy lambda function
 
-    # Set user-agent for requests to work
-    session.headers.update(
-        {
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36"  # pylint: disable=line-too-long
-        }
-    )
-
-    tgc = None
-
-    # Manually set cookie.
-    cookie = requests.cookies.create_cookie(
-        domain="secure.its.yale.edu",
-        name="TGC",
-        value=tgc,
-        path="/cas/",
-        secure=True,
-    )
-    session.cookies.set_cookie(cookie)
-
-    # Verify that it worked.
-    if "TGC" not in session.cookies.get_dict():
-        raise NotImplementedError("cannot handle 2-factor authentication")
-
-    return session
+    return client
 
 
-def _create_session_from_cookie(cookie: str) -> requests.Session:
-    session = requests.Session()
-    session.headers.update({"Cookie": cookie})
-    return session
-
-
-def create_session() -> requests.Session:
+def create_client(
+    cas_cookie: str = None,
+) -> httpx.AsyncClient:
     """
-    Create a session using parameters from /ferry/config.py.
+    Create a client using parameters from /ferry/config.py.
     """
 
-    if config.CAS_USE_COOKIE:  # will be using cookie for CAS login
-        cookie = resolve_potentially_callable(config.CAS_COOKIE)
-        return _create_session_from_cookie(cookie)
+    if cas_cookie is None:
+        raise ValueError("cas_cookie is required. Please see ferry/utils.py ")
 
-    net_id = resolve_potentially_callable(config.CAS_CREDENTIAL_NETID)
-    password = resolve_potentially_callable(config.CAS_CREDENTIAL_PASSWORD)
-    return _create_session_from_credentials(net_id, password)
-
-
-if __name__ == "__main__":
-    # Create a session twice to test resolution.
-    session_test = create_session()
-    print(session_test)
-    session_test = create_session()
-    print(session_test)
-    print("Cookies: ", session_test.cookies.get_dict())
-
-    res = session_test.get("https://secure.its.yale.edu/cas/login")
-    if res.text.find("Login Successful") < 0:
-        print("failed to login")
-        breakpoint()  # pylint: disable=forgotten-debug-statement
-    else:
-        print("success")
+    cas_cookie = resolve_potentially_callable(cas_cookie)
+    return _create_client_from_cookie(cas_cookie=cas_cookie)

@@ -7,11 +7,8 @@ import re
 from itertools import combinations
 from typing import Any, Dict, FrozenSet, List, Set, Tuple, TypeVar
 
-import networkx
 import pandas as pd
 from sqlalchemy import inspect
-
-from ferry import database
 
 
 def convert_unicode(text: str) -> str:
@@ -89,6 +86,8 @@ def merge_overlapping(sets: List[FrozenSet[Any]]) -> List[Set[Any]]:
     sets:
         Output list of merged sets.
     """
+    import networkx
+
     # deduplicate sets to improve performance
     sets = list(set(sets))
 
@@ -259,6 +258,8 @@ def get_all_tables(select_schemas: List[str]) -> Dict[str, pd.DataFrame]:
     -------
     Dictionary of Pandas DataFrames.
     """
+    from ferry import database
+    
     tables: List[str] = []
 
     # inspect and get schema names

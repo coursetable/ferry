@@ -1,80 +1,38 @@
 """
-Fetches a list of all seasons for the following:
-
-    (1) courses (/api_output/course_seasons.json)
-    (2) demand (/api_output/demand_seasons.json)
-
-This list of seasons is then used and required by
-fetch_classes.py, fetch_demand.py, and fetch_ratings.py.
+Fetches a list of all seasons from the Yale Courses API.
 """
 
 import re
 
-import requests
 import ujson
-from bs4 import BeautifulSoup
-
-from ferry import config
-
-config.init_sentry()
-
-
-class FetchSeasonsError(Exception):
-    """
-    Error object for fetch seasons exceptions.
-    """
-
-    # pylint: disable=unnecessary-pass
-    pass
-
+from httpx import AsyncClient
 
 # -----------------------------------------
 # Retrieve seasons from unofficial Yale API
 # -----------------------------------------
 
-print("Fetching course seasons")
-r = requests.post("https://courses.yale.edu/")
 
-# Successful response
-if r.status_code == 200:
+async def fetch_course_seasons(
+    data_dir, client: AsyncClient = AsyncClient(timeout=None)
+):
+    print("Fetching course seasons...", end=" ")
+    r = await client.get("https://courses.yale.edu/")
 
-    course_seasons = re.findall(r'option value="(\d{6})"', r.text)
+    # Successful response
+    if r.status_code == 200:
+        course_seasons = re.findall(r'option value="(\d{6})"', r.text)
 
-    # exclude '999999' catch-all 'Past seasons' season option
-    course_seasons = sorted([x for x in course_seasons if x != "999999"])
+        # exclude '999999' catch-all 'Past seasons' season option
+        course_seasons = sorted([x for x in course_seasons if x != "999999"])
 
-    # write seasons list for use later
-    with open(f"{config.DATA_DIR}/course_seasons.json", "w") as f:
-        ujson.dump(course_seasons, f, indent=4)
+        with open(f"{data_dir}/course_seasons.json", "w") as f:
+            ujson.dump(course_seasons, f, indent=4)
 
-# Unsuccessful
-else:
-    raise FetchSeasonsError(
-        f"Unsuccessful course seasons response: code {r.status_code}"
-    )
+        print("✔")
 
+        return course_seasons
 
-# ----------------------------------------------
-# Retrieve seasons from course statistics portal
-# ----------------------------------------------
-
-print("Fetching demand seasons")
-r = requests.get("https://ivy.yale.edu/course-stats/")
-
-# Successful response
-if r.status_code == 200:
-
-    s = BeautifulSoup(r.text, "html.parser")
-
-    season_elems = s.select("#termCode option[value]")
-    demand_seasons = [elem.get("value") for elem in season_elems]
-
-    # write seasons list for use later
-    with open(f"{config.DATA_DIR}/demand_seasons.json", "w") as f:
-        ujson.dump(demand_seasons, f, indent=4)
-
-# Unsuccessful
-else:
-    raise FetchSeasonsError(
-        f"Unsuccessful demand seasons response: code {r.status_code}"
-    )
+    # Unsuccessful
+    else:
+        print("✘")
+        raise SystemExit(f"Unsuccessful course seasons response: code {r.status_code}")
