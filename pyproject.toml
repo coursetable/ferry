@@ -7,7 +7,7 @@ authors = []
 [tool.poetry.dependencies]
 # General
 python = "^3.8"
-requests = "^2.23.0"
+requests = "^2.31.0"
 tqdm = "^4.46.1"
 
 # Crawling
