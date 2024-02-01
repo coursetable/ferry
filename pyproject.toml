@@ -23,7 +23,7 @@ SQLAlchemy = "^1.3.17"
 sqlalchemy_mixins = "^1.2.1"
 textdistance = "^4.2.0"
 psycopg2 = "^2.8.5"
-pandas = "^1.1.2"
+pandas = "^2.0.3"
 networkx = "^2.5"
 
 # NLP
