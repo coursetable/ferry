@@ -8,7 +8,7 @@ authors = []
 # General
 python = "^3.8"
 requests = "^2.23.0"
-tqdm = "^4.46.1"
+tqdm = "^4.66.1"
 
 # Crawling
 unidecode = "^1.1.1"
