@@ -32,10 +32,11 @@ async def fetch_ivystats_csv(cas_cookie, season):
             courses_data = defaultdict(list)
 
             for row in csv_reader:
-                courses_data[row['fullCourse']].append({
-                    'date': row['timestamp'],
-                    'count': int(row['count'])
-                })
+                 if row['status'] == "Registered":  # Filter for registered participants
+                    courses_data[row['fullCourse']].append({
+                        'date': row['timestamp'],
+                        'count': int(row['count'])
+                    })
 
             # Aggregate counts for the most recent date
             result = {}
@@ -45,9 +46,10 @@ async def fetch_ivystats_csv(cas_cookie, season):
                 most_recent_date = max(data, key=lambda x: x['date'])['date']
                 total_count = sum(item['count'] for item in data if item['date'] == most_recent_date)
                 result[course] = total_count
+            sorted_result = {k: v for k, v in sorted(result.items(), key=lambda item: item[1])}
 
-            # Output the result as JSON
-            print(json.dumps(result, indent=4))
+            # Output the sorted result as JSON
+            print(json.dumps(sorted_result, indent=4))
         else:
             print(f"Failed to fetch data: {response.status_code}")
 
