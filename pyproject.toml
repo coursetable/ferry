@@ -33,7 +33,7 @@ tables = "^3.6.1"
 en_core_web_sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz" } # the English language model for SpaCy
 vaderSentiment = "^3.3.2"
 pandarallel = "^1.5.1"
-gensim = "^4.3.1"
+gensim = "^4.3.2"
 edlib = "^1.3.8"
 stackprinter = "^0.2.5"
 numpy = "^1.19.5"
