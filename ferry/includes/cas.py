@@ -14,7 +14,7 @@ def _create_client_from_cookie(cas_cookie: str) -> httpx.AsyncClient:
     client = httpx.AsyncClient(timeout=None, limits=limits)
 
     client.cas_cookie = cas_cookie
-    client.url = "https://aa6j3dg4vknlw2zp5hrji4oh540triws.lambda-url.us-east-2.on.aws/"  # proxy lambda function for concurrency requests
+    client.url = "https://2jbbfpryjyp5wax2tpl5whkfdm0osghd.lambda-url.us-east-1.on.aws/"  # proxy lambda function for concurrency requests
     client.headers.update(
         {"auth_header": "123"}
     )  # auth_header for proxy lambda function
