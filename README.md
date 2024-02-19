@@ -75,4 +75,4 @@ The course evaluations data are private and should only be accessible to Yale st
 
 This submodule includes course and evaluation data dating back to 2009 (many of which are no longer available through Yale), more recent course demand statistics, and caches and raw HTML files for debugging purposes.
 
-_If you want to use these data but don't want to crawl it yourself, please reach out and we can grant access to our archives._
+_If you want to use these data but don't want to crawl it yourself, please reach out and we can grant access to our archives. Or, alternatively, use our [GraphiQL interface!](https://coursetable.com/graphiql)_
