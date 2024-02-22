@@ -22,7 +22,7 @@ jobs:
         run: sudo apt-get -y install graphviz libgraphviz-dev
 
       - name: Install poetry
-        uses: snok/install-poetry@v1.1.1
+        uses: snok/install-poetry@v1.3.4
         with:
           version: 1.1.4
           virtualenvs-create: true
