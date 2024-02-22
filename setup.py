@@ -5,7 +5,7 @@ setup(
     version='1.0',
     packages=find_packages(),
     install_requires=[
-        'requests==2.28.1',
+        'requests==2.31.0',
         'beautifulsoup4==4.11.1',
         'stackprinter==0.2.10',
         'sentry-sdk==1.12.1',
