@@ -7,6 +7,7 @@ curl -fsS -m 10 --retry 5 -o /dev/null "${PING_URL}/start"
 
 export TERM=dumb
 source .venv/bin/activate
+git pull
 python main.py -f config/release_courses.yml
 
 curl -fsS -m 10 --retry 5 -o /dev/null "${PING_URL}$([ $? -ne 0 ] && echo -n /fail)"
