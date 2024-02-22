@@ -1,13 +1,28 @@
 # Ferry v2 - **UNDER DEVELOPMENT**
 
+INSTALLATION:
+1. Install [`graphviz`](https://www.graphviz.org/) for your platform
+   - *MacOS*: Install with `brew` and install `pygraphviz`
+      ```sh
+      brew install graphviz
+      python -m pip install \
+      --global-option=build_ext \
+      --global-option="-I$(brew --prefix graphviz)/include/" \
+      --global-option="-L$(brew --prefix graphviz)/lib/" \
+      pygraphviz
+      ```
+1. Install `ferry` in editable mode
+   ```sh
+   pip install -e .
+   ```
+
 TODO:
- - Test database related transforms + scripts
- - Remove unnecessary NLP stuff
- - Full Doppler integration
  - Containerize ferry
+    - Full Doppler integration
  - Write documentation, standardize variable names, cleanup, etc.
  - Cleanup those branches
  - Lint and format CI
+ - Parallelize db sync scripts (stage, transform, deploy)
 
 DONE:
  - Modernized driver
