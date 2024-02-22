@@ -1,24 +1,23 @@
-"""
-Load transformed CSVs into staged database tables.
-
-Used immediately after transform.py and immediately before deploy.py.
-"""
+from pathlib import Path
 from typing import Any, Dict
 
 import pandas as pd
 from sqlalchemy import MetaData
 
-from ferry import config, database
+from ferry.database import Database
 from ferry.database.models import Base
 from ferry.includes.staging import copy_from_stringio
 
-config.init_sentry()
 
-if __name__ == "__main__":
+def stage(data_dir: Path, database: Database):
+    """
+    Load transformed CSVs into staged database tables.
+    """
 
     print("\n[Reading in tables from CSVs]")
 
-    csv_dir = config.DATA_DIR / "importer_dumps"
+    csv_dir = data_dir / "importer_dumps"
+    Path(csv_dir).mkdir(parents=True, exist_ok=True)
 
     # common pd.read_csv arguments
     general_csv_kwargs: Dict[Any, Any] = {"index_col": 0, "low_memory": False}
@@ -73,12 +72,12 @@ if __name__ == "__main__":
     flags = load_csv("flags")
     course_flags = load_csv("course_flags")
 
-    discussions = load_csv(
-        "discussions", {"dtype": {"section_crn": "Int64", "section": str}}
-    )
-    course_discussions = load_csv("course_discussions")
+    # discussions = load_csv(
+    #     "discussions", {"dtype": {"section_crn": "Int64", "section": str}}
+    # )
+    # course_discussions = load_csv("course_discussions")
 
-    demand_statistics = load_csv("demand_statistics")
+    # demand_statistics = load_csv("demand_statistics")
 
     evaluation_questions = load_csv("evaluation_questions")
     evaluation_narratives = load_csv("evaluation_narratives")
@@ -93,13 +92,6 @@ if __name__ == "__main__":
                 "no_response": "Int64",
             }
         },
-    )
-
-    fasttext_similars = load_csv(
-        "fasttext_similars", {"dtype": {"source": "Int64", "target": "Int64"}}
-    )
-    tfidf_similars = load_csv(
-        "tfidf_similars", {"dtype": {"source": "Int64", "target": "Int64"}}
     )
 
     # --------------------------
@@ -146,20 +138,16 @@ if __name__ == "__main__":
     copy_from_stringio(raw_conn, course_flags, "course_flags_staged")
 
     # discussion sections
-    copy_from_stringio(raw_conn, discussions, "discussions_staged")
-    copy_from_stringio(raw_conn, course_discussions, "course_discussions_staged")
+    # copy_from_stringio(raw_conn, discussions, "discussions_staged")
+    # copy_from_stringio(raw_conn, course_discussions, "course_discussions_staged")
 
     # demand statistics
-    copy_from_stringio(raw_conn, demand_statistics, "demand_statistics_staged")
+    # copy_from_stringio(raw_conn, demand_statistics, "demand_statistics_staged")
 
     # evaluations
     copy_from_stringio(raw_conn, evaluation_questions, "evaluation_questions_staged")
     copy_from_stringio(raw_conn, evaluation_narratives, "evaluation_narratives_staged")
     copy_from_stringio(raw_conn, evaluation_ratings, "evaluation_ratings_staged")
     copy_from_stringio(raw_conn, evaluation_statistics, "evaluation_statistics_staged")
-
-    # similar courses
-    copy_from_stringio(raw_conn, fasttext_similars, "fasttext_similars_staged")
-    copy_from_stringio(raw_conn, tfidf_similars, "tfidf_similars_staged")
 
     raw_conn.commit()

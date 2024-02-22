@@ -9,8 +9,8 @@ from typing import Any, Dict, List, Tuple
 import edlib
 import networkx
 import pandas as pd
+from tqdm import tqdm
 
-from ferry.includes.tqdm import tqdm
 from ferry.includes.utils import flatten_list_of_lists
 
 MIN_TITLE_MATCH_LEN = 8

@@ -1,17 +1,11 @@
-"""
-Import the parsed course and evaluation data into CSVs generated with Pandas.
-
-Used immediately before stage.py as the first step in the import process.
-"""
 import os
 from pathlib import Path
 from typing import Any, Dict, List
 
 import pandas as pd
 import ujson
+from tqdm import tqdm
 
-from ferry import config
-from ferry.includes.tqdm import tqdm
 from ferry.includes.transform_compute import (
     courses_computed,
     evaluation_statistics_computed,
@@ -25,9 +19,13 @@ from ferry.includes.transform_import import (
     import_evaluations,
 )
 
-config.init_sentry()
 
-if __name__ == "__main__":
+def transform(data_dir: Path):
+    """
+    Import the parsed course and evaluation data into CSVs generated with Pandas.
+
+    Used immediately before stage.py as the first step in the import process.
+    """
 
     # ---------------------
     # Get seasons to import
@@ -37,8 +35,8 @@ if __name__ == "__main__":
         [
             filename.split(".")[0]  # remove the .json extension
             for filename in set(
-                os.listdir(f"{config.DATA_DIR}/migrated_courses/")
-                + os.listdir(f"{config.DATA_DIR}/parsed_courses/")
+                os.listdir(f"{data_dir}/migrated_courses/")
+                + os.listdir(f"{data_dir}/parsed_courses/")
             )
             if filename[0] != "."
         ]
@@ -47,20 +45,20 @@ if __name__ == "__main__":
     # get full list of discussion seasons from files
     discussion_seasons = sorted(
         [
-            filename.split(".")[0]  # remove the .csv suffix
-            for filename in os.listdir(
-                f"{config.DATA_DIR}/discussion_sections/parsed_csvs/"
-            )
-            if filename[0] != "."
+            # filename.split(".")[0]  # remove the .csv suffix
+            # for filename in os.listdir(
+            #     f"{data_dir}/discussion_sections/parsed_csvs/"
+            # )
+            # if filename[0] != "."
         ]
     )
 
     # get full list of demand seasons from files
     demand_seasons = sorted(
         [
-            filename.split("_")[0]  # remove the _demand.json suffix
-            for filename in os.listdir(f"{config.DATA_DIR}/demand_stats/")
-            if filename[0] != "." and filename != "subjects.json"
+            # filename.split("_")[0]  # remove the _demand.json suffix
+            # for filename in os.listdir(f"{data_dir}/demand_stats/")
+            # if filename[0] != "." and filename != "subjects.json"
         ]
     )
 
@@ -75,14 +73,14 @@ if __name__ == "__main__":
 
     for season in tqdm(course_seasons, desc="Loading course JSONs"):
         # Read the course listings, giving preference to freshly parsed over migrated ones.
-        parsed_courses_file = Path(f"{config.DATA_DIR}/parsed_courses/{season}.json")
+        parsed_courses_file = Path(f"{data_dir}/parsed_courses/{season}.json")
 
         if parsed_courses_file.is_file():
             parsed_course_info = pd.DataFrame(pd.read_json(str(parsed_courses_file)))
         else:
             # check migrated courses as a fallback
             migrated_courses_file = Path(
-                f"{config.DATA_DIR}/migrated_courses/{season}.json"
+                f"{data_dir}/migrated_courses/{season}.json"
             )
 
             if not migrated_courses_file.is_file():
@@ -115,60 +113,60 @@ if __name__ == "__main__":
     # Import discussion sections
     # --------------------------
 
-    print("\n[Importing discussion sections]")
-    print(f"Season(s): {', '.join(discussion_seasons)}")
+    # print("\n[Importing discussion sections]")
+    # print(f"Season(s): {', '.join(discussion_seasons)}")
 
-    merged_discussions_info_ = []
+    # merged_discussions_info_ = []
 
-    for season in tqdm(discussion_seasons, desc="Loading discussion section CSVs"):
+    # for season in tqdm(discussion_seasons, desc="Loading discussion section CSVs"):
 
-        discussions_file = Path(
-            config.DATA_DIR / "discussion_sections" / "parsed_csvs" / f"{season}.csv"
-        )
+    #     discussions_file = Path(
+    #         data_dir / "discussion_sections" / "parsed_csvs" / f"{season}.csv"
+    #     )
 
-        if not discussions_file.is_file():
-            print(f"Skipping season {season}: discussion sections file not found.")
-            continue
+    #     if not discussions_file.is_file():
+    #         print(f"Skipping season {season}: discussion sections file not found.")
+    #         continue
 
-        season_discussions = pd.read_csv(
-            discussions_file, dtype={"section_crn": "Int64", "section": str}
-        )
+    #     season_discussions = pd.read_csv(
+    #         discussions_file, dtype={"section_crn": "Int64", "section": str}
+    #     )
 
-        season_discussions["season_code"] = season
-        merged_discussions_info_.append(season_discussions)
+    #     season_discussions["season_code"] = season
+    #     merged_discussions_info_.append(season_discussions)
 
-    merged_discussions_info = pd.concat(merged_discussions_info_, axis=0)
-    merged_discussions_info = merged_discussions_info.reset_index(drop=True)
+    # merged_discussions_info = pd.concat(merged_discussions_info_, axis=0)
+    # merged_discussions_info = merged_discussions_info.reset_index(drop=True)
 
-    discussions, course_discussions = import_discussions(
-        merged_discussions_info, listings
-    )
+    # discussions, course_discussions = import_discussions(
+    #     merged_discussions_info, listings
+    # )
 
     # ------------------------
     # Import demand statistics
     # ------------------------
 
-    merged_demand_info_ = []
+    # merged_demand_info_ = []
 
-    print("\n[Importing demand statistics]")
-    print(f"Season(s): {', '.join(demand_seasons)}")
-    for season in tqdm(demand_seasons, desc="Loading demand JSONs"):
+    # print("\n[Importing demand statistics]")
+    # print(f"Season(s): {', '.join(demand_seasons)}")
+    # for season in tqdm(demand_seasons, desc="Loading demand JSONs"):
 
-        demand_file = Path(f"{config.DATA_DIR}/demand_stats/{season}_demand.json")
+    #     demand_file = Path(f"{data_dir}/demand_stats/{season}_demand.json")
 
-        if not demand_file.is_file():
-            print(f"Skipping season {season}: demand statistics file not found.")
-            continue
+    #     if not demand_file.is_file():
+    #         print(f"Skipping season {season}: demand statistics file not found.")
+    #         continue
 
-        demand_info = pd.DataFrame(pd.read_json(str(demand_file)))
+    #     demand_info = pd.DataFrame(pd.read_json(str(demand_file)))
 
-        demand_info["season_code"] = season
-        merged_demand_info_.append(demand_info)
+    #     demand_info["season_code"] = season
+    #     merged_demand_info_.append(demand_info)
 
-    merged_demand_info = pd.concat(merged_demand_info_, axis=0)
-    merged_demand_info = merged_demand_info.reset_index(drop=True)
+    # merged_demand_info = pd.concat(merged_demand_info_, axis=0)
+    # merged_demand_info = merged_demand_info.reset_index(drop=True)
 
-    demand_statistics = import_demand(merged_demand_info, listings)
+    # demand_statistics = import_demand(merged_demand_info, listings)
 
     # -------------------------
     # Import course evaluations
@@ -177,19 +175,19 @@ if __name__ == "__main__":
     print("\n[Importing course evaluations]")
 
     evaluation_narratives = pd.read_csv(
-        config.DATA_DIR / "parsed_evaluations/evaluation_narratives.csv",
+        data_dir / "parsed_evaluations/evaluation_narratives.csv",
         dtype={"season": int, "crn": int},
     )
     evaluation_ratings = pd.read_csv(
-        config.DATA_DIR / "parsed_evaluations/evaluation_ratings.csv",
+        data_dir / "parsed_evaluations/evaluation_ratings.csv",
         dtype={"season": int, "crn": int},
     )
     evaluation_statistics = pd.read_csv(
-        config.DATA_DIR / "parsed_evaluations/evaluation_statistics.csv",
+        data_dir / "parsed_evaluations/evaluation_statistics.csv",
         dtype={"season": int, "crn": int},
     )
     evaluation_questions = pd.read_csv(
-        config.DATA_DIR / "parsed_evaluations/evaluation_questions.csv",
+        data_dir / "parsed_evaluations/evaluation_questions.csv",
         dtype={"season": int, "crn": int},
     )
 
@@ -247,7 +245,8 @@ if __name__ == "__main__":
 
     print("\n[Writing tables to disk as CSVs]")
 
-    csv_dir = config.DATA_DIR / "importer_dumps"
+    csv_dir = data_dir / "importer_dumps"
+    Path(csv_dir).mkdir(parents=True, exist_ok=True)
 
     def export_csv(
         table: pd.DataFrame, table_name: str, csv_kwargs: Dict[str, Any] = None
@@ -279,10 +278,10 @@ if __name__ == "__main__":
     export_csv(flags, "flags")
     export_csv(course_flags, "course_flags")
 
-    export_csv(discussions, "discussions")
-    export_csv(course_discussions, "course_discussions")
+    # export_csv(discussions, "discussions")
+    # export_csv(course_discussions, "course_discussions")
 
-    export_csv(demand_statistics, "demand_statistics")
+    # export_csv(demand_statistics, "demand_statistics")
 
     export_csv(evaluation_questions, "evaluation_questions")
     export_csv(evaluation_narratives, "evaluation_narratives")

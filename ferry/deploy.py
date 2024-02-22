@@ -1,21 +1,12 @@
-"""
-Deploy staged tables to main ones and regenerate database.
-
-- Checks the database invariants on staged tables.
-- If invariants pass, promotes staged tables to actual ones,
-  updates indexes, and recomputes search views
-- If any invariant fails, exits with no changes to tables.
-"""
-import argparse
+from pathlib import Path
 
 import sqlalchemy
 from sqlalchemy import MetaData
+from tqdm import tqdm
 
-from ferry import config, database
-from ferry.includes.tqdm import tqdm
+from ferry import database
 
-config.init_sentry()
-
+resource_dir = Path(__file__).parent / "resources"
 
 def listing_invariants(session: sqlalchemy.orm.session.Session):
     """
@@ -45,7 +36,7 @@ def question_invariants(session: sqlalchemy.orm.session.Session):
     """
     for question in session.query(
         database.EvaluationQuestion
-    ):  # type: database.EvaluationQuestion
+    ):
         narrative = question.is_narrative
         options = bool(question.options)
         if narrative and options:
@@ -69,7 +60,7 @@ def question_tag_invariant(session: sqlalchemy.orm.session.Session):
 
     for question in session.query(
         database.EvaluationQuestion
-    ):  # type: database.EvaluationQuestion
+    ):
         if not question.tag:
             continue
 
@@ -112,7 +103,7 @@ def search_setup(session: sqlalchemy.orm.session.Session):
     Used by CourseTable to pull JSONs for client-side catalog browsing.
     """
     print("Creating tmp table")
-    with open(f"{config.RESOURCE_DIR}/computed_listing_info_tmp.sql") as tmp_file:
+    with open(f"{resource_dir}/computed_listing_info_tmp.sql") as tmp_file:
         tmp_sql = tmp_file.read()
         session.execute(tmp_sql)
 
@@ -140,12 +131,20 @@ def search_setup(session: sqlalchemy.orm.session.Session):
             print(f"  {column_name} not null")
 
     print("Swapping in the table")
-    with open(f"{config.RESOURCE_DIR}/computed_listing_info_swap.sql") as swap_file:
+    with open(f"{resource_dir}/computed_listing_info_swap.sql") as swap_file:
         swap_sql = swap_file.read()
         session.execute(swap_sql)
 
 
-if __name__ == "__main__":
+def deploy(db: database.Database):
+    """
+    Deploy staged tables to main ones and regenerate database.
+
+    - Checks the database invariants on staged tables.
+    - If invariants pass, promotes staged tables to actual ones,
+        updates indexes, and recomputes search views
+    - If any invariant fails, exits with no changes to tables.
+    """
 
     # ------------------------------------
     # Specify invariant checking functions
@@ -167,34 +166,23 @@ if __name__ == "__main__":
                 return checking_function
         raise ValueError(f"cannot find item with name {name}")
 
-    parser = argparse.ArgumentParser(
-        description="Generate computed fields and check invariants"
-    )
-    parser.add_argument(
-        "--items",
-        nargs="+",
-        help="which items to run",
-        default=None,
-        required=False,
-    )
-
     # --------------------------------------
     # Check if all staged tables are present
     # --------------------------------------
 
     # sorted tables in the database
-    db_meta = MetaData(bind=database.Engine)
+    db_meta = MetaData(bind=db.Engine)
     db_meta.reflect()
 
     # ordered tables defined only in our model
-    alchemy_tables = database.Base.metadata.sorted_tables
+    alchemy_tables = db.Base.metadata.sorted_tables
     target_tables = [table.name[:-7] for table in alchemy_tables]
 
     db_tables = {x.name for x in db_meta.sorted_tables}
 
     if any(table.name not in db_tables for table in alchemy_tables):
 
-        raise database.MissingTablesError(
+        raise db.MissingTablesError(
             "Not all staged tables are present. Run stage.py again?"
         )
 
@@ -204,11 +192,7 @@ if __name__ == "__main__":
 
     print("\n[Checking table invariants]")
 
-    args = parser.parse_args()
-    if args.items:
-        items = [_match(name) for name in args.items]
-    else:
-        items = all_items
+    items = all_items
 
     for fn in items:
         if fn.__doc__:
@@ -216,7 +200,7 @@ if __name__ == "__main__":
         else:
             tqdm.write(f"Running: {fn.__name__}")
 
-        with database.session_scope(database.Session) as db_session:
+        with database.session_scope(db.Session) as db_session:
             fn(db_session)
 
     print("All invariants passed")
@@ -227,7 +211,7 @@ if __name__ == "__main__":
 
     print("\n[Replacing old tables with staged]")
 
-    conn = database.Engine.connect()
+    conn = db.Engine.connect()
 
     # keep track of main table constraints and indexes
     # because staged tables do not have foreign key relationships
@@ -304,7 +288,7 @@ if __name__ == "__main__":
 
     # generate computed tables and full-text-search
     print("\n[Setting up computed tables]")
-    with database.session_scope(database.Session) as db_session:
+    with database.session_scope(db.Session) as db_session:
         search_setup(db_session)
 
     # -------------
@@ -313,8 +297,8 @@ if __name__ == "__main__":
 
     # Print row counts for each table.
     tqdm.write("\n[Table Statistics]")
-    with database.session_scope(database.Session) as db_session:
-        with open(f"{config.RESOURCE_DIR}/table_sizes.sql") as file:
+    with database.session_scope(db.Session) as db_session:
+        with open(f"{resource_dir}/table_sizes.sql") as file:
             SUMMARY_SQL = file.read()
 
         result = db_session.execute(SUMMARY_SQL)

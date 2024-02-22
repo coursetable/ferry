@@ -31,7 +31,6 @@ class InvalidSeasonError(Exception):
 _PROJECT_DIR = pathlib.Path(__file__).resolve().parent.parent
 
 DATA_DIR = str(_PROJECT_DIR / "data")
-RESOURCE_DIR = str(_PROJECT_DIR / "resources")
 CONFIG_FILE = str(_PROJECT_DIR / "config" / "config.yml")
 
 
@@ -46,6 +45,25 @@ def get_parser():
         "-r",
         "--release",
         help="Whether to run in release mode. This enables Sentry and requires a database connection string.",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "--sync-db",
+        help="Sync the database. This is automatically set to true in release mode.",
+        action="store_true",
+    )
+
+
+    parser.add_argument(
+        "--fetch-evals",
+        help="Fetch evaluations.",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "--generate-diagram",
+        help="Generate database diagram.",
         action="store_true",
     )
 
@@ -66,13 +84,6 @@ def get_parser():
         "--data-dir",
         help="Directory to store data files.",
         default=DATA_DIR,
-    )
-
-    # TODO: Remove resource dir
-    parser.add_argument(
-        "--resource-dir",
-        help="Directory to store resource files.",
-        default=RESOURCE_DIR,
     )
 
     """
@@ -168,8 +179,8 @@ def parse_env_args(args):
 
     # Parse env var args
     if args.database_connect_string is None:
-        args.database_connect_string = os.environ.get("MYSQL_URI")
-        if args.database_connect_string is None and args.release:
+        args.database_connect_string = os.environ.get("POSTGRES_URI")
+        if args.database_connect_string is None and args.sync_db:
             # prompt user
             args.database_connect_string = input("Enter database connection string: ")
 
@@ -232,20 +243,16 @@ def save_yaml(args):
         del args.save_config
         config_file = str(args.config_file)
         data_dir = str(args.data_dir)
-        resource_dir = str(args.resource_dir)
 
         del args.config_file
 
         if args.data_dir == DATA_DIR:
             del args.data_dir
-        if args.resource_dir == RESOURCE_DIR:
-            del args.resource_dir
 
         with open(config_file, "w+") as f:
             yaml.dump(vars(args), f)
 
         args.data_dir = data_dir
-        args.resource_dir = resource_dir
 
 
 # Init Sentry (in relase mode)

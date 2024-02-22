@@ -8,17 +8,22 @@ import math
 from typing import List, Optional
 
 import pandas as pd
+from tqdm import tqdm
 
-from ferry import config, database
+from ferry import database
 from ferry.includes.same_courses import (
     resolve_historical_courses,
     split_same_professors,
 )
-from ferry.includes.tqdm import tqdm
 from ferry.includes.utils import get_table_columns
 
 QUESTION_TAGS = {}
-with open(f"{config.RESOURCE_DIR}/question_tags.csv") as f:
+
+from pathlib import Path
+
+resource_dir = Path(__file__).parent.parent / "resources"
+
+with open(f"{resource_dir}/question_tags.csv") as f:
     for question_code, tag in csv.reader(f):
         QUESTION_TAGS[question_code] = tag
 

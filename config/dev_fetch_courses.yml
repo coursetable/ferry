@@ -1,0 +1,10 @@
+# DEV CONFIG
+# This configuation is used to only fetch course data (no evaluations) from all seasons in a dev environment. Please combine with -s option to specify the seasons to fetch.
+
+cas_cookie: null
+database_connect_string: null
+fetch_evals: false
+generate_diagram: false
+release: false
+sentry_url: null
+sync_db: false

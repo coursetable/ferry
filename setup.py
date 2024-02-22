@@ -23,6 +23,10 @@ setup(
         'httpx==0.26.0',
         "PyYAML==6.0.1",
         "lxml==5.0.0",
-        "diskcache==5.6.3"
+        "diskcache==5.6.3",
+        "psycopg2==2.9.5",
+        "edlib==1.3.9",
+        "networkx==2.8.8",
+        "eralchemy2==1.3.8"
     ],
 )

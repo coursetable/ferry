@@ -1,0 +1,10 @@
+# DEV CONFIG
+# This configuation is used to enable syncing the local postgres database in a dev environment.
+
+cas_cookie: null
+fetch_evals: false
+generate_diagram: true
+release: false
+seasons: null
+sentry_url: null
+sync_db: true

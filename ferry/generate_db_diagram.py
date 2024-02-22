@@ -2,8 +2,17 @@
 Generates a schema diagram of the database based on the
 SQLAlchemy schema.
 """
-from eralchemy import render_er
+from pathlib import Path
+
+from eralchemy2 import render_er
 
 from ferry.database.models import Base
 
-render_er(Base, "../docs/db_diagram.png")
+
+def generate_db_diagram(path: str = "docs/db_diagram.pdf"):
+    """
+    Generates a schema diagram of the database based on the
+    SQLAlchemy schema.
+    """
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
+    render_er(Base, path)
