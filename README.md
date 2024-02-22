@@ -17,6 +17,7 @@ INSTALLATION:
    ```
 
 TODO:
+ - Error handling on legacy artifacts in dev (old discussion sections, demand stats, and migrated courses)
  - Containerize ferry
     - Full Doppler integration
  - Write documentation, standardize variable names, cleanup, etc.
