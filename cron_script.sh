@@ -10,4 +10,9 @@ source .venv/bin/activate
 git pull
 python main.py -f config/release_courses.yml
 
+cd data
+git add -A
+git diff-index --quiet HEAD || git commit -m "automatic update on $(date)"
+git push
+
 curl -fsS -m 10 --retry 5 -o /dev/null "${PING_URL}$([ $? -ne 0 ] && echo -n /fail)"
