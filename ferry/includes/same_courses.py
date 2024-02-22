@@ -4,7 +4,7 @@ Find historical offerings of a course.
 Used by transform_compute.py
 """
 
-from typing import Any, Dict, List, Tuple
+from typing import Any
 
 import edlib
 import networkx
@@ -22,7 +22,7 @@ MAX_DESCRIPTION_DIST = 0.25
 
 def map_to_groups(
     dataframe: pd.DataFrame, left: str, right: str
-) -> Tuple[Dict[Any, List[Any]], Dict[Any, List[Any]]]:
+) -> tuple[dict[Any, list[Any]], dict[Any, list[Any]]]:
     """
     Make grouped dictionary mappings from a DataFrame.
 
@@ -129,7 +129,7 @@ def is_same_course(
 
 def get_connected_courses(
     graph: networkx.Graph,
-) -> Tuple[Dict[Any, Any], Dict[Any, Any]]:
+) -> tuple[dict[Any, Any], dict[Any, Any]]:
     """
     Get connected courses in courses graph.
 
@@ -161,7 +161,7 @@ def get_connected_courses(
 
 def resolve_historical_courses(
     courses: pd.DataFrame, listings: pd.DataFrame
-) -> Tuple[Dict[int, int], Dict[int, List[int]], Dict[int, int], Dict[int, List[int]]]:
+) -> tuple[dict[int, int], dict[int, list[int]], dict[int, int], dict[int, list[int]]]:
     """
     Among courses, identify historical offerings of a course.
 
@@ -288,8 +288,8 @@ def resolve_historical_courses(
 
 
 def split_same_professors(
-    course_to_same_course_filtered: Dict[int, int], course_professors: pd.DataFrame
-) -> Tuple[Dict[int, int], Dict[int, List[int]]]:
+    course_to_same_course_filtered: dict[int, int], course_professors: pd.DataFrame
+) -> tuple[dict[int, int], dict[int, list[int]]]:
     """
     Split an equivalent-courses partitioning further by same-professor.
 

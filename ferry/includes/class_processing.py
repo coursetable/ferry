@@ -5,7 +5,7 @@ Course fetching functions used by:
     /ferry/crawler/fetch_classes.py
 """
 
-from typing import Any, Dict, List
+from typing import Any
 
 import ujson
 from httpx import AsyncClient
@@ -24,9 +24,9 @@ class FetchClassesError(Exception):
 
 async def fetch_season_courses_util(
     season: str,
-    criteria: List[Dict[str, Any]],
+    criteria: list[dict[str, Any]],
     client: AsyncClient = AsyncClient(timeout=None),
-) -> List[Dict[str, Any]]:
+) -> list[dict[str, Any]]:
     """
     Get preliminary course info for a given season
 
@@ -69,7 +69,7 @@ async def fetch_season_courses_util(
 
 async def fetch_course_json(
     code: str, crn: str, srcdb: str, client: AsyncClient = None
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Fetch information for a course from the API
 

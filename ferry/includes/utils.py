@@ -5,7 +5,7 @@ Used for processing course JSONs, resolving cross-listings, etc.
 """
 import re
 from itertools import combinations
-from typing import Any, Dict, FrozenSet, List, Set, Tuple, TypeVar
+from typing import Any, TypeVar
 
 import pandas as pd
 from sqlalchemy import inspect
@@ -53,14 +53,14 @@ def convert_unicode(text: str) -> str:
     return text
 
 
-def flatten_list_of_lists(list_of_lists: List[List[Any]]) -> List[Any]:
+def flatten_list_of_lists(list_of_lists: list[list[Any]]) -> list[Any]:
     """
     Flatten a list of lists into a single list.
 
     Parameters
     ----------
     list_of_lists:
-        List of lists.
+        list of lists.
 
     Returns
     -------
@@ -72,7 +72,7 @@ def flatten_list_of_lists(list_of_lists: List[List[Any]]) -> List[Any]:
     return flattened
 
 
-def merge_overlapping(sets: List[FrozenSet[Any]]) -> List[Set[Any]]:
+def merge_overlapping(sets: list[frozenset[Any]]) -> list[set[Any]]:
     """
     Given a list of FrozenSets, merge sets with a nonempty intersection until all sets are disjoint.
 
@@ -112,7 +112,7 @@ def merge_overlapping(sets: List[FrozenSet[Any]]) -> List[Set[Any]]:
     return merged
 
 
-def invert_dict_of_lists(dict_of_lists: Dict[Any, List[Any]]) -> Dict[Any, Any]:
+def invert_dict_of_lists(dict_of_lists: dict[Any, list[Any]]) -> dict[Any, Any]:
     """
     Given a dictionary mapping x -> [a, b, c], invert such that it now maps all a, b, c -> x.
     If same value in multiple keys, then inverted dictionary overwrites arbitrarily.
@@ -139,7 +139,7 @@ def invert_dict_of_lists(dict_of_lists: Dict[Any, List[Any]]) -> Dict[Any, Any]:
 Numeric = TypeVar("Numeric", int, float)
 
 
-def elementwise_sum(list_a: List[Numeric], list_b: List[Numeric]) -> List[Numeric]:
+def elementwise_sum(list_a: list[Numeric], list_b: list[Numeric]) -> list[Numeric]:
     """
     Given two lists of equal length, return
     a list of elementwise sums
@@ -162,7 +162,7 @@ def elementwise_sum(list_a: List[Numeric], list_b: List[Numeric]) -> List[Numeri
     return [sum(x) for x in zip(list_a, list_b)]
 
 
-def category_average(categories: List[int]) -> Tuple[float, int]:
+def category_average(categories: list[int]) -> tuple[float, int]:
     """
     Given a list-like of n category counts,
     aggregate and return the average where each
@@ -223,7 +223,7 @@ def get_table(table: str) -> pd.DataFrame:
     return pd.read_sql_table(table, con=database.Engine)  # type: ignore
 
 
-def get_table_columns(table, not_class=False) -> List[str]:
+def get_table_columns(table, not_class=False) -> list[str]:
     """
     Get column names of a table, where table is
     a SQLalchemy model or object (e.g. ferry.database.models.Course)
@@ -237,7 +237,7 @@ def get_table_columns(table, not_class=False) -> List[str]:
 
     Returns
     -------
-    List of column names
+    list of column names
     """
     if not_class:
         return [column.key for column in table.columns]
@@ -245,7 +245,7 @@ def get_table_columns(table, not_class=False) -> List[str]:
     return [column.key for column in table.__table__.columns]
 
 
-def get_all_tables(select_schemas: List[str]) -> Dict[str, pd.DataFrame]:
+def get_all_tables(select_schemas: list[str]) -> dict[str, pd.DataFrame]:
     """
     Get all the tables under given schemas as a dictionary of Pandas dataframes.
 
@@ -260,7 +260,7 @@ def get_all_tables(select_schemas: List[str]) -> Dict[str, pd.DataFrame]:
     """
     from ferry import database
     
-    tables: List[str] = []
+    tables: list[str] = []
 
     # inspect and get schema names
     inspector = inspect(database.Engine)

@@ -5,10 +5,35 @@ Utility functions for ferry driver.
 import argparse
 import asyncio
 import pathlib
-from typing import Any, List, Optional
+from typing import Any
 
 from httpx import AsyncClient
 
+class RawArgs:
+    cas_cookie: str | None
+    config_file: str
+    data_dir: str
+    database_connect_string: str | None
+    fetch_evals: bool | None
+    generate_diagram: bool | None
+    release: bool | None
+    save_config: bool | None
+    seasons: list[str] | None
+    sentry_url: str | None
+    sync_db: bool | None
+
+class Args:
+    cas_cookie: str
+    config_file: str
+    client: AsyncClient
+    data_dir: str
+    database_connect_string: str
+    fetch_evals: bool
+    generate_diagram: bool
+    release: bool
+    seasons: list[str] | None
+    sentry_url: str
+    sync_db: bool
 
 class RateLimitError(Exception):
     """
@@ -105,19 +130,19 @@ def get_parser():
     """
     parser.add_argument(
         "--cas-cookie",
-        help="CAS cookie. If not specificed, defaults to the value of the CAS_COOKIE environment variable before prompting user.",
+        help="CAS cookie. If not specified, defaults to the value of the CAS_COOKIE environment variable before prompting user.",
         default=None,
     )
 
     parser.add_argument(
         "--database-connect-string",
-        help="Database connection string. If not specificed, defaults to the value of the MYSQL_URI environment variable before prompting user.",
+        help="Database connection string. If not specified, defaults to the value of the MYSQL_URI environment variable before prompting user.",
         default=None,
     )
 
     parser.add_argument(
         "--sentry-url",
-        help="Sentry URL. If not specificed, defaults to the value of the SENTRY_URL environment variabl before prompting user.",
+        help="Sentry URL. If not specified, defaults to the value of the SENTRY_URL environment variable before prompting user.",
         default=None,
     )
 
@@ -132,7 +157,7 @@ def get_parser():
     return parser
 
 
-def parse_seasons_arg(arg_seasons: Optional[List[str]], all_viable_seasons: List[Any]):
+def parse_seasons_arg(arg_seasons: list[str] | None, all_viable_seasons: list[Any]):
     """
     Parse and handle seasons from add_seasons_args.
 
@@ -174,7 +199,7 @@ def parse_seasons_arg(arg_seasons: Optional[List[str]], all_viable_seasons: List
     return seasons
 
 
-def parse_env_args(args):
+def parse_env_args(args: RawArgs):
     import os
 
     # Parse env var args
@@ -197,8 +222,8 @@ def parse_env_args(args):
             args.cas_cookie = input("Enter CAS cookie: ")
 
 
-def load_yaml(parser):
-    p = parser.parse_args()
+def load_yaml(parser: argparse.ArgumentParser):
+    p: RawArgs = parser.parse_args()
 
     if p.config_file is not None:
         try:
@@ -213,7 +238,7 @@ def load_yaml(parser):
             import yaml
 
             with open(p.config_file, "r") as f:
-                default_arg = yaml.safe_load(f)
+                default_arg: dict[str, Any] = yaml.safe_load(f)
             key = vars(p).keys()
 
             # Check for wrong args / empty file
@@ -233,7 +258,7 @@ def load_yaml(parser):
             return
 
 
-def save_yaml(args):
+def save_yaml(args: RawArgs):
     if args.save_config:
         # Save config YAML file
         import yaml
@@ -255,6 +280,28 @@ def save_yaml(args):
         args.data_dir = data_dir
 
 
+def get_args() -> Args:
+    parser = get_parser()
+
+    # Load YAML config as default args
+    load_yaml(parser)
+
+    args: RawArgs = parser.parse_args()
+
+    # Set args.sync_db to True if args.release is True
+    if args.release:
+        args.sync_db = True
+
+    # Save config YAML file if specified
+    save_yaml(args)
+
+    parse_env_args(args)
+
+    # Initialize HTTPX client, only used for fetching classes (ratings fetch initializes its own client with CAS auth)
+    args.client = AsyncClient(timeout=None)
+    return args
+
+
 # Init Sentry (in relase mode)
 def init_sentry(sentry_url: str):
     import sentry_sdk
@@ -268,7 +315,7 @@ def init_sentry(sentry_url: str):
                 "Error: SENTRY_URL is not set. It is required for production."
             )
 
-    return sentry_sdk.init(
+    sentry_sdk.init(
         sentry_url,
         # Set traces_sample_rate to 1.0 to capture 100%
         # of transactions for performance monitoring.
@@ -277,9 +324,7 @@ def init_sentry(sentry_url: str):
     )
 
 
-def load_cache_json(
-    path: str,
-):
+def load_cache_json(path: str):
     """
     Load JSON from cache file
 
@@ -295,15 +340,12 @@ def load_cache_json(
     """
     import ujson
 
-    if path is None:
+    p = pathlib.Path(path)
+
+    if not p.is_file():
         return None
 
-    path = pathlib.Path(path)
-
-    if not path.is_file():
-        return None
-
-    with open(path, "r") as f:
+    with open(p, "r") as f:
         return ujson.load(f)
 
 
@@ -326,18 +368,18 @@ def save_cache_json(
     """
     import ujson
 
-    path = pathlib.Path(path)
-    path.parent.mkdir(parents=True, exist_ok=True)
+    p = pathlib.Path(path)
+    p.parent.mkdir(parents=True, exist_ok=True)
 
-    with open(path, "w") as f:
+    with open(p, "w") as f:
         ujson.dump(data, f, indent=indent)
 
 
 async def request(
     method: str,
     url: str,
+    client: AsyncClient,
     attempts: int = 1,
-    client: AsyncClient = AsyncClient(timeout=None),
     **kwargs,
 ):
     """
@@ -349,11 +391,12 @@ async def request(
         HTTP method
     url: str
         URL
+    client: AsyncClient
+        HTTPX AsyncClient
     attempts: int = 1
         Number of attempts
-    client: AsyncClient = AsyncClient(timeout=None)
-        HTTPX AsyncClient
     **kwargs
+        Additional keyword arguments for client.request
     """
 
     attempt = 0

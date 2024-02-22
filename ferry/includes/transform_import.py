@@ -5,7 +5,6 @@ Used by /ferry/transform.py.
 """
 from collections import Counter
 from itertools import combinations
-from typing import List, Tuple
 
 import numpy as np
 import pandas as pd
@@ -182,8 +181,8 @@ def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
 
 
 def resolve_professors(
-    professors_prep: pd.DataFrame, seasons: List[str]
-) -> Tuple[pd.DataFrame, pd.DataFrame]:
+    professors_prep: pd.DataFrame, seasons: list[str]
+) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Resolve course-professor mappings and professors table
 
@@ -340,8 +339,8 @@ def resolve_professors(
 
 # for memory profiling
 def import_courses(
-    merged_course_info: pd.DataFrame, seasons: List[str]
-) -> Tuple[pd.DataFrame, ...]:
+    merged_course_info: pd.DataFrame, seasons: list[str]
+) -> tuple[pd.DataFrame, ...]:
     """
     Import courses into Pandas DataFrames.
 
@@ -456,7 +455,7 @@ def import_courses(
 
 def import_discussions(
     merged_discussions_info: pd.DataFrame, listings: pd.DataFrame
-) -> Tuple[pd.DataFrame, pd.DataFrame]:
+) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Import discussion sections into Pandas DataFrame.
 
@@ -652,7 +651,7 @@ def match_evaluations_to_courses(
     evaluation_ratings: pd.DataFrame,
     evaluation_statistics: pd.DataFrame,
     listings: pd.DataFrame,
-) -> Tuple[pd.DataFrame, ...]:
+) -> tuple[pd.DataFrame, ...]:
     """
     Match evaluations to course IDs.
 
@@ -742,7 +741,7 @@ def import_evaluations(
     evaluation_statistics: pd.DataFrame,
     evaluation_questions: pd.DataFrame,
     listings: pd.DataFrame,
-) -> Tuple[pd.DataFrame, ...]:
+) -> tuple[pd.DataFrame, ...]:
     """
     Import course evaluations into Pandas DataFrame.
 

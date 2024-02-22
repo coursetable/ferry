@@ -7,8 +7,6 @@ Fetches the following information from the Yale Courses API:
     (2) Detailed information for each course, for each season
         (/api_output/course_json_cache/)
 """
-from typing import List
-
 from httpx import AsyncClient
 from tqdm import tqdm
 from tqdm.asyncio import tqdm_asyncio
@@ -23,7 +21,7 @@ from ferry.utils import load_cache_json, save_cache_json
 
 
 async def fetch_classes(
-    seasons: List[str],
+    seasons: list[str],
     data_dir: str,
     client: AsyncClient = AsyncClient(timeout=None),
 ) -> dict:
@@ -48,7 +46,7 @@ async def fetch_classes(
 # -----------------------------------------
 
 
-async def fetch_class(season: str, data_dir, client: AsyncClient = None):
+async def fetch_class(season: str, data_dir, client: AsyncClient):
     # fetch season classes
     season_courses = await fetch_season_courses(
         season, data_dir=data_dir, client=client
@@ -72,7 +70,7 @@ async def fetch_class(season: str, data_dir, client: AsyncClient = None):
 
 # fetch overview info for all classes in each season
 async def fetch_season_courses(
-    season: str, data_dir: str, client: AsyncClient = None, fysem: bool = False
+    season: str, data_dir: str, client: AsyncClient, fysem: bool = False
 ):
     if fysem:
         criteria = [{"field": "fsem_attrs", "value": "Y"}]
@@ -102,7 +100,7 @@ async def fetch_season_courses(
 
 # fetch detailed info for all classes in each season
 async def fetch_aggregate_season_json(
-    season: str, season_courses, data_dir: str, client: AsyncClient = None
+    season: str, season_courses, data_dir: str, client: AsyncClient
 ):
     # load from cache if it exists
 

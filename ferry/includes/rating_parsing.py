@@ -4,7 +4,7 @@ Functions for processing course rating JSONs into aggregate CSVs.
 Used by /ferry/crawler/parse_ratings.py
 """
 import csv
-from typing import Any, Dict, List
+from typing import Any
 
 import ujson
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
@@ -62,13 +62,14 @@ def parse_rating(
     filename: str,
 ):
     # Read the evaluation, giving preference to current over previous.
-    current_evals_file = Path(f"{data_dir}/course_evals/{filename}")
+    current_evals_file = Path(data_dir) / "course_evals" / filename
+    previous_evals_file = Path(data_dir) / "previous_evals" / filename
 
     if current_evals_file.is_file():
         with open(current_evals_file, "r") as f:
             evaluation = ujson.load(f)
     else:
-        with open(f"{data_dir}/previous_evals/{filename}", "r") as f:
+        with open(previous_evals_file, "r") as f:
             evaluation = ujson.load(f)
 
     return (
@@ -80,12 +81,12 @@ def parse_rating(
 
 
 async def parse_ratings(data_dir: str):
-    data_dir = Path(data_dir)
-    (data_dir / "parsed_evaluations").mkdir(parents=True, exist_ok=True)
-    questions_path = data_dir / "parsed_evaluations/evaluation_questions.csv"
-    ratings_path = data_dir / "parsed_evaluations/evaluation_ratings.csv"
-    statistics_path = data_dir / "parsed_evaluations/evaluation_statistics.csv"
-    narratives_path = data_dir / "parsed_evaluations/evaluation_narratives.csv"
+    root = Path(data_dir)
+    (root / "parsed_evaluations").mkdir(parents=True, exist_ok=True)
+    questions_path = root / "parsed_evaluations/evaluation_questions.csv"
+    ratings_path = root / "parsed_evaluations/evaluation_ratings.csv"
+    statistics_path = root / "parsed_evaluations/evaluation_statistics.csv"
+    narratives_path = root / "parsed_evaluations/evaluation_narratives.csv"
 
     # ------------------
     # CSV output writers
@@ -112,8 +113,8 @@ async def parse_ratings(data_dir: str):
     # ----------------------------
 
     # list available evaluation files
-    previous_eval_files = Path(data_dir / "previous_evals").glob("*.json")
-    new_eval_files = Path(data_dir / "course_evals").glob("*.json")
+    previous_eval_files = (root / "previous_evals").glob("*.json")
+    new_eval_files = (root / "course_evals").glob("*.json")
 
     # extract file names (<season> + <crn> format) for merging
     previous_eval_filenames = [x.name for x in previous_eval_files]
@@ -127,12 +128,12 @@ async def parse_ratings(data_dir: str):
             loop.run_in_executor(
                 executor,
                 parse_rating,
-                data_dir,
+                root,
                 filename,
             )
             for filename in all_eval_files
         ]
-        results: List[(List, List, List, Dict)] = await tqdm_asyncio.gather(
+        results: list[tuple[list, list, list, dict]] = await tqdm_asyncio.gather(
             *futures, leave=False, desc=f"Parsing all ratings"
         )
         # results: [ ( narratives: List, ratings: List, questions: List, statistics: Dict ) ]
@@ -163,7 +164,7 @@ async def parse_ratings(data_dir: str):
 ####################
 
 
-def process_narratives(evaluation: Dict[str, Any]):
+def process_narratives(evaluation: dict[str, Any]):
     """
     Process written evaluations. Appends to narratives CSV with global writer object.
 
@@ -195,7 +196,7 @@ def process_narratives(evaluation: Dict[str, Any]):
     return narratives
 
 
-def process_ratings(evaluation: Dict[str, Any]):
+def process_ratings(evaluation: dict[str, Any]):
     """
     Process categorical evaluations. Appends to ratings CSV with global writer object.
 
@@ -220,7 +221,7 @@ def process_ratings(evaluation: Dict[str, Any]):
     return ratings
 
 
-def process_statistics(evaluation: Dict[str, Any]):
+def process_statistics(evaluation: dict[str, Any]):
     """
     Process evaluation statistics. Appends to statistics CSV with global writer object.
 
@@ -243,7 +244,7 @@ def process_statistics(evaluation: Dict[str, Any]):
     return statistics
 
 
-def process_questions(evaluation: Dict[str, Any]):
+def process_questions(evaluation: dict[str, Any]):
     """
     Process evaluation questions. Appends to questions CSV with global writer object.
 

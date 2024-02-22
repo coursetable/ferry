@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any
 
 import pandas as pd
 import ujson
@@ -35,8 +35,8 @@ def transform(data_dir: Path):
         [
             filename.split(".")[0]  # remove the .json extension
             for filename in set(
-                os.listdir(f"{data_dir}/migrated_courses/")
-                + os.listdir(f"{data_dir}/parsed_courses/")
+                os.listdir(data_dir / "migrated_courses")
+                + os.listdir(data_dir / "parsed_courses")
             )
             if filename[0] != "."
         ]
@@ -69,29 +69,25 @@ def transform(data_dir: Path):
     print("[Importing courses]")
     print(f"Season(s): {', '.join(course_seasons)}")
 
-    merged_course_info_: List[pd.DataFrame] = []
+    merged_course_info_: list[pd.DataFrame] = []
 
     for season in tqdm(course_seasons, desc="Loading course JSONs"):
         # Read the course listings, giving preference to freshly parsed over migrated ones.
-        parsed_courses_file = Path(f"{data_dir}/parsed_courses/{season}.json")
+        parsed_courses_file = data_dir / "parsed_courses" / f"{season}.json"
+        # check migrated courses as a fallback
+        migrated_courses_file = data_dir / "migrated_courses" / f"{season}.json"
 
         if parsed_courses_file.is_file():
             parsed_course_info = pd.DataFrame(pd.read_json(str(parsed_courses_file)))
         else:
-            # check migrated courses as a fallback
-            migrated_courses_file = Path(
-                f"{data_dir}/migrated_courses/{season}.json"
-            )
-
             if not migrated_courses_file.is_file():
                 print(
                     f"Skipping season {season}: not found in parsed or migrated courses."
                 )
                 continue
-            with open(migrated_courses_file, "r") as f:
-                parsed_course_info = pd.DataFrame(
-                    pd.read_json(str(migrated_courses_file))
-                )
+            parsed_course_info = pd.DataFrame(
+                pd.read_json(str(migrated_courses_file))
+            )
 
         parsed_course_info["season_code"] = season
         merged_course_info_.append(parsed_course_info)
@@ -249,7 +245,7 @@ def transform(data_dir: Path):
     Path(csv_dir).mkdir(parents=True, exist_ok=True)
 
     def export_csv(
-        table: pd.DataFrame, table_name: str, csv_kwargs: Dict[str, Any] = None
+        table: pd.DataFrame, table_name: str, csv_kwargs: dict[str, Any] = None
     ):
         """
         Exports a table to a CSV file with provided name.

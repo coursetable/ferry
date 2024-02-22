@@ -1,7 +1,6 @@
 import asyncio
 from pathlib import Path
 
-import httpx
 import uvloop
 
 from ferry.crawler.fetch_classes import fetch_classes
@@ -12,18 +11,16 @@ from ferry.deploy import deploy
 from ferry.stage import stage
 from ferry.transform import transform
 from ferry.utils import (
-    get_parser,
+    get_args,
     init_sentry,
-    load_yaml,
-    parse_env_args,
     parse_seasons_arg,
-    save_yaml,
+    Args,
 )
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
 
-async def start_crawl(args):
+async def start_crawl(args: Args):
     # Fetch seasons
     course_seasons = await fetch_course_seasons(
         data_dir=args.data_dir, client=args.client
@@ -54,9 +51,9 @@ async def start_crawl(args):
 
     print("-" * 80)
 
-def sync_db(args):
+def sync_db(args: Args):
     db = Database(args.database_connect_string)
-    
+
     stage(data_dir=Path(args.data_dir), database=db)
     print("-" * 80)
 
@@ -68,25 +65,7 @@ def sync_db(args):
     print("Database sync: ✔")
 
 async def main():
-    parser = get_parser()
-
-    # Load YAML config as default args
-    load_yaml(parser)
-
-    args = parser.parse_args()
-    
-    # Set args.sync_db to True if args.release is True
-    if args.release:
-        args.sync_db = True
-
-    # Save config YAML file if specified
-    save_yaml(args)
-
-    # Parse env var args
-    parse_env_args(args)
-
-    # Initlize HTTPX client, only used for fetching classes (ratings fetch initializes its own client with CAS auth)
-    args.client = httpx.AsyncClient(timeout=None)
+    args = get_args()
 
     # Create data directory if it doesn't exist
     Path(args.data_dir).mkdir(parents=True, exist_ok=True)

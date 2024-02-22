@@ -13,7 +13,6 @@ import asyncio
 import concurrent.futures
 import traceback
 from pathlib import Path
-from typing import List, Union
 
 import diskcache
 import ujson
@@ -51,7 +50,7 @@ async def is_yale_college(
     season_code: str,
     crn: str,
     client: AsyncClient = AsyncClient(timeout=None),
-) -> Union[str, bool]:
+) -> str | bool:
     """
     Helper function to check if course is in Yale College
     (only Yale College and Summer Session courses are rated)
@@ -146,9 +145,9 @@ async def is_yale_college(
 
 async def fetch_ratings(
     cas_cookie: str,
-    seasons: List[str],
+    seasons: list[str],
     data_dir: str = None,
-    courses: List[dict] = None,
+    courses: list[dict] = None,
 ):
     # We need a place for mandatory cache files to go.
     if (cache_dir := data_dir) is None:
@@ -266,9 +265,9 @@ async def fetch_ratings(
 async def fetch_course_ratings(
     season_code: str,
     crn: str,
-    data_dir: str = None,
-    client: AsyncClient = AsyncClient(timeout=None),
-    is_yale_college: bool = True,
+    data_dir: str,
+    client: AsyncClient,
+    is_yale_college: bool,
 ):
     course_unique_id = f"{season_code}-{crn}"
 

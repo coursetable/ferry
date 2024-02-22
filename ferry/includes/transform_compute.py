@@ -5,7 +5,6 @@ Used by /ferry/transform.py.
 """
 import csv
 import math
-from typing import List, Optional
 
 import pandas as pd
 from tqdm import tqdm
@@ -104,7 +103,7 @@ def evaluation_statistics_computed(
     )
 
     # compute average rating of responses array
-    def average_rating(ratings: List[int]) -> Optional[float]:
+    def average_rating(ratings: list[int]) -> float | None:
         if not ratings or not sum(ratings):
             return None
         agg = 0

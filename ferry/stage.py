@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Any, Dict
+from typing import Any
 
 import pandas as pd
 from sqlalchemy import MetaData
@@ -17,12 +17,12 @@ def stage(data_dir: Path, database: Database):
     print("\n[Reading in tables from CSVs]")
 
     csv_dir = data_dir / "importer_dumps"
-    Path(csv_dir).mkdir(parents=True, exist_ok=True)
+    csv_dir.mkdir(parents=True, exist_ok=True)
 
     # common pd.read_csv arguments
-    general_csv_kwargs: Dict[Any, Any] = {"index_col": 0, "low_memory": False}
+    general_csv_kwargs: dict[Any, Any] = {"index_col": 0, "low_memory": False}
 
-    def load_csv(table_name: str, csv_kwargs: Dict[str, Any] = None) -> pd.DataFrame:
+    def load_csv(table_name: str, csv_kwargs: dict[str, Any] = None) -> pd.DataFrame:
         """
         Loads a CSV given a table name.
 

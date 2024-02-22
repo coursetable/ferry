@@ -4,14 +4,14 @@ Functions for processing ratings.
 fetch_course_eval is used by /ferry/crawler/fetch_ratings.py.
 """
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any
 from urllib.parse import urlencode
 
 import requests
 from bs4 import BeautifulSoup
 from httpx import AsyncClient
 
-from ferry.utils import load_cache_json, request, save_cache_json
+from ferry.utils import request, save_cache_json
 
 QuestionId = str
 
@@ -58,7 +58,7 @@ class AuthError(Exception):
 
 def fetch_questions(
     page, crn, term_code
-) -> Tuple[Dict[QuestionId, str], Dict[QuestionId, bool]]:
+) -> tuple[dict[QuestionId, str], dict[QuestionId, bool]]:
     """
     Get list of question Ids for a certain course from OCE.
 
@@ -126,7 +126,7 @@ def fetch_questions(
 
 def fetch_eval_ratings(
     page: requests.Response, question_id: str
-) -> Tuple[List[int], List[str]]:
+) -> tuple[list[int], list[str]]:
     """
     Fetch the evaluation ratings for the given question.
 
@@ -169,8 +169,8 @@ def fetch_eval_ratings(
 
 
 def fetch_eval_comments(
-    page: requests.Response, questions: Dict[QuestionId, str], question_id: str
-) -> Dict[str, Any]:
+    page: requests.Response, questions: dict[QuestionId, str], question_id: str
+) -> dict[str, Any]:
     """
     Fetch the comments for the given narrative question.
 
@@ -224,7 +224,7 @@ def fetch_eval_comments(
 
 def fetch_course_enrollment(
     page: requests.Response,
-) -> Tuple[Dict[str, Optional[int]], Dict[str, Any]]:
+) -> tuple[dict[str, int | None], dict[str, Any]]:
     """
     Get enrollment statistics for this course.
 
@@ -240,7 +240,7 @@ def fetch_course_enrollment(
 
     soup = BeautifulSoup(page.content, "lxml")
 
-    stats: Dict[str, Optional[int]] = {}
+    stats: dict[str, int | None] = {}
 
     infos = (
         soup.find("div", id="courseHeader")
@@ -312,7 +312,7 @@ def process_course_eval(page_index, crn_code, term_code, path):
                 }
             )
 
-    course_eval: Dict[str, Any] = {}
+    course_eval: dict[str, Any] = {}
     course_eval["crn_code"] = crn_code
     course_eval["season"] = term_code
     course_eval["enrollment"] = enrollment
@@ -328,7 +328,7 @@ def process_course_eval(page_index, crn_code, term_code, path):
 
 async def fetch_course_eval(
     client: AsyncClient, crn_code: str, term_code: str, data_dir: str
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Gets evaluation data and comments for the specified course in specified term.
 
