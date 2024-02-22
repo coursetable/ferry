@@ -15,7 +15,7 @@ setup(
         'regex==2022.10.31',
         'pandas==1.5.2',
         'vadersentiment==3.3.2',
-        'ujson==4.3.0',
+        'ujson==5.4.0',
         'textdistance==4.5.0',
         'sqlalchemy-mixins==1.5.3',
         'sqlalchemy==1.4.45',
