@@ -227,6 +227,7 @@ def resolve_historical_courses(
     for course in courses["course_id"]:
         same_courses.add_node(course)
 
+    # TODO: Add concurrency
     for course, shared_code_courses in tqdm(
         courses_shared_code.iteritems(),  # type: ignore
         total=len(courses_shared_code),
@@ -250,6 +251,7 @@ def resolve_historical_courses(
         long_descriptions, "course_id", "description"
     )
 
+    # TODO: Add concurrency
     for course_1, course_2 in tqdm(
         same_courses.edges(data=False), desc="Building filtered same-courses graph"
     ):

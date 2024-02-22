@@ -337,6 +337,7 @@ def courses_computed(
             last_enrollment_same_professors,
         )
 
+     # TODO: Add concurrency
     tqdm.pandas(desc="Finding last-offered course")
     courses["last_offered_course_id"] = courses.progress_apply(  # type: ignore
         get_last_offered, axis=1

@@ -192,7 +192,7 @@ def parse_env_args(args):
 
     if args.cas_cookie is None:
         args.cas_cookie = os.environ.get("CAS_COOKIE")
-        if args.cas_cookie is None:
+        if args.cas_cookie is None and args.fetch_evals:
             # prompt user
             args.cas_cookie = input("Enter CAS cookie: ")
 
