@@ -22,23 +22,25 @@ asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
 async def start_crawl(args: Args):
     # Fetch seasons
-    course_seasons = await fetch_course_seasons(
-        data_dir=args.data_dir, client=args.client
-    )
+    if args.fetch_classes:
+        course_seasons = await fetch_course_seasons(
+            data_dir=args.data_dir, client=args.client
+        )
 
-    # Parse season args
-    seasons = parse_seasons_arg(
-        arg_seasons=args.seasons, all_viable_seasons=course_seasons
-    )
+        # Parse season args
+        seasons = parse_seasons_arg(
+            arg_seasons=args.seasons, all_viable_seasons=course_seasons
+        )
 
-    print("-" * 80)
+        print("-" * 80)
 
-    # Fetch classes/courses
-    classes = await fetch_classes(
-        seasons=seasons,
-        data_dir=args.data_dir,
-        client=args.client,
-    )
+        # Fetch classes/courses
+        classes = await fetch_classes(
+            seasons=seasons,
+            data_dir=args.data_dir,
+            client=args.client,
+            use_cache=args.use_cache
+        )
 
     # Fetch ratings/evals
     if args.fetch_evals:

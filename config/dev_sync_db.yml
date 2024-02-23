@@ -2,9 +2,12 @@
 # This configuation is used to enable syncing the local postgres database in a dev environment.
 
 cas_cookie: null
+fetch_classes: false
 fetch_evals: false
 generate_diagram: true
 release: false
 seasons: null
 sentry_url: null
 sync_db: true
+database_connect_string: "postgresql://postgres:postgres@db:5432/postgres"
+use_cache: true

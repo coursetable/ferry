@@ -31,6 +31,7 @@ def transform(data_dir: Path):
     # Get seasons to import
     # ---------------------
     # get full list of course seasons from files
+    Path(data_dir / "migrated_courses").mkdir(parents=True, exist_ok=True)
     course_seasons = sorted(
         [
             filename.split(".")[0]  # remove the .json extension

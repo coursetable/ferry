@@ -14,6 +14,7 @@ class RawArgs:
     config_file: str
     data_dir: str
     database_connect_string: str | None
+    fetch_classes: bool | None
     fetch_evals: bool | None
     generate_diagram: bool | None
     release: bool | None
@@ -21,6 +22,7 @@ class RawArgs:
     seasons: list[str] | None
     sentry_url: str | None
     sync_db: bool | None
+    use_cache: bool | None
 
 class Args:
     cas_cookie: str
@@ -28,12 +30,14 @@ class Args:
     client: AsyncClient
     data_dir: str
     database_connect_string: str
+    fetch_classes: bool
     fetch_evals: bool
     generate_diagram: bool
     release: bool
     seasons: list[str] | None
     sentry_url: str
     sync_db: bool
+    use_cache: bool
 
 class RateLimitError(Exception):
     """
@@ -74,6 +78,12 @@ def get_parser():
     )
 
     parser.add_argument(
+        "--use-cache",
+        help="Whether to use cache for requests. Automatically set to false in release mode.",
+        action="store_true",
+    )
+
+    parser.add_argument(
         "--sync-db",
         help="Sync the database. This is automatically set to true in release mode.",
         action="store_true",
@@ -83,6 +93,12 @@ def get_parser():
     parser.add_argument(
         "--fetch-evals",
         help="Fetch evaluations.",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "--fetch-classes",
+        help="Fetch classes.",
         action="store_true",
     )
 
@@ -288,9 +304,10 @@ def get_args() -> Args:
 
     args: RawArgs = parser.parse_args()
 
-    # Set args.sync_db to True if args.release is True
+    # Set args.sync_db to True and args.use_cache to False if args.release is True
     if args.release:
         args.sync_db = True
+        args.use_cache = False
 
     # Save config YAML file if specified
     save_yaml(args)

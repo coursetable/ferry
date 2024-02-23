@@ -3,8 +3,10 @@
 
 cas_cookie: null
 database_connect_string: null
-fetch_evals: false
+fetch_classes: true
+fetch_evals: true
 generate_diagram: false
 release: false
 sentry_url: null
 sync_db: false
+use_cache: true

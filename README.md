@@ -1,23 +1,13 @@
 # Ferry v2 - **UNDER DEVELOPMENT**
 
-INSTALLATION:
-1. Install [`graphviz`](https://www.graphviz.org/) for your platform
-   - *MacOS*: Install with `brew` and install `pygraphviz`
-      ```sh
-      brew install graphviz
-      python -m pip install \
-      --global-option=build_ext \
-      --global-option="-I$(brew --prefix graphviz)/include/" \
-      --global-option="-L$(brew --prefix graphviz)/lib/" \
-      pygraphviz
-      ```
-1. Install `ferry` in editable mode
-   ```sh
-   pip install -e .
-   ```
+Contributing
+1. Ferry uses [VSCode's Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) for the dev environment. All environment setup is handled through the standard dev container pipeline.
 
 TODO:
+ - **Ensure that parallel ratings is accurate**
+ - Modernize dependencies
  - Error handling on legacy artifacts in dev (old discussion sections, demand stats, and migrated courses)
+ - SIGINT handler
  - Containerize ferry
     - Full Doppler integration
  - Write documentation, standardize variable names, cleanup, etc.

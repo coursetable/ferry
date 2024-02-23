@@ -201,7 +201,8 @@ async def fetch_ratings(
                     f"Season {season} not found in season_courses directory."
                 )
 
-            season_courses = season_courses[:100]
+            # Test for first 100 courses
+            # season_courses = season_courses[:100]
 
             # Check if course is in Yale College
             futures = [

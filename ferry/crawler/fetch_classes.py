@@ -24,6 +24,7 @@ async def fetch_classes(
     seasons: list[str],
     data_dir: str,
     client: AsyncClient = AsyncClient(timeout=None),
+    use_cache: bool = True,
 ) -> dict:
     # Concurrency with async at the season level overloads the CPU
     # futures = [ fetch_class(season, data_dir=data_dir, client=client) for season in seasons ]
@@ -33,7 +34,7 @@ async def fetch_classes(
 
     classes = {}
     for season in tqdm(seasons, desc="Season Progress", leave=False):
-        classes[season] = await fetch_class(season, data_dir=data_dir, client=client)
+        classes[season] = await fetch_class(season, data_dir=data_dir, client=client, use_cache=use_cache)
 
     print("\033[F", end="")
     print(f"Fetching course info for seasons: {seasons}... ✔")
@@ -46,23 +47,23 @@ async def fetch_classes(
 # -----------------------------------------
 
 
-async def fetch_class(season: str, data_dir, client: AsyncClient):
+async def fetch_class(season: str, data_dir, client: AsyncClient, use_cache: bool = True):
     # fetch season classes
     season_courses = await fetch_season_courses(
-        season, data_dir=data_dir, client=client
+        season, data_dir=data_dir, client=client, use_cache=use_cache
     )
     season_fysem_courses = await fetch_season_courses(
-        season, data_dir=data_dir, client=client, fysem=True
+        season, data_dir=data_dir, client=client, fysem=True, use_cache=use_cache
     )
 
     # fetch detailed info for all classes in each season
     aggregate_season_json = await fetch_aggregate_season_json(
-        season, season_courses, data_dir=data_dir, client=client
+        season, season_courses, data_dir=data_dir, client=client, use_cache=use_cache
     )
 
     # parse courses
     parsed_courses = parse_courses(
-        season, aggregate_season_json, season_fysem_courses, data_dir=data_dir
+        season, aggregate_season_json, season_fysem_courses, data_dir=data_dir, use_cache=use_cache
     )
 
     return parsed_courses
@@ -70,7 +71,7 @@ async def fetch_class(season: str, data_dir, client: AsyncClient):
 
 # fetch overview info for all classes in each season
 async def fetch_season_courses(
-    season: str, data_dir: str, client: AsyncClient, fysem: bool = False
+    season: str, data_dir: str, client: AsyncClient, fysem: bool = False, use_cache: bool = True
 ):
     if fysem:
         criteria = [{"field": "fsem_attrs", "value": "Y"}]
@@ -80,7 +81,7 @@ async def fetch_season_courses(
         f_suffix = ""
 
     # load from cache if it exists
-    if (
+    if use_cache and (
         cache_load := load_cache_json(
             f"{data_dir}/season_courses/{season}{f_suffix}.json"
         )
@@ -100,11 +101,11 @@ async def fetch_season_courses(
 
 # fetch detailed info for all classes in each season
 async def fetch_aggregate_season_json(
-    season: str, season_courses, data_dir: str, client: AsyncClient
+    season: str, season_courses, data_dir: str, client: AsyncClient, use_cache: bool = True
 ):
     # load from cache if it exists
 
-    if (
+    if use_cache and (
         cache_load := load_cache_json(f"{data_dir}/course_json_cache/{season}.json")
     ) is not None:
         return cache_load
@@ -126,9 +127,9 @@ async def fetch_aggregate_season_json(
 
 
 # combine regular and fysem courses in each season
-def parse_courses(season: str, aggregate_season_json, fysem_courses, data_dir: str):
+def parse_courses(season: str, aggregate_season_json, fysem_courses, data_dir: str, use_cache: bool = True):
     # load from cache if it exists
-    if (
+    if use_cache and (
         cache_load := load_cache_json(f"{data_dir}/parsed_courses/{season}.json")
     ) is not None:
         return cache_load
