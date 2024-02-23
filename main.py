@@ -54,10 +54,10 @@ async def start_crawl(args: Args):
 def sync_db(args: Args):
     db = Database(args.database_connect_string)
 
-    stage(data_dir=Path(args.data_dir), database=db)
+    transform(data_dir=Path(args.data_dir))
     print("-" * 80)
 
-    transform(data_dir=Path(args.data_dir))
+    stage(data_dir=Path(args.data_dir), database=db)
     print("-" * 80)
 
     deploy(db=db)
