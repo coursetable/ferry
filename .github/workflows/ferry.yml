@@ -1,7 +1,7 @@
 name: Ferry Run
 on: push
 jobs:
-  build:
+  ferry:
     runs-on: ubuntu-latest
     strategy:
         matrix:
@@ -15,6 +15,11 @@ jobs:
           path: data
           ssh-key: ${{ secrets.REPO_SSH_KEY }}
           fetch-depth: 1
+
+      - name: Install Packages
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install gcc g++ musl-dev libffi-dev libpq-dev libhdf5-dev python3-tables graphviz libgraphviz-dev
 
       - uses: actions/cache@v4
         id: cache-uv
