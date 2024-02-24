@@ -1,7 +1,16 @@
 # Ferry v2 - **UNDER DEVELOPMENT**
 
 Contributing
-1. Ferry uses [VSCode's Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) for the dev environment. All environment setup is handled through the standard dev container pipeline.
+1. Ferry uses [VSCode's Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) for the dev environment. All environment setup is handled through the standard Dev Container pipeline.
+
+1. *MacOS*: If you want to develop outside of the Dev Container, please install `pygraphviz` first before running `pip install -e .`
+   ```sh
+   pip install -U --no-cache-dir  \
+               --config-settings="--global-option=build_ext" \
+               --config-settings="--global-option=-I$(brew --prefix graphviz)/include/" \
+               --config-settings="--global-option=-L$(brew --prefix graphviz)/lib/" \
+               pygraphviz
+   ```
 
 TODO:
  - **Ensure that parallel ratings is accurate**
