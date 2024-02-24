@@ -8,14 +8,10 @@ from ferry.crawler.fetch_ratings import fetch_ratings
 from ferry.crawler.fetch_seasons import fetch_course_seasons
 from ferry.database.database import Database
 from ferry.deploy import deploy
+from ferry.includes.rating_parsing import parse_ratings
 from ferry.stage import stage
 from ferry.transform import transform
-from ferry.utils import (
-    get_args,
-    init_sentry,
-    parse_seasons_arg,
-    Args,
-)
+from ferry.utils import Args, get_args, init_sentry, parse_seasons_arg
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
@@ -50,6 +46,9 @@ async def start_crawl(args: Args):
             data_dir=args.data_dir,
             courses=classes,
         )
+    else:
+        # Make sure to parse evals since they are not cached in the data directory
+        await parse_ratings(data_dir=args.data_dir)
 
     print("-" * 80)
 
