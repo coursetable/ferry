@@ -81,6 +81,9 @@ def parse_rating(
 
 
 async def parse_ratings(data_dir: str):
+    
+    print(f"Parsing course ratings...")
+
     root = Path(data_dir)
     (root / "parsed_evaluations").mkdir(parents=True, exist_ok=True)
     questions_path = root / "parsed_evaluations/evaluation_questions.csv"
@@ -157,6 +160,9 @@ async def parse_ratings(data_dir: str):
     narratives_file.close()
     ratings_file.close()
     statistics_file.close()
+
+    print("\033[F", end="")
+    print(f"Parsing course ratings... ✔")
 
 
 ####################
