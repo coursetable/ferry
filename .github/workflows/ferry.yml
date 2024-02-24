@@ -32,16 +32,15 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
+      - name: Install uv and create virtual environment
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv venv .venv
+          echo "VIRTUAL_ENV=.venv" >> $GITHUB_ENV
+          echo "$PWD/.venv/bin" >> $GITHUB_PATH
+
       - name: Install dependencies
-        run: |
-          python -m pip install uv
-          uv venv
-          uv pip install -e .
-      
-      - name: Activate virtualenv
-        run: |
-          . .venv/bin/activate
-          echo PATH=$PATH >> $GITHUB_ENV
+        run: uv pip install -e .
 
       - name: Refresh latest 3 seasons
         run: python main.py -f config/release_courses.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
