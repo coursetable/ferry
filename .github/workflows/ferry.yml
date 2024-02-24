@@ -13,8 +13,8 @@ jobs:
         with:
           repository: coursetable/ferry-data
           path: data
-          token: ${{ secrets.REPO_SSH_KEY }}
-          depth: 1
+          ssh-key: ${{ secrets.REPO_SSH_KEY }}
+          fetch-depth: 1
 
       - uses: actions/cache@v4
         id: cache-uv
