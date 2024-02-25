@@ -16,11 +16,10 @@ Contributing
 
 TODO:
  - **Ensure that parallel ratings is accurate**
+ - Create crontab schedule 
  - Modernize dependencies
  - Error handling on legacy artifacts in dev (old discussion sections, demand stats, and migrated courses)
  - SIGINT handler
- - Containerize ferry
-    - Full Doppler integration
  - Write documentation, standardize variable names, cleanup, etc.
  - Cleanup those branches
  - Lint and format CI
@@ -42,3 +41,5 @@ DONE:
     - `pathlib.Path` everywhere, etc.
  - No more `poetry`
     - Just use `pip` with frozen requirements
+ - Automated cron job Ferry run with GitHub Actions
+    - Containerized for dev
