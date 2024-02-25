@@ -16,7 +16,7 @@ Contributing
 
 TODO:
  - **Ensure that parallel ratings is accurate**
- - Create crontab schedule 
+ - Rearchitect GitHub action to create Postgres dump, upload with VC (enable lifecycle management) to Azure Blob, and restart prod `postgres` container to trigger new pull.
  - Modernize dependencies
  - Error handling on legacy artifacts in dev (old discussion sections, demand stats, and migrated courses)
  - SIGINT handler
