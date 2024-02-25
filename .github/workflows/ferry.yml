@@ -1,5 +1,10 @@
 name: Ferry Run
-on: push
+on:
+  push:
+    branches: [master]
+    paths:
+      - '**.py'
+
 jobs:
   ferry:
     runs-on: ubuntu-latest
