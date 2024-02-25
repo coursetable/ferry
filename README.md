@@ -1,5 +1,7 @@
 # Ferry v2 - **UNDER DEVELOPMENT**
 
+[![Ferry Run](https://github.com/coursetable/ferry/actions/workflows/ferry.yml/badge.svg)](https://github.com/coursetable/ferry/actions/workflows/ferry.yml)
+
 Contributing
 1. Ferry uses [VSCode's Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) for the dev environment. All environment setup is handled through the standard Dev Container pipeline.
 
