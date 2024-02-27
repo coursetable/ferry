@@ -5,6 +5,7 @@ cas_cookie: null
 database_connect_string: null
 fetch_classes: true
 fetch_evals: true
+parse_evals: false
 generate_diagram: false
 release: false
 sentry_url: null

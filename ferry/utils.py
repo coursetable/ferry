@@ -17,6 +17,7 @@ class RawArgs:
     database_connect_string: str | None
     fetch_classes: bool | None
     fetch_evals: bool | None
+    parse_evals: bool | None
     generate_diagram: bool | None
     release: bool | None
     save_config: bool | None
@@ -33,6 +34,7 @@ class Args:
     database_connect_string: str
     fetch_classes: bool
     fetch_evals: bool
+    parse_evals: bool
     generate_diagram: bool
     release: bool
     seasons: list[str] | None

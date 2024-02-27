@@ -4,6 +4,7 @@
 cas_cookie: null
 fetch_classes: false
 fetch_evals: false
+parse_evals: true
 generate_diagram: true
 release: false
 seasons: null

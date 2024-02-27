@@ -46,7 +46,7 @@ async def start_crawl(args: Args):
             data_dir=args.data_dir,
             courses=classes,
         )
-    else:
+    elif args.parse_evals:
         # Make sure to parse evals since they are not cached in the data directory
         await parse_ratings(data_dir=args.data_dir)
 
