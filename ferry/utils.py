@@ -106,6 +106,12 @@ def get_parser():
     )
 
     parser.add_argument(
+        "--parse-evals",
+        help="Parse evaluations.",
+        action="store_true",
+    )
+
+    parser.add_argument(
         "--generate-diagram",
         help="Generate database diagram.",
         action="store_true",
