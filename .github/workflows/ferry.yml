@@ -63,3 +63,7 @@ jobs:
             git config --global user.email 'coursetable.at.yale@gmail.com'
             git diff-index --quiet HEAD || git commit -am "automatic update on $(date)"
             git push
+
+      - name: Regenerate static catalog on server
+        run: |
+          curl --silent --show-error -H "X-FERRY-SECRET: ${{secrets.FERRY_SECRET}}" https://api.coursetable.com/api/catalog/refresh
