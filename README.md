@@ -16,6 +16,7 @@ Contributing
 
 TODO:
  - **Ensure that parallel ratings is accurate**
+ - May have to restart GraphQL Engine container in ferry run as well.
  - Rearchitect GitHub action to create Postgres dump, upload with VC (enable lifecycle management) to Azure Blob, and restart prod `postgres` container to trigger new pull.
  - Modernize dependencies
  - Error handling on legacy artifacts in dev (old discussion sections, demand stats, and migrated courses)
