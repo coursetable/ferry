@@ -54,7 +54,7 @@ jobs:
         run: python main.py -f config/release_fetch.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
 
       - name: Sync Postgres DB
-        run: python main.py -f config/release_sync.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
+        run: python main.py -f config/release_sync_db.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
 
       - name: Commit updated ferry-data
         run: |
