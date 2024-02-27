@@ -10,4 +10,3 @@ seasons: null
 sentry_url: null
 sync_db: true
 database_connect_string: "postgresql://postgres:postgres@db:5432/postgres"
-use_cache: true

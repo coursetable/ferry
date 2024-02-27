@@ -10,6 +10,7 @@ on:
 jobs:
   ferry:
     runs-on: ubuntu-latest
+    timeout-minutes: 40
     strategy:
         matrix:
           python-version: ["3.10"]
@@ -49,8 +50,11 @@ jobs:
       - name: Install dependencies
         run: uv pip install -e .
 
-      - name: Refresh latest 3 seasons
-        run: python main.py -f config/release_courses.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
+      - name: Fetch latest 3 seasons
+        run: python main.py -f config/release_fetch.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
+
+      - name: Sync Postgres DB
+        run: python main.py -f config/release_sync.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
 
       - name: Commit updated ferry-data
         run: |

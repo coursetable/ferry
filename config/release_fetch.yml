@@ -1,5 +1,5 @@
 # PROD CONFIG
-# This configuation is used for syncing the last 3 seasons of course data (no evaluations) to the production database.
+# This configuation is used for fetching the latest data for the last 3 seasons of course data (no evaluations).
 
 cas_cookie: null
 database_connect_string: null
@@ -10,4 +10,4 @@ release: true
 seasons:
 - LATEST_3
 sentry_url: null
-sync_db: true
+sync_db: false

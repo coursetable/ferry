@@ -1,0 +1,12 @@
+# PROD CONFIG
+# This configuation is used for syncing to the production database.
+
+cas_cookie: null
+database_connect_string: null
+fetch_classes: false
+fetch_evals: false
+generate_diagram: false
+release: true
+seasons: null
+sentry_url: null
+sync_db: true

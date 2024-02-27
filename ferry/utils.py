@@ -9,6 +9,7 @@ from typing import Any
 
 from httpx import AsyncClient
 
+
 class RawArgs:
     cas_cookie: str | None
     config_file: str
@@ -304,9 +305,8 @@ def get_args() -> Args:
 
     args: RawArgs = parser.parse_args()
 
-    # Set args.sync_db to True and args.use_cache to False if args.release is True
+    # Set args.use_cache to False if args.release is True
     if args.release:
-        args.sync_db = True
         args.use_cache = False
 
     # Save config YAML file if specified
