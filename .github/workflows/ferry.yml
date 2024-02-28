@@ -67,6 +67,7 @@ jobs:
           commit_message: "automatic update on $(date)"
           commit_user_name: "Ferry Bot"
           commit_user_email: "coursetable.at.yale@gmail.com"
+          commit_author: course-table <course-table@users.noreply.github.com>
           repository: data
           skip_dirty_check: false
 
