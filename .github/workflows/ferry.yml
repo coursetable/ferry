@@ -33,7 +33,11 @@ jobs:
         id: cache-uv
         with:
             path: ~/.cache/uv
-            key: ${{ runner.os }}-python-${{ matrix.python-version }}-uv
+            key: ${{ runner.os }}-python-${{ matrix.python-version }}-${{ hashFiles('**/setup.py') }}
+            restore-keys: |
+              ${{ runner.os }}-python-${{ matrix.python-version }}-
+              ${{ runner.os }}-python-
+              ${{ runner.os }}-
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
