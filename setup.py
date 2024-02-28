@@ -9,7 +9,7 @@ setup(
         'beautifulsoup4==4.11.1',
         'stackprinter==0.2.10',
         'sentry-sdk==1.12.1',
-        'tqdm==4.64.1',
+        'tqdm==4.66.2',
         'unidecode==1.3.6',
         'tika==1.25',
         'regex==2022.10.31',
