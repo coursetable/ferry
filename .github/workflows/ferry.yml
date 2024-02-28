@@ -61,7 +61,7 @@ jobs:
             cd data
             git config --global user.name 'Coursetable Bot'
             git config --global user.email 'coursetable.at.yale@gmail.com'
-            git diff-index --quiet HEAD || git commit -am "automatic update on $(date)"
+            git diff-index --quiet --cached HEAD || git commit -am "automatic update on $(date)"
             git push
 
       - name: Regenerate static catalog on server
