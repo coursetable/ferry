@@ -4,6 +4,7 @@ on:
     branches: [master]
     paths:
       - '**.py'
+      - '.github/workflows/ferry.yml'
   schedule:
     - cron: '43 7 * * *'
 
@@ -61,14 +62,13 @@ jobs:
         run: TQDM_DISABLE=1 python main.py -f config/release_sync_db.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
 
       - name: Commit updated ferry-data
-        run: |
-            cd data
-            git config --global user.name 'Coursetable Bot'
-            git config --global user.email 'coursetable.at.yale@gmail.com'
-            if ! git diff-index --quiet HEAD; then
-              git commit -am "automatic update on $(date)"
-              git push origin master
-            fi
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "automatic update on $(date)"
+          commit_user_name: "Ferry Bot"
+          commit_user_email: "coursetable.at.yale@gmail.com"
+          repository: data
+          skip_dirty_check: false
 
       - name: Regenerate static catalog on server
         run: |
