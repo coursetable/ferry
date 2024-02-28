@@ -8,6 +8,7 @@ import math
 
 import pandas as pd
 from tqdm import tqdm
+import logging
 
 from ferry import database
 from ferry.includes.same_courses import (
@@ -41,6 +42,8 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
     evaluation_questions:
         table with computed fields.
     """
+
+    logging.debug("Assigning question tags")
 
     def assign_code(row):
 
@@ -91,6 +94,8 @@ def evaluation_statistics_computed(
     evaluation_statistics:
         Table with computed fields.
     """
+    logging.debug("Computing average ratings by course")
+
     # create local deep copy
     evaluation_ratings = evaluation_ratings.copy(deep=True)
 
@@ -193,6 +198,8 @@ def courses_computed(
     courses:
         Table with computed fields.
     """
+    logging.debug("Computing courses")
+
     listings = listings.copy(deep=True)
     evaluation_statistics = evaluation_statistics.copy(deep=True)
     course_professors = course_professors.copy(deep=True)
@@ -246,7 +253,7 @@ def courses_computed(
     listings["professors"] = listings["course_id"].apply(course_to_professors.get)
     courses["professors"] = courses["course_id"].apply(course_to_professors.get)
 
-    print("Computing last offering statistics")
+    logging.debug("Computing last offering statistics")
 
     # course_id for all evaluated courses
     evaluated_courses = set(
@@ -336,13 +343,12 @@ def courses_computed(
             last_enrollment_same_professors,
         )
 
-     # TODO: Add concurrency
-    tqdm.pandas(desc="Finding last-offered course")
+    tqdm.pandas(desc="Finding last-offered course", leave=False)
     courses["last_offered_course_id"] = courses.progress_apply(  # type: ignore
         get_last_offered, axis=1
     )
 
-    tqdm.pandas(desc="Finding last-offered enrollment")
+    tqdm.pandas(desc="Finding last-offered enrollment", leave=False)
     # getting last-offered enrollment
     (
         courses["last_enrollment_course_id"],
@@ -353,7 +359,7 @@ def courses_computed(
         *courses.progress_apply(get_last_offered_enrollment, axis=1)  # type: ignore
     )
 
-    print("Computing historical ratings for courses")
+    logging.debug("Computing historical ratings for courses")
 
     # map courses to ratings
     course_to_overall = dict(
@@ -426,6 +432,8 @@ def professors_computed(
     professors:
         Table with computed fields.
     """
+    logging.debug("Computing ratings for professors")
+
     # create local deep copy
     course_professors = course_professors.copy(deep=True)
 

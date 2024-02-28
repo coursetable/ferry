@@ -1,8 +1,8 @@
+import logging
 from pathlib import Path
 
 import sqlalchemy
-from sqlalchemy import MetaData
-from tqdm import tqdm
+from sqlalchemy import MetaData, text
 
 from ferry import database
 
@@ -15,6 +15,7 @@ def listing_invariants(session: sqlalchemy.orm.session.Session):
     Check invariant:
         listing.season_code == course.season_code if listing.course_id == course.course_id.
     """
+
     for listing_id, course_id, listing_season_code, course_season_code in session.query(
         database.Listing.listing_id,
         database.Listing.course_id,
@@ -34,6 +35,7 @@ def question_invariants(session: sqlalchemy.orm.session.Session):
     Check invariant:
         evaluation_questions.options is null iff evaluation_questions.is_narrative = True
     """
+
     for question in session.query(
         database.EvaluationQuestion
     ):
@@ -79,13 +81,12 @@ def course_invariants(session: sqlalchemy.orm.session.Session):
     Check invariant:
         every course should have at least one listing.
     """
-    courses_no_listings = (
-        session.query(database.Course)
-        .select_from(database.Listing)
-        .join(database.Listing.course, isouter=True)
-        .group_by(database.Course.course_id)
-        .having(sqlalchemy.func.count(database.Listing.listing_id) == 0)
-    ).all()
+
+    courses_no_listings = session.query(
+        database.Listing
+    ).filter(~database.Listing.course_id.in_(
+        session.query(database.Course.course_id)
+    )).all()
 
     if courses_no_listings:
 
@@ -102,38 +103,38 @@ def search_setup(session: sqlalchemy.orm.session.Session):
 
     Used by CourseTable to pull JSONs for client-side catalog browsing.
     """
-    print("Creating tmp table")
+    logging.debug("Creating tmp table")
     with open(f"{resource_dir}/computed_listing_info_tmp.sql") as tmp_file:
         tmp_sql = tmp_file.read()
-        session.execute(tmp_sql)
+        session.execute(text(tmp_sql))
 
-    print("Setting columns to not null if possible")
+    logging.debug("Setting columns to not null if possible")
     table_name = "computed_listing_info_tmp"
-    for (_, _, column_name) in session.execute(
+    for (_, _, column_name) in session.execute(text(
         # Get the list of columns in the table.
         f"""
         SELECT table_schema, table_name, column_name
         FROM information_schema.columns
         WHERE table_name = '{table_name}';
         """
-    ):
-        (null_count,) = session.execute(
+    )):
+        (null_count,) = session.execute(text(
             f"""
             SELECT count(*) FROM {table_name} WHERE {column_name} IS NULL ;
             """
-        ).first()
+        )).first()
         if null_count == 0:
-            session.execute(
+            session.execute(text(
                 f"""
                 ALTER TABLE {table_name} ALTER COLUMN {column_name} SET NOT NULL ;
                 """
-            )
-            print(f"  {column_name} not null")
+            ))
+            logging.debug(f"  {column_name} not null")
 
-    print("Swapping in the table")
+    logging.debug("Swapping in the table")
     with open(f"{resource_dir}/computed_listing_info_swap.sql") as swap_file:
         swap_sql = swap_file.read()
-        session.execute(swap_sql)
+        session.execute(text(swap_sql))
 
 
 def deploy(db: database.Database):
@@ -171,8 +172,8 @@ def deploy(db: database.Database):
     # --------------------------------------
 
     # sorted tables in the database
-    db_meta = MetaData(bind=db.Engine)
-    db_meta.reflect()
+    db_meta = MetaData()
+    db_meta.reflect(bind=db.Engine)
 
     # ordered tables defined only in our model
     alchemy_tables = db.Base.metadata.sorted_tables
@@ -190,26 +191,27 @@ def deploy(db: database.Database):
     # Check invariants on new tables
     # ------------------------------
 
-    print("\n[Checking table invariants]")
+    print("\nChecking table invariants...")
 
     items = all_items
 
     for fn in items:
         if fn.__doc__:
-            tqdm.write(f"{fn.__doc__.strip()}")
+            logging.debug(f"{fn.__doc__.strip()}")
         else:
-            tqdm.write(f"Running: {fn.__name__}")
+            logging.debug(f"Running: {fn.__name__}")
 
         with database.session_scope(db.Session) as db_session:
             fn(db_session)
 
-    print("All invariants passed")
+    print("\033[F", end="")
+    print("Checking table invariants... ✔")
 
     # -------------------------------------
     # Upgrade staged tables to primary ones
     # -------------------------------------
 
-    print("\n[Replacing old tables with staged]")
+    print("\nReplacing old tables with staged...")
 
     conn = db.Engine.connect()
 
@@ -217,45 +219,50 @@ def deploy(db: database.Database):
     # because staged tables do not have foreign key relationships
 
     replace = conn.begin()
-    conn.execute("SET CONSTRAINTS ALL DEFERRED;")
+    conn.execute(text("SET CONSTRAINTS ALL DEFERRED;"))
 
     # drop and update tables in reverse dependency order
     for table in target_tables:
 
-        print(f"Updating table {table}")
+        logging.debug(f"Updating table {table}")
 
         # remove the old table if it is present before
-        conn.execute(f"DROP TABLE IF EXISTS {table}_old CASCADE;")
+        conn.execute(text(f"DROP TABLE IF EXISTS {table}_old CASCADE;"))
         # rename current main table to _old
         # (keep the old tables instead of dropping them
         # so we can rollback if invariants don't pass)
-        conn.execute(f'ALTER TABLE IF EXISTS "{table}" RENAME TO {table}_old;')
+        conn.execute(text(f'ALTER TABLE IF EXISTS "{table}" RENAME TO {table}_old;'))
         # rename staged table to main
-        conn.execute(f'ALTER TABLE IF EXISTS "{table}_staged" RENAME TO {table};')
+        conn.execute(text(f'ALTER TABLE IF EXISTS "{table}_staged" RENAME TO {table};'))
 
     replace.commit()
+
+    print("\033[F", end="")
+    print("Replacing old tables with staged... ✔")
 
     # -----------------
     # Remove old tables
     # -----------------
 
-    print("\n[Deleting temporary old tables]")
+    print("\nDeleting temporary old tables...")
     delete = conn.begin()
-    conn.execute("SET CONSTRAINTS ALL DEFERRED;")
+    conn.execute(text("SET CONSTRAINTS ALL DEFERRED;"))
     for table in target_tables:
-        print(f"Dropping table {table}_old")
-        conn.execute(f"DROP TABLE IF EXISTS {table}_old CASCADE;")
+        logging.debug(f"Dropping table {table}_old")
+        conn.execute(text(f"DROP TABLE IF EXISTS {table}_old CASCADE;"))
 
     delete.commit()
+    print("\033[F", end="")
+    print("Deleting temporary old tables... ✔")
 
     # ----------------------
     # Rename _staged indexes
     # ----------------------
 
-    print("\n[Renaming indexes]")
+    print("\nRenaming indexes...")
 
     # sorted tables in the database
-    db_meta.reflect()
+    db_meta.reflect(bind=db.Engine)
 
     # delete previous staged indexes
     delete_indexes = conn.begin()
@@ -263,44 +270,52 @@ def deploy(db: database.Database):
         for index in meta_table.indexes:
             # remove the staged indexes
             if "_staged" in index.name:
-                # conn.execute(schema.DropIndex(index))
+                # conn.execute(text(schema.DropIndex(index)))
                 renamed = index.name.replace("_staged", "")
-                conn.execute(f"ALTER INDEX IF EXISTS {index.name} RENAME TO {renamed};")
+                conn.execute(text(f"ALTER INDEX IF EXISTS {index.name} RENAME TO {renamed};"))
         # primary key indexes are not listed under meta_table.indexes
         # so just rename these if they exist
-        conn.execute(
+        conn.execute(text(
             f"ALTER INDEX IF EXISTS pk_{meta_table.name}_staged RENAME TO pk_{meta_table.name};"
-        )
+        ))
     delete_indexes.commit()
+
+    print("\033[F", end="")
+    print("Renaming indexes... ✔")
 
     # -------
     # Reindex
     # -------
 
-    print("\n[Reindexing]")
+    print("\nReindexing...")
     conn.execution_options(isolation_level="AUTOCOMMIT").execute(
-        "REINDEX DATABASE postgres;"
+        text("REINDEX DATABASE postgres;")
     )
+    print("\033[F", end="")
+    print("Reindexing... ✔")
 
     # -----------------------------------
     # Set up materialized view and search
     # -----------------------------------
 
     # generate computed tables and full-text-search
-    print("\n[Setting up computed tables]")
+    print("\nSetting up computed tables...")
     with database.session_scope(db.Session) as db_session:
         search_setup(db_session)
+    
+    print("\033[F", end="")
+    print("Setting up computed tables... ✔")
 
     # -------------
     # Final summary
     # -------------
 
     # Print row counts for each table.
-    tqdm.write("\n[Table Statistics]")
+    print("\n[Table Statistics]")
     with database.session_scope(db.Session) as db_session:
         with open(f"{resource_dir}/table_sizes.sql") as file:
             SUMMARY_SQL = file.read()
 
-        result = db_session.execute(SUMMARY_SQL)
+        result = db_session.execute(text(SUMMARY_SQL))
         for table_counts in result:
             print(f"{table_counts[1]:>25} - {table_counts[2]:6} rows")

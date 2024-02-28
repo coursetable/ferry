@@ -46,27 +46,34 @@ async def start_crawl(args: Args):
             data_dir=args.data_dir,
             courses=classes,
         )
-    elif args.parse_evals:
-        # Make sure to parse evals since they are not cached in the data directory
-        await parse_ratings(data_dir=args.data_dir)
+    # elif args.parse_evals:
+    #     # Make sure to parse evals since they are not cached in the data directory
+    #     await parse_ratings(data_dir=args.data_dir)
 
     print("-" * 80)
 
 def sync_db(args: Args):
     db = Database(args.database_connect_string)
 
+    print("[Transform]")
     transform(data_dir=Path(args.data_dir))
     print("-" * 80)
 
+    print("[Stage]")
     stage(data_dir=Path(args.data_dir), database=db)
     print("-" * 80)
 
+    print("[Deploy]")
     deploy(db=db)
     print("-" * 80)
     print("Database sync: ✔")
 
 async def main():
     args = get_args()
+
+    if args.debug:
+        import logging
+        logging.basicConfig(level=logging.DEBUG)
 
     # Create data directory if it doesn't exist
     Path(args.data_dir).mkdir(parents=True, exist_ok=True)

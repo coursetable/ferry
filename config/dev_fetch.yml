@@ -1,5 +1,5 @@
 # DEV CONFIG
-# This configuation is used to only fetch course data (no evaluations) from all seasons in a dev environment. Please combine with -s option to specify the seasons to fetch.
+# This configuation is used to only fetch course data (no evaluations) for the last 3 seasons in a dev environment. Please combine with -s option to specify exact seasons to fetch. For debug printing, use -d option.
 
 cas_cookie: null
 database_connect_string: null
@@ -11,3 +11,5 @@ release: false
 sentry_url: null
 sync_db: false
 use_cache: true
+seasons:
+- LATEST_3

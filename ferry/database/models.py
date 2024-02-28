@@ -15,8 +15,7 @@ from sqlalchemy import (
     String,
     Table,
 )
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import backref, relationship
+from sqlalchemy.orm import backref, declarative_base, relationship
 from sqlalchemy_mixins import ReprMixin, SerializeMixin
 
 meta = MetaData(
@@ -31,8 +30,7 @@ meta = MetaData(
 
 Base = declarative_base(metadata=meta)
 
-
-class BaseModel(Base, SerializeMixin, ReprMixin):
+class BaseModel(SerializeMixin, ReprMixin, Base):
     """
     BaseModel class for all tables.
     """

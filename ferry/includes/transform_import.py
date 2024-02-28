@@ -3,6 +3,7 @@ Functions for importing information into tables.
 
 Used by /ferry/transform.py.
 """
+import logging
 from collections import Counter
 from itertools import combinations
 
@@ -44,7 +45,7 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
 
     # seasons must be sorted in ascending order
     # prioritize Yale College courses when deduplicating listings
-    print("Sorting by season and if-undergrad")
+    logging.debug("Sorting by season and if-undergrad")
 
     def classify_yc(row):
         if row["school"] == "YC":
@@ -64,7 +65,7 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
         by=["season_code", "is_yc"], ascending=[True, False]
     )
 
-    print("Aggregating cross-listings")
+    logging.debug("Aggregating cross-listings")
     merged_course_info["season_code"] = merged_course_info["season_code"].astype(int)
     merged_course_info["crn"] = merged_course_info["crn"].astype(int)
     merged_course_info["crns"] = merged_course_info["crns"].apply(
@@ -81,7 +82,7 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
     # resolve overlapping CRN sets
     crns_by_season = crns_by_season.apply(merge_overlapping)
 
-    print("Mapping out cross-listings")
+    logging.debug("Mapping out cross-listings")
     # map CRN groups to temporary IDs within each season
     temp_course_ids_by_season = crns_by_season.apply(
         lambda x: invert_dict_of_lists(dict(enumerate(x)))
@@ -113,14 +114,14 @@ def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
     -------
     professors_prep: professor attributes DataFrame
     """
-    print("Creating professors table")
+    logging.debug("Aggregating professor attributes")
     # initialize professors table
     professors_prep = courses.loc[
         :,
         ["season_code", "course_id", "professors", "professor_emails", "professor_ids"],
     ]
 
-    print("Resolving professor attributes")
+    logging.debug("Resolving professor attributes")
     # set default empty value for exploding later on
     professors_prep["professors"] = professors_prep["professors"].apply(
         lambda x: [] if not isinstance(x, list) else x
@@ -198,7 +199,7 @@ def resolve_professors(
     professors, course_professors
     """
 
-    print("Constructing professors table in chronological order")
+    logging.debug("Constructing professors table in chronological order")
 
     professors = pd.DataFrame(columns=["professor_id", "name", "email"])
 
@@ -210,13 +211,13 @@ def resolve_professors(
 
         names_ids = (
             professors.dropna(subset=["name"])
-            .groupby("name")["professor_id"]
+            .groupby("name", group_keys=True)["professor_id"]
             .apply(list)
             .to_dict()
         )
         emails_ids = (
             professors.dropna(subset=["email"])
-            .groupby("email")["professor_id"]
+            .groupby("email", group_keys=True)["professor_id"]
             .apply(list)
             .to_dict()
         )
@@ -272,11 +273,9 @@ def resolve_professors(
         tied_professors = season_professors[ties]
 
         def print_ties(row):
-            print(
-                f"Professor {row['name']} ({row['email']}) has tied matches: ",
-                end="",
+            logging.debug(
+                f"Professor {row['name']} ({row['email']}) has tied matches: { sorted(list(set(row['matched_ids_aggregate']))) }",
             )
-            print(sorted(list(set(row["matched_ids_aggregate"]))))
 
         tied_professors.apply(print_ties, axis=1)
 
@@ -312,7 +311,8 @@ def resolve_professors(
             index=new_professors.index,
             dtype=np.float64,  # type: ignore
         )
-        professors_update["professor_id"].update(new_professor_ids)
+        # Replace with new IDs
+        professors_update.loc[new_professors.index, "professor_id"] = new_professor_ids
         professors_update["professor_id"] = professors_update["professor_id"].astype(
             int
         )
@@ -357,7 +357,7 @@ def import_courses(
     """
     merged_course_info = resolve_cross_listings(merged_course_info)
 
-    print("Creating courses table")
+    logging.debug("Creating courses table")
     # initialize courses table
     courses = merged_course_info.drop_duplicates(  # type: ignore
         subset="temp_course_id"
@@ -376,7 +376,7 @@ def import_courses(
         lambda x: x.replace("\r", "")
     )
 
-    print("Creating listings table")
+    logging.debug("Creating listings table")
     # map temporary season-specific IDs to global course IDs
     temp_to_course_id = dict(zip(courses["temp_course_id"], courses["course_id"]))
 
@@ -416,7 +416,7 @@ def import_courses(
     professors[["average_rating", "average_rating_n"]] = np.nan
 
     # construct courses and flags mapping
-    print("Adding course flags")
+    logging.debug("Adding course flags")
     course_flags = courses[["course_id", "flags"]].copy(deep=True)
     course_flags = course_flags[course_flags["flags"].apply(len) > 0]
     course_flags = course_flags.explode("flags")  # type: ignore
@@ -441,14 +441,6 @@ def import_courses(
     course_flags = course_flags.loc[
         :, get_table_columns(database.models.course_flags, not_class=True)
     ]
-
-    print("[Summary]")
-    print(f"Total courses: {len(courses)}")
-    print(f"Total listings: {len(listings)}")
-    print(f"Total course-professors: {len(course_professors)}")
-    print(f"Total professors: {len(professors)}")
-    print(f"Total course-flags: {len(course_flags)}")
-    print(f"Total flags: {len(flags)}")
 
     return courses, listings, course_professors, professors, course_flags, flags
 
@@ -673,7 +665,7 @@ def match_evaluations_to_courses(
     evaluation_statistics,
     evaluation_questions
     """
-    print("Matching evaluations to courses")
+    logging.debug("Matching evaluations to courses")
 
     # construct outer season grouping
     season_crn_to_course_id = listings[["season_code", "course_id", "crn"]].groupby(
@@ -701,7 +693,7 @@ def match_evaluations_to_courses(
 
     # each course must have exactly one statistic, so use this for reporting
     nan_total = evaluation_statistics["course_id"].isna().sum()
-    print(
+    logging.debug(
         f"Removing {nan_total}/{len(evaluation_statistics)} evaluated courses without matches"
     )
 
@@ -781,7 +773,7 @@ def import_evaluations(
     # -------------------
 
     # consistency checks
-    print("Checking question text consistency")
+    logging.debug("Checking question text consistency")
     text_by_code = evaluation_questions.groupby("question_code")[  # type: ignore
         "question_text"
     ].apply(set)
@@ -809,7 +801,7 @@ def import_evaluations(
 
     # add [0] at the end to account for empty lists
     max_diff_texts = max(list(text_by_code.apply(len)) + [0])
-    print(f"Maximum number of different texts per question code: {max_diff_texts}")
+    logging.debug(f"Maximum number of different texts per question code: {max_diff_texts}")
 
     # get the maximum distance between a set of texts
     def max_pairwise_distance(texts):
@@ -823,7 +815,7 @@ def import_evaluations(
     # add [0] at the end to account for empty lists
     max_all_distances = max(list(distances_by_code) + [0])
 
-    print(f"Maximum text divergence within codes: {max_all_distances}")
+    logging.debug(f"Maximum text divergence within codes: {max_all_distances}")
 
     if not all(distances_by_code < QUESTION_DIVERGENCE_CUTOFF):
 
@@ -837,7 +829,7 @@ def import_evaluations(
             f"Error: question codes {inconsistent_codes} have divergent texts"
         )
 
-    print("Checking question type (narrative/rating) consistency")
+    logging.debug("Checking question type (narrative/rating) consistency")
     is_narrative_by_code = evaluation_questions.groupby(  # type: ignore
         "question_code"
     )["is_narrative"].apply(set)
@@ -875,7 +867,7 @@ def import_evaluations(
     # MIN_COMMENT_LENGTH = 2
     evaluation_narratives = evaluation_narratives.loc[
         evaluation_narratives["comment"].apply(len) > 2
-    ]
+    ].copy()
     # replace carriage returns for csv-based migration
     evaluation_narratives.loc[:, "comment"] = evaluation_narratives["comment"].apply(
         lambda x: x.replace("\r", "")
@@ -919,12 +911,6 @@ def import_evaluations(
     evaluation_questions = evaluation_questions.loc[
         :, get_table_columns(database.models.EvaluationQuestion)
     ]
-
-    print("[Summary]")
-    print(f"Total evaluation narratives: {len(evaluation_narratives)}")
-    print(f"Total evaluation ratings: {len(evaluation_ratings)}")
-    print(f"Total evaluation statistics: {len(evaluation_statistics)}")
-    print(f"Total evaluation questions: {len(evaluation_questions)}")
 
     return (
         evaluation_narratives,

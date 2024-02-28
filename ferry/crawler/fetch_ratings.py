@@ -202,7 +202,7 @@ async def fetch_ratings(
                 )
 
             # Test for first 100 courses
-            # season_courses = season_courses[:100]
+            season_courses = season_courses[:100]
 
             # Check if course is in Yale College
             futures = [

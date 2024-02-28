@@ -3,8 +3,8 @@ Init all submodules for import.
 """
 
 from sqlalchemy import MetaData, Table
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.inspection import inspect
+from sqlalchemy.orm import declarative_base
 
 from ferry.database.database import Database
 from ferry.database.database_utilities import *

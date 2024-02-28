@@ -15,6 +15,7 @@ class RawArgs:
     config_file: str
     data_dir: str
     database_connect_string: str | None
+    debug: bool | None
     fetch_classes: bool | None
     fetch_evals: bool | None
     parse_evals: bool | None
@@ -32,6 +33,7 @@ class Args:
     client: AsyncClient
     data_dir: str
     database_connect_string: str
+    debug: bool
     fetch_classes: bool
     fetch_evals: bool
     parse_evals: bool
@@ -81,6 +83,13 @@ def get_parser():
     )
 
     parser.add_argument(
+        "-d",
+        "--debug",
+        help="Whether to run in debug mode. Prints extra logs and information",
+        action="store_true",
+    )
+
+    parser.add_argument(
         "--use-cache",
         help="Whether to use cache for requests. Automatically set to false in release mode.",
         action="store_true",
@@ -91,7 +100,6 @@ def get_parser():
         help="Sync the database. This is automatically set to true in release mode.",
         action="store_true",
     )
-
 
     parser.add_argument(
         "--fetch-evals",

@@ -67,12 +67,12 @@ def transform(data_dir: Path):
     # Import course listings
     # ----------------------
 
-    print("[Importing courses]")
-    print(f"Season(s): {', '.join(course_seasons)}")
+    print(f"\nSeason(s): {', '.join(course_seasons)}")
+    print("\nImporting courses...")
 
     merged_course_info_: list[pd.DataFrame] = []
 
-    for season in tqdm(course_seasons, desc="Loading course JSONs"):
+    for season in tqdm(course_seasons, desc="Loading course JSONs", leave=False):
         # Read the course listings, giving preference to freshly parsed over migrated ones.
         parsed_courses_file = data_dir / "parsed_courses" / f"{season}.json"
         # check migrated courses as a fallback
@@ -105,6 +105,17 @@ def transform(data_dir: Path):
         flags,
     ) = import_courses(merged_course_info, course_seasons)
     del merged_course_info
+
+    print("\033[F", end="")
+    print("Importing courses... ✔")
+
+    print("[Summary]")
+    print(f"Total courses: {len(courses)}")
+    print(f"Total listings: {len(listings)}")
+    print(f"Total course-professors: {len(course_professors)}")
+    print(f"Total professors: {len(professors)}")
+    print(f"Total course-flags: {len(course_flags)}")
+    print(f"Total flags: {len(flags)}")
 
     # --------------------------
     # Import discussion sections
@@ -169,7 +180,7 @@ def transform(data_dir: Path):
     # Import course evaluations
     # -------------------------
 
-    print("\n[Importing course evaluations]")
+    print("\nImporting course evaluations...")
 
     evaluation_narratives = pd.read_csv(
         data_dir / "parsed_evaluations/evaluation_narratives.csv",
@@ -215,35 +226,63 @@ def transform(data_dir: Path):
         seasons["season_code"].astype(str).apply(lambda x: x[:4]).astype(int)
     )
 
+    print("\033[F", end="")
+    print("Importing course evaluations... ✔")
+
+    print("[Summary]")
+    print(f"Total evaluation narratives: {len(evaluation_narratives)}")
+    print(f"Total evaluation ratings: {len(evaluation_ratings)}")
+    print(f"Total evaluation statistics: {len(evaluation_statistics)}")
+    print(f"Total evaluation questions: {len(evaluation_questions)}")
+
     # ----------------------------
     # Compute secondary attributes
     # ----------------------------
 
-    print("\n[Computing secondary attributes]")
+    print("\nComputing secondary attributes...")
 
-    print("Assigning question tags")
     evaluation_questions = questions_computed(evaluation_questions)
-    print("Computing average ratings by course")
+    
     evaluation_statistics = evaluation_statistics_computed(
         evaluation_statistics, evaluation_ratings, evaluation_questions
     )
-    print("Computing courses")
+
     courses = courses_computed(
         courses, listings, evaluation_statistics, course_professors
     )
-    print("Computing ratings for professors")
+    
     professors = professors_computed(
         professors, course_professors, evaluation_statistics
     )
+
+    print("\033[F", end="")
+    print("Computing secondary attributes... ✔")
 
     # -----------------------------
     # Output tables to disk as CSVs
     # -----------------------------
 
-    print("\n[Writing tables to disk as CSVs]")
+    print("\nWriting tables to disk as CSVs...")
 
     csv_dir = data_dir / "importer_dumps"
     Path(csv_dir).mkdir(parents=True, exist_ok=True)
+
+    csvs = {
+        "seasons": seasons,
+        "courses": courses,
+        "listings": listings,
+        "professors": professors,
+        "course_professors": course_professors,
+        "flags": flags,
+        "course_flags": course_flags,
+        # "discussions": discussions,
+        # "course_discussions": course_discussions,
+        # "demand_statistics": demand_statistics,
+        "evaluation_questions": evaluation_questions,
+        "evaluation_narratives": evaluation_narratives,
+        "evaluation_ratings": evaluation_ratings,
+        "evaluation_statistics": evaluation_statistics,
+    }
 
     def export_csv(
         table: pd.DataFrame, table_name: str, csv_kwargs: dict[str, Any] = None
@@ -266,21 +305,8 @@ def transform(data_dir: Path):
 
         table.to_csv(csv_dir / f"{table_name}.csv", **csv_kwargs)
 
-    export_csv(seasons, "seasons")
+    for table_name, table in csvs.items():
+        export_csv(table, table_name)
 
-    export_csv(courses, "courses")
-    export_csv(listings, "listings")
-    export_csv(professors, "professors")
-    export_csv(course_professors, "course_professors")
-    export_csv(flags, "flags")
-    export_csv(course_flags, "course_flags")
-
-    # export_csv(discussions, "discussions")
-    # export_csv(course_discussions, "course_discussions")
-
-    # export_csv(demand_statistics, "demand_statistics")
-
-    export_csv(evaluation_questions, "evaluation_questions")
-    export_csv(evaluation_narratives, "evaluation_narratives")
-    export_csv(evaluation_ratings, "evaluation_ratings")
-    export_csv(evaluation_statistics, "evaluation_statistics")
+    print("\033[F", end="")
+    print("Writing tables to disk as CSVs... ✔")

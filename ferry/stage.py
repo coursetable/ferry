@@ -1,3 +1,5 @@
+import csv
+from io import StringIO
 from pathlib import Path
 from typing import Any
 
@@ -14,7 +16,7 @@ def stage(data_dir: Path, database: Database):
     Load transformed CSVs into staged database tables.
     """
 
-    print("\n[Reading in tables from CSVs]")
+    print("\nReading in tables from CSVs...")
 
     csv_dir = data_dir / "importer_dumps"
     csv_dir.mkdir(parents=True, exist_ok=True)
@@ -68,7 +70,15 @@ def stage(data_dir: Path, database: Database):
             }
         },
     )
-    course_professors = load_csv("course_professors")
+    course_professors = load_csv(
+        "course_professors", 
+        {
+            "dtype": {
+                "professor_id": "Int64",
+                "course_id": "Int64",
+            }
+        }
+    )
     flags = load_csv("flags")
     course_flags = load_csv("course_flags")
 
@@ -94,60 +104,60 @@ def stage(data_dir: Path, database: Database):
         },
     )
 
+    # Define mapping of tables to their respective DataFrames
+    tables = {
+        "seasons_staged": seasons,
+        "courses_staged": courses,
+        "listings_staged": listings,
+        "professors_staged": professors,
+        "course_professors_staged": course_professors,
+        "flags_staged": flags,
+        "course_flags_staged": course_flags,
+        # "discussions_staged": discussions,
+        # "course_discussions_staged": course_discussions,
+        # "demand_statistics_staged": demand_statistics,
+        "evaluation_questions_staged": evaluation_questions,
+        "evaluation_narratives_staged": evaluation_narratives,
+        "evaluation_ratings_staged": evaluation_ratings,
+        "evaluation_statistics_staged": evaluation_statistics,
+    }
+
+    print("\033[F", end="")
+    print(f"Reading in tables from CSVs... ✔")
+
     # --------------------------
     # Replace tables in database
     # --------------------------
-    print("\n[Clearing staging tables]")
-
-    # ordered tables defined only in our model
-    alchemy_tables = database.Base.metadata.sorted_tables
 
     # sorted tables in the database
-    db_meta = MetaData(bind=database.Engine)
-    db_meta.reflect()
+    db_meta = MetaData()
+    db_meta.reflect(bind=database.Engine)
+    
+    # Drop all tables
+    print("\nDropping all tables...")
+    db_meta.drop_all(
+        bind=database.Engine,
+        tables=reversed(db_meta.sorted_tables),
+        checkfirst=True,
+    )
+    print("\033[F", end="")
+    print("Dropping all tables... ✔")
 
-    # drop old staging tables
-    conn = database.Engine.connect()
-    delete = conn.begin()
-    # loop in reverse sorted order to handle dependencies
-    for table in db_meta.sorted_tables[::-1]:
-        if table.name.endswith("_staged"):
-            print(f"Dropping table {table.name}")
-            conn.execute(f"DROP TABLE IF EXISTS {table.name} CASCADE;")
-    delete.commit()
-
+    # Add new staging tables
+    print("\nAdding new staging tables...")
+    connection = database.Engine.raw_connection()
     Base.metadata.create_all(database.Engine)
+    for table in Base.metadata.sorted_tables:
+        if table.name in tables:
+            copy_from_stringio(connection, tables[table.name], f"{table.name}")
+        else:
+            raise ValueError(f"{table.name} defined in Base metadata, but there is no data for it.")
+    connection.commit()
+        
+    print("\033[F", end="")
+    print("Adding new staging tables... ✔")
 
-    # -------------
-    # Update tables
-    # -------------
-
-    print("\n[Staging new tables]")
-
-    raw_conn = database.Engine.raw_connection()
-
-    # seasons
-    copy_from_stringio(raw_conn, seasons, "seasons_staged")
-
-    # courses
-    copy_from_stringio(raw_conn, courses, "courses_staged")
-    copy_from_stringio(raw_conn, listings, "listings_staged")
-    copy_from_stringio(raw_conn, professors, "professors_staged")
-    copy_from_stringio(raw_conn, course_professors, "course_professors_staged")
-    copy_from_stringio(raw_conn, flags, "flags_staged")
-    copy_from_stringio(raw_conn, course_flags, "course_flags_staged")
-
-    # discussion sections
-    # copy_from_stringio(raw_conn, discussions, "discussions_staged")
-    # copy_from_stringio(raw_conn, course_discussions, "course_discussions_staged")
-
-    # demand statistics
-    # copy_from_stringio(raw_conn, demand_statistics, "demand_statistics_staged")
-
-    # evaluations
-    copy_from_stringio(raw_conn, evaluation_questions, "evaluation_questions_staged")
-    copy_from_stringio(raw_conn, evaluation_narratives, "evaluation_narratives_staged")
-    copy_from_stringio(raw_conn, evaluation_ratings, "evaluation_ratings_staged")
-    copy_from_stringio(raw_conn, evaluation_statistics, "evaluation_statistics_staged")
-
-    raw_conn.commit()
+    # Print all added tables
+    print("\n[Table Summary]")
+    for table in Base.metadata.sorted_tables:
+        print(f"{table.name}")

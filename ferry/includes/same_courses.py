@@ -10,6 +10,7 @@ import edlib
 import networkx
 import pandas as pd
 from tqdm import tqdm
+import logging
 
 from ferry.includes.utils import flatten_list_of_lists
 
@@ -227,11 +228,11 @@ def resolve_historical_courses(
     for course in courses["course_id"]:
         same_courses.add_node(course)
 
-    # TODO: Add concurrency
     for course, shared_code_courses in tqdm(
-        courses_shared_code.iteritems(),  # type: ignore
+        courses_shared_code.items(),
         total=len(courses_shared_code),
         desc="Populating initial same-courses graph",
+        leave=False,
     ):
         for other_course_id in shared_code_courses:
             same_courses.add_edge(course, other_course_id)
@@ -251,9 +252,8 @@ def resolve_historical_courses(
         long_descriptions, "course_id", "description"
     )
 
-    # TODO: Add concurrency
     for course_1, course_2 in tqdm(
-        same_courses.edges(data=False), desc="Building filtered same-courses graph"
+        same_courses.edges(data=False), desc="Building filtered same-courses graph", leave=False
     ):
 
         title_1 = course_to_title.get(course_1, [""])[0]
@@ -267,10 +267,10 @@ def resolve_historical_courses(
 
             same_courses_filtered.add_edge(course_1, course_2)
 
-    print(f"Original shared-code edges: {same_courses.number_of_edges()}")
-    print(f"Pruned shared-code edges: {same_courses_filtered.number_of_edges()}")
+    logging.debug(f"Original shared-code edges: {same_courses.number_of_edges()}")
+    logging.debug(f"Pruned shared-code edges: {same_courses_filtered.number_of_edges()}")
 
-    print("Identifying same courses by connected components")
+    logging.debug("Identifying same courses by connected components")
 
     # get same-course mappings from connected components
     course_to_same_course, same_course_to_courses = get_connected_courses(same_courses)
