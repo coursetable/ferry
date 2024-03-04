@@ -61,5 +61,5 @@ def copy_from_stringio(conn, table: pd.DataFrame, table_name: str):
         cursor.close()
         raise DatabaseStagingError from error
 
-    print(f"Successfully copied {table_name}")
+    # print(f"Successfully copied {table_name}")
     cursor.close()
