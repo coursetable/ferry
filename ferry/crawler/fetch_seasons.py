@@ -24,8 +24,6 @@ async def fetch_course_seasons(
 
         # exclude '999999' catch-all 'Past seasons' season option
         course_seasons = sorted([x for x in course_seasons if x != "999999"]) 
-        
-        course_seasons.remove("202501") # temporary fix for 202501 empty season - will fix once 202501 is populated
 
         with open(f"{data_dir}/course_seasons.json", "w") as f:
             ujson.dump(course_seasons, f, indent=4)
