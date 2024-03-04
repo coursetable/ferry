@@ -7,6 +7,7 @@ on:
       - '.github/workflows/ferry.yml'
   schedule:
     - cron: '43 7 * * *'
+  workflow_dispatch:
 
 jobs:
   ferry:
