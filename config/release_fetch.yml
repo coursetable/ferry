@@ -9,6 +9,6 @@ parse_evals: false
 generate_diagram: false
 release: true
 seasons:
-- LATEST_3
+- LATEST_4
 sentry_url: null
 sync_db: false
