@@ -179,7 +179,7 @@ def days_of_week_from_letters(letters: str) -> list[str]:
         "Th": "Thursday",
         "F": "Friday",
         "Sa": "Saturday",
-        "Su": "Saturday",
+        "Su": "Sunday",
     }
 
     letters = letters + " "
