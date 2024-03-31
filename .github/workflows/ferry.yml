@@ -3,11 +3,11 @@ on:
   push:
     branches: [master]
     paths:
-      - '**.py'
-      - '.github/workflows/ferry.yml'
-      - 'config/release*.yml'
+      - "**.py"
+      - ".github/workflows/ferry.yml"
+      - "config/release*.yml"
   schedule:
-    - cron: '43 7 * * *'
+    - cron: "43 7 * * *"
   workflow_dispatch:
 
 jobs:
@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     strategy:
-        matrix:
-          python-version: ["3.10"]
+      matrix:
+        python-version: ["3.10"]
     steps:
       - uses: actions/checkout@v4
 
@@ -35,12 +35,12 @@ jobs:
       - uses: actions/cache@v4
         id: cache-uv
         with:
-            path: ~/.cache/uv
-            key: ${{ runner.os }}-python-${{ matrix.python-version }}-${{ hashFiles('setup.py') }}
-            restore-keys: |
-              ${{ runner.os }}-python-${{ matrix.python-version }}-${{ hashFiles('setup.py') }}
-              ${{ runner.os }}-python-${{ matrix.python-version }}-
-              ${{ runner.os }}-
+          path: ~/.cache/uv
+          key: ${{ runner.os }}-python-${{ matrix.python-version }}-${{ hashFiles('setup.py') }}
+          restore-keys: |
+            ${{ runner.os }}-python-${{ matrix.python-version }}-${{ hashFiles('setup.py') }}
+            ${{ runner.os }}-python-${{ matrix.python-version }}-
+            ${{ runner.os }}-
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4

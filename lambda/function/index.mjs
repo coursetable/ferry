@@ -1,45 +1,43 @@
-import fetch from 'node-fetch';
+import fetch from "node-fetch";
 
 export const handler = async (event) => {
-  var auth_header = ""
+  let auth_header = "";
   try {
-    auth_header = event["headers"]["auth_header"];
-  }
-  catch (e) {}
-  if (auth_header != "123") {
+    auth_header = event.headers.auth_header;
+  } catch (e) {}
+  if (auth_header !== "123") {
     return {
       statusCode: 403,
-      body: JSON.stringify("Missing/incorrect auth_header value.")
+      body: JSON.stringify("Missing/incorrect auth_header value."),
     };
   }
-  
-  var res = "";
-  
+
+  /** @type {Response} */
+  let res = undefined;
+
   try {
-    const body = JSON.parse(event["body"])
-    const cookie = body["cookie"];
+    const body = JSON.parse(event.body);
+    const cookie = body.cookie;
     const url = decodeURI(body["url"]);
     console.log(url);
-    res = await fetch(url, {headers: {"Cookie": cookie}});
-  }
-  catch (e) {
+    res = await fetch(url, { headers: { Cookie: cookie } });
+  } catch (e) {
     return {
       statusCode: 400,
-      body: JSON.stringify(e)
+      body: String(e),
     };
   }
-  
+
   try {
     const html = await res.text();
     return {
       statusCode: res.status,
-      body: html
+      body: html,
     };
-  }
-  catch (e) {
+  } catch (e) {
     return {
       statusCode: 500,
-      body: JSON.stringify(e)
-    }
+      body: String(e),
+    };
   }
 };

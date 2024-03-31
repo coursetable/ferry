@@ -12,4 +12,4 @@ sentry_url: null
 sync_db: false
 use_cache: true
 seasons:
-- LATEST_4
+  - LATEST_4
