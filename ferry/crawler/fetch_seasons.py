@@ -22,8 +22,8 @@ async def fetch_course_seasons(
     if r.status_code == 200:
         course_seasons = re.findall(r'option value="(\d{6})"', r.text)
 
-        # exclude '999999' catch-all 'Past seasons' season option
-        course_seasons = sorted([x for x in course_seasons if x != "999999"]) 
+        # exclude '999999' and '999998' catch-all 'Past seasons' season option
+        course_seasons = sorted([x for x in course_seasons if x != "999999" and x != "999998"]) 
 
         with open(f"{data_dir}/course_seasons.json", "w") as f:
             ujson.dump(course_seasons, f, indent=4)
