@@ -4,7 +4,7 @@ on:
     branches: [master]
     paths:
       - '**.py'
-      - '.github/workflows/ferry.yml'
+      - '.github/workflows/ferry_migration.yml'
       - 'config/release*.yml'
   schedule:
     - cron: '43 7 * * *'
