@@ -1,4 +1,4 @@
-name: Ferry Run
+name: Ferry Migration Run
 on:
   push:
     branches: [master]
