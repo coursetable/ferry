@@ -27,20 +27,10 @@ def session_scope(Session):
         session.close()
 
 
-def fetch_existing_listings(session: sqlalchemy.orm.session.Session) -> pd.DataFrame:
-    """
-    Fetch existing listings from the database and return as a pandas DataFrame.
-    Maybe can cut some columns out
-    """
-    listings_query = session.query(
-        Listing.course_id,
-        Listing.section,
-        Listing.season_code,
-        Listing.crn,
-    ).all()
-
-    # Convert query result to DataFrame
-    existing_listings_df = pd.DataFrame(listings_query, columns=['course_id', 'section', 'season_code', 'crn'])
+def fetch_existing_listings(engine):
+    """Fetch existing listings from the database."""
+    with engine.connect() as connection:
+        existing_listings_df = pd.read_sql_table('listings', con=connection)
     return existing_listings_df
 
 def compare_listings(new_listings: pd.DataFrame, existing_listings: pd.DataFrame) ->  Tuple[pd.DataFrame, pd.DataFrame]:
@@ -69,12 +59,81 @@ def compare_listings(new_listings: pd.DataFrame, existing_listings: pd.DataFrame
 
     return new_listings, deleted_listings
 
+def insert_new_listings(db: Database, new_listings_df: pd.DataFrame) -> None:
+    """Insert new listings into the database."""
+    # Filter out listings that are already in the database
+    with session_scope(db.Session) as session:
+        existing_listings_df = fetch_existing_listings(db.Engine)
+        # Combine 'crn' and 'season_code' into a single identifier in the existing listings
+        existing_listings_df['combined_id'] = existing_listings_df['crn'].astype(str) + '_' + existing_listings_df['season_code'].astype(str)
+        existing_combinations = set(existing_listings_df['combined_id'])
+
+        print("BEFORE", len(new_listings_df))
+        # Combine 'crn' and 'season_code' in the new listings as well
+        new_listings_df['combined_id'] = new_listings_df['crn'].astype(str) + '_' + new_listings_df['season_code'].astype(str)
+        # Filter new listings to exclude those with combinations that already exist
+        new_listings_df = new_listings_df[~new_listings_df['combined_id'].isin(existing_combinations)]
+        
+        # drop for unique
+        new_listings_df = new_listings_df.drop(columns=['listing_id'], errors='ignore')
+
+        # Print information of the new listings
+        if not new_listings_df.empty:
+            print("New listings to be inserted:")
+            print(new_listings_df[['crn', 'season_code']])  # Adjust columns as necessary to display relevant information
+
+        new_listings_df.drop('combined_id', axis=1, inplace=True)
+        print("AFTER", len(new_listings_df))
+
+        if not new_listings_df.empty:
+            new_listings_df.to_sql('listings', con=db.Engine, if_exists='append', index=False)
+            print(f"Inserted {len(new_listings_df)} new listings.")
+
+
 def stage_listings(data_dir: Path, db: Database):
     """
     Stages new listings, updates existing ones, and handles deleted listings.
     """
+    print("\nReading in tables from CSVs...")
+
+    csv_dir = data_dir / "importer_dumps"
+    csv_dir.mkdir(parents=True, exist_ok=True)
+
+    # common pd.read_csv arguments
+    general_csv_kwargs: dict[Any, Any] = {"index_col": 0, "low_memory": False}
+
+    def load_csv(table_name: str, csv_kwargs: dict[str, Any] = None) -> pd.DataFrame:
+        """
+        Loads a CSV given a table name.
+
+        Parameters
+        ----------
+        table_name:
+            name of table to load
+        csv_kwargs:
+            additional arguments to pass to pandas.read_csv
+        """
+
+        if csv_kwargs is None:
+            csv_kwargs = {}
+
+        merged_kwargs = general_csv_kwargs.copy()
+        merged_kwargs.update(csv_kwargs)
+
+        return pd.read_csv(csv_dir / f"{table_name}.csv", **merged_kwargs)
+    
     # Load new listings data from CSV
-    new_listings_df = pd.read_csv(data_dir / "importer_dumps/listings.csv")
+    new_listings_df = load_csv("listings", {"dtype": {"section": str}})
+    print(new_listings_df[['course_id']].head())
+
+    # Confirm there are no null values in 'course_id' right before insertion
+    print(new_listings_df['course_id'].isnull().any())
+
+    # Confirm the data types
+    print(new_listings_df.dtypes)
+    # Insert new listings into the database
+    insert_new_listings(db, new_listings_df)
+    print("Done!")
 
     # Fetch existing listings from the database
     with session_scope(db.Session) as session:
@@ -89,6 +148,10 @@ def stage_listings(data_dir: Path, db: Database):
         print("\n[Listings Summary]")
         print(f"New listings: {len(new_listings)}")
         print(f"Deleted listings: {len(deleted_listings)}")
+        if new_listings_df['course_id'].isnull().any():
+            raise ValueError("Null 'course_id' values found in listings DataFrame.")
+
+
 
         # --------------------------
         # Update existing listings when we link w course
@@ -129,15 +192,17 @@ def stage_listings(data_dir: Path, db: Database):
         # Insert new listings
         # --------------------------
 
+        required_columns = ['listing_id', 'school', 'subject', 'number', 'course_code', 'section', 'season_code', 'crn']
+        actual_columns = [col for col in required_columns if col in new_listings.columns]
+        # this is pretty jank def a better way but was getting key errors
+        new_listings_adjusted = new_listings[actual_columns]
+
         if not new_listings.empty:
             print("\nInserting new listings...")
 
-            new_listings = new_listings[['listing_id', 'school', 'subject', 'number', 'course_code', 'section', 'season_code', 'crn']]
-
-
             # Insert new listings
-            new_listings.to_sql(
-                "listings",
+            new_listings_adjusted.to_sql(
+                "listings_staged",
                 con=db.Engine,
                 if_exists="append",
                 index=False,
