@@ -61,33 +61,22 @@ def compare_listings(new_listings: pd.DataFrame, existing_listings: pd.DataFrame
 
 def insert_new_listings(db: Database, new_listings_df: pd.DataFrame) -> None:
     """Insert new listings into the database."""
-    # Filter out listings that are already in the database
-    with session_scope(db.Session) as session:
-        existing_listings_df = fetch_existing_listings(db.Engine)
-        # Combine 'crn' and 'season_code' into a single identifier in the existing listings
-        existing_listings_df['combined_id'] = existing_listings_df['crn'].astype(str) + '_' + existing_listings_df['season_code'].astype(str)
-        existing_combinations = set(existing_listings_df['combined_id'])
+    # Fetch existing listings to prevent duplicate entries
+    # may need to run SELECT setval('listings_staged_listing_id_seq', (SELECT MAX(listing_id) FROM listings_staged) + 1);
+    # or SELECT setval('listings_staged_listing_id_seq', COALESCE((SELECT MAX(listing_id) FROM listings), 1));
+    existing_listings_df = fetch_existing_listings(db.Engine)
+    existing_crns = set(existing_listings_df['crn'])
 
-        print("BEFORE", len(new_listings_df))
-        # Combine 'crn' and 'season_code' in the new listings as well
-        new_listings_df['combined_id'] = new_listings_df['crn'].astype(str) + '_' + new_listings_df['season_code'].astype(str)
-        # Filter new listings to exclude those with combinations that already exist
-        new_listings_df = new_listings_df[~new_listings_df['combined_id'].isin(existing_combinations)]
+    # Filter out existing CRNs from new listings
+    new_listings_df = new_listings_df[~new_listings_df['crn'].isin(existing_crns)]
+
+    if not new_listings_df.empty:
+        # Drop 'listing_id' column to let the database handle it through auto-increment
+        new_listings_df.drop(columns=['listing_id'], errors='ignore', inplace=True)
         
-        # drop for unique
-        new_listings_df = new_listings_df.drop(columns=['listing_id'], errors='ignore')
-
-        # Print information of the new listings
-        if not new_listings_df.empty:
-            print("New listings to be inserted:")
-            print(new_listings_df[['crn', 'season_code']])  # Adjust columns as necessary to display relevant information
-
-        new_listings_df.drop('combined_id', axis=1, inplace=True)
-        print("AFTER", len(new_listings_df))
-
-        if not new_listings_df.empty:
-            new_listings_df.to_sql('listings', con=db.Engine, if_exists='append', index=False)
-            print(f"Inserted {len(new_listings_df)} new listings.")
+        # Insert new listings into the database
+        new_listings_df.to_sql('listings', con=db.Engine, if_exists='append', index=False)
+        print(f"Inserted {len(new_listings_df)} new listings.")
 
 
 def stage_listings(data_dir: Path, db: Database):

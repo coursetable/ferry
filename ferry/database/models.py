@@ -354,7 +354,7 @@ class Listing(BaseModel):
     """
 
     __tablename__ = "listings_staged"
-    listing_id = Column(Integer, primary_key=True, comment="Listing ID")
+    listing_id = Column(Integer, primary_key=True, autoincrement=True, comment="Listing ID")
 
     course_id = Column(
         Integer,
