@@ -9,7 +9,7 @@ from ferry.crawler.fetch_seasons import fetch_course_seasons
 from ferry.database.database import Database
 from ferry.deploy import deploy
 from ferry.includes.rating_parsing import parse_ratings
-from ferry.stage import stage
+from ferry.stage import stage_listings
 from ferry.transform import transform
 from ferry.utils import Args, get_args, init_sentry, parse_seasons_arg
 
@@ -60,7 +60,7 @@ def sync_db(args: Args):
     print("-" * 80)
 
     print("[Stage]")
-    stage(data_dir=Path(args.data_dir), database=db)
+    stage_listings(db=db, data_dir=Path(args.data_dir))
     print("-" * 80)
 
     print("[Deploy]")

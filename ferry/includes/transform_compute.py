@@ -43,6 +43,10 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
         table with computed fields.
     """
 
+    if evaluation_questions.empty:
+        logging.debug("No evaluation questions to process.")
+        return evaluation_questions
+
     logging.debug("Assigning question tags")
 
     def assign_code(row):
