@@ -289,7 +289,7 @@ def deploy(db: database.Database):
 
     print("\nReindexing...")
     conn.execution_options(isolation_level="AUTOCOMMIT").execute(
-        text("REINDEX SCHEMA ferry;")
+        text("REINDEX DATABASE postgres;")
     )
     print("\033[F", end="")
     print("Reindexing... ✔")
