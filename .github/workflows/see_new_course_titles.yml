@@ -5,7 +5,7 @@ on:
     workflows: ["Ferry Run"]
     types:
       - completed
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   extract-courses:
