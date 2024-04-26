@@ -19,6 +19,8 @@ jobs:
           repository: coursetable/ferry-data
           token: ${{ secrets.TOKEN_FOR_FERRY_DATA }}
           path: ferry-data
+          fetch-depth: 1  # Fetches only the last commit
+
 
       - name: Fetch the latest commit SHA from ferry-data
         if: github.event_name == 'workflow_run'
