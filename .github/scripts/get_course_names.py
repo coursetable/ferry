@@ -27,7 +27,7 @@ def main():
     owner = 'coursetable'  
     repo = 'ferry-data'    
     commit_hash = os.getenv('LATEST_COMMIT_SHA')  # Use the fetched commit SHA from ferry-data
-    token = os.getenv('GITHUB_TOKEN') 
+    token = os.getenv('TOKEN_FOR_FERRY_DATA') 
 
     # Get commit diff
     diff_data = get_github_commit_diff(owner, repo, commit_hash, token)
