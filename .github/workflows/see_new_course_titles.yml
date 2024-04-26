@@ -42,7 +42,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_SHA: ${{ env.LATEST_COMMIT_SHA }}
-        run: python ./scripts/extract_courses.py
+        run: python ./scripts/get_course_names.py
 
       - name: Output new courses
         run: cat new_courses.txt
