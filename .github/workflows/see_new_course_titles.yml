@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: coursetable/ferry-data
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.TOKEN_FOR_FERRY_DATA }}
           path: ferry-data
 
       - name: Fetch the latest commit SHA from ferry-data
