@@ -10,7 +10,7 @@ on:
 jobs:
   extract-courses:
     runs-on: ubuntu-latest
-    if: github.event.workflow_run.conclusion == 'success'
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
 
     steps:
       - name: Checkout ferry-data
@@ -21,6 +21,7 @@ jobs:
           path: ferry-data
 
       - name: Fetch the latest commit SHA from ferry-data
+        if: github.event_name == 'workflow_run'
         id: get-latest-commit
         run: echo "LATEST_COMMIT_SHA=$(git log -1 --format=%H)" >> $GITHUB_ENV
         working-directory: ./ferry-data
