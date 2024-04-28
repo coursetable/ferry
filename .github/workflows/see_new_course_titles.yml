@@ -40,8 +40,8 @@ jobs:
 
       - name: Run Python script to extract new courses
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_SHA: ${{ env.LATEST_COMMIT_SHA }}
+          TOKEN_FOR_FERRY_DATA: ${{ secrets.GITHUB_TOKEN }}
+          LATEST_COMMIT_SHA: ${{ env.LATEST_COMMIT_SHA }}
         run: python ./ferry-data/.github/scripts/get_course_names.py
 
       - name: Output new courses
