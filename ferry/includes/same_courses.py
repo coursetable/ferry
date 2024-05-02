@@ -43,8 +43,8 @@ def map_to_groups(
     -------
     left_to_right and right_to_left mappings.
     """
-    left_to_right = dataframe.groupby(left)[right].apply(list).to_dict()  # type: ignore
-    right_to_left = dataframe.groupby(right)[left].apply(list).to_dict()  # type: ignore
+    left_to_right = dataframe.groupby(left)[right].apply(list).to_dict()
+    right_to_left = dataframe.groupby(right)[left].apply(list).to_dict()
 
     return left_to_right, right_to_left
 
@@ -148,11 +148,11 @@ def get_connected_courses(
     connected_codes += [[x] for x in singles]
 
     # map courses to unique same-courses ID, and map same-courses ID to courses
-    connected_courses = pd.Series(connected_codes, name="course_id")  # type: ignore
+    connected_courses = pd.Series(connected_codes, name="course_id")
     same_course_to_courses = connected_courses.to_dict()
 
     # map course_id to same-course partition ID
-    same_courses_explode = connected_courses.explode()  # type: ignore
+    same_courses_explode = connected_courses.explode()
     course_to_same_course = dict(
         zip(same_courses_explode.values, same_courses_explode.index)
     )
@@ -194,7 +194,7 @@ def resolve_historical_courses(
     )
 
     # map course_id to course codes
-    courses_codes = courses.set_index("course_id", drop=False)[  # type: ignore
+    courses_codes = courses.set_index("course_id", drop=False)[
         "course_id"
     ].apply(course_to_codes.get)
 
@@ -209,10 +209,10 @@ def resolve_historical_courses(
 
     # filter out titles and descriptions for matching
     long_titles = courses.loc[
-        courses["title"].fillna("").apply(len) >= MIN_TITLE_MATCH_LEN  # type: ignore
+        courses["title"].fillna("").apply(len) >= MIN_TITLE_MATCH_LEN
     ]
     long_descriptions = courses.loc[
-        courses["description"].fillna("").apply(len)  # type: ignore
+        courses["description"].fillna("").apply(len)
         >= MIN_DESCRIPTION_MATCH_LEN
     ]
 
@@ -310,20 +310,20 @@ def split_same_professors(
     """
     # initialize same-courses with same-professors mapping
     same_course_profs = pd.DataFrame(
-        pd.Series(course_to_same_course_filtered).rename(  # type: ignore
+        pd.Series(course_to_same_course_filtered).rename(
             "same_course_id"
         )
     )
 
-    same_course_profs.index.rename("course_id", inplace=True)  # type: ignore
+    same_course_profs.index.rename("course_id", inplace=True)
     same_course_profs = same_course_profs.reset_index(drop=False)
 
     # construct course_id to course_professors mapping
-    course_to_professors = course_professors.groupby("course_id")[  # type: ignore
+    course_to_professors = course_professors.groupby("course_id")[
         "professor_id"
     ].apply(
         frozenset
-    )  # type: ignore
+    )
 
     # map each course to frozenset of professors
     same_course_profs[  # pylint: disable=unsupported-assignment-operation,unsubscriptable-object
@@ -338,7 +338,7 @@ def split_same_professors(
     # reset the index to obtain a partitioning by same-course and same-professors
     professors_grouped = (
         same_course_profs.groupby(["same_course_id", "professors"])["course_id"]
-        .apply(list)  # type: ignore
+        .apply(list)
         .reset_index()
     )
 

@@ -220,7 +220,7 @@ def get_table(table: str) -> pd.DataFrame:
     Pandas DataFrame
     """
     # the Pandas stubs we're using don't have read_sql_table yet
-    return pd.read_sql_table(table, con=database.Engine)  # type: ignore
+    return pd.read_sql_table(table, con=database.Engine)
 
 
 def get_table_columns(table, not_class=False) -> list[str]:

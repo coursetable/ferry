@@ -17,6 +17,8 @@ asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
 
 async def start_crawl(args: Args):
+    seasons = []
+    classes = {}
     # Fetch seasons
     if args.fetch_classes:
         course_seasons = await fetch_course_seasons(
@@ -56,11 +58,11 @@ def sync_db(args: Args):
     db = Database(args.database_connect_string)
 
     print("[Transform]")
-    transform(data_dir=Path(args.data_dir))
+    transform(data_dir=args.data_dir)
     print("-" * 80)
 
     print("[Stage]")
-    stage(data_dir=Path(args.data_dir), database=db)
+    stage(data_dir=args.data_dir, database=db)
     print("-" * 80)
 
     print("[Deploy]")
@@ -76,7 +78,7 @@ async def main():
         logging.basicConfig(level=logging.DEBUG)
 
     # Create data directory if it doesn't exist
-    Path(args.data_dir).mkdir(parents=True, exist_ok=True)
+    args.data_dir.mkdir(parents=True, exist_ok=True)
 
     # Initialize Sentry
     if args.release:
@@ -98,7 +100,7 @@ async def main():
     if args.generate_diagram:
         from ferry.generate_db_diagram import generate_db_diagram
 
-        generate_db_diagram(path="docs/db_diagram.pdf")
+        generate_db_diagram(path=Path("docs/db_diagram.pdf"))
 
 
 if __name__ == "__main__":

@@ -24,7 +24,7 @@ def stage(data_dir: Path, database: Database):
     # common pd.read_csv arguments
     general_csv_kwargs: dict[Any, Any] = {"index_col": 0, "low_memory": False}
 
-    def load_csv(table_name: str, csv_kwargs: dict[str, Any] = None) -> pd.DataFrame:
+    def load_csv(table_name: str, csv_kwargs: dict[str, Any] | None = None) -> pd.DataFrame:
         """
         Loads a CSV given a table name.
 
@@ -137,7 +137,7 @@ def stage(data_dir: Path, database: Database):
     print("\nDropping all tables...")
     db_meta.drop_all(
         bind=database.Engine,
-        tables=reversed(db_meta.sorted_tables),
+        tables=list(reversed(db_meta.sorted_tables)),
         checkfirst=True,
     )
     print("\033[F", end="")

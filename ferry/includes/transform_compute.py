@@ -245,7 +245,7 @@ def courses_computed(
 
     # map course_id to professor_ids
     # use frozenset because it is hashable (set is not), needed for groupby
-    course_to_professors = course_professors.groupby("course_id")[  # type: ignore
+    course_to_professors = course_professors.groupby("course_id")[
         "professor_id"
     ].apply(frozenset)
 
@@ -344,7 +344,7 @@ def courses_computed(
         )
 
     tqdm.pandas(desc="Finding last-offered course", leave=False)
-    courses["last_offered_course_id"] = courses.progress_apply(  # type: ignore
+    courses["last_offered_course_id"] = courses.progress_apply(
         get_last_offered, axis=1
     )
 
@@ -356,7 +356,7 @@ def courses_computed(
         courses["last_enrollment_season_code"],
         courses["last_enrollment_same_professors"],
     ) = zip(
-        *courses.progress_apply(get_last_offered_enrollment, axis=1)  # type: ignore
+        *courses.progress_apply(get_last_offered_enrollment, axis=1)
     )
 
     logging.debug("Computing historical ratings for courses")

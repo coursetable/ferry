@@ -58,12 +58,12 @@ narratives_headers = [
 
 
 def parse_rating(
-    data_dir: str,
+    data_dir: Path,
     filename: str,
 ):
     # Read the evaluation, giving preference to current over previous.
-    current_evals_file = Path(data_dir) / "course_evals" / filename
-    previous_evals_file = Path(data_dir) / "previous_evals" / filename
+    current_evals_file = data_dir / "course_evals" / filename
+    previous_evals_file = data_dir / "previous_evals" / filename
 
     if current_evals_file.is_file():
         with open(current_evals_file, "r") as f:
@@ -80,16 +80,15 @@ def parse_rating(
     )
 
 
-async def parse_ratings(data_dir: str):
+async def parse_ratings(data_dir: Path):
     
     print(f"Parsing course ratings...")
-
-    root = Path(data_dir)
-    (root / "parsed_evaluations").mkdir(parents=True, exist_ok=True)
-    questions_path = root / "parsed_evaluations/evaluation_questions.csv"
-    ratings_path = root / "parsed_evaluations/evaluation_ratings.csv"
-    statistics_path = root / "parsed_evaluations/evaluation_statistics.csv"
-    narratives_path = root / "parsed_evaluations/evaluation_narratives.csv"
+    parsed_evaluations_dir = data_dir / "parsed_evaluations"
+    parsed_evaluations_dir.mkdir(parents=True, exist_ok=True)
+    questions_path = parsed_evaluations_dir / "evaluation_questions.csv"
+    ratings_path = parsed_evaluations_dir / "evaluation_ratings.csv"
+    statistics_path = parsed_evaluations_dir / "evaluation_statistics.csv"
+    narratives_path = parsed_evaluations_dir / "evaluation_narratives.csv"
 
     # ------------------
     # CSV output writers
@@ -116,8 +115,8 @@ async def parse_ratings(data_dir: str):
     # ----------------------------
 
     # list available evaluation files
-    previous_eval_files = (root / "previous_evals").glob("*.json")
-    new_eval_files = (root / "course_evals").glob("*.json")
+    previous_eval_files = (data_dir / "previous_evals").glob("*.json")
+    new_eval_files = (data_dir / "course_evals").glob("*.json")
 
     # extract file names (<season> + <crn> format) for merging
     previous_eval_filenames = [x.name for x in previous_eval_files]
@@ -131,7 +130,7 @@ async def parse_ratings(data_dir: str):
             loop.run_in_executor(
                 executor,
                 parse_rating,
-                root,
+                data_dir,
                 filename,
             )
             for filename in all_eval_files

@@ -74,7 +74,7 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
 
     # group CRNs by season for cross-listing deduplication
 
-    crns_by_season = merged_course_info.groupby("season_code")[  # type: ignore
+    crns_by_season = merged_course_info.groupby("season_code")[
         "crns"
     ].apply(list)
     # convert CRN groups to sets for resolution
@@ -134,7 +134,7 @@ def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
     )
 
     # reshape professor attributes array
-    professors_prep["professors_info"] = professors_prep[  # type: ignore
+    professors_prep["professors_info"] = professors_prep[
         ["professors", "professor_emails"]
     ].to_dict(orient="split")["data"]
 
@@ -168,7 +168,7 @@ def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
     professors_prep = professors_prep[professors_prep["professors_info"].apply(len) > 0]
 
     # expand courses with multiple professors
-    professors_prep = professors_prep.loc[  # type: ignore
+    professors_prep = professors_prep.loc[
         :, ["season_code", "course_id", "professors_info"]
     ].explode("professors_info")
     professors_prep = professors_prep.reset_index(drop=True)
@@ -288,7 +288,7 @@ def resolve_professors(
     # build professors table in order of seasons
     for season in seasons:
 
-        season_professors = professors_by_season.get_group(  # type: ignore
+        season_professors = professors_by_season.get_group(
             int(season)
         ).copy(deep=True)
 
@@ -309,7 +309,7 @@ def resolve_professors(
                 range(max_professor_id + 1, max_professor_id + len(new_professors) + 1)
             ),
             index=new_professors.index,
-            dtype=np.float64,  # type: ignore
+            dtype=np.float64,
         )
         # Replace with new IDs
         professors_update.loc[new_professors.index, "professor_id"] = new_professor_ids
@@ -321,9 +321,9 @@ def resolve_professors(
         )
         professors_update = professors_update.set_index("professor_id")
 
-        professors = professors.set_index("professor_id", drop=True)  # type: ignore
+        professors = professors.set_index("professor_id", drop=True)
         professors = professors_update[professors.columns].combine_first(professors)
-        professors = professors.reset_index(drop=False)  # type: ignore
+        professors = professors.reset_index(drop=False)
 
         # second-pass
         season_professors["professor_id"] = match_professors(
@@ -359,7 +359,7 @@ def import_courses(
 
     logging.debug("Creating courses table")
     # initialize courses table
-    courses = merged_course_info.drop_duplicates(  # type: ignore
+    courses = merged_course_info.drop_duplicates(
         subset="temp_course_id"
     ).copy(deep=True)
     # global course IDs
@@ -385,8 +385,8 @@ def import_courses(
     listings["listing_id"] = range(len(listings))
     listings["course_id"] = listings["temp_course_id"].apply(temp_to_course_id.get)
     listings["section"] = listings["section"].apply(lambda x: "0" if x is None else x)
-    listings["section"] = listings["section"].fillna("0").astype(str)  # type: ignore
-    listings["section"] = listings["section"].replace({"": "0"})  # type: ignore
+    listings["section"] = listings["section"].fillna("0").astype(str)
+    listings["section"] = listings["section"].replace({"": "0"})
 
     professors_prep = aggregate_professors(courses)
 
@@ -419,9 +419,9 @@ def import_courses(
     logging.debug("Adding course flags")
     course_flags = courses[["course_id", "flags"]].copy(deep=True)
     course_flags = course_flags[course_flags["flags"].apply(len) > 0]
-    course_flags = course_flags.explode("flags")  # type: ignore
+    course_flags = course_flags.explode("flags")
 
-    flags = course_flags.drop_duplicates(  # type: ignore
+    flags = course_flags.drop_duplicates(
         subset=["flags"], keep="first"
     ).copy(deep=True)
     flags["flag_text"] = flags["flags"]
@@ -474,7 +474,7 @@ def import_discussions(
     ].groupby("season_code")
 
     # construct inner course_code to course_id mapping
-    season_code_to_course_id = season_code_to_course_id.apply(  # type: ignore
+    season_code_to_course_id = season_code_to_course_id.apply(
         lambda x: x[["course_code", "course_id"]]
         .groupby("course_code")["course_id"]
         .apply(list)
@@ -482,7 +482,7 @@ def import_discussions(
     )
 
     # cast outer season mapping to dictionary
-    season_code_to_course_id = season_code_to_course_id.to_dict()  # type: ignore
+    season_code_to_course_id = season_code_to_course_id.to_dict()
 
     def get_course_code(row):
         """
@@ -515,7 +515,7 @@ def import_discussions(
     # create course_discussions junction table
     course_discussions = discussions.loc[
         :, ["course_ids", "discussion_id"]
-    ].explode(  # type: ignore
+    ].explode(
         "course_ids"
     )
     course_discussions = course_discussions.rename(columns={"course_ids": "course_id"})
@@ -556,7 +556,7 @@ def import_demand(
     ].groupby("season_code")
 
     # construct inner course_code to course_id mapping
-    season_code_to_course_id = season_code_to_course_id.apply(  # type: ignore
+    season_code_to_course_id = season_code_to_course_id.apply(
         lambda x: x[["course_code", "course_id"]]
         .groupby("course_code")["course_id"]
         .apply(list)
@@ -564,7 +564,7 @@ def import_demand(
     )
 
     # cast outer season mapping to dictionary
-    season_code_to_course_id = season_code_to_course_id.to_dict()  # type: ignore
+    season_code_to_course_id = season_code_to_course_id.to_dict()
 
     def match_demand_to_courses(row):
         season_code = int(row["season_code"])
@@ -589,7 +589,7 @@ def import_demand(
         match_demand_to_courses, axis=1
     )
 
-    demand_statistics = demand_statistics.loc[  # type: ignore
+    demand_statistics = demand_statistics.loc[
         demand_statistics["course_id"].apply(len) > 0, :
     ]
 
@@ -615,8 +615,8 @@ def import_demand(
     )
 
     # expand course_id list to one per row
-    demand_statistics = demand_statistics.explode("course_id")  # type: ignore
-    demand_statistics.drop_duplicates(  # type: ignore
+    demand_statistics = demand_statistics.explode("course_id")
+    demand_statistics.drop_duplicates(
         subset=["course_id"], keep="first", inplace=True
     )
 
@@ -672,11 +672,11 @@ def match_evaluations_to_courses(
         "season_code"
     )
     # construct inner course_code to course_id mapping
-    season_crn_to_course_id = season_crn_to_course_id.apply(  # type: ignore
+    season_crn_to_course_id = season_crn_to_course_id.apply(
         lambda x: x[["crn", "course_id"]].set_index("crn")["course_id"].to_dict()
     )
     # cast outer season mapping to dictionary
-    season_crn_to_course_id = season_crn_to_course_id.to_dict()  # type: ignore
+    season_crn_to_course_id = season_crn_to_course_id.to_dict()
 
     def get_course_id(row):
         course_id = season_crn_to_course_id.get(row["season"], {}).get(row["crn"], None)
@@ -708,19 +708,19 @@ def match_evaluations_to_courses(
     evaluation_statistics["course_id"] = evaluation_statistics["course_id"].astype(int)
 
     # drop cross-listing duplicates
-    evaluation_statistics.drop_duplicates(  # type: ignore
+    evaluation_statistics.drop_duplicates(
         subset=["course_id"], inplace=True, keep="first"
     )
-    evaluation_ratings.drop_duplicates(  # type: ignore
+    evaluation_ratings.drop_duplicates(
         subset=["course_id", "question_code"], inplace=True, keep="first"
     )
     evaluation_narratives["comment"] = (
-        evaluation_narratives["comment"]  # type: ignore
+        evaluation_narratives["comment"]
         .str.replace("\r", " ")
         .str.replace("\n", " ")
         .str.replace("  ", " ")
     )
-    evaluation_narratives.drop_duplicates(  # type: ignore
+    evaluation_narratives.drop_duplicates(
         subset=["course_id", "question_code", "comment"], inplace=True, keep="first"
     )
 
@@ -774,14 +774,14 @@ def import_evaluations(
 
     # consistency checks
     logging.debug("Checking question text consistency")
-    text_by_code = evaluation_questions.groupby("question_code")[  # type: ignore
+    text_by_code: pd.Series[set[str]] = evaluation_questions.groupby("question_code")[
         "question_text"
     ].apply(set)
 
     # focus on question texts with multiple variations
     text_by_code = text_by_code[text_by_code.apply(len) > 1]
 
-    def amend_texts(texts: set) -> set:
+    def amend_texts(texts: set[str]) -> set[str]:
         """
         Remove extraneous texts.
 
@@ -804,7 +804,7 @@ def import_evaluations(
     logging.debug(f"Maximum number of different texts per question code: {max_diff_texts}")
 
     # get the maximum distance between a set of texts
-    def max_pairwise_distance(texts):
+    def max_pairwise_distance(texts: set[str]):
 
         pairs = combinations(texts, 2)
         distances = [textdistance.levenshtein.distance(*pair) for pair in pairs]
@@ -830,7 +830,7 @@ def import_evaluations(
         )
 
     logging.debug("Checking question type (narrative/rating) consistency")
-    is_narrative_by_code = evaluation_questions.groupby(  # type: ignore
+    is_narrative_by_code = evaluation_questions.groupby(
         "question_code"
     )["is_narrative"].apply(set)
 
@@ -847,7 +847,7 @@ def import_evaluations(
     evaluation_questions = evaluation_questions.sort_values(
         by="season", ascending=False
     )
-    evaluation_questions.drop_duplicates(  # type: ignore
+    evaluation_questions.drop_duplicates(
         subset=["question_code"], keep="first", inplace=True
     )
 

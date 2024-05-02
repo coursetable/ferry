@@ -1,0 +1,23 @@
+# See: https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+# TODO: migrate setup.py
+
+[tool.pyright]
+include = ["."]
+exclude = ["legacy"]
+# TODO: use strict
+typeCheckingMode = "standard"
+
+pythonVersion = "3.12"
+pythonPlatform = "Linux"
+
+reportImplicitOverride = true
+reportImplicitStringConcatenation = true
+reportMissingSuperCall = true
+reportPropertyTypeMismatch = true
+reportShadowedImports = true
+reportUnnecessaryTypeIgnoreComment = true
+
+# TODO
+reportUnknownArgumentType = "none"
+reportUnknownMemberType = "none"
+reportUnknownVariableType = "none"

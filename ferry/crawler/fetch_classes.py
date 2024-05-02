@@ -10,6 +10,7 @@ Fetches the following information from the Yale Courses API:
 from httpx import AsyncClient
 from tqdm import tqdm
 from tqdm.asyncio import tqdm_asyncio
+from pathlib import Path
 
 from ferry.includes.class_parsing import extract_course_info
 from ferry.includes.class_processing import fetch_course_json, fetch_season_courses_util
@@ -22,7 +23,7 @@ from ferry.utils import load_cache_json, save_cache_json
 
 async def fetch_classes(
     seasons: list[str],
-    data_dir: str,
+    data_dir: Path,
     client: AsyncClient = AsyncClient(timeout=None),
     use_cache: bool = True,
 ) -> dict:
@@ -47,7 +48,7 @@ async def fetch_classes(
 # -----------------------------------------
 
 
-async def fetch_class(season: str, data_dir, client: AsyncClient, use_cache: bool = True):
+async def fetch_class(season: str, data_dir: Path, client: AsyncClient, use_cache: bool = True):
     # fetch season classes
     season_courses = await fetch_season_courses(
         season, data_dir=data_dir, client=client, use_cache=use_cache
@@ -71,7 +72,7 @@ async def fetch_class(season: str, data_dir, client: AsyncClient, use_cache: boo
 
 # fetch overview info for all classes in each season
 async def fetch_season_courses(
-    season: str, data_dir: str, client: AsyncClient, fysem: bool = False, use_cache: bool = True
+    season: str, data_dir: Path, client: AsyncClient, fysem: bool = False, use_cache: bool = True
 ):
     if fysem:
         criteria = [{"field": "fsem_attrs", "value": "Y"}]
@@ -83,7 +84,7 @@ async def fetch_season_courses(
     # load from cache if it exists
     if use_cache and (
         cache_load := load_cache_json(
-            f"{data_dir}/season_courses/{season}{f_suffix}.json"
+            data_dir / "season_courses" / f"{season}{f_suffix}.json"
         )
     ) is not None:
         return cache_load
@@ -93,7 +94,7 @@ async def fetch_season_courses(
     )
 
     save_cache_json(
-        f"{data_dir}/season_courses/{season}{f_suffix}.json", season_courses
+        data_dir / "season_courses" / f"{season}{f_suffix}.json", season_courses
     )
 
     return season_courses
@@ -101,12 +102,12 @@ async def fetch_season_courses(
 
 # fetch detailed info for all classes in each season
 async def fetch_aggregate_season_json(
-    season: str, season_courses, data_dir: str, client: AsyncClient, use_cache: bool = True
+    season: str, season_courses, data_dir: Path, client: AsyncClient, use_cache: bool = True
 ):
     # load from cache if it exists
 
     if use_cache and (
-        cache_load := load_cache_json(f"{data_dir}/course_json_cache/{season}.json")
+        cache_load := load_cache_json(data_dir / "course_json_cache" / f"{season}.json")
     ) is not None:
         return cache_load
 
@@ -120,17 +121,17 @@ async def fetch_aggregate_season_json(
     )
 
     save_cache_json(
-        f"{data_dir}/course_json_cache/{season}.json", aggregate_season_json
+        data_dir / "course_json_cache" / f"{season}.json", aggregate_season_json
     )
 
     return aggregate_season_json
 
 
 # combine regular and fysem courses in each season
-def parse_courses(season: str, aggregate_season_json, fysem_courses, data_dir: str, use_cache: bool = True):
+def parse_courses(season: str, aggregate_season_json, fysem_courses, data_dir: Path, use_cache: bool = True):
     # load from cache if it exists
     if use_cache and (
-        cache_load := load_cache_json(f"{data_dir}/parsed_courses/{season}.json")
+        cache_load := load_cache_json(data_dir / "parsed_courses" / f"{season}.json")
     ) is not None:
         return cache_load
 
@@ -143,6 +144,6 @@ def parse_courses(season: str, aggregate_season_json, fysem_courses, data_dir: s
         except Exception as e:
             print(f"Error parsing course {x['code']} in season {season}: {e}")
 
-    save_cache_json(f"{data_dir}/parsed_courses/{season}.json", parsed_course_info)
+    save_cache_json(data_dir / "parsed_courses" / f"{season}.json", parsed_course_info)
 
     return parsed_course_info

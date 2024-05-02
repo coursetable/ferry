@@ -31,7 +31,7 @@ def transform(data_dir: Path):
     # Get seasons to import
     # ---------------------
     # get full list of course seasons from files
-    Path(data_dir / "migrated_courses").mkdir(parents=True, exist_ok=True)
+    (data_dir / "migrated_courses").mkdir(parents=True, exist_ok=True)
     course_seasons = sorted(
         [
             filename.split(".")[0]  # remove the .json extension
@@ -181,21 +181,22 @@ def transform(data_dir: Path):
     # -------------------------
 
     print("\nImporting course evaluations...")
+    parsed_evaluations_dir = data_dir / "parsed_evaluations"
 
     evaluation_narratives = pd.read_csv(
-        data_dir / "parsed_evaluations/evaluation_narratives.csv",
+        parsed_evaluations_dir / "evaluation_narratives.csv",
         dtype={"season": int, "crn": int},
     )
     evaluation_ratings = pd.read_csv(
-        data_dir / "parsed_evaluations/evaluation_ratings.csv",
+        parsed_evaluations_dir / "evaluation_ratings.csv",
         dtype={"season": int, "crn": int},
     )
     evaluation_statistics = pd.read_csv(
-        data_dir / "parsed_evaluations/evaluation_statistics.csv",
+        parsed_evaluations_dir / "evaluation_statistics.csv",
         dtype={"season": int, "crn": int},
     )
     evaluation_questions = pd.read_csv(
-        data_dir / "parsed_evaluations/evaluation_questions.csv",
+        parsed_evaluations_dir / "evaluation_questions.csv",
         dtype={"season": int, "crn": int},
     )
 
@@ -265,7 +266,7 @@ def transform(data_dir: Path):
     print("\nWriting tables to disk as CSVs...")
 
     csv_dir = data_dir / "importer_dumps"
-    Path(csv_dir).mkdir(parents=True, exist_ok=True)
+    csv_dir.mkdir(parents=True, exist_ok=True)
 
     csvs = {
         "seasons": seasons,
@@ -285,7 +286,7 @@ def transform(data_dir: Path):
     }
 
     def export_csv(
-        table: pd.DataFrame, table_name: str, csv_kwargs: dict[str, Any] = None
+        table: pd.DataFrame, table_name: str, csv_kwargs: dict[str, Any] | None = None
     ):
         """
         Exports a table to a CSV file with provided name.

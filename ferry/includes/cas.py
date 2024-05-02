@@ -24,7 +24,7 @@ def _create_client_from_cookie(cas_cookie: str) -> httpx.AsyncClient:
 
 
 def create_client(
-    cas_cookie: str = None,
+    cas_cookie: str | None = None,
 ) -> httpx.AsyncClient:
     """
     Create a client using parameters from /ferry/config.py.

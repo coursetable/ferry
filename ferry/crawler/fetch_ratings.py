@@ -13,6 +13,7 @@ import asyncio
 import concurrent.futures
 import traceback
 from pathlib import Path
+from typing import Any
 
 import diskcache
 import ujson
@@ -146,13 +147,10 @@ async def is_yale_college(
 async def fetch_ratings(
     cas_cookie: str,
     seasons: list[str],
-    data_dir: str = None,
-    courses: list[dict] = None,
+    data_dir: Path,
+    courses: dict[str, Any] | None = None,
 ):
-    # We need a place for mandatory cache files to go.
-    if (cache_dir := data_dir) is None:
-        cache_dir = "data"
-    yale_college_cache = diskcache.Cache(f"{cache_dir}/yale_college_cache")
+    yale_college_cache = diskcache.Cache(data_dir / "yale_college_cache")
 
     # -----------------------------------
     # Queue courses to query from seasons
@@ -192,7 +190,7 @@ async def fetch_ratings(
 
             if (
                 season_courses := load_cache_json(
-                    f"{data_dir}/season_courses/{season}.json"
+                    data_dir / "season_courses" / f"{season}.json"
                 )
                 if courses is None
                 else courses[season]
@@ -266,15 +264,15 @@ async def fetch_ratings(
 async def fetch_course_ratings(
     season_code: str,
     crn: str,
-    data_dir: str,
+    data_dir: Path,
     client: AsyncClient,
     is_yale_college: bool,
 ):
     course_unique_id = f"{season_code}-{crn}"
 
-    output_path = f"{data_dir}/course_evals/{course_unique_id}.json"
+    output_path = data_dir / "course_evals" / f"{course_unique_id}.json"
 
-    if Path(output_path).is_file():
+    if output_path.is_file():
         # tqdm.write(f"Skipping course {course_unique_id} - already exists")
         # The JSON will be loaded at the process ratings step
         return None, None, None, output_path
@@ -327,7 +325,7 @@ if __name__ == "__main__":
     asyncio.run(
         fetch_ratings(
             seasons=seasons,
-            data_dir="data",
+            data_dir=Path("data"),
             cas_cookie=args.cas_cookie,
         )
     )

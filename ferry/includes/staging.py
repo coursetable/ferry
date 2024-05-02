@@ -38,13 +38,13 @@ def copy_from_stringio(conn, table: pd.DataFrame, table_name: str):
     buffer = StringIO()
 
     table.to_csv(
-        buffer,  # type: ignore
+        buffer,
         index_label="id",
         header=False,
         index=False,
         sep="\t",
         quoting=csv.QUOTE_NONE,
-        escapechar="\\",  # type: ignore
+        escapechar="\\",
         na_rep="NULL",
     )
 

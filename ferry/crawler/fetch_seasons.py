@@ -6,6 +6,7 @@ import re
 
 import ujson
 from httpx import AsyncClient
+from pathlib import Path
 
 # -----------------------------------------
 # Retrieve seasons from unofficial Yale API
@@ -13,7 +14,7 @@ from httpx import AsyncClient
 
 
 async def fetch_course_seasons(
-    data_dir, client: AsyncClient = AsyncClient(timeout=None)
+    data_dir: Path, client: AsyncClient = AsyncClient(timeout=None)
 ):
     print("Fetching course seasons...", end=" ")
     r = await client.get("https://courses.yale.edu/")
@@ -25,7 +26,7 @@ async def fetch_course_seasons(
         # exclude '999999' and '999998' catch-all 'Past seasons' season option
         course_seasons = sorted([x for x in course_seasons if x != "999999" and x != "999998"]) 
 
-        with open(f"{data_dir}/course_seasons.json", "w") as f:
+        with open(data_dir / "course_seasons.json", "w") as f:
             ujson.dump(course_seasons, f, indent=4)
 
         print("✔")

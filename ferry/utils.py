@@ -4,8 +4,8 @@ Utility functions for ferry driver.
 
 import argparse
 import asyncio
-import pathlib
-from typing import Any
+from pathlib import Path
+from typing import Any, cast
 
 from httpx import AsyncClient
 
@@ -29,9 +29,9 @@ class RawArgs:
 
 class Args:
     cas_cookie: str
-    config_file: str
+    config_file: Path
     client: AsyncClient
-    data_dir: str
+    data_dir: Path
     database_connect_string: str
     debug: bool
     fetch_classes: bool
@@ -62,7 +62,7 @@ class InvalidSeasonError(Exception):
     pass
 
 
-_PROJECT_DIR = pathlib.Path(__file__).resolve().parent.parent
+_PROJECT_DIR = Path(__file__).resolve().parent.parent
 
 DATA_DIR = str(_PROJECT_DIR / "data")
 CONFIG_FILE = str(_PROJECT_DIR / "config" / "config.yml")
@@ -256,13 +256,10 @@ def parse_env_args(args: RawArgs):
 
 
 def load_yaml(parser: argparse.ArgumentParser):
-    p: RawArgs = parser.parse_args()
+    p: RawArgs = cast(RawArgs, parser.parse_args())
 
     if p.config_file is not None:
         try:
-            # Check if config file exists
-            from pathlib import Path
-
             if not Path(p.config_file).is_file():
                 print(f"File not found: {p.config_file}.")
                 return
@@ -304,7 +301,7 @@ def save_yaml(args: RawArgs):
 
         del args.config_file
 
-        if args.data_dir == DATA_DIR:
+        if str(args.data_dir) == DATA_DIR:
             del args.data_dir
 
         with open(config_file, "w+") as f:
@@ -319,7 +316,7 @@ def get_args() -> Args:
     # Load YAML config as default args
     load_yaml(parser)
 
-    args: RawArgs = parser.parse_args()
+    args: RawArgs = cast(RawArgs, parser.parse_args())
 
     # Set args.use_cache to False if args.release is True
     if args.release:
@@ -330,13 +327,17 @@ def get_args() -> Args:
 
     parse_env_args(args)
 
+    final_args = cast(Args, args)
+
     # Initialize HTTPX client, only used for fetching classes (ratings fetch initializes its own client with CAS auth)
-    args.client = AsyncClient(timeout=None)
-    return args
+    final_args.client = AsyncClient(timeout=None)
+    final_args.data_dir = Path(final_args.data_dir)
+    final_args.config_file = Path(final_args.config_file)
+    return final_args
 
 
 # Init Sentry (in relase mode)
-def init_sentry(sentry_url: str):
+def init_sentry(sentry_url: str | None):
     import sentry_sdk
 
     if sentry_url is None:
@@ -357,7 +358,7 @@ def init_sentry(sentry_url: str):
     )
 
 
-def load_cache_json(path: str):
+def load_cache_json(path: Path):
     """
     Load JSON from cache file
 
@@ -373,17 +374,15 @@ def load_cache_json(path: str):
     """
     import ujson
 
-    p = pathlib.Path(path)
-
-    if not p.is_file():
+    if not path.is_file():
         return None
 
-    with open(p, "r") as f:
+    with open(path, "r") as f:
         return ujson.load(f)
 
 
 def save_cache_json(
-    path: str,
+    path: Path,
     data: Any,
     indent: int = 4,
 ):
@@ -401,10 +400,9 @@ def save_cache_json(
     """
     import ujson
 
-    p = pathlib.Path(path)
-    p.parent.mkdir(parents=True, exist_ok=True)
+    path.parent.mkdir(parents=True, exist_ok=True)
 
-    with open(p, "w") as f:
+    with open(path, "w") as f:
         ujson.dump(data, f, indent=indent)
 
 
@@ -444,4 +442,6 @@ async def request(
             await asyncio.sleep(2**attempt)
             attempt += 1
 
+    if response is None:
+        raise ValueError("Request failed: all attempts exhausted.")
     return response

@@ -68,7 +68,7 @@ async def fetch_season_courses_util(
 
 
 async def fetch_course_json(
-    code: str, crn: str, srcdb: str, client: AsyncClient = None
+    code: str, crn: str, srcdb: str, client: AsyncClient
 ) -> dict[str, Any]:
     """
     Fetch information for a course from the API

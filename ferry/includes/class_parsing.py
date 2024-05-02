@@ -88,7 +88,7 @@ def professors_from_html(html: str) -> tuple[list[str], list[str], list[str]]:
         instructor_name = unidecode.unidecode(instructor_name)
 
         # patch certain professor names manually
-        instructor_name = PROFESSOR_EXCEPTIONS.get(  # type: ignore
+        instructor_name = PROFESSOR_EXCEPTIONS.get(
             instructor_name, instructor_name
         )
 
@@ -768,9 +768,9 @@ def is_sysem(title_text: str, description_text: str, requirements_text: str) -> 
     flagged_text = [
         "Enrollment limited to sophomores",
         "Sophomore Seminar",
-        "Registration preference to sophomores"
+        "Registration preference to sophomores",
         "Registration preference given to sophomores",
-        "Registration preference is given to sophomores"
+        "Registration preference is given to sophomores",
         "Enrollment limited to freshmen and sophomores",
         "Enrollment limited to first-years and sophomores",
         "Enrollment limited to sophomores",

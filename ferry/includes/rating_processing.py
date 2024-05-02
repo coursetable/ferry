@@ -9,7 +9,7 @@ from urllib.parse import urlencode
 
 import requests
 from bs4 import BeautifulSoup
-from httpx import AsyncClient
+from httpx import AsyncClient, Response
 
 from ferry.utils import request, save_cache_json
 
@@ -17,7 +17,13 @@ QuestionId = str
 
 
 class page_index_class:
-    pass
+    def __init__(self, path: Path | Response):
+        super().__init__()
+        if isinstance(path, Response):
+            self.content = path.content
+            return
+        with open(path, "rb") as file:
+            self.content = file.read()
 
 
 class EmptyEvaluationError(Exception):
@@ -269,7 +275,7 @@ def fetch_course_enrollment(
 
 
 # Does not return anything, only responsible for writing course evals to json cache
-def process_course_eval(page_index, crn_code, term_code, path):
+def process_course_eval(page_index, crn_code, term_code, path: Path):
     if page_index is None:
         return
     # Enrollment data.
@@ -327,8 +333,8 @@ def process_course_eval(page_index, crn_code, term_code, path):
 
 
 async def fetch_course_eval(
-    client: AsyncClient, crn_code: str, term_code: str, data_dir: str
-) -> dict[str, Any]:
+    client: AsyncClient, crn_code: str, term_code: str, data_dir: Path
+) -> page_index_class:
     """
     Gets evaluation data and comments for the specified course in specified term.
 
@@ -348,18 +354,10 @@ async def fetch_course_eval(
     course_eval:
         Dictionary with all evaluation data.
     """
-
-    html_file = (
-        Path(data_dir) / f"rating_cache/questions_index/{term_code}_{crn_code}.html"
-    )
-    if (html_file).is_file():
-        with open(
-            html_file,
-            "rb",
-        ) as file:
-            page_index = page_index_class()
-            page_index.content = file.read()
-            return page_index
+    questions_index = data_dir / "rating_cache" / "questions_index"
+    html_file = questions_index / f"{term_code}_{crn_code}.html"
+    if html_file.is_file():
+        return page_index_class(html_file)
 
     # OCE website for evaluations
     url_eval = "https://oce.app.yale.edu/ocedashboard/studentViewer/courseSummary?"
@@ -397,13 +395,8 @@ async def fetch_course_eval(
         raise CrawlerError(f"Error fetching evaluations for {term_code}-{crn_code}")
 
     # save raw HTML in case we ever need it
-    (Path(data_dir) / f"rating_cache/questions_index/").mkdir(
-        parents=True, exist_ok=True
-    )
-    with open(
-        Path(data_dir) / f"rating_cache/questions_index/{term_code}_{crn_code}.html",
-        "wb",
-    ) as file:
+    questions_index.mkdir(parents=True, exist_ok=True)
+    with open(html_file, "wb") as file:
         file.write(page_index.content)
 
-    return page_index
+    return page_index_class(page_index)
