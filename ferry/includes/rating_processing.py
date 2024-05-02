@@ -10,9 +10,10 @@ from urllib.parse import urlencode
 
 import requests
 from bs4 import BeautifulSoup
-from httpx import AsyncClient, Response
+from httpx import Response
 
 from ferry.utils import request, save_cache_json
+from ferry.includes.cas import CASClient
 
 QuestionId = str
 
@@ -293,6 +294,7 @@ def process_course_eval(page_index, crn_code, term_code, path: Path):
         )
     except EmptyEvaluationError as err:
         questions = {}
+        question_is_narrative = {}
         extras["not_viewable"] = str(err)
 
     # Fetch question responses based on whether they are narrative or rating.
@@ -334,7 +336,7 @@ def process_course_eval(page_index, crn_code, term_code, path: Path):
 
 
 async def fetch_course_eval(
-    client: AsyncClient, crn_code: str, term_code: str, data_dir: Path
+    client: CASClient, crn_code: str, term_code: str, data_dir: Path
 ) -> page_index_class:
     """
     Gets evaluation data and comments for the specified course in specified term.

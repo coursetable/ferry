@@ -20,15 +20,6 @@ Contributing
 
 ## Linting&formatting
 
-Installing:
-
-```sh
-pip install black
-npm install -g pyright
-```
-
-Running:
-
 ```sh
 black .
 pyright

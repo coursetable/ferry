@@ -45,6 +45,7 @@ def create_engine_and_session(connect_string: str):
 
 class Database:
     def __init__(self, connect_string: str):
+        super().__init__()
         self.connect_string = connect_string
         self.Engine, self.Session = create_engine_and_session(connect_string)
         self.Base = Base

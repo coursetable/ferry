@@ -14,15 +14,14 @@ import asyncio
 import concurrent.futures
 import traceback
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
 import diskcache
 import ujson
-from httpx import AsyncClient
 from tqdm import tqdm
 from tqdm.asyncio import tqdm_asyncio
 
-from ferry.includes.cas import create_client
+from ferry.includes.cas import create_client, CASClient
 from ferry.includes.rating_parsing import parse_ratings
 from ferry.includes.rating_processing import (
     AuthError,
@@ -51,8 +50,8 @@ async def is_yale_college(
     yale_college_cache: diskcache.Cache,
     season_code: str,
     crn: str,
-    client: AsyncClient = AsyncClient(timeout=None),
-) -> str | bool:
+    client: CASClient,
+) -> bool:
     """
     Helper function to check if course is in Yale College
     (only Yale College and Summer Session courses are rated)
@@ -62,7 +61,7 @@ async def is_yale_college(
 
     # Check cache
     if course_unique_id in yale_college_cache:
-        return yale_college_cache.get(course_unique_id)
+        return cast(bool, yale_college_cache.get(course_unique_id))
 
     all_params = {
         "other": {"srcdb": season_code},
@@ -266,7 +265,7 @@ async def fetch_course_ratings(
     season_code: str,
     crn: str,
     data_dir: Path,
-    client: AsyncClient,
+    client: CASClient,
     is_yale_college: bool,
 ):
     course_unique_id = f"{season_code}-{crn}"

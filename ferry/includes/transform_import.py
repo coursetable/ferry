@@ -12,6 +12,7 @@ import numpy as np
 import pandas as pd
 import textdistance
 import ujson
+from typing import cast
 
 from ferry import database
 from ferry.includes.utils import (
@@ -426,7 +427,7 @@ def import_courses(
     logging.debug("Adding course flags")
     course_flags = courses[["course_id", "flags"]].copy(deep=True)
     course_flags = course_flags[course_flags["flags"].apply(len) > 0]
-    course_flags = course_flags.explode("flags")
+    course_flags = course_flags.explode(column="flags")
 
     flags = course_flags.drop_duplicates(subset=["flags"], keep="first").copy(deep=True)
     flags["flag_text"] = flags["flags"]
@@ -436,208 +437,208 @@ def import_courses(
     course_flags["flag_id"] = course_flags["flags"].apply(flag_text_to_id.get)
 
     # extract columns to match database
-    courses = courses.loc[:, get_table_columns(database.models.Course)]
-    listings = listings.loc[:, get_table_columns(database.models.Listing)]
+    courses = courses.loc[:, get_table_columns(database.Course)]
+    listings = listings.loc[:, get_table_columns(database.Listing)]
     course_professors = course_professors.loc[
-        :, get_table_columns(database.models.course_professors, not_class=True)
+        :, get_table_columns(database.course_professors, not_class=True)
     ]
-    professors = professors.loc[:, get_table_columns(database.models.Professor)]
-    flags = flags.loc[:, get_table_columns(database.models.Flag)]
+    professors = professors.loc[:, get_table_columns(database.Professor)]
+    flags = flags.loc[:, get_table_columns(database.Flag)]
     course_flags = course_flags.loc[
-        :, get_table_columns(database.models.course_flags, not_class=True)
+        :, get_table_columns(database.course_flags, not_class=True)
     ]
 
     return courses, listings, course_professors, professors, course_flags, flags
 
 
-def import_discussions(
-    merged_discussions_info: pd.DataFrame, listings: pd.DataFrame
-) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """
-    Import discussion sections into Pandas DataFrame.
+# def import_discussions(
+#     merged_discussions_info: pd.DataFrame, listings: pd.DataFrame
+# ) -> tuple[pd.DataFrame, pd.DataFrame]:
+#     """
+#     Import discussion sections into Pandas DataFrame.
 
-    Parameters
-    ----------
-    merged_discussions_info:
-        Parsed discussion sections information from CSV files.
-    listings:
-        Listings table from import_courses.
+#     Parameters
+#     ----------
+#     merged_discussions_info:
+#         Parsed discussion sections information from CSV files.
+#     listings:
+#         Listings table from import_courses.
 
-    Returns
-    -------
-    discussions
-    """
-    discussions = merged_discussions_info.copy(deep=True)
-    discussions["discussion_id"] = range(len(discussions))
+#     Returns
+#     -------
+#     discussions
+#     """
+#     discussions = merged_discussions_info.copy(deep=True)
+#     discussions["discussion_id"] = range(len(discussions))
 
-    # serialize objects for loading
-    discussions["times_by_day"] = discussions["times_by_day"].apply(ujson.dumps)
+#     # serialize objects for loading
+#     discussions["times_by_day"] = discussions["times_by_day"].apply(ujson.dumps)
 
-    # construct outer season grouping
-    season_code_to_course_id = listings[
-        ["season_code", "course_code", "course_id"]
-    ].groupby("season_code")
+#     # construct outer season grouping
+#     season_code_to_course_id = listings[
+#         ["season_code", "course_code", "course_id"]
+#     ].groupby("season_code")
 
-    # construct inner course_code to course_id mapping
-    season_code_to_course_id = season_code_to_course_id.apply(
-        lambda x: x[["course_code", "course_id"]]
-        .groupby("course_code")["course_id"]
-        .apply(list)
-        .to_dict()
-    )
+#     # construct inner course_code to course_id mapping
+#     season_code_to_course_id = season_code_to_course_id.apply(
+#         lambda x: x[["course_code", "course_id"]]
+#         .groupby("course_code")["course_id"]
+#         .apply(list)
+#         .to_dict()
+#     )
 
-    # cast outer season mapping to dictionary
-    season_code_to_course_id = season_code_to_course_id.to_dict()
+#     # cast outer season mapping to dictionary
+#     season_code_to_course_id = season_code_to_course_id.to_dict()
 
-    def get_course_code(row):
-        """
-        Formats the course code for course ID matching.
-        """
-        if row["subject"] != "" and row["number"] != "":
-            # remove the 'D' at the end of the code for matching
-            return row["subject"] + " " + row["number"][:-1]
-        return ""
+#     def get_course_code(row):
+#         """
+#         Formats the course code for course ID matching.
+#         """
+#         if row["subject"] != "" and row["number"] != "":
+#             # remove the 'D' at the end of the code for matching
+#             return row["subject"] + " " + row["number"][:-1]
+#         return ""
 
-    discussions["course_code"] = discussions.apply(get_course_code, axis=1)
+#     discussions["course_code"] = discussions.apply(get_course_code, axis=1)
 
-    def match_discussion_to_courses(row):
-        """
-        Matches discussion section course code to course ID (in 'courses' table).
-        """
-        season_code = int(row["season_code"])
+#     def match_discussion_to_courses(row):
+#         """
+#         Matches discussion section course code to course ID (in 'courses' table).
+#         """
+#         season_code = int(row["season_code"])
 
-        # get matching course IDs by season and section code
-        # (assumes section code is just course code + "D" suffix)
-        course_ids = season_code_to_course_id.get(season_code, {}).get(
-            row["course_code"], []
-        )
-        course_ids = sorted(list(course_ids))
+#         # get matching course IDs by season and section code
+#         # (assumes section code is just course code + "D" suffix)
+#         course_ids = season_code_to_course_id.get(season_code, {}).get(
+#             row["course_code"], []
+#         )
+#         course_ids = sorted(list(course_ids))
 
-        return course_ids
+#         return course_ids
 
-    discussions["course_ids"] = discussions.apply(match_discussion_to_courses, axis=1)
+#     discussions["course_ids"] = discussions.apply(match_discussion_to_courses, axis=1)
 
-    # create course_discussions junction table
-    course_discussions = discussions.loc[:, ["course_ids", "discussion_id"]].explode(
-        "course_ids"
-    )
-    course_discussions = course_discussions.rename(columns={"course_ids": "course_id"})
-    course_discussions.dropna(subset=["course_id"], inplace=True)
-    course_discussions.loc[:, "course_id"] = course_discussions["course_id"].astype(int)
+#     # create course_discussions junction table
+#     course_discussions = discussions.loc[:, ["course_ids", "discussion_id"]].explode(
+#         "course_ids"
+#     )
+#     course_discussions = course_discussions.rename(columns={"course_ids": "course_id"})
+#     course_discussions.dropna(subset=["course_id"], inplace=True)
+#     course_discussions.loc[:, "course_id"] = course_discussions["course_id"].astype(int)
 
-    # subset for actual columns used in Postgres
-    course_discussions = course_discussions.loc[
-        :, get_table_columns(database.models.course_discussions, not_class=True)
-    ]
-    discussions = discussions.loc[:, get_table_columns(database.models.Discussion)]
+#     # subset for actual columns used in Postgres
+#     course_discussions = course_discussions.loc[
+#         :, get_table_columns(database.course_discussions, not_class=True)
+#     ]
+#     discussions = discussions.loc[:, get_table_columns(database.Discussion)]
 
-    return discussions, course_discussions
+#     return discussions, course_discussions
 
 
-def import_demand(
-    merged_demand_info: pd.DataFrame, listings: pd.DataFrame
-) -> pd.DataFrame:
-    """
-    Import demand statistics into Pandas DataFrame.
+# def import_demand(
+#     merged_demand_info: pd.DataFrame, listings: pd.DataFrame
+# ) -> pd.DataFrame:
+#     """
+#     Import demand statistics into Pandas DataFrame.
 
-    Parameters
-    ----------
-    merged_demand_info:
-        Raw demand information from JSON files.
-    listings:
-        Listings table from import_courses.
+#     Parameters
+#     ----------
+#     merged_demand_info:
+#         Raw demand information from JSON files.
+#     listings:
+#         Listings table from import_courses.
 
-    Returns
-    -------
-    demand_statistics
-    """
-    demand_statistics = merged_demand_info.copy(deep=True)
+#     Returns
+#     -------
+#     demand_statistics
+#     """
+#     demand_statistics = merged_demand_info.copy(deep=True)
 
-    # construct outer season grouping
-    season_code_to_course_id = listings[
-        ["season_code", "course_code", "course_id"]
-    ].groupby("season_code")
+#     # construct outer season grouping
+#     season_code_to_course_id = listings[
+#         ["season_code", "course_code", "course_id"]
+#     ].groupby("season_code")
 
-    # construct inner course_code to course_id mapping
-    season_code_to_course_id = season_code_to_course_id.apply(
-        lambda x: x[["course_code", "course_id"]]
-        .groupby("course_code")["course_id"]
-        .apply(list)
-        .to_dict()
-    )
+#     # construct inner course_code to course_id mapping
+#     season_code_to_course_id = season_code_to_course_id.apply(
+#         lambda x: x[["course_code", "course_id"]]
+#         .groupby("course_code")["course_id"]
+#         .apply(list)
+#         .to_dict()
+#     )
 
-    # cast outer season mapping to dictionary
-    season_code_to_course_id = season_code_to_course_id.to_dict()
+#     # cast outer season mapping to dictionary
+#     season_code_to_course_id = season_code_to_course_id.to_dict()
 
-    def match_demand_to_courses(row):
-        season_code = int(row["season_code"])
+#     def match_demand_to_courses(row):
+#         season_code = int(row["season_code"])
 
-        course_ids = [
-            season_code_to_course_id.get(season_code, {}).get(x, None)
-            for x in row["codes"]
-        ]
+#         course_ids = [
+#             season_code_to_course_id.get(season_code, {}).get(x, None)
+#             for x in row["codes"]
+#         ]
 
-        course_ids = [set(x) for x in course_ids if x is not None]
+#         course_ids = [set(x) for x in course_ids if x is not None]
 
-        if course_ids == []:
-            return []
+#         if course_ids == []:
+#             return []
 
-        # union all course IDs
-        course_ids = set.union(*course_ids)
-        course_ids = sorted(list(course_ids))
+#         # union all course IDs
+#         course_ids = set.union(*course_ids)
+#         course_ids = sorted(list(course_ids))
 
-        return course_ids
+#         return course_ids
 
-    demand_statistics["course_id"] = demand_statistics.apply(
-        match_demand_to_courses, axis=1
-    )
+#     demand_statistics["course_id"] = demand_statistics.apply(
+#         match_demand_to_courses, axis=1
+#     )
 
-    demand_statistics = demand_statistics.loc[
-        demand_statistics["course_id"].apply(len) > 0, :
-    ]
+#     demand_statistics = demand_statistics.loc[
+#         demand_statistics["course_id"].apply(len) > 0, :
+#     ]
 
-    def date_to_int(date):
-        month, day = date.split("/")
+#     def date_to_int(date):
+#         month, day = date.split("/")
 
-        month = int(month)
-        day = int(day)
+#         month = int(month)
+#         day = int(day)
 
-        return month * 100 + day
+#         return month * 100 + day
 
-    def get_most_recent_demand(row):
+#     def get_most_recent_demand(row):
 
-        sorted_demand = list(row["overall_demand"].items())
-        sorted_demand.sort(key=lambda x: date_to_int(x[0]))
-        latest_demand_date, latest_demand = sorted_demand[-1]
+#         sorted_demand = list(row["overall_demand"].items())
+#         sorted_demand.sort(key=lambda x: date_to_int(x[0]))
+#         latest_demand_date, latest_demand = sorted_demand[-1]
 
-        return [latest_demand, latest_demand_date]
+#         return [latest_demand, latest_demand_date]
 
-    # get most recent demand date
-    (
-        demand_statistics["latest_demand"],
-        demand_statistics["latest_demand_date"],
-    ) = zip(*demand_statistics.apply(get_most_recent_demand, axis=1))
+#     # get most recent demand date
+#     (
+#         demand_statistics["latest_demand"],
+#         demand_statistics["latest_demand_date"],
+#     ) = zip(*demand_statistics.apply(get_most_recent_demand, axis=1))
 
-    # expand course_id list to one per row
-    demand_statistics = demand_statistics.explode("course_id")
-    demand_statistics.drop_duplicates(subset=["course_id"], keep="first", inplace=True)
+#     # expand course_id list to one per row
+#     demand_statistics = demand_statistics.explode("course_id")
+#     demand_statistics.drop_duplicates(subset=["course_id"], keep="first", inplace=True)
 
-    # rename demand JSON column to match database
-    demand_statistics = demand_statistics.rename(
-        {"overall_demand": "demand"}, axis="columns"
-    )
+#     # rename demand JSON column to match database
+#     demand_statistics = demand_statistics.rename(
+#         {"overall_demand": "demand"}, axis="columns"
+#     )
 
-    demand_statistics["demand"] = demand_statistics["demand"].apply(ujson.dumps)
+#     demand_statistics["demand"] = demand_statistics["demand"].apply(ujson.dumps)
 
-    # extract columns to match database
-    demand_statistics = demand_statistics.loc[
-        :, get_table_columns(database.models.DemandStatistics)
-    ]
+#     # extract columns to match database
+#     demand_statistics = demand_statistics.loc[
+#         :, get_table_columns(database.DemandStatistics)
+#     ]
 
-    print("[Summary]")
-    print(f"Total demand statistics: {len(demand_statistics)}")
+#     print("[Summary]")
+#     print(f"Total demand statistics: {len(demand_statistics)}")
 
-    return demand_statistics
+#     return demand_statistics
 
 
 def match_evaluations_to_courses(
@@ -778,9 +779,10 @@ def import_evaluations(
 
     # consistency checks
     logging.debug("Checking question text consistency")
-    text_by_code: pd.Series[set[str]] = evaluation_questions.groupby("question_code")[
-        "question_text"
-    ].apply(set)
+    text_by_code = cast(
+        pd.Series,
+        evaluation_questions.groupby("question_code")["question_text"].apply(set),
+    )
 
     # focus on question texts with multiple variations
     text_by_code = text_by_code[text_by_code.apply(len) > 1]
@@ -817,19 +819,21 @@ def import_evaluations(
 
         return max(distances)
 
-    distances_by_code = text_by_code.apply(max_pairwise_distance)
+    distances_by_code: pd.Series[float] = text_by_code.apply(max_pairwise_distance)
     # add [0] at the end to account for empty lists
     max_all_distances = max(list(distances_by_code) + [0])
 
     logging.debug(f"Maximum text divergence within codes: {max_all_distances}")
 
     if not all(distances_by_code < QUESTION_DIVERGENCE_CUTOFF):
-
-        inconsistent_codes = distances_by_code[
-            distances_by_code >= QUESTION_DIVERGENCE_CUTOFF
-        ]
-        inconsistent_codes = list(inconsistent_codes.index)
-        inconsistent_codes = ", ".join(inconsistent_codes)
+        inconsistent_codes = ", ".join(
+            [
+                str(x)
+                for x in distances_by_code[
+                    distances_by_code >= QUESTION_DIVERGENCE_CUTOFF
+                ].index
+            ]
+        )
 
         raise database.InvariantError(
             f"Error: question codes {inconsistent_codes} have divergent texts"
@@ -842,9 +846,14 @@ def import_evaluations(
 
     # check that a question code is always narrative or always rating
     if not all(is_narrative_by_code.apply(len) == 1):
-        inconsistent_codes = is_narrative_by_code[is_narrative_by_code.apply(len) != 1]
-        inconsistent_codes = list(inconsistent_codes.index)
-        inconsistent_codes = ", ".join(inconsistent_codes)
+        inconsistent_codes = ", ".join(
+            [
+                str(x)
+                for x in is_narrative_by_code[
+                    is_narrative_by_code.apply(len) != 1
+                ].index
+            ]
+        )
         raise database.InvariantError(
             f"Error: question codes {inconsistent_codes} have both narratives and ratings"
         )
@@ -906,16 +915,16 @@ def import_evaluations(
 
     # extract columns to match database  ----------------
     evaluation_narratives = evaluation_narratives.loc[
-        :, get_table_columns(database.models.EvaluationNarrative)
+        :, get_table_columns(database.EvaluationNarrative)
     ]
     evaluation_ratings = evaluation_ratings.loc[
-        :, get_table_columns(database.models.EvaluationRating)
+        :, get_table_columns(database.EvaluationRating)
     ]
     evaluation_statistics = evaluation_statistics.loc[
-        :, get_table_columns(database.models.EvaluationStatistics)
+        :, get_table_columns(database.EvaluationStatistics)
     ]
     evaluation_questions = evaluation_questions.loc[
-        :, get_table_columns(database.models.EvaluationQuestion)
+        :, get_table_columns(database.EvaluationQuestion)
     ]
 
     return (

@@ -414,7 +414,7 @@ def courses_computed(
         )
 
     # remove intermediate columns
-    courses = courses.loc[:, get_table_columns(database.models.Course)]
+    courses = courses.loc[:, get_table_columns(database.Course)]
 
     return courses
 

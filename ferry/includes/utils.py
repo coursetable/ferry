@@ -8,8 +8,7 @@ import re
 from itertools import combinations
 from typing import Any, TypeVar
 
-import pandas as pd
-from sqlalchemy import inspect
+from ferry.database.models import BaseModel
 
 
 def convert_unicode(text: str) -> str:
@@ -207,24 +206,7 @@ def resolve_potentially_callable(val: Any) -> Any:
     return val
 
 
-def get_table(table: str) -> pd.DataFrame:
-    """
-    Read one of the tables from the database into Pandas dataframe (assuming SQL storage format).
-
-    Parameters
-    ----------
-    table:
-        Name of table to retrieve.
-
-    Returns
-    -------
-    Pandas DataFrame
-    """
-    # the Pandas stubs we're using don't have read_sql_table yet
-    return pd.read_sql_table(table, con=database.Engine)
-
-
-def get_table_columns(table, not_class=False) -> list[str]:
+def get_table_columns(table: BaseModel, not_class=False) -> list[str]:
     """
     Get column names of a table, where table is
     a SQLalchemy model or object (e.g. ferry.database.models.Course)
@@ -244,37 +226,3 @@ def get_table_columns(table, not_class=False) -> list[str]:
         return [column.key for column in table.columns]
 
     return [column.key for column in table.__table__.columns]
-
-
-def get_all_tables(select_schemas: list[str]) -> dict[str, pd.DataFrame]:
-    """
-    Get all the tables under given schemas as a dictionary of Pandas dataframes.
-
-    Parameters
-    ----------
-    select_schemas:
-        Schemas to retrieve tables for.
-
-    Returns
-    -------
-    Dictionary of Pandas DataFrames.
-    """
-    from ferry import database
-
-    tables: list[str] = []
-
-    # inspect and get schema names
-    inspector = inspect(database.Engine)
-    schemas = inspector.get_schema_names()
-
-    select_schemas = [x for x in schemas if x in select_schemas]
-
-    for schema in select_schemas:
-
-        schema_tables = inspector.get_table_names(schema=schema)
-
-        tables = tables + schema_tables
-
-    mapped_tables = {table: get_table(table) for table in tables}
-
-    return mapped_tables

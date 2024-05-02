@@ -14,8 +14,8 @@ from ferry.includes.transform_compute import (
 )
 from ferry.includes.transform_import import (
     import_courses,
-    import_demand,
-    import_discussions,
+    # import_demand,
+    # import_discussions,
     import_evaluations,
 )
 
