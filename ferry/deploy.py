@@ -8,6 +8,7 @@ from ferry import database
 
 resource_dir = Path(__file__).parent / "resources"
 
+
 def listing_invariants(session: sqlalchemy.orm.session.Session):
     """
     Check listing invariants.
@@ -16,12 +17,19 @@ def listing_invariants(session: sqlalchemy.orm.session.Session):
         listing.season_code == course.season_code if listing.course_id == course.course_id.
     """
 
-    for listing_id, course_id, listing_season_code, course_season_code in session.query(
+    for (
+        listing_id,
+        course_id,
+        listing_season_code,
+        course_season_code,
+    ) in session.query(
         database.Listing.listing_id,
         database.Listing.course_id,
         database.Listing.season_code,
         database.Course.season_code,
-    ).filter(database.Listing.course_id == database.Course.course_id):
+    ).filter(
+        database.Listing.course_id == database.Course.course_id
+    ):
         if listing_season_code != course_season_code:
             raise database.InvariantError(
                 f"listing {listing_id} has mismatched season_code with course {course_id}"
@@ -36,9 +44,7 @@ def question_invariants(session: sqlalchemy.orm.session.Session):
         evaluation_questions.options is null iff evaluation_questions.is_narrative = True
     """
 
-    for question in session.query(
-        database.EvaluationQuestion
-    ):
+    for question in session.query(database.EvaluationQuestion):
         narrative = question.is_narrative
         options = bool(question.options)
         if narrative and options:
@@ -60,14 +66,15 @@ def question_tag_invariant(session: sqlalchemy.orm.session.Session):
     def optlen(options):
         return len(options) if options else -1
 
-    for question in session.query(
-        database.EvaluationQuestion
-    ):
+    for question in session.query(database.EvaluationQuestion):
         if not question.tag:
             continue
 
         if question.tag not in tag_cache:
-            tag_cache[question.tag] = (question.is_narrative, optlen(question.options))
+            tag_cache[question.tag] = (
+                question.is_narrative,
+                optlen(question.options),
+            )
         else:
             narrative, count = tag_cache[question.tag]
             if question.is_narrative != narrative or count != optlen(question.options):
@@ -82,11 +89,13 @@ def course_invariants(session: sqlalchemy.orm.session.Session):
         every course should have at least one listing.
     """
 
-    courses_no_listings = session.query(
-        database.Listing
-    ).filter(~database.Listing.course_id.in_(
-        session.query(database.Course.course_id)
-    )).all()
+    courses_no_listings = (
+        session.query(database.Listing)
+        .filter(
+            ~database.Listing.course_id.in_(session.query(database.Course.course_id))
+        )
+        .all()
+    )
 
     if courses_no_listings:
 
@@ -110,25 +119,31 @@ def search_setup(session: sqlalchemy.orm.session.Session):
 
     logging.debug("Setting columns to not null if possible")
     table_name = "computed_listing_info_tmp"
-    for (_, _, column_name) in session.execute(text(
-        # Get the list of columns in the table.
-        f"""
+    for _, _, column_name in session.execute(
+        text(
+            # Get the list of columns in the table.
+            f"""
         SELECT table_schema, table_name, column_name
         FROM information_schema.columns
         WHERE table_name = '{table_name}';
         """
-    )):
-        (null_count,) = session.execute(text(
-            f"""
+        )
+    ):
+        (null_count,) = session.execute(
+            text(
+                f"""
             SELECT count(*) FROM {table_name} WHERE {column_name} IS NULL ;
             """
-        )).first()
+            )
+        ).first()
         if null_count == 0:
-            session.execute(text(
-                f"""
+            session.execute(
+                text(
+                    f"""
                 ALTER TABLE {table_name} ALTER COLUMN {column_name} SET NOT NULL ;
                 """
-            ))
+                )
+            )
             logging.debug(f"  {column_name} not null")
 
     logging.debug("Swapping in the table")
@@ -272,12 +287,16 @@ def deploy(db: database.Database):
             if "_staged" in index.name:
                 # conn.execute(text(schema.DropIndex(index)))
                 renamed = index.name.replace("_staged", "")
-                conn.execute(text(f"ALTER INDEX IF EXISTS {index.name} RENAME TO {renamed};"))
+                conn.execute(
+                    text(f"ALTER INDEX IF EXISTS {index.name} RENAME TO {renamed};")
+                )
         # primary key indexes are not listed under meta_table.indexes
         # so just rename these if they exist
-        conn.execute(text(
-            f"ALTER INDEX IF EXISTS pk_{meta_table.name}_staged RENAME TO pk_{meta_table.name};"
-        ))
+        conn.execute(
+            text(
+                f"ALTER INDEX IF EXISTS pk_{meta_table.name}_staged RENAME TO pk_{meta_table.name};"
+            )
+        )
     delete_indexes.commit()
 
     print("\033[F", end="")
@@ -302,7 +321,7 @@ def deploy(db: database.Database):
     print("\nSetting up computed tables...")
     with database.session_scope(db.Session) as db_session:
         search_setup(db_session)
-    
+
     print("\033[F", end="")
     print("Setting up computed tables... ✔")
 

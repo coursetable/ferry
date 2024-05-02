@@ -99,7 +99,11 @@ async def fetch_course_json(
 
     # retry up to 10 times
     req = await request(
-        method="POST", client=client, url=url, data=ujson.dumps(payload), attempts=10
+        method="POST",
+        client=client,
+        url=url,
+        data=ujson.dumps(payload),
+        attempts=10,
     )
 
     req.encoding = "utf-8"

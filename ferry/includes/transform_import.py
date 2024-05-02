@@ -3,6 +3,7 @@ Functions for importing information into tables.
 
 Used by /ferry/transform.py.
 """
+
 import logging
 from collections import Counter
 from itertools import combinations
@@ -74,9 +75,7 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
 
     # group CRNs by season for cross-listing deduplication
 
-    crns_by_season = merged_course_info.groupby("season_code")[
-        "crns"
-    ].apply(list)
+    crns_by_season = merged_course_info.groupby("season_code")["crns"].apply(list)
     # convert CRN groups to sets for resolution
     crns_by_season = crns_by_season.apply(lambda x: [frozenset(y) for y in x])
     # resolve overlapping CRN sets
@@ -91,7 +90,8 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
 
     # assign season-specific ID based on CRN group IDs
     merged_course_info["season_course_id"] = merged_course_info.apply(
-        lambda row: temp_course_ids_by_season[row["season_code"]][row["crn"]], axis=1
+        lambda row: temp_course_ids_by_season[row["season_code"]][row["crn"]],
+        axis=1,
     )
     # temporary string-based unique course identifier
     merged_course_info["temp_course_id"] = merged_course_info.apply(
@@ -118,7 +118,13 @@ def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
     # initialize professors table
     professors_prep = courses.loc[
         :,
-        ["season_code", "course_id", "professors", "professor_emails", "professor_ids"],
+        [
+            "season_code",
+            "course_id",
+            "professors",
+            "professor_emails",
+            "professor_ids",
+        ],
     ]
 
     logging.debug("Resolving professor attributes")
@@ -288,9 +294,7 @@ def resolve_professors(
     # build professors table in order of seasons
     for season in seasons:
 
-        season_professors = professors_by_season.get_group(
-            int(season)
-        ).copy(deep=True)
+        season_professors = professors_by_season.get_group(int(season)).copy(deep=True)
 
         # first-pass
         season_professors["professor_id"] = match_professors(
@@ -306,7 +310,10 @@ def resolve_professors(
         max_professor_id = max(list(professors["professor_id"]) + [0])
         new_professor_ids = pd.Series(
             list(
-                range(max_professor_id + 1, max_professor_id + len(new_professors) + 1)
+                range(
+                    max_professor_id + 1,
+                    max_professor_id + len(new_professors) + 1,
+                )
             ),
             index=new_professors.index,
             dtype=np.float64,
@@ -359,9 +366,9 @@ def import_courses(
 
     logging.debug("Creating courses table")
     # initialize courses table
-    courses = merged_course_info.drop_duplicates(
-        subset="temp_course_id"
-    ).copy(deep=True)
+    courses = merged_course_info.drop_duplicates(subset="temp_course_id").copy(
+        deep=True
+    )
     # global course IDs
     courses["course_id"] = range(len(courses))
     # convert to JSON string for postgres
@@ -421,9 +428,7 @@ def import_courses(
     course_flags = course_flags[course_flags["flags"].apply(len) > 0]
     course_flags = course_flags.explode("flags")
 
-    flags = course_flags.drop_duplicates(
-        subset=["flags"], keep="first"
-    ).copy(deep=True)
+    flags = course_flags.drop_duplicates(subset=["flags"], keep="first").copy(deep=True)
     flags["flag_text"] = flags["flags"]
     flags["flag_id"] = range(len(flags))
 
@@ -513,9 +518,7 @@ def import_discussions(
     discussions["course_ids"] = discussions.apply(match_discussion_to_courses, axis=1)
 
     # create course_discussions junction table
-    course_discussions = discussions.loc[
-        :, ["course_ids", "discussion_id"]
-    ].explode(
+    course_discussions = discussions.loc[:, ["course_ids", "discussion_id"]].explode(
         "course_ids"
     )
     course_discussions = course_discussions.rename(columns={"course_ids": "course_id"})
@@ -610,15 +613,14 @@ def import_demand(
         return [latest_demand, latest_demand_date]
 
     # get most recent demand date
-    demand_statistics["latest_demand"], demand_statistics["latest_demand_date"] = zip(
-        *demand_statistics.apply(get_most_recent_demand, axis=1)
-    )
+    (
+        demand_statistics["latest_demand"],
+        demand_statistics["latest_demand_date"],
+    ) = zip(*demand_statistics.apply(get_most_recent_demand, axis=1))
 
     # expand course_id list to one per row
     demand_statistics = demand_statistics.explode("course_id")
-    demand_statistics.drop_duplicates(
-        subset=["course_id"], keep="first", inplace=True
-    )
+    demand_statistics.drop_duplicates(subset=["course_id"], keep="first", inplace=True)
 
     # rename demand JSON column to match database
     demand_statistics = demand_statistics.rename(
@@ -721,7 +723,9 @@ def match_evaluations_to_courses(
         .str.replace("  ", " ")
     )
     evaluation_narratives.drop_duplicates(
-        subset=["course_id", "question_code", "comment"], inplace=True, keep="first"
+        subset=["course_id", "question_code", "comment"],
+        inplace=True,
+        keep="first",
     )
 
     return evaluation_statistics, evaluation_narratives, evaluation_ratings
@@ -801,7 +805,9 @@ def import_evaluations(
 
     # add [0] at the end to account for empty lists
     max_diff_texts = max(list(text_by_code.apply(len)) + [0])
-    logging.debug(f"Maximum number of different texts per question code: {max_diff_texts}")
+    logging.debug(
+        f"Maximum number of different texts per question code: {max_diff_texts}"
+    )
 
     # get the maximum distance between a set of texts
     def max_pairwise_distance(texts: set[str]):
@@ -830,9 +836,9 @@ def import_evaluations(
         )
 
     logging.debug("Checking question type (narrative/rating) consistency")
-    is_narrative_by_code = evaluation_questions.groupby(
-        "question_code"
-    )["is_narrative"].apply(set)
+    is_narrative_by_code = evaluation_questions.groupby("question_code")[
+        "is_narrative"
+    ].apply(set)
 
     # check that a question code is always narrative or always rating
     if not all(is_narrative_by_code.apply(len) == 1):

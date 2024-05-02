@@ -88,9 +88,7 @@ def professors_from_html(html: str) -> tuple[list[str], list[str], list[str]]:
         instructor_name = unidecode.unidecode(instructor_name)
 
         # patch certain professor names manually
-        instructor_name = PROFESSOR_EXCEPTIONS.get(
-            instructor_name, instructor_name
-        )
+        instructor_name = PROFESSOR_EXCEPTIONS.get(instructor_name, instructor_name)
 
         # if the professor has a name and is not listed as staff, add it
         if len(instructor_name) > 0 and instructor_name != "Staff":
@@ -456,7 +454,11 @@ def extract_meetings_by_day(
 def extract_meetings(
     meeting_html: str,
 ) -> tuple[
-    list[dict[str, Any]], str, str, str, dict[str, list[tuple[str, str, str, str]]]
+    list[dict[str, Any]],
+    str,
+    str,
+    str,
+    dict[str, list[tuple[str, str, str, str]]],
 ]:
     """
     Extract course meeting times and locations from the provided HTML.

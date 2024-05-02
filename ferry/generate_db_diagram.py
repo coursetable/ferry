@@ -2,6 +2,7 @@
 Generates a schema diagram of the database based on the
 SQLAlchemy schema.
 """
+
 from pathlib import Path
 
 from eralchemy2 import render_er

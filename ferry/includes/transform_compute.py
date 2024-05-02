@@ -3,6 +3,7 @@ Handles computed fields in the tables.
 
 Used by /ferry/transform.py.
 """
+
 import csv
 import math
 
@@ -245,9 +246,9 @@ def courses_computed(
 
     # map course_id to professor_ids
     # use frozenset because it is hashable (set is not), needed for groupby
-    course_to_professors = course_professors.groupby("course_id")[
-        "professor_id"
-    ].apply(frozenset)
+    course_to_professors = course_professors.groupby("course_id")["professor_id"].apply(
+        frozenset
+    )
 
     # get historical offerings with same professors
     listings["professors"] = listings["course_id"].apply(course_to_professors.get)
@@ -265,7 +266,10 @@ def courses_computed(
 
     # map course_id to number enrolled
     course_to_enrollment = dict(
-        zip(evaluation_statistics["course_id"], evaluation_statistics["enrolled"])
+        zip(
+            evaluation_statistics["course_id"],
+            evaluation_statistics["enrolled"],
+        )
     )
 
     # get last course offering in general (with or without enrollment)
@@ -344,9 +348,7 @@ def courses_computed(
         )
 
     tqdm.pandas(desc="Finding last-offered course", leave=False)
-    courses["last_offered_course_id"] = courses.progress_apply(
-        get_last_offered, axis=1
-    )
+    courses["last_offered_course_id"] = courses.progress_apply(get_last_offered, axis=1)
 
     tqdm.pandas(desc="Finding last-offered enrollment", leave=False)
     # getting last-offered enrollment
@@ -355,18 +357,22 @@ def courses_computed(
         courses["last_enrollment"],
         courses["last_enrollment_season_code"],
         courses["last_enrollment_same_professors"],
-    ) = zip(
-        *courses.progress_apply(get_last_offered_enrollment, axis=1)
-    )
+    ) = zip(*courses.progress_apply(get_last_offered_enrollment, axis=1))
 
     logging.debug("Computing historical ratings for courses")
 
     # map courses to ratings
     course_to_overall = dict(
-        zip(evaluation_statistics["course_id"], evaluation_statistics["avg_rating"])
+        zip(
+            evaluation_statistics["course_id"],
+            evaluation_statistics["avg_rating"],
+        )
     )
     course_to_workload = dict(
-        zip(evaluation_statistics["course_id"], evaluation_statistics["avg_workload"])
+        zip(
+            evaluation_statistics["course_id"],
+            evaluation_statistics["avg_workload"],
+        )
     )
 
     # get ratings
@@ -398,7 +404,10 @@ def courses_computed(
         ("average_rating", "average_rating_n"),
         ("average_workload", "average_workload_n"),
         ("average_rating_same_professors", "average_rating_same_professors_n"),
-        ("average_workload_same_professors", "average_workload_same_professors_n"),
+        (
+            "average_workload_same_professors",
+            "average_workload_same_professors_n",
+        ),
     ]:
         courses[average_col], courses[num_col] = zip(
             *courses[average_col].apply(average)
@@ -438,7 +447,10 @@ def professors_computed(
     course_professors = course_professors.copy(deep=True)
 
     course_to_overall = dict(
-        zip(evaluation_statistics["course_id"], evaluation_statistics["avg_rating"])
+        zip(
+            evaluation_statistics["course_id"],
+            evaluation_statistics["avg_rating"],
+        )
     )
     # course_to_workload = dict(
     #     zip(evaluation_statistics["course_id"], evaluation_statistics["avg_workload"])

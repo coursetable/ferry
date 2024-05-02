@@ -24,7 +24,9 @@ def stage(data_dir: Path, database: Database):
     # common pd.read_csv arguments
     general_csv_kwargs: dict[Any, Any] = {"index_col": 0, "low_memory": False}
 
-    def load_csv(table_name: str, csv_kwargs: dict[str, Any] | None = None) -> pd.DataFrame:
+    def load_csv(
+        table_name: str, csv_kwargs: dict[str, Any] | None = None
+    ) -> pd.DataFrame:
         """
         Loads a CSV given a table name.
 
@@ -71,13 +73,13 @@ def stage(data_dir: Path, database: Database):
         },
     )
     course_professors = load_csv(
-        "course_professors", 
+        "course_professors",
         {
             "dtype": {
                 "professor_id": "Int64",
                 "course_id": "Int64",
             }
-        }
+        },
     )
     flags = load_csv("flags")
     course_flags = load_csv("course_flags")
@@ -132,7 +134,7 @@ def stage(data_dir: Path, database: Database):
     # sorted tables in the database
     db_meta = MetaData()
     db_meta.reflect(bind=database.Engine)
-    
+
     # Drop all tables
     print("\nDropping all tables...")
     db_meta.drop_all(
@@ -151,9 +153,11 @@ def stage(data_dir: Path, database: Database):
         if table.name in tables:
             copy_from_stringio(connection, tables[table.name], f"{table.name}")
         else:
-            raise ValueError(f"{table.name} defined in Base metadata, but there is no data for it.")
+            raise ValueError(
+                f"{table.name} defined in Base metadata, but there is no data for it."
+            )
     connection.commit()
-        
+
     print("\033[F", end="")
     print("Adding new staging tables... ✔")
 

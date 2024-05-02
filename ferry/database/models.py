@@ -30,6 +30,7 @@ meta = MetaData(
 
 Base = declarative_base(metadata=meta)
 
+
 class BaseModel(SerializeMixin, ReprMixin, Base):
     """
     BaseModel class for all tables.
@@ -48,7 +49,10 @@ class Season(BaseModel):
 
     __tablename__ = "seasons_staged"
     season_code = Column(
-        String(10), primary_key=True, comment="Season code (e.g. '202001')", index=True
+        String(10),
+        primary_key=True,
+        comment="Season code (e.g. '202001')",
+        index=True,
     )
 
     term = Column(
@@ -199,7 +203,8 @@ class Course(BaseModel):
         optional writing credits, etc.)""",
     )
     extra_info = Column(
-        String, comment="Additional information (indicates if class has been cancelled)"
+        String,
+        comment="Additional information (indicates if class has been cancelled)",
     )
     rp_attr = Column(String, comment="Reading period notes")
     classnotes = Column(String, comment="Additional class notes")
@@ -366,7 +371,8 @@ class Listing(BaseModel):
     course = relationship("Course", backref="listings_staged", cascade="all")
 
     school = Column(
-        String, comment="School (e.g. YC, GS, MG) that the course is listed under"
+        String,
+        comment="School (e.g. YC, GS, MG) that the course is listed under",
     )
 
     subject = Column(
@@ -412,7 +418,12 @@ class Listing(BaseModel):
             "number",
             "section",
         ),
-        Index("idx_season_code_crn_unique_staged", "season_code", "crn", unique=True),
+        Index(
+            "idx_season_code_crn_unique_staged",
+            "season_code",
+            "crn",
+            unique=True,
+        ),
     )
 
 
@@ -579,7 +590,8 @@ class EvaluationStatistics(BaseModel):
     declined = Column(Integer, comment="Number of students who declined to respond")
     no_response = Column(Integer, comment="Number of students who did not respond")
     extras = Column(
-        JSON, comment="Arbitrary additional information attached to an evaluation"
+        JSON,
+        comment="Arbitrary additional information attached to an evaluation",
     )
     avg_rating = Column(Float, comment="[computed] Average overall rating")
     avg_workload = Column(Float, comment="[computed] Average workload rating")

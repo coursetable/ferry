@@ -1,6 +1,11 @@
 # See: https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
 # TODO: migrate setup.py
 
+[tool.black]
+# https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html#labels-line-length
+line-length = 88
+target-version = ["py312"]
+
 [tool.pyright]
 include = ["."]
 exclude = ["legacy"]

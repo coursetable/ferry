@@ -86,9 +86,7 @@ def transform(data_dir: Path):
                     f"Skipping season {season}: not found in parsed or migrated courses."
                 )
                 continue
-            parsed_course_info = pd.DataFrame(
-                pd.read_json(str(migrated_courses_file))
-            )
+            parsed_course_info = pd.DataFrame(pd.read_json(str(migrated_courses_file)))
 
         parsed_course_info["season_code"] = season
         merged_course_info_.append(parsed_course_info)
@@ -243,7 +241,7 @@ def transform(data_dir: Path):
     print("\nComputing secondary attributes...")
 
     evaluation_questions = questions_computed(evaluation_questions)
-    
+
     evaluation_statistics = evaluation_statistics_computed(
         evaluation_statistics, evaluation_ratings, evaluation_questions
     )
@@ -251,7 +249,7 @@ def transform(data_dir: Path):
     courses = courses_computed(
         courses, listings, evaluation_statistics, course_professors
     )
-    
+
     professors = professors_computed(
         professors, course_professors, evaluation_statistics
     )
@@ -286,7 +284,9 @@ def transform(data_dir: Path):
     }
 
     def export_csv(
-        table: pd.DataFrame, table_name: str, csv_kwargs: dict[str, Any] | None = None
+        table: pd.DataFrame,
+        table_name: str,
+        csv_kwargs: dict[str, Any] | None = None,
     ):
         """
         Exports a table to a CSV file with provided name.

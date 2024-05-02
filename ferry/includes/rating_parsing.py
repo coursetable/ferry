@@ -3,6 +3,7 @@ Functions for processing course rating JSONs into aggregate CSVs.
 
 Used by /ferry/crawler/parse_ratings.py
 """
+
 import csv
 from typing import Any
 
@@ -81,7 +82,7 @@ def parse_rating(
 
 
 async def parse_ratings(data_dir: Path):
-    
+
     print(f"Parsing course ratings...")
     parsed_evaluations_dir = data_dir / "parsed_evaluations"
     parsed_evaluations_dir.mkdir(parents=True, exist_ok=True)

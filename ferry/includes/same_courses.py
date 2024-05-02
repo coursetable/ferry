@@ -194,9 +194,9 @@ def resolve_historical_courses(
     )
 
     # map course_id to course codes
-    courses_codes = courses.set_index("course_id", drop=False)[
-        "course_id"
-    ].apply(course_to_codes.get)
+    courses_codes = courses.set_index("course_id", drop=False)["course_id"].apply(
+        course_to_codes.get
+    )
 
     # map course_id to all other courses with overlapping codes
     courses_shared_code = courses_codes.apply(
@@ -212,8 +212,7 @@ def resolve_historical_courses(
         courses["title"].fillna("").apply(len) >= MIN_TITLE_MATCH_LEN
     ]
     long_descriptions = courses.loc[
-        courses["description"].fillna("").apply(len)
-        >= MIN_DESCRIPTION_MATCH_LEN
+        courses["description"].fillna("").apply(len) >= MIN_DESCRIPTION_MATCH_LEN
     ]
 
     # construct initial graph of courses:
@@ -253,7 +252,9 @@ def resolve_historical_courses(
     )
 
     for course_1, course_2 in tqdm(
-        same_courses.edges(data=False), desc="Building filtered same-courses graph", leave=False
+        same_courses.edges(data=False),
+        desc="Building filtered same-courses graph",
+        leave=False,
     ):
 
         title_1 = course_to_title.get(course_1, [""])[0]
@@ -268,7 +269,9 @@ def resolve_historical_courses(
             same_courses_filtered.add_edge(course_1, course_2)
 
     logging.debug(f"Original shared-code edges: {same_courses.number_of_edges()}")
-    logging.debug(f"Pruned shared-code edges: {same_courses_filtered.number_of_edges()}")
+    logging.debug(
+        f"Pruned shared-code edges: {same_courses_filtered.number_of_edges()}"
+    )
 
     logging.debug("Identifying same courses by connected components")
 
@@ -288,7 +291,8 @@ def resolve_historical_courses(
 
 
 def split_same_professors(
-    course_to_same_course_filtered: dict[int, int], course_professors: pd.DataFrame
+    course_to_same_course_filtered: dict[int, int],
+    course_professors: pd.DataFrame,
 ) -> tuple[dict[int, int], dict[int, list[int]]]:
     """
     Split an equivalent-courses partitioning further by same-professor.
@@ -310,18 +314,14 @@ def split_same_professors(
     """
     # initialize same-courses with same-professors mapping
     same_course_profs = pd.DataFrame(
-        pd.Series(course_to_same_course_filtered).rename(
-            "same_course_id"
-        )
+        pd.Series(course_to_same_course_filtered).rename("same_course_id")
     )
 
     same_course_profs.index.rename("course_id", inplace=True)
     same_course_profs = same_course_profs.reset_index(drop=False)
 
     # construct course_id to course_professors mapping
-    course_to_professors = course_professors.groupby("course_id")[
-        "professor_id"
-    ].apply(
+    course_to_professors = course_professors.groupby("course_id")["professor_id"].apply(
         frozenset
     )
 
@@ -348,10 +348,16 @@ def split_same_professors(
     same_prof_explode = professors_grouped.explode("course_id")
 
     course_to_same_prof_course = dict(
-        zip(same_prof_explode["course_id"], same_prof_explode["same_prof_course_id"])
+        zip(
+            same_prof_explode["course_id"],
+            same_prof_explode["same_prof_course_id"],
+        )
     )
     same_prof_course_to_courses = dict(
-        zip(professors_grouped["same_prof_course_id"], professors_grouped["course_id"])
+        zip(
+            professors_grouped["same_prof_course_id"],
+            professors_grouped["course_id"],
+        )
     )
 
     return course_to_same_prof_course, same_prof_course_to_courses

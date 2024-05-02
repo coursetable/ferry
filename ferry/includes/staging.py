@@ -3,6 +3,7 @@ Functions for staging tables from CSVs to the Postgres database.
 
 Used by /ferry/stage.py.
 """
+
 import csv
 from io import StringIO
 

@@ -3,6 +3,7 @@ Miscellaneous abstract utilities.
 
 Used for processing course JSONs, resolving cross-listings, etc.
 """
+
 import re
 from itertools import combinations
 from typing import Any, TypeVar
@@ -259,7 +260,7 @@ def get_all_tables(select_schemas: list[str]) -> dict[str, pd.DataFrame]:
     Dictionary of Pandas DataFrames.
     """
     from ferry import database
-    
+
     tables: list[str] = []
 
     # inspect and get schema names

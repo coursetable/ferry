@@ -33,7 +33,7 @@ def create_engine_and_session(connect_string: str):
             "keepalives_idle": 30,
             "keepalives_interval": 10,
             "keepalives_count": 5,
-        }
+        },
     )
     Base.metadata.create_all(Engine)
 
@@ -41,6 +41,7 @@ def create_engine_and_session(connect_string: str):
         raise MissingTablesError("Model tables should all end with _staged")
 
     return Engine, sqlalchemy.orm.sessionmaker(bind=Engine)
+
 
 class Database:
     def __init__(self, connect_string: str):

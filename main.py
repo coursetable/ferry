@@ -37,7 +37,7 @@ async def start_crawl(args: Args):
             seasons=seasons,
             data_dir=args.data_dir,
             client=args.client,
-            use_cache=args.use_cache
+            use_cache=args.use_cache,
         )
 
     # Fetch ratings/evals
@@ -53,6 +53,7 @@ async def start_crawl(args: Args):
         await parse_ratings(data_dir=args.data_dir)
 
     print("-" * 80)
+
 
 def sync_db(args: Args):
     db = Database(args.database_connect_string)
@@ -70,11 +71,13 @@ def sync_db(args: Args):
     print("-" * 80)
     print("Database sync: ✔")
 
+
 async def main():
     args = get_args()
 
     if args.debug:
         import logging
+
         logging.basicConfig(level=logging.DEBUG)
 
     # Create data directory if it doesn't exist

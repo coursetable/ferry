@@ -27,6 +27,7 @@ class RawArgs:
     sync_db: bool | None
     use_cache: bool | None
 
+
 class Args:
     cas_cookie: str
     config_file: Path
@@ -43,6 +44,7 @@ class Args:
     sentry_url: str
     sync_db: bool
     use_cache: bool
+
 
 class RateLimitError(Exception):
     """

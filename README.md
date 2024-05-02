@@ -18,6 +18,22 @@ Contributing
 
 1. **In almost all cases, it is sufficient to only fetch the last 3 seasons in dev.** In fact, `ferry` will not work when fetching and syncing to DB all seasons in dev due to `professor_id` mapping requiring legacy seasons. Please clone [`ferry-data`](https://github.com/coursetable/ferry-data) if working with all seasons is necessary.
 
+## Linting&formatting
+
+Installing:
+
+```sh
+pip install black
+npm install -g pyright
+```
+
+Running:
+
+```sh
+black .
+pyright
+```
+
 TODO:
 
 - **Ensure that parallel ratings is accurate**

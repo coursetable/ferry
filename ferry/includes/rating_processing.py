@@ -3,6 +3,7 @@ Functions for processing ratings.
 
 fetch_course_eval is used by /ferry/crawler/fetch_ratings.py.
 """
+
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlencode

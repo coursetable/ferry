@@ -9,6 +9,7 @@ following steps:
     4. Fetch and save OCE data for each course in the queue
 
 """
+
 import asyncio
 import concurrent.futures
 import traceback
@@ -189,11 +190,11 @@ async def fetch_ratings(
             pbar.set_postfix({"season": season})
 
             if (
-                season_courses := load_cache_json(
-                    data_dir / "season_courses" / f"{season}.json"
+                season_courses := (
+                    load_cache_json(data_dir / "season_courses" / f"{season}.json")
+                    if courses is None
+                    else courses[season]
                 )
-                if courses is None
-                else courses[season]
             ) is None:
                 raise FetchRatingsError(
                     f"Season {season} not found in season_courses directory."
