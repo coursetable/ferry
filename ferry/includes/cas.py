@@ -6,8 +6,6 @@ Used by config.py.
 
 import httpx
 
-from ferry.includes.utils import resolve_potentially_callable
-
 
 class CASClient(httpx.AsyncClient):
     def __init__(self, cas_cookie: str):
@@ -28,8 +26,6 @@ def create_client(
     """
     Create a client using parameters from /ferry/config.py.
     """
-
-    cas_cookie = resolve_potentially_callable(cas_cookie)
     if cas_cookie is None:
         raise ValueError("cas_cookie is required. Please see ferry/utils.py ")
 

@@ -303,29 +303,3 @@ async def fetch_course_ratings(
         tqdm.write(f"skipped {course_unique_id}: unknown error {error}")
 
     return None, None, None, None
-
-
-# testing function
-if __name__ == "__main__":
-    import asyncio
-
-    import uvloop
-
-    asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
-
-    seasons = ujson.load(open("data/course_seasons.json", "r"))
-
-    class args:
-        pass
-
-    from ferry.utils import init_cas
-
-    init_cas(args)
-
-    asyncio.run(
-        fetch_ratings(
-            seasons=seasons,
-            data_dir=Path("data"),
-            cas_cookie=args.cas_cookie,
-        )
-    )

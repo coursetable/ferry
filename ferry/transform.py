@@ -14,8 +14,6 @@ from ferry.includes.transform_compute import (
 )
 from ferry.includes.transform_import import (
     import_courses,
-    # import_demand,
-    # import_discussions,
     import_evaluations,
 )
 
@@ -40,26 +38,6 @@ def transform(data_dir: Path):
                 + os.listdir(data_dir / "parsed_courses")
             )
             if filename[0] != "."
-        ]
-    )
-
-    # get full list of discussion seasons from files
-    discussion_seasons = sorted(
-        [
-            # filename.split(".")[0]  # remove the .csv suffix
-            # for filename in os.listdir(
-            #     f"{data_dir}/discussion_sections/parsed_csvs/"
-            # )
-            # if filename[0] != "."
-        ]
-    )
-
-    # get full list of demand seasons from files
-    demand_seasons = sorted(
-        [
-            # filename.split("_")[0]  # remove the _demand.json suffix
-            # for filename in os.listdir(f"{data_dir}/demand_stats/")
-            # if filename[0] != "." and filename != "subjects.json"
         ]
     )
 
@@ -114,65 +92,6 @@ def transform(data_dir: Path):
     print(f"Total professors: {len(professors)}")
     print(f"Total course-flags: {len(course_flags)}")
     print(f"Total flags: {len(flags)}")
-
-    # --------------------------
-    # Import discussion sections
-    # --------------------------
-
-    # print("\n[Importing discussion sections]")
-    # print(f"Season(s): {', '.join(discussion_seasons)}")
-
-    # merged_discussions_info_ = []
-
-    # for season in tqdm(discussion_seasons, desc="Loading discussion section CSVs"):
-
-    #     discussions_file = Path(
-    #         data_dir / "discussion_sections" / "parsed_csvs" / f"{season}.csv"
-    #     )
-
-    #     if not discussions_file.is_file():
-    #         print(f"Skipping season {season}: discussion sections file not found.")
-    #         continue
-
-    #     season_discussions = pd.read_csv(
-    #         discussions_file, dtype={"section_crn": "Int64", "section": str}
-    #     )
-
-    #     season_discussions["season_code"] = season
-    #     merged_discussions_info_.append(season_discussions)
-
-    # merged_discussions_info = pd.concat(merged_discussions_info_, axis=0)
-    # merged_discussions_info = merged_discussions_info.reset_index(drop=True)
-
-    # discussions, course_discussions = import_discussions(
-    #     merged_discussions_info, listings
-    # )
-
-    # ------------------------
-    # Import demand statistics
-    # ------------------------
-
-    # merged_demand_info_ = []
-
-    # print("\n[Importing demand statistics]")
-    # print(f"Season(s): {', '.join(demand_seasons)}")
-    # for season in tqdm(demand_seasons, desc="Loading demand JSONs"):
-
-    #     demand_file = Path(f"{data_dir}/demand_stats/{season}_demand.json")
-
-    #     if not demand_file.is_file():
-    #         print(f"Skipping season {season}: demand statistics file not found.")
-    #         continue
-
-    #     demand_info = pd.DataFrame(pd.read_json(str(demand_file)))
-
-    #     demand_info["season_code"] = season
-    #     merged_demand_info_.append(demand_info)
-
-    # merged_demand_info = pd.concat(merged_demand_info_, axis=0)
-    # merged_demand_info = merged_demand_info.reset_index(drop=True)
-
-    # demand_statistics = import_demand(merged_demand_info, listings)
 
     # -------------------------
     # Import course evaluations

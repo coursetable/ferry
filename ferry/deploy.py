@@ -173,15 +173,6 @@ def deploy(db: database.Database):
         question_tag_invariant,
     ]
 
-    def _match(name: str):
-        """
-        Get a function object by name (string)
-        """
-        for checking_function in all_items:
-            if checking_function.__name__ == name:
-                return checking_function
-        raise ValueError(f"cannot find item with name {name}")
-
     # --------------------------------------
     # Check if all staged tables are present
     # --------------------------------------

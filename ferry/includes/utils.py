@@ -6,7 +6,7 @@ Used for processing course JSONs, resolving cross-listings, etc.
 
 import re
 from itertools import combinations
-from typing import Any, TypeVar
+from typing import Any
 
 from ferry.database.models import BaseModel
 
@@ -134,76 +134,6 @@ def invert_dict_of_lists(dict_of_lists: dict[Any, list[Any]]) -> dict[Any, Any]:
             inverted[item] = key
 
     return inverted
-
-
-Numeric = TypeVar("Numeric", int, float)
-
-
-def elementwise_sum(list_a: list[Numeric], list_b: list[Numeric]) -> list[Numeric]:
-    """
-    Given two lists of equal length, return
-    a list of elementwise sums
-
-    Parameters
-    ----------
-    list_a:
-        First list.
-    list_b:
-        Second list.
-
-    Returns
-    -------
-    sums:
-        elementwise sums
-    """
-    if len(list_a) != len(list_b):
-        raise ValueError("a and b must have same size")
-
-    return [sum(x) for x in zip(list_a, list_b)]
-
-
-def category_average(categories: list[int]) -> tuple[float, int]:
-    """
-    Given a list-like of n category counts,
-    aggregate and return the average where each
-    category denotes counts of [1,2,...n]
-
-    Parameters
-    ----------
-    Categories:
-        Categories and counts.
-
-    Returns
-    -------
-    average:
-        Average value.
-    total:
-        Total number of responses.
-    """
-    if len(categories) == 0:
-        return 0, -1
-
-    categories_sum = sum([categories[i] * (i + 1) for i in range(len(categories))])
-
-    total = sum(categories)
-
-    average = categories_sum / total
-
-    return average, total
-
-
-def resolve_potentially_callable(val: Any) -> Any:
-    """
-    Check if a value is callable, and return its result if so.
-
-    Parameters
-    ----------
-    val:
-        Value to check.
-    """
-    if callable(val):
-        return val()
-    return val
 
 
 def get_table_columns(table: BaseModel, not_class=False) -> list[str]:
