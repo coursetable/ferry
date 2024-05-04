@@ -3,7 +3,6 @@ from pathlib import Path
 from typing import Any
 
 import pandas as pd
-import ujson
 from tqdm import tqdm
 
 from ferry.transform.transform_compute import (
@@ -53,24 +52,19 @@ def transform(data_dir: Path):
     for season in tqdm(course_seasons, desc="Loading course JSONs", leave=False):
         # Read the course listings, giving preference to freshly parsed over migrated ones.
         parsed_courses_file = data_dir / "parsed_courses" / f"{season}.json"
-        # check migrated courses as a fallback
-        migrated_courses_file = data_dir / "migrated_courses" / f"{season}.json"
-
-        if parsed_courses_file.is_file():
-            parsed_course_info = pd.DataFrame(pd.read_json(str(parsed_courses_file)))
-        else:
-            if not migrated_courses_file.is_file():
-                print(
-                    f"Skipping season {season}: not found in parsed or migrated courses."
-                )
-                continue
-            parsed_course_info = pd.DataFrame(pd.read_json(str(migrated_courses_file)))
-
+        if not parsed_courses_file.is_file():
+            # check migrated courses as a fallback
+            parsed_courses_file = data_dir / "migrated_courses" / f"{season}.json"
+        if not parsed_courses_file.is_file():
+            print(
+                f"Skipping season {season}: not found in parsed or migrated courses."
+            )
+            continue
+        parsed_course_info = pd.read_json(parsed_courses_file)
         parsed_course_info["season_code"] = season
         merged_course_info_.append(parsed_course_info)
 
-    merged_course_info = pd.concat(merged_course_info_, axis=0)
-    merged_course_info = merged_course_info.reset_index(drop=True)
+    merged_course_info = pd.concat(merged_course_info_, axis=0).reset_index(drop=True)
 
     (
         courses,
@@ -98,40 +92,13 @@ def transform(data_dir: Path):
     # -------------------------
 
     print("\nImporting course evaluations...")
-    parsed_evaluations_dir = data_dir / "parsed_evaluations"
-
-    evaluation_narratives = pd.read_csv(
-        parsed_evaluations_dir / "evaluation_narratives.csv",
-        dtype={"season": int, "crn": int},
-    )
-    evaluation_ratings = pd.read_csv(
-        parsed_evaluations_dir / "evaluation_ratings.csv",
-        dtype={"season": int, "crn": int},
-    )
-    evaluation_statistics = pd.read_csv(
-        parsed_evaluations_dir / "evaluation_statistics.csv",
-        dtype={"season": int, "crn": int},
-    )
-    evaluation_questions = pd.read_csv(
-        parsed_evaluations_dir / "evaluation_questions.csv",
-        dtype={"season": int, "crn": int},
-    )
-
-    # parse rating objects
-    evaluation_ratings["rating"] = evaluation_ratings["rating"].apply(ujson.loads)
 
     (
         evaluation_narratives,
         evaluation_ratings,
         evaluation_statistics,
         evaluation_questions,
-    ) = import_evaluations(
-        evaluation_narratives,
-        evaluation_ratings,
-        evaluation_statistics,
-        evaluation_questions,
-        listings,
-    )
+    ) = import_evaluations(data_dir / "parsed_evaluations", listings)
 
     # define seasons table for import
     seasons = pd.DataFrame(

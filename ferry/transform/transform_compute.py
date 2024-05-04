@@ -24,7 +24,7 @@ from pathlib import Path
 
 resource_dir = Path(__file__).parent.parent / "resources"
 
-with open(f"{resource_dir}/question_tags.csv") as f:
+with open(resource_dir / "question_tags.csv") as f:
     for question_code, tag in csv.reader(f):
         QUESTION_TAGS[question_code] = tag
 

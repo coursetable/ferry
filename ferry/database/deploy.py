@@ -6,7 +6,7 @@ from sqlalchemy import MetaData, text
 
 from ferry import database
 
-resource_dir = Path(__file__).parent / "resources"
+resource_dir = Path(__file__).parent.parent / "resources"
 
 
 def listing_invariants(session: sqlalchemy.orm.session.Session):

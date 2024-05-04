@@ -5,6 +5,7 @@ Used by /ferry/transform.py.
 """
 
 import logging
+from pathlib import Path
 from collections import Counter
 from itertools import combinations
 
@@ -49,7 +50,7 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
     # prioritize Yale College courses when deduplicating listings
     logging.debug("Sorting by season and if-undergrad")
 
-    def classify_yc(row):
+    def classify_yc(row: pd.Series):
         if row["school"] == "YC":
             return True
 
@@ -531,10 +532,7 @@ def match_evaluations_to_courses(
 
 
 def import_evaluations(
-    evaluation_narratives: pd.DataFrame,
-    evaluation_ratings: pd.DataFrame,
-    evaluation_statistics: pd.DataFrame,
-    evaluation_questions: pd.DataFrame,
+    parsed_evaluations_dir: Path,
     listings: pd.DataFrame,
 ) -> tuple[pd.DataFrame, ...]:
     """
@@ -542,14 +540,8 @@ def import_evaluations(
 
     Parameters
     ----------
-    evaluation_narratives:
-        Table of narratives from /ferry/crawler/parse_ratings.py.
-    evaluation_ratings:
-        Table of ratings from /ferry/crawler/parse_ratings.py.
-    evaluation_statistics:
-        Table of statistics from /ferry/crawler/parse_ratings.py.
-    evaluation_questions:
-        Table of questions from /ferry/crawler/parse_ratings.py.
+    parsed_evaluations_dir:
+        Directory containing parsed evaluations.
     listings:
         Table of listings from import_courses.
 
@@ -560,6 +552,25 @@ def import_evaluations(
     evaluation_statistics,
     evaluation_questions
     """
+    evaluation_narratives = pd.read_csv(
+        parsed_evaluations_dir / "evaluation_narratives.csv",
+        dtype={"season": int, "crn": int},
+    )
+    evaluation_ratings = pd.read_csv(
+        parsed_evaluations_dir / "evaluation_ratings.csv",
+        dtype={"season": int, "crn": int},
+    )
+    evaluation_statistics = pd.read_csv(
+        parsed_evaluations_dir / "evaluation_statistics.csv",
+        dtype={"season": int, "crn": int},
+    )
+    evaluation_questions = pd.read_csv(
+        parsed_evaluations_dir / "evaluation_questions.csv",
+        dtype={"season": int, "crn": int},
+    )
+    # parse rating objects
+    evaluation_ratings["rating"] = evaluation_ratings["rating"].apply(ujson.loads)
+
     (
         evaluation_statistics,
         evaluation_narratives,
