@@ -9,7 +9,7 @@ from typing import Any
 from urllib.parse import urlencode
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 from httpx import Response
 
 from ferry.utils import request, save_cache_json
@@ -18,7 +18,7 @@ from ferry.includes.cas import CASClient
 QuestionId = str
 
 
-class page_index_class:
+class PageIndex:
     def __init__(self, path: Path | Response):
         super().__init__()
         if isinstance(path, Response):
@@ -65,7 +65,7 @@ class AuthError(Exception):
 
 
 def fetch_questions(
-    page, crn, term_code
+    page: PageIndex, crn: str, term_code: str
 ) -> tuple[dict[QuestionId, str], dict[QuestionId, bool]]:
     """
     Get list of question Ids for a certain course from OCE.
@@ -95,7 +95,11 @@ def fetch_questions(
             f"Evaluations for course crn={crn} in term={term_code} are empty"
         )
 
-    infos = questions.find("tbody").find_all("tr")
+    infos = questions.find("tbody")
+    if type(infos) == Tag:
+        infos = infos.find_all("tr")
+    else:
+        raise EmptyEvaluationError()
 
     questions = {}
     question_is_narrative = {}
@@ -133,7 +137,7 @@ def fetch_questions(
 
 
 def fetch_eval_ratings(
-    page: requests.Response, question_id: str
+    page: PageIndex, question_id: str
 ) -> tuple[list[int], list[str]]:
     """
     Fetch the evaluation ratings for the given question.
@@ -153,16 +157,25 @@ def fetch_eval_ratings(
     """
     soup = BeautifulSoup(page.content, "lxml")
 
+    td = soup.find("td", text=str(question_id))
+    if td is None or td.parent is None:
+        raise EmptyEvaluationError()
+    id = td.parent.get("id")
+    if type(id) != str:
+        raise EmptyEvaluationError()
+
     # Get the 0-indexed question index
-    q_index = (
-        soup.find("td", text=str(question_id))
-        .parent.get("id")
-        .replace("questionRow", "")
-    )
+    q_index = id.replace("questionRow", "")
 
-    table = soup.find("table", id="answers" + str(q_index))
+    table = soup.find("table", id="answers" + q_index)
+    if table is None:
+        raise EmptyEvaluationError()
 
-    rows = table.find("tbody").find_all("tr")
+    tbody = table.find("tbody")
+    if type(tbody) == Tag:
+        rows = tbody.find_all("tr")
+    else:
+        raise EmptyEvaluationError()
 
     ratings = []
     options = []
@@ -177,7 +190,7 @@ def fetch_eval_ratings(
 
 
 def fetch_eval_comments(
-    page: requests.Response, questions: dict[QuestionId, str], question_id: str
+    page: PageIndex, questions: dict[QuestionId, str], question_id: str
 ) -> dict[str, Any]:
     """
     Fetch the comments for the given narrative question.
@@ -200,20 +213,26 @@ def fetch_eval_comments(
         # account for question 10 of summer courses
         response_table_id = "answers{i}"
     else:
+        td = soup.find("td", text=str(question_id))
+        if td is None or td.parent is None:
+            raise EmptyEvaluationError()
+        id = td.parent.get("id")
+        if type(id) != str:
+            raise EmptyEvaluationError()
         # Get the 0-indexed question index
-        q_index = (
-            soup.find("td", text=str(question_id))
-            .parent.get("id")
-            .replace("questionRow", "")
-        )
-        response_table_id = "answers" + str(q_index)
+        q_index = id.replace("questionRow", "")
+        response_table_id = "answers" + q_index
 
     table = soup.find("table", id=response_table_id)
 
     if table is None:
         raise EmptyNarrativeError()
 
-    rows = table.find("tbody").find_all("tr")
+    rows = table.find("tbody")
+    if type(rows) == Tag:
+        rows = rows.find_all("tr")
+    else:
+        raise EmptyNarrativeError()
     comments = []
     for row in rows:
         comment = row.find_all("td")[1].text.strip()
@@ -231,7 +250,7 @@ def fetch_eval_comments(
 
 
 def fetch_course_enrollment(
-    page: requests.Response,
+    page: PageIndex,
 ) -> tuple[dict[str, int | None], dict[str, Any]]:
     """
     Get enrollment statistics for this course.
@@ -250,11 +269,13 @@ def fetch_course_enrollment(
 
     stats: dict[str, int | None] = {}
 
-    infos = (
-        soup.find("div", id="courseHeader")
-        .find_all("div", class_="row")[0]
-        .find_all("div", recursive=False)[-1]
-    )
+    header = soup.find("div", id="courseHeader")
+    if type(header) != Tag:
+        raise EmptyEvaluationError()
+    header = header.find("div", class_="row")
+    if type(header) != Tag:
+        raise EmptyEvaluationError()
+    infos = header.find_all("div", recursive=False)[-1]
 
     enrolled = infos.find_all("div", class_="row")[0].find_all("div")[-1].text.strip()
     responded = infos.find_all("div", class_="row")[1].find_all("div")[-1].text.strip()
@@ -264,20 +285,17 @@ def fetch_course_enrollment(
     stats["declined"] = None  # legacy: used to have "declined" stats
     stats["no response"] = None  # legacy: used to have "no response" stats
 
-    title = (
-        soup.find("div", id="courseHeader")
-        .find_all("div", class_="row")[0]
-        .find_all("div", recursive=False)[1]
-        .find_all("span")[1]
-        .text.strip()
-    )
+    title = header.find_all("div", recursive=False)[1]
+    if type(title) != Tag:
+        raise EmptyEvaluationError()
+    title = title.find_all("span")[1].text.strip()
 
     # print(stats, title)
     return stats, {"title": title}
 
 
 # Does not return anything, only responsible for writing course evals to json cache
-def process_course_eval(page_index, crn_code, term_code, path: Path):
+def process_course_eval(page_index: PageIndex | None, crn_code: str, term_code: str, path: Path):
     if page_index is None:
         return
     # Enrollment data.
@@ -337,7 +355,7 @@ def process_course_eval(page_index, crn_code, term_code, path: Path):
 
 async def fetch_course_eval(
     client: CASClient, crn_code: str, term_code: str, data_dir: Path
-) -> page_index_class:
+) -> PageIndex:
     """
     Gets evaluation data and comments for the specified course in specified term.
 
@@ -360,7 +378,7 @@ async def fetch_course_eval(
     questions_index = data_dir / "rating_cache" / "questions_index"
     html_file = questions_index / f"{term_code}_{crn_code}.html"
     if html_file.is_file():
-        return page_index_class(html_file)
+        return PageIndex(html_file)
 
     # OCE website for evaluations
     url_eval = "https://oce.app.yale.edu/ocedashboard/studentViewer/courseSummary?"
@@ -402,4 +420,4 @@ async def fetch_course_eval(
     with open(html_file, "wb") as file:
         file.write(page_index.content)
 
-    return page_index_class(page_index)
+    return PageIndex(page_index)

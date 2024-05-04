@@ -275,7 +275,7 @@ def deploy(db: database.Database):
     for meta_table in db_meta.sorted_tables:
         for index in meta_table.indexes:
             # remove the staged indexes
-            if "_staged" in index.name:
+            if index.name and "_staged" in index.name:
                 # conn.execute(text(schema.DropIndex(index)))
                 renamed = index.name.replace("_staged", "")
                 conn.execute(

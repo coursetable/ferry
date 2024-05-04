@@ -28,6 +28,7 @@ from ferry.includes.rating_processing import (
     CrawlerError,
     fetch_course_eval,
     process_course_eval,
+    PageIndex,
 )
 from ferry.utils import load_cache_json, request
 
@@ -229,14 +230,14 @@ async def fetch_ratings(
 
             # Chunking is necessary as the lambda proxy function has a concurrency limit of 10.
             chunk_size = client.chunk_size
-            raw_course_evals = []
+            raw_course_evals: list[tuple[PageIndex | None, str, str, Path]] = []
 
             for chunk_begin in tqdm(
                 range(0, len(season_courses), chunk_size),
                 leave=False,
                 desc=f"Fetching ratings",
             ):
-                chunk = await tqdm_asyncio.gather(
+                chunk: list[tuple[PageIndex | None, str, str, Path]] = await tqdm_asyncio.gather(
                     *futures[chunk_begin : chunk_begin + chunk_size],
                     leave=False,
                     desc=f"Chunk {int(chunk_begin / chunk_size)}",
@@ -267,7 +268,7 @@ async def fetch_course_ratings(
     data_dir: Path,
     client: CASClient,
     is_yale_college: bool,
-):
+) -> tuple[PageIndex | None, str, str, Path]:
     course_unique_id = f"{season_code}-{crn}"
 
     output_path = data_dir / "course_evals" / f"{course_unique_id}.json"
@@ -275,11 +276,11 @@ async def fetch_course_ratings(
     if output_path.is_file():
         # tqdm.write(f"Skipping course {course_unique_id} - already exists")
         # The JSON will be loaded at the process ratings step
-        return None, None, None, output_path
+        return None, crn, season_code, output_path
 
     if not is_yale_college:
         # tqdm.write(f"Skipping course {course_unique_id} - not in yale college")
-        return None, None, None, None
+        return None, crn, season_code, output_path
 
     # tqdm.write(f"Fetching {course_unique_id} ... ", end="")
     try:
@@ -302,4 +303,4 @@ async def fetch_course_ratings(
         traceback.print_exc()
         tqdm.write(f"skipped {course_unique_id}: unknown error {error}")
 
-    return None, None, None, None
+    return None, crn, season_code, output_path

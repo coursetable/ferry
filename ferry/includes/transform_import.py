@@ -141,35 +141,16 @@ def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
     )
 
     # reshape professor attributes array
-    professors_prep["professors_info"] = professors_prep[
-        ["professors", "professor_emails"]
-    ].to_dict(orient="split")["data"]
+    all_professors_info = []
+    
+    for i, row in professors_prep.iterrows():
+        names, emails = row["professors"], row["professor_emails"]
 
-    def zip_professors_info(professors_info):
-        # helper function to convert professors_info
-        # from [[names...],[emails...]] format
-        # to [[name,email]...] format
+        for j, name in enumerate(names):
+            if name != "":
+                all_professors_info.append((name, emails[j]))
 
-        names, emails = professors_info
-
-        # exclude empty attributes
-        names = list(filter(lambda x: x != "", names))
-        emails = list(filter(lambda x: x != "", emails))
-
-        # if no names, return empty regardless of others
-        # (professors need to be named)
-        if len(names) == 0:
-            return []
-
-        # account for inconsistent lengths before zipping
-        if len(emails) != len(names):
-            emails = [None] * len(names)
-
-        return list(zip(names, emails))
-
-    professors_prep["professors_info"] = professors_prep["professors_info"].apply(
-        zip_professors_info
-    )
+    professors_prep["professors_info"] = all_professors_info
 
     # exclude instances with empty/bad professor infos
     professors_prep = professors_prep[professors_prep["professors_info"].apply(len) > 0]
@@ -277,14 +258,10 @@ def resolve_professors(
         )
         ties = ties.apply(lambda x: False if len(x) != 2 else x[0][1] == x[1][1])
 
-        tied_professors = season_professors[ties]
-
-        def print_ties(row):
+        for i, row in season_professors[ties].iterrows():
             logging.debug(
                 f"Professor {row['name']} ({row['email']}) has tied matches: { sorted(list(set(row['matched_ids_aggregate']))) }",
             )
-
-        tied_professors.apply(print_ties, axis=1)
 
         return professor_ids
 

@@ -12,6 +12,7 @@ from httpx import AsyncClient
 from tqdm import tqdm
 from tqdm.asyncio import tqdm_asyncio
 from pathlib import Path
+from typing import Any
 
 from ferry.includes.class_parsing import extract_course_info
 from ferry.includes.class_processing import (
@@ -30,7 +31,7 @@ async def fetch_classes(
     data_dir: Path,
     client: AsyncClient = AsyncClient(timeout=None),
     use_cache: bool = True,
-) -> dict:
+) -> dict[str, list[dict[str, Any]]]:
     # Concurrency with async at the season level overloads the CPU
     # futures = [ fetch_class(season, data_dir=data_dir, client=client) for season in seasons ]
     # classes = await tqdm_asyncio.gather(*futures, desc="Season Progress")
@@ -172,7 +173,7 @@ def parse_courses(
     fysem_courses,
     data_dir: Path,
     use_cache: bool = True,
-):
+) -> list[dict[str, Any]]:
     # load from cache if it exists
     if (
         use_cache
@@ -186,7 +187,7 @@ def parse_courses(
         return cache_load
 
     # parse course JSON in season
-    parsed_course_info = []
+    parsed_course_info: list[dict[str, Any]] = []
     # not worth parallelizing, already pretty quick
     for x in tqdm(aggregate_season_json, leave=False, desc=f"Parsing season {season}"):
         try:
