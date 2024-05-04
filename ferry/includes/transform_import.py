@@ -153,6 +153,7 @@ def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
         # (professors need to be named)
         if len(names) == 0:
             all_professors_info.append([])
+            continue
 
         # account for inconsistent lengths before zipping
         if len(emails) != len(names):

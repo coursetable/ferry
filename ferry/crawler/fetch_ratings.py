@@ -151,8 +151,6 @@ async def fetch_ratings(
     data_dir: Path,
     courses: dict[str, Any] | None = None,
 ):
-    yale_college_cache = diskcache.Cache(data_dir / "yale_college_cache")
-
     # -----------------------------------
     # Queue courses to query from seasons
     # -----------------------------------
@@ -202,20 +200,7 @@ async def fetch_ratings(
 
             # Test for first 100 courses
             season_courses = season_courses[:100]
-
-            # Check if course is in Yale College
-            futures = [
-                is_yale_college(
-                    season_code=season,
-                    crn=course["crn"],
-                    client=client,
-                    yale_college_cache=yale_college_cache,
-                )
-                for course in season_courses
-            ]
-            is_yale_college_results = await tqdm_asyncio.gather(
-                *futures, leave=False, desc=f"Checking Yale College"
-            )
+            yale_college_cache = diskcache.Cache(data_dir / "yale_college_cache")
 
             futures = [
                 fetch_course_ratings(
@@ -223,9 +208,9 @@ async def fetch_ratings(
                     crn=course["crn"],
                     data_dir=data_dir,
                     client=client,
-                    is_yale_college=is_yale_college_results[idx],
+                    yale_college_cache=yale_college_cache,
                 )
-                for idx, course in enumerate(season_courses)
+                for course in season_courses
             ]
 
             # Chunking is necessary as the lambda proxy function has a concurrency limit of 10.
@@ -269,7 +254,7 @@ async def fetch_course_ratings(
     crn: str,
     data_dir: Path,
     client: CASClient,
-    is_yale_college: bool,
+    yale_college_cache: diskcache.Cache,
 ) -> tuple[PageIndex | None, str, str, Path]:
     course_unique_id = f"{season_code}-{crn}"
 
@@ -280,7 +265,12 @@ async def fetch_course_ratings(
         # The JSON will be loaded at the process ratings step
         return None, crn, season_code, output_path
 
-    if not is_yale_college:
+    if not await is_yale_college(
+        season_code=season_code,
+        crn=crn,
+        client=client,
+        yale_college_cache=yale_college_cache,
+    ):
         # tqdm.write(f"Skipping course {course_unique_id} - not in yale college")
         return None, crn, season_code, output_path
 

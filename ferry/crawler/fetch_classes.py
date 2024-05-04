@@ -132,7 +132,7 @@ async def fetch_season_courses(
 # fetch detailed info for all classes in each season
 async def fetch_aggregate_season_json(
     season: str,
-    season_courses,
+    season_courses: list[dict[str, Any]],
     data_dir: Path,
     client: AsyncClient,
     use_cache: bool = True,
@@ -151,12 +151,12 @@ async def fetch_aggregate_season_json(
         return cache_load
 
     # merge all the JSON results per season
-    course_futures = [
+    futures = [
         fetch_course_json(course["code"], course["crn"], course["srcdb"], client=client)
         for course in season_courses
     ]
     aggregate_season_json = await tqdm_asyncio.gather(
-        *course_futures, leave=False, desc=f"Fetching season {season}"
+        *futures, leave=False, desc=f"Fetching season {season}"
     )
 
     save_cache_json(
