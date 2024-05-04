@@ -15,7 +15,7 @@ import ujson
 from typing import cast
 
 from ferry import database
-from ferry.includes.utils import (
+from ferry.utils import (
     get_table_columns,
     invert_dict_of_lists,
     merge_overlapping,

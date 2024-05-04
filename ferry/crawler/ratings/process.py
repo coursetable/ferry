@@ -8,12 +8,11 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlencode
 
-import requests
 from bs4 import BeautifulSoup, Tag
 from httpx import Response
 
-from ferry.utils import request, save_cache_json
-from ferry.includes.cas import CASClient
+from ferry.crawler.cache import save_cache_json
+from ferry.crawler.cas_request import CASClient, request
 
 QuestionId = str
 

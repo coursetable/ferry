@@ -12,7 +12,7 @@ import ujson
 import unidecode
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 
-from ferry.includes.utils import convert_unicode
+from ferry.utils import convert_unicode
 
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning, module="bs4")
 

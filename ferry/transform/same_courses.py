@@ -12,7 +12,7 @@ import pandas as pd
 from tqdm import tqdm
 import logging
 
-from ferry.includes.utils import flatten_list_of_lists
+from ferry.utils import flatten_list_of_lists
 
 MIN_TITLE_MATCH_LEN = 8
 MIN_DESCRIPTION_MATCH_LEN = 32

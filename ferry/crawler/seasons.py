@@ -13,9 +13,7 @@ from pathlib import Path
 # -----------------------------------------
 
 
-async def fetch_course_seasons(
-    data_dir: Path, client: AsyncClient = AsyncClient(timeout=None)
-):
+async def fetch_seasons(data_dir: Path, client: AsyncClient):
     print("Fetching course seasons...", end=" ")
     r = await client.get("https://courses.yale.edu/")
 

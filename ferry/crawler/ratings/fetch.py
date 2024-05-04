@@ -21,16 +21,16 @@ import ujson
 from tqdm import tqdm
 from tqdm.asyncio import tqdm_asyncio
 
-from ferry.includes.cas import create_client, CASClient
-from ferry.includes.rating_parsing import parse_ratings
-from ferry.includes.rating_processing import (
+from .parse import parse_ratings
+from .process import (
     AuthError,
     CrawlerError,
     fetch_course_eval,
     process_course_eval,
     PageIndex,
 )
-from ferry.utils import load_cache_json, request
+from ferry.crawler.cas_request import create_client, CASClient, request
+from ferry.crawler.cache import load_cache_json
 
 
 class FetchRatingsError(Exception):

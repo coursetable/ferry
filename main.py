@@ -3,17 +3,36 @@ from pathlib import Path
 
 import uvloop
 
-from ferry.crawler.fetch_classes import fetch_classes
-from ferry.crawler.fetch_ratings import fetch_ratings
-from ferry.crawler.fetch_seasons import fetch_course_seasons
-from ferry.database.database import Database
-from ferry.deploy import deploy
-from ferry.includes.rating_parsing import parse_ratings
-from ferry.stage import stage
+from ferry.crawler.classes import fetch_classes
+from ferry.crawler.ratings import fetch_ratings, parse_ratings
+from ferry.crawler.seasons import fetch_seasons
 from ferry.transform import transform
-from ferry.utils import Args, get_args, init_sentry, parse_seasons_arg
+from ferry.database import Database, stage, deploy
+from ferry.args_parser import Args, get_args, parse_seasons_arg
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+
+
+# Init Sentry (in relase mode)
+def init_sentry(sentry_url: str | None):
+    import sentry_sdk
+
+    if sentry_url is None:
+        import os
+
+        sentry_url = os.environ.get("SENTRY_URL")
+        if sentry_url is None:
+            raise SystemExit(
+                "Error: SENTRY_URL is not set. It is required for production."
+            )
+
+    sentry_sdk.init(
+        sentry_url,
+        # Set traces_sample_rate to 1.0 to capture 100%
+        # of transactions for performance monitoring.
+        # We recommend adjusting this value in production.
+        traces_sample_rate=1.0,
+    )
 
 
 async def start_crawl(args: Args):
@@ -21,7 +40,7 @@ async def start_crawl(args: Args):
     classes = {}
     # Fetch seasons
     if args.fetch_classes:
-        course_seasons = await fetch_course_seasons(
+        course_seasons = await fetch_seasons(
             data_dir=args.data_dir, client=args.client
         )
 

@@ -14,12 +14,12 @@ from tqdm.asyncio import tqdm_asyncio
 from pathlib import Path
 from typing import Any
 
-from ferry.includes.class_parsing import extract_course_info
-from ferry.includes.class_processing import (
+from .parse import extract_course_info
+from .process import (
     fetch_course_json,
     fetch_season_courses_util,
 )
-from ferry.utils import load_cache_json, save_cache_json
+from ferry.crawler.cache import load_cache_json, save_cache_json
 
 # -----------------------------------------
 # Retrieve courses from unofficial Yale API
@@ -29,7 +29,7 @@ from ferry.utils import load_cache_json, save_cache_json
 async def fetch_classes(
     seasons: list[str],
     data_dir: Path,
-    client: AsyncClient = AsyncClient(timeout=None),
+    client: AsyncClient,
     use_cache: bool = True,
 ) -> dict[str, list[dict[str, Any]]]:
     # Concurrency with async at the season level overloads the CPU

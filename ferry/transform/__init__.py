@@ -6,13 +6,13 @@ import pandas as pd
 import ujson
 from tqdm import tqdm
 
-from ferry.includes.transform_compute import (
+from ferry.transform.transform_compute import (
     courses_computed,
     evaluation_statistics_computed,
     professors_computed,
     questions_computed,
 )
-from ferry.includes.transform_import import (
+from ferry.transform.transform_import import (
     import_courses,
     import_evaluations,
 )

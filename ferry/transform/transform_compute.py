@@ -12,11 +12,11 @@ from tqdm import tqdm
 import logging
 
 from ferry import database
-from ferry.includes.same_courses import (
+from ferry.transform.same_courses import (
     resolve_historical_courses,
     split_same_professors,
 )
-from ferry.includes.utils import get_table_columns
+from ferry.utils import get_table_columns
 
 QUESTION_TAGS = {}
 

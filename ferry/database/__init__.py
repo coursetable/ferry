@@ -2,13 +2,9 @@
 Init all submodules for import.
 """
 
-from sqlalchemy import MetaData, Table
-from sqlalchemy.inspection import inspect
-from sqlalchemy.orm import declarative_base
-
-from ferry.database.database import Database
-from ferry.database.database_utilities import *
-from ferry.database.models import (  # DemandStatistics,
+from .database import Database
+from .database_utilities import *
+from .models import (
     Base,
     Course,
     EvaluationNarrative,
@@ -22,3 +18,5 @@ from ferry.database.models import (  # DemandStatistics,
     course_flags,
     course_professors,
 )
+from .stage import stage
+from .deploy import deploy

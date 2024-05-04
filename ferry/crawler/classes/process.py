@@ -10,7 +10,7 @@ from typing import Any
 import ujson
 from httpx import AsyncClient
 
-from ferry.utils import request
+from ferry.crawler.cas_request import request
 
 
 class FetchClassesError(Exception):
@@ -25,7 +25,7 @@ class FetchClassesError(Exception):
 async def fetch_season_courses_util(
     season: str,
     criteria: list[dict[str, Any]],
-    client: AsyncClient = AsyncClient(timeout=None),
+    client: AsyncClient,
 ) -> list[dict[str, Any]]:
     """
     Get preliminary course info for a given season

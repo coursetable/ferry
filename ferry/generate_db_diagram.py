@@ -7,7 +7,7 @@ from pathlib import Path
 
 from eralchemy2 import render_er
 
-from ferry.database.models import Base
+from ferry.database import Base
 
 
 def generate_db_diagram(path: Path):
