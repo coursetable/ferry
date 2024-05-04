@@ -3,7 +3,7 @@ from pathlib import Path
 
 import uvloop
 
-from ferry.crawler.classes import fetch_classes
+from ferry.crawler.classes import crawl_classes
 from ferry.crawler.ratings import fetch_ratings, parse_ratings
 from ferry.crawler.seasons import fetch_seasons
 from ferry.transform import transform
@@ -40,9 +40,7 @@ async def start_crawl(args: Args):
     classes = {}
     # Fetch seasons
     if args.fetch_classes:
-        course_seasons = await fetch_seasons(
-            data_dir=args.data_dir, client=args.client
-        )
+        course_seasons = await fetch_seasons(data_dir=args.data_dir, client=args.client)
 
         # Parse season args
         seasons = parse_seasons_arg(
@@ -52,7 +50,7 @@ async def start_crawl(args: Args):
         print("-" * 80)
 
         # Fetch classes/courses
-        classes = await fetch_classes(
+        classes = await crawl_classes(
             seasons=seasons,
             data_dir=args.data_dir,
             client=args.client,

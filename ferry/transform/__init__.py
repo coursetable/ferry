@@ -56,9 +56,7 @@ def transform(data_dir: Path):
             # check migrated courses as a fallback
             parsed_courses_file = data_dir / "migrated_courses" / f"{season}.json"
         if not parsed_courses_file.is_file():
-            print(
-                f"Skipping season {season}: not found in parsed or migrated courses."
-            )
+            print(f"Skipping season {season}: not found in parsed or migrated courses.")
             continue
         parsed_course_info = pd.read_json(parsed_courses_file)
         parsed_course_info["season_code"] = season
