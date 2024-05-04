@@ -141,14 +141,24 @@ def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
     )
 
     # reshape professor attributes array
-    all_professors_info = []
+    all_professors_info: list[list[tuple[str, str | None]]] = []
 
     for i, row in professors_prep.iterrows():
         names, emails = row["professors"], row["professor_emails"]
 
-        for j, name in enumerate(names):
-            if name != "":
-                all_professors_info.append((name, emails[j]))
+        names: list[str] = list(filter(lambda x: x != "", names))
+        emails: list[str | None] = list(filter(lambda x: x != "", emails))
+
+        # if no names, return empty regardless of others
+        # (professors need to be named)
+        if len(names) == 0:
+            all_professors_info.append([])
+
+        # account for inconsistent lengths before zipping
+        if len(emails) != len(names):
+            emails = [None] * len(names)
+
+        all_professors_info.append(list(zip(names, emails)))
 
     professors_prep["professors_info"] = all_professors_info
 
