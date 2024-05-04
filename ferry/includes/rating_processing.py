@@ -295,7 +295,9 @@ def fetch_course_enrollment(
 
 
 # Does not return anything, only responsible for writing course evals to json cache
-def process_course_eval(page_index: PageIndex | None, crn_code: str, term_code: str, path: Path):
+def process_course_eval(
+    page_index: PageIndex | None, crn_code: str, term_code: str, path: Path
+):
     if page_index is None:
         return
     # Enrollment data.

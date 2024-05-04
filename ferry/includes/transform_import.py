@@ -142,7 +142,7 @@ def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
 
     # reshape professor attributes array
     all_professors_info = []
-    
+
     for i, row in professors_prep.iterrows():
         names, emails = row["professors"], row["professor_emails"]
 

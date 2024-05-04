@@ -237,10 +237,12 @@ async def fetch_ratings(
                 leave=False,
                 desc=f"Fetching ratings",
             ):
-                chunk: list[tuple[PageIndex | None, str, str, Path]] = await tqdm_asyncio.gather(
-                    *futures[chunk_begin : chunk_begin + chunk_size],
-                    leave=False,
-                    desc=f"Chunk {int(chunk_begin / chunk_size)}",
+                chunk: list[tuple[PageIndex | None, str, str, Path]] = (
+                    await tqdm_asyncio.gather(
+                        *futures[chunk_begin : chunk_begin + chunk_size],
+                        leave=False,
+                        desc=f"Chunk {int(chunk_begin / chunk_size)}",
+                    )
                 )
                 raw_course_evals.extend(chunk)
 
