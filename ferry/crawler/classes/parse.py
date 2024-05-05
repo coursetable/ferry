@@ -8,11 +8,11 @@ import re
 import warnings
 from pathlib import Path
 from tqdm import tqdm
-from typing import Any
+from typing import cast, Any, TypedDict
 
 import ujson
-import unidecode
-from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
+from unidecode import unidecode
+from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning, ResultSet, Tag
 
 from ferry.utils import convert_unicode
 from ferry.crawler.cache import load_cache_json, save_cache_json
@@ -25,27 +25,35 @@ PROFESSOR_EXCEPTIONS = {
 }
 
 COLLEGE_SEMINAR_CODES = {
-    "CSBF": "Coll Sem:Ben Franklin Coll",
-    "CSBK": "Coll Sem:Berkeley Coll",
-    "CSBR": "Coll Sem:Branford Coll",
-    "CSDC": "Coll Sem:Davenport Coll",
-    "CSES": "Coll Sem:Ezra Stiles Coll",
-    "CSGH": "Coll Sem:Grace Hopper Coll",
-    "CSJE": "Coll Sem:Jonathan Edwards Coll",
-    "CSMC": "Coll Sem:Morse Coll",
-    "CSMY": "Coll Sem:Pauli Murray Coll",
-    "CSPC": "Coll Sem:Pierson Coll",
-    "CSSM": "Coll Sem:Silliman Coll",
-    "CSSY": "Coll Sem:Saybrook Coll",
-    "CSTC": "Coll Sem:Trumbull Coll",
-    "CSTD": "Coll Sem:Timothy Dwight Coll",
-    "CSYC": "Coll Sem: Yale Coll",
+    "CSBF",  # Coll Sem: Ben Franklin Coll
+    "CSBK",  # Coll Sem: Berkeley Coll
+    "CSBR",  # Coll Sem: Branford Coll
+    "CSDC",  # Coll Sem: Davenport Coll
+    "CSES",  # Coll Sem: Ezra Stiles Coll
+    "CSGH",  # Coll Sem: Grace Hopper Coll
+    "CSJE",  # Coll Sem: Jonathan Edwards Coll
+    "CSMC",  # Coll Sem: Morse Coll
+    "CSMY",  # Coll Sem: Pauli Murray Coll
+    "CSPC",  # Coll Sem: Pierson Coll
+    "CSSM",  # Coll Sem: Silliman Coll
+    "CSSY",  # Coll Sem: Saybrook Coll
+    "CSTC",  # Coll Sem: Trumbull Coll
+    "CSTD",  # Coll Sem: Timothy Dwight Coll
+    "CSYC",  # Coll Sem: Yale Coll
 }
 
 
-def extract_professors(html: str) -> dict[str, list[str]]:
+class ParsedProfessors(TypedDict):
+    professors: list[str]
+    professor_emails: list[str]
+    professor_ids: list[str]
+
+
+def extract_professors(html: str) -> ParsedProfessors:
     soup = BeautifulSoup(html, features="lxml")
-    instructor_divs = soup.findAll("div", {"class": "instructor-detail"})
+    instructor_divs = cast(
+        ResultSet[Tag], soup.findAll("div", {"class": "instructor-detail"})
+    )
 
     names = []
     emails = []
@@ -59,8 +67,8 @@ def extract_professors(html: str) -> dict[str, list[str]]:
         if instructor_name:
             # check if the professor has an associated ID
             instructor_search = instructor_name.find("a", {"data-action": "search"})
-            if instructor_search:
-                instructor_id = instructor_search["data-id"]
+            if type(instructor_search) == Tag:
+                instructor_id = str(instructor_search["data-id"])
             instructor_name = instructor_name.get_text()
         else:
             instructor_name = ""
@@ -71,7 +79,7 @@ def extract_professors(html: str) -> dict[str, list[str]]:
             instructor_email = ""
 
         # remove accents from professor names
-        instructor_name = unidecode.unidecode(instructor_name)
+        instructor_name = unidecode(instructor_name)
 
         # patch certain professor names manually
         instructor_name = PROFESSOR_EXCEPTIONS.get(instructor_name, instructor_name)
@@ -117,6 +125,20 @@ def parse_cross_listings(xlist_html: str) -> list[str]:
     return xlist_crns
 
 
+def extract_credits(credit_html: str, hours: str) -> float:
+    try:
+        if hours != "":
+            return float(hours)
+        if credit_html.endswith(
+            " credit for Yale College students"
+        ) or credit_html.endswith(" credits for Yale College students"):
+            return float(credit_html[:-33])
+    except ValueError:
+        pass
+    # non-Yale College courses don't have listed credits, so assume they are 1
+    return 1.0
+
+
 def extract_flags(ci_attrs: str) -> list[str]:
     """
     Get the course flags from the ci_attrs field.
@@ -132,7 +154,7 @@ def extract_flags(ci_attrs: str) -> list[str]:
         Flags (keywords) for the course.
     """
     soup = BeautifulSoup(ci_attrs, features="lxml")
-    flag_texts = [x.get_text() for x in soup.find_all("a")]
+    flag_texts = [x.get_text() for x in cast(ResultSet[Tag], soup.find_all("a"))]
 
     return flag_texts
 
@@ -154,19 +176,17 @@ def days_of_week_from_letters(letters: str) -> list[str]:
     if letters == "M-F":
         return ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
-    days = []
+    days: list[str] = []
 
     letter_to_day = {
         "M": "Monday",
-        "(T[^h]|T$)": "Tuesday",  # avoid misidentification as Thursday
+        "T(?!h)": "Tuesday",  # avoid misidentification as Thursday
         "W": "Wednesday",
         "Th": "Thursday",
         "F": "Friday",
         "Sa": "Saturday",
         "Su": "Sunday",
     }
-
-    letters += " "
 
     for letter, day in letter_to_day.items():
         if re.search(letter, letters):
@@ -192,12 +212,9 @@ def format_time(time: str) -> str:
     time_stripped = time.replace(";", "")[:-2]
 
     if ":" in time_stripped:
-        hour = time_stripped.split(":")[0]
-        minute = time_stripped.split(":")[1]
-
+        hour, minute = time_stripped.split(":")[:2]
     else:
-        hour = time_stripped
-        minute = "00"
+        hour, minute = time_stripped, "00"
 
     hour_num = int(hour)
 
@@ -209,7 +226,7 @@ def format_time(time: str) -> str:
 
     hour = str(hour_num)
 
-    return hour + ":" + minute
+    return f"{hour}:{minute}"
 
 
 def split_meeting_text(meeting_text: str) -> tuple[str, str, str]:
@@ -246,7 +263,7 @@ def create_meeting_summaries(
     times_summary, locations_summary
     """
     # make times and locations summary as first listed
-    times_summary = split_meetings[0][0] + " " + split_meetings[0][1]
+    times_summary = f"{split_meetings[0][0]} {split_meetings[0][1]}"
     locations_summary = split_meetings[0][2]
 
     # collapse additional times/locations
@@ -258,7 +275,7 @@ def create_meeting_summaries(
     times_summary = times_summary.replace("MTWThF", "M-F")
     locations_summary = locations_summary.replace("MTWThF", "M-F")
 
-    if locations_summary == "" or locations_summary[:3] == " + ":
+    if locations_summary == "" or locations_summary.startswith(" + "):
         locations_summary = "TBA"
 
     # handle redundant dash-delimited format (introduced in fall 2020)
@@ -272,7 +289,7 @@ def create_meeting_summaries(
     return times_summary, locations_summary
 
 
-def create_meetings_by_day(
+def create_times_by_day(
     split_meetings: list[tuple[str, str, str]], location_urls: list[str]
 ) -> dict[str, list[tuple[str, str, str, str]]]:
     """
@@ -294,13 +311,11 @@ def create_meetings_by_day(
             ]
         }
     """
-    meetings_by_day: dict[str, list[tuple[str, str, str, str]]] = {}
+    times_by_day: dict[str, list[tuple[str, str, str, str]]] = {}
 
-    for i, meeting in enumerate(split_meetings):
-        if meeting[0] == "HTBA":
+    for i, (days, times, location) in enumerate(split_meetings):
+        if days == "HTBA":
             continue
-        days = meeting[0]
-        times = meeting[1]
         days_split = days_of_week_from_letters(days)
 
         times_split = times.split("-")
@@ -311,26 +326,26 @@ def create_meetings_by_day(
         start_time = format_time(start_time)
         end_time = format_time(end_time)
         for day in days_split:
-            session = start_time, end_time, meeting[2], location_urls[i]
-
-            # if day key already present, append
-            if day in meetings_by_day:
-                meetings_by_day[day].append(session)
-            # otherwise, initialize list
+            session = start_time, end_time, location, location_urls[i]
+            if day in times_by_day:
+                times_by_day[day].append(session)
             else:
-                meetings_by_day[day] = [session]
+                times_by_day[day] = [session]
 
-    return meetings_by_day
+    return times_by_day
+
+
+class ParsedMeeting(TypedDict):
+    times_summary: str
+    locations_summary: str
+    times_long_summary: str
+    times_by_day: dict[str, list[tuple[str, str, str, str]]]
 
 
 def extract_meetings(
     meeting_html: str,
-) -> tuple[
-    str,
-    str,
-    str,
-    dict[str, list[tuple[str, str, str, str]]],
-]:
+    all_in_group: list[dict[str, Any]],
+) -> ParsedMeeting:
     """
     Extract course meeting times and locations from the provided HTML.
 
@@ -350,16 +365,24 @@ def extract_meetings(
     times_long_summary:
         Summary of meeting times and locations; computed as comma-joined texts from the
         meeting_html items.
-    meetings_by_day:
+    times_by_day:
         Dictionary with keys as days and values consisting of lists of
         [start_time, end_time, location, location_url]
     """
+    if meeting_html == "":
+        return extract_meetings_alternate(all_in_group)
+
     # identify meeting tags and convert to plaintext
     meeting_entries = BeautifulSoup(meeting_html, features="lxml").find_all(
         "div", {"class": "meet"}
     )
     if len(meeting_entries) == 0 or meeting_entries[0].text == "HTBA":
-        return "TBA", "TBA", "TBA", {}
+        return {
+            "times_summary": "TBA",
+            "locations_summary": "TBA",
+            "times_long_summary": "TBA",
+            "times_by_day": {},
+        }
 
     location_urls: list[str] = []
     meetings: list[str] = []
@@ -373,15 +396,13 @@ def extract_meetings(
 
     split_meetings = list(map(split_meeting_text, meetings))
     times_summary, locations_summary = create_meeting_summaries(split_meetings)
-    times_long_summary = "\n".join(meetings).replace("MTWThF", "M-F")
-    meetings_by_day = create_meetings_by_day(split_meetings, location_urls)
 
-    return (
-        times_summary,
-        locations_summary,
-        times_long_summary,
-        meetings_by_day,
-    )
+    return {
+        "times_summary": times_summary,
+        "locations_summary": locations_summary,
+        "times_long_summary": "\n".join(meetings).replace("MTWThF", "M-F"),
+        "times_by_day": create_times_by_day(split_meetings, location_urls),
+    }
 
 
 def format_undelimited_time(time: str) -> str:
@@ -409,9 +430,7 @@ DAYS_MAP = {
 }
 
 
-def extract_meetings_alternate(
-    course_json: dict[str, Any]
-) -> tuple[str, str, str, dict[str, list[tuple[str, str, str, str]]]]:
+def extract_meetings_alternate(all_in_group: list[dict[str, Any]]) -> ParsedMeeting:
     """
     Extract course meeting times from the allInGroup key rather than meeting_html. Note that this
     does not return locations because they are not specified.
@@ -436,54 +455,40 @@ def extract_meetings_alternate(
         Dictionary with keys as days and values consisting of lists of
         [start_time, end_time, location]
     """
-    locations_summary = "TBA"
-    times_by_day: dict[str, list[tuple[str, str, str, str]]] = {}
+    if len(all_in_group) == 0:
+        return {
+            "times_summary": "TBA",
+            "locations_summary": "TBA",
+            "times_long_summary": "TBA",
+            "times_by_day": {},
+        }
 
-    # check if there is a valid listing
-
-    listings = course_json.get("allInGroup", [])
-
-    if len(listings) >= 0:
-        # use the first listing (for when a course has multiple)
-
-        primary_listing = listings[0]
-
-        times_summary = primary_listing["meets"]
-
-        if times_summary == "HTBA":
-            times_summary = "TBA"
-
-        meeting_times = ujson.loads(primary_listing["meetingTimes"])
-
-        for meeting_time in meeting_times:
-            meeting_day = DAYS_MAP[meeting_time["meet_day"]]
-
-            session = (
-                format_undelimited_time(meeting_time["start_time"]),
-                format_undelimited_time(meeting_time["end_time"]),
-                "",
-                "",
-            )
-
-            if meeting_day in times_by_day:
-                times_by_day[meeting_day].append(session)
-
-            else:
-                times_by_day[meeting_day] = [session]
-
-    # if no valid listing, then return the default missing values
-    else:
+    # use the first listing (for when a course has multiple)
+    primary_listing = all_in_group[0]
+    times_summary = primary_listing["meets"]
+    if times_summary == "HTBA":
         times_summary = "TBA"
+    meeting_times = ujson.loads(primary_listing["meetingTimes"])
+    times_by_day: dict[str, list[tuple[str, str, str, str]]] = {}
+    for meeting_time in meeting_times:
+        meeting_day = DAYS_MAP[meeting_time["meet_day"]]
+        session = (
+            format_undelimited_time(meeting_time["start_time"]),
+            format_undelimited_time(meeting_time["end_time"]),
+            "",
+            "",
+        )
+        if meeting_day in times_by_day:
+            times_by_day[meeting_day].append(session)
+        else:
+            times_by_day[meeting_day] = [session]
 
-    # since there are no locations, just set this to times_summary
-    times_long_summary = times_summary
-
-    return (
-        times_summary,
-        locations_summary,
-        times_long_summary,
-        times_by_day,
-    )
+    return {
+        "times_summary": times_summary,
+        "locations_summary": "TBA",
+        "times_long_summary": times_summary,
+        "times_by_day": times_by_day,
+    }
 
 
 def extract_resource_link(resource_html: str, title: str) -> str:
@@ -534,7 +539,12 @@ def extract_skills_areas(text: str, codes_map: dict[str, str]) -> list[str]:
     return sorted(codes)
 
 
-def extract_prereqs_and_description(description_html: str) -> dict[str, str]:
+class ParsedDescription(TypedDict):
+    requirements: str
+    description: str
+
+
+def extract_prereqs_and_description(description_html: str) -> ParsedDescription:
     raw_description = BeautifulSoup(convert_unicode(description_html), features="lxml")
 
     # course prerequisites
@@ -620,9 +630,45 @@ def truncate_title(title: str):
     return title
 
 
+class ParsedCourse(TypedDict):
+    season_code: str
+    requirements: str
+    description: str
+    short_title: str
+    title: str
+    school: str
+    credits: float
+    extra_info: str
+    professors: list[str]
+    professor_emails: list[str]
+    professor_ids: list[str]
+    crn: str
+    crns: list[str]
+    course_code: str
+    subject: str
+    number: str
+    section: str
+    times_summary: str
+    locations_summary: str
+    times_long_summary: str
+    times_by_day: dict[str, list[tuple[str, str, str, str]]]
+    skills: list[str]
+    areas: list[str]
+    flags: list[str]
+    regnotes: str
+    rp_attr: str
+    classnotes: str
+    final_exam: str
+    course_home_url: str
+    syllabus_url: str
+    fysem: bool
+    sysem: bool
+    colsem: bool
+
+
 def extract_course_info(
     course_json: dict[str, Any], season: str, fysem: set[str]
-) -> dict[str, Any]:
+) -> ParsedCourse:
     """
     Parse the JSON response from the Yale courses API into a more useful format.
 
@@ -642,14 +688,15 @@ def extract_course_info(
     """
     # The order of keys is significant (impacts JSON diff)! Add them all at once
     # to avoid changing them
-    course_info: dict[str, Any] = {
+    course_info: ParsedCourse = {
         "season_code": season,
         **extract_prereqs_and_description(course_json["description"]),
         "short_title": truncate_title(course_json["title"]),
         "title": course_json["title"],
         "school": course_json["col"],
-        # non-Yale College courses don't have listed credits, so assume they are 1
-        "credits": 1.0,
+        "credits": extract_credits(
+            course_json.get("credit_html", ""), course_json.get("hours", "")
+        ),
         "extra_info": STAT_MAP.get(course_json["stat"], "ACTIVE"),
         **extract_professors(convert_unicode(course_json["instructordetail_html"])),
         "crn": course_json["crn"],
@@ -658,10 +705,9 @@ def extract_course_info(
         "subject": course_json["code"].split(" ")[0],
         "number": course_json["code"].split(" ")[1],
         "section": course_json["section"].lstrip("0"),
-        "times_summary": "",
-        "locations_summary": "",
-        "times_long_summary": "",
-        "times_by_day": {},
+        **extract_meetings(
+            course_json.get("meeting_html", ""), course_json.get("allInGroup", [])
+        ),
         "skills": extract_skills_areas(course_json["yc_attrs"], SKILLS_MAP),
         "areas": extract_skills_areas(course_json["yc_attrs"], AREAS_MAP),
         "flags": extract_flags(course_json["ci_attrs"]),
@@ -675,38 +721,6 @@ def extract_course_info(
         "sysem": False,
         "colsem": False,
     }
-
-    # Number of credits
-    try:
-        if "hours" in course_json:
-            course_info["credits"] = float(course_json["hours"])
-        # in Fall 2021, Yale switched to a new credits format under the 'credits' field
-        elif course_json.get("credit_html", "").endswith(
-            " credit for Yale College students"
-        ) or course_json.get("credit_html", "").endswith(
-            " credits for Yale College students"
-        ):
-            course_info["credits"] = float(course_json["credit_html"][:-33])
-    except ValueError:
-        pass
-
-    # Meeting times
-    if course_json.get("meeting_html", "") != "":
-        (
-            course_info["times_summary"],
-            course_info["locations_summary"],
-            course_info["times_long_summary"],
-            course_info["times_by_day"],
-        ) = extract_meetings(course_json["meeting_html"])
-
-    # Fall 2020 courses do not have meeting_htmls because most are online
-    else:
-        (
-            course_info["times_summary"],
-            course_info["locations_summary"],
-            course_info["times_long_summary"],
-            course_info["times_by_day"],
-        ) = extract_meetings_alternate(course_json)
 
     course_info["fysem"] = course_json["crn"] in fysem or is_fysem(
         course_json["code"],
@@ -732,7 +746,7 @@ def parse_courses(
     fysem_courses: set[str],
     data_dir: Path,
     use_cache: bool = True,
-) -> list[dict[str, Any]]:
+) -> list[ParsedCourse]:
     # load from cache if it exists
     if (
         use_cache
@@ -746,7 +760,7 @@ def parse_courses(
         return cache_load
 
     # parse course JSON in season
-    parsed_course_info: list[dict[str, Any]] = []
+    parsed_course_info: list[ParsedCourse] = []
     # not worth parallelizing, already pretty quick
     for x in tqdm(
         aggregate_season_courses, leave=False, desc=f"Parsing season {season}"

@@ -4,7 +4,7 @@ from httpx import AsyncClient
 from tqdm import tqdm
 
 from .fetch import fetch_season_course_list, fetch_all_season_courses_details
-from .parse import parse_courses
+from .parse import parse_courses, ParsedCourse
 
 
 async def crawl_classes(
@@ -12,14 +12,14 @@ async def crawl_classes(
     data_dir: Path,
     client: AsyncClient,
     use_cache: bool = True,
-) -> dict[str, list[dict[str, Any]]]:
+) -> dict[str, list[ParsedCourse]]:
     # Concurrency with async at the season level overloads the CPU
     # futures = [ fetch_class(season, data_dir=data_dir, client=client) for season in seasons ]
     # classes = await tqdm_asyncio.gather(*futures, desc="Season Progress")
 
     print(f"Fetching course info for seasons: {seasons}...")
 
-    classes: dict[str, list[dict[str, Any]]] = {}
+    classes: dict[str, list[ParsedCourse]] = {}
     for season in tqdm(seasons, desc="Season Progress", leave=False):
         season_courses = await fetch_season_course_list(
             season, data_dir=data_dir, client=client, use_cache=use_cache

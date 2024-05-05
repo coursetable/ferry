@@ -33,15 +33,12 @@ def transform(data_dir: Path):
         ]
     )
     print(f"\nSeason(s): {', '.join(course_seasons)}")
-    # define seasons table for import
     seasons_table = pd.DataFrame(
-        [int(x) for x in course_seasons], columns=["season_code"], dtype=int
-    )
-    seasons_table["term"] = seasons_table["season_code"].apply(
-        lambda x: {"1": "spring", "2": "summer", "3": "fall"}[str(x)[-1]]
-    )
-    seasons_table["year"] = (
-        seasons_table["season_code"].astype(str).apply(lambda x: x[:4]).astype(int)
+        [
+            [int(x), {"1": "spring", "2": "summer", "3": "fall"}[x[-1]], int(x[:4])]
+            for x in course_seasons
+        ],
+        columns=["season_code", "term", "year"],
     )
 
     course_tables = import_courses(

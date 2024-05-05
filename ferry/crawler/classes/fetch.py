@@ -96,10 +96,10 @@ async def fetch_course_details(
     url = "https://courses.yale.edu/api/?page=fose&route=details"
 
     payload = {
-        "group": "code:" + code + "",
-        "key": "crn:" + crn + "",
-        "srcdb": "" + srcdb + "",
-        "matched": "crn:" + crn + "",
+        "group": f"code:{code}",
+        "key": f"crn:{crn}",
+        "srcdb": f"{srcdb}",
+        "matched": f"crn:{crn}",
     }
 
     # retry up to 10 times
@@ -115,14 +115,14 @@ async def fetch_course_details(
 
     # Unsuccessful response
     if req.status_code != 200:
-        raise FetchClassesError("Unsuccessful response: code {req.status_code}")
+        raise FetchClassesError(f"Unsuccessful response: code {req.status_code}")
     course_json = ujson.loads(req.text)
 
     # exclude Yale's last-updated field (we use our own later on)
     if "last_updated" in course_json:
         del course_json["last_updated"]
 
-    if "fatal" in course_json.keys():
+    if "fatal" in course_json:
         raise FetchClassesError(f"Unsuccessful response: {course_json['fatal']}")
 
     return course_json

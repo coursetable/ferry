@@ -15,6 +15,20 @@ from ferry.utils import (
 )
 
 
+def classify_yc(row: pd.Series):
+    if row["school"] == "YC":
+        return True
+
+    if row["school"] != row["school"]:
+        # check number of numbers in course number
+        # (some courses have letters in them)
+        num_nums = len([x for x in row["number"] if x.isnumeric()])
+        # if the course number is in the 000s to 400s range it's undergrad
+        if row["number"][0] in ["0", "1", "2", "3", "4"] and num_nums < 4:
+            return True
+    return False
+
+
 def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
     """
     Resolve course cross-listings by computing unique course_ids.
@@ -26,19 +40,6 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
     # seasons must be sorted in ascending order
     # prioritize Yale College courses when deduplicating listings
     logging.debug("Sorting by season and if-undergrad")
-
-    def classify_yc(row: pd.Series):
-        if row["school"] == "YC":
-            return True
-
-        if row["school"] != row["school"]:
-            # check number of numbers in course number
-            # (some courses have letters in them)
-            num_nums = len([x for x in row["number"] if x.isnumeric()])
-            # if the course number is in the 000s to 400s range it's undergrad
-            if row["number"][0] in ["0", "1", "2", "3", "4"] and num_nums < 4:
-                return True
-        return False
 
     merged_course_info["is_yc"] = merged_course_info.apply(classify_yc, axis=1)
     merged_course_info = merged_course_info.sort_values(
@@ -270,7 +271,9 @@ def resolve_professors(
         )
         # Replace with new IDs
         professors_update.loc[new_professors.index, "professor_id"] = new_professor_ids
-        professors_update["professor_id"] = professors_update["professor_id"].astype(int)
+        professors_update["professor_id"] = professors_update["professor_id"].astype(
+            int
+        )
         professors_update.drop_duplicates(
             subset=["professor_id"], keep="first", inplace=True
         )

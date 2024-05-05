@@ -36,19 +36,16 @@ def init_sentry(sentry_url: str | None):
 
 
 async def start_crawl(args: Args):
-    seasons = []
-    classes = {}
+    classes = None
     # Fetch seasons
+    course_seasons = await fetch_seasons(data_dir=args.data_dir, client=args.client)
+
+    # Parse season args
+    seasons = parse_seasons_arg(
+        arg_seasons=args.seasons, all_viable_seasons=course_seasons
+    )
+    print("-" * 80)
     if args.fetch_classes:
-        course_seasons = await fetch_seasons(data_dir=args.data_dir, client=args.client)
-
-        # Parse season args
-        seasons = parse_seasons_arg(
-            arg_seasons=args.seasons, all_viable_seasons=course_seasons
-        )
-
-        print("-" * 80)
-
         # Fetch classes/courses
         classes = await crawl_classes(
             seasons=seasons,
@@ -56,7 +53,6 @@ async def start_crawl(args: Args):
             client=args.client,
             use_cache=args.use_cache,
         )
-
     # Fetch ratings/evals
     if args.fetch_evals:
         await fetch_ratings(

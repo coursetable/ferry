@@ -29,6 +29,7 @@ from .process import (
     process_course_eval,
     PageIndex,
 )
+from ferry.crawler.classes.parse import ParsedCourse
 from ferry.crawler.cas_request import create_client, CASClient, request
 from ferry.crawler.cache import load_cache_json
 
@@ -149,7 +150,7 @@ async def fetch_ratings(
     cas_cookie: str,
     seasons: list[str],
     data_dir: Path,
-    courses: dict[str, Any] | None = None,
+    courses: dict[str, list[ParsedCourse]] | None = None,
 ):
     # -----------------------------------
     # Queue courses to query from seasons
