@@ -6,13 +6,12 @@ Used by transform_compute.py
 
 from typing import Any
 
+import itertools
 import edlib
 import networkx
 import pandas as pd
 from tqdm import tqdm
 import logging
-
-from ferry.utils import flatten_list_of_lists
 
 MIN_TITLE_MATCH_LEN = 8
 MIN_DESCRIPTION_MATCH_LEN = 32
@@ -204,7 +203,7 @@ def resolve_historical_courses(
     )
     # flatten courses with overlapping codes
     courses_shared_code = courses_shared_code.apply(
-        lambda x: list(set(flatten_list_of_lists(x)))
+        lambda x: list(set(itertools.chain.from_iterable(x)))
     )
 
     # filter out titles and descriptions for matching

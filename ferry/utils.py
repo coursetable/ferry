@@ -53,25 +53,6 @@ def convert_unicode(text: str) -> str:
     return text
 
 
-def flatten_list_of_lists(list_of_lists: list[list[Any]]) -> list[Any]:
-    """
-    Flatten a list of lists into a single list.
-
-    Parameters
-    ----------
-    list_of_lists:
-        list of lists.
-
-    Returns
-    -------
-    flattened:
-        Flattened list.
-    """
-    flattened = [x for y in list_of_lists for x in y]
-
-    return flattened
-
-
 def merge_overlapping(sets: list[frozenset[Any]]) -> list[set[Any]]:
     """
     Given a list of FrozenSets, merge sets with a nonempty intersection until all sets are disjoint.
@@ -112,24 +93,15 @@ def merge_overlapping(sets: list[frozenset[Any]]) -> list[set[Any]]:
     return merged
 
 
-def invert_dict_of_lists(dict_of_lists: dict[Any, list[Any]]) -> dict[Any, Any]:
+def to_element_index_map(dict_of_lists: list[set[Any]]) -> dict[Any, int]:
     """
-    Given a dictionary mapping x -> [a, b, c], invert such that it now maps all a, b, c -> x.
-    If same value in multiple keys, then inverted dictionary overwrites arbitrarily.
+    Given a list of sets, return a dictionary mapping each element to its index in the list.
 
-    Parameters
-    ----------
-    dict_of_lists:
-        Input dictionary of lists.
-
-    Returns
-    -------
-    Inverted:
-        Output inverted dictionary.
+    If an element is present in multiple sets, the index of the *last* set it appears in is used.
     """
-    inverted = {}
+    inverted: dict[Any, int] = {}
 
-    for key, val in dict_of_lists.items():
+    for key, val in enumerate(dict_of_lists):
         for item in val:
             inverted[item] = key
 
