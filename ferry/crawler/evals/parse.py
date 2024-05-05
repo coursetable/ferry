@@ -2,19 +2,8 @@ from pathlib import Path
 from typing import cast, TypedDict
 
 from bs4 import BeautifulSoup, Tag, ResultSet
-from httpx import Response
 
 from ferry.crawler.cache import save_cache_json
-
-
-class PageIndex:
-    def __init__(self, path: Path | Response):
-        super().__init__()
-        if isinstance(path, Response):
-            self.content = path.content
-            return
-        with open(path, "rb") as file:
-            self.content = file.read()
 
 
 class EmptyEvaluationError(Exception):
@@ -36,9 +25,9 @@ class EmptyNarrativeError(Exception):
 
 
 def parse_questions(
-    page: PageIndex, crn: str, season_code: str
+    page: bytes, crn: str, season_code: str
 ) -> tuple[dict[str, str], dict[str, bool]]:
-    soup = BeautifulSoup(page.content, "lxml")
+    soup = BeautifulSoup(page, "lxml")
 
     questions = soup.find("table", id="questions")
 
@@ -93,9 +82,9 @@ class ParsedEvalRatings(TypedDict):
 
 
 def parse_eval_ratings(
-    page: PageIndex, questions: dict[str, str], question_id: str
+    page: bytes, questions: dict[str, str], question_id: str
 ) -> ParsedEvalRatings:
-    soup = BeautifulSoup(page.content, "lxml")
+    soup = BeautifulSoup(page, "lxml")
 
     td = soup.find("td", text=str(question_id))
     if td is None or td.parent is None:
@@ -141,9 +130,9 @@ class ParsedEvalComments(TypedDict):
 
 
 def parse_eval_comments(
-    page: PageIndex, questions: dict[str, str], question_id: str
+    page: bytes, questions: dict[str, str], question_id: str
 ) -> ParsedEvalComments:
-    soup = BeautifulSoup(page.content, "lxml")
+    soup = BeautifulSoup(page, "lxml")
 
     if question_id == "SU124":
         # account for question 10 of summer courses
@@ -201,10 +190,8 @@ class ParsedExtras(TypedDict):
     not_viewable: str | None
 
 
-def parse_course_enrollment(
-    page: PageIndex,
-) -> tuple[ParsedStats, ParsedExtras]:
-    soup = BeautifulSoup(page.content, "lxml")
+def parse_course_enrollment(page: bytes) -> tuple[ParsedStats, ParsedExtras]:
+    soup = BeautifulSoup(page, "lxml")
 
     header = soup.find("div", id="courseHeader")
     if type(header) != Tag:
@@ -244,7 +231,7 @@ class ParsedEval(TypedDict):
 
 # Does not return anything, only responsible for writing course evals to json cache
 def parse_eval_page(
-    page_index: PageIndex | None, crn_code: str, season_code: str, path: Path
+    page_index: bytes | None, crn_code: str, season_code: str, path: Path
 ):
     if page_index is None:
         return

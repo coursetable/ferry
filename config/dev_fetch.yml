@@ -3,9 +3,9 @@
 
 cas_cookie: null
 database_connect_string: null
-fetch_classes: true
-fetch_evals: true
-parse_evals: false
+crawl_classes: true
+crawl_evals: true
+create_evals_tables: false
 generate_diagram: false
 release: false
 sentry_url: null

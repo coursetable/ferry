@@ -3,9 +3,9 @@
 
 cas_cookie: null
 database_connect_string: null
-fetch_classes: false
-fetch_evals: false
-parse_evals: true
+crawl_classes: false
+crawl_evals: false
+create_evals_tables: true
 generate_diagram: false
 release: true
 seasons: null

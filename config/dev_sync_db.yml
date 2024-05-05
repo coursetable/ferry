@@ -2,9 +2,9 @@
 # This configuration is used to enable syncing the local postgres database in a dev environment.
 
 cas_cookie: null
-fetch_classes: false
-fetch_evals: false
-parse_evals: true
+crawl_classes: false
+crawl_evals: false
+create_evals_tables: true
 generate_diagram: true
 release: false
 seasons: null

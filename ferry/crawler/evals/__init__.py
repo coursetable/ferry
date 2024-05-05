@@ -1,0 +1,116 @@
+from pathlib import Path
+import asyncio
+import concurrent.futures
+import diskcache
+from tqdm import tqdm
+from tqdm.asyncio import tqdm_asyncio
+
+from .fetch import fetch_course_evals, FetchError
+from .parse import parse_eval_page
+from .to_table import create_evals_tables
+from ferry.crawler.classes.parse import ParsedCourse
+from ferry.crawler.cas_request import create_client
+from ferry.crawler.cache import load_cache_json
+
+
+# exclude seasons before and including this because no evaluations
+EXCLUDE_SEASONS_BEFORE = "202101"
+
+
+async def crawl_evals(
+    cas_cookie: str,
+    seasons: list[str],
+    data_dir: Path,
+    courses: dict[str, list[ParsedCourse]] | None = None,
+):
+    # -----------------------------------
+    # Queue courses to query from seasons
+    # -----------------------------------
+
+    # Test cases----------------------------------------------------------------
+    # queue = [
+    #     ("201903", "11970"),  # basic test
+    #     ("201703", "10738"),  # no evaluations available
+    #     ("201703", "13958"),  # DRAM class?
+    #     ("201703", "10421"),  # APHY 990 (class not in Yale College)
+    #     ("201703", "16119"),  # no evaluations available (doesn't show in OCE)
+    #     ("201802", "30348"),  # summer session course
+    # ]
+    # --------------------------------------------------------------------------
+
+    # predetermine all valid seasons
+    seasons = list(
+        filter(
+            lambda season: int(season) > int(EXCLUDE_SEASONS_BEFORE),
+            seasons,
+        )
+    )
+
+    # Status update
+    print(f"Fetching course evals for valid seasons: {seasons}...")
+
+    # initiate Yale client session to access evals
+    client = create_client(cas_cookie=cas_cookie)
+
+    # Season level is synchronous, following same logic as fetch_classes.py
+    with concurrent.futures.ProcessPoolExecutor() as executor:
+        for season in (pbar := tqdm(seasons, desc="Season Progress", leave=False)):
+            pbar.set_postfix({"season": season})
+
+            if (
+                season_courses := (
+                    load_cache_json(data_dir / "season_courses" / f"{season}.json")
+                    if courses is None
+                    else courses[season]
+                )
+            ) is None:
+                raise FetchError(
+                    f"Season {season} not found in season_courses directory."
+                )
+
+            # Test for first 100 courses
+            season_courses = season_courses[:100]
+            yale_college_cache = diskcache.Cache(data_dir / "yale_college_cache")
+
+            futures = [
+                fetch_course_evals(
+                    season_code=season,
+                    crn=course["crn"],
+                    data_dir=data_dir,
+                    client=client,
+                    yale_college_cache=yale_college_cache,
+                )
+                for course in season_courses
+            ]
+
+            # Chunking is necessary as the lambda proxy function has a concurrency limit of 10.
+            chunk_size = client.chunk_size
+            raw_course_evals: list[tuple[bytes | None, str, str, Path]] = []
+
+            for chunk_begin in tqdm(
+                range(0, len(season_courses), chunk_size),
+                leave=False,
+                desc=f"Fetching evals",
+            ):
+                chunk = await tqdm_asyncio.gather(
+                    *futures[chunk_begin : chunk_begin + chunk_size],
+                    leave=False,
+                    desc=f"Chunk {int(chunk_begin / chunk_size)}",
+                )
+                raw_course_evals.extend(chunk)
+
+            # It's not exactly necessary to make the parallelized processing async here because of the season-level sync loop.
+            # However, if the season-loop sync loop becomes async, this will be non-blocking.
+            loop = asyncio.get_running_loop()
+            futures = [
+                loop.run_in_executor(executor, parse_eval_page, *args)
+                for args in raw_course_evals
+            ]
+            await tqdm_asyncio.gather(*futures, leave=False, desc=f"Processing evals")
+
+    await create_evals_tables(data_dir=data_dir)
+
+    await client.aclose()
+
+    print("\033[F", end="")
+    print(f"Fetching course evals for valid seasons: {seasons}... ✔")

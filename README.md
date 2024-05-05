@@ -32,15 +32,15 @@ Note: because we use `argparse`, you can provide just the prefix of each argumen
 
 | CLI flag                    | Config option             | Env key        | Default                              | Description                                                                                           |
 | --------------------------- | ------------------------- | -------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------- |
-| `--cas-cookie`              | `cas_cookie`              | `CAS_COOKIE`   | `None`; prompt if `fetch_evals`      | Only used for fetching evals; see below                                                               |
+| `--cas-cookie`              | `cas_cookie`              | `CAS_COOKIE`   | `None`; prompt if `crawl_evals`      | Only used for fetching evals; see below                                                               |
 | `-f`, `--config-file`       | N/A                       | N/A            | `None`                               | Path to YAML config file, relative to PWD; if unspecified, all options are read from command          |
+| `--crawl-classes`           | `crawl_classes`           | N/A            | `False`                              | Run the class crawler                                                                                 |
+| `--crawl-evals`             | `crawl_classes`             | N/A            | `False`                              | Run the eval crawler                                                                                  |
+| `--create-evals-tables`             | `create_evals_tables`             | N/A            | `False`                              | Run the eval crawler, but just parse existing fetched evals                                           |
 | `--data-dir`                | `data_dir`                | N/A            | `data`                               | Directory to load/store parsed data. This is usually where the `ferry-data` is cloned.                |
 | `--database-connect-string` | `database_connect_string` | `POSTGRES_URI` | `None`; prompt if `sync_db`          | Postgres connection string; for dev, see `dev_sync_db.yml`                                            |
 | `-d`, `--debug`             | `debug`                   | N/A            | `False`                              | Enable debug logging                                                                                  |
-| `--fetch-classes`           | `fetch_classes`           | N/A            | `False`                              | Run the class crawler                                                                                 |
-| `--fetch-evals`             | `fetch_evals`             | N/A            | `False`                              | Run the eval crawler                                                                                  |
 | `--generate-diagram`        | `generate_diagram`        | N/A            | `False`                              | Generate a DB visualization diagram to `docs/db_diagram.pdf`                                          |
-| `--parse-evals`             | `parse_evals`             | N/A            | `False`                              | Run the eval crawler, but just parse existing fetched evals                                           |
 | `-r`, `--release`           | `release`                 | N/A            | `False`                              | Run in release mode; see below                                                                        |
 | `--save-config`             | `save_config`             | N/A            | `False`                              | Save the parsed config options to `config_file`; does nothing if `config_file` is unspecified.        |
 | `-s`, `--seasons`           | `seasons`                 | N/A            | `None`                               | A list of seasons to fetch; see below                                                                 |
@@ -84,7 +84,7 @@ pyright
 
 ## TODO
 
-- **Ensure that parallel ratings is accurate**
+- **Ensure that parallel evals is accurate**
 - Rearchitect GitHub action to create Postgres dump, upload with VC (enable lifecycle management) to Azure Blob, and restart prod `postgres` container to trigger new pull.
 - Modernize dependencies
 - SIGINT handler

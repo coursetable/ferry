@@ -50,7 +50,7 @@ narratives_headers = [
 ]
 
 
-async def create_rating_tables(data_dir: Path):
+async def create_evals_tables(data_dir: Path):
     print(f"Parsing course ratings...")
     parsed_evaluations_dir = data_dir / "parsed_evaluations"
     parsed_evaluations_dir.mkdir(parents=True, exist_ok=True)

@@ -11,7 +11,6 @@ following steps:
 """
 
 import asyncio
-import concurrent.futures
 import traceback
 from pathlib import Path
 from urllib.parse import urlencode
@@ -20,16 +19,8 @@ from typing import cast
 import diskcache
 import ujson
 from tqdm import tqdm
-from tqdm.asyncio import tqdm_asyncio
 
-from .to_table import create_rating_tables
-from .parse import (
-    parse_eval_page,
-    PageIndex,
-)
-from ferry.crawler.classes.parse import ParsedCourse
-from ferry.crawler.cas_request import create_client, CASClient, request
-from ferry.crawler.cache import load_cache_json
+from ferry.crawler.cas_request import CASClient, request
 
 
 class AuthError(Exception):
@@ -48,11 +39,6 @@ class FetchError(Exception):
 
     # pylint: disable=unnecessary-pass
     pass
-
-
-EXCLUDE_SEASONS_BEFORE = (
-    "202101"  # exclude seasons before and including this because no evaluations
-)
 
 
 async def is_yale_college(
@@ -148,117 +134,13 @@ async def is_yale_college(
     return result
 
 
-# --------------------------------------------------------
-# Load all seasons and compare with selection if specified
-# --------------------------------------------------------
-
-
-async def fetch_ratings(
-    cas_cookie: str,
-    seasons: list[str],
-    data_dir: Path,
-    courses: dict[str, list[ParsedCourse]] | None = None,
-):
-    # -----------------------------------
-    # Queue courses to query from seasons
-    # -----------------------------------
-
-    # Test cases----------------------------------------------------------------
-    # queue = [
-    #     ("201903", "11970"),  # basic test
-    #     ("201703", "10738"),  # no evaluations available
-    #     ("201703", "13958"),  # DRAM class?
-    #     ("201703", "10421"),  # APHY 990 (class not in Yale College)
-    #     ("201703", "16119"),  # no evaluations available (doesn't show in OCE)
-    #     ("201802", "30348"),  # summer session course
-    # ]
-    # --------------------------------------------------------------------------
-
-    # predetermine all valid seasons
-    seasons = list(
-        filter(
-            lambda season: int(season) > int(EXCLUDE_SEASONS_BEFORE),
-            seasons,
-        )
-    )
-
-    # Status update
-    print(f"Fetching course ratings for valid seasons: {seasons}...")
-
-    # initiate Yale client session to access ratings
-    client = create_client(cas_cookie=cas_cookie)
-
-    # Season level is synchronous, following same logic as fetch_classes.py
-    with concurrent.futures.ProcessPoolExecutor() as executor:
-        for season in (pbar := tqdm(seasons, desc="Season Progress", leave=False)):
-            pbar.set_postfix({"season": season})
-
-            if (
-                season_courses := (
-                    load_cache_json(data_dir / "season_courses" / f"{season}.json")
-                    if courses is None
-                    else courses[season]
-                )
-            ) is None:
-                raise FetchError(
-                    f"Season {season} not found in season_courses directory."
-                )
-
-            # Test for first 100 courses
-            season_courses = season_courses[:100]
-            yale_college_cache = diskcache.Cache(data_dir / "yale_college_cache")
-
-            futures = [
-                fetch_course_evals(
-                    season_code=season,
-                    crn=course["crn"],
-                    data_dir=data_dir,
-                    client=client,
-                    yale_college_cache=yale_college_cache,
-                )
-                for course in season_courses
-            ]
-
-            # Chunking is necessary as the lambda proxy function has a concurrency limit of 10.
-            chunk_size = client.chunk_size
-            raw_course_evals: list[tuple[PageIndex | None, str, str, Path]] = []
-
-            for chunk_begin in tqdm(
-                range(0, len(season_courses), chunk_size),
-                leave=False,
-                desc=f"Fetching ratings",
-            ):
-                chunk = await tqdm_asyncio.gather(
-                    *futures[chunk_begin : chunk_begin + chunk_size],
-                    leave=False,
-                    desc=f"Chunk {int(chunk_begin / chunk_size)}",
-                )
-                raw_course_evals.extend(chunk)
-
-            # It's not exactly necessary to make the parallelized processing async here because of the season-level sync loop.
-            # However, if the season-loop sync loop becomes async, this will be non-blocking.
-            loop = asyncio.get_running_loop()
-            futures = [
-                loop.run_in_executor(executor, parse_eval_page, *args)
-                for args in raw_course_evals
-            ]
-            await tqdm_asyncio.gather(*futures, leave=False, desc=f"Processing ratings")
-
-    await create_rating_tables(data_dir=data_dir)
-
-    await client.aclose()
-
-    print("\033[F", end="")
-    print(f"Fetching course ratings for valid seasons: {seasons}... ✔")
-
-
 async def fetch_course_evals(
     season_code: str,
     crn: str,
     data_dir: Path,
     client: CASClient,
     yale_college_cache: diskcache.Cache,
-) -> tuple[PageIndex | None, str, str, Path]:
+) -> tuple[bytes | None, str, str, Path]:
     course_unique_id = f"{season_code}-{crn}"
 
     output_path = data_dir / "course_evals" / f"{course_unique_id}.json"
@@ -302,7 +184,7 @@ async def fetch_course_evals(
 
 async def fetch_eval_page(
     client: CASClient, crn: str, season_code: str, data_dir: Path
-) -> PageIndex:
+) -> bytes:
     """
     Gets evaluation data and comments for the specified course in specified term.
 
@@ -325,7 +207,8 @@ async def fetch_eval_page(
     questions_index = data_dir / "rating_cache" / "questions_index"
     html_file = questions_index / f"{season_code}_{crn}.html"
     if html_file.is_file():
-        return PageIndex(html_file)
+        with open(html_file, "rb") as file:
+            return file.read()
 
     # OCE website for evaluations
     url_eval = f"https://oce.app.yale.edu/ocedashboard/studentViewer/courseSummary?{urlencode({'crn': crn, 'termCode': season_code})}"
@@ -357,4 +240,4 @@ async def fetch_eval_page(
     with open(html_file, "wb") as file:
         file.write(page_index.content)
 
-    return PageIndex(page_index)
+    return page_index.content

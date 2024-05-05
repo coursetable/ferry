@@ -5,7 +5,7 @@ from httpx import AsyncClient
 import uvloop
 
 from ferry.crawler.classes import crawl_classes
-from ferry.crawler.ratings import fetch_ratings, create_rating_tables
+from ferry.crawler.evals import crawl_evals, create_evals_tables
 from ferry.crawler.seasons import fetch_seasons
 from ferry.transform import transform
 from ferry.database import Database, stage, deploy
@@ -38,7 +38,7 @@ def init_sentry(sentry_url: str | None):
 
 async def start_crawl(args: Args):
     classes = None
-    # Initialize HTTPX client, only used for fetching classes (ratings fetch
+    # Initialize HTTPX client, only used for fetching classes (evals fetch
     # initializes its own client with CAS auth)
     client = AsyncClient(timeout=None)
     course_seasons = await fetch_seasons(data_dir=args.data_dir, client=client)
@@ -46,22 +46,22 @@ async def start_crawl(args: Args):
         arg_seasons=args.seasons, all_viable_seasons=course_seasons
     )
     print("-" * 80)
-    if args.fetch_classes:
+    if args.crawl_classes:
         classes = await crawl_classes(
             seasons=seasons,
             data_dir=args.data_dir,
             client=client,
             use_cache=args.use_cache,
         )
-    if args.fetch_evals:
-        await fetch_ratings(
+    if args.crawl_evals:
+        await crawl_evals(
             cas_cookie=args.cas_cookie,
             seasons=seasons,
             data_dir=args.data_dir,
             courses=classes,
         )
-    elif args.parse_evals:
-        await create_rating_tables(data_dir=args.data_dir)
+    elif args.create_evals_tables:
+        await create_evals_tables(data_dir=args.data_dir)
 
     await client.aclose()
     print("-" * 80)

@@ -6,13 +6,13 @@ from typing import Any, cast
 class RawArgs:
     cas_cookie: str | None
     config_file: str | None
+    crawl_classes: bool
+    crawl_evals: bool
+    create_evals_tables: bool
     data_dir: str
     database_connect_string: str | None
     debug: bool
-    fetch_classes: bool
-    fetch_evals: bool
     generate_diagram: bool
-    parse_evals: bool
     release: bool
     save_config: bool
     seasons: list[str] | None
@@ -23,13 +23,13 @@ class RawArgs:
 
 class Args:
     cas_cookie: str
+    crawl_classes: bool
+    crawl_evals: bool
+    create_evals_tables: bool
     data_dir: Path
     database_connect_string: str
     debug: bool
-    fetch_classes: bool
-    fetch_evals: bool
     generate_diagram: bool
-    parse_evals: bool
     release: bool
     seasons: list[str] | None
     sentry_url: str
@@ -72,6 +72,24 @@ def get_parser():
     )
 
     parser.add_argument(
+        "--crawl-classes",
+        help="Crawl classes.",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "--crawl-evals",
+        help="Crawl evaluations.",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "--create-evals-tables",
+        help="Generate CSV from cached eval JSON.",
+        action="store_true",
+    )
+
+    parser.add_argument(
         "--data-dir",
         help="Directory to store data files.",
         default=DATA_DIR,
@@ -91,26 +109,8 @@ def get_parser():
     )
 
     parser.add_argument(
-        "--fetch-classes",
-        help="Fetch classes.",
-        action="store_true",
-    )
-
-    parser.add_argument(
-        "--fetch-evals",
-        help="Fetch evaluations.",
-        action="store_true",
-    )
-
-    parser.add_argument(
         "--generate-diagram",
         help="Generate database diagram.",
-        action="store_true",
-    )
-
-    parser.add_argument(
-        "--parse-evals",
-        help="Parse evaluations.",
         action="store_true",
     )
 
@@ -214,7 +214,7 @@ def parse_env_args(args: RawArgs):
 
     if args.cas_cookie is None:
         args.cas_cookie = os.environ.get("CAS_COOKIE")
-        if args.cas_cookie is None and args.fetch_evals:
+        if args.cas_cookie is None and args.crawl_evals:
             args.cas_cookie = input("Enter CAS cookie: ")
 
 
