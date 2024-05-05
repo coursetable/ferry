@@ -66,19 +66,19 @@ jobs:
       - name: Calculate commit message
         run: |
           if [ "${{ github.event_name }}" == "schedule" ]; then
-            echo "MSG=\"$(date): Scheduled update\"" >> $GITHUB_ENV
+            echo "MSG='$(date): Scheduled update'" >> $GITHUB_ENV
           elif [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
-            echo "MSG=\"$(date): Manual update by ${{ github.actor }}\"" >> $GITHUB_ENV
+            echo "MSG='$(date): Manual update by ${{ github.actor }}'" >> $GITHUB_ENV
           elif [ "${{ github.event_name }}" == "push" ]; then
-            echo "MSG=\"$(date): Update based on $GITHUB_SHA\"" >> $GITHUB_ENV
+            echo "MSG='$(date): Update based on $GITHUB_SHA'" >> $GITHUB_ENV
           else
-            echo "MSG=\"$(date): Update\"" >> $GITHUB_ENV
+            echo "MSG='$(date): Update'" >> $GITHUB_ENV
           fi
 
       - name: Commit updated ferry-data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "${{ env.MSG }}"
+          commit_message: ${{ env.MSG }}
           commit_user_name: "Ferry Bot"
           commit_user_email: "coursetable.at.yale@gmail.com"
           commit_author: course-table <course-table@users.noreply.github.com>
