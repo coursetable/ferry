@@ -1,5 +1,5 @@
 # DEV CONFIG
-# This configuation is used to enable syncing the local postgres database in a dev environment.
+# This configuration is used to enable syncing the local postgres database in a dev environment.
 
 cas_cookie: null
 fetch_classes: false

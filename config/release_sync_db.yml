@@ -1,5 +1,5 @@
 # PROD CONFIG
-# This configuation is used for syncing to the production database.
+# This configuration is used for syncing to the production database.
 
 cas_cookie: null
 database_connect_string: null

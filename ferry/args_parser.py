@@ -7,33 +7,32 @@ from httpx import AsyncClient
 
 class RawArgs:
     cas_cookie: str | None
-    config_file: str
+    config_file: str | None
     data_dir: str
     database_connect_string: str | None
-    debug: bool | None
-    fetch_classes: bool | None
-    fetch_evals: bool | None
-    parse_evals: bool | None
-    generate_diagram: bool | None
-    release: bool | None
-    save_config: bool | None
+    debug: bool
+    fetch_classes: bool
+    fetch_evals: bool
+    generate_diagram: bool
+    parse_evals: bool
+    release: bool
+    save_config: bool
     seasons: list[str] | None
     sentry_url: str | None
-    sync_db: bool | None
-    use_cache: bool | None
+    sync_db: bool
+    use_cache: bool
 
 
 class Args:
     cas_cookie: str
-    config_file: Path
     client: AsyncClient
     data_dir: Path
     database_connect_string: str
     debug: bool
     fetch_classes: bool
     fetch_evals: bool
-    parse_evals: bool
     generate_diagram: bool
+    parse_evals: bool
     release: bool
     seasons: list[str] | None
     sentry_url: str
@@ -53,7 +52,6 @@ class InvalidSeasonError(Exception):
 _PROJECT_DIR = Path(__file__).resolve().parent.parent
 
 DATA_DIR = str(_PROJECT_DIR / "data")
-CONFIG_FILE = str(_PROJECT_DIR / "config" / "config.yml")
 
 
 # Args for main.py
@@ -64,10 +62,28 @@ def get_parser():
     )
 
     parser.add_argument(
-        "-r",
-        "--release",
-        help="Whether to run in release mode. This enables Sentry and requires a database connection string.",
-        action="store_true",
+        "--cas-cookie",
+        help="CAS cookie. If not specified, defaults to the value of the CAS_COOKIE environment variable before prompting user.",
+        default=None,
+    )
+
+    parser.add_argument(
+        "-f",
+        "--config-file",
+        help="Path to config YAML file. The config file will be loaded as default args.",
+        default=None,
+    )
+
+    parser.add_argument(
+        "--data-dir",
+        help="Directory to store data files.",
+        default=DATA_DIR,
+    )
+
+    parser.add_argument(
+        "--database-connect-string",
+        help="Database connection string. If not specified, defaults to the value of the MYSQL_URI environment variable before prompting user.",
+        default=None,
     )
 
     parser.add_argument(
@@ -78,14 +94,8 @@ def get_parser():
     )
 
     parser.add_argument(
-        "--use-cache",
-        help="Whether to use cache for requests. Automatically set to false in release mode.",
-        action="store_true",
-    )
-
-    parser.add_argument(
-        "--sync-db",
-        help="Sync the database. This is automatically set to true in release mode.",
+        "--fetch-classes",
+        help="Fetch classes.",
         action="store_true",
     )
 
@@ -96,8 +106,8 @@ def get_parser():
     )
 
     parser.add_argument(
-        "--fetch-classes",
-        help="Fetch classes.",
+        "--generate-diagram",
+        help="Generate database diagram.",
         action="store_true",
     )
 
@@ -108,16 +118,10 @@ def get_parser():
     )
 
     parser.add_argument(
-        "--generate-diagram",
-        help="Generate database diagram.",
+        "-r",
+        "--release",
+        help="Whether to run in release mode. This enables Sentry and requires a database connection string.",
         action="store_true",
-    )
-
-    parser.add_argument(
-        "-f",
-        "--config_file",
-        help="Path to config YAML file. The config file will be loaded as default args.",
-        default=CONFIG_FILE,
     )
 
     parser.add_argument(
@@ -127,37 +131,10 @@ def get_parser():
     )
 
     parser.add_argument(
-        "--data-dir",
-        help="Directory to store data files.",
-        default=DATA_DIR,
-    )
-
-    """
-    CAS Authentication
-
-    All cookies set in the request header are necessary for CAS authentication.
-
-    TODO: Add more documentation on how to get these cookies.
-
-    Example:
-      JSESSIONID=...;
-      dtCookie=...;
-      _6a39a=...;
-      _ga=...;
-      _gid=...;
-      _gat=...;
-      _ga_NMGP3341FM=...
-      [...]
-    """
-    parser.add_argument(
-        "--cas-cookie",
-        help="CAS cookie. If not specified, defaults to the value of the CAS_COOKIE environment variable before prompting user.",
-        default=None,
-    )
-
-    parser.add_argument(
-        "--database-connect-string",
-        help="Database connection string. If not specified, defaults to the value of the MYSQL_URI environment variable before prompting user.",
+        "-s",
+        "--seasons",
+        nargs="+",
+        help="Seasons to fetch. Format: Explicit list or LATEST_n to fetch n latest seasons. If not specified, fetches all seasons.",
         default=None,
     )
 
@@ -168,11 +145,15 @@ def get_parser():
     )
 
     parser.add_argument(
-        "-s",
-        "--seasons",
-        nargs="+",
-        help="Seasons to fetch. Format: Explicit list or LATEST_n to fetch n latest seasons. If not specified, fetches all seasons.",
-        default=None,
+        "--sync-db",
+        help="Sync the database. This is automatically set to true in release mode.",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "--use-cache",
+        help="Whether to use cache for requests. Automatically set to false in release mode.",
+        action="store_true",
     )
 
     return parser
@@ -227,91 +208,92 @@ def parse_env_args(args: RawArgs):
     if args.database_connect_string is None:
         args.database_connect_string = os.environ.get("POSTGRES_URI")
         if args.database_connect_string is None and args.sync_db:
-            # prompt user
             args.database_connect_string = input("Enter database connection string: ")
 
     if args.sentry_url is None:
         args.sentry_url = os.environ.get("SENTRY_URL")
         if args.sentry_url is None and args.release:
-            # prompt user
             args.sentry_url = input("Enter Sentry URL: ")
 
     if args.cas_cookie is None:
         args.cas_cookie = os.environ.get("CAS_COOKIE")
         if args.cas_cookie is None and args.fetch_evals:
-            # prompt user
             args.cas_cookie = input("Enter CAS cookie: ")
 
 
 def load_yaml(parser: argparse.ArgumentParser):
-    p: RawArgs = cast(RawArgs, parser.parse_args())
+    p = cast(RawArgs, parser.parse_args())
 
-    if p.config_file is not None:
-        try:
-            if not Path(p.config_file).is_file():
-                print(f"File not found: {p.config_file}.")
-                return
+    if p.config_file is None:
+        return
+    if not Path(p.config_file).is_file():
+        print(f"File not found: {p.config_file}.")
+        return
+    try:
+        # Load YAML config as default args
+        import yaml
 
-            # Load YAML config as default args
-            import yaml
+        with open(p.config_file, "r") as f:
+            default_arg: dict[str, Any] = yaml.safe_load(f)
+        key = vars(p).keys()
 
-            with open(p.config_file, "r") as f:
-                default_arg: dict[str, Any] = yaml.safe_load(f)
-            key = vars(p).keys()
-
-            # Check for wrong args / empty file
-            if default_arg is None:
-                print(f"File is empty: {p.config_file}.")
-                return
-            for k in default_arg.keys():
-                if k not in key:
-                    print("WRONG ARG: {}".format(k))
-                    assert k in key
-
-            # Set default args
-            parser.set_defaults(**default_arg)
-
-        except:
-            print(f"Error loading config file: {p.config_file}.")
+        # Check for wrong args / empty file
+        if default_arg is None:
+            print(f"File is empty: {p.config_file}.")
             return
+        for k in default_arg.keys():
+            if k not in key:
+                print("WRONG ARG: {}".format(k))
+                assert k in key
+
+        # Set default args
+        parser.set_defaults(**default_arg)
+
+    except:
+        print(f"Error loading config file: {p.config_file}.")
+        return
 
 
 def save_yaml(args: RawArgs):
-    if args.save_config:
-        # Save config YAML file
-        import yaml
+    # Save config YAML file
+    import yaml
 
-        print(f"Saving config file to {args.config_file}.")
+    if args.config_file is None:
+        print("No config file specified.")
+        return
+    if not Path(args.config_file).is_file():
+        print(f"File not found: {args.config_file}.")
+        return
 
-        del args.save_config
-        config_file = str(args.config_file)
-        data_dir = str(args.data_dir)
+    print(f"Saving config file to {args.config_file}.")
 
-        del args.config_file
+    del args.save_config
+    config_file = args.config_file
+    data_dir = str(args.data_dir)
 
-        if str(args.data_dir) == DATA_DIR:
-            del args.data_dir
+    del args.config_file
 
-        with open(config_file, "w+") as f:
-            yaml.dump(vars(args), f)
+    if data_dir == DATA_DIR:
+        del args.data_dir
 
-        args.data_dir = data_dir
+    with open(config_file, "w+") as f:
+        yaml.dump(vars(args), f)
+
+    args.data_dir = data_dir
 
 
 def get_args() -> Args:
     parser = get_parser()
 
-    # Load YAML config as default args
     load_yaml(parser)
 
-    args: RawArgs = cast(RawArgs, parser.parse_args())
+    args = cast(RawArgs, parser.parse_args())
 
-    # Set args.use_cache to False if args.release is True
     if args.release:
         args.use_cache = False
 
-    # Save config YAML file if specified
-    save_yaml(args)
+    if args.save_config:
+        save_yaml(args)
 
     parse_env_args(args)
 
@@ -320,5 +302,4 @@ def get_args() -> Args:
     # Initialize HTTPX client, only used for fetching classes (ratings fetch initializes its own client with CAS auth)
     final_args.client = AsyncClient(timeout=None)
     final_args.data_dir = Path(final_args.data_dir)
-    final_args.config_file = Path(final_args.config_file)
     return final_args

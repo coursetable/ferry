@@ -1,5 +1,5 @@
 # PROD CONFIG
-# This configuation is used for fetching the latest data for the last 3 seasons of course data (no evaluations).
+# This configuration is used for fetching the latest data for the last 3 seasons of course data (no evaluations).
 
 cas_cookie: null
 database_connect_string: null

@@ -1,5 +1,5 @@
 # DEV CONFIG
-# This configuation is used to only fetch course data (no evaluations) for the last 3 seasons in a dev environment. Please combine with -s option to specify exact seasons to fetch. For debug printing, use -d option.
+# This configuration is used to only fetch course data (no evaluations) for the last 3 seasons in a dev environment. Please combine with -s option to specify exact seasons to fetch. For debug printing, use -d option.
 
 cas_cookie: null
 database_connect_string: null

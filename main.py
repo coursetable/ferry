@@ -93,26 +93,17 @@ async def main():
 
         logging.basicConfig(level=logging.DEBUG)
 
-    # Create data directory if it doesn't exist
     args.data_dir.mkdir(parents=True, exist_ok=True)
 
-    # Initialize Sentry
     if args.release:
         init_sentry(args.sentry_url)
     else:
         print("Running in dev mode. Sentry not initialized.")
 
-    # Start the crawl - fetch classes + ratings
     await start_crawl(args)
-
-    # Close HTTPX client
     await args.client.aclose()
-
-    # Sync the database
     if args.sync_db:
         sync_db(args)
-
-    # Generate DB diagram
     if args.generate_diagram:
         from ferry.generate_db_diagram import generate_db_diagram
 
