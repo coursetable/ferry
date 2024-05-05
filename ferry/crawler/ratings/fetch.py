@@ -14,7 +14,7 @@ import asyncio
 import concurrent.futures
 import traceback
 from pathlib import Path
-from typing import Any, cast
+from typing import cast
 
 import diskcache
 import ujson

@@ -2,8 +2,6 @@ import argparse
 from pathlib import Path
 from typing import Any, cast
 
-from httpx import AsyncClient
-
 
 class RawArgs:
     cas_cookie: str | None
@@ -25,7 +23,6 @@ class RawArgs:
 
 class Args:
     cas_cookie: str
-    client: AsyncClient
     data_dir: Path
     database_connect_string: str
     debug: bool
@@ -299,7 +296,5 @@ def get_args() -> Args:
 
     final_args = cast(Args, args)
 
-    # Initialize HTTPX client, only used for fetching classes (ratings fetch initializes its own client with CAS auth)
-    final_args.client = AsyncClient(timeout=None)
     final_args.data_dir = Path(final_args.data_dir)
     return final_args

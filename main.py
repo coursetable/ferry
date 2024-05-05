@@ -1,5 +1,6 @@
 import asyncio
 from pathlib import Path
+from httpx import AsyncClient
 
 import uvloop
 
@@ -37,23 +38,21 @@ def init_sentry(sentry_url: str | None):
 
 async def start_crawl(args: Args):
     classes = None
-    # Fetch seasons
-    course_seasons = await fetch_seasons(data_dir=args.data_dir, client=args.client)
-
-    # Parse season args
+    # Initialize HTTPX client, only used for fetching classes (ratings fetch
+    # initializes its own client with CAS auth)
+    client = AsyncClient(timeout=None)
+    course_seasons = await fetch_seasons(data_dir=args.data_dir, client=client)
     seasons = parse_seasons_arg(
         arg_seasons=args.seasons, all_viable_seasons=course_seasons
     )
     print("-" * 80)
     if args.fetch_classes:
-        # Fetch classes/courses
         classes = await crawl_classes(
             seasons=seasons,
             data_dir=args.data_dir,
-            client=args.client,
+            client=client,
             use_cache=args.use_cache,
         )
-    # Fetch ratings/evals
     if args.fetch_evals:
         await fetch_ratings(
             cas_cookie=args.cas_cookie,
@@ -62,9 +61,9 @@ async def start_crawl(args: Args):
             courses=classes,
         )
     elif args.parse_evals:
-        # Make sure to parse evals since they are not cached in the data directory
         await parse_ratings(data_dir=args.data_dir)
 
+    await client.aclose()
     print("-" * 80)
 
 
@@ -101,7 +100,6 @@ async def main():
         print("Running in dev mode. Sentry not initialized.")
 
     await start_crawl(args)
-    await args.client.aclose()
     if args.sync_db:
         sync_db(args)
     if args.generate_diagram:

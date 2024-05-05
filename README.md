@@ -28,7 +28,7 @@ python main.py -f config/dev_fetch.yml
 
 Options can be passed either through the command line, through a YAML config file, or through environment variables, in decreasing order of precedence.
 
-Note: because we use `argparse`, you can provide just the prefix of each argument, such as `--config` instead of ``--config-file`.
+Note: because we use `argparse`, you can provide just the prefix of each argument, such as `--config` instead of `--config-file`.
 
 | CLI flag                    | Config option             | Env key        | Default                              | Description                                                                                           |
 | --------------------------- | ------------------------- | -------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------- |

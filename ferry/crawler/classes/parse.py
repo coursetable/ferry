@@ -64,7 +64,7 @@ def extract_professors(html: str) -> ParsedProfessors:
         instructor_email = div.find("div", {"class": "instructor-email"})
         instructor_id = ""  # default
 
-        if instructor_name:
+        if type(instructor_name) == Tag:
             # check if the professor has an associated ID
             instructor_search = instructor_name.find("a", {"data-action": "search"})
             if type(instructor_search) == Tag:

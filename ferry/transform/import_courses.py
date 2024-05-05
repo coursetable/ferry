@@ -1,5 +1,6 @@
 import logging
 from tqdm import tqdm
+from typing import cast
 from pathlib import Path
 from collections import Counter
 
@@ -120,8 +121,8 @@ def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
     def aggregate_prof_info(row: pd.Series) -> list[tuple[str, str | None]]:
         names, emails = row["professors"], row["professor_emails"]
 
-        names: list[str] = list(filter(lambda x: x != "", names))
-        emails: list[str | None] = list(filter(lambda x: x != "", emails))
+        names = cast(list[str], list(filter(lambda x: x != "", names)))
+        emails = cast(list[str | None], list(filter(lambda x: x != "", emails)))
 
         # if no names, return empty regardless of others
         # (professors need to be named)
