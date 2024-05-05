@@ -1,2 +1,2 @@
 from .fetch import fetch_ratings
-from .parse import parse_ratings
+from .to_table import create_rating_tables

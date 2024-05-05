@@ -5,7 +5,7 @@ from httpx import AsyncClient
 import uvloop
 
 from ferry.crawler.classes import crawl_classes
-from ferry.crawler.ratings import fetch_ratings, parse_ratings
+from ferry.crawler.ratings import fetch_ratings, create_rating_tables
 from ferry.crawler.seasons import fetch_seasons
 from ferry.transform import transform
 from ferry.database import Database, stage, deploy
@@ -61,7 +61,7 @@ async def start_crawl(args: Args):
             courses=classes,
         )
     elif args.parse_evals:
-        await parse_ratings(data_dir=args.data_dir)
+        await create_rating_tables(data_dir=args.data_dir)
 
     await client.aclose()
     print("-" * 80)

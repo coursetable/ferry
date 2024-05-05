@@ -73,7 +73,7 @@ class FetchClassesError(Exception):
 
 
 async def fetch_course_details(
-    code: str, crn: str, srcdb: str, client: AsyncClient
+    code: str, crn: str, season_code: str, client: AsyncClient
 ) -> dict[str, Any]:
     """
     Fetch information for a course from the API
@@ -84,7 +84,7 @@ async def fetch_course_details(
         the course code
     crn: string
         the course registration number
-    srcdb: string
+    season_code: string
         season the course is in
 
     Returns
@@ -98,7 +98,7 @@ async def fetch_course_details(
     payload = {
         "group": f"code:{code}",
         "key": f"crn:{crn}",
-        "srcdb": f"{srcdb}",
+        "srcdb": f"{season_code}",
         "matched": f"crn:{crn}",
     }
 

@@ -1,286 +1,289 @@
-"""
-Functions for processing course rating JSONs into aggregate CSVs.
-
-Used by /ferry/crawler/parse_ratings.py
-"""
-
-import csv
-from typing import Any
-
-import ujson
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-
-# initialize sentiment intensity analyzer
-analyzer = SentimentIntensityAnalyzer()
-import asyncio
-import concurrent.futures
-import csv
 from pathlib import Path
+from typing import cast, TypedDict
 
-import ujson
-from tqdm.asyncio import tqdm_asyncio
+from bs4 import BeautifulSoup, Tag, ResultSet
+from httpx import Response
 
-# ------------------
-# CSV output headers
-# ------------------
-
-questions_headers = [
-    "season",
-    "crn",
-    "question_code",
-    "is_narrative",
-    "question_text",
-    "options",
-]
-ratings_headers = ["season", "crn", "question_code", "rating"]
-statistics_headers = [
-    "season",
-    "crn",
-    "enrolled",
-    "responses",
-    "declined",
-    "no_response",
-    "extras",
-]
-narratives_headers = [
-    "season",
-    "crn",
-    "question_code",
-    "comment",
-    "comment_neg",
-    "comment_neu",
-    "comment_pos",
-    "comment_compound",
-]
-
-# ----------------
-# CSV output paths
-# ----------------
+from ferry.crawler.cache import save_cache_json
 
 
-def parse_rating(
-    data_dir: Path,
-    filename: str,
-):
-    # Read the evaluation, giving preference to current over previous.
-    current_evals_file = data_dir / "course_evals" / filename
-    previous_evals_file = data_dir / "previous_evals" / filename
-
-    if current_evals_file.is_file():
-        with open(current_evals_file, "r") as f:
-            evaluation = ujson.load(f)
-    else:
-        with open(previous_evals_file, "r") as f:
-            evaluation = ujson.load(f)
-
-    return (
-        process_narratives(evaluation),
-        process_ratings(evaluation),
-        process_questions(evaluation),
-        process_statistics(evaluation),
-    )
+class PageIndex:
+    def __init__(self, path: Path | Response):
+        super().__init__()
+        if isinstance(path, Response):
+            self.content = path.content
+            return
+        with open(path, "rb") as file:
+            self.content = file.read()
 
 
-async def parse_ratings(data_dir: Path):
+class EmptyEvaluationError(Exception):
+    """
+    Object for empty evaluations exceptions.
+    """
 
-    print(f"Parsing course ratings...")
-    parsed_evaluations_dir = data_dir / "parsed_evaluations"
-    parsed_evaluations_dir.mkdir(parents=True, exist_ok=True)
-    questions_path = parsed_evaluations_dir / "evaluation_questions.csv"
-    ratings_path = parsed_evaluations_dir / "evaluation_ratings.csv"
-    statistics_path = parsed_evaluations_dir / "evaluation_statistics.csv"
-    narratives_path = parsed_evaluations_dir / "evaluation_narratives.csv"
+    # pylint: disable=unnecessary-pass
+    pass
 
-    # ------------------
-    # CSV output writers
-    # ------------------
 
-    questions_file = open(questions_path, "w")  # pylint: disable=consider-using-with
-    questions_writer = csv.DictWriter(questions_file, questions_headers)
-    questions_writer.writeheader()
+class EmptyNarrativeError(Exception):
+    """
+    Object for empty narrative exceptions.
+    """
 
-    narratives_file = open(narratives_path, "w")  # pylint: disable=consider-using-with
-    narratives_writer = csv.DictWriter(narratives_file, narratives_headers)
-    narratives_writer.writeheader()
+    # pylint: disable=unnecessary-pass
+    pass
 
-    ratings_file = open(ratings_path, "w")  # pylint: disable=consider-using-with
-    ratings_writer = csv.DictWriter(ratings_file, ratings_headers)
-    ratings_writer.writeheader()
 
-    statistics_file = open(statistics_path, "w")  # pylint: disable=consider-using-with
-    statistics_writer = csv.DictWriter(statistics_file, statistics_headers)
-    statistics_writer.writeheader()
+def parse_questions(
+    page: PageIndex, crn: str, season_code: str
+) -> tuple[dict[str, str], dict[str, bool]]:
+    soup = BeautifulSoup(page.content, "lxml")
 
-    # ----------------------------
-    # Load and process evaluations
-    # ----------------------------
+    questions = soup.find("table", id="questions")
 
-    # list available evaluation files
-    previous_eval_files = (data_dir / "previous_evals").glob("*.json")
-    new_eval_files = (data_dir / "course_evals").glob("*.json")
-
-    # extract file names (<season> + <crn> format) for merging
-    previous_eval_filenames = [x.name for x in previous_eval_files]
-    new_eval_filenames = [x.name for x in new_eval_files]
-
-    all_eval_files = sorted(list(set(previous_eval_filenames + new_eval_filenames)))
-
-    with concurrent.futures.ProcessPoolExecutor() as executor:
-        loop = asyncio.get_event_loop()
-        futures = [
-            loop.run_in_executor(
-                executor,
-                parse_rating,
-                data_dir,
-                filename,
-            )
-            for filename in all_eval_files
-        ]
-        results: list[tuple[list, list, list, dict]] = await tqdm_asyncio.gather(
-            *futures, leave=False, desc=f"Parsing all ratings"
+    if questions is None:
+        raise EmptyEvaluationError(
+            f"Evaluations for course crn={crn} in term={season_code} are empty"
         )
-        # results: [ ( narratives: List, ratings: List, questions: List, statistics: Dict ) ]
 
-    # Must be done in serial, as the CSV writers are not thread-safe.
-    for narratives, ratings, questions, statistics in results:
-        # write narratives to CSV
-        narratives_writer.writerows(narratives)
+    infos = questions.find("tbody")
+    if type(infos) == Tag:
+        infos = cast(ResultSet[Tag], infos.find_all("tr"))
+    else:
+        raise EmptyEvaluationError()
 
-        # write ratings to CSV
-        ratings_writer.writerows(ratings)
+    questions = {}
+    question_is_narrative = {}
 
-        # write questions to CSV
-        questions_writer.writerows(questions)
+    for question_row in infos:
+        question_id = question_row.find_all("td")[2].text.strip()
+        question_text = question_row.find(
+            "td", class_="Question", recursive=False
+        ).find(text=True)
 
-        # write statistics to CSV
-        statistics_writer.writerow(statistics)
+        if question_text is None:
+            # skip any empty questions (which is possible due to errors in OCE)
+            continue
 
-    # close CSV files
-    questions_file.close()
-    narratives_file.close()
-    ratings_file.close()
-    statistics_file.close()
+        # Check if question is narrative
+        question_response = (
+            question_row.find_all("td", class_="Responses")[0]
+            .find_all("span", class_="show-for-print")[0]
+            .find(text=True)
+        )
+        question_is_narrative[question_id] = "Narrative" in question_response
 
-    print("\033[F", end="")
-    print(f"Parsing course ratings... ✔")
+        questions[question_id] = question_text.text.strip()
+        # print(question_id, question_is_narrative[question_id], questions[question_id])
 
+    if len(questions) == 0:  # Evaluation data for this course not available
+        raise EmptyEvaluationError(
+            f"Evaluations for course crn={crn} in term={season_code} are unavailable"
+        )
 
-####################
-# Helper Functions #
-####################
-
-
-def process_narratives(evaluation: dict[str, Any]):
-    """
-    Process written evaluations. Appends to narratives CSV with global writer object.
-
-    Parameters
-    ----------
-    evaluation:
-        evaluation object for a course.
-    narratives_writer:
-        CSV writer to narratives output file.
-    """
-    narratives = []
-    for narrative_group in evaluation["narratives"]:
-        for raw_narrative in narrative_group["comments"]:
-            narrative = {}
-            narrative["season"] = evaluation["season"]
-            narrative["crn"] = evaluation["crn_code"]
-            narrative["question_code"] = narrative_group["question_id"]
-            narrative["comment"] = raw_narrative
-
-            sentiment = analyzer.polarity_scores(raw_narrative)
-
-            narrative["comment_neg"] = sentiment["neg"]
-            narrative["comment_neu"] = sentiment["neu"]
-            narrative["comment_pos"] = sentiment["pos"]
-            narrative["comment_compound"] = sentiment["compound"]
-
-            narratives.append(narrative)
-
-    return narratives
+    return questions, question_is_narrative
 
 
-def process_ratings(evaluation: dict[str, Any]):
-    """
-    Process categorical evaluations. Appends to ratings CSV with global writer object.
-
-    Parameters
-    ----------
-    evaluation:
-        evaluation object for a course.
-    ratings_writer:
-        CSV writer to ratings output file.
-    """
-    ratings = []
-    for raw_rating in evaluation["ratings"]:
-        rating = {}
-
-        rating["season"] = evaluation["season"]
-        rating["crn"] = evaluation["crn_code"]
-        rating["question_code"] = raw_rating["question_id"]
-        rating["rating"] = ujson.dumps(raw_rating["data"])
-
-        ratings.append(rating)
-
-    return ratings
+class ParsedEvalRatings(TypedDict):
+    question_id: str
+    question_text: str
+    options: list[str]
+    data: list[int]
 
 
-def process_statistics(evaluation: dict[str, Any]):
-    """
-    Process evaluation statistics. Appends to statistics CSV with global writer object.
+def parse_eval_ratings(
+    page: PageIndex, questions: dict[str, str], question_id: str
+) -> ParsedEvalRatings:
+    soup = BeautifulSoup(page.content, "lxml")
 
-    Parameters
-    ----------
-    evaluation:
-        evaluation object for a course.
-    statistics_writer:
-        CSV writer to course statistics output file.
-    """
-    statistics = {}
-    statistics["season"] = evaluation["season"]
-    statistics["crn"] = evaluation["crn_code"]
-    statistics["enrolled"] = evaluation["enrollment"]["enrolled"]
-    statistics["responses"] = evaluation["enrollment"]["responses"]
-    statistics["declined"] = evaluation["enrollment"]["declined"]
-    statistics["no_response"] = evaluation["enrollment"]["no response"]
-    statistics["extras"] = evaluation["extras"]
+    td = soup.find("td", text=str(question_id))
+    if td is None or td.parent is None:
+        raise EmptyEvaluationError()
+    id = td.parent.get("id")
+    if type(id) != str:
+        raise EmptyEvaluationError()
 
-    return statistics
+    # Get the 0-indexed question index
+    q_index = id.replace("questionRow", "")
+
+    table = soup.find("table", id="answers" + q_index)
+    if table is None:
+        raise EmptyEvaluationError()
+
+    tbody = table.find("tbody")
+    if type(tbody) == Tag:
+        rows = cast(ResultSet[Tag], tbody.find_all("tr"))
+    else:
+        raise EmptyEvaluationError()
+
+    ratings: list[int] = []
+    options: list[str] = []
+    for row in rows:
+        item = row.find_all("td")
+        options.append(item[0].text.strip())  # e.g. "very low"
+        ratings.append(int(item[1].text.strip()))  # e.g. 8
+
+    # print(options, ratings)
+
+    return {
+        "question_id": question_id,
+        "question_text": questions[question_id],
+        "options": options,
+        "data": ratings,
+    }
 
 
-def process_questions(evaluation: dict[str, Any]):
-    """
-    Process evaluation questions. Appends to questions CSV with global writer object.
+class ParsedEvalComments(TypedDict):
+    question_id: str
+    question_text: str
+    comments: list[str]
 
-    Parameters
-    ----------
-    evaluation:
-        evaluation object for a course.
-    questions_writer:
-        CSV writer to questions output file.
-    """
-    questions = []
 
-    for rating in evaluation["ratings"]:
-        question = {}
-        question["season"] = evaluation["season"]
-        question["crn"] = evaluation["crn_code"]
-        question["question_code"] = rating["question_id"]
-        question["question_text"] = rating["question_text"]
-        question["is_narrative"] = False
-        question["options"] = ujson.dumps(rating["options"])
-        questions.append(question)
+def parse_eval_comments(
+    page: PageIndex, questions: dict[str, str], question_id: str
+) -> ParsedEvalComments:
+    soup = BeautifulSoup(page.content, "lxml")
 
-    for narrative in evaluation["narratives"]:
-        question = {}
-        question["season"] = evaluation["season"]
-        question["crn"] = evaluation["crn_code"]
-        question["question_code"] = narrative["question_id"]
-        question["question_text"] = narrative["question_text"]
-        question["is_narrative"] = True
-        question["options"] = None
-        questions.append(question)
+    if question_id == "SU124":
+        # account for question 10 of summer courses
+        response_table_id = "answers{i}"
+    else:
+        td = soup.find("td", text=str(question_id))
+        if td is None or td.parent is None:
+            raise EmptyEvaluationError()
+        id = td.parent.get("id")
+        if type(id) != str:
+            raise EmptyEvaluationError()
+        # Get the 0-indexed question index
+        q_index = id.replace("questionRow", "")
+        response_table_id = "answers" + q_index
 
-    return questions
+    table = soup.find("table", id=response_table_id)
+
+    if table is None:
+        raise EmptyNarrativeError()
+
+    rows = table.find("tbody")
+    if type(rows) == Tag:
+        rows = rows.find_all("tr")
+    else:
+        raise EmptyNarrativeError()
+    comments: list[str] = []
+    for row in rows:
+        comment = row.find_all("td")[1].text.strip()
+        comments.append(comment)
+
+    # print("Question ID: ", question_id)
+    # print("Question text: ", questions[question_id])
+    # print("Comments:", comments)
+
+    return {
+        "question_id": question_id,
+        "question_text": questions[question_id],
+        "comments": comments,
+    }
+
+
+ParsedStats = TypedDict(
+    "ParsedStats",
+    {
+        "enrolled": int,
+        "responses": int,
+        "declined": int | None,
+        "no response": int | None,
+    },
+)
+
+
+class ParsedExtras(TypedDict):
+    title: str
+    not_viewable: str | None
+
+
+def parse_course_enrollment(
+    page: PageIndex,
+) -> tuple[ParsedStats, ParsedExtras]:
+    soup = BeautifulSoup(page.content, "lxml")
+
+    header = soup.find("div", id="courseHeader")
+    if type(header) != Tag:
+        raise EmptyEvaluationError()
+    header = header.find("div", class_="row")
+    if type(header) != Tag:
+        raise EmptyEvaluationError()
+    infos = header.find_all("div", recursive=False)[-1]
+
+    enrolled = infos.find_all("div", class_="row")[0].find_all("div")[-1].text.strip()
+    responded = infos.find_all("div", class_="row")[1].find_all("div")[-1].text.strip()
+
+    stats: ParsedStats = {
+        "enrolled": int(enrolled),
+        "responses": int(responded),
+        "declined": None,  # legacy: used to have "declined" stats
+        "no response": None,  # legacy: used to have "no response" stats
+    }
+
+    title = header.find_all("div", recursive=False)[1]
+    if type(title) != Tag:
+        raise EmptyEvaluationError()
+    title = title.find_all("span")[1].text.strip()
+
+    # print(stats, title)
+    return stats, {"title": title, "not_viewable": None}
+
+
+class ParsedEval(TypedDict):
+    crn_code: str
+    season: str
+    enrollment: ParsedStats
+    ratings: list[ParsedEvalRatings]
+    narratives: list[ParsedEvalComments]
+    extras: ParsedExtras
+
+
+# Does not return anything, only responsible for writing course evals to json cache
+def parse_eval_page(
+    page_index: PageIndex | None, crn_code: str, season_code: str, path: Path
+):
+    if page_index is None:
+        return
+    try:
+        enrollment, extras = parse_course_enrollment(page_index)
+    except:
+        # Enrollment data is not available - most likely error page was returned.
+        return
+
+    try:
+        questions, question_is_narrative = parse_questions(
+            page_index, crn_code, season_code
+        )
+    except EmptyEvaluationError as err:
+        questions = {}
+        question_is_narrative = {}
+        extras["not_viewable"] = str(err)
+
+    # Fetch question responses based on whether they are narrative or rating.
+    ratings: list[ParsedEvalRatings] = []
+    narratives: list[ParsedEvalComments] = []
+    for question_id in questions.keys():
+        if question_is_narrative[question_id]:
+            try:
+                narratives.append(
+                    parse_eval_comments(page_index, questions, question_id)
+                )
+            except EmptyNarrativeError:
+                pass
+        else:
+            ratings.append(parse_eval_ratings(page_index, questions, question_id))
+
+    course_eval: ParsedEval = {
+        "crn_code": crn_code,
+        "season": season_code,
+        "enrollment": enrollment,
+        "ratings": ratings,
+        "narratives": narratives,
+        "extras": extras,
+    }
+
+    save_cache_json(path, course_eval)

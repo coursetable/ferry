@@ -14,6 +14,7 @@ import asyncio
 import concurrent.futures
 import traceback
 from pathlib import Path
+from urllib.parse import urlencode
 from typing import cast
 
 import diskcache
@@ -21,12 +22,9 @@ import ujson
 from tqdm import tqdm
 from tqdm.asyncio import tqdm_asyncio
 
-from .parse import parse_ratings
-from .process import (
-    AuthError,
-    CrawlerError,
-    fetch_course_eval,
-    process_course_eval,
+from .to_table import create_rating_tables
+from .parse import (
+    parse_eval_page,
     PageIndex,
 )
 from ferry.crawler.classes.parse import ParsedCourse
@@ -34,7 +32,16 @@ from ferry.crawler.cas_request import create_client, CASClient, request
 from ferry.crawler.cache import load_cache_json
 
 
-class FetchRatingsError(Exception):
+class AuthError(Exception):
+    """
+    Object for auth exceptions.
+    """
+
+    # pylint: disable=unnecessary-pass
+    pass
+
+
+class FetchError(Exception):
     """
     Error object for fetch ratings exceptions.
     """
@@ -179,9 +186,7 @@ async def fetch_ratings(
     print(f"Fetching course ratings for valid seasons: {seasons}...")
 
     # initiate Yale client session to access ratings
-    client = create_client(
-        cas_cookie=cas_cookie,
-    )
+    client = create_client(cas_cookie=cas_cookie)
 
     # Season level is synchronous, following same logic as fetch_classes.py
     with concurrent.futures.ProcessPoolExecutor() as executor:
@@ -195,7 +200,7 @@ async def fetch_ratings(
                     else courses[season]
                 )
             ) is None:
-                raise FetchRatingsError(
+                raise FetchError(
                     f"Season {season} not found in season_courses directory."
                 )
 
@@ -204,7 +209,7 @@ async def fetch_ratings(
             yale_college_cache = diskcache.Cache(data_dir / "yale_college_cache")
 
             futures = [
-                fetch_course_ratings(
+                fetch_course_evals(
                     season_code=season,
                     crn=course["crn"],
                     data_dir=data_dir,
@@ -223,12 +228,10 @@ async def fetch_ratings(
                 leave=False,
                 desc=f"Fetching ratings",
             ):
-                chunk: list[tuple[PageIndex | None, str, str, Path]] = (
-                    await tqdm_asyncio.gather(
-                        *futures[chunk_begin : chunk_begin + chunk_size],
-                        leave=False,
-                        desc=f"Chunk {int(chunk_begin / chunk_size)}",
-                    )
+                chunk = await tqdm_asyncio.gather(
+                    *futures[chunk_begin : chunk_begin + chunk_size],
+                    leave=False,
+                    desc=f"Chunk {int(chunk_begin / chunk_size)}",
                 )
                 raw_course_evals.extend(chunk)
 
@@ -236,13 +239,12 @@ async def fetch_ratings(
             # However, if the season-loop sync loop becomes async, this will be non-blocking.
             loop = asyncio.get_running_loop()
             futures = [
-                loop.run_in_executor(executor, process_course_eval, *args)
+                loop.run_in_executor(executor, parse_eval_page, *args)
                 for args in raw_course_evals
             ]
             await tqdm_asyncio.gather(*futures, leave=False, desc=f"Processing ratings")
 
-    # Parse course ratings, parallelized similar to process_course_eval
-    await parse_ratings(data_dir=data_dir)
+    await create_rating_tables(data_dir=data_dir)
 
     await client.aclose()
 
@@ -250,7 +252,7 @@ async def fetch_ratings(
     print(f"Fetching course ratings for valid seasons: {seasons}... ✔")
 
 
-async def fetch_course_ratings(
+async def fetch_course_evals(
     season_code: str,
     crn: str,
     data_dir: Path,
@@ -277,16 +279,15 @@ async def fetch_course_ratings(
 
     # tqdm.write(f"Fetching {course_unique_id} ... ", end="")
     try:
-        course_eval = await fetch_course_eval(
+        eval_page = await fetch_eval_page(
             client=client,
-            crn_code=crn,
-            term_code=season_code,
+            crn=crn,
+            season_code=season_code,
             data_dir=data_dir,
         )  # this is the raw html request, must be processed
-
-        return course_eval, crn, season_code, output_path
+        return eval_page, crn, season_code, output_path
         # tqdm.write("dumped in JSON")
-    except CrawlerError as error:
+    except FetchError as error:
         # tqdm.write(f"skipped {course_unique_id}: {error}")
         pass
     except AuthError as error:
@@ -297,3 +298,63 @@ async def fetch_course_ratings(
         tqdm.write(f"skipped {course_unique_id}: unknown error {error}")
 
     return None, crn, season_code, output_path
+
+
+async def fetch_eval_page(
+    client: CASClient, crn: str, season_code: str, data_dir: Path
+) -> PageIndex:
+    """
+    Gets evaluation data and comments for the specified course in specified term.
+
+    Parameters
+    ----------
+    client:
+        The current session client with login cookie.
+    crn:
+        CRN of this course.
+    season:
+        term code of this course.
+    data_dir:
+        Path to data directory.
+
+    Returns
+    -------
+    course_eval:
+        Dictionary with all evaluation data.
+    """
+    questions_index = data_dir / "rating_cache" / "questions_index"
+    html_file = questions_index / f"{season_code}_{crn}.html"
+    if html_file.is_file():
+        return PageIndex(html_file)
+
+    # OCE website for evaluations
+    url_eval = f"https://oce.app.yale.edu/ocedashboard/studentViewer/courseSummary?{urlencode({'crn': crn, 'termCode': season_code})}"
+    payload = {
+        "cookie": client.cas_cookie,
+        "url": url_eval,
+    }
+    try:
+        page_index = await request(
+            method="POST",
+            url=client.url,
+            client=client,
+            json=payload,
+        )
+    except Exception as err:
+        raise FetchError(f"Error fetching evaluations for {season_code}-{crn}: {err}")
+
+    if "Central Authentication Service" in page_index.text:
+        raise AuthError(f"Cookie auth failed for {season_code}-{crn}")
+
+    if page_index.status_code == 500:
+        raise FetchError(f"Evaluations for term {season_code}-{crn} are unavailable")
+
+    if page_index.status_code != 200:  # Evaluation data for this term not available
+        raise FetchError(f"Error fetching evaluations for {season_code}-{crn}")
+
+    # save raw HTML in case we ever need it
+    questions_index.mkdir(parents=True, exist_ok=True)
+    with open(html_file, "wb") as file:
+        file.write(page_index.content)
+
+    return PageIndex(page_index)
