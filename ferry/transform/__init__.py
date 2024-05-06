@@ -40,7 +40,7 @@ def transform(data_dir: Path):
 
     course_tables = import_courses(data_dir / "parsed_courses", course_seasons)
     eval_tables = import_evaluations(
-        data_dir / "parsed_evaluations", course_tables["listings"]
+        data_dir / "evaluation_tables", course_tables["listings"]
     )
 
     print("\nComputing secondary attributes...")

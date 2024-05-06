@@ -143,7 +143,7 @@ async def fetch_course_evals(
 ) -> tuple[bytes | None, str, str, Path]:
     course_unique_id = f"{season_code}-{crn}"
 
-    output_path = data_dir / "course_evals" / f"{course_unique_id}.json"
+    output_path = data_dir / "parsed_evaluations" / f"{course_unique_id}.json"
 
     if output_path.is_file():
         # tqdm.write(f"Skipping course {course_unique_id} - already exists")

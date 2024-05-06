@@ -47,12 +47,12 @@ narratives_headers = [
 
 async def create_evals_tables(data_dir: Path):
     print(f"Parsing course ratings...")
-    parsed_evaluations_dir = data_dir / "parsed_evaluations"
-    parsed_evaluations_dir.mkdir(parents=True, exist_ok=True)
-    questions_path = parsed_evaluations_dir / "evaluation_questions.csv"
-    ratings_path = parsed_evaluations_dir / "evaluation_ratings.csv"
-    narratives_path = parsed_evaluations_dir / "evaluation_narratives.csv"
-    statistics_path = parsed_evaluations_dir / "evaluation_statistics.csv"
+    evaluation_tables_dir = data_dir / "evaluation_tables"
+    evaluation_tables_dir.mkdir(parents=True, exist_ok=True)
+    questions_path = evaluation_tables_dir / "evaluation_questions.csv"
+    ratings_path = evaluation_tables_dir / "evaluation_ratings.csv"
+    narratives_path = evaluation_tables_dir / "evaluation_narratives.csv"
+    statistics_path = evaluation_tables_dir / "evaluation_statistics.csv"
 
     questions_file = open(questions_path, "w")  # pylint: disable=consider-using-with
     questions_writer = csv.DictWriter(questions_file, questions_headers)
@@ -69,22 +69,13 @@ async def create_evals_tables(data_dir: Path):
     statistics_file = open(statistics_path, "w")  # pylint: disable=consider-using-with
     statistics_writer = csv.DictWriter(statistics_file, statistics_headers)
     statistics_writer.writeheader()
-
-    # list available evaluation files
-    previous_eval_files = (data_dir / "previous_evals").glob("*.json")
-    new_eval_files = (data_dir / "course_evals").glob("*.json")
-
-    # extract file names (<season> + <crn> format) for merging
-    previous_eval_filenames = [x.name for x in previous_eval_files]
-    new_eval_filenames = [x.name for x in new_eval_files]
-
-    all_eval_files = sorted(list(set(previous_eval_filenames + new_eval_filenames)))
+    eval_filenames = sorted([x.name for x in (data_dir / "parsed_evaluations").glob("*.json")])
 
     with concurrent.futures.ProcessPoolExecutor() as executor:
         loop = asyncio.get_event_loop()
         futures = [
             loop.run_in_executor(executor, create_rating_table_row, data_dir, filename)
-            for filename in all_eval_files
+            for filename in eval_filenames
         ]
         results: list[tuple[list, list, list, dict]] = await tqdm_asyncio.gather(
             *futures, leave=False, desc=f"Parsing all ratings"
@@ -107,16 +98,8 @@ async def create_evals_tables(data_dir: Path):
 
 
 def create_rating_table_row(data_dir: Path, filename: str):
-    # Read the evaluation, giving preference to current over previous.
-    current_evals_file = data_dir / "course_evals" / filename
-    previous_evals_file = data_dir / "previous_evals" / filename
-
-    if current_evals_file.is_file():
-        with open(current_evals_file, "r") as f:
-            evaluation = cast(ParsedEval, ujson.load(f))
-    else:
-        with open(previous_evals_file, "r") as f:
-            evaluation = cast(ParsedEval, ujson.load(f))
+    with open(data_dir / "parsed_evaluations" / filename, "r") as f:
+        evaluation = cast(ParsedEval, ujson.load(f))
 
     return (
         process_questions(evaluation),

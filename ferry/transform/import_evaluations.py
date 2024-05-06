@@ -77,11 +77,11 @@ def match_evaluations_to_courses(
 
 
 def import_evaluations(
-    parsed_evaluations_dir: Path,
+    evaluation_tables_dir: Path,
     listings: pd.DataFrame,
 ) -> dict[str, pd.DataFrame]:
     """
-    Import evaluations from JSON files in `parsed_evaluations_dir`.
+    Import evaluations from JSON files in `evaluation_tables_dir`.
     Splits the raw data into various tables for the database.
 
     Returns
@@ -94,19 +94,19 @@ def import_evaluations(
     print("\nImporting course evaluations...")
 
     evaluation_narratives = pd.read_csv(
-        parsed_evaluations_dir / "evaluation_narratives.csv",
+        evaluation_tables_dir / "evaluation_narratives.csv",
         dtype={"season": int, "crn": int},
     )
     evaluation_ratings = pd.read_csv(
-        parsed_evaluations_dir / "evaluation_ratings.csv",
+        evaluation_tables_dir / "evaluation_ratings.csv",
         dtype={"season": int, "crn": int},
     )
     evaluation_statistics = pd.read_csv(
-        parsed_evaluations_dir / "evaluation_statistics.csv",
+        evaluation_tables_dir / "evaluation_statistics.csv",
         dtype={"season": int, "crn": int},
     )
     evaluation_questions = pd.read_csv(
-        parsed_evaluations_dir / "evaluation_questions.csv",
+        evaluation_tables_dir / "evaluation_questions.csv",
         dtype={"season": int, "crn": int},
     )
     # parse rating objects
