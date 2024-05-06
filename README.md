@@ -16,6 +16,23 @@
                pygraphviz
    ```
 
+### Installing submodules
+
+Ferry uses a submodule for the data repository. To clone the submodule, run:
+
+```sh
+git submodule update --init --depth 1
+```
+
+Any time in the future, you can update the submodule with:
+
+```sh
+git submodule foreach git reset --hard
+git submodule update --rebase --remote
+```
+
+Then, you can commit the new submodule link to the main repo. This should be rarely done.
+
 ## Running Ferry
 
 Make sure you have all dependencies installed or are using the Dev Container.
