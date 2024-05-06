@@ -332,7 +332,6 @@ def create_times_by_day(
 class ParsedMeeting(TypedDict):
     times_summary: str
     locations_summary: str
-    times_long_summary: str
     times_by_day: dict[str, list[tuple[str, str, str, str]]]
 
 
@@ -356,9 +355,6 @@ def extract_meetings(
     locations_summary:
         Summary of meeting locations; the first listed ocations are shown while additional ones
         are collapsed to " + (n-1)".
-    times_long_summary:
-        Summary of meeting times and locations; computed as comma-joined texts from the
-        meeting_html items.
     times_by_day:
         Dictionary with keys as days and values consisting of lists of
         [start_time, end_time, location, location_url]
@@ -374,7 +370,6 @@ def extract_meetings(
         return {
             "times_summary": "TBA",
             "locations_summary": "TBA",
-            "times_long_summary": "TBA",
             "times_by_day": {},
         }
 
@@ -394,7 +389,6 @@ def extract_meetings(
     return {
         "times_summary": times_summary,
         "locations_summary": locations_summary,
-        "times_long_summary": "\n".join(meetings).replace("MTWThF", "M-F"),
         "times_by_day": create_times_by_day(split_meetings, location_urls),
     }
 
@@ -442,9 +436,6 @@ def extract_meetings_alternate(all_in_group: list[dict[str, Any]]) -> ParsedMeet
     locations_summary:
         Summary of meeting locations; the first listed locations are shown while additional
         ones are collapsed to " + (n-1)"
-    times_long_summary:
-        Summary of meeting times and locations; computed as comma-joined texts from the
-        meeting_html items.
     times_by_day:
         Dictionary with keys as days and values consisting of lists of
         [start_time, end_time, location]
@@ -453,7 +444,6 @@ def extract_meetings_alternate(all_in_group: list[dict[str, Any]]) -> ParsedMeet
         return {
             "times_summary": "TBA",
             "locations_summary": "TBA",
-            "times_long_summary": "TBA",
             "times_by_day": {},
         }
 
@@ -480,7 +470,6 @@ def extract_meetings_alternate(all_in_group: list[dict[str, Any]]) -> ParsedMeet
     return {
         "times_summary": times_summary,
         "locations_summary": "TBA",
-        "times_long_summary": times_summary,
         "times_by_day": times_by_day,
     }
 
@@ -609,26 +598,10 @@ def is_sysem(title_text: str, description_text: str, requirements_text: str) -> 
     )
 
 
-def truncate_title(title: str):
-    """
-    Get shortened course title.
-
-    Parameters
-    ----------
-    title:
-        Title to truncate.
-    """
-    if len(title) > 32:
-        return f"{title[:29]}..."
-
-    return title
-
-
 class ParsedCourse(TypedDict):
     season_code: str
     requirements: str
     description: str
-    short_title: str
     title: str
     school: str
     credits: float
@@ -644,7 +617,6 @@ class ParsedCourse(TypedDict):
     section: str
     times_summary: str
     locations_summary: str
-    times_long_summary: str
     times_by_day: dict[str, list[tuple[str, str, str, str]]]
     skills: list[str]
     areas: list[str]
@@ -685,7 +657,6 @@ def extract_course_info(
     course_info: ParsedCourse = {
         "season_code": season,
         **extract_prereqs_and_description(course_json["description"]),
-        "short_title": truncate_title(course_json["title"]),
         "title": course_json["title"],
         "school": course_json["col"],
         "credits": extract_credits(

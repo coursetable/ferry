@@ -116,11 +116,6 @@ class Course(BaseModel):
     # ------------------------
 
     title = Column(String, comment="Complete course title")
-    short_title = Column(
-        String,
-        comment="""Shortened course title (first 29 characters + "...")
-        if the length exceeds 32, otherwise just the title itself""",
-    )
     description = Column(String, comment="Course description")
     requirements = Column(
         String, comment="Recommended requirements/prerequisites for the course"
@@ -137,11 +132,6 @@ class Course(BaseModel):
         in CourseTable.""",
     )
 
-    times_long_summary = Column(
-        String,
-        comment="""Course times and locations, displayed in the "Meets"
-         row in CourseTable course modals""",
-    )
     times_summary = Column(
         String,
         comment='Course times, displayed in the "Times" column in CourseTable',

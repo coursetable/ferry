@@ -346,7 +346,6 @@ def import_courses(
     # replace carriage returns for tsv-based migration
     courses["description"] = courses["description"].apply(lambda x: x.replace("\r", ""))
     courses["title"] = courses["title"].apply(lambda x: x.replace("\r", ""))
-    courses["short_title"] = courses["short_title"].apply(lambda x: x.replace("\r", ""))
     courses["requirements"] = courses["requirements"].apply(
         lambda x: x.replace("\r", "")
     )
