@@ -182,14 +182,13 @@ def deploy(db: database.Database):
     db_meta.reflect(bind=db.Engine)
 
     # ordered tables defined only in our model
-    alchemy_tables = db.Base.metadata.sorted_tables
+    alchemy_tables = database.Base.metadata.sorted_tables
     target_tables = [table.name[:-7] for table in alchemy_tables]
 
     db_tables = {x.name for x in db_meta.sorted_tables}
 
     if any(table.name not in db_tables for table in alchemy_tables):
-
-        raise db.MissingTablesError(
+        raise database.MissingTablesError(
             "Not all staged tables are present. Run stage.py again?"
         )
 
