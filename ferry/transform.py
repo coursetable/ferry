@@ -3,6 +3,7 @@ Import the parsed course and evaluation data into CSVs generated with Pandas.
 
 Used immediately before stage.py as the first step in the import process.
 """
+
 import os
 from pathlib import Path
 from typing import Any, Dict, List
@@ -177,19 +178,19 @@ if __name__ == "__main__":
     print("\n[Importing course evaluations]")
 
     evaluation_narratives = pd.read_csv(
-        config.DATA_DIR / "parsed_evaluations/evaluation_narratives.csv",
+        config.DATA_DIR / "evaluation_tables/evaluation_narratives.csv",
         dtype={"season": int, "crn": int},
     )
     evaluation_ratings = pd.read_csv(
-        config.DATA_DIR / "parsed_evaluations/evaluation_ratings.csv",
+        config.DATA_DIR / "evaluation_tables/evaluation_ratings.csv",
         dtype={"season": int, "crn": int},
     )
     evaluation_statistics = pd.read_csv(
-        config.DATA_DIR / "parsed_evaluations/evaluation_statistics.csv",
+        config.DATA_DIR / "evaluation_tables/evaluation_statistics.csv",
         dtype={"season": int, "crn": int},
     )
     evaluation_questions = pd.read_csv(
-        config.DATA_DIR / "parsed_evaluations/evaluation_questions.csv",
+        config.DATA_DIR / "evaluation_tables/evaluation_questions.csv",
         dtype={"season": int, "crn": int},
     )
 

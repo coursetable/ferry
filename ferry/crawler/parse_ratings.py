@@ -60,10 +60,10 @@ narratives_headers = [
 # CSV output paths
 # ----------------
 
-questions_path = config.DATA_DIR / "parsed_evaluations/evaluation_questions.csv"
-ratings_path = config.DATA_DIR / "parsed_evaluations/evaluation_ratings.csv"
-statistics_path = config.DATA_DIR / "parsed_evaluations/evaluation_statistics.csv"
-narratives_path = config.DATA_DIR / "parsed_evaluations/evaluation_narratives.csv"
+questions_path = config.DATA_DIR / "evaluation_tables/evaluation_questions.csv"
+ratings_path = config.DATA_DIR / "evaluation_tables/evaluation_ratings.csv"
+statistics_path = config.DATA_DIR / "evaluation_tables/evaluation_statistics.csv"
+narratives_path = config.DATA_DIR / "evaluation_tables/evaluation_narratives.csv"
 
 # ------------------
 # CSV output writers
@@ -94,7 +94,7 @@ if __name__ == "__main__":
 
     # list available evaluation files
     previous_eval_files = Path(config.DATA_DIR / "previous_evals").glob("*.json")
-    new_eval_files = Path(config.DATA_DIR / "course_evals").glob("*.json")
+    new_eval_files = Path(config.DATA_DIR / "parsed_evaluations").glob("*.json")
 
     # extract file names (<season> + <crn> format) for merging
     previous_eval_filenames = [x.name for x in previous_eval_files]
@@ -106,7 +106,7 @@ if __name__ == "__main__":
 
     for filename in tqdm(all_eval_files, desc="Processing evaluations"):
         # Read the evaluation, giving preference to current over previous.
-        current_evals_file = Path(f"{config.DATA_DIR}/course_evals/{filename}")
+        current_evals_file = Path(f"{config.DATA_DIR}/parsed_evaluations/{filename}")
 
         if current_evals_file.is_file():
             with open(current_evals_file, "r") as f:

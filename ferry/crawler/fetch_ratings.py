@@ -9,6 +9,7 @@ following steps:
     4. Fetch and save OCE data for each course in the queue
 
 """
+
 import argparse
 import datetime
 import os
@@ -78,7 +79,6 @@ yale_college_cache = diskcache.Cache(f"{config.DATA_DIR}/yale_college_cache")
 
 @yale_college_cache.memoize()
 def is_yale_college(course_season_code: str, course_crn: str) -> Union[str, bool]:
-
     """
     Helper function to check if course is in Yale College
     (only Yale College and Summer Session courses are rated)
@@ -169,12 +169,12 @@ session = create_session()
 
 for season_code, crn in tqdm(queue):
     # Create directory if doesn't exist
-    output_dir = f"{config.DATA_DIR}/course_evals/"
+    output_dir = f"{config.DATA_DIR}/parsed_evaluations/"
     if os.path.exists(output_dir) is False:
         os.makedirs(output_dir)
 
     course_unique_id = f"{season_code}-{crn}"
-    output_path = f"{config.DATA_DIR}/course_evals/{course_unique_id}.json"
+    output_path = f"{config.DATA_DIR}/parsed_evaluations/{course_unique_id}.json"
 
     if isfile(output_path) and not args.force:
         # tqdm.write(f"Skipping course {course_unique_id} - already exists")
