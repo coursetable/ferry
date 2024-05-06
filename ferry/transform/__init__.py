@@ -21,14 +21,10 @@ def transform(data_dir: Path):
     """
 
     # get full list of course seasons from files
-    (data_dir / "migrated_courses").mkdir(parents=True, exist_ok=True)
     course_seasons = sorted(
         [
             filename.split(".")[0]  # remove the .json extension
-            for filename in set(
-                os.listdir(data_dir / "migrated_courses")
-                + os.listdir(data_dir / "parsed_courses")
-            )
+            for filename in os.listdir(data_dir / "parsed_courses")
             if filename[0] != "."
         ]
     )
@@ -42,7 +38,7 @@ def transform(data_dir: Path):
     )
 
     course_tables = import_courses(
-        data_dir / "parsed_courses", data_dir / "migrated_courses", course_seasons
+        data_dir / "parsed_courses", course_seasons
     )
     eval_tables = import_evaluations(
         data_dir / "parsed_evaluations", course_tables["listings"]

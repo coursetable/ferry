@@ -297,10 +297,10 @@ def resolve_professors(
 
 
 def import_courses(
-    parsed_courses_dir: Path, migrated_courses_dir: Path, seasons: list[str]
+    parsed_courses_dir: Path, seasons: list[str]
 ) -> dict[str, pd.DataFrame]:
     """
-    Import courses from JSON files in `parsed_courses_dir` and `migrated_courses_dir`.
+    Import courses from JSON files in `parsed_courses_dir`.
     Splits the raw data into various tables for the database.
 
     Returns
@@ -317,13 +317,9 @@ def import_courses(
     all_course_info: list[pd.DataFrame] = []
 
     for season in tqdm(seasons, desc="Loading course JSONs", leave=False):
-        # Read the course listings, giving preference to freshly parsed over migrated ones.
         parsed_courses_file = parsed_courses_dir / f"{season}.json"
         if not parsed_courses_file.is_file():
-            # check migrated courses as a fallback
-            parsed_courses_file = migrated_courses_dir / f"{season}.json"
-        if not parsed_courses_file.is_file():
-            print(f"Skipping season {season}: not found in parsed or migrated courses.")
+            print(f"Skipping season {season}: not found in parsed courses.")
             continue
         parsed_course_info = pd.read_json(parsed_courses_file)
         parsed_course_info["season_code"] = season
