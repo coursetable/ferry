@@ -7,7 +7,6 @@ from tqdm.asyncio import tqdm_asyncio
 
 from .fetch import fetch_course_evals, FetchError
 from .parse import parse_eval_page
-from .to_table import create_evals_tables
 from ferry.crawler.classes.parse import ParsedCourse
 from ferry.crawler.cas_request import create_client
 from ferry.crawler.cache import load_cache_json
@@ -107,8 +106,6 @@ async def crawl_evals(
                 for args in raw_course_evals
             ]
             await tqdm_asyncio.gather(*futures, leave=False, desc=f"Processing evals")
-
-    await create_evals_tables(data_dir=data_dir)
 
     await client.aclose()
 

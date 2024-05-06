@@ -81,24 +81,6 @@ course_professors = Table(
     ),
 )
 
-# Course-Discussion association/junction table.
-# course_discussions = Table(
-#     "course_discussions_staged",
-#     Base.metadata,
-#     Column(
-#         "course_id",
-#         ForeignKey("courses_staged.course_id"),
-#         primary_key=True,
-#         index=True,
-#     ),
-#     Column(
-#         "discussion_id",
-#         ForeignKey("discussions_staged.discussion_id"),
-#         primary_key=True,
-#         index=True,
-#     ),
-# )
-
 
 class Course(BaseModel):
     """
@@ -128,13 +110,6 @@ class Course(BaseModel):
         back_populates="courses",
         cascade="all",
     )
-
-    # discussions = relationship(
-    #     "Discussion",
-    #     secondary=course_discussions,
-    #     back_populates="courses",
-    #     cascade="all",
-    # )
 
     # ------------------------
     # Basic course descriptors
@@ -427,47 +402,6 @@ class Listing(BaseModel):
     )
 
 
-# class Discussion(BaseModel):
-#     """
-#     Discussion sections.
-#     """
-
-#     __tablename__ = "discussions_staged"
-#     discussion_id = Column(Integer, primary_key=True, comment="Discussion section ID")
-
-#     courses = relationship(
-#         "Course",
-#         secondary=course_discussions,
-#         back_populates="discussions",
-#         cascade="all",
-#     )
-
-#     subject = Column(String, comment="Discussion section subject", nullable=False)
-#     number = Column(String, comment="Discussion section number", nullable=False)
-#     info = Column(String, comment="Additional discussion section notes")
-
-#     locations_summary = Column(
-#         String,
-#         comment="""If single location, is `<location>`; otherwise is
-#         `<location> + <n_other_locations>` where the first location is the one
-#         with the greatest number of days. Same format as for courses.""",
-#     )
-
-#     times_long_summary = Column(
-#         String,
-#         comment="""Course times and locations. Same format as for courses.""",
-#     )
-#     times_summary = Column(
-#         String,
-#         comment="Course times. Same format as for courses.",
-#     )
-#     times_by_day = Column(
-#         JSON,
-#         comment="""Course meeting times by day, with days as keys and
-#         tuples of `(start_time, end_time, location)`. Same format as for courses.""",
-#     )
-
-
 class Flag(BaseModel):
     """
     Course flags table.
@@ -497,36 +431,6 @@ course_flags = Table(
         index=True,
     ),
 )
-
-
-# class DemandStatistics(BaseModel):
-#     """
-#     Course demand statistics table.
-#     """
-
-#     __tablename__ = "demand_statistics_staged"
-
-#     course_id = Column(
-#         Integer,
-#         ForeignKey("courses_staged.course_id"),
-#         primary_key=True,
-#         index=True,
-#         comment="The course to which these demand statistics apply",
-#     )
-#     latest_demand = Column(
-#         Integer,
-#         comment="Latest demand count",
-#     )
-#     latest_demand_date = Column(
-#         String,
-#         comment="Latest demand date",
-#     )
-#     course = relationship("Course", backref="demand_statistics_staged", cascade="all")
-
-#     demand = Column(
-#         JSON,
-#         comment="JSON dict containing demand stats by day",
-#     )
 
 
 class Professor(BaseModel):

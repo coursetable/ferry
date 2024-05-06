@@ -1,5 +1,7 @@
 """
 Functions for processing course rating JSONs into aggregate CSVs.
+
+TODO: do we need this step at all?
 """
 
 import csv
@@ -15,7 +17,7 @@ from pathlib import Path
 
 import ujson
 from tqdm.asyncio import tqdm_asyncio
-from .parse import ParsedEval
+from ferry.crawler.evals.parse import ParsedEval
 
 
 # initialize sentiment intensity analyzer

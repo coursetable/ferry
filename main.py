@@ -5,9 +5,10 @@ from httpx import AsyncClient
 import uvloop
 
 from ferry.crawler.classes import crawl_classes
-from ferry.crawler.evals import crawl_evals, create_evals_tables
+from ferry.crawler.evals import crawl_evals
 from ferry.crawler.seasons import fetch_seasons
 from ferry.transform import transform
+from ferry.transform.to_table import create_evals_tables
 from ferry.database import Database, stage, deploy
 from ferry.args_parser import Args, get_args, parse_seasons_arg
 
@@ -60,6 +61,7 @@ async def start_crawl(args: Args):
             data_dir=args.data_dir,
             courses=classes,
         )
+        await create_evals_tables(data_dir=args.data_dir)
     elif args.create_evals_tables:
         await create_evals_tables(data_dir=args.data_dir)
 

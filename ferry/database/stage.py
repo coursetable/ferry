@@ -138,13 +138,6 @@ def stage(data_dir: Path, database: Database):
     flags = load_csv("flags")
     course_flags = load_csv("course_flags")
 
-    # discussions = load_csv(
-    #     "discussions", {"dtype": {"section_crn": "Int64", "section": str}}
-    # )
-    # course_discussions = load_csv("course_discussions")
-
-    # demand_statistics = load_csv("demand_statistics")
-
     evaluation_questions = load_csv("evaluation_questions")
     evaluation_narratives = load_csv("evaluation_narratives")
     evaluation_ratings = load_csv("evaluation_ratings")
@@ -169,9 +162,6 @@ def stage(data_dir: Path, database: Database):
         "course_professors_staged": course_professors,
         "flags_staged": flags,
         "course_flags_staged": course_flags,
-        # "discussions_staged": discussions,
-        # "course_discussions_staged": course_discussions,
-        # "demand_statistics_staged": demand_statistics,
         "evaluation_questions_staged": evaluation_questions,
         "evaluation_narratives_staged": evaluation_narratives,
         "evaluation_ratings_staged": evaluation_ratings,
