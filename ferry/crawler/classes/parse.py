@@ -1,9 +1,3 @@
-"""
-Functions for parsing raw course JSONs.
-
-Used by /ferry/crawler/parse_classes.py.
-"""
-
 import re
 import warnings
 from pathlib import Path

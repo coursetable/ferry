@@ -1,7 +1,5 @@
 """
 Find historical offerings of a course.
-
-Used by transform_compute.py
 """
 
 from typing import Any

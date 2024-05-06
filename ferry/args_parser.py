@@ -51,7 +51,6 @@ _PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = str(_PROJECT_DIR / "data")
 
 
-# Args for main.py
 def get_parser():
     parser = argparse.ArgumentParser(
         description="Ferry for Yale Course Selection",

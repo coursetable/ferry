@@ -8,7 +8,7 @@ from tqdm.asyncio import tqdm_asyncio
 from .fetch import fetch_course_evals, FetchError
 from .parse import parse_eval_page
 from ferry.crawler.classes.parse import ParsedCourse
-from ferry.crawler.cas_request import create_client
+from ferry.crawler.cas_request import CASClient
 from ferry.crawler.cache import load_cache_json
 
 
@@ -49,9 +49,9 @@ async def crawl_evals(
     print(f"Fetching course evals for valid seasons: {seasons}...")
 
     # initiate Yale client session to access evals
-    client = create_client(cas_cookie=cas_cookie)
+    client = CASClient(cas_cookie=cas_cookie)
 
-    # Season level is synchronous, following same logic as fetch_classes.py
+    # Season level is synchronous, following same logic as class fetcher
     with concurrent.futures.ProcessPoolExecutor() as executor:
         for season in (pbar := tqdm(seasons, desc="Season Progress", leave=False)):
             pbar.set_postfix({"season": season})

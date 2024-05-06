@@ -1,7 +1,5 @@
 """
 Functions for authenticating with Yale Central Authentication System (CAS).
-
-Used by config.py.
 """
 
 import httpx
@@ -28,18 +26,6 @@ class CASClient(httpx.AsyncClient):
             {"auth_header": "123"}
         )  # auth_header for proxy lambda function
         self.chunk_size = 10  # concurrency limit for proxy lambda function
-
-
-def create_client(
-    cas_cookie: str | None = None,
-) -> CASClient:
-    """
-    Create a client using parameters from /ferry/config.py.
-    """
-    if cas_cookie is None:
-        raise ValueError("cas_cookie is required. Please see ferry/utils.py ")
-
-    return CASClient(cas_cookie)
 
 
 async def request(

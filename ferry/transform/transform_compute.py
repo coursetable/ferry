@@ -1,9 +1,3 @@
-"""
-Handles computed fields in the tables.
-
-Used by /ferry/transform.py.
-"""
-
 import csv
 import math
 

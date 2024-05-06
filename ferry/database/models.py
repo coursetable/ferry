@@ -1,6 +1,6 @@
 """
 SQLAlchemy database models. Note that these are for the staged tables
-that are then upgraded to the main ones in /ferry/deploy.py.
+that are then upgraded to the main ones in deploy.py.
 """
 
 from sqlalchemy import (
