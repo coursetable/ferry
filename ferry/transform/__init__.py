@@ -8,6 +8,7 @@ from ferry.transform.transform_compute import (
     evaluation_statistics_computed,
     professors_computed,
     questions_computed,
+    narratives_computed,
 )
 from ferry.transform.import_courses import import_courses
 from ferry.transform.import_evaluations import import_evaluations
@@ -37,9 +38,7 @@ def transform(data_dir: Path):
         columns=["season_code", "term", "year"],
     )
 
-    course_tables = import_courses(
-        data_dir / "parsed_courses", course_seasons
-    )
+    course_tables = import_courses(data_dir / "parsed_courses", course_seasons)
     eval_tables = import_evaluations(
         data_dir / "parsed_evaluations", course_tables["listings"]
     )
@@ -48,6 +47,10 @@ def transform(data_dir: Path):
 
     eval_tables["evaluation_questions"] = questions_computed(
         eval_tables["evaluation_questions"]
+    )
+
+    eval_tables["evaluation_narratives"] = narratives_computed(
+        eval_tables["evaluation_narratives"]
     )
 
     eval_tables["evaluation_statistics"] = evaluation_statistics_computed(

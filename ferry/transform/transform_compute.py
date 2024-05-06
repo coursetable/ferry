@@ -4,6 +4,7 @@ import math
 import pandas as pd
 from tqdm import tqdm
 import logging
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 from ferry import database
 from ferry.transform.same_courses import (
@@ -63,6 +64,24 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
     evaluation_questions["tag"] = evaluation_questions.apply(assign_code, axis=1)
 
     return evaluation_questions
+
+
+analyzer = SentimentIntensityAnalyzer()
+
+
+def sentiment_analysis(text: str) -> tuple[float, float, float, float]:
+    sentiment = analyzer.polarity_scores(text)
+    return sentiment["neg"], sentiment["neu"], sentiment["pos"], sentiment["compound"]
+
+
+def narratives_computed(evaluation_narratives: pd.DataFrame) -> pd.DataFrame:
+    (
+        evaluation_narratives["comment_neg"],
+        evaluation_narratives["comment_neu"],
+        evaluation_narratives["comment_pos"],
+        evaluation_narratives["comment_compound"],
+    ) = zip(*evaluation_narratives["comment"].apply(sentiment_analysis))
+    return evaluation_narratives
 
 
 def evaluation_statistics_computed(

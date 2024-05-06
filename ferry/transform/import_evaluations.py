@@ -231,6 +231,8 @@ def import_evaluations(
 
     # evaluation narratives ----------------
 
+    # explicitly specify missing columns to be filled in later
+    evaluation_narratives[["comment_neg", "comment_neu", "comment_pos", "comment_compound"]] = np.nan
     # filter out missing or short comments
     evaluation_narratives.dropna(subset=["comment"], inplace=True)
 

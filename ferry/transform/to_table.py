@@ -8,7 +8,6 @@ import csv
 from typing import cast
 
 import ujson
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 import asyncio
 import concurrent.futures
@@ -20,8 +19,6 @@ from tqdm.asyncio import tqdm_asyncio
 from ferry.crawler.evals.parse import ParsedEval
 
 
-# initialize sentiment intensity analyzer
-analyzer = SentimentIntensityAnalyzer()
 questions_headers = [
     "season",
     "crn",
@@ -45,10 +42,6 @@ narratives_headers = [
     "crn",
     "question_code",
     "comment",
-    "comment_neg",
-    "comment_neu",
-    "comment_pos",
-    "comment_compound",
 ]
 
 
@@ -137,17 +130,12 @@ def process_narratives(evaluation: ParsedEval):
     narratives = []
     for narrative_group in evaluation["narratives"]:
         for raw_narrative in narrative_group["comments"]:
-            sentiment = analyzer.polarity_scores(raw_narrative)
             narratives.append(
                 {
                     "season": evaluation["season"],
                     "crn": evaluation["crn_code"],
                     "question_code": narrative_group["question_id"],
                     "comment": raw_narrative,
-                    "comment_neg": sentiment["neg"],
-                    "comment_neu": sentiment["neu"],
-                    "comment_pos": sentiment["pos"],
-                    "comment_compound": sentiment["compound"],
                 }
             )
 

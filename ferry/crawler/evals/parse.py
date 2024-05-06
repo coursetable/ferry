@@ -177,8 +177,8 @@ def parse_eval_comments(
 ParsedStats = TypedDict(
     "ParsedStats",
     {
-        "enrolled": int, # Note: historical evals have None
-        "responses": int, # Note: historical evals have None
+        "enrolled": int,  # Note: historical evals have None
+        "responses": int,  # Note: historical evals have None
         "declined": int | None,
         "no response": int | None,
     },
