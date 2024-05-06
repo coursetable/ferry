@@ -316,10 +316,10 @@ def courses_computed(
             and course_to_season[x] < course_row["season_code"]
         ]
         if len(same_courses) == 0:
-            return [None, None, None, None]
+            return None, None, None, None
         same_courses = [x for x in same_courses if x is not course_row["course_id"]]
         if len(same_courses) == 0:
-            return [None, None, None, None]
+            return None, None, None, None
 
         current_professors = course_to_professors.get(course_row["course_id"], set())
 
@@ -362,6 +362,9 @@ def courses_computed(
 
     tqdm.pandas(desc="Finding last-offered course", leave=False)
     courses["last_offered_course_id"] = courses.progress_apply(get_last_offered, axis=1)
+    courses["last_offered_course_id"] = courses["last_offered_course_id"].astype(
+        pd.Int64Dtype()
+    )
 
     tqdm.pandas(desc="Finding last-offered enrollment", leave=False)
     # getting last-offered enrollment
@@ -371,6 +374,10 @@ def courses_computed(
         courses["last_enrollment_season_code"],
         courses["last_enrollment_same_professors"],
     ) = zip(*courses.progress_apply(get_last_offered_enrollment, axis=1))
+    courses["last_enrollment_course_id"] = courses["last_enrollment_course_id"].astype(
+        pd.Int64Dtype()
+    )
+    courses["last_enrollment"] = courses["last_enrollment"].astype(pd.Int64Dtype())
 
     logging.debug("Computing historical ratings for courses")
 
@@ -404,13 +411,12 @@ def courses_computed(
     ].apply(lambda courses: [course_to_workload.get(x) for x in courses])
 
     # calculate the average of an array
-    def average(nums):
-        nums = list(filter(lambda x: x is not None, nums))
-        nums = list(filter(lambda x: not math.isnan(x), nums))
+    def average(nums: list[float]) -> tuple[float | None, int]:
+        nums = [x for x in nums if x is not None and not math.isnan(x)]
         if not nums:
-            return [None, None]
+            return None, 0
         num_obs = len(nums)
-        return (sum(nums) / num_obs, num_obs)
+        return sum(nums) / num_obs, num_obs
 
     # calculate averages over past offerings
     for average_col, num_col in [
@@ -425,6 +431,7 @@ def courses_computed(
         courses[average_col], courses[num_col] = zip(
             *courses[average_col].apply(average)
         )
+        courses[num_col] = courses[num_col].astype(pd.Int64Dtype())
 
     # remove intermediate columns
     courses = courses.loc[:, get_table_columns(database.Course)]
@@ -502,6 +509,9 @@ def professors_computed(
 
     professors["average_rating_n"] = professors["professor_id"].apply(
         rating_by_professor_n.get
+    )
+    professors["average_rating_n"] = professors["average_rating_n"].astype(
+        pd.Int64Dtype()
     )
 
     return professors

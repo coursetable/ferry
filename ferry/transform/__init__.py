@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from typing import cast
 
 import pandas as pd
 
@@ -14,7 +15,20 @@ from ferry.transform.import_courses import import_courses
 from ferry.transform.import_evaluations import import_evaluations
 
 
-def transform(data_dir: Path):
+def write_csvs(tables: dict[str, pd.DataFrame], data_dir: Path):
+    print("\nWriting tables to disk as CSVs...")
+
+    csv_dir = data_dir / "importer_dumps"
+    csv_dir.mkdir(parents=True, exist_ok=True)
+
+    for table_name, table in tables.items():
+        cast(pd.DataFrame, table).to_csv(csv_dir / f"{table_name}.csv")
+
+    print("\033[F", end="")
+    print("Writing tables to disk as CSVs... ✔")
+
+
+def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
     """
     Import the parsed course and evaluation data into CSVs generated with Pandas.
 
@@ -32,7 +46,7 @@ def transform(data_dir: Path):
     print(f"\nSeason(s): {', '.join(course_seasons)}")
     seasons_table = pd.DataFrame(
         [
-            [int(x), {"1": "spring", "2": "summer", "3": "fall"}[x[-1]], int(x[:4])]
+            [x, {"1": "spring", "2": "summer", "3": "fall"}[x[-1]], int(x[:4])]
             for x in course_seasons
         ],
         columns=["season_code", "term", "year"],
@@ -75,19 +89,4 @@ def transform(data_dir: Path):
     print("\033[F", end="")
     print("Computing secondary attributes... ✔")
 
-    # -----------------------------
-    # Output tables to disk as CSVs
-    # -----------------------------
-
-    print("\nWriting tables to disk as CSVs...")
-
-    csv_dir = data_dir / "importer_dumps"
-    csv_dir.mkdir(parents=True, exist_ok=True)
-
-    csvs = {"seasons": seasons_table, **course_tables, **eval_tables}
-
-    for table_name, table in csvs.items():
-        table.to_csv(csv_dir / f"{table_name}.csv")
-
-    print("\033[F", end="")
-    print("Writing tables to disk as CSVs... ✔")
+    return {"seasons": seasons_table, **course_tables, **eval_tables}

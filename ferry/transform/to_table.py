@@ -69,7 +69,9 @@ async def create_evals_tables(data_dir: Path):
     statistics_file = open(statistics_path, "w")  # pylint: disable=consider-using-with
     statistics_writer = csv.DictWriter(statistics_file, statistics_headers)
     statistics_writer.writeheader()
-    eval_filenames = sorted([x.name for x in (data_dir / "parsed_evaluations").glob("*.json")])
+    eval_filenames = sorted(
+        [x.name for x in (data_dir / "parsed_evaluations").glob("*.json")]
+    )
 
     with concurrent.futures.ProcessPoolExecutor() as executor:
         loop = asyncio.get_event_loop()

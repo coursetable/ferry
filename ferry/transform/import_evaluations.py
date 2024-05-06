@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from textdistance import levenshtein
 import ujson
-from typing import cast
+from typing import cast, TypedDict
 
 from ferry import database
 from ferry.utils import get_table_columns
@@ -69,17 +69,29 @@ def match_evaluations_to_courses(
     evaluation_statistics.dropna(subset=["course_id"], axis=0, inplace=True)
 
     # change from float to integer type for import
-    evaluation_narratives["course_id"] = evaluation_narratives["course_id"].astype(int)
-    evaluation_ratings["course_id"] = evaluation_ratings["course_id"].astype(int)
-    evaluation_statistics["course_id"] = evaluation_statistics["course_id"].astype(int)
+    evaluation_narratives["course_id"] = evaluation_narratives["course_id"].astype(
+        int
+    )
+    evaluation_ratings["course_id"] = evaluation_ratings["course_id"].astype(
+        int
+    )
+    evaluation_statistics["course_id"] = evaluation_statistics["course_id"].astype(
+        int
+    )
 
     return evaluation_narratives, evaluation_ratings, evaluation_statistics
 
 
+class EvalTables(TypedDict):
+    evaluation_narratives: pd.DataFrame
+    evaluation_ratings: pd.DataFrame
+    evaluation_statistics: pd.DataFrame
+    evaluation_questions: pd.DataFrame
+
+
 def import_evaluations(
-    evaluation_tables_dir: Path,
-    listings: pd.DataFrame,
-) -> dict[str, pd.DataFrame]:
+    evaluation_tables_dir: Path, listings: pd.DataFrame
+) -> EvalTables:
     """
     Import evaluations from JSON files in `evaluation_tables_dir`.
     Splits the raw data into various tables for the database.
@@ -95,19 +107,26 @@ def import_evaluations(
 
     evaluation_narratives = pd.read_csv(
         evaluation_tables_dir / "evaluation_narratives.csv",
-        dtype={"season": int, "crn": int},
+        dtype={"season": str, "crn": int},
     )
     evaluation_ratings = pd.read_csv(
         evaluation_tables_dir / "evaluation_ratings.csv",
-        dtype={"season": int, "crn": int},
+        dtype={"season": str, "crn": int},
     )
     evaluation_statistics = pd.read_csv(
         evaluation_tables_dir / "evaluation_statistics.csv",
-        dtype={"season": int, "crn": int},
+        dtype={
+            "season": str,
+            "crn": int,
+            "enrolled": pd.Int64Dtype(),
+            "responses": pd.Int64Dtype(),
+            "declined": pd.Int64Dtype(),
+            "no_response": pd.Int64Dtype(),
+        },
     )
     evaluation_questions = pd.read_csv(
         evaluation_tables_dir / "evaluation_questions.csv",
-        dtype={"season": int, "crn": int},
+        dtype={"season": str, "crn": int},
     )
     # parse rating objects
     evaluation_ratings["rating"] = evaluation_ratings["rating"].apply(ujson.loads)
@@ -232,7 +251,9 @@ def import_evaluations(
     # evaluation narratives ----------------
 
     # explicitly specify missing columns to be filled in later
-    evaluation_narratives[["comment_neg", "comment_neu", "comment_pos", "comment_compound"]] = np.nan
+    evaluation_narratives[
+        ["comment_neg", "comment_neu", "comment_pos", "comment_compound"]
+    ] = np.nan
     # filter out missing or short comments
     evaluation_narratives.dropna(subset=["comment"], inplace=True)
 

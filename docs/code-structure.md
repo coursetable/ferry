@@ -28,7 +28,7 @@ The data analyzer code is located in `ferry/transform`. In this part, we transfo
 - `import_{courses,evaluations}.py`: imports the parsed data from `parsed_courses` and `evaluation_tables` into Pandas DataFrames. It does surface-level analysis such as deduplication, generating IDs, etc.
 - `transform_compute.py`: generates analysis, such as average ratings, finding last offered courses, etc.
 
-The analyzer creates the following tables in `importer_dumps`: `seasons.csv`, `courses.csv`, `listings.csv`, `course_professors.csv`, `professors.csv`, `course_flags.csv`, `flags.csv`, `evaluation_narratives.csv`, `evaluation_ratings.csv`, `evaluation_statistics.csv`, `evaluation_questions.csv`.
+If the `--snapshot-tables` argument is used, the analyzer will create a CSV file for each DB table in `importer_dumps`.
 
 ## Database connector
 

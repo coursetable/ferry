@@ -62,6 +62,7 @@ Note: because we use `argparse`, you can provide just the prefix of each argumen
 | `--save-config`             | `save_config`             | N/A            | `False`                              | Save the parsed config options to `config_file`; does nothing if `config_file` is unspecified.        |
 | `-s`, `--seasons`           | `seasons`                 | N/A            | `None`                               | A list of seasons to fetch; see below                                                                 |
 | `--sentry-url`              | `sentry_url`              | `SENTRY_URL`   | `None`; prompt if `release`          | Sentry URL for error reporting; required in release mode, ignored in dev mode                         |
+| `--snapshot-tables`         | `snapshot_tables`         | N/A            | `False`                              | Generate CSV files capturing data that would be written to DB. Only has an effect if `sync_db`.       |
 | `--sync-db`                 | `sync_db`                 | N/A            | `False`                              | Sync the parsed data to the database                                                                  |
 | `--use-cache`               | `use_cache`               | N/A            | `False`; always `False` if `release` | Use cached data instead of fetching fresh data. Even if not using cache, cache will still be updated. |
 

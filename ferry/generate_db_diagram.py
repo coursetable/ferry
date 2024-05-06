@@ -16,4 +16,4 @@ def generate_db_diagram(path: Path):
     SQLAlchemy schema.
     """
     path.parent.mkdir(parents=True, exist_ok=True)
-    render_er(Base, path)
+    render_er(Base, str(path))

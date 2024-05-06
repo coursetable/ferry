@@ -17,6 +17,7 @@ class RawArgs:
     save_config: bool
     seasons: list[str] | None
     sentry_url: str | None
+    snapshot_tables: bool
     sync_db: bool
     use_cache: bool
 
@@ -33,6 +34,7 @@ class Args:
     release: bool
     seasons: list[str] | None
     sentry_url: str
+    snapshot_tables: bool
     sync_db: bool
     use_cache: bool
 
@@ -138,6 +140,12 @@ def get_parser():
         "--sentry-url",
         help="Sentry URL. If not specified, defaults to the value of the SENTRY_URL environment variable before prompting user.",
         default=None,
+    )
+
+    parser.add_argument(
+        "--snapshot-tables",
+        help="Generate CSV files capturing data that would be written to DB.",
+        action="store_true",
     )
 
     parser.add_argument(

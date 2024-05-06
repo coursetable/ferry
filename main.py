@@ -7,7 +7,7 @@ import uvloop
 from ferry.crawler.classes import crawl_classes
 from ferry.crawler.evals import crawl_evals
 from ferry.crawler.seasons import fetch_seasons
-from ferry.transform import transform
+from ferry.transform import transform, write_csvs
 from ferry.transform.to_table import create_evals_tables
 from ferry.database import Database, stage, deploy
 from ferry.args_parser import Args, get_args, parse_seasons_arg
@@ -73,11 +73,13 @@ def sync_db(args: Args):
     db = Database(args.database_connect_string)
 
     print("[Transform]")
-    transform(data_dir=args.data_dir)
+    tables = transform(data_dir=args.data_dir)
+    if args.snapshot_tables:
+        write_csvs(tables, data_dir=args.data_dir)
     print("-" * 80)
 
     print("[Stage]")
-    stage(data_dir=args.data_dir, database=db)
+    stage(tables, database=db)
     print("-" * 80)
 
     print("[Deploy]")

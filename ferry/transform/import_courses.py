@@ -1,6 +1,6 @@
 import logging
 from tqdm import tqdm
-from typing import cast
+from typing import cast, TypedDict
 from pathlib import Path
 from collections import Counter
 
@@ -48,12 +48,6 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
     )
 
     logging.debug("Aggregating cross-listings")
-    merged_course_info["season_code"] = merged_course_info["season_code"].astype(int)
-    merged_course_info["crn"] = merged_course_info["crn"].astype(int)
-    merged_course_info["crns"] = merged_course_info["crns"].apply(
-        lambda crns: [int(crn) for crn in crns]
-    )
-
     # group CRNs by season for cross-listing deduplication
     # crns_by_season[season_code] -> Series[Series[CRN]]
     crns_by_season = merged_course_info.groupby("season_code")["crns"]
@@ -249,7 +243,7 @@ def resolve_professors(
 
     # build professors table in order of seasons
     for season in seasons:
-        season_professors = professors_by_season.get_group(int(season)).copy(deep=True)
+        season_professors = professors_by_season.get_group(season).copy(deep=True)
 
         # first-pass
         season_professors["professor_id"] = match_professors(
@@ -273,7 +267,7 @@ def resolve_professors(
         # Replace with new IDs
         professors_update.loc[new_professors.index, "professor_id"] = new_professor_ids
         professors_update["professor_id"] = professors_update["professor_id"].astype(
-            int
+            pd.Int64Dtype()
         )
         professors_update.drop_duplicates(
             subset=["professor_id"], keep="first", inplace=True
@@ -296,9 +290,16 @@ def resolve_professors(
     return professors, course_professors
 
 
-def import_courses(
-    parsed_courses_dir: Path, seasons: list[str]
-) -> dict[str, pd.DataFrame]:
+class CourseTables(TypedDict):
+    courses: pd.DataFrame
+    listings: pd.DataFrame
+    course_professors: pd.DataFrame
+    professors: pd.DataFrame
+    course_flags: pd.DataFrame
+    flags: pd.DataFrame
+
+
+def import_courses(parsed_courses_dir: Path, seasons: list[str]) -> CourseTables:
     """
     Import courses from JSON files in `parsed_courses_dir`.
     Splits the raw data into various tables for the database.
@@ -321,11 +322,14 @@ def import_courses(
         if not parsed_courses_file.is_file():
             print(f"Skipping season {season}: not found in parsed courses.")
             continue
-        parsed_course_info = pd.read_json(parsed_courses_file)
+        parsed_course_info = pd.read_json(parsed_courses_file, dtype={"crn": int})
         parsed_course_info["season_code"] = season
         all_course_info.append(parsed_course_info)
 
     merged_course_info = pd.concat(all_course_info, axis=0).reset_index(drop=True)
+    merged_course_info["crns"] = merged_course_info["crns"].apply(
+        lambda crns: [int(crn) for crn in crns]
+    )
     merged_course_info = resolve_cross_listings(merged_course_info)
 
     logging.debug("Creating courses table")

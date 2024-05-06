@@ -8,7 +8,7 @@ import re
 from itertools import combinations
 from typing import Any
 
-from ferry.database.models import BaseModel, Table
+from sqlalchemy import Table
 
 
 def convert_unicode(text: str) -> str:
@@ -108,7 +108,7 @@ def to_element_index_map(dict_of_lists: list[set[Any]]) -> dict[Any, int]:
     return inverted
 
 
-def get_table_columns(table: BaseModel | Table, not_class=False) -> list[str]:
+def get_table_columns(table: Table, not_class=False) -> list[str]:
     """
     Get column names of a table, where table is
     a SQLalchemy model or object (e.g. ferry.database.models.Course)
