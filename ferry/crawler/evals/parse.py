@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import cast, TypedDict
+from typing import cast, TypedDict, Any
 
 from bs4 import BeautifulSoup, Tag, ResultSet
 
@@ -177,20 +177,15 @@ def parse_eval_comments(
 ParsedStats = TypedDict(
     "ParsedStats",
     {
-        "enrolled": int,
-        "responses": int,
+        "enrolled": int, # Note: historical evals have None
+        "responses": int, # Note: historical evals have None
         "declined": int | None,
         "no response": int | None,
     },
 )
 
 
-class ParsedExtras(TypedDict):
-    title: str
-    not_viewable: str | None
-
-
-def parse_course_enrollment(page: bytes) -> tuple[ParsedStats, ParsedExtras]:
+def parse_course_enrollment(page: bytes) -> tuple[ParsedStats, dict[str, Any]]:
     soup = BeautifulSoup(page, "lxml")
 
     header = soup.find("div", id="courseHeader")
@@ -217,7 +212,7 @@ def parse_course_enrollment(page: bytes) -> tuple[ParsedStats, ParsedExtras]:
     title = title.find_all("span")[1].text.strip()
 
     # print(stats, title)
-    return stats, {"title": title, "not_viewable": None}
+    return stats, {"title": title}
 
 
 class ParsedEval(TypedDict):
@@ -226,7 +221,15 @@ class ParsedEval(TypedDict):
     enrollment: ParsedStats
     ratings: list[ParsedEvalRatings]
     narratives: list[ParsedEvalComments]
-    extras: ParsedExtras
+    # Note: known extra keys are:
+    # - title: str
+    # - not_viewable: str
+    # For historical evals:
+    # - subject: str
+    # - number: str
+    # - section: int
+    # - note: str
+    extras: dict[str, Any]
 
 
 # Does not return anything, only responsible for writing course evals to json cache
