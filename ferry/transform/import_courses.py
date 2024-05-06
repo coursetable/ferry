@@ -8,9 +8,7 @@ import numpy as np
 import pandas as pd
 import ujson
 
-from ferry import database
 from ferry.utils import (
-    get_table_columns,
     to_element_index_map,
     merge_overlapping,
 )
@@ -364,29 +362,6 @@ def import_courses(parsed_courses_dir: Path, seasons: list[str]) -> CourseTables
 
     professors, course_professors = resolve_professors(professors_prep, seasons)
 
-    # explicitly specify missing columns to be filled in later
-    courses[
-        [
-            "location_times",
-            "average_rating",
-            "average_rating_n",
-            "average_workload",
-            "average_workload_n",
-            "average_rating_same_professors",
-            "average_rating_same_professors_n",
-            "average_workload_same_professors",
-            "average_workload_same_professors_n",
-            "same_course_id",
-            "same_course_and_profs_id",
-            "last_offered_course_id",
-            "last_enrollment_course_id",
-            "last_enrollment",
-            "last_enrollment_season_code",
-            "last_enrollment_same_professors",
-        ]
-    ] = np.nan
-    professors[["average_rating", "average_rating_n"]] = np.nan
-
     # construct courses and flags mapping
     logging.debug("Adding course flags")
     course_flags = courses[["course_id", "flags"]].copy(deep=True)
@@ -399,18 +374,6 @@ def import_courses(parsed_courses_dir: Path, seasons: list[str]) -> CourseTables
 
     flag_text_to_id = dict(zip(flags["flag_text"], flags["flag_id"]))
     course_flags["flag_id"] = course_flags["flags"].apply(flag_text_to_id.get)
-
-    # extract columns to match database
-    courses = courses.loc[:, get_table_columns(database.Course)]
-    listings = listings.loc[:, get_table_columns(database.Listing)]
-    course_professors = course_professors.loc[
-        :, get_table_columns(database.course_professors, not_class=True)
-    ]
-    professors = professors.loc[:, get_table_columns(database.Professor)]
-    flags = flags.loc[:, get_table_columns(database.Flag)]
-    course_flags = course_flags.loc[
-        :, get_table_columns(database.course_flags, not_class=True)
-    ]
 
     print("\033[F", end="")
     print("Importing courses... ✔")

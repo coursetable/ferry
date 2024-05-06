@@ -51,9 +51,6 @@ WITH listing_info
                                   JOIN flags f on course_flags.flag_id = f.flag_id
                          WHERE course_flags.course_id = courses.course_id
                          GROUP BY course_flags.course_id), '[]'::jsonb)      AS flag_info,
-               (SELECT enrollment
-                FROM evaluation_statistics
-                WHERE evaluation_statistics.course_id = listings.course_id)  AS enrollment,
                (SELECT enrolled
                 FROM evaluation_statistics
                 WHERE evaluation_statistics.course_id = listings.course_id)  AS enrolled,
@@ -116,7 +113,6 @@ SELECT listing_id,
        last_enrollment,
        last_enrollment_season_code,
        last_enrollment_same_professors,
-       enrollment,
        enrolled,
        responses,
        declined,

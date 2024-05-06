@@ -11,7 +11,6 @@ from ferry.transform.same_courses import (
     resolve_historical_courses,
     split_same_professors,
 )
-from ferry.utils import get_table_columns
 
 QUESTION_TAGS = {}
 
@@ -432,9 +431,6 @@ def courses_computed(
             *courses[average_col].apply(average)
         )
         courses[num_col] = courses[num_col].astype(pd.Int64Dtype())
-
-    # remove intermediate columns
-    courses = courses.loc[:, get_table_columns(database.Course)]
 
     return courses
 

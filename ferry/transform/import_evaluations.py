@@ -9,7 +9,6 @@ import ujson
 from typing import cast, TypedDict
 
 from ferry import database
-from ferry.utils import get_table_columns
 
 # maximum question divergence to allow
 QUESTION_DIVERGENCE_CUTOFF = 32
@@ -250,10 +249,6 @@ def import_evaluations(
 
     # evaluation narratives ----------------
 
-    # explicitly specify missing columns to be filled in later
-    evaluation_narratives[
-        ["comment_neg", "comment_neu", "comment_pos", "comment_compound"]
-    ] = np.nan
     # filter out missing or short comments
     evaluation_narratives.dropna(subset=["comment"], inplace=True)
 
@@ -283,27 +278,12 @@ def import_evaluations(
 
     # evaluation statistics ----------------
 
-    # explicitly specify missing columns to be filled in later
-    evaluation_statistics[["avg_rating", "avg_workload", "enrollment"]] = np.nan
     # convert to JSON string for postgres
     evaluation_statistics.loc[:, "extras"] = evaluation_statistics["extras"].apply(
         ujson.dumps
     )
     evaluation_statistics.reset_index(drop=True, inplace=True)
 
-    # extract columns to match database  ----------------
-    evaluation_narratives = evaluation_narratives.loc[
-        :, get_table_columns(database.EvaluationNarrative)
-    ]
-    evaluation_ratings = evaluation_ratings.loc[
-        :, get_table_columns(database.EvaluationRating)
-    ]
-    evaluation_statistics = evaluation_statistics.loc[
-        :, get_table_columns(database.EvaluationStatistics)
-    ]
-    evaluation_questions = evaluation_questions.loc[
-        :, get_table_columns(database.EvaluationQuestion)
-    ]
     print("\033[F", end="")
     print("Importing course evaluations... ✔")
 

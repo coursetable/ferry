@@ -4,6 +4,7 @@ from typing import cast
 
 import pandas as pd
 
+from ferry import database
 from ferry.transform.transform_compute import (
     courses_computed,
     evaluation_statistics_computed,
@@ -86,7 +87,26 @@ def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         evaluation_statistics=eval_tables["evaluation_statistics"],
     )
 
+    all_tables = {"seasons": seasons_table, **course_tables, **eval_tables}
+
+    # Remove intermediate columns to match DB schema
+    for table_name, db_table in [
+        ("courses", database.Course.__table__),
+        ("listings", database.Listing.__table__),
+        ("course_professors", database.course_professors),
+        ("professors", database.Professor.__table__),
+        ("flags", database.Flag.__table__),
+        ("course_flags", database.course_flags),
+        ("evaluation_questions", database.EvaluationQuestion.__table__),
+        ("evaluation_narratives", database.EvaluationNarrative.__table__),
+        ("evaluation_statistics", database.EvaluationStatistics.__table__),
+        ("evaluation_ratings", database.EvaluationRating.__table__),
+    ]:
+        all_tables[table_name] = all_tables[table_name].loc[
+            :, [column.key for column in db_table.columns]
+        ]
+
     print("\033[F", end="")
     print("Computing secondary attributes... ✔")
 
-    return {"seasons": seasons_table, **course_tables, **eval_tables}
+    return all_tables

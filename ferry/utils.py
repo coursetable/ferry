@@ -8,8 +8,6 @@ import re
 from itertools import combinations
 from typing import Any
 
-from sqlalchemy import Table
-
 
 def convert_unicode(text: str) -> str:
     """
@@ -106,25 +104,3 @@ def to_element_index_map(dict_of_lists: list[set[Any]]) -> dict[Any, int]:
             inverted[item] = key
 
     return inverted
-
-
-def get_table_columns(table: Table, not_class=False) -> list[str]:
-    """
-    Get column names of a table, where table is
-    a SQLalchemy model or object (e.g. ferry.database.models.Course)
-
-    Parameters
-    ----------
-    table:
-        Name of table to retrieve.
-    not_class:
-        If the table is not a class (for instance, a junction table).
-
-    Returns
-    -------
-    list of column names
-    """
-    if not_class:
-        return [column.key for column in table.columns]
-
-    return [column.key for column in table.__table__.columns]

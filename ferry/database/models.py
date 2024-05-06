@@ -475,10 +475,6 @@ class EvaluationStatistics(BaseModel):
         cascade="all",
     )
 
-    enrollment = Column(
-        Integer,
-        comment="Placeholder for compatibility (previously held JSON for enrollment)",
-    )
     enrolled = Column(Integer, comment="Number of students enrolled in course")
     responses = Column(Integer, comment="Number of responses")
     declined = Column(Integer, comment="Number of students who declined to respond")
