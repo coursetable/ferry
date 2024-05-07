@@ -1,17 +1,58 @@
 import logging
 from tqdm import tqdm
-from typing import cast, TypedDict
+from typing import cast, TypedDict, Any, Iterable
+from itertools import combinations
 from pathlib import Path
 from collections import Counter
 
 import numpy as np
 import pandas as pd
 import ujson
+import networkx
 
-from ferry.utils import (
-    to_element_index_map,
-    merge_overlapping,
-)
+
+def merge_overlapping(sets: Iterable[Iterable[Any]]) -> list[set[Any]]:
+    """
+    Given a list of lists, converts each sublist to a set and merges sets with
+    a nonempty intersection until all sets are disjoint.
+    """
+
+    sets = [frozenset(x) for x in sets]
+
+    sets_graph = networkx.Graph()
+    for sub_set in sets:
+        # if single listing, add it (does nothing if already present)
+        if len(sub_set) == 1:
+            sets_graph.add_node(tuple(sub_set)[0])
+        # otherwise, add all pairwise listings
+        else:
+            for edge in combinations(list(sub_set), 2):
+                sets_graph.add_edge(*edge)
+
+    # get overlapping listings as connected components
+    merged = networkx.connected_components(sets_graph)
+    merged = [set(x) for x in merged]
+
+    # handle courses with no cross-listings
+    singles = networkx.isolates(sets_graph)
+    merged += [{x} for x in singles]
+
+    return merged
+
+
+def to_element_index_map(dict_of_lists: list[set[Any]]) -> dict[Any, int]:
+    """
+    Given a list of sets, return a dictionary mapping each element to its index in the list.
+
+    If an element is present in multiple sets, the index of the *last* set it appears in is used.
+    """
+    inverted: dict[Any, int] = {}
+
+    for key, val in enumerate(dict_of_lists):
+        for item in val:
+            inverted[item] = key
+
+    return inverted
 
 
 def classify_yc(row: pd.Series):
@@ -49,8 +90,6 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
     # group CRNs by season for cross-listing deduplication
     # crns_by_season[season_code] -> Series[Series[CRN]]
     crns_by_season = merged_course_info.groupby("season_code")["crns"]
-    # crns_by_season[season_code] -> list[frozenset[CRN]]
-    crns_by_season = crns_by_season.apply(lambda x: [frozenset(y) for y in x])
     # crns_by_season[season_code] -> list[set[CRN]]
     crns_by_season = crns_by_season.apply(merge_overlapping)
 

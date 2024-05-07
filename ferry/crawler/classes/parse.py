@@ -8,7 +8,6 @@ import ujson
 from unidecode import unidecode
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning, ResultSet, Tag
 
-from ferry.utils import convert_unicode
 from ferry.crawler.cache import load_cache_json, save_cache_json
 
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning, module="bs4")
@@ -37,14 +36,44 @@ COLLEGE_SEMINAR_CODES = {
 }
 
 
+def normalize_unicode(text: str) -> str:
+    unicode_exceptions = {
+        r"\u00e2\u20ac\u201c": "–",
+        r"\u00c2\u00a0": "\u00a0",
+        r"\u00c3\u00a7": "ç",
+        r"\u00c3\u00a1": "á",
+        r"\u00c3\u00a9": "é",
+        r"\u00c3\u00ab": "ë",
+        r"\u00c3\u00ae": "î",
+        r"\u00c3\u00bc": "ü",
+        r"\u00c3\u00b1": "ñ",
+        r"\u201c": '"',
+        r"\u201d": '"',
+    }
+
+    for bad_unicode, replacement in unicode_exceptions.items():
+        text = re.sub(bad_unicode, replacement, text)
+
+    # convert utf-8 bytestrings
+    # pylint: disable=line-too-long
+    # from https://stackoverflow.com/questions/5842115/converting-a-string-which-contains-both-utf-8-encoded-bytestrings-and-codepoints
+    text = re.sub(
+        r"[\xc2-\xf4][\x80-\xbf]+",
+        lambda m: m.group(0).encode("latin1").decode("unicode-escape"),
+        text,
+    )
+
+    return text
+
+
 class ParsedProfessors(TypedDict):
     professors: list[str]
     professor_emails: list[str]
     professor_ids: list[str]
 
 
-def extract_professors(html: str) -> ParsedProfessors:
-    soup = BeautifulSoup(html, features="lxml")
+def extract_professors(instructordetail_html: str) -> ParsedProfessors:
+    soup = BeautifulSoup(normalize_unicode(instructordetail_html), features="lxml")
     instructor_divs = cast(
         ResultSet[Tag], soup.findAll("div", {"class": "instructor-detail"})
     )
@@ -99,24 +128,14 @@ def parse_cross_listings(xlist_html: str) -> list[str]:
     Retrieve cross-listings (CRN codes) from the HTML in the 'xlist' field from the Yale API.
 
     Note that the cross-listings do not include the course itself.
-
-    Parameters
-    ----------
-    xlist_html:
-        'xlist' field from the Yale API response.
-
-    Returns
-    -------
-    xlist_crns:
-        CRN codes of course cross-listings.
     """
-    xlist_soup = BeautifulSoup(xlist_html, features="lxml")
+    soup = BeautifulSoup(xlist_html, features="lxml")
 
-    xlist_crns = xlist_soup.find_all("a", {"data-action": "result-detail"})
-    xlist_crns = [x["data-key"] for x in xlist_crns]
-    xlist_crns = [x[4:] for x in xlist_crns if x[:4] == "crn:"]
+    crns = soup.find_all("a", {"data-action": "result-detail"})
+    crns = [x["data-key"] for x in crns]
+    crns = [x[4:] for x in crns if x[:4] == "crn:"]
 
-    return xlist_crns
+    return crns
 
 
 def extract_credits(credit_html: str, hours: str) -> float:
@@ -133,40 +152,14 @@ def extract_credits(credit_html: str, hours: str) -> float:
     return 1.0
 
 
-def extract_flags(ci_attrs: str) -> list[str]:
-    """
-    Get the course flags from the ci_attrs field.
-
-    Parameters
-    ----------
-    ci_attrs:
-        the field from the Yale API response.
-
-    Returns
-    -------
-    flag_texts:
-        Flags (keywords) for the course.
-    """
-    soup = BeautifulSoup(ci_attrs, features="lxml")
+def extract_flags(ci_attrs_html: str) -> list[str]:
+    soup = BeautifulSoup(ci_attrs_html, features="lxml")
     flag_texts = [x.get_text() for x in cast(ResultSet[Tag], soup.find_all("a"))]
 
     return flag_texts
 
 
 def days_of_week_from_letters(letters: str) -> list[str]:
-    """
-    Parse course days from letterings.
-
-    Parameters
-    ----------
-    letters:
-        Course meeting days, abbreviated.
-
-    Returns
-    -------
-    days:
-        Days on which course meets.
-    """
     if letters == "M-F":
         return ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
@@ -339,26 +332,6 @@ def extract_meetings(
     meeting_html: str,
     all_in_group: list[dict[str, Any]],
 ) -> ParsedMeeting:
-    """
-    Extract course meeting times and locations from the provided HTML.
-
-    Parameters
-    ----------
-    meeting_html:
-        HTML of course meeting times, specified by the 'meeting_html' key in the Yale API response.
-
-    Returns
-    -------
-    times_summary: string
-        Summary of meeting times; the first listed times are shown while additional ones are
-        collapsed to " + (n-1)".
-    locations_summary:
-        Summary of meeting locations; the first listed ocations are shown while additional ones
-        are collapsed to " + (n-1)".
-    times_by_day:
-        Dictionary with keys as days and values consisting of lists of
-        [start_time, end_time, location, location_url]
-    """
     if meeting_html == "":
         return extract_meetings_alternate(all_in_group)
 
@@ -475,8 +448,8 @@ def extract_meetings_alternate(all_in_group: list[dict[str, Any]]) -> ParsedMeet
     }
 
 
-def extract_resource_link(resource_html: str, title: str) -> str:
-    matched_link = re.findall(f'href="([^"]*)"[^>]*>{title}</a>', resource_html)
+def extract_resource_link(resources_html: str, title: str) -> str:
+    matched_link = re.findall(f'href="([^"]*)"[^>]*>{title}</a>', resources_html)
 
     if len(matched_link) > 0:
         return matched_link[0]
@@ -513,11 +486,11 @@ STAT_MAP = {
 }
 
 
-def extract_skills_areas(text: str, codes_map: dict[str, str]) -> list[str]:
+def extract_skills_areas(yc_attrs_html: str, codes_map: dict[str, str]) -> list[str]:
     codes: list[str] = []
 
     for search_text, code in codes_map.items():
-        if search_text in text:
+        if search_text in yc_attrs_html:
             codes.append(code)
 
     return sorted(codes)
@@ -529,7 +502,9 @@ class ParsedDescription(TypedDict):
 
 
 def extract_prereqs_and_description(description_html: str) -> ParsedDescription:
-    raw_description = BeautifulSoup(convert_unicode(description_html), features="lxml")
+    raw_description = BeautifulSoup(
+        normalize_unicode(description_html), features="lxml"
+    )
 
     # course prerequisites
     prereq_elems = raw_description.findAll("p", {"class": "prerequisites"})
@@ -544,8 +519,8 @@ def extract_prereqs_and_description(description_html: str) -> ParsedDescription:
     return {"requirements": requirements, "description": description_text}
 
 
-def extract_note(raw_html: str) -> str:
-    return BeautifulSoup(raw_html, features="lxml").get_text().replace("  ", " ")
+def extract_note(note_html: str) -> str:
+    return BeautifulSoup(note_html, features="lxml").get_text().replace("  ", " ")
 
 
 def is_fysem(code: str, description_text: str, requirements_text: str) -> bool:
@@ -664,7 +639,7 @@ def extract_course_info(
             course_json.get("credit_html", ""), course_json.get("hours", "")
         ),
         "extra_info": STAT_MAP.get(course_json["stat"], "ACTIVE"),
-        **extract_professors(convert_unicode(course_json["instructordetail_html"])),
+        **extract_professors(course_json["instructordetail_html"]),
         "crn": course_json["crn"],
         "crns": [course_json["crn"], *parse_cross_listings(course_json["xlist"])],
         "course_code": course_json["code"],

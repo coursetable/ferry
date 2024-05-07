@@ -68,15 +68,9 @@ def match_evaluations_to_courses(
     evaluation_statistics.dropna(subset=["course_id"], axis=0, inplace=True)
 
     # change from float to integer type for import
-    evaluation_narratives["course_id"] = evaluation_narratives["course_id"].astype(
-        int
-    )
-    evaluation_ratings["course_id"] = evaluation_ratings["course_id"].astype(
-        int
-    )
-    evaluation_statistics["course_id"] = evaluation_statistics["course_id"].astype(
-        int
-    )
+    evaluation_narratives["course_id"] = evaluation_narratives["course_id"].astype(int)
+    evaluation_ratings["course_id"] = evaluation_ratings["course_id"].astype(int)
+    evaluation_statistics["course_id"] = evaluation_statistics["course_id"].astype(int)
 
     return evaluation_narratives, evaluation_ratings, evaluation_statistics
 
