@@ -366,7 +366,8 @@ def extract_meetings(
     meeting_entries = BeautifulSoup(meeting_html, features="lxml").find_all(
         "div", {"class": "meet"}
     )
-    if len(meeting_entries) == 0 or meeting_entries[0].text == "HTBA":
+    meeting_entries = [x for x in meeting_entries if x.text != "HTBA"]
+    if len(meeting_entries) == 0:
         return {
             "times_summary": "TBA",
             "locations_summary": "TBA",
