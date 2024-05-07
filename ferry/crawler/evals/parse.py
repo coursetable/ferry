@@ -160,12 +160,8 @@ def parse_eval_comments(
         raise EmptyNarrativeError()
     comments: list[str] = []
     for row in rows:
-        comment = row.find_all("td")[1].text.strip()
+        comment = row.find_all("td")[1].text.strip().replace("\r", "")
         comments.append(comment)
-
-    # print("Question ID: ", question_id)
-    # print("Question text: ", questions[question_id])
-    # print("Comments:", comments)
 
     return {
         "question_id": question_id,

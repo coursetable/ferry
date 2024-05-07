@@ -533,13 +533,13 @@ def extract_prereqs_and_description(description_html: str) -> ParsedDescription:
 
     # course prerequisites
     prereq_elems = raw_description.findAll("p", {"class": "prerequisites"})
-    requirements = "\n".join([x.get_text() for x in prereq_elems])
+    requirements = "\n".join([x.get_text() for x in prereq_elems]).replace("\r", "")
 
     # remove prereqs from the description
     for div in prereq_elems:
         div.decompose()
 
-    description_text = raw_description.get_text().rstrip()
+    description_text = raw_description.get_text().rstrip().replace("\r", "")
 
     return {"requirements": requirements, "description": description_text}
 
@@ -658,7 +658,7 @@ def extract_course_info(
     course_info: ParsedCourse = {
         "season_code": season,
         **extract_prereqs_and_description(course_json["description"]),
-        "title": course_json["title"],
+        "title": course_json["title"].replace("\r", ""),
         "school": course_json["col"],
         "credits": extract_credits(
             course_json.get("credit_html", ""), course_json.get("hours", "")

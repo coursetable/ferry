@@ -147,12 +147,6 @@ def import_evaluations(
     evaluation_ratings.drop_duplicates(
         subset=["course_id", "question_code"], inplace=True, keep="first"
     )
-    evaluation_narratives["comment"] = (
-        evaluation_narratives["comment"]
-        .str.replace("\r", " ")
-        .str.replace("\n", " ")
-        .str.replace("  ", " ")
-    )
     evaluation_narratives.drop_duplicates(
         subset=["course_id", "question_code", "comment"],
         inplace=True,
@@ -256,10 +250,6 @@ def import_evaluations(
     evaluation_narratives = evaluation_narratives.loc[
         evaluation_narratives["comment"].apply(len) > 2
     ].copy()
-    # replace carriage returns for csv-based migration
-    evaluation_narratives.loc[:, "comment"] = evaluation_narratives["comment"].apply(
-        lambda x: x.replace("\r", "")
-    )
     # id column for database primary key
     evaluation_narratives.loc[:, "id"] = list(range(len(evaluation_narratives)))
     evaluation_narratives.reset_index(drop=True, inplace=True)

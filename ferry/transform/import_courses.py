@@ -341,12 +341,6 @@ def import_courses(parsed_courses_dir: Path, seasons: list[str]) -> CourseTables
     courses["areas"] = courses["areas"].apply(ujson.dumps)
     courses["times_by_day"] = courses["times_by_day"].apply(ujson.dumps)
     courses["skills"] = courses["skills"].apply(ujson.dumps)
-    # replace carriage returns for tsv-based migration
-    courses["description"] = courses["description"].apply(lambda x: x.replace("\r", ""))
-    courses["title"] = courses["title"].apply(lambda x: x.replace("\r", ""))
-    courses["requirements"] = courses["requirements"].apply(
-        lambda x: x.replace("\r", "")
-    )
 
     logging.debug("Creating listings table")
     # map temporary season-specific IDs to global course IDs
