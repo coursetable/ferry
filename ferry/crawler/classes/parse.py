@@ -236,7 +236,7 @@ def split_meeting_text(meeting_text: str) -> tuple[str, str, str]:
 
 def create_meeting_summaries(
     split_meetings: list[tuple[str, str, str]]
-) -> tuple[str, str]:
+) -> tuple[str | None, str | None]:
     """
     Get meeting time and location summary strings.
 
@@ -249,6 +249,8 @@ def create_meeting_summaries(
     -------
     times_summary, locations_summary
     """
+    if len(split_meetings) == 0:
+        return None, None
     # make times and locations summary as first listed
     times_summary = f"{split_meetings[0][0]} {split_meetings[0][1]}"
     locations_summary = split_meetings[0][2]
@@ -323,8 +325,8 @@ def create_times_by_day(
 
 
 class ParsedMeeting(TypedDict):
-    times_summary: str
-    locations_summary: str
+    times_summary: str | None
+    locations_summary: str | None
     times_by_day: dict[str, list[tuple[str, str, str, str]]]
 
 
@@ -448,13 +450,13 @@ def extract_meetings_alternate(all_in_group: list[dict[str, Any]]) -> ParsedMeet
     }
 
 
-def extract_resource_link(resources_html: str, title: str) -> str:
+def extract_resource_link(resources_html: str, title: str) -> str | None:
     matched_link = re.findall(f'href="([^"]*)"[^>]*>{title}</a>', resources_html)
 
     if len(matched_link) > 0:
         return matched_link[0]
     else:
-        return ""
+        return None
 
 
 # abbreviations for skills
@@ -591,8 +593,8 @@ class ParsedCourse(TypedDict):
     subject: str
     number: str
     section: str
-    times_summary: str
-    locations_summary: str
+    times_summary: str | None
+    locations_summary: str | None
     times_by_day: dict[str, list[tuple[str, str, str, str]]]
     skills: list[str]
     areas: list[str]
@@ -601,8 +603,8 @@ class ParsedCourse(TypedDict):
     rp_attr: str
     classnotes: str
     final_exam: str
-    course_home_url: str
-    syllabus_url: str
+    course_home_url: str | None
+    syllabus_url: str | None
     fysem: bool
     sysem: bool
     colsem: bool

@@ -53,14 +53,20 @@ class Season(BaseModel):
         primary_key=True,
         comment="Season code (e.g. '202001')",
         index=True,
+        nullable=False,
     )
 
     term = Column(
         String(10),
         comment="[computed] Season of the semester - one of spring, summer, or fall",
+        nullable=False,
     )
 
-    year = Column(Integer, comment="[computed] Year of the semester")
+    year = Column(
+        Integer,
+        comment="[computed] Year of the semester",
+        nullable=False,
+    )
 
 
 # Course-Professor association/junction table.
@@ -115,7 +121,7 @@ class Course(BaseModel):
     # Basic course descriptors
     # ------------------------
 
-    title = Column(String, comment="Complete course title")
+    title = Column(String, comment="Complete course title", nullable=False)
     description = Column(String, comment="Course description")
     requirements = Column(
         String, comment="Recommended requirements/prerequisites for the course"
@@ -139,7 +145,8 @@ class Course(BaseModel):
     times_by_day = Column(
         JSON,
         comment="""Course meeting times by day, with days as keys and
-        tuples of `(start_time, end_time, location)`""",
+        tuples of `(start_time, end_time, location, locatio_url)`""",
+        nullable=False,
     )
 
     # ----------------------
@@ -150,9 +157,14 @@ class Course(BaseModel):
         JSON,
         comment="""Skills that the course fulfills (e.g. writing,
         quantitative reasoning, language levels)""",
+        nullable=False,
     )
 
-    areas = Column(JSON, comment="Course areas (humanities, social sciences, sciences)")
+    areas = Column(
+        JSON,
+        comment="Course areas (humanities, social sciences, sciences)",
+        nullable=False,
+    )
 
     credits = Column(Float, comment="Number of course credits")
 
@@ -354,6 +366,7 @@ class Listing(BaseModel):
         String,
         comment='[computed] subject + number (e.g. "AMST 312")',
         index=True,
+        nullable=False,
     )
     section = Column(
         String,
@@ -504,10 +517,12 @@ class EvaluationQuestion(BaseModel):
         Boolean,
         comment="""True if the question has narrative responses.
         False if the question has categorica/numerical responses""",
+        nullable=False,
     )
     question_text = Column(
         String,
         comment="The question text",
+        nullable=False,
     )
     options = Column(
         JSON,
@@ -521,6 +536,7 @@ class EvaluationQuestion(BaseModel):
         identification purposes. No other commonality, other than that they
         contain similar keywords, is guaranteed—for example, they may have
         different options, or even differ in being narrative or not.""",
+        nullable=True,
     )
 
 
@@ -558,26 +574,31 @@ class EvaluationNarrative(BaseModel):
     comment = Column(
         String,
         comment="Response to the question",
+        nullable=False,
     )
 
     comment_neg = Column(
         Float,
         comment="VADER sentiment 'neg' score (negativity)",
+        nullable=False,
     )
 
     comment_neu = Column(
         Float,
         comment="VADER sentiment 'neu' score (neutrality)",
+        nullable=False,
     )
 
     comment_pos = Column(
         Float,
         comment="VADER sentiment 'pos' score (positivity)",
+        nullable=False,
     )
 
     comment_compound = Column(
         Float,
         comment="VADER sentiment 'compound' score (valence aggregate of neg, neu, pos)",
+        nullable=False,
     )
 
 
@@ -611,4 +632,5 @@ class EvaluationRating(BaseModel):
     rating = Column(
         JSON,
         comment="JSON array of the response counts for each option",
+        nullable=False,
     )

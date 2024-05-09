@@ -43,13 +43,13 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
             "Organization": "organize" in text,
             "Professor": bool(re.search(r"rating|assessment|evaluate", text))
             and "instructor" in text,
-            "Overall": "overall assessment" in text
-            and "instructor" not in text
+            "Overall": "overall assessment" in text and "instructor" not in text
             # This one is used in rating average
             and not row["is_narrative"],
             "Recommend": "recommend" in text,
             "Skills": "skills" in text,
-            "Strengths/weaknesses": "strengths and weaknesses" in text and "instructor" not in text,
+            "Strengths/weaknesses": "strengths and weaknesses" in text
+            and "instructor" not in text,
             "Summary": "summarize" in text and "recommend" not in text,
             # This one is used in rating average
             "Workload": "workload" in text and not row["is_narrative"],
@@ -60,7 +60,9 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
                 f"{row['question_text']} contains multiple tags {', '.join([tag for tag, condition in tag_candidates.items() if condition])}. Please adjust the conditions above."
             )
 
-        return next((tag for tag, condition in tag_candidates.items() if condition), None)
+        return next(
+            (tag for tag, condition in tag_candidates.items() if condition), None
+        )
 
     evaluation_questions["tag"] = evaluation_questions.apply(assign_code, axis=1)
 
