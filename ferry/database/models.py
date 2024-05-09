@@ -511,13 +511,16 @@ class EvaluationQuestion(BaseModel):
     )
     options = Column(
         JSON,
-        comment="JSON array of possible responses (only if the question is not a narrative",
+        comment="JSON array of possible responses (only if the question is not a narrative)",
     )
 
     tag = Column(
         String,
-        comment="""[computed] Question type (used for computing ratings, since one
-        question may be coded differently for different respondants)""",
+        comment="""[computed] Question type. The 'Overall' and 'Workload' tags
+        are used to compute average ratings, while others are purely for
+        identification purposes. No other commonality, other than that they
+        contain similar keywords, is guaranteed—for example, they may have
+        different options, or even differ in being narrative or not.""",
     )
 
 

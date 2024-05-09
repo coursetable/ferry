@@ -256,8 +256,6 @@ def import_evaluations(
 
     # evaluation questions ----------------
 
-    # tag to be added later
-    evaluation_questions["tag"] = ""
     evaluation_questions.reset_index(drop=True, inplace=True)
 
     # evaluation statistics ----------------

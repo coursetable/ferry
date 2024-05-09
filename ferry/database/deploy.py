@@ -53,34 +53,6 @@ def question_invariants(session: sqlalchemy.orm.session.Session):
             raise database.InvariantError(f"ratings question {question} lacks options")
 
 
-def question_tag_invariant(session: sqlalchemy.orm.session.Session):
-    """
-    Check question tag invariants.
-
-    Check invariant:
-        all questions sharing a tag also share is_narrative and len(options)
-    """
-    # Dictionary of question_code -> (is_narrative, len(options))
-    tag_cache = {}
-
-    def optlen(options):
-        return len(options) if options else -1
-
-    for question in session.query(database.EvaluationQuestion):
-        if not question.tag:
-            continue
-
-        if question.tag not in tag_cache:
-            tag_cache[question.tag] = (
-                question.is_narrative,
-                optlen(question.options),
-            )
-        else:
-            narrative, count = tag_cache[question.tag]
-            if question.is_narrative != narrative or count != optlen(question.options):
-                raise database.InvariantError(f"mismatched tag {question.tag}")
-
-
 def course_invariants(session: sqlalchemy.orm.session.Session):
     """
     Check course invariants.
@@ -170,7 +142,6 @@ def deploy(db: database.Database):
         listing_invariants,
         course_invariants,
         question_invariants,
-        question_tag_invariant,
     ]
 
     # --------------------------------------

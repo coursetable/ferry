@@ -1,5 +1,6 @@
-import csv
 import math
+import re
+from typing import cast
 
 import pandas as pd
 from tqdm import tqdm
@@ -11,16 +12,6 @@ from ferry.transform.same_courses import (
     resolve_historical_courses,
     split_same_professors,
 )
-
-QUESTION_TAGS = {}
-
-from pathlib import Path
-
-resource_dir = Path(__file__).parent.parent / "resources"
-
-with open(resource_dir / "question_tags.csv") as f:
-    for question_code, tag in csv.reader(f):
-        QUESTION_TAGS[question_code] = tag
 
 
 def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
@@ -40,25 +31,36 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
 
     logging.debug("Assigning question tags")
 
-    def assign_code(row):
+    def assign_code(row: pd.Series):
+        text = cast(str, row["question_text"]).lower()
 
-        code = row["question_code"]
+        tag_candidates = {
+            "Available resources": "resources" in text,
+            "Engagement": "engagement" in text,
+            "Feedback": "feedback" in text,
+            "Intellectual challenge": "intellectual challenge" in text,
+            "Major": "major" in text,
+            "Organization": "organize" in text,
+            "Professor": bool(re.search(r"rating|assessment|evaluate", text))
+            and "instructor" in text,
+            "Overall": "overall assessment" in text
+            and "instructor" not in text
+            # This one is used in rating average
+            and not row["is_narrative"],
+            "Recommend": "recommend" in text,
+            "Skills": "skills" in text,
+            "Strengths/weaknesses": "strengths and weaknesses" in text and "instructor" not in text,
+            "Summary": "summarize" in text and "recommend" not in text,
+            # This one is used in rating average
+            "Workload": "workload" in text and not row["is_narrative"],
+        }
 
-        # Remove these suffixes for tag resolution.
-        strip_suffixes = ["-YCWR", "-YXWR", "-SA"]
-
-        for suffix in strip_suffixes:
-            if code.endswith(suffix):
-                code = code[: -len(suffix)]
-                break
-
-        # Set the appropriate question tag.
-        try:
-            return QUESTION_TAGS[code]
-        except KeyError as err:
+        if sum(tag_candidates.values()) > 1:
             raise database.InvariantError(
-                f"No associated tag for question code {code} with text {row['question_text']}"
-            ) from err
+                f"{row['question_text']} contains multiple tags {', '.join([tag for tag, condition in tag_candidates.items() if condition])}. Please adjust the conditions above."
+            )
+
+        return next((tag for tag, condition in tag_candidates.items() if condition), None)
 
     evaluation_questions["tag"] = evaluation_questions.apply(assign_code, axis=1)
 
@@ -132,7 +134,6 @@ def evaluation_statistics_computed(
 
     # Get average rating for each course with a specified tag
     def average_by_course(question_tag, n_categories):
-
         tagged_ratings = evaluation_ratings[
             evaluation_ratings["tag"] == question_tag
         ].copy(deep=True)
@@ -160,8 +161,8 @@ def evaluation_statistics_computed(
         return rating_by_course
 
     # get overall and workload ratings
-    overall_by_course = average_by_course("rating", 5)
-    workload_by_course = average_by_course("workload", 5)
+    overall_by_course = average_by_course("Overall", 5)
+    workload_by_course = average_by_course("Workload", 5)
 
     evaluation_statistics["avg_rating"] = evaluation_statistics["course_id"].apply(
         overall_by_course.get
