@@ -19,7 +19,6 @@ WITH listing_info
                listings.school,
                listings.subject,
                listings.number,
-               listings.section,
                courses.*,
                (SELECT jsonb_agg(listings.course_code)
                 FROM listings

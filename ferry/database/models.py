@@ -109,6 +109,12 @@ class Course(BaseModel):
         cascade="all",
         foreign_keys="Course.season_code",
     )
+    section = Column(
+        String,
+        comment="""Course section. Note that the section number is the same for
+        all cross-listings.""",
+        nullable=False,
+    )
 
     professors = relationship(
         "Professor",
@@ -370,7 +376,8 @@ class Listing(BaseModel):
     )
     section = Column(
         String,
-        comment="Course section for the given subject and number",
+        comment="""Course section. Note that the section number is the same for
+        all cross-listings.""",
         nullable=False,
     )
     season_code = Column(
