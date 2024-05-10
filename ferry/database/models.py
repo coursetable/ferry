@@ -208,7 +208,10 @@ class Course(BaseModel):
     # ----------------
     # Computed ratings
     # ----------------
-
+    average_gut_rating = Column(
+        Float,
+        comment="""[computed] average_rating - average_workload""",
+    )
     average_rating = Column(
         Float,
         comment="""[computed] Historical average course rating for this course code,

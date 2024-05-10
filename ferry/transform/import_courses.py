@@ -379,8 +379,8 @@ def import_courses(parsed_courses_dir: Path, seasons: list[str]) -> CourseTables
     # convert to JSON string for postgres
     courses["areas"] = courses["areas"].apply(ujson.dumps)
     courses["times_by_day"] = courses["times_by_day"].apply(ujson.dumps)
-    courses["section"] = courses["section"].fillna("0").astype(str).replace({"": "0"})
     courses["skills"] = courses["skills"].apply(ujson.dumps)
+    courses["section"] = courses["section"].fillna("0").astype(str).replace({"": "0"})
 
     logging.debug("Creating listings table")
     # map temporary season-specific IDs to global course IDs

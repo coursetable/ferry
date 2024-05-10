@@ -188,6 +188,7 @@ def courses_computed(
 ) -> pd.DataFrame:
     """
     Populates computed course rating fields:
+        average_gut_rating
         average_rating:
             Average course rating over all past instances.
         average_workload:
@@ -438,6 +439,8 @@ def courses_computed(
             *courses[average_col].apply(average)
         )
         courses[num_col] = courses[num_col].astype(pd.Int64Dtype())
+
+    courses["average_gut_rating"] = courses["average_rating"] - courses["average_workload"]
 
     return courses
 
