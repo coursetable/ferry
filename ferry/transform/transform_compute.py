@@ -47,7 +47,11 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
             # This one is used in rating average
             and not row["is_narrative"],
             "Recommend": "recommend" in text,
-            "Skills": "skills" in text,
+            # SU122: "How will you use the knowledge and skills you learned in
+            # this course in your future endeavors?"
+            # There is another SU question about skills; do not assign tag for
+            # this one to avoid collision
+            "Skills": "skills" in text and row["question_code"] not in ["SU122"],
             "Strengths/weaknesses": "strengths and weaknesses" in text
             and "instructor" not in text,
             "Summary": "summarize" in text and "recommend" not in text,

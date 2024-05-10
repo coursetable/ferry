@@ -145,7 +145,7 @@ class Course(BaseModel):
     times_by_day = Column(
         JSON,
         comment="""Course meeting times by day, with days as keys and
-        tuples of `(start_time, end_time, location, locatio_url)`""",
+        tuples of `(start_time, end_time, location, location_url)`""",
         nullable=False,
     )
 
