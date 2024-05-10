@@ -6,7 +6,7 @@ from sqlalchemy import MetaData, text
 
 from ferry import database
 
-resource_dir = Path(__file__).parent.parent / "resources"
+queries_dir = Path(__file__).parent / "queries"
 
 
 def listing_invariants(session: sqlalchemy.orm.session.Session):
@@ -85,7 +85,7 @@ def search_setup(session: sqlalchemy.orm.session.Session):
     Used by CourseTable to pull JSONs for client-side catalog browsing.
     """
     logging.debug("Creating tmp table")
-    with open(f"{resource_dir}/computed_listing_info_tmp.sql") as tmp_file:
+    with open(queries_dir / "computed_listing_info_tmp.sql") as tmp_file:
         tmp_sql = tmp_file.read()
         session.execute(text(tmp_sql))
 
@@ -119,7 +119,7 @@ def search_setup(session: sqlalchemy.orm.session.Session):
             logging.debug(f"  {column_name} not null")
 
     logging.debug("Swapping in the table")
-    with open(f"{resource_dir}/computed_listing_info_swap.sql") as swap_file:
+    with open(queries_dir / "computed_listing_info_swap.sql") as swap_file:
         swap_sql = swap_file.read()
         session.execute(text(swap_sql))
 
@@ -293,7 +293,7 @@ def deploy(db: database.Database):
     # Print row counts for each table.
     print("\n[Table Statistics]")
     with database.session_scope(db.Session) as db_session:
-        with open(f"{resource_dir}/table_sizes.sql") as file:
+        with open(queries_dir / "table_sizes.sql") as file:
             SUMMARY_SQL = file.read()
 
         result = db_session.execute(text(SUMMARY_SQL))
