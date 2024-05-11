@@ -40,11 +40,6 @@ WITH listing_info
                                   JOIN professors p on course_professors.professor_id = p.professor_id
                          WHERE course_professors.course_id = courses.course_id
                          GROUP BY course_professors.course_id), '[]'::jsonb) AS professor_info,
-               (SELECT avg(p.average_rating)
-                FROM course_professors
-                         JOIN professors p on course_professors.professor_id = p.professor_id
-                WHERE course_professors.course_id = courses.course_id
-                GROUP BY course_professors.course_id)                        AS average_professor,
                coalesce((SELECT jsonb_agg(f.flag_text)
                          FROM course_flags
                                   JOIN flags f on course_flags.flag_id = f.flag_id
@@ -87,7 +82,7 @@ SELECT listing_id,
        professor_names,
        professor_ids,
        professor_info,
-       average_professor,
+       average_professor_rating as average_professor,
        flag_info,
        fysem,
        sysem,

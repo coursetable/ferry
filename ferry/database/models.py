@@ -212,6 +212,10 @@ class Course(BaseModel):
         Float,
         comment="""[computed] average_rating - average_workload""",
     )
+    average_professor_rating = Column(
+        Float,
+        comment="""[computed] Average of the average ratings of all professors for this course.""",
+    )
     average_rating = Column(
         Float,
         comment="""[computed] Historical average course rating for this course code,

@@ -185,10 +185,13 @@ def courses_computed(
     listings: pd.DataFrame,
     evaluation_statistics: pd.DataFrame,
     course_professors: pd.DataFrame,
+    professors: pd.DataFrame,
 ) -> pd.DataFrame:
     """
     Populates computed course rating fields:
         average_gut_rating
+        average_professor_rating:
+            Average of the average ratings of all professors for this course.
         average_rating:
             Average course rating over all past instances.
         average_workload:
@@ -206,6 +209,7 @@ def courses_computed(
         last_enrollment_same_professors:
             If recent previous offering with enrollment statistics was with same professors.
 
+    Must be called after professors_computed because it uses the average_rating of each professor.
     Parameters
     ----------
     Pandas tables post-import:
@@ -440,7 +444,22 @@ def courses_computed(
         )
         courses[num_col] = courses[num_col].astype(pd.Int64Dtype())
 
-    courses["average_gut_rating"] = courses["average_rating"] - courses["average_workload"]
+    courses["average_gut_rating"] = (
+        courses["average_rating"] - courses["average_workload"]
+    )
+
+    # Calculate average_professor_rating
+    merged_data = pd.merge(courses[["course_id"]], course_professors, on="course_id")
+    merged_data = pd.merge(
+        merged_data, professors[["professor_id", "average_rating"]], on="professor_id"
+    )
+    average_professor_ratings = (
+        merged_data.groupby("course_id")["average_rating"]
+        .mean()
+        .reset_index()
+        .rename(columns={"average_rating": "average_professor_rating"})
+    )
+    courses = pd.merge(courses, average_professor_ratings, on="course_id", how="left")
 
     return courses
 

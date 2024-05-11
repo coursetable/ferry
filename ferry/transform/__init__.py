@@ -74,17 +74,18 @@ def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         evaluation_questions=eval_tables["evaluation_questions"],
     )
 
+    course_tables["professors"] = professors_computed(
+        professors=course_tables["professors"],
+        course_professors=course_tables["course_professors"],
+        evaluation_statistics=eval_tables["evaluation_statistics"],
+    )
+
     course_tables["courses"] = courses_computed(
         courses=course_tables["courses"],
         listings=course_tables["listings"],
         evaluation_statistics=eval_tables["evaluation_statistics"],
         course_professors=course_tables["course_professors"],
-    )
-
-    course_tables["professors"] = professors_computed(
         professors=course_tables["professors"],
-        course_professors=course_tables["course_professors"],
-        evaluation_statistics=eval_tables["evaluation_statistics"],
     )
 
     all_tables = {"seasons": seasons_table, **course_tables, **eval_tables}
