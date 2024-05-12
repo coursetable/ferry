@@ -538,5 +538,11 @@ def professors_computed(
     professors["average_rating_n"] = professors["average_rating_n"].astype(
         pd.Int64Dtype()
     )
+    merged_data = pd.merge(course_professors, professors, on="professor_id", how="left")
+    courses_taught = (
+        merged_data.groupby("professor_id").size().reset_index(name="courses_taught")
+    )
+    professors = pd.merge(professors, courses_taught, on="professor_id", how="left")
+    professors["courses_taught"] = professors["courses_taught"].fillna(0).astype(int)
 
     return professors

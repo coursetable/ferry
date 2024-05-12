@@ -469,6 +469,10 @@ class Professor(BaseModel):
         cascade="all",
     )
 
+    courses_taught = Column(
+        Integer, comment="[computed] Number of courses taught", nullable=False
+    )
+
     average_rating = Column(
         Float,
         comment="""[computed] Average rating of the professor assessed via
