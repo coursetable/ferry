@@ -1,6 +1,6 @@
 import logging
 from tqdm import tqdm
-from typing import cast, TypedDict, Any, Iterable
+from typing import TypedDict, Any, Iterable
 from itertools import combinations
 from pathlib import Path
 from collections import Counter
@@ -92,8 +92,6 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
     crns_by_season = merged_course_info.groupby("season_code")["crns"]
     # crns_by_season[season_code] -> list[set[CRN]]
     crns_by_season = crns_by_season.apply(merge_overlapping)
-
-    logging.debug("Mapping out cross-listings")
     # temp_course_ids_by_season[season_code][CRN] -> course_id
     temp_course_ids_by_season = crns_by_season.apply(to_element_index_map).to_dict()
 
@@ -106,225 +104,91 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
     return merged_course_info
 
 
-def aggregate_professors(courses: pd.DataFrame) -> pd.DataFrame:
+def aggregate_professors(courses: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
-    Aggregate professor info columns in preparation for matching.
+    Two professors are deemed the same if:
 
-    Parameters
-    ----------
-    courses:
-        intermediate courses table from import_courses.
+    - The emails are equal and both non-empty. In this case we pick the name that
+      appears last in the table. OR
+    - At least one of the two entries' email is empty and the names are equal. In
+      this case we pick the non-empty email if there's one.
 
-    Returns
-    -------
-    professors_prep: professor attributes DataFrame, with 4 columns:
-        - season_code
-        - course_id
-        - name
-        - email
+    This means:
+
+    - If a professor has multiple emails, they will be treated as separate professors.
+      (Usually this means they are two people with the same name.)
+    - If a professor changes their registered name, and all emails are empty, they will
+      be treated as separate professors.
+    - For two professors with the same name, entries with empty emails will be randomly
+      attributed to either professor.
+
+    Theoretically, OCS provides an ID (in the `professor_ids` field that we scraped).
+    At one point we also used the ID to do matching. However, it turns out that Yale
+    recycles OCS IDs, so we can't use it without a bunch of wrong matches. Legacy
+    courses also have no professor ID anyway.
     """
     logging.debug("Aggregating professor attributes")
-    # initialize professors table
-    professors_prep = courses.loc[
-        :,
-        [
-            "season_code",
-            "course_id",
-            "professors",
-            "professor_emails",
-            "professor_ids",
-        ],
-    ]
 
-    logging.debug("Resolving professor attributes")
-    # set default empty value for exploding later on
-    professors_prep["professors"] = professors_prep["professors"].apply(
-        lambda x: [] if not isinstance(x, list) else x
+    course_professors = (
+        courses[["course_id", "professors", "professor_emails"]]
+        .explode(["professors", "professor_emails"])
+        .dropna(subset="professors")
+        .rename(columns={"professors": "name", "professor_emails": "email"})
+        .reset_index(drop=True)
     )
-    professors_prep["professor_emails"] = professors_prep["professor_emails"].apply(
-        lambda x: [] if not isinstance(x, list) else x
-    )
-    professors_prep["professor_ids"] = professors_prep["professor_ids"].apply(
-        lambda x: [] if not isinstance(x, list) else x
-    )
+    # First: try to fill empty emails
+    course_professors = course_professors.groupby("name")
 
-    # reshape professor attributes array
-    def aggregate_prof_info(row: pd.Series) -> list[tuple[str, str | None]]:
-        names, emails = row["professors"], row["professor_emails"]
+    def fix_empty_email(group: pd.DataFrame) -> pd.DataFrame:
+        first_valid_email = next((s for s in group["email"] if s), None)
+        if first_valid_email is None:
+            return group
+        group["email"] = group["email"].replace({"": first_valid_email})
+        all_emails = group["email"].unique()
+        if len(all_emails) > 1:
+            logging.warning(
+                f"Multiple emails with name {group.name}: {all_emails}; they will be treated as separate professors"
+            )
+        return group
 
-        names = cast(list[str], list(filter(lambda x: x != "", names)))
-        emails = cast(list[str | None], list(filter(lambda x: x != "", emails)))
+    # Second: deduplicate by email, falling back to name
+    course_professors = course_professors.apply(fix_empty_email).reset_index(drop=True)
 
-        # if no names, return empty regardless of others
-        # (professors need to be named)
-        if len(names) == 0:
-            return []
-
-        # account for inconsistent lengths before zipping
-        if len(emails) != len(names):
-            emails = [None] * len(names)
-
-        return list(zip(names, emails))
-
-    professors_prep["professors_info"] = professors_prep.apply(
-        aggregate_prof_info, axis=1
-    )
-
-    # exclude instances with empty/bad professor infos
-    professors_prep = professors_prep[professors_prep["professors_info"].apply(len) > 0]
-
-    # expand courses with multiple professors
-    professors_prep = professors_prep.loc[
-        :, ["season_code", "course_id", "professors_info"]
-    ].explode("professors_info")
-    professors_prep = professors_prep.reset_index(drop=True)
-
-    # expand professor info columns
-    professors_prep[["name", "email"]] = pd.DataFrame(
-        professors_prep["professors_info"].tolist(), index=professors_prep.index
-    )
-
-    return professors_prep
-
-
-def resolve_professors(
-    professors_prep: pd.DataFrame, seasons: list[str]
-) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """
-    Resolve course-professor mappings and professors table
-
-    Parameters
-    ----------
-    professors_prep:
-        Professor attributes from aggregate_professors.
-    seasons:
-        List of seasons for sorting purposes.
-
-    Returns
-    -------
-    professors, course_professors
-    """
-
-    logging.debug("Constructing professors table in chronological order")
-
-    professors = pd.DataFrame(columns=["professor_id", "name", "email"])
-    professors_by_season = professors_prep.groupby("season_code")
-
-    def match_professors(
-        season_professors: pd.DataFrame, professors: pd.DataFrame
-    ) -> pd.Series:
-        """
-        Match professors within a season to main professors.
-
-        Parameters
-        ----------
-        season_professors:
-            Professors and attributes for a given season
-        professors:
-            Main professors table to pull attributes from.
-        """
-        names_ids = (
-            professors.dropna(subset=["name"])
-            .groupby("name", group_keys=True)["professor_id"]
-            .apply(list)
-            .to_dict()
-        )
-        emails_ids = (
-            professors.dropna(subset=["email"])
-            .groupby("email", group_keys=True)["professor_id"]
-            .apply(list)
-            .to_dict()
-        )
-
-        # get ID matches by field
-        season_professors["name_matched_ids"] = season_professors["name"].apply(
-            lambda x: names_ids.get(x, [])
-        )
-        season_professors["email_matched_ids"] = season_professors["email"].apply(
-            lambda x: emails_ids.get(x, [])
-        )
-        # NOTE: at one point we also used the ocs_id field to do matching. However, it turns out
-        # that Yale recycles OCS IDs, so we can't use it without a bunch of wrong matches.
-
-        # aggregate found IDs
-        season_professors["matched_ids_aggregate"] = (
-            season_professors["name_matched_ids"]
-            + season_professors["email_matched_ids"]
-        )
-
-        # aggregate ID matches
-        season_professors["matched_ids_aggregate"] = season_professors[
-            "matched_ids_aggregate"
-        ].apply(lambda x: x if len(x) > 0 else [np.nan])
-
-        # use the most-common matched ID
-        professor_ids = season_professors["matched_ids_aggregate"].apply(
-            lambda x: Counter(x).most_common(1)[0][0]
-        )
-
-        ties = season_professors["matched_ids_aggregate"].apply(
-            lambda x: Counter(x).most_common(2)
-        )
-        ties = ties.apply(lambda x: False if len(x) != 2 else x[0][1] == x[1][1])
-
-        for i, row in season_professors[ties].iterrows():
-            logging.debug(
-                f"Professor {row['name']} ({row['email']}) has tied matches: { sorted(list(set(row['matched_ids_aggregate']))) }",
+    def warn_different_name(group: pd.DataFrame):
+        all_names = group["name"].unique()
+        if group.name != "" and len(all_names) > 1:
+            logging.warning(
+                f"Multiple names with email {group.name}: {all_names}; only the last name will be used"
             )
 
-        return professor_ids
+    course_professors.groupby("email").apply(warn_different_name)
 
-    # course-professors junction table
-    # store as list of DataFrames before concatenation
-    all_season_professors = []
-
-    # build professors table in order of seasons
-    for season in seasons:
-        season_professors = professors_by_season.get_group(season).copy(deep=True)
-
-        # first-pass
-        season_professors["professor_id"] = match_professors(
-            season_professors, professors
-        )
-        professors_update = season_professors.drop_duplicates(
-            subset=["name", "email"], keep="first"
-        ).copy(deep=True)
-
-        new_professors = professors_update[professors_update["professor_id"].isna()]
-
-        max_professor_id = max(list(professors["professor_id"]) + [0])
-        new_professor_ids = pd.Series(
-            np.arange(
-                max_professor_id + 1,
-                max_professor_id + len(new_professors) + 1,
-            ),
-            index=new_professors.index,
-            dtype=int,
-        )
-        # Replace with new IDs
-        professors_update.loc[new_professors.index, "professor_id"] = new_professor_ids
-        professors_update["professor_id"] = professors_update["professor_id"].astype(
-            pd.Int64Dtype()
-        )
-        professors_update.drop_duplicates(
-            subset=["professor_id"], keep="first", inplace=True
-        )
-        professors_update = professors_update.set_index("professor_id")
-
-        professors = professors.set_index("professor_id", drop=True)
-        professors = professors_update[professors.columns].combine_first(professors)
-        professors = professors.reset_index(drop=False)
-
-        # second-pass
-        season_professors["professor_id"] = match_professors(
-            season_professors, professors
-        )
-
-        all_season_professors.append(season_professors[["course_id", "professor_id"]])
-
-    course_professors = pd.concat(all_season_professors, axis=0, sort=True)
-
+    course_professors["professor_id"] = course_professors.apply(
+        lambda x: x["email"] or x["name"], axis=1
+    )
+    course_professors["professor_id"] = course_professors.groupby(
+        "professor_id"
+    ).ngroup()
+    professors = course_professors.drop_duplicates(
+        subset="professor_id", keep="last"
+    ).copy(deep=True)
+    professors["email"] = professors["email"].replace({"": None})
     return professors, course_professors
+
+
+def aggregate_flags(courses: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    logging.debug("Adding course flags")
+    course_flags = (
+        courses[["course_id", "flags"]]
+        .explode(column="flags")
+        .dropna(subset="flags")
+        .rename(columns={"flags": "flag_text"})
+        .reset_index(drop=True)
+    )
+
+    course_flags["flag_id"] = course_flags.groupby("flag_text").ngroup()
+    flags = course_flags.drop_duplicates(subset="flag_id")
+    return flags, course_flags
 
 
 class CourseTables(TypedDict):
@@ -392,22 +256,8 @@ def import_courses(parsed_courses_dir: Path, seasons: list[str]) -> CourseTables
     listings["course_id"] = listings["temp_course_id"].apply(temp_to_course_id.get)
     listings["section"] = listings["section"].fillna("0").astype(str).replace({"": "0"})
 
-    professors_prep = aggregate_professors(courses)
-
-    professors, course_professors = resolve_professors(professors_prep, seasons)
-
-    # construct courses and flags mapping
-    logging.debug("Adding course flags")
-    course_flags = courses[["course_id", "flags"]].copy(deep=True)
-    course_flags = course_flags[course_flags["flags"].apply(len) > 0]
-    course_flags = course_flags.explode(column="flags")
-
-    flags = course_flags.drop_duplicates(subset=["flags"], keep="first").copy(deep=True)
-    flags["flag_text"] = flags["flags"]
-    flags["flag_id"] = range(len(flags))
-
-    flag_text_to_id = dict(zip(flags["flag_text"], flags["flag_id"]))
-    course_flags["flag_id"] = course_flags["flags"].apply(flag_text_to_id.get)
+    professors, course_professors = aggregate_professors(courses)
+    flags, course_flags = aggregate_flags(courses)
 
     print("\033[F", end="")
     print("Importing courses... ✔")
