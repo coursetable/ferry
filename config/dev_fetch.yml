@@ -1,15 +1,10 @@
 # DEV CONFIG
 # This configuration is used to only fetch course data (no evaluations) for the last 3 seasons in a dev environment. Please combine with -s option to specify exact seasons to fetch. For debug printing, use -d option.
 
-cas_cookie: null
-database_connect_string: null
-crawl_classes: true
-crawl_evals: true
-create_evals_tables: false
-generate_diagram: false
 release: false
-sentry_url: null
-sync_db: false
-use_cache: true
 seasons:
   - LATEST_4
+use_cache: true
+
+crawl_seasons: true
+crawl_classes: true

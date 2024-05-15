@@ -51,20 +51,28 @@ Note: because we use `argparse`, you can provide just the prefix of each argumen
 | --------------------------- | ------------------------- | -------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------- |
 | `--cas-cookie`              | `cas_cookie`              | `CAS_COOKIE`   | `None`; prompt if `crawl_evals`      | Only used for fetching evals; see below                                                               |
 | `-f`, `--config-file`       | N/A                       | N/A            | `None`                               | Path to YAML config file, relative to PWD; if unspecified, all options are read from command          |
-| `--crawl-classes`           | `crawl_classes`           | N/A            | `False`                              | Run the class crawler                                                                                 |
-| `--crawl-evals`             | `crawl_classes`           | N/A            | `False`                              | Run the eval crawler                                                                                  |
-| `--create-evals-tables`     | `create_evals_tables`     | N/A            | `False`                              | Regenerate evals CSV files using the cached crawler results.                                          |
 | `--data-dir`                | `data_dir`                | N/A            | `data`                               | Directory to load/store parsed data. This is usually where the `ferry-data` is cloned.                |
 | `--database-connect-string` | `database_connect_string` | `POSTGRES_URI` | `None`; prompt if `sync_db`          | Postgres connection string; for dev, see `dev_sync_db.yml`                                            |
 | `-d`, `--debug`             | `debug`                   | N/A            | `False`                              | Enable debug logging                                                                                  |
-| `--generate-diagram`        | `generate_diagram`        | N/A            | `False`                              | Generate a DB visualization diagram to `docs/db_diagram.pdf`                                          |
 | `-r`, `--release`           | `release`                 | N/A            | `False`                              | Run in release mode; see below                                                                        |
-| `--save-config`             | `save_config`             | N/A            | `False`                              | Save the parsed config options to `config_file`; does nothing if `config_file` is unspecified.        |
 | `-s`, `--seasons`           | `seasons`                 | N/A            | `None`                               | A list of seasons to fetch; see below                                                                 |
 | `--sentry-url`              | `sentry_url`              | `SENTRY_URL`   | `None`; prompt if `release`          | Sentry URL for error reporting; required in release mode, ignored in dev mode                         |
-| `--snapshot-tables`         | `snapshot_tables`         | N/A            | `False`                              | Generate CSV files capturing data that would be written to DB. Only has an effect if `sync_db`.       |
-| `--sync-db`                 | `sync_db`                 | N/A            | `False`                              | Sync the parsed data to the database                                                                  |
 | `--use-cache`               | `use_cache`               | N/A            | `False`; always `False` if `release` | Use cached data instead of fetching fresh data. Even if not using cache, cache will still be updated. |
+
+### Stage switches
+
+You can selectively run certain stages of Ferry. Options below are in the order of the stages. All stages are `False` by default, in which case Ferry basically does nothing.
+
+| CLI flag             | Config option      | Description                                                                                                                      |
+| -------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| `--save-config`      | `save_config`      | Save the parsed config options to `config_file`; does nothing if `config_file` is unspecified.                                   |
+| `--crawl-seasons`    | `crawl_seasons`    | Run the seasons crawler. If `False` and no cached data is available, then `--seasons` must be provided and all be valid seasons. |
+| `--crawl-classes`    | `crawl_classes`    | Run the class crawler.                                                                                                           |
+| `--crawl-evals`      | `crawl_evals`      | Run the eval crawler.                                                                                                            |
+| `--transform`        | `transform`        | Run the transformer. Always `True` if `sync_db` or `snapshot_tables`.                                                            |
+| `--snapshot-tables`  | `snapshot_tables`  | Generate CSV files capturing data that would be written to DB.                                                                   |
+| `--sync-db`          | `sync_db`          | Sync the transformed data to the database.                                                                                       |
+| `--generate-diagram` | `generate_diagram` | Generate a DB visualization diagram to `docs/db_diagram.pdf`                                                                     |
 
 ### Release mode
 

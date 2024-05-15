@@ -8,7 +8,7 @@ class RawArgs:
     config_file: str | None
     crawl_classes: bool
     crawl_evals: bool
-    create_evals_tables: bool
+    crawl_seasons: bool
     data_dir: str
     database_connect_string: str | None
     debug: bool
@@ -19,6 +19,7 @@ class RawArgs:
     sentry_url: str | None
     snapshot_tables: bool
     sync_db: bool
+    transform: bool
     use_cache: bool
 
 
@@ -26,7 +27,7 @@ class Args:
     cas_cookie: str
     crawl_classes: bool
     crawl_evals: bool
-    create_evals_tables: bool
+    crawl_seasons: bool
     data_dir: Path
     database_connect_string: str
     debug: bool
@@ -36,6 +37,7 @@ class Args:
     sentry_url: str
     snapshot_tables: bool
     sync_db: bool
+    transform: bool
     use_cache: bool
 
 
@@ -85,8 +87,8 @@ def get_parser():
     )
 
     parser.add_argument(
-        "--create-evals-tables",
-        help="Generate CSV from cached eval JSON.",
+        "--crawl-seasons",
+        help="Crawl seasons.",
         action="store_true",
     )
 
@@ -155,6 +157,12 @@ def get_parser():
     )
 
     parser.add_argument(
+        "--transform",
+        help="Run the transformer",
+        action="store_true",
+    )
+
+    parser.add_argument(
         "--use-cache",
         help="Whether to use cache for requests. Automatically set to false in release mode.",
         action="store_true",
@@ -163,7 +171,9 @@ def get_parser():
     return parser
 
 
-def parse_seasons_arg(arg_seasons: list[str] | None, all_viable_seasons: list[Any]):
+def parse_seasons_arg(
+    arg_seasons: list[str] | None, all_viable_seasons: list[str] | None
+):
     """
     Parse and handle seasons from add_seasons_args.
 
@@ -177,6 +187,10 @@ def parse_seasons_arg(arg_seasons: list[str] | None, all_viable_seasons: list[An
 
     # if no seasons supplied, use all
     if arg_seasons is None:
+        if all_viable_seasons is None:
+            raise SystemExit(
+                "No known viable seasons and no seasons provided in arguments"
+            )
         seasons = all_viable_seasons
 
         print(f"All seasons: {seasons}")
@@ -186,6 +200,8 @@ def parse_seasons_arg(arg_seasons: list[str] | None, all_viable_seasons: list[An
 
         # if fetching latest n seasons, truncate the list and log it
         if seasons_latest:
+            if all_viable_seasons is None:
+                raise SystemExit(f"No known viable seasons to resolve {seasons_latest}")
             num_latest = int(arg_seasons[0].split("_")[1])
 
             seasons = all_viable_seasons[-num_latest:]
@@ -194,11 +210,13 @@ def parse_seasons_arg(arg_seasons: list[str] | None, all_viable_seasons: list[An
 
         # otherwise, use and check the user-supplied seasons
         else:
+            if all_viable_seasons is None:
+                # Trust args if there's nothing to validate with
+                return arg_seasons
             # Check to make sure user-inputted seasons are valid
             if all(season in all_viable_seasons for season in arg_seasons):
                 seasons = arg_seasons
                 print(f"User-specified seasons: {seasons}")
-
             else:
                 raise InvalidSeasonError("Invalid season.")
 
@@ -295,6 +313,9 @@ def get_args() -> Args:
 
     if args.release:
         args.use_cache = False
+
+    if args.snapshot_tables or args.sync_db:
+        args.transform = True
 
     if args.save_config:
         save_yaml(args)

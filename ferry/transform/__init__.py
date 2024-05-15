@@ -5,15 +5,15 @@ from typing import cast
 import pandas as pd
 
 from ferry import database
-from ferry.transform.transform_compute import (
+from .transform_compute import (
     courses_computed,
     evaluation_statistics_computed,
     professors_computed,
     questions_computed,
     narratives_computed,
 )
-from ferry.transform.import_courses import import_courses
-from ferry.transform.import_evaluations import import_evaluations
+from .import_courses import import_courses
+from .import_evaluations import import_evaluations
 
 
 def write_csvs(tables: dict[str, pd.DataFrame], data_dir: Path):

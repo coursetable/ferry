@@ -441,21 +441,27 @@ def professors_computed(
         .reset_index(name="ratings")
     )
 
-    def avg_prof_rating(ratings: list[float]) -> tuple[float, int | None]:
-        ratings = list(filter(bool, ratings))
-        if not ratings:
-            return np.nan, None
-        # TODO: implement weights based on recency
-        return np.mean(ratings), len(ratings)
+    def avg_prof_rating(row: pd.Series):
+        ratings = list(filter(bool, row["ratings"]))
+        if ratings:
+            # TODO: implement weights based on recency
+            mean = np.mean(ratings)
+        else:
+            mean = np.nan
+        return {
+            "professor_id": row["professor_id"],
+            "average_rating": mean,
+            "average_rating_n": len(ratings),
+        }
 
-    prof_to_ratings[["average_rating", "average_rating_n"]] = prof_to_ratings[
-        "ratings"
-    ].apply(avg_prof_rating)
-    professors["average_rating_n"] = professors["average_rating_n"].astype(
-        pd.Int64Dtype()
+    prof_to_ratings = prof_to_ratings.apply(
+        avg_prof_rating, axis=1, result_type="expand"
     )
 
     professors = pd.merge(professors, prof_to_ratings, on="professor_id", how="left")
+    professors["average_rating_n"] = professors["average_rating_n"].astype(
+        pd.Int64Dtype()
+    )
 
     courses_taught = (
         pd.merge(course_professors, professors, on="professor_id", how="left")

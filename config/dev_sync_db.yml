@@ -1,13 +1,10 @@
 # DEV CONFIG
 # This configuration is used to enable syncing the local postgres database in a dev environment.
 
-cas_cookie: null
-crawl_classes: false
-crawl_evals: false
-create_evals_tables: true
-generate_diagram: true
+database_connect_string: "postgresql://postgres:postgres@db:5432/postgres"
 release: false
 seasons: null
-sentry_url: null
+use_cache: true
+
 sync_db: true
-database_connect_string: "postgresql://postgres:postgres@db:5432/postgres"
+generate_diagram: true

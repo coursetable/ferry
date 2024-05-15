@@ -1,14 +1,10 @@
 # PROD CONFIG
 # This configuration is used for fetching the latest data for the last 3 seasons of course data (no evaluations).
 
-cas_cookie: null
-database_connect_string: null
-crawl_classes: true
-crawl_evals: false
-create_evals_tables: false
-generate_diagram: false
+# Sentry URL & DB URL are passed through env
 release: true
 seasons:
   - LATEST_4
-sentry_url: null
-sync_db: false
+
+crawl_seasons: true
+crawl_classes: true

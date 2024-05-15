@@ -1,13 +1,8 @@
 # PROD CONFIG
 # This configuration is used for syncing to the production database.
 
-cas_cookie: null
-database_connect_string: null
-crawl_classes: false
-crawl_evals: false
-create_evals_tables: true
-generate_diagram: false
+# Sentry URL & DB URL are passed through env
 release: true
 seasons: null
-sentry_url: null
+
 sync_db: true
