@@ -2,6 +2,7 @@ import math
 import re
 from typing import cast
 
+import numpy as np
 import pandas as pd
 from tqdm import tqdm
 import logging
@@ -16,17 +17,9 @@ from ferry.transform.same_courses import (
 
 def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
     """
-    Populate computed question fields:
+    Populate the following fields on evaluation_questions:
 
-    Parameters
-    ----------
-    evaluation_questions:
-        Pandas tables post-import.
-
-    Returns
-    -------
-    evaluation_questions:
-        table with computed fields.
+    - tag
     """
 
     logging.debug("Assigning question tags")
@@ -53,6 +46,8 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
             # this one to avoid collision
             "Skills": "skills" in text and row["question_code"] not in ["SU122"],
             "Strengths/weaknesses": "strengths and weaknesses" in text
+            and "course" in text
+            and "teaching assistant" not in text
             and "instructor" not in text,
             "Summary": "summarize" in text and "recommend" not in text,
             # This one is used in rating average
@@ -82,6 +77,16 @@ def sentiment_analysis(text: str) -> tuple[float, float, float, float]:
 
 
 def narratives_computed(evaluation_narratives: pd.DataFrame) -> pd.DataFrame:
+    """
+    Populate the following fields on evaluation_narratives:
+
+    - comment_neg
+    - comment_neu
+    - comment_pos
+    - comment_compound
+    """
+    logging.debug("Computing comment sentiment")
+
     (
         evaluation_narratives["comment_neg"],
         evaluation_narratives["comment_neu"],
@@ -97,84 +102,47 @@ def evaluation_statistics_computed(
     evaluation_questions: pd.DataFrame,
 ) -> pd.DataFrame:
     """
-    Populate computed question fields:
-        avg_rating:
-            Average course rating.
-        avg_workload:
-            Average course workload.
+    Populate the following fields on evaluation_statistics:
 
-    Parameters
-    ----------
-    Pandas tables post-import:
-        evaluation_statistics
-        evaluation_ratings
-        evaluation_questions
-
-    Returns
-    -------
-    evaluation_statistics:
-        Table with computed fields.
+    - avg_rating
+    - avg_workload
     """
     logging.debug("Computing average ratings by course")
 
-    # create local deep copy
-    evaluation_ratings = evaluation_ratings.copy(deep=True)
-
-    # match tags to ratings
-    question_code_map = dict(
-        zip(evaluation_questions["question_code"], evaluation_questions["tag"])
+    # Match ratings with tag
+    evaluation_ratings = pd.merge(
+        evaluation_ratings, evaluation_questions, on="question_code", how="left"
     )
-    evaluation_ratings["tag"] = evaluation_ratings["question_code"].apply(
-        question_code_map.get
-    )
-
-    # compute average rating of responses array
-    def average_rating(ratings: list[int]) -> float | None:
-        if not ratings or not sum(ratings):
-            return None
-        agg = 0
-        for i, rating in enumerate(ratings):
-            multiplier = i + 1
-            agg += multiplier * rating
-        return agg / sum(ratings)
 
     # Get average rating for each course with a specified tag
-    def average_by_course(question_tag, n_categories):
-        tagged_ratings = evaluation_ratings[
-            evaluation_ratings["tag"] == question_tag
-        ].copy(deep=True)
-        rating_by_course = tagged_ratings.groupby("course_id")["rating"].apply(list)
+    def average_by_course(question_tag: str, n_categories: int):
+        tagged_ratings = evaluation_ratings[evaluation_ratings["tag"] == question_tag]
+        # course_id -> Series[list[int]]
+        rating_by_course = tagged_ratings.groupby("course_id")["rating"]
 
-        # Aggregate responses across question variants.
-        rating_by_course = rating_by_course.apply(
-            lambda data: [sum(x) for x in zip(*data)]
-        )
+        def average_rating(data: pd.Series) -> float:
+            # A course can have multiple questions of the same type. This usually
+            # happens when the course is cross-listed between GS and YC
+            weights = [sum(x) for x in zip(*data)]
+            if len(weights) != n_categories:
+                raise database.InvariantError(
+                    f"Invalid number of categories for {question_tag}: {len(weights)}"
+                )
+            if sum(weights) == 0:
+                return np.nan
+            return cast(float, np.average(range(1, n_categories + 1), weights=weights))
 
-        # check that all the response arrays are the expected length
-        lengths_invalid = rating_by_course.apply(len) != n_categories
-
-        if any(lengths_invalid):
-            raise database.InvariantError(
-                f"""
-                Invalid workload responses\n
-                \tExpected length of 5: {rating_by_course[lengths_invalid]}
-                """
-            )
-
-        rating_by_course = rating_by_course.apply(average_rating)
-        rating_by_course = rating_by_course.to_dict()
-
-        return rating_by_course
+        return rating_by_course.apply(average_rating)
 
     # get overall and workload ratings
-    overall_by_course = average_by_course("Overall", 5)
-    workload_by_course = average_by_course("Workload", 5)
+    avg_rating = average_by_course("Overall", 5).reset_index(name="avg_rating")
+    avg_workload = average_by_course("Workload", 5).reset_index(name="avg_workload")
 
-    evaluation_statistics["avg_rating"] = evaluation_statistics["course_id"].apply(
-        overall_by_course.get
+    evaluation_statistics = pd.merge(
+        evaluation_statistics, avg_rating, on="course_id", how="left"
     )
-    evaluation_statistics["avg_workload"] = evaluation_statistics["course_id"].apply(
-        workload_by_course.get
+    evaluation_statistics = pd.merge(
+        evaluation_statistics, avg_workload, on="course_id", how="left"
     )
 
     return evaluation_statistics
@@ -210,18 +178,6 @@ def courses_computed(
             If recent previous offering with enrollment statistics was with same professors.
 
     Must be called after professors_computed because it uses the average_rating of each professor.
-    Parameters
-    ----------
-    Pandas tables post-import:
-        courses
-        listings
-        evaluation_statistics
-        course_professors
-
-    Returns
-    -------
-    courses:
-        Table with computed fields.
     """
     logging.debug("Computing courses")
 
@@ -470,77 +426,42 @@ def professors_computed(
     evaluation_statistics: pd.DataFrame,
 ) -> pd.DataFrame:
     """
-    Populate computed professor fields:
-        average_rating:
-            Average overall rating of classes taught.
+    Populate the following fields on professors:
 
-    Parameters
-    ----------
-    Pandas tables post-import:
-        professors
-        course_professors
-        evaluation_statistics
-
-    Returns
-    -------
-    professors:
-        Table with computed fields.
+    - average_rating
+    - average_rating_n
+    - courses_taught
     """
     logging.debug("Computing ratings for professors")
 
-    # create local deep copy
-    course_professors = course_professors.copy(deep=True)
-
-    course_to_overall = dict(
-        zip(
-            evaluation_statistics["course_id"],
-            evaluation_statistics["avg_rating"],
-        )
-    )
-    # course_to_workload = dict(
-    #     zip(evaluation_statistics["course_id"], evaluation_statistics["avg_workload"])
-    # )
-
-    course_professors["average_rating"] = course_professors["course_id"].apply(
-        course_to_overall.get
-    )
-    # course_professors["average_workload"] = course_professors["course_id"].apply(
-    #     course_to_workload.get
-    # )
-
-    rating_by_professor = (
-        course_professors.dropna(subset=["average_rating"])
-        .groupby("professor_id")["average_rating"]
-        .mean()
-        .to_dict()
+    prof_to_ratings = (
+        pd.merge(course_professors, evaluation_statistics, on="course_id", how="left")
+        .groupby("professor_id")["avg_rating"]
+        .apply(list)
+        .reset_index(name="ratings")
     )
 
-    rating_by_professor_n = (
-        course_professors.dropna(subset=["average_rating"])
-        .groupby("professor_id")["average_rating"]
-        .count()
-        .to_dict()
-    )
-    # workload_by_professor = (
-    #     course_professors.dropna("average_workload")
-    #     .groupby("professor_id")
-    #     .mean()
-    #     .to_dict()
-    # )
+    def avg_prof_rating(ratings: list[float]) -> tuple[float, int | None]:
+        ratings = list(filter(bool, ratings))
+        if not ratings:
+            return np.nan, None
+        # TODO: implement weights based on recency
+        return np.mean(ratings), len(ratings)
 
-    professors["average_rating"] = professors["professor_id"].apply(
-        rating_by_professor.get
-    )
-
-    professors["average_rating_n"] = professors["professor_id"].apply(
-        rating_by_professor_n.get
-    )
+    prof_to_ratings[["average_rating", "average_rating_n"]] = prof_to_ratings[
+        "ratings"
+    ].apply(avg_prof_rating)
     professors["average_rating_n"] = professors["average_rating_n"].astype(
         pd.Int64Dtype()
     )
-    merged_data = pd.merge(course_professors, professors, on="professor_id", how="left")
+
+    professors = pd.merge(professors, prof_to_ratings, on="professor_id", how="left")
+
     courses_taught = (
-        merged_data.groupby("professor_id").size().reset_index(name="courses_taught")
+        pd.merge(course_professors, professors, on="professor_id", how="left")
+        .groupby("professor_id")
+        .size()
+        .reset_index(name="courses_taught")
     )
     professors = pd.merge(professors, courses_taught, on="professor_id", how="left")
     professors["courses_taught"] = professors["courses_taught"].fillna(0).astype(int)
