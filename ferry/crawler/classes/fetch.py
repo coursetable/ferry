@@ -64,11 +64,6 @@ async def fetch_season_course_list(
 
 
 class FetchClassesError(Exception):
-    """
-    Object for class fetching exceptions.
-    """
-
-    # pylint: disable=unnecessary-pass
     pass
 
 

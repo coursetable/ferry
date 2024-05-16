@@ -7,20 +7,10 @@ from ferry.crawler.cache import save_cache_json
 
 
 class EmptyEvaluationError(Exception):
-    """
-    Object for empty evaluations exceptions.
-    """
-
-    # pylint: disable=unnecessary-pass
     pass
 
 
 class EmptyNarrativeError(Exception):
-    """
-    Object for empty narrative exceptions.
-    """
-
-    # pylint: disable=unnecessary-pass
     pass
 
 
@@ -49,7 +39,8 @@ def parse_questions(
         question_id = question_row.find_all("td")[2].text.strip()
         question_text = question_row.find(
             "td", class_="Question", recursive=False
-        ).find(text=True)
+        )
+        question_text = question_text.find(text=True) if question_text else None
 
         if question_text is None:
             # skip any empty questions (which is possible due to errors in OCE)

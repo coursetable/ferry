@@ -30,20 +30,10 @@ class Database:
 
 
 class InvariantError(Exception):
-    """
-    Object for invariant checking exceptions.
-    """
-
-    # pylint: disable=unnecessary-pass
     pass
 
 
 class MissingTablesError(Exception):
-    """
-    Object for missing table exceptions.
-    """
-
-    # pylint: disable=unnecessary-pass
     pass
 
 

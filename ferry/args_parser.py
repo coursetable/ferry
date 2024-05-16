@@ -42,11 +42,6 @@ class Args:
 
 
 class InvalidSeasonError(Exception):
-    """
-    Error object for invalid seasons exception.
-    """
-
-    # pylint: disable=unnecessary-pass
     pass
 
 

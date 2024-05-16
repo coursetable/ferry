@@ -24,20 +24,10 @@ from ferry.crawler.cas_request import CASClient, request
 
 
 class AuthError(Exception):
-    """
-    Object for auth exceptions.
-    """
-
-    # pylint: disable=unnecessary-pass
     pass
 
 
 class FetchError(Exception):
-    """
-    Error object for fetch ratings exceptions.
-    """
-
-    # pylint: disable=unnecessary-pass
     pass
 
 
@@ -174,7 +164,6 @@ async def fetch_course_evals(
         pass
     except AuthError as error:
         raise SystemExit(error)
-    # pylint: disable=broad-except
     except Exception as error:
         traceback.print_exc()
         tqdm.write(f"skipped {course_unique_id}: unknown error {error}")

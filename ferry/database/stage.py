@@ -9,11 +9,6 @@ from ferry.database import Database, Base
 
 
 class DatabaseStagingError(Exception):
-    """
-    Object for import exceptions.
-    """
-
-    # pylint: disable=unnecessary-pass
     pass
 
 

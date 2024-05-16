@@ -7,11 +7,6 @@ import asyncio
 
 
 class RateLimitError(Exception):
-    """
-    Error object for rate limit exceptions.
-    """
-
-    # pylint: disable=unnecessary-pass
     pass
 
 

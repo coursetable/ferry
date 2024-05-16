@@ -38,9 +38,6 @@ class BaseModel(SerializeMixin, ReprMixin, Base):
 
     __abstract__ = True
 
-    # pylint: disable=unnecessary-pass
-    pass
-
 
 class Season(BaseModel):
     """

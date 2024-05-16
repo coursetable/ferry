@@ -16,7 +16,7 @@ QUESTION_DIVERGENCE_CUTOFF = 32
 
 # extraneous texts to remove
 REMOVE_TEXTS = [
-    "(Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)"  # pylint: disable=line-too-long
+    "(Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)"
 ]
 
 

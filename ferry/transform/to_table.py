@@ -54,19 +54,19 @@ async def create_evals_tables(data_dir: Path):
     narratives_path = evaluation_tables_dir / "evaluation_narratives.csv"
     statistics_path = evaluation_tables_dir / "evaluation_statistics.csv"
 
-    questions_file = open(questions_path, "w")  # pylint: disable=consider-using-with
+    questions_file = open(questions_path, "w")
     questions_writer = csv.DictWriter(questions_file, questions_headers)
     questions_writer.writeheader()
 
-    ratings_file = open(ratings_path, "w")  # pylint: disable=consider-using-with
+    ratings_file = open(ratings_path, "w")
     ratings_writer = csv.DictWriter(ratings_file, ratings_headers)
     ratings_writer.writeheader()
 
-    narratives_file = open(narratives_path, "w")  # pylint: disable=consider-using-with
+    narratives_file = open(narratives_path, "w")
     narratives_writer = csv.DictWriter(narratives_file, narratives_headers)
     narratives_writer.writeheader()
 
-    statistics_file = open(statistics_path, "w")  # pylint: disable=consider-using-with
+    statistics_file = open(statistics_path, "w")
     statistics_writer = csv.DictWriter(statistics_file, statistics_headers)
     statistics_writer.writeheader()
     eval_filenames = sorted(

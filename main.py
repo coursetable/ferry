@@ -5,6 +5,7 @@ from httpx import AsyncClient
 import pandas as pd
 import uvloop
 import logging
+import cProfile
 
 from ferry.crawler.classes import crawl_classes
 from ferry.crawler.evals import crawl_evals
@@ -105,4 +106,4 @@ async def main():
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    cProfile.run('asyncio.run(main())', 'main.prof')
