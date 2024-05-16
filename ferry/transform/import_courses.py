@@ -1,58 +1,10 @@
 import logging
 from tqdm import tqdm
 from typing import TypedDict, Any, Iterable
-from itertools import combinations
 from pathlib import Path
-from collections import Counter
 
-import numpy as np
 import pandas as pd
 import ujson
-import networkx
-
-
-def merge_overlapping(sets: Iterable[Iterable[Any]]) -> list[set[Any]]:
-    """
-    Given a list of lists, converts each sublist to a set and merges sets with
-    a nonempty intersection until all sets are disjoint.
-    """
-
-    sets = [frozenset(x) for x in sets]
-
-    sets_graph = networkx.Graph()
-    for sub_set in sets:
-        # if single listing, add it (does nothing if already present)
-        if len(sub_set) == 1:
-            sets_graph.add_node(tuple(sub_set)[0])
-        # otherwise, add all pairwise listings
-        else:
-            for edge in combinations(list(sub_set), 2):
-                sets_graph.add_edge(*edge)
-
-    # get overlapping listings as connected components
-    merged = networkx.connected_components(sets_graph)
-    merged = [set(x) for x in merged]
-
-    # handle courses with no cross-listings
-    singles = networkx.isolates(sets_graph)
-    merged += [{x} for x in singles]
-
-    return merged
-
-
-def to_element_index_map(dict_of_lists: list[set[Any]]) -> dict[Any, int]:
-    """
-    Given a list of sets, return a dictionary mapping each element to its index in the list.
-
-    If an element is present in multiple sets, the index of the *last* set it appears in is used.
-    """
-    inverted: dict[Any, int] = {}
-
-    for key, val in enumerate(dict_of_lists):
-        for item in val:
-            inverted[item] = key
-
-    return inverted
 
 
 def classify_yc(row: pd.Series):
@@ -87,17 +39,28 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
     )
 
     logging.debug("Aggregating cross-listings")
-    # group CRNs by season for cross-listing deduplication
-    # crns_by_season[season_code] -> Series[Series[CRN]]
-    crns_by_season = merged_course_info.groupby("season_code")["crns"]
-    # crns_by_season[season_code] -> list[set[CRN]]
-    crns_by_season = crns_by_season.apply(merge_overlapping)
-    # temp_course_ids_by_season[season_code][CRN] -> course_id
-    temp_course_ids_by_season = crns_by_season.apply(to_element_index_map).to_dict()
+    temp_course_ids_by_season = {}
+    for season, crns_of_season in merged_course_info.groupby("season_code")["crns"]:
+        temp_course_id = 0
+        crn_to_course_id = {}
+        for crns in crns_of_season:
+            existing_ids = set(
+                crn_to_course_id[crn] if crn in crn_to_course_id else None
+                for crn in crns
+            )
+            if existing_ids == {None}:
+                for crn in crns:
+                    crn_to_course_id[crn] = f"{season}_{temp_course_id}"
+                temp_course_id += 1
+            elif len(existing_ids) > 1:
+                raise SystemExit(
+                    f"Unexpected: {crns} are partially matched in {season}. The CRN graph should be a disjoint union of cliques."
+                )
+        temp_course_ids_by_season[season] = crn_to_course_id
 
     # temporary string-based unique course identifier
     merged_course_info["temp_course_id"] = merged_course_info.apply(
-        lambda row: f"{row['season_code']}_{temp_course_ids_by_season[row['season_code']][row['crn']]}",
+        lambda row: temp_course_ids_by_season[row["season_code"]][row["crn"]],
         axis=1,
     )
 
@@ -216,7 +179,7 @@ def import_courses(parsed_courses_dir: Path, seasons: list[str]) -> CourseTables
     """
 
     print("\nImporting courses...")
-    all_course_info: list[pd.DataFrame] = []
+    all_imported_listings: list[pd.DataFrame] = []
 
     for season in tqdm(seasons, desc="Loading course JSONs", leave=False):
         parsed_courses_file = parsed_courses_dir / f"{season}.json"
@@ -225,36 +188,37 @@ def import_courses(parsed_courses_dir: Path, seasons: list[str]) -> CourseTables
             continue
         parsed_course_info = pd.read_json(parsed_courses_file, dtype={"crn": int})
         parsed_course_info["season_code"] = season
-        all_course_info.append(parsed_course_info)
+        all_imported_listings.append(parsed_course_info)
 
-    merged_course_info = pd.concat(all_course_info, axis=0).reset_index(drop=True)
-    merged_course_info["crns"] = merged_course_info["crns"].apply(
+    imported_listings = pd.concat(all_imported_listings, axis=0).reset_index(drop=True)
+    imported_listings["crns"] = imported_listings["crns"].apply(
         lambda crns: [int(crn) for crn in crns]
     )
-    merged_course_info = resolve_cross_listings(merged_course_info)
+    # convert to JSON string for postgres
+    imported_listings["times_by_day"] = imported_listings["times_by_day"].apply(
+        ujson.dumps
+    )
+    imported_listings["skills"] = imported_listings["skills"].apply(ujson.dumps)
+    imported_listings["areas"] = imported_listings["areas"].apply(ujson.dumps)
+    imported_listings["section"] = (
+        imported_listings["section"].fillna("0").astype(str).replace({"": "0"})
+    )
+    imported_listings = resolve_cross_listings(imported_listings)
 
     logging.debug("Creating courses table")
     # initialize courses table
-    courses = merged_course_info.drop_duplicates(subset="temp_course_id").copy(
-        deep=True
-    )
+    courses = imported_listings.drop_duplicates(subset="temp_course_id").copy(deep=True)
     # global course IDs
     courses["course_id"] = range(len(courses))
-    # convert to JSON string for postgres
-    courses["areas"] = courses["areas"].apply(ujson.dumps)
-    courses["times_by_day"] = courses["times_by_day"].apply(ujson.dumps)
-    courses["skills"] = courses["skills"].apply(ujson.dumps)
-    courses["section"] = courses["section"].fillna("0").astype(str).replace({"": "0"})
 
     logging.debug("Creating listings table")
-    # map temporary season-specific IDs to global course IDs
-    temp_to_course_id = dict(zip(courses["temp_course_id"], courses["course_id"]))
-
-    # initialize listings table
-    listings = merged_course_info.copy(deep=True)
+    listings = pd.merge(
+        imported_listings,
+        courses[["temp_course_id", "course_id"]],
+        on="temp_course_id",
+        how="left",
+    )
     listings["listing_id"] = range(len(listings))
-    listings["course_id"] = listings["temp_course_id"].apply(temp_to_course_id.get)
-    listings["section"] = listings["section"].fillna("0").astype(str).replace({"": "0"})
 
     professors, course_professors = aggregate_professors(courses)
     flags, course_flags = aggregate_flags(courses)
