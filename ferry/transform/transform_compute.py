@@ -442,9 +442,9 @@ def professors_computed(
     )
 
     def avg_prof_rating(row: pd.Series):
-        ratings = list(filter(bool, row["ratings"]))
+        ratings = list(filter(lambda x: not np.isnan(x), row["ratings"]))
         if ratings:
-            # TODO: implement weights based on recency
+            # TODO: implement weights based on recency, class size, etc.
             mean = np.mean(ratings)
         else:
             mean = np.nan
