@@ -84,7 +84,7 @@ def is_same_course(
 
 def resolve_historical_courses(
     courses: pd.DataFrame, listings: pd.DataFrame
-) -> tuple[dict[int, int], dict[int, list[int]]]:
+) -> tuple[pd.Series, dict[int, list[int]]]:
     """
     Among courses, identify historical offerings of a course.
 
@@ -93,7 +93,7 @@ def resolve_historical_courses(
 
     Returns
     -------
-    course_to_same_course:
+    same_course_id:
         Mapping from course_id to resolved same_course id, with title/description filtering.
     same_course_to_courses:
         Mapping from resolved same_course id to group of identical courses, with
@@ -103,16 +103,13 @@ def resolve_historical_courses(
     course_to_codes = map_to_groups(listings, "course_id", "course_code")
     code_to_courses = map_to_groups(listings, "course_code", "course_id")
 
-    # map course_id to course codes
-    courses_codes = courses.set_index("course_id", drop=False)["course_id"].apply(
-        course_to_codes.get
-    )
-
     # map course_id to all other courses with overlapping codes
     # flatten courses with overlapping codes
-    courses_shared_code = courses_codes.apply(
-        lambda x: list(
-            set(itertools.chain.from_iterable(code_to_courses[code] for code in x))
+    courses_shared_code = courses.index.to_series().apply(
+        lambda id_: set(
+            itertools.chain.from_iterable(
+                code_to_courses[code] for code in course_to_codes[id_]
+            )
         )
     )
 
@@ -124,20 +121,16 @@ def resolve_historical_courses(
     same_courses = networkx.Graph()
 
     # fill in the nodes first to keep courses with no same-code edges
-    for course_id in courses["course_id"]:
+    for course_id in courses.index:
         same_courses.add_node(course_id)
 
     # filter out titles and descriptions for matching
-    long_titles = courses.loc[
-        courses["title"].fillna("").apply(len) >= MIN_TITLE_MATCH_LEN
-    ]
-    long_descriptions = courses.loc[
-        courses["description"].fillna("").apply(len) >= MIN_DESCRIPTION_MATCH_LEN
-    ]
-
-    # course_id to title and description for graph pruning
-    course_to_title = map_to_groups(long_titles, "course_id", "title")
-    course_to_description = map_to_groups(long_descriptions, "course_id", "description")
+    course_to_title = courses["title"][
+        courses["title"].apply(len) >= MIN_TITLE_MATCH_LEN
+    ].to_dict()
+    course_to_description = courses["description"][
+        courses["description"].apply(len) >= MIN_DESCRIPTION_MATCH_LEN
+    ].to_dict()
 
     for course_1, shared_code_courses in tqdm(
         courses_shared_code.items(),
@@ -168,51 +161,43 @@ def resolve_historical_courses(
 
     # map courses to unique same-courses ID, and map same-courses ID to courses
     connected_courses = pd.Series(connected_codes, name="course_id")
+    connected_courses.index.rename("same_course_id", inplace=True)
     same_course_to_courses = connected_courses.to_dict()
 
     # map course_id to same-course partition ID
-    same_courses_explode = connected_courses.explode()
-    course_to_same_course = dict(
-        zip(same_courses_explode.values, same_courses_explode.index)
+    same_course_id = (
+        connected_courses.explode()
+        .reset_index(drop=False)
+        .set_index("course_id")["same_course_id"]
     )
 
-    return course_to_same_course, same_course_to_courses
+    return same_course_id, same_course_to_courses
 
 
 def split_same_professors(
-    course_to_same_course_filtered: dict[int, int],
-    course_professors: pd.DataFrame,
-) -> tuple[dict[int, int], dict[int, list[int]]]:
+    same_course_id: pd.Series,
+    course_to_professors: pd.Series,
+) -> tuple[pd.Series, dict[int, list[int]]]:
     """
     Split an equivalent-courses partitioning further by same-professor.
 
     Parameters
     ----------
-    course_to_same_course_filtered:
+    same_course_id:
         Mapping from course_id to a unique identifier for each group of same-courses, produced by
         resolve_historical_courses.
-    course_professors:
-        Junction table of course_ids and professor_ids produced by import.
+    course_to_professors:
+        Series mapping from course_id to frozen sets of professor_ids.
 
     Returns
     -------
-    course_to_same_prof_course:
+    same_course_and_profs_id:
         Mapping from course_id to resolved same_course id,
     same_prof_course_to_courses:
         Mapping from resolved same_course id to group of identical courses.
     """
     # initialize same-courses with same-professors mapping
-    same_course_profs = pd.DataFrame(
-        pd.Series(course_to_same_course_filtered).rename("same_course_id")
-    )
-
-    same_course_profs.index.rename("course_id", inplace=True)
-    same_course_profs = same_course_profs.reset_index(drop=False)
-
-    # construct course_id to course_professors mapping
-    course_to_professors = course_professors.groupby("course_id")["professor_id"].apply(
-        frozenset
-    )
+    same_course_profs = same_course_id.reset_index(drop=False)
 
     # map each course to frozenset of professors
     same_course_profs["professors"] = same_course_profs["course_id"].map(
@@ -227,22 +212,14 @@ def split_same_professors(
         .reset_index()
     )
 
-    professors_grouped["same_prof_course_id"] = list(range(len(professors_grouped)))
+    professors_grouped.index.rename("same_course_and_profs_id", inplace=True)
 
-    # explode the course_id groups to get same-course to course_id mapping
-    same_prof_explode = professors_grouped.explode("course_id")
+    same_prof_course_to_courses = professors_grouped["course_id"].to_dict()
 
-    course_to_same_prof_course = dict(
-        zip(
-            same_prof_explode["course_id"],
-            same_prof_explode["same_prof_course_id"],
-        )
-    )
-    same_prof_course_to_courses = dict(
-        zip(
-            professors_grouped["same_prof_course_id"],
-            professors_grouped["course_id"],
-        )
+    same_course_and_profs_id = (
+        professors_grouped.explode("course_id")
+        .reset_index(drop=False)
+        .set_index("course_id")["same_course_and_profs_id"]
     )
 
-    return course_to_same_prof_course, same_prof_course_to_courses
+    return same_course_and_profs_id, same_prof_course_to_courses

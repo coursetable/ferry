@@ -117,8 +117,8 @@ def evaluation_statistics_computed(
     logging.debug("Computing average ratings by course")
 
     # Match ratings with tag
-    evaluation_ratings = pd.merge(
-        evaluation_ratings, evaluation_questions, on="question_code", how="left"
+    evaluation_ratings = evaluation_ratings.merge(
+        evaluation_questions, on="question_code", how="left"
     )
 
     # Get average rating for each course with a specified tag
@@ -142,15 +142,8 @@ def evaluation_statistics_computed(
         return rating_by_course.apply(average_rating)
 
     # get overall and workload ratings
-    avg_rating = average_by_course("Overall", 5).reset_index(name="avg_rating")
-    avg_workload = average_by_course("Workload", 5).reset_index(name="avg_workload")
-
-    evaluation_statistics = pd.merge(
-        evaluation_statistics, avg_rating, on="course_id", how="left"
-    )
-    evaluation_statistics = pd.merge(
-        evaluation_statistics, avg_workload, on="course_id", how="left"
-    )
+    evaluation_statistics["avg_rating"] = average_by_course("Overall", 5)
+    evaluation_statistics["avg_workload"] = average_by_course("Workload", 5)
 
     return evaluation_statistics
 
@@ -188,47 +181,33 @@ def courses_computed(
     """
     logging.debug("Computing courses")
 
-    listings = listings.copy(deep=True)
-    evaluation_statistics = evaluation_statistics.copy(deep=True)
-    course_professors = course_professors.copy(deep=True)
-
-    course_to_same_course, same_course_to_courses = resolve_historical_courses(
-        courses, listings
-    )
-
-    # split same-course partition by same-professors
-    course_to_same_prof_course, same_prof_course_to_courses = split_same_professors(
-        course_to_same_course, course_professors
-    )
-
-    courses["same_course_id"] = courses["course_id"].apply(course_to_same_course.get)
-    courses["same_course_and_profs_id"] = courses["course_id"].apply(
-        course_to_same_prof_course.get
-    )
-
     # map course_id to professor_ids
     # use frozenset because it is hashable (set is not), needed for groupby
     course_to_professors = course_professors.groupby("course_id")["professor_id"].apply(
         frozenset
     )
 
+    same_course_id, same_course_to_courses = resolve_historical_courses(
+        courses, listings
+    )
+
+    # split same-course partition by same-professors
+    same_course_and_profs_id, same_prof_course_to_courses = split_same_professors(
+        same_course_id, course_to_professors
+    )
+
+    courses["same_course_id"] = same_course_id
+    courses["same_course_and_profs_id"] = same_course_and_profs_id
+
     logging.debug("Computing last offering statistics")
 
     # course_id for all evaluated courses
     evaluated_courses = set(
-        evaluation_statistics.dropna(subset=["enrolled"], axis=0)["course_id"]
+        evaluation_statistics.dropna(subset=["enrolled"], axis=0).index
     )
 
-    # map course_id to season
-    course_to_season = dict(zip(courses["course_id"], courses["season_code"]))
-
-    # map course_id to number enrolled
-    course_to_enrollment = dict(
-        zip(
-            evaluation_statistics["course_id"],
-            evaluation_statistics["enrolled"],
-        )
-    )
+    course_to_season = courses["season_code"].to_dict()
+    course_to_enrollment = evaluation_statistics["enrolled"].to_dict()
 
     # get last course offering in general (with or without enrollment)
     def get_last_offered(course_row: pd.Series):
@@ -241,7 +220,7 @@ def courses_computed(
         if len(same_courses) == 0:
             return None
 
-        same_courses = [x for x in same_courses if x is not course_row["course_id"]]
+        same_courses = [x for x in same_courses if x is not course_row.name]
         if len(same_courses) == 0:
             return None
 
@@ -260,11 +239,11 @@ def courses_computed(
         ]
         if len(same_courses) == 0:
             return None, None, None, None
-        same_courses = [x for x in same_courses if x is not course_row["course_id"]]
+        same_courses = [x for x in same_courses if x is not course_row.name]
         if len(same_courses) == 0:
             return None, None, None, None
 
-        current_professors = course_to_professors.get(course_row["course_id"], set())
+        current_professors = course_to_professors.get(course_row.name, set())
 
         # sort courses newest-first
         same_courses = sorted(
@@ -283,7 +262,7 @@ def courses_computed(
         )
 
         # number of students last taking course
-        last_enrollment = course_to_enrollment[last_enrollment_course]
+        last_enrollment = course_to_enrollment.get(last_enrollment_course, None)
         # season for last enrollment
         last_enrollment_season = course_to_season[last_enrollment_course]
         # professors for last enrollment
@@ -325,33 +304,27 @@ def courses_computed(
     logging.debug("Computing historical ratings for courses")
 
     # map courses to ratings
-    course_to_overall = dict(
-        zip(
-            evaluation_statistics["course_id"],
-            evaluation_statistics["avg_rating"],
-        )
-    )
-    course_to_workload = dict(
-        zip(
-            evaluation_statistics["course_id"],
-            evaluation_statistics["avg_workload"],
-        )
-    )
+    course_to_overall = evaluation_statistics["avg_rating"].to_dict()
+    course_to_workload = evaluation_statistics["avg_workload"].to_dict()
 
     # get ratings
-    courses["average_rating"] = courses["same_course_id"].apply(
+    courses["average_rating"] = courses["same_course_id"].map(
         lambda id_: [course_to_overall.get(x) for x in same_course_to_courses[id_]]
     )
-    courses["average_workload"] = courses["same_course_id"].apply(
+    courses["average_workload"] = courses["same_course_id"].map(
         lambda id_: [course_to_workload.get(x) for x in same_course_to_courses[id_]]
     )
 
-    courses["average_rating_same_professors"] = courses["same_course_and_profs_id"].apply(
+    courses["average_rating_same_professors"] = courses["same_course_and_profs_id"].map(
         lambda id_: [course_to_overall.get(x) for x in same_prof_course_to_courses[id_]]
     )
     courses["average_workload_same_professors"] = courses[
         "same_course_and_profs_id"
-    ].apply(lambda id_: [course_to_workload.get(x) for x in same_prof_course_to_courses[id_]])
+    ].map(
+        lambda id_: [
+            course_to_workload.get(x) for x in same_prof_course_to_courses[id_]
+        ]
+    )
 
     # calculate the average of an array
     def average(nums: list[float]) -> tuple[float | None, int]:
@@ -381,17 +354,16 @@ def courses_computed(
     )
 
     # Calculate average_professor_rating
-    merged_data = pd.merge(courses[["course_id"]], course_professors, on="course_id")
-    merged_data = pd.merge(
-        merged_data, professors[["professor_id", "average_rating"]], on="professor_id"
-    )
-    average_professor_ratings = (
-        merged_data.groupby("course_id")["average_rating"]
+    courses["average_professor_rating"] = (
+        course_professors.merge(
+            professors["average_rating"],
+            left_on="professor_id",
+            right_index=True,
+            how="left",
+        )
+        .groupby("course_id")["average_rating"]
         .mean()
-        .reset_index()
-        .rename(columns={"average_rating": "average_professor_rating"})
     )
-    courses = pd.merge(courses, average_professor_ratings, on="course_id", how="left")
 
     return courses
 
@@ -410,13 +382,6 @@ def professors_computed(
     """
     logging.debug("Computing ratings for professors")
 
-    prof_to_ratings = (
-        pd.merge(course_professors, evaluation_statistics, on="course_id", how="left")
-        .groupby("professor_id")["avg_rating"]
-        .apply(list)
-        .reset_index(name="ratings")
-    )
-
     def avg_prof_rating(row: pd.Series):
         ratings = list(filter(lambda x: not np.isnan(x), row["ratings"]))
         if ratings:
@@ -430,22 +395,34 @@ def professors_computed(
             "average_rating_n": len(ratings),
         }
 
-    prof_to_ratings = prof_to_ratings.apply(
-        avg_prof_rating, axis=1, result_type="expand"
+    prof_to_ratings = (
+        course_professors.merge(
+            evaluation_statistics,
+            left_on="course_id",
+            right_index=True,
+            how="left",
+        )
+        .groupby("professor_id")["avg_rating"]
+        .apply(list)
+        .reset_index(name="ratings")
+        .apply(avg_prof_rating, axis=1, result_type="expand")
     )
 
-    professors = pd.merge(professors, prof_to_ratings, on="professor_id", how="left")
+    professors = (
+        professors.reset_index()
+        .merge(prof_to_ratings, how="left", on="professor_id")
+        .set_index("professor_id")
+    )
     professors["average_rating_n"] = professors["average_rating_n"].astype(
         pd.Int64Dtype()
     )
 
-    courses_taught = (
-        pd.merge(course_professors, professors, on="professor_id", how="left")
+    professors["courses_taught"] = (
+        course_professors.merge(professors, on="professor_id", how="inner")
         .groupby("professor_id")
         .size()
-        .reset_index(name="courses_taught")
+        .rename("courses_taught")
     )
-    professors = pd.merge(professors, courses_taught, on="professor_id", how="left")
     professors["courses_taught"] = professors["courses_taught"].fillna(0).astype(int)
 
     return professors

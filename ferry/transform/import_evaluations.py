@@ -231,10 +231,6 @@ def import_evaluations(
         "NaN", "[]"
     )
 
-    # -------------------
-    # Clean up and subset
-    # -------------------
-
     # evaluation narratives ----------------
 
     # filter out missing or short comments
@@ -243,19 +239,17 @@ def import_evaluations(
     # MIN_COMMENT_LENGTH = 2
     evaluation_narratives = evaluation_narratives.loc[
         evaluation_narratives["comment"].apply(len) > 2
-    ].copy()
+    ].reset_index(drop=True)
     # id column for database primary key
-    evaluation_narratives.loc[:, "id"] = list(range(len(evaluation_narratives)))
-    evaluation_narratives.reset_index(drop=True, inplace=True)
+    evaluation_narratives.index.rename("id", inplace=True)
 
     # evaluation ratings ----------------
 
     # id column for database primary key
-    evaluation_ratings.loc[:, "id"] = list(range(len(evaluation_ratings)))
     evaluation_ratings.reset_index(drop=True, inplace=True)
+    evaluation_ratings.index.rename("id", inplace=True)
 
     # evaluation questions ----------------
-
     evaluation_questions.reset_index(drop=True, inplace=True)
 
     # evaluation statistics ----------------
@@ -264,7 +258,7 @@ def import_evaluations(
     evaluation_statistics.loc[:, "extras"] = evaluation_statistics["extras"].apply(
         ujson.dumps
     )
-    evaluation_statistics.reset_index(drop=True, inplace=True)
+    evaluation_statistics.set_index("course_id", inplace=True)
 
     print("\033[F", end="")
     print("Importing course evaluations... ✔")

@@ -1,6 +1,6 @@
 import logging
 from tqdm import tqdm
-from typing import TypedDict, Any, Iterable
+from typing import TypedDict
 from pathlib import Path
 
 import pandas as pd
@@ -21,7 +21,7 @@ def classify_yc(row: pd.Series):
     return False
 
 
-def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
+def resolve_cross_listings(listings: pd.DataFrame) -> pd.DataFrame:
     """
     Resolve course cross-listings by computing unique course_ids.
 
@@ -33,14 +33,14 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
     # prioritize Yale College courses when deduplicating listings
     logging.debug("Sorting by season and if-undergrad")
 
-    merged_course_info["is_yc"] = merged_course_info.apply(classify_yc, axis=1)
-    merged_course_info = merged_course_info.sort_values(
+    listings["is_yc"] = listings.apply(classify_yc, axis=1)
+    listings = listings.sort_values(
         by=["season_code", "is_yc"], ascending=[True, False]
     )
 
     logging.debug("Aggregating cross-listings")
     temp_course_ids_by_season = {}
-    for season, crns_of_season in merged_course_info.groupby("season_code")["crns"]:
+    for season, crns_of_season in listings.groupby("season_code")["crns"]:
         temp_course_id = 0
         crn_to_course_id = {}
         for crns in crns_of_season:
@@ -59,12 +59,12 @@ def resolve_cross_listings(merged_course_info: pd.DataFrame) -> pd.DataFrame:
         temp_course_ids_by_season[season] = crn_to_course_id
 
     # temporary string-based unique course identifier
-    merged_course_info["temp_course_id"] = merged_course_info.apply(
+    listings["temp_course_id"] = listings.apply(
         lambda row: temp_course_ids_by_season[row["season_code"]][row["crn"]],
         axis=1,
     )
 
-    return merged_course_info
+    return listings
 
 
 def aggregate_professors(courses: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
@@ -93,11 +93,11 @@ def aggregate_professors(courses: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFr
     logging.debug("Aggregating professor attributes")
 
     course_professors = (
-        courses[["course_id", "professors", "professor_emails"]]
+        courses[["professors", "professor_emails"]]
         .explode(["professors", "professor_emails"])
         .dropna(subset="professors")
         .rename(columns={"professors": "name", "professor_emails": "email"})
-        .reset_index(drop=True)
+        .reset_index(drop=False)
     )
     # First: try to fill empty emails
     course_professors = course_professors.groupby("name")
@@ -134,7 +134,7 @@ def aggregate_professors(courses: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFr
     ).ngroup()
     professors = course_professors.drop_duplicates(
         subset="professor_id", keep="last"
-    ).copy(deep=True)
+    ).set_index("professor_id")
     professors["email"] = professors["email"].replace({"": None})
     return professors, course_professors
 
@@ -142,11 +142,7 @@ def aggregate_professors(courses: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFr
 def aggregate_flags(courses: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     logging.debug("Adding course flags")
     course_flags = (
-        courses[["course_id", "flags"]]
-        .explode(column="flags")
-        .dropna(subset="flags")
-        .rename(columns={"flags": "flag_text"})
-        .reset_index(drop=True)
+        courses["flags"].explode().dropna().rename("flag_text").reset_index(drop=False)
     )
 
     course_flags["flag_id"] = course_flags.groupby("flag_text").ngroup()
@@ -190,35 +186,28 @@ def import_courses(parsed_courses_dir: Path, seasons: list[str]) -> CourseTables
         parsed_course_info["season_code"] = season
         all_imported_listings.append(parsed_course_info)
 
-    imported_listings = pd.concat(all_imported_listings, axis=0).reset_index(drop=True)
-    imported_listings["crns"] = imported_listings["crns"].apply(
-        lambda crns: [int(crn) for crn in crns]
-    )
+    listings = pd.concat(all_imported_listings, axis=0).reset_index(drop=True)
+    listings["crns"] = listings["crns"].apply(lambda crns: [int(crn) for crn in crns])
     # convert to JSON string for postgres
-    imported_listings["times_by_day"] = imported_listings["times_by_day"].apply(
-        ujson.dumps
-    )
-    imported_listings["skills"] = imported_listings["skills"].apply(ujson.dumps)
-    imported_listings["areas"] = imported_listings["areas"].apply(ujson.dumps)
-    imported_listings["section"] = (
-        imported_listings["section"].fillna("0").astype(str).replace({"": "0"})
-    )
-    imported_listings = resolve_cross_listings(imported_listings)
+    listings["times_by_day"] = listings["times_by_day"].apply(ujson.dumps)
+    listings["skills"] = listings["skills"].apply(ujson.dumps)
+    listings["areas"] = listings["areas"].apply(ujson.dumps)
+    listings["section"] = listings["section"].fillna("0").astype(str).replace({"": "0"})
+    listings = resolve_cross_listings(listings)
 
     logging.debug("Creating courses table")
     # initialize courses table
-    courses = imported_listings.drop_duplicates(subset="temp_course_id").copy(deep=True)
+    courses = listings.drop_duplicates(subset="temp_course_id").reset_index(drop=True)
     # global course IDs
-    courses["course_id"] = range(len(courses))
+    courses.index = courses.index.rename("course_id")
 
     logging.debug("Creating listings table")
-    listings = pd.merge(
-        imported_listings,
-        courses[["temp_course_id", "course_id"]],
+    listings = listings.merge(
+        courses["temp_course_id"].reset_index(drop=False),
         on="temp_course_id",
         how="left",
     )
-    listings["listing_id"] = range(len(listings))
+    listings.index.rename("listing_id", inplace=True)
 
     professors, course_professors = aggregate_professors(courses)
     flags, course_flags = aggregate_flags(courses)

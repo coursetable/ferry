@@ -92,6 +92,7 @@ def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
 
     # Remove intermediate columns to match DB schema
     for table_name, db_table in [
+        ("seasons", database.Season.__table__),
         ("courses", database.Course.__table__),
         ("listings", database.Listing.__table__),
         ("course_professors", database.course_professors),
@@ -103,9 +104,11 @@ def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         ("evaluation_statistics", database.EvaluationStatistics.__table__),
         ("evaluation_ratings", database.EvaluationRating.__table__),
     ]:
-        all_tables[table_name] = all_tables[table_name].loc[
-            :, [column.key for column in db_table.columns]
-        ]
+        all_tables[table_name] = (
+            all_tables[table_name]
+            .reset_index(drop=False)
+            .loc[:, [column.key for column in db_table.columns]]
+        )
 
     print("\033[F", end="")
     print("Computing secondary attributes... ✔")
