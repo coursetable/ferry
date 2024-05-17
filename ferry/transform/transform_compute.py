@@ -96,10 +96,10 @@ def narratives_computed(evaluation_narratives: pd.DataFrame) -> pd.DataFrame:
 
     # TODO: the sentiment analysis is by far the most costly, we need to cache it
     # We don't use this actually so it's fine for now
-    evaluation_narratives["comment_neg"],
-    evaluation_narratives["comment_neu"],
-    evaluation_narratives["comment_pos"],
-    evaluation_narratives["comment_compound"] = 0, 0, 0, 0
+    evaluation_narratives["comment_neg"] = 0
+    evaluation_narratives["comment_neu"] = 0
+    evaluation_narratives["comment_pos"] = 0
+    evaluation_narratives["comment_compound"] = 0
     return evaluation_narratives
 
 

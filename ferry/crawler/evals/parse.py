@@ -37,9 +37,7 @@ def parse_questions(
 
     for question_row in infos:
         question_id = question_row.find_all("td")[2].text.strip()
-        question_text = question_row.find(
-            "td", class_="Question", recursive=False
-        )
+        question_text = question_row.find("td", class_="Question", recursive=False)
         question_text = question_text.find(text=True) if question_text else None
 
         if question_text is None:
