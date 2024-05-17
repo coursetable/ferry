@@ -139,11 +139,11 @@ def resolve_historical_courses(
         leave=False,
     ):
         for course_2 in shared_code_courses:
-            title_1 = course_to_title.get(course_1, [""])[0]
-            title_2 = course_to_title.get(course_2, [""])[0]
+            title_1 = course_to_title.get(course_1, "")
+            title_2 = course_to_title.get(course_2, "")
 
-            description_1 = course_to_description.get(course_1, [""])[0]
-            description_2 = course_to_description.get(course_2, [""])[0]
+            description_1 = course_to_description.get(course_1, "")
+            description_2 = course_to_description.get(course_2, "")
 
             # if title and description are similar enough, keep the edge
             if is_same_course(title_1, title_2, description_1, description_2):
