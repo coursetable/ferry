@@ -192,43 +192,18 @@ def courses_computed(
     evaluation_statistics = evaluation_statistics.copy(deep=True)
     course_professors = course_professors.copy(deep=True)
 
-    (
-        course_to_same_course,
-        same_course_to_courses,
-        course_to_same_course_filtered,
-        same_course_to_courses_filtered,
-    ) = resolve_historical_courses(courses, listings)
-
-    # partition ID of same-codes courses (not used anymore, useful for debugging)
-    courses["shared_code_id"] = courses["course_id"].apply(course_to_same_course.get)
-    # connected courses with the same code (not used anymore, useful for debugging)
-    courses["shared_code_courses"] = courses["shared_code_id"].apply(
-        same_course_to_courses.get
-    )
-
-    # unique ID for each partition of the same courses
-    courses["same_course_id"] = courses["course_id"].apply(
-        course_to_same_course_filtered.get
-    )
-
-    # list of course_ids that are the same course per course_id
-    courses["same_courses"] = courses["same_course_id"].apply(
-        same_course_to_courses_filtered.get
+    course_to_same_course, same_course_to_courses = resolve_historical_courses(
+        courses, listings
     )
 
     # split same-course partition by same-professors
     course_to_same_prof_course, same_prof_course_to_courses = split_same_professors(
-        course_to_same_course_filtered, course_professors
+        course_to_same_course, course_professors
     )
 
-    # unique ID for each partition of the same courses taught by the same set of profs
+    courses["same_course_id"] = courses["course_id"].apply(course_to_same_course.get)
     courses["same_course_and_profs_id"] = courses["course_id"].apply(
         course_to_same_prof_course.get
-    )
-
-    # list of course_ids that are the same course and taught by same profs per course_id
-    courses["same_courses_and_profs"] = courses["same_course_and_profs_id"].apply(
-        same_prof_course_to_courses.get
     )
 
     # map course_id to professor_ids
@@ -236,10 +211,6 @@ def courses_computed(
     course_to_professors = course_professors.groupby("course_id")["professor_id"].apply(
         frozenset
     )
-
-    # get historical offerings with same professors
-    listings["professors"] = listings["course_id"].apply(course_to_professors.get)
-    courses["professors"] = courses["course_id"].apply(course_to_professors.get)
 
     logging.debug("Computing last offering statistics")
 
@@ -260,11 +231,11 @@ def courses_computed(
     )
 
     # get last course offering in general (with or without enrollment)
-    def get_last_offered(course_row):
-        same_courses = course_row["same_courses"]
-
+    def get_last_offered(course_row: pd.Series):
         same_courses = [
-            x for x in same_courses if course_to_season[x] < course_row["season_code"]
+            x
+            for x in same_course_to_courses[course_row["same_course_id"]]
+            if course_to_season[x] < course_row["season_code"]
         ]
 
         if len(same_courses) == 0:
@@ -279,13 +250,11 @@ def courses_computed(
         return last_offered_course
 
     # helper function for getting enrollment fields of last-offered course
-    def get_last_offered_enrollment(course_row):
-        same_courses = course_row["same_courses"]
-
+    def get_last_offered_enrollment(course_row: pd.Series):
         # keep course only if distinct, has enrollment statistics, and is before current
         same_courses = [
             x
-            for x in same_courses
+            for x in same_course_to_courses[course_row["same_course_id"]]
             if x in evaluated_courses
             and course_to_season[x] < course_row["season_code"]
         ]
@@ -370,19 +339,19 @@ def courses_computed(
     )
 
     # get ratings
-    courses["average_rating"] = courses["same_courses"].apply(
-        lambda courses: [course_to_overall.get(x) for x in courses]
+    courses["average_rating"] = courses["same_course_id"].apply(
+        lambda id_: [course_to_overall.get(x) for x in same_course_to_courses[id_]]
     )
-    courses["average_workload"] = courses["same_courses"].apply(
-        lambda courses: [course_to_workload.get(x) for x in courses]
+    courses["average_workload"] = courses["same_course_id"].apply(
+        lambda id_: [course_to_workload.get(x) for x in same_course_to_courses[id_]]
     )
 
-    courses["average_rating_same_professors"] = courses["same_courses_and_profs"].apply(
-        lambda courses: [course_to_overall.get(x) for x in courses]
+    courses["average_rating_same_professors"] = courses["same_course_and_profs_id"].apply(
+        lambda id_: [course_to_overall.get(x) for x in same_prof_course_to_courses[id_]]
     )
     courses["average_workload_same_professors"] = courses[
-        "same_courses_and_profs"
-    ].apply(lambda courses: [course_to_workload.get(x) for x in courses])
+        "same_course_and_profs_id"
+    ].apply(lambda id_: [course_to_workload.get(x) for x in same_prof_course_to_courses[id_]])
 
     # calculate the average of an array
     def average(nums: list[float]) -> tuple[float | None, int]:

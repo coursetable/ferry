@@ -20,30 +20,12 @@ MAX_DESCRIPTION_DIST = 0.25
 
 def map_to_groups(
     dataframe: pd.DataFrame, left: str, right: str
-) -> tuple[dict[Any, list[Any]], dict[Any, list[Any]]]:
+) -> dict[Any, list[Any]]:
     """
-    Make grouped dictionary mappings from a DataFrame.
-
     Given a DataFrame and two columns 'left' and 'right', construct dictionaries
-    mapping from 'left' to list-grouped 'right' values and vice-versa.
-
-    Parameters
-    ----------
-    dataframe:
-        Host DataFrame.
-    left:
-        Name of 'left' column.
-    right:
-        Name of 'right' column.
-
-    Returns
-    -------
-    left_to_right and right_to_left mappings.
+    mapping from 'left' to list-grouped 'right' values.
     """
-    left_to_right = dataframe.groupby(left)[right].apply(list).to_dict()
-    right_to_left = dataframe.groupby(right)[left].apply(list).to_dict()
-
-    return left_to_right, right_to_left
+    return dataframe.groupby(left)[right].apply(list).to_dict()
 
 
 def text_distance(text_1: str, text_2: str) -> float:
@@ -76,72 +58,112 @@ def is_same_course(
 ) -> bool:
     """
     Based on titles and descriptions, judge if two courses are the same.
-
-    Parameters
-    ----------
-    title_1:
-        Title of first course.
-    title_2:
-        Title of second course.
-    description_1:
-        Description of first course.
-    description_2:
-        Description of second course.
-
-    Returns
-    -------
-    Whether or not the courses are judged to be the same.
     """
     # if titles or descriptions match, consider the courses to be the same
     # give short-title / short-description courses the benefit of the doubt
     if title_1 == title_2 and title_1 != "":
-
         return True
-
     if description_1 == description_2 and description_1 != "":
-
         return True
-
     if title_1 == "" and title_2 == "" and description_1 == "" and description_2 == "":
-
         return True
 
     # otherwise, have to look at fuzzy distance
-
     # if titles are slightly similar, then consider two courses to be the same
     title_dist = text_distance(title_1, title_2)
-
     if title_dist <= MAX_TITLE_DIST:
-
         return True
 
     # if descriptions are slightly similar, then consider two courses to be the same
     description_dist = text_distance(description_1, description_2)
-
     if description_dist <= MAX_DESCRIPTION_DIST:
-
         return True
 
     return False
 
 
-def get_connected_courses(
-    graph: networkx.Graph,
-) -> tuple[dict[Any, Any], dict[Any, Any]]:
+def resolve_historical_courses(
+    courses: pd.DataFrame, listings: pd.DataFrame
+) -> tuple[dict[int, int], dict[int, list[int]]]:
     """
-    Get connected courses in courses graph.
+    Among courses, identify historical offerings of a course.
 
-    Parameters
-    ----------
-    graph:
-        Graph where nodes represent courses.
+    This is equivalent to constructing a partition of course_ids such that each
+    partition contains the same courses, offered over different terms.
+
+    Returns
+    -------
+    course_to_same_course:
+        Mapping from course_id to resolved same_course id, with title/description filtering.
+    same_course_to_courses:
+        Mapping from resolved same_course id to group of identical courses, with
+        title/description filtering.
     """
+    # map course to codes and code to courses
+    course_to_codes = map_to_groups(listings, "course_id", "course_code")
+    code_to_courses = map_to_groups(listings, "course_code", "course_id")
+
+    # map course_id to course codes
+    courses_codes = courses.set_index("course_id", drop=False)["course_id"].apply(
+        course_to_codes.get
+    )
+
+    # map course_id to all other courses with overlapping codes
+    # flatten courses with overlapping codes
+    courses_shared_code = courses_codes.apply(
+        lambda x: list(
+            set(itertools.chain.from_iterable(code_to_courses[code] for code in x))
+        )
+    )
+
+    # construct initial graph of courses:
+    # each node is a unique course from the 'courses' table, and two courses are
+    # linked if they share a common course code
+    #
+    # edges are then pruned for title/description match
+    same_courses = networkx.Graph()
+
+    # fill in the nodes first to keep courses with no same-code edges
+    for course_id in courses["course_id"]:
+        same_courses.add_node(course_id)
+
+    # filter out titles and descriptions for matching
+    long_titles = courses.loc[
+        courses["title"].fillna("").apply(len) >= MIN_TITLE_MATCH_LEN
+    ]
+    long_descriptions = courses.loc[
+        courses["description"].fillna("").apply(len) >= MIN_DESCRIPTION_MATCH_LEN
+    ]
+
+    # course_id to title and description for graph pruning
+    course_to_title = map_to_groups(long_titles, "course_id", "title")
+    course_to_description = map_to_groups(long_descriptions, "course_id", "description")
+
+    for course_1, shared_code_courses in tqdm(
+        courses_shared_code.items(),
+        total=len(courses_shared_code),
+        desc="Populating same-courses graph",
+        leave=False,
+    ):
+        for course_2 in shared_code_courses:
+            title_1 = course_to_title.get(course_1, [""])[0]
+            title_2 = course_to_title.get(course_2, [""])[0]
+
+            description_1 = course_to_description.get(course_1, [""])[0]
+            description_2 = course_to_description.get(course_2, [""])[0]
+
+            # if title and description are similar enough, keep the edge
+            if is_same_course(title_1, title_2, description_1, description_2):
+                same_courses.add_edge(course_1, course_2)
+
+    logging.debug(f"Pruned shared-code edges: {same_courses.number_of_edges()}")
+
     # get overlapping listings as connected components
-    connected_codes = networkx.connected_components(graph)
+    connected_codes = networkx.connected_components(same_courses)
     connected_codes = [list(x) for x in connected_codes]
 
     # handle courses with no cross-listings
-    singles = networkx.isolates(graph)
+    singles = networkx.isolates(same_courses)
     connected_codes += [[x] for x in singles]
 
     # map courses to unique same-courses ID, and map same-courses ID to courses
@@ -155,136 +177,6 @@ def get_connected_courses(
     )
 
     return course_to_same_course, same_course_to_courses
-
-
-def resolve_historical_courses(
-    courses: pd.DataFrame, listings: pd.DataFrame
-) -> tuple[dict[int, int], dict[int, list[int]], dict[int, int], dict[int, list[int]]]:
-    """
-    Among courses, identify historical offerings of a course.
-
-    This is equivalent to constructing a partition of course_ids such that each
-    partition contains the same courses, offered over different terms.
-
-    Parameters
-    ----------
-    courses:
-        'courses' table.
-    listings:
-        'listings' table.
-
-    Returns
-    -------
-    course_to_same_course:
-        Mapping from course_id to resolved same_course id.
-    same_course_to_courses:
-        Mapping from resolved same_course id to group of identical courses.
-    course_to_same_course_filtered:
-        Mapping from course_id to resolved same_course id, with title/description filtering.
-    same_course_to_courses_filtered:
-        Mapping from resolved same_course id to group of identical courses, with
-        title/description filtering.
-    """
-    # map course to codes and code to courses
-    course_to_codes, code_to_courses = map_to_groups(
-        listings, "course_id", "course_code"
-    )
-
-    # map course_id to course codes
-    courses_codes = courses.set_index("course_id", drop=False)["course_id"].apply(
-        course_to_codes.get
-    )
-
-    # map course_id to all other courses with overlapping codes
-    courses_shared_code = courses_codes.apply(
-        lambda x: [code_to_courses[code] for code in x]
-    )
-    # flatten courses with overlapping codes
-    courses_shared_code = courses_shared_code.apply(
-        lambda x: list(set(itertools.chain.from_iterable(x)))
-    )
-
-    # filter out titles and descriptions for matching
-    long_titles = courses.loc[
-        courses["title"].fillna("").apply(len) >= MIN_TITLE_MATCH_LEN
-    ]
-    long_descriptions = courses.loc[
-        courses["description"].fillna("").apply(len) >= MIN_DESCRIPTION_MATCH_LEN
-    ]
-
-    # construct initial graph of courses:
-    # each node is a unique course from the 'courses' table, and two courses are
-    # linked if they share a common course code
-    #
-    # edges are then pruned for title/description match
-
-    same_courses = networkx.Graph()
-
-    # fill in the nodes first to keep courses with no same-code edges
-    for course in courses["course_id"]:
-        same_courses.add_node(course)
-
-    for course, shared_code_courses in tqdm(
-        courses_shared_code.items(),
-        total=len(courses_shared_code),
-        desc="Populating initial same-courses graph",
-        leave=False,
-    ):
-        for other_course_id in shared_code_courses:
-            same_courses.add_edge(course, other_course_id)
-
-    # filtered same-courses graph:
-    # we iterate over edges of the same_courses graph and keep the ones that satisfy
-    # our title/description matching criteria
-    same_courses_filtered = networkx.Graph()
-
-    # fill in the nodes first to keep courses with no same-code edges
-    for course_id in courses["course_id"]:
-        same_courses_filtered.add_node(course_id)
-
-    # course_id to title and description for graph pruning
-    course_to_title, _ = map_to_groups(long_titles, "course_id", "title")
-    course_to_description, _ = map_to_groups(
-        long_descriptions, "course_id", "description"
-    )
-
-    for course_1, course_2 in tqdm(
-        same_courses.edges(data=False),
-        desc="Building filtered same-courses graph",
-        leave=False,
-    ):
-
-        title_1 = course_to_title.get(course_1, [""])[0]
-        title_2 = course_to_title.get(course_2, [""])[0]
-
-        description_1 = course_to_description.get(course_1, [""])[0]
-        description_2 = course_to_description.get(course_2, [""])[0]
-
-        # if title and description are similar enough, keep the edge
-        if is_same_course(title_1, title_2, description_1, description_2):
-
-            same_courses_filtered.add_edge(course_1, course_2)
-
-    logging.debug(f"Original shared-code edges: {same_courses.number_of_edges()}")
-    logging.debug(
-        f"Pruned shared-code edges: {same_courses_filtered.number_of_edges()}"
-    )
-
-    logging.debug("Identifying same courses by connected components")
-
-    # get same-course mappings from connected components
-    course_to_same_course, same_course_to_courses = get_connected_courses(same_courses)
-    (
-        course_to_same_course_filtered,
-        same_course_to_courses_filtered,
-    ) = get_connected_courses(same_courses_filtered)
-
-    return (
-        course_to_same_course,
-        same_course_to_courses,
-        course_to_same_course_filtered,
-        same_course_to_courses_filtered,
-    )
 
 
 def split_same_professors(
