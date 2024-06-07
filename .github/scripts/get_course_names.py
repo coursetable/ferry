@@ -1,5 +1,6 @@
 import os
-import requests
+
+import httpx
 
 
 def get_github_commit_diff(owner, repo, commit_hash, token):
@@ -9,7 +10,7 @@ def get_github_commit_diff(owner, repo, commit_hash, token):
         "Authorization": f"token {token}",
         "Accept": "application/vnd.github.v3.diff",
     }
-    response = requests.get(url, headers=headers)
+    response = httpx.get(url, headers=headers)
     return response.text
 
 
