@@ -6,7 +6,7 @@ version = "1.0"
 description = "A crawler for Yale courses and evaluation data. Integrates with CourseTable."
 requires-python = ">=3.10"
 dependencies = [
-  "requests==2.31.0",
+  "requests==2.32.2",
   "beautifulsoup4==4.11.1",
   "stackprinter==0.2.10",
   "sentry-sdk==1.14.0",
