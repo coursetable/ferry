@@ -28,7 +28,7 @@ dependencies = [
   "psycopg2==2.9.9",
   "edlib==1.3.9",
   "networkx==2.8.8",
-  "eralchemy2==1.3.8",
+  "eralchemy2==1.4.1",
   "black==24.4.2",
 ]
 
