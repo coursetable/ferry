@@ -1,19 +1,19 @@
 import asyncio
+import logging
 from pathlib import Path
-from httpx import AsyncClient
 
 import pandas as pd
 import uvloop
-import logging
+from httpx import AsyncClient
 
+from ferry.args_parser import Args, get_args, parse_seasons_arg
+from ferry.crawler.cache import load_cache_json
 from ferry.crawler.classes import crawl_classes
 from ferry.crawler.evals import crawl_evals
 from ferry.crawler.seasons import fetch_seasons
-from ferry.crawler.cache import load_cache_json
+from ferry.database import Database, deploy, stage
 from ferry.transform import transform, write_csvs
 from ferry.transform.to_table import create_evals_tables
-from ferry.database import Database, stage, deploy
-from ferry.args_parser import Args, get_args, parse_seasons_arg
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
