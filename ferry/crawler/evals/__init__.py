@@ -1,16 +1,17 @@
-from pathlib import Path
 import asyncio
 import concurrent.futures
+from pathlib import Path
+
 import diskcache
 from tqdm import tqdm
 from tqdm.asyncio import tqdm_asyncio
 
-from .fetch import fetch_course_evals, FetchError
-from .parse import parse_eval_page
-from ferry.crawler.classes.parse import ParsedCourse
-from ferry.crawler.cas_request import CASClient
 from ferry.crawler.cache import load_cache_json
+from ferry.crawler.cas_request import CASClient
+from ferry.crawler.classes.parse import ParsedCourse
 
+from .fetch import FetchError, fetch_course_evals
+from .parse import parse_eval_page
 
 # exclude seasons before and including this because no evaluations
 EXCLUDE_SEASONS_BEFORE = "202101"
@@ -67,8 +68,6 @@ async def crawl_evals(
                     f"Season {season} not found in season_courses directory."
                 )
 
-            # Test for first 100 courses
-            season_courses = season_courses[:100]
             yale_college_cache = diskcache.Cache(data_dir / "yale_college_cache")
 
             futures = [

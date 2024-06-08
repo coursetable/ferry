@@ -10,11 +10,12 @@ following steps:
 
 """
 
+import ast
 import asyncio
 import traceback
 from pathlib import Path
-from urllib.parse import urlencode
 from typing import cast
+from urllib.parse import urlencode
 
 import diskcache
 import ujson
@@ -196,8 +197,8 @@ async def fetch_eval_page(
     questions_index = data_dir / "rating_cache" / "questions_index"
     html_file = questions_index / f"{season_code}_{crn}.html"
     if html_file.is_file():
-        with open(html_file, "rb") as file:
-            return file.read()
+        with open(html_file, "r") as file:
+            return ast.literal_eval(file.read())
 
     # OCE website for evaluations
     url_eval = f"https://oce.app.yale.edu/ocedashboard/studentViewer/courseSummary?{urlencode({'crn': crn, 'termCode': season_code})}"
@@ -226,7 +227,7 @@ async def fetch_eval_page(
 
     # save raw HTML in case we ever need it
     questions_index.mkdir(parents=True, exist_ok=True)
-    with open(html_file, "wb") as file:
-        file.write(page_index.content)
+    with open(html_file, "w") as file:
+        file.write(str(page_index.content))
 
     return page_index.content

@@ -1,7 +1,7 @@
 from pathlib import Path
-from typing import cast, TypedDict, Any
+from typing import Any, TypedDict, cast
 
-from bs4 import BeautifulSoup, Tag, ResultSet
+from bs4 import BeautifulSoup, ResultSet, Tag
 
 from ferry.crawler.cache import save_cache_json
 
