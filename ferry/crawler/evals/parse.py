@@ -1,6 +1,6 @@
 from pathlib import Path
 from typing import Any, TypedDict, cast
-
+import re
 from bs4 import BeautifulSoup, ResultSet, Tag
 
 from ferry.crawler.cache import save_cache_json
@@ -43,6 +43,9 @@ def parse_questions(
         if question_text is None:
             # skip any empty questions (which is possible due to errors in OCE)
             continue
+        question_text = question_text.text.strip()
+        # Some old questions contain the course code in the question text
+        question_text = re.sub(r"[A-Z]+ \d+(?: \d+)?(?:/[A-Z]+ \d+(?: \d+)?)*", "this course", question_text)
 
         # Check if question is narrative
         question_response = (
@@ -52,7 +55,7 @@ def parse_questions(
         )
         question_is_narrative[question_id] = "Narrative" in question_response
 
-        questions[question_id] = question_text.text.strip()
+        questions[question_id] = question_text
         # print(question_id, question_is_narrative[question_id], questions[question_id])
 
     if len(questions) == 0:  # Evaluation data for this course not available
