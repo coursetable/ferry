@@ -42,9 +42,11 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
             "Recommend": "recommend" in text,
             # SU122: "How will you use the knowledge and skills you learned in
             # this course in your future endeavors?"
-            # There is another SU question about skills; do not assign tag for
-            # this one to avoid collision
-            "Skills": "skills" in text and row["question_code"] not in ["SU122"],
+            # FS1003: "How well did the knowledge, skills, and insights gained
+            # in this class align with your expectations?"
+            # These question codes cause conflicts with other Skills questions
+            "Skills": "skills" in text
+            and row["question_code"] not in ["SU122", "FS1003"],
             "Strengths/weaknesses": "strengths and weaknesses" in text
             and "course" in text
             and "teaching assistant" not in text
