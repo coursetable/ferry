@@ -17,4 +17,4 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | b
 
 COPY . .
 
-RUN /root/.cargo/bin/uv pip install --no-cache -e .
+RUN /root/.cargo/bin/uv pip install --no-cache -e . --system
