@@ -30,35 +30,47 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
         tag_candidates = {
             "Available resources": "resources" in text,
             "Engagement": "engagement" in text,
-            "Feedback": "feedback" in text,
+            # DR464: "Please provide feedback on the instructor's teaching style,
+            # speaking and listening skills, and time management."
+            "Feedback": "feedback" in text
+            and row["question_code"] not in ["DR464"],
             "Intellectual challenge": "intellectual challenge" in text,
             "Major": "major" in text,
             "Organization": "organize" in text,
+            # DR113, DR316: "I would recommend this instructor to other students."
             "Professor": bool(re.search(r"rating|assessment|evaluate", text))
-            and "instructor" in text,
+            and "instructor" in text
+            and row["question_code"] not in ["DR113", "DR316"],
             "Overall": "overall assessment" in text and "instructor" not in text
             # This one is used in rating average
-            and not row["is_narrative"],
-            "Recommend": "recommend" in text,
+            and not row["is_narrative"]
+            # TODO: properly filter out wrong questions
+            and isinstance(row["options"], list) and len(row["options"]) == 5,
+            # DR113, DR316: "I would recommend this instructor to other students."
+            "Recommend": "recommend" in text and row["question_code"] not in ["DR113", "DR316"],
             # SU122: "How will you use the knowledge and skills you learned in
             # this course in your future endeavors?"
             # FS1003: "How well did the knowledge, skills, and insights gained
             # in this class align with your expectations?"
+            # DR464: "Please provide feedback on the instructor's teaching style,
+            # speaking and listening skills, and time management."
             # These question codes cause conflicts with other Skills questions
             "Skills": "skills" in text
-            and row["question_code"] not in ["SU122", "FS1003"],
+            and row["question_code"] not in ["SU122", "FS1003", "DR464"],
             "Strengths/weaknesses": "strengths and weaknesses" in text
             and "course" in text
             and "teaching assistant" not in text
             and "instructor" not in text,
             "Summary": "summarize" in text and "recommend" not in text,
             # This one is used in rating average
-            "Workload": "workload" in text and not row["is_narrative"],
+            "Workload": "workload" in text and not row["is_narrative"]
+            # TODO: properly filter out wrong questions
+            and isinstance(row["options"], list) and len(row["options"]) == 5
         }
 
         if sum(tag_candidates.values()) > 1:
             raise database.InvariantError(
-                f"{row['question_text']} contains multiple tags {', '.join([tag for tag, condition in tag_candidates.items() if condition])}. Please adjust the conditions above."
+                f"{row['question_code']} {row['question_text']} contains multiple tags {', '.join([tag for tag, condition in tag_candidates.items() if condition])}. Please adjust the conditions above."
             )
 
         return next(
