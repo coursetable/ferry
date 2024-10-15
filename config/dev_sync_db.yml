@@ -7,4 +7,5 @@ seasons: null
 use_cache: true
 
 sync_db: true
+crawl_evals: false
 generate_diagram: true
