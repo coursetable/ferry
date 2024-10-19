@@ -78,52 +78,6 @@ def course_invariants(session: sqlalchemy.orm.session.Session):
         )
 
 
-def search_setup(session: sqlalchemy.orm.session.Session):
-    """
-    Set up an aggregated course information table.
-
-    Used by CourseTable to pull JSONs for client-side catalog browsing.
-    """
-    logging.debug("Creating tmp table")
-    with open(queries_dir / "computed_listing_info_tmp.sql") as tmp_file:
-        tmp_sql = tmp_file.read()
-        session.execute(text(tmp_sql))
-
-    logging.debug("Setting columns to not null if possible")
-    table_name = "computed_listing_info_tmp"
-    for _, _, column_name in session.execute(
-        text(
-            # Get the list of columns in the table.
-            f"""
-        SELECT table_schema, table_name, column_name
-        FROM information_schema.columns
-        WHERE table_name = '{table_name}';
-        """
-        )
-    ):
-        (null_count,) = session.execute(
-            text(
-                f"""
-            SELECT count(*) FROM {table_name} WHERE {column_name} IS NULL ;
-            """
-            )
-        ).first()
-        if null_count == 0:
-            session.execute(
-                text(
-                    f"""
-                ALTER TABLE {table_name} ALTER COLUMN {column_name} SET NOT NULL ;
-                """
-                )
-            )
-            logging.debug(f"  {column_name} not null")
-
-    logging.debug("Swapping in the table")
-    with open(queries_dir / "computed_listing_info_swap.sql") as swap_file:
-        swap_sql = swap_file.read()
-        session.execute(text(swap_sql))
-
-
 def deploy(db: database.Database):
     """
     Deploy staged tables to main ones and regenerate database.
@@ -273,18 +227,6 @@ def deploy(db: database.Database):
     )
     print("\033[F", end="")
     print("Reindexing... ✔")
-
-    # -----------------------------------
-    # Set up materialized view and search
-    # -----------------------------------
-
-    # generate computed tables and full-text-search
-    print("\nSetting up computed tables...")
-    with database.session_scope(db.Session) as db_session:
-        search_setup(db_session)
-
-    print("\033[F", end="")
-    print("Setting up computed tables... ✔")
 
     # -------------
     # Final summary
