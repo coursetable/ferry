@@ -14,6 +14,7 @@ from .transform_compute import (
 )
 from .import_courses import import_courses
 from .import_evaluations import import_evaluations
+from .invariants import check_invariants
 
 
 def write_csvs(tables: dict[str, pd.DataFrame], data_dir: Path):
@@ -89,6 +90,8 @@ def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
     )
 
     all_tables = {"seasons": seasons_table, **course_tables, **eval_tables}
+
+    check_invariants(all_tables)
 
     # Remove intermediate columns to match DB schema
     for table_name, db_table in [

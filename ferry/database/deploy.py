@@ -9,94 +9,10 @@ from ferry import database
 queries_dir = Path(__file__).parent / "queries"
 
 
-def listing_invariants(session: sqlalchemy.orm.session.Session):
-    """
-    Check listing invariants.
-
-    Check invariant:
-        listing.season_code == course.season_code if listing.course_id == course.course_id.
-    """
-
-    for (
-        listing_id,
-        course_id,
-        listing_season_code,
-        course_season_code,
-    ) in session.query(
-        database.Listing.listing_id,
-        database.Listing.course_id,
-        database.Listing.season_code,
-        database.Course.season_code,
-    ).filter(
-        database.Listing.course_id == database.Course.course_id
-    ):
-        if listing_season_code != course_season_code:
-            raise database.InvariantError(
-                f"listing {listing_id} has mismatched season_code with course {course_id}"
-            )
-
-
-def question_invariants(session: sqlalchemy.orm.session.Session):
-    """
-    Check question invariants.
-
-    Check invariant:
-        evaluation_questions.options is null iff evaluation_questions.is_narrative = True
-    """
-
-    for question in session.query(database.EvaluationQuestion):
-        narrative = question.is_narrative
-        options = bool(question.options)
-        if narrative and options:
-            raise database.InvariantError(f"narrative question {question} has options")
-        if not narrative and not options:
-            raise database.InvariantError(f"ratings question {question} lacks options")
-
-
-def course_invariants(session: sqlalchemy.orm.session.Session):
-    """
-    Check course invariants.
-
-    Check invariant:
-        every course should have at least one listing.
-    """
-
-    courses_no_listings = (
-        session.query(database.Listing)
-        .filter(
-            ~database.Listing.course_id.in_(session.query(database.Course.course_id))
-        )
-        .all()
-    )
-
-    if courses_no_listings:
-
-        no_listing_courses = [str(course) for course in courses_no_listings]
-
-        raise database.InvariantError(
-            f"the following courses have no listings: {', '.join(no_listing_courses)}"
-        )
-
-
 def deploy(db: database.Database):
     """
     Deploy staged tables to main ones and regenerate database.
-
-    - Checks the database invariants on staged tables.
-    - If invariants pass, promotes staged tables to actual ones,
-        updates indexes, and recomputes search views
-    - If any invariant fails, exits with no changes to tables.
     """
-
-    # ------------------------------------
-    # Specify invariant checking functions
-    # ------------------------------------
-
-    all_items = [
-        listing_invariants,
-        course_invariants,
-        question_invariants,
-    ]
 
     # --------------------------------------
     # Check if all staged tables are present
@@ -116,26 +32,6 @@ def deploy(db: database.Database):
         raise database.MissingTablesError(
             "Not all staged tables are present. Run stage.py again?"
         )
-
-    # ------------------------------
-    # Check invariants on new tables
-    # ------------------------------
-
-    print("\nChecking table invariants...")
-
-    items = all_items
-
-    for fn in items:
-        if fn.__doc__:
-            logging.debug(f"{fn.__doc__.strip()}")
-        else:
-            logging.debug(f"Running: {fn.__name__}")
-
-        with database.session_scope(db.Session) as db_session:
-            fn(db_session)
-
-    print("\033[F", end="")
-    print("Checking table invariants... ✔")
 
     # -------------------------------------
     # Upgrade staged tables to primary ones
