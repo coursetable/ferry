@@ -213,7 +213,7 @@ def resolve_historical_courses(
         leave=False,
     ):
         course_set = set(
-            itertools.chain.from_iterable(code_to_courses[c] for c in codes)
+            itertools.chain.from_iterable(code_to_courses.get(c, []) for c in codes)
         )
         # Our goal is to connect each course to a component. We don't have to
         # connect it to every same course, just enough so we can map out the

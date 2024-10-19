@@ -45,6 +45,9 @@ def stage(tables: dict[str, pd.DataFrame], database: Database):
             )
         # create in-memory buffer for DataFrame
         buffer = StringIO()
+        # TODO is this really needed?
+        staged_tables[table.name] = staged_tables[table.name].replace(
+            {r'\r': ''}, regex=True)
         staged_tables[table.name].to_csv(
             buffer,
             index_label="id",
