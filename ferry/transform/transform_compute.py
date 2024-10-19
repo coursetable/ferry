@@ -43,9 +43,7 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
             and row["question_code"] not in ["DR113", "DR316"],
             "Overall": "overall assessment" in text and "instructor" not in text
             # This one is used in rating average
-            and not row["is_narrative"]
-            # TODO: properly filter out wrong questions
-            and isinstance(row["options"], list) and len(row["options"]) == 5,
+            and not row["is_narrative"],
             # DR113, DR316: "I would recommend this instructor to other students."
             "Recommend": "recommend" in text and row["question_code"] not in ["DR113", "DR316"],
             # SU122: "How will you use the knowledge and skills you learned in
@@ -64,8 +62,6 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
             "Summary": "summarize" in text and "recommend" not in text,
             # This one is used in rating average
             "Workload": "workload" in text and not row["is_narrative"]
-            # TODO: properly filter out wrong questions
-            and isinstance(row["options"], list) and len(row["options"]) == 5
         }
 
         if sum(tag_candidates.values()) > 1:
