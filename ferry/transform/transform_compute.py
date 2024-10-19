@@ -141,8 +141,14 @@ def evaluation_statistics_computed(
             # A course can have multiple questions of the same type. This usually
             # happens when the course is cross-listed between GS and YC
             weights = [sum(x) for x in zip(*data["rating"])]
-            question_code = list(data["question_code"])[0]
-            if len(weights) != n_categories and question_code != "DR359":
+            
+            # DR359 is a question code for which the workload has 6 categories
+            # In general, for all other question codes (e.g., YC408)
+            # the workload should have 5 categories (n_categories = 5)
+            # To prevent the InvariantError, ignore the number of categories
+            # mismatch when the question code is DR359
+            
+            if len(weights) != n_categories and not (data["question_code"] == "DR359").all():
                 raise database.InvariantError(
                     f"Invalid number of categories for {question_tag}: {len(weights)}"
                 )
