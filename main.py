@@ -2,7 +2,6 @@ import asyncio
 import logging
 from pathlib import Path
 
-import pandas as pd
 import uvloop
 from httpx import AsyncClient
 
@@ -11,7 +10,7 @@ from ferry.crawler.cache import load_cache_json
 from ferry.crawler.classes import crawl_classes
 from ferry.crawler.evals import crawl_evals
 from ferry.crawler.seasons import fetch_seasons
-from ferry.database import Database, deploy, stage
+from ferry.database import sync_db
 from ferry.transform import transform, write_csvs
 from ferry.transform.to_table import create_evals_tables
 
@@ -51,19 +50,6 @@ async def start_crawl(args: Args):
 
     await client.aclose()
     print("-" * 80)
-
-
-def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
-    db = Database(database_connect_string)
-
-    print("[Stage]")
-    stage(tables, database=db)
-    print("-" * 80)
-
-    print("[Deploy]")
-    deploy(db=db)
-    print("-" * 80)
-    print("Database sync: ✔")
 
 
 async def main():

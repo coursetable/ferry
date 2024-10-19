@@ -21,11 +21,6 @@ class Database:
                 "keepalives_count": 5,
             },
         )
-        Base.metadata.create_all(self.Engine)
-
-        if any(not table.endswith("_staged") for table in Base.metadata.tables):
-            raise MissingTablesError("Model tables should all end with _staged")
-
         self.Session = sqlalchemy.orm.sessionmaker(bind=self.Engine)
 
 

@@ -32,12 +32,4 @@ If the `--snapshot-tables` argument is used, the analyzer will create a CSV file
 
 ## Database connector
 
-The database connector code is located in `ferry/database`.
-
-- `stage.py`: stages the data in the database.
-- `deploy.py`: checks table invariants, and regenerates the database based on the staged data. At this step we also run SQL to generate some derived tables.
-
-TODO:
-
-1. Move the SQL logic to the data analyzer.
-2. Ferry should not regenerate the whole DB each time.
+The database connector code is located in `ferry/database`. It takes the Pandas tables and imports them into the database.

@@ -20,11 +20,11 @@ from sqlalchemy_mixins import ReprMixin, SerializeMixin
 
 meta = MetaData(
     naming_convention={
-        "ix": "ix_%(column_0_label)s_staged",
-        "uq": "uq_%(table_name)s_%(column_0_name)s_staged",
-        "ck": "ck_%(table_name)s_%(constraint_name)s_staged",
-        "fk": "fk_%(table_name)s_%(column_0_name)s_%(referred_table_name)s_staged",
-        "pk": "pk_%(table_name)s_staged",
+        "ix": "ix_%(column_0_label)s",
+        "uq": "uq_%(table_name)s_%(column_0_name)s",
+        "ck": "ck_%(table_name)s_%(constraint_name)s",
+        "fk": "fk_%(table_name)s_%(column_0_name)s_%(referred_table_name)s",
+        "pk": "pk_%(table_name)s",
     }
 )
 
@@ -44,7 +44,7 @@ class Season(BaseModel):
     Seasons table.
     """
 
-    __tablename__ = "seasons_staged"
+    __tablename__ = "seasons"
     season_code = Column(
         String(10),
         primary_key=True,
@@ -68,17 +68,17 @@ class Season(BaseModel):
 
 # Course-Professor association/junction table.
 course_professors = Table(
-    "course_professors_staged",
+    "course_professors",
     Base.metadata,
     Column(
         "course_id",
-        ForeignKey("courses_staged.course_id"),
+        ForeignKey("courses.course_id"),
         primary_key=True,
         index=True,
     ),
     Column(
         "professor_id",
-        ForeignKey("professors_staged.professor_id"),
+        ForeignKey("professors.professor_id"),
         primary_key=True,
         index=True,
     ),
@@ -90,19 +90,19 @@ class Course(BaseModel):
     Courses table.
     """
 
-    __tablename__ = "courses_staged"
+    __tablename__ = "courses"
     course_id = Column(Integer, primary_key=True, index=True)
 
     season_code = Column(
         String(10),
-        ForeignKey("seasons_staged.season_code"),
+        ForeignKey("seasons.season_code"),
         comment="The season the course is being taught in",
         index=True,
         nullable=False,
     )
     season = relationship(
         "Season",
-        backref="courses_staged",
+        backref="courses",
         cascade="all",
         foreign_keys="Course.season_code",
     )
@@ -257,7 +257,7 @@ class Course(BaseModel):
 
     last_offered_course_id = Column(
         Integer,
-        ForeignKey("courses_staged.course_id"),
+        ForeignKey("courses.course_id"),
         comment="""[computed] Most recent previous offering of
         course (excluding future ones)""",
         index=True,
@@ -293,7 +293,7 @@ class Course(BaseModel):
 
     last_offered_course = relationship(
         "Course",
-        backref="courses_staged",
+        backref="courses",
         cascade="all",
         remote_side="Course.course_id",
         foreign_keys="Course.last_offered_course_id",
@@ -301,14 +301,14 @@ class Course(BaseModel):
 
     last_enrollment_course_id = Column(
         Integer,
-        ForeignKey("courses_staged.course_id"),
+        ForeignKey("courses.course_id"),
         comment="[computed] Course from which last enrollment offering was pulled",
         index=True,
     )
 
     last_enrollment_course = relationship(
         "Course",
-        backref="courses_staged_",
+        backref="courses",
         cascade="all",
         remote_side="Course.course_id",
         foreign_keys="Course.last_enrollment_course_id",
@@ -321,14 +321,14 @@ class Course(BaseModel):
 
     last_enrollment_season_code = Column(
         String(10),
-        ForeignKey("seasons_staged.season_code"),
+        ForeignKey("seasons.season_code"),
         comment="[computed] Season in which last enrollment offering is from",
         index=True,
     )
 
     last_enrollment_season = relationship(
         "Season",
-        backref="courses_staged_",
+        backref="courses_",
         cascade="all",
         foreign_keys="Course.last_enrollment_season_code",
     )
@@ -345,17 +345,17 @@ class Listing(BaseModel):
     Listings table.
     """
 
-    __tablename__ = "listings_staged"
+    __tablename__ = "listings"
     listing_id = Column(Integer, primary_key=True, comment="Listing ID")
 
     course_id = Column(
         Integer,
-        ForeignKey("courses_staged.course_id"),
+        ForeignKey("courses.course_id"),
         comment="Course that the listing refers to",
         index=True,
         nullable=False,
     )
-    course = relationship("Course", backref="listings_staged", cascade="all")
+    course = relationship("Course", backref="listings", cascade="all")
 
     school = Column(
         String,
@@ -386,12 +386,12 @@ class Listing(BaseModel):
     )
     season_code = Column(
         String(10),
-        ForeignKey("seasons_staged.season_code"),
+        ForeignKey("seasons.season_code"),
         comment="When the course/listing is being taught, mapping to `seasons`",
         index=True,
         nullable=False,
     )
-    season = relationship("Season", backref="listings_staged", cascade="all")
+    season = relationship("Season", backref="listings", cascade="all")
     crn = Column(
         Integer,
         comment="The CRN associated with this listing",
@@ -401,14 +401,14 @@ class Listing(BaseModel):
 
     __table_args__ = (
         Index(
-            "idx_season_course_section_unique_staged",
+            "idx_season_course_section_unique",
             "season_code",
             "subject",
             "number",
             "section",
         ),
         Index(
-            "idx_season_code_crn_unique_staged",
+            "idx_season_code_crn_unique",
             "season_code",
             "crn",
             unique=True,
@@ -421,7 +421,7 @@ class Flag(BaseModel):
     Course flags table.
     """
 
-    __tablename__ = "flags_staged"
+    __tablename__ = "flags"
 
     flag_id = Column(Integer, comment="Flag ID", primary_key=True)
 
@@ -430,17 +430,17 @@ class Flag(BaseModel):
 
 # Course-Flag association/junction table.
 course_flags = Table(
-    "course_flags_staged",
+    "course_flags",
     Base.metadata,
     Column(
         "course_id",
-        ForeignKey("courses_staged.course_id"),
+        ForeignKey("courses.course_id"),
         primary_key=True,
         index=True,
     ),
     Column(
         "flag_id",
-        ForeignKey("flags_staged.flag_id"),
+        ForeignKey("flags.flag_id"),
         primary_key=True,
         index=True,
     ),
@@ -452,7 +452,7 @@ class Professor(BaseModel):
     Professors table.
     """
 
-    __tablename__ = "professors_staged"
+    __tablename__ = "professors"
 
     professor_id = Column(Integer, comment="Professor ID", primary_key=True)
     name = Column(String, comment="Name of the professor", index=True, nullable=False)
@@ -487,11 +487,11 @@ class EvaluationStatistics(BaseModel):
     Evaluation statistics table.
     """
 
-    __tablename__ = "evaluation_statistics_staged"
+    __tablename__ = "evaluation_statistics"
 
     course_id = Column(
         Integer,
-        ForeignKey("courses_staged.course_id"),
+        ForeignKey("courses.course_id"),
         primary_key=True,
         comment="The course associated with these statistics",
         index=True,
@@ -499,7 +499,7 @@ class EvaluationStatistics(BaseModel):
     )
     course = relationship(
         "Course",
-        backref=backref("evaluation_statistics_staged", uselist=False),
+        backref=backref("evaluation_statistics", uselist=False),
         cascade="all",
     )
 
@@ -520,7 +520,7 @@ class EvaluationQuestion(BaseModel):
     Evaluation questions table.
     """
 
-    __tablename__ = "evaluation_questions_staged"
+    __tablename__ = "evaluation_questions"
 
     question_code = Column(
         String,
@@ -560,29 +560,29 @@ class EvaluationNarrative(BaseModel):
     Evaluation narratives (written ones) table.
     """
 
-    __tablename__ = "evaluation_narratives_staged"
+    __tablename__ = "evaluation_narratives"
 
     id = Column(Integer, primary_key=True)
     course_id = Column(
         Integer,
-        ForeignKey("courses_staged.course_id"),
+        ForeignKey("courses.course_id"),
         comment="The course to which this narrative comment applies",
         index=True,
         nullable=False,
     )
     course = relationship(
-        "Course", backref="evaluation_narratives_staged", cascade="all"
+        "Course", backref="evaluation_narratives", cascade="all"
     )
     question_code = Column(
         String,
-        ForeignKey("evaluation_questions_staged.question_code"),
+        ForeignKey("evaluation_questions.question_code"),
         comment="Question to which this narrative comment responds",
         index=True,
         nullable=False,
     )
     question = relationship(
         "EvaluationQuestion",
-        backref="evaluation_narratives_staged",
+        backref="evaluation_narratives",
         cascade="all",
     )
 
@@ -622,26 +622,26 @@ class EvaluationRating(BaseModel):
     Evaluation ratings (categorical ones) table.
     """
 
-    __tablename__ = "evaluation_ratings_staged"
+    __tablename__ = "evaluation_ratings"
 
     id = Column(Integer, primary_key=True)
     course_id = Column(
         Integer,
-        ForeignKey("courses_staged.course_id"),
+        ForeignKey("courses.course_id"),
         comment="The course to which this rating applies",
         index=True,
         nullable=False,
     )
-    course = relationship("Course", backref="evaluation_ratings_staged", cascade="all")
+    course = relationship("Course", backref="evaluation_ratings", cascade="all")
     question_code = Column(
         String,
-        ForeignKey("evaluation_questions_staged.question_code"),
+        ForeignKey("evaluation_questions.question_code"),
         comment="Question to which this rating responds",
         index=True,
         nullable=False,
     )
     question = relationship(
-        "EvaluationQuestion", backref="evaluation_ratings_staged", cascade="all"
+        "EvaluationQuestion", backref="evaluation_ratings", cascade="all"
     )
 
     rating = Column(

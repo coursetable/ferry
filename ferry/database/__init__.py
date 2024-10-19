@@ -18,5 +18,4 @@ from .models import (
     course_flags,
     course_professors,
 )
-from .stage import stage
-from .deploy import deploy
+from .sync_db import sync_db
