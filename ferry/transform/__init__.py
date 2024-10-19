@@ -14,6 +14,7 @@ from .transform_compute import (
 )
 from .import_courses import import_courses
 from .import_evaluations import import_evaluations
+from .invariants import check_invariants
 
 
 def write_csvs(tables: dict[str, pd.DataFrame], data_dir: Path):
@@ -109,6 +110,8 @@ def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
             .reset_index(drop=False)
             .loc[:, [column.key for column in db_table.columns]]
         )
+
+    check_invariants(all_tables)
 
     print("\033[F", end="")
     print("Computing secondary attributes... ✔")
