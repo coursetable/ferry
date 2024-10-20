@@ -13,10 +13,6 @@ from ferry.database import Database, Base
 queries_dir = Path(__file__).parent / "queries"
 
 
-class DatabaseStagingError(Exception):
-    pass
-
-
 def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     db = Database(database_connect_string)
 
@@ -108,7 +104,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
         except Exception as error:
             conn.rollback()
             cursor.close()
-            raise DatabaseStagingError from error
+            raise error
 
         # print(f"Successfully copied {table_name}")
         cursor.close()

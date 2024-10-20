@@ -33,8 +33,6 @@ def write_csvs(tables: dict[str, pd.DataFrame], data_dir: Path):
 def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
     """
     Import the parsed course and evaluation data into CSVs generated with Pandas.
-
-    Used immediately before stage.py as the first step in the import process.
     """
 
     # get full list of course seasons from files

@@ -114,7 +114,4 @@ pyright
 - Rearchitect GitHub action to create Postgres dump, upload with VC (enable lifecycle management) to Azure Blob, and restart prod `postgres` container to trigger new pull.
 - Modernize dependencies
 - SIGINT handler
-- Write documentation, standardize variable names, cleanup, etc.
-- Cleanup those branches
 - Lint and format CI
-- Parallelize db sync scripts (stage, transform, deploy)
