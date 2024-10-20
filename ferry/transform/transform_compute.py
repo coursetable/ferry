@@ -142,12 +142,11 @@ def evaluation_statistics_computed(
             # happens when the course is cross-listed between GS and YC
             weights = [sum(x) for x in zip(*data["rating"])]
             
-            # DR359 is a question code for which the workload has 6 categories
+            # DR359: How appropriate was the workload? has six options
             # In general, for all other question codes (e.g., YC408)
             # the workload should have 5 categories (n_categories = 5)
-            # To prevent the InvariantError, ignore the number of categories
-            # mismatch when the question code is DR359
-            
+            # but this one also qualifies as a "workload" question, so we still assign it
+            # the "workload" tag
             if len(weights) != n_categories and not (data["question_code"] == "DR359").all():
                 raise database.InvariantError(
                     f"Invalid number of categories for {question_tag}: {len(weights)}"
