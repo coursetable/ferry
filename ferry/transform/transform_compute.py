@@ -32,8 +32,7 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
             "Engagement": "engagement" in text,
             # DR464: "Please provide feedback on the instructor's teaching style,
             # speaking and listening skills, and time management."
-            "Feedback": "feedback" in text
-            and row["question_code"] not in ["DR464"],
+            "Feedback": "feedback" in text and row["question_code"] not in ["DR464"],
             "Intellectual challenge": "intellectual challenge" in text,
             "Major": "major" in text,
             "Organization": "organize" in text,
@@ -45,7 +44,8 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
             # This one is used in rating average
             and not row["is_narrative"],
             # DR113, DR316: "I would recommend this instructor to other students."
-            "Recommend": "recommend" in text and row["question_code"] not in ["DR113", "DR316"],
+            "Recommend": "recommend" in text
+            and row["question_code"] not in ["DR113", "DR316"],
             # SU122: "How will you use the knowledge and skills you learned in
             # this course in your future endeavors?"
             # FS1003: "How well did the knowledge, skills, and insights gained
@@ -61,7 +61,7 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
             and "instructor" not in text,
             "Summary": "summarize" in text and "recommend" not in text,
             # This one is used in rating average
-            "Workload": "workload" in text and not row["is_narrative"]
+            "Workload": "workload" in text and not row["is_narrative"],
         }
 
         if sum(tag_candidates.values()) > 1:
@@ -132,22 +132,29 @@ def evaluation_statistics_computed(
     )
 
     # Get average rating for each course with a specified tag
-    def average_by_course(question_tag: str, n_categories: int):
+    def average_by_course(question_tag: str, n_categories: int) -> pd.Series:
         tagged_ratings = evaluation_ratings[evaluation_ratings["tag"] == question_tag]
         # course_id -> Series[list[int]]
-        rating_by_course = tagged_ratings.groupby("course_id")[["rating", "question_code"]]
+        rating_by_course = tagged_ratings.groupby("course_id")[
+            ["rating", "question_code"]
+        ]
+        if len(rating_by_course) == 0:
+            return pd.Series()
 
         def average_rating(data: pd.DataFrame) -> float:
             # A course can have multiple questions of the same type. This usually
             # happens when the course is cross-listed between GS and YC
             weights = [sum(x) for x in zip(*data["rating"])]
-            
+
             # DR359: How appropriate was the workload? has six options
             # In general, for all other question codes (e.g., YC408)
             # the workload should have 5 categories (n_categories = 5)
             # but this one also qualifies as a "workload" question, so we still assign it
             # the "workload" tag
-            if len(weights) != n_categories and not (data["question_code"] == "DR359").all():
+            if (
+                len(weights) != n_categories
+                and not (data["question_code"] == "DR359").all()
+            ):
                 raise database.InvariantError(
                     f"Invalid number of categories for {question_tag}: {len(weights)}"
                 )

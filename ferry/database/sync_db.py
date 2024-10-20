@@ -36,28 +36,27 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
         # remove the old table if it is present before
         conn.execute(text(f"DROP TABLE IF EXISTS {table}_old CASCADE;"))
         for index in inspector.get_indexes(table.name):
-            index_name = index['name']
+            index_name = index["name"]
             if not index_name:
                 continue
-            conn.execute(
-                text(f"ALTER INDEX {index_name} RENAME TO {index_name}_old"))
+            conn.execute(text(f"ALTER INDEX {index_name} RENAME TO {index_name}_old"))
 
         for constraint in [
-                inspector.get_pk_constraint(table.name),
-                *inspector.get_foreign_keys(table.name),
-                *inspector.get_unique_constraints(table.name)
+            inspector.get_pk_constraint(table.name),
+            *inspector.get_foreign_keys(table.name),
+            *inspector.get_unique_constraints(table.name),
         ]:
-            name = constraint['name']
+            name = constraint["name"]
             if not name:
                 continue
             conn.execute(
-                text(f"ALTER TABLE {table} RENAME CONSTRAINT {name} TO {name}_old"))
+                text(f"ALTER TABLE {table} RENAME CONSTRAINT {name} TO {name}_old")
+            )
         # rename current main table to _old
         # (keep the old tables instead of dropping them
         # so we can rollback in case of errors)
         # Note that this is done after we've retrieved the indexes and constraints
-        conn.execute(
-            text(f'ALTER TABLE IF EXISTS "{table}" RENAME TO {table}_old;'))
+        conn.execute(text(f'ALTER TABLE IF EXISTS "{table}" RENAME TO {table}_old;'))
 
     replace.commit()
 
@@ -77,8 +76,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
         # create in-memory buffer for DataFrame
         buffer = StringIO()
         # TODO is this really needed?
-        tables[table.name] = tables[table.name].replace(
-            {r'\r': ''}, regex=True)
+        tables[table.name] = tables[table.name].replace({r"\r": ""}, regex=True)
         tables[table.name].to_csv(
             buffer,
             index_label="id",

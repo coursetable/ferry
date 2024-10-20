@@ -14,6 +14,7 @@ from .transform_compute import (
 )
 from .import_courses import import_courses
 from .import_evaluations import import_evaluations
+from .cache_id import save_id_cache
 from .invariants import check_invariants
 
 
@@ -24,7 +25,7 @@ def write_csvs(tables: dict[str, pd.DataFrame], data_dir: Path):
     csv_dir.mkdir(parents=True, exist_ok=True)
 
     for table_name, table in tables.items():
-        cast(pd.DataFrame, table).to_csv(csv_dir / f"{table_name}.csv")
+        cast(pd.DataFrame, table).to_csv(csv_dir / f"{table_name}.csv", index=False)
 
     print("\033[F", end="")
     print("Writing tables to disk as CSVs... ✔")
@@ -113,5 +114,7 @@ def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
 
     print("\033[F", end="")
     print("Computing secondary attributes... ✔")
+
+    save_id_cache(all_tables, data_dir)
 
     return all_tables

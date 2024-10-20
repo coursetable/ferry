@@ -45,7 +45,11 @@ def parse_questions(
             continue
         question_text = question_text.text.strip()
         # Some old questions contain the course code in the question text
-        question_text = re.sub(r"[A-Z]+ \d+(?: \d+)?(?:/[A-Z]+ \d+(?: \d+)?)*", "this course", question_text)
+        question_text = re.sub(
+            r"[A-Z]+ \d+(?: \d+)?(?:/[A-Z]+ \d+(?: \d+)?)*",
+            "this course",
+            question_text,
+        )
 
         # Check if question is narrative
         question_response = (

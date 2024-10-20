@@ -401,6 +401,7 @@ class Listing(BaseModel):
             "subject",
             "number",
             "section",
+            unique=True,
         ),
         Index(
             "idx_season_code_crn_unique",
@@ -565,9 +566,7 @@ class EvaluationNarrative(BaseModel):
         index=True,
         nullable=False,
     )
-    course = relationship(
-        "Course", backref="evaluation_narratives", cascade="all"
-    )
+    course = relationship("Course", backref="evaluation_narratives", cascade="all")
     question_code = Column(
         String,
         ForeignKey("evaluation_questions.question_code"),
