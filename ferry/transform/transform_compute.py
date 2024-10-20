@@ -135,19 +135,25 @@ def evaluation_statistics_computed(
     def average_by_course(question_tag: str, n_categories: int):
         tagged_ratings = evaluation_ratings[evaluation_ratings["tag"] == question_tag]
         # course_id -> Series[list[int]]
-        rating_by_course = tagged_ratings.groupby("course_id")["rating"]
+        rating_by_course = tagged_ratings.groupby("course_id")[["rating", "question_code"]]
 
-        def average_rating(data: pd.Series) -> float:
+        def average_rating(data: pd.DataFrame) -> float:
             # A course can have multiple questions of the same type. This usually
             # happens when the course is cross-listed between GS and YC
-            weights = [sum(x) for x in zip(*data)]
-            if len(weights) != n_categories:
+            weights = [sum(x) for x in zip(*data["rating"])]
+            
+            # DR359: How appropriate was the workload? has six options
+            # In general, for all other question codes (e.g., YC408)
+            # the workload should have 5 categories (n_categories = 5)
+            # but this one also qualifies as a "workload" question, so we still assign it
+            # the "workload" tag
+            if len(weights) != n_categories and not (data["question_code"] == "DR359").all():
                 raise database.InvariantError(
                     f"Invalid number of categories for {question_tag}: {len(weights)}"
                 )
             if sum(weights) == 0:
                 return np.nan
-            return cast(float, np.average(range(1, n_categories + 1), weights=weights))
+            return cast(float, np.average(range(1, len(weights) + 1), weights=weights))
 
         return rating_by_course.apply(average_rating)
 
