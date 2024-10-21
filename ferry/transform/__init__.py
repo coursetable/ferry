@@ -53,7 +53,7 @@ def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         columns=["season_code", "term", "year"],
     )
 
-    course_tables = import_courses(data_dir / "parsed_courses", course_seasons)
+    course_tables = import_courses(data_dir, course_seasons)
     eval_tables = import_evaluations(
         data_dir / "evaluation_tables", course_tables["listings"]
     )

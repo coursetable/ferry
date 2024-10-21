@@ -1,7 +1,21 @@
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from ferry.crawler.cache import save_cache_json
+from ferry.crawler.cache import save_cache_json, load_cache_json
+
+
+def merge_id_cache(
+    cache_path: Path, data: dict[str, int], throw_on_conflict: bool = True
+):
+    existing_data = load_cache_json(cache_path) or {}
+    if throw_on_conflict:
+        for key, value in data.items():
+            if key in existing_data and existing_data[key] != value:
+                raise ValueError(
+                    f"ID cache conflict: {key} is already assigned to {existing_data[key]}, changing it to {value}"
+                )
+    existing_data.update(data)
+    save_cache_json(cache_path, existing_data)
 
 
 def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
@@ -40,9 +54,11 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
     same_course_to_id = (
         tables["courses"].set_index("course_id")["same_course_id"].to_dict()
     )
+    same_course_to_id = {str(k): v for k, v in same_course_to_id.items()}
     same_course_and_profs_to_id = (
         tables["courses"].set_index("course_id")["same_course_and_profs_id"].to_dict()
     )
+    same_course_and_profs_to_id = {str(k): v for k, v in same_course_and_profs_to_id.items()}
     listing_to_id = (
         tables["listings"].set_index(["season_code", "crn"])["listing_id"].to_dict()
     )
@@ -70,13 +86,13 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
         .to_dict()
     )
     rating_to_id = {f"{k[0]}-{k[1]}": v for k, v in rating_to_id.items()}
-    save_cache_json(cache_dir / "course_id.json", course_to_id)
-    save_cache_json(cache_dir / "same_course_id.json", same_course_to_id)
-    save_cache_json(
-        cache_dir / "same_course_and_profs_id.json", same_course_and_profs_to_id
+    merge_id_cache(cache_dir / "course_id.json", course_to_id)
+    merge_id_cache(cache_dir / "same_course_id.json", same_course_to_id, False)
+    merge_id_cache(
+        cache_dir / "same_course_and_profs_id.json", same_course_and_profs_to_id, False
     )
-    save_cache_json(cache_dir / "flag_id.json", flag_to_id)
-    save_cache_json(cache_dir / "listing_id.json", listing_to_id)
-    save_cache_json(cache_dir / "professor_id.json", professor_to_id)
-    save_cache_json(cache_dir / "evaluation_narrative_id.json", narrative_to_id)
-    save_cache_json(cache_dir / "evaluation_rating_id.json", rating_to_id)
+    merge_id_cache(cache_dir / "flag_id.json", flag_to_id)
+    merge_id_cache(cache_dir / "listing_id.json", listing_to_id)
+    merge_id_cache(cache_dir / "professor_id.json", professor_to_id)
+    merge_id_cache(cache_dir / "evaluation_narrative_id.json", narrative_to_id, False)
+    merge_id_cache(cache_dir / "evaluation_rating_id.json", rating_to_id, False)

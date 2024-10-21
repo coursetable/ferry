@@ -1,10 +1,30 @@
 import logging
 from tqdm import tqdm
-from typing import TypedDict
+from typing import TypedDict, cast, Callable
 from pathlib import Path
 
 import pandas as pd
 import ujson
+from ferry.crawler.cache import load_cache_json
+
+
+def generate_id(
+    df: pd.DataFrame, get_cache_key: Callable[[pd.Series], str], cache_path: Path
+) -> pd.Series:
+    """
+    Generate a unique ID for each row in a DataFrame.
+
+    `column_name` identifies each unique row value. `id_cache` stores existing
+    mappings of `column_name` to ID. Then, for all unmapped rows, they are
+    assigned IDs in increasing values.
+    """
+    id_cache: dict[str, int] = load_cache_json(cache_path) or {}
+    cache_keys = df.apply(get_cache_key, axis=1)
+    ids = cache_keys.map(id_cache)
+    max_flag_id = max(id_cache.values(), default=0)
+    unmapped = cache_keys[ids.isna()].unique()
+    new_flag_ids = pd.Series(range(max_flag_id + 1, max_flag_id + 1 + len(unmapped)))
+    return ids.fillna(cache_keys.map(dict(zip(unmapped, new_flag_ids)))).astype(int)
 
 
 def classify_yc(row: pd.Series):
@@ -21,7 +41,7 @@ def classify_yc(row: pd.Series):
     return False
 
 
-def resolve_cross_listings(listings: pd.DataFrame) -> pd.DataFrame:
+def resolve_cross_listings(listings: pd.DataFrame, data_dir: Path) -> pd.DataFrame:
     """
     Resolve course cross-listings by computing unique course_ids.
 
@@ -33,30 +53,31 @@ def resolve_cross_listings(listings: pd.DataFrame) -> pd.DataFrame:
     # prioritize Yale College courses when deduplicating listings
     logging.debug("Sorting by season and if-undergrad")
 
+    course_id_cache: dict[str, int] = (
+        load_cache_json(data_dir / "id_cache" / "course_id.json") or {}
+    )
+
     listings["is_yc"] = listings.apply(classify_yc, axis=1)
     listings = listings.sort_values(
         by=["season_code", "is_yc"], ascending=[True, False]
     )
 
     logging.debug("Aggregating cross-listings")
-    temp_course_ids_by_season = {}
+    temp_course_ids_by_season: dict[str, dict[int, str]] = {}
     for season, crns_of_season in listings.groupby("season_code")["crns"]:
         temp_course_id = 0
-        crn_to_course_id = {}
+        crn_to_course_id: dict[int, str] = {}
         for crns in crns_of_season:
-            existing_ids = set(
-                crn_to_course_id[crn] if crn in crn_to_course_id else None
-                for crn in crns
-            )
+            existing_ids = set(map(crn_to_course_id.get, crns))
             if existing_ids == {None}:
                 for crn in crns:
                     crn_to_course_id[crn] = f"{season}_{temp_course_id}"
                 temp_course_id += 1
             elif len(existing_ids) > 1:
-                raise SystemExit(
-                    f"Unexpected: {crns} are partially matched in {season}. The CRN graph should be a disjoint union of cliques."
+                raise ValueError(
+                    f"Unexpected: {crns} are matched to multiple courses in {season}. The CRN graph should be a disjoint union of cliques."
                 )
-        temp_course_ids_by_season[season] = crn_to_course_id
+        temp_course_ids_by_season[cast(str, season)] = crn_to_course_id
 
     # temporary string-based unique course identifier
     listings["temp_course_id"] = listings.apply(
@@ -64,10 +85,41 @@ def resolve_cross_listings(listings: pd.DataFrame) -> pd.DataFrame:
         axis=1,
     )
 
+    next_course_id = max(course_id_cache.values(), default=0)
+
+    def listing_group_to_id(group: pd.DataFrame) -> int:
+        nonlocal next_course_id
+        all_seasons = group["season_code"].unique()
+        if len(all_seasons) > 1:
+            raise ValueError(
+                f"Unexpected: {group['temp_course_id']} is matched to multiple seasons: {all_seasons}"
+            )
+        season = all_seasons[0]
+        all_course_ids = set(
+            course_id_cache.get(f"{season}-{crn}") for crn in group["crn"]
+        )
+        all_course_ids.discard(None)
+        if len(all_course_ids) > 1:
+            raise ValueError(
+                f"Unexpected: {group['temp_course_id']} is matched to multiple courses: {all_course_ids}"
+            )
+        if all_course_ids:
+            return cast(int, all_course_ids.pop())
+        next_course_id += 1
+        return next_course_id
+
+    course_id = (
+        listings.groupby("temp_course_id")
+        .apply(listing_group_to_id)
+        .reset_index(name="course_id")
+    )
+    listings = listings.merge(course_id, on="temp_course_id", how="left")
     return listings
 
 
-def aggregate_professors(courses: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+def aggregate_professors(
+    courses: pd.DataFrame, data_dir: Path
+) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Two professors are deemed the same if:
 
@@ -126,12 +178,11 @@ def aggregate_professors(courses: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFr
 
     course_professors.groupby("email").apply(warn_different_name)
 
-    course_professors["professor_id"] = course_professors.apply(
-        lambda x: x["email"] or x["name"], axis=1
+    course_professors["professor_id"] = generate_id(
+        course_professors,
+        lambda x: f"{x['name']} <{x['email']}>" if x["email"] else x["name"],
+        data_dir / "id_cache" / "professor_id.json",
     )
-    course_professors["professor_id"] = course_professors.groupby(
-        "professor_id"
-    ).ngroup()
     professors = course_professors.drop_duplicates(
         subset="professor_id", keep="last"
     ).set_index("professor_id")
@@ -139,14 +190,20 @@ def aggregate_professors(courses: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFr
     return professors, course_professors
 
 
-def aggregate_flags(courses: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+def aggregate_flags(
+    courses: pd.DataFrame, data_dir: Path
+) -> tuple[pd.DataFrame, pd.DataFrame]:
     logging.debug("Adding course flags")
     course_flags = (
         courses["flags"].explode().dropna().rename("flag_text").reset_index(drop=False)
     )
 
-    course_flags["flag_id"] = course_flags.groupby("flag_text").ngroup()
-    flags = course_flags.drop_duplicates(subset="flag_id")
+    course_flags["flag_id"] = generate_id(
+        course_flags,
+        lambda row: row["flag_text"],
+        data_dir / "id_cache" / "flag_id.json",
+    )
+    flags = course_flags.drop_duplicates(subset="flag_id").set_index("flag_id")
     return flags, course_flags
 
 
@@ -159,7 +216,7 @@ class CourseTables(TypedDict):
     flags: pd.DataFrame
 
 
-def import_courses(parsed_courses_dir: Path, seasons: list[str]) -> CourseTables:
+def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     """
     Import courses from JSON files in `parsed_courses_dir`.
     Splits the raw data into various tables for the database.
@@ -175,6 +232,8 @@ def import_courses(parsed_courses_dir: Path, seasons: list[str]) -> CourseTables
     """
 
     print("\nImporting courses...")
+    parsed_courses_dir = data_dir / "parsed_courses"
+
     all_imported_listings: list[pd.DataFrame] = []
 
     for season in tqdm(seasons, desc="Loading course JSONs", leave=False):
@@ -186,6 +245,7 @@ def import_courses(parsed_courses_dir: Path, seasons: list[str]) -> CourseTables
         parsed_course_info["season_code"] = season
         all_imported_listings.append(parsed_course_info)
 
+    logging.debug("Creating listings table")
     listings = pd.concat(all_imported_listings, axis=0).reset_index(drop=True)
     listings["crns"] = listings["crns"].apply(lambda crns: [int(crn) for crn in crns])
     # convert to JSON string for postgres
@@ -193,24 +253,24 @@ def import_courses(parsed_courses_dir: Path, seasons: list[str]) -> CourseTables
     listings["skills"] = listings["skills"].apply(ujson.dumps)
     listings["areas"] = listings["areas"].apply(ujson.dumps)
     listings["section"] = listings["section"].fillna("0").astype(str).replace({"": "0"})
-    listings = resolve_cross_listings(listings)
+    listings["listing_id"] = generate_id(
+        listings,
+        lambda row: f"{row['season_code']}-{row['crn']}",
+        data_dir / "id_cache" / "listing_id.json",
+    )
+    listings = resolve_cross_listings(listings, data_dir)
+    # Do this afterwards, because resolve_cross_listings will drop the index
+    listings = listings.set_index("listing_id")
 
     logging.debug("Creating courses table")
-    # initialize courses table
-    courses = listings.drop_duplicates(subset="temp_course_id").reset_index(drop=True)
-    # global course IDs
-    courses.index = courses.index.rename("course_id")
-
-    logging.debug("Creating listings table")
-    listings = listings.merge(
-        courses["temp_course_id"].reset_index(drop=False),
-        on="temp_course_id",
-        how="left",
+    courses = (
+        listings.reset_index(drop=True)
+        .drop_duplicates(subset="course_id")
+        .set_index("course_id")
     )
-    listings.index.rename("listing_id", inplace=True)
 
-    professors, course_professors = aggregate_professors(courses)
-    flags, course_flags = aggregate_flags(courses)
+    professors, course_professors = aggregate_professors(courses, data_dir)
+    flags, course_flags = aggregate_flags(courses, data_dir)
 
     print("\033[F", end="")
     print("Importing courses... ✔")
