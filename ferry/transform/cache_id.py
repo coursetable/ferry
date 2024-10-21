@@ -71,12 +71,8 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
         f"{k[0]} <{k[1]}>" if str(k[1]) != "nan" else k[0]: v
         for k, v in professor_to_id.items()
     }
-    # first sequentially assign a number to every narrative with the same course/question
-    narratives_with_number = tables["evaluation_narratives"].copy()
-    narratives_with_number["response_number"] = narratives_with_number.groupby(
-        ["course_id", "question_code"]
-    ).cumcount()
-    narrative_to_id = narratives_with_number.set_index(
+
+    narrative_to_id = tables["evaluation_narratives"].set_index(
         ["course_id", "question_code", "response_number"]
     )["id"].to_dict()
     narrative_to_id = {f"{k[0]}-{k[1]}-{k[2]}": v for k, v in narrative_to_id.items()}

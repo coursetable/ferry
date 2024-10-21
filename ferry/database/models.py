@@ -578,6 +578,11 @@ class EvaluationNarrative(BaseModel):
         backref="evaluation_narratives",
         cascade="all",
     )
+    response_number = Column(
+        Integer,
+        comment="The number of the response for the given course and question",
+        nullable=False,
+    )
 
     comment = Column(
         String,

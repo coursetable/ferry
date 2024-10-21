@@ -240,6 +240,10 @@ def import_evaluations(
     evaluation_narratives = evaluation_narratives.loc[
         evaluation_narratives["comment"].apply(len) > 2
     ].reset_index(drop=True)
+
+    evaluation_narratives["response_number"] = evaluation_narratives.groupby(
+        ["course_id", "question_code"]
+    ).cumcount()
     # id column for database primary key
     evaluation_narratives.index.rename("id", inplace=True)
 
