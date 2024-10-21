@@ -401,7 +401,6 @@ class Listing(BaseModel):
             "subject",
             "number",
             "section",
-            unique=True,
         ),
         Index(
             "idx_season_code_crn_unique",

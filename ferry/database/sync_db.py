@@ -25,6 +25,8 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
 
     conn = db.Engine.connect()
     inspector = inspect(db.Engine)
+    # TODO: remove this; currently we have a deadlock issue when executing on prod DB
+    conn.execution_options(isolation_level="AUTOCOMMIT")
     replace = conn.begin()
     conn.execute(text("SET CONSTRAINTS ALL DEFERRED;"))
     for table in Base.metadata.sorted_tables:
