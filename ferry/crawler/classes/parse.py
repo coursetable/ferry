@@ -1,12 +1,13 @@
 import re
+import traceback
 import warnings
 from pathlib import Path
-from tqdm import tqdm
-from typing import cast, Any, TypedDict
+from typing import Any, TypedDict, cast
 
 import ujson
-from unidecode import unidecode
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning, ResultSet, Tag
+from tqdm import tqdm
+from unidecode import unidecode
 
 from ferry.crawler.cache import load_cache_json, save_cache_json
 
@@ -711,6 +712,7 @@ def parse_courses(
             parsed_course_info.append(extract_course_info(x, season, fysem_courses))
         except Exception as e:
             print(f"Error parsing course {x['code']} in season {season}: {e}")
+            traceback.print_exc()
 
     save_cache_json(data_dir / "parsed_courses" / f"{season}.json", parsed_course_info)
 
