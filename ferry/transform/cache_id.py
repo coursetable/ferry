@@ -58,7 +58,9 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
     same_course_and_profs_to_id = (
         tables["courses"].set_index("course_id")["same_course_and_profs_id"].to_dict()
     )
-    same_course_and_profs_to_id = {str(k): v for k, v in same_course_and_profs_to_id.items()}
+    same_course_and_profs_to_id = {
+        str(k): v for k, v in same_course_and_profs_to_id.items()
+    }
     listing_to_id = (
         tables["listings"].set_index(["season_code", "crn"])["listing_id"].to_dict()
     )
@@ -72,9 +74,11 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
         for k, v in professor_to_id.items()
     }
 
-    narrative_to_id = tables["evaluation_narratives"].set_index(
-        ["course_id", "question_code", "response_number"]
-    )["id"].to_dict()
+    narrative_to_id = (
+        tables["evaluation_narratives"]
+        .set_index(["course_id", "question_code", "response_number"])["id"]
+        .to_dict()
+    )
     narrative_to_id = {f"{k[0]}-{k[1]}-{k[2]}": v for k, v in narrative_to_id.items()}
     rating_to_id = (
         tables["evaluation_ratings"]

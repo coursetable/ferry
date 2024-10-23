@@ -359,6 +359,16 @@ def extract_meetings(
             location_urls.append("")
         meetings.append(meeting.text)
 
+    if (
+        len(meetings) == 0
+        or len(meetings) == 1
+        and meetings[0].startswith("Not Supported")
+    ):
+        return {
+            "times_summary": "TBA",
+            "locations_summary": "TBA",
+            "times_by_day": {},
+        }
     split_meetings = list(map(split_meeting_text, meetings))
     times_summary, locations_summary = create_meeting_summaries(split_meetings)
 
