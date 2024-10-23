@@ -133,12 +133,19 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     print("\033[F", end="")
     print("Reindexing... ✔")
 
-    # Print row counts for each table.
-    print("\n[Table Statistics]")
     with database.session_scope(db.Session) as db_session:
-        with open(queries_dir / "table_sizes.sql") as file:
-            SUMMARY_SQL = file.read()
+        print("\nCreating metadata...")
+        with open(queries_dir / "create_metadata.sql") as file:
+            sql = file.read()
+        db_session.execute(text(sql))
+        print("\033[F", end="")
+        print("Creating metadata... ✔")
 
-        result = db_session.execute(text(SUMMARY_SQL))
+        # Print row counts for each table.
+        print("\n[Table Statistics]")
+        with open(queries_dir / "table_sizes.sql") as file:
+            sql = file.read()
+
+        result = db_session.execute(text(sql))
         for table_counts in result:
             print(f"{table_counts[1]:>25} - {table_counts[2]:6} rows")
