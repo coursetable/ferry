@@ -49,9 +49,30 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
         output_file_path = Path(output_dir).parent / (table_name + ".txt")
 
         with open(output_file_path, "w") as file:
-             # TODO check difference between old df and new df
-             # and output to above file path
-            file.write("")
+             # check difference between old df and new df and output to above file path
+            old_df = tables_old[table_name]
+            new_df = tables_new[table_name]
+
+            # check for rows that are in old df but not in new df
+            missing_rows = old_df[~old_df.isin(new_df)].dropna()
+            if not missing_rows.empty:
+                file.write(f"Rows missing in new table: {missing_rows}\n")
+
+            # check for rows that are in new df but not in old df
+            new_rows = new_df[~new_df.isin(old_df)].dropna()
+            if not new_rows.empty:
+                file.write(f"New rows in new table: {new_rows}\n")
+
+            # check for rows that have changed
+            changed_rows = old_df[~old_df.eq(new_df)].dropna()
+            if not changed_rows.empty:
+                file.write(f"Changed rows in new table: {changed_rows}\n")
+
+            # check for rows that have been deleted
+            deleted_rows = new_df[~new_df.isin(old_df)].dropna()
+            if not deleted_rows.empty:
+                file.write(f"Deleted rows in new table: {deleted_rows}\n")
+            
 
 
 get_dfs("postgresql://postgres:postgres@db:5432/postgres")
