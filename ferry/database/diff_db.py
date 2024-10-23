@@ -15,6 +15,32 @@ from ferry.database import Database, Base
 queries_dir = Path(__file__).parent / "queries"
 
 
+def get_dfs(database_connect_string: str):
+    db = Database(database_connect_string)
+
+    # sorted tables in the database
+    db_meta = MetaData()
+    db_meta.reflect(bind=db.Engine)
+
+    conn = db.Engine.connect()
+    
+    # get table names
+    query = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'"
+    result = conn.execute(text(query))
+    tables = [row[0] for row in result]
+
+    # Initialize a dictionary to store DataFrames
+    dataframes = {}
+
+    # Load each table into a DataFrame
+    for table_name in tables:
+        df = pd.read_sql_table(table_name, con=conn)
+        dataframes[table_name] = df
+
+    print(dataframes["courses"])
+
+get_dfs("postgresql://postgres:postgres@db:5432/postgres")
+
 def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     db = Database(database_connect_string)
 
@@ -27,6 +53,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
 
     conn = db.Engine.connect()
     inspector = inspect(db.Engine)
+    
     # TODO: remove this; currently we have a deadlock issue when executing on prod DB
     conn.execution_options(isolation_level="AUTOCOMMIT")
     replace = conn.begin()
