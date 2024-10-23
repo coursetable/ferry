@@ -86,7 +86,8 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
         .to_dict()
     )
     rating_to_id = {f"{k[0]}-{k[1]}": v for k, v in rating_to_id.items()}
-    merge_id_cache(cache_dir / "course_id.json", course_to_id)
+    # Cross-listing status can change, so the course id may change too
+    merge_id_cache(cache_dir / "course_id.json", course_to_id, False)
     merge_id_cache(cache_dir / "same_course_id.json", same_course_to_id, False)
     merge_id_cache(
         cache_dir / "same_course_and_profs_id.json", same_course_and_profs_to_id, False
