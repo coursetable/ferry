@@ -39,6 +39,19 @@ def get_dfs(database_connect_string: str):
 
     print(dataframes["courses"])
 
+def generate_diff(tables_old: dict[str, pd.DataFrame],
+                    tables_new: dict[str, pd.DataFrame], output_dir:str):
+    
+    for table_name in tables_old.keys():
+        if table_name not in tables_new.keys():
+            raise ValueError(f"Table {table_name} not found in new tables")
+        
+        output_file_path = Path(__file__).parent / (table_name + ".txt")
+
+        # TODO check difference between old df and new df and output to above file path
+
+
+
 get_dfs("postgresql://postgres:postgres@db:5432/postgres")
 
 def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
