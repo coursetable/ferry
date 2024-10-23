@@ -3,4 +3,5 @@ CREATE TABLE metadata (
   last_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-UPDATE metadata SET last_update = NOW() WHERE id = 1;
+INSERT INTO metadata (id, last_update) VALUES (1, NOW())
+ON CONFLICT (id) DO UPDATE SET last_update = EXCLUDED.last_update;
