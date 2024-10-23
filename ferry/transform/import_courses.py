@@ -86,6 +86,7 @@ def resolve_cross_listings(listings: pd.DataFrame, data_dir: Path) -> pd.DataFra
     )
 
     next_course_id = max(course_id_cache.values(), default=0)
+    course_ids_assigned: set[int] = set()
 
     def listing_group_to_id(group: pd.DataFrame) -> int:
         nonlocal next_course_id
@@ -100,12 +101,19 @@ def resolve_cross_listings(listings: pd.DataFrame, data_dir: Path) -> pd.DataFra
         )
         all_course_ids.discard(None)
         if len(all_course_ids) > 1:
-            raise ValueError(
-                f"Unexpected: {group['temp_course_id']} is matched to multiple courses: {all_course_ids}"
+            logging.warning(
+                f"The following courses are mapped to multiple courses: {all_course_ids}:\n{listings.loc[group['temp_course_id'].index][['season_code', 'title', 'course_code', 'crns']]}\nThey will be merged into the first one"
             )
-        if all_course_ids:
-            return cast(int, all_course_ids.pop())
+        already_assigned_ids = all_course_ids & course_ids_assigned
+        if already_assigned_ids:
+            logging.warning(f"Course ID {already_assigned_ids} is already used by another group; probably because cross-listings are split")
+        unassigned_ids = all_course_ids - course_ids_assigned
+        if unassigned_ids:
+            id = cast(int, unassigned_ids.pop())
+            course_ids_assigned.add(id)
+            return id
         next_course_id += 1
+        course_ids_assigned.add(next_course_id)
         return next_course_id
 
     course_id = (
