@@ -83,6 +83,10 @@ async def main():
         write_csvs(tables, data_dir=args.data_dir)
     if args.sync_db:
         assert tables
+        print(tables.keys())
+        print("here\n", tables, "\nend")
+        # TODO get old db into pandas table from args.database_connect_string and compare, modify sync_db with changes
+         
         sync_db(tables, args.database_connect_string)
     if args.generate_diagram:
         from ferry.generate_db_diagram import generate_db_diagram
