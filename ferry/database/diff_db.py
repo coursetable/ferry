@@ -10,6 +10,7 @@ from sqlalchemy import MetaData, text, inspect
 
 from ferry import database
 from ferry.database import Database, Base
+from ferry.transform import transform
 
 
 queries_dir = Path(__file__).parent / "queries"
@@ -37,11 +38,25 @@ def get_dfs(database_connect_string: str):
         df = pd.read_sql_table(table_name, con=conn)
         dataframes[table_name] = df
 
-    print(dataframes["courses"])
+    return dataframes
 
 def generate_diff(tables_old: dict[str, pd.DataFrame],
                     tables_new: dict[str, pd.DataFrame], output_dir:str):
     
+    primary_keys = {
+        "flags" : ["flag_id"],
+        "course_flags" : ["course_id", "flag_id"],
+        "professors" : ["professor_id"],
+        "course_professors" : ["course_id", "professor_id"],
+        "courses" : ["course_id"],
+        "listings" : ["listing_id"],
+        "evaluation_statistics" : ["course_id"],
+        "evaluation_narratives" : ["id"],
+        "evaluation_ratings" : ['id'],
+        "evaluation_questions" : ["question_code"],
+        "seasons" : ["season_code"]
+    }
+
     for table_name in tables_old.keys():
         if table_name not in tables_new.keys():
             raise ValueError(f"Table {table_name} not found in new tables")
@@ -53,6 +68,10 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
             old_df = tables_old[table_name]
             new_df = tables_new[table_name]
 
+            # just testing
+            old_df.to_csv("old_df.csv", index=False)
+            new_df.to_csv("new_df.csv", index=False)
+            
             # check for rows that are in old df but not in new df
             missing_rows = old_df[~old_df.isin(new_df)].dropna()
             if not missing_rows.empty:
@@ -75,7 +94,9 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
             
 
 
-get_dfs("postgresql://postgres:postgres@db:5432/postgres")
+# tables_old = get_dfs("postgresql://postgres:postgres@db:5432/postgres")
+# tables_new = transform(data_dir=Path("/workspaces/ferry/data"))
+# generate_diff(tables_old, tables_new, "/workspaces/ferry/diff")
 
 def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     db = Database(database_connect_string)
