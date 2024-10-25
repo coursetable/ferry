@@ -62,41 +62,59 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
             raise ValueError(f"Table {table_name} not found in new tables")
         
         output_file_path = Path(output_dir).parent / (table_name + ".txt")
+        
 
         with open(output_file_path, "w") as file:
              # check difference between old df and new df and output to above file path
             old_df = tables_old[table_name]
             new_df = tables_new[table_name]
+            
+            if (table_name == "courses"):
+                # temporary -- can be created by uncommenting where it says just testing
+                old_df = pd.read_csv("/workspaces/ferry/new_df.csv")
 
-            # just testing
-            old_df.to_csv("old_df.csv", index=False)
-            new_df.to_csv("new_df.csv", index=False)
+            # TODO - better way to do this?
+            pk = primary_keys[table_name][0]
+
+            # merged_df = pd.merge(old_df, new_df, on=primary_keys[table_name][0],
+                                #  how="outer", suffixes=('_old', '_new'))
+
+            # Identify rows with differences
             
             # check for rows that are in old df but not in new df
-            missing_rows = old_df[~old_df.isin(new_df)].dropna()
+            # based on primary key
+            missing_rows = old_df[~old_df[pk].isin(new_df[pk])]
             if not missing_rows.empty:
                 file.write(f"Rows missing in new table: {missing_rows}\n")
-
-            # check for rows that are in new df but not in old df
-            new_rows = new_df[~new_df.isin(old_df)].dropna()
-            if not new_rows.empty:
-                file.write(f"New rows in new table: {new_rows}\n")
-
-            # check for rows that have changed
-            changed_rows = old_df[~old_df.eq(new_df)].dropna()
-            if not changed_rows.empty:
-                file.write(f"Changed rows in new table: {changed_rows}\n")
-
+            
             # check for rows that have been deleted
-            deleted_rows = new_df[~new_df.isin(old_df)].dropna()
+            deleted_rows = new_df[~new_df[pk].isin(old_df[pk])]
             if not deleted_rows.empty:
                 file.write(f"Deleted rows in new table: {deleted_rows}\n")
+
+            # check for row
+
+            # just testing
+            # old_df.to_csv("old_df.csv", index=False)
+            # new_df.to_csv("new_df.csv", index=False)
+            
+            # check for rows that are in new df but not in old df
+            # new_rows = new_df[~new_df.isin(old_df)].dropna()
+            # if not new_rows.empty:
+            #     file.write(f"New rows in new table: {new_rows}\n")
+
+            # # check for rows that have changed
+            # changed_rows = old_df[~old_df.eq(new_df)].dropna()
+            # if not changed_rows.empty:
+            #     file.write(f"Changed rows in new table: {changed_rows}\n")
+
+            
             
 
 
-# tables_old = get_dfs("postgresql://postgres:postgres@db:5432/postgres")
-# tables_new = transform(data_dir=Path("/workspaces/ferry/data"))
-# generate_diff(tables_old, tables_new, "/workspaces/ferry/diff")
+tables_old = get_dfs("postgresql://postgres:postgres@db:5432/postgres")
+tables_new = transform(data_dir=Path("/workspaces/ferry/data"))
+generate_diff(tables_old, tables_new, "/workspaces/ferry/diff")
 
 def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     db = Database(database_connect_string)
