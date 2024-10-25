@@ -40,6 +40,18 @@ def get_dfs(database_connect_string: str):
 
     return dataframes
 
+def check_change(row):
+    for col_name in row.index.tolist():
+        if ("_old" not in col_name):
+            continue
+        col_name = col_name.replace("_old", "")
+        if (not pd.isna(row[col_name + "_old"]) and
+        not pd.isna(row[col_name + "_new"]) and
+        str(row[col_name + "_old"]) != str(row[col_name + "_new"])):
+            return True
+            
+    return False
+
 def generate_diff(tables_old: dict[str, pd.DataFrame],
                     tables_new: dict[str, pd.DataFrame], output_dir:str):
     
@@ -69,15 +81,13 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
             old_df = tables_old[table_name]
             new_df = tables_new[table_name]
             
-            if (table_name == "courses"):
-                # temporary -- can be created by uncommenting where it says just testing
-                old_df = pd.read_csv("/workspaces/ferry/new_df.csv")
+            ## if want to test with differences between old and new df
+            # if (table_name == "courses"):
+            #     # temporary -- can be created by uncommenting where it says just testing
+            #     old_df = pd.read_csv("/workspaces/ferry/new_df.csv")
 
             # TODO - better way to do this?
             pk = primary_keys[table_name][0]
-
-            # merged_df = pd.merge(old_df, new_df, on=primary_keys[table_name][0],
-                                #  how="outer", suffixes=('_old', '_new'))
 
             # Identify rows with differences
             
@@ -98,18 +108,19 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
             # old_df.to_csv("old_df.csv", index=False)
             # new_df.to_csv("new_df.csv", index=False)
             
-            # check for rows that are in new df but not in old df
-            # new_rows = new_df[~new_df.isin(old_df)].dropna()
-            # if not new_rows.empty:
-            #     file.write(f"New rows in new table: {new_rows}\n")
-
-            # # check for rows that have changed
-            # changed_rows = old_df[~old_df.eq(new_df)].dropna()
+            # check for rows that have changed
+            # changed_rows = old_df[((~old_df.isna()) & (~new_df.isna()) & (old_df != new_df)).any(axis=1)]
+            
             # if not changed_rows.empty:
             #     file.write(f"Changed rows in new table: {changed_rows}\n")
-
             
+            merged_df = pd.merge(old_df, new_df, on=pk,
+                                 how="inner", suffixes=('_old', '_new'))
             
+            changed_rows = merged_df[merged_df.apply(check_change, axis=1)]
+            
+            if not changed_rows.empty:
+                file.write(f"Changed rows in new table: {changed_rows}\n")
 
 
 tables_old = get_dfs("postgresql://postgres:postgres@db:5432/postgres")
