@@ -100,10 +100,10 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
         
         print(f"Computing diff for table {table_name} ...", end=" ")
         
-        output_file_path = Path(output_dir).parent / (table_name + ".txt")
+        output_file_path = Path(output_dir) / (table_name + ".txt")
         
 
-        with open(output_file_path, "w") as file:
+        with open(output_file_path, "w+") as file:
              # check difference between old df and new df and output to above file path
             old_df = tables_old[table_name]
             new_df = tables_new[table_name]
