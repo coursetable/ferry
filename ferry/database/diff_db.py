@@ -2,6 +2,8 @@
 
 import pandas as pd
 import csv
+import json
+import ast
 from io import StringIO
 import logging
 from pathlib import Path
@@ -45,10 +47,33 @@ def check_change(row):
         if ("_old" not in col_name):
             continue
         col_name = col_name.replace("_old", "")
-        if (not pd.isna(row[col_name + "_old"]) and
-        not pd.isna(row[col_name + "_new"]) and
-        str(row[col_name + "_old"]) != str(row[col_name + "_new"])):
-            return True
+
+        old_value = row[col_name + "_old"]
+        new_value = row[col_name + "_new"]
+        
+        if isinstance(old_value, list) or isinstance(new_value, list):
+            old_value = ast.literal_eval(str(old_value).replace('"',"'")) # fix quotes
+            new_value = ast.literal_eval(str(new_value).replace('"',"'"))
+            if (old_value != new_value):
+                return True
+        else:
+            if (not pd.isna(old_value) and
+            not pd.isna(new_value)):
+                if isinstance(old_value, dict) and isinstance(new_value, str):
+                    new_value = json.loads(new_value)
+                elif isinstance(old_value, (int, float)) and isinstance(new_value, (int, float)):
+                    new_value = float(new_value)
+                    old_value = float(old_value)
+                else:
+                    old_value = str(old_value).replace('"',"'").replace('\\', '').strip("'")
+                    new_value = str(new_value).replace('"',"'").replace('\\', '').strip("'")
+                    try:
+                        old_value = json.loads(old_value)
+                        new_value = json.loads(new_value)
+                    except:
+                        pass
+                if old_value != new_value:
+                    return True
             
     return False
 
@@ -72,6 +97,8 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
     for table_name in tables_old.keys():
         if table_name not in tables_new.keys():
             raise ValueError(f"Table {table_name} not found in new tables")
+        
+        print(f"Computing diff for table {table_name} ...", end=" ")
         
         output_file_path = Path(output_dir).parent / (table_name + ".txt")
         
@@ -121,6 +148,8 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
             
             if not changed_rows.empty:
                 file.write(f"Changed rows in new table: {changed_rows}\n")
+        
+        print("✔")
 
 
 tables_old = get_dfs("postgresql://postgres:postgres@db:5432/postgres")
