@@ -49,7 +49,7 @@ def check_change(row, table_name):
         "course_flags" : [],
         "professors" : [],
         "course_professors" : [],
-        'courses' : ['same_course_and_profs_id'],
+        'courses' : ['same_course_and_profs_id', 'same_course_id', 'same_prof_id', 'last_offered_course_id'],
         "listings" : [],
     }
 
@@ -89,6 +89,7 @@ def check_change(row, table_name):
                     except:
                         pass
                 if old_value != new_value:
+                    print(f"column: {col_name}, old: {old_value}, new: {new_value}")
                     return True
             
     return False
@@ -98,9 +99,9 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
     
     primary_keys = {
         "flags" : ["flag_id"],
-        "course_flags" : ["course_id", "flag_id"],
+        "course_flags" : ["course_id"],
         "professors" : ["professor_id"],
-        "course_professors" : ["course_id", "professor_id"],
+        "course_professors" : ["course_id"],
         "courses" : ["course_id"],
         "listings" : ["listing_id"],
     }
@@ -134,12 +135,12 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
             # based on primary key
             missing_rows = old_df[~old_df[pk].isin(new_df[pk])]
             if not missing_rows.empty:
-                file.write(f"Rows missing in new table: {missing_rows}\n")
+                file.write(f"Rows missing in new table: {missing_rows.to_csv()}\n")
             
             # check for rows that have been deleted
             deleted_rows = new_df[~new_df[pk].isin(old_df[pk])]
             if not deleted_rows.empty:
-                file.write(f"Deleted rows in new table: {deleted_rows}\n")
+                file.write(f"Deleted rows in new table: {deleted_rows.to_csv()}\n")
 
             # check for row
 
@@ -152,6 +153,13 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
             
             # if not changed_rows.empty:
             #     file.write(f"Changed rows in new table: {changed_rows}\n")
+            if table_name == "course_flags":
+                old_df = old_df.groupby("course_id")["flag_id"].apply(frozenset)
+                new_df = new_df.groupby("course_id")["flag_id"].apply(frozenset)
+            elif table_name == "course_professors":
+                old_df = old_df.groupby("course_id")["professor_id"].apply(frozenset)
+                new_df = new_df.groupby("course_id")["professor_id"].apply(frozenset)
+
             
             merged_df = pd.merge(old_df, new_df, on=pk,
                                  how="inner", suffixes=('_old', '_new'))
@@ -159,7 +167,7 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
             changed_rows = merged_df[merged_df.apply(check_change, args=(table_name,), axis=1)]
             
             if not changed_rows.empty:
-                file.write(f"Changed rows in new table: {changed_rows}\n")
+                file.write(f"Changed rows in new table: {changed_rows.to_csv()}\n")
         
         print("✔")
 
