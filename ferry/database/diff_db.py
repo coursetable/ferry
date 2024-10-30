@@ -11,6 +11,7 @@ from pathlib import Path
 from sqlalchemy import MetaData, text, inspect
 
 from ferry import database
+from ferry.crawler.classes.parse import normalize_unicode
 from ferry.database import Database, Base
 from ferry.transform import transform
 
@@ -42,12 +43,24 @@ def get_dfs(database_connect_string: str):
 
     return dataframes
 
-def check_change(row):
+def check_change(row, table_name):
+    cols_to_exclude = {
+        "flags" : [],
+        "course_flags" : [],
+        "professors" : [],
+        "course_professors" : [],
+        'courses' : ['same_course_and_profs_id'],
+        "listings" : [],
+    }
+
     for col_name in row.index.tolist():
         if ("_old" not in col_name):
             continue
         col_name = col_name.replace("_old", "")
-
+        
+        if (col_name in cols_to_exclude[table_name]):
+            return False
+        
         old_value = row[col_name + "_old"]
         new_value = row[col_name + "_new"]
         
@@ -65,8 +78,11 @@ def check_change(row):
                     new_value = float(new_value)
                     old_value = float(old_value)
                 else:
+                
                     old_value = str(old_value).replace('"',"'").replace('\\', '').strip("'")
                     new_value = str(new_value).replace('"',"'").replace('\\', '').strip("'")
+                    # old_value = normalize_unicode(old_value)
+                    # new_value = normalize_unicode(new_value)
                     try:
                         old_value = json.loads(old_value)
                         new_value = json.loads(new_value)
@@ -87,15 +103,11 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
         "course_professors" : ["course_id", "professor_id"],
         "courses" : ["course_id"],
         "listings" : ["listing_id"],
-        "evaluation_statistics" : ["course_id"],
-        "evaluation_narratives" : ["id"],
-        "evaluation_ratings" : ['id'],
-        "evaluation_questions" : ["question_code"],
-        "seasons" : ["season_code"]
     }
 
-    for table_name in tables_old.keys():
-        if table_name not in tables_new.keys():
+
+    for table_name in primary_keys.keys():
+        if table_name not in tables_new.keys() or table_name not in tables_old.keys():
             raise ValueError(f"Table {table_name} not found in new tables")
         
         print(f"Computing diff for table {table_name} ...", end=" ")
@@ -144,7 +156,7 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
             merged_df = pd.merge(old_df, new_df, on=pk,
                                  how="inner", suffixes=('_old', '_new'))
             
-            changed_rows = merged_df[merged_df.apply(check_change, axis=1)]
+            changed_rows = merged_df[merged_df.apply(check_change, args=(table_name,), axis=1)]
             
             if not changed_rows.empty:
                 file.write(f"Changed rows in new table: {changed_rows}\n")
