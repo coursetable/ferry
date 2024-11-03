@@ -67,8 +67,13 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
 
     replace.commit()
 
+    update = conn.begin()
 
-    for (table_name, diffs) in diff.items():
+    # order to process tables to avoid foreign key constraint issues
+    tables_order = ["courses", "listings", "flags", "course_flags", "professors", "course_professors"]
+
+    for table_name in tables_order:
+        diffs = diff[table_name]
         print(f"Syncing Table: {table_name}")
 
         # first add the new rows
@@ -121,7 +126,8 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                 where_clause = f"{pk} = '{row[pk]}'"
                 update_query = f'UPDATE {table_name} SET {set_clause} WHERE {where_clause}'
                 conn.execute(text(update_query))
-
+    
+    update.commit()
     print("\033[F", end="")
     print("Moving existing tables... ✔")
 
