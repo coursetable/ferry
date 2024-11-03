@@ -82,11 +82,14 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                 insert_query = f'INSERT INTO {table_name} ({columns}) VALUES ({values})'
                 conn.execute(text(insert_query))
 
+        pk = primary_keys[table_name]
+
         to_remove = diffs["deleted_rows"]
+        
         # remove these rows from the database table
         if len(to_remove) > 0:
             print(f"Removing {len(to_remove)} rows from {table_name}")
-            pk = primary_keys[table_name]
+            
             for _, row in to_remove.iterrows():
                 where_clause = f"{pk} = '{row[pk]}'"
                 delete_query = f'DELETE FROM {table_name} WHERE {where_clause}'
@@ -96,8 +99,27 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
         # update these rows in the database table
         if len(to_update) > 0:
             for _, row in to_update.iterrows():
-                # TODO: implement this
-                update_query = f'UPDATE {table_name} SET WHERE ...'
+                # TODO: check differences between specific columns again or update the whole row?
+                # might have to create new function just for checking difference between two columns in a row
+
+                set_clause_items = []
+                for col in row.index:
+                    col_name_orig = ""
+                    if "_new" in col:
+                        col_name_orig = col.replace("_new", "")
+                    else:
+                        continue
+
+                    val = row[col]
+
+                    if val is not None:
+                        set_clause_items.append(f"{col_name_orig} = '{val}'")
+                    else:
+                        set_clause_items.append(f"{col_name_orig} = NULL")
+
+                set_clause = ', '.join(set_clause_items)
+                where_clause = f"{pk} = '{row[pk]}'"
+                update_query = f'UPDATE {table_name} SET {set_clause} WHERE {where_clause}'
                 conn.execute(text(update_query))
 
     print("\033[F", end="")
