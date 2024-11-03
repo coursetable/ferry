@@ -19,3 +19,11 @@ from .models import (
     course_professors,
 )
 from .sync_db import sync_db
+
+# if this leads to an error, run the following command in the terminal:
+# export PYTHONPATH=/workspaces/ferry:$PYTHONPATH
+from .diff_db import (
+    get_dfs,
+    generate_diff,
+    primary_keys
+)

@@ -8,9 +8,10 @@ from sqlalchemy import MetaData, text, inspect
 
 from ferry import database
 from ferry.database import Database, Base
-from ferry.database.diff_db import get_dfs
-from ferry.database.diff_db import generate_diff
-from ferry.database.diff_db import primary_keys
+from ferry.database import get_dfs
+from ferry.database import generate_diff
+from ferry.database import primary_keys
+from ferry.transform import transform
 
 queries_dir = Path(__file__).parent / "queries"
 
@@ -208,3 +209,5 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
         result = db_session.execute(text(SUMMARY_SQL))
         for table_counts in result:
             print(f"{table_counts[1]:>25} - {table_counts[2]:6} rows")
+
+sync_db(transform(data_dir=Path("/workspaces/ferry/data")), "postgresql://postgres:postgres@db:5432/postgres")
