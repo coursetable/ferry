@@ -128,11 +128,11 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
             
             # check for rows that are in old df but not in new df
             # based on primary key
-            file.write("## Rows missing in new table: \n")
+            file.write("## Deleted rows in new table: \n")
 
-            missing_rows = old_df[~old_df[pk].isin(new_df[pk])]
-            if not missing_rows.empty:
-                file.write(f"{missing_rows.to_csv()}\n")
+            deleted_rows = old_df[~old_df[pk].isin(new_df[pk])]
+            if not deleted_rows.empty:
+                file.write(f"{deleted_rows.to_csv()}\n")
             
             file.write("## Added rows in new table: \n")
             # check for rows that have been added
@@ -159,7 +159,7 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
                 file.write(f"{changed_rows.to_csv()}\n")
 
             diff_dict[table_name] = {
-                "missing_rows": missing_rows,
+                "deleted_rows": deleted_rows,
                 "added_rows": added_rows,
                 "changed_rows": changed_rows
             }
@@ -168,6 +168,7 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
 
     return diff_dict
 
-tables_old = get_dfs("postgresql://postgres:postgres@db:5432/postgres")
-tables_new = transform(data_dir=Path("/workspaces/ferry/data"))
-generate_diff(tables_old, tables_new, "/workspaces/ferry/diff")
+if __name__ == "__main__":
+    tables_old = get_dfs("postgresql://postgres:postgres@db:5432/postgres")
+    tables_new = transform(data_dir=Path("/workspaces/ferry/data"))
+    generate_diff(tables_old, tables_new, "/workspaces/ferry/diff")
