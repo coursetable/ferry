@@ -55,9 +55,17 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
         if len(to_add) > 0:
             print(f"Adding {len(to_add)} new rows to {table_name}")
             for _, row in to_add.iterrows():
-                columns = ', '.join(row.index)
+                columns_list = list(row.index)
+                columns_list.append("time_added")
+                columns_list.append("last_updated")
+                columns = ', '.join(columns_list)
+
+                values_list = list(row.values)
+                values_list.append("NOW()")
+                values_list.append("NOW()")
                 values = ', '.join(
-                    f"'{str(v)}'" if v is not None else 'NULL' for v in row.values)
+                    f"'{str(v)}'" if v is not None else 'NULL' for v in values_list)
+
                 insert_query = f'INSERT INTO {table_name} ({columns}) VALUES ({values});'
                 conn.execute(text(insert_query))
 
