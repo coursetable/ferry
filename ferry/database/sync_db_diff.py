@@ -38,11 +38,16 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     update = conn.begin()
 
     # order to process tables to avoid foreign key constraint issues
-    tables_order = ["courses", "listings", "flags", "course_flags", "professors", "course_professors"]
+    tables_order_add = ["courses", "listings", "flags",
+                        "course_flags", "professors", "course_professors"]
 
-    for table_name in tables_order:
+    # reverse order when deleting
+    tables_order_delete = ["course_professors", "professors",
+                           "course_flags", "flags", "listings", "courses"]
+
+    for table_name in tables_order_add:
         diffs = diff[table_name]
-        print(f"Syncing Table: {table_name}")
+        print(f"Syncing (Add/Update) Table: {table_name}")
 
         # first add the new rows
         to_add = diffs["added_rows"]
@@ -51,22 +56,12 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
             print(f"Adding {len(to_add)} new rows to {table_name}")
             for _, row in to_add.iterrows():
                 columns = ', '.join(row.index)
-                values = ', '.join(f"'{str(v)}'" if v is not None else 'NULL' for v in row.values)
+                values = ', '.join(
+                    f"'{str(v)}'" if v is not None else 'NULL' for v in row.values)
                 insert_query = f'INSERT INTO {table_name} ({columns}) VALUES ({values});'
                 conn.execute(text(insert_query))
 
         pk = primary_keys[table_name][0]
-
-        to_remove = diffs["deleted_rows"]
-        
-        # remove these rows from the database table
-        if len(to_remove) > 0:
-            print(f"Removing {len(to_remove)} rows from {table_name}")
-            
-            for _, row in to_remove.iterrows():
-                where_clause = f"{pk} = '{row[pk]}'"
-                delete_query = f'DELETE FROM {table_name} WHERE {where_clause};'
-                conn.execute(text(delete_query))
 
         to_update = diffs["changed_rows"]
         # update these rows in the database table
@@ -96,10 +91,27 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                 where_clause = f"{pk} = '{row[pk]}'"
                 update_query = f'UPDATE {table_name} SET {set_clause} WHERE {where_clause};'
                 conn.execute(text(update_query))
-    
+
+    for table_name in tables_order_delete:
+        diffs = diff[table_name]
+        print(f"Syncing (Delete) Table: {table_name}")
+
+        pk = primary_keys[table_name][0]
+
+        to_remove = diffs["deleted_rows"]
+
+        # remove these rows from the database table
+        if len(to_remove) > 0:
+            print(f"Removing {len(to_remove)} rows from {table_name}")
+
+            for _, row in to_remove.iterrows():
+                where_clause = f"{pk} = '{row[pk]}'"
+                delete_query = f'DELETE FROM {table_name} WHERE {where_clause};'
+                conn.execute(text(delete_query))
+
     update.commit()
     print("\033[F", end="")
-    
+
     # Print row counts for each table.
     print("\n[Table Statistics]")
     with database.session_scope(db.Session) as db_session:
@@ -110,5 +122,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
         for table_counts in result:
             print(f"{table_counts[1]:>25} - {table_counts[2]:6} rows")
 
+
 if __name__ == "__main__":
-    sync_db(transform(data_dir=Path("/workspaces/ferry/data")), "postgresql://postgres:postgres@db:5432/postgres")
+    sync_db(transform(data_dir=Path("/workspaces/ferry/data")),
+            "postgresql://postgres:postgres@db:5432/postgres")
