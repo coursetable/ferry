@@ -29,6 +29,12 @@ MAX_DESCRIPTION_DIST = 0.25
 code_changes = [
     ("ENGL 121", "ENGL 421"),
     ("CPSC 427", "CPSC 327"),
+    # Although our build_four_digit_transition function automatically discovers
+    # a lot of these transitions, some are very hard to find. For example, ENGL
+    # 115 has different titles every year.
+    ("ENGL 115", "ENGL 1015"),
+    ("ENGL 121", "ENGL 1021"),
+    ("ENGL 308", "ENGL 2854"),
 ]
 
 subject_changes = [
@@ -127,6 +133,50 @@ def distance_in_bounds(text_1: str, text_2: str, max_dist: float) -> float:
     return raw_dist / len(text_1)
 
 
+def build_four_digit_transition(listings: pd.DataFrame) -> dict[str, str]:
+    """
+    Starting in spring 2025, Yale is migrating from 3-digit codes to 4-digit
+    codes. To our surprise this is a very chaotic and unorganized process.
+    There's no clear rule about how the course codes are re-written, so we
+    do the following:
+
+    Every department changes codes at one particular season (ENGL at 202501).
+    Then, we split all their courses by "before" and "after", and for each
+    course in "after", we find the course in "before" that has the same title.
+    If there is none, then we assume there's no recurrence.
+
+    TODO: we will ask the registrar to find a better way forward.
+    """
+    transition_seasons = {"ENGL": "202501"}
+    transition_codes: dict[str, str] = {}
+    for department, season in transition_seasons.items():
+        before = listings[
+            (listings["season_code"] < season) & (listings["subject"] == department)
+        ]
+        after = listings[
+            (listings["season_code"] >= season) & (listings["subject"] == department)
+        ]
+        # For course before: for each title, sort by season code and get most recent course code
+        before = (
+            before.sort_values("season_code")
+            .groupby("title")["course_code"]
+            .last()
+            .to_dict()
+        )
+        # For course after: for each title, get the least recent course code
+        after = (
+            after.sort_values("season_code")
+            .groupby("title")["course_code"]
+            .first()
+            .to_dict()
+        )
+        # For each course in after, find the corresponding course in before
+        for title, code in after.items():
+            if title in before and before[title] not in transition_codes:
+                transition_codes[before[title]] = code
+    return transition_codes
+
+
 def resolve_historical_courses(
     courses: pd.DataFrame, listings: pd.DataFrame
 ) -> tuple[pd.Series, dict[int, list[int]]]:
@@ -176,7 +226,7 @@ def resolve_historical_courses(
         for code_1, code_2 in itertools.pairwise(course_codes):
             cross_listed_codes.add_edge(code_1, code_2)
 
-    for code_1, code_2 in code_changes:
+    for code_1, code_2 in [*code_changes, *build_four_digit_transition(listings).items()]:
         cross_listed_codes.add_edge(code_1, code_2)
 
     for subject_1, subject_2 in subject_changes:

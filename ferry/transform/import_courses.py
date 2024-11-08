@@ -106,7 +106,9 @@ def resolve_cross_listings(listings: pd.DataFrame, data_dir: Path) -> pd.DataFra
             )
         already_assigned_ids = all_course_ids & course_ids_assigned
         if already_assigned_ids:
-            logging.warning(f"Course ID {already_assigned_ids} is already used by another group; probably because cross-listings are split")
+            logging.warning(
+                f"Course ID {already_assigned_ids} is already used by another group; probably because cross-listings are split"
+            )
         unassigned_ids = all_course_ids - course_ids_assigned
         if unassigned_ids:
             id = cast(int, unassigned_ids.pop())
