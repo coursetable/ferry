@@ -226,7 +226,10 @@ def resolve_historical_courses(
         for code_1, code_2 in itertools.pairwise(course_codes):
             cross_listed_codes.add_edge(code_1, code_2)
 
-    for code_1, code_2 in [*code_changes, *build_four_digit_transition(listings).items()]:
+    for code_1, code_2 in [
+        *code_changes,
+        *build_four_digit_transition(listings).items(),
+    ]:
         cross_listed_codes.add_edge(code_1, code_2)
 
     for subject_1, subject_2 in subject_changes:
@@ -254,7 +257,7 @@ def resolve_historical_courses(
         courses["description"].apply(len) >= MIN_DESCRIPTION_MATCH_LEN
     ].to_dict()
 
-    same_courses: list[list[int]] = []
+    same_course_to_courses: dict[int, list[int]] = {}
 
     for codes in tqdm(
         cross_listed_codes,
@@ -281,7 +284,8 @@ def resolve_historical_courses(
         title_components = [(i, t, c) for i, (t, c) in enumerate(titles.items())]
         # There's no title variation, nothing to match
         if len(title_components) == 1:
-            same_courses.append(list(course_set))
+            ids = list(course_set)
+            same_course_to_courses[min(ids)] = ids
             continue
         same_course_graph = nx.Graph()
         # fill in the nodes first to keep courses with no same-code edges
@@ -349,15 +353,15 @@ def resolve_historical_courses(
                         log_file.write(
                             f"[WARNING] {'/'.join(c1)} and {'/'.join(c2)} have no code in common\n"
                         )
-            same_courses.append(list(x))
+            ids = list(x)
+            same_course_to_courses[min(ids)] = ids
 
     for course in set(discussion_course_ids):
-        same_courses.append([course])
+        same_course_to_courses[course] = [course]
 
     # map courses to unique same-courses ID, and map same-courses ID to courses
-    connected_courses = pd.Series(same_courses, name="course_id")
+    connected_courses = pd.Series(same_course_to_courses, name="course_id")
     connected_courses.index.rename("same_course_id", inplace=True)
-    same_course_to_courses = connected_courses.to_dict()
 
     # map course_id to same-course partition ID
     same_course_id = (
@@ -409,14 +413,15 @@ def split_same_professors(
         .reset_index()
     )
 
-    professors_grouped.index.rename("same_course_and_profs_id", inplace=True)
+    professors_grouped["same_course_and_profs_id"] = professors_grouped[
+        "course_id"
+    ].apply(min)
+    same_prof_course_to_courses = professors_grouped.set_index(
+        "same_course_and_profs_id"
+    )["course_id"].to_dict()
 
-    same_prof_course_to_courses = professors_grouped["course_id"].to_dict()
-
-    same_course_and_profs_id = (
-        professors_grouped.explode("course_id")
-        .reset_index(drop=False)
-        .set_index("course_id")["same_course_and_profs_id"]
-    )
+    same_course_and_profs_id = professors_grouped.explode("course_id").set_index(
+        "course_id"
+    )["same_course_and_profs_id"]
 
     return same_course_and_profs_id, same_prof_course_to_courses
