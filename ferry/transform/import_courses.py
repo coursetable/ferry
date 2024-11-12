@@ -354,12 +354,12 @@ def aggregate_locations(
     course_meetings = course_meetings.explode().dropna().apply(pd.Series).reset_index()
     # Merge rows with the same start/end/location
     course_meetings = (
-        course_meetings.groupby(["course_id", "start_time", "end_time", "location_id"])
+        course_meetings.groupby(["course_id", "start_time", "end_time", "location_id"], dropna=False)
         .agg({"days_of_week": lambda x: sum(1 << i for i in x)})
         .reset_index()
     )
     course_meetings["days_of_week"] = course_meetings["days_of_week"].astype(int)
-    course_meetings["location_id"] = course_meetings["location_id"].astype(int)
+    course_meetings["location_id"] = course_meetings["location_id"].astype(pd.Int64Dtype())
     return course_meetings, locations, buildings
 
 
