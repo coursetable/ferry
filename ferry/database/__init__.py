@@ -13,6 +13,7 @@ from .models import (
     EvaluationStatistics,
     Flag,
     course_meetings,
+    Building,
     Location,
     Listing,
     Professor,

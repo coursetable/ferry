@@ -476,6 +476,24 @@ course_meetings = Table(
 )
 
 
+class Building(BaseModel):
+    """
+    Buildings table.
+    """
+
+    __tablename__ = "buildings"
+
+    code = Column(
+        String,
+        comment="Building short code/abbreviation, as in YCS",
+        index=True,
+        nullable=False,
+        primary_key=True,
+    )
+    building_name = Column(String, comment="Building full name")
+    url = Column(String, comment="Yale campus map URL")
+
+
 class Location(BaseModel):
     """
     Locations table.
@@ -483,15 +501,25 @@ class Location(BaseModel):
 
     __tablename__ = "locations"
 
-    location_id = Column(Integer, comment="Location ID", primary_key=True)
-    building_name = Column(String, comment="Building full name")
-    code = Column(
+    location_id = Column(Integer, primary_key=True)
+    building_code = Column(
         String,
-        comment="Building short code/abbreviation, as in YCS",
+        ForeignKey("buildings.code"),
+        comment="Building code",
         index=True,
         nullable=False,
     )
-    number = Column(String, comment="Room number", index=True)
+    building = relationship("Building", backref="locations", cascade="all")
+    room = Column(String, comment="Room number")
+
+    __table_args__ = (
+        Index(
+            "idx_building_code_room_unique",
+            "building_code",
+            "room",
+            unique=True,
+        ),
+    )
 
 
 class Professor(BaseModel):

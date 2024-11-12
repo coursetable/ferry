@@ -3,6 +3,7 @@ from tqdm import tqdm
 from typing import TypedDict, cast, Callable
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import ujson
 from ferry.crawler.cache import load_cache_json
@@ -217,28 +218,37 @@ def aggregate_flags(
     return flags, course_flags
 
 
-def parse_location(location: str) -> dict[str, str]:
-    if " - " not in location:
-        if " " not in location:
-            # Just building code
-            return {"building_name": "", "code": location, "number": ""}
-        # [code] [number]
-        code, number = location.split(" ", 1)
-        return {"building_name": "", "code": code, "number": number}
-    abbrev, rest = location.split(" - ", 1)
-    if " " not in abbrev:
-        if rest == abbrev:
-            rest = ""
-        # [code] - [building name]
-        return {"building_name": rest, "code": abbrev, "number": ""}
-    code, number = abbrev.split(" ", 1)
-    if not rest.endswith(number):
+def parse_location(location: str) -> dict[str, str | None]:
+    def do_parse():
+        if " - " not in location:
+            if " " not in location:
+                # Just building code
+                return {"building_name": None, "code": location, "room": None}
+            # [code] [room]
+            code, room = location.split(" ", 1)
+            return {"building_name": None, "code": code, "room": room}
+        abbrev, rest = location.split(" - ", 1)
+        if " " not in abbrev:
+            if rest == abbrev:
+                rest = None
+            # [code] - [building name]
+            return {"building_name": rest, "code": abbrev, "room": None}
+        code, room = abbrev.split(" ", 1)
+        if not rest.endswith(room):
+            raise ValueError(f"Unexpected location format: {location}")
+        building_full_name = rest.removesuffix(f" {room}")
+        if building_full_name == code:
+            building_full_name = None
+        # [code] [room] - [building name] [room]
+        return {"building_name": building_full_name, "code": code, "room": room}
+
+    res = do_parse()
+    for key in res:
+        if res[key] == "" or res[key] == "TBA":
+            res[key] = None
+    if res["code"] is None:
         raise ValueError(f"Unexpected location format: {location}")
-    building_full_name = rest.removesuffix(f" {number}")
-    if building_full_name == code:
-        building_full_name = ""
-    # [code] [number] - [building name] [number]
-    return {"building_name": building_full_name, "code": code, "number": number}
+    return res
 
 
 weekdays = {
@@ -254,12 +264,12 @@ weekdays = {
 
 def aggregate_locations(
     courses: pd.DataFrame, data_dir: Path
-) -> tuple[pd.DataFrame, pd.DataFrame]:
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     location_data = []
     for times_by_day in courses["times_by_day"]:
         for day_details in ujson.loads(times_by_day).values():
             for [_, _, location, location_url] in day_details:
-                if location == "" or location == "TBA":
+                if location == "" or location == "TBA" or location == "TBA TBA":
                     continue
                 location_data.append({**parse_location(location), "url": location_url})
     locations = pd.DataFrame(location_data).drop_duplicates().reset_index(drop=True)
@@ -270,20 +280,43 @@ def aggregate_locations(
                 f"Multiple names for {row.name}: {row['building_name'].unique()}"
             )
 
-    locations_by_name = locations[locations["building_name"] != ""].groupby(
-        ["code", "number"]
+    locations[~locations["building_name"].isna()].groupby(["code", "room"]).apply(
+        report_multiple_names
     )
-    locations_by_name.apply(report_multiple_names)
-    locations["building_name"] = locations["building_name"].replace({"": None})
-    locations = locations.groupby(["code", "number"], as_index=False).last()
+    locations = locations.groupby(["code", "room"], as_index=False, dropna=False).last()
 
     locations["location_id"] = generate_id(
         locations,
-        lambda row: f"{row['code']} {row['number']}",
+        lambda row: f"{row['code']} {row['room'] or ''}",
         data_dir / "id_cache" / "location_id.json",
     )
-    location_to_id = locations.set_index(["code", "number"])["location_id"].to_dict()
+    location_to_id = locations.set_index(["code", "room"])["location_id"].to_dict()
     locations = locations.set_index("location_id")
+
+    buildings = locations.copy(deep=True)
+    locations.rename(columns={"code": "building_code"}, inplace=True)
+
+    def report_different_info(group: pd.DataFrame):
+        all_names = group["building_name"].unique()
+        all_names = all_names[~pd.isna(all_names)]
+        if len(all_names) > 1:
+            logging.warning(
+                f"Multiple building names for building {group.name}: {all_names}; only the last name will be used"
+            )
+        all_urls = group["url"].unique()
+        all_urls = all_urls[~pd.isna(all_urls)]
+        if len(all_urls) > 1:
+            logging.warning(
+                f"Multiple URLs for building {group.name}: {all_urls}; only the last URL will be used"
+            )
+
+    buildings.groupby("code").apply(report_different_info)
+    buildings = (
+        buildings.sort_values(by=["building_name", "url"])
+        .groupby("code")
+        .last()
+        .reset_index()
+    )
 
     # For each course, go from { day_of_week: [start, end, location, url] } to
     # an array of { day_of_week, start_time, end_time, location_id }
@@ -292,7 +325,7 @@ def aggregate_locations(
         meetings = []
         for day, day_details in data.items():
             for [start, end, location, _] in day_details:
-                if location == "" or location == "TBA":
+                if location == "" or location == "TBA" or location == "TBA TBA":
                     meetings.append(
                         {
                             "days_of_week": weekdays[day],
@@ -309,7 +342,7 @@ def aggregate_locations(
                         "start_time": start,
                         "end_time": end,
                         "location_id": location_to_id[
-                            location_info["code"], location_info["number"]
+                            location_info["code"], location_info["room"] or np.nan
                         ],
                     }
                 )
@@ -318,9 +351,7 @@ def aggregate_locations(
     course_meetings = courses["times_by_day"].apply(to_course_meetings)
     # course_meetings is a series of course_id -> list of dicts.
     # Explode it to get a DataFrame with course_id, days_of_week, start_time, end_time, location_id
-    course_meetings = (
-        course_meetings.explode().dropna().apply(pd.Series).reset_index()
-    )
+    course_meetings = course_meetings.explode().dropna().apply(pd.Series).reset_index()
     # Merge rows with the same start/end/location
     course_meetings = (
         course_meetings.groupby(["course_id", "start_time", "end_time", "location_id"])
@@ -329,7 +360,7 @@ def aggregate_locations(
     )
     course_meetings["days_of_week"] = course_meetings["days_of_week"].astype(int)
     course_meetings["location_id"] = course_meetings["location_id"].astype(int)
-    return course_meetings, locations
+    return course_meetings, locations, buildings
 
 
 class CourseTables(TypedDict):
@@ -341,6 +372,7 @@ class CourseTables(TypedDict):
     flags: pd.DataFrame
     course_meetings: pd.DataFrame
     locations: pd.DataFrame
+    buildings: pd.DataFrame
 
 
 def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
@@ -398,7 +430,7 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
 
     professors, course_professors = aggregate_professors(courses, data_dir)
     flags, course_flags = aggregate_flags(courses, data_dir)
-    course_meetings, locations = aggregate_locations(courses, data_dir)
+    course_meetings, locations, buildings = aggregate_locations(courses, data_dir)
 
     print("\033[F", end="")
     print("Importing courses... ✔")
@@ -410,8 +442,9 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     print(f"Total professors: {len(professors)}")
     print(f"Total course-flags: {len(course_flags)}")
     print(f"Total flags: {len(flags)}")
-    print(f"Total locations: {len(locations)}")
     print(f"Total course-meetings: {len(course_meetings)}")
+    print(f"Total locations: {len(locations)}")
+    print(f"Total buildings: {len(buildings)}")
 
     return {
         "courses": courses,
@@ -421,5 +454,6 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
         "course_flags": course_flags,
         "flags": flags,
         "locations": locations,
+        "buildings": buildings,
         "course_meetings": course_meetings,
     }

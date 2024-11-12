@@ -101,6 +101,7 @@ def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         ("course_flags", database.course_flags),
         ("course_meetings", database.course_meetings),
         ("locations", database.Location.__table__),
+        ("buildings", database.Building.__table__),
         ("evaluation_questions", database.EvaluationQuestion.__table__),
         ("evaluation_narratives", database.EvaluationNarrative.__table__),
         ("evaluation_statistics", database.EvaluationStatistics.__table__),

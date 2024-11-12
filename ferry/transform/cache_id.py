@@ -67,9 +67,11 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
     listing_to_id = {f"{k[0]}-{k[1]}": v for k, v in listing_to_id.items()}
     flag_to_id = tables["flags"].set_index("flag_text")["flag_id"].to_dict()
     location_to_id = (
-        tables["locations"].set_index(["code", "number"])["location_id"].to_dict()
+        tables["locations"]
+        .set_index(["building_code", "room"])["location_id"]
+        .to_dict()
     )
-    location_to_id = {f"{k[0]} {k[1]}": v for k, v in location_to_id.items()}
+    location_to_id = {f"{k[0]} {k[1] or ''}": v for k, v in location_to_id.items()}
     professor_to_id = (
         tables["professors"].set_index(["name", "email"])["professor_id"].to_dict()
     )
