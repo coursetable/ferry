@@ -12,6 +12,8 @@ from .models import (
     EvaluationRating,
     EvaluationStatistics,
     Flag,
+    course_meetings,
+    Location,
     Listing,
     Professor,
     Season,

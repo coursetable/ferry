@@ -217,6 +217,121 @@ def aggregate_flags(
     return flags, course_flags
 
 
+def parse_location(location: str) -> dict[str, str]:
+    if " - " not in location:
+        if " " not in location:
+            # Just building code
+            return {"building_name": "", "code": location, "number": ""}
+        # [code] [number]
+        code, number = location.split(" ", 1)
+        return {"building_name": "", "code": code, "number": number}
+    abbrev, rest = location.split(" - ", 1)
+    if " " not in abbrev:
+        if rest == abbrev:
+            rest = ""
+        # [code] - [building name]
+        return {"building_name": rest, "code": abbrev, "number": ""}
+    code, number = abbrev.split(" ", 1)
+    if not rest.endswith(number):
+        raise ValueError(f"Unexpected location format: {location}")
+    building_full_name = rest.removesuffix(f" {number}")
+    if building_full_name == code:
+        building_full_name = ""
+    # [code] [number] - [building name] [number]
+    return {"building_name": building_full_name, "code": code, "number": number}
+
+
+weekdays = {
+    "Sunday": 0,
+    "Monday": 1,
+    "Tuesday": 2,
+    "Wednesday": 3,
+    "Thursday": 4,
+    "Friday": 5,
+    "Saturday": 6,
+}
+
+
+def aggregate_locations(
+    courses: pd.DataFrame, data_dir: Path
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    location_data = []
+    for times_by_day in courses["times_by_day"]:
+        for day_details in ujson.loads(times_by_day).values():
+            for [_, _, location, location_url] in day_details:
+                if location == "" or location == "TBA":
+                    continue
+                location_data.append({**parse_location(location), "url": location_url})
+    locations = pd.DataFrame(location_data).drop_duplicates().reset_index(drop=True)
+
+    def report_multiple_names(row: pd.DataFrame):
+        if len(row["building_name"].unique()) > 1:
+            logging.warning(
+                f"Multiple names for {row.name}: {row['building_name'].unique()}"
+            )
+
+    locations_by_name = locations[locations["building_name"] != ""].groupby(
+        ["code", "number"]
+    )
+    locations_by_name.apply(report_multiple_names)
+    locations["building_name"] = locations["building_name"].replace({"": None})
+    locations = locations.groupby(["code", "number"], as_index=False).last()
+
+    locations["location_id"] = generate_id(
+        locations,
+        lambda row: f"{row['code']} {row['number']}",
+        data_dir / "id_cache" / "location_id.json",
+    )
+    location_to_id = locations.set_index(["code", "number"])["location_id"].to_dict()
+    locations = locations.set_index("location_id")
+
+    # For each course, go from { day_of_week: [start, end, location, url] } to
+    # an array of { day_of_week, start_time, end_time, location_id }
+    def to_course_meetings(times_by_day: str):
+        data = ujson.loads(times_by_day)
+        meetings = []
+        for day, day_details in data.items():
+            for [start, end, location, _] in day_details:
+                if location == "" or location == "TBA":
+                    meetings.append(
+                        {
+                            "days_of_week": weekdays[day],
+                            "start_time": start,
+                            "end_time": end,
+                            "location_id": None,
+                        }
+                    )
+                    continue
+                location_info = parse_location(location)
+                meetings.append(
+                    {
+                        "days_of_week": weekdays[day],
+                        "start_time": start,
+                        "end_time": end,
+                        "location_id": location_to_id[
+                            location_info["code"], location_info["number"]
+                        ],
+                    }
+                )
+        return meetings
+
+    course_meetings = courses["times_by_day"].apply(to_course_meetings)
+    # course_meetings is a series of course_id -> list of dicts.
+    # Explode it to get a DataFrame with course_id, days_of_week, start_time, end_time, location_id
+    course_meetings = (
+        course_meetings.explode().dropna().apply(pd.Series).reset_index()
+    )
+    # Merge rows with the same start/end/location
+    course_meetings = (
+        course_meetings.groupby(["course_id", "start_time", "end_time", "location_id"])
+        .agg({"days_of_week": lambda x: sum(1 << i for i in x)})
+        .reset_index()
+    )
+    course_meetings["days_of_week"] = course_meetings["days_of_week"].astype(int)
+    course_meetings["location_id"] = course_meetings["location_id"].astype(int)
+    return course_meetings, locations
+
+
 class CourseTables(TypedDict):
     courses: pd.DataFrame
     listings: pd.DataFrame
@@ -224,6 +339,8 @@ class CourseTables(TypedDict):
     professors: pd.DataFrame
     course_flags: pd.DataFrame
     flags: pd.DataFrame
+    course_meetings: pd.DataFrame
+    locations: pd.DataFrame
 
 
 def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
@@ -281,6 +398,7 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
 
     professors, course_professors = aggregate_professors(courses, data_dir)
     flags, course_flags = aggregate_flags(courses, data_dir)
+    course_meetings, locations = aggregate_locations(courses, data_dir)
 
     print("\033[F", end="")
     print("Importing courses... ✔")
@@ -292,6 +410,8 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     print(f"Total professors: {len(professors)}")
     print(f"Total course-flags: {len(course_flags)}")
     print(f"Total flags: {len(flags)}")
+    print(f"Total locations: {len(locations)}")
+    print(f"Total course-meetings: {len(course_meetings)}")
 
     return {
         "courses": courses,
@@ -300,4 +420,6 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
         "professors": professors,
         "course_flags": course_flags,
         "flags": flags,
+        "locations": locations,
+        "course_meetings": course_meetings,
     }

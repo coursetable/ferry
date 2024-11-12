@@ -99,6 +99,8 @@ def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         ("professors", database.Professor.__table__),
         ("flags", database.Flag.__table__),
         ("course_flags", database.course_flags),
+        ("course_meetings", database.course_meetings),
+        ("locations", database.Location.__table__),
         ("evaluation_questions", database.EvaluationQuestion.__table__),
         ("evaluation_narratives", database.EvaluationNarrative.__table__),
         ("evaluation_statistics", database.EvaluationStatistics.__table__),

@@ -66,6 +66,10 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
     )
     listing_to_id = {f"{k[0]}-{k[1]}": v for k, v in listing_to_id.items()}
     flag_to_id = tables["flags"].set_index("flag_text")["flag_id"].to_dict()
+    location_to_id = (
+        tables["locations"].set_index(["code", "number"])["location_id"].to_dict()
+    )
+    location_to_id = {f"{k[0]} {k[1]}": v for k, v in location_to_id.items()}
     professor_to_id = (
         tables["professors"].set_index(["name", "email"])["professor_id"].to_dict()
     )
@@ -92,8 +96,9 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
     merge_id_cache(
         cache_dir / "same_course_and_profs_id.json", same_course_and_profs_to_id, False
     )
-    merge_id_cache(cache_dir / "flag_id.json", flag_to_id)
     merge_id_cache(cache_dir / "listing_id.json", listing_to_id)
+    merge_id_cache(cache_dir / "flag_id.json", flag_to_id)
+    merge_id_cache(cache_dir / "location_id.json", location_to_id)
     merge_id_cache(cache_dir / "professor_id.json", professor_to_id)
     merge_id_cache(cache_dir / "evaluation_narrative_id.json", narrative_to_id, False)
     merge_id_cache(cache_dir / "evaluation_rating_id.json", rating_to_id, False)

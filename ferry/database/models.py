@@ -442,6 +442,58 @@ course_flags = Table(
 )
 
 
+course_meetings = Table(
+    "course_meetings",
+    Base.metadata,
+    Column(
+        "course_id",
+        ForeignKey("courses.course_id"),
+        index=True,
+    ),
+    Column(
+        "days_of_week",
+        Integer,
+        comment="Days of the week for this session. It is formed through bitwise joining all the constituents, where (1 = Sunday, 2 = Monday, 4 = Tuesday, ..., 64 = Saturday). For example, if a course meets on Monday, Wednesday, and Friday, the value would be 2 + 8 + 32 = 42.",
+        nullable=False,
+    ),
+    Column(
+        "start_time",
+        String,
+        comment="Start time of this meeting session",
+        nullable=False,
+    ),
+    Column(
+        "end_time",
+        String,
+        comment="End time of this meeting session",
+        nullable=False,
+    ),
+    Column(
+        "location_id",
+        ForeignKey("locations.location_id"),
+        comment="Location of this meeting session",
+    ),
+)
+
+
+class Location(BaseModel):
+    """
+    Locations table.
+    """
+
+    __tablename__ = "locations"
+
+    location_id = Column(Integer, comment="Location ID", primary_key=True)
+    building_name = Column(String, comment="Building full name")
+    code = Column(
+        String,
+        comment="Building short code/abbreviation, as in YCS",
+        index=True,
+        nullable=False,
+    )
+    number = Column(String, comment="Room number", index=True)
+
+
 class Professor(BaseModel):
     """
     Professors table.
