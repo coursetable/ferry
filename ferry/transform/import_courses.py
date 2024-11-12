@@ -287,7 +287,7 @@ def aggregate_locations(
 
     locations["location_id"] = generate_id(
         locations,
-        lambda row: f"{row['code']} {row['room'] or ''}",
+        lambda row: f"{row['code']} {'' if pd.isna(row['room']) else row['room']}",
         data_dir / "id_cache" / "location_id.json",
     )
     location_to_id = locations.set_index(["code", "room"])["location_id"].to_dict()
