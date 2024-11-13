@@ -59,8 +59,15 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                 columns_list.append("time_added")
                 columns_list.append("last_updated")
                 columns = ', '.join(columns_list)
+                
+                values_list = []
+                for col in row.index:
+                    val = row[col]
+                    if pd.isna(val) or val in [None, "None", "NULL", "<NA>", 'nan']:
+                        val = None
 
-                values_list = list(row.values)
+                    values_list.append(val)
+                
                 values_list.append("NOW()")
                 values_list.append("NOW()")
                 values = ', '.join(
@@ -89,8 +96,10 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                     val = row[col]
                     if pd.isna(val) or val in [None, "None", "NULL", "<NA>", 'nan']:
                         val = None
-
+    
                     if val is not None:
+                        if isinstance(val, str):
+                            val = val.replace("'", "''")
                         set_clause_items.append(f"{col_name_orig} = '{val}'")
                     else:
                         set_clause_items.append(f"{col_name_orig} = NULL")

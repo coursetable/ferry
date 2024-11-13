@@ -106,7 +106,11 @@ def check_change(row, table_name):
                     print(
                         f"column: {col_name}, old: {old_value}, new: {new_value}")
                     return True
-
+            elif (pd.isna(old_value) and not pd.isna(new_value)) or (not pd.isna(old_value) and pd.isna(new_value)):
+                # deleted or added a specific value
+                print(
+                        f"column: {col_name}, old: {old_value}, new: {new_value}")
+                return True
     return False
 
 
