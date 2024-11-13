@@ -95,6 +95,8 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                     else:
                         set_clause_items.append(f"{col_name_orig} = NULL")
 
+                set_clause_items.append("last_updated = NOW()")
+                
                 set_clause = ', '.join(set_clause_items)
                 where_clause = f"{pk} = '{row[pk]}'"
                 update_query = f'UPDATE {table_name} SET {set_clause} WHERE {where_clause};'
