@@ -71,7 +71,9 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
         .set_index(["building_code", "room"])["location_id"]
         .to_dict()
     )
-    location_to_id = {f"{k[0]} {'' if pd.isna(k[1]) else k[1]}": v for k, v in location_to_id.items()}
+    location_to_id = {
+        f"{k[0]} {'' if pd.isna(k[1]) else k[1]}": v for k, v in location_to_id.items()
+    }
     professor_to_id = (
         tables["professors"].set_index(["name", "email"])["professor_id"].to_dict()
     )

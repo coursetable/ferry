@@ -27,8 +27,9 @@ git submodule update --init --depth 1
 Any time in the future, you can update the submodule with:
 
 ```sh
-git submodule foreach 'git reset --hard && git clean -fd'
-git submodule update --rebase --remote --depth 1
+cd data
+git fetch --depth 1 origin master
+git reset --hard origin/master
 ```
 
 Then, you can commit the new submodule link to the main repo. It's not necessary to sync the latest link all the time, but feel free to whenever you are committing other changes.

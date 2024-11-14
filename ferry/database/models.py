@@ -125,28 +125,6 @@ class Course(BaseModel):
         String, comment="Recommended requirements/prerequisites for the course"
     )
 
-    # -------------------
-    # Times and locations
-    # -------------------
-    locations_summary = Column(
-        String,
-        comment="""If single location, is `<location>`; otherwise is
-        `<location> + <n_other_locations>` where the first location is the one
-        with the greatest number of days. Displayed in the "Locations" column
-        in CourseTable.""",
-    )
-
-    times_summary = Column(
-        String,
-        comment='Course times, displayed in the "Times" column in CourseTable',
-    )
-    times_by_day = Column(
-        JSON,
-        comment="""Course meeting times by day, with days as keys and
-        tuples of `(start_time, end_time, location, location_url)`""",
-        nullable=False,
-    )
-
     # ----------------------
     # Skills, areas, credits
     # ----------------------

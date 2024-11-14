@@ -2,6 +2,7 @@ import logging
 from tqdm import tqdm
 from typing import TypedDict, cast, Callable
 from pathlib import Path
+from ..crawler.classes.parse import ParsedMeeting
 
 import numpy as np
 import pandas as pd
@@ -251,27 +252,15 @@ def parse_location(location: str) -> dict[str, str | None]:
     return res
 
 
-weekdays = {
-    "Sunday": 0,
-    "Monday": 1,
-    "Tuesday": 2,
-    "Wednesday": 3,
-    "Thursday": 4,
-    "Friday": 5,
-    "Saturday": 6,
-}
-
-
 def aggregate_locations(
     courses: pd.DataFrame, data_dir: Path
 ) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     location_data = []
-    for times_by_day in courses["times_by_day"]:
-        for day_details in ujson.loads(times_by_day).values():
-            for [_, _, location, location_url] in day_details:
-                if location == "" or location == "TBA" or location == "TBA TBA":
-                    continue
-                location_data.append({**parse_location(location), "url": location_url})
+    for meetings in courses["meetings"]:
+        for meeting in meetings:
+            if meeting["location"] in ["", "TBA", "TBA TBA"]:
+                continue
+            location_data.append({**parse_location(meeting["location"]), "url": meeting["location_url"]})
     locations = pd.DataFrame(location_data).drop_duplicates().reset_index(drop=True)
 
     def report_multiple_names(row: pd.DataFrame):
@@ -318,49 +307,60 @@ def aggregate_locations(
         .reset_index()
     )
 
-    # For each course, go from { day_of_week: [start, end, location, url] } to
-    # an array of { day_of_week, start_time, end_time, location_id }
-    def to_course_meetings(times_by_day: str):
-        data = ujson.loads(times_by_day)
+    # For each meeting, coalesce location and location_url into a location_id
+    # (which is None if location is TBA)
+    def transform_course_meetings(original_meetings: list[ParsedMeeting]):
+        if len(original_meetings) == 0:
+            return []
         meetings = []
-        for day, day_details in data.items():
-            for [start, end, location, _] in day_details:
-                if location == "" or location == "TBA" or location == "TBA TBA":
-                    meetings.append(
-                        {
-                            "days_of_week": weekdays[day],
-                            "start_time": start,
-                            "end_time": end,
-                            "location_id": None,
-                        }
-                    )
-                    continue
-                location_info = parse_location(location)
+        for m in original_meetings:
+            if m["location"] in ["", "TBA", "TBA TBA"]:
                 meetings.append(
                     {
-                        "days_of_week": weekdays[day],
-                        "start_time": start,
-                        "end_time": end,
-                        "location_id": location_to_id[
-                            location_info["code"], location_info["room"] or np.nan
-                        ],
+                        "days_of_week": m["days_of_week"],
+                        "start_time": m["start_time"],
+                        "end_time": m["end_time"],
+                        "location_id": None,
                     }
                 )
+                continue
+            location_info = parse_location(m["location"])
+            meetings.append(
+                {
+                    "days_of_week": m["days_of_week"],
+                    "start_time": m["start_time"],
+                    "end_time": m["end_time"],
+                    "location_id": location_to_id[
+                        location_info["code"], location_info["room"] or np.nan
+                    ],
+                }
+            )
         return meetings
 
-    course_meetings = courses["times_by_day"].apply(to_course_meetings)
+    course_meetings = courses["meetings"].apply(transform_course_meetings)
     # course_meetings is a series of course_id -> list of dicts.
     # Explode it to get a DataFrame with course_id, days_of_week, start_time, end_time, location_id
     course_meetings = course_meetings.explode().dropna().apply(pd.Series).reset_index()
     # Merge rows with the same start/end/location
     course_meetings = (
-        course_meetings.groupby(["course_id", "start_time", "end_time", "location_id"], dropna=False)
-        .agg({"days_of_week": lambda x: sum(1 << i for i in x)})
+        course_meetings.groupby(
+            ["course_id", "start_time", "end_time", "location_id"], dropna=False
+        )
+        .agg({"days_of_week": reduce_days_of_week})
         .reset_index()
     )
     course_meetings["days_of_week"] = course_meetings["days_of_week"].astype(int)
-    course_meetings["location_id"] = course_meetings["location_id"].astype(pd.Int64Dtype())
+    course_meetings["location_id"] = course_meetings["location_id"].astype(
+        pd.Int64Dtype()
+    )
     return course_meetings, locations, buildings
+
+
+def reduce_days_of_week(days_of_week: list[int]) -> int:
+    res = 0
+    for i in days_of_week:
+        res |= i
+    return res
 
 
 class CourseTables(TypedDict):
@@ -408,7 +408,6 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     listings = pd.concat(all_imported_listings, axis=0).reset_index(drop=True)
     listings["crns"] = listings["crns"].apply(lambda crns: [int(crn) for crn in crns])
     # convert to JSON string for postgres
-    listings["times_by_day"] = listings["times_by_day"].apply(ujson.dumps)
     listings["skills"] = listings["skills"].apply(ujson.dumps)
     listings["areas"] = listings["areas"].apply(ujson.dumps)
     listings["section"] = listings["section"].fillna("0").astype(str).replace({"": "0"})
