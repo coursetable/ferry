@@ -8,16 +8,15 @@ from sqlalchemy import MetaData, text, inspect
 
 from ferry import database
 from ferry.database import Database, Base
-from ferry.database import get_dfs
-from ferry.database import generate_diff
-from ferry.database import primary_keys
+from ferry.database import get_dfs, generate_diff, primary_keys
 from ferry.transform import transform
 
 queries_dir = Path(__file__).parent / "queries"
 
 
 def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
-    tables_old = get_dfs("postgresql://postgres:postgres@db:5432/postgres")
+    print("Generating diff...")
+    tables_old = get_dfs(database_connect_string)
     diff = generate_diff(tables_old, tables, "/workspaces/ferry/diff")
 
     db = Database(database_connect_string)

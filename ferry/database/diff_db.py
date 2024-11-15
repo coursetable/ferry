@@ -10,7 +10,6 @@ from pathlib import Path
 
 from sqlalchemy import MetaData, text, inspect
 
-from ferry import database
 from ferry.crawler.classes.parse import normalize_unicode
 from ferry.database import Database, Base
 from ferry.transform import transform
