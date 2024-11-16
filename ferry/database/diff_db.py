@@ -176,10 +176,11 @@ def generate_diff(tables_old: dict[str, pd.DataFrame],
 
             changed_rows = merged_df[merged_df.apply(
                 check_change, args=(table_name,), axis=1)]
-
+            
             file.write("## Changed rows in new table: \n")
 
             if not changed_rows.empty:
+                changed_rows = changed_rows.reset_index()
                 file.write(f"{changed_rows.to_csv()}\n")
 
             diff_dict[table_name] = {
