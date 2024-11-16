@@ -17,6 +17,8 @@ from ferry.transform import transform
 
 queries_dir = Path(__file__).parent / "queries"
 
+# TODO - need primary key for course_meetings
+
 primary_keys = {
     "flags": ["flag_id"],
     "course_flags": ["course_id"],
@@ -24,8 +26,10 @@ primary_keys = {
     "course_professors": ["course_id"],
     "courses": ["course_id"],
     "listings": ["listing_id"],
+    "buildings": ["code"],
+    "locations": ["location_id"],
+    "course_meetings": ["course_id"],
 }
-
 
 def get_dfs(database_connect_string: str):
     db = Database(database_connect_string)
@@ -61,6 +65,9 @@ def check_change(row, table_name):
         "course_professors": [],
         'courses': ['same_course_and_profs_id', 'same_course_id', 'same_prof_id', 'last_offered_course_id'],
         "listings": [],
+        "buildings": [],
+        "locations": [],
+        "course_meetings": []
     }
 
     for col_name in row.index.tolist():
@@ -88,6 +95,9 @@ def check_change(row, table_name):
                 elif isinstance(old_value, (int, float)) and isinstance(new_value, (int, float)):
                     new_value = float(new_value)
                     old_value = float(old_value)
+                    # todo - maybe a better condition here
+                    if (abs(old_value - new_value) < 0.000001):
+                        return False
                 else:
 
                     old_value = str(old_value).replace(

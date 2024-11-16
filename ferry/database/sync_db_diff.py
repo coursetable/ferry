@@ -39,10 +39,12 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
 
     # order to process tables to avoid foreign key constraint issues
     tables_order_add = ["courses", "listings", "flags",
-                        "course_flags", "professors", "course_professors"]
+                        "course_flags", "professors", "course_professors", 
+                        "buildings", "locations", "course_meetings"]
 
     # reverse order when deleting
-    tables_order_delete = ["course_professors", "professors",
+    tables_order_delete = ["course_meetings", "locations", "buildings",
+                           "course_professors", "professors",
                            "course_flags", "flags", "listings", "courses"]
 
     for table_name in tables_order_add:
