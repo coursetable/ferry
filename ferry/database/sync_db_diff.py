@@ -15,6 +15,8 @@ queries_dir = Path(__file__).parent / "queries"
 
 
 def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
+    # this is the sync db function that will be called from main.py
+
     print("Generating diff...")
     tables_old = get_dfs(database_connect_string)
     diff = generate_diff(tables_old, tables, "/workspaces/ferry/diff")
@@ -32,8 +34,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     inspector = inspect(db.Engine)
     # TODO: remove this; currently we have a deadlock issue when executing on prod DB
     conn.execution_options(isolation_level="AUTOCOMMIT")
-    # TODO: bring back the code for moving existing tables to _old for backup
-
+    
     update = conn.begin()
 
     # order to process tables to avoid foreign key constraint issues
@@ -58,7 +59,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                 columns_list.append("time_added")
                 columns_list.append("last_updated")
                 columns = ', '.join(columns_list)
-                
+
                 values_list = []
                 for col in row.index:
                     val = row[col]
@@ -66,7 +67,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                         val = None
 
                     values_list.append(val)
-                
+
                 values_list.append("NOW()")
                 values_list.append("NOW()")
                 values = ', '.join(
@@ -95,7 +96,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                     val = row[col]
                     if pd.isna(val) or val in [None, "None", "NULL", "<NA>", 'nan']:
                         val = None
-    
+
                     if val is not None:
                         if isinstance(val, str):
                             val = val.replace("'", "''")
@@ -104,7 +105,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                         set_clause_items.append(f"{col_name_orig} = NULL")
 
                 set_clause_items.append("last_updated = NOW()")
-                
+
                 set_clause = ', '.join(set_clause_items)
                 where_clause = f"{pk} = '{row[pk]}'"
                 update_query = f'UPDATE {table_name} SET {set_clause} WHERE {where_clause};'
@@ -139,8 +140,3 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
         result = db_session.execute(text(SUMMARY_SQL))
         for table_counts in result:
             print(f"{table_counts[1]:>25} - {table_counts[2]:6} rows")
-
-
-if __name__ == "__main__":
-    sync_db(transform(data_dir=Path("/workspaces/ferry/data")),
-            "postgresql://postgres:postgres@db:5432/postgres")
