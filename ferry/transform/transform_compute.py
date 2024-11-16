@@ -73,9 +73,11 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
             (tag for tag, condition in tag_candidates.items() if condition), None
         )
 
-   
-    evaluation_questions["tag"] = pd.Series(dtype="string") if len(evaluation_questions) == 0 else  evaluation_questions.apply(assign_code, axis=1)
-
+    evaluation_questions["tag"] = (
+        pd.Series(dtype="string")
+        if len(evaluation_questions) == 0
+        else evaluation_questions.apply(assign_code, axis=1)
+    )
 
     return evaluation_questions
 

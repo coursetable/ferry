@@ -27,11 +27,12 @@ git submodule update --init --depth 1
 Any time in the future, you can update the submodule with:
 
 ```sh
-git submodule foreach git reset --hard
-git submodule update --rebase --remote
+cd data
+git fetch --depth 1 origin master
+git reset --hard origin/master
 ```
 
-Then, you can commit the new submodule link to the main repo. This should be rarely done.
+Then, you can commit the new submodule link to the main repo. It's not necessary to sync the latest link all the time, but feel free to whenever you are committing other changes.
 
 ## Running Ferry
 
@@ -39,6 +40,7 @@ Make sure you have all dependencies installed or are using the Dev Container.
 
 ```sh
 python main.py -f config/dev_fetch.yml
+python main.py -f config/dev_sync_db.yml
 ```
 
 ### Options
@@ -73,6 +75,12 @@ You can selectively run certain stages of Ferry. Options below are in the order 
 | `--snapshot-tables`  | `snapshot_tables`  | Generate CSV files capturing data that would be written to DB.                                                                   |
 | `--sync-db`          | `sync_db`          | Sync the transformed data to the database.                                                                                       |
 | `--generate-diagram` | `generate_diagram` | Generate a DB visualization diagram to `docs/db_diagram.pdf`                                                                     |
+
+For example, to test the transformer in isolation, you may find this handy:
+
+```sh
+python main.py --transform --snapshot-tables
+```
 
 ### Release mode
 

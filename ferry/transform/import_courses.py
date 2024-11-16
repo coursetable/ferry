@@ -2,7 +2,9 @@ import logging
 from tqdm import tqdm
 from typing import TypedDict, cast, Callable
 from pathlib import Path
+from ..crawler.classes.parse import ParsedMeeting
 
+import numpy as np
 import pandas as pd
 import ujson
 from ferry.crawler.cache import load_cache_json
@@ -86,6 +88,7 @@ def resolve_cross_listings(listings: pd.DataFrame, data_dir: Path) -> pd.DataFra
     )
 
     next_course_id = max(course_id_cache.values(), default=0)
+    course_ids_assigned: set[int] = set()
 
     def listing_group_to_id(group: pd.DataFrame) -> int:
         nonlocal next_course_id
@@ -100,12 +103,21 @@ def resolve_cross_listings(listings: pd.DataFrame, data_dir: Path) -> pd.DataFra
         )
         all_course_ids.discard(None)
         if len(all_course_ids) > 1:
-            raise ValueError(
-                f"Unexpected: {group['temp_course_id']} is matched to multiple courses: {all_course_ids}"
+            logging.warning(
+                f"The following courses are mapped to multiple courses: {all_course_ids}:\n{listings.loc[group['temp_course_id'].index][['season_code', 'title', 'course_code', 'crns']]}\nThey will be merged into the first one"
             )
-        if all_course_ids:
-            return cast(int, all_course_ids.pop())
+        already_assigned_ids = all_course_ids & course_ids_assigned
+        if already_assigned_ids:
+            logging.warning(
+                f"Course ID {already_assigned_ids} is already used by another group; probably because cross-listings are split"
+            )
+        unassigned_ids = all_course_ids - course_ids_assigned
+        if unassigned_ids:
+            id = cast(int, unassigned_ids.pop())
+            course_ids_assigned.add(id)
+            return id
         next_course_id += 1
+        course_ids_assigned.add(next_course_id)
         return next_course_id
 
     course_id = (
@@ -207,6 +219,150 @@ def aggregate_flags(
     return flags, course_flags
 
 
+def parse_location(location: str) -> dict[str, str | None]:
+    def do_parse():
+        if " - " not in location:
+            if " " not in location:
+                # Just building code
+                return {"building_name": None, "code": location, "room": None}
+            # [code] [room]
+            code, room = location.split(" ", 1)
+            return {"building_name": None, "code": code, "room": room}
+        abbrev, rest = location.split(" - ", 1)
+        if " " not in abbrev:
+            if rest == abbrev:
+                rest = None
+            # [code] - [building name]
+            return {"building_name": rest, "code": abbrev, "room": None}
+        code, room = abbrev.split(" ", 1)
+        if not rest.endswith(room):
+            raise ValueError(f"Unexpected location format: {location}")
+        building_full_name = rest.removesuffix(f" {room}")
+        if building_full_name == code:
+            building_full_name = None
+        # [code] [room] - [building name] [room]
+        return {"building_name": building_full_name, "code": code, "room": room}
+
+    res = do_parse()
+    for key in res:
+        if res[key] == "" or res[key] == "TBA":
+            res[key] = None
+    if res["code"] is None:
+        raise ValueError(f"Unexpected location format: {location}")
+    return res
+
+
+def aggregate_locations(
+    courses: pd.DataFrame, data_dir: Path
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    location_data = []
+    for meetings in courses["meetings"]:
+        for meeting in meetings:
+            if meeting["location"] in ["", "TBA", "TBA TBA"]:
+                continue
+            location_data.append({**parse_location(meeting["location"]), "url": meeting["location_url"]})
+    locations = pd.DataFrame(location_data).drop_duplicates().reset_index(drop=True)
+
+    def report_multiple_names(row: pd.DataFrame):
+        if len(row["building_name"].unique()) > 1:
+            logging.warning(
+                f"Multiple names for {row.name}: {row['building_name'].unique()}"
+            )
+
+    locations[~locations["building_name"].isna()].groupby(["code", "room"]).apply(
+        report_multiple_names
+    )
+    locations = locations.groupby(["code", "room"], as_index=False, dropna=False).last()
+
+    locations["location_id"] = generate_id(
+        locations,
+        lambda row: f"{row['code']} {'' if pd.isna(row['room']) else row['room']}",
+        data_dir / "id_cache" / "location_id.json",
+    )
+    location_to_id = locations.set_index(["code", "room"])["location_id"].to_dict()
+    locations = locations.set_index("location_id")
+
+    buildings = locations.copy(deep=True)
+    locations.rename(columns={"code": "building_code"}, inplace=True)
+
+    def report_different_info(group: pd.DataFrame):
+        all_names = group["building_name"].unique()
+        all_names = all_names[~pd.isna(all_names)]
+        if len(all_names) > 1:
+            logging.warning(
+                f"Multiple building names for building {group.name}: {all_names}; only the last name will be used"
+            )
+        all_urls = group["url"].unique()
+        all_urls = all_urls[~pd.isna(all_urls)]
+        if len(all_urls) > 1:
+            logging.warning(
+                f"Multiple URLs for building {group.name}: {all_urls}; only the last URL will be used"
+            )
+
+    buildings.groupby("code").apply(report_different_info)
+    buildings = (
+        buildings.sort_values(by=["building_name", "url"])
+        .groupby("code")
+        .last()
+        .reset_index()
+    )
+
+    # For each meeting, coalesce location and location_url into a location_id
+    # (which is None if location is TBA)
+    def transform_course_meetings(original_meetings: list[ParsedMeeting]):
+        if len(original_meetings) == 0:
+            return []
+        meetings = []
+        for m in original_meetings:
+            if m["location"] in ["", "TBA", "TBA TBA"]:
+                meetings.append(
+                    {
+                        "days_of_week": m["days_of_week"],
+                        "start_time": m["start_time"],
+                        "end_time": m["end_time"],
+                        "location_id": None,
+                    }
+                )
+                continue
+            location_info = parse_location(m["location"])
+            meetings.append(
+                {
+                    "days_of_week": m["days_of_week"],
+                    "start_time": m["start_time"],
+                    "end_time": m["end_time"],
+                    "location_id": location_to_id[
+                        location_info["code"], location_info["room"] or np.nan
+                    ],
+                }
+            )
+        return meetings
+
+    course_meetings = courses["meetings"].apply(transform_course_meetings)
+    # course_meetings is a series of course_id -> list of dicts.
+    # Explode it to get a DataFrame with course_id, days_of_week, start_time, end_time, location_id
+    course_meetings = course_meetings.explode().dropna().apply(pd.Series).reset_index()
+    # Merge rows with the same start/end/location
+    course_meetings = (
+        course_meetings.groupby(
+            ["course_id", "start_time", "end_time", "location_id"], dropna=False
+        )
+        .agg({"days_of_week": reduce_days_of_week})
+        .reset_index()
+    )
+    course_meetings["days_of_week"] = course_meetings["days_of_week"].astype(int)
+    course_meetings["location_id"] = course_meetings["location_id"].astype(
+        pd.Int64Dtype()
+    )
+    return course_meetings, locations, buildings
+
+
+def reduce_days_of_week(days_of_week: list[int]) -> int:
+    res = 0
+    for i in days_of_week:
+        res |= i
+    return res
+
+
 class CourseTables(TypedDict):
     courses: pd.DataFrame
     listings: pd.DataFrame
@@ -214,6 +370,9 @@ class CourseTables(TypedDict):
     professors: pd.DataFrame
     course_flags: pd.DataFrame
     flags: pd.DataFrame
+    course_meetings: pd.DataFrame
+    locations: pd.DataFrame
+    buildings: pd.DataFrame
 
 
 def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
@@ -249,7 +408,6 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     listings = pd.concat(all_imported_listings, axis=0).reset_index(drop=True)
     listings["crns"] = listings["crns"].apply(lambda crns: [int(crn) for crn in crns])
     # convert to JSON string for postgres
-    listings["times_by_day"] = listings["times_by_day"].apply(ujson.dumps)
     listings["skills"] = listings["skills"].apply(ujson.dumps)
     listings["areas"] = listings["areas"].apply(ujson.dumps)
     listings["section"] = listings["section"].fillna("0").astype(str).replace({"": "0"})
@@ -271,6 +429,7 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
 
     professors, course_professors = aggregate_professors(courses, data_dir)
     flags, course_flags = aggregate_flags(courses, data_dir)
+    course_meetings, locations, buildings = aggregate_locations(courses, data_dir)
 
     print("\033[F", end="")
     print("Importing courses... ✔")
@@ -282,6 +441,9 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     print(f"Total professors: {len(professors)}")
     print(f"Total course-flags: {len(course_flags)}")
     print(f"Total flags: {len(flags)}")
+    print(f"Total course-meetings: {len(course_meetings)}")
+    print(f"Total locations: {len(locations)}")
+    print(f"Total buildings: {len(buildings)}")
 
     return {
         "courses": courses,
@@ -290,4 +452,7 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
         "professors": professors,
         "course_flags": course_flags,
         "flags": flags,
+        "locations": locations,
+        "buildings": buildings,
+        "course_meetings": course_meetings,
     }

@@ -159,25 +159,26 @@ def extract_flags(ci_attrs_html: str) -> list[str]:
     return flag_texts
 
 
-def days_of_week_from_letters(letters: str) -> list[str]:
+letter_to_day = {
+    "Su": 1,
+    "M": 2,
+    "T(?!h)": 4,  # avoid misidentification as Thursday
+    "W": 8,
+    "Th": 16,
+    "F": 32,
+    "Sa": 64,
+}
+
+
+def days_of_week_from_letters(letters: str) -> int:
     if letters == "M-F":
-        return ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        return 2 + 4 + 8 + 16 + 32
 
-    days: list[str] = []
-
-    letter_to_day = {
-        "M": "Monday",
-        "T(?!h)": "Tuesday",  # avoid misidentification as Thursday
-        "W": "Wednesday",
-        "Th": "Thursday",
-        "F": "Friday",
-        "Sa": "Saturday",
-        "Su": "Sunday",
-    }
+    days: int = 0
 
     for letter, day in letter_to_day.items():
         if re.search(letter, letters):
-            days.append(day)
+            days += day
 
     return days
 
@@ -234,106 +235,19 @@ def split_meeting_text(meeting_text: str) -> tuple[str, str, str]:
         return meeting_text, "", ""
 
 
-def create_meeting_summaries(
-    split_meetings: list[tuple[str, str, str]]
-) -> tuple[str | None, str | None]:
-    """
-    Get meeting time and location summary strings.
-
-    Parameters
-    ----------
-    split_meetings:
-        split meetings from split_meeting_text. list of meeting [days, time, location]
-
-    Returns
-    -------
-    times_summary, locations_summary
-    """
-    if len(split_meetings) == 0:
-        return None, None
-    # make times and locations summary as first listed
-    times_summary = f"{split_meetings[0][0]} {split_meetings[0][1]}"
-    locations_summary = split_meetings[0][2]
-
-    # collapse additional times/locations
-    if len(split_meetings) > 1:
-        times_summary += f" + {len(split_meetings)-1}"
-        locations_summary += f" + {len(split_meetings)-1}"
-
-    # some final touches
-    times_summary = times_summary.replace("MTWThF", "M-F")
-    locations_summary = locations_summary.replace("MTWThF", "M-F")
-
-    if locations_summary == "" or locations_summary.startswith(" + "):
-        locations_summary = "TBA"
-
-    # handle redundant dash-delimited format (introduced in fall 2020)
-    if locations_summary.count(" - ") == 1:
-        locations_1, locations_2 = locations_summary.split(" - ")
-
-        # if location is redundant
-        if locations_2.startswith(locations_1):
-            locations_summary = locations_2
-
-    return times_summary, locations_summary
-
-
-def create_times_by_day(
-    split_meetings: list[tuple[str, str, str]], location_urls: list[str]
-) -> dict[str, list[tuple[str, str, str, str]]]:
-    """
-    Transform formatted meetings.
-
-    Parameters
-    ----------
-    split_meetings:
-        split meetings from split_meeting_text. list of meeting [days, time, location]
-    location_urls:
-        list of location urls
-
-    Returns
-    ---
-        {
-            day: [
-                [start_time, end_time, location, location_url]
-                ...
-            ]
-        }
-    """
-    times_by_day: dict[str, list[tuple[str, str, str, str]]] = {}
-
-    for i, (days, times, location) in enumerate(split_meetings):
-        if days == "HTBA":
-            continue
-        days_split = days_of_week_from_letters(days)
-
-        times_split = times.split("-")
-        start_time = times_split[0]
-        end_time = times_split[1]
-
-        # standardize times to 24-hour, full format
-        start_time = format_time(start_time)
-        end_time = format_time(end_time)
-        for day in days_split:
-            session = start_time, end_time, location, location_urls[i]
-            if day in times_by_day:
-                times_by_day[day].append(session)
-            else:
-                times_by_day[day] = [session]
-
-    return times_by_day
-
-
 class ParsedMeeting(TypedDict):
-    times_summary: str | None
-    locations_summary: str | None
-    times_by_day: dict[str, list[tuple[str, str, str, str]]]
+    # This is a bitmask, where 1 = Sunday, 2 = Monday, 4 = Tuesday, etc.
+    days_of_week: int
+    start_time: str
+    end_time: str
+    location: str
+    location_url: str
 
 
 def extract_meetings(
     meeting_html: str,
     all_in_group: list[dict[str, Any]],
-) -> ParsedMeeting:
+) -> list[ParsedMeeting]:
     if meeting_html == "":
         return extract_meetings_alternate(all_in_group)
 
@@ -342,31 +256,33 @@ def extract_meetings(
         "div", {"class": "meet"}
     )
     meeting_entries = [x for x in meeting_entries if x.text != "HTBA"]
-    if len(meeting_entries) == 0:
-        return {
-            "times_summary": "TBA",
-            "locations_summary": "TBA",
-            "times_by_day": {},
-        }
+    if (
+        len(meeting_entries) == 0
+        or len(meeting_entries) == 1
+        and meeting_entries[0].text == "Not Supported"
+    ):
+        return []
 
-    location_urls: list[str] = []
-    meetings: list[str] = []
+    meetings: list[ParsedMeeting] = []
     for meeting in meeting_entries:
         link = meeting.find("a")
-        if link:
-            location_urls.append(link["href"])
-        else:
-            location_urls.append("")
-        meetings.append(meeting.text)
+        location_url = link["href"] if link else ""
+        days, time, location = split_meeting_text(meeting.text)
+        if days == "HTBA":
+            continue
+        start_time, end_time = time.split("-", 1)
+        meetings.append(
+            {
+                "days_of_week": days_of_week_from_letters(days),
+                # Standardize times to 24-hour, full format
+                "start_time": format_time(start_time),
+                "end_time": format_time(end_time),
+                "location": location,
+                "location_url": location_url,
+            }
+        )
 
-    split_meetings = list(map(split_meeting_text, meetings))
-    times_summary, locations_summary = create_meeting_summaries(split_meetings)
-
-    return {
-        "times_summary": times_summary,
-        "locations_summary": locations_summary,
-        "times_by_day": create_times_by_day(split_meetings, location_urls),
-    }
+    return meetings
 
 
 def format_undelimited_time(time: str) -> str:
@@ -383,71 +299,38 @@ def format_undelimited_time(time: str) -> str:
     return f"{hours}:{minutes}"
 
 
-DAYS_MAP = {
-    "0": "Monday",
-    "1": "Tuesday",
-    "2": "Wednesday",
-    "3": "Thursday",
-    "4": "Friday",
-    "5": "Saturday",
-    "6": "Sunday",
-}
-
-
-def extract_meetings_alternate(all_in_group: list[dict[str, Any]]) -> ParsedMeeting:
+def extract_meetings_alternate(
+    all_in_group: list[dict[str, Any]]
+) -> list[ParsedMeeting]:
     """
     Extract course meeting times from the allInGroup key rather than meeting_html. Note that this
     does not return locations because they are not specified.
-
-    Parameters
-    ----------
-    course_json:
-        course_json object read from course_json_cache.
-
-    Returns
-    -------
-    times_summary:
-        Summary of meeting times; the first listed times are shown while additional ones are
-        collapsed to " + (n-1)"
-    locations_summary:
-        Summary of meeting locations; the first listed locations are shown while additional
-        ones are collapsed to " + (n-1)"
-    times_by_day:
-        Dictionary with keys as days and values consisting of lists of
-        [start_time, end_time, location]
     """
     if len(all_in_group) == 0:
-        return {
-            "times_summary": "TBA",
-            "locations_summary": "TBA",
-            "times_by_day": {},
-        }
+        return []
 
-    # use the first listing (for when a course has multiple)
+    # Use the first listing (for when a course has multiple)
     primary_listing = all_in_group[0]
-    times_summary = primary_listing["meets"]
-    if times_summary == "HTBA":
-        times_summary = "TBA"
+    if primary_listing["meets"] == "HTBA":
+        return []
     meeting_times = ujson.loads(primary_listing["meetingTimes"])
-    times_by_day: dict[str, list[tuple[str, str, str, str]]] = {}
+    meetings: dict[tuple[str, str], ParsedMeeting] = {}
     for meeting_time in meeting_times:
-        meeting_day = DAYS_MAP[meeting_time["meet_day"]]
-        session = (
-            format_undelimited_time(meeting_time["start_time"]),
-            format_undelimited_time(meeting_time["end_time"]),
-            "",
-            "",
-        )
-        if meeting_day in times_by_day:
-            times_by_day[meeting_day].append(session)
+        start_time = format_undelimited_time(meeting_time["start_time"])
+        end_time = format_undelimited_time(meeting_time["end_time"])
+        if (start_time, end_time) in meetings:
+            meetings[(start_time, end_time)]["days_of_week"] += 1 << (
+                (int(meeting_time["meet_day"]) + 1) % 7
+            )
         else:
-            times_by_day[meeting_day] = [session]
-
-    return {
-        "times_summary": times_summary,
-        "locations_summary": "TBA",
-        "times_by_day": times_by_day,
-    }
+            meetings[(start_time, end_time)] = {
+                "days_of_week": 1 << ((int(meeting_time["meet_day"]) + 1) % 7),
+                "start_time": start_time,
+                "end_time": end_time,
+                "location": "",
+                "location_url": "",
+            }
+    return list(meetings.values())
 
 
 def extract_resource_link(resources_html: str, title: str) -> str | None:
@@ -593,9 +476,7 @@ class ParsedCourse(TypedDict):
     subject: str
     number: str
     section: str
-    times_summary: str | None
-    locations_summary: str | None
-    times_by_day: dict[str, list[tuple[str, str, str, str]]]
+    meetings: list[ParsedMeeting]
     skills: list[str]
     areas: list[str]
     flags: list[str]
@@ -648,7 +529,7 @@ def extract_course_info(
         "subject": course_json["code"].split(" ")[0],
         "number": course_json["code"].split(" ")[1],
         "section": course_json["section"].lstrip("0"),
-        **extract_meetings(
+        "meetings": extract_meetings(
             course_json.get("meeting_html", ""), course_json.get("allInGroup", [])
         ),
         "skills": extract_skills_areas(course_json["yc_attrs"], SKILLS_MAP),

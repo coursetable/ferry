@@ -125,28 +125,6 @@ class Course(BaseModel):
         String, comment="Recommended requirements/prerequisites for the course"
     )
 
-    # -------------------
-    # Times and locations
-    # -------------------
-    locations_summary = Column(
-        String,
-        comment="""If single location, is `<location>`; otherwise is
-        `<location> + <n_other_locations>` where the first location is the one
-        with the greatest number of days. Displayed in the "Locations" column
-        in CourseTable.""",
-    )
-
-    times_summary = Column(
-        String,
-        comment='Course times, displayed in the "Times" column in CourseTable',
-    )
-    times_by_day = Column(
-        JSON,
-        comment="""Course meeting times by day, with days as keys and
-        tuples of `(start_time, end_time, location, location_url)`""",
-        nullable=False,
-    )
-
     # ----------------------
     # Skills, areas, credits
     # ----------------------
@@ -440,6 +418,86 @@ course_flags = Table(
         index=True,
     ),
 )
+
+
+course_meetings = Table(
+    "course_meetings",
+    Base.metadata,
+    Column(
+        "course_id",
+        ForeignKey("courses.course_id"),
+        index=True,
+    ),
+    Column(
+        "days_of_week",
+        Integer,
+        comment="Days of the week for this session. It is formed through bitwise joining all the constituents, where (1 = Sunday, 2 = Monday, 4 = Tuesday, ..., 64 = Saturday). For example, if a course meets on Monday, Wednesday, and Friday, the value would be 2 + 8 + 32 = 42.",
+        nullable=False,
+    ),
+    Column(
+        "start_time",
+        String,
+        comment="Start time of this meeting session",
+        nullable=False,
+    ),
+    Column(
+        "end_time",
+        String,
+        comment="End time of this meeting session",
+        nullable=False,
+    ),
+    Column(
+        "location_id",
+        ForeignKey("locations.location_id"),
+        comment="Location of this meeting session",
+    ),
+)
+
+
+class Building(BaseModel):
+    """
+    Buildings table.
+    """
+
+    __tablename__ = "buildings"
+
+    code = Column(
+        String,
+        comment="Building short code/abbreviation, as in YCS",
+        index=True,
+        nullable=False,
+        primary_key=True,
+    )
+    building_name = Column(String, comment="Building full name")
+    url = Column(String, comment="Yale campus map URL")
+
+
+class Location(BaseModel):
+    """
+    Locations table.
+    """
+
+    __tablename__ = "locations"
+
+    location_id = Column(Integer, primary_key=True)
+    building_code = Column(
+        String,
+        ForeignKey("buildings.code"),
+        comment="Building code",
+        index=True,
+        nullable=False,
+    )
+    building = relationship("Building", backref="locations", cascade="all")
+    room = Column(String, comment="Room number")
+
+    __table_args__ = (
+        Index(
+            "idx_building_code_room_unique",
+            "building_code",
+            "room",
+            unique=True,
+        ),
+    )
 
 
 class Professor(BaseModel):
