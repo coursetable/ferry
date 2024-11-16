@@ -48,6 +48,19 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                            "course_flags", "flags", "listings", "courses"]
 
     for table_name in tables_order_add:
+
+        # Check if the table has columns 'last_updated' and 'time_added'
+        columns = inspector.get_columns(table_name)
+        has_last_updated = any(col['name'] == 'last_updated' for col in columns)
+        has_time_added = any(col['name'] == 'time_added' for col in columns)
+        
+        if not has_time_added:
+            print(f"adding new column time_added to {table_name}")
+            conn.execute(text(f'ALTER TABLE {table_name} ADD COLUMN time_added TIMESTAMP DEFAULT NULL;'))
+        if not has_last_updated:
+            print(f"adding new column last_updated to {table_name}")
+            conn.execute(text(f'ALTER TABLE {table_name} ADD COLUMN last_updated TIMESTAMP DEFAULT NULL;'))
+
         diffs = diff[table_name]
         print(f"Syncing (Add/Update) Table: {table_name}")
 

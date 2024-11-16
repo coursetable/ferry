@@ -3,6 +3,7 @@
 import pandas as pd
 import csv
 import json
+import ujson
 import ast
 from io import StringIO
 import logging
@@ -82,9 +83,9 @@ def check_change(row, table_name):
         new_value = row[col_name + "_new"]
 
         if isinstance(old_value, list) or isinstance(new_value, list):
-            old_value = ast.literal_eval(
-                str(old_value).replace('"', "'"))  # fix quotes
-            new_value = ast.literal_eval(str(new_value).replace('"', "'"))
+            old_value = ujson.loads(
+                str(old_value).replace("'", '"'))  # fix quotes
+            new_value = ujson.loads(str(new_value).replace("'", '"'))
             if (old_value != new_value):
                 return True
         else:
@@ -104,8 +105,7 @@ def check_change(row, table_name):
                         '"', "'").replace('\\', '').strip("'")
                     new_value = str(new_value).replace(
                         '"', "'").replace('\\', '').strip("'")
-                    # old_value = normalize_unicode(old_value)
-                    # new_value = normalize_unicode(new_value)
+                    
                     try:
                         old_value = json.loads(old_value)
                         new_value = json.loads(new_value)
