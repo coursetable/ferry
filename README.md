@@ -60,7 +60,7 @@ Note: because we use `argparse`, you can provide just the prefix of each argumen
 | `-s`, `--seasons`           | `seasons`                 | N/A            | `None`                               | A list of seasons to fetch; see below                                                                 |
 | `--sentry-url`              | `sentry_url`              | `SENTRY_URL`   | `None`; prompt if `release`          | Sentry URL for error reporting; required in release mode, ignored in dev mode                         |
 | `--use-cache`               | `use_cache`               | N/A            | `False`; always `False` if `release` | Use cached data instead of fetching fresh data. Even if not using cache, cache will still be updated. |
-| `--rewrite`               | `rewrite`               | N/A            | `False`; always `False` if `release` | Use cached data instead of fetching fresh data. Even if not using cache, cache will still be updated. |
+| `--rewrite`               | `rewrite`               | N/A            | `False`; always `False` if `release` | Use old sync db function to write to database instead of incremental write. Use this during the first run to set up the database. |
 
 ### Stage switches
 
