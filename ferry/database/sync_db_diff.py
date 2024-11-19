@@ -34,12 +34,12 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     inspector = inspect(db.Engine)
     # TODO: remove this; currently we have a deadlock issue when executing on prod DB
     conn.execution_options(isolation_level="AUTOCOMMIT")
-    
+
     update = conn.begin()
 
     # order to process tables to avoid foreign key constraint issues
     tables_order_add = ["courses", "listings", "flags",
-                        "course_flags", "professors", "course_professors", 
+                        "course_flags", "professors", "course_professors",
                         "buildings", "locations", "course_meetings"]
 
     # reverse order when deleting
@@ -48,18 +48,25 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                            "course_flags", "flags", "listings", "courses"]
 
     for table_name in tables_order_add:
-
+        # check if table exists in database
+        if table_name not in db_meta.tables:
+            print(
+                f"Table {table_name} does not exist in the database. Please run sync_db_old.py once before sync_db_diff.py.")
+            continue
         # Check if the table has columns 'last_updated' and 'time_added'
         columns = inspector.get_columns(table_name)
-        has_last_updated = any(col['name'] == 'last_updated' for col in columns)
+        has_last_updated = any(
+            col['name'] == 'last_updated' for col in columns)
         has_time_added = any(col['name'] == 'time_added' for col in columns)
-        
+
         if not has_time_added:
             print(f"adding new column time_added to {table_name}")
-            conn.execute(text(f'ALTER TABLE {table_name} ADD COLUMN time_added TIMESTAMP DEFAULT NULL;'))
+            conn.execute(
+                text(f'ALTER TABLE {table_name} ADD COLUMN time_added TIMESTAMP DEFAULT NULL;'))
         if not has_last_updated:
             print(f"adding new column last_updated to {table_name}")
-            conn.execute(text(f'ALTER TABLE {table_name} ADD COLUMN last_updated TIMESTAMP DEFAULT NULL;'))
+            conn.execute(text(
+                f'ALTER TABLE {table_name} ADD COLUMN last_updated TIMESTAMP DEFAULT NULL;'))
 
         diffs = diff[table_name]
         print(f"Syncing (Add/Update) Table: {table_name}")
@@ -97,34 +104,73 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
         # update these rows in the database table
         if len(to_update) > 0:
             for _, row in to_update.iterrows():
+
+                if table_name == "course_meetings":
+                    # delete the existing meetings with that course id
+                    where_clause = f"{pk} = '{row[pk]}'"
+                    delete_query = f'DELETE FROM {table_name} WHERE {where_clause};'
+                    conn.execute(text(delete_query))
+
+                    # add the new meetings
+                    meetings = row["meetings_new"]
+                    meetings_old = row["meetings_old"]
+                    for i, meeting in enumerate(meetings):
+                        columns_list = list(meetings_old[i].keys())
+
+                        values_list = []
+                        for col in columns_list:
+                            val = ""
+                            if col == "last_updated":
+                                val = "NOW()"
+                            elif col == "time_added":
+                                old_val = meetings_old[i]["time_added"]
+                                if pd.isna(old_val) or old_val in [None, "None", "NULL", "<NA>", 'nan']:
+                                    val = "NOW()"
+                                else:
+                                    val = old_val
+                            else:
+                                val = meeting[col]
+
+                                if pd.isna(val) or val in [None, "None", "NULL", "<NA>", 'nan']:
+                                    val = None
+
+                            values_list.append(val)
+
+                        values = ', '.join(
+                            f"'{str(v)}'" if v is not None else 'NULL' for v in values_list)
+
+                        columns = ', '.join(columns_list)
+                        insert_query = f'INSERT INTO {table_name} ({columns}) VALUES ({values});'
+                        conn.execute(text(insert_query))
+
                 # TODO: check differences between specific columns again or update the whole row?
                 # might have to create new function just for checking difference between two columns in a row
+                else:
+                    set_clause_items = []
+                    for col in row.index:
+                        col_name_orig = ""
+                        if "_new" in col:
+                            col_name_orig = col.replace("_new", "")
+                        else:
+                            continue
 
-                set_clause_items = []
-                for col in row.index:
-                    col_name_orig = ""
-                    if "_new" in col:
-                        col_name_orig = col.replace("_new", "")
-                    else:
-                        continue
+                        val = row[col]
+                        if pd.isna(val) or val in [None, "None", "NULL", "<NA>", 'nan']:
+                            val = None
 
-                    val = row[col]
-                    if pd.isna(val) or val in [None, "None", "NULL", "<NA>", 'nan']:
-                        val = None
+                        if val is not None:
+                            if isinstance(val, str):
+                                val = val.replace("'", "''")
+                            set_clause_items.append(f"{col_name_orig} = '{val}'")
+                        else:
+                            set_clause_items.append(f"{col_name_orig} = NULL")
 
-                    if val is not None:
-                        if isinstance(val, str):
-                            val = val.replace("'", "''")
-                        set_clause_items.append(f"{col_name_orig} = '{val}'")
-                    else:
-                        set_clause_items.append(f"{col_name_orig} = NULL")
+                    set_clause_items.append("last_updated = NOW()")
 
-                set_clause_items.append("last_updated = NOW()")
-
-                set_clause = ', '.join(set_clause_items)
-                where_clause = f"{pk} = '{row[pk]}'"
-                update_query = f'UPDATE {table_name} SET {set_clause} WHERE {where_clause};'
-                conn.execute(text(update_query))
+                    set_clause = ', '.join(set_clause_items)
+                    where_clause = f"{pk} = '{row[pk]}'"
+                    update_query = f'UPDATE {table_name} SET {set_clause} WHERE {where_clause};'
+                    conn.execute(text(update_query))
 
     for table_name in tables_order_delete:
         diffs = diff[table_name]
