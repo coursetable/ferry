@@ -144,9 +144,12 @@ def generate_diff(
 
     diff_dict = {}
 
-    for table_name in primary_keys.keys():
-        if table_name not in tables_new.keys() or table_name not in tables_old.keys():
-            raise ValueError(f"Table {table_name} not found in new tables")
+for table_name in primary_keys.keys():
+    if table_name not in tables_new.keys():
+        raise ValueError(f"Table '{table_name}' not found in new tables")
+    if table_name not in tables_old.keys():
+        raise ValueError(f"Table '{table_name}' not found in old tables")
+
 
         print(f"Computing diff for table {table_name} ...", end=" ")
 
