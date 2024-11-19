@@ -167,7 +167,7 @@ def get_parser():
     parser.add_argument(
         "--rewrite",
         help="Whether to rewrite the database when syncing. Uses original sync_db function if true",
-        action="store_true"
+        action="store_true",
     )
 
     return parser

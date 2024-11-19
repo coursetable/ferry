@@ -95,23 +95,62 @@ def check_change(row, table_name):
         new_value = row[col_name + "_new"]
 
         if isinstance(old_value, list) or isinstance(new_value, list):
-            
+
             if table_name == "course_meetings":
-                old_value_str = re.sub(r'Timestamp\("([^"]+)"\)', r'"\1"', str(old_value).replace("'", '"').replace("None", "null").replace("nan", "null").replace("NaT", "null"))
-                new_value_str = re.sub(r'Timestamp\("([^"]+)"\)', r'"\1"', str(new_value).replace("'", '"').replace("None", "null").replace("nan", "null").replace("NaT", "null"))
+                old_value_str = re.sub(
+                    r'Timestamp\("([^"]+)"\)',
+                    r'"\1"',
+                    str(old_value)
+                    .replace("'", '"')
+                    .replace("None", "null")
+                    .replace("nan", "null")
+                    .replace("NaT", "null"),
+                )
+                new_value_str = re.sub(
+                    r'Timestamp\("([^"]+)"\)',
+                    r'"\1"',
+                    str(new_value)
+                    .replace("'", '"')
+                    .replace("None", "null")
+                    .replace("nan", "null")
+                    .replace("NaT", "null"),
+                )
                 old_value = ujson.loads(old_value_str)  # fix quotes
                 new_value = ujson.loads(new_value_str)  # fix quotes
 
                 # remove last_updated and time_added from the dictionaries
-                old_value = [{k: v for k, v in d.items() if k not in ["last_updated", "time_added"]} for d in old_value]
-                new_value = [{k: v for k, v in d.items() if k not in ["last_updated", "time_added"]} for d in new_value]
+                old_value = [
+                    {
+                        k: v
+                        for k, v in d.items()
+                        if k not in ["last_updated", "time_added"]
+                    }
+                    for d in old_value
+                ]
+                new_value = [
+                    {
+                        k: v
+                        for k, v in d.items()
+                        if k not in ["last_updated", "time_added"]
+                    }
+                    for d in new_value
+                ]
 
             else:
                 old_value = ujson.loads(
-                str(old_value).replace("'", '"').replace("None", "null").replace("nan", "null"))  # fix quotes
-                new_value = ujson.loads(str(new_value).replace("'", '"').replace("None", "null").replace("nan", "null"))  # fix quotes
+                    str(old_value)
+                    .replace("'", '"')
+                    .replace("None", "null")
+                    .replace("nan", "null")
+                )  # fix quotes
+                new_value = ujson.loads(
+                    str(new_value)
+                    .replace("'", '"')
+                    .replace("None", "null")
+                    .replace("nan", "null")
+                )  # fix quotes
 
-            if (old_value != new_value):
+            if old_value != new_value:
                 return True
         else:
             if not pd.isna(old_value) and not pd.isna(new_value):
@@ -204,19 +243,30 @@ def generate_diff(
                 old_df = old_df.groupby("course_id")["flag_id"].apply(frozenset)
                 new_df = new_df.groupby("course_id")["flag_id"].apply(frozenset)
             elif table_name == "course_professors":
-                old_df = old_df.groupby("course_id")[
-                    "professor_id"].apply(frozenset)
-                new_df = new_df.groupby("course_id")[
-                    "professor_id"].apply(frozenset)
+                old_df = old_df.groupby("course_id")["professor_id"].apply(frozenset)
+                new_df = new_df.groupby("course_id")["professor_id"].apply(frozenset)
             elif table_name == "course_meetings":
                 # join with courses on course_id to create course_id -> meeting mapping
-                old_df = old_df.merge(tables_old["courses"][["course_id"]], on="course_id", how="left")
-                old_df = old_df.groupby("course_id").apply(lambda x: x.to_dict(orient="records")).reset_index(name="meetings")
-                new_df = new_df.merge(tables_new["courses"][["course_id"]], on="course_id", how="left")
-                new_df = new_df.groupby("course_id").apply(lambda x: x.to_dict(orient="records")).reset_index(name="meetings")
-                
-            merged_df = pd.merge(old_df, new_df, on=pk,
-                                 how="inner", suffixes=('_old', '_new'))
+                old_df = old_df.merge(
+                    tables_old["courses"][["course_id"]], on="course_id", how="left"
+                )
+                old_df = (
+                    old_df.groupby("course_id")
+                    .apply(lambda x: x.to_dict(orient="records"))
+                    .reset_index(name="meetings")
+                )
+                new_df = new_df.merge(
+                    tables_new["courses"][["course_id"]], on="course_id", how="left"
+                )
+                new_df = (
+                    new_df.groupby("course_id")
+                    .apply(lambda x: x.to_dict(orient="records"))
+                    .reset_index(name="meetings")
+                )
+
+            merged_df = pd.merge(
+                old_df, new_df, on=pk, how="inner", suffixes=("_old", "_new")
+            )
 
             changed_rows = merged_df[
                 merged_df.apply(check_change, args=(table_name,), axis=1)

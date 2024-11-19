@@ -38,35 +38,57 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     update = conn.begin()
 
     # order to process tables to avoid foreign key constraint issues
-    tables_order_add = ["courses", "listings", "flags",
-                        "course_flags", "professors", "course_professors",
-                        "buildings", "locations", "course_meetings"]
+    tables_order_add = [
+        "courses",
+        "listings",
+        "flags",
+        "course_flags",
+        "professors",
+        "course_professors",
+        "buildings",
+        "locations",
+        "course_meetings",
+    ]
 
     # reverse order when deleting
-    tables_order_delete = ["course_meetings", "locations", "buildings",
-                           "course_professors", "professors",
-                           "course_flags", "flags", "listings", "courses"]
+    tables_order_delete = [
+        "course_meetings",
+        "locations",
+        "buildings",
+        "course_professors",
+        "professors",
+        "course_flags",
+        "flags",
+        "listings",
+        "courses",
+    ]
 
     for table_name in tables_order_add:
         # check if table exists in database
         if table_name not in db_meta.tables:
             print(
-                f"Table {table_name} does not exist in the database. Please run sync_db_old.py once before sync_db_diff.py.")
+                f"Table {table_name} does not exist in the database. Please run sync_db_old.py once before sync_db_diff.py."
+            )
             continue
         # Check if the table has columns 'last_updated' and 'time_added'
         columns = inspector.get_columns(table_name)
-        has_last_updated = any(
-            col['name'] == 'last_updated' for col in columns)
-        has_time_added = any(col['name'] == 'time_added' for col in columns)
+        has_last_updated = any(col["name"] == "last_updated" for col in columns)
+        has_time_added = any(col["name"] == "time_added" for col in columns)
 
         if not has_time_added:
             print(f"adding new column time_added to {table_name}")
             conn.execute(
-                text(f'ALTER TABLE {table_name} ADD COLUMN time_added TIMESTAMP DEFAULT NULL;'))
+                text(
+                    f"ALTER TABLE {table_name} ADD COLUMN time_added TIMESTAMP DEFAULT NULL;"
+                )
+            )
         if not has_last_updated:
             print(f"adding new column last_updated to {table_name}")
-            conn.execute(text(
-                f'ALTER TABLE {table_name} ADD COLUMN last_updated TIMESTAMP DEFAULT NULL;'))
+            conn.execute(
+                text(
+                    f"ALTER TABLE {table_name} ADD COLUMN last_updated TIMESTAMP DEFAULT NULL;"
+                )
+            )
 
         diffs = diff[table_name]
         print(f"Syncing (Add/Update) Table: {table_name}")
@@ -80,22 +102,25 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                 columns_list = list(row.index)
                 columns_list.append("time_added")
                 columns_list.append("last_updated")
-                columns = ', '.join(columns_list)
+                columns = ", ".join(columns_list)
 
                 values_list = []
                 for col in row.index:
                     val = row[col]
-                    if pd.isna(val) or val in [None, "None", "NULL", "<NA>", 'nan']:
+                    if pd.isna(val) or val in [None, "None", "NULL", "<NA>", "nan"]:
                         val = None
 
                     values_list.append(val)
 
                 values_list.append("NOW()")
                 values_list.append("NOW()")
-                values = ', '.join(
-                    f"'{str(v)}'" if v is not None else 'NULL' for v in values_list)
+                values = ", ".join(
+                    f"'{str(v)}'" if v is not None else "NULL" for v in values_list
+                )
 
-                insert_query = f'INSERT INTO {table_name} ({columns}) VALUES ({values});'
+                insert_query = (
+                    f"INSERT INTO {table_name} ({columns}) VALUES ({values});"
+                )
                 conn.execute(text(insert_query))
 
         pk = primary_keys[table_name][0]
@@ -108,7 +133,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                 if table_name == "course_meetings":
                     # delete the existing meetings with that course id
                     where_clause = f"{pk} = '{row[pk]}'"
-                    delete_query = f'DELETE FROM {table_name} WHERE {where_clause};'
+                    delete_query = f"DELETE FROM {table_name} WHERE {where_clause};"
                     conn.execute(text(delete_query))
 
                     # add the new meetings
@@ -124,23 +149,39 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                                 val = "NOW()"
                             elif col == "time_added":
                                 old_val = meetings_old[i]["time_added"]
-                                if pd.isna(old_val) or old_val in [None, "None", "NULL", "<NA>", 'nan']:
+                                if pd.isna(old_val) or old_val in [
+                                    None,
+                                    "None",
+                                    "NULL",
+                                    "<NA>",
+                                    "nan",
+                                ]:
                                     val = "NOW()"
                                 else:
                                     val = old_val
                             else:
                                 val = meeting[col]
 
-                                if pd.isna(val) or val in [None, "None", "NULL", "<NA>", 'nan']:
+                                if pd.isna(val) or val in [
+                                    None,
+                                    "None",
+                                    "NULL",
+                                    "<NA>",
+                                    "nan",
+                                ]:
                                     val = None
 
                             values_list.append(val)
 
-                        values = ', '.join(
-                            f"'{str(v)}'" if v is not None else 'NULL' for v in values_list)
+                        values = ", ".join(
+                            f"'{str(v)}'" if v is not None else "NULL"
+                            for v in values_list
+                        )
 
-                        columns = ', '.join(columns_list)
-                        insert_query = f'INSERT INTO {table_name} ({columns}) VALUES ({values});'
+                        columns = ", ".join(columns_list)
+                        insert_query = (
+                            f"INSERT INTO {table_name} ({columns}) VALUES ({values});"
+                        )
                         conn.execute(text(insert_query))
 
                 # TODO: check differences between specific columns again or update the whole row?
@@ -155,7 +196,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
                             continue
 
                         val = row[col]
-                        if pd.isna(val) or val in [None, "None", "NULL", "<NA>", 'nan']:
+                        if pd.isna(val) or val in [None, "None", "NULL", "<NA>", "nan"]:
                             val = None
 
                         if val is not None:
@@ -167,9 +208,11 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
 
                     set_clause_items.append("last_updated = NOW()")
 
-                    set_clause = ', '.join(set_clause_items)
+                    set_clause = ", ".join(set_clause_items)
                     where_clause = f"{pk} = '{row[pk]}'"
-                    update_query = f'UPDATE {table_name} SET {set_clause} WHERE {where_clause};'
+                    update_query = (
+                        f"UPDATE {table_name} SET {set_clause} WHERE {where_clause};"
+                    )
                     conn.execute(text(update_query))
 
     for table_name in tables_order_delete:
@@ -186,7 +229,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
 
             for _, row in to_remove.iterrows():
                 where_clause = f"{pk} = '{row[pk]}'"
-                delete_query = f'DELETE FROM {table_name} WHERE {where_clause};'
+                delete_query = f"DELETE FROM {table_name} WHERE {where_clause};"
                 conn.execute(text(delete_query))
 
     update.commit()

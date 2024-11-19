@@ -85,7 +85,7 @@ async def main():
         assert tables
         print(tables.keys())
         print("here\n", tables, "\nend")
-        if (args.rewrite):
+        if args.rewrite:
             print("rewriting database")
             sync_db_old(tables, args.database_connect_string)
         else:
