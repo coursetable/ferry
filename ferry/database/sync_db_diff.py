@@ -17,10 +17,6 @@ queries_dir = Path(__file__).parent / "queries"
 def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     # this is the sync db function that will be called from main.py
 
-    print("Generating diff...")
-    tables_old = get_dfs(database_connect_string)
-    diff = generate_diff(tables_old, tables, "/workspaces/ferry/diff")
-
     db = Database(database_connect_string)
 
     # sorted tables in the database
@@ -66,10 +62,52 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     for table_name in tables_order_add:
         # check if table exists in database
         if table_name not in db_meta.tables:
-            print(
-                f"Table {table_name} does not exist in the database. Please run sync_db_old.py once before sync_db_diff.py."
+            conn_new = db.Engine.raw_connection()
+            Base.metadata.create_all(db.Engine)
+            if table_name not in tables:
+                raise ValueError(
+                    f"There is no data for table {table_name}."
+                )
+            # create in-memory buffer for DataFrame
+            buffer = StringIO()
+            # TODO is this really needed?
+            tables[table_name] = tables[table_name].replace({r"\r": ""}, regex=True)
+            tables[table_name].to_csv(
+                buffer,
+                index_label="id",
+                header=False,
+                index=False,
+                sep="\t",
+                quoting=csv.QUOTE_NONE,
+                escapechar="\\",
+                na_rep="NULL",
             )
+
+            buffer.seek(0)
+            cursor = conn_new.cursor()
+
+            try:
+                cursor.copy_from(
+                    buffer,
+                    table_name,
+                    columns=tables[table_name].columns,
+                    sep="\t",
+                    null="NULL",
+                )
+            except Exception as error:
+                conn_new.rollback()
+                cursor.close()
+                raise error
+
+            cursor.close()
+            conn_new.commit()
             continue
+    
+    print("Generating diff...")
+    tables_old = get_dfs(database_connect_string)
+    diff = generate_diff(tables_old, tables, "/workspaces/ferry/diff")
+    
+    for table_name in tables_order_add:
         # Check if the table has columns 'last_updated' and 'time_added'
         columns = inspector.get_columns(table_name)
         has_last_updated = any(col["name"] == "last_updated" for col in columns)
