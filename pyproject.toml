@@ -4,7 +4,7 @@
 name = "ferry"
 version = "1.0"
 description = "A crawler for Yale courses and evaluation data. Integrates with CourseTable."
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
   "beautifulsoup4==4.12.3",
   "sentry-sdk==2.18.0",
