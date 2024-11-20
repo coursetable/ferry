@@ -30,6 +30,7 @@ code_changes = [
     ("ENGL 121", "ENGL 421"),
     ("ANTH 399", "ANTH 229"),
     ("CPSC 427", "CPSC 327"),
+    ("CPSC 679", "CPSC 410"),
     # Although our build_four_digit_transition function automatically discovers
     # a lot of these transitions, some are very hard to find. For example, ENGL
     # 115 has different titles every year.
