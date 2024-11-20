@@ -16,7 +16,7 @@ dependencies = [
   "networkx==3.4.2",
   "pandas==2.2.3",
   "psycopg2==2.9.10",
-  "PyYAML==6.0.1",
+  "PyYAML==6.0.2",
   "sentry-sdk==2.18.0",
   "sqlalchemy-mixins==2.0.5",
   "sqlalchemy==2.0.27",
