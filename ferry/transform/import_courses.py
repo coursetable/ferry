@@ -260,7 +260,9 @@ def aggregate_locations(
         for meeting in meetings:
             if meeting["location"] in ["", "TBA", "TBA TBA"]:
                 continue
-            location_data.append({**parse_location(meeting["location"]), "url": meeting["location_url"]})
+            location_data.append(
+                {**parse_location(meeting["location"]), "url": meeting["location_url"]}
+            )
     locations = pd.DataFrame(location_data).drop_duplicates().reset_index(drop=True)
 
     def report_multiple_names(row: pd.DataFrame):
