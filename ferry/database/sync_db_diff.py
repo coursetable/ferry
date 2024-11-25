@@ -4,7 +4,7 @@ from io import StringIO
 import logging
 from pathlib import Path
 
-from sqlalchemy import MetaData, text, inspect, Connection, func
+from sqlalchemy import MetaData, text, inspect, Connection
 
 from ferry import database
 from ferry.database import Database, Base
