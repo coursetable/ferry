@@ -2,18 +2,14 @@
 
 import re
 import pandas as pd
-import csv
 import json
 import ujson
-import ast
-from io import StringIO
-import logging
 from pathlib import Path
+from typing import TypedDict
 
-from sqlalchemy import MetaData, text, inspect
+from sqlalchemy import MetaData, text
 
-from ferry.crawler.classes.parse import normalize_unicode
-from ferry.database import Database, Base
+from ferry.database import Database
 from ferry.transform import transform
 
 
@@ -51,7 +47,7 @@ def get_dfs(database_connect_string: str):
     tables = [row[0] for row in result]
 
     # Initialize a dictionary to store DataFrames
-    dataframes = {}
+    dataframes: dict[str, pd.DataFrame] = {}
 
     # Load each table into a DataFrame
     for table_name in tables:
@@ -61,7 +57,7 @@ def get_dfs(database_connect_string: str):
     return dataframes
 
 
-def check_change(row, table_name):
+def check_change(row: pd.Series, table_name: str):
     cols_to_exclude = {
         "all": ["time_added", "last_updated"],  # ignore the timestamps
         "flags": [],
@@ -95,7 +91,6 @@ def check_change(row, table_name):
         new_value = row[col_name + "_new"]
 
         if isinstance(old_value, list) or isinstance(new_value, list):
-
             if table_name == "course_meetings":
                 old_value_str = re.sub(
                     r'Timestamp\("([^"]+)"\)',
@@ -161,11 +156,10 @@ def check_change(row, table_name):
                 ):
                     new_value = float(new_value)
                     old_value = float(old_value)
-                    # todo - maybe a better condition here
+                    # TODO - maybe a better condition here
                     if abs(old_value - new_value) < 0.000001:
                         return False
                 else:
-
                     old_value = (
                         str(old_value).replace('"', "'").replace("\\", "").strip("'")
                     )
@@ -190,13 +184,18 @@ def check_change(row, table_name):
     return False
 
 
+class DiffRecord(TypedDict):
+    deleted_rows: pd.DataFrame
+    added_rows: pd.DataFrame
+    changed_rows: pd.DataFrame
+
+
 def generate_diff(
     tables_old: dict[str, pd.DataFrame],
     tables_new: dict[str, pd.DataFrame],
     output_dir: str,
 ):
-
-    diff_dict = {}
+    diff_dict: dict[str, DiffRecord] = {}
 
     for table_name in primary_keys.keys():
         if table_name not in tables_new.keys():
@@ -287,9 +286,3 @@ def generate_diff(
         print("✔")
 
     return diff_dict
-
-
-if __name__ == "__main__":
-    tables_old = get_dfs("postgresql://postgres:postgres@db:5432/postgres")
-    tables_new = transform(data_dir=Path("/workspaces/ferry/data"))
-    generate_diff(tables_old, tables_new, "/workspaces/ferry/diff")
