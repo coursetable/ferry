@@ -81,7 +81,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     print("\nReindexing...")
     conn = db.Engine.connect()
     conn.execution_options(isolation_level="AUTOCOMMIT")
-    conn.execute(text("REINDEX DATABASE ferry;"))
+    conn.execute(text("REINDEX SCHEMA public;"))
     conn.close()
     print("\033[F", end="")
     print("Reindexing... ✔")
