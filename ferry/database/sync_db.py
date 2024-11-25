@@ -94,6 +94,14 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
         print("\033[F", end="")
         print("Creating metadata... ✔")
 
+        # TODO: we should set up some mechanism to automatically grant
+        # privileges... The default on the schema is not enough.
+        print("\nGranting privileges to hasura...")
+        db_session.execute(text("GRANT SELECT ON ALL TABLES IN SCHEMA public TO hasura;"))
+        db_session.execute(text("GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO hasura;"))
+        print("\033[F", end="")
+        print("Granting privileges to hasura... ✔")
+
         # Print row counts for each table.
         print("\n[Table Statistics]")
         with open(queries_dir / "table_sizes.sql") as file:
