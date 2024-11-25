@@ -182,7 +182,7 @@ def generate_diff(
             elif table_name == "course_meetings":
                 # join with courses on course_id to create course_id -> meetings mapping
                 old_df = (
-                    old_df.drop(cols_to_exclude["course_meetings"])
+                    old_df.drop(cols_to_exclude["course_meetings"], errors="ignore")
                     .merge(
                         tables_old["courses"][["course_id"]], on="course_id", how="left"
                     )
@@ -191,7 +191,7 @@ def generate_diff(
                     .reset_index(name="meetings")
                 )
                 new_df = (
-                    new_df.drop(cols_to_exclude["course_meetings"])
+                    new_df.drop(cols_to_exclude["course_meetings"], errors="ignore")
                     .merge(
                         tables_new["courses"][["course_id"]], on="course_id", how="left"
                     )
