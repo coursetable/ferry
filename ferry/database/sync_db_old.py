@@ -13,7 +13,7 @@ from ferry.database import Database, Base
 queries_dir = Path(__file__).parent / "queries"
 
 
-def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
+def sync_db_old(tables: dict[str, pd.DataFrame], database_connect_string: str):
     db = Database(database_connect_string)
 
     # sorted tables in the database

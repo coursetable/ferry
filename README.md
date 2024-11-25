@@ -60,22 +60,22 @@ Note: because we use `argparse`, you can provide just the prefix of each argumen
 | `-s`, `--seasons`           | `seasons`                 | N/A            | `None`                               | A list of seasons to fetch; see below                                                                 |
 | `--sentry-url`              | `sentry_url`              | `SENTRY_URL`   | `None`; prompt if `release`          | Sentry URL for error reporting; required in release mode, ignored in dev mode                         |
 | `--use-cache`               | `use_cache`               | N/A            | `False`; always `False` if `release` | Use cached data instead of fetching fresh data. Even if not using cache, cache will still be updated. |
-| `--rewrite`               | `rewrite`               | N/A            | `False`; always `False` if `release` | Use old sync db function to write to database instead of incremental write. Use this during the first run to set up the database. |
 
 ### Stage switches
 
 You can selectively run certain stages of Ferry. Options below are in the order of the stages. All stages are `False` by default, in which case Ferry basically does nothing.
 
-| CLI flag             | Config option      | Description                                                                                                                      |
-| -------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| `--save-config`      | `save_config`      | Save the parsed config options to `config_file`; does nothing if `config_file` is unspecified.                                   |
-| `--crawl-seasons`    | `crawl_seasons`    | Run the seasons crawler. If `False` and no cached data is available, then `--seasons` must be provided and all be valid seasons. |
-| `--crawl-classes`    | `crawl_classes`    | Run the class crawler.                                                                                                           |
-| `--crawl-evals`      | `crawl_evals`      | Run the eval crawler.                                                                                                            |
-| `--transform`        | `transform`        | Run the transformer. Always `True` if `sync_db` or `snapshot_tables`.                                                            |
-| `--snapshot-tables`  | `snapshot_tables`  | Generate CSV files capturing data that would be written to DB.                                                                   |
-| `--sync-db`          | `sync_db`          | Sync the transformed data to the database.                                                                                       |
-| `--generate-diagram` | `generate_diagram` | Generate a DB visualization diagram to `docs/db_diagram.pdf`                                                                     |
+| CLI flag             | Config option      | Description                                                                                                                                                                                     |
+| -------------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--save-config`      | `save_config`      | Save the parsed config options to `config_file`; does nothing if `config_file` is unspecified.                                                                                                  |
+| `--crawl-seasons`    | `crawl_seasons`    | Run the seasons crawler. If `False` and no cached data is available, then `--seasons` must be provided and all be valid seasons.                                                                |
+| `--crawl-classes`    | `crawl_classes`    | Run the class crawler.                                                                                                                                                                          |
+| `--crawl-evals`      | `crawl_evals`      | Run the eval crawler.                                                                                                                                                                           |
+| `--transform`        | `transform`        | Run the transformer. Always `True` if `sync_db` or `snapshot_tables`.                                                                                                                           |
+| `--snapshot-tables`  | `snapshot_tables`  | Generate CSV files capturing data that would be written to DB.                                                                                                                                  |
+| `--sync-db`          | `sync_db`          | Sync the transformed data to the database.                                                                                                                                                      |
+| `--rewrite`          | `rewrite`          | Use old sync db function to write to database instead of incremental write. Use this during the first run to set up the database. Only has an effect if `sync_db`. Always `False` if `release`. |
+| `--generate-diagram` | `generate_diagram` | Generate a DB visualization diagram to `docs/db_diagram.pdf`                                                                                                                                    |
 
 For example, to test the transformer in isolation, you may find this handy:
 

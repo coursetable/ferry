@@ -83,10 +83,7 @@ async def main():
         write_csvs(tables, data_dir=args.data_dir)
     if args.sync_db:
         assert tables
-        print(tables.keys())
-        print("here\n", tables, "\nend")
         if args.rewrite:
-            print("rewriting database")
             sync_db_old(tables, args.database_connect_string)
         else:
             sync_db(tables, args.database_connect_string)
