@@ -156,11 +156,10 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     db_meta = MetaData()
     db_meta.reflect(bind=db.Engine)
     # Order to process tables to avoid foreign key constraint issues
-    tables_order_add = db_meta.sorted_tables
+    tables_order_add = [t.name for t in db_meta.sorted_tables if "evaluation_" not in t.name]
     tables_order_delete = tables_order_add[::-1]
 
-    for table in tables_order_add:
-        table_name = table.name
+    for table_name in tables_order_add:
         # Make sure all tables are in the database
         if table_name in db_meta.tables:
             continue
@@ -210,32 +209,32 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     conn.execution_options(isolation_level="AUTOCOMMIT")
     update = conn.begin()
 
-    for table in tables_order_add:
+    for table_name in tables_order_add:
         # Check if the table has columns 'last_updated' and 'time_added'
-        columns = inspector.get_columns(table.name)
+        columns = inspector.get_columns(table_name)
         has_last_updated = any(col["name"] == "last_updated" for col in columns)
         has_time_added = any(col["name"] == "time_added" for col in columns)
 
         if not has_time_added:
-            print(f"adding new column time_added to {table.name}")
+            print(f"adding new column time_added to {table_name}")
             conn.execute(
                 text(
-                    f"ALTER TABLE {table.name} ADD COLUMN time_added TIMESTAMP DEFAULT NULL;"
+                    f"ALTER TABLE {table_name} ADD COLUMN time_added TIMESTAMP DEFAULT NULL;"
                 )
             )
         if not has_last_updated:
-            print(f"adding new column last_updated to {table.name}")
+            print(f"adding new column last_updated to {table_name}")
             conn.execute(
                 text(
-                    f"ALTER TABLE {table.name} ADD COLUMN last_updated TIMESTAMP DEFAULT NULL;"
+                    f"ALTER TABLE {table_name} ADD COLUMN last_updated TIMESTAMP DEFAULT NULL;"
                 )
             )
 
-    for table in tables_order_add:
-        commit_additions(table.name, diff[table.name]["added_rows"], conn)
-        commit_updates(table.name, diff[table.name]["changed_rows"], conn)
-    for table in tables_order_delete:
-        commit_deletions(table.name, diff[table.name]["deleted_rows"], conn)
+    for table_name in tables_order_add:
+        commit_additions(table_name, diff[table_name]["added_rows"], conn)
+        commit_updates(table_name, diff[table_name]["changed_rows"], conn)
+    for table_name in tables_order_delete:
+        commit_deletions(table_name, diff[table_name]["deleted_rows"], conn)
     update.commit()
     print("\033[F", end="")
 
