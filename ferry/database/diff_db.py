@@ -73,6 +73,18 @@ cols_to_exclude = {
 }
 
 
+def revive_value(val):
+    return ujson.loads(re.sub(
+        r'Timestamp\("([^"]+)"\)',
+        r'"\1"',
+        str(val)
+        .replace("'", '"')
+        .replace("None", "null")
+        .replace("nan", "null")
+        .replace("NaT", "null"),
+    ))
+
+
 def check_change(row: pd.Series, table_name: str):
     for col_name in row.index.tolist():
         if "_old" not in col_name:
@@ -89,29 +101,10 @@ def check_change(row: pd.Series, table_name: str):
         new_value = row[col_name + "_new"]
 
         if isinstance(old_value, list) or isinstance(new_value, list):
+            old_value = revive_value(old_value)
+            new_value = revive_value(new_value)
             if table_name == "course_meetings":
-                old_value_str = re.sub(
-                    r'Timestamp\("([^"]+)"\)',
-                    r'"\1"',
-                    str(old_value)
-                    .replace("'", '"')
-                    .replace("None", "null")
-                    .replace("nan", "null")
-                    .replace("NaT", "null"),
-                )
-                new_value_str = re.sub(
-                    r'Timestamp\("([^"]+)"\)',
-                    r'"\1"',
-                    str(new_value)
-                    .replace("'", '"')
-                    .replace("None", "null")
-                    .replace("nan", "null")
-                    .replace("NaT", "null"),
-                )
-                old_value = ujson.loads(old_value_str)  # fix quotes
-                new_value = ujson.loads(new_value_str)  # fix quotes
-
-                # remove last_updated and time_added from the dictionaries
+                # Remove last_updated and time_added from the dictionaries
                 old_value = [
                     {
                         k: v
@@ -128,57 +121,39 @@ def check_change(row: pd.Series, table_name: str):
                     }
                     for d in new_value
                 ]
-
-            else:
-                old_value = ujson.loads(
-                    str(old_value)
-                    .replace("'", '"')
-                    .replace("None", "null")
-                    .replace("nan", "null")
-                )  # fix quotes
-                new_value = ujson.loads(
-                    str(new_value)
-                    .replace("'", '"')
-                    .replace("None", "null")
-                    .replace("nan", "null")
-                )  # fix quotes
-
             if old_value != new_value:
                 return True
-        else:
-            if not pd.isna(old_value) and not pd.isna(new_value):
-                if isinstance(old_value, dict) and isinstance(new_value, str):
-                    new_value = json.loads(new_value)
-                elif isinstance(old_value, (int, float)) and isinstance(
-                    new_value, (int, float)
-                ):
-                    new_value = float(new_value)
-                    old_value = float(old_value)
-                    # TODO - maybe a better condition here
-                    if abs(old_value - new_value) < 0.000001:
-                        return False
-                else:
-                    old_value = (
-                        str(old_value).replace('"', "'").replace("\\", "").strip("'")
-                    )
-                    new_value = (
-                        str(new_value).replace('"', "'").replace("\\", "").strip("'")
-                    )
-
-                    try:
-                        old_value = json.loads(old_value)
-                        new_value = json.loads(new_value)
-                    except:
-                        pass
-                if old_value != new_value:
-                    print(f"column: {col_name}, old: {old_value}, new: {new_value}")
-                    return True
-            elif (pd.isna(old_value) and not pd.isna(new_value)) or (
-                not pd.isna(old_value) and pd.isna(new_value)
+        elif not pd.isna(old_value) and not pd.isna(new_value):
+            if isinstance(old_value, dict) and isinstance(new_value, str):
+                new_value = json.loads(new_value)
+            elif isinstance(old_value, (int, float)) and isinstance(
+                new_value, (int, float)
             ):
-                # deleted or added a specific value
-                print(f"column: {col_name}, old: {old_value}, new: {new_value}")
+                new_value = float(new_value)
+                old_value = float(old_value)
+                # TODO - maybe a better condition here
+                if abs(old_value - new_value) < 0.000001:
+                    return False
+            else:
+                old_value = (
+                    str(old_value).replace('"', "'").replace("\\", "").strip("'")
+                )
+                new_value = (
+                    str(new_value).replace('"', "'").replace("\\", "").strip("'")
+                )
+
+                try:
+                    old_value = json.loads(old_value)
+                    new_value = json.loads(new_value)
+                except:
+                    pass
+            if old_value != new_value:
                 return True
+        elif (pd.isna(old_value) and not pd.isna(new_value)) or (
+            not pd.isna(old_value) and pd.isna(new_value)
+        ):
+            # deleted or added a specific value
+            return True
     return False
 
 
