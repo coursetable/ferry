@@ -8,8 +8,7 @@ from sqlalchemy import MetaData, text, inspect
 
 from ferry import database
 from ferry.database import Database, Base
-from ferry.database import get_dfs, generate_diff, primary_keys
-from ferry.transform import transform
+from ferry.database.diff_db import get_dfs, generate_diff, primary_keys
 
 logging.basicConfig(
     format="%(asctime)s - %(message)s",

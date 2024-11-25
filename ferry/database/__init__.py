@@ -22,6 +22,5 @@ from .models import (
     course_professors,
 )
 
-from .diff_db import get_dfs, generate_diff, primary_keys
 from .sync_db_diff import sync_db
 from .sync_db_old import sync_db_old

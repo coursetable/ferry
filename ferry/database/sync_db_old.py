@@ -1,10 +1,9 @@
 import pandas as pd
 import csv
 from io import StringIO
-import logging
 from pathlib import Path
 
-from sqlalchemy import MetaData, text, inspect
+from sqlalchemy import MetaData, text
 
 from ferry import database
 from ferry.database import Database, Base
@@ -97,8 +96,12 @@ def sync_db_old(tables: dict[str, pd.DataFrame], database_connect_string: str):
         # TODO: we should set up some mechanism to automatically grant
         # privileges... The default on the schema is not enough.
         print("\nGranting privileges to hasura...")
-        db_session.execute(text("GRANT SELECT ON ALL TABLES IN SCHEMA public TO hasura;"))
-        db_session.execute(text("GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO hasura;"))
+        db_session.execute(
+            text("GRANT SELECT ON ALL TABLES IN SCHEMA public TO hasura;")
+        )
+        db_session.execute(
+            text("GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO hasura;")
+        )
         print("\033[F", end="")
         print("Granting privileges to hasura... ✔")
 
