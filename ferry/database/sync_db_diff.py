@@ -157,7 +157,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     db_meta.reflect(bind=db.Engine)
     # Order to process tables to avoid foreign key constraint issues
     tables_order_add = [
-        t.name for t in db_meta.sorted_tables if "evaluation_" not in t.name
+        t.name for t in db_meta.sorted_tables if t.name in primary_keys
     ]
     tables_order_delete = tables_order_add[::-1]
 
