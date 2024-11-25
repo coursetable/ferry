@@ -1,5 +1,3 @@
-# TODO load data into pandas
-
 import re
 import pandas as pd
 import json
@@ -10,7 +8,6 @@ from typing import TypedDict
 from sqlalchemy import MetaData, text
 
 from ferry.database import Database
-from ferry.transform import transform
 
 
 queries_dir = Path(__file__).parent / "queries"
@@ -57,25 +54,26 @@ def get_tables_from_db(database_connect_string: str):
     return dataframes
 
 
-def check_change(row: pd.Series, table_name: str):
-    cols_to_exclude = {
-        "all": ["time_added", "last_updated"],  # ignore the timestamps
-        "flags": [],
-        "course_flags": [],
-        "professors": [],
-        "course_professors": [],
-        "courses": [
-            "same_course_and_profs_id",
-            "same_course_id",
-            "same_prof_id",
-            "last_offered_course_id",
-        ],
-        "listings": [],
-        "buildings": [],
-        "locations": [],
-        "course_meetings": [],
-    }
+cols_to_exclude = {
+    "all": ["time_added", "last_updated"],  # ignore the timestamps
+    "flags": [],
+    "course_flags": [],
+    "professors": [],
+    "course_professors": [],
+    "courses": [
+        "same_course_and_profs_id",
+        "same_course_id",
+        "same_prof_id",
+        "last_offered_course_id",
+    ],
+    "listings": [],
+    "buildings": [],
+    "locations": [],
+    "course_meetings": [],
+}
 
+
+def check_change(row: pd.Series, table_name: str):
     for col_name in row.index.tolist():
         if "_old" not in col_name:
             continue
@@ -208,31 +206,21 @@ def generate_diff(
         output_file_path = Path(output_dir) / (table_name + ".md")
 
         with open(output_file_path, "w+") as file:
-            # check difference between old df and new df and output to above file path
             old_df = tables_old[table_name]
             new_df = tables_new[table_name]
 
-            # drop columns last_updated and time_added
-            # try:
-            #     print("dropping columns last_updated and time_added")
-            #     old_df = old_df.drop(columns=["last_updated", "time_added"])
-            # except:
-            #     print("columns last_updated and time_added not found in old_df")
-
-            # TODO - better way to do this?
             pk = primary_keys[table_name][0]
 
             # Identify rows with differences
-
             # check for rows that are in old df but not in new df
             # based on primary key
-            file.write("## Deleted rows in new table: \n")
+            file.write("## Deleted\n")
 
             deleted_rows = old_df[~old_df[pk].isin(new_df[pk])]
             if not deleted_rows.empty:
                 file.write(f"{deleted_rows.to_csv()}\n")
 
-            file.write("## Added rows in new table: \n")
+            file.write("## Added\n")
             # check for rows that have been added
             added_rows = new_df[~new_df[pk].isin(old_df[pk])]
             if not added_rows.empty:
@@ -271,7 +259,7 @@ def generate_diff(
                 merged_df.apply(check_change, args=(table_name,), axis=1)
             ]
 
-            file.write("## Changed rows in new table: \n")
+            file.write("## Changed\n")
 
             if not changed_rows.empty:
                 changed_rows = changed_rows.reset_index()
