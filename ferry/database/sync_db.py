@@ -20,50 +20,13 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     db_meta = MetaData()
     db_meta.reflect(bind=db.Engine)
 
-    # First step: existing -> old
-    print("\nMoving existing tables...")
-
-    conn = db.Engine.connect()
-    inspector = inspect(db.Engine)
-    # TODO: remove this; currently we have a deadlock issue when executing on prod DB
-    conn.execution_options(isolation_level="AUTOCOMMIT")
-    replace = conn.begin()
-    conn.execute(text("SET CONSTRAINTS ALL DEFERRED;"))
-    for table in Base.metadata.sorted_tables:
-        logging.debug(f"Updating table {table}")
-        # If table doesn't exist, skip
-        if table.name not in db_meta.tables:
-            logging.debug(f"Table {table} does not exist in database.")
-            continue
-        # remove the old table if it is present before
-        conn.execute(text(f"DROP TABLE IF EXISTS {table}_old CASCADE;"))
-        for index in inspector.get_indexes(table.name):
-            index_name = index["name"]
-            if not index_name:
-                continue
-            conn.execute(text(f"ALTER INDEX {index_name} RENAME TO {index_name}_old"))
-
-        for constraint in [
-            inspector.get_pk_constraint(table.name),
-            *inspector.get_foreign_keys(table.name),
-            *inspector.get_unique_constraints(table.name),
-        ]:
-            name = constraint["name"]
-            if not name:
-                continue
-            conn.execute(
-                text(f"ALTER TABLE {table} RENAME CONSTRAINT {name} TO {name}_old")
-            )
-        # rename current main table to _old
-        # (keep the old tables instead of dropping them
-        # so we can rollback in case of errors)
-        # Note that this is done after we've retrieved the indexes and constraints
-        conn.execute(text(f'ALTER TABLE IF EXISTS "{table}" RENAME TO {table}_old;'))
-
-    replace.commit()
-
-    print("\033[F", end="")
-    print("Moving existing tables... ✔")
+    with database.session_scope(db.Session) as db_session:
+        print("Dropping all old objects...")
+        with open(queries_dir / "drop_all.sql") as file:
+            sql = file.read()
+        db_session.execute(text(sql))
+        print("\033[F", end="")
+        print("Dropping all old objects... ✔")
 
     # Second step: stage new tables
     print("\nAdding new staging tables...")
@@ -113,23 +76,13 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     print("\033[F", end="")
     print("Adding new staging tables... ✔")
 
-    # Last: drop the _old tables
-    print("\nDeleting temporary old tables...")
-
-    conn = db.Engine.connect()
-    delete = conn.begin()
-    conn.execute(text("SET CONSTRAINTS ALL DEFERRED;"))
-    for table in Base.metadata.sorted_tables:
-        logging.debug(f"Dropping table {table}_old")
-        conn.execute(text(f"DROP TABLE IF EXISTS {table}_old CASCADE;"))
-    delete.commit()
-
-    print("\033[F", end="")
-    print("Deleting temporary old tables... ✔")
-
+    # Third step: create indexes
+    # Reindexing cannot be done within a transaction
     print("\nReindexing...")
+    conn = db.Engine.connect()
     conn.execution_options(isolation_level="AUTOCOMMIT")
     conn.execute(text("REINDEX DATABASE ferry;"))
+    conn.close()
     print("\033[F", end="")
     print("Reindexing... ✔")
 

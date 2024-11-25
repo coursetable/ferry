@@ -450,6 +450,7 @@ course_meetings = Table(
         "location_id",
         ForeignKey("locations.location_id"),
         comment="Location of this meeting session",
+        index=True,
     ),
 )
 
