@@ -11,6 +11,14 @@ from ferry.database import Database, Base
 from ferry.database import get_dfs, generate_diff, primary_keys
 from ferry.transform import transform
 
+logging.basicConfig(
+    format="%(asctime)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    level=logging.INFO,
+)
+logging.getLogger("sqlalchemy.engine").setLevel(logging.INFO)
+
+
 queries_dir = Path(__file__).parent / "queries"
 
 
@@ -65,9 +73,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
             conn_new = db.Engine.raw_connection()
             Base.metadata.create_all(db.Engine)
             if table_name not in tables:
-                raise ValueError(
-                    f"There is no data for table {table_name}."
-                )
+                raise ValueError(f"There is no data for table {table_name}.")
             # create in-memory buffer for DataFrame
             buffer = StringIO()
             # TODO is this really needed?
@@ -102,11 +108,11 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
             cursor.close()
             conn_new.commit()
             continue
-    
+
     print("Generating diff...")
     tables_old = get_dfs(database_connect_string)
     diff = generate_diff(tables_old, tables, "/workspaces/ferry/diff")
-    
+
     for table_name in tables_order_add:
         # Check if the table has columns 'last_updated' and 'time_added'
         columns = inspector.get_columns(table_name)
