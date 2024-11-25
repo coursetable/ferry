@@ -30,7 +30,7 @@ primary_keys = {
 }
 
 
-def get_dfs(database_connect_string: str):
+def get_tables_from_db(database_connect_string: str):
     db = Database(database_connect_string)
 
     # sorted tables in the database
