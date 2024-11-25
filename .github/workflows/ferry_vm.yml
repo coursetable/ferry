@@ -1,18 +1,18 @@
-name: Ferry Run
+name: Ferry Run (VM)
 on:
   push:
     branches: [master]
     paths:
       - "**.py"
-      - ".github/workflows/ferry.yml"
+      # - ".github/workflows/ferry_vm.yml"
       - "config/release*.yml"
-  schedule:
-    - cron: "43 7 * * *"
+  # schedule:
+  #   - cron: "43 7 * * *"
   workflow_dispatch:
 
 jobs:
   ferry:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 40
     strategy:
       matrix:
@@ -58,10 +58,10 @@ jobs:
         run: uv pip install -e .
 
       - name: Fetch latest 4 seasons
-        run: TQDM_DISABLE=1 python main.py -f config/release_fetch.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
+        run: TQDM_DISABLE=1 python main.py -f config/release_fetch.yml --database-connect-string ${{ secrets.FERRY_DB_CONNECT_STRING_VM }} --sentry-url ${{ secrets.SENTRY_URL }}
 
       - name: Sync Postgres DB
-        run: TQDM_DISABLE=1 python main.py -f config/release_sync_db.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
+        run: TQDM_DISABLE=1 python main.py -f config/release_sync_db.yml --database-connect-string ${{ secrets.FERRY_DB_CONNECT_STRING_VM }} --sentry-url ${{ secrets.SENTRY_URL }}
 
       - name: Calculate commit message
         run: |

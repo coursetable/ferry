@@ -1,7 +1,7 @@
 # DEV CONFIG
 # This configuration is used to enable syncing the local postgres database in a dev environment.
 
-database_connect_string: "postgresql://postgres:postgres@db:5432/postgres"
+database_connect_string: "postgresql://postgres:postgres@db:5432/ferry"
 release: false
 seasons: null
 use_cache: true

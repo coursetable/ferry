@@ -1,5 +1,4 @@
 from sqlalchemy import (
-    JSON,
     Boolean,
     Column,
     Float,
@@ -10,6 +9,7 @@ from sqlalchemy import (
     String,
     Table,
 )
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import backref, declarative_base, relationship
 from sqlalchemy_mixins import ReprMixin, SerializeMixin
 
@@ -130,14 +130,14 @@ class Course(BaseModel):
     # ----------------------
 
     skills = Column(
-        JSON,
+        JSONB,
         comment="""Skills that the course fulfills (e.g. writing,
         quantitative reasoning, language levels)""",
         nullable=False,
     )
 
     areas = Column(
-        JSON,
+        JSONB,
         comment="Course areas (humanities, social sciences, sciences)",
         nullable=False,
     )
@@ -450,6 +450,7 @@ course_meetings = Table(
         "location_id",
         ForeignKey("locations.location_id"),
         comment="Location of this meeting session",
+        index=True,
     ),
 )
 
@@ -561,7 +562,7 @@ class EvaluationStatistics(BaseModel):
     declined = Column(Integer, comment="Number of students who declined to respond")
     no_response = Column(Integer, comment="Number of students who did not respond")
     extras = Column(
-        JSON,
+        JSONB,
         comment="Arbitrary additional information attached to an evaluation",
     )
     avg_rating = Column(Float, comment="[computed] Average overall rating")
@@ -593,7 +594,7 @@ class EvaluationQuestion(BaseModel):
         nullable=False,
     )
     options = Column(
-        JSON,
+        JSONB,
         comment="JSON array of possible responses (only if the question is not a narrative)",
     )
 
@@ -701,7 +702,7 @@ class EvaluationRating(BaseModel):
     )
 
     rating = Column(
-        JSON,
+        JSONB,
         comment="JSON array of the response counts for each option",
         nullable=False,
     )
