@@ -97,9 +97,18 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
         # TODO: we should set up some mechanism to automatically grant
         # privileges... The default on the schema is not enough.
         print("\nGranting privileges to hasura...")
-        db_session.execute(text("CREATE ROLE IF NOT EXISTS hasura;"))
-        db_session.execute(text("GRANT SELECT ON ALL TABLES IN SCHEMA public TO hasura;"))
-        db_session.execute(text("GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO hasura;"))
+        db_session.execute(text("""
+DO
+$do$
+BEGIN
+IF NOT EXISTS (SELECT FROM pg_roles WHERE rolname = 'hasura') THEN
+    CREATE USER hasura;
+END IF;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO hasura;
+GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO hasura;
+END
+$do$;
+        """))
         print("\033[F", end="")
         print("Granting privileges to hasura... ✔")
 
