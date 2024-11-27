@@ -64,8 +64,8 @@ def get_tables_from_db(database_connect_string: str) -> dict[str, pd.DataFrame]:
     }
 
 
-def revive_value(val):
-    return ujson.loads(
+def revive_value(val, table_name: str):
+    res = ujson.loads(
         re.sub(
             r'Timestamp\("([^"]+)"\)',
             r'"\1"',
@@ -76,6 +76,20 @@ def revive_value(val):
             .replace("NaT", "null"),
         )
     )
+
+    # since course_meetings has a nested structure (json instead of separate
+    # columns), we need to exclude some columns
+    if table_name == "course_meetings":
+        res = [
+                    {
+                        k: v
+                        for k, v in d.items()
+                        if k not in cols_to_exclude["course_meetings"]
+                    }
+                    for d in res
+                ]
+    
+    return res
 
 
 def check_change(row: pd.Series, table_name: str):
@@ -91,8 +105,8 @@ def check_change(row: pd.Series, table_name: str):
         new_value = row[col_name + "_new"]
 
         if isinstance(old_value, list) or isinstance(new_value, list):
-            old_value = revive_value(old_value)
-            new_value = revive_value(new_value)
+            old_value = revive_value(old_value, table_name)
+            new_value = revive_value(new_value, table_name)
             if old_value != new_value:
                 return True
         elif not pd.isna(old_value) and not pd.isna(new_value):
