@@ -18,6 +18,7 @@ from ferry.transform.to_table import create_evals_tables
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 pd.set_option("display.max_columns", None)
 pd.set_option("display.max_rows", None)
+pd.set_option("display.width", None)
 
 
 async def start_crawl(args: Args):

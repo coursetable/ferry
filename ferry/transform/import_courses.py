@@ -29,20 +29,6 @@ def generate_id(
     return ids.fillna(cache_keys.map(dict(zip(unmapped, new_flag_ids)))).astype(int)
 
 
-def classify_yc(row: pd.Series):
-    if row["school"] == "YC":
-        return True
-
-    if row["school"] != row["school"]:
-        # check number of numbers in course number
-        # (some courses have letters in them)
-        num_nums = len([x for x in row["number"] if x.isnumeric()])
-        # if the course number is in the 000s to 400s range it's undergrad
-        if row["number"][0] in ["0", "1", "2", "3", "4"] and num_nums < 4:
-            return True
-    return False
-
-
 # These classes in their infinite wisdom published two CRNs that are exactly
 # identical and messes up with our assumptions
 exactly_identical_crns = {
@@ -70,9 +56,9 @@ def resolve_cross_listings(
     # seasons must be sorted in ascending order
     # prioritize Yale College courses when deduplicating listings. We assume that
     # YC listings carry the most info (skills/areas, etc.)
-    listings["is_yc"] = listings.apply(classify_yc, axis=1)
+    listings["is_yc"] = listings["school"] == "YC"
     listings = listings.sort_values(
-        by=["season_code", "is_yc"], ascending=[True, False]
+        by=["season_code", "is_yc", "course_code"], ascending=[True, False, True]
     )
     listings["crns"] = listings["crns"].apply(
         lambda crns: frozenset(int(crn) for crn in crns)
