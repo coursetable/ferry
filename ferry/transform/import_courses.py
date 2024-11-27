@@ -43,6 +43,15 @@ def classify_yc(row: pd.Series):
     return False
 
 
+# These classes in their infinite wisdom published two CRNs that are exactly
+# identical and messes up with our assumptions
+exactly_identical_crns = {
+    "201803": (12568, 13263),  # CPLT 942
+    "201901": (21500, 22135),  # PLSC 530
+    "202403": (15444, 15753),  # MUS 644
+}
+
+
 def resolve_cross_listings(
     listings: pd.DataFrame, data_dir: Path
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
@@ -65,11 +74,28 @@ def resolve_cross_listings(
     listings = listings.sort_values(
         by=["season_code", "is_yc"], ascending=[True, False]
     )
-
-    logging.debug("Aggregating cross-listings")
     listings["crns"] = listings["crns"].apply(
         lambda crns: frozenset(int(crn) for crn in crns)
     )
+
+    # Remove exactly identical CRNs by removing their rows as well their
+    # references in other rows' `crns` column
+    for season, crns in exactly_identical_crns.items():
+        first, *rest = crns
+        listings = listings[
+            ~(listings["crn"].isin(rest) & listings["season_code"].eq(season))
+        ]
+        cross_listed_crns = listings[
+            listings["season_code"].eq(season) & listings["crn"].eq(first)
+        ]["crns"].iloc[0]
+        for other_crn in cross_listed_crns - set(crns):
+            # Remove rest from the crns of each cross listed crn
+            target = listings["season_code"].eq(season) & listings["crn"].eq(other_crn)
+            listings.loc[target, "crns"] = listings.loc[target, "crns"].apply(
+                lambda x: x - set(rest)
+            )
+
+    logging.debug("Aggregating cross-listings")
     # season -> CRN -> set of CRNs it's connected to
     season_crn_graphs: dict[str, dict[int, frozenset[int]]] = (
         listings.groupby("season_code")
@@ -83,7 +109,7 @@ def resolve_cross_listings(
     # Assign course_id, inheriting from existing course_id if possible
     for i, row in listings.iterrows():
         season_course_ids = new_course_ids.setdefault(row["season_code"], {})
-        if row['crn'] in season_course_ids:
+        if row["crn"] in season_course_ids:
             # A previous row has already assigned this course_id
             continue
         crns = row["crns"]
@@ -136,8 +162,18 @@ def resolve_cross_listings(
             raise ValueError(f"CRNs not fully connected")
 
     listings["course_id"] = listings.apply(
-        lambda row: new_course_ids[row['season_code']][row['crn']], axis=1
+        lambda row: new_course_ids[row["season_code"]][row["crn"]], axis=1
     )
+
+    def validate_course_groups(group: pd.DataFrame):
+        # Each course has identical sections
+        if len(group["section"].unique()) > 1:
+            logging.warning(f"Multiple sections for course {group.name}:\n{group}")
+        # Each course has distinct course codes
+        if len(group["course_code"].unique()) != len(group):
+            logging.warning(f"Identical course codes for course {group.name}:\n{group}")
+
+    listings.groupby("course_id").apply(validate_course_groups)
     courses = listings.drop_duplicates(subset="course_id").set_index("course_id")
     return listings, courses
 
