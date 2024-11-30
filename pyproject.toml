@@ -20,7 +20,7 @@ dependencies = [
   "scipy==1.14.1",
   "sentry-sdk==2.18.0",
   "sqlalchemy-mixins==2.0.5",
-  "sqlalchemy==2.0.27",
+  "sqlalchemy==2.0.36",
   "textdistance==4.5.0",
   "tqdm==4.66.4",
   "ujson==5.10.0",
