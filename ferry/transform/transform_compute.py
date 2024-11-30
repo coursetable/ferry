@@ -215,7 +215,7 @@ def courses_computed(
     )
 
     same_course_id, same_course_to_courses = resolve_historical_courses(
-        courses, listings
+        courses, listings, course_to_professors
     )
 
     # split same-course partition by same-professors

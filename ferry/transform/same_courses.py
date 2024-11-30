@@ -2,12 +2,11 @@
 Find historical offerings of a course.
 """
 
-from typing import cast, Any
+from typing import cast
 
-import logging
 import itertools
+from scipy.cluster.hierarchy import DisjointSet
 import edlib
-import networkx as nx
 import pandas as pd
 from tqdm import tqdm
 
@@ -19,105 +18,142 @@ MIN_DESCRIPTION_MATCH_LEN = 32
 MAX_TITLE_DIST = 0.25
 MAX_DESCRIPTION_DIST = 0.25
 
-# These are courses that changed code; we only consider course pairs that have
-# overlapping codes because we can't afford a full pairwise text comparison.
-# These have to be added as special cases.
-# We do so by pretending that the specified course codes have an extra cross-
-# listing, so they can be grouped into the same shared-code component for further
-# title comparison.
-# TODO: is there a data structure that allows us to find similar texts quickly?
-code_changes = [
-    ("ENGL 121", "ENGL 421"),
-    ("ANTH 399", "ANTH 229"),
-    ("CPSC 427", "CPSC 327"),
-    ("CPSC 679", "CPSC 410"),
-    # Although our build_four_digit_transition function automatically discovers
-    # a lot of these transitions, some are very hard to find. For example, ENGL
-    # 115 has different titles every year.
-    ("ENGL 115", "ENGL 1015"),
-    ("ENGL 121", "ENGL 1021"),
-    ("ENGL 308", "ENGL 2854"),
+subject_changes = {
+    "G&G": "EPS",
+    "STAT": "S&DS",
+}
+
+# Courses that simultaneous changed codes and titles cannot be captured by our
+# matching.
+code_changes = {
+    "ENGL 115": "ENGL 1015",
+    "ENGL 121": "ENGL 1021",
+    "CPSC 679": "CPSC 410",
+    "CHNS 154": "CHNS 158",
+    "CHNS 155": "CHNS 159",
+}
+
+# The titles are too generic, so even if the prof is the same, we should not
+# consider them as the same course
+do_not_merge_on_prof = [
+    "directed reading",
+    "directed research",
+    "reading and research",
+    "tutorial",
+    "senior essay",
+    "senior project",
 ]
 
-subject_changes = [
-    ("G&G", "EPS"),
-]
-
-# These are course titles that are very similar but considering them equal would
-# link a lot of unwanted courses, or those that are not so similar but still the
-# same course.
-# Note: to disconnect two courses you have to make sure there's NO path between
-# them, but to connect two you just need one edge
-forced_title_comparison = {
-    # These departments have basically redesigned their codes and created a bunch
-    # of extra links
-    ("Elementary Akkadian", "Elementary Akkadian I"): False,
-    ("Elementary Akkadian I", "Elementary Akkadian II"): False,
-    ("ElementaryModernStandardArabic", "Elementary Modern Standard Arabic I"): False,
-    (
-        "Elementary Modern Standard Arabic I",
-        "Elementary Modern Standard Arabic II",
-    ): False,
-    **{
-        tuple(sorted((n1, n2))): False
-        for n1, n2 in itertools.combinations(
-            [
-                "Intermediate Modern Standard Arabic II",
-                "Advanced Modern Standard Arabic II",
-                "Arabic Seminar",
-                "Intermediate Modern Standard Arabic I",
-                "Advanced Modern Standard Arabic I",
-                "Arabic Seminar: Early Adab",
-            ],
-            2,
-        )
-        if {n1, n2} != {"Arabic Seminar", "Arabic Seminar: Early Adab"}
-    },
-    **{
-        tuple(sorted((n1, n2))): False
-        for n1, n2 in itertools.combinations(
-            [
-                "Intermediate Classical Arabic II",
-                "Intermediate Classical Arabic I",
-                "Beginning Classical Arabic II",
-                "Beginning Classical Arabic I",
-            ],
-            2,
-        )
-    },
-    # Skewed by the long logistical paragraph in description
-    ("Film and History", "The Idea of the Western Hemisphere"): False,
-    # This is why the text comparison algorithm doesn't work
-    ("Film and History", "Foxes, Hedgehogs, and History"): False,
-    (
-        "A Global History of the Second World War, 1937–1945",
-        "History of the Body",
-    ): False,
-    ("Equality", "Political Economy of Gender Inequality"): False,
+# These courses' content changed in very subtle ways that cause too many
+# other courses to be linked to be connected together.
+# To address this, we only allow exact text matches for these courses.
+# In general it's very hard to split a cluster once they have been grouped, so
+# we need to stop the grouping before it happens.
+do_not_merge_on_similar_text = {
+    "HIST 164J",
+    "HIST 447J",
 }
 
 
-def map_to_groups(
-    dataframe: pd.DataFrame, left: str, right: str
-) -> dict[Any, list[Any]]:
-    """
-    Given a DataFrame and two columns 'left' and 'right', construct dictionaries
-    mapping from 'left' to list-grouped 'right' values.
-    """
-    return dataframe.groupby(left)[right].apply(list).to_dict()
+# These courses are grouped together because they are part of a year-long sequence
+# with similar/identical titles and descriptions. However, we still want to allow
+# courses with the same code to change title. Therefore, rather than forbidding
+# text matching altogether, we split them after the fact. Each entry in this list
+# is called a "split spec": it is a list of groups specifying which courses should
+# belong to which split group. You can either specify just a course code, or a code +
+# season. For each course, it must unambiguously belong to one and only one group.
+# For each origin partition, we select the first split spec where every group has
+# at least one matching course.
+# TODO: add user survey about whether we should actually split them
+always_distinct: list[list[set[str | tuple[str, str]]]] = [
+    [
+        {"ARBC 110", ("ARBC 501", "201403"), ("ARBC 500", "202303")},
+        {"ARBC 120"},
+    ],  # Elementary Modern Standard Arabic I/II
+    [
+        {"ARBC 130", ("ARBC 502", "202103")},
+        {"ARBC 140"},
+    ],  # Intermediate Modern Standard Arabic I/II
+    [
+        {"ARBC 150", ("ARBC 504", "202103")},
+        {"ARBC 151"},
+    ],  # Advanced Modern Standard Arabic I/II
+    [
+        {"ARBC 136", "ARBC 156"},
+        {"ARBC 146", "ARBC 166"},
+    ],  # Intermediate Classical Arabic I/II
+    [{"ARBC 158"}, {"ARBC 159"}],  # Advanced Classical Arabic I/II
+    [
+        {"BENG 355L"},
+        {"BENG 356L"},
+    ],  # Physiological Systems Laboratory/Biomedical Engineering Laboratory
+    [
+        {"CHNS 112"},
+        {"CHNS 122", *[("CHNS 132", f"201{year}03") for year in range(2, 8)]},
+    ],  # Elementary Modern Chinese for Heritage Speakers
+    [{"CHNS 132"}, {"CHNS 142"}],  # Intermediate Modern Chinese for Heritage Speakers
+    [{"CHNS 152"}, {"CHNS 153"}],  # Advanced Modern Chinese for Heritage Speakers
+    [
+        {"CHNS 154", "CHNS 158"},
+        {"CHNS 155", "CHNS 159"},
+    ],  # Advanced Chinese III/IV through Films and Stories
+    [
+        {"CHNS 156"},
+        {"CHNS 157"},
+    ],  # Advanced Modern Chinese through Film for Heritage Speakers
+    [{"CHNS 170"}, {"CHNS 171"}],  # Introduction to Literary Chinese I/II
+    [{"PHYS 180"}, {"PHYS 181"}],  # University Physics
+    [{"PHYS 401"}, {"PHYS 402"}],  # Advanced Classical Physics from Newton to Einstein
+    [
+        {"PHIL 742", "PHIL 271", "LING 671", "LING 271"},
+        {"PHIL 703"},
+    ],  # Philosophy of Language (completely different courses)
+]
 
 
-def distance_in_bounds(text_1: str, text_2: str, max_dist: float) -> float:
+def find_matching_split_spec(
+    courses: set[str | tuple[str, str]]
+) -> list[set[str | tuple[str, str]]] | None:
+    candidates = []
+    for split_spec in always_distinct:
+        if all(any(course in group for course in courses) for group in split_spec):
+            candidates.append(split_spec)
+    if len(candidates) == 1:
+        return candidates[0]
+    if len(candidates) > 1:
+        raise ValueError(
+            f"Multiple matching split specs: {candidates} for courses {courses}"
+        )
+    return None
+
+
+def fix_department(code: str) -> str:
+    dep, rest = code.split(" ", 1)
+    if dep in subject_changes:
+        return f"{subject_changes[dep]} {rest}"
+    return code
+
+
+def distance_in_bounds(text_1: str, text_2: str, attr: str) -> float:
     """
     Get edit distance between two texts.
 
     Normalized by dividing by the length of the smaller text.
     """
-    # return maximum distance if any being compared is empty
+    text_1 = text_1.strip()
+    text_2 = text_2.strip()
+    # Always consider empty as unequal
     if text_1 == "" or text_2 == "":
-        return 0 if text_1 == text_2 else -1
+        return -1
 
-    # make sure the shorter text comes first for infix (HW) edit distance
+    if attr == "title_norm":
+        max_dist = MAX_TITLE_DIST
+    elif attr == "description":
+        max_dist = MAX_DESCRIPTION_DIST
+    else:
+        raise ValueError(f"Unknown attribute: {attr}")
+
+    # Make sure the shorter text comes first for infix (HW) edit distance
     if len(text_1) > len(text_2):
         text_1, text_2 = text_2, text_1
 
@@ -135,52 +171,17 @@ def distance_in_bounds(text_1: str, text_2: str, max_dist: float) -> float:
     return raw_dist / len(text_1)
 
 
-def build_four_digit_transition(listings: pd.DataFrame) -> dict[str, str]:
-    """
-    Starting in spring 2025, Yale is migrating from 3-digit codes to 4-digit
-    codes. To our surprise this is a very chaotic and unorganized process.
-    There's no clear rule about how the course codes are re-written, so we
-    do the following:
-
-    Every department changes codes at one particular season (ENGL at 202501).
-    Then, we split all their courses by "before" and "after", and for each
-    course in "after", we find the course in "before" that has the same title.
-    If there is none, then we assume there's no recurrence.
-
-    TODO: we will ask the registrar to find a better way forward.
-    """
-    transition_seasons = {"ENGL": "202501"}
-    transition_codes: dict[str, str] = {}
-    for department, season in transition_seasons.items():
-        before = listings[
-            (listings["season_code"] < season) & (listings["subject"] == department)
-        ]
-        after = listings[
-            (listings["season_code"] >= season) & (listings["subject"] == department)
-        ]
-        # For course before: for each title, sort by season code and get most recent course code
-        before = (
-            before.sort_values("season_code")
-            .groupby("title")["course_code"]
-            .last()
-            .to_dict()
-        )
-        # For course after: for each title, get the least recent course code
-        after = (
-            after.sort_values("season_code")
-            .groupby("title")["course_code"]
-            .first()
-            .to_dict()
-        )
-        # For each course in after, find the corresponding course in before
-        for title, code in after.items():
-            if title in before and before[title] not in transition_codes:
-                transition_codes[before[title]] = code
-    return transition_codes
+def reverse_map(mapping: pd.Series) -> pd.Series:
+    return (
+        mapping.explode()
+        .reset_index()
+        .groupby(cast(str, mapping.name))[mapping.index.name]
+        .apply(list)
+    )
 
 
 def resolve_historical_courses(
-    courses: pd.DataFrame, listings: pd.DataFrame
+    courses: pd.DataFrame, listings: pd.DataFrame, course_to_professors: pd.Series
 ) -> tuple[pd.Series, dict[int, list[int]]]:
     """
     Among courses, identify historical offerings of a course.
@@ -199,182 +200,229 @@ def resolve_historical_courses(
     # Discussions are never considered in the same-course relationship since they don't
     # have ratings anyway. To give them a same_course_id, we add them later
     # TODO: we should have a dedicated discussion -> course relationship
-    discussions = ~listings["section"].str.isnumeric() | listings[
+    discussions = ~listings["section"].str.isdigit() | listings[
         "course_code"
     ].str.endswith("D")
-    discussion_course_ids = listings["course_id"][discussions]
-    listings = listings.loc[~discussions]
-
-    # map course to codes and code to courses
-    course_to_codes = cast(
-        dict[int, list[str]], map_to_groups(listings, "course_id", "course_code")
-    )
-    code_to_courses = cast(
-        dict[str, list[int]], map_to_groups(listings, "course_code", "course_id")
-    )
-
-    # Create a graph for all course codes that have ever been cross-listed.
-    # Consider the following case: in season 1, course X has code A; in season 2,
-    # it has code A and B; in season 3, it has code B. It turns out that seasons 1
-    # and 3 offered the same content but season 2 was different. We will fail to
-    # link them if we only consider explicitly declared cross-listings. (This sounds
-    # hypothetical but it may happen with seminars, where every season a different
-    # set of topics are offered.)
-    cross_listed_codes = nx.Graph()
-
-    for course_codes in course_to_codes.values():
-        if len(course_codes) == 1:
-            cross_listed_codes.add_node(course_codes[0])
-        for code_1, code_2 in itertools.pairwise(course_codes):
-            cross_listed_codes.add_edge(code_1, code_2)
-
-    for code_1, code_2 in [
-        *code_changes,
-        *build_four_digit_transition(listings).items(),
-    ]:
-        cross_listed_codes.add_edge(code_1, code_2)
-
-    for subject_1, subject_2 in subject_changes:
-        for code_1 in code_to_courses.keys():
-            if code_1.startswith(subject_1):
-                code_2 = code_1.replace(subject_1, subject_2)
-                if code_2 in code_to_courses:
-                    cross_listed_codes.add_edge(code_1, code_2)
-
-    cross_listed_codes = cast(
-        list[set[str]], list(nx.connected_components(cross_listed_codes))
-    )
-
-    if logging.DEBUG >= logging.root.level:
-        log_file = open("same_courses.log", "w")
-    else:
-        log_file = None
-
-    # filter out titles and descriptions for matching
-    course_to_season = courses["season_code"].to_dict()
-    course_to_title = courses["title"][
-        courses["title"].apply(len) >= MIN_TITLE_MATCH_LEN
-    ].to_dict()
-    course_to_description = courses["description"][
-        courses["description"].apply(len) >= MIN_DESCRIPTION_MATCH_LEN
-    ].to_dict()
-
-    same_course_to_courses: dict[int, list[int]] = {}
-
-    for codes in tqdm(
-        cross_listed_codes,
-        total=len(cross_listed_codes),
-        desc="Populating same-courses graph",
-        leave=False,
-    ):
-        course_set = set(
-            itertools.chain.from_iterable(code_to_courses.get(c, []) for c in codes)
-        )
-        # Our goal is to connect each course to a component. We don't have to
-        # connect it to every same course, just enough so we can map out the
-        # connected components.
-        # We first connect the graph into same-title components: this alone should
-        # reduce a lot of pairwise comparisons
-        titles: dict[str, list[int]] = {}
-        for course_id in course_set:
-            title = course_to_title.get(course_id, "")
-            if title not in titles:
-                titles[title] = [course_id]
-            else:
-                titles[title].append(course_id)
-
-        title_components = [(i, t, c) for i, (t, c) in enumerate(titles.items())]
-        # There's no title variation, nothing to match
-        if len(title_components) == 1:
-            ids = list(course_set)
-            same_course_to_courses[min(ids)] = ids
-            continue
-        same_course_graph = nx.Graph()
-        # fill in the nodes first to keep courses with no same-code edges
-        for course_id in course_set:
-            same_course_graph.add_node(course_id)
-        for i, title, ids in title_components:
-            for id1, id2 in itertools.pairwise(ids):
-                same_course_graph.add_edge(id1, id2)
-        if log_file:
-            log_file.write("-" * 80 + "\n")
-            log_file.write(f"Processing group {codes}\n")
-            for i, title, ids in title_components:
-                log_file.write(
-                    f"{i}. {title} - {[course_to_season[course] + ' ' + '/'.join(course_to_codes[course]) for course in ids]}\n"
-                )
-
-        # Try to connect as many title components as possible
-        for (i1, title1, ids1), (
-            i2,
-            title2,
-            ids2,
-        ) in itertools.combinations(title_components, 2):
-            # If the two components are already connected, no need to do anything
-            if nx.has_path(same_course_graph, ids1[0], ids2[0]):
-                continue
-            p = tuple(sorted((title1, title2)))
-            if p in forced_title_comparison:
-                res = forced_title_comparison[p]
-                if log_file:
-                    log_file.write(
-                        f"{i1} ~ {i2}: forced {'equal' if res else 'unequal'}\n"
-                    )
-                if res:
-                    same_course_graph.add_edge(ids1[0], ids2[0])
-                continue
-            title_dist = distance_in_bounds(title1, title2, MAX_TITLE_DIST)
-            # Connect components with similar titles
-            if title_dist != -1:
-                same_course_graph.add_edge(ids1[0], ids2[0])
-                if log_file:
-                    log_file.write(f"{i1} ~ {i2}: title match {title_dist}\n")
-                continue
-            # For components with dissimilar titles: connect as long as there
-            # exist two courses with similar (non-empty) descriptions
-            for id1, id2 in itertools.product(ids1, ids2):
-                if id1 in course_to_description and id2 in course_to_description:
-                    desc_dist = distance_in_bounds(
-                        course_to_description[id1],
-                        course_to_description[id2],
-                        MAX_DESCRIPTION_DIST,
-                    )
-                    if desc_dist != -1:
-                        same_course_graph.add_edge(id1, id2)
-                        if log_file:
-                            log_file.write(
-                                f"{i1} ~ {i2}: description match {desc_dist}\n"
-                            )
-                        break
-
-        for x in nx.connected_components(same_course_graph):
-            if log_file:
-                course_code_set = set(frozenset(course_to_codes[c]) for c in x)
-                for c1, c2 in itertools.combinations(course_code_set, 2):
-                    if c1.isdisjoint(c2):
-                        log_file.write(
-                            f"[WARNING] {'/'.join(c1)} and {'/'.join(c2)} have no code in common\n"
-                        )
-            ids = list(x)
-            same_course_to_courses[min(ids)] = ids
-
-    for course in set(discussion_course_ids):
-        same_course_to_courses[course] = [course]
-
-    # map courses to unique same-courses ID, and map same-courses ID to courses
-    connected_courses = pd.Series(same_course_to_courses, name="course_id")
-    connected_courses.index.rename("same_course_id", inplace=True)
-
-    # map course_id to same-course partition ID
+    discussion_ids = listings[discussions]["course_id"].drop_duplicates()
+    listings = listings[~discussions].copy()
+    listings["course_code_norm"] = listings["course_code"].apply(fix_department)
+    data = courses[courses.index.isin(listings["course_id"])][
+        ["season_code", "title", "description"]
+    ].copy()
+    data["course_codes"] = listings.groupby("course_id")["course_code_norm"].apply(list)
+    data["title_norm"] = data["title"].str.lower()
+    data["prof_ids"] = course_to_professors
+    school_listings = listings[~listings["season_code"].str.endswith("2")]
+    summer_listings = listings[listings["season_code"].str.endswith("2")]
+    school_data = data[~data["season_code"].str.endswith("2")]
+    summer_data = data[data["season_code"].str.endswith("2")]
+    school_same_course_id = partition_same_courses(school_data, school_listings)
+    summer_same_course_id = partition_same_courses(summer_data, summer_listings)
+    print(discussion_ids)
+    discussion_same_course_id = pd.Series(discussion_ids.values, index=discussion_ids.values)
     same_course_id = (
-        connected_courses.explode()
-        .reset_index(drop=False)
-        .set_index("course_id")["same_course_id"]
+        pd.concat(
+            [school_same_course_id, summer_same_course_id, discussion_same_course_id]
+        )
+        .sort_index()
+        .rename("same_course_id")
     )
-    if log_file:
-        log_file.close()
-
+    same_course_id.index.rename("course_id", inplace=True)
+    same_course_to_courses = reverse_map(same_course_id).to_dict()
     return same_course_id, same_course_to_courses
+
+
+def partition_same_courses(data: pd.DataFrame, listings: pd.DataFrame) -> pd.Series:
+    tqdm.pandas()
+    data = data[data.index.isin(listings["course_id"])]
+    same_course_partitions = DisjointSet(elements=data.index)
+    have_cross_listed = DisjointSet(elements=listings["course_code_norm"])
+
+    def mark_cross_listed(codes: list[str]):
+        for c1, c2 in itertools.pairwise(codes):
+            have_cross_listed.merge(c1, c2)
+
+    data["course_codes"].apply(mark_cross_listed)
+    data.groupby("title_norm").progress_apply(
+        merge_same_title_courses,
+        include_groups=False,
+        same_course_partitions=same_course_partitions,
+        have_cross_listed=have_cross_listed,
+    )
+    listings.groupby("course_code_norm")["course_id"].progress_apply(
+        merge_same_code_courses,
+        include_groups=False,
+        listings=listings,
+        data=data,
+        same_course_partitions=same_course_partitions,
+    )
+    return map_course_id_to_same_course_id(same_course_partitions, data)
+
+
+def all_same_course(group: pd.DataFrame, same_course_partitions: DisjointSet):
+    return same_course_partitions.subset(group.index[0]) >= set(group.index)
+
+
+# We partition all the course IDs based on whether they were in the same
+# department, or were taught by the same professor
+def merge_same_title_courses(
+    same_title_group: pd.DataFrame,
+    same_course_partitions: DisjointSet,
+    have_cross_listed: DisjointSet,
+):
+    dep_to_course_ids = reverse_map(
+        same_title_group["course_codes"].apply(
+            lambda x: [v.split(" ", 1)[0] for v in x]
+        )
+    )
+    for course_ids in dep_to_course_ids:
+        for id1, id2 in itertools.pairwise(course_ids):
+            same_course_partitions.merge(id1, id2)
+    subset_to_course_codes: dict[int, set[str]] = {}
+    for id in same_title_group.index:
+        subset = same_course_partitions[id]
+        subset_to_course_codes.setdefault(subset, set()).update(
+            same_title_group.loc[id, "course_codes"]
+        )
+    for subset1, subset2 in itertools.combinations(subset_to_course_codes, 2):
+        if same_course_partitions.connected(subset1, subset2):
+            continue
+        all_codes1 = subset_to_course_codes[subset1]
+        all_codes2 = subset_to_course_codes[subset2]
+        for c1, c2 in itertools.product(all_codes1, all_codes2):
+            if have_cross_listed.connected(c1, c2):
+                same_course_partitions.merge(subset1, subset2)
+                break
+    # If all courses have been merged into the same partition, we can stop here
+    if all_same_course(same_title_group, same_course_partitions):
+        return
+    if any(keyword in same_title_group.name for keyword in do_not_merge_on_prof):
+        return
+    prof_to_course_ids = reverse_map(same_title_group["prof_ids"])
+    for course_ids in prof_to_course_ids:
+        for id1, id2 in itertools.pairwise(course_ids):
+            same_course_partitions.merge(id1, id2)
+
+
+def merge_by_similar_text(
+    same_code_group: pd.DataFrame,
+    attr: str,
+    same_course_partitions: DisjointSet,
+    all_data: pd.DataFrame,
+    merge_same_text: bool = True,
+):
+    # Merging by similar text should only cause courses from different times to be merged.
+    # We avoid merging two courses in the same season.
+    def merge_if_different_season(id1: int, id2: int):
+        subset1 = same_course_partitions.subset(id1)
+        subset2 = same_course_partitions.subset(id2)
+        subset1_seasons = all_data.loc[list(subset1), "season_code"]
+        subset2_seasons = all_data.loc[list(subset2), "season_code"]
+        if set(subset1_seasons) & set(subset2_seasons):
+            return
+        same_course_partitions.merge(id1, id2)
+
+    attr_to_course_ids = reverse_map(same_code_group[attr])
+    if merge_same_text:
+        for ids in attr_to_course_ids:
+            for id1, id2 in itertools.pairwise(ids):
+                merge_if_different_season(id1, id2)
+        if all_same_course(same_code_group, same_course_partitions):
+            return
+    for (a, group1), (b, group2) in itertools.combinations(
+        attr_to_course_ids.items(), 2
+    ):
+        # Courses within each group are already merged, so we only need to
+        # merge the first two if needed
+        if same_course_partitions.connected(group1[0], group2[0]):
+            continue
+        if distance_in_bounds(cast(str, a), cast(str, b), attr) >= 0:
+            # print(f"Merge\n{subdata.loc[group1, ["title", "season_code", "course_codes"]]}\nand\n{subdata.loc[group2, ["title", "season_code", "course_codes"]]}\nbased on {attr}:\n{a}\n{b}")
+            merge_if_different_season(group1[0], group2[0])
+
+
+# Merge again based on course_codes: for each group with overlapping course_codes
+# check if the titles or descriptions are similar
+def merge_same_code_courses(
+    same_code_ids: pd.Series,
+    listings: pd.DataFrame,
+    data: pd.DataFrame,
+    same_course_partitions: DisjointSet,
+):
+    # Pretend the old courses were also offered with the new codes
+    if same_code_ids.name in code_changes:
+        same_code_ids = pd.concat(
+            [
+                same_code_ids,
+                listings[listings["course_code"] == code_changes[same_code_ids.name]][
+                    "course_id"
+                ],
+            ]
+        )
+    if same_code_ids.name in do_not_merge_on_similar_text:
+        return
+    same_code_group = data.loc[same_code_ids]
+    if all_same_course(same_code_group, same_course_partitions):
+        return
+    merge_by_similar_text(
+        same_code_group, "title_norm", same_course_partitions, data, False
+    )
+    if all_same_course(same_code_group, same_course_partitions):
+        return
+    merge_by_similar_text(same_code_group, "description", same_course_partitions, data)
+
+
+def map_course_id_to_same_course_id(
+    same_course_partitions: DisjointSet, data: pd.DataFrame
+):
+    course_id_to_same_course_id: dict[int, int] = {}
+    for subset in same_course_partitions.subsets():
+        subdata = data.loc[sorted(subset)]
+        # Split always-distinct courses
+        id_to_season_and_codes = cast(
+            dict[int, set[str | tuple[str, str]]],
+            subdata.apply(
+                lambda row: set(
+                    (code, row["season_code"]) for code in row["course_codes"]
+                )
+                | set(row["course_codes"]),
+                axis=1,
+            ).to_dict(),
+        )
+        all_codes = set(itertools.chain.from_iterable(id_to_season_and_codes.values()))
+        split_spec = find_matching_split_spec(all_codes)
+        if split_spec:
+            subset_partitions = [set() for _ in range(len(split_spec))]
+            for course_id in subset:
+                course_codes = id_to_season_and_codes[course_id]
+                overlapping_sets: list[int] = []
+                for i, code_set in enumerate(split_spec):
+                    if course_codes & code_set:
+                        overlapping_sets.append(i)
+                if len(overlapping_sets) > 1:
+                    print(subdata[["season_code", "course_codes", "title"]])
+                    raise ValueError(
+                        f"Course ID {course_id} overlaps with multiple sets: {overlapping_sets}"
+                    )
+                elif len(overlapping_sets) == 1:
+                    subset_partitions[overlapping_sets[0]].add(course_id)
+                else:
+                    print(subdata[["season_code", "course_codes", "title"]])
+                    raise ValueError(
+                        f"Course ID {course_id} with codes {course_codes} does not overlap with any set in the split spec {split_spec}"
+                    )
+        else:
+            subset_partitions = [subset]
+        for subset in subset_partitions:
+            if not subset:
+                print(subdata[["season_code", "course_codes", "title"]])
+                raise ValueError(
+                    f"Empty partition in {subset_partitions} split according to {split_spec}"
+                )
+            same_course_id = min(subset)
+            for course_id in subset:
+                course_id_to_same_course_id[course_id] = same_course_id
+    return pd.Series(course_id_to_same_course_id)
 
 
 def split_same_professors(

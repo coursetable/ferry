@@ -26,7 +26,7 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
     as PKs in the DB because numeric primary keys are faster.
 
     We cache the following:
-    - `courses`: `course_id`, `same_course_id`, `same_course_and_profs_id`
+    - `courses`: `course_id`
     - `listings`: `listing_id`
     - `flags`: `flag_id`
     - `professors`: `professor_id`
@@ -51,16 +51,6 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
         tables["listings"].set_index(["season_code", "crn"])["course_id"].to_dict()
     )
     course_to_id = {f"{k[0]}-{k[1]}": v for k, v in course_to_id.items()}
-    same_course_to_id = (
-        tables["courses"].set_index("course_id")["same_course_id"].to_dict()
-    )
-    same_course_to_id = {str(k): v for k, v in same_course_to_id.items()}
-    same_course_and_profs_to_id = (
-        tables["courses"].set_index("course_id")["same_course_and_profs_id"].to_dict()
-    )
-    same_course_and_profs_to_id = {
-        str(k): v for k, v in same_course_and_profs_to_id.items()
-    }
     listing_to_id = (
         tables["listings"].set_index(["season_code", "crn"])["listing_id"].to_dict()
     )
@@ -96,10 +86,6 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
     rating_to_id = {f"{k[0]}-{k[1]}": v for k, v in rating_to_id.items()}
     # Cross-listing status can change, so the course id may change too
     merge_id_cache(cache_dir / "course_id.json", course_to_id, False)
-    merge_id_cache(cache_dir / "same_course_id.json", same_course_to_id, False)
-    merge_id_cache(
-        cache_dir / "same_course_and_profs_id.json", same_course_and_profs_to_id, False
-    )
     merge_id_cache(cache_dir / "listing_id.json", listing_to_id)
     merge_id_cache(cache_dir / "flag_id.json", flag_to_id)
     merge_id_cache(cache_dir / "location_id.json", location_to_id)
