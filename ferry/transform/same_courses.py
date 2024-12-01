@@ -216,10 +216,13 @@ def resolve_historical_courses(
     summer_listings = listings[listings["season_code"].str.endswith("2")]
     school_data = data[~data["season_code"].str.endswith("2")]
     summer_data = data[data["season_code"].str.endswith("2")]
+    tqdm.pandas(desc="Partitioning school year courses", leave=False)
     school_same_course_id = partition_same_courses(school_data, school_listings)
+    tqdm.pandas(desc="Partitioning summer courses", leave=False)
     summer_same_course_id = partition_same_courses(summer_data, summer_listings)
-    print(discussion_ids)
-    discussion_same_course_id = pd.Series(discussion_ids.values, index=discussion_ids.values)
+    discussion_same_course_id = pd.Series(
+        discussion_ids.values, index=discussion_ids.values
+    )
     same_course_id = (
         pd.concat(
             [school_same_course_id, summer_same_course_id, discussion_same_course_id]
@@ -233,7 +236,6 @@ def resolve_historical_courses(
 
 
 def partition_same_courses(data: pd.DataFrame, listings: pd.DataFrame) -> pd.Series:
-    tqdm.pandas()
     data = data[data.index.isin(listings["course_id"])]
     same_course_partitions = DisjointSet(elements=data.index)
     have_cross_listed = DisjointSet(elements=listings["course_code_norm"])

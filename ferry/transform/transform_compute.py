@@ -4,7 +4,6 @@ from typing import cast
 
 import numpy as np
 import pandas as pd
-from tqdm import tqdm
 import logging
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
@@ -208,7 +207,7 @@ def courses_computed(
     """
     logging.debug("Computing courses")
 
-    # map course_id to professor_ids
+    # Map course_id to professor_ids
     # use frozenset because it is hashable (set is not), needed for groupby
     course_to_professors = course_professors.groupby("course_id")["professor_id"].apply(
         frozenset
@@ -218,7 +217,7 @@ def courses_computed(
         courses, listings, course_to_professors
     )
 
-    # split same-course partition by same-professors
+    # Split same-course partition by same-professors
     same_course_and_profs_id, same_prof_course_to_courses = split_same_professors(
         same_course_id, course_to_professors
     )
@@ -229,104 +228,38 @@ def courses_computed(
     logging.debug("Computing last offering statistics")
 
     # course_id for all evaluated courses
-    evaluated_courses = set(
+    course_with_enrollment = set(
         evaluation_statistics.dropna(subset=["enrolled"], axis=0).index
     )
 
-    course_to_season = courses["season_code"].to_dict()
-    course_to_enrollment = evaluation_statistics["enrolled"].to_dict()
+    course_to_last_offered: dict[int, int | None] = {}
+    course_to_last_enrollment: dict[int, int | None] = {}
 
-    # get last course offering in general (with or without enrollment)
-    def get_last_offered(course_row: pd.Series):
-        same_courses = [
-            x
-            for x in same_course_to_courses[course_row["same_course_id"]]
-            if course_to_season[x] < course_row["season_code"]
-        ]
+    for same_course_group in same_course_to_courses.values():
+        ids_by_season = courses.loc[same_course_group].sort_values("season_code").index
+        for i, course_id in enumerate(ids_by_season):
+            course_to_last_offered[course_id] = ids_by_season[i - 1] if i > 0 else None
+        last_enrollment_id = None
+        for i, course_id in enumerate(ids_by_season):
+            course_to_last_enrollment[course_id] = last_enrollment_id
+            if course_id in course_with_enrollment:
+                last_enrollment_id = course_id
 
-        if len(same_courses) == 0:
-            return None
-
-        same_courses = [x for x in same_courses if x is not course_row.name]
-        if len(same_courses) == 0:
-            return None
-
-        last_offered_course = max(same_courses, key=lambda x: course_to_season[x])
-
-        return last_offered_course
-
-    # helper function for getting enrollment fields of last-offered course
-    def get_last_offered_enrollment(course_row: pd.Series):
-        # keep course only if distinct, has enrollment statistics, and is before current
-        same_courses = [
-            x
-            for x in same_course_to_courses[course_row["same_course_id"]]
-            if x in evaluated_courses
-            and course_to_season[x] < course_row["season_code"]
-        ]
-        if len(same_courses) == 0:
-            return None, None, None, None
-        same_courses = [x for x in same_courses if x is not course_row.name]
-        if len(same_courses) == 0:
-            return None, None, None, None
-
-        current_professors = course_to_professors.get(course_row.name, set())
-
-        # sort courses newest-first
-        same_courses = sorted(
-            same_courses, key=lambda x: course_to_season[x], reverse=True
-        )
-
-        # get the newest course with the same professors, otherwise just the newest course
-        last_enrollment_course = next(
-            (
-                prev_course
-                for prev_course in same_courses
-                if course_to_professors.get(prev_course, set()) == current_professors
-            ),
-            # default to newest course if no previous course has same profs
-            same_courses[0],
-        )
-
-        # number of students last taking course
-        last_enrollment = course_to_enrollment.get(last_enrollment_course, None)
-        # season for last enrollment
-        last_enrollment_season = course_to_season[last_enrollment_course]
-        # professors for last enrollment
-        last_enrollment_professors = course_to_professors.get(
-            last_enrollment_course, set()
-        )
-
-        # if last enrollment is with same professors
-        last_enrollment_same_professors = (
-            last_enrollment_professors == current_professors
-        )
-
-        return (
-            last_enrollment_course,
-            last_enrollment,
-            last_enrollment_season,
-            last_enrollment_same_professors,
-        )
-
-    tqdm.pandas(desc="Finding last-offered course", leave=False)
-    courses["last_offered_course_id"] = courses.progress_apply(get_last_offered, axis=1)
-    courses["last_offered_course_id"] = courses["last_offered_course_id"].astype(
-        pd.Int64Dtype()
+    courses["last_offered_course_id"] = pd.Series(
+        course_to_last_offered, dtype=pd.Int64Dtype()
     )
-
-    tqdm.pandas(desc="Finding last-offered enrollment", leave=False)
-    # getting last-offered enrollment
-    (
-        courses["last_enrollment_course_id"],
-        courses["last_enrollment"],
-        courses["last_enrollment_season_code"],
-        courses["last_enrollment_same_professors"],
-    ) = zip(*courses.progress_apply(get_last_offered_enrollment, axis=1))
-    courses["last_enrollment_course_id"] = courses["last_enrollment_course_id"].astype(
-        pd.Int64Dtype()
+    courses["last_enrollment_course_id"] = pd.Series(
+        course_to_last_enrollment, dtype=pd.Int64Dtype()
     )
-    courses["last_enrollment"] = courses["last_enrollment"].astype(pd.Int64Dtype())
+    courses["last_enrollment_season_code"] = courses["last_enrollment_course_id"].map(
+        courses["season_code"]
+    )
+    courses["last_enrollment_same_professors"] = course_to_professors.reindex(courses.index, fill_value=frozenset()) == courses[
+        "last_enrollment_course_id"
+    ].map(course_to_professors)
+    courses["last_enrollment"] = courses["last_enrollment_course_id"].map(
+        evaluation_statistics["enrolled"]
+    )
 
     logging.debug("Computing historical ratings for courses")
 
