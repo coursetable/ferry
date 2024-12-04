@@ -1,14 +1,18 @@
 import pandas as pd
+import numpy as np
 import csv
 from io import StringIO
 import logging
 from pathlib import Path
 
 from sqlalchemy import MetaData, text, inspect, Connection
+from psycopg2.extensions import register_adapter, AsIs
 
 from ferry import database
 from ferry.database import Database, Base
 from .diff_db import get_tables_from_db, generate_diff, primary_keys
+
+register_adapter(np.int64, AsIs)
 
 logging.basicConfig(
     format="%(asctime)s - %(message)s",
@@ -144,6 +148,7 @@ def commit_updates(
                             "nan",
                         ]:
                             val = None
+
                         placeholders.append(f":{col}")
                         params[col] = val
 
@@ -153,7 +158,68 @@ def commit_updates(
                     f"INSERT INTO {table_name} ({columns}) VALUES ({values});"
                 )
                 conn.execute(insert_query, params)
+        elif table_name == "course_flags":
+            # Delete the existing flags with that course id
+            delete_query = text(f"DELETE FROM {table_name} WHERE {pk} = :pk_value;")
+            conn.execute(delete_query, {"pk_value": row[pk]})
+            
+            # Add the new flags
+            flags = row["flag_id_new"] # frozenset
+            flags_old = row["flag_id_old"] # frozenset
+            if type(flags) == frozenset:
+                flags = list(flags)
+            if type(flags_old) == frozenset:
+                flags_old = list(flags_old)
 
+            for i, flag in enumerate(flags):
+                # Validate columns
+                for col in row.index:
+                    if "_new" in col:
+                        col_name_orig = col.replace("_new", "")
+                    else:
+                        continue
+                    if col_name_orig not in valid_columns:
+                        raise ValueError(
+                            f"Invalid column name: {col} in table {table_name}"
+                        )
+
+                placeholders = []
+                params = {}
+                columns_list = []
+                columns_list.append("last_updated")
+                placeholders.append("CURRENT_TIMESTAMP")
+                for col in row.index:
+                    if "_new" in col:
+                        col_name_orig = col.replace("_new", "")
+                    elif col == "course_id":
+                        col_name_orig = col
+                    else:
+                        continue
+
+                    columns_list.append(col_name_orig)
+
+                    val = row[col]
+                    if col_name_orig == "flag_id":
+                        val = flag
+                    
+                    if pd.isna(val) or val in [
+                        None,
+                        "None",
+                        "NULL",
+                        "<NA>",
+                        "nan",
+                    ]:
+                        val = None
+
+                    placeholders.append(f":{col_name_orig}")
+                    params[col_name_orig] = val
+
+                columns = ", ".join(columns_list)
+                values = ", ".join(placeholders)
+                insert_query = text(
+                    f"INSERT INTO {table_name} ({columns}) VALUES ({values});"
+                )
+                conn.execute(insert_query, params)
         else:
             set_clause_items = []
             params = {}
@@ -211,7 +277,18 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
         return [col.name for col in table.columns]
 
     # Order to process tables to avoid foreign key constraint issues
-    tables_order_add = [t.name for t in db_meta.sorted_tables if t.name in primary_keys]
+    # We can't use db_meta.sorted_tables because that only has existing tables in DB
+    tables_order_add = [
+        "buildings",
+        "locations",
+        "flags",
+        "professors",
+        "courses",
+        "course_flags",
+        "course_meetings",
+        "course_professors",
+        "listings",
+    ]
     tables_order_delete = tables_order_add[::-1]
 
     for table_name in tables_order_add:
