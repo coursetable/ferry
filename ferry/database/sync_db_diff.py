@@ -162,10 +162,10 @@ def commit_updates(
             # Delete the existing flags with that course id
             delete_query = text(f"DELETE FROM {table_name} WHERE {pk} = :pk_value;")
             conn.execute(delete_query, {"pk_value": row[pk]})
-            
+
             # Add the new flags
-            flags = row["flag_id_new"] # frozenset
-            flags_old = row["flag_id_old"] # frozenset
+            flags = row["flag_id_new"]  # frozenset
+            flags_old = row["flag_id_old"]  # frozenset
             if type(flags) == frozenset:
                 flags = list(flags)
             if type(flags_old) == frozenset:
@@ -201,7 +201,7 @@ def commit_updates(
                     val = row[col]
                     if col_name_orig == "flag_id":
                         val = flag
-                    
+
                     if pd.isna(val) or val in [
                         None,
                         "None",

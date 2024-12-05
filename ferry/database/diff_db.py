@@ -81,14 +81,10 @@ def revive_value(val, table_name: str):
     # columns), we need to exclude some columns
     if table_name == "course_meetings":
         res = [
-                    {
-                        k: v
-                        for k, v in d.items()
-                        if k not in cols_to_exclude["course_meetings"]
-                    }
-                    for d in res
-                ]
-    
+            {k: v for k, v in d.items() if k not in cols_to_exclude["course_meetings"]}
+            for d in res
+        ]
+
     return res
 
 
