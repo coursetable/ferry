@@ -1,11 +1,11 @@
 name: Ferry Run (VM)
 on:
-  push:
-    branches: [master]
-    paths:
-      - "**.py"
-      # - ".github/workflows/ferry_vm.yml"
-      - "config/release*.yml"
+  # push:
+  #   branches: [master]
+  #   paths:
+  #     - "**.py"
+  #     # - ".github/workflows/ferry_vm.yml"
+  #     - "config/release*.yml"
   # schedule:
   #   - cron: "43 7 * * *"
   workflow_dispatch:
