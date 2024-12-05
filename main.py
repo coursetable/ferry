@@ -90,7 +90,7 @@ async def main():
         if args.rewrite:
             sync_db_old(tables, args.database_connect_string)
         else:
-            sync_db(tables, args.database_connect_string)
+            sync_db(tables, args.database_connect_string, data_dir=args.data_dir)
     if args.generate_diagram:
         from ferry.generate_db_diagram import generate_db_diagram
 

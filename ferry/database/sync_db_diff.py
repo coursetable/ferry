@@ -261,7 +261,9 @@ def get_valid_columns(table_name, db_meta):
     return [col.name for col in table.columns]
 
 
-def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
+def sync_db(
+    tables: dict[str, pd.DataFrame], database_connect_string: str, data_dir: Path
+):
     db = Database(database_connect_string)
 
     db_meta = MetaData()
@@ -333,7 +335,7 @@ def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
 
     print("Generating diff...")
     tables_old = get_tables_from_db(database_connect_string)
-    diff = generate_diff(tables_old, tables, "/workspaces/ferry/diff")
+    diff = generate_diff(tables_old, tables, str(data_dir / "diff"))
 
     conn = db.Engine.connect()
     inspector = inspect(db.Engine)
