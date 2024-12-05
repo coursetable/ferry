@@ -152,6 +152,9 @@ def generate_diff(
 ):
     diff_dict: dict[str, DiffRecord] = {}
 
+    # Make sure dif output directory exists
+    Path(output_dir).mkdir(parents=True, exist_ok=True)
+
     for table_name in primary_keys.keys():
         if table_name not in tables_new.keys():
             raise ValueError(f"Table '{table_name}' not found in new tables")
