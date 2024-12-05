@@ -1,9 +1,10 @@
 import pandas as pd
 import csv
 from io import StringIO
+import logging
 from pathlib import Path
 
-from sqlalchemy import MetaData, text
+from sqlalchemy import MetaData, text, inspect
 
 from ferry import database
 from ferry.database import Database, Base
@@ -12,7 +13,7 @@ from ferry.database import Database, Base
 queries_dir = Path(__file__).parent / "queries"
 
 
-def sync_db_old(tables: dict[str, pd.DataFrame], database_connect_string: str):
+def sync_db(tables: dict[str, pd.DataFrame], database_connect_string: str):
     db = Database(database_connect_string)
 
     # sorted tables in the database
@@ -97,10 +98,20 @@ def sync_db_old(tables: dict[str, pd.DataFrame], database_connect_string: str):
         # privileges... The default on the schema is not enough.
         print("\nGranting privileges to hasura...")
         db_session.execute(
-            text("GRANT SELECT ON ALL TABLES IN SCHEMA public TO hasura;")
-        )
-        db_session.execute(
-            text("GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO hasura;")
+            text(
+                """
+DO
+$do$
+BEGIN
+IF NOT EXISTS (SELECT FROM pg_roles WHERE rolname = 'hasura') THEN
+    CREATE USER hasura;
+END IF;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO hasura;
+GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO hasura;
+END
+$do$;
+        """
+            )
         )
         print("\033[F", end="")
         print("Granting privileges to hasura... ✔")
