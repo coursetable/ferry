@@ -39,6 +39,7 @@ class Args:
     sync_db: bool
     transform: bool
     use_cache: bool
+    rewrite: bool
 
 
 class InvalidSeasonError(Exception):
@@ -160,6 +161,12 @@ def get_parser():
     parser.add_argument(
         "--use-cache",
         help="Whether to use cache for requests. Automatically set to false in release mode.",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "--rewrite",
+        help="Whether to rewrite the database when syncing. Uses original sync_db function if true",
         action="store_true",
     )
 

@@ -11,7 +11,7 @@ from ferry.crawler.cache import load_cache_json
 from ferry.crawler.classes import crawl_classes
 from ferry.crawler.evals import crawl_evals
 from ferry.crawler.seasons import fetch_seasons
-from ferry.database import sync_db
+from ferry.database import sync_db, sync_db_old
 from ferry.transform import transform, write_csvs
 from ferry.transform.to_table import create_evals_tables
 
@@ -87,7 +87,10 @@ async def main():
         write_csvs(tables, data_dir=args.data_dir)
     if args.sync_db:
         assert tables
-        sync_db(tables, args.database_connect_string)
+        if args.rewrite:
+            sync_db_old(tables, args.database_connect_string)
+        else:
+            sync_db(tables, args.database_connect_string)
     if args.generate_diagram:
         from ferry.generate_db_diagram import generate_db_diagram
 

@@ -21,4 +21,6 @@ from .models import (
     course_flags,
     course_professors,
 )
-from .sync_db import sync_db
+
+from .sync_db_diff import sync_db
+from .sync_db_old import sync_db_old
