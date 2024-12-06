@@ -31,11 +31,14 @@ def generate_id(
 
 # These classes in their infinite wisdom published two CRNs that are exactly
 # identical and messes up with our assumptions
-exactly_identical_crns = {
-    "201803": (12568, 13263),  # CPLT 942
-    "201901": (21500, 22135),  # PLSC 530
-    "202403": (15444, 15753),  # MUS 644
-}
+exactly_identical_crns = [
+    ("201803", (12568, 13263)),  # CPLT 942
+    ("201901", (21500, 22135)),  # PLSC 530
+    ("202403", (15444, 15753)),  # MUS 644
+    ("202501", (23554, 26053)),  # MUS 506
+    ("202501", (23555, 26054)),  # MUS 606
+    ("202501", (24725, 26055)),  # MUS 706
+]
 
 
 def resolve_cross_listings(
@@ -66,7 +69,7 @@ def resolve_cross_listings(
 
     # Remove exactly identical CRNs by removing their rows as well their
     # references in other rows' `crns` column
-    for season, crns in exactly_identical_crns.items():
+    for season, crns in exactly_identical_crns:
         first, *rest = crns
         listings = listings[
             ~(listings["crn"].isin(rest) & listings["season_code"].eq(season))
