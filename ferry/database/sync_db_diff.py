@@ -98,12 +98,6 @@ def get_tables_from_db(database_connect_string: str) -> dict[str, pd.DataFrame]:
     }
 
 
-def type_or_na(value):
-    if pd.isna(value):
-        return "None"
-    return type(value)
-
-
 def generate_diff(
     tables_old: dict[str, pd.DataFrame],
     tables_new: dict[str, pd.DataFrame],
@@ -162,10 +156,17 @@ def generate_diff(
             ):
                 print(shared_rows_old.columns)
                 print(shared_rows_new.columns)
-                raise ValueError(f"Column mismatch in table {table_name}. Run with --rewrite once to fix.")
-            old_types = shared_rows_old.map(type_or_na)
-            new_types = shared_rows_new.map(type_or_na)
-            different_types = old_types != new_types
+                raise ValueError(
+                    f"Column mismatch in table {table_name}. Run with --rewrite once to fix."
+                )
+            # Do not allow type changes unless one of them is NA
+            old_types = shared_rows_old.map(type)
+            new_types = shared_rows_new.map(type)
+            different_types = ~(
+                (old_types == new_types)
+                | shared_rows_old.isna()
+                | shared_rows_new.isna()
+            )
             if different_types.any().any():
                 row, col = list(zip(*different_types.values.nonzero()))[0]
                 print(f"Type mismatch in {table_name} at ({row}, {col})")
@@ -181,7 +182,7 @@ def generate_diff(
 
             file.write("## Changed\n\n")
             changed_rows = shared_rows_new[unequal_mask.any(axis=1)].copy()
-            changed_rows["columns_changed"] = unequal_mask.apply(
+            changed_rows["columns_changed"] = unequal_mask[unequal_mask.any(axis=1)].apply(
                 lambda row: shared_rows_new.columns[row].tolist(), axis=1
             )
             if not changed_rows.empty:
