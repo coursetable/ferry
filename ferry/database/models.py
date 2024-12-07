@@ -175,9 +175,30 @@ class Course(BaseModel):
         comment="True if the course is a college seminar. False otherwise.",
     )
 
-    # ----------------
-    # Computed ratings
-    # ----------------
+    # ------------------------------
+    # Historical identical offerings
+    # ------------------------------
+
+    same_course_id = Column(
+        Integer,
+        comment="""[computed] Unique ID for grouping courses by historical offering.
+        All courses with a given ID are identical offerings across different semesters.
+        """,
+        index=True,
+        nullable=False,
+    )
+
+    same_course_and_profs_id = Column(
+        Integer,
+        comment="""[computed] Unique ID for grouping courses by historical offering.
+        All courses with a given ID are identical offerings across different semesters.
+        Same as 'same_course_id' with the constraint that all courses in a group were
+        taught by the same professors.
+        """,
+        index=True,
+        nullable=False,
+    )
+
     average_gut_rating = Column(
         Float,
         comment="""[computed] average_rating - average_workload""",
@@ -228,6 +249,10 @@ class Course(BaseModel):
         `average_workload_same_professors`""",
     )
 
+    # -----------------------
+    # Last-offered statistics
+    # -----------------------
+
     last_offered_course_id = Column(
         Integer,
         ForeignKey("courses.course_id"),
@@ -235,34 +260,6 @@ class Course(BaseModel):
         course (excluding future ones)""",
         index=True,
     )
-
-    # ------------------------------
-    # Historical identical offerings
-    # ------------------------------
-
-    same_course_id = Column(
-        Integer,
-        comment="""[computed] Unique ID for grouping courses by historical offering.
-        All courses with a given ID are identical offerings across different semesters.
-        """,
-        index=True,
-        nullable=False,
-    )
-
-    same_course_and_profs_id = Column(
-        Integer,
-        comment="""[computed] Unique ID for grouping courses by historical offering.
-        All courses with a given ID are identical offerings across different semesters.
-        Same as 'same_course_id' with the constraint that all courses in a group were
-        taught by the same professors.
-        """,
-        index=True,
-        nullable=False,
-    )
-
-    # -----------------------
-    # Last-offered statistics
-    # -----------------------
 
     last_offered_course = relationship(
         "Course",

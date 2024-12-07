@@ -254,9 +254,9 @@ def courses_computed(
     courses["last_enrollment_season_code"] = courses["last_enrollment_course_id"].map(
         courses["season_code"]
     )
-    courses["last_enrollment_same_professors"] = course_to_professors.reindex(courses.index, fill_value=frozenset()) == courses[
-        "last_enrollment_course_id"
-    ].map(course_to_professors)
+    courses["last_enrollment_same_professors"] = course_to_professors.reindex(
+        courses.index, fill_value=frozenset()
+    ) == courses["last_enrollment_course_id"].map(course_to_professors)
     courses["last_enrollment"] = courses["last_enrollment_course_id"].map(
         evaluation_statistics["enrolled"]
     )
