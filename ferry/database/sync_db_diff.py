@@ -191,9 +191,9 @@ def generate_diff(
                 changed_rows["columns_changed"] = pd.Series()
 
             diff_dict[table_name] = {
-                "deleted_rows": deleted_rows,
-                "added_rows": added_rows,
-                "changed_rows": changed_rows,
+                "deleted_rows": deleted_rows.reset_index(),
+                "added_rows": added_rows.reset_index(),
+                "changed_rows": changed_rows.reset_index(),
             }
 
         print("✔")
