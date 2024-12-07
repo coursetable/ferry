@@ -150,6 +150,17 @@ def generate_diff(
             shared_rows_new = (
                 new_df[new_df.index.isin(old_df.index)].sort_index().sort_index(axis=1)
             )
+            if (shared_rows_old.index != shared_rows_new.index).any():
+                print(shared_rows_old.index)
+                print(shared_rows_new.index)
+                raise ValueError(f"Unexpected: index mismatch in table {table_name}")
+            if (
+                len(shared_rows_old.columns) != len(shared_rows_new.columns)
+                or (shared_rows_old.columns != shared_rows_new.columns).any()
+            ):
+                print(shared_rows_old.columns)
+                print(shared_rows_new.columns)
+                raise ValueError(f"Column mismatch in table {table_name}. Run with --rewrite once to fix.")
             old_types = shared_rows_old.map(type_or_na)
             new_types = shared_rows_new.map(type_or_na)
             different_types = old_types != new_types
