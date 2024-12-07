@@ -316,6 +316,8 @@ def sync_db(
 
     for table_name in tables_order_add:
         # Check if the table has columns 'last_updated' and 'time_added'
+        if table_name in junction_tables:
+            continue
         columns = inspector.get_columns(table_name)
         has_last_updated = any(col["name"] == "last_updated" for col in columns)
         has_time_added = any(col["name"] == "time_added" for col in columns)
