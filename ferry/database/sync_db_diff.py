@@ -326,46 +326,41 @@ def sync_db(
     ].astype(pd.Int64Dtype())
     diff = generate_diff(tables_old, tables, data_dir / "diff")
 
-    conn = db.Engine.connect()
     inspector = inspect(db.Engine)
-    # TODO: remove this; currently we have a deadlock issue when executing on prod DB
-    conn.execution_options(isolation_level="AUTOCOMMIT")
-    update = conn.begin()
+    with db.Engine.begin() as conn:
+        for table_name in tables_order_add:
+            # Check if the table has columns 'last_updated' and 'time_added'
+            if table_name in junction_tables:
+                continue
+            columns = inspector.get_columns(table_name)
+            has_last_updated = any(col["name"] == "last_updated" for col in columns)
+            has_time_added = any(col["name"] == "time_added" for col in columns)
 
-    for table_name in tables_order_add:
-        # Check if the table has columns 'last_updated' and 'time_added'
-        if table_name in junction_tables:
-            continue
-        columns = inspector.get_columns(table_name)
-        has_last_updated = any(col["name"] == "last_updated" for col in columns)
-        has_time_added = any(col["name"] == "time_added" for col in columns)
-
-        if not has_time_added:
-            conn.execute(
-                text(
-                    f"ALTER TABLE {table_name} ADD COLUMN time_added TIMESTAMP DEFAULT NULL;"
+            if not has_time_added:
+                conn.execute(
+                    text(
+                        f"ALTER TABLE {table_name} ADD COLUMN time_added TIMESTAMP DEFAULT NULL;"
+                    )
                 )
-            )
-        if not has_last_updated:
-            conn.execute(
-                text(
-                    f"ALTER TABLE {table_name} ADD COLUMN last_updated TIMESTAMP DEFAULT NULL;"
+            if not has_last_updated:
+                conn.execute(
+                    text(
+                        f"ALTER TABLE {table_name} ADD COLUMN last_updated TIMESTAMP DEFAULT NULL;"
+                    )
                 )
-            )
-    for table_name in tables_order_add:
-        commit_additions(table_name, diff[table_name]["added_rows"], conn)
-        commit_updates(table_name, diff[table_name]["changed_rows"], conn)
-    for table_name in tables_order_delete:
-        commit_deletions(table_name, diff[table_name]["deleted_rows"], conn)
-    update.commit()
-    print("\033[F", end="")
+        for table_name in tables_order_add:
+            commit_additions(table_name, diff[table_name]["added_rows"], conn)
+            commit_updates(table_name, diff[table_name]["changed_rows"], conn)
+        for table_name in tables_order_delete:
+            commit_deletions(table_name, diff[table_name]["deleted_rows"], conn)
+        print("\033[F", end="")
 
     # Print row counts for each table.
     print("\n[Table Statistics]")
-    with database.session_scope(db.Session) as db_session:
+    with db.Engine.begin() as conn:
         with open(queries_dir / "table_sizes.sql") as file:
             SUMMARY_SQL = file.read()
 
-        result = db_session.execute(text(SUMMARY_SQL))
+        result = conn.execute(text(SUMMARY_SQL))
         for table_counts in result:
             print(f"{table_counts[1]:>25} - {table_counts[2]:6} rows")
