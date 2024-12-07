@@ -182,11 +182,13 @@ def generate_diff(
 
             file.write("## Changed\n\n")
             changed_rows = shared_rows_new[unequal_mask.any(axis=1)].copy()
-            changed_rows["columns_changed"] = unequal_mask[unequal_mask.any(axis=1)].apply(
-                lambda row: shared_rows_new.columns[row].tolist(), axis=1
-            )
             if not changed_rows.empty:
+                changed_rows["columns_changed"] = unequal_mask[
+                    unequal_mask.any(axis=1)
+                ].apply(lambda row: shared_rows_new.columns[row].tolist(), axis=1)
                 file.write(f"{changed_rows.to_csv()}\n\n")
+            else:
+                changed_rows["columns_changed"] = pd.Series()
 
             diff_dict[table_name] = {
                 "deleted_rows": deleted_rows,
@@ -303,7 +305,9 @@ def sync_db(
     db_meta.reflect(bind=db.Engine)
 
     # Order to process tables to avoid foreign key constraint issues
-    tables_order_add = [table.name for table in db_meta.sorted_tables]
+    tables_order_add = [
+        table.name for table in db_meta.sorted_tables if table.name in primary_keys
+    ]
     tables_order_delete = tables_order_add[::-1]
     # Make sure all tables are in the database
     nonexistent_tables = set(primary_keys.keys()) - set(tables_order_add)
