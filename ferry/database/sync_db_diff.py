@@ -19,6 +19,7 @@ queries_dir = Path(__file__).parent / "queries"
 
 # The keys need to be in sync with the CourseTables class in import_courses.py
 primary_keys = {
+    "seasons": ["season_code"],
     "courses": ["course_id"],
     "listings": ["listing_id"],
     "course_professors": ["course_id", "professor_id"],
@@ -33,6 +34,7 @@ primary_keys = {
 # Changes to these columns are synced to the DB, but are not recorded by last mod.
 # These are purely computed columns and are subject to change based on our algorithm.
 computed_columns = {
+    "seasons": [],
     "courses": [
         "same_course_id",
         "same_course_and_profs_id",
@@ -90,7 +92,7 @@ def get_tables_from_db(database_connect_string: str) -> dict[str, pd.DataFrame]:
 
     return {
         table_name: pd.read_sql_table(table_name, con=conn).drop(
-            ["time_added", "last_updated"], errors="ignore"
+            columns=["time_added", "last_updated"], errors="ignore"
         )
         for table_name in primary_keys.keys()
     }
