@@ -98,6 +98,32 @@ def create_section(depth: int, title: str, content: str, if_empty: str | None = 
     return f"{'#' * depth} {title}\n\n{content.strip()}\n\n"
 
 
+def create_listing_link(row: pd.Series):
+    return f"[{row['course_code']} {row['section']}](https://coursetable.com/catalog?course-modal={row['season_code']}-{row['crn']})"
+
+
+weekdays = {
+    "Su": 0,
+    "M": 1,
+    "T": 2,
+    "W": 3,
+    "Th": 4,
+    "F": 5,
+    "Sa": 6,
+}
+
+
+def print_days_of_week(days_of_week: int):
+    days = []
+    for day, value in weekdays.items():
+        if days_of_week & (1 << value):
+            days.append(day)
+    res = "".join(days)
+    if res == "MTWThF":
+        return "M–F"
+    return res
+
+
 # TODO: use this to print same_course changes
 def analyze_partition_diff(old_partition: pd.Series, new_partition: pd.Series):
     """
@@ -171,34 +197,28 @@ def print_course_changes(
             old_profs, new_profs = old["professor_id"], new["professor_id"]
             old_profs_info = prof_info.loc[old_profs]
             new_profs_info = prof_info.loc[new_profs]
-            res += f"  - Professor: {", ".join(old_profs_info['name']) or "N/A"} -> {", ".join(new_profs_info['name']) or "N/A"}\n"
+            res += f"  - Professor: {", ".join(old_profs_info['name']) or "N/A"} → {", ".join(new_profs_info['name']) or "N/A"}\n"
         elif column == "flags":
             old_flags, new_flags = old["flag_id"], new["flag_id"]
             old_flags_info = flag_info.loc[old_flags]
             new_flags_info = flag_info.loc[new_flags]
-            res += f"  - Flags: {", ".join(old_flags_info['flag_text']) or "N/A"} -> {", ".join(new_flags_info['flag_text']) or "N/A"}\n"
+            res += f"  - Flags: {", ".join(old_flags_info['flag_text']) or "N/A"} → {", ".join(new_flags_info['flag_text']) or "N/A"}\n"
         elif column == "meetings":
             old_meetings = old.apply(
-                lambda row: f"{row['days_of_week']} {row['start_time']}–{row['end_time']} {location_info.loc[row['location_id']]['name'] if not pd.isna(row['location_id']) else ''}",
+                lambda row: f"{print_days_of_week(row['days_of_week'])} {row['start_time']}–{row['end_time']} {location_info.loc[row['location_id']]['name'] if not pd.isna(row['location_id']) else ''}",
                 axis=1,
             )
             new_meetings = new.apply(
-                lambda row: f"{row['days_of_week']} {row['start_time']}–{row['end_time']} {location_info.loc[row['location_id']]['name'] if not pd.isna(row['location_id']) else ''}",
+                lambda row: f"{print_days_of_week(row['days_of_week'])} {row['start_time']}–{row['end_time']} {location_info.loc[row['location_id']]['name'] if not pd.isna(row['location_id']) else ''}",
                 axis=1,
             )
-            res += f"  - Meetings: {", ".join(old_meetings) or "N/A"} -> {", ".join(new_meetings) or "N/A"}\n"
+            res += f"  - Meetings: {", ".join(old_meetings) or "N/A"} → {", ".join(new_meetings) or "N/A"}\n"
         elif column == "listings":
-            old_listings = old.apply(
-                lambda row: f"[{row['course_code']}](https://coursetable.com/catalog?course-modal={row["season_code"]}-{row["crn"]})",
-                axis=1,
-            )
-            new_listings = new.apply(
-                lambda row: f"[{row['course_code']}](https://coursetable.com/catalog?course-modal={row["season_code"]}-{row["crn"]})",
-                axis=1,
-            )
-            res += f"  - Listings: {" / ".join(old_listings) or "N/A"} -> {" / ".join(new_listings) or "N/A"}\n"
+            old_listings = old.apply(create_listing_link, axis=1)
+            new_listings = new.apply(create_listing_link, axis=1)
+            res += f"  - Listings: {" / ".join(old_listings) or "N/A"} → {" / ".join(new_listings) or "N/A"}\n"
         else:
-            res += f"  - {column}: {old if not pd.isna(old) else "N/A"} -> {new if not pd.isna(new) else "N/A"}\n"
+            res += f"  - {column}: {old if not pd.isna(old) else "N/A"} → {new if not pd.isna(new) else "N/A"}\n"
     return res
 
 
@@ -220,7 +240,7 @@ def print_table_diff(
                 continue
             old_val = table_old[table_old[pk] == row[pk]][column].values[0]
             new_val = table_new[table_new[pk] == row[pk]][column].values[0]
-            update += f"  - {column}: {old_val if not pd.isna(old_val) else 'N/A'} -> {new_val if not pd.isna(new_val) else 'N/A'}\n"
+            update += f"  - {column}: {old_val if not pd.isna(old_val) else 'N/A'} → {new_val if not pd.isna(new_val) else 'N/A'}\n"
         if update:
             updates += f"{identify_row(row)}{update}"
     changes = ""
@@ -243,10 +263,7 @@ def print_courses_diff(
         listings_already_exist = listings[
             listings["listing_id"].isin(tables_old["listings"]["listing_id"])
         ]
-        links = listings.apply(
-            lambda row: f"[{row['course_code']}](https://coursetable.com/catalog?course-modal={row["season_code"]}-{row["crn"]})",
-            axis=1,
-        )
+        links = listings.apply(create_listing_link, axis=1)
         course_additions += (
             f"- {course.season_code} {" / ".join(links)} {course.title}\n"
         )
@@ -260,10 +277,7 @@ def print_courses_diff(
         listings_still_exist = listings[
             listings["listing_id"].isin(tables["listings"]["listing_id"])
         ]
-        links = listings.apply(
-            lambda row: f"[{row['course_code']}](https://coursetable.com/catalog?course-modal={row["season_code"]}-{row["crn"]})",
-            axis=1,
-        )
+        links = listings.apply(create_listing_link, axis=1)
         course_removals += (
             f"- {course.season_code} {" / ".join(links)} {course.title}\n"
         )
@@ -335,10 +349,7 @@ def print_courses_diff(
         if not changes:
             continue
         listings = tables["listings"][tables["listings"]["course_id"] == course_id]
-        links = listings.apply(
-            lambda row: f"[{row['course_code']}](https://coursetable.com/catalog?course-modal={row["season_code"]}-{row["crn"]})",
-            axis=1,
-        )
+        links = listings.apply(create_listing_link, axis=1)
         course = tables['courses'][tables['courses']['course_id'] == course_id]
         course_updates += f"- {course["season_code"].values[0]} {" / ".join(links)} {course['title'].values[0]}\n"
         course_updates += print_course_changes(
@@ -391,7 +402,7 @@ def print_diff(
             continue
         listing_changes += f"- [{listing.season_code} {listing.course_code} {listing.section}](https://coursetable.com/catalog?course-modal={listing.season_code}-{listing.crn})\n"
         for column in columns_changed:
-            listing_changes += f"  - {column}: {tables_old['listings'][tables_old['listings']['listing_id'] == listing.listing_id][column].values[0]} -> {tables['listings'][tables['listings']['listing_id'] == listing.listing_id][column].values[0]}\n"
+            listing_changes += f"  - {column}: {tables_old['listings'][tables_old['listings']['listing_id'] == listing.listing_id][column].values[0]} → {tables['listings'][tables['listings']['listing_id'] == listing.listing_id][column].values[0]}\n"
     if listing_changes:
         listing_changes = (
             "Here we only report listing information changes. Changes to their association with courses (the addition or removal of cross-listings, etc.) are reported in the courses section.\n\n"
