@@ -13,11 +13,6 @@ from ferry.crawler.cache import load_cache_json, save_cache_json
 
 warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning, module="bs4")
 
-PROFESSOR_EXCEPTIONS = {
-    "Kimberly Shirkhani": "Kim Shirkhani",
-    "John Green": "Derek Green",
-}
-
 COLLEGE_SEMINAR_CODES = {
     "CSBF",  # Coll Sem: Ben Franklin Coll
     "CSBK",  # Coll Sem: Berkeley Coll
@@ -103,9 +98,6 @@ def extract_professors(instructordetail_html: str) -> ParsedProfessors:
 
         # remove accents from professor names
         instructor_name = unidecode(instructor_name)
-
-        # patch certain professor names manually
-        instructor_name = PROFESSOR_EXCEPTIONS.get(instructor_name, instructor_name)
 
         # if the professor has a name and is not listed as staff, add it
         if len(instructor_name) > 0 and instructor_name != "Staff":
