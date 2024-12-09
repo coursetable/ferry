@@ -18,7 +18,7 @@ dependencies = [
   "psycopg2==2.9.10",
   "PyYAML==6.0.2",
   "scipy==1.14.1",
-  "sentry-sdk==2.18.0",
+  "sentry-sdk==2.19.2",
   "sqlalchemy-mixins==2.0.5",
   "sqlalchemy==2.0.36",
   "textdistance==4.5.0",
