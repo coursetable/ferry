@@ -307,7 +307,10 @@ def print_courses_diff(
             f"- {course.season_code} {" / ".join(links)} {course.title}\n"
         )
         if not listings_already_exist.empty:
-            course_additions += f"  - Note: {", ".join(listings_already_exist["course_code"])} already exist; this is probably due to a cross-listing split\n"
+            course_additions += (
+                f"  - Note: {', '.join(listings_already_exist['course_code'])} "
+                f"{'exists' if len(listings_already_exist) == 1 else 'exist'}; this is probably due to a cross-listing split\n"
+            )
     course_removals = ""
     for course in diff["courses"]["deleted_rows"].itertuples():
         listings = tables_old["listings"][
@@ -321,7 +324,10 @@ def print_courses_diff(
             f"- {course.season_code} {" / ".join(links)} {course.title}\n"
         )
         if not listings_still_exist.empty:
-            course_removals += f"  - Note: {", ".join(listings_still_exist["course_code"])} still exist; this is probably due to a cross-listing merge\n"
+            course_removals += (
+                f"  - Note: {', '.join(listings_still_exist['course_code'])} "
+                f"{'exists' if len(listings_still_exist) == 1 else 'exist'}; this is probably due to a cross-listing merge\n"
+            )
     course_updates = ""
     course_id_to_changes: dict[int, dict[str, tuple[Any, Any]]] = {}
     for _, course in diff["courses"]["changed_rows"].iterrows():

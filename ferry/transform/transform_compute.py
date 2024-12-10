@@ -236,12 +236,17 @@ def courses_computed(
     course_to_last_enrollment: dict[int, int | None] = {}
 
     for same_course_group in same_course_to_courses.values():
-        ids_by_season = courses.loc[same_course_group].groupby("season_code").apply(
-            lambda x: x.index.tolist()
-        ).tolist()
+        ids_by_season = (
+            courses.loc[same_course_group]
+            .groupby("season_code")
+            .apply(lambda x: x.index.tolist())
+            .tolist()
+        )
         for i, course_ids in enumerate(ids_by_season):
             for course_id in course_ids:
-                course_to_last_offered[course_id] = ids_by_season[i - 1][0] if i > 0 else None
+                course_to_last_offered[course_id] = (
+                    ids_by_season[i - 1][0] if i > 0 else None
+                )
         last_enrollment_id = None
         for i, course_ids in enumerate(ids_by_season):
             for course_id in course_ids:
