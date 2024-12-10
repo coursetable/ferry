@@ -56,7 +56,7 @@ distinct_prof_emails: set[frozenset[str]] = {
 
 
 def generate_id(
-    df: pd.DataFrame, get_cache_key: Callable[[pd.Series], str], cache_path: Path
+    df: pd.DataFrame, get_cache_key: Callable[[pd.Series], str | tuple[str]], cache_path: Path
 ) -> pd.Series:
     """
     Generate a unique ID for each row in a DataFrame.
@@ -66,7 +66,12 @@ def generate_id(
     assigned IDs in increasing values.
     """
     id_cache: dict[str, int] = load_cache_json(cache_path) or {}
-    cache_keys = df.apply(get_cache_key, axis=1)
+    def get_applicable_key(row: pd.Series):
+        keys = get_cache_key(row)
+        if isinstance(keys, str):
+            return keys
+        return next((key for key in keys if key in id_cache), keys[0])
+    cache_keys = df.apply(get_applicable_key, axis=1)
     ids = cache_keys.map(id_cache)
     max_flag_id = max(id_cache.values(), default=0)
     unmapped = cache_keys[ids.isna()].unique()
@@ -324,7 +329,9 @@ def aggregate_professors(
 
     course_professors["professor_id"] = generate_id(
         course_professors,
-        lambda x: f"{x['name']} <{x['email']}>" if x["email"] else x["name"],
+        # Sometimes a prof's email comes later, so we should "upgrade" the cache
+        # key instead of creating a new one if the name-only cache key exists
+        lambda x: (f"{x['name']} <{x['email']}>" if x["email"] else x["name"], x["name"]),
         data_dir / "id_cache" / "professor_id.json",
     )
     professors = course_professors.drop_duplicates(

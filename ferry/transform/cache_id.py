@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import logging
 from pathlib import Path
 from ferry.crawler.cache import save_cache_json, load_cache_json
 
@@ -71,6 +72,16 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
         f"{k[0]} <{k[1]}>" if str(k[1]) != "nan" else k[0]: v
         for k, v in professor_to_id.items()
     }
+    never_used: dict[str, str] = {}
+    for key in professor_to_id:
+        if "<" in key:
+            name_only_version = key.split("<")[0].strip()
+            if name_only_version in professor_to_id:
+                never_used[name_only_version] = key
+    if never_used:
+        logging.warning(f"The following professor IDs will never be used because they will always be replaced with the more specific version: {never_used}")
+        for name_only_version in never_used.keys():
+            del professor_to_id[name_only_version]
 
     narrative_to_id = (
         tables["evaluation_narratives"]
