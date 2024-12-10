@@ -72,7 +72,7 @@ def generate_id(
     unmapped = cache_keys[ids.isna()].unique()
     new_flag_ids = pd.Series(range(max_flag_id + 1, max_flag_id + 1 + len(unmapped)))
     unused_keys = set(id_cache.keys()) - set(cache_keys.values)
-    print(f"Unused keys: {unused_keys}")
+    logging.warning(f"Unused keys in {cache_path}: {unused_keys}")
     return ids.fillna(cache_keys.map(dict(zip(unmapped, new_flag_ids)))).astype(int)
 
 
@@ -306,12 +306,14 @@ def aggregate_professors(
             logging.warning(
                 f"Multiple names with email {group.name}: {names_by_season}; they will all be merged as {most_recent_name} because it seems to be the most recent.\nIf they are the same person, add the following entry to `prof_name_changes`: `\"{group.name}\": {{{", ".join([f"\"{old_name}\": \"{most_recent_name}\"" for old_name in names_by_season[:-1]])}}},` (adjust which name you are eventually mapping to depending on what the latest name is)."
             )
-            for name, d in name_data:
-                logging.warning(f"Name: {name}\n{d}")
-            if not set.intersection(*[set(d["course_code"]) for _, d in name_data]):
-                logging.warning(
-                    f"Note: it looks like their course codes did not overlap, indicating there's a possibility that they are not the same person."
-                )
+            # If you are fixing the warning above, you may find the below useful
+            # for a local run:
+            # for name, d in name_data:
+            #     logging.warning(f"Name: {name}\n{d}")
+            # if not set.intersection(*[set(d["course_code"]) for _, d in name_data]):
+            #     logging.warning(
+            #         f"Note: it looks like their course codes did not overlap, indicating there's a possibility that they are not the same person."
+            #     )
         return group
 
     course_professors = (
