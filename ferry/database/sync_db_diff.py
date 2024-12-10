@@ -144,7 +144,9 @@ def commit_additions(table_name: str, to_add: pd.DataFrame, conn: Connection):
             for connected_table in junction_tables[table_name]:
                 pk = primary_keys[connected_table]
                 where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
-                params = {col: row[col] if not pd.isna(row[col]) else None for col in pk}
+                params = {
+                    col: row[col] if not pd.isna(row[col]) else None for col in pk
+                }
 
                 update_query = text(
                     f"UPDATE {connected_table} SET last_updated = CURRENT_TIMESTAMP WHERE {where_clause};"
@@ -168,7 +170,9 @@ def commit_deletions(table_name: str, to_remove: pd.DataFrame, conn: Connection)
             for connected_table in junction_tables[table_name]:
                 pk = primary_keys[connected_table]
                 where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
-                params = {col: row[col] if not pd.isna(row[col]) else None for col in pk}
+                params = {
+                    col: row[col] if not pd.isna(row[col]) else None for col in pk
+                }
 
                 update_query = text(
                     f"UPDATE {connected_table} SET last_updated = CURRENT_TIMESTAMP WHERE {where_clause};"
@@ -207,7 +211,9 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
             for connected_table in junction_tables[table_name]:
                 pk = primary_keys[connected_table]
                 where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
-                params = {col: row[col] if not pd.isna(row[col]) else None for col in pk}
+                params = {
+                    col: row[col] if not pd.isna(row[col]) else None for col in pk
+                }
 
                 update_query = text(
                     f"UPDATE {connected_table} SET last_updated = CURRENT_TIMESTAMP WHERE {where_clause};"
