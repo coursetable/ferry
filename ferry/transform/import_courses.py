@@ -10,6 +10,51 @@ import ujson
 from ferry.crawler.cache import load_cache_json
 
 
+# Mappings from past prof emails to their current ones
+prof_email_changes = {
+    "abraham.silberschatz@yale.edu": "avi@yale.edu",
+    "elena.perez@yale.edu": "elle.perez@yale.edu",
+    "eric.c.lin@yale.edu": "eric.lin@yale.edu",
+    "harold.bloom@yale.edu": "hbloom@yale.edu",
+    "huibin.zhou@yale.edu": "harrison.zhou@yale.edu",
+    "jill.richards@yale.edu": "juno.richards@yale.edu",
+    "marta.justocaldeira@yale.edu": "marta.caldeira@yale.edu",
+    "nancy.yao.maasbach@yale.edu": "nancy.yao@yale.edu",
+    "peter.aronow@yale.edu": "p.aronow@yale.edu",
+    "so442@yale.edu": "samuel.omans@yale.edu",
+}
+
+# Old name -> new name. To prevent overfixing, it is further namespaced by email.
+prof_name_changes = {
+    "adam.wasserstein@yale.edu": {"Adam Wasserstein": "A. J. Wasserstein"},
+    "aki.sasamoto@yale.edu": {"Akiko Sasamoto": "Aki Sasamoto"},
+    "alexandre.debs@yale.edu": {"Alexandre Debs": "Alex Debs"},
+    "alice.miller@yale.edu": {"Alice Miller": "Ali Miller"},
+    "ahmed.mobarak@yale.edu": {"A. Mushfiq Mobarak": "Mushfiq Mobarak"},
+    "alicia.camacho@yale.edu": {"Alicia Camacho": "Alicia Schmidt Camacho"},
+    # TODO: is it actually beneficial to have an exhaustive list? It's very hard
+    # to have *distinct* people with the same email
+}
+
+
+# Each group contains a set of emails that are considered distinct, even though
+# they have identical names
+distinct_prof_emails: set[frozenset[str]] = {
+    frozenset({"a.clark@yale.edu", "aaron.m.clark@yale.edu"}),
+    frozenset({"mark.a.peterson@yale.edu", "mark.peterson@yale.edu"}),
+    frozenset({"n.robinson@yale.edu", "nicholas.robinson@yale.edu"}),
+    frozenset({"william.fleming@yale.edu", "william.j.fleming@yale.edu"}),
+    frozenset({"christopher.miller@yale.edu", "cr.miller@yale.edu"}),
+    frozenset({"l.tran@yale.edu", "linh.v.tran@yale.edu"}),
+    frozenset({"robert.a.m.stern@yale.edu", "robert.stern.rs2783@yale.edu"}),
+    frozenset({"z.smith@yale.edu", "zachary.smith@yale.edu"}),
+    frozenset({"meghan.a.freeman@yale.edu", "meghan.freeman@yale.edu"}),
+    frozenset({"lisa.davis@yale.edu", "lisa.n.davis@yale.edu"}),
+    frozenset({"robert.d.williams@yale.edu", "robert.j.williams@yale.edu"}),
+    frozenset({"timothy.h.robinson@yale.edu", "timothy.robinson@yale.edu"}),
+}
+
+
 def generate_id(
     df: pd.DataFrame, get_cache_key: Callable[[pd.Series], str], cache_path: Path
 ) -> pd.Series:
@@ -26,6 +71,8 @@ def generate_id(
     max_flag_id = max(id_cache.values(), default=0)
     unmapped = cache_keys[ids.isna()].unique()
     new_flag_ids = pd.Series(range(max_flag_id + 1, max_flag_id + 1 + len(unmapped)))
+    unused_keys = set(id_cache.keys()) - set(cache_keys.values)
+    print(f"Unused keys: {unused_keys}")
     return ids.fillna(cache_keys.map(dict(zip(unmapped, new_flag_ids)))).astype(int)
 
 
@@ -198,32 +245,80 @@ def aggregate_professors(
         .rename(columns={"professors": "name", "professor_emails": "email"})
         .reset_index(drop=False)
     )
-    # First: try to fill empty emails
-    course_professors = course_professors.groupby("name")
+    course_professors["email"] = course_professors["email"].replace(prof_email_changes)
 
+    # First: try to fill empty emails
     def fix_empty_email(group: pd.DataFrame) -> pd.DataFrame:
         first_valid_email = next((s for s in group["email"] if s), None)
         if first_valid_email is None:
             return group
         group["email"] = group["email"].replace({"": first_valid_email})
         all_emails = group["email"].unique()
-        if len(all_emails) > 1:
+        if len(all_emails) > 1 and frozenset(all_emails) not in distinct_prof_emails:
+            email_data = [
+                (
+                    email,
+                    pd.merge(group[group["email"] == email], courses, on="course_id")[
+                        ["season_code", "course_code", "section", "title"]
+                    ],
+                )
+                for email in all_emails
+            ]
             logging.warning(
-                f"Multiple emails with name {group.name}: {all_emails}; they will be treated as separate professors"
+                f"Multiple emails with name {group.name}: {all_emails}; they will be treated as separate professors. If they are the same person, add this to `prof_email_changes`. If they are different people, add the following entry to `distinct_prof_emails`: {frozenset(all_emails)}."
             )
+            for email, d in email_data:
+                logging.warning(f"Email: {email}\n{d}")
+            if set.intersection(*[set(d["course_code"]) for _, d in email_data]):
+                logging.warning(
+                    f"Note: it looks like their course codes overlap, indicating there's a high chance that they are the same person (or the course data itself assigns the wrong professor to some courses)."
+                )
         return group
 
     # Second: deduplicate by email, falling back to name
-    course_professors = course_professors.apply(fix_empty_email).reset_index(drop=True)
+    course_professors = (
+        course_professors.groupby("name").apply(fix_empty_email).reset_index(drop=True)
+    )
 
-    def warn_different_name(group: pd.DataFrame):
+    def fix_different_name(group: pd.DataFrame):
+        rename = prof_name_changes.get(group.name, None)
+        if rename:
+            group["name"] = group["name"].replace(rename)
         all_names = group["name"].unique()
         if group.name != "" and len(all_names) > 1:
+            name_data = [
+                (
+                    name,
+                    pd.merge(group[group["name"] == name], courses, on="course_id")[
+                        ["season_code", "course_code", "section", "title"]
+                    ],
+                )
+                for name in all_names
+            ]
+            names_by_season = [
+                name
+                for name, _ in sorted(
+                    name_data, key=lambda x: x[1]["season_code"].max()
+                )
+            ]
+            most_recent_name = names_by_season[-1]
+            group["name"] = most_recent_name
             logging.warning(
-                f"Multiple names with email {group.name}: {all_names}; only the last name will be used"
+                f"Multiple names with email {group.name}: {names_by_season}; they will all be merged as {most_recent_name} because it seems to be the most recent.\nIf they are the same person, add the following entry to `prof_name_changes`: `\"{group.name}\": {{{", ".join([f"\"{old_name}\": \"{most_recent_name}\"" for old_name in names_by_season[:-1]])}}},` (adjust which name you are eventually mapping to depending on what the latest name is)."
             )
+            for name, d in name_data:
+                logging.warning(f"Name: {name}\n{d}")
+            if not set.intersection(*[set(d["course_code"]) for _, d in name_data]):
+                logging.warning(
+                    f"Note: it looks like their course codes did not overlap, indicating there's a possibility that they are not the same person."
+                )
+        return group
 
-    course_professors.groupby("email").apply(warn_different_name)
+    course_professors = (
+        course_professors.groupby("email")
+        .apply(fix_different_name)
+        .reset_index(drop=True)
+    )
 
     course_professors["professor_id"] = generate_id(
         course_professors,
