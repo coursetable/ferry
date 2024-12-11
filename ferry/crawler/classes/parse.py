@@ -64,7 +64,6 @@ def normalize_unicode(text: str) -> str:
 class ParsedProfessors(TypedDict):
     professors: list[str]
     professor_emails: list[str]
-    professor_ids: list[str]
 
 
 def extract_professors(instructordetail_html: str) -> ParsedProfessors:
@@ -75,18 +74,15 @@ def extract_professors(instructordetail_html: str) -> ParsedProfessors:
 
     names = []
     emails = []
-    ids = []  # Yale course search's internal professor ID
 
     for div in instructor_divs:
+        # Note: the markup also contains an internal OCS ID, but we don't use it.
+        # Yale recycles this ID, so identification purely based on this is not
+        # stable across seasons. Just using name + email already works.
         instructor_name = div.find("div", {"class": "instructor-name"})
         instructor_email = div.find("div", {"class": "instructor-email"})
-        instructor_id = ""  # default
 
         if type(instructor_name) == Tag:
-            # check if the professor has an associated ID
-            instructor_search = instructor_name.find("a", {"data-action": "search"})
-            if type(instructor_search) == Tag:
-                instructor_id = str(instructor_search["data-id"])
             instructor_name = instructor_name.get_text()
         else:
             instructor_name = ""
@@ -103,16 +99,15 @@ def extract_professors(instructordetail_html: str) -> ParsedProfessors:
         if len(instructor_name) > 0 and instructor_name != "Staff":
             names.append(instructor_name)
             emails.append(instructor_email)
-            ids.append(instructor_id)
 
     # skip sorting and return empty
     if len(names) == 0:
-        return {"professors": [], "professor_emails": [], "professor_ids": []}
+        return {"professors": [], "professor_emails": []}
 
     # parallel sort by instructor name
-    names, emails, ids = zip(*sorted(zip(names, emails, ids)))
+    names, emails = zip(*sorted(zip(names, emails)))
 
-    return {"professors": names, "professor_emails": emails, "professor_ids": ids}
+    return {"professors": names, "professor_emails": emails}
 
 
 def parse_cross_listings(xlist_html: str) -> list[str]:
@@ -461,7 +456,6 @@ class ParsedCourse(TypedDict):
     extra_info: str
     professors: list[str]
     professor_emails: list[str]
-    professor_ids: list[str]
     crn: str
     crns: list[str]
     course_code: str
