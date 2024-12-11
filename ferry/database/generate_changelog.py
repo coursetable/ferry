@@ -175,15 +175,15 @@ def print_course_changes(
 ):
     res = ""
     for column, (old, new) in changes.items():
-        if column == "professors":
+        if column == "course_professors":
             old_profs, new_profs = (
                 cast(pd.DataFrame, old)["professor_id"],
                 cast(pd.DataFrame, new)["professor_id"],
             )
             old_profs_info = prof_info.loc[old_profs]
             new_profs_info = prof_info.loc[new_profs]
-            res += f"  - Professor: {", ".join(old_profs_info['name']) or "N/A"} → {", ".join(new_profs_info['name']) or "N/A"}\n"
-        elif column == "flags":
+            res += f"  - Professors: {", ".join(old_profs_info['name']) or "N/A"} → {", ".join(new_profs_info['name']) or "N/A"}\n"
+        elif column == "course_flags":
             old_flags, new_flags = (
                 cast(pd.DataFrame, old)["flag_id"],
                 cast(pd.DataFrame, new)["flag_id"],
@@ -191,7 +191,7 @@ def print_course_changes(
             old_flags_info = flag_info.loc[old_flags]
             new_flags_info = flag_info.loc[new_flags]
             res += f"  - Flags: {", ".join(old_flags_info['flag_text']) or "N/A"} → {", ".join(new_flags_info['flag_text']) or "N/A"}\n"
-        elif column == "meetings":
+        elif column == "course_meetings":
             old_meetings = cast(pd.DataFrame, old).apply(
                 lambda row: f"{print_days_of_week(row['days_of_week'])} {row['start_time']}–{row['end_time']} {location_info.loc[row['location_id']]['name'] if not pd.isna(row['location_id']) else ''}",
                 axis=1,
@@ -241,41 +241,46 @@ def print_table_diff(
 
 
 def register_junction_change(
+    course_id_to_changes: dict[int, dict[str, tuple[Any, Any]]],
     course_id: int,
     junction_old: pd.DataFrame,
     junction_new: pd.DataFrame,
-    change_name: str,
-    course_id_to_changes: dict[int, dict[str, tuple[Any, Any]]],
+    junction_name: str,
 ):
     if course_id not in course_id_to_changes:
         course_id_to_changes[course_id] = {}
-    course_id_to_changes[course_id][change_name] = (
+    course_id_to_changes[course_id][junction_name] = (
         junction_old[junction_old["course_id"] == course_id],
         junction_new[junction_new["course_id"] == course_id],
     )
 
 
 def register_junction_changes(
-    junction_diff: DiffRecord,
-    junction_old: pd.DataFrame,
-    junction_new: pd.DataFrame,
-    change_name: str,
     course_id_to_changes: dict[int, dict[str, tuple[Any, Any]]],
+    tables_diff: dict[str, DiffRecord],
+    tables_old: dict[str, pd.DataFrame],
+    tables_new: dict[str, pd.DataFrame],
+    junction_name: str,
     include_columns: list[str] | None = None,
 ):
+    junction_diff = tables_diff[junction_name]
+    junction_old = tables_old[junction_name]
+    junction_new = tables_new[junction_name]
+    courses_old = tables_old["courses"]
+    courses_new = tables_new["courses"]
     for course_id in junction_diff["added_rows"]["course_id"].values:
         # Course itself was added
-        if junction_old[junction_old["course_id"] == course_id].empty:
+        if courses_old[courses_old["course_id"] == course_id].empty:
             continue
         register_junction_change(
-            course_id, junction_old, junction_new, change_name, course_id_to_changes
+            course_id_to_changes, course_id, junction_old, junction_new, junction_name
         )
     for course_id in junction_diff["deleted_rows"]["course_id"].values:
         # Course itself was removed
-        if junction_new[junction_new["course_id"] == course_id].empty:
+        if courses_new[courses_new["course_id"] == course_id].empty:
             continue
         register_junction_change(
-            course_id, junction_old, junction_new, change_name, course_id_to_changes
+            course_id_to_changes, course_id, junction_old, junction_new, junction_name
         )
     for row in junction_diff["changed_rows"].itertuples():
         course_id = row.course_id
@@ -285,7 +290,7 @@ def register_junction_changes(
         ):
             continue
         register_junction_change(
-            course_id, junction_old, junction_new, change_name, course_id_to_changes
+            course_id_to_changes, course_id, junction_old, junction_new, junction_name
         )
 
 
@@ -346,32 +351,32 @@ def print_courses_diff(
                 ].values[0],
             )
     register_junction_changes(
-        diff["course_professors"],
-        tables_old["course_professors"],
-        tables["course_professors"],
-        "professors",
         course_id_to_changes,
+        diff,
+        tables_old,
+        tables,
+        "course_professors",
     )
     register_junction_changes(
-        diff["course_flags"],
-        tables_old["course_flags"],
-        tables["course_flags"],
-        "flags",
         course_id_to_changes,
+        diff,
+        tables_old,
+        tables,
+        "course_flags",
     )
     register_junction_changes(
-        diff["course_meetings"],
-        tables_old["course_meetings"],
-        tables["course_meetings"],
-        "meetings",
         course_id_to_changes,
+        diff,
+        tables_old,
+        tables,
+        "course_meetings",
     )
     register_junction_changes(
-        diff["listings"],
-        tables_old["listings"],
-        tables["listings"],
+        course_id_to_changes,
+        diff,
+        tables_old,
+        tables,
         "listings",
-        course_id_to_changes,
         # Only include changes to the course_id column, because changes to
         # other columns are reported by the listings section
         ["course_id"],
