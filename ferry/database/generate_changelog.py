@@ -192,14 +192,22 @@ def print_course_changes(
             new_flags_info = flag_info.loc[new_flags]
             res += f"  - Flags: {", ".join(old_flags_info['flag_text']) or "N/A"} → {", ".join(new_flags_info['flag_text']) or "N/A"}\n"
         elif column == "course_meetings":
-            old_meetings = cast(pd.DataFrame, old).apply(
-                lambda row: f"{print_days_of_week(row['days_of_week'])} {row['start_time']}–{row['end_time']} {location_info.loc[row['location_id']]['name'] if not pd.isna(row['location_id']) else ''}",
-                axis=1,
-            ) if not old.empty else []
-            new_meetings = cast(pd.DataFrame, new).apply(
-                lambda row: f"{print_days_of_week(row['days_of_week'])} {row['start_time']}–{row['end_time']} {location_info.loc[row['location_id']]['name'] if not pd.isna(row['location_id']) else ''}",
-                axis=1,
-            ) if not new.empty else []
+            old_meetings = (
+                cast(pd.DataFrame, old).apply(
+                    lambda row: f"{print_days_of_week(row['days_of_week'])} {row['start_time']}–{row['end_time']} {location_info.loc[row['location_id']]['name'] if not pd.isna(row['location_id']) else ''}",
+                    axis=1,
+                )
+                if not old.empty
+                else []
+            )
+            new_meetings = (
+                cast(pd.DataFrame, new).apply(
+                    lambda row: f"{print_days_of_week(row['days_of_week'])} {row['start_time']}–{row['end_time']} {location_info.loc[row['location_id']]['name'] if not pd.isna(row['location_id']) else ''}",
+                    axis=1,
+                )
+                if not new.empty
+                else []
+            )
             res += f"  - Meetings: {", ".join(old_meetings) or "N/A"} → {", ".join(new_meetings) or "N/A"}\n"
         elif column == "listings":
             old_listings = cast(pd.DataFrame, old).apply(create_listing_link, axis=1)

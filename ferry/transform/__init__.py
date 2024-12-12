@@ -31,7 +31,7 @@ def write_csvs(tables: dict[str, pd.DataFrame], data_dir: Path):
     print("Writing tables to disk as CSVs... ✔")
 
 
-def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
+async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
     """
     Import the parsed course and evaluation data into CSVs generated with Pandas.
     """
@@ -54,9 +54,7 @@ def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
     )
 
     course_tables = import_courses(data_dir, course_seasons)
-    eval_tables = import_evaluations(
-        data_dir / "evaluation_tables", course_tables["listings"]
-    )
+    eval_tables = await import_evaluations(data_dir, course_tables["listings"])
 
     print("\nComputing secondary attributes...")
 

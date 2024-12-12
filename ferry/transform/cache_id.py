@@ -79,7 +79,9 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
             if name_only_version in professor_to_id:
                 never_used[name_only_version] = key
     if never_used:
-        logging.warning(f"The following professor IDs will never be used because they will always be replaced with the more specific version: {never_used}")
+        logging.warning(
+            f"The following professor IDs will never be used because they will always be replaced with the more specific version: {never_used}"
+        )
         for name_only_version in never_used.keys():
             del professor_to_id[name_only_version]
 

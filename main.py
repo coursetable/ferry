@@ -13,7 +13,6 @@ from ferry.crawler.evals import crawl_evals
 from ferry.crawler.seasons import fetch_seasons
 from ferry.database import sync_db, sync_db_old
 from ferry.transform import transform, write_csvs
-from ferry.transform.to_table import create_evals_tables
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 pd.set_option("display.max_columns", None)
@@ -80,8 +79,7 @@ async def main():
     await start_crawl(args)
     tables = None
     if args.transform:
-        await create_evals_tables(data_dir=args.data_dir)
-        tables = transform(data_dir=args.data_dir)
+        tables = await transform(data_dir=args.data_dir)
     if args.snapshot_tables:
         assert tables
         write_csvs(tables, data_dir=args.data_dir)

@@ -24,8 +24,7 @@ Each crawler has two parts, a `fetch.py` and a `parse.py`:
 
 The data analyzer code is located in `ferry/transform`. In this part, we transform JSON into a Pandas DataFrame, and then create some analyzed fields. The goal is to produce tables that exactly match the database schema.
 
-- `to_table.py`: this is a preparatory step that converts `parsed_evaluations` to 4 giant CSV files in `evaluation_tables`: `evaluation_questions.csv`, `evaluation_ratings.csv`, `evaluation_narratives.csv`, `evaluation_statistics.csv`. It's probably for performance reasons.
-- `import_{courses,evaluations}.py`: imports the parsed data from `parsed_courses` and `evaluation_tables` into Pandas DataFrames. It does surface-level analysis such as deduplication, generating IDs, etc.
+- `import_{courses,evaluations}.py`: imports the parsed data from `parsed_courses` and `parsed_evaluations` into Pandas DataFrames. It does surface-level analysis such as deduplication, generating IDs, etc.
 - `transform_compute.py`: generates analysis, such as average ratings, finding last offered courses, etc.
 
 If the `--snapshot-tables` argument is used, the analyzer will create a CSV file for each DB table in `importer_dumps`.

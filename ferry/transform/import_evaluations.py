@@ -1,7 +1,10 @@
 import logging
 from pathlib import Path
-from itertools import combinations
+import itertools
 
+import asyncio
+import concurrent.futures
+from tqdm.asyncio import tqdm_asyncio
 import numpy as np
 import pandas as pd
 from textdistance import levenshtein
@@ -9,6 +12,7 @@ import ujson
 from typing import cast, TypedDict
 
 from ferry import database
+from ferry.crawler.evals.parse import ParsedEval
 
 # maximum question divergence to allow
 QUESTION_DIVERGENCE_CUTOFF = 32
@@ -82,11 +86,91 @@ class EvalTables(TypedDict):
     evaluation_questions: pd.DataFrame
 
 
-def import_evaluations(
-    evaluation_tables_dir: Path, listings: pd.DataFrame
-) -> EvalTables:
+def create_rating_table_row(data_dir: Path, filename: str):
+    with open(data_dir / "parsed_evaluations" / filename, "r") as f:
+        evaluation = cast(ParsedEval, ujson.load(f))
+
+    return (
+        process_questions(evaluation),
+        process_ratings(evaluation),
+        process_narratives(evaluation),
+        process_statistics(evaluation),
+    )
+
+
+def process_narratives(evaluation: ParsedEval):
+    narratives = []
+    for narrative_group in evaluation["narratives"]:
+        for raw_narrative in narrative_group["comments"]:
+            narratives.append(
+                {
+                    "season": evaluation["season"],
+                    "crn": int(evaluation["crn_code"]),
+                    "question_code": narrative_group["question_id"],
+                    "comment": raw_narrative,
+                }
+            )
+
+    return narratives
+
+
+def process_ratings(evaluation: ParsedEval):
+    return [
+        {
+            "season": evaluation["season"],
+            "crn": int(evaluation["crn_code"]),
+            "question_code": rating["question_id"],
+            "rating": rating["data"],
+        }
+        for rating in evaluation["ratings"]
+    ]
+
+
+def process_statistics(evaluation: ParsedEval):
+    return {
+        "season": evaluation["season"],
+        "crn": int(evaluation["crn_code"]),
+        "enrolled": evaluation["enrollment"]["enrolled"],
+        "responses": evaluation["enrollment"]["responses"],
+        "declined": evaluation["enrollment"]["declined"],
+        "no_response": evaluation["enrollment"]["no response"],
+        "extras": evaluation["extras"],
+    }
+
+
+def process_questions(evaluation: ParsedEval):
+    questions = []
+
+    for rating in evaluation["ratings"]:
+        questions.append(
+            {
+                "season": evaluation["season"],
+                "crn": int(evaluation["crn_code"]),
+                "question_code": rating["question_id"],
+                "question_text": rating["question_text"],
+                "is_narrative": False,
+                "options": rating["options"],
+            }
+        )
+
+    for narrative in evaluation["narratives"]:
+        questions.append(
+            {
+                "season": evaluation["season"],
+                "crn": int(evaluation["crn_code"]),
+                "question_code": narrative["question_id"],
+                "question_text": narrative["question_text"],
+                "is_narrative": True,
+                "options": None,
+            }
+        )
+
+    return questions
+
+
+async def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTables:
     """
-    Import evaluations from JSON files in `evaluation_tables_dir`.
+    Import evaluations from JSON files in `data_dir`.
     Splits the raw data into various tables for the database.
 
     Returns
@@ -97,32 +181,30 @@ def import_evaluations(
     evaluation_questions
     """
     print("\nImporting course evaluations...")
+    eval_filenames = sorted(
+        [x.name for x in (data_dir / "parsed_evaluations").glob("*.json")]
+    )
 
-    evaluation_narratives = pd.read_csv(
-        evaluation_tables_dir / "evaluation_narratives.csv",
-        dtype={"season": str, "crn": int},
+    with concurrent.futures.ProcessPoolExecutor() as executor:
+        loop = asyncio.get_event_loop()
+        futures = [
+            loop.run_in_executor(executor, create_rating_table_row, data_dir, filename)
+            for filename in eval_filenames
+        ]
+        results: list[tuple[list, list, list, dict]] = await tqdm_asyncio.gather(
+            *futures, leave=False, desc=f"Parsing all ratings"
+        )
+
+    table_rows = list(zip(*results))
+    evaluation_questions = pd.DataFrame(itertools.chain(*table_rows[0]))
+    evaluation_ratings = pd.DataFrame(itertools.chain(*table_rows[1]))
+    evaluation_narratives = pd.DataFrame(itertools.chain(*table_rows[2]))
+    evaluation_statistics = pd.DataFrame(table_rows[3])
+    evaluation_statistics[["enrolled", "responses", "declined", "no_response"]] = (
+        evaluation_statistics[
+            ["enrolled", "responses", "declined", "no_response"]
+        ].astype(pd.Int64Dtype())
     )
-    evaluation_ratings = pd.read_csv(
-        evaluation_tables_dir / "evaluation_ratings.csv",
-        dtype={"season": str, "crn": int},
-    )
-    evaluation_statistics = pd.read_csv(
-        evaluation_tables_dir / "evaluation_statistics.csv",
-        dtype={
-            "season": str,
-            "crn": int,
-            "enrolled": pd.Int64Dtype(),
-            "responses": pd.Int64Dtype(),
-            "declined": pd.Int64Dtype(),
-            "no_response": pd.Int64Dtype(),
-        },
-    )
-    evaluation_questions = pd.read_csv(
-        evaluation_tables_dir / "evaluation_questions.csv",
-        dtype={"season": str, "crn": int},
-    )
-    # parse rating objects
-    evaluation_ratings["rating"] = evaluation_ratings["rating"].apply(ujson.loads)
 
     (
         evaluation_narratives,
@@ -176,7 +258,7 @@ def import_evaluations(
 
     # get the maximum distance between a set of texts
     def max_pairwise_distance(texts: set[str]):
-        pairs = combinations(texts, 2)
+        pairs = itertools.combinations(texts, 2)
         distances = [levenshtein.distance(*pair) for pair in pairs]
         return max(distances)
 
