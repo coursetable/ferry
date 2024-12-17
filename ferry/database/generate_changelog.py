@@ -431,7 +431,7 @@ def print_diff(
     output_dir.mkdir(parents=True, exist_ok=True)
     time = strftime("%Y-%m-%dT%H:%M:%S", gmtime())
     # TODO: use actual GH commit message
-    content = f"# {time} change log\n\n"
+    content = f"# {time} changelog\n\n"
     summary = ""
     for table_name, diff_record in diff.items():
         if (
