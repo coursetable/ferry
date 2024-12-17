@@ -1,0 +1,36 @@
+name: Send Changelog Email
+on:
+  workflow_dispatch:
+
+  workflow_run:
+    workflows: ["Ferry Run"]
+    types:
+      - completed
+
+jobs:
+  send_mail:
+    runs-on: ubuntu-latest
+    steps:
+      # Check out the ferry-data repo to get the latest changelog
+      - uses: actions/checkout@v4
+        with:
+          repository: coursetable/ferry-data
+          path: data
+          ssh-key: ${{ secrets.REPO_SSH_KEY }}
+          fetch-depth: 1
+
+      # Find the latest changelog file in data/change_log
+      - name: Find latest changelog file
+        id: find_changelog
+        run: echo "FILE=$(ls -t data/change_log/*.md | head -n 1)" >> $GITHUB_ENV
+
+      # Send the email using the found file
+      - name: Send changelog email
+        uses: dawidd6/action-send-mail@v4
+        with:
+          connection_url: ${{ secrets.MAIL_CONNECTION }}
+          from: "coursetable at yale <coursetable.at.yale@gmail.com>"
+          to: ${{ secrets.MAIL_RECIPIENTS }}
+          subject: "Changelog"
+          html_body: "file://${{ env.FILE }}"
+          convert_markdown: true
