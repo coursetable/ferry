@@ -89,3 +89,18 @@ jobs:
         run: |
           curl --silent --show-error -H "X-FERRY-SECRET: ${{secrets.FERRY_SECRET}}" https://api.coursetable.com/api/catalog/refresh
           curl --silent --show-error -H "X-FERRY-SECRET: ${{secrets.FERRY_SECRET}}" https://api-staging.coursetable.com/api/catalog/refresh
+
+      - name: Find latest changelog file
+        id: find_changelog
+        run: echo "FILE=$(ls -t data/change_log/*.md | head -n 1)" >> $GITHUB_ENV
+
+      - name: Send changelog email
+        uses: dawidd6/action-send-mail@v4
+        with:
+          connection_url: ${{ secrets.MAIL_CONNECTION }}
+          from: "coursetable at yale <coursetable.at.yale@gmail.com>"
+          to: ${{ secrets.EMAIL_RECIPIENTS }}
+          subject: "changelog"
+          # Use the latest changelog file as the HTML body
+          html_body: "file://${{ env.FILE }}"
+          convert_markdown: true
