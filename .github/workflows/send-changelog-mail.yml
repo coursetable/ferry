@@ -24,14 +24,14 @@ jobs:
       # Find the latest changelog file
       - name: Find latest changelog file
         id: find_changelog
-        run: echo "FILE=$(ls -t data/change_log/*.md | head -n 1)" >> $GITHUB_ENV
+        run: |
+          FILE=$(ls data/change_log/*.md | sort | tail -n 1)
+          echo "FILE=$FILE" >> $GITHUB_ENV
 
       # Extract the date/time from the filename
       - name: Extract changelog date/time
         run: |
-          # Extract filename without path
           FILE_NAME=$(basename "${FILE}")
-          # Remove the .md extension
           DATE_TIME="${FILE_NAME%.md}"
           echo "CHANGELOG_DATE_TIME=${DATE_TIME}" >> $GITHUB_ENV
 
@@ -44,7 +44,7 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           from: "CourseTable <coursetable.at.yale@gmail.com>"
           to: ${{ secrets.MAIL_RECIPIENTS }}
-          subject: "Changelog - ${{ env.CHANGELOG_DATE_TIME }}"
+          subject: "[FERRY] Changelog - ${{ env.CHANGELOG_DATE_TIME }}"
           html_body: "file://${{ env.FILE }}"
           convert_markdown: true
 
