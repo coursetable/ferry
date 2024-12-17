@@ -42,7 +42,7 @@ jobs:
           server_port: 587
           username: ${{ secrets.MAIL_USERNAME }} 
           password: ${{ secrets.MAIL_PASSWORD }}
-          from: "coursetable at yale <coursetable.at.yale@gmail.com>"
+          from: "CourseTable <coursetable.at.yale@gmail.com>"
           to: ${{ secrets.MAIL_RECIPIENTS }}
           subject: "Changelog - ${{ env.CHANGELOG_DATE_TIME }}"
           html_body: "file://${{ env.FILE }}"
