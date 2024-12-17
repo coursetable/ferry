@@ -11,26 +11,36 @@ jobs:
   send_mail:
     runs-on: ubuntu-latest
     steps:
-      # Check out the ferry-data repo to get the latest changelog
       - uses: actions/checkout@v4
         with:
           repository: coursetable/ferry-data
           path: data
           ssh-key: ${{ secrets.REPO_SSH_KEY }}
+          sparse-checkout: |
+            change_log/
+          sparse-checkout-cone-mode: false
           fetch-depth: 1
 
-      # Find the latest changelog file in data/change_log
+      # Find the latest changelog file
       - name: Find latest changelog file
         id: find_changelog
         run: echo "FILE=$(ls -t data/change_log/*.md | head -n 1)" >> $GITHUB_ENV
 
-      # Send the email using the found file
+      # Extract the date/time from the filename
+      - name: Extract changelog date/time
+        run: |
+          # Extract filename without path
+          FILE_NAME=$(basename "${FILE}")
+          # Remove the .md extension
+          DATE_TIME="${FILE_NAME%.md}"
+          echo "CHANGELOG_DATE_TIME=${DATE_TIME}" >> $GITHUB_ENV
+
       - name: Send changelog email
         uses: dawidd6/action-send-mail@v4
         with:
           connection_url: ${{ secrets.MAIL_CONNECTION }}
           from: "coursetable at yale <coursetable.at.yale@gmail.com>"
           to: ${{ secrets.MAIL_RECIPIENTS }}
-          subject: "Changelog"
+          subject: "Changelog - ${{ env.CHANGELOG_DATE_TIME }}"
           html_body: "file://${{ env.FILE }}"
           convert_markdown: true
