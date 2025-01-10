@@ -18,10 +18,11 @@ from typing import cast
 from urllib.parse import urlencode
 
 import diskcache
+import httpx
 import ujson
 from tqdm import tqdm
 
-from ferry.crawler.cas_request import CASClient, request
+from ferry.crawler.cas_request import CASClient, request, sync_request
 
 
 class AuthError(Exception):
@@ -36,7 +37,7 @@ async def is_yale_college(
     yale_college_cache: diskcache.Cache,
     season_code: str,
     crn: str,
-    client: CASClient,
+    client: httpx.AsyncClient,
 ) -> bool:
     """
     Helper function to check if course is in Yale College
@@ -129,7 +130,8 @@ async def fetch_course_evals(
     season_code: str,
     crn: str,
     data_dir: Path,
-    client: CASClient,
+    client: httpx.AsyncClient,
+    cas_client: CASClient,
     yale_college_cache: diskcache.Cache,
 ) -> tuple[bytes | None, str, str, Path]:
     course_unique_id = f"{season_code}-{crn}"
@@ -152,8 +154,8 @@ async def fetch_course_evals(
 
     # tqdm.write(f"Fetching {course_unique_id} ... ", end="")
     try:
-        eval_page = await fetch_eval_page(
-            client=client,
+        eval_page = fetch_eval_page(
+            client=cas_client,
             crn=crn,
             season_code=season_code,
             data_dir=data_dir,
@@ -161,7 +163,7 @@ async def fetch_course_evals(
         return eval_page, crn, season_code, output_path
         # tqdm.write("dumped in JSON")
     except FetchError as error:
-        # tqdm.write(f"skipped {course_unique_id}: {error}")
+        tqdm.write(f"skipped {course_unique_id}: {error}")
         pass
     except AuthError as error:
         raise SystemExit(error)
@@ -172,7 +174,7 @@ async def fetch_course_evals(
     return None, crn, season_code, output_path
 
 
-async def fetch_eval_page(
+def fetch_eval_page(
     client: CASClient, crn: str, season_code: str, data_dir: Path
 ) -> bytes:
     """
@@ -202,32 +204,25 @@ async def fetch_eval_page(
 
     # OCE website for evaluations
     url_eval = f"https://oce.app.yale.edu/ocedashboard/studentViewer/courseSummary?{urlencode({'crn': crn, 'termCode': season_code})}"
-    payload = {
-        "cookie": client.cas_cookie,
-        "url": url_eval,
-    }
+    print(url_eval)
     try:
-        page_index = await request(
+        page_index = sync_request(
             method="POST",
-            url=client.url,
+            url=url_eval,
             client=client,
-            json=payload,
         )
     except Exception as err:
         raise FetchError(f"Error fetching evaluations for {season_code}-{crn}: {err}")
 
-    if "Central Authentication Service" in page_index.text:
+    if "Central Authentication Service" in str(page_index):
         raise AuthError(f"Cookie auth failed for {season_code}-{crn}")
 
-    if page_index.status_code == 500:
-        raise FetchError(f"Evaluations for term {season_code}-{crn} are unavailable")
-
-    if page_index.status_code != 200:  # Evaluation data for this term not available
+    if page_index is None:  # Evaluation data for this term not available
         raise FetchError(f"Error fetching evaluations for {season_code}-{crn}")
 
     # save raw HTML in case we ever need it
     questions_index.mkdir(parents=True, exist_ok=True)
     with open(html_file, "w") as file:
-        file.write(str(page_index.content))
+        file.write(str(page_index))
 
-    return page_index.content
+    return page_index

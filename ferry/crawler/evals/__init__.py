@@ -3,6 +3,7 @@ import concurrent.futures
 from pathlib import Path
 
 import diskcache
+import httpx
 from tqdm import tqdm
 from tqdm.asyncio import tqdm_asyncio
 
@@ -50,7 +51,8 @@ async def crawl_evals(
     print(f"Fetching course evals for valid seasons: {seasons}...")
 
     # initiate Yale client session to access evals
-    client = CASClient(cas_cookie=cas_cookie)
+    client = httpx.AsyncClient()
+    cas_client = CASClient(cas_cookie=cas_cookie)
 
     # Season level is synchronous, following same logic as class fetcher
     with concurrent.futures.ProcessPoolExecutor() as executor:
@@ -69,33 +71,19 @@ async def crawl_evals(
                 )
 
             yale_college_cache = diskcache.Cache(data_dir / "yale_college_cache")
-
-            futures = [
-                fetch_course_evals(
-                    season_code=season,
-                    crn=course["crn"],
-                    data_dir=data_dir,
-                    client=client,
-                    yale_college_cache=yale_college_cache,
-                )
-                for course in season_courses
-            ]
-
-            # Chunking is necessary as the lambda proxy function has a concurrency limit of 10.
-            chunk_size = client.chunk_size
             raw_course_evals: list[tuple[bytes | None, str, str, Path]] = []
 
-            for chunk_begin in tqdm(
-                range(0, len(season_courses), chunk_size),
-                leave=False,
-                desc=f"Fetching evals",
-            ):
-                chunk = await tqdm_asyncio.gather(
-                    *futures[chunk_begin : chunk_begin + chunk_size],
-                    leave=False,
-                    desc=f"Chunk {int(chunk_begin / chunk_size)}",
+            for course in tqdm(season_courses, desc="Course Progress", leave=False):
+                raw_course_evals.append(
+                    await fetch_course_evals(
+                        season_code=season,
+                        crn=course["crn"],
+                        data_dir=data_dir,
+                        client=client,
+                        cas_client=cas_client,
+                        yale_college_cache=yale_college_cache,
+                    )
                 )
-                raw_course_evals.extend(chunk)
 
             # It's not exactly necessary to make the parallelized processing async here because of the season-level sync loop.
             # However, if the season-loop sync loop becomes async, this will be non-blocking.
@@ -105,8 +93,6 @@ async def crawl_evals(
                 for args in raw_course_evals
             ]
             await tqdm_asyncio.gather(*futures, leave=False, desc=f"Processing evals")
-
-    await client.aclose()
 
     print("\033[F", end="")
     print(f"Fetching course evals for valid seasons: {seasons}... ✔")

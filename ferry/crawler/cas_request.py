@@ -2,25 +2,68 @@
 Functions for authenticating with Yale Central Authentication System (CAS).
 """
 
-import httpx
 import asyncio
+import os
+import time
+
+import httpx
+import requests
 
 
 class RateLimitError(Exception):
     pass
 
 
-class CASClient(httpx.AsyncClient):
+class CASClient(requests.Session):
     def __init__(self, cas_cookie: str):
-        limits = httpx.Limits(max_connections=None, keepalive_expiry=None)
-        super().__init__(timeout=None, limits=limits)
-
+        super().__init__()
         self.cas_cookie = cas_cookie
-        self.url = "https://2jbbfpryjyp5wax2tpl5whkfdm0osghd.lambda-url.us-east-1.on.aws/"  # proxy lambda function for concurrency requests
-        self.headers.update(
-            {"auth_header": "123"}
-        )  # auth_header for proxy lambda function
-        self.chunk_size = 10  # concurrency limit for proxy lambda function
+
+
+def sync_request(
+    url: str,
+    client: CASClient,
+    attempts: int = 1,
+    **kwargs,
+):
+    """
+    Helper function to make a request with retries (exponential backoff)
+
+    Parameters
+    ----------
+    method: str
+        HTTP method
+    url: str
+        URL
+    client: Client
+        HTTPX Client
+    attempts: int = 1
+        Number of attempts
+    **kwargs
+        Additional keyword arguments for client.request
+    """
+
+    attempt = 0
+    response = None
+
+    while response is None and attempt < attempts:
+        try:
+            # Non-ideal but works for now
+            os.system(f'curl -f -H "Cookie: {client.cas_cookie}" "{url}" -o /tmp/out')
+            with open("/tmp/out", "rb") as file:
+                response = file.read()
+                if (
+                    "The requested URL returned error" in str(response)
+                    or len(str(response)) == 0
+                ):
+                    response = None
+        except:
+            time.sleep(2**attempt)
+            attempt += 1
+
+    if response is None:
+        raise ValueError("Request failed: all attempts exhausted.")
+    return response
 
 
 async def request(
