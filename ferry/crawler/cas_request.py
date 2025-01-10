@@ -49,7 +49,9 @@ def sync_request(
     while response is None and attempt < attempts:
         try:
             # Non-ideal but works for now
-            os.system(f'curl -f -H "Cookie: {client.cas_cookie}" "{url}" -o /tmp/out')
+            os.system(
+                f'curl -s -f -H "Cookie: {client.cas_cookie}" "{url}" -o /tmp/out'
+            )
             with open("/tmp/out", "rb") as file:
                 response = file.read()
                 if (

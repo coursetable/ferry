@@ -204,7 +204,6 @@ def fetch_eval_page(
 
     # OCE website for evaluations
     url_eval = f"https://oce.app.yale.edu/ocedashboard/studentViewer/courseSummary?{urlencode({'crn': crn, 'termCode': season_code})}"
-    print(url_eval)
     try:
         page_index = sync_request(
             method="POST",

@@ -1,0 +1,9 @@
+# DEV CONFIG
+# This configuration is used to only fetch evaluations for the LAST season in a dev environment. Please combine with -s option to specify exact seasons to fetch. For debug printing, use -d option.
+
+release: false
+seasons:
+  - LATEST_1
+
+crawl_seasons: true
+crawl_evals: true
