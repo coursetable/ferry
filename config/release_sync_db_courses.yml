@@ -5,4 +5,4 @@
 release: true
 seasons: null
 
-sync_db: true
+sync_db_courses: true

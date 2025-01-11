@@ -1,10 +1,9 @@
 import pandas as pd
 import csv
 from io import StringIO
-import logging
 from pathlib import Path
 
-from sqlalchemy import MetaData, text, inspect
+from sqlalchemy import MetaData, text
 
 from ferry import database
 from ferry.database import Database, Base
@@ -13,7 +12,7 @@ from ferry.database import Database, Base
 queries_dir = Path(__file__).parent / "queries"
 
 
-def sync_db_old(tables: dict[str, pd.DataFrame], database_connect_string: str):
+def sync_db_evals(tables: dict[str, pd.DataFrame], database_connect_string: str):
     db = Database(database_connect_string)
 
     # sorted tables in the database
@@ -22,18 +21,19 @@ def sync_db_old(tables: dict[str, pd.DataFrame], database_connect_string: str):
 
     with database.session_scope(db.Session) as db_session:
         print("Dropping all old objects...")
-        with open(queries_dir / "drop_all.sql") as file:
-            sql = file.read()
-        db_session.execute(text(sql))
+        for table in reversed(db_meta.sorted_tables):
+            if table.name.startswith("evaluation_"):
+                db_session.execute(text(f"DROP TABLE IF EXISTS {table.name} CASCADE;"))
         print("\033[F", end="")
         print("Dropping all old objects... ✔")
 
     # Second step: stage new tables
     print("\nAdding new staging tables...")
-    # TODO this should probably be done within one transaction
     conn = db.Engine.raw_connection()
     Base.metadata.create_all(db.Engine)
     for table in Base.metadata.sorted_tables:
+        if not table.name.startswith("evaluation_"):
+            continue
         if table.name not in tables:
             raise ValueError(
                 f"{table.name} defined in Base metadata, but there is no data for it."

@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from typing import cast
+import ujson
 
 import pandas as pd
 
@@ -84,6 +85,9 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         evaluation_statistics=eval_tables["evaluation_statistics"],
         course_professors=course_tables["course_professors"],
         professors=course_tables["professors"],
+    )
+    eval_tables["evaluation_questions"]["options"] = eval_tables["evaluation_questions"]["options"].apply(
+        lambda x: ujson.dumps(x) if isinstance(x, list) else x
     )
 
     all_tables = {"seasons": seasons_table, **course_tables, **eval_tables}

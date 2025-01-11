@@ -11,7 +11,7 @@ from ferry.crawler.cache import load_cache_json
 from ferry.crawler.classes import crawl_classes
 from ferry.crawler.evals import crawl_evals
 from ferry.crawler.seasons import fetch_seasons
-from ferry.database import sync_db, sync_db_old
+from ferry.database import sync_db_courses, sync_db_courses_old, sync_db_evals
 from ferry.transform import transform, write_csvs
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
@@ -84,12 +84,15 @@ async def main():
     if args.snapshot_tables:
         assert tables
         write_csvs(tables, data_dir=args.data_dir)
-    if args.sync_db:
+    if args.sync_db_courses:
         assert tables
         if args.rewrite:
-            sync_db_old(tables, args.database_connect_string)
+            sync_db_courses_old(tables, args.database_connect_string)
         else:
-            sync_db(tables, args.database_connect_string, data_dir=args.data_dir)
+            sync_db_courses(tables, args.database_connect_string, data_dir=args.data_dir)
+    if args.sync_db_evals:
+        assert tables
+        sync_db_evals(tables, args.database_connect_string)
     if args.generate_diagram:
         from ferry.generate_db_diagram import generate_db_diagram
 

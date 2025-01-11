@@ -6,5 +6,5 @@ release: false
 seasons: null
 use_cache: true
 
-sync_db: true
+sync_db_courses: true
 generate_diagram: true

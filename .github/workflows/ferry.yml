@@ -61,7 +61,7 @@ jobs:
         run: TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
 
       - name: Sync Postgres DB
-        run: TQDM_DISABLE=1 python -u main.py -f config/release_sync_db.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
+        run: TQDM_DISABLE=1 python -u main.py -f config/release_sync_db_courses.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
 
       - name: Calculate commit message
         run: |

@@ -40,7 +40,7 @@ Make sure you have all dependencies installed or are using the Dev Container.
 
 ```sh
 python main.py -f config/dev_fetch.yml
-python main.py -f config/dev_sync_db.yml
+python main.py -f config/dev_sync_db_courses.yml
 ```
 
 ### Options
@@ -54,7 +54,7 @@ Note: because we use `argparse`, you can provide just the prefix of each argumen
 | `--cas-cookie`              | `cas_cookie`              | `CAS_COOKIE`   | `None`; prompt if `crawl_evals`      | Only used for fetching evals; see below                                                               |
 | `-f`, `--config-file`       | N/A                       | N/A            | `None`                               | Path to YAML config file, relative to PWD; if unspecified, all options are read from command          |
 | `--data-dir`                | `data_dir`                | N/A            | `data`                               | Directory to load/store parsed data. This is usually where the `ferry-data` is cloned.                |
-| `--database-connect-string` | `database_connect_string` | `POSTGRES_URI` | `None`; prompt if `sync_db`          | Postgres connection string; for dev, see `dev_sync_db.yml`                                            |
+| `--database-connect-string` | `database_connect_string` | `POSTGRES_URI` | `None`; prompt if `sync_db_courses` or `sync_db_evals`          | Postgres connection string; for dev, see `dev_sync_db_courses.yml`                                            |
 | `-d`, `--debug`             | `debug`                   | N/A            | `False`                              | Enable debug logging                                                                                  |
 | `-r`, `--release`           | `release`                 | N/A            | `False`                              | Run in release mode; see below                                                                        |
 | `-s`, `--seasons`           | `seasons`                 | N/A            | `None`                               | A list of seasons to fetch; see below                                                                 |
@@ -71,10 +71,11 @@ You can selectively run certain stages of Ferry. Options below are in the order 
 | `--crawl-seasons`    | `crawl_seasons`    | Run the seasons crawler. If `False` and no cached data is available, then `--seasons` must be provided and all be valid seasons.                                   |
 | `--crawl-classes`    | `crawl_classes`    | Run the class crawler.                                                                                                                                             |
 | `--crawl-evals`      | `crawl_evals`      | Run the eval crawler.                                                                                                                                              |
-| `--transform`        | `transform`        | Run the transformer. Always `True` if `sync_db` or `snapshot_tables`.                                                                                              |
+| `--transform`        | `transform`        | Run the transformer. Always `True` if `sync_db_courses`, `sync_db_evals`, or `snapshot_tables`.                                                                               |
 | `--snapshot-tables`  | `snapshot_tables`  | Generate CSV files capturing data that would be written to DB.                                                                                                     |
-| `--sync-db`          | `sync_db`          | Sync the transformed data to the database.                                                                                                                         |
-| `--rewrite`          | `rewrite`          | Use old sync db function to write to database instead of incremental write. Use this during the first run to set up the database. Only has an effect if `sync_db`. |
+| `--sync-db-courses`     | `sync_db_courses`     | Sync the transformed data to the database.                                                                                                                         |
+| `--sync-db-evals`     | `sync_db_evals`     | Sync the transformed data to the database.                                                                                                                         |
+| `--rewrite`          | `rewrite`          | Use old sync db function to write to database instead of incremental write. Use this during the first run to set up the database. Only has an effect if `sync_db_courses`. |
 | `--generate-diagram` | `generate_diagram` | Generate a DB visualization diagram to `docs/db_diagram.pdf`                                                                                                       |
 
 For example, to test the transformer in isolation, you may find this handy:
@@ -109,6 +110,16 @@ JSESSIONID=...; ...
 - Otherwise, the `seasons` option should be a list of seasons to fetch, using the standard season code format: e.g. `--seasons 202301 202303`.
 
 **In almost all cases, it is sufficient to only fetch the last 3 seasons in dev.** In fact, `ferry` will not work when fetching and syncing to DB all seasons in dev due to `professor_id` mapping requiring legacy seasons. Please clone [`ferry-data`](https://github.com/coursetable/ferry-data) if working with all seasons is necessary.
+
+## Crawling evals
+
+Eval data is fetched and committed using an entirely separate pipeline, because it's only run once a semester.
+
+```sh
+python main.py -f config/dev_evals.yml
+python main.py --sync-db-evals
+# Enter the prod database URL when prompted
+```
 
 ## Linting & formatting
 

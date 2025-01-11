@@ -221,7 +221,7 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
                 conn.execute(update_query, params)
 
 
-def sync_db(
+def sync_db_courses(
     tables: dict[str, pd.DataFrame], database_connect_string: str, data_dir: Path
 ):
     db = Database(database_connect_string)

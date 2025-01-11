@@ -22,5 +22,6 @@ from .models import (
     course_professors,
 )
 
-from .sync_db_diff import sync_db
-from .sync_db_old import sync_db_old
+from .sync_db_courses import sync_db_courses
+from .sync_db_courses_old import sync_db_courses_old
+from .sync_db_evals import sync_db_evals

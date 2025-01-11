@@ -14,11 +14,13 @@ class RawArgs:
     debug: bool
     generate_diagram: bool
     release: bool
+    rewrite: bool
     save_config: bool
     seasons: list[str] | None
     sentry_url: str | None
     snapshot_tables: bool
-    sync_db: bool
+    sync_db_courses: bool
+    sync_db_evals: bool
     transform: bool
     use_cache: bool
 
@@ -33,13 +35,14 @@ class Args:
     debug: bool
     generate_diagram: bool
     release: bool
+    rewrite: bool
     seasons: list[str] | None
     sentry_url: str
     snapshot_tables: bool
-    sync_db: bool
+    sync_db_courses: bool
+    sync_db_evals: bool
     transform: bool
     use_cache: bool
-    rewrite: bool
 
 
 class InvalidSeasonError(Exception):
@@ -121,6 +124,12 @@ def get_parser():
     )
 
     parser.add_argument(
+        "--rewrite",
+        help="Whether to rewrite the database when syncing. Uses original sync_db_courses function if true",
+        action="store_true",
+    )
+
+    parser.add_argument(
         "--save-config",
         help="Save config YAML file. Overwrites existing file.",
         action="store_true",
@@ -147,8 +156,13 @@ def get_parser():
     )
 
     parser.add_argument(
-        "--sync-db",
+        "--sync-db-courses",
         help="Sync the database. This is automatically set to true in release mode.",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--sync-db-evals",
+        help="The evaluations are not synced by default. If you are crawling evals (once a semester), you can use this flag to sync them to the database.",
         action="store_true",
     )
 
@@ -161,12 +175,6 @@ def get_parser():
     parser.add_argument(
         "--use-cache",
         help="Whether to use cache for requests. Automatically set to false in release mode.",
-        action="store_true",
-    )
-
-    parser.add_argument(
-        "--rewrite",
-        help="Whether to rewrite the database when syncing. Uses original sync_db function if true",
         action="store_true",
     )
 
@@ -231,7 +239,7 @@ def parse_env_args(args: RawArgs):
     # Parse env var args
     if args.database_connect_string is None:
         args.database_connect_string = os.environ.get("POSTGRES_URI")
-        if args.database_connect_string is None and args.sync_db:
+        if args.database_connect_string is None and (args.sync_db_courses or args.sync_db_evals):
             args.database_connect_string = input("Enter database connection string: ")
 
     if args.sentry_url is None:
@@ -316,7 +324,7 @@ def get_args() -> Args:
     if args.release:
         args.use_cache = False
 
-    if args.snapshot_tables or args.sync_db:
+    if args.snapshot_tables or args.sync_db_courses or args.sync_db_evals:
         args.transform = True
 
     if args.save_config:
