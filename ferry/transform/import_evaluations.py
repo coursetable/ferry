@@ -1,27 +1,18 @@
 import logging
 from pathlib import Path
 import itertools
+import re
 
 import asyncio
 import concurrent.futures
 from tqdm.asyncio import tqdm_asyncio
 import numpy as np
 import pandas as pd
-from textdistance import levenshtein
 import ujson
 from typing import cast, TypedDict
 
 from ferry import database
 from ferry.crawler.evals.parse import ParsedEval
-
-# maximum question divergence to allow
-QUESTION_DIVERGENCE_CUTOFF = 32
-
-
-# extraneous texts to remove
-REMOVE_TEXTS = [
-    "(Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)"
-]
 
 
 def match_evaluations_to_courses(
@@ -232,55 +223,52 @@ async def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTabl
     # -------------------
     # Aggregate questions
     # -------------------
+    # Normalize question texts 
+    def amend_text(text: str):
+        text = text.replace("(Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)", "")
+        text = re.sub(r"[ \t\r\n]+", " ", text)
+        text = re.sub(r"</?[a-z]+>", "", text)
+        text = re.sub(r" *(Comments|Ratings):$", "", text)
+        text = text.replace("course or module", "course or workshop")
+        text = text.replace("YSE", "F&ES")
+        return text.strip()
+
+    evaluation_questions["question_text"] = evaluation_questions["question_text"].apply(
+        amend_text
+    )
 
     # consistency checks
     logging.debug("Checking question text consistency")
     text_by_code = cast(
         pd.Series,
-        evaluation_questions.groupby("question_code")["question_text"].apply(set),
+        evaluation_questions.groupby("question_code")["question_text"].apply(
+            lambda x: set(x) - {""}
+        ),
     )
 
-    # focus on question texts with multiple variations
-    text_by_code = text_by_code[text_by_code.apply(len) > 1]
-
-    def amend_texts(texts: set[str]) -> set[str]:
-        for remove_text in REMOVE_TEXTS:
-            texts = {text.replace(remove_text, "") for text in texts}
+    def amend_text_group(texts: set[str]) -> set[str]:
+        # Old DR questions just say "Ratings:" which now have the actual question included
+        if len(texts) == 2:
+            text_1, text_2 = texts
+            if len(text_1) > len(text_2):
+                text_1, text_2 = text_2, text_1
+            if text_2.endswith(text_1) or text_2.startswith(text_1):
+                return {text_2}
+        if len(texts) == 0:
+            return {""}
         return texts
 
-    text_by_code = text_by_code.apply(amend_texts)
+    text_by_code = text_by_code.apply(amend_text_group)
 
-    # add [0] at the end to account for empty lists
-    max_diff_texts = max(list(text_by_code.apply(len)) + [0])
-    logging.debug(
-        f"Maximum number of different texts per question code: {max_diff_texts}"
+    diverging_texts = text_by_code[text_by_code.apply(len) > 1]
+    if not diverging_texts.empty:
+        print(diverging_texts)
+        raise database.InvariantError("Diverging question texts")
+
+    text_by_code = text_by_code.apply(lambda x: next(iter(x)))
+    evaluation_questions["question_text"] = evaluation_questions["question_code"].map(
+        text_by_code
     )
-
-    # get the maximum distance between a set of texts
-    def max_pairwise_distance(texts: set[str]):
-        pairs = itertools.combinations(texts, 2)
-        distances = [levenshtein.distance(*pair) for pair in pairs]
-        return max(distances)
-
-    distances_by_code: pd.Series[float] = text_by_code.apply(max_pairwise_distance)
-    # add [0] at the end to account for empty lists
-    max_all_distances = max(list(distances_by_code) + [0])
-
-    logging.debug(f"Maximum text divergence within codes: {max_all_distances}")
-
-    if not all(distances_by_code < QUESTION_DIVERGENCE_CUTOFF):
-        inconsistent_codes = ", ".join(
-            [
-                str(x)
-                for x in distances_by_code[
-                    distances_by_code >= QUESTION_DIVERGENCE_CUTOFF
-                ].index
-            ]
-        )
-
-        raise database.InvariantError(
-            f"Error: question codes {inconsistent_codes} have divergent texts"
-        )
 
     logging.debug("Checking question type (narrative/rating) consistency")
     is_narrative_by_code = evaluation_questions.groupby("question_code")[

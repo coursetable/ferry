@@ -17,6 +17,7 @@ from ferry.transform import transform, write_csvs
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 pd.set_option("display.max_columns", None)
 pd.set_option("display.max_rows", None)
+pd.set_option("display.max_colwidth", None)
 pd.set_option("display.width", None)
 
 
