@@ -246,6 +246,9 @@ def sync_db_courses(
     # Pandas would read JSON columns as real values, so we serialize them again
     tables_old["courses"]["skills"] = tables_old["courses"]["skills"].apply(ujson.dumps)
     tables_old["courses"]["areas"] = tables_old["courses"]["areas"].apply(ujson.dumps)
+    tables_old["courses"]["primary_crn"] = tables_old["courses"]["primary_crn"].astype(
+        pd.Int64Dtype()
+    )
     tables_old["course_meetings"]["location_id"] = tables_old["course_meetings"][
         "location_id"
     ].astype(pd.Int64Dtype())
