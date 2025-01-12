@@ -186,10 +186,9 @@ async def fetch_cws_api(
         desc=f"Fetching season {season} from CourseWebService API",
     )
 
-    save_cache_json(
-        data_dir / "cws_api_cache" / f"{season}.json",
-        sorted(itertools.chain(*aggregate_season_json), key=lambda x: x["crn"]),
-    )
+    data = sorted(itertools.chain(*aggregate_season_json), key=lambda x: x["crn"])
+    save_cache_json(data_dir / "cws_api_cache" / f"{season}.json", data)
+    return data
 
 
 # fetch detailed info for all classes in each season
