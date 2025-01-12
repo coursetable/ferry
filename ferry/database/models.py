@@ -101,6 +101,10 @@ class Course(BaseModel):
         cascade="all",
         foreign_keys="Course.season_code",
     )
+    # Note: this is purposefully not a foreign key because I can't think of a
+    # use case for that. Just get all listings, and use this field to find the
+    # primary one.
+    primary_crn = Column(Integer, comment="CRN of the primary listing")
     section = Column(
         String,
         comment="""Course section. Note that the section number is the same for

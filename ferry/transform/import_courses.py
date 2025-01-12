@@ -216,6 +216,17 @@ def resolve_cross_listings(
             logging.warning(f"Identical course codes for course {group.name}:\n{group}")
 
     listings.groupby("course_id").apply(validate_course_groups)
+
+    def validate_primary_crn(group: pd.Series):
+        if len(group.unique()) == 1:
+            return group.iloc[0]
+        else:
+            # Add a log here if you want to see how many there are
+            return np.nan
+
+    listings["primary_crn"] = listings.groupby("course_id")["primary_crn"].transform(
+        validate_primary_crn
+    )
     courses = listings.drop_duplicates(subset="course_id").set_index("course_id")
     return listings, courses
 
@@ -563,6 +574,7 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
         lambda row: f"{row['season_code']}-{row['crn']}",
         data_dir / "id_cache" / "listing_id.json",
     )
+    listings["primary_crn"] = listings["primary_crn"].astype(pd.Int64Dtype())
     listings, courses = resolve_cross_listings(listings, data_dir)
     professors, course_professors = aggregate_professors(courses, data_dir)
     flags, course_flags = aggregate_flags(courses, data_dir)
