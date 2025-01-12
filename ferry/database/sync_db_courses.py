@@ -90,7 +90,9 @@ def generate_diff(
         )
         if different_types.any().any():
             row, col = list(zip(*different_types.values.nonzero()))[0]
-            print(f"Type mismatch in {table_name} at ({row}, {col})")
+            print(
+                f"Type mismatch in {table_name} at ({row}, {col}) (column {shared_rows_old.columns[col]})"
+            )
             print(f"Old type: {old_types.iat[row, col]}")
             print(f"New type: {new_types.iat[row, col]}")
             print(f"Old value: {shared_rows_old.iat[row, col]}")

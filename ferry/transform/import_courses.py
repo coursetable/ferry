@@ -224,8 +224,10 @@ def resolve_cross_listings(
             # Add a log here if you want to see how many there are
             return np.nan
 
-    listings["primary_crn"] = listings.groupby("course_id")["primary_crn"].transform(
-        validate_primary_crn
+    listings["primary_crn"] = (
+        listings.groupby("course_id")["primary_crn"]
+        .transform(validate_primary_crn)
+        .astype(pd.Int64Dtype())
     )
     courses = listings.drop_duplicates(subset="course_id").set_index("course_id")
     return listings, courses
