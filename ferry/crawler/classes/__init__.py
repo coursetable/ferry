@@ -44,7 +44,7 @@ async def crawl_classes(
             use_cache=use_cache,
         )
 
-        await fetch_cws_api(
+        cws_season_json = await fetch_cws_api(
             season,
             season_courses,
             data_dir=data_dir,
@@ -56,6 +56,7 @@ async def crawl_classes(
         classes[season] = parse_courses(
             season,
             aggregate_season_json,
+            cws_season_json,
             set(x["crn"] for x in season_fysem_courses),
             data_dir=data_dir,
             use_cache=use_cache,

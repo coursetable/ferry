@@ -3,6 +3,7 @@ import traceback
 import warnings
 from pathlib import Path
 from typing import Any, TypedDict, cast
+import logging
 
 import ujson
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning, ResultSet, Tag
@@ -395,6 +396,65 @@ def extract_note(note_html: str) -> str:
     return BeautifulSoup(note_html, features="lxml").get_text().replace("  ", " ")
 
 
+class ParsedCrns(TypedDict):
+    crn: str
+    crns: list[str]
+    primary_crn: str | None
+
+
+def get_primary_crn(
+    crn: str,
+    cws_data: dict[str, dict[str, Any]],
+    cws_data_by_code: dict[str, list[dict[str, Any]]],
+) -> str | None:
+    if crn not in cws_data:
+        return None
+    cws_course = cws_data[crn]
+    primXLst = cws_course["primXLst"]
+    if primXLst is None:
+        return crn
+    if primXLst not in cws_data_by_code:
+        logging.warning(
+            f"Primary cross-listing {primXLst} not found for course {cws_course["termCode"]}-{crn}"
+        )
+        return None
+    # Use the sole entry, ignoring the section
+    primXLst_data = cws_data_by_code[primXLst]
+    if len(primXLst_data) == 1:
+        return primXLst_data[0]["crn"]
+    # Need to disambiguate by section
+    section = next(
+        (
+            x
+            for x in cws_data_by_code[primXLst]
+            if x["sectionNumber"] == cws_course["sectionNumber"]
+        ),
+        None,
+    )
+    if section is None:
+        logging.warning(
+            f"Primary cross-listing {primXLst} section {cws_course["sectionNumber"]} not found for course {cws_course["termCode"]}-{crn}, available sections: {', '.join(x['sectionNumber'] for x in cws_data_by_code[primXLst])}"
+        )
+        return None
+    return section["crn"]
+
+
+def extract_crns(
+    course_json: dict[str, Any],
+    cws_data: dict[str, dict[str, Any]],
+    cws_data_by_code: dict[str, list[dict[str, Any]]],
+) -> ParsedCrns:
+    crn = course_json["crn"]
+    all_crns = [crn, *parse_cross_listings(course_json["xlist"])]
+    primary_crn = get_primary_crn(crn, cws_data, cws_data_by_code)
+    if primary_crn is not None and primary_crn not in all_crns:
+        logging.warning(
+            f"Primary CRN {primary_crn} not in cross-listings for course {course_json['code']}"
+        )
+        return {"crn": crn, "crns": all_crns, "primary_crn": None}
+    return {"crn": crn, "crns": all_crns, "primary_crn": primary_crn}
+
+
 def is_fysem(code: str, description_text: str, requirements_text: str) -> bool:
     # directed studies courses are basically first-year seminars
     if code.startswith("DRST 0"):
@@ -458,6 +518,7 @@ class ParsedCourse(TypedDict):
     professor_emails: list[str]
     crn: str
     crns: list[str]
+    primary_crn: str | None
     course_code: str
     subject: str
     number: str
@@ -478,7 +539,11 @@ class ParsedCourse(TypedDict):
 
 
 def extract_course_info(
-    course_json: dict[str, Any], season: str, fysem: set[str]
+    course_json: dict[str, Any],
+    season: str,
+    fysem: set[str],
+    cws_data: dict[str, dict[str, Any]],
+    cws_data_by_code: dict[str, list[dict[str, Any]]],
 ) -> ParsedCourse:
     """
     Parse the JSON response from the Yale courses API into a more useful format.
@@ -509,8 +574,7 @@ def extract_course_info(
         ),
         "extra_info": STAT_MAP.get(course_json["stat"], "ACTIVE"),
         **extract_professors(course_json["instructordetail_html"]),
-        "crn": course_json["crn"],
-        "crns": [course_json["crn"], *parse_cross_listings(course_json["xlist"])],
+        **extract_crns(course_json, cws_data, cws_data_by_code),
         "course_code": course_json["code"],
         "subject": course_json["code"].split(" ")[0],
         "number": course_json["code"].split(" ")[1],
@@ -553,6 +617,7 @@ def extract_course_info(
 def parse_courses(
     season: str,
     aggregate_season_courses: list[dict[str, Any]],
+    cws_season_json: list[dict[str, Any]],
     fysem_courses: set[str],
     data_dir: Path,
     use_cache: bool = True,
@@ -571,12 +636,20 @@ def parse_courses(
 
     # parse course JSON in season
     parsed_course_info: list[ParsedCourse] = []
+    cws_data = {x["crn"]: x for x in cws_season_json}
+    cws_data_by_code = {}
+    for x in cws_season_json:
+        cws_data_by_code.setdefault(x["subjectNumber"], []).append(x)
     # not worth parallelizing, already pretty quick
     for x in tqdm(
         aggregate_season_courses, leave=False, desc=f"Parsing season {season}"
     ):
         try:
-            parsed_course_info.append(extract_course_info(x, season, fysem_courses))
+            parsed_course_info.append(
+                extract_course_info(
+                    x, season, fysem_courses, cws_data, cws_data_by_code
+                )
+            )
         except Exception as e:
             print(f"Error parsing course {x['code']} in season {season}: {e}")
             traceback.print_exc()
