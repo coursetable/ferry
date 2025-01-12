@@ -58,7 +58,7 @@ jobs:
         run: uv pip install -e .
 
       - name: Fetch latest 4 seasons
-        run: TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
+        run: TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }} --cws-api-key ${{ secrets.CWS_API_KEY }}
 
       - name: Sync Postgres DB
         run: TQDM_DISABLE=1 python -u main.py -f config/release_sync_db_courses.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
