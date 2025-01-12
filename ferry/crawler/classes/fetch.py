@@ -3,6 +3,7 @@ from tqdm.asyncio import tqdm_asyncio
 from pathlib import Path
 import ujson
 from typing import Any
+import itertools
 
 from ferry.crawler.cache import load_cache_json, save_cache_json
 from ferry.crawler.cas_request import request
@@ -121,6 +122,74 @@ async def fetch_course_details(
         raise FetchClassesError(f"Unsuccessful response: {course_json['fatal']}")
 
     return course_json
+
+
+async def fetch_cws_api_school_subject(
+    school: str, subject: str, season_code: str, client: AsyncClient, cws_api_key: str
+):
+    url = "https://gw.its.yale.edu/soa-gateway/courses/webservice/v3/index"
+
+    req = await request(
+        method="GET",
+        client=client,
+        url=url,
+        params={
+            "apikey": cws_api_key,
+            "subjectCode": subject,
+            "termCode": season_code,
+            "mode": "json",
+            "school": school,
+        },
+    )
+    req.encoding = "utf-8"
+
+    # Unsuccessful response
+    if req.status_code != 200:
+        raise FetchClassesError(f"Unsuccessful response: code {req.status_code}")
+    r_json = ujson.loads(req.text)
+
+    # Each response is a list of courses
+    return r_json
+
+
+async def fetch_cws_api(
+    season: str,
+    season_courses: list[dict[str, Any]],
+    data_dir: Path,
+    client: AsyncClient,
+    cws_api_key: str,
+    use_cache: bool = True,
+):
+    # load from cache if it exists
+    if (
+        use_cache
+        and (
+            cache_load := load_cache_json(data_dir / "cws_api_cache" / f"{season}.json")
+        )
+        is not None
+    ):
+        return cache_load
+
+    # Get all school/subject combinations
+    school_subjects = set(
+        (course["col"], course["code"].split(" ")[0]) for course in season_courses
+    )
+
+    futures = [
+        fetch_cws_api_school_subject(school, subject, season, client, cws_api_key)
+        for school, subject in school_subjects
+    ]
+
+    aggregate_season_json = await tqdm_asyncio.gather(
+        *futures,
+        leave=False,
+        desc=f"Fetching season {season} from CourseWebService API",
+    )
+
+    save_cache_json(
+        data_dir / "cws_api_cache" / f"{season}.json",
+        sorted(itertools.chain(*aggregate_season_json), key=lambda x: x["crn"]),
+    )
 
 
 # fetch detailed info for all classes in each season

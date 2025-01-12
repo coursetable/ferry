@@ -2,7 +2,11 @@ from pathlib import Path
 from httpx import AsyncClient
 from tqdm import tqdm
 
-from .fetch import fetch_season_course_list, fetch_all_season_courses_details
+from .fetch import (
+    fetch_season_course_list,
+    fetch_all_season_courses_details,
+    fetch_cws_api,
+)
 from .parse import parse_courses, ParsedCourse
 
 
@@ -10,6 +14,7 @@ async def crawl_classes(
     seasons: list[str],
     data_dir: Path,
     client: AsyncClient,
+    cws_api_key: str,
     use_cache: bool = True,
 ) -> dict[str, list[ParsedCourse]]:
     # Concurrency with async at the season level overloads the CPU
@@ -35,6 +40,15 @@ async def crawl_classes(
             season,
             season_courses,
             data_dir=data_dir,
+            client=client,
+            use_cache=use_cache,
+        )
+
+        await fetch_cws_api(
+            season,
+            season_courses,
+            data_dir=data_dir,
+            cws_api_key=cws_api_key,
             client=client,
             use_cache=use_cache,
         )

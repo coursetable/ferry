@@ -223,9 +223,12 @@ async def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTabl
     # -------------------
     # Aggregate questions
     # -------------------
-    # Normalize question texts 
+    # Normalize question texts
     def amend_text(text: str):
-        text = text.replace("(Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)", "")
+        text = text.replace(
+            "(Your anonymous response to this question may be viewed by Yale College students, faculty, and advisers to aid in course selection and evaluating teaching.)",
+            "",
+        )
         text = re.sub(r"[ \t\r\n]+", " ", text)
         text = re.sub(r"</?[a-z]+>", "", text)
         text = re.sub(r" *(Comments|Ratings):$", "", text)

@@ -41,6 +41,7 @@ async def start_crawl(args: Args):
         classes = await crawl_classes(
             seasons=seasons,
             data_dir=args.data_dir,
+            cws_api_key=args.cws_api_key,
             client=client,
             use_cache=args.use_cache,
         )
@@ -89,7 +90,9 @@ async def main():
         if args.rewrite:
             sync_db_courses_old(tables, args.database_connect_string)
         else:
-            sync_db_courses(tables, args.database_connect_string, data_dir=args.data_dir)
+            sync_db_courses(
+                tables, args.database_connect_string, data_dir=args.data_dir
+            )
     if args.sync_db_evals:
         assert tables
         sync_db_evals(tables, args.database_connect_string)

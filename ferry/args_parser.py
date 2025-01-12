@@ -9,6 +9,7 @@ class RawArgs:
     crawl_classes: bool
     crawl_evals: bool
     crawl_seasons: bool
+    cws_api_key: str | None
     data_dir: str
     database_connect_string: str | None
     debug: bool
@@ -30,6 +31,7 @@ class Args:
     crawl_classes: bool
     crawl_evals: bool
     crawl_seasons: bool
+    cws_api_key: str
     data_dir: Path
     database_connect_string: str
     debug: bool
@@ -89,6 +91,12 @@ def get_parser():
         "--crawl-seasons",
         help="Crawl seasons.",
         action="store_true",
+    )
+
+    parser.add_argument(
+        "--cws-api-key",
+        help="API key for the Yale CourseWebService API. If not specified, defaults to the value of the CWS_API_KEY environment variable before prompting user.",
+        default=None,
     )
 
     parser.add_argument(
@@ -239,7 +247,9 @@ def parse_env_args(args: RawArgs):
     # Parse env var args
     if args.database_connect_string is None:
         args.database_connect_string = os.environ.get("POSTGRES_URI")
-        if args.database_connect_string is None and (args.sync_db_courses or args.sync_db_evals):
+        if args.database_connect_string is None and (
+            args.sync_db_courses or args.sync_db_evals
+        ):
             args.database_connect_string = input("Enter database connection string: ")
 
     if args.sentry_url is None:
@@ -251,6 +261,11 @@ def parse_env_args(args: RawArgs):
         args.cas_cookie = os.environ.get("CAS_COOKIE")
         if args.cas_cookie is None and args.crawl_evals:
             args.cas_cookie = input("Enter CAS cookie: ")
+
+    if args.cws_api_key is None:
+        args.cws_api_key = os.environ.get("CWS_API_KEY")
+        if args.cws_api_key is None and args.crawl_classes:
+            args.cws_api_key = input("Enter CWS API key: ")
 
 
 def load_yaml(parser: argparse.ArgumentParser):
