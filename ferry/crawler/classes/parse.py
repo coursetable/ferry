@@ -527,10 +527,10 @@ class ParsedCourse(TypedDict):
     skills: list[str]
     areas: list[str]
     flags: list[str]
-    regnotes: str
-    rp_attr: str
-    classnotes: str
-    final_exam: str
+    regnotes: str | None
+    rp_attr: str | None
+    classnotes: str | None
+    final_exam: str | None
     course_home_url: str | None
     syllabus_url: str | None
     fysem: bool
@@ -585,10 +585,10 @@ def extract_course_info(
         "skills": extract_skills_areas(course_json["yc_attrs"], SKILLS_MAP),
         "areas": extract_skills_areas(course_json["yc_attrs"], AREAS_MAP),
         "flags": extract_flags(course_json["ci_attrs"]),
-        "regnotes": extract_note(course_json["regnotes"]),
-        "rp_attr": extract_note(course_json["rp_attr"]),
-        "classnotes": extract_note(course_json.get("clssnotes", "")),
-        "final_exam": course_json["final_exam"],
+        "regnotes": extract_note(course_json["regnotes"]) or None,
+        "rp_attr": extract_note(course_json["rp_attr"]) or None,
+        "classnotes": extract_note(course_json.get("clssnotes", "")) or None,
+        "final_exam": course_json["final_exam"] or None,
         "course_home_url": extract_resource_link(course_json["resources"], "HOMEPAGE"),
         "syllabus_url": extract_resource_link(course_json["resources"], "SYLLABUS"),
         "fysem": False,
