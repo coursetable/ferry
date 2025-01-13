@@ -321,6 +321,7 @@ class Listing(BaseModel):
     school = Column(
         String,
         comment="School (e.g. YC, GS, MG) that the course is listed under",
+        nullable=False,
     )
 
     subject = Column(
