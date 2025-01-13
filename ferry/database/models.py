@@ -415,6 +415,7 @@ course_meetings = Table(
         "course_id",
         ForeignKey("courses.course_id"),
         index=True,
+        nullable=False,
     ),
     Column(
         "days_of_week",
@@ -514,7 +515,7 @@ class Professor(BaseModel):
 
     average_rating = Column(
         Float,
-        comment="[computed] Average rating of the professor assessed via the \"Overall assessment\" question in courses taught",
+        comment='[computed] Average rating of the professor assessed via the "Overall assessment" question in courses taught',
     )
 
     average_rating_n = Column(

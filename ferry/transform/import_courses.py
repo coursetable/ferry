@@ -561,7 +561,16 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
         if not parsed_courses_file.is_file():
             print(f"Skipping season {season}: not found in parsed courses.")
             continue
-        parsed_course_info = pd.read_json(parsed_courses_file, dtype={"crn": int})
+        parsed_course_info = pd.read_json(
+            parsed_courses_file,
+            dtype={
+                "crn": int,
+                "primary_crn": pd.Int64Dtype(),
+                "colsem": bool,
+                "fysem": bool,
+                "sysem": bool,
+            },
+        )
         parsed_course_info["season_code"] = season
         all_imported_listings.append(parsed_course_info)
 
@@ -576,7 +585,6 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
         lambda row: f"{row['season_code']}-{row['crn']}",
         data_dir / "id_cache" / "listing_id.json",
     )
-    listings["primary_crn"] = listings["primary_crn"].astype(pd.Int64Dtype())
     listings, courses = resolve_cross_listings(listings, data_dir)
     professors, course_professors = aggregate_professors(courses, data_dir)
     flags, course_flags = aggregate_flags(courses, data_dir)
