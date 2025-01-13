@@ -107,8 +107,7 @@ class Course(BaseModel):
     primary_crn = Column(Integer, comment="CRN of the primary listing")
     section = Column(
         String,
-        comment="""Course section. Note that the section number is the same for
-        all cross-listings.""",
+        comment="Course section. Note that the section number is the same for all cross-listings.",
         nullable=False,
     )
 
@@ -135,8 +134,7 @@ class Course(BaseModel):
 
     skills = Column(
         JSONB,
-        comment="""Skills that the course fulfills (e.g. writing,
-        quantitative reasoning, language levels)""",
+        comment="Skills that the course fulfills (e.g. writing, quantitative reasoning, language levels)",
         nullable=False,
     )
 
@@ -156,8 +154,7 @@ class Course(BaseModel):
     course_home_url = Column(String, comment="Link to the course homepage")
     regnotes = Column(
         String,
-        comment="""Registrar's notes (e.g. preference selection links,
-        optional writing credits, etc.)""",
+        comment="Registrar's notes (e.g. preference selection links, optional writing credits, etc.)",
     )
     extra_info = Column(
         String,
@@ -185,72 +182,64 @@ class Course(BaseModel):
 
     same_course_id = Column(
         Integer,
-        comment="""[computed] Unique ID for grouping courses by historical offering.
-        All courses with a given ID are identical offerings across different semesters.
-        """,
+        comment="[computed] Unique ID for grouping courses by historical offering. All courses with a given ID are identical offerings across different semesters.",
         index=True,
         nullable=False,
     )
 
     same_course_and_profs_id = Column(
         Integer,
-        comment="""[computed] Unique ID for grouping courses by historical offering.
-        All courses with a given ID are identical offerings across different semesters.
-        Same as 'same_course_id' with the constraint that all courses in a group were
-        taught by the same professors.
-        """,
+        comment="[computed] Unique ID for grouping courses by historical offering. All courses with a given ID are identical offerings across different semesters. Same as 'same_course_id' with the constraint that all courses in a group were taught by the same professors.",
         index=True,
         nullable=False,
     )
 
     average_gut_rating = Column(
         Float,
-        comment="""[computed] average_rating - average_workload""",
+        comment="[computed] average_rating - average_workload",
     )
     average_professor_rating = Column(
         Float,
-        comment="""[computed] Average of the average ratings of all professors for this course.""",
+        comment="[computed] Average of the average ratings of all professors for this course.",
     )
     average_rating = Column(
         Float,
-        comment="""[computed] Historical average course rating for this course code,
-        aggregated across all cross-listings""",
+        comment="[computed] Historical average course rating for this course code, aggregated across all cross-listings",
     )
     average_rating_n = Column(
         Integer,
-        comment="""[computed] Number of courses used to compute `average_rating`""",
+        comment="[computed] Number of courses used to compute `average_rating`",
+        nullable=False,
     )
 
     average_workload = Column(
         Float,
-        comment="""[computed] Historical average workload rating,
-        aggregated across all cross-listings""",
+        comment="[computed] Historical average workload rating, aggregated across all cross-listings",
     )
     average_workload_n = Column(
         Integer,
-        comment="""[computed] Number of courses used to compute `average_workload`""",
+        comment="[computed] Number of courses used to compute `average_workload`",
+        nullable=False,
     )
 
     average_rating_same_professors = Column(
         Float,
-        comment="""[computed] Historical average course rating for this course code,
-        aggregated across all cross-listings with same set of professors""",
+        comment="[computed] Historical average course rating for this course code, aggregated across all cross-listings with same set of professors",
     )
     average_rating_same_professors_n = Column(
         Integer,
-        comment="""[computed] Number of courses used to compute
-        `average_rating_same_professors`""",
+        comment="[computed] Number of courses used to compute `average_rating_same_professors`",
+        nullable=False,
     )
 
     average_workload_same_professors = Column(
         Float,
-        comment="""[computed] Historical average workload rating,
-        aggregated across all cross-listings with same set of professors""",
+        comment="[computed] Historical average workload rating, aggregated across all cross-listings with same set of professors",
     )
     average_workload_same_professors_n = Column(
         Integer,
-        comment="""[computed] Number of courses used to compute
-        `average_workload_same_professors`""",
+        comment="[computed] Number of courses used to compute `average_workload_same_professors`",
+        nullable=False,
     )
 
     # -----------------------
@@ -260,8 +249,7 @@ class Course(BaseModel):
     last_offered_course_id = Column(
         Integer,
         ForeignKey("courses.course_id"),
-        comment="""[computed] Most recent previous offering of
-        course (excluding future ones)""",
+        comment="[computed] Most recent previous offering of course (excluding future ones)",
         index=True,
     )
 
@@ -309,8 +297,7 @@ class Course(BaseModel):
 
     last_enrollment_same_professors = Column(
         Boolean,
-        comment="""[computed] Whether last enrollment offering
-        is with same professor as current.""",
+        comment="[computed] Whether last enrollment offering is with same professor as current.",
     )
 
 
@@ -354,8 +341,7 @@ class Listing(BaseModel):
     )
     section = Column(
         String,
-        comment="""Course section. Note that the section number is the same for
-        all cross-listings.""",
+        comment="Course section. Note that the section number is the same for all cross-listings.",
         nullable=False,
     )
     season_code = Column(
@@ -527,13 +513,13 @@ class Professor(BaseModel):
 
     average_rating = Column(
         Float,
-        comment="""[computed] Average rating of the professor assessed via
-        the "Overall assessment" question in courses taught""",
+        comment="[computed] Average rating of the professor assessed via the \"Overall assessment\" question in courses taught",
     )
 
     average_rating_n = Column(
         Integer,
-        comment="""[computed] Number of courses used to compute `average_rating`""",
+        comment="[computed] Number of courses used to compute `average_rating`",
+        nullable=False,
     )
 
 
@@ -585,8 +571,7 @@ class EvaluationQuestion(BaseModel):
     )
     is_narrative = Column(
         Boolean,
-        comment="""True if the question has narrative responses.
-        False if the question has categorica/numerical responses""",
+        comment="True if the question has narrative responses. False if the question has categorical/numerical responses",
         nullable=False,
     )
     question_text = Column(
@@ -601,11 +586,7 @@ class EvaluationQuestion(BaseModel):
 
     tag = Column(
         String,
-        comment="""[computed] Question type. The 'Overall' and 'Workload' tags
-        are used to compute average ratings, while others are purely for
-        identification purposes. No other commonality, other than that they
-        contain similar keywords, is guaranteed—for example, they may have
-        different options, or even differ in being narrative or not.""",
+        comment="[computed] Question type. The 'Overall' and 'Workload' tags are used to compute average ratings, while others are purely for identification purposes. No other commonality, other than that they contain similar keywords, is guaranteed—for example, they may have different options, or even differ in being narrative or not.",
         nullable=True,
     )
 
