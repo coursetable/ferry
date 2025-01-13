@@ -166,14 +166,17 @@ class Course(BaseModel):
     fysem = Column(
         Boolean,
         comment="True if the course is a first-year seminar. False otherwise.",
+        nullable=False,
     )
     sysem = Column(
         Boolean,
         comment="True if the course is a sophomore seminar. False otherwise.",
+        nullable=False,
     )
     colsem = Column(
         Boolean,
         comment="True if the course is a college seminar. False otherwise.",
+        nullable=False,
     )
 
     # ------------------------------
