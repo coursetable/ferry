@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 import logging
 from pathlib import Path
 from ferry.crawler.cache import save_cache_json, load_cache_json
@@ -28,7 +27,6 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
 
     We cache the following:
     - `courses`: `course_id`
-    - `listings`: `listing_id`
     - `flags`: `flag_id`
     - `professors`: `professor_id`
     - `evaluation_narratives`: `id`
@@ -52,10 +50,6 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
         tables["listings"].set_index(["season_code", "crn"])["course_id"].to_dict()
     )
     course_to_id = {f"{k[0]}-{k[1]}": v for k, v in course_to_id.items()}
-    listing_to_id = (
-        tables["listings"].set_index(["season_code", "crn"])["listing_id"].to_dict()
-    )
-    listing_to_id = {f"{k[0]}-{k[1]}": v for k, v in listing_to_id.items()}
     flag_to_id = tables["flags"].set_index("flag_text")["flag_id"].to_dict()
     location_to_id = (
         tables["locations"]
@@ -99,7 +93,6 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
     rating_to_id = {f"{k[0]}-{k[1]}": v for k, v in rating_to_id.items()}
     # Cross-listing status can change, so the course id may change too
     merge_id_cache(cache_dir / "course_id.json", course_to_id, False)
-    merge_id_cache(cache_dir / "listing_id.json", listing_to_id)
     merge_id_cache(cache_dir / "flag_id.json", flag_to_id)
     merge_id_cache(cache_dir / "location_id.json", location_to_id)
     merge_id_cache(cache_dir / "professor_id.json", professor_to_id)

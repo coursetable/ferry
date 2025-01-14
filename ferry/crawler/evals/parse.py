@@ -1,10 +1,7 @@
 import re
-from pathlib import Path
 from typing import Any, TypedDict, cast
 
 from bs4 import BeautifulSoup, ResultSet, Tag
-
-from ferry.crawler.cache import save_cache_json
 
 
 class EmptyEvaluationError(Exception):
@@ -191,7 +188,7 @@ def parse_course_header(page: bytes) -> tuple[tuple[int, int], dict[str, Any]]:
 class ParsedEval(TypedDict):
     crn: str
     season: str
-    enrolled: int  # Note: historical evals have None
+    enrolled: int
     responses: int  # Note: historical evals have None
     ratings: list[ParsedEvalRatings]
     narratives: list[ParsedEvalComments]

@@ -536,6 +536,11 @@ class CourseTables(TypedDict):
     buildings: pd.DataFrame
 
 
+def generate_listing_id(row: pd.Series) -> int:
+    season = int(row["season_code"]) - 200000
+    return season * 100000 + row["crn"]
+
+
 def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     """
     Import courses from JSON files in `parsed_courses_dir`.
@@ -580,11 +585,7 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     listings["skills"] = listings["skills"].apply(ujson.dumps)
     listings["areas"] = listings["areas"].apply(ujson.dumps)
     listings["section"] = listings["section"].fillna("0").astype(str).replace({"": "0"})
-    listings["listing_id"] = generate_id(
-        listings,
-        lambda row: f"{row['season_code']}-{row['crn']}",
-        data_dir / "id_cache" / "listing_id.json",
-    )
+    listings["listing_id"] = listings.apply(generate_listing_id, axis=1)
     listings, courses = resolve_cross_listings(listings, data_dir)
     professors, course_professors = aggregate_professors(courses, data_dir)
     flags, course_flags = aggregate_flags(courses, data_dir)
