@@ -103,14 +103,10 @@ def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTables:
         .dropna(subset=["narratives"])
     )
     del courses
-    print(rating_qa[rating_qa["ratings"].apply(lambda x: x["question_code"] == "DR155")])
-    print(rating_qa.head(10))
     rating_qa[["question_code", "question_text", "options", "data"]] = (
         pd.DataFrame(list(rating_qa["ratings"]), index=rating_qa.index)
     )
     rating_qa.drop(columns=["ratings"], inplace=True)
-    print(rating_qa.head(10))
-    print(rating_qa[rating_qa["question_code"] == "DR155"])
     evaluation_ratings = rating_qa[
         ["season", "course_id", "question_code", "data"]
     ].rename(columns={"data": "rating"})
