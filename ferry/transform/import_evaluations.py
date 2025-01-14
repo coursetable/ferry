@@ -12,11 +12,8 @@ from ferry import database
 
 
 def match_evaluations_to_courses(
-    evaluation_narratives: pd.DataFrame,
-    evaluation_ratings: pd.DataFrame,
-    evaluation_statistics: pd.DataFrame,
-    listings: pd.DataFrame,
-) -> tuple[pd.DataFrame, ...]:
+    evals: pd.DataFrame, listings: pd.DataFrame
+) -> pd.DataFrame:
     logging.debug("Matching evaluations to courses")
 
     # construct outer season grouping
@@ -38,32 +35,18 @@ def match_evaluations_to_courses(
         )
         return course_id
 
-    # get course IDs
-    evaluation_narratives["course_id"] = evaluation_narratives.apply(
-        get_course_id, axis=1
-    )
-    evaluation_ratings["course_id"] = evaluation_ratings.apply(get_course_id, axis=1)
-    evaluation_statistics["course_id"] = evaluation_statistics.apply(
-        get_course_id, axis=1
-    )
+    evals["course_id"] = evals.apply(get_course_id, axis=1)
 
-    # each course must have exactly one statistic, so use this for reporting
-    nan_total = evaluation_statistics["course_id"].isna().sum()
+    nan_total = evals["course_id"].isna().sum()
     logging.debug(
-        f"Removing {nan_total}/{len(evaluation_statistics)} evaluated courses without matches"
+        f"Removing {nan_total}/{len(evals)} evaluated courses without matches"
     )
 
     # remove unmatched courses
-    evaluation_narratives.dropna(subset=["course_id"], axis=0, inplace=True)
-    evaluation_ratings.dropna(subset=["course_id"], axis=0, inplace=True)
-    evaluation_statistics.dropna(subset=["course_id"], axis=0, inplace=True)
-
+    evals.dropna(subset=["course_id"], axis=0, inplace=True)
     # change from float to integer type for import
-    evaluation_narratives["course_id"] = evaluation_narratives["course_id"].astype(int)
-    evaluation_ratings["course_id"] = evaluation_ratings["course_id"].astype(int)
-    evaluation_statistics["course_id"] = evaluation_statistics["course_id"].astype(int)
-
-    return evaluation_narratives, evaluation_ratings, evaluation_statistics
+    evals["course_id"] = evals["course_id"].astype(int)
+    return evals
 
 
 class EvalTables(TypedDict):
@@ -95,6 +78,7 @@ def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTables:
             parsed_evals_file,
             dtype={
                 "crn": int,
+                "season": str,
                 "enrolled": pd.Int64Dtype(),
                 "responses": pd.Int64Dtype(),
             },
@@ -102,55 +86,61 @@ def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTables:
         all_imported_evals.append(parsed_course_info)
 
     courses = pd.concat(all_imported_evals, axis=0, ignore_index=True)
+    # Delete variables to avoid OOM
+    del all_imported_evals
+    courses = match_evaluations_to_courses(courses, listings)
     evaluation_statistics = courses[
-        ["season", "crn", "enrolled", "responses", "extras"]
+        ["season", "course_id", "enrolled", "responses", "extras"]
     ].copy()
-    rating_qa = courses.drop(
-        columns=["enrolled", "responses", "extras", "narratives"]
-    ).explode(column="ratings")
-    narrative_qa = courses.drop(
-        columns=["enrolled", "responses", "extras", "ratings"]
-    ).explode(column="narratives")
+    rating_qa = (
+        courses.drop(columns=["enrolled", "responses", "extras", "narratives"])
+        .explode(column="ratings")
+        .dropna(subset=["ratings"])
+    )
+    narrative_qa = (
+        courses.drop(columns=["enrolled", "responses", "extras", "ratings"])
+        .explode(column="narratives")
+        .dropna(subset=["narratives"])
+    )
+    del courses
+    print(rating_qa[rating_qa["ratings"].apply(lambda x: x["question_code"] == "DR155")])
+    print(rating_qa.head(10))
     rating_qa[["question_code", "question_text", "options", "data"]] = (
-        pd.json_normalize(rating_qa["ratings"])
+        pd.DataFrame(list(rating_qa["ratings"]), index=rating_qa.index)
     )
     rating_qa.drop(columns=["ratings"], inplace=True)
-    narrative_qa[["question_code", "question_text", "comments"]] = pd.json_normalize(
-        narrative_qa["narratives"]
+    print(rating_qa.head(10))
+    print(rating_qa[rating_qa["question_code"] == "DR155"])
+    evaluation_ratings = rating_qa[
+        ["season", "course_id", "question_code", "data"]
+    ].rename(columns={"data": "rating"})
+    rating_questions = rating_qa[
+        ["season", "question_code", "question_text", "options"]
+    ].copy()
+    del rating_qa
+    narrative_qa[["question_code", "question_text", "comments"]] = pd.DataFrame(
+        list(narrative_qa["narratives"]), index=narrative_qa.index
     )
     narrative_qa.drop(columns=["narratives"], inplace=True)
-    rating_questions = rating_qa[
-        ["season", "crn", "question_code", "question_text", "options"]
-    ].copy()
+    evaluation_narratives = (
+        narrative_qa[["season", "course_id", "question_code", "comments"]]
+        .explode(column="comments")
+        .rename(columns={"comments": "comment"})
+    )
     narrative_questions = narrative_qa[
-        ["season", "crn", "question_code", "question_text"]
+        ["season", "question_code", "question_text"]
     ].copy()
+    del narrative_qa
     narrative_questions["options"] = None
     rating_questions["is_narrative"] = False
     narrative_questions["is_narrative"] = True
     evaluation_questions = pd.concat(
         [rating_questions, narrative_questions], axis=0, ignore_index=True
     )
-    evaluation_ratings = rating_qa[["season", "crn", "question_code", "data"]].rename(
-        columns={"data": "rating"}
-    )
-    evaluation_narratives = (
-        narrative_qa[["season", "crn", "question_code", "comments"]]
-        .explode(column="comments")
-        .rename(columns={"comments": "comment"})
-    )
 
-    (
-        evaluation_narratives,
-        evaluation_ratings,
-        evaluation_statistics,
-    ) = match_evaluations_to_courses(
-        evaluation_narratives=evaluation_narratives,
-        evaluation_ratings=evaluation_ratings,
-        evaluation_statistics=evaluation_statistics,
-        listings=listings,
-    )
     # drop cross-listing duplicates
+    # Note: do *not* drop duplicates by each course_id, because different
+    # listings can have different questions (e.g. YC and GS)
     evaluation_statistics.drop_duplicates(
         subset=["course_id"], inplace=True, keep="first"
     )

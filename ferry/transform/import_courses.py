@@ -575,7 +575,7 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
         all_imported_listings.append(parsed_course_info)
 
     logging.debug("Creating listings table")
-    listings = pd.concat(all_imported_listings, axis=0).reset_index(drop=True)
+    listings = pd.concat(all_imported_listings, axis=0, ignore_index=True)
     # convert to JSON string for postgres
     listings["skills"] = listings["skills"].apply(ujson.dumps)
     listings["areas"] = listings["areas"].apply(ujson.dumps)
