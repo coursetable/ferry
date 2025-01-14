@@ -133,7 +133,7 @@ async def fetch_course_evals(
     client: httpx.AsyncClient,
     cas_client: CASClient,
     yale_college_cache: diskcache.Cache,
-) -> tuple[bytes | None, str, str, Path]:
+) -> tuple[bytes | None, str]:
     course_unique_id = f"{season_code}-{crn}"
 
     output_path = data_dir / "parsed_evaluations" / f"{course_unique_id}.json"
@@ -141,7 +141,7 @@ async def fetch_course_evals(
     if output_path.is_file():
         # tqdm.write(f"Skipping course {course_unique_id} - already exists")
         # The JSON will be loaded at the process ratings step
-        return None, crn, season_code, output_path
+        return None, crn
 
     if not await is_yale_college(
         season_code=season_code,
@@ -150,7 +150,7 @@ async def fetch_course_evals(
         yale_college_cache=yale_college_cache,
     ):
         # tqdm.write(f"Skipping course {course_unique_id} - not in yale college")
-        return None, crn, season_code, output_path
+        return None, crn
 
     # tqdm.write(f"Fetching {course_unique_id} ... ", end="")
     try:
@@ -160,7 +160,7 @@ async def fetch_course_evals(
             season_code=season_code,
             data_dir=data_dir,
         )  # this is the raw html request, must be processed
-        return eval_page, crn, season_code, output_path
+        return eval_page, crn
         # tqdm.write("dumped in JSON")
     except FetchError as error:
         tqdm.write(f"skipped {course_unique_id}: {error}")
@@ -171,7 +171,7 @@ async def fetch_course_evals(
         traceback.print_exc()
         tqdm.write(f"skipped {course_unique_id}: unknown error {error}")
 
-    return None, crn, season_code, output_path
+    return None, crn
 
 
 def fetch_eval_page(

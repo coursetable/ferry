@@ -5,7 +5,7 @@ import re
 
 import asyncio
 import concurrent.futures
-from tqdm.asyncio import tqdm_asyncio
+from tqdm import tqdm
 import numpy as np
 import pandas as pd
 import ujson
@@ -77,89 +77,9 @@ class EvalTables(TypedDict):
     evaluation_questions: pd.DataFrame
 
 
-def create_rating_table_row(data_dir: Path, filename: str):
-    with open(data_dir / "parsed_evaluations" / filename, "r") as f:
-        evaluation = cast(ParsedEval, ujson.load(f))
-
-    return (
-        process_questions(evaluation),
-        process_ratings(evaluation),
-        process_narratives(evaluation),
-        process_statistics(evaluation),
-    )
-
-
-def process_narratives(evaluation: ParsedEval):
-    narratives = []
-    for narrative_group in evaluation["narratives"]:
-        for raw_narrative in narrative_group["comments"]:
-            narratives.append(
-                {
-                    "season": evaluation["season"],
-                    "crn": int(evaluation["crn_code"]),
-                    "question_code": narrative_group["question_id"],
-                    "comment": raw_narrative,
-                }
-            )
-
-    return narratives
-
-
-def process_ratings(evaluation: ParsedEval):
-    return [
-        {
-            "season": evaluation["season"],
-            "crn": int(evaluation["crn_code"]),
-            "question_code": rating["question_id"],
-            "rating": rating["data"],
-        }
-        for rating in evaluation["ratings"]
-    ]
-
-
-def process_statistics(evaluation: ParsedEval):
-    return {
-        "season": evaluation["season"],
-        "crn": int(evaluation["crn_code"]),
-        "enrolled": evaluation["enrollment"]["enrolled"],
-        "responses": evaluation["enrollment"]["responses"],
-        "declined": evaluation["enrollment"]["declined"],
-        "no_response": evaluation["enrollment"]["no response"],
-        "extras": evaluation["extras"],
-    }
-
-
-def process_questions(evaluation: ParsedEval):
-    questions = []
-
-    for rating in evaluation["ratings"]:
-        questions.append(
-            {
-                "season": evaluation["season"],
-                "crn": int(evaluation["crn_code"]),
-                "question_code": rating["question_id"],
-                "question_text": rating["question_text"],
-                "is_narrative": False,
-                "options": rating["options"],
-            }
-        )
-
-    for narrative in evaluation["narratives"]:
-        questions.append(
-            {
-                "season": evaluation["season"],
-                "crn": int(evaluation["crn_code"]),
-                "question_code": narrative["question_id"],
-                "question_text": narrative["question_text"],
-                "is_narrative": True,
-                "options": None,
-            }
-        )
-
-    return questions
-
-
-async def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTables:
+def import_evaluations(
+    data_dir: Path, seasons: list[str], listings: pd.DataFrame
+) -> EvalTables:
     """
     Import evaluations from JSON files in `data_dir`.
     Splits the raw data into various tables for the database.
@@ -172,29 +92,58 @@ async def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTabl
     evaluation_questions
     """
     print("\nImporting course evaluations...")
-    eval_filenames = sorted(
-        [x.name for x in (data_dir / "parsed_evaluations").glob("*.json")]
-    )
-
-    with concurrent.futures.ProcessPoolExecutor() as executor:
-        loop = asyncio.get_event_loop()
-        futures = [
-            loop.run_in_executor(executor, create_rating_table_row, data_dir, filename)
-            for filename in eval_filenames
-        ]
-        results: list[tuple[list, list, list, dict]] = await tqdm_asyncio.gather(
-            *futures, leave=False, desc=f"Parsing all ratings"
+    parsed_evals_dir = data_dir / "parsed_evaluations"
+    eval_filenames = sorted([x.name for x in parsed_evals_dir.glob("*.json")])
+    all_imported_evals: list[pd.DataFrame] = []
+    for filename in tqdm(eval_filenames, desc="Loading eval JSONs", leave=False):
+        parsed_evals_file = parsed_evals_dir / filename
+        parsed_course_info = pd.read_json(
+            parsed_evals_file,
+            dtype={
+                "crn": int,
+                "enrolled": pd.Int64Dtype(),
+                "responses": pd.Int64Dtype(),
+            },
         )
+        all_imported_evals.append(parsed_course_info)
 
-    table_rows = list(zip(*results))
-    evaluation_questions = pd.DataFrame(itertools.chain(*table_rows[0]))
-    evaluation_ratings = pd.DataFrame(itertools.chain(*table_rows[1]))
-    evaluation_narratives = pd.DataFrame(itertools.chain(*table_rows[2]))
-    evaluation_statistics = pd.DataFrame(table_rows[3])
-    evaluation_statistics[["enrolled", "responses", "declined", "no_response"]] = (
-        evaluation_statistics[
-            ["enrolled", "responses", "declined", "no_response"]
-        ].astype(pd.Int64Dtype())
+    courses = pd.concat(all_imported_evals, axis=0, ignore_index=True)
+    evaluation_statistics = courses[
+        ["season", "crn", "enrolled", "responses", "extras"]
+    ].copy()
+    rating_qa = courses.drop(
+        columns=["enrolled", "responses", "extras", "narratives"]
+    ).explode(column="ratings")
+    narrative_qa = courses.drop(
+        columns=["enrolled", "responses", "extras", "ratings"]
+    ).explode(column="narratives")
+    rating_qa[["question_code", "question_text", "options", "data"]] = (
+        pd.json_normalize(rating_qa["ratings"])
+    )
+    rating_qa.drop(columns=["ratings"], inplace=True)
+    narrative_qa[["question_code", "question_text", "comments"]] = pd.json_normalize(
+        narrative_qa["narratives"]
+    )
+    narrative_qa.drop(columns=["narratives"], inplace=True)
+    rating_questions = rating_qa[
+        ["season", "crn", "question_code", "question_text", "options"]
+    ].copy()
+    narrative_questions = narrative_qa[
+        ["season", "crn", "question_code", "question_text"]
+    ].copy()
+    narrative_questions["options"] = None
+    rating_questions["is_narrative"] = False
+    narrative_questions["is_narrative"] = True
+    evaluation_questions = pd.concat(
+        [rating_questions, narrative_questions], axis=0, ignore_index=True
+    )
+    evaluation_ratings = rating_qa[["season", "crn", "question_code", "data"]].rename(
+        columns={"data": "rating"}
+    )
+    evaluation_narratives = (
+        narrative_qa[["season", "crn", "question_code", "comments"]]
+        .explode(column="comments")
+        .rename(columns={"comments": "comment"})
     )
 
     (

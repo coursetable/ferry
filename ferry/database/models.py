@@ -551,8 +551,6 @@ class EvaluationStatistics(BaseModel):
 
     enrolled = Column(Integer, comment="Number of students enrolled in course")
     responses = Column(Integer, comment="Number of responses")
-    declined = Column(Integer, comment="Number of students who declined to respond")
-    no_response = Column(Integer, comment="Number of students who did not respond")
     extras = Column(
         JSONB,
         comment="Arbitrary additional information attached to an evaluation",

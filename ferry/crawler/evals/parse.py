@@ -37,7 +37,7 @@ def parse_questions(
     question_is_narrative = {}
 
     for question_row in infos:
-        question_id = question_row.find_all("td")[2].text.strip()
+        question_code = question_row.find_all("td")[2].text.strip()
         question_text = question_row.find("td", class_="Question", recursive=False)
         question_text = question_text.find(text=True) if question_text else None
 
@@ -58,10 +58,9 @@ def parse_questions(
             .find_all("span", class_="show-for-print")[0]
             .find(text=True)
         )
-        question_is_narrative[question_id] = "Narrative" in question_response
+        question_is_narrative[question_code] = "Narrative" in question_response
 
-        questions[question_id] = question_text
-        # print(question_id, question_is_narrative[question_id], questions[question_id])
+        questions[question_code] = question_text
 
     if len(questions) == 0:  # Evaluation data for this course not available
         raise EmptyEvaluationError(
@@ -72,18 +71,18 @@ def parse_questions(
 
 
 class ParsedEvalRatings(TypedDict):
-    question_id: str
+    question_code: str
     question_text: str
     options: list[str]
     data: list[int]
 
 
 def parse_eval_ratings(
-    page: bytes, questions: dict[str, str], question_id: str
+    page: bytes, questions: dict[str, str], question_code: str
 ) -> ParsedEvalRatings:
     soup = BeautifulSoup(page, "lxml")
 
-    td = soup.find("td", text=str(question_id))
+    td = soup.find("td", text=str(question_code))
     if td is None or td.parent is None:
         raise EmptyEvaluationError()
     id = td.parent.get("id")
@@ -113,29 +112,29 @@ def parse_eval_ratings(
     # print(options, ratings)
 
     return {
-        "question_id": question_id,
-        "question_text": questions[question_id],
+        "question_code": question_code,
+        "question_text": questions[question_code],
         "options": options,
         "data": ratings,
     }
 
 
 class ParsedEvalComments(TypedDict):
-    question_id: str
+    question_code: str
     question_text: str
     comments: list[str]
 
 
 def parse_eval_comments(
-    page: bytes, questions: dict[str, str], question_id: str
+    page: bytes, questions: dict[str, str], question_code: str
 ) -> ParsedEvalComments:
     soup = BeautifulSoup(page, "lxml")
 
-    if question_id == "SU124":
+    if question_code == "SU124":
         # account for question 10 of summer courses
         response_table_id = "answers{i}"
     else:
-        td = soup.find("td", text=str(question_id))
+        td = soup.find("td", text=str(question_code))
         if td is None or td.parent is None:
             raise EmptyEvaluationError()
         id = td.parent.get("id")
@@ -161,24 +160,13 @@ def parse_eval_comments(
         comments.append(comment)
 
     return {
-        "question_id": question_id,
-        "question_text": questions[question_id],
+        "question_code": question_code,
+        "question_text": questions[question_code],
         "comments": comments,
     }
 
 
-ParsedStats = TypedDict(
-    "ParsedStats",
-    {
-        "enrolled": int,  # Note: historical evals have None
-        "responses": int,  # Note: historical evals have None
-        "declined": int | None,
-        "no response": int | None,
-    },
-)
-
-
-def parse_course_enrollment(page: bytes) -> tuple[ParsedStats, dict[str, Any]]:
+def parse_course_header(page: bytes) -> tuple[tuple[int, int], dict[str, Any]]:
     soup = BeautifulSoup(page, "lxml")
 
     header = soup.find("div", id="courseHeader")
@@ -192,26 +180,19 @@ def parse_course_enrollment(page: bytes) -> tuple[ParsedStats, dict[str, Any]]:
     enrolled = infos.find_all("div", class_="row")[0].find_all("div")[-1].text.strip()
     responded = infos.find_all("div", class_="row")[1].find_all("div")[-1].text.strip()
 
-    stats: ParsedStats = {
-        "enrolled": int(enrolled),
-        "responses": int(responded),
-        "declined": None,  # legacy: used to have "declined" stats
-        "no response": None,  # legacy: used to have "no response" stats
-    }
-
     title = header.find_all("div", recursive=False)[1]
     if type(title) != Tag:
         raise EmptyEvaluationError()
     title = title.find_all("span")[1].text.strip()
 
-    # print(stats, title)
-    return stats, {"title": title}
+    return (int(enrolled), int(responded)), {"title": title}
 
 
 class ParsedEval(TypedDict):
-    crn_code: str
+    crn: str
     season: str
-    enrollment: ParsedStats
+    enrolled: int  # Note: historical evals have None
+    responses: int  # Note: historical evals have None
     ratings: list[ParsedEvalRatings]
     narratives: list[ParsedEvalComments]
     # Note: known extra keys are:
@@ -225,22 +206,19 @@ class ParsedEval(TypedDict):
     extras: dict[str, Any]
 
 
-# Does not return anything, only responsible for writing course evals to json cache
 def parse_eval_page(
-    page_index: bytes | None, crn_code: str, season_code: str, path: Path
-):
+    page_index: bytes | None, crn: str, season_code: str
+) -> ParsedEval | None:
     if page_index is None:
-        return
+        return None
     try:
-        enrollment, extras = parse_course_enrollment(page_index)
+        (enrolled, responses), extras = parse_course_header(page_index)
     except:
         # Enrollment data is not available - most likely error page was returned.
-        return
+        return None
 
     try:
-        questions, question_is_narrative = parse_questions(
-            page_index, crn_code, season_code
-        )
+        questions, question_is_narrative = parse_questions(page_index, crn, season_code)
     except EmptyEvaluationError as err:
         questions = {}
         question_is_narrative = {}
@@ -249,24 +227,23 @@ def parse_eval_page(
     # Fetch question responses based on whether they are narrative or rating.
     ratings: list[ParsedEvalRatings] = []
     narratives: list[ParsedEvalComments] = []
-    for question_id in questions.keys():
-        if question_is_narrative[question_id]:
+    for question_code in questions.keys():
+        if question_is_narrative[question_code]:
             try:
                 narratives.append(
-                    parse_eval_comments(page_index, questions, question_id)
+                    parse_eval_comments(page_index, questions, question_code)
                 )
             except EmptyNarrativeError:
                 pass
         else:
-            ratings.append(parse_eval_ratings(page_index, questions, question_id))
+            ratings.append(parse_eval_ratings(page_index, questions, question_code))
 
-    course_eval: ParsedEval = {
-        "crn_code": crn_code,
+    return {
+        "crn": crn,
         "season": season_code,
-        "enrollment": enrollment,
+        "enrolled": enrolled,
+        "responses": responses,
         "ratings": ratings,
         "narratives": narratives,
         "extras": extras,
     }
-
-    save_cache_json(path, course_eval)

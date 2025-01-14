@@ -55,7 +55,7 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
     )
 
     course_tables = import_courses(data_dir, course_seasons)
-    eval_tables = await import_evaluations(data_dir, course_tables["listings"])
+    eval_tables = import_evaluations(data_dir, course_tables["listings"])
 
     print("\nComputing secondary attributes...")
 

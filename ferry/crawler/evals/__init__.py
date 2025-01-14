@@ -1,13 +1,11 @@
-import asyncio
 import concurrent.futures
 from pathlib import Path
 
 import diskcache
 import httpx
 from tqdm import tqdm
-from tqdm.asyncio import tqdm_asyncio
 
-from ferry.crawler.cache import load_cache_json
+from ferry.crawler.cache import load_cache_json, save_cache_json
 from ferry.crawler.cas_request import CASClient
 from ferry.crawler.classes.parse import ParsedCourse
 
@@ -71,7 +69,7 @@ async def crawl_evals(
                 )
 
             yale_college_cache = diskcache.Cache(data_dir / "yale_college_cache")
-            raw_course_evals: list[tuple[bytes | None, str, str, Path]] = []
+            raw_course_evals: list[tuple[bytes | None, str]] = []
 
             for course in tqdm(season_courses, desc="Course Progress", leave=False):
                 raw_course_evals.append(
@@ -85,14 +83,14 @@ async def crawl_evals(
                     )
                 )
 
-            # It's not exactly necessary to make the parallelized processing async here because of the season-level sync loop.
-            # However, if the season-loop sync loop becomes async, this will be non-blocking.
-            loop = asyncio.get_running_loop()
-            futures = [
-                loop.run_in_executor(executor, parse_eval_page, *args)
-                for args in raw_course_evals
-            ]
-            await tqdm_asyncio.gather(*futures, leave=False, desc=f"Processing evals")
+            data = []
+            for page, crn in raw_course_evals:
+                parsed = parse_eval_page(page, crn, season)
+                if parsed is None:
+                    continue
+                data.append(parsed)
+            data.sort(key=lambda x: x["crn"])
+            save_cache_json(data_dir / "parsed_evaluations" / f"{season}.json", data)
 
     print("\033[F", end="")
     print(f"Fetching course evals for valid seasons: {seasons}... ✔")
