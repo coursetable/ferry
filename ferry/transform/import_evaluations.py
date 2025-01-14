@@ -103,8 +103,8 @@ def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTables:
         .dropna(subset=["narratives"])
     )
     del courses
-    rating_qa[["question_code", "question_text", "options", "data"]] = (
-        pd.DataFrame(list(rating_qa["ratings"]), index=rating_qa.index)
+    rating_qa[["question_code", "question_text", "options", "data"]] = pd.DataFrame(
+        list(rating_qa["ratings"]), index=rating_qa.index
     )
     rating_qa.drop(columns=["ratings"], inplace=True)
     evaluation_ratings = rating_qa[

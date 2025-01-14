@@ -549,7 +549,9 @@ class EvaluationStatistics(BaseModel):
         cascade="all",
     )
 
-    enrolled = Column(Integer, comment="Number of students enrolled in course")
+    enrolled = Column(
+        Integer, comment="Number of students enrolled in course", nullable=False
+    )
     responses = Column(Integer, comment="Number of responses")
     extras = Column(
         JSONB,
