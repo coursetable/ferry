@@ -1,10 +1,7 @@
 import logging
 from pathlib import Path
-import itertools
 import re
 
-import asyncio
-import concurrent.futures
 from tqdm import tqdm
 import numpy as np
 import pandas as pd
@@ -12,7 +9,6 @@ import ujson
 from typing import cast, TypedDict
 
 from ferry import database
-from ferry.crawler.evals.parse import ParsedEval
 
 
 def match_evaluations_to_courses(
@@ -77,9 +73,7 @@ class EvalTables(TypedDict):
     evaluation_questions: pd.DataFrame
 
 
-def import_evaluations(
-    data_dir: Path, seasons: list[str], listings: pd.DataFrame
-) -> EvalTables:
+def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTables:
     """
     Import evaluations from JSON files in `data_dir`.
     Splits the raw data into various tables for the database.
