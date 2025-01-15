@@ -94,21 +94,17 @@ exactly_identical_crns = [
 ]
 
 
-def resolve_cross_listings(
-    listings: pd.DataFrame, data_dir: Path
-) -> tuple[pd.DataFrame, pd.DataFrame]:
+def generate_course_id(row: pd.Series) -> int:
+    season = int(row["season_code"]) - 200000
+    crn = np.min(list(row["crns"]))
+    return season * 100000 + crn
+
+
+def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Resolve course cross-listings using the `crns` from the parsed courses.
     Creates the `courses` table that identifies connected components of cross-listings.
     """
-
-    course_id_cache: dict[str, int] = (
-        load_cache_json(data_dir / "id_cache" / "course_id.json") or {}
-    )
-    course_id_to_listings: dict[int, list[str]] = {}
-    for key, value in course_id_cache.items():
-        course_id_to_listings.setdefault(value, []).append(key)
-
     # seasons must be sorted in ascending order
     # prioritize Yale College courses when deduplicating listings. We assume that
     # YC listings carry the most info (skills/areas, etc.)
@@ -144,68 +140,41 @@ def resolve_cross_listings(
         .apply(lambda group: group.set_index("crn")["crns"].to_dict())
         .to_dict()
     )
-    next_course_id = max(course_id_cache.values(), default=-1) + 1
-    # season_code -> CRN -> course_id
-    new_course_ids: dict[str, dict[int, int]] = {}
 
-    # Assign course_id, inheriting from existing course_id if possible
-    for i, row in listings.iterrows():
-        season_course_ids = new_course_ids.setdefault(row["season_code"], {})
-        if row["crn"] in season_course_ids:
-            # A previous row has already assigned this course_id
-            continue
-        crns = row["crns"]
-        existing_ids = set(
-            course_id_cache.get(f"{row['season_code']}-{crn}") for crn in crns
-        )
-        # Some listings may be unseen (newly added listings)
-        existing_ids.discard(None)
-        if len(existing_ids) == 0:
-            # None of these CRNs have been seen before, create one.
-            new_id = next_course_id
-            next_course_id += 1
-        else:
-            # This either picks the only existing id or the smallest one
-            # if there are multiple (i.e. multiple cross-listings merged)
-            new_id = min(cast(set[int], existing_ids))
-            # Prevent the same course_id being used by another set of CRNs
-            # For example, before A and B were cross-listed and had the same
-            # course_id; now they are separate, so we need to assign a new
-            # course_id for B. We do this by throwing away each course_id once
-            # we've assigned it to a set of CRNs.
-            for season_crn in course_id_to_listings[new_id]:
-                del course_id_cache[season_crn]
-        # Invariant: CRNs contain the CRN itself
-        if row["crn"] not in crns:
-            print(row)
-            raise ValueError(f"CRN not in CRNs")
-        # Invariant: CRNs form a fully connected component by running DFS
-        # Also assign course_ids while we traverse (we use season_course_ids as
-        # the visited set)
-        stack = [row["crn"]]
-        component = []
-        adj_list = season_crn_graphs[row["season_code"]]
-        num_edges = 0
-        while stack:
-            v = stack.pop()
-            if v not in season_course_ids:
-                season_course_ids[v] = new_id
-                component.append(v)
-                num_edges += len(adj_list[v])
-                stack.extend(adj_list[v] - set(season_course_ids))
-        # Since each node also has a self-edge, the number of edges should be n^2
-        if num_edges != len(component) ** 2:
-            print(
-                listings[
-                    listings["crn"].isin(component)
-                    & listings["season_code"].eq(row["season_code"])
-                ]
-            )
-            raise ValueError(f"CRNs not fully connected")
+    # Check CRN structure before creating course_id
+    for season in season_crn_graphs:
+        visited: set[int] = set()
+        for crn, crns in season_crn_graphs[season].items():
+            if crn in visited:
+                # A previous row has already verified this CRN
+                continue
+            # Invariant: CRNs contain the CRN itself
+            if crn not in crns:
+                print(listings[listings["crn"].eq(crn) & listings["season_code"].eq(season)])
+                raise ValueError(f"CRN not in CRNs")
+            # Invariant: CRNs form a fully connected component by running DFS
+            stack = [crn]
+            component = []
+            adj_list = season_crn_graphs[season]
+            num_edges = 0
+            while stack:
+                v = stack.pop()
+                if v not in visited:
+                    visited.add(v)
+                    component.append(v)
+                    num_edges += len(adj_list[v])
+                    stack.extend(adj_list[v] - visited)
+            # Since each node also has a self-edge, the number of edges should be n^2
+            if num_edges != len(component) ** 2:
+                print(
+                    listings[
+                        listings["crn"].isin(component)
+                        & listings["season_code"].eq(season)
+                    ]
+                )
+                raise ValueError(f"CRNs not fully connected, counted {num_edges} edges, expected {len(component) ** 2}")
 
-    listings["course_id"] = listings.apply(
-        lambda row: new_course_ids[row["season_code"]][row["crn"]], axis=1
-    )
+    listings["course_id"] = listings.apply(generate_course_id, axis=1)
 
     def validate_course_groups(group: pd.DataFrame):
         # Each course has identical sections
@@ -586,7 +555,7 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     listings["areas"] = listings["areas"].apply(ujson.dumps)
     listings["section"] = listings["section"].fillna("0").astype(str).replace({"": "0"})
     listings["listing_id"] = listings.apply(generate_listing_id, axis=1)
-    listings, courses = resolve_cross_listings(listings, data_dir)
+    listings, courses = resolve_cross_listings(listings)
     professors, course_professors = aggregate_professors(courses, data_dir)
     flags, course_flags = aggregate_flags(courses, data_dir)
     course_meetings, locations, buildings = aggregate_locations(courses, data_dir)
