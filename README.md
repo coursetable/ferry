@@ -18,7 +18,7 @@
 1. __MacOS__: Additionally, you may also need this step to install `psycopg2`: 
 
    ```sh
-   pip install -U  --no-cache-dir \
+   pip install -U --no-cache-dir \
                --config-settings="--global-option=build_ext" \
                --config-settings="--global-option=-I$(brew --prefix openssl)/include/" \
                --config-settings="--global-option=-L$(brew --prefix openssl)/lib/" \

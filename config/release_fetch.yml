@@ -3,9 +3,7 @@
 
 # Sentry URL & DB URL are passed through env
 release: true
-seasons:
-  - 202501
-  - 202502
+seasons: [ '202501', '202502' ]
 
 crawl_seasons: true
 crawl_classes: true
