@@ -162,8 +162,15 @@ def commit_deletions(table_name: str, to_remove: pd.DataFrame, conn: Connection)
     logging.debug(f"Removing {len(to_remove)} rows from {table_name}")
     pk = primary_keys[table_name]
     for _, row in to_remove.iterrows():
-        where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
-        params = {col: row[col] if not pd.isna(row[col]) else None for col in pk}
+        where_conditions = []
+        params = {}
+        for col in pk:
+            value = row[col] if not pd.isna(row[col]) else None
+            params[col] = value
+            where_conditions.append(
+                f"{col} IS NULL" if value is None else f"{col} = :{col}"
+            )
+        where_clause = " AND ".join(where_conditions)
 
         delete_query = text(f"DELETE FROM {table_name} WHERE {where_clause};")
         conn.execute(delete_query, params)
