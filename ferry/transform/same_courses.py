@@ -67,16 +67,16 @@ do_not_merge_on_similar_text = {
 # TODO: add user survey about whether we should actually split them
 always_distinct: list[list[set[str | tuple[str, str]]]] = [
     [
-        {"ARBC 110", ("ARBC 501", "201403"), ("ARBC 500", "202303")},
-        {"ARBC 120"},
+        {"ARBC 110", ("ARBC 501", "201403"), ("ARBC 500", "202303"), "ARBC 1100"},
+        {"ARBC 120", "ARBC 1200"},
     ],  # Elementary Modern Standard Arabic I/II
     [
-        {"ARBC 130", ("ARBC 502", "202103")},
-        {"ARBC 140"},
+        {"ARBC 130", ("ARBC 502", "202103"), "ARBC 1300"},
+        {"ARBC 140", "ARBC 1400"},
     ],  # Intermediate Modern Standard Arabic I/II
     [
-        {"ARBC 150", ("ARBC 504", "202103")},
-        {"ARBC 151"},
+        {"ARBC 150", ("ARBC 504", "202103"), "ARBC 1500"},
+        {"ARBC 151", "ARBC 1510"},
     ],  # Advanced Modern Standard Arabic I/II
     [
         {"ARBC 136", "ARBC 156"},
@@ -84,28 +84,40 @@ always_distinct: list[list[set[str | tuple[str, str]]]] = [
     ],  # Intermediate Classical Arabic I/II
     [{"ARBC 158"}, {"ARBC 159"}],  # Advanced Classical Arabic I/II
     [
-        {"BENG 355L"},
+        {"BENG 355L", "BENG 3100"},
         {"BENG 356L"},
     ],  # Physiological Systems Laboratory/Biomedical Engineering Laboratory
     [
-        {"CHNS 112"},
+        {"CHNS 112", "CHNS 1120"},
         {"CHNS 122", *[("CHNS 132", f"201{year}03") for year in range(2, 8)]},
     ],  # Elementary Modern Chinese for Heritage Speakers
-    [{"CHNS 132"}, {"CHNS 142"}],  # Intermediate Modern Chinese for Heritage Speakers
-    [{"CHNS 152"}, {"CHNS 153"}],  # Advanced Modern Chinese for Heritage Speakers
     [
-        {"CHNS 154", "CHNS 158"},
-        {"CHNS 155", "CHNS 159"},
+        {"CHNS 132", "CHNS 1320"},
+        {"CHNS 142", "CHNS 1420"},
+    ],  # Intermediate Modern Chinese for Heritage Speakers
+    [
+        {"CHNS 152", "CHNS 1520"},
+        {"CHNS 153", "CHNS 1530"},
+    ],  # Advanced Modern Chinese for Heritage Speakers
+    [
+        {"CHNS 154", "CHNS 158", "CHNS 1580"},
+        {"CHNS 155", "CHNS 159", "CHNS 1590"},
     ],  # Advanced Chinese III/IV through Films and Stories
     [
-        {"CHNS 156"},
-        {"CHNS 157"},
+        {"CHNS 156", "CHNS 1560"},
+        {"CHNS 157", "CHNS 1570"},
     ],  # Advanced Modern Chinese through Film for Heritage Speakers
-    [{"CHNS 170"}, {"CHNS 171"}],  # Introduction to Literary Chinese I/II
-    [{"PHYS 180"}, {"PHYS 181"}],  # University Physics
-    [{"PHYS 401"}, {"PHYS 402"}],  # Advanced Classical Physics from Newton to Einstein
     [
-        {"PHIL 742", "PHIL 271", "LING 671", "LING 271"},
+        {"CHNS 170", "CHNS 1700"},
+        {"CHNS 171", "CHNS 1710"},
+    ],  # Introduction to Literary Chinese I/II
+    [{"PHYS 180", "PHYS 1800"}, {"PHYS 181", "PHYS 1810"}],  # University Physics
+    [
+        {"PHYS 401", "PHYS 4010"},
+        {"PHYS 402", "PHYS 4020"},
+    ],  # Advanced Classical Physics from Newton to Einstein
+    [
+        {"PHIL 742", "PHIL 271", "LING 671", "LING 271", "LING 2710", "PHIL 2271"},
         {"PHIL 703"},
     ],  # Philosophy of Language (completely different courses)
 ]
@@ -245,12 +257,14 @@ def partition_same_courses(data: pd.DataFrame, listings: pd.DataFrame) -> pd.Ser
             have_cross_listed.merge(c1, c2)
 
     data["course_codes"].apply(mark_cross_listed)
+    tqdm.pandas(desc="Merging same title courses", leave=False)
     data.groupby("title_norm").progress_apply(
         merge_same_title_courses,
         include_groups=False,
         same_course_partitions=same_course_partitions,
         have_cross_listed=have_cross_listed,
     )
+    tqdm.pandas(desc="Merging same code courses", leave=False)
     listings.groupby("course_code_norm")["course_id"].progress_apply(
         merge_same_code_courses,
         include_groups=False,

@@ -150,7 +150,11 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
                 continue
             # Invariant: CRNs contain the CRN itself
             if crn not in crns:
-                print(listings[listings["crn"].eq(crn) & listings["season_code"].eq(season)])
+                print(
+                    listings[
+                        listings["crn"].eq(crn) & listings["season_code"].eq(season)
+                    ]
+                )
                 raise ValueError(f"CRN not in CRNs")
             # Invariant: CRNs form a fully connected component by running DFS
             stack = [crn]
@@ -172,7 +176,9 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
                         & listings["season_code"].eq(season)
                     ]
                 )
-                raise ValueError(f"CRNs not fully connected, counted {num_edges} edges, expected {len(component) ** 2}")
+                raise ValueError(
+                    f"CRNs not fully connected, counted {num_edges} edges, expected {len(component) ** 2}"
+                )
 
     listings["course_id"] = listings.apply(generate_course_id, axis=1)
 
