@@ -7,7 +7,7 @@ on:
       - ".github/workflows/ferry.yml"
       - "config/release*.yml"
   schedule:
-    - cron: "0 */5 * * *"
+    - cron: "0 */4 * * *"
   workflow_dispatch:
 
 jobs:
