@@ -2,12 +2,12 @@
 Find historical offerings of a course.
 """
 
+import itertools
 from typing import cast
 
-import itertools
-from scipy.cluster.hierarchy import DisjointSet
 import edlib
 import pandas as pd
+from scipy.cluster.hierarchy import DisjointSet
 from tqdm import tqdm
 
 # TODO: I don't quite like these hard-coded constants. Is there a better way
@@ -79,7 +79,7 @@ always_distinct: list[list[set[str | tuple[str, str]]]] = [
         {"ARBC 151", "ARBC 1510"},
     ],  # Advanced Modern Standard Arabic I/II
     [
-        {"ARBC 136", "ARBC 156"},
+        {"ARBC 136", "ARBC 156", "ARBC 1560", "ARBC 5110"},
         {"ARBC 146", "ARBC 166"},
     ],  # Intermediate Classical Arabic I/II
     [{"ARBC 158"}, {"ARBC 159"}],  # Advanced Classical Arabic I/II
@@ -108,7 +108,7 @@ always_distinct: list[list[set[str | tuple[str, str]]]] = [
         {"CHNS 157", "CHNS 1570"},
     ],  # Advanced Modern Chinese through Film for Heritage Speakers
     [
-        {"CHNS 170", "CHNS 1700"},
+        {"CHNS 170", "CHNS 1700", "CHNS 5700"},
         {"CHNS 171", "CHNS 1710"},
     ],  # Introduction to Literary Chinese I/II
     [{"PHYS 180", "PHYS 1800"}, {"PHYS 181", "PHYS 1810"}],  # University Physics
@@ -124,7 +124,7 @@ always_distinct: list[list[set[str | tuple[str, str]]]] = [
 
 
 def find_matching_split_spec(
-    courses: set[str | tuple[str, str]]
+    courses: set[str | tuple[str, str]],
 ) -> list[set[str | tuple[str, str]]] | None:
     candidates = []
     for split_spec in always_distinct:
