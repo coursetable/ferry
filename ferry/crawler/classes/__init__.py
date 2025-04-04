@@ -44,14 +44,19 @@ async def crawl_classes(
             use_cache=use_cache,
         )
 
-        cws_season_json = await fetch_cws_api(
-            season,
-            season_courses,
-            data_dir=data_dir,
-            cws_api_key=cws_api_key,
-            client=client,
-            use_cache=use_cache,
-        )
+        cws_season_json = []
+        try:
+            cws_season_json = await fetch_cws_api(
+                season,
+                season_courses,
+                data_dir=data_dir,
+                cws_api_key=cws_api_key,
+                client=client,
+                use_cache=use_cache,
+            )
+        except:
+            print(f"Failed to fetch CWS API for {season}.\n Continuing...")
+            pass
 
         classes[season] = parse_courses(
             season,
