@@ -80,12 +80,12 @@ always_distinct: list[list[set[str | tuple[str, str]]]] = [
     ],  # Advanced Modern Standard Arabic I/II
     [
         {"ARBC 136", "ARBC 156", "ARBC 1560", "ARBC 5110"},
-        {"ARBC 146", "ARBC 166"},
+        {"ARBC 146", "ARBC 166", "ARBC 1660", "ARBC 5120"},
     ],  # Intermediate Classical Arabic I/II
     [{"ARBC 158"}, {"ARBC 159"}],  # Advanced Classical Arabic I/II
     [
         {"BENG 355L", "BENG 3100"},
-        {"BENG 356L"},
+        {"BENG 356L", "BENG 3110"},
     ],  # Physiological Systems Laboratory/Biomedical Engineering Laboratory
     [
         {"CHNS 112", "CHNS 1120"},
