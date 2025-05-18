@@ -89,7 +89,11 @@ always_distinct: list[list[set[str | tuple[str, str]]]] = [
     ],  # Physiological Systems Laboratory/Biomedical Engineering Laboratory
     [
         {"CHNS 112", "CHNS 1120"},
-        {"CHNS 122", *[("CHNS 132", f"201{year}03") for year in range(2, 8)]},
+        {
+            "CHNS 122",
+            *[("CHNS 132", f"201{year}03") for year in range(2, 8)],
+            "CHNS 1220",
+        },
     ],  # Elementary Modern Chinese for Heritage Speakers
     [
         {"CHNS 132", "CHNS 1320"},
@@ -109,7 +113,7 @@ always_distinct: list[list[set[str | tuple[str, str]]]] = [
     ],  # Advanced Modern Chinese through Film for Heritage Speakers
     [
         {"CHNS 170", "CHNS 1700", "CHNS 5700"},
-        {"CHNS 171", "CHNS 1710"},
+        {"CHNS 171", "CHNS 1710", "CHNS 5710"},
     ],  # Introduction to Literary Chinese I/II
     [{"PHYS 180", "PHYS 1800"}, {"PHYS 181", "PHYS 1810"}],  # University Physics
     [
