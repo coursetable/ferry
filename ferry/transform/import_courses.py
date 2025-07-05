@@ -397,7 +397,11 @@ def aggregate_locations(
             location_data.append(
                 {**parse_location(meeting["location"]), "url": meeting["location_url"]}
             )
-    locations = pd.DataFrame(location_data).drop_duplicates().reset_index(drop=True)
+    locations = (
+        pd.DataFrame(location_data)
+        .drop_duplicates(subset=["code", "room"], keep="last")
+        .reset_index(drop=True)
+    )
 
     def report_multiple_names(row: pd.DataFrame):
         if len(row["building_name"].unique()) > 1:

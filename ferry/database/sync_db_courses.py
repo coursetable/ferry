@@ -63,16 +63,35 @@ def generate_diff(
         added_rows = new_df[~new_df.index.isin(old_df.index)]
 
         # Must sort index in order to compare dataframes cell-wise
-        shared_rows_old = (
-            old_df[old_df.index.isin(new_df.index)].sort_index().sort_index(axis=1)
-        )
-        shared_rows_new = (
-            new_df[new_df.index.isin(old_df.index)].sort_index().sort_index(axis=1)
-        )
-        if (shared_rows_old.index != shared_rows_new.index).any():
-            print(shared_rows_old.index)
-            print(shared_rows_new.index)
-            raise ValueError(f"Unexpected: index mismatch in table {table_name}")
+        # Get the common index values to ensure both DataFrames have identical indexes
+        common_index = old_df.index.intersection(new_df.index)
+
+        # Check for duplicate rows in pk index in original DataFrames
+        if not old_df.index.is_unique:
+            print(f"WARNING: {table_name} old_df has duplicate index values:")
+            duplicates = old_df.index[old_df.index.duplicated()]
+            print(f"Duplicate indexes: {duplicates.unique()}")
+
+        if not new_df.index.is_unique:
+            print(f"WARNING: {table_name} new_df has duplicate index values:")
+            duplicates = new_df.index[new_df.index.duplicated()]
+            print(f"Duplicate indexes: {duplicates.unique()}")
+
+        shared_rows_old = old_df.loc[common_index].sort_index().sort_index(axis=1)
+        shared_rows_new = new_df.loc[common_index].sort_index().sort_index(axis=1)
+
+        # Verify that the indexes are now identical
+        if len(shared_rows_old.index) != len(shared_rows_new.index):
+            print(f"Length mismatch in {table_name}:")
+            print(f"  Old index length: {len(shared_rows_old.index)}")
+            print(f"  New index length: {len(shared_rows_new.index)}")
+            print(f"  Common index length: {len(common_index)}")
+            raise ValueError(
+                f"Length mismatch in table {table_name}: old={len(shared_rows_old.index)}, new={len(shared_rows_new.index)}"
+            )
+
+        if not shared_rows_old.index.equals(shared_rows_new.index):
+            raise ValueError(f"Index equality mismatch in table {table_name}")
         if (
             len(shared_rows_old.columns) != len(shared_rows_new.columns)
             or (shared_rows_old.columns != shared_rows_new.columns).any()
