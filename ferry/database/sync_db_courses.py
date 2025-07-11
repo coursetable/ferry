@@ -197,17 +197,24 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
     for _, row in to_update.iterrows():
         columns_changed = row["columns_changed"]
         row = row.drop("columns_changed")
-        where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
+        where_conditions = []
+        params = {}
+        for col in pk:
+            value = row[col] if not pd.isna(row[col]) else None
+            params[col] = value
+            where_conditions.append(
+                f"{col} IS NULL" if value is None else f"{col} = :{col}"
+            )
+        where_clause = " AND ".join(where_conditions)
         set_clause = ", ".join(f"{col} = :{col}" for col in row.index)
         # Only update last_updated if one of the changed columns is not computed
         if table_name not in junction_tables and not (
             set(columns_changed) <= set(computed_columns[table_name])
         ):
             set_clause = f"{set_clause}, last_updated = CURRENT_TIMESTAMP"
-        params = {
-            **{col: row[col] if not pd.isna(row[col]) else None for col in row.index},
-            **{col: row[col] if not pd.isna(row[col]) else None for col in pk},
-        }
+        params.update(
+            {col: row[col] if not pd.isna(row[col]) else None for col in row.index}
+        )
 
         update_query = text(
             f"UPDATE {table_name} SET {set_clause} WHERE {where_clause};"
@@ -287,9 +294,13 @@ def sync_db_courses(
                     )
                 )
         for table_name in tables_order_add:
+            if table_name == "course_meetings":
+                commit_deletions(table_name, diff[table_name]["deleted_rows"], conn)
             commit_additions(table_name, diff[table_name]["added_rows"], conn)
             commit_updates(table_name, diff[table_name]["changed_rows"], conn)
         for table_name in tables_order_delete:
+            if table_name == "course_meetings":
+                continue
             commit_deletions(table_name, diff[table_name]["deleted_rows"], conn)
         print("\033[F", end="")
 
