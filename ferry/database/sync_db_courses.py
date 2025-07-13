@@ -3,6 +3,7 @@ import numpy as np
 import ujson
 from pathlib import Path
 import logging
+from typing import Any, Dict, Union
 
 from sqlalchemy import MetaData, text, inspect, Connection
 from psycopg2.extensions import register_adapter, AsIs
@@ -104,10 +105,15 @@ def generate_diff(
         )
 
         changed_rows = shared_rows_new[unequal_mask.any(axis=1)].copy()
-        if not changed_rows.empty:
+        if len(changed_rows) > 0:
             changed_rows["columns_changed"] = unequal_mask[
                 unequal_mask.any(axis=1)
             ].apply(lambda row: shared_rows_new.columns[row].tolist(), axis=1)
+            # Add old values for primary key columns that are being changed
+            for pk_col in pk:
+                if pk_col in changed_rows.columns:
+                    old_values = shared_rows_old[unequal_mask.any(axis=1)][pk_col]
+                    changed_rows[f"old_{pk_col}"] = old_values
         else:
             changed_rows["columns_changed"] = pd.Series()
 
@@ -134,7 +140,15 @@ def commit_additions(table_name: str, to_add: pd.DataFrame, conn: Connection):
         values = ", ".join(f":{col}" for col in row.index)
         if table_name not in junction_tables:
             values = f"{values}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP"
-        params = {col: row[col] if not pd.isna(row[col]) else None for col in row.index}
+        
+        # Convert pandas values to Python types for SQL parameters
+        params: Dict[str, Any] = {}
+        for col in row.index:
+            value = row[col]
+            if pd.isna(value).item():
+                params[str(col)] = None
+            else:
+                params[str(col)] = value
 
         insert_query = text(f"INSERT INTO {table_name} ({columns}) VALUES ({values});")
         conn.execute(insert_query, params)
@@ -146,9 +160,13 @@ def commit_additions(table_name: str, to_add: pd.DataFrame, conn: Connection):
             for connected_table in junction_tables[table_name]:
                 pk = primary_keys[connected_table]
                 where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
-                params = {
-                    col: row[col] if not pd.isna(row[col]) else None for col in pk
-                }
+                params = {}
+                for col in pk:
+                    value = row[col]
+                    if pd.isna(value).item():
+                        params[str(col)] = None
+                    else:
+                        params[str(col)] = value
 
                 update_query = text(
                     f"UPDATE {connected_table} SET last_updated = CURRENT_TIMESTAMP WHERE {where_clause};"
@@ -163,13 +181,15 @@ def commit_deletions(table_name: str, to_remove: pd.DataFrame, conn: Connection)
     pk = primary_keys[table_name]
     for _, row in to_remove.iterrows():
         where_conditions = []
-        params = {}
+        params: Dict[str, Any] = {}
         for col in pk:
-            value = row[col] if not pd.isna(row[col]) else None
-            params[col] = value
-            where_conditions.append(
-                f"{col} IS NULL" if value is None else f"{col} = :{col}"
-            )
+            value = row[col]
+            if pd.isna(value).item():
+                params[str(col)] = None
+                where_conditions.append(f"{col} IS NULL")
+            else:
+                params[str(col)] = value
+                where_conditions.append(f"{col} = :{col}")
         where_clause = " AND ".join(where_conditions)
 
         delete_query = text(f"DELETE FROM {table_name} WHERE {where_clause};")
@@ -179,9 +199,13 @@ def commit_deletions(table_name: str, to_remove: pd.DataFrame, conn: Connection)
             for connected_table in junction_tables[table_name]:
                 pk = primary_keys[connected_table]
                 where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
-                params = {
-                    col: row[col] if not pd.isna(row[col]) else None for col in pk
-                }
+                params = {}
+                for col in pk:
+                    value = row[col]
+                    if pd.isna(value).item():
+                        params[str(col)] = None
+                    else:
+                        params[str(col)] = value
 
                 update_query = text(
                     f"UPDATE {connected_table} SET last_updated = CURRENT_TIMESTAMP WHERE {where_clause};"
@@ -197,22 +221,76 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
     for _, row in to_update.iterrows():
         columns_changed = row["columns_changed"]
         row = row.drop("columns_changed")
-        where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
-        set_clause = ", ".join(f"{col} = :{col}" for col in row.index)
-        # Only update last_updated if one of the changed columns is not computed
-        if table_name not in junction_tables and not (
-            set(columns_changed) <= set(computed_columns[table_name])
-        ):
-            set_clause = f"{set_clause}, last_updated = CURRENT_TIMESTAMP"
-        params = {
-            **{col: row[col] if not pd.isna(row[col]) else None for col in row.index},
-            **{col: row[col] if not pd.isna(row[col]) else None for col in pk},
-        }
+        
+        # For course_meetings table, use old primary key values in WHERE clause
+        if table_name == "course_meetings":
+            # Use old values for primary key columns in WHERE clause
+            where_conditions = []
+            where_params: Dict[str, Any] = {}
+            for pk_col in pk:
+                old_col = f"old_{pk_col}"
+                if old_col in row.index:
+                    # Use old value for WHERE clause
+                    where_conditions.append(f"{pk_col} = :{pk_col}")
+                    value = row[old_col]
+                    if pd.isna(value).item():
+                        where_params[pk_col] = None
+                    else:
+                        where_params[pk_col] = value
+                else:
+                    # Use new value if no old value available
+                    where_conditions.append(f"{pk_col} = :{pk_col}")
+                    value = row[pk_col]
+                    if pd.isna(value).item():
+                        where_params[pk_col] = None
+                    else:
+                        where_params[pk_col] = value
+            
+            where_clause = " AND ".join(where_conditions)
+            set_clause = ", ".join(f"{col} = :{col}" for col in row.index if not str(col).startswith("old_"))
+            
+            update_params: Dict[str, Any] = {}
+            for col in row.index:
+                if not str(col).startswith("old_"):
+                    value = row[col]
+                    if pd.isna(value).item():
+                        update_params[str(col)] = None
+                    else:
+                        update_params[str(col)] = value
+            update_params.update(where_params)
 
-        update_query = text(
-            f"UPDATE {table_name} SET {set_clause} WHERE {where_clause};"
-        )
-        conn.execute(update_query, params)
+            update_query = text(
+                f"UPDATE {table_name} SET {set_clause} WHERE {where_clause};"
+            )
+            conn.execute(update_query, update_params)
+        else:
+            # Standard update logic for other tables
+            where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
+            set_clause = ", ".join(f"{col} = :{col}" for col in row.index)
+            # Only update last_updated if one of the changed columns is not computed
+            if table_name not in junction_tables and not (
+                set(columns_changed) <= set(computed_columns[table_name])
+            ):
+                set_clause = f"{set_clause}, last_updated = CURRENT_TIMESTAMP"
+            
+            params: Dict[str, Any] = {}
+            for col in row.index:
+                value = row[col]
+                if pd.isna(value).item():
+                    params[str(col)] = None
+                else:
+                    params[str(col)] = value
+            for col in pk:
+                value = row[col]
+                if pd.isna(value).item():
+                    params[str(col)] = None
+                else:
+                    params[str(col)] = value
+
+            update_query = text(
+                f"UPDATE {table_name} SET {set_clause} WHERE {where_clause};"
+            )
+            conn.execute(update_query, params)
 
         # Note! This assumes junction tables do not have computed columns.
         # This is a fine assumption for now.
@@ -220,14 +298,58 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
             for connected_table in junction_tables[table_name]:
                 pk = primary_keys[connected_table]
                 where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
-                params = {
-                    col: row[col] if not pd.isna(row[col]) else None for col in pk
-                }
+                params = {}
+                for col in pk:
+                    value = row[col]
+                    if pd.isna(value).item():
+                        params[str(col)] = None
+                    else:
+                        params[str(col)] = value
 
                 update_query = text(
                     f"UPDATE {connected_table} SET last_updated = CURRENT_TIMESTAMP WHERE {where_clause};"
                 )
                 conn.execute(update_query, params)
+
+
+def sync_locations_with_upsert(locations_df: pd.DataFrame, conn: Connection) -> dict:
+    """Sync locations by introspecting DB for existing IDs, inserting new ones, and returning actual DB IDs."""
+    
+    location_mapping = {}
+    
+    for _, location in locations_df.iterrows():
+        building_code = location['building_code']
+        room = location['room'] if not pd.isna(location['room']).item() else None
+        
+        # Check if location already exists
+        result = conn.execute(text("""
+            SELECT location_id FROM locations 
+            WHERE building_code = :building_code AND room = :room
+        """), {
+            'building_code': building_code,
+            'room': room
+        }).fetchone()
+        
+        if result:
+            # Use existing ID
+            location_id = result[0]
+        else:
+            # Insert new location and get returned ID
+            result = conn.execute(text("""
+                INSERT INTO locations (building_code, room) 
+                VALUES (:building_code, :room)
+                RETURNING location_id
+            """), {
+                'building_code': building_code,
+                'room': room
+            }).fetchone()
+            if result is None:
+                raise ValueError("Failed to insert location and get location_id")
+            location_id = result[0]
+        
+        location_mapping[(building_code, room)] = location_id
+    
+    return location_mapping
 
 
 def sync_db_courses(
@@ -286,11 +408,36 @@ def sync_db_courses(
                         f"ALTER TABLE {table_name} ADD COLUMN last_updated TIMESTAMP DEFAULT NULL;"
                     )
                 )
+        # Handle locations separately with UPSERT
+        location_mapping = sync_locations_with_upsert(tables["locations"], conn)
+        
+        # Handle other tables normally
         for table_name in tables_order_add:
-            commit_additions(table_name, diff[table_name]["added_rows"], conn)
-            commit_updates(table_name, diff[table_name]["changed_rows"], conn)
+            if table_name != "locations":  # Skip locations since we handled it above
+                commit_additions(table_name, diff[table_name]["added_rows"], conn)
+                commit_updates(table_name, diff[table_name]["changed_rows"], conn)
+        
+        # Update course_meetings with correct location_ids AFTER they've been inserted
+        if location_mapping:
+            # Update the course_meetings table to use actual location_ids
+            for (building_code, room), location_id in location_mapping.items():
+                conn.execute(text("""
+                    UPDATE course_meetings 
+                    SET location_id = :location_id 
+                    WHERE location_id IS NULL 
+                    AND EXISTS (
+                        SELECT 1 FROM locations 
+                        WHERE building_code = :building_code 
+                        AND room = :room
+                    )
+                """), {
+                    'location_id': location_id,
+                    'building_code': building_code,
+                    'room': room
+                })
         for table_name in tables_order_delete:
-            commit_deletions(table_name, diff[table_name]["deleted_rows"], conn)
+            if table_name != "locations":  # Skip locations deletion since we use UPSERT
+                commit_deletions(table_name, diff[table_name]["deleted_rows"], conn)
         print("\033[F", end="")
 
     # Print row counts for each table.

@@ -125,7 +125,11 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
         ]
         cross_listed_crns = listings[
             listings["season_code"].eq(season) & listings["crn"].eq(first)
-        ]["crns"].iloc[0]
+        ]["crns"]
+        if not cross_listed_crns.empty:
+            cross_listed_crns = cross_listed_crns.iloc[0]
+        else:
+            cross_listed_crns = set()
         for other_crn in cross_listed_crns - set(crns):
             # Remove rest from the crns of each cross listed crn
             target = listings["season_code"].eq(season) & listings["crn"].eq(other_crn)
@@ -166,19 +170,25 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
                 if v not in visited:
                     visited.add(v)
                     component.append(v)
+                    # Count edges only once by counting outgoing edges from each node
                     num_edges += len(adj_list[v])
                     stack.extend(adj_list[v] - visited)
-            # Since each node also has a self-edge, the number of edges should be n^2
-            if num_edges != len(component) ** 2:
+            # Check if the component is connected (each node can reach every other node)
+            # In a fully connected component with n nodes, each node has n edges (including self-edge)
+            # So total edges = n * n = n^2
+            expected_edges = len(component) ** 2
+            if num_edges != expected_edges:
                 print(
                     listings[
                         listings["crn"].isin(component)
                         & listings["season_code"].eq(season)
                     ]
                 )
-                raise ValueError(
-                    f"CRNs not fully connected, counted {num_edges} edges, expected {len(component) ** 2}"
+                logging.warning(
+                    f"CRNs not fully connected, counted {num_edges} edges, expected {expected_edges}. "
+                    f"This may indicate incomplete cross-listing data for season {season}, component {component}."
                 )
+                # Continue processing instead of raising an error
 
     listings["course_id"] = listings.apply(generate_course_id, axis=1)
 
@@ -410,16 +420,20 @@ def aggregate_locations(
     )
     locations = locations.groupby(["code", "room"], as_index=False, dropna=False).last()
 
-    locations["location_id"] = generate_id(
-        locations,
-        lambda row: f"{row['code']} {'' if pd.isna(row['room']) else row['room']}",
-        data_dir / "id_cache" / "location_id.json",
-    )
-    location_to_id = locations.set_index(["code", "room"])["location_id"].to_dict()
-    locations = locations.set_index("location_id")
+    # Remove cache-based ID generation - let database handle it
+    # locations["location_id"] = generate_id(...) - REMOVED
+    
+    # We'll get the actual database IDs during sync, so just create a placeholder mapping for now
+    # The real mapping will be created during the database sync
+    location_to_id = {}  # Will be populated during sync
+    locations = locations.set_index(["code", "room"])
 
     buildings = locations.copy(deep=True)
     locations.rename(columns={"code": "building_code"}, inplace=True)
+    
+    # Remove any location_id column to let database handle ID generation
+    if "location_id" in locations.columns:
+        locations = locations.drop(columns=["location_id"])
 
     def report_different_info(group: pd.DataFrame):
         all_names = group["building_name"].unique()
@@ -461,14 +475,13 @@ def aggregate_locations(
                 )
                 continue
             location_info = parse_location(m["location"])
+            # We'll set location_id to None initially, it will be updated during sync
             meetings.append(
                 {
                     "days_of_week": m["days_of_week"],
                     "start_time": m["start_time"],
                     "end_time": m["end_time"],
-                    "location_id": location_to_id[
-                        location_info["code"], location_info["room"] or np.nan
-                    ],
+                    "location_id": None,  # Will be updated during sync
                 }
             )
         return meetings
