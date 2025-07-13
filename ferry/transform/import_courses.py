@@ -420,20 +420,11 @@ def aggregate_locations(
     )
     locations = locations.groupby(["code", "room"], as_index=False, dropna=False).last()
 
-    # Remove cache-based ID generation - let database handle it
-    # locations["location_id"] = generate_id(...) - REMOVED
-    
-    # We'll get the actual database IDs during sync, so just create a placeholder mapping for now
-    # The real mapping will be created during the database sync
-    location_to_id = {}  # Will be populated during sync
+    # No need for cache-based location IDs - database will handle this with UPSERT
     locations = locations.set_index(["code", "room"])
-
+    
     buildings = locations.copy(deep=True)
     locations.rename(columns={"code": "building_code"}, inplace=True)
-    
-    # Remove any location_id column to let database handle ID generation
-    if "location_id" in locations.columns:
-        locations = locations.drop(columns=["location_id"])
 
     def report_different_info(group: pd.DataFrame):
         all_names = group["building_name"].unique()
@@ -475,13 +466,14 @@ def aggregate_locations(
                 )
                 continue
             location_info = parse_location(m["location"])
-            # We'll set location_id to None initially, it will be updated during sync
             meetings.append(
                 {
                     "days_of_week": m["days_of_week"],
                     "start_time": m["start_time"],
                     "end_time": m["end_time"],
-                    "location_id": None,  # Will be updated during sync
+                    "location_id": None,  # Will be resolved during database sync with UPSERT
+                    "_building_code": location_info["code"],  # Temporary for location resolution
+                    "_room": location_info["room"],  # Temporary for location resolution
                 }
             )
         return meetings
@@ -502,6 +494,10 @@ def aggregate_locations(
     course_meetings["location_id"] = course_meetings["location_id"].astype(
         pd.Int64Dtype()
     )
+    
+    # Remove temporary location columns before returning (they'll be used during database sync)
+    # course_meetings = course_meetings.drop(columns=["_building_code", "_room"], errors="ignore")
+    
     return course_meetings, locations, buildings
 
 
