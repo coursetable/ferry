@@ -444,6 +444,14 @@ course_meetings = Table(
         comment="Location of this meeting session",
         index=True,
     ),
+    # Add the unique constraint that was causing the error
+    Index(
+        "cm_3col_uniq_idx",
+        "course_id",
+        "start_time", 
+        "end_time",
+        unique=True,
+    ),
 )
 
 

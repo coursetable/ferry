@@ -15,6 +15,22 @@ from .generate_changelog import print_diff, computed_columns, primary_keys, Diff
 register_adapter(np.int64, AsIs)
 
 
+def safe_isna(value) -> bool:
+    """
+    Safely check if a value is NA, handling both pandas scalars and Python scalars.
+    """
+    try:
+        result = pd.isna(value)
+        # If result has .item() method (pandas scalar), use it
+        if hasattr(result, 'item'):
+            return result.item()
+        # Otherwise, it's already a Python boolean
+        return bool(result)
+    except (TypeError, ValueError):
+        # Fallback for edge cases
+        return value is None or (isinstance(value, float) and np.isnan(value))
+
+
 queries_dir = Path(__file__).parent / "queries"
 
 # Junction tables do not have added/updated timestamps. Rather, any changes to
@@ -65,15 +81,18 @@ def generate_diff(
 
         # Must sort index in order to compare dataframes cell-wise
         shared_rows_old = (
-            old_df[old_df.index.isin(new_df.index)].sort_index().sort_index(axis=1)
+            old_df[old_df.index.isin(new_df.index)
+                   ].sort_index().sort_index(axis=1)
         )
         shared_rows_new = (
-            new_df[new_df.index.isin(old_df.index)].sort_index().sort_index(axis=1)
+            new_df[new_df.index.isin(old_df.index)
+                   ].sort_index().sort_index(axis=1)
         )
         if (shared_rows_old.index != shared_rows_new.index).any():
             print(shared_rows_old.index)
             print(shared_rows_new.index)
-            raise ValueError(f"Unexpected: index mismatch in table {table_name}")
+            raise ValueError(
+                f"Unexpected: index mismatch in table {table_name}")
         if (
             len(shared_rows_old.columns) != len(shared_rows_new.columns)
             or (shared_rows_old.columns != shared_rows_new.columns).any()
@@ -112,7 +131,8 @@ def generate_diff(
             # Add old values for primary key columns that are being changed
             for pk_col in pk:
                 if pk_col in changed_rows.columns:
-                    old_values = shared_rows_old[unequal_mask.any(axis=1)][pk_col]
+                    old_values = shared_rows_old[unequal_mask.any(
+                        axis=1)][pk_col]
                     changed_rows[f"old_{pk_col}"] = old_values
         else:
             changed_rows = pd.DataFrame(columns=shared_rows_new.columns)
@@ -141,10 +161,12 @@ def commit_additions(table_name: str, to_add: pd.DataFrame, conn: Connection):
         values = ", ".join(f":{col}" for col in row.index)
         if table_name not in junction_tables:
             values = f"{values}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP"
-        
-        params = {str(col): row[col] if not pd.isna(row[col]).item() else None for col in row.index}
 
-        insert_query = text(f"INSERT INTO {table_name} ({columns}) VALUES ({values});")
+        params = {str(col): row[col] if not safe_isna(
+            row[col]) else None for col in row.index}
+
+        insert_query = text(
+            f"INSERT INTO {table_name} ({columns}) VALUES ({values});")
         conn.execute(insert_query, params)
 
         if table_name in junction_tables:
@@ -155,7 +177,7 @@ def commit_additions(table_name: str, to_add: pd.DataFrame, conn: Connection):
                 pk = primary_keys[connected_table]
                 where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
                 params = {
-                    str(col): row[col] if not pd.isna(row[col]).item() else None for col in pk
+                    str(col): row[col] if not safe_isna(row[col]) else None for col in pk
                 }
 
                 update_query = text(
@@ -174,7 +196,7 @@ def commit_deletions(table_name: str, to_remove: pd.DataFrame, conn: Connection)
         params = {}
         for col in pk:
             value = row[col]
-            if pd.isna(value).item():
+            if safe_isna(value):
                 params[str(col)] = None
                 where_conditions.append(f"{col} IS NULL")
             else:
@@ -192,7 +214,7 @@ def commit_deletions(table_name: str, to_remove: pd.DataFrame, conn: Connection)
                 params = {}
                 for col in pk:
                     value = row[col]
-                    if pd.isna(value).item():
+                    if safe_isna(value):
                         params[str(col)] = None
                     else:
                         params[str(col)] = value
@@ -211,7 +233,7 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
     for _, row in to_update.iterrows():
         columns_changed = row["columns_changed"]
         row = row.drop("columns_changed")
-        
+
         # For course_meetings table, use old primary key values in WHERE clause
         if table_name == "course_meetings":
             # Use old values for primary key columns in WHERE clause
@@ -223,7 +245,7 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
                     # Use old value for WHERE clause
                     where_conditions.append(f"{pk_col} = :{pk_col}")
                     value = row[old_col]
-                    if pd.isna(value).item():
+                    if safe_isna(value):
                         where_params[pk_col] = None
                     else:
                         where_params[pk_col] = value
@@ -231,19 +253,20 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
                     # Use new value if no old value available
                     where_conditions.append(f"{pk_col} = :{pk_col}")
                     value = row[pk_col]
-                    if pd.isna(value).item():
+                    if safe_isna(value):
                         where_params[pk_col] = None
                     else:
                         where_params[pk_col] = value
-            
+
             where_clause = " AND ".join(where_conditions)
-            set_clause = ", ".join(f"{col} = :{col}" for col in row.index if not str(col).startswith("old_"))
-            
+            set_clause = ", ".join(
+                f"{col} = :{col}" for col in row.index if not str(col).startswith("old_"))
+
             update_params: Dict[str, Any] = {}
             for col in row.index:
                 if not str(col).startswith("old_"):
                     value = row[col]
-                    if pd.isna(value).item():
+                    if safe_isna(value):
                         update_params[str(col)] = None
                     else:
                         update_params[str(col)] = value
@@ -262,17 +285,17 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
                 set(columns_changed) <= set(computed_columns[table_name])
             ):
                 set_clause = f"{set_clause}, last_updated = CURRENT_TIMESTAMP"
-            
+
             params: Dict[str, Any] = {}
             for col in row.index:
                 value = row[col]
-                if pd.isna(value).item():
+                if safe_isna(value):
                     params[str(col)] = None
                 else:
                     params[str(col)] = value
             for col in pk:
                 value = row[col]
-                if pd.isna(value).item():
+                if safe_isna(value):
                     params[str(col)] = None
                 else:
                     params[str(col)] = value
@@ -291,7 +314,7 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
                 params = {}
                 for col in pk:
                     value = row[col]
-                    if pd.isna(value).item():
+                    if safe_isna(value):
                         params[str(col)] = None
                     else:
                         params[str(col)] = value
@@ -308,11 +331,17 @@ def upsert_locations(locations_df: pd.DataFrame, conn: Connection) -> dict[tuple
     Returns a mapping from (building_code, room) to location_id.
     """
     location_mapping = {}
-    
+
     for _, location in locations_df.iterrows():
         building_code = location['building_code']
-        room = location['room'] if not pd.isna(location['room']).item() else None
-        
+        room = location['room'] if not safe_isna(location['room']) else None
+
+        # Skip locations with invalid building_code (database constraint violation)
+        if safe_isna(building_code) or building_code is None:
+            logging.warning(
+                f"Skipping location with None building_code: room='{room}', location data: {dict(location)}")
+            continue
+
         # Use postgres UPSERT with ON CONFLICT UPDATE
         result = conn.execute(text("""
             INSERT INTO locations (building_code, room, time_added, last_updated) 
@@ -324,15 +353,45 @@ def upsert_locations(locations_df: pd.DataFrame, conn: Connection) -> dict[tuple
             'building_code': building_code,
             'room': room,
         }).fetchone()
-        
+
         if result is None:
             raise ValueError("Failed to upsert location and get location_id")
         location_id = result[0]
-        
+
         # Store the mapping
         location_mapping[(building_code, room)] = location_id
-    
+
     return location_mapping
+
+
+def upsert_course_meetings(course_meetings_df: pd.DataFrame, conn: Connection):
+    """
+    Upsert course_meetings using postgres ON CONFLICT UPDATE.
+    Handles the unique constraint on (course_id, start_time, end_time) - cm_3col_uniq_idx.
+    """
+    for _, meeting in course_meetings_df.iterrows():
+        course_id = meeting['course_id']
+        start_time = meeting['start_time']
+        end_time = meeting['end_time']
+        days_of_week = meeting['days_of_week']
+        location_id = meeting['location_id'] if not safe_isna(
+            meeting['location_id']) else None
+
+        # Use postgres UPSERT with ON CONFLICT UPDATE targeting the actual constraint cm_3col_uniq_idx
+        conn.execute(text("""
+            INSERT INTO course_meetings (course_id, start_time, end_time, days_of_week, location_id) 
+            VALUES (:course_id, :start_time, :end_time, :days_of_week, :location_id)
+            ON CONFLICT (course_id, start_time, end_time) 
+            DO UPDATE SET 
+                days_of_week = EXCLUDED.days_of_week,
+                location_id = EXCLUDED.location_id
+        """), {
+            'course_id': course_id,
+            'start_time': start_time,
+            'end_time': end_time,
+            'days_of_week': days_of_week,
+            'location_id': location_id,
+        })
 
 
 def update_course_meetings_location_ids(course_meetings_df: pd.DataFrame, location_mapping: dict[tuple, int], conn: Connection):
@@ -342,12 +401,13 @@ def update_course_meetings_location_ids(course_meetings_df: pd.DataFrame, locati
     for _, meeting in course_meetings_df.iterrows():
         if meeting['location_id'] is None and '_building_code' in meeting.index and '_room' in meeting.index:
             building_code = meeting['_building_code']
-            room = meeting['_room'] if not pd.isna(meeting['_room']).item() else None
+            room = meeting['_room'] if not safe_isna(
+                meeting['_room']) else None
             location_key = (building_code, room)
-            
+
             if location_key in location_mapping:
                 location_id = location_mapping[location_key]
-                
+
                 # Update the course_meetings record
                 conn.execute(text("""
                     UPDATE course_meetings 
@@ -364,9 +424,6 @@ def update_course_meetings_location_ids(course_meetings_df: pd.DataFrame, locati
                     'start_time': meeting['start_time'],
                     'end_time': meeting['end_time']
                 })
-
-
-
 
 
 def sync_db_courses(
@@ -392,8 +449,10 @@ def sync_db_courses(
     print("Generating diff...")
     tables_old = get_tables_from_db(database_connect_string)
     # Pandas would read JSON columns as real values, so we serialize them again
-    tables_old["courses"]["skills"] = tables_old["courses"]["skills"].apply(ujson.dumps)
-    tables_old["courses"]["areas"] = tables_old["courses"]["areas"].apply(ujson.dumps)
+    tables_old["courses"]["skills"] = tables_old["courses"]["skills"].apply(
+        ujson.dumps)
+    tables_old["courses"]["areas"] = tables_old["courses"]["areas"].apply(
+        ujson.dumps)
     tables_old["courses"]["primary_crn"] = tables_old["courses"]["primary_crn"].astype(
         pd.Int64Dtype()
     )
@@ -401,8 +460,9 @@ def sync_db_courses(
         "location_id"
     ].astype(pd.Int64Dtype())
     diff = generate_diff(tables_old, tables)
-    print_diff(diff, tables_old, tables, data_dir / "change_log")
+    # print_diff(diff, tables_old, tables, data_dir / "change_log")
 
+    # Now proceed with main data operations in a fresh transaction
     inspector = inspect(db.Engine)
     with db.Engine.begin() as conn:
         for table_name in tables_order_add:
@@ -410,8 +470,10 @@ def sync_db_courses(
             if table_name in junction_tables:
                 continue
             columns = inspector.get_columns(table_name)
-            has_last_updated = any(col["name"] == "last_updated" for col in columns)
-            has_time_added = any(col["name"] == "time_added" for col in columns)
+            has_last_updated = any(
+                col["name"] == "last_updated" for col in columns)
+            has_time_added = any(
+                col["name"] == "time_added" for col in columns)
 
             if not has_time_added:
                 conn.execute(
@@ -425,27 +487,52 @@ def sync_db_courses(
                         f"ALTER TABLE {table_name} ADD COLUMN last_updated TIMESTAMP DEFAULT NULL;"
                     )
                 )
-        
+
         # Handle locations with UPSERT first
         location_mapping = upsert_locations(tables["locations"], conn)
-        
+
+        # Handle course_meetings with UPSERT (bypasses normal diff logic due to unique constraints)
+        if "course_meetings" in tables:
+            # First resolve location IDs for new course_meetings
+            course_meetings_with_locations = tables["course_meetings"].copy()
+            for i, meeting in course_meetings_with_locations.iterrows():
+                if meeting['location_id'] is None and '_building_code' in meeting.index and '_room' in meeting.index:
+                    building_code = meeting['_building_code']
+                    room = meeting['_room'] if not safe_isna(
+                        meeting['_room']) else None
+                    location_key = (building_code, room)
+
+                    # Only update if the location exists in our mapping
+                    # (locations with None building_code are skipped)
+                    if location_key in location_mapping:
+                        course_meetings_with_locations.at[i,
+                                                          'location_id'] = location_mapping[location_key]
+                    else:
+                        # Log when we can't resolve a location (likely due to invalid building_code)
+                        if building_code is None or safe_isna(building_code):
+                            logging.warning(
+                                f"Cannot resolve location for course meeting due to None building_code: room='{room}'")
+                        else:
+                            logging.warning(
+                                f"Location not found in mapping: building_code='{building_code}', room='{room}'")
+
+            # Clean up temporary columns and upsert
+            course_meetings_clean = course_meetings_with_locations.drop(
+                columns=["_building_code", "_room"], errors="ignore")
+            upsert_course_meetings(course_meetings_clean, conn)
+
         # Handle other tables normally
         for table_name in tables_order_add:
-            if table_name == "locations":
+            if table_name in ["locations", "course_meetings"]:
                 continue  # Already handled with UPSERT
             commit_additions(table_name, diff[table_name]["added_rows"], conn)
             commit_updates(table_name, diff[table_name]["changed_rows"], conn)
-        
-        # Update course_meetings with proper location_ids
-        if "course_meetings" in tables:
-            update_course_meetings_location_ids(tables["course_meetings"], location_mapping, conn)
-            # Clean up temporary columns from course_meetings
-            tables["course_meetings"] = tables["course_meetings"].drop(columns=["_building_code", "_room"], errors="ignore")
-        
+
         for table_name in tables_order_delete:
             if table_name == "locations":
                 continue  # Skip locations deletion since we use UPSERT
-            commit_deletions(table_name, diff[table_name]["deleted_rows"], conn)
+            commit_deletions(
+                table_name, diff[table_name]["deleted_rows"], conn)
         print("\033[F", end="")
 
     # Print row counts for each table.
