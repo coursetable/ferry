@@ -21,13 +21,10 @@ def safe_isna(value) -> bool:
     """
     try:
         result = pd.isna(value)
-        # If result has .item() method (pandas scalar), use it
         if hasattr(result, 'item'):
             return result.item()
-        # Otherwise, it's already a Python boolean
         return bool(result)
     except (TypeError, ValueError):
-        # Fallback for edge cases
         return value is None or (isinstance(value, float) and np.isnan(value))
 
 
@@ -61,9 +58,9 @@ def generate_diff(
 ):
     diff_dict: dict[str, DiffRecord] = {}
 
-    # Only process tables that exist in both old and new tables
-    # This allows us to exclude certain tables (like locations, course_meetings) that use UPSERT
-    tables_to_process = set(tables_old.keys()) & set(tables_new.keys()) & set(primary_keys.keys())
+    # only process tables that exist in both old and new tables
+    tables_to_process = set(tables_old.keys()) & set(
+        tables_new.keys()) & set(primary_keys.keys())
 
     for table_name in tables_to_process:
         print(f"Computing diff for table {table_name} ...", end=" ")
@@ -123,19 +120,12 @@ def generate_diff(
         )
 
         changed_rows = shared_rows_new[unequal_mask.any(axis=1)].copy()
-        if len(changed_rows) > 0:
+        if not changed_rows.empty:
             changed_rows["columns_changed"] = unequal_mask[
                 unequal_mask.any(axis=1)
             ].apply(lambda row: shared_rows_new.columns[row].tolist(), axis=1)
-            # Add old values for primary key columns that are being changed
-            for pk_col in pk:
-                if pk_col in changed_rows.columns:
-                    old_values = shared_rows_old[unequal_mask.any(
-                        axis=1)][pk_col]
-                    changed_rows[f"old_{pk_col}"] = old_values
         else:
-            changed_rows = pd.DataFrame(columns=shared_rows_new.columns)
-            changed_rows["columns_changed"] = pd.Series(dtype=object)
+            changed_rows["columns_changed"] = pd.Series()
 
         diff_dict[table_name] = {
             "deleted_rows": deleted_rows.reset_index(),
@@ -194,13 +184,11 @@ def commit_deletions(table_name: str, to_remove: pd.DataFrame, conn: Connection)
         where_conditions = []
         params = {}
         for col in pk:
-            value = row[col]
-            if safe_isna(value):
-                params[str(col)] = None
-                where_conditions.append(f"{col} IS NULL")
-            else:
-                params[str(col)] = value
-                where_conditions.append(f"{col} = :{col}")
+            value = row[col] if not safe_isna(row[col]) else None
+            params[str(col)] = value
+            where_conditions.append(
+                f"{col} IS NULL" if value is None else f"{col} = :{col}"
+            )
         where_clause = " AND ".join(where_conditions)
 
         delete_query = text(f"DELETE FROM {table_name} WHERE {where_clause};")
@@ -212,11 +200,8 @@ def commit_deletions(table_name: str, to_remove: pd.DataFrame, conn: Connection)
                 where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
                 params = {}
                 for col in pk:
-                    value = row[col]
-                    if safe_isna(value):
-                        params[str(col)] = None
-                    else:
-                        params[str(col)] = value
+                    value = row[col] if not safe_isna(row[col]) else None
+                    params[str(col)] = value
 
                 update_query = text(
                     f"UPDATE {connected_table} SET last_updated = CURRENT_TIMESTAMP WHERE {where_clause};"
@@ -243,19 +228,13 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
                 if old_col in row.index:
                     # Use old value for WHERE clause
                     where_conditions.append(f"{pk_col} = :{pk_col}")
-                    value = row[old_col]
-                    if safe_isna(value):
-                        where_params[pk_col] = None
-                    else:
-                        where_params[pk_col] = value
+                    value = row[old_col] if not safe_isna(row[old_col]) else None
+                    where_params[pk_col] = value
                 else:
                     # Use new value if no old value available
                     where_conditions.append(f"{pk_col} = :{pk_col}")
-                    value = row[pk_col]
-                    if safe_isna(value):
-                        where_params[pk_col] = None
-                    else:
-                        where_params[pk_col] = value
+                    value = row[pk_col] if not safe_isna(row[pk_col]) else None
+                    where_params[pk_col] = value
 
             where_clause = " AND ".join(where_conditions)
             set_clause = ", ".join(
@@ -264,11 +243,8 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
             update_params: Dict[str, Any] = {}
             for col in row.index:
                 if not str(col).startswith("old_"):
-                    value = row[col]
-                    if safe_isna(value):
-                        update_params[str(col)] = None
-                    else:
-                        update_params[str(col)] = value
+                    value = row[col] if not safe_isna(row[col]) else None
+                    update_params[str(col)] = value
             update_params.update(where_params)
 
             update_query = text(
@@ -287,17 +263,11 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
 
             params: Dict[str, Any] = {}
             for col in row.index:
-                value = row[col]
-                if safe_isna(value):
-                    params[str(col)] = None
-                else:
-                    params[str(col)] = value
+                value = row[col] if not safe_isna(row[col]) else None
+                params[str(col)] = value
             for col in pk:
-                value = row[col]
-                if safe_isna(value):
-                    params[str(col)] = None
-                else:
-                    params[str(col)] = value
+                value = row[col] if not safe_isna(row[col]) else None
+                params[str(col)] = value
 
             update_query = text(
                 f"UPDATE {table_name} SET {set_clause} WHERE {where_clause};"
@@ -312,11 +282,8 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
                 where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
                 params = {}
                 for col in pk:
-                    value = row[col]
-                    if safe_isna(value):
-                        params[str(col)] = None
-                    else:
-                        params[str(col)] = value
+                    value = row[col] if not safe_isna(row[col]) else None
+                    params[str(col)] = value
 
                 update_query = text(
                     f"UPDATE {connected_table} SET last_updated = CURRENT_TIMESTAMP WHERE {where_clause};"
@@ -337,8 +304,6 @@ def upsert_locations(locations_df: pd.DataFrame, conn: Connection) -> dict[tuple
 
         # Skip locations with invalid building_code (database constraint violation)
         if safe_isna(building_code) or building_code is None:
-            logging.warning(
-                f"Skipping location with None building_code: room='{room}', location data: {dict(location)}")
             continue
 
         # Use postgres UPSERT with ON CONFLICT UPDATE
@@ -361,6 +326,52 @@ def upsert_locations(locations_df: pd.DataFrame, conn: Connection) -> dict[tuple
         location_mapping[(building_code, room)] = location_id
 
     return location_mapping
+
+
+def cleanup_dependencies_for_buildings(buildings_to_delete: pd.DataFrame, conn: Connection):
+    """
+    Handle dependencies for buildings that are about to be deleted.
+    Deletes course_meetings that reference affected locations (will be recreated by UPSERT logic) 
+    and deletes the locations themselves.
+    Chain: course_meetings → locations → buildings
+    This prevents foreign key constraint violations and respects UPSERT unique constraints.
+    """
+    if len(buildings_to_delete) == 0:
+        logging.info("No buildings to delete, skipping dependency cleanup")
+        return
+        
+    # Get list of building codes that will be deleted
+    building_codes_to_delete = buildings_to_delete['code'].tolist()
+    logging.info(f"About to clean up dependencies for buildings: {building_codes_to_delete}")
+    
+    placeholders = ', '.join([f':code_{i}' for i in range(len(building_codes_to_delete))])
+    params = {f'code_{i}': code for i, code in enumerate(building_codes_to_delete)}
+    
+    # Step 1: Delete course_meetings that reference locations about to be deleted
+    # Let the UPSERT logic handle recreating them properly to avoid unique constraint violations
+    logging.info("Step 1: Deleting course_meetings referencing affected locations (will be recreated by UPSERT)")
+    meetings_result = conn.execute(text(f"""
+        DELETE FROM course_meetings 
+        WHERE location_id IN (
+            SELECT location_id FROM locations 
+            WHERE building_code IN ({placeholders})
+        )
+    """), params)
+    
+    meetings_deleted = meetings_result.rowcount
+    logging.info(f"Deleted {meetings_deleted} course_meeting(s) referencing affected locations (will be recreated by UPSERT)")
+    
+    # Step 2: Clean up locations that reference these buildings
+    logging.info("Step 2: Cleaning up locations referencing buildings to be deleted")
+    locations_result = conn.execute(text(f"""
+        DELETE FROM locations 
+        WHERE building_code IN ({placeholders})
+    """), params)
+    
+    locations_deleted = locations_result.rowcount
+    logging.info(f"Cleaned up {locations_deleted} location(s) referencing buildings to be deleted: {building_codes_to_delete}")
+    
+    logging.info(f"Total cleanup: {meetings_deleted} meetings deleted + {locations_deleted} locations deleted for {len(building_codes_to_delete)} buildings")
 
 
 def upsert_course_meetings(course_meetings_df: pd.DataFrame, conn: Connection):
@@ -443,11 +454,13 @@ def sync_db_courses(
     tables_old["course_meetings"]["location_id"] = tables_old["course_meetings"][
         "location_id"
     ].astype(pd.Int64Dtype())
-    
+
     # Exclude tables that use UPSERT logic from diff computation
-    tables_for_diff = {k: v for k, v in tables.items() if k not in ["locations", "course_meetings"]}
-    tables_old_for_diff = {k: v for k, v in tables_old.items() if k not in ["locations", "course_meetings"]}
-    
+    tables_for_diff = {k: v for k, v in tables.items() if k not in [
+        "locations", "course_meetings"]}
+    tables_old_for_diff = {k: v for k, v in tables_old.items() if k not in [
+        "locations", "course_meetings"]}
+
     diff = generate_diff(tables_old_for_diff, tables_for_diff)
     # print_diff(diff, tables_old, tables, data_dir / "change_log")
 
@@ -520,8 +533,16 @@ def sync_db_courses(
         for table_name in tables_order_delete:
             if table_name in ["locations", "course_meetings"]:
                 continue  # Skip deletion for tables using UPSERT
-            commit_deletions(
-                table_name, diff[table_name]["deleted_rows"], conn)
+            
+            deleted_rows = diff[table_name]["deleted_rows"]
+            logging.info(f"Processing deletions for table '{table_name}': {len(deleted_rows)} rows to delete")
+            
+            # Clean up dependencies before deleting buildings to avoid FK constraint violations
+            if table_name == "buildings":
+                logging.info(f"About to clean up dependencies before deleting {len(deleted_rows)} buildings")
+                cleanup_dependencies_for_buildings(deleted_rows, conn)
+                
+            commit_deletions(table_name, deleted_rows, conn)
         print("\033[F", end="")
 
     # Print row counts for each table.

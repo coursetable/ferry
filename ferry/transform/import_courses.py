@@ -404,10 +404,22 @@ def aggregate_locations(
         for meeting in meetings:
             if meeting["location"] in ["", "TBA", "TBA TBA"]:
                 continue
-            location_data.append(
-                {**parse_location(meeting["location"]), "url": meeting["location_url"]}
-            )
+            try:
+                parsed_location = parse_location(meeting["location"])
+                # Only add location if it has a valid building code
+                if parsed_location["code"] is not None and str(parsed_location["code"]).strip() != "":
+                    location_data.append(
+                        {**parsed_location, "url": meeting["location_url"]}
+                    )
+            except ValueError as e:
+                logging.warning(f"Failed to parse location '{meeting['location']}': {e}")
+                continue
+                
     locations = pd.DataFrame(location_data).drop_duplicates().reset_index(drop=True)
+    
+    # Filter out any rows where code is still None or NaN
+    locations = locations.dropna(subset=["code"])
+    locations = locations[locations["code"].notna() & (locations["code"] != "")]
 
     def report_multiple_names(row: pd.DataFrame):
         if len(row["building_name"].unique()) > 1:
@@ -418,7 +430,8 @@ def aggregate_locations(
     locations[~locations["building_name"].isna()].groupby(["code", "room"]).apply(
         report_multiple_names
     )
-    locations = locations.groupby(["code", "room"], as_index=False, dropna=False).last()
+    # Changed dropna=False to dropna=True to exclude NaN values from grouping
+    locations = locations.groupby(["code", "room"], as_index=False, dropna=True).last()
 
     # No need for cache-based location IDs - database will handle this with UPSERT
     locations = locations.set_index(["code", "room"])
