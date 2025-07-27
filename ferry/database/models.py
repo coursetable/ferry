@@ -8,6 +8,7 @@ from sqlalchemy import (
     MetaData,
     String,
     Table,
+    text,
 )
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import backref, declarative_base, relationship
@@ -444,13 +445,22 @@ course_meetings = Table(
         comment="Location of this meeting session",
         index=True,
     ),
-    # Add the unique constraint that was causing the error
     Index(
         "cm_3col_uniq_idx",
         "course_id",
         "start_time", 
         "end_time",
         unique=True,
+        postgresql_where=text("location_id IS NULL"),
+    ),
+    Index(
+        "cm_4col_uniq_idx",
+        "course_id",
+        "start_time",
+        "end_time", 
+        "location_id",
+        unique=True,
+        postgresql_where=text("location_id IS NOT NULL"),
     ),
 )
 

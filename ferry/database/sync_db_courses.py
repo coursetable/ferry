@@ -61,12 +61,11 @@ def generate_diff(
 ):
     diff_dict: dict[str, DiffRecord] = {}
 
-    for table_name in primary_keys.keys():
-        if table_name not in tables_new.keys():
-            raise ValueError(f"Table '{table_name}' not found in new tables")
-        if table_name not in tables_old.keys():
-            raise ValueError(f"Table '{table_name}' not found in old tables")
+    # Only process tables that exist in both old and new tables
+    # This allows us to exclude certain tables (like locations, course_meetings) that use UPSERT
+    tables_to_process = set(tables_old.keys()) & set(tables_new.keys()) & set(primary_keys.keys())
 
+    for table_name in tables_to_process:
         print(f"Computing diff for table {table_name} ...", end=" ")
 
         old_df = tables_old[table_name]
@@ -367,7 +366,9 @@ def upsert_locations(locations_df: pd.DataFrame, conn: Connection) -> dict[tuple
 def upsert_course_meetings(course_meetings_df: pd.DataFrame, conn: Connection):
     """
     Upsert course_meetings using postgres ON CONFLICT UPDATE.
-    Handles the unique constraint on (course_id, start_time, end_time) - cm_3col_uniq_idx.
+    Handles both partial unique constraints:
+    - cm_4col_uniq_idx: (course_id, start_time, end_time, location_id) WHERE location_id IS NOT NULL
+    - cm_3col_uniq_idx: (course_id, start_time, end_time) WHERE location_id IS NULL
     """
     for _, meeting in course_meetings_df.iterrows():
         course_id = meeting['course_id']
@@ -377,53 +378,36 @@ def upsert_course_meetings(course_meetings_df: pd.DataFrame, conn: Connection):
         location_id = meeting['location_id'] if not safe_isna(
             meeting['location_id']) else None
 
-        # Use postgres UPSERT with ON CONFLICT UPDATE targeting the actual constraint cm_3col_uniq_idx
-        conn.execute(text("""
-            INSERT INTO course_meetings (course_id, start_time, end_time, days_of_week, location_id) 
-            VALUES (:course_id, :start_time, :end_time, :days_of_week, :location_id)
-            ON CONFLICT (course_id, start_time, end_time) 
-            DO UPDATE SET 
-                days_of_week = EXCLUDED.days_of_week,
-                location_id = EXCLUDED.location_id
-        """), {
-            'course_id': course_id,
-            'start_time': start_time,
-            'end_time': end_time,
-            'days_of_week': days_of_week,
-            'location_id': location_id,
-        })
-
-
-def update_course_meetings_location_ids(course_meetings_df: pd.DataFrame, location_mapping: dict[tuple, int], conn: Connection):
-    """
-    Update course_meetings records to use the correct location_ids from the location mapping.
-    """
-    for _, meeting in course_meetings_df.iterrows():
-        if meeting['location_id'] is None and '_building_code' in meeting.index and '_room' in meeting.index:
-            building_code = meeting['_building_code']
-            room = meeting['_room'] if not safe_isna(
-                meeting['_room']) else None
-            location_key = (building_code, room)
-
-            if location_key in location_mapping:
-                location_id = location_mapping[location_key]
-
-                # Update the course_meetings record
-                conn.execute(text("""
-                    UPDATE course_meetings 
-                    SET location_id = :location_id 
-                    WHERE course_id = :course_id 
-                    AND days_of_week = :days_of_week 
-                    AND start_time = :start_time 
-                    AND end_time = :end_time 
-                    AND location_id IS NULL
-                """), {
-                    'location_id': location_id,
-                    'course_id': meeting['course_id'],
-                    'days_of_week': meeting['days_of_week'],
-                    'start_time': meeting['start_time'],
-                    'end_time': meeting['end_time']
-                })
+        if location_id is None:
+            # Handle meetings without location (uses 3-column constraint)
+            conn.execute(text("""
+                INSERT INTO course_meetings (course_id, start_time, end_time, days_of_week, location_id) 
+                VALUES (:course_id, :start_time, :end_time, :days_of_week, NULL)
+                ON CONFLICT (course_id, start_time, end_time) WHERE location_id IS NULL
+                DO UPDATE SET 
+                    days_of_week = EXCLUDED.days_of_week
+            """), {
+                'course_id': course_id,
+                'start_time': start_time,
+                'end_time': end_time,
+                'days_of_week': days_of_week,
+            })
+        else:
+            # Handle meetings with location (uses 4-column constraint)
+            conn.execute(text("""
+                INSERT INTO course_meetings (course_id, start_time, end_time, days_of_week, location_id) 
+                VALUES (:course_id, :start_time, :end_time, :days_of_week, :location_id)
+                ON CONFLICT (course_id, start_time, end_time, location_id) WHERE location_id IS NOT NULL
+                DO UPDATE SET 
+                    days_of_week = EXCLUDED.days_of_week,
+                    location_id = EXCLUDED.location_id
+            """), {
+                'course_id': course_id,
+                'start_time': start_time,
+                'end_time': end_time,
+                'days_of_week': days_of_week,
+                'location_id': location_id,
+            })
 
 
 def sync_db_courses(
@@ -459,7 +443,12 @@ def sync_db_courses(
     tables_old["course_meetings"]["location_id"] = tables_old["course_meetings"][
         "location_id"
     ].astype(pd.Int64Dtype())
-    diff = generate_diff(tables_old, tables)
+    
+    # Exclude tables that use UPSERT logic from diff computation
+    tables_for_diff = {k: v for k, v in tables.items() if k not in ["locations", "course_meetings"]}
+    tables_old_for_diff = {k: v for k, v in tables_old.items() if k not in ["locations", "course_meetings"]}
+    
+    diff = generate_diff(tables_old_for_diff, tables_for_diff)
     # print_diff(diff, tables_old, tables, data_dir / "change_log")
 
     # Now proceed with main data operations in a fresh transaction
@@ -529,8 +518,8 @@ def sync_db_courses(
             commit_updates(table_name, diff[table_name]["changed_rows"], conn)
 
         for table_name in tables_order_delete:
-            if table_name == "locations":
-                continue  # Skip locations deletion since we use UPSERT
+            if table_name in ["locations", "course_meetings"]:
+                continue  # Skip deletion for tables using UPSERT
             commit_deletions(
                 table_name, diff[table_name]["deleted_rows"], conn)
         print("\033[F", end="")

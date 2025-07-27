@@ -462,6 +462,8 @@ def aggregate_locations(
                         "start_time": m["start_time"],
                         "end_time": m["end_time"],
                         "location_id": None,
+                        "_building_code": None,  # TBA locations have no building
+                        "_room": None,  # TBA locations have no room
                     }
                 )
                 continue
@@ -482,12 +484,14 @@ def aggregate_locations(
     # course_meetings is a series of course_id -> list of dicts.
     # Explode it to get a DataFrame with course_id, days_of_week, start_time, end_time, location_id
     course_meetings = course_meetings.explode().dropna().apply(pd.Series).reset_index()
-    # Merge rows with the same start/end/location
+    
+    # CRITICAL FIX: Group by temporary location columns instead of location_id (which is always None)
+    # This prevents incorrect merging of meetings with different locations but same time slots
     course_meetings = (
         course_meetings.groupby(
-            ["course_id", "start_time", "end_time", "location_id"], dropna=False
+            ["course_id", "start_time", "end_time", "_building_code", "_room"], dropna=False
         )
-        .agg({"days_of_week": reduce_days_of_week})
+        .agg({"days_of_week": reduce_days_of_week, "location_id": "first"})  # location_id is always None anyway
         .reset_index()
     )
     course_meetings["days_of_week"] = course_meetings["days_of_week"].astype(int)
@@ -495,7 +499,7 @@ def aggregate_locations(
         pd.Int64Dtype()
     )
     
-    # Remove temporary location columns before returning (they'll be used during database sync)
+    # Keep temporary location columns for database sync (they'll be cleaned up there)
     # course_meetings = course_meetings.drop(columns=["_building_code", "_room"], errors="ignore")
     
     return course_meetings, locations, buildings
