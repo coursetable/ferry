@@ -218,20 +218,16 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
         columns_changed = row["columns_changed"]
         row = row.drop("columns_changed")
 
-        # For course_meetings table, use old primary key values in WHERE clause
         if table_name == "course_meetings":
-            # Use old values for primary key columns in WHERE clause
             where_conditions = []
             where_params: Dict[str, Any] = {}
             for pk_col in pk:
                 old_col = f"old_{pk_col}"
                 if old_col in row.index:
-                    # Use old value for WHERE clause
                     where_conditions.append(f"{pk_col} = :{pk_col}")
                     value = row[old_col] if not safe_isna(row[old_col]) else None
                     where_params[pk_col] = value
                 else:
-                    # Use new value if no old value available
                     where_conditions.append(f"{pk_col} = :{pk_col}")
                     value = row[pk_col] if not safe_isna(row[pk_col]) else None
                     where_params[pk_col] = value
@@ -252,10 +248,8 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
             )
             conn.execute(update_query, update_params)
         else:
-            # Standard update logic for other tables
             where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
             set_clause = ", ".join(f"{col} = :{col}" for col in row.index)
-            # Only update last_updated if one of the changed columns is not computed
             if table_name not in junction_tables and not (
                 set(columns_changed) <= set(computed_columns[table_name])
             ):
@@ -280,10 +274,7 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
             for connected_table in junction_tables[table_name]:
                 pk = primary_keys[connected_table]
                 where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
-                params = {}
-                for col in pk:
-                    value = row[col] if not safe_isna(row[col]) else None
-                    params[str(col)] = value
+                params = { str(col): row[col] if not safe_isna(row[col]) else None for col in pk }
 
                 update_query = text(
                     f"UPDATE {connected_table} SET last_updated = CURRENT_TIMESTAMP WHERE {where_clause};"
@@ -331,10 +322,7 @@ def upsert_locations(locations_df: pd.DataFrame, conn: Connection) -> dict[tuple
 def cleanup_dependencies_for_buildings(buildings_to_delete: pd.DataFrame, conn: Connection):
     """
     Handle dependencies for buildings that are about to be deleted.
-    Deletes course_meetings that reference affected locations (will be recreated by UPSERT logic) 
-    and deletes the locations themselves.
-    Chain: course_meetings → locations → buildings
-    This prevents foreign key constraint violations and respects UPSERT unique constraints.
+    course_meetings → locations → buildings
     """
     if len(buildings_to_delete) == 0:
         logging.info("No buildings to delete, skipping dependency cleanup")
@@ -347,8 +335,6 @@ def cleanup_dependencies_for_buildings(buildings_to_delete: pd.DataFrame, conn: 
     placeholders = ', '.join([f':code_{i}' for i in range(len(building_codes_to_delete))])
     params = {f'code_{i}': code for i, code in enumerate(building_codes_to_delete)}
     
-    # Step 1: Delete course_meetings that reference locations about to be deleted
-    # Let the UPSERT logic handle recreating them properly to avoid unique constraint violations
     logging.info("Step 1: Deleting course_meetings referencing affected locations (will be recreated by UPSERT)")
     meetings_result = conn.execute(text(f"""
         DELETE FROM course_meetings 
@@ -361,7 +347,6 @@ def cleanup_dependencies_for_buildings(buildings_to_delete: pd.DataFrame, conn: 
     meetings_deleted = meetings_result.rowcount
     logging.info(f"Deleted {meetings_deleted} course_meeting(s) referencing affected locations (will be recreated by UPSERT)")
     
-    # Step 2: Clean up locations that reference these buildings
     logging.info("Step 2: Cleaning up locations referencing buildings to be deleted")
     locations_result = conn.execute(text(f"""
         DELETE FROM locations 
@@ -377,7 +362,6 @@ def cleanup_dependencies_for_buildings(buildings_to_delete: pd.DataFrame, conn: 
 def upsert_course_meetings(course_meetings_df: pd.DataFrame, conn: Connection):
     """
     Upsert course_meetings using postgres ON CONFLICT UPDATE.
-    Handles both partial unique constraints:
     - cm_4col_uniq_idx: (course_id, start_time, end_time, location_id) WHERE location_id IS NOT NULL
     - cm_3col_uniq_idx: (course_id, start_time, end_time) WHERE location_id IS NULL
     """
@@ -390,7 +374,6 @@ def upsert_course_meetings(course_meetings_df: pd.DataFrame, conn: Connection):
             meeting['location_id']) else None
 
         if location_id is None:
-            # Handle meetings without location (uses 3-column constraint)
             conn.execute(text("""
                 INSERT INTO course_meetings (course_id, start_time, end_time, days_of_week, location_id) 
                 VALUES (:course_id, :start_time, :end_time, :days_of_week, NULL)
@@ -404,7 +387,6 @@ def upsert_course_meetings(course_meetings_df: pd.DataFrame, conn: Connection):
                 'days_of_week': days_of_week,
             })
         else:
-            # Handle meetings with location (uses 4-column constraint)
             conn.execute(text("""
                 INSERT INTO course_meetings (course_id, start_time, end_time, days_of_week, location_id) 
                 VALUES (:course_id, :start_time, :end_time, :days_of_week, :location_id)
@@ -462,9 +444,8 @@ def sync_db_courses(
         "locations", "course_meetings"]}
 
     diff = generate_diff(tables_old_for_diff, tables_for_diff)
-    # print_diff(diff, tables_old, tables, data_dir / "change_log")
+    print_diff(diff, tables_old, tables, data_dir / "change_log")
 
-    # Now proceed with main data operations in a fresh transaction
     inspector = inspect(db.Engine)
     with db.Engine.begin() as conn:
         for table_name in tables_order_add:
@@ -510,7 +491,6 @@ def sync_db_courses(
                         course_meetings_with_locations.at[i,
                                                           'location_id'] = location_mapping[location_key]
                     else:
-                        # Log when we can't resolve a location (likely due to invalid building_code)
                         if building_code is None or safe_isna(building_code):
                             logging.warning(
                                 f"Cannot resolve location for course meeting due to None building_code: room='{room}'")
@@ -523,21 +503,19 @@ def sync_db_courses(
                 columns=["_building_code", "_room"], errors="ignore")
             upsert_course_meetings(course_meetings_clean, conn)
 
-        # Handle other tables normally
         for table_name in tables_order_add:
             if table_name in ["locations", "course_meetings"]:
-                continue  # Already handled with UPSERT
+                continue
             commit_additions(table_name, diff[table_name]["added_rows"], conn)
             commit_updates(table_name, diff[table_name]["changed_rows"], conn)
 
         for table_name in tables_order_delete:
             if table_name in ["locations", "course_meetings"]:
-                continue  # Skip deletion for tables using UPSERT
+                continue
             
             deleted_rows = diff[table_name]["deleted_rows"]
             logging.info(f"Processing deletions for table '{table_name}': {len(deleted_rows)} rows to delete")
             
-            # Clean up dependencies before deleting buildings to avoid FK constraint violations
             if table_name == "buildings":
                 logging.info(f"About to clean up dependencies before deleting {len(deleted_rows)} buildings")
                 cleanup_dependencies_for_buildings(deleted_rows, conn)
