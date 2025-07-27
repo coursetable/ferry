@@ -125,11 +125,7 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
         ]
         cross_listed_crns = listings[
             listings["season_code"].eq(season) & listings["crn"].eq(first)
-        ]["crns"]
-        if not cross_listed_crns.empty:
-            cross_listed_crns = cross_listed_crns.iloc[0]
-        else:
-            cross_listed_crns = set()
+        ]["crns"].iloc[0]
         for other_crn in cross_listed_crns - set(crns):
             # Remove rest from the crns of each cross listed crn
             target = listings["season_code"].eq(season) & listings["crn"].eq(other_crn)

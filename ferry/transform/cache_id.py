@@ -43,7 +43,6 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
     cache_dir.mkdir(exist_ok=True)
 
     flag_to_id = tables["flags"].set_index("flag_text")["flag_id"].to_dict()
-    
     professor_to_id = (
         tables["professors"].set_index(["name", "email"])["professor_id"].to_dict()
     )
