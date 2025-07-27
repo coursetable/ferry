@@ -170,25 +170,19 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
                 if v not in visited:
                     visited.add(v)
                     component.append(v)
-                    # Count edges only once by counting outgoing edges from each node
                     num_edges += len(adj_list[v])
                     stack.extend(adj_list[v] - visited)
-            # Check if the component is connected (each node can reach every other node)
-            # In a fully connected component with n nodes, each node has n edges (including self-edge)
-            # So total edges = n * n = n^2
-            expected_edges = len(component) ** 2
-            if num_edges != expected_edges:
+            # Since each node also has a self-edge, the number of edges should be n^2
+            if num_edges != len(component) ** 2:
                 print(
                     listings[
                         listings["crn"].isin(component)
                         & listings["season_code"].eq(season)
                     ]
                 )
-                logging.warning(
-                    f"CRNs not fully connected, counted {num_edges} edges, expected {expected_edges}. "
-                    f"This may indicate incomplete cross-listing data for season {season}, component {component}."
+                raise ValueError(
+                    f"CRNs not fully connected, counted {num_edges} edges, expected {len(component) ** 2}"
                 )
-                # Continue processing instead of raising an error
 
     listings["course_id"] = listings.apply(generate_course_id, axis=1)
 
@@ -430,10 +424,8 @@ def aggregate_locations(
     locations[~locations["building_name"].isna()].groupby(["code", "room"]).apply(
         report_multiple_names
     )
-    # Changed dropna=False to dropna=True to exclude NaN values from grouping
     locations = locations.groupby(["code", "room"], as_index=False, dropna=True).last()
 
-    # No need for cache-based location IDs - database will handle this with UPSERT
     locations = locations.set_index(["code", "room"])
     
     buildings = locations.copy(deep=True)
@@ -475,8 +467,8 @@ def aggregate_locations(
                         "start_time": m["start_time"],
                         "end_time": m["end_time"],
                         "location_id": None,
-                        "_building_code": None,  # TBA locations have no building
-                        "_room": None,  # TBA locations have no room
+                        "_building_code": None,
+                        "_room": None,
                     }
                 )
                 continue
@@ -486,9 +478,9 @@ def aggregate_locations(
                     "days_of_week": m["days_of_week"],
                     "start_time": m["start_time"],
                     "end_time": m["end_time"],
-                    "location_id": None,  # Will be resolved during database sync with UPSERT
-                    "_building_code": location_info["code"],  # Temporary for location resolution
-                    "_room": location_info["room"],  # Temporary for location resolution
+                    "location_id": None,
+                    "_building_code": location_info["code"],
+                    "_room": location_info["room"],
                 }
             )
         return meetings
@@ -498,8 +490,6 @@ def aggregate_locations(
     # Explode it to get a DataFrame with course_id, days_of_week, start_time, end_time, location_id
     course_meetings = course_meetings.explode().dropna().apply(pd.Series).reset_index()
     
-    # CRITICAL FIX: Group by temporary location columns instead of location_id (which is always None)
-    # This prevents incorrect merging of meetings with different locations but same time slots
     course_meetings = (
         course_meetings.groupby(
             ["course_id", "start_time", "end_time", "_building_code", "_room"], dropna=False
@@ -511,9 +501,6 @@ def aggregate_locations(
     course_meetings["location_id"] = course_meetings["location_id"].astype(
         pd.Int64Dtype()
     )
-    
-    # Keep temporary location columns for database sync (they'll be cleaned up there)
-    # course_meetings = course_meetings.drop(columns=["_building_code", "_room"], errors="ignore")
     
     return course_meetings, locations, buildings
 

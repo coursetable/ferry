@@ -110,24 +110,18 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         ("evaluation_ratings", database.EvaluationRating.__table__),
     ]:
 
-        # Special handling for locations table due to UPSERT approach
         if table_name == "locations":
-            # Locations table should only have: location_id, building_code, room
-            # Remove any extra columns (building_name, url, etc. belong in buildings table)
             current_table = all_tables[table_name].reset_index(drop=False)
             if "location_id" not in current_table.columns:
                 current_table["location_id"] = None
-            # Keep only the columns that belong in the locations table
             locations_columns = ["location_id", "building_code", "room"]
             available_cols = [col for col in locations_columns if col in current_table.columns]
             current_table = current_table[available_cols]
-            # Ensure all required columns exist
             for col in locations_columns:
                 if col not in current_table.columns:
                     current_table[col] = None
             all_tables[table_name] = current_table
         
-        # Get column names from database schema
         db_columns = [column.key for column in db_table.columns]
         current_table = all_tables[table_name].reset_index(drop=False)
         
