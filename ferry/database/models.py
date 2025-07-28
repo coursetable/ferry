@@ -417,7 +417,7 @@ course_meetings = Table(
     Base.metadata,
     Column(
         "course_id",
-        ForeignKey("courses.course_id"),
+        ForeignKey("courses.course_id", ondelete="CASCADE"),
         index=True,
         nullable=False,
     ),

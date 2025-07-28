@@ -444,7 +444,7 @@ def sync_db_courses(
         "locations", "course_meetings"]}
 
     diff = generate_diff(tables_old_for_diff, tables_for_diff)
-    print_diff(diff, tables_old, tables, data_dir / "change_log")
+    # print_diff(diff, tables_old, tables, data_dir / "change_log")
 
     inspector = inspect(db.Engine)
     with db.Engine.begin() as conn:
@@ -474,7 +474,14 @@ def sync_db_courses(
         # Handle locations with UPSERT first
         location_mapping = upsert_locations(tables["locations"], conn)
 
+        for table_name in tables_order_add:
+            if table_name in ["locations", "course_meetings"]:
+                continue
+            commit_additions(table_name, diff[table_name]["added_rows"], conn)
+            commit_updates(table_name, diff[table_name]["changed_rows"], conn)
+
         # Handle course_meetings with UPSERT (bypasses normal diff logic due to unique constraints)
+        # Must go after all other tables are added due to course id foreign key constraint
         if "course_meetings" in tables:
             # First resolve location IDs for new course_meetings
             course_meetings_with_locations = tables["course_meetings"].copy()
@@ -503,14 +510,8 @@ def sync_db_courses(
                 columns=["_building_code", "_room"], errors="ignore")
             upsert_course_meetings(course_meetings_clean, conn)
 
-        for table_name in tables_order_add:
-            if table_name in ["locations", "course_meetings"]:
-                continue
-            commit_additions(table_name, diff[table_name]["added_rows"], conn)
-            commit_updates(table_name, diff[table_name]["changed_rows"], conn)
-
         for table_name in tables_order_delete:
-            if table_name in ["locations", "course_meetings"]:
+            if table_name in ["locations", "course_meetings", "courses"]: # skip deleting courses due to self-fk constraint
                 continue
             
             deleted_rows = diff[table_name]["deleted_rows"]
