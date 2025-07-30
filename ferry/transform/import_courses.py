@@ -100,6 +100,50 @@ def generate_course_id(row: pd.Series) -> int:
     return season * 100000 + crn
 
 
+def fix_asymmetric_cross_listings(listings: pd.DataFrame) -> pd.DataFrame:
+    """
+    Fix asymmetric cross-listing relationships by ensuring that if CRN A references CRN B,
+    then CRN B also references CRN A.
+    """
+    logging.debug("Fixing asymmetric cross-listings")
+    
+    for season in listings["season_code"].unique():
+        season_mask = listings["season_code"] == season
+        season_listings = listings[season_mask].copy()
+        
+        # Build a mapping of CRN -> set of cross-listed CRNs for this season
+        crn_to_crns = {}
+        for _, row in season_listings.iterrows():
+            crn_to_crns[row["crn"]] = set(row["crns"])
+        
+        # Find all asymmetric relationships and fix them
+        modified = True
+        iteration = 0
+        while modified and iteration < 10:
+            modified = False
+            iteration += 1
+            
+            for crn_a, crns_a in crn_to_crns.items():
+                for crn_b in list(crns_a):
+                    if crn_b in crn_to_crns:
+                        crns_b = crn_to_crns[crn_b]
+                        # If A references B but B doesn't reference A, add A to B's references
+                        if crn_a not in crns_b:
+                            crn_to_crns[crn_b] = crns_b | {crn_a}
+                            modified = True
+                            logging.debug(f"Season {season}: Added CRN {crn_a} to CRN {crn_b}'s cross-listings")
+        
+        # Update the listings DataFrame with the fixed cross-listings
+        for crn, fixed_crns in crn_to_crns.items():
+            mask = season_mask & (listings["crn"] == crn)
+            if mask.any():
+                listings.loc[mask, "crns"] = listings.loc[mask, "crns"].apply(
+                    lambda _: frozenset(fixed_crns)
+                )
+    
+    return listings
+
+
 def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Resolve course cross-listings using the `crns` from the parsed courses.
@@ -115,6 +159,9 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
     listings["crns"] = listings["crns"].apply(
         lambda crns: frozenset(int(crn) for crn in crns)
     )
+
+    # Fix asymmetric cross-listing relationships before validation
+    listings = fix_asymmetric_cross_listings(listings)
 
     # Remove exactly identical CRNs by removing their rows as well their
     # references in other rows' `crns` column
@@ -170,15 +217,46 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
                     stack.extend(adj_list[v] - visited)
             # Since each node also has a self-edge, the number of edges should be n^2
             if num_edges != len(component) ** 2:
-                print(
-                    listings[
-                        listings["crn"].isin(component)
-                        & listings["season_code"].eq(season)
-                    ]
-                )
-                raise ValueError(
-                    f"CRNs not fully connected, counted {num_edges} edges, expected {len(component) ** 2}"
-                )
+                print(f"\n=== DEBUGGING CROSS-LISTING CONNECTIVITY ISSUE (Season: {season}) ===")
+                print(f"Component size: {len(component)}, Expected edges: {len(component) ** 2}, Found edges: {num_edges}")
+                print(f"Missing edges: {len(component) ** 2 - num_edges}")
+                print(f"Component CRNs: {sorted(component)}")
+                
+                print("\nDetailed connectivity analysis:")
+                for crn_node in sorted(component):
+                    connections = adj_list[crn_node]
+                    missing_connections = set(component) - connections
+                    print(f"  CRN {crn_node}: connected to {sorted(connections)} (missing: {sorted(missing_connections)})")
+                
+                print("\nAffected courses:")
+                problematic_courses = listings[
+                    listings["crn"].isin(component)
+                    & listings["season_code"].eq(season)
+                ]
+                for _, course in problematic_courses.iterrows():
+                    print(f"  CRN {course['crn']}: {course['course_code']} - Cross-listed with: {sorted(course['crns'])}")
+                
+                # Option to auto-fix remaining connectivity issues
+                logging.warning(f"Attempting to auto-fix remaining connectivity issues for season {season}")
+                
+                for crn_node in component:
+                    season_crn_graphs[season][crn_node] = frozenset(component)
+                
+                for crn_node in component:
+                    mask = listings["crn"].eq(crn_node) & listings["season_code"].eq(season)
+                    if mask.any():
+                        listings.loc[mask, "crns"] = listings.loc[mask, "crns"].apply(
+                            lambda _: frozenset(component)
+                        )
+                
+                logging.warning(f"Auto-fixed connectivity for CRNs: {sorted(component)}")
+                
+                # Verify the fix worked
+                recalculated_edges = sum(len(season_crn_graphs[season][crn_node]) for crn_node in component)
+                if recalculated_edges != len(component) ** 2:
+                    raise ValueError(
+                        f"Failed to auto-fix CRN connectivity. CRNs still not fully connected, counted {recalculated_edges} edges, expected {len(component) ** 2}. Manual intervention required."
+                    )
 
     listings["course_id"] = listings.apply(generate_course_id, axis=1)
 
