@@ -437,14 +437,15 @@ def sync_db_courses(
         "location_id"
     ].astype(pd.Int64Dtype())
 
-    # Exclude tables that use UPSERT logic from diff computation
+    # Exclude course_meetings from diff computation
     tables_for_diff = {k: v for k, v in tables.items() if k not in [
-        "locations", "course_meetings"]}
+        "course_meetings"]}
     tables_old_for_diff = {k: v for k, v in tables_old.items() if k not in [
-        "locations", "course_meetings"]}
+        "course_meetings"]}
 
     diff = generate_diff(tables_old_for_diff, tables_for_diff)
-    # print_diff(diff, tables_old, tables, data_dir / "change_log")
+    
+    print_diff(diff, tables_old, tables, data_dir / "change_log")
 
     inspector = inspect(db.Engine)
     with db.Engine.begin() as conn:

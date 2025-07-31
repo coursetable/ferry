@@ -372,13 +372,9 @@ def print_courses_diff(
         tables,
         "course_flags",
     )
-    register_junction_changes(
-        course_id_to_changes,
-        diff,
-        tables_old,
-        tables,
-        "course_meetings",
-    )
+    # Note: course_meetings uses UPSERT logic, so junction change tracking is skipped
+    # Meeting changes (if any) will not be reflected accurately in the changelog
+    
     register_junction_changes(
         course_id_to_changes,
         diff,
