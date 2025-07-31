@@ -120,17 +120,17 @@ def generate_diff(
         )
 
         changed_rows = shared_rows_new[unequal_mask.any(axis=1)].copy()
-        if not changed_rows.empty:
+        if len(changed_rows) > 0:
             changed_rows["columns_changed"] = unequal_mask[
                 unequal_mask.any(axis=1)
             ].apply(lambda row: shared_rows_new.columns[row].tolist(), axis=1)
         else:
-            changed_rows["columns_changed"] = pd.Series()
+            changed_rows["columns_changed"] = pd.Series(dtype=object)
 
         diff_dict[table_name] = {
-            "deleted_rows": deleted_rows.reset_index(),
-            "added_rows": added_rows.reset_index(),
-            "changed_rows": changed_rows.reset_index(),
+            "deleted_rows": pd.DataFrame(deleted_rows).reset_index(),
+            "added_rows": pd.DataFrame(added_rows).reset_index(),
+            "changed_rows": pd.DataFrame(changed_rows).reset_index(),
         }
 
         print("✔")
@@ -225,7 +225,8 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
                 old_col = f"old_{pk_col}"
                 if old_col in row.index:
                     where_conditions.append(f"{pk_col} = :{pk_col}")
-                    value = row[old_col] if not safe_isna(row[old_col]) else None
+                    value = row[old_col] if not safe_isna(
+                        row[old_col]) else None
                     where_params[pk_col] = value
                 else:
                     where_conditions.append(f"{pk_col} = :{pk_col}")
@@ -274,7 +275,8 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
             for connected_table in junction_tables[table_name]:
                 pk = primary_keys[connected_table]
                 where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
-                params = { str(col): row[col] if not safe_isna(row[col]) else None for col in pk }
+                params = {str(col): row[col] if not safe_isna(
+                    row[col]) else None for col in pk}
 
                 update_query = text(
                     f"UPDATE {connected_table} SET last_updated = CURRENT_TIMESTAMP WHERE {where_clause};"
@@ -327,15 +329,19 @@ def cleanup_dependencies_for_buildings(buildings_to_delete: pd.DataFrame, conn: 
     if len(buildings_to_delete) == 0:
         logging.info("No buildings to delete, skipping dependency cleanup")
         return
-        
+
     # Get list of building codes that will be deleted
     building_codes_to_delete = buildings_to_delete['code'].tolist()
-    logging.info(f"About to clean up dependencies for buildings: {building_codes_to_delete}")
-    
-    placeholders = ', '.join([f':code_{i}' for i in range(len(building_codes_to_delete))])
-    params = {f'code_{i}': code for i, code in enumerate(building_codes_to_delete)}
-    
-    logging.info("Step 1: Deleting course_meetings referencing affected locations (will be recreated by UPSERT)")
+    logging.info(
+        f"About to clean up dependencies for buildings: {building_codes_to_delete}")
+
+    placeholders = ', '.join(
+        [f':code_{i}' for i in range(len(building_codes_to_delete))])
+    params = {f'code_{i}': code for i,
+              code in enumerate(building_codes_to_delete)}
+
+    logging.info(
+        "Step 1: Deleting course_meetings referencing affected locations (will be recreated by UPSERT)")
     meetings_result = conn.execute(text(f"""
         DELETE FROM course_meetings 
         WHERE location_id IN (
@@ -343,64 +349,139 @@ def cleanup_dependencies_for_buildings(buildings_to_delete: pd.DataFrame, conn: 
             WHERE building_code IN ({placeholders})
         )
     """), params)
-    
+
     meetings_deleted = meetings_result.rowcount
-    logging.info(f"Deleted {meetings_deleted} course_meeting(s) referencing affected locations (will be recreated by UPSERT)")
-    
-    logging.info("Step 2: Cleaning up locations referencing buildings to be deleted")
+    logging.info(
+        f"Deleted {meetings_deleted} course_meeting(s) referencing affected locations (will be recreated by UPSERT)")
+
+    logging.info(
+        "Step 2: Cleaning up locations referencing buildings to be deleted")
     locations_result = conn.execute(text(f"""
         DELETE FROM locations 
         WHERE building_code IN ({placeholders})
     """), params)
-    
+
     locations_deleted = locations_result.rowcount
-    logging.info(f"Cleaned up {locations_deleted} location(s) referencing buildings to be deleted: {building_codes_to_delete}")
-    
-    logging.info(f"Total cleanup: {meetings_deleted} meetings deleted + {locations_deleted} locations deleted for {len(building_codes_to_delete)} buildings")
+    logging.info(
+        f"Cleaned up {locations_deleted} location(s) referencing buildings to be deleted: {building_codes_to_delete}")
+
+    logging.info(
+        f"Total cleanup: {meetings_deleted} meetings deleted + {locations_deleted} locations deleted for {len(building_codes_to_delete)} buildings")
 
 
-def upsert_course_meetings(course_meetings_df: pd.DataFrame, conn: Connection):
+def sync_course_meetings_incremental(
+    old_course_meetings: pd.DataFrame,
+    new_course_meetings: pd.DataFrame,
+    conn: Connection
+):
     """
-    Upsert course_meetings using postgres ON CONFLICT UPDATE.
-    - cm_4col_uniq_idx: (course_id, start_time, end_time, location_id) WHERE location_id IS NOT NULL
-    - cm_3col_uniq_idx: (course_id, start_time, end_time) WHERE location_id IS NULL
+    Incrementally sync course_meetings. Drops all meetings for courses that have changed, then recreates them.
     """
-    for _, meeting in course_meetings_df.iterrows():
-        course_id = meeting['course_id']
-        start_time = meeting['start_time']
-        end_time = meeting['end_time']
-        days_of_week = meeting['days_of_week']
-        location_id = meeting['location_id'] if not safe_isna(
-            meeting['location_id']) else None
+    logging.info("Performing incremental sync of course_meetings...")
 
-        if location_id is None:
-            conn.execute(text("""
-                INSERT INTO course_meetings (course_id, start_time, end_time, days_of_week, location_id) 
-                VALUES (:course_id, :start_time, :end_time, :days_of_week, NULL)
-                ON CONFLICT (course_id, start_time, end_time) WHERE location_id IS NULL
-                DO UPDATE SET 
-                    days_of_week = EXCLUDED.days_of_week
-            """), {
-                'course_id': course_id,
-                'start_time': start_time,
-                'end_time': end_time,
-                'days_of_week': days_of_week,
-            })
-        else:
-            conn.execute(text("""
-                INSERT INTO course_meetings (course_id, start_time, end_time, days_of_week, location_id) 
-                VALUES (:course_id, :start_time, :end_time, :days_of_week, :location_id)
-                ON CONFLICT (course_id, start_time, end_time, location_id) WHERE location_id IS NOT NULL
-                DO UPDATE SET 
-                    days_of_week = EXCLUDED.days_of_week,
-                    location_id = EXCLUDED.location_id
-            """), {
-                'course_id': course_id,
-                'start_time': start_time,
-                'end_time': end_time,
-                'days_of_week': days_of_week,
-                'location_id': location_id,
-            })
+    # Group both old and new by course_id to compare meeting sets
+    old_grouped = old_course_meetings.groupby('course_id')
+    new_grouped = new_course_meetings.groupby('course_id')
+
+    old_course_ids = set(old_grouped.groups.keys())
+    new_course_ids = set(new_grouped.groups.keys())
+
+    changed_course_ids = set()
+
+    # Check courses that exist in both old and new
+    for course_id in old_course_ids & new_course_ids:
+        old_subset = old_grouped.get_group(
+            course_id).drop(columns=['course_id'])
+        new_subset = new_grouped.get_group(
+            course_id).drop(columns=['course_id'])
+
+        # Sort both DFs for comparison
+        old_meetings = old_subset.iloc[:].sort_values(
+            ['start_time', 'end_time', 'location_id']).reset_index(drop=True)
+        new_meetings = new_subset.iloc[:].sort_values(
+            ['start_time', 'end_time', 'location_id']).reset_index(drop=True)
+
+        # Compare the meeting sets (excluding course_id)
+        try:
+            if not old_meetings.equals(new_meetings):
+                changed_course_ids.add(course_id)
+        except (ValueError, TypeError):
+            # If comparison fails due to type/structure differences, consider it changed
+            changed_course_ids.add(course_id)
+
+    # Courses only in new data (additions)
+    added_course_ids = new_course_ids - old_course_ids
+    changed_course_ids.update(added_course_ids)
+
+    # Courses only in old data (removals) - these will be handled by deletion
+    removed_course_ids = old_course_ids - new_course_ids
+    changed_course_ids.update(removed_course_ids)
+
+    if not changed_course_ids:
+        logging.info("No course meetings changes detected")
+        return
+
+    logging.info(
+        f"Detected {len(changed_course_ids)} courses with meeting changes")
+
+    # Delete all meetings for changed courses
+    course_ids_list = list(changed_course_ids)
+    if course_ids_list:
+        course_ids_str = ','.join(str(cid) for cid in course_ids_list)
+
+        delete_result = conn.execute(text(f"""
+            DELETE FROM course_meetings 
+            WHERE course_id IN ({course_ids_str})
+        """))
+
+        logging.info(
+            f"Deleted {delete_result.rowcount} existing course_meetings for {len(course_ids_list)} courses")
+
+    # Insert new meetings for courses
+    courses_to_insert = [
+        cid for cid in changed_course_ids if cid in new_course_ids]
+    if courses_to_insert:
+        meetings_to_insert = new_course_meetings[
+            new_course_meetings['course_id'].isin(courses_to_insert)
+        ]
+
+        if len(meetings_to_insert) > 0:
+            # Handle duplicate meetings: prefer meetings with location over those without
+            meetings_to_insert = meetings_to_insert.iloc[:].sort_values([
+                                                                        'location_id'])
+
+            meetings_to_insert = meetings_to_insert.drop_duplicates(
+                subset=['course_id', 'start_time', 'end_time'],
+                keep='first'
+            )
+
+            logging.info(
+                f"After deduplication: {len(meetings_to_insert)} meetings to insert")
+            # Batch insert using individual parameterized queries for safety
+            inserted_count = 0
+            for _, meeting in meetings_to_insert.iterrows():
+                course_id = meeting['course_id']
+                start_time = meeting['start_time']
+                end_time = meeting['end_time']
+                days_of_week = meeting['days_of_week']
+                location_id = meeting['location_id'] if not safe_isna(
+                    meeting['location_id']) else None
+
+                conn.execute(text("""
+                    INSERT INTO course_meetings (course_id, start_time, end_time, days_of_week, location_id)
+                    VALUES (:course_id, :start_time, :end_time, :days_of_week, :location_id)
+                """), {
+                    'course_id': course_id,
+                    'start_time': start_time,
+                    'end_time': end_time,
+                    'days_of_week': days_of_week,
+                    'location_id': location_id,
+                })
+                inserted_count += 1
+
+            logging.info(f"Inserted {inserted_count} new course_meetings")
+
+    logging.info("Course meetings incremental sync completed")
 
 
 def sync_db_courses(
@@ -444,7 +525,7 @@ def sync_db_courses(
         "course_meetings"]}
 
     diff = generate_diff(tables_old_for_diff, tables_for_diff)
-    
+
     print_diff(diff, tables_old, tables, data_dir / "change_log")
 
     inspector = inspect(db.Engine)
@@ -481,7 +562,7 @@ def sync_db_courses(
             commit_additions(table_name, diff[table_name]["added_rows"], conn)
             commit_updates(table_name, diff[table_name]["changed_rows"], conn)
 
-        # Handle course_meetings with UPSERT (bypasses normal diff logic due to unique constraints)
+        # Handle course_meetings with incremental drop-and-recreate approach
         # Must go after all other tables are added due to course id foreign key constraint
         if "course_meetings" in tables:
             # First resolve location IDs for new course_meetings
@@ -506,22 +587,30 @@ def sync_db_courses(
                             logging.warning(
                                 f"Location not found in mapping: building_code='{building_code}', room='{room}'")
 
-            # Clean up temporary columns and upsert
+            # Clean up temporary columns
             course_meetings_clean = course_meetings_with_locations.drop(
                 columns=["_building_code", "_room"], errors="ignore")
-            upsert_course_meetings(course_meetings_clean, conn)
+
+            sync_course_meetings_incremental(
+                tables_old["course_meetings"],
+                course_meetings_clean,
+                conn
+            )
 
         for table_name in tables_order_delete:
-            if table_name in ["locations", "course_meetings", "courses"]: # skip deleting courses due to self-fk constraint
+            # skip deleting courses due to self-fk constraint
+            if table_name in ["locations", "course_meetings", "courses"]:
                 continue
-            
+
             deleted_rows = diff[table_name]["deleted_rows"]
-            logging.info(f"Processing deletions for table '{table_name}': {len(deleted_rows)} rows to delete")
-            
+            logging.info(
+                f"Processing deletions for table '{table_name}': {len(deleted_rows)} rows to delete")
+
             if table_name == "buildings":
-                logging.info(f"About to clean up dependencies before deleting {len(deleted_rows)} buildings")
+                logging.info(
+                    f"About to clean up dependencies before deleting {len(deleted_rows)} buildings")
                 cleanup_dependencies_for_buildings(deleted_rows, conn)
-                
+
             commit_deletions(table_name, deleted_rows, conn)
         print("\033[F", end="")
 
