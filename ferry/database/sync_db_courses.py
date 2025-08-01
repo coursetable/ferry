@@ -446,18 +446,32 @@ def sync_course_meetings_incremental(
         ]
 
         if len(meetings_to_insert) > 0:
-            # Handle duplicate meetings: prefer meetings with location over those without
-            meetings_to_insert = meetings_to_insert.iloc[:].sort_values([
-                                                                        'location_id'])
-
-            meetings_to_insert = meetings_to_insert.drop_duplicates(
-                subset=['course_id', 'start_time', 'end_time'],
-                keep='first'
-            )
+            # Remove null location duplicates based on database constraints:
+            # - For null location: unique on (course_id, start_time, end_time) only
+            # - For non-null location: unique on (course_id, start_time, end_time, location_id)
+            null_location_mask = meetings_to_insert['location_id'].apply(safe_isna)
+            
+            meetings_with_location = meetings_to_insert[~null_location_mask].copy()
+            meetings_with_null_location = meetings_to_insert[null_location_mask].copy()
+            
+            if len(meetings_with_null_location) > 0:
+                # (constraint allows only one null location per course_id, start_time, end_time)
+                meetings_with_null_location = meetings_with_null_location.drop_duplicates(
+                    subset=['course_id', 'start_time', 'end_time'], 
+                    keep='first'
+                )
+                
+                # Then, remove null location meetings if there's any non-null location meeting
+                non_null_keys = set(meetings_with_location[['course_id', 'start_time', 'end_time']].apply(tuple, axis=1))
+                meetings_with_null_location = meetings_with_null_location[
+                    ~meetings_with_null_location[['course_id', 'start_time', 'end_time']].apply(tuple, axis=1).isin(non_null_keys)
+                ]
+            
+            meetings_to_insert = pd.concat([meetings_with_location, meetings_with_null_location], ignore_index=True)
 
             logging.info(
                 f"After deduplication: {len(meetings_to_insert)} meetings to insert")
-            # Batch insert using individual parameterized queries for safety
+
             inserted_count = 0
             for _, meeting in meetings_to_insert.iterrows():
                 course_id = meeting['course_id']
