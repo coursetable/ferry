@@ -472,26 +472,28 @@ def sync_course_meetings_incremental(
             logging.info(
                 f"After deduplication: {len(meetings_to_insert)} meetings to insert")
 
-            inserted_count = 0
+            # Prepare batch data for insertion
+            batch_data = []
             for _, meeting in meetings_to_insert.iterrows():
-                course_id = meeting['course_id']
-                start_time = meeting['start_time']
-                end_time = meeting['end_time']
-                days_of_week = meeting['days_of_week']
                 location_id = meeting['location_id'] if not safe_isna(
                     meeting['location_id']) else None
+                
+                batch_data.append({
+                    'course_id': meeting['course_id'],
+                    'start_time': meeting['start_time'],
+                    'end_time': meeting['end_time'],
+                    'days_of_week': meeting['days_of_week'],
+                    'location_id': location_id,
+                })
 
+            if batch_data:
                 conn.execute(text("""
                     INSERT INTO course_meetings (course_id, start_time, end_time, days_of_week, location_id)
                     VALUES (:course_id, :start_time, :end_time, :days_of_week, :location_id)
-                """), {
-                    'course_id': course_id,
-                    'start_time': start_time,
-                    'end_time': end_time,
-                    'days_of_week': days_of_week,
-                    'location_id': location_id,
-                })
-                inserted_count += 1
+                """), batch_data)
+                inserted_count = len(batch_data)
+            else:
+                inserted_count = 0
 
             logging.info(f"Inserted {inserted_count} new course_meetings")
 
