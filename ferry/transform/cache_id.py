@@ -27,7 +27,6 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
 
     We cache the following:
     - `flags`: `flag_id`
-    - `locations`: `location_id`
     - `professors`: `professor_id`
 
     We can alternatively locate every row by:
@@ -37,19 +36,13 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
 
     This one is not affected by the `use_cache` option: it always saves the cache.
     This is because this is not for performance, but for consistency.
+
+    Locations are now managed via database UPSERT.
     """
     cache_dir = data_dir / "id_cache"
     cache_dir.mkdir(exist_ok=True)
 
     flag_to_id = tables["flags"].set_index("flag_text")["flag_id"].to_dict()
-    location_to_id = (
-        tables["locations"]
-        .set_index(["building_code", "room"])["location_id"]
-        .to_dict()
-    )
-    location_to_id = {
-        f"{k[0]} {'' if pd.isna(k[1]) else k[1]}": v for k, v in location_to_id.items()
-    }
     professor_to_id = (
         tables["professors"].set_index(["name", "email"])["professor_id"].to_dict()
     )
@@ -71,5 +64,4 @@ def save_id_cache(tables: dict[str, pd.DataFrame], data_dir: Path):
             del professor_to_id[name_only_version]
 
     merge_id_cache(cache_dir / "flag_id.json", flag_to_id)
-    merge_id_cache(cache_dir / "location_id.json", location_to_id)
     merge_id_cache(cache_dir / "professor_id.json", professor_to_id)

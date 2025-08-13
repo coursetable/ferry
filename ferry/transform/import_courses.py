@@ -79,7 +79,8 @@ def generate_id(
     ids = cache_keys.map(id_cache)
     max_flag_id = max(id_cache.values(), default=0)
     unmapped = cache_keys[ids.isna()].unique()
-    new_flag_ids = pd.Series(range(max_flag_id + 1, max_flag_id + 1 + len(unmapped)))
+    new_flag_ids = pd.Series(
+        range(max_flag_id + 1, max_flag_id + 1 + len(unmapped)))
     unused_keys = set(id_cache.keys()) - set(cache_keys.values)
     logging.warning(f"Unused keys in {cache_path}: {unused_keys}")
     return ids.fillna(cache_keys.map(dict(zip(unmapped, new_flag_ids)))).astype(int)
@@ -91,6 +92,7 @@ exactly_identical_crns = [
     ("201803", (12568, 13263)),  # CPLT 942
     ("201901", (21500, 22135)),  # PLSC 530
     ("202403", (15444, 15753)),  # MUS 644
+    ("202503", (11421, 11423)),  # MUS 644 (again)
 ]
 
 
@@ -128,7 +130,8 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
         ]["crns"].iloc[0]
         for other_crn in cross_listed_crns - set(crns):
             # Remove rest from the crns of each cross listed crn
-            target = listings["season_code"].eq(season) & listings["crn"].eq(other_crn)
+            target = listings["season_code"].eq(
+                season) & listings["crn"].eq(other_crn)
             listings.loc[target, "crns"] = listings.loc[target, "crns"].apply(
                 lambda x: x - set(rest)
             )
@@ -152,7 +155,8 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
             if crn not in crns:
                 print(
                     listings[
-                        listings["crn"].eq(crn) & listings["season_code"].eq(season)
+                        listings["crn"].eq(
+                            crn) & listings["season_code"].eq(season)
                     ]
                 )
                 raise ValueError(f"CRN not in CRNs")
@@ -170,14 +174,10 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
                     stack.extend(adj_list[v] - visited)
             # Since each node also has a self-edge, the number of edges should be n^2
             if num_edges != len(component) ** 2:
-                print(
-                    listings[
-                        listings["crn"].isin(component)
-                        & listings["season_code"].eq(season)
-                    ]
-                )
+                print(listings[listings["crn"].isin(component)
+                      & listings["season_code"].eq(season)])
                 raise ValueError(
-                    f"CRNs not fully connected, counted {num_edges} edges, expected {len(component) ** 2}"
+                    f"CRNs {component} in season {season} not fully connected, counted {num_edges} edges, expected {len(component) ** 2}"
                 )
 
     listings["course_id"] = listings.apply(generate_course_id, axis=1)
@@ -185,10 +185,12 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
     def validate_course_groups(group: pd.DataFrame):
         # Each course has identical sections
         if len(group["section"].unique()) > 1:
-            logging.warning(f"Multiple sections for course {group.name}:\n{group}")
+            logging.warning(
+                f"Multiple sections for course {group.name}:\n{group}")
         # Each course has distinct course codes
         if len(group["course_code"].unique()) != len(group):
-            logging.warning(f"Identical course codes for course {group.name}:\n{group}")
+            logging.warning(
+                f"Identical course codes for course {group.name}:\n{group}")
 
     listings.groupby("course_id").apply(validate_course_groups)
 
@@ -204,7 +206,8 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
         .transform(validate_primary_crn)
         .astype(pd.Int64Dtype())
     )
-    courses = listings.drop_duplicates(subset="course_id").set_index("course_id")
+    courses = listings.drop_duplicates(
+        subset="course_id").set_index("course_id")
     return listings, courses
 
 
@@ -242,7 +245,8 @@ def aggregate_professors(
         .rename(columns={"professors": "name", "professor_emails": "email"})
         .reset_index(drop=False)
     )
-    course_professors["email"] = course_professors["email"].replace(prof_email_changes)
+    course_professors["email"] = course_professors["email"].replace(
+        prof_email_changes)
 
     # First: try to fill empty emails
     def fix_empty_email(group: pd.DataFrame) -> pd.DataFrame:
@@ -274,7 +278,8 @@ def aggregate_professors(
 
     # Second: deduplicate by email, falling back to name
     course_professors = (
-        course_professors.groupby("name").apply(fix_empty_email).reset_index(drop=True)
+        course_professors.groupby("name").apply(
+            fix_empty_email).reset_index(drop=True)
     )
 
     def fix_different_name(group: pd.DataFrame):
@@ -301,7 +306,8 @@ def aggregate_professors(
             most_recent_name = names_by_season[-1]
             group["name"] = most_recent_name
             logging.warning(
-                f"Multiple names with email {group.name}: {names_by_season}; they will all be merged as {most_recent_name} because it seems to be the most recent.\nIf they are the same person, add the following entry to `prof_name_changes`: `\"{group.name}\": {{{", ".join([f"\"{old_name}\": \"{most_recent_name}\"" for old_name in names_by_season[:-1]])}}},` (adjust which name you are eventually mapping to depending on what the latest name is)."
+                f"Multiple names with email {group.name}: {names_by_season}; they will all be merged as {most_recent_name} because it seems to be the most recent.\nIf they are the same person, add the following entry to `prof_name_changes`: `\"{group.name}\": {{{", ".join([f"\"{old_name}\": \"{most_recent_name}\"" for old_name in names_by_season[
+                                                                                                                                                                                                                                                                                 :-1]])}}},` (adjust which name you are eventually mapping to depending on what the latest name is)."
             )
             # If you are fixing the warning above, you may find the below useful
             # for a local run:
@@ -341,7 +347,8 @@ def aggregate_flags(
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     logging.debug("Adding course flags")
     course_flags = (
-        courses["flags"].explode().dropna().rename("flag_text").reset_index(drop=False)
+        courses["flags"].explode().dropna().rename(
+            "flag_text").reset_index(drop=False)
     )
 
     course_flags["flag_id"] = generate_id(
@@ -394,10 +401,25 @@ def aggregate_locations(
         for meeting in meetings:
             if meeting["location"] in ["", "TBA", "TBA TBA"]:
                 continue
-            location_data.append(
-                {**parse_location(meeting["location"]), "url": meeting["location_url"]}
-            )
-    locations = pd.DataFrame(location_data).drop_duplicates().reset_index(drop=True)
+            try:
+                parsed_location = parse_location(meeting["location"])
+                # Only add location if it has a valid building code
+                if parsed_location["code"] is not None and str(parsed_location["code"]).strip() != "":
+                    location_data.append(
+                        {**parsed_location, "url": meeting["location_url"]}
+                    )
+            except ValueError as e:
+                logging.warning(
+                    f"Failed to parse location '{meeting['location']}': {e}")
+                continue
+
+    locations = pd.DataFrame(
+        location_data).drop_duplicates().reset_index(drop=True)
+
+    # Filter out any rows where code is still None or NaN
+    locations = locations.dropna(subset=["code"])
+    locations = locations[locations["code"].notna() & (
+        locations["code"] != "")]
 
     def report_multiple_names(row: pd.DataFrame):
         if len(row["building_name"].unique()) > 1:
@@ -408,15 +430,10 @@ def aggregate_locations(
     locations[~locations["building_name"].isna()].groupby(["code", "room"]).apply(
         report_multiple_names
     )
-    locations = locations.groupby(["code", "room"], as_index=False, dropna=False).last()
+    locations = locations.groupby(
+        ["code", "room"], as_index=False, dropna=True).last()
 
-    locations["location_id"] = generate_id(
-        locations,
-        lambda row: f"{row['code']} {'' if pd.isna(row['room']) else row['room']}",
-        data_dir / "id_cache" / "location_id.json",
-    )
-    location_to_id = locations.set_index(["code", "room"])["location_id"].to_dict()
-    locations = locations.set_index("location_id")
+    locations = locations.set_index(["code", "room"])
 
     buildings = locations.copy(deep=True)
     locations.rename(columns={"code": "building_code"}, inplace=True)
@@ -457,6 +474,8 @@ def aggregate_locations(
                         "start_time": m["start_time"],
                         "end_time": m["end_time"],
                         "location_id": None,
+                        "_building_code": None,
+                        "_room": None,
                     }
                 )
                 continue
@@ -466,9 +485,9 @@ def aggregate_locations(
                     "days_of_week": m["days_of_week"],
                     "start_time": m["start_time"],
                     "end_time": m["end_time"],
-                    "location_id": location_to_id[
-                        location_info["code"], location_info["room"] or np.nan
-                    ],
+                    "location_id": None,
+                    "_building_code": location_info["code"],
+                    "_room": location_info["room"],
                 }
             )
         return meetings
@@ -477,18 +496,21 @@ def aggregate_locations(
     # course_meetings is a series of course_id -> list of dicts.
     # Explode it to get a DataFrame with course_id, days_of_week, start_time, end_time, location_id
     course_meetings = course_meetings.explode().dropna().apply(pd.Series).reset_index()
-    # Merge rows with the same start/end/location
+
     course_meetings = (
         course_meetings.groupby(
-            ["course_id", "start_time", "end_time", "location_id"], dropna=False
+            ["course_id", "start_time", "end_time", "_building_code", "_room"], dropna=False
         )
-        .agg({"days_of_week": reduce_days_of_week})
+        # location_id is always None anyway
+        .agg({"days_of_week": reduce_days_of_week, "location_id": "first"})
         .reset_index()
     )
-    course_meetings["days_of_week"] = course_meetings["days_of_week"].astype(int)
+    course_meetings["days_of_week"] = course_meetings["days_of_week"].astype(
+        int)
     course_meetings["location_id"] = course_meetings["location_id"].astype(
         pd.Int64Dtype()
     )
+
     return course_meetings, locations, buildings
 
 
@@ -559,12 +581,14 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     # convert to JSON string for postgres
     listings["skills"] = listings["skills"].apply(ujson.dumps)
     listings["areas"] = listings["areas"].apply(ujson.dumps)
-    listings["section"] = listings["section"].fillna("0").astype(str).replace({"": "0"})
+    listings["section"] = listings["section"].fillna(
+        "0").astype(str).replace({"": "0"})
     listings["listing_id"] = listings.apply(generate_listing_id, axis=1)
     listings, courses = resolve_cross_listings(listings)
     professors, course_professors = aggregate_professors(courses, data_dir)
     flags, course_flags = aggregate_flags(courses, data_dir)
-    course_meetings, locations, buildings = aggregate_locations(courses, data_dir)
+    course_meetings, locations, buildings = aggregate_locations(
+        courses, data_dir)
 
     print("\033[F", end="")
     print("Importing courses... ✔")

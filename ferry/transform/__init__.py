@@ -109,11 +109,25 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         ("evaluation_statistics", database.EvaluationStatistics.__table__),
         ("evaluation_ratings", database.EvaluationRating.__table__),
     ]:
-        all_tables[table_name] = (
-            all_tables[table_name]
-            .reset_index(drop=False)
-            .loc[:, [column.key for column in db_table.columns]]
-        )
+
+        if table_name == "locations":
+            current_table = all_tables[table_name].reset_index(drop=False)
+            if "location_id" not in current_table.columns:
+                current_table["location_id"] = None
+            locations_columns = ["location_id", "building_code", "room"]
+            available_cols = [col for col in locations_columns if col in current_table.columns]
+            current_table = current_table[available_cols]
+            for col in locations_columns:
+                if col not in current_table.columns:
+                    current_table[col] = None
+            all_tables[table_name] = current_table
+        
+        db_columns = [column.key for column in db_table.columns]
+        current_table = all_tables[table_name].reset_index(drop=False)
+        
+        # Only select columns that exist in both the dataframe and database schema
+        available_columns = [col for col in db_columns if col in current_table.columns]
+        all_tables[table_name] = current_table[available_columns]
 
     check_invariants(all_tables)
 
