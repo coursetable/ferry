@@ -7,7 +7,7 @@ on:
       - ".github/workflows/ferry.yml"
       - "config/release*.yml"
   schedule:
-    - cron: "0 7 * * *" # 3:00 AM EDT
+    # - cron: "0 7 * * *" # 3:00 AM EDT
     # - cron: "0 13 * * *"    # 9:00 AM EDT
     # - cron: "30 17 * * *"   # 1:30 PM EDT
     # - cron: "0 22 * * *"    # 6:00 PM EDT
