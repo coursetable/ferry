@@ -480,13 +480,17 @@ def print_diff(
         lambda row: f"- {row['flag_text']}\n",
         "flags",
     )
-    content += print_table_diff(
-        diff["locations"],
-        tables_old["locations"],
-        tables["locations"],
-        lambda row: f"- {row['building_code']} {row['room']}\n",
-        "locations",
-    )
+    # Locations are handled via upsert and excluded from diff computation
+    if "locations" in diff:
+        content += print_table_diff(
+            diff["locations"],
+            tables_old["locations"],
+            tables["locations"],
+            lambda row: f"- {row['building_code']} {row['room']}\n",
+            "locations",
+        )
+    else:
+        content += create_section(2, "Locations", "Handled via upsert (no diff computed)")
     content += print_table_diff(
         diff["buildings"],
         tables_old["buildings"],
