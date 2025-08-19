@@ -592,12 +592,11 @@ def sync_db_courses(
         "location_id"
     ].astype(pd.Int64Dtype())
 
-    # Exclude course_meetings and locations from diff computation
-    # Locations are handled via upsert_locations() and don't need diff-based sync
+    # Exclude course_meetings from diff computation
     tables_for_diff = {k: v for k, v in tables.items() if k not in [
-        "course_meetings", "locations"]}
+        "course_meetings"]}
     tables_old_for_diff = {k: v for k, v in tables_old.items() if k not in [
-        "course_meetings", "locations"]}
+        "course_meetings"]}
 
     diff = generate_diff(tables_old_for_diff, tables_for_diff)
 
