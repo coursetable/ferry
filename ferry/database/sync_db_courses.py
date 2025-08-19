@@ -334,12 +334,12 @@ def cleanup_dependencies_for_buildings(buildings_to_delete: pd.DataFrame, conn: 
     building_codes_to_delete = buildings_to_delete['code'].tolist()
     logging.info(
         f"About to clean up dependencies for buildings: {building_codes_to_delete}")
-
+    
     placeholders = ', '.join(
         [f':code_{i}' for i in range(len(building_codes_to_delete))])
     params = {f'code_{i}': code for i,
               code in enumerate(building_codes_to_delete)}
-
+    
     logging.info(
         "Step 1: Deleting course_meetings referencing affected locations (will be recreated by UPSERT)")
     meetings_result = conn.execute(text(f"""
@@ -449,31 +449,25 @@ def sync_course_meetings_incremental(
             # Remove null location duplicates based on database constraints:
             # - For null location: unique on (course_id, start_time, end_time) only
             # - For non-null location: unique on (course_id, start_time, end_time, location_id)
-            null_location_mask = meetings_to_insert['location_id'].apply(
-                safe_isna)
-
-            meetings_with_location = meetings_to_insert[~null_location_mask].copy(
-            )
-            meetings_with_null_location = meetings_to_insert[null_location_mask].copy(
-            )
-
+            null_location_mask = meetings_to_insert['location_id'].apply(safe_isna)
+            
+            meetings_with_location = meetings_to_insert[~null_location_mask].copy()
+            meetings_with_null_location = meetings_to_insert[null_location_mask].copy()
+            
             if len(meetings_with_null_location) > 0:
                 # (constraint allows only one null location per course_id, start_time, end_time)
                 meetings_with_null_location = meetings_with_null_location.drop_duplicates(
-                    subset=['course_id', 'start_time', 'end_time'],
+                    subset=['course_id', 'start_time', 'end_time'], 
                     keep='first'
                 )
-
+                
                 # Then, remove null location meetings if there's any non-null location meeting
-                non_null_keys = set(meetings_with_location[[
-                                    'course_id', 'start_time', 'end_time']].apply(tuple, axis=1))
+                non_null_keys = set(meetings_with_location[['course_id', 'start_time', 'end_time']].apply(tuple, axis=1))
                 meetings_with_null_location = meetings_with_null_location[
-                    ~meetings_with_null_location[['course_id', 'start_time', 'end_time']].apply(
-                        tuple, axis=1).isin(non_null_keys)
+                    ~meetings_with_null_location[['course_id', 'start_time', 'end_time']].apply(tuple, axis=1).isin(non_null_keys)
                 ]
-
-            meetings_to_insert = pd.concat(
-                [meetings_with_location, meetings_with_null_location], ignore_index=True)
+            
+            meetings_to_insert = pd.concat([meetings_with_location, meetings_with_null_location], ignore_index=True)
 
             logging.info(
                 f"After deduplication: {len(meetings_to_insert)} meetings to insert")
@@ -483,7 +477,7 @@ def sync_course_meetings_incremental(
             for _, meeting in meetings_to_insert.iterrows():
                 location_id = meeting['location_id'] if not safe_isna(
                     meeting['location_id']) else None
-
+                
                 batch_data.append({
                     'course_id': meeting['course_id'],
                     'start_time': meeting['start_time'],
@@ -602,7 +596,10 @@ def sync_db_courses(
                         course_meetings_with_locations.at[i,
                                                           'location_id'] = location_mapping[location_key]
                     else:
-                        if building_code is not None and not safe_isna(building_code):
+                        if building_code is None or safe_isna(building_code):
+                            logging.warning(
+                                f"Cannot resolve location for course meeting due to None building_code: room='{room}'")
+                        else:
                             logging.warning(
                                 f"Location not found in mapping: building_code='{building_code}', room='{room}'")
 
