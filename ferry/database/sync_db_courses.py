@@ -630,6 +630,10 @@ def sync_db_courses(
 
         # Handle locations with UPSERT first
         location_mapping = upsert_locations(tables["locations"], conn)
+        print(f"Created location_mapping with {len(location_mapping)} entries")
+        if len(location_mapping) > 0:
+            sample_keys = list(location_mapping.keys())[:5]
+            print(f"Sample location_mapping keys: {sample_keys}")
 
         for table_name in tables_order_add:
             if table_name in ["locations", "course_meetings"]:
@@ -642,8 +646,24 @@ def sync_db_courses(
         if "course_meetings" in tables:
             # First resolve location IDs for new course_meetings
             course_meetings_with_locations = tables["course_meetings"].copy()
+            print(f"Processing {len(course_meetings_with_locations)} course meetings")
+            print(f"Course meetings columns: {course_meetings_with_locations.columns.tolist()}")
+            
+            resolved_count = 0
+            failed_count = 0
+            
             for i, meeting in course_meetings_with_locations.iterrows():
-                if meeting['location_id'] is None and '_building_code' in meeting.index and '_room' in meeting.index:
+                has_building_code = '_building_code' in meeting.index
+                has_room = '_room' in meeting.index
+                location_id_is_none = pd.isna(meeting['location_id'])
+                
+                if isinstance(i, int) and i < 3:  # Debug first few rows
+                    print(f"Row {i}: location_id={meeting.get('location_id')}, location_id_is_none={location_id_is_none}, has_building_code={has_building_code}, has_room={has_room}")
+                    if has_building_code and has_room:
+                        print(f"  Building code: '{meeting['_building_code']}', Room: '{meeting['_room']}')")
+                    print(f"  Will process: {location_id_is_none and has_building_code and has_room}")
+                
+                if location_id_is_none and has_building_code and has_room:
                     building_code = meeting['_building_code']
                     room = meeting['_room'] if not safe_isna(
                         meeting['_room']) else None
@@ -654,14 +674,20 @@ def sync_db_courses(
                     if location_key in location_mapping:
                         course_meetings_with_locations.at[i,
                                                           'location_id'] = location_mapping[location_key]
+                        resolved_count += 1
                     else:
+                        failed_count += 1
                         if building_code is None or safe_isna(building_code):
-                            logging.warning(
-                                f"Cannot resolve location for course meeting due to None building_code: room='{room}'")
+                            # Only log if room is not None/empty (legitimate TBA cases)
+                            if room is not None and str(room).strip() not in ['', 'None', 'TBA']:
+                                logging.warning(
+                                    f"Cannot resolve location for course meeting due to None building_code: room='{room}'")
                         else:
                             logging.warning(
                                 f"Location not found in mapping: building_code='{building_code}', room='{room}'")
 
+            print(f"Location resolution results: {resolved_count} resolved, {failed_count} failed")
+            
             # Clean up temporary columns
             course_meetings_clean = course_meetings_with_locations.drop(
                 columns=["_building_code", "_room"], errors="ignore")

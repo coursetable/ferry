@@ -433,10 +433,13 @@ def aggregate_locations(
     locations = locations.groupby(
         ["code", "room"], as_index=False, dropna=True).last()
 
-    locations = locations.set_index(["code", "room"])
-
-    buildings = locations.copy(deep=True)
+    # Rename code to building_code BEFORE setting as index
     locations.rename(columns={"code": "building_code"}, inplace=True)
+    
+    # Copy buildings before setting index (buildings need the original column name)
+    buildings = locations.rename(columns={"building_code": "code"}).copy(deep=True)
+    
+    locations = locations.set_index(["building_code", "room"])
 
     def report_different_info(group: pd.DataFrame):
         all_names = group["building_name"].unique()
