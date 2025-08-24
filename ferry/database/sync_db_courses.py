@@ -569,11 +569,14 @@ def sync_db_courses(
                     )
                 )
 
-        # Handle locations with UPSERT first
-        location_mapping = upsert_locations(tables["locations"], conn)
-
+        # Process tables in dependency order (buildings before locations)
+        location_mapping = {}
         for table_name in tables_order_add:
-            if table_name in ["locations", "course_meetings"]:
+            if table_name == "locations":
+                # Handle locations with UPSERT
+                location_mapping = upsert_locations(tables["locations"], conn)
+                continue
+            elif table_name == "course_meetings":
                 continue
             commit_additions(table_name, diff[table_name]["added_rows"], conn)
             commit_updates(table_name, diff[table_name]["changed_rows"], conn)
