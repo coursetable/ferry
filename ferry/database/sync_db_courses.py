@@ -626,7 +626,7 @@ def sync_db_courses(
                         course_meetings_with_locations.at[i,
                                                           'location_id'] = location_mapping[location_key]
                     else:
-                        if building_code is None or safe_isna(building_code):
+                        if (building_code is None or safe_isna(building_code)) and (room is not None and not safe_isna(room)):
                             logging.warning(
                                 f"Cannot resolve location for course meeting due to None building_code: room='{room}'")
                         else:
