@@ -284,6 +284,26 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
                 conn.execute(update_query, params)
 
 
+def reset_location_sequence(conn: Connection):
+    """
+    Reset the locations sequence to the next value after the highest existing location_id.
+    This prevents duplicate key violations when the sequence is out of sync.
+    """
+    try:
+        result = conn.execute(text("""
+            SELECT setval('locations_location_id_seq', 
+                         COALESCE((SELECT MAX(location_id) FROM locations), 0) + 1, 
+                         true)
+        """)).fetchone()
+        
+        if result:
+            logging.info(f"Reset locations sequence to: {result[0]}")
+        else:
+            logging.warning("Failed to reset locations sequence")
+    except Exception as e:
+        logging.warning(f"Could not reset locations sequence (this is usually fine): {e}")
+
+
 def upsert_locations(locations_df: pd.DataFrame, conn: Connection) -> dict[tuple, int]:
     """
     Upsert locations using postgres ON CONFLICT UPDATE.
@@ -334,12 +354,12 @@ def cleanup_dependencies_for_buildings(buildings_to_delete: pd.DataFrame, conn: 
     building_codes_to_delete = buildings_to_delete['code'].tolist()
     logging.info(
         f"About to clean up dependencies for buildings: {building_codes_to_delete}")
-
+    
     placeholders = ', '.join(
         [f':code_{i}' for i in range(len(building_codes_to_delete))])
     params = {f'code_{i}': code for i,
               code in enumerate(building_codes_to_delete)}
-
+    
     logging.info(
         "Step 1: Deleting course_meetings referencing affected locations (will be recreated by UPSERT)")
     meetings_result = conn.execute(text(f"""
@@ -400,6 +420,11 @@ def sync_course_meetings_incremental(
             ['start_time', 'end_time', 'location_id']).reset_index(drop=True)
         new_meetings = new_subset.iloc[:].sort_values(
             ['start_time', 'end_time', 'location_id']).reset_index(drop=True)
+
+        # Check if any old meetings have missing location IDs - if so, treat as changed
+        if old_meetings['location_id'].apply(safe_isna).any():
+            changed_course_ids.add(course_id)
+            continue
 
         # Compare the meeting sets (excluding course_id)
         try:
@@ -569,11 +594,16 @@ def sync_db_courses(
                     )
                 )
 
-        # Handle locations with UPSERT first
-        location_mapping = upsert_locations(tables["locations"], conn)
-
+        # Process tables in dependency order (buildings before locations)
+        location_mapping = {}
         for table_name in tables_order_add:
-            if table_name in ["locations", "course_meetings"]:
+            if table_name == "locations":
+                # Reset sequence to prevent duplicate key violations
+                reset_location_sequence(conn)
+                # Handle locations with UPSERT
+                location_mapping = upsert_locations(tables["locations"], conn)
+                continue
+            elif table_name == "course_meetings":
                 continue
             commit_additions(table_name, diff[table_name]["added_rows"], conn)
             commit_updates(table_name, diff[table_name]["changed_rows"], conn)
@@ -584,7 +614,7 @@ def sync_db_courses(
             # First resolve location IDs for new course_meetings
             course_meetings_with_locations = tables["course_meetings"].copy()
             for i, meeting in course_meetings_with_locations.iterrows():
-                if meeting['location_id'] is None and '_building_code' in meeting.index and '_room' in meeting.index:
+                if pd.isna(meeting['location_id']) and '_building_code' in meeting.index and '_room' in meeting.index:
                     building_code = meeting['_building_code']
                     room = meeting['_room'] if not safe_isna(
                         meeting['_room']) else None
@@ -596,7 +626,7 @@ def sync_db_courses(
                         course_meetings_with_locations.at[i,
                                                           'location_id'] = location_mapping[location_key]
                     else:
-                        if building_code is None or safe_isna(building_code):
+                        if (building_code is None or safe_isna(building_code)) and (room is not None and not safe_isna(room)):
                             logging.warning(
                                 f"Cannot resolve location for course meeting due to None building_code: room='{room}'")
                         else:

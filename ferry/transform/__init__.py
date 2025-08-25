@@ -121,13 +121,22 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
                 if col not in current_table.columns:
                     current_table[col] = None
             all_tables[table_name] = current_table
-        
-        db_columns = [column.key for column in db_table.columns]
-        current_table = all_tables[table_name].reset_index(drop=False)
-        
-        # Only select columns that exist in both the dataframe and database schema
-        available_columns = [col for col in db_columns if col in current_table.columns]
-        all_tables[table_name] = current_table[available_columns]
+        elif table_name == "course_meetings":
+            # Special handling for course_meetings to preserve temporary location columns
+            current_table = all_tables[table_name].reset_index(drop=False)
+            db_columns = [column.key for column in db_table.columns]
+            
+            # Include temporary columns needed for location resolution in sync_db_courses
+            temp_columns = ["_building_code", "_room"]
+            available_columns = [col for col in db_columns + temp_columns if col in current_table.columns]
+            all_tables[table_name] = current_table[available_columns]
+        else:
+            db_columns = [column.key for column in db_table.columns]
+            current_table = all_tables[table_name].reset_index(drop=False)
+            
+            # Only select columns that exist in both the dataframe and database schema
+            available_columns = [col for col in db_columns if col in current_table.columns]
+            all_tables[table_name] = current_table[available_columns]
 
     check_invariants(all_tables)
 
