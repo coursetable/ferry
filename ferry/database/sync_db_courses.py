@@ -284,6 +284,26 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
                 conn.execute(update_query, params)
 
 
+def reset_location_sequence(conn: Connection):
+    """
+    Reset the locations sequence to the next value after the highest existing location_id.
+    This prevents duplicate key violations when the sequence is out of sync.
+    """
+    try:
+        result = conn.execute(text("""
+            SELECT setval('locations_location_id_seq', 
+                         COALESCE((SELECT MAX(location_id) FROM locations), 0) + 1, 
+                         true)
+        """)).fetchone()
+        
+        if result:
+            logging.info(f"Reset locations sequence to: {result[0]}")
+        else:
+            logging.warning("Failed to reset locations sequence")
+    except Exception as e:
+        logging.warning(f"Could not reset locations sequence (this is usually fine): {e}")
+
+
 def upsert_locations(locations_df: pd.DataFrame, conn: Connection) -> dict[tuple, int]:
     """
     Upsert locations using postgres ON CONFLICT UPDATE.
@@ -400,6 +420,11 @@ def sync_course_meetings_incremental(
             ['start_time', 'end_time', 'location_id']).reset_index(drop=True)
         new_meetings = new_subset.iloc[:].sort_values(
             ['start_time', 'end_time', 'location_id']).reset_index(drop=True)
+
+        # Check if any old meetings have missing location IDs - if so, treat as changed
+        if old_meetings['location_id'].apply(safe_isna).any():
+            changed_course_ids.add(course_id)
+            continue
 
         # Compare the meeting sets (excluding course_id)
         try:
@@ -573,6 +598,8 @@ def sync_db_courses(
         location_mapping = {}
         for table_name in tables_order_add:
             if table_name == "locations":
+                # Reset sequence to prevent duplicate key violations
+                reset_location_sequence(conn)
                 # Handle locations with UPSERT
                 location_mapping = upsert_locations(tables["locations"], conn)
                 continue
