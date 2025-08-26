@@ -162,7 +162,18 @@ def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTables:
         text = re.sub(r"</?[a-z]+>", "", text)
         text = re.sub(r" *(Comments|Ratings):$", "", text)
         text = text.replace("course or module", "course or workshop")
+
+        # plurals
+        text = text.replace("the professor?", "the professor(s)?")
+        text = text.replace("professor's", "professor(s)'s")
+
+        # class/subject specific
         text = text.replace("YSE", "F&ES")
+        text = re.sub(r"Behavioral & Inst Economics\s?", "", text)
+
+        # missing object
+        text = text.replace(" for ?", "?")
+        text = text.replace(" in ?", "?")
         return text.strip()
 
     evaluation_questions["question_text"] = evaluation_questions["question_text"].apply(
