@@ -31,6 +31,7 @@ code_changes = {
     "CPSC 679": "CPSC 410",
     "CHNS 154": "CHNS 158",
     "CHNS 155": "CHNS 159",
+    "LING 380": "LING 3800",
 }
 
 # The titles are too generic, so even if the prof is the same, we should not
