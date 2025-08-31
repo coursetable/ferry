@@ -122,7 +122,7 @@ always_distinct: list[list[set[str | tuple[str, str]]]] = [
         {"PHYS 402", "PHYS 4020"},
     ],  # Advanced Classical Physics from Newton to Einstein
     [
-        {"PHIL 742", "PHIL 271", "LING 671", "LING 271", "LING 2710", "PHIL 2271", "LING 6710", "PHIL 7742"},
+        {"PHIL 742", "PHIL 271", "LING 671", "LING 271", "LING 2710", "PHIL 2271", "LING 6710"},
         {"PHIL 703"},
     ],  # Philosophy of Language (completely different courses)
 ]
