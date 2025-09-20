@@ -21,6 +21,7 @@ MAX_DESCRIPTION_DIST = 0.25
 subject_changes = {
     "G&G": "EPS",
     "STAT": "S&DS",
+    "EENG": "ECE",
 }
 
 # Courses that simultaneous changed codes and titles cannot be captured by our
