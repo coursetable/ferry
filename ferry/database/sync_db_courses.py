@@ -9,6 +9,7 @@ from sqlalchemy import MetaData, text, inspect, Connection
 from psycopg2.extensions import register_adapter, AsIs
 
 from ferry.database import Database
+from ferry.memory_benchmark import memory_benchmark, memory_checkpoint
 from .generate_changelog import print_diff, computed_columns, primary_keys, DiffRecord
 
 
@@ -39,6 +40,7 @@ junction_tables = {
 }
 
 
+@memory_benchmark(include_dataframes=True, force_gc=True)
 def get_tables_from_db(database_connect_string: str) -> dict[str, pd.DataFrame]:
     db = Database(database_connect_string)
     db_meta = MetaData()
@@ -53,6 +55,7 @@ def get_tables_from_db(database_connect_string: str) -> dict[str, pd.DataFrame]:
     }
 
 
+@memory_benchmark(include_dataframes=True, force_gc=True)
 def generate_diff(
     tables_old: dict[str, pd.DataFrame], tables_new: dict[str, pd.DataFrame]
 ):
@@ -525,6 +528,7 @@ def sync_course_meetings_incremental(
     logging.info("Course meetings incremental sync completed")
 
 
+@memory_benchmark(include_dataframes=True, force_gc=True)
 def sync_db_courses(
     tables: dict[str, pd.DataFrame], database_connect_string: str, data_dir: Path
 ):
@@ -546,28 +550,35 @@ def sync_db_courses(
         )
 
     print("Generating diff...")
-    tables_old = get_tables_from_db(database_connect_string)
-    # Pandas would read JSON columns as real values, so we serialize them again
-    tables_old["courses"]["skills"] = tables_old["courses"]["skills"].apply(
-        ujson.dumps)
-    tables_old["courses"]["areas"] = tables_old["courses"]["areas"].apply(
-        ujson.dumps)
-    tables_old["courses"]["primary_crn"] = tables_old["courses"]["primary_crn"].astype(
-        pd.Int64Dtype()
-    )
-    tables_old["course_meetings"]["location_id"] = tables_old["course_meetings"][
-        "location_id"
-    ].astype(pd.Int64Dtype())
+    
+    with memory_checkpoint("get_tables_from_db", include_dataframes=True):
+        tables_old = get_tables_from_db(database_connect_string)
+    
+    with memory_checkpoint("serialize_json_columns"):
+        # Pandas would read JSON columns as real values, so we serialize them again
+        tables_old["courses"]["skills"] = tables_old["courses"]["skills"].apply(
+            ujson.dumps)
+        tables_old["courses"]["areas"] = tables_old["courses"]["areas"].apply(
+            ujson.dumps)
+        tables_old["courses"]["primary_crn"] = tables_old["courses"]["primary_crn"].astype(
+            pd.Int64Dtype()
+        )
+        tables_old["course_meetings"]["location_id"] = tables_old["course_meetings"][
+            "location_id"
+        ].astype(pd.Int64Dtype())
 
-    # Exclude course_meetings from diff computation
-    tables_for_diff = {k: v for k, v in tables.items() if k not in [
-        "course_meetings"]}
-    tables_old_for_diff = {k: v for k, v in tables_old.items() if k not in [
-        "course_meetings"]}
+    with memory_checkpoint("prepare_diff_tables"):
+        # Exclude course_meetings from diff computation
+        tables_for_diff = {k: v for k, v in tables.items() if k not in [
+            "course_meetings"]}
+        tables_old_for_diff = {k: v for k, v in tables_old.items() if k not in [
+            "course_meetings"]}
 
-    diff = generate_diff(tables_old_for_diff, tables_for_diff)
+    with memory_checkpoint("generate_diff", include_dataframes=True):
+        diff = generate_diff(tables_old_for_diff, tables_for_diff)
 
-    print_diff(diff, tables_old, tables, data_dir / "change_log")
+    with memory_checkpoint("print_diff"):
+        print_diff(diff, tables_old, tables, data_dir / "change_log")
 
     inspector = inspect(db.Engine)
     with db.Engine.begin() as conn:

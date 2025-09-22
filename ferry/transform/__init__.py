@@ -6,6 +6,7 @@ import ujson
 import pandas as pd
 
 from ferry import database
+from ferry.memory_benchmark import memory_benchmark, memory_checkpoint
 from .transform_compute import (
     courses_computed,
     evaluation_statistics_computed,
@@ -32,6 +33,7 @@ def write_csvs(tables: dict[str, pd.DataFrame], data_dir: Path):
     print("Writing tables to disk as CSVs... ✔")
 
 
+@memory_benchmark(include_dataframes=True, force_gc=True)
 async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
     """
     Import the parsed course and evaluation data into CSVs generated with Pandas.
@@ -54,38 +56,46 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         columns=["season_code", "term", "year"],
     )
 
-    course_tables = import_courses(data_dir, course_seasons)
-    eval_tables = import_evaluations(data_dir, course_tables["listings"])
+    with memory_checkpoint("import_courses", include_dataframes=True):
+        course_tables = import_courses(data_dir, course_seasons)
+    
+    with memory_checkpoint("import_evaluations", include_dataframes=True, listings=course_tables["listings"]):
+        eval_tables = import_evaluations(data_dir, course_tables["listings"])
 
     print("\nComputing secondary attributes...")
 
-    eval_tables["evaluation_questions"] = questions_computed(
-        eval_tables["evaluation_questions"]
-    )
+    with memory_checkpoint("questions_computed"):
+        eval_tables["evaluation_questions"] = questions_computed(
+            eval_tables["evaluation_questions"]
+        )
 
-    eval_tables["evaluation_narratives"] = narratives_computed(
-        eval_tables["evaluation_narratives"]
-    )
+    with memory_checkpoint("narratives_computed"):
+        eval_tables["evaluation_narratives"] = narratives_computed(
+            eval_tables["evaluation_narratives"]
+        )
 
-    eval_tables["evaluation_statistics"] = evaluation_statistics_computed(
-        evaluation_statistics=eval_tables["evaluation_statistics"],
-        evaluation_ratings=eval_tables["evaluation_ratings"],
-        evaluation_questions=eval_tables["evaluation_questions"],
-    )
+    with memory_checkpoint("evaluation_statistics_computed"):
+        eval_tables["evaluation_statistics"] = evaluation_statistics_computed(
+            evaluation_statistics=eval_tables["evaluation_statistics"],
+            evaluation_ratings=eval_tables["evaluation_ratings"],
+            evaluation_questions=eval_tables["evaluation_questions"],
+        )
 
-    course_tables["professors"] = professors_computed(
-        professors=course_tables["professors"],
-        course_professors=course_tables["course_professors"],
-        evaluation_statistics=eval_tables["evaluation_statistics"],
-    )
+    with memory_checkpoint("professors_computed"):
+        course_tables["professors"] = professors_computed(
+            professors=course_tables["professors"],
+            course_professors=course_tables["course_professors"],
+            evaluation_statistics=eval_tables["evaluation_statistics"],
+        )
 
-    course_tables["courses"] = courses_computed(
-        courses=course_tables["courses"],
-        listings=course_tables["listings"],
-        evaluation_statistics=eval_tables["evaluation_statistics"],
-        course_professors=course_tables["course_professors"],
-        professors=course_tables["professors"],
-    )
+    with memory_checkpoint("courses_computed"):
+        course_tables["courses"] = courses_computed(
+            courses=course_tables["courses"],
+            listings=course_tables["listings"],
+            evaluation_statistics=eval_tables["evaluation_statistics"],
+            course_professors=course_tables["course_professors"],
+            professors=course_tables["professors"],
+        )
     eval_tables["evaluation_questions"]["options"] = eval_tables[
         "evaluation_questions"
     ]["options"].apply(lambda x: ujson.dumps(x) if isinstance(x, list) else x)

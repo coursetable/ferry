@@ -13,6 +13,7 @@ from ferry.crawler.evals import crawl_evals
 from ferry.crawler.seasons import fetch_seasons
 from ferry.database import sync_db_courses, sync_db_courses_old, sync_db_evals
 from ferry.transform import transform, write_csvs
+from ferry.memory_benchmark import memory_benchmark, save_benchmark_data, print_memory_summary
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 pd.set_option("display.max_columns", None)
@@ -57,11 +58,15 @@ async def start_crawl(args: Args):
     print("-" * 80)
 
 
+@memory_benchmark(include_dataframes=True, force_gc=True)
 async def main():
     args = get_args()
 
     if args.debug:
         logging.basicConfig(level=logging.DEBUG)
+    else:
+        # Set up logging to capture memory benchmark info
+        logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
     args.data_dir.mkdir(parents=True, exist_ok=True)
 
@@ -100,6 +105,14 @@ async def main():
         from ferry.generate_db_diagram import generate_db_diagram
 
         generate_db_diagram(path=Path("docs/db_diagram.pdf"))
+    
+    # Save memory benchmark data and print summary
+    if args.release or args.debug:
+        try:
+            save_benchmark_data(args.data_dir / "memory_benchmark.json")
+            print_memory_summary()
+        except Exception as e:
+            logging.warning(f"Failed to save memory benchmark data: {e}")
 
 
 if __name__ == "__main__":

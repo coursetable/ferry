@@ -9,6 +9,7 @@ import ujson
 from typing import cast, TypedDict
 
 from ferry import database
+from ferry.memory_benchmark import memory_benchmark, memory_checkpoint
 
 
 def match_evaluations_to_courses(
@@ -56,6 +57,7 @@ class EvalTables(TypedDict):
     evaluation_questions: pd.DataFrame
 
 
+@memory_benchmark(include_dataframes=True, force_gc=True)
 def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTables:
     """
     Import evaluations from JSON files in `data_dir`.
@@ -69,26 +71,29 @@ def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTables:
     evaluation_questions
     """
     print("\nImporting course evaluations...")
-    parsed_evals_dir = data_dir / "parsed_evaluations"
-    eval_filenames = sorted([x.name for x in parsed_evals_dir.glob("*.json")])
-    all_imported_evals: list[pd.DataFrame] = []
-    for filename in tqdm(eval_filenames, desc="Loading eval JSONs", leave=False):
-        parsed_evals_file = parsed_evals_dir / filename
-        parsed_course_info = pd.read_json(
-            parsed_evals_file,
-            dtype={
-                "crn": int,
-                "season": str,
-                "enrolled": pd.Int64Dtype(),
-                "responses": pd.Int64Dtype(),
-            },
-        )
-        all_imported_evals.append(parsed_course_info)
+    
+    with memory_checkpoint("load_eval_jsons"):
+        parsed_evals_dir = data_dir / "parsed_evaluations"
+        eval_filenames = sorted([x.name for x in parsed_evals_dir.glob("*.json")])
+        all_imported_evals: list[pd.DataFrame] = []
+        for filename in tqdm(eval_filenames, desc="Loading eval JSONs", leave=False):
+            parsed_evals_file = parsed_evals_dir / filename
+            parsed_course_info = pd.read_json(
+                parsed_evals_file,
+                dtype={
+                    "crn": int,
+                    "season": str,
+                    "enrolled": pd.Int64Dtype(),
+                    "responses": pd.Int64Dtype(),
+                },
+            )
+            all_imported_evals.append(parsed_course_info)
 
-    courses = pd.concat(all_imported_evals, axis=0, ignore_index=True)
-    # Delete variables to avoid OOM
-    del all_imported_evals
-    courses = match_evaluations_to_courses(courses, listings)
+    with memory_checkpoint("concat_and_match_evals", include_dataframes=True, listings=listings):
+        courses = pd.concat(all_imported_evals, axis=0, ignore_index=True)
+        # Delete variables to avoid OOM
+        del all_imported_evals
+        courses = match_evaluations_to_courses(courses, listings)
     evaluation_statistics = courses[
         ["season", "course_id", "enrolled", "responses", "extras"]
     ].copy()

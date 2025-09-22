@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 import ujson
 from ferry.crawler.cache import load_cache_json
+from ferry.memory_benchmark import memory_benchmark, memory_checkpoint
 
 
 # Mappings from past prof emails to their current ones
@@ -541,6 +542,7 @@ def generate_listing_id(row: pd.Series) -> int:
     return season * 100000 + row["crn"]
 
 
+@memory_benchmark(include_dataframes=True, force_gc=True)
 def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     """
     Import courses from JSON files in `parsed_courses_dir`.
@@ -561,37 +563,50 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
 
     all_imported_listings: list[pd.DataFrame] = []
 
-    for season in tqdm(seasons, desc="Loading course JSONs", leave=False):
-        parsed_courses_file = parsed_courses_dir / f"{season}.json"
-        if not parsed_courses_file.is_file():
-            print(f"Skipping season {season}: not found in parsed courses.")
-            continue
-        parsed_course_info = pd.read_json(
-            parsed_courses_file,
-            dtype={
-                "crn": int,
-                "primary_crn": pd.Int64Dtype(),
-                "colsem": bool,
-                "fysem": bool,
-                "sysem": bool,
-            },
-        )
-        parsed_course_info["season_code"] = season
-        all_imported_listings.append(parsed_course_info)
+    with memory_checkpoint("load_course_jsons"):
+        for season in tqdm(seasons, desc="Loading course JSONs", leave=False):
+            parsed_courses_file = parsed_courses_dir / f"{season}.json"
+            if not parsed_courses_file.is_file():
+                print(f"Skipping season {season}: not found in parsed courses.")
+                continue
+            parsed_course_info = pd.read_json(
+                parsed_courses_file,
+                dtype={
+                    "crn": int,
+                    "primary_crn": pd.Int64Dtype(),
+                    "colsem": bool,
+                    "fysem": bool,
+                    "sysem": bool,
+                },
+            )
+            parsed_course_info["season_code"] = season
+            all_imported_listings.append(parsed_course_info)
 
-    logging.debug("Creating listings table")
-    listings = pd.concat(all_imported_listings, axis=0, ignore_index=True)
-    # convert to JSON string for postgres
-    listings["skills"] = listings["skills"].apply(ujson.dumps)
-    listings["areas"] = listings["areas"].apply(ujson.dumps)
-    listings["section"] = listings["section"].fillna(
-        "0").astype(str).replace({"": "0"})
-    listings["listing_id"] = listings.apply(generate_listing_id, axis=1)
-    listings, courses = resolve_cross_listings(listings)
-    professors, course_professors = aggregate_professors(courses, data_dir)
-    flags, course_flags = aggregate_flags(courses, data_dir)
-    course_meetings, locations, buildings = aggregate_locations(
-        courses, data_dir)
+    with memory_checkpoint("concat_and_process_listings"):
+        logging.debug("Creating listings table")
+        listings = pd.concat(all_imported_listings, axis=0, ignore_index=True)
+        # Delete large intermediate list to free memory
+        del all_imported_listings
+        
+        # convert to JSON string for postgres
+        listings["skills"] = listings["skills"].apply(ujson.dumps)
+        listings["areas"] = listings["areas"].apply(ujson.dumps)
+        listings["section"] = listings["section"].fillna(
+            "0").astype(str).replace({"": "0"})
+        listings["listing_id"] = listings.apply(generate_listing_id, axis=1)
+    
+    with memory_checkpoint("resolve_cross_listings", include_dataframes=True, listings=listings):
+        listings, courses = resolve_cross_listings(listings)
+    
+    with memory_checkpoint("aggregate_professors", include_dataframes=True, courses=courses):
+        professors, course_professors = aggregate_professors(courses, data_dir)
+    
+    with memory_checkpoint("aggregate_flags", include_dataframes=True, courses=courses):
+        flags, course_flags = aggregate_flags(courses, data_dir)
+    
+    with memory_checkpoint("aggregate_locations", include_dataframes=True, courses=courses):
+        course_meetings, locations, buildings = aggregate_locations(
+            courses, data_dir)
 
     print("\033[F", end="")
     print("Importing courses... ✔")
