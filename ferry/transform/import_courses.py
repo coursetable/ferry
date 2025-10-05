@@ -557,36 +557,53 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     - course_flags: corresponds to database.course_flags
     - flags: corresponds to database.Flag
     """
+    import gc
 
     print("\nImporting courses...")
     parsed_courses_dir = data_dir / "parsed_courses"
 
-    all_imported_listings: list[pd.DataFrame] = []
+    # Process seasons in chunks to avoid OOM with 50+ seasons
+    CHUNK_SIZE = 10  # Process 10 seasons at a time
+    all_listings_chunks: list[pd.DataFrame] = []
 
-    with memory_checkpoint("load_course_jsons"):
-        for season in tqdm(seasons, desc="Loading course JSONs", leave=False):
-            parsed_courses_file = parsed_courses_dir / f"{season}.json"
-            if not parsed_courses_file.is_file():
-                print(f"Skipping season {season}: not found in parsed courses.")
-                continue
-            parsed_course_info = pd.read_json(
-                parsed_courses_file,
-                dtype={
-                    "crn": int,
-                    "primary_crn": pd.Int64Dtype(),
-                    "colsem": bool,
-                    "fysem": bool,
-                    "sysem": bool,
-                },
-            )
-            parsed_course_info["season_code"] = season
-            all_imported_listings.append(parsed_course_info)
+    with memory_checkpoint("load_course_jsons_chunked"):
+        for chunk_start in range(0, len(seasons), CHUNK_SIZE):
+            chunk_seasons = seasons[chunk_start:chunk_start + CHUNK_SIZE]
+            chunk_listings: list[pd.DataFrame] = []
+            
+            for season in tqdm(chunk_seasons, desc=f"Loading chunk {chunk_start//CHUNK_SIZE + 1}/{(len(seasons)-1)//CHUNK_SIZE + 1}", leave=False):
+                parsed_courses_file = parsed_courses_dir / f"{season}.json"
+                if not parsed_courses_file.is_file():
+                    print(f"Skipping season {season}: not found in parsed courses.")
+                    continue
+                parsed_course_info = pd.read_json(
+                    parsed_courses_file,
+                    dtype={
+                        "crn": int,
+                        "primary_crn": pd.Int64Dtype(),
+                        "colsem": bool,
+                        "fysem": bool,
+                        "sysem": bool,
+                    },
+                )
+                parsed_course_info["season_code"] = season
+                chunk_listings.append(parsed_course_info)
+            
+            # Concatenate this chunk and add to chunks list
+            if chunk_listings:
+                chunk_df = pd.concat(chunk_listings, axis=0, ignore_index=True)
+                all_listings_chunks.append(chunk_df)
+                # Clear chunk list and force GC
+                del chunk_listings
+                gc.collect()
 
     with memory_checkpoint("concat_and_process_listings"):
         logging.debug("Creating listings table")
-        listings = pd.concat(all_imported_listings, axis=0, ignore_index=True)
+        # Concatenate all chunks (much more memory efficient than concatenating 50+ individual dfs)
+        listings = pd.concat(all_listings_chunks, axis=0, ignore_index=True)
         # Delete large intermediate list to free memory
-        del all_imported_listings
+        del all_listings_chunks
+        gc.collect()
         
         # convert to JSON string for postgres
         listings["skills"] = listings["skills"].apply(ujson.dumps)
@@ -594,6 +611,14 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
         listings["section"] = listings["section"].fillna(
             "0").astype(str).replace({"": "0"})
         listings["listing_id"] = listings.apply(generate_listing_id, axis=1)
+        
+        # Optimize memory by using category dtype for columns with repeated values
+        logging.debug("Optimizing DataFrame memory usage")
+        # Only optimize school column - season_code needs to stay as string for comparison operations
+        if "school" in listings.columns:
+            listings["school"] = listings["school"].astype('category')
+        
+        gc.collect()
     
     with memory_checkpoint("resolve_cross_listings", include_dataframes=True, listings=listings):
         listings, courses = resolve_cross_listings(listings)

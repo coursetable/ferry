@@ -42,17 +42,27 @@ junction_tables = {
 
 @memory_benchmark(include_dataframes=True, force_gc=True)
 def get_tables_from_db(database_connect_string: str) -> dict[str, pd.DataFrame]:
+    import gc
     db = Database(database_connect_string)
     db_meta = MetaData()
     db_meta.reflect(bind=db.Engine)
     conn = db.Engine.connect()
 
-    return {
-        table_name: pd.read_sql_table(table_name, con=conn).drop(
+    tables_dict = {}
+    for table_name in tqdm(primary_keys.keys(), desc="Loading tables from DB", leave=False):
+        tables_dict[table_name] = pd.read_sql_table(table_name, con=conn).drop(
             columns=["time_added", "last_updated"], errors="ignore"
         )
-        for table_name in primary_keys.keys()
-    }
+        # Optimize memory for string columns with repeated values
+        for col in tables_dict[table_name].select_dtypes(include=['object']).columns:
+            num_unique = tables_dict[table_name][col].nunique()
+            num_total = len(tables_dict[table_name][col])
+            # If less than 50% unique values, use category dtype
+            if num_total > 0 and num_unique / num_total < 0.5:
+                tables_dict[table_name][col] = tables_dict[table_name][col].astype('category')
+        gc.collect()
+    
+    return tables_dict
 
 
 @memory_benchmark(include_dataframes=True, force_gc=True)
@@ -576,6 +586,10 @@ def sync_db_courses(
 
     with memory_checkpoint("generate_diff", include_dataframes=True):
         diff = generate_diff(tables_old_for_diff, tables_for_diff)
+        # Clean up diff tables after generating diff
+        del tables_for_diff, tables_old_for_diff
+        import gc
+        gc.collect()
 
     with memory_checkpoint("print_diff"):
         print_diff(diff, tables_old, tables, data_dir / "change_log")

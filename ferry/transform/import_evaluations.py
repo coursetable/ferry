@@ -70,69 +70,99 @@ def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTables:
     evaluation_statistics,
     evaluation_questions
     """
+    import gc
+    
     print("\nImporting course evaluations...")
     
-    with memory_checkpoint("load_eval_jsons"):
+    with memory_checkpoint("load_eval_jsons_chunked"):
         parsed_evals_dir = data_dir / "parsed_evaluations"
         eval_filenames = sorted([x.name for x in parsed_evals_dir.glob("*.json")])
-        all_imported_evals: list[pd.DataFrame] = []
-        for filename in tqdm(eval_filenames, desc="Loading eval JSONs", leave=False):
-            parsed_evals_file = parsed_evals_dir / filename
-            parsed_course_info = pd.read_json(
-                parsed_evals_file,
-                dtype={
-                    "crn": int,
-                    "season": str,
-                    "enrolled": pd.Int64Dtype(),
-                    "responses": pd.Int64Dtype(),
-                },
-            )
-            all_imported_evals.append(parsed_course_info)
+        
+        # Process evaluation files in chunks to avoid OOM
+        CHUNK_SIZE = 10
+        all_evals_chunks: list[pd.DataFrame] = []
+        
+        for chunk_start in range(0, len(eval_filenames), CHUNK_SIZE):
+            chunk_filenames = eval_filenames[chunk_start:chunk_start + CHUNK_SIZE]
+            chunk_evals: list[pd.DataFrame] = []
+            
+            for filename in tqdm(chunk_filenames, desc=f"Loading eval chunk {chunk_start//CHUNK_SIZE + 1}/{(len(eval_filenames)-1)//CHUNK_SIZE + 1}", leave=False):
+                parsed_evals_file = parsed_evals_dir / filename
+                parsed_course_info = pd.read_json(
+                    parsed_evals_file,
+                    dtype={
+                        "crn": int,
+                        "season": str,
+                        "enrolled": pd.Int64Dtype(),
+                        "responses": pd.Int64Dtype(),
+                    },
+                )
+                chunk_evals.append(parsed_course_info)
+            
+            # Concatenate this chunk
+            if chunk_evals:
+                chunk_df = pd.concat(chunk_evals, axis=0, ignore_index=True)
+                all_evals_chunks.append(chunk_df)
+                del chunk_evals
+                gc.collect()
 
     with memory_checkpoint("concat_and_match_evals", include_dataframes=True, listings=listings):
-        courses = pd.concat(all_imported_evals, axis=0, ignore_index=True)
+        courses = pd.concat(all_evals_chunks, axis=0, ignore_index=True)
         # Delete variables to avoid OOM
-        del all_imported_evals
+        del all_evals_chunks
+        gc.collect()
+        
         courses = match_evaluations_to_courses(courses, listings)
-    evaluation_statistics = courses[
-        ["season", "course_id", "enrolled", "responses", "extras"]
-    ].copy()
-    rating_qa = (
-        courses.drop(columns=["enrolled", "responses", "extras", "narratives"])
-        .explode(column="ratings")
-        .dropna(subset=["ratings"])
-    )
-    narrative_qa = (
-        courses.drop(columns=["enrolled", "responses", "extras", "ratings"])
-        .explode(column="narratives")
-        .dropna(subset=["narratives"])
-    )
-    del courses
-    rating_qa[["question_code", "question_text", "options", "data"]] = pd.DataFrame(
-        list(rating_qa["ratings"]), index=rating_qa.index
-    )
-    rating_qa.drop(columns=["ratings"], inplace=True)
-    evaluation_ratings = rating_qa[
-        ["season", "course_id", "question_code", "data"]
-    ].rename(columns={"data": "rating"})
-    rating_questions = rating_qa[
-        ["season", "question_code", "question_text", "options"]
-    ].copy()
-    del rating_qa
-    narrative_qa[["question_code", "question_text", "comments"]] = pd.DataFrame(
-        list(narrative_qa["narratives"]), index=narrative_qa.index
-    )
-    narrative_qa.drop(columns=["narratives"], inplace=True)
-    evaluation_narratives = (
-        narrative_qa[["season", "course_id", "question_code", "comments"]]
-        .explode(column="comments")
-        .rename(columns={"comments": "comment"})
-    )
-    narrative_questions = narrative_qa[
-        ["season", "question_code", "question_text"]
-    ].copy()
-    del narrative_qa
-    narrative_questions["options"] = None
+        
+        # Optimize memory usage with category dtype
+        if "season" in courses.columns:
+            courses["season"] = courses["season"].astype('category')
+        gc.collect()
+    with memory_checkpoint("split_eval_tables"):
+        evaluation_statistics = courses[
+            ["season", "course_id", "enrolled", "responses", "extras"]
+        ].copy()
+        rating_qa = (
+            courses.drop(columns=["enrolled", "responses", "extras", "narratives"])
+            .explode(column="ratings")
+            .dropna(subset=["ratings"])
+        )
+        narrative_qa = (
+            courses.drop(columns=["enrolled", "responses", "extras", "ratings"])
+            .explode(column="narratives")
+            .dropna(subset=["narratives"])
+        )
+        del courses
+        gc.collect()
+    with memory_checkpoint("process_rating_qa"):
+        rating_qa[["question_code", "question_text", "options", "data"]] = pd.DataFrame(
+            list(rating_qa["ratings"]), index=rating_qa.index
+        )
+        rating_qa.drop(columns=["ratings"], inplace=True)
+        evaluation_ratings = rating_qa[
+            ["season", "course_id", "question_code", "data"]
+        ].rename(columns={"data": "rating"})
+        rating_questions = rating_qa[
+            ["season", "question_code", "question_text", "options"]
+        ].copy()
+        del rating_qa
+        gc.collect()
+    with memory_checkpoint("process_narrative_qa"):
+        narrative_qa[["question_code", "question_text", "comments"]] = pd.DataFrame(
+            list(narrative_qa["narratives"]), index=narrative_qa.index
+        )
+        narrative_qa.drop(columns=["narratives"], inplace=True)
+        evaluation_narratives = (
+            narrative_qa[["season", "course_id", "question_code", "comments"]]
+            .explode(column="comments")
+            .rename(columns={"comments": "comment"})
+        )
+        narrative_questions = narrative_qa[
+            ["season", "question_code", "question_text"]
+        ].copy()
+        del narrative_qa
+        gc.collect()
+        narrative_questions["options"] = None
     rating_questions["is_narrative"] = False
     narrative_questions["is_narrative"] = True
     evaluation_questions = pd.concat(
