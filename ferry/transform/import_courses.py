@@ -120,23 +120,23 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
 
     # Remove exactly identical CRNs by removing their rows as well their
     # references in other rows' `crns` column
-    for season, crns in exactly_identical_crns:
-        # Skip if this season is not in the current dataset
-        if season not in listings["season_code"].values:
-            continue
-            
+    for season, crns in exactly_identical_crns:            
         first, *rest = crns
         
-        # Remove the duplicate CRN rows from listings
         listings = listings[
             ~(listings["crn"].isin(rest) & listings["season_code"].eq(season))
         ]
         
-        # Remove all references to the deleted CRNs from ALL courses in this season
-        season_mask = listings["season_code"].eq(season)
-        listings.loc[season_mask, "crns"] = listings.loc[season_mask, "crns"].apply(
-            lambda x: x - set(rest)
-        )
+        cross_listed_crns = listings[
+            listings["season_code"].eq(season) & listings["crn"].eq(first)
+        ]["crns"].iloc[0]
+        for other_crn in cross_listed_crns - set(crns):
+            # Remove rest from the crns of each cross listed crn
+            target = listings["season_code"].eq(
+                season) & listings["crn"].eq(other_crn)
+            listings.loc[target, "crns"] = listings.loc[target, "crns"].apply(
+                lambda x: x - set(rest)
+            )
 
     logging.debug("Aggregating cross-listings")
     # season -> CRN -> set of CRNs it's connected to
@@ -583,7 +583,6 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
 
     logging.debug("Creating listings table")
     
-    # Optimize memory usage during concat by using appropriate dtypes
     listings = pd.concat(all_imported_listings, axis=0, ignore_index=True)
     
     # Clean up source data immediately after concat
@@ -596,16 +595,12 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
         "0").astype(str).replace({"": "0"})
     listings["listing_id"] = listings.apply(generate_listing_id, axis=1)
     
-    logging.debug("Resolving cross-listings")
     listings, courses = resolve_cross_listings(listings)
     
-    logging.debug("Aggregating professors")
     professors, course_professors = aggregate_professors(courses, data_dir)
     
-    logging.debug("Aggregating flags")
     flags, course_flags = aggregate_flags(courses, data_dir)
     
-    logging.debug("Aggregating locations")
     course_meetings, locations, buildings = aggregate_locations(
         courses, data_dir)
 

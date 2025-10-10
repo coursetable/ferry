@@ -101,7 +101,7 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         professors=course_tables["professors"],
     )
     
-    # Force garbage collection after computing courses (memory-intensive)
+    # Force garbage collection after computing courses
     gc.collect()
     eval_tables["evaluation_questions"]["options"] = eval_tables[
         "evaluation_questions"
