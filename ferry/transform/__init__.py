@@ -1,3 +1,4 @@
+import gc
 import os
 from pathlib import Path
 from typing import cast
@@ -55,7 +56,14 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
     )
 
     course_tables = import_courses(data_dir, course_seasons)
+    
+    # Force garbage collection after importing courses (large operation)
+    gc.collect()
+    
     eval_tables = import_evaluations(data_dir, course_tables["listings"])
+    
+    # Force garbage collection after importing evaluations
+    gc.collect()
 
     print("\nComputing secondary attributes...")
 
@@ -72,12 +80,18 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         evaluation_ratings=eval_tables["evaluation_ratings"],
         evaluation_questions=eval_tables["evaluation_questions"],
     )
+    
+    # Force garbage collection after computing evaluation statistics
+    gc.collect()
 
     course_tables["professors"] = professors_computed(
         professors=course_tables["professors"],
         course_professors=course_tables["course_professors"],
         evaluation_statistics=eval_tables["evaluation_statistics"],
     )
+    
+    # Force garbage collection after computing professors
+    gc.collect()
 
     course_tables["courses"] = courses_computed(
         courses=course_tables["courses"],
@@ -86,6 +100,9 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         course_professors=course_tables["course_professors"],
         professors=course_tables["professors"],
     )
+    
+    # Force garbage collection after computing courses (memory-intensive)
+    gc.collect()
     eval_tables["evaluation_questions"]["options"] = eval_tables[
         "evaluation_questions"
     ]["options"].apply(lambda x: ujson.dumps(x) if isinstance(x, list) else x)

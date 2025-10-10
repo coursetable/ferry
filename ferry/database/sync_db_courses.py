@@ -559,13 +559,16 @@ def sync_db_courses(
         "location_id"
     ].astype(pd.Int64Dtype())
 
-    # Exclude course_meetings from diff computation
+    # Exclude course_meetings from diff computation (save memory)
     tables_for_diff = {k: v for k, v in tables.items() if k not in [
         "course_meetings"]}
     tables_old_for_diff = {k: v for k, v in tables_old.items() if k not in [
         "course_meetings"]}
 
     diff = generate_diff(tables_old_for_diff, tables_for_diff)
+    
+    # Clean up diff tables immediately after generating diff
+    del tables_for_diff, tables_old_for_diff
 
     print_diff(diff, tables_old, tables, data_dir / "change_log")
 

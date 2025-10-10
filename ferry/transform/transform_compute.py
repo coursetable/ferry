@@ -129,10 +129,14 @@ def evaluation_statistics_computed(
     """
     logging.debug("Computing average ratings by course")
 
-    # Match ratings with tag
+    # Match ratings with tag - only select necessary columns to reduce memory
+    question_tags = evaluation_questions[["question_code", "tag"]].copy()
     evaluation_ratings = evaluation_ratings.merge(
-        evaluation_questions, on="question_code", how="left"
+        question_tags, on="question_code", how="left"
     )
+    
+    # Clean up intermediate data
+    del question_tags
 
     # Get average rating for each course with a specified tag
     def average_by_course(question_tag: str, n_categories: int) -> pd.Series:
@@ -272,51 +276,59 @@ def courses_computed(
 
     logging.debug("Computing historical ratings for courses")
 
-    # map courses to ratings
+    # map courses to ratings - use dictionaries instead of lambda functions for memory efficiency
     course_to_overall = evaluation_statistics["avg_rating"].to_dict()
     course_to_workload = evaluation_statistics["avg_workload"].to_dict()
 
-    # get ratings
-    courses["average_rating"] = courses["same_course_id"].map(
-        lambda id_: [course_to_overall.get(x) for x in same_course_to_courses[id_]]
-    )
-    courses["average_workload"] = courses["same_course_id"].map(
-        lambda id_: [course_to_workload.get(x) for x in same_course_to_courses[id_]]
-    )
-
-    courses["average_rating_same_professors"] = courses["same_course_and_profs_id"].map(
-        lambda id_: [course_to_overall.get(x) for x in same_prof_course_to_courses[id_]]
-    )
-    courses["average_workload_same_professors"] = courses[
-        "same_course_and_profs_id"
-    ].map(
-        lambda id_: [
-            course_to_workload.get(x) for x in same_prof_course_to_courses[id_]
-        ]
-    )
-
-    # calculate the average of an array
-    def average(nums: list[float]) -> tuple[float | None, int]:
-        nums = [x for x in nums if x is not None and not math.isnan(x)]
-        if not nums:
+    # Pre-compute aggregated ratings for each same_course group to avoid repeated list creation
+    logging.debug("Pre-computing same-course rating aggregates")
+    
+    def compute_aggregate_rating(course_ids: list[int], rating_dict: dict) -> tuple[float | None, int]:
+        """Compute average rating directly without creating intermediate lists"""
+        ratings = [rating_dict.get(cid) for cid in course_ids]
+        ratings = [x for x in ratings if x is not None and not math.isnan(x)]
+        if not ratings:
             return None, 0
-        num_obs = len(nums)
-        return sum(nums) / num_obs, num_obs
-
-    # calculate averages over past offerings
-    for average_col, num_col in [
-        ("average_rating", "average_rating_n"),
-        ("average_workload", "average_workload_n"),
-        ("average_rating_same_professors", "average_rating_same_professors_n"),
-        (
-            "average_workload_same_professors",
-            "average_workload_same_professors_n",
-        ),
-    ]:
-        courses[average_col], courses[num_col] = zip(
-            *courses[average_col].apply(average)
-        )
-        courses[num_col] = courses[num_col].astype(pd.Int64Dtype())
+        return sum(ratings) / len(ratings), len(ratings)
+    
+    # Build aggregated ratings directly for same_course groups
+    same_course_rating_agg = {}
+    same_course_workload_agg = {}
+    for same_id, course_ids in same_course_to_courses.items():
+        same_course_rating_agg[same_id] = compute_aggregate_rating(course_ids, course_to_overall)
+        same_course_workload_agg[same_id] = compute_aggregate_rating(course_ids, course_to_workload)
+    
+    # Build aggregated ratings for same_course_and_profs groups
+    same_prof_rating_agg = {}
+    same_prof_workload_agg = {}
+    for same_prof_id, course_ids in same_prof_course_to_courses.items():
+        same_prof_rating_agg[same_prof_id] = compute_aggregate_rating(course_ids, course_to_overall)
+        same_prof_workload_agg[same_prof_id] = compute_aggregate_rating(course_ids, course_to_workload)
+    
+    # Map pre-computed aggregates to courses
+    logging.debug("Mapping aggregated ratings to courses")
+    courses["average_rating"], courses["average_rating_n"] = zip(
+        *courses["same_course_id"].map(same_course_rating_agg)
+    )
+    courses["average_workload"], courses["average_workload_n"] = zip(
+        *courses["same_course_id"].map(same_course_workload_agg)
+    )
+    courses["average_rating_same_professors"], courses["average_rating_same_professors_n"] = zip(
+        *courses["same_course_and_profs_id"].map(same_prof_rating_agg)
+    )
+    courses["average_workload_same_professors"], courses["average_workload_same_professors_n"] = zip(
+        *courses["same_course_and_profs_id"].map(same_prof_workload_agg)
+    )
+    
+    # Convert to proper dtypes
+    courses["average_rating_n"] = courses["average_rating_n"].astype(pd.Int64Dtype())
+    courses["average_workload_n"] = courses["average_workload_n"].astype(pd.Int64Dtype())
+    courses["average_rating_same_professors_n"] = courses["average_rating_same_professors_n"].astype(pd.Int64Dtype())
+    courses["average_workload_same_professors_n"] = courses["average_workload_same_professors_n"].astype(pd.Int64Dtype())
+    
+    # Clean up temporary dictionaries
+    del same_course_rating_agg, same_course_workload_agg, same_prof_rating_agg, same_prof_workload_agg
+    del course_to_overall, course_to_workload
 
     courses["average_gut_rating"] = (
         courses["average_rating"] - courses["average_workload"]
@@ -351,31 +363,33 @@ def professors_computed(
     """
     logging.debug("Computing ratings for professors")
 
-    def avg_prof_rating(row: pd.Series):
-        ratings = list(filter(lambda x: not np.isnan(x), row["ratings"]))
+    # Build rating dictionary for faster lookup (avoid large merge)
+    course_ratings = evaluation_statistics["avg_rating"].to_dict()
+    
+    # Group by professor first, then lookup ratings - avoids creating huge merged dataframe
+    prof_course_groups = course_professors.groupby("professor_id")["course_id"].apply(list)
+    
+    prof_rating_data = []
+    for prof_id, course_ids in prof_course_groups.items():
+        # Lookup ratings without creating intermediate lists
+        ratings = [course_ratings.get(cid) for cid in course_ids]
+        ratings = [r for r in ratings if r is not None and not np.isnan(r)]
+        
         if ratings:
-            # TODO: implement weights based on recency, class size, etc.
             mean = np.mean(ratings)
         else:
             mean = np.nan
-        return {
-            "professor_id": row["professor_id"],
+        
+        prof_rating_data.append({
+            "professor_id": prof_id,
             "average_rating": mean,
             "average_rating_n": len(ratings),
-        }
-
-    prof_to_ratings = (
-        course_professors.merge(
-            evaluation_statistics,
-            left_on="course_id",
-            right_index=True,
-            how="left",
-        )
-        .groupby("professor_id")["avg_rating"]
-        .apply(list)
-        .reset_index(name="ratings")
-        .apply(avg_prof_rating, axis=1, result_type="expand")
-    )
+        })
+    
+    prof_to_ratings = pd.DataFrame(prof_rating_data)
+    
+    # Clean up temporary variables
+    del course_ratings, prof_course_groups
 
     professors = (
         professors.reset_index()
@@ -386,12 +400,12 @@ def professors_computed(
         pd.Int64Dtype()
     )
 
+    # Compute courses_taught more efficiently using value_counts
     professors["courses_taught"] = (
-        course_professors.merge(professors, on="professor_id", how="inner")
-        .groupby("professor_id")
-        .size()
-        .rename("courses_taught")
+        course_professors["professor_id"]
+        .value_counts()
+        .reindex(professors.index, fill_value=0)
+        .astype(int)
     )
-    professors["courses_taught"] = professors["courses_taught"].fillna(0).astype(int)
 
     return professors
