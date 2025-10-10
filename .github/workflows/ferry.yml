@@ -12,6 +12,12 @@ on:
     # - cron: "30 17 * * *"   # 1:30 PM EDT
     # - cron: "0 22 * * *"    # 6:00 PM EDT
   workflow_dispatch:
+    inputs:
+      seasons:
+        description: 'Seasons to sync (space-separated, e.g. "202503 202601")'
+        required: false
+        default: ''
+        type: string
 
 jobs:
   ferry:
@@ -61,17 +67,31 @@ jobs:
         run: uv pip install -e .
 
       - name: Fetch latest 4 seasons
-        run: TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }} --cws-api-key ${{ secrets.CWS_API_KEY }}
+        run: |
+          if [ -n "${{ github.event.inputs.seasons }}" ]; then
+            TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }} --cws-api-key ${{ secrets.CWS_API_KEY }} -s ${{ github.event.inputs.seasons }}
+          else
+            TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }} --cws-api-key ${{ secrets.CWS_API_KEY }}
+          fi
 
       - name: Sync Postgres DB
-        run: TQDM_DISABLE=1 python -u main.py -f config/release_sync_db_courses.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
+        run: |
+          if [ -n "${{ github.event.inputs.seasons }}" ]; then
+            TQDM_DISABLE=1 python -u main.py -f config/release_sync_db_courses.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }} -s ${{ github.event.inputs.seasons }}
+          else
+            TQDM_DISABLE=1 python -u main.py -f config/release_sync_db_courses.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
+          fi
 
       - name: Calculate commit message
         run: |
           if [ "${{ github.event_name }}" == "schedule" ]; then
             echo "MSG=$(date): Scheduled update" >> $GITHUB_ENV
           elif [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
-            echo "MSG=$(date): Manual update by ${{ github.actor }}" >> $GITHUB_ENV
+            if [ -n "${{ github.event.inputs.seasons }}" ]; then
+              echo "MSG=$(date): Manual update by ${{ github.actor }} (seasons: ${{ github.event.inputs.seasons }})" >> $GITHUB_ENV
+            else
+              echo "MSG=$(date): Manual update by ${{ github.actor }}" >> $GITHUB_ENV
+            fi
           elif [ "${{ github.event_name }}" == "push" ]; then
             echo "MSG=$(date): Update based on $GITHUB_SHA" >> $GITHUB_ENV
           else

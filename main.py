@@ -81,7 +81,7 @@ async def main():
     await start_crawl(args)
     tables = None
     if args.transform:
-        tables = await transform(data_dir=args.data_dir)
+        tables = await transform(data_dir=args.data_dir, seasons=args.seasons)
     if args.snapshot_tables:
         assert tables
         write_csvs(tables, data_dir=args.data_dir)

@@ -32,19 +32,37 @@ def write_csvs(tables: dict[str, pd.DataFrame], data_dir: Path):
     print("Writing tables to disk as CSVs... ✔")
 
 
-async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
+async def transform(data_dir: Path, seasons: list[str] | None = None) -> dict[str, pd.DataFrame]:
     """
     Import the parsed course and evaluation data into CSVs generated with Pandas.
+    
+    Parameters
+    ----------
+    data_dir : Path
+        Directory containing parsed course data
+    seasons : list[str] | None
+        Optional list of seasons to transform. If None, transforms all seasons found in data_dir.
     """
 
     # get full list of course seasons from files
-    course_seasons = sorted(
+    all_course_seasons = sorted(
         [
             filename.split(".")[0]  # remove the .json extension
             for filename in os.listdir(data_dir / "parsed_courses")
             if filename[0] != "."
         ]
     )
+    
+    # Filter to requested seasons if specified
+    if seasons is not None:
+        course_seasons = [s for s in all_course_seasons if s in seasons]
+        if len(course_seasons) != len(seasons):
+            missing = set(seasons) - set(course_seasons)
+            if missing:
+                print(f"Warning: Seasons {missing} not found in {data_dir / 'parsed_courses'}")
+    else:
+        course_seasons = all_course_seasons
+    
     print(f"\nSeason(s): {', '.join(course_seasons)}")
     seasons_table = pd.DataFrame(
         [
