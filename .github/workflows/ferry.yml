@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
     inputs:
       seasons:
-        description: 'Seasons to sync (space-separated, e.g. "202503 202601")'
+        description: 'Seasons to sync to database (space-separated, e.g. "202503 202601"). Fetch still uses config file.'
         required: false
         default: ''
         type: string
@@ -67,12 +67,7 @@ jobs:
         run: uv pip install -e .
 
       - name: Fetch latest 4 seasons
-        run: |
-          if [ -n "${{ github.event.inputs.seasons }}" ]; then
-            TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }} --cws-api-key ${{ secrets.CWS_API_KEY }} -s ${{ github.event.inputs.seasons }}
-          else
-            TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }} --cws-api-key ${{ secrets.CWS_API_KEY }}
-          fi
+        run: TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }} --cws-api-key ${{ secrets.CWS_API_KEY }}
 
       - name: Sync Postgres DB
         run: |
