@@ -120,13 +120,11 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
 
     # Remove exactly identical CRNs by removing their rows as well their
     # references in other rows' `crns` column
-    for season, crns in exactly_identical_crns:            
+    for season, crns in exactly_identical_crns:
         first, *rest = crns
-        
         listings = listings[
             ~(listings["crn"].isin(rest) & listings["season_code"].eq(season))
         ]
-        
         cross_listed_crns = listings[
             listings["season_code"].eq(season) & listings["crn"].eq(first)
         ]["crns"].iloc[0]
@@ -582,7 +580,6 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
         all_imported_listings.append(parsed_course_info)
 
     logging.debug("Creating listings table")
-    
     listings = pd.concat(all_imported_listings, axis=0, ignore_index=True)
     
     # Clean up source data immediately after concat
@@ -594,13 +591,9 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     listings["section"] = listings["section"].fillna(
         "0").astype(str).replace({"": "0"})
     listings["listing_id"] = listings.apply(generate_listing_id, axis=1)
-    
     listings, courses = resolve_cross_listings(listings)
-    
     professors, course_professors = aggregate_professors(courses, data_dir)
-    
     flags, course_flags = aggregate_flags(courses, data_dir)
-    
     course_meetings, locations, buildings = aggregate_locations(
         courses, data_dir)
 
