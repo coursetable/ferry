@@ -121,18 +121,23 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
     # Remove exactly identical CRNs by removing their rows as well their
     # references in other rows' `crns` column
     for season, crns in exactly_identical_crns:
+        # Skip if this season is not in the current dataset
+        if season not in listings["season_code"].values:
+            continue
+            
         first, *rest = crns
+        
+        # Remove the duplicate CRN rows from listings
         listings = listings[
             ~(listings["crn"].isin(rest) & listings["season_code"].eq(season))
         ]
-        cross_listed_crns = listings[
-            listings["season_code"].eq(season) & listings["crn"].eq(first)
-        ]["crns"].iloc[0]
-        for other_crn in cross_listed_crns - set(crns):
-            # Remove rest from the crns of each cross listed crn
-            target = listings["season_code"].eq(
-                season) & listings["crn"].eq(other_crn)
-            listings.loc[target, "crns"] = listings.loc[target, "crns"].apply(
+        
+        # Remove ALL references to deleted CRNs from ALL courses in this season
+        # This is more memory-efficient than iterating over cross-listed courses
+        # and prevents orphan references that would cause KeyError
+        season_mask = listings["season_code"] == season
+        if season_mask.any():
+            listings.loc[season_mask, "crns"] = listings.loc[season_mask, "crns"].apply(
                 lambda x: x - set(rest)
             )
 
@@ -580,10 +585,16 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
         all_imported_listings.append(parsed_course_info)
 
     logging.debug("Creating listings table")
-    listings = pd.concat(all_imported_listings, axis=0, ignore_index=True)
+    
+    # Use copy=False to avoid duplicating data during concat
+    listings = pd.concat(all_imported_listings, axis=0, ignore_index=True, copy=False)
     
     # Clean up source data immediately after concat
     del all_imported_listings
+    
+    # Force garbage collection after loading all data
+    import gc
+    gc.collect()
     
     # convert to JSON string for postgres
     listings["skills"] = listings["skills"].apply(ujson.dumps)
@@ -591,11 +602,19 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     listings["section"] = listings["section"].fillna(
         "0").astype(str).replace({"": "0"})
     listings["listing_id"] = listings.apply(generate_listing_id, axis=1)
+    
     listings, courses = resolve_cross_listings(listings)
+    import gc
+    gc.collect()  # Clean up after cross-listing resolution
+    
     professors, course_professors = aggregate_professors(courses, data_dir)
+    gc.collect()  # Clean up after professor aggregation
+    
     flags, course_flags = aggregate_flags(courses, data_dir)
+    
     course_meetings, locations, buildings = aggregate_locations(
         courses, data_dir)
+    gc.collect()  # Clean up after location aggregation
 
     print("\033[F", end="")
     print("Importing courses... ✔")
