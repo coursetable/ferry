@@ -283,7 +283,7 @@ def courses_computed(
     # Pre-compute aggregated ratings for each same_course group to avoid repeated list creation
     logging.debug("Pre-computing same-course rating aggregates")
     
-    def compute_aggregate_rating(course_ids: list[int], rating_dict: dict) -> tuple[float | None, int]:
+    def compute_aggregate_rating(course_ids: list[int], rating_dict: dict[int, float | None]) -> tuple[float | None, int]:
         """Compute average rating directly without creating intermediate lists"""
         ratings = [rating_dict.get(cid) for cid in course_ids]
         ratings = [x for x in ratings if x is not None and not math.isnan(x)]
