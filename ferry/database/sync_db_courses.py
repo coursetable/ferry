@@ -56,6 +56,8 @@ def get_tables_from_db(database_connect_string: str) -> dict[str, pd.DataFrame]:
 def generate_diff(
     tables_old: dict[str, pd.DataFrame], tables_new: dict[str, pd.DataFrame]
 ):
+    import gc
+    
     diff_dict: dict[str, DiffRecord] = {}
 
     # only process tables that exist in both old and new tables
@@ -84,6 +86,9 @@ def generate_diff(
             new_df[new_df.index.isin(old_df.index)
                    ].sort_index().sort_index(axis=1)
         )
+        
+        # Free old_df and new_df as we now have the subsets we need
+        del old_df, new_df
         if (shared_rows_old.index != shared_rows_new.index).any():
             print(shared_rows_old.index)
             print(shared_rows_new.index)
@@ -114,6 +119,10 @@ def generate_diff(
             print(f"Old value: {shared_rows_old.iat[row, col]}")
             print(f"New value: {shared_rows_new.iat[row, col]}")
             raise TypeError("Type mismatch")
+        
+        # Free type checking DataFrames
+        del old_types, new_types, different_types
+        
         unequal_mask = ~(
             (shared_rows_old == shared_rows_new)
             | (shared_rows_old.isna() & shared_rows_new.isna())
@@ -132,6 +141,13 @@ def generate_diff(
             "added_rows": pd.DataFrame(added_rows).reset_index(),
             "changed_rows": pd.DataFrame(changed_rows).reset_index(),
         }
+        
+        # Free all intermediate DataFrames for this table
+        del deleted_rows, added_rows, changed_rows, shared_rows_old, shared_rows_new, unequal_mask
+        
+        # Collect garbage after processing each table to keep memory usage down
+        if table_name in ["courses", "listings"]:  # Large tables
+            gc.collect()
 
         print("✔")
 
@@ -528,6 +544,8 @@ def sync_course_meetings_incremental(
 def sync_db_courses(
     tables: dict[str, pd.DataFrame], database_connect_string: str, data_dir: Path
 ):
+    import gc
+    
     db = Database(database_connect_string)
 
     db_meta = MetaData()
@@ -546,6 +564,8 @@ def sync_db_courses(
         )
 
     print("Generating diff...")
+    # Force garbage collection before loading old tables
+    gc.collect()
     tables_old = get_tables_from_db(database_connect_string)
     # Pandas would read JSON columns as real values, so we serialize them again
     tables_old["courses"]["skills"] = tables_old["courses"]["skills"].apply(
@@ -566,8 +586,16 @@ def sync_db_courses(
         "course_meetings"]}
 
     diff = generate_diff(tables_old_for_diff, tables_for_diff)
+    
+    # Free memory from diff computation copies
+    del tables_old_for_diff, tables_for_diff
+    gc.collect()
 
     print_diff(diff, tables_old, tables, data_dir / "change_log")
+    
+    # Free memory after changelog is written
+    del tables_old
+    gc.collect()
 
     inspector = inspect(db.Engine)
     with db.Engine.begin() as conn:
