@@ -15,10 +15,11 @@ from ferry.database import sync_db_courses, sync_db_courses_old, sync_db_evals
 from ferry.transform import transform, write_csvs
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
-pd.set_option("display.max_columns", None)
-pd.set_option("display.max_rows", None)
-pd.set_option("display.max_colwidth", None)
-pd.set_option("display.width", None)
+# Limit pandas display to avoid memory issues with large DataFrames
+pd.set_option("display.max_columns", 20)
+pd.set_option("display.max_rows", 100)
+pd.set_option("display.max_colwidth", 50)
+pd.set_option("display.width", 120)
 
 
 async def start_crawl(args: Args):

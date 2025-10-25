@@ -93,6 +93,8 @@ exactly_identical_crns = [
     ("201901", (21500, 22135)),  # PLSC 530
     ("202403", (15444, 15753)),  # MUS 644
     ("202503", (11421, 11423)),  # MUS 644 (again)
+    ("202601", (23900, 23902)),  # MUS 506
+    ("202601", (23903, 23904)),  # MUS 606
 ]
 
 
@@ -586,19 +588,28 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
 
     logging.debug("Creating listings table")
     
+    import gc
+    
     # Use copy=False to avoid duplicating data during concat
-    listings = pd.concat(all_imported_listings, axis=0, ignore_index=True, copy=False)
+    # Also suppress any pandas output during concat
+    import warnings
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        listings = pd.concat(all_imported_listings, axis=0, ignore_index=True, copy=False)
     
     # Clean up source data immediately after concat
     del all_imported_listings
     
     # Force garbage collection after loading all data
-    import gc
     gc.collect()
     
     # convert to JSON string for postgres
     listings["skills"] = listings["skills"].apply(ujson.dumps)
+    gc.collect()
+    
     listings["areas"] = listings["areas"].apply(ujson.dumps)
+    gc.collect()
+    
     listings["section"] = listings["section"].fillna(
         "0").astype(str).replace({"": "0"})
     listings["listing_id"] = listings.apply(generate_listing_id, axis=1)
