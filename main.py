@@ -8,6 +8,7 @@ from httpx import AsyncClient
 
 from ferry.args_parser import Args, get_args, parse_seasons_arg
 from ferry.crawler.cache import load_cache_json
+from ferry.crawler.cas_request import USER_AGENT
 from ferry.crawler.classes import crawl_classes
 from ferry.crawler.evals import crawl_evals
 from ferry.crawler.seasons import fetch_seasons
@@ -26,7 +27,7 @@ async def start_crawl(args: Args):
     classes = None
     # Initialize HTTPX client, only used for fetching classes (evals fetch
     # initializes its own client with CAS auth)
-    client = AsyncClient(timeout=None)
+    client = AsyncClient(timeout=None, headers={"User-Agent": USER_AGENT})
     if args.crawl_seasons:
         course_seasons = await fetch_seasons(
             data_dir=args.data_dir, client=client, use_cache=args.use_cache
