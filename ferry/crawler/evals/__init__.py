@@ -6,7 +6,7 @@ import httpx
 from tqdm import tqdm
 
 from ferry.crawler.cache import load_cache_json, save_cache_json
-from ferry.crawler.cas_request import CASClient
+from ferry.crawler.cas_request import CASClient, USER_AGENT
 from ferry.crawler.classes.parse import ParsedCourse
 
 from .fetch import FetchError, fetch_course_evals
@@ -49,7 +49,7 @@ async def crawl_evals(
     print(f"Fetching course evals for valid seasons: {seasons}...")
 
     # initiate Yale client session to access evals
-    client = httpx.AsyncClient()
+    client = httpx.AsyncClient(headers={"User-Agent": USER_AGENT})
     cas_client = CASClient(cas_cookie=cas_cookie)
 
     # Season level is synchronous, following same logic as class fetcher
@@ -92,5 +92,6 @@ async def crawl_evals(
             data.sort(key=lambda x: x["crn"])
             save_cache_json(data_dir / "parsed_evaluations" / f"{season}.json", data)
 
+    await client.aclose()
     print("\033[F", end="")
     print(f"Fetching course evals for valid seasons: {seasons}... ✔")
