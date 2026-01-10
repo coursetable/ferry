@@ -69,7 +69,12 @@ class FetchClassesError(Exception):
 
 
 async def fetch_course_details(
-    code: str, crn: str, season_code: str, client: AsyncClient
+    code: str,
+    crn: str,
+    season_code: str,
+    client: AsyncClient,
+    pers: dict | None = None,
+    cookie_header: str | None = None,
 ) -> dict[str, Any]:
     """
     Fetch information for a course from the API
@@ -98,12 +103,38 @@ async def fetch_course_details(
         "matched": f"crn:{crn}",
     }
 
+    # Include personalization when provided (browser sends id/idProof)
+    if pers:
+        payload["_pers"] = pers
+    else:
+        payload["_pers"] = {}
+
+    # Warm session to obtain site cookies if the client has none and no explicit cookie provided
+    try:
+        if cookie_header is None and (not client.cookies):
+            await client.get("https://courses.yale.edu/")
+    except Exception:
+        pass
+
     # retry up to 10 times
+    headers = {
+        "X-Requested-With": "XMLHttpRequest",
+        "Content-Type": "application/json",
+        "Accept": "application/json, text/javascript, */*; q=0.01",
+        "Referer": "https://courses.yale.edu/",
+        "Origin": "https://courses.yale.edu",
+        "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36",
+    }
+
+    if cookie_header:
+        headers["Cookie"] = cookie_header
+
     req = await request(
         method="POST",
         client=client,
         url=url,
         data=ujson.dumps(payload),
+        headers=headers,
         attempts=10,
     )
 
@@ -198,6 +229,8 @@ async def fetch_all_season_courses_details(
     data_dir: Path,
     client: AsyncClient,
     use_cache: bool = True,
+    pers: dict | None = None,
+    cookie_header: str | None = None,
 ):
     # load from cache if it exists
     if (
@@ -214,7 +247,12 @@ async def fetch_all_season_courses_details(
     # merge all the JSON results per season
     futures = [
         fetch_course_details(
-            course["code"], course["crn"], course["srcdb"], client=client
+            course["code"],
+            course["crn"],
+            course["srcdb"],
+            client=client,
+            pers=pers,
+            cookie_header=cookie_header,
         )
         for course in season_courses
     ]
