@@ -24,6 +24,7 @@ class RawArgs:
     sync_db_evals: bool
     transform: bool
     use_cache: bool
+    freeze_locations: bool
 
 
 class Args:
@@ -45,6 +46,7 @@ class Args:
     sync_db_evals: bool
     transform: bool
     use_cache: bool
+    freeze_locations: bool
 
 
 class InvalidSeasonError(Exception):
@@ -175,6 +177,12 @@ def get_parser():
     )
 
     parser.add_argument(
+        "--freeze-locations",
+        help="When set, do not modify the `locations` table or update meeting location_ids during DB sync.",
+        action="store_true",
+    )
+
+    parser.add_argument(
         "--transform",
         help="Run the transformer",
         action="store_true",
@@ -259,7 +267,7 @@ def parse_env_args(args: RawArgs):
 
     if args.cas_cookie is None:
         args.cas_cookie = os.environ.get("CAS_COOKIE")
-        if args.cas_cookie is None and args.crawl_evals:
+        if args.cas_cookie is None and (args.crawl_evals or args.crawl_classes):
             args.cas_cookie = input("Enter CAS cookie: ")
 
     if args.cws_api_key is None:

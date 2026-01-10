@@ -93,7 +93,10 @@ async def main():
             sync_db_courses_old(tables, args.database_connect_string)
         else:
             sync_db_courses(
-                tables, args.database_connect_string, data_dir=args.data_dir
+                tables,
+                args.database_connect_string,
+                data_dir=args.data_dir,
+                freeze_locations=getattr(args, "freeze_locations", False),
             )
     if args.sync_db_evals:
         assert tables

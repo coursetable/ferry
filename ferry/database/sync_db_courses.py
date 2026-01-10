@@ -392,7 +392,8 @@ def cleanup_dependencies_for_buildings(buildings_to_delete: pd.DataFrame, conn: 
 def sync_course_meetings_incremental(
     old_course_meetings: pd.DataFrame,
     new_course_meetings: pd.DataFrame,
-    conn: Connection
+    conn: Connection,
+    freeze_locations: bool = False,
 ):
     """
     Incrementally sync course_meetings. Drops all meetings for courses that have changed, then recreates them.
@@ -499,10 +500,24 @@ def sync_course_meetings_incremental(
 
             # Prepare batch data for insertion
             batch_data = []
+            # Create quick lookup of old meetings by (course_id, start_time, end_time)
+            if freeze_locations:
+                old_lookup = {}
+                for _, oldm in old_course_meetings.iterrows():
+                    key = (oldm['course_id'], oldm['start_time'], oldm['end_time'])
+                    # prefer non-null location_id if multiple
+                    if key not in old_lookup or not pd.isna(old_lookup[key]):
+                        old_lookup[key] = oldm.get('location_id')
+
             for _, meeting in meetings_to_insert.iterrows():
-                location_id = meeting['location_id'] if not safe_isna(
-                    meeting['location_id']) else None
-                
+                if freeze_locations:
+                    key = (meeting['course_id'], meeting['start_time'], meeting['end_time'])
+                    # reuse old location_id for same meeting times if present
+                    location_id = old_lookup.get(key) if key in old_lookup else None
+                else:
+                    location_id = meeting['location_id'] if not safe_isna(
+                        meeting['location_id']) else None
+
                 batch_data.append({
                     'course_id': meeting['course_id'],
                     'start_time': meeting['start_time'],
@@ -526,7 +541,8 @@ def sync_course_meetings_incremental(
 
 
 def sync_db_courses(
-    tables: dict[str, pd.DataFrame], database_connect_string: str, data_dir: Path
+    tables: dict[str, pd.DataFrame], database_connect_string: str, data_dir: Path,
+    freeze_locations: bool = False,
 ):
     db = Database(database_connect_string)
 
@@ -600,8 +616,12 @@ def sync_db_courses(
             if table_name == "locations":
                 # Reset sequence to prevent duplicate key violations
                 reset_location_sequence(conn)
-                # Handle locations with UPSERT
-                location_mapping = upsert_locations(tables["locations"], conn)
+                if freeze_locations:
+                    logging.info("Freeze locations enabled: skipping locations upsert")
+                    location_mapping = {}
+                else:
+                    # Handle locations with UPSERT
+                    location_mapping = upsert_locations(tables["locations"], conn)
                 continue
             elif table_name == "course_meetings":
                 continue
@@ -615,6 +635,10 @@ def sync_db_courses(
             course_meetings_with_locations = tables["course_meetings"].copy()
             for i, meeting in course_meetings_with_locations.iterrows():
                 if pd.isna(meeting['location_id']) and '_building_code' in meeting.index and '_room' in meeting.index:
+                    # Only attempt to resolve if not freezing locations
+                    if freeze_locations:
+                        # do not populate location_id when freeze is enabled
+                        continue
                     building_code = meeting['_building_code']
                     room = meeting['_room'] if not safe_isna(
                         meeting['_room']) else None
@@ -640,7 +664,8 @@ def sync_db_courses(
             sync_course_meetings_incremental(
                 tables_old["course_meetings"],
                 course_meetings_clean,
-                conn
+                conn,
+                freeze_locations=freeze_locations,
             )
 
         for table_name in tables_order_delete:
