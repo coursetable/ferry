@@ -96,7 +96,7 @@ async def main():
                 tables,
                 args.database_connect_string,
                 data_dir=args.data_dir,
-                freeze_locations=getattr(args, "freeze_locations", False),
+                freeze_locations=args.freeze_locations,
             )
     if args.sync_db_evals:
         assert tables

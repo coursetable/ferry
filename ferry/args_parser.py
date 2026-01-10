@@ -267,7 +267,7 @@ def parse_env_args(args: RawArgs):
 
     if args.cas_cookie is None:
         args.cas_cookie = os.environ.get("CAS_COOKIE")
-        if args.cas_cookie is None and (args.crawl_evals or args.crawl_classes):
+        if args.cas_cookie is None and args.crawl_evals:
             args.cas_cookie = input("Enter CAS cookie: ")
 
     if args.cws_api_key is None:
