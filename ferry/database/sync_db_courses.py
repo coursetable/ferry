@@ -502,18 +502,43 @@ def sync_course_meetings_incremental(
             batch_data = []
             # Create quick lookup of old meetings by (course_id, start_time, end_time)
             if freeze_locations:
+                from collections import deque
+
                 old_lookup = {}
+                # Build multiset of non-null old location_ids and a flag for nulls
                 for _, oldm in old_course_meetings.iterrows():
                     key = (oldm['course_id'], oldm['start_time'], oldm['end_time'])
-                    # prefer non-null location_id if multiple
-                    if key not in old_lookup or not pd.isna(old_lookup[key]):
-                        old_lookup[key] = oldm.get('location_id')
+                    loc = oldm.get('location_id')
+                    if key not in old_lookup:
+                        old_lookup[key] = {'non_nulls': [], 'has_null': False}
+                    if pd.isna(loc):
+                        old_lookup[key]['has_null'] = True
+                    else:
+                        old_lookup[key]['non_nulls'].append(int(loc))
+
+                # Make deterministic by sorting location lists
+                for v in old_lookup.values():
+                    v['non_nulls'] = deque(sorted(v['non_nulls']))
+                # Track whether we've already assigned the single allowed NULL per key
+                null_assigned = {k: False for k in old_lookup.keys()}
 
             for _, meeting in meetings_to_insert.iterrows():
                 if freeze_locations:
                     key = (meeting['course_id'], meeting['start_time'], meeting['end_time'])
-                    # reuse old location_id for same meeting times if present
-                    location_id = old_lookup.get(key) if key in old_lookup else None
+                    location_id = None
+                    if key in old_lookup:
+                        info = old_lookup[key]
+                        if info['non_nulls']:
+                            # Assign one of the old non-null location_ids (deterministic)
+                            location_id = info['non_nulls'].popleft()
+                        elif info['has_null'] and not null_assigned.get(key, False):
+                            # Preserve a single old NULL for this key
+                            location_id = None
+                            null_assigned[key] = True
+                        else:
+                            location_id = None
+                    else:
+                        location_id = None
                 else:
                     location_id = meeting['location_id'] if not safe_isna(
                         meeting['location_id']) else None
