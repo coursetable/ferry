@@ -563,10 +563,18 @@ def sync_course_meetings_incremental(
                     lambda x: None if safe_isna(x) else x
                 )
             
-            # Convert to list of dicts for batch insert (more efficient than iterrows)
+            # Convert to list of dicts for batch insert
             batch_data = meetings_to_insert[[
                 'course_id', 'start_time', 'end_time', 'days_of_week', 'location_id'
             ]].to_dict('records')
+            
+            # Fix location_id types: ensure int (not float) and None (not nan)
+            for record in batch_data:
+                loc_id = record['location_id']
+                if pd.isna(loc_id) or loc_id is None:
+                    record['location_id'] = None
+                else:
+                    record['location_id'] = int(loc_id)
 
             if batch_data:
                 conn.execute(text("""
