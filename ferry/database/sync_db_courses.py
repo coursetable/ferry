@@ -392,7 +392,8 @@ def cleanup_dependencies_for_buildings(buildings_to_delete: pd.DataFrame, conn: 
 def sync_course_meetings_incremental(
     old_course_meetings: pd.DataFrame,
     new_course_meetings: pd.DataFrame,
-    conn: Connection
+    conn: Connection,
+    freeze_locations: bool = False,
 ):
     """
     Incrementally sync course_meetings. Drops all meetings for courses that have changed, then recreates them.
@@ -499,17 +500,81 @@ def sync_course_meetings_incremental(
 
             # Prepare batch data for insertion
             batch_data = []
-            for _, meeting in meetings_to_insert.iterrows():
-                location_id = meeting['location_id'] if not safe_isna(
-                    meeting['location_id']) else None
+            # Create quick lookup of old meetings by (course_id, start_time, end_time)
+            if freeze_locations:
+                from collections import deque
+
+                # Vectorized approach: create key column and group by it
+                old_meetings_df = old_course_meetings.copy()
+                old_meetings_df['_key'] = old_meetings_df.apply(
+                    lambda row: (row['course_id'], row['start_time'], row['end_time']), axis=1
+                )
                 
-                batch_data.append({
-                    'course_id': meeting['course_id'],
-                    'start_time': meeting['start_time'],
-                    'end_time': meeting['end_time'],
-                    'days_of_week': meeting['days_of_week'],
-                    'location_id': location_id,
-                })
+                # Group by key and aggregate location_ids
+                old_lookup = {}
+                for key, group in old_meetings_df.groupby('_key'):
+                    location_ids = group['location_id'].dropna()
+                    has_null = group['location_id'].isna().any()
+                    
+                    # Convert non-null location_ids to sorted list, then to deque
+                    non_nulls = deque(sorted([int(loc_id) for loc_id in location_ids]))
+                    
+                    old_lookup[key] = {
+                        'non_nulls': non_nulls,
+                        'has_null': bool(has_null)
+                    }
+                
+                # Track whether we've already assigned the single allowed NULL per key
+                null_assigned = {k: False for k in old_lookup.keys()}
+
+            # Vectorized approach: prepare location_ids for all meetings at once
+            if freeze_locations:
+                # Create key column for vectorized lookup
+                meetings_to_insert = meetings_to_insert.copy()
+                meetings_to_insert['_key'] = meetings_to_insert.apply(
+                    lambda row: (row['course_id'], row['start_time'], row['end_time']), axis=1
+                )
+                
+                # Process location_ids using vectorized operations where possible
+                location_ids_list = []
+                for key in meetings_to_insert['_key']:
+                    location_id = None
+                    if key in old_lookup:
+                        info = old_lookup[key]
+                        if info['non_nulls']:
+                            # Assign one of the old non-null location_ids (deterministic)
+                            location_id = info['non_nulls'].popleft()
+                        elif info['has_null'] and not null_assigned.get(key, False):
+                            # Preserve a single old NULL for this key
+                            location_id = None
+                            null_assigned[key] = True
+                        else:
+                            location_id = None
+                    else:
+                        location_id = None
+                    location_ids_list.append(location_id)
+                
+                meetings_to_insert['location_id'] = location_ids_list
+                meetings_to_insert = meetings_to_insert.drop(columns=['_key'])
+            else:
+                # For non-frozen case, just ensure location_id is None if it's NA
+                meetings_to_insert = meetings_to_insert.copy()
+                meetings_to_insert['location_id'] = meetings_to_insert['location_id'].apply(
+                    lambda x: None if safe_isna(x) else x
+                )
+            
+            # Convert to list of dicts for batch insert
+            batch_data = meetings_to_insert[[
+                'course_id', 'start_time', 'end_time', 'days_of_week', 'location_id'
+            ]].to_dict('records')
+            
+            # Fix location_id types: ensure int (not float) and None (not nan)
+            for record in batch_data:
+                loc_id = record['location_id']
+                if pd.isna(loc_id) or loc_id is None:
+                    record['location_id'] = None
+                else:
+                    record['location_id'] = int(loc_id)
 
             if batch_data:
                 conn.execute(text("""
@@ -526,7 +591,8 @@ def sync_course_meetings_incremental(
 
 
 def sync_db_courses(
-    tables: dict[str, pd.DataFrame], database_connect_string: str, data_dir: Path
+    tables: dict[str, pd.DataFrame], database_connect_string: str, data_dir: Path,
+    freeze_locations: bool = False,
 ):
     db = Database(database_connect_string)
 
@@ -600,8 +666,12 @@ def sync_db_courses(
             if table_name == "locations":
                 # Reset sequence to prevent duplicate key violations
                 reset_location_sequence(conn)
-                # Handle locations with UPSERT
-                location_mapping = upsert_locations(tables["locations"], conn)
+                if freeze_locations:
+                    logging.info("Freeze locations enabled: skipping locations upsert")
+                    location_mapping = {}
+                else:
+                    # Handle locations with UPSERT
+                    location_mapping = upsert_locations(tables["locations"], conn)
                 continue
             elif table_name == "course_meetings":
                 continue
@@ -615,6 +685,10 @@ def sync_db_courses(
             course_meetings_with_locations = tables["course_meetings"].copy()
             for i, meeting in course_meetings_with_locations.iterrows():
                 if pd.isna(meeting['location_id']) and '_building_code' in meeting.index and '_room' in meeting.index:
+                    # Only attempt to resolve if not freezing locations
+                    if freeze_locations:
+                        # do not populate location_id when freeze is enabled
+                        continue
                     building_code = meeting['_building_code']
                     room = meeting['_room'] if not safe_isna(
                         meeting['_room']) else None
@@ -640,7 +714,8 @@ def sync_db_courses(
             sync_course_meetings_incremental(
                 tables_old["course_meetings"],
                 course_meetings_clean,
-                conn
+                conn,
+                freeze_locations=freeze_locations,
             )
 
         for table_name in tables_order_delete:

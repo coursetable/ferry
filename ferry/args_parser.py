@@ -24,6 +24,7 @@ class RawArgs:
     sync_db_evals: bool
     transform: bool
     use_cache: bool
+    freeze_locations: bool
 
 
 class Args:
@@ -45,6 +46,7 @@ class Args:
     sync_db_evals: bool
     transform: bool
     use_cache: bool
+    freeze_locations: bool
 
 
 class InvalidSeasonError(Exception):
@@ -171,6 +173,12 @@ def get_parser():
     parser.add_argument(
         "--sync-db-evals",
         help="The evaluations are not synced by default. If you are crawling evals (once a semester), you can use this flag to sync them to the database.",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "--freeze-locations",
+        help="When set, do not modify the `locations` table or update meeting location_ids during DB sync.",
         action="store_true",
     )
 
