@@ -504,27 +504,40 @@ def sync_course_meetings_incremental(
             if freeze_locations:
                 from collections import deque
 
+                # Vectorized approach: create key column and group by it
+                old_meetings_df = old_course_meetings.copy()
+                old_meetings_df['_key'] = old_meetings_df.apply(
+                    lambda row: (row['course_id'], row['start_time'], row['end_time']), axis=1
+                )
+                
+                # Group by key and aggregate location_ids
                 old_lookup = {}
-                # Build multiset of non-null old location_ids and a flag for nulls
-                for _, oldm in old_course_meetings.iterrows():
-                    key = (oldm['course_id'], oldm['start_time'], oldm['end_time'])
-                    loc = oldm.get('location_id')
-                    if key not in old_lookup:
-                        old_lookup[key] = {'non_nulls': [], 'has_null': False}
-                    if pd.isna(loc):
-                        old_lookup[key]['has_null'] = True
-                    else:
-                        old_lookup[key]['non_nulls'].append(int(loc))
-
-                # Make deterministic by sorting location lists
-                for v in old_lookup.values():
-                    v['non_nulls'] = deque(sorted(v['non_nulls']))
+                for key, group in old_meetings_df.groupby('_key'):
+                    location_ids = group['location_id'].dropna()
+                    has_null = group['location_id'].isna().any()
+                    
+                    # Convert non-null location_ids to sorted list, then to deque
+                    non_nulls = deque(sorted([int(loc_id) for loc_id in location_ids]))
+                    
+                    old_lookup[key] = {
+                        'non_nulls': non_nulls,
+                        'has_null': bool(has_null)
+                    }
+                
                 # Track whether we've already assigned the single allowed NULL per key
                 null_assigned = {k: False for k in old_lookup.keys()}
 
-            for _, meeting in meetings_to_insert.iterrows():
-                if freeze_locations:
-                    key = (meeting['course_id'], meeting['start_time'], meeting['end_time'])
+            # Vectorized approach: prepare location_ids for all meetings at once
+            if freeze_locations:
+                # Create key column for vectorized lookup
+                meetings_to_insert = meetings_to_insert.copy()
+                meetings_to_insert['_key'] = meetings_to_insert.apply(
+                    lambda row: (row['course_id'], row['start_time'], row['end_time']), axis=1
+                )
+                
+                # Process location_ids using vectorized operations where possible
+                location_ids_list = []
+                for key in meetings_to_insert['_key']:
                     location_id = None
                     if key in old_lookup:
                         info = old_lookup[key]
@@ -539,17 +552,21 @@ def sync_course_meetings_incremental(
                             location_id = None
                     else:
                         location_id = None
-                else:
-                    location_id = meeting['location_id'] if not safe_isna(
-                        meeting['location_id']) else None
-
-                batch_data.append({
-                    'course_id': meeting['course_id'],
-                    'start_time': meeting['start_time'],
-                    'end_time': meeting['end_time'],
-                    'days_of_week': meeting['days_of_week'],
-                    'location_id': location_id,
-                })
+                    location_ids_list.append(location_id)
+                
+                meetings_to_insert['location_id'] = location_ids_list
+                meetings_to_insert = meetings_to_insert.drop(columns=['_key'])
+            else:
+                # For non-frozen case, just ensure location_id is None if it's NA
+                meetings_to_insert = meetings_to_insert.copy()
+                meetings_to_insert['location_id'] = meetings_to_insert['location_id'].apply(
+                    lambda x: None if safe_isna(x) else x
+                )
+            
+            # Convert to list of dicts for batch insert (more efficient than iterrows)
+            batch_data = meetings_to_insert[[
+                'course_id', 'start_time', 'end_time', 'days_of_week', 'location_id'
+            ]].to_dict('records')
 
             if batch_data:
                 conn.execute(text("""
