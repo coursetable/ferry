@@ -6,6 +6,3 @@ release: true
 seasons: null
 
 sync_db_courses: true
-
-# temporary solution for locations needing auth in YCS
-freeze_locations: true
