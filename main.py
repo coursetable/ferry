@@ -40,12 +40,23 @@ async def start_crawl(args: Args):
     )
     print("-" * 80)
     if args.crawl_classes:
+        ycs_pers = None
+        if args.ycs_pers:
+            import ujson
+
+            try:
+                ycs_pers = ujson.loads(args.ycs_pers)
+            except Exception as e:
+                print(f"Error parsing YCS personalization tokens: {e}")
+
         classes = await crawl_classes(
             seasons=seasons,
             data_dir=args.data_dir,
             cws_api_key=args.cws_api_key,
             client=client,
             use_cache=args.use_cache,
+            pers=ycs_pers,
+            cookie_header=args.ycs_cookie,
         )
     if args.crawl_evals:
         await crawl_evals(

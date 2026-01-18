@@ -16,6 +16,8 @@ async def crawl_classes(
     client: AsyncClient,
     cws_api_key: str,
     use_cache: bool = True,
+    pers: dict | None = None,
+    cookie_header: str | None = None,
 ) -> dict[str, list[ParsedCourse]]:
     # Concurrency with async at the season level overloads the CPU
     # futures = [ fetch_class(season, data_dir=data_dir, client=client) for season in seasons ]
@@ -42,6 +44,8 @@ async def crawl_classes(
             data_dir=data_dir,
             client=client,
             use_cache=use_cache,
+            pers=pers,
+            cookie_header=cookie_header,
         )
 
         cws_season_json = []

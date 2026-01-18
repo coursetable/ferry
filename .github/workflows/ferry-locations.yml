@@ -1,0 +1,80 @@
+name: Ferry Location Sync
+on:
+  workflow_dispatch:
+    inputs:
+      ycs_cookie:
+        description: "YCS Cookie string (from browser)"
+        required: true
+      ycs_pers:
+        description: 'YCS Personalization JSON ({"id": "...", "idProof": "..."})'
+        required: true
+      seasons:
+        description: 'Seasons to fetch (space separated, e.g., "202503 202601"). Leave empty for defaults.'
+        required: false
+        default: ""
+
+jobs:
+  ferry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: coursetable/ferry-data
+          path: data
+          ssh-key: ${{ secrets.REPO_SSH_KEY }}
+          fetch-depth: 1
+
+      - name: Install Packages
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install gcc g++ musl-dev libffi-dev libpq-dev libhdf5-dev python3-tables graphviz libgraphviz-dev
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install uv and create virtual environment
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv venv .venv
+          echo "VIRTUAL_ENV=.venv" >> $GITHUB_ENV
+          echo "$PWD/.venv/bin" >> $GITHUB_PATH
+
+      - name: Install dependencies
+        run: uv pip install -e .
+
+      - name: Fetch with Locations
+        run: |
+          SEASON_ARG=""
+          if [ -n "${{ github.event.inputs.seasons }}" ]; then
+            SEASON_ARG="--seasons ${{ github.event.inputs.seasons }}"
+          fi
+          TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml \
+            --database-connect-string "${{ secrets.DATABASE_CONNECT_STRING }}" \
+            --sentry-url "${{ secrets.SENTRY_URL }}" \
+            --cws-api-key "${{ secrets.CWS_API_KEY }}" \
+            --ycs-cookie "${{ github.event.inputs.ycs_cookie }}" \
+            --ycs-pers "${{ github.event.inputs.ycs_pers }}" \
+            $SEASON_ARG
+
+      - name: Sync Postgres DB
+        run: TQDM_DISABLE=1 python -u main.py -f config/release_sync_db_courses.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
+
+      - name: Commit updated ferry-data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Manual Location Sync by ${{ github.actor }}"
+          commit_user_name: "Ferry Bot"
+          commit_user_email: "coursetable.at.yale@gmail.com"
+          commit_author: course-table <course-table@users.noreply.github.com>
+          repository: data
+          skip_dirty_check: false
+
+      - name: Regenerate static catalog on server
+        run: |
+          curl --silent --show-error -H "X-FERRY-SECRET: ${{secrets.FERRY_SECRET}}" https://api.coursetable.com/api/catalog/refresh
+          curl --silent --show-error -H "X-FERRY-SECRET: ${{secrets.FERRY_SECRET}}" https://api-staging.coursetable.com/api/catalog/refresh
