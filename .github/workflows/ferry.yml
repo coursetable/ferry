@@ -69,17 +69,22 @@ jobs:
 
       - name: Fetch latest 4 seasons
         run: |
-          CMD="TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml --database-connect-string \"${{ secrets.DATABASE_CONNECT_STRING }}\" --sentry-url \"${{ secrets.SENTRY_URL }}\" --cws-api-key \"${{ secrets.CWS_API_KEY }}\""
-
           # If YCS credentials are provided, use them to fetch locations
           # Otherwise, freeze locations
           if [ -n "${{ github.event.inputs.ycs_cookie }}" ] && [ -n "${{ github.event.inputs.ycs_pers }}" ]; then
-            CMD="$CMD --ycs-cookie \"${{ github.event.inputs.ycs_cookie }}\" --ycs-pers \"${{ github.event.inputs.ycs_pers }}\""
+            TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml \
+              --database-connect-string "${{ secrets.DATABASE_CONNECT_STRING }}" \
+              --sentry-url "${{ secrets.SENTRY_URL }}" \
+              --cws-api-key "${{ secrets.CWS_API_KEY }}" \
+              --ycs-cookie "${{ github.event.inputs.ycs_cookie }}" \
+              --ycs-pers '${{ github.event.inputs.ycs_pers }}'
           else
-            CMD="$CMD --freeze-locations"
+            TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml \
+              --database-connect-string "${{ secrets.DATABASE_CONNECT_STRING }}" \
+              --sentry-url "${{ secrets.SENTRY_URL }}" \
+              --cws-api-key "${{ secrets.CWS_API_KEY }}" \
+              --freeze-locations
           fi
-
-          eval $CMD
 
       - name: Sync Postgres DB
         run: TQDM_DISABLE=1 python -u main.py -f config/release_sync_db_courses.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
