@@ -25,6 +25,8 @@ class RawArgs:
     transform: bool
     use_cache: bool
     freeze_locations: bool
+    ycs_cookie: str | None
+    ycs_pers: str | None
 
 
 class Args:
@@ -47,6 +49,8 @@ class Args:
     transform: bool
     use_cache: bool
     freeze_locations: bool
+    ycs_cookie: str | None
+    ycs_pers: str | None
 
 
 class InvalidSeasonError(Exception):
@@ -194,6 +198,18 @@ def get_parser():
         action="store_true",
     )
 
+    parser.add_argument(
+        "--ycs-cookie",
+        help="Cookie string for Yale Course Search. Used for fetching location data.",
+        default=None,
+    )
+
+    parser.add_argument(
+        "--ycs-pers",
+        help="Personalization JSON string for Yale Course Search (id and idProof). Used for fetching location data.",
+        default=None,
+    )
+
     return parser
 
 
@@ -274,6 +290,12 @@ def parse_env_args(args: RawArgs):
         args.cws_api_key = os.environ.get("CWS_API_KEY")
         if args.cws_api_key is None and args.crawl_classes:
             args.cws_api_key = input("Enter CWS API key: ")
+
+    if args.ycs_cookie is None:
+        args.ycs_cookie = os.environ.get("YCS_COOKIE")
+
+    if args.ycs_pers is None:
+        args.ycs_pers = os.environ.get("YCS_PERS")
 
 
 def load_yaml(parser: argparse.ArgumentParser):

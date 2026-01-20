@@ -40,13 +40,41 @@ async def start_crawl(args: Args):
     )
     print("-" * 80)
     if args.crawl_classes:
+        ycs_pers = None
+        if args.ycs_pers:
+            import ujson
+
+            try:
+                ycs_pers = ujson.loads(args.ycs_pers)
+            except Exception as e:
+                print(f"Error parsing YCS personalization tokens: {e}")
+
         classes = await crawl_classes(
             seasons=seasons,
             data_dir=args.data_dir,
             cws_api_key=args.cws_api_key,
             client=client,
             use_cache=args.use_cache,
+            pers=ycs_pers,
+            cookie_header=args.ycs_cookie,
         )
+        
+        # Validate that locations were fetched if credentials were provided
+        if args.ycs_cookie and args.ycs_pers:
+            location_count = 0
+            for season_courses in classes.values():
+                for course in season_courses:
+                    for meeting in course.get("meetings", []):
+                        if meeting.get("location"):
+                            location_count += 1
+            
+            print(f"Found {location_count} meetings with locations")
+            
+            if location_count == 0:
+                raise RuntimeError(
+                    "YCS credentials were provided but no locations were fetched. "
+                    "This likely means the authentication failed or the credentials are invalid."
+                )
     if args.crawl_evals:
         await crawl_evals(
             cas_cookie=args.cas_cookie,
