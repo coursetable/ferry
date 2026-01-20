@@ -68,10 +68,8 @@ jobs:
 
       - name: Fetch latest 4 seasons
         run: |
-          # Freeze locations by default for scheduled/push events, or if freeze_locations input is true
-          # Only fetch locations when manually triggered with freeze_locations=false
+          # Only pass YCS credentials when manually triggered with freeze_locations=false
           if [ "${{ github.event_name }}" == "workflow_dispatch" ] && [ "${{ github.event.inputs.freeze_locations }}" == "false" ]; then
-            # Use YCS credentials from secrets to fetch locations
             TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml \
               --database-connect-string "${{ secrets.DATABASE_CONNECT_STRING }}" \
               --sentry-url "${{ secrets.SENTRY_URL }}" \
@@ -79,16 +77,24 @@ jobs:
               --ycs-cookie "${{ secrets.YCS_COOKIE }}" \
               --ycs-pers '${{ secrets.YCS_PERS }}'
           else
-            # Freeze locations (default behavior)
             TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml \
               --database-connect-string "${{ secrets.DATABASE_CONNECT_STRING }}" \
               --sentry-url "${{ secrets.SENTRY_URL }}" \
-              --cws-api-key "${{ secrets.CWS_API_KEY }}" \
-              --freeze-locations
+              --cws-api-key "${{ secrets.CWS_API_KEY }}"
           fi
 
       - name: Sync Postgres DB
-        run: TQDM_DISABLE=1 python -u main.py -f config/release_sync_db_courses.yml --database-connect-string ${{ secrets.DATABASE_CONNECT_STRING }} --sentry-url ${{ secrets.SENTRY_URL }}
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ] && [ "${{ github.event.inputs.freeze_locations }}" == "false" ]; then
+            TQDM_DISABLE=1 python -u main.py -f config/release_sync_db_courses.yml \
+              --database-connect-string "${{ secrets.DATABASE_CONNECT_STRING }}" \
+              --sentry-url "${{ secrets.SENTRY_URL }}"
+          else
+            TQDM_DISABLE=1 python -u main.py -f config/release_sync_db_courses.yml \
+              --database-connect-string "${{ secrets.DATABASE_CONNECT_STRING }}" \
+              --sentry-url "${{ secrets.SENTRY_URL }}" \
+              --freeze-locations
+          fi
 
       - name: Calculate commit message
         run: |
