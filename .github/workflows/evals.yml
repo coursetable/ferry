@@ -1,0 +1,77 @@
+name: Manual Evals Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      season:
+        description: "Season to fetch (e.g. 202503)"
+        required: true
+      sync_db:
+        description: "Sync to database?"
+        type: boolean
+        required: true
+        default: false
+
+jobs:
+  release_evals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: coursetable/ferry-data
+          path: data
+          ssh-key: ${{ secrets.REPO_SSH_KEY }}
+          fetch-depth: 1
+
+      - name: Install Packages
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install gcc g++ musl-dev libffi-dev libpq-dev libhdf5-dev python3-tables graphviz libgraphviz-dev
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install uv and dependencies
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv venv .venv
+          echo "VIRTUAL_ENV=.venv" >> $GITHUB_ENV
+          echo "$PWD/.venv/bin" >> $GITHUB_PATH
+          uv pip install -e .
+
+      - name: Fetch Evaluations
+        env:
+          CAS_COOKIE: ${{ secrets.CAS_COOKIE }}
+        run: |
+          # Use --crawl-evals and explicit season
+          # We don't save to cache in this mode usually, but default behavior writes to json files
+          python main.py --crawl-evals --seasons ${{ inputs.season }} --cas-cookie "$CAS_COOKIE"
+
+      - name: Validate Data (Transform)
+        run: |
+          # Running transform checks for InvariantError in questions
+          python main.py --transform --snapshot-tables
+
+      - name: Commit Evaluations Data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "feat: add ${{ inputs.season }} evaluations"
+          commit_user_name: "Ferry Bot"
+          commit_user_email: "coursetable.at.yale@gmail.com"
+          commit_author: course-table <course-table@users.noreply.github.com>
+          repository: data
+          file_pattern: "parsed_evaluations/*.json"
+          skip_dirty_check: false
+
+      - name: Sync to Database
+        if: ${{ inputs.sync_db }}
+        env:
+          DATABASE_CONNECT_STRING: ${{ secrets.DATABASE_CONNECT_STRING }}
+        run: |
+          # Sync evals (this implicitly runs transform again)
+          python main.py --sync-db-evals --database-connect-string "$DATABASE_CONNECT_STRING"
