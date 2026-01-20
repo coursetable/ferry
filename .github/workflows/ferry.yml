@@ -13,11 +13,10 @@ on:
     # - cron: "0 22 * * *"    # 6:00 PM EDT
   workflow_dispatch:
     inputs:
-      ycs_cookie:
-        description: "YCS Cookie string (optional, for fetching locations)"
-        required: false
-      ycs_pers:
-        description: "YCS Personalization JSON (optional, for fetching locations)"
+      freeze_locations:
+        description: "Freeze locations (do not fetch/update location data)"
+        type: boolean
+        default: true
         required: false
 
 jobs:
@@ -69,16 +68,18 @@ jobs:
 
       - name: Fetch latest 4 seasons
         run: |
-          # If YCS credentials are provided, use them to fetch locations
-          # Otherwise, freeze locations
-          if [ -n "${{ github.event.inputs.ycs_cookie }}" ] && [ -n "${{ github.event.inputs.ycs_pers }}" ]; then
+          # Freeze locations by default for scheduled/push events, or if freeze_locations input is true
+          # Only fetch locations when manually triggered with freeze_locations=false
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ] && [ "${{ github.event.inputs.freeze_locations }}" == "false" ]; then
+            # Use YCS credentials from secrets to fetch locations
             TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml \
               --database-connect-string "${{ secrets.DATABASE_CONNECT_STRING }}" \
               --sentry-url "${{ secrets.SENTRY_URL }}" \
               --cws-api-key "${{ secrets.CWS_API_KEY }}" \
-              --ycs-cookie "${{ github.event.inputs.ycs_cookie }}" \
-              --ycs-pers '${{ github.event.inputs.ycs_pers }}'
+              --ycs-cookie "${{ secrets.YCS_COOKIE }}" \
+              --ycs-pers '${{ secrets.YCS_PERS }}'
           else
+            # Freeze locations (default behavior)
             TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml \
               --database-connect-string "${{ secrets.DATABASE_CONNECT_STRING }}" \
               --sentry-url "${{ secrets.SENTRY_URL }}" \
