@@ -81,3 +81,9 @@ jobs:
         run: |
           # Sync evals (this implicitly runs transform again)
           python main.py --sync-db-evals --database-connect-string "$DATABASE_CONNECT_STRING"
+
+      - name: Regenerate static catalog on server
+        if: ${{ inputs.sync_db }}
+        run: |
+          curl --silent --show-error -H "X-FERRY-SECRET: ${{secrets.FERRY_SECRET}}" https://api.coursetable.com/api/catalog/refresh
+          curl --silent --show-error -H "X-FERRY-SECRET: ${{secrets.FERRY_SECRET}}" https://api-staging.coursetable.com/api/catalog/refresh
