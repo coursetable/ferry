@@ -251,16 +251,16 @@ def print_table_diff(
 def register_junction_change(
     course_id_to_changes: dict[int, dict[str, tuple[Any, Any]]],
     course_id: int,
-    junction_old: pd.DataFrame,
-    junction_new: pd.DataFrame,
+    junction_old_grouped: dict[int, pd.DataFrame],
+    junction_new_grouped: dict[int, pd.DataFrame],
     junction_name: str,
 ):
     if course_id not in course_id_to_changes:
         course_id_to_changes[course_id] = {}
-    course_id_to_changes[course_id][junction_name] = (
-        junction_old[junction_old["course_id"] == course_id],
-        junction_new[junction_new["course_id"] == course_id],
-    )
+    # Use pre-grouped data instead of filtering
+    old_group = junction_old_grouped.get(course_id, pd.DataFrame())
+    new_group = junction_new_grouped.get(course_id, pd.DataFrame())
+    course_id_to_changes[course_id][junction_name] = (old_group, new_group)
 
 
 def register_junction_changes(
@@ -274,21 +274,36 @@ def register_junction_changes(
     junction_diff = tables_diff[junction_name]
     junction_old = tables_old[junction_name]
     junction_new = tables_new[junction_name]
-    courses_old = tables_old["courses"]
-    courses_new = tables_new["courses"]
+    
+    # Pre-group junction tables by course_id for O(1) lookups
+    junction_old_grouped = {
+        course_id: group
+        for course_id, group in junction_old.groupby("course_id")
+    }
+    junction_new_grouped = {
+        course_id: group
+        for course_id, group in junction_new.groupby("course_id")
+    }
+    
+    # Pre-index courses for O(1) lookups instead of O(n) filtering
+    courses_old_indexed = set(tables_old["courses"]["course_id"].values)
+    courses_new_indexed = set(tables_new["courses"]["course_id"].values)
+    
     for course_id in junction_diff["added_rows"]["course_id"].values:
         # Course itself was added
-        if courses_old[courses_old["course_id"] == course_id].empty:
+        if course_id not in courses_old_indexed:
             continue
         register_junction_change(
-            course_id_to_changes, course_id, junction_old, junction_new, junction_name
+            course_id_to_changes, course_id, junction_old_grouped,
+            junction_new_grouped, junction_name
         )
     for course_id in junction_diff["deleted_rows"]["course_id"].values:
         # Course itself was removed
-        if courses_new[courses_new["course_id"] == course_id].empty:
+        if course_id not in courses_new_indexed:
             continue
         register_junction_change(
-            course_id_to_changes, course_id, junction_old, junction_new, junction_name
+            course_id_to_changes, course_id, junction_old_grouped,
+            junction_new_grouped, junction_name
         )
     for row in junction_diff["changed_rows"].itertuples():
         course_id = row.course_id
@@ -298,7 +313,8 @@ def register_junction_changes(
         ):
             continue
         register_junction_change(
-            course_id_to_changes, course_id, junction_old, junction_new, junction_name
+            course_id_to_changes, course_id, junction_old_grouped,
+            junction_new_grouped, junction_name
         )
 
 
@@ -307,40 +323,63 @@ def print_courses_diff(
     tables_old: dict[str, pd.DataFrame],
     tables: dict[str, pd.DataFrame],
 ):
-    course_additions = ""
+    # Pre-group listings by course_id for O(1) lookups
+    listings_by_course = {
+        course_id: group
+        for course_id, group in tables["listings"].groupby("course_id")
+    }
+    listings_old_by_course = {
+        course_id: group
+        for course_id, group in tables_old["listings"].groupby("course_id")
+    }
+    
+    # Pre-index listing IDs for fast lookups
+    old_listing_ids = set(tables_old["listings"]["listing_id"].values)
+    new_listing_ids = set(tables["listings"]["listing_id"].values)
+    
+    # Pre-index courses by course_id for O(1) lookups
+    courses_old_indexed = tables_old["courses"].set_index("course_id")
+    courses_new_indexed = tables["courses"].set_index("course_id")
+    
+    # Process additions with vectorized operations
+    course_additions_list = []
     for course in diff["courses"]["added_rows"].itertuples():
-        listings = tables["listings"][
-            tables["listings"]["course_id"] == course.course_id
-        ]
-        listings_already_exist = listings[
-            listings["listing_id"].isin(tables_old["listings"]["listing_id"])
-        ]
-        links = listings.apply(create_listing_link, axis=1)
-        course_additions += (
-            f"- {course.season_code} {" / ".join(links)} {course.title}\n"
-        )
-        if not listings_already_exist.empty:
-            course_additions += (
-                f"  - Note: {', '.join(listings_already_exist['course_code'])} "
-                f"{'exists' if len(listings_already_exist) == 1 else 'exist'}; this is probably due to a cross-listing split\n"
+        listings = listings_by_course.get(course.course_id, pd.DataFrame())
+        if not listings.empty:
+            listings_already_exist = listings[
+                listings["listing_id"].isin(old_listing_ids)
+            ]
+            links = listings.apply(create_listing_link, axis=1)
+            course_additions_list.append(
+                f"- {course.season_code} {" / ".join(links)} {course.title}\n"
             )
-    course_removals = ""
+            if not listings_already_exist.empty:
+                exists_text = 'exists' if len(listings_already_exist) == 1 else 'exist'
+                course_additions_list.append(
+                    f"  - Note: {', '.join(listings_already_exist['course_code'])} {exists_text}; this is probably due to a cross-listing split\n"
+                )
+    course_additions = "".join(course_additions_list)
+    
+    # Process removals with vectorized operations
+    course_removals_list = []
     for course in diff["courses"]["deleted_rows"].itertuples():
-        listings = tables_old["listings"][
-            tables_old["listings"]["course_id"] == course.course_id
-        ]
-        listings_still_exist = listings[
-            listings["listing_id"].isin(tables["listings"]["listing_id"])
-        ]
-        links = listings.apply(create_listing_link, axis=1)
-        course_removals += (
-            f"- {course.season_code} {" / ".join(links)} {course.title}\n"
-        )
-        if not listings_still_exist.empty:
-            course_removals += (
-                f"  - Note: {', '.join(listings_still_exist['course_code'])} "
-                f"{'exists' if len(listings_still_exist) == 1 else 'exist'}; this is probably due to a cross-listing merge\n"
+        listings = listings_old_by_course.get(course.course_id, pd.DataFrame())
+        if not listings.empty:
+            listings_still_exist = listings[
+                listings["listing_id"].isin(new_listing_ids)
+            ]
+            links = listings.apply(create_listing_link, axis=1)
+            course_removals_list.append(
+                f"- {course.season_code} {" / ".join(links)} {course.title}\n"
             )
+            if not listings_still_exist.empty:
+                exists_text = 'exists' if len(listings_still_exist) == 1 else 'exist'
+                course_removals_list.append(
+                    f"  - Note: {', '.join(listings_still_exist['course_code'])} {exists_text}; this is probably due to a cross-listing merge\n"
+                )
+    course_removals = "".join(course_removals_list)
+    
+    # Process changed courses with indexed lookups
     course_updates = ""
     course_id_to_changes: dict[int, dict[str, tuple[Any, Any]]] = {}
     for _, course in diff["courses"]["changed_rows"].iterrows():
@@ -350,14 +389,10 @@ def print_courses_diff(
         for column in course["columns_changed"]:
             if column in computed_columns["courses"]:
                 continue
-            course_id_to_changes[course_id][column] = (
-                tables_old["courses"][tables_old["courses"]["course_id"] == course_id][
-                    column
-                ].values[0],
-                tables["courses"][tables["courses"]["course_id"] == course_id][
-                    column
-                ].values[0],
-            )
+            # Use indexed lookup instead of filtering
+            old_val = courses_old_indexed.loc[course_id, column]
+            new_val = courses_new_indexed.loc[course_id, column]
+            course_id_to_changes[course_id][column] = (old_val, new_val)
     register_junction_changes(
         course_id_to_changes,
         diff,
@@ -401,16 +436,23 @@ def print_courses_diff(
         .combine_first(tables_old["locations"].set_index("location_id"))
     )
     location_info["name"] = location_info["building_code"] + " " + location_info["room"]
+    
+    # Use pre-grouped listings and indexed courses
+    course_updates_list = []
     for course_id, changes in course_id_to_changes.items():
         if not changes:
             continue
-        listings = tables["listings"][tables["listings"]["course_id"] == course_id]
-        links = listings.apply(create_listing_link, axis=1)
-        course = tables["courses"][tables["courses"]["course_id"] == course_id]
-        course_updates += f"- {course["season_code"].values[0]} {" / ".join(links)} {course['title'].values[0]}\n"
-        course_updates += print_course_changes(
-            changes, prof_info, flag_info, location_info
+        listings = listings_by_course.get(course_id, pd.DataFrame())
+        links = listings.apply(create_listing_link, axis=1) if not listings.empty else []
+        # Use indexed lookup instead of filtering
+        course = courses_new_indexed.loc[course_id]
+        course_updates_list.append(
+            f"- {course["season_code"]} {" / ".join(links)} {course['title']}\n"
         )
+        course_updates_list.append(
+            print_course_changes(changes, prof_info, flag_info, location_info)
+        )
+    course_updates = "".join(course_updates_list)
     course_changes = ""
     course_changes += create_section(3, "Additions", course_additions)
     course_changes += create_section(3, "Removals", course_removals)
