@@ -6,8 +6,13 @@ on:
       season:
         description: "Season to fetch (e.g. 202503)"
         required: true
+      skip_fetch:
+        description: "Skip fetching? (Use existing data in repo)"
+        type: boolean
+        required: true
+        default: false
       sync_db:
-        description: "Sync to database?"
+        description: "Sync to database? WARNING: This drops and recreates all evaluation tables."
         type: boolean
         required: true
         default: false
@@ -45,6 +50,7 @@ jobs:
           uv pip install -e .
 
       - name: Fetch Evaluations
+        if: ${{ !inputs.skip_fetch }}
         env:
           CAS_COOKIE: ${{ secrets.CAS_COOKIE }}
         run: |
