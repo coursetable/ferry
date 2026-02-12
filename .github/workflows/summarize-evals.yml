@@ -1,0 +1,60 @@
+name: Summarize Evals
+
+on:
+  workflow_dispatch:
+    inputs:
+      seasons:
+        description: "Space-separated season codes to summarise (e.g. '202403 202501')"
+        required: true
+
+jobs:
+  summarize_evals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: coursetable/ferry-data
+          path: data
+          ssh-key: ${{ secrets.REPO_SSH_KEY }}
+          fetch-depth: 1
+
+      - name: Install Packages
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install gcc g++ musl-dev libffi-dev libpq-dev libhdf5-dev python3-tables graphviz libgraphviz-dev
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install uv and dependencies
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv venv .venv
+          echo "VIRTUAL_ENV=.venv" >> $GITHUB_ENV
+          echo "$PWD/.venv/bin" >> $GITHUB_PATH
+          uv pip install -e .
+
+      - name: Summarize Evaluations
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python main.py \
+            -f config/release_summarize_evals.yml \
+            --seasons ${{ inputs.seasons }} \
+            --sentry-url "${{ secrets.SENTRY_URL }}"
+
+      - name: Commit Evaluation Summaries
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "feat: summarize evals for ${{ inputs.seasons }}"
+          commit_user_name: "Ferry Bot"
+          commit_user_email: "coursetable.at.yale@gmail.com"
+          commit_author: course-table <course-table@users.noreply.github.com>
+          repository: data
+          file_pattern: "evaluation_summaries/*.json"
+          skip_dirty_check: false

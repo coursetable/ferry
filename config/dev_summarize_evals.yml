@@ -1,0 +1,10 @@
+# DEV CONFIG
+# This configuration is used to summarize evaluations in a dev environment.
+# Specify seasons with the -s option. The OPENAI_API_KEY env var must be set.
+
+release: false
+seasons:
+  - LATEST_1
+
+crawl_seasons: true
+summarize_evals: true

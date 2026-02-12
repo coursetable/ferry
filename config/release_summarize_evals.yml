@@ -1,0 +1,6 @@
+# PROD CONFIG
+# This configuration is used for summarizing evaluations in production.
+# The OPENAI_API_KEY env var must be set.
+
+release: true
+summarize_evals: true

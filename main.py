@@ -13,6 +13,7 @@ from ferry.crawler.classes import crawl_classes
 from ferry.crawler.evals import crawl_evals
 from ferry.crawler.seasons import fetch_seasons
 from ferry.database import sync_db_courses, sync_db_courses_old, sync_db_evals
+from ferry.summarize import summarize_evals
 from ferry.transform import transform, write_csvs
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
@@ -23,7 +24,8 @@ pd.set_option("display.max_colwidth", 50)
 pd.set_option("display.width", 120)
 
 
-async def start_crawl(args: Args):
+async def start_crawl(args: Args) -> list[str]:
+    """Run the crawl stages and return the resolved list of seasons."""
     classes = None
     # Initialize HTTPX client, only used for fetching classes (evals fetch
     # initializes its own client with CAS auth)
@@ -86,6 +88,8 @@ async def start_crawl(args: Args):
     await client.aclose()
     print("-" * 80)
 
+    return seasons
+
 
 async def main():
     args = get_args()
@@ -108,7 +112,7 @@ async def main():
     else:
         print("Running in dev mode. Sentry not initialized.")
 
-    await start_crawl(args)
+    seasons = await start_crawl(args)
     tables = None
     if args.transform:
         tables = await transform(data_dir=args.data_dir)
@@ -129,6 +133,13 @@ async def main():
     if args.sync_db_evals:
         assert tables
         sync_db_evals(tables, args.database_connect_string)
+    if args.summarize_evals:
+        assert args.openai_api_key, "OpenAI API key is required for --summarize-evals"
+        await summarize_evals(
+            seasons=seasons,
+            data_dir=args.data_dir,
+            openai_api_key=args.openai_api_key,
+        )
     if args.generate_diagram:
         from ferry.generate_db_diagram import generate_db_diagram
 

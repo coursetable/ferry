@@ -14,12 +14,14 @@ class RawArgs:
     database_connect_string: str | None
     debug: bool
     generate_diagram: bool
+    openai_api_key: str | None
     release: bool
     rewrite: bool
     save_config: bool
     seasons: list[str] | None
     sentry_url: str | None
     snapshot_tables: bool
+    summarize_evals: bool
     sync_db_courses: bool
     sync_db_evals: bool
     transform: bool
@@ -39,11 +41,13 @@ class Args:
     database_connect_string: str
     debug: bool
     generate_diagram: bool
+    openai_api_key: str | None
     release: bool
     rewrite: bool
     seasons: list[str] | None
     sentry_url: str
     snapshot_tables: bool
+    summarize_evals: bool
     sync_db_courses: bool
     sync_db_evals: bool
     transform: bool
@@ -164,8 +168,20 @@ def get_parser():
     )
 
     parser.add_argument(
+        "--openai-api-key",
+        help="OpenAI API key for eval summarization. If not specified, defaults to the value of the OPENAI_API_KEY environment variable.",
+        default=None,
+    )
+
+    parser.add_argument(
         "--snapshot-tables",
         help="Generate CSV files capturing data that would be written to DB.",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "--summarize-evals",
+        help="Summarize narrative evaluations using the OpenAI API.",
         action="store_true",
     )
 
@@ -290,6 +306,11 @@ def parse_env_args(args: RawArgs):
         args.cws_api_key = os.environ.get("CWS_API_KEY")
         if args.cws_api_key is None and args.crawl_classes:
             args.cws_api_key = input("Enter CWS API key: ")
+
+    if args.openai_api_key is None:
+        args.openai_api_key = os.environ.get("OPENAI_API_KEY")
+        if args.openai_api_key is None and args.summarize_evals:
+            args.openai_api_key = input("Enter OpenAI API key: ")
 
     if args.ycs_cookie is None:
         args.ycs_cookie = os.environ.get("YCS_COOKIE")
