@@ -83,6 +83,11 @@ async def start_crawl(args: Args):
             courses=classes,
         )
 
+    # Track seasons updated during crawl for catalog refresh endpoint
+    if args.crawl_classes or args.crawl_evals:
+        updated_seasons_path = args.data_dir / "ferry_updated_seasons.txt"
+        updated_seasons_path.write_text(",".join(seasons))
+
     await client.aclose()
     print("-" * 80)
 
