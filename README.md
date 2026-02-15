@@ -120,6 +120,43 @@ JSESSIONID=...; ...
 
 **In almost all cases, it is sufficient to only fetch the last 3 seasons in dev.** In fact, `ferry` will not work when fetching and syncing to DB all seasons in dev due to `professor_id` mapping requiring legacy seasons. Please clone [`ferry-data`](https://github.com/coursetable/ferry-data) if working with all seasons is necessary.
 
+### Running Ferry with locations
+
+By default, the Ferry workflow does not fetch or update location data since YCS does not provide locations publicly anymore. To refresh locations you need credentials from Yale Course Search and either run locally or via the GitHub Action.
+
+**Getting the credentials**
+
+1. Log into [Yale Course Search](https://courses.yale.edu/)
+2. Open DevTools → **Network**
+2. Open a course (e.g. search and click a course so the details request is sent).
+3. Find a **POST** request to `https://courses.yale.edu/api/?page=fose&route=details` (or `route=search`). Click it.
+4. **`--ycs-cookie`** (Cookie header): In the request, open **Headers** → **Request Headers**. Copy the full value of the **Cookie** header. It typically includes `dtCookie=...` and `JSESSIONID=...` (semicolon-separated).
+5. **`--ycs-pers`** (request body): In the same request, open **Payload** (or **Request** tab). The body is JSON. Copy only the **`_pers`** object — the part that looks like `{"id":"gSoUbZ...","idProof":"HJUI7|..."}`. Use that as the value for `--ycs-pers` (valid JSON string with `id` and `idProof`).
+
+**Running locally**
+
+```sh
+python main.py -f config/release_fetch.yml \
+  --ycs-cookie "" \
+  --ycs-pers '{"id":"gSoUbZ...","idProof":"HJUI7|..."}'
+```
+
+(Add `--database-connect-string`, `--sentry-url`, etc. as needed for your run. Run the sync step separately if you need to push to the DB.)
+
+**Running via GitHub Action (for admins)**
+
+1. **Update GitHub secrets**  
+   In the ferry repo: **Settings → Secrets and variables → Actions**. Add or update:
+   - `YCS_COOKIE` — the cookie header (e.g. `dtCookie=v_4_srv_3...; JSESSIONID=...`)
+   - `YCS_PERS` — the same `_pers` JSON string as above (e.g. `{"id":"...","idProof":"..."}`).
+
+2. **Run the workflow with locations enabled**  
+   Go to **Actions → Ferry Run**, click **Run workflow**. Under inputs, **uncheck** “Freeze locations (do not fetch/update location data)”, then run the workflow.
+
+Scheduled and push-triggered runs always freeze locations; only manually triggered runs can update location data.
+
+Important: if you run this workflow and uncheck freeze locations without updating the secrets, locations may be wiped from the database.
+
 ## Crawling evals
 
 Eval data is fetched and committed using an entirely separate pipeline, because it's only run once a semester.
