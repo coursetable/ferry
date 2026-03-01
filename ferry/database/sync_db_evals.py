@@ -40,6 +40,8 @@ def sync_db_evals(tables: dict[str, pd.DataFrame], database_connect_string: str)
             )
         # create in-memory buffer for DataFrame
         buffer = StringIO()
+        # TODO is this really needed?
+        tables[table.name] = tables[table.name].replace({r"\r": ""}, regex=True)
         tables[table.name].to_csv(
             buffer,
             index_label="id",
