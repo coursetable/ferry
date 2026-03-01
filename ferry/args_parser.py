@@ -17,6 +17,7 @@ class RawArgs:
     openai_api_key: str | None
     llm_model: str | None
     llm_base_url: str | None
+    max_courses: int | None
     release: bool
     rewrite: bool
     save_config: bool
@@ -46,6 +47,7 @@ class Args:
     openai_api_key: str | None
     llm_model: str | None
     llm_base_url: str | None
+    max_courses: int | None
     release: bool
     rewrite: bool
     seasons: list[str] | None
@@ -202,6 +204,13 @@ def get_parser():
     )
 
     parser.add_argument(
+        "--max-courses",
+        type=int,
+        default=None,
+        help="Max courses per season for eval summarization (omit for no limit).",
+    )
+
+    parser.add_argument(
         "--sync-db-courses",
         help="Sync the database. This is automatically set to true in release mode.",
         action="store_true",
@@ -333,6 +342,11 @@ def parse_env_args(args: RawArgs):
 
     if args.llm_base_url is None:
         args.llm_base_url = os.environ.get("LLM_BASE_URL")
+
+    if args.max_courses is None:
+        val = os.environ.get("MAX_COURSES")
+        if val and val.strip():
+            args.max_courses = int(val.strip())
 
     if args.ycs_cookie is None:
         args.ycs_cookie = os.environ.get("YCS_COOKIE")

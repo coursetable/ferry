@@ -24,9 +24,6 @@ MIN_COMMENTS_FOR_SUMMARY = 3
 # Maximum concurrent API requests to avoid rate-limit pressure.
 MAX_CONCURRENT_REQUESTS = 10
 
-# Cap courses per season for initial testing (set to None for no limit).
-MAX_COURSES_PER_SEASON = 100
-
 SYSTEM_PROMPT = """
 You are an expert at summarizing student course evaluations for a university
 course catalog. You will receive a set of student comments responding to a
@@ -149,6 +146,7 @@ async def summarize_evals(
     api_key: str,
     model: str = DEFAULT_MODEL,
     base_url: str | None = None,
+    max_courses_per_season: int | None = None,
 ) -> None:
     """
     Summarize narrative evaluations for the given seasons.
@@ -157,6 +155,9 @@ async def summarize_evals(
     Groq (https://api.groq.com/openai/v1), OpenRouter, etc. Reads from
     ``data_dir/parsed_evaluations/{season}.json`` and writes summaries to
     ``data_dir/evaluation_summaries/{season}.json``.
+
+    When ``max_courses_per_season`` is set, limits how many courses are
+    processed per season.
     """
     llm = LLMClient(
         api_key=api_key,
@@ -169,9 +170,14 @@ async def summarize_evals(
     output_dir.mkdir(parents=True, exist_ok=True)
 
     base_info = f", base: {base_url}" if base_url else ""
+    limit_info = (
+        f", max {max_courses_per_season} courses/season"
+        if max_courses_per_season
+        else ""
+    )
     print(
         f"\nSummarizing evaluations for seasons: {seasons} "
-        + f"(model: {model}{base_info})"
+        + f"(model: {model}{base_info}{limit_info})"
     )
 
     for season in seasons:
@@ -199,8 +205,8 @@ async def summarize_evals(
             for c in course_evals
             if str(c["crn"]) not in already_done and c.get("narratives")
         ]
-        if MAX_COURSES_PER_SEASON is not None:
-            to_process = to_process[:MAX_COURSES_PER_SEASON]
+        if max_courses_per_season is not None:
+            to_process = to_process[:max_courses_per_season]
 
         if not to_process:
             print(

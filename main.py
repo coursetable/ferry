@@ -142,6 +142,7 @@ async def main():
             api_key=args.openai_api_key,
             model=args.llm_model or DEFAULT_MODEL,
             base_url=args.llm_base_url,
+            max_courses_per_season=args.max_courses,
         )
     if args.generate_diagram:
         from ferry.generate_db_diagram import generate_db_diagram

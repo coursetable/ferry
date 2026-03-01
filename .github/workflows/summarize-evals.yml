@@ -6,6 +6,10 @@ on:
       seasons:
         description: "Space-separated season codes to summarize (e.g. '202403 202501')"
         required: true
+      max_courses:
+        description: "Optional max courses per season (leave empty for no limit)"
+        required: false
+        default: ""
 
 jobs:
   summarize_evals:
@@ -44,6 +48,7 @@ jobs:
       - name: Summarize Evaluations
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          MAX_COURSES: ${{ inputs.max_courses }}
         run: |
           python main.py \
             -f config/release_summarize_evals.yml \
