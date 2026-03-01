@@ -217,17 +217,11 @@ async def summarize_evals(
         new_summaries: list[CourseSummary] = []
 
         for course_eval in tqdm(
-            to_process, desc=f"Summarizing {season}", leave=False
+            to_process, desc=f"Summarizing {season}", leave=True
         ):
             result = await _summarize_course(llm, course_eval, semaphore)
             if result is not None:
                 new_summaries.append(result)
-                for ns in result["narrative_summaries"]:
-                    line = (
-                        f"[{result['season']}] crn={result['crn']} "
-                        + f"{ns['question_code']}: {ns['summary']}"
-                    )
-                    print(line)
 
         # Merge new results with any existing ones and write back.
         all_summaries = existing_summaries + new_summaries
