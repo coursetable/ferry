@@ -123,6 +123,10 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         ("buildings", database.Building.__table__),
         ("evaluation_questions", database.EvaluationQuestion.__table__),
         ("evaluation_narratives", database.EvaluationNarrative.__table__),
+        (
+            "evaluation_narrative_summaries",
+            database.EvaluationNarrativeSummary.__table__,
+        ),
         ("evaluation_statistics", database.EvaluationStatistics.__table__),
         ("evaluation_ratings", database.EvaluationRating.__table__),
     ]:

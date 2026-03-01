@@ -8,6 +8,7 @@ from .models import (
     Base,
     Course,
     EvaluationNarrative,
+    EvaluationNarrativeSummary,
     EvaluationQuestion,
     EvaluationRating,
     EvaluationStatistics,

@@ -14,12 +14,16 @@ class RawArgs:
     database_connect_string: str | None
     debug: bool
     generate_diagram: bool
+    openai_api_key: str | None
+    llm_model: str | None
+    llm_base_url: str | None
     release: bool
     rewrite: bool
     save_config: bool
     seasons: list[str] | None
     sentry_url: str | None
     snapshot_tables: bool
+    summarize_evals: bool
     sync_db_courses: bool
     sync_db_evals: bool
     transform: bool
@@ -39,11 +43,15 @@ class Args:
     database_connect_string: str
     debug: bool
     generate_diagram: bool
+    openai_api_key: str | None
+    llm_model: str | None
+    llm_base_url: str | None
     release: bool
     rewrite: bool
     seasons: list[str] | None
     sentry_url: str
     snapshot_tables: bool
+    summarize_evals: bool
     sync_db_courses: bool
     sync_db_evals: bool
     transform: bool
@@ -164,8 +172,32 @@ def get_parser():
     )
 
     parser.add_argument(
+        "--openai-api-key",
+        help="API key for eval summarization (OpenAI or any OpenAI-compatible provider). Defaults to OPENAI_API_KEY env var.",
+        default=None,
+    )
+
+    parser.add_argument(
+        "--llm-model",
+        help="Model name for eval summarization (e.g. gpt-4.1-mini, groq/llama-3-70b). Defaults to gpt-4.1-mini.",
+        default=None,
+    )
+
+    parser.add_argument(
+        "--llm-base-url",
+        help="Base URL for OpenAI-compatible API (e.g. https://api.groq.com/openai/v1 for Groq). Omit for OpenAI.",
+        default=None,
+    )
+
+    parser.add_argument(
         "--snapshot-tables",
         help="Generate CSV files capturing data that would be written to DB.",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "--summarize-evals",
+        help="Summarize narrative evaluations using the OpenAI API.",
         action="store_true",
     )
 
@@ -290,6 +322,17 @@ def parse_env_args(args: RawArgs):
         args.cws_api_key = os.environ.get("CWS_API_KEY")
         if args.cws_api_key is None and args.crawl_classes:
             args.cws_api_key = input("Enter CWS API key: ")
+
+    if args.openai_api_key is None:
+        args.openai_api_key = os.environ.get("OPENAI_API_KEY")
+        if args.openai_api_key is None and args.summarize_evals:
+            args.openai_api_key = input("Enter API key for LLM (OpenAI or compatible): ")
+
+    if args.llm_model is None:
+        args.llm_model = os.environ.get("LLM_MODEL")
+
+    if args.llm_base_url is None:
+        args.llm_base_url = os.environ.get("LLM_BASE_URL")
 
     if args.ycs_cookie is None:
         args.ycs_cookie = os.environ.get("YCS_COOKIE")

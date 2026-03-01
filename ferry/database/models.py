@@ -8,6 +8,7 @@ from sqlalchemy import (
     MetaData,
     String,
     Table,
+    Text,
     text,
 )
 from sqlalchemy.dialects.postgresql import JSONB
@@ -709,5 +710,46 @@ class EvaluationRating(BaseModel):
     rating = Column(
         JSONB,
         comment="JSON array of the response counts for each option",
+        nullable=False,
+    )
+
+
+class EvaluationNarrativeSummary(BaseModel):
+    """
+    AI-generated summaries of narrative evaluation comments per course and question.
+    One row per (course_id, question_code).
+    """
+
+    __tablename__ = "evaluation_narrative_summaries"
+
+    course_id = Column(
+        Integer,
+        ForeignKey("courses.course_id"),
+        primary_key=True,
+        comment="The course these narrative comments summarize",
+        index=True,
+        nullable=False,
+    )
+    course = relationship(
+        "Course",
+        backref="evaluation_narrative_summaries",
+        cascade="all",
+    )
+    question_code = Column(
+        String,
+        ForeignKey("evaluation_questions.question_code"),
+        primary_key=True,
+        comment="Question code for the summarized narrative responses",
+        index=True,
+        nullable=False,
+    )
+    question = relationship(
+        "EvaluationQuestion",
+        backref="evaluation_narrative_summaries",
+        cascade="all",
+    )
+    summary = Column(
+        Text,
+        comment="AI-generated summary of student narrative comments",
         nullable=False,
     )
