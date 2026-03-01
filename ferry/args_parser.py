@@ -15,6 +15,8 @@ class RawArgs:
     debug: bool
     generate_diagram: bool
     openai_api_key: str | None
+    llm_model: str | None
+    llm_base_url: str | None
     release: bool
     rewrite: bool
     save_config: bool
@@ -42,6 +44,8 @@ class Args:
     debug: bool
     generate_diagram: bool
     openai_api_key: str | None
+    llm_model: str | None
+    llm_base_url: str | None
     release: bool
     rewrite: bool
     seasons: list[str] | None
@@ -169,7 +173,19 @@ def get_parser():
 
     parser.add_argument(
         "--openai-api-key",
-        help="OpenAI API key for eval summarization. If not specified, defaults to the value of the OPENAI_API_KEY environment variable.",
+        help="API key for eval summarization (OpenAI or any OpenAI-compatible provider). Defaults to OPENAI_API_KEY env var.",
+        default=None,
+    )
+
+    parser.add_argument(
+        "--llm-model",
+        help="Model name for eval summarization (e.g. gpt-4.1-mini, groq/llama-3-70b). Defaults to gpt-4.1-mini.",
+        default=None,
+    )
+
+    parser.add_argument(
+        "--llm-base-url",
+        help="Base URL for OpenAI-compatible API (e.g. https://api.groq.com/openai/v1 for Groq). Omit for OpenAI.",
         default=None,
     )
 
@@ -310,7 +326,13 @@ def parse_env_args(args: RawArgs):
     if args.openai_api_key is None:
         args.openai_api_key = os.environ.get("OPENAI_API_KEY")
         if args.openai_api_key is None and args.summarize_evals:
-            args.openai_api_key = input("Enter OpenAI API key: ")
+            args.openai_api_key = input("Enter API key for LLM (OpenAI or compatible): ")
+
+    if args.llm_model is None:
+        args.llm_model = os.environ.get("LLM_MODEL")
+
+    if args.llm_base_url is None:
+        args.llm_base_url = os.environ.get("LLM_BASE_URL")
 
     if args.ycs_cookie is None:
         args.ycs_cookie = os.environ.get("YCS_COOKIE")

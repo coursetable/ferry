@@ -13,7 +13,7 @@ from ferry.crawler.classes import crawl_classes
 from ferry.crawler.evals import crawl_evals
 from ferry.crawler.seasons import fetch_seasons
 from ferry.database import sync_db_courses, sync_db_courses_old, sync_db_evals
-from ferry.summarize import summarize_evals
+from ferry.summarize import DEFAULT_MODEL, summarize_evals
 from ferry.transform import transform, write_csvs
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
@@ -134,11 +134,13 @@ async def main():
         assert tables
         sync_db_evals(tables, args.database_connect_string)
     if args.summarize_evals:
-        assert args.openai_api_key, "OpenAI API key is required for --summarize-evals"
+        assert args.openai_api_key, "API key is required for --summarize-evals"
         await summarize_evals(
             seasons=seasons,
             data_dir=args.data_dir,
-            openai_api_key=args.openai_api_key,
+            api_key=args.openai_api_key,
+            model=args.llm_model or DEFAULT_MODEL,
+            base_url=args.llm_base_url,
         )
     if args.generate_diagram:
         from ferry.generate_db_diagram import generate_db_diagram

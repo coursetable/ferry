@@ -1,6 +1,7 @@
 # PROD CONFIG
 # This configuration is used for summarizing evaluations in production.
-# The OPENAI_API_KEY env var must be set.
+# Set OPENAI_API_KEY (or provider key) in env. Optionally set llm_model,
+# llm_base_url for different providers (e.g. Groq: base https://api.groq.com/openai/v1).
 
 release: true
 summarize_evals: true
