@@ -94,7 +94,14 @@ async def _summarize_comments(
             max_tokens=300,
         )
 
-    return response.choices[0].message.content.strip()
+    content = response.choices[0].message.content
+    if content is None:
+        logging.warning(
+            "OpenAI returned None content for summarization (question: %r)",
+            question_text[:50],
+        )
+        raise ValueError("OpenAI API returned empty content for summary")
+    return content.strip()
 
 
 async def _summarize_course(
@@ -149,7 +156,7 @@ async def _summarize_course(
         return None
 
     return {
-        "crn": course_eval["crn"],
+        "crn": str(course_eval["crn"]),
         "season": course_eval["season"],
         "narrative_summaries": summaries,
     }
@@ -190,7 +197,7 @@ async def summarize_evals(
         existing_summaries: list[CourseSummary] = (
             load_cache_json(output_path) or []
         )
-        already_done: set[str] = {s["crn"] for s in existing_summaries}
+        already_done: set[str] = {str(s["crn"]) for s in existing_summaries}
 
         # Load parsed evaluations for this season.
         course_evals: list[dict[str, Any]] | None = load_cache_json(parsed_path)
@@ -202,7 +209,7 @@ async def summarize_evals(
         to_process = [
             c
             for c in course_evals
-            if c["crn"] not in already_done and c.get("narratives")
+            if str(c["crn"]) not in already_done and c.get("narratives")
         ]
         if MAX_COURSES_PER_SEASON is not None:
             to_process = to_process[:MAX_COURSES_PER_SEASON]
@@ -229,7 +236,7 @@ async def summarize_evals(
 
         # Merge new results with any existing ones and write back.
         all_summaries = existing_summaries + new_summaries
-        all_summaries.sort(key=lambda s: s["crn"])
+        all_summaries.sort(key=lambda s: str(s["crn"]))
 
         save_cache_json(output_path, all_summaries)
 
