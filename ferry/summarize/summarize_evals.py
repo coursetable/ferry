@@ -30,6 +30,9 @@ OPENAI_MODEL = "gpt-4.1-mini"
 # Maximum concurrent API requests to avoid rate-limit pressure.
 MAX_CONCURRENT_REQUESTS = 10
 
+# Cap courses per season for testing (set to None for no limit).
+MAX_COURSES_PER_SEASON = 10
+
 SYSTEM_PROMPT = """\
 You are an expert at summarizing student course evaluations for a university \
 course catalog. You will receive a set of student comments responding to a \
@@ -201,6 +204,8 @@ async def summarize_evals(
             for c in course_evals
             if c["crn"] not in already_done and c.get("narratives")
         ]
+        if MAX_COURSES_PER_SEASON is not None:
+            to_process = to_process[:MAX_COURSES_PER_SEASON]
 
         if not to_process:
             print(f"  Season {season}: all {len(existing_summaries)} courses already summarised.")
@@ -219,6 +224,8 @@ async def summarize_evals(
             result = await _summarize_course(openai_client, course_eval, semaphore)
             if result is not None:
                 new_summaries.append(result)
+                for ns in result["narrative_summaries"]:
+                    print(f"  [{result['season']}] crn={result['crn']} {ns['question_code']}: {ns['summary']}")
 
         # Merge new results with any existing ones and write back.
         all_summaries = existing_summaries + new_summaries

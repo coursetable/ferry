@@ -9,6 +9,7 @@ import ujson
 from typing import cast, TypedDict
 
 from ferry import database
+from ferry.crawler.cache import load_cache_json
 
 
 def match_evaluations_to_courses(
@@ -49,8 +50,63 @@ def match_evaluations_to_courses(
     return evals
 
 
+def import_evaluation_summaries(
+    data_dir: Path, listings: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Import AI-generated narrative summaries from evaluation_summaries/*.json.
+    Maps (season, crn) to course_id via listings. Returns empty DataFrame if no
+    summaries exist.
+    """
+    summaries_dir = data_dir / "evaluation_summaries"
+    if not summaries_dir.is_dir():
+        return pd.DataFrame(columns=["course_id", "question_code", "summary"])
+
+    season_crn_to_course_id: dict[str, dict[str | int, float]] = (
+        listings[["season_code", "course_id", "crn"]]
+        .groupby("season_code")
+        .apply(
+            lambda x: x[["crn", "course_id"]]
+            .set_index("crn")["course_id"]
+            .astype(float)
+            .to_dict()
+        )
+        .to_dict()
+    )
+
+    rows: list[dict[str, int | str]] = []
+    for path in sorted(summaries_dir.glob("*.json")):
+        course_summaries = load_cache_json(path)
+        if not course_summaries:
+            continue
+        for course in course_summaries:
+            season = course["season"]
+            crn = course["crn"]
+            # Normalize crn to int for lookup (listings use int keys; JSON may have str)
+            try:
+                crn_key = int(crn) if crn is not None else None
+            except (TypeError, ValueError):
+                continue
+            if crn_key is None:
+                continue
+            course_id = season_crn_to_course_id.get(season, {}).get(crn_key, np.nan)
+            if pd.isna(course_id):
+                continue
+            for ns in course.get("narrative_summaries", []):
+                rows.append(
+                    {
+                        "course_id": int(course_id),
+                        "question_code": ns["question_code"],
+                        "summary": ns["summary"],
+                    }
+                )
+
+    return pd.DataFrame(rows)
+
+
 class EvalTables(TypedDict):
     evaluation_narratives: pd.DataFrame
+    evaluation_narrative_summaries: pd.DataFrame
     evaluation_ratings: pd.DataFrame
     evaluation_statistics: pd.DataFrame
     evaluation_questions: pd.DataFrame
@@ -280,14 +336,23 @@ def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTables:
     print("\033[F", end="")
     print("Importing course evaluations... ✔")
 
+    evaluation_narrative_summaries = import_evaluation_summaries(
+        data_dir, listings
+    )
+    evaluation_narrative_summaries.drop_duplicates(
+        subset=["course_id", "question_code"], inplace=True, keep="first"
+    )
+
     print("[Summary]")
     print(f"Total evaluation narratives: {len(evaluation_narratives)}")
+    print(f"Total evaluation narrative summaries: {len(evaluation_narrative_summaries)}")
     print(f"Total evaluation ratings: {len(evaluation_ratings)}")
     print(f"Total evaluation statistics: {len(evaluation_statistics)}")
     print(f"Total evaluation questions: {len(evaluation_questions)}")
 
     return {
         "evaluation_narratives": evaluation_narratives,
+        "evaluation_narrative_summaries": evaluation_narrative_summaries,
         "evaluation_ratings": evaluation_ratings,
         "evaluation_statistics": evaluation_statistics,
         "evaluation_questions": evaluation_questions,
