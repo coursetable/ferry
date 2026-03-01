@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       seasons:
-        description: "Space-separated season codes to summarise (e.g. '202403 202501')"
+        description: "Space-separated season codes to summarize (e.g. '202403 202501')"
         required: true
 
 jobs:
