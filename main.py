@@ -134,7 +134,8 @@ async def main():
         assert tables
         sync_db_evals(tables, args.database_connect_string)
     if args.summarize_evals:
-        assert args.openai_api_key, "API key is required for --summarize-evals"
+        if not args.openai_api_key:
+            raise ValueError("API key is required for --summarize-evals")
         await summarize_evals(
             seasons=seasons,
             data_dir=args.data_dir,
