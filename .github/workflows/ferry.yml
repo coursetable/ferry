@@ -120,8 +120,14 @@ jobs:
 
       - name: Regenerate static catalog on server
         run: |
-          curl --silent --show-error -H "X-FERRY-SECRET: ${{secrets.FERRY_SECRET}}" https://api.coursetable.com/api/catalog/refresh
-          curl --silent --show-error -H "X-FERRY-SECRET: ${{secrets.FERRY_SECRET}}" https://api-staging.coursetable.com/api/catalog/refresh
+          if [ -f data/ferry_updated_seasons.txt ]; then
+            SEASONS=$(cat data/ferry_updated_seasons.txt)
+            curl --silent --show-error -H "X-FERRY-SECRET: ${{secrets.FERRY_SECRET}}" "https://api.coursetable.com/api/catalog/refresh?seasons=${SEASONS}"
+            curl --silent --show-error -H "X-FERRY-SECRET: ${{secrets.FERRY_SECRET}}" "https://api-staging.coursetable.com/api/catalog/refresh?seasons=${SEASONS}"
+          else
+            curl --silent --show-error -H "X-FERRY-SECRET: ${{secrets.FERRY_SECRET}}" https://api.coursetable.com/api/catalog/refresh
+            curl --silent --show-error -H "X-FERRY-SECRET: ${{secrets.FERRY_SECRET}}" https://api-staging.coursetable.com/api/catalog/refresh
+          fi
 
   send_mail:
     runs-on: ubuntu-latest
