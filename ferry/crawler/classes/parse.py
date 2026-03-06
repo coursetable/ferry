@@ -288,7 +288,7 @@ def format_undelimited_time(time: str) -> str:
 
 
 def extract_meetings_alternate(
-    all_in_group: list[dict[str, Any]]
+    all_in_group: list[dict[str, Any]],
 ) -> list[ParsedMeeting]:
     """
     Extract course meeting times from the allInGroup key rather than meeting_html. Note that this
@@ -415,7 +415,7 @@ def get_primary_crn(
         return crn
     if primXLst not in cws_data_by_code:
         logging.warning(
-            f"Primary cross-listing {primXLst} not found for course {cws_course["termCode"]}-{crn}"
+            f"Primary cross-listing {primXLst} not found for course {cws_course['termCode']}-{crn}"
         )
         return None
     # Use the sole entry, ignoring the section
@@ -433,7 +433,7 @@ def get_primary_crn(
     )
     if section is None:
         logging.warning(
-            f"Primary cross-listing {primXLst} section {cws_course["sectionNumber"]} not found for course {cws_course["termCode"]}-{crn}, available sections: {', '.join(x['sectionNumber'] for x in cws_data_by_code[primXLst])}"
+            f"Primary cross-listing {primXLst} section {cws_course['sectionNumber']} not found for course {cws_course['termCode']}-{crn}, available sections: {', '.join(x['sectionNumber'] for x in cws_data_by_code[primXLst])}"
         )
         return None
     return section["crn"]
