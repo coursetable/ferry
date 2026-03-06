@@ -345,38 +345,48 @@ def print_courses_diff(
     course_additions_list = []
     for course in diff["courses"]["added_rows"].itertuples():
         listings = listings_by_course.get(course.course_id, pd.DataFrame())
-        if not listings.empty:
-            listings_already_exist = listings[
-                listings["listing_id"].isin(old_listing_ids)
-            ]
-            links = listings.apply(create_listing_link, axis=1)
+        listings_already_exist = (
+            listings[listings["listing_id"].isin(old_listing_ids)]
+            if not listings.empty
+            else pd.DataFrame()
+        )
+        links = (
+            listings.apply(create_listing_link, axis=1)
+            if not listings.empty
+            else []
+        )
+        course_additions_list.append(
+            f"- {course.season_code} {" / ".join(links)} {course.title}\n"
+        )
+        if not listings_already_exist.empty:
+            exists_text = 'exists' if len(listings_already_exist) == 1 else 'exist'
             course_additions_list.append(
-                f"- {course.season_code} {" / ".join(links)} {course.title}\n"
+                f"  - Note: {', '.join(listings_already_exist['course_code'])} {exists_text}; this is probably due to a cross-listing split\n"
             )
-            if not listings_already_exist.empty:
-                exists_text = 'exists' if len(listings_already_exist) == 1 else 'exist'
-                course_additions_list.append(
-                    f"  - Note: {', '.join(listings_already_exist['course_code'])} {exists_text}; this is probably due to a cross-listing split\n"
-                )
     course_additions = "".join(course_additions_list)
     
     # Process removals with vectorized operations
     course_removals_list = []
     for course in diff["courses"]["deleted_rows"].itertuples():
         listings = listings_old_by_course.get(course.course_id, pd.DataFrame())
-        if not listings.empty:
-            listings_still_exist = listings[
-                listings["listing_id"].isin(new_listing_ids)
-            ]
-            links = listings.apply(create_listing_link, axis=1)
+        listings_still_exist = (
+            listings[listings["listing_id"].isin(new_listing_ids)]
+            if not listings.empty
+            else pd.DataFrame()
+        )
+        links = (
+            listings.apply(create_listing_link, axis=1)
+            if not listings.empty
+            else []
+        )
+        course_removals_list.append(
+            f"- {course.season_code} {" / ".join(links)} {course.title}\n"
+        )
+        if not listings_still_exist.empty:
+            exists_text = 'exists' if len(listings_still_exist) == 1 else 'exist'
             course_removals_list.append(
-                f"- {course.season_code} {" / ".join(links)} {course.title}\n"
+                f"  - Note: {', '.join(listings_still_exist['course_code'])} {exists_text}; this is probably due to a cross-listing merge\n"
             )
-            if not listings_still_exist.empty:
-                exists_text = 'exists' if len(listings_still_exist) == 1 else 'exist'
-                course_removals_list.append(
-                    f"  - Note: {', '.join(listings_still_exist['course_code'])} {exists_text}; this is probably due to a cross-listing merge\n"
-                )
     course_removals = "".join(course_removals_list)
     
     # Process changed courses with indexed lookups
