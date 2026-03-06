@@ -134,7 +134,7 @@ def evaluation_statistics_computed(
     evaluation_ratings = evaluation_ratings.merge(
         question_tags, on="question_code", how="left"
     )
-    
+
     # Clean up intermediate data
     del question_tags
 
@@ -282,29 +282,39 @@ def courses_computed(
 
     # Pre-compute aggregated ratings for each same_course group to avoid repeated list creation
     logging.debug("Pre-computing same-course rating aggregates")
-    
-    def compute_aggregate_rating(course_ids: list[int], rating_dict: dict[int, float | None]) -> tuple[float | None, int]:
+
+    def compute_aggregate_rating(
+        course_ids: list[int], rating_dict: dict[int, float | None]
+    ) -> tuple[float | None, int]:
         """Compute average rating directly without creating intermediate lists"""
         ratings = [rating_dict.get(cid) for cid in course_ids]
         ratings = [x for x in ratings if x is not None and not math.isnan(x)]
         if not ratings:
             return None, 0
         return sum(ratings) / len(ratings), len(ratings)
-    
+
     # Build aggregated ratings directly for same_course groups
     same_course_rating_agg = {}
     same_course_workload_agg = {}
     for same_id, course_ids in same_course_to_courses.items():
-        same_course_rating_agg[same_id] = compute_aggregate_rating(course_ids, course_to_overall)
-        same_course_workload_agg[same_id] = compute_aggregate_rating(course_ids, course_to_workload)
-    
+        same_course_rating_agg[same_id] = compute_aggregate_rating(
+            course_ids, course_to_overall
+        )
+        same_course_workload_agg[same_id] = compute_aggregate_rating(
+            course_ids, course_to_workload
+        )
+
     # Build aggregated ratings for same_course_and_profs groups
     same_prof_rating_agg = {}
     same_prof_workload_agg = {}
     for same_prof_id, course_ids in same_prof_course_to_courses.items():
-        same_prof_rating_agg[same_prof_id] = compute_aggregate_rating(course_ids, course_to_overall)
-        same_prof_workload_agg[same_prof_id] = compute_aggregate_rating(course_ids, course_to_workload)
-    
+        same_prof_rating_agg[same_prof_id] = compute_aggregate_rating(
+            course_ids, course_to_overall
+        )
+        same_prof_workload_agg[same_prof_id] = compute_aggregate_rating(
+            course_ids, course_to_workload
+        )
+
     # Map pre-computed aggregates to courses
     logging.debug("Mapping aggregated ratings to courses")
     courses["average_rating"], courses["average_rating_n"] = zip(
@@ -313,21 +323,34 @@ def courses_computed(
     courses["average_workload"], courses["average_workload_n"] = zip(
         *courses["same_course_id"].map(same_course_workload_agg)
     )
-    courses["average_rating_same_professors"], courses["average_rating_same_professors_n"] = zip(
-        *courses["same_course_and_profs_id"].map(same_prof_rating_agg)
-    )
-    courses["average_workload_same_professors"], courses["average_workload_same_professors_n"] = zip(
-        *courses["same_course_and_profs_id"].map(same_prof_workload_agg)
-    )
-    
+    (
+        courses["average_rating_same_professors"],
+        courses["average_rating_same_professors_n"],
+    ) = zip(*courses["same_course_and_profs_id"].map(same_prof_rating_agg))
+    (
+        courses["average_workload_same_professors"],
+        courses["average_workload_same_professors_n"],
+    ) = zip(*courses["same_course_and_profs_id"].map(same_prof_workload_agg))
+
     # Convert to proper dtypes
     courses["average_rating_n"] = courses["average_rating_n"].astype(pd.Int64Dtype())
-    courses["average_workload_n"] = courses["average_workload_n"].astype(pd.Int64Dtype())
-    courses["average_rating_same_professors_n"] = courses["average_rating_same_professors_n"].astype(pd.Int64Dtype())
-    courses["average_workload_same_professors_n"] = courses["average_workload_same_professors_n"].astype(pd.Int64Dtype())
-    
+    courses["average_workload_n"] = courses["average_workload_n"].astype(
+        pd.Int64Dtype()
+    )
+    courses["average_rating_same_professors_n"] = courses[
+        "average_rating_same_professors_n"
+    ].astype(pd.Int64Dtype())
+    courses["average_workload_same_professors_n"] = courses[
+        "average_workload_same_professors_n"
+    ].astype(pd.Int64Dtype())
+
     # Clean up temporary dictionaries
-    del same_course_rating_agg, same_course_workload_agg, same_prof_rating_agg, same_prof_workload_agg
+    del (
+        same_course_rating_agg,
+        same_course_workload_agg,
+        same_prof_rating_agg,
+        same_prof_workload_agg,
+    )
     del course_to_overall, course_to_workload
 
     courses["average_gut_rating"] = (
@@ -365,29 +388,33 @@ def professors_computed(
 
     # Build rating dictionary for faster lookup (avoid large merge)
     course_ratings = evaluation_statistics["avg_rating"].to_dict()
-    
+
     # Group by professor first, then lookup ratings - avoids creating huge merged dataframe
-    prof_course_groups = course_professors.groupby("professor_id")["course_id"].apply(list)
-    
+    prof_course_groups = course_professors.groupby("professor_id")["course_id"].apply(
+        list
+    )
+
     prof_rating_data = []
     for prof_id, course_ids in prof_course_groups.items():
         # Lookup ratings without creating intermediate lists
         ratings = [course_ratings.get(cid) for cid in course_ids]
         ratings = [r for r in ratings if r is not None and not np.isnan(r)]
-        
+
         if ratings:
             mean = np.mean(ratings)
         else:
             mean = np.nan
-        
-        prof_rating_data.append({
-            "professor_id": prof_id,
-            "average_rating": mean,
-            "average_rating_n": len(ratings),
-        })
-    
+
+        prof_rating_data.append(
+            {
+                "professor_id": prof_id,
+                "average_rating": mean,
+                "average_rating_n": len(ratings),
+            }
+        )
+
     prof_to_ratings = pd.DataFrame(prof_rating_data)
-    
+
     # Clean up temporary variables
     del course_ratings, prof_course_groups
 

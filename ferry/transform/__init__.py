@@ -56,12 +56,12 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
     )
 
     course_tables = import_courses(data_dir, course_seasons)
-    
+
     # Force garbage collection after importing courses (large operation)
     gc.collect()
-    
+
     eval_tables = import_evaluations(data_dir, course_tables["listings"])
-    
+
     # Force garbage collection after importing evaluations
     gc.collect()
 
@@ -80,7 +80,7 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         evaluation_ratings=eval_tables["evaluation_ratings"],
         evaluation_questions=eval_tables["evaluation_questions"],
     )
-    
+
     # Force garbage collection after computing evaluation statistics
     gc.collect()
 
@@ -89,7 +89,7 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         course_professors=course_tables["course_professors"],
         evaluation_statistics=eval_tables["evaluation_statistics"],
     )
-    
+
     # Force garbage collection after computing professors
     gc.collect()
 
@@ -100,7 +100,7 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         course_professors=course_tables["course_professors"],
         professors=course_tables["professors"],
     )
-    
+
     # Force garbage collection after computing courses
     gc.collect()
     eval_tables["evaluation_questions"]["options"] = eval_tables[
@@ -136,7 +136,9 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
             if "location_id" not in current_table.columns:
                 current_table["location_id"] = None
             locations_columns = ["location_id", "building_code", "room"]
-            available_cols = [col for col in locations_columns if col in current_table.columns]
+            available_cols = [
+                col for col in locations_columns if col in current_table.columns
+            ]
             current_table = current_table[available_cols]
             for col in locations_columns:
                 if col not in current_table.columns:
@@ -146,17 +148,21 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
             # Special handling for course_meetings to preserve temporary location columns
             current_table = all_tables[table_name].reset_index(drop=False)
             db_columns = [column.key for column in db_table.columns]
-            
+
             # Include temporary columns needed for location resolution in sync_db_courses
             temp_columns = ["_building_code", "_room"]
-            available_columns = [col for col in db_columns + temp_columns if col in current_table.columns]
+            available_columns = [
+                col for col in db_columns + temp_columns if col in current_table.columns
+            ]
             all_tables[table_name] = current_table[available_columns]
         else:
             db_columns = [column.key for column in db_table.columns]
             current_table = all_tables[table_name].reset_index(drop=False)
-            
+
             # Only select columns that exist in both the dataframe and database schema
-            available_columns = [col for col in db_columns if col in current_table.columns]
+            available_columns = [
+                col for col in db_columns if col in current_table.columns
+            ]
             all_tables[table_name] = current_table[available_columns]
 
     check_invariants(all_tables)
