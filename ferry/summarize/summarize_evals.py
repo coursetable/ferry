@@ -185,18 +185,13 @@ async def summarize_evals(
         output_path = output_dir / f"{season}.json"
 
         # Load existing summaries so we can skip already-summarized courses.
-        existing_summaries: list[CourseSummary] = (
-            load_cache_json(output_path) or []
-        )
+        existing_summaries: list[CourseSummary] = load_cache_json(output_path) or []
         already_done: set[str] = {str(s["crn"]) for s in existing_summaries}
 
         # Load parsed evaluations for this season.
-        course_evals: list[dict[str, Any]] | None = load_cache_json(
-            parsed_path
-        )
+        course_evals: list[dict[str, Any]] | None = load_cache_json(parsed_path)
         if course_evals is None:
-            print(
-                f"No parsed evaluations found for season {season}, skipping.")
+            print(f"No parsed evaluations found for season {season}, skipping.")
             continue
 
         # Filter to courses that still need summarization.
@@ -222,9 +217,7 @@ async def summarize_evals(
 
         new_summaries: list[CourseSummary] = []
 
-        for course_eval in tqdm(
-            to_process, desc=f"Summarizing {season}", leave=True
-        ):
+        for course_eval in tqdm(to_process, desc=f"Summarizing {season}", leave=True):
             result = await _summarize_course(llm, course_eval, semaphore)
             if result is not None:
                 new_summaries.append(result)

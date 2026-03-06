@@ -21,7 +21,7 @@ def safe_isna(value) -> bool:
     """
     try:
         result = pd.isna(value)
-        if hasattr(result, 'item'):
+        if hasattr(result, "item"):
             return result.item()
         return bool(result)
     except (TypeError, ValueError):
@@ -59,8 +59,9 @@ def generate_diff(
     diff_dict: dict[str, DiffRecord] = {}
 
     # only process tables that exist in both old and new tables
-    tables_to_process = set(tables_old.keys()) & set(
-        tables_new.keys()) & set(primary_keys.keys())
+    tables_to_process = (
+        set(tables_old.keys()) & set(tables_new.keys()) & set(primary_keys.keys())
+    )
 
     for table_name in tables_to_process:
         print(f"Computing diff for table {table_name} ...", end=" ")
@@ -77,18 +78,15 @@ def generate_diff(
 
         # Must sort index in order to compare dataframes cell-wise
         shared_rows_old = (
-            old_df[old_df.index.isin(new_df.index)
-                   ].sort_index().sort_index(axis=1)
+            old_df[old_df.index.isin(new_df.index)].sort_index().sort_index(axis=1)
         )
         shared_rows_new = (
-            new_df[new_df.index.isin(old_df.index)
-                   ].sort_index().sort_index(axis=1)
+            new_df[new_df.index.isin(old_df.index)].sort_index().sort_index(axis=1)
         )
         if (shared_rows_old.index != shared_rows_new.index).any():
             print(shared_rows_old.index)
             print(shared_rows_new.index)
-            raise ValueError(
-                f"Unexpected: index mismatch in table {table_name}")
+            raise ValueError(f"Unexpected: index mismatch in table {table_name}")
         if (
             len(shared_rows_old.columns) != len(shared_rows_new.columns)
             or (shared_rows_old.columns != shared_rows_new.columns).any()
@@ -151,11 +149,11 @@ def commit_additions(table_name: str, to_add: pd.DataFrame, conn: Connection):
         if table_name not in junction_tables:
             values = f"{values}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP"
 
-        params = {str(col): row[col] if not safe_isna(
-            row[col]) else None for col in row.index}
+        params = {
+            str(col): row[col] if not safe_isna(row[col]) else None for col in row.index
+        }
 
-        insert_query = text(
-            f"INSERT INTO {table_name} ({columns}) VALUES ({values});")
+        insert_query = text(f"INSERT INTO {table_name} ({columns}) VALUES ({values});")
         conn.execute(insert_query, params)
 
         if table_name in junction_tables:
@@ -166,7 +164,8 @@ def commit_additions(table_name: str, to_add: pd.DataFrame, conn: Connection):
                 pk = primary_keys[connected_table]
                 where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
                 params = {
-                    str(col): row[col] if not safe_isna(row[col]) else None for col in pk
+                    str(col): row[col] if not safe_isna(row[col]) else None
+                    for col in pk
                 }
 
                 update_query = text(
@@ -225,8 +224,7 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
                 old_col = f"old_{pk_col}"
                 if old_col in row.index:
                     where_conditions.append(f"{pk_col} = :{pk_col}")
-                    value = row[old_col] if not safe_isna(
-                        row[old_col]) else None
+                    value = row[old_col] if not safe_isna(row[old_col]) else None
                     where_params[pk_col] = value
                 else:
                     where_conditions.append(f"{pk_col} = :{pk_col}")
@@ -235,7 +233,10 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
 
             where_clause = " AND ".join(where_conditions)
             set_clause = ", ".join(
-                f"{col} = :{col}" for col in row.index if not str(col).startswith("old_"))
+                f"{col} = :{col}"
+                for col in row.index
+                if not str(col).startswith("old_")
+            )
 
             update_params: Dict[str, Any] = {}
             for col in row.index:
@@ -275,8 +276,10 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
             for connected_table in junction_tables[table_name]:
                 pk = primary_keys[connected_table]
                 where_clause = " AND ".join(f"{col} = :{col}" for col in pk)
-                params = {str(col): row[col] if not safe_isna(
-                    row[col]) else None for col in pk}
+                params = {
+                    str(col): row[col] if not safe_isna(row[col]) else None
+                    for col in pk
+                }
 
                 update_query = text(
                     f"UPDATE {connected_table} SET last_updated = CURRENT_TIMESTAMP WHERE {where_clause};"
@@ -290,18 +293,24 @@ def reset_location_sequence(conn: Connection):
     This prevents duplicate key violations when the sequence is out of sync.
     """
     try:
-        result = conn.execute(text("""
+        result = conn.execute(
+            text(
+                """
             SELECT setval('locations_location_id_seq', 
                          COALESCE((SELECT MAX(location_id) FROM locations), 0) + 1, 
                          true)
-        """)).fetchone()
-        
+        """
+            )
+        ).fetchone()
+
         if result:
             logging.info(f"Reset locations sequence to: {result[0]}")
         else:
             logging.warning("Failed to reset locations sequence")
     except Exception as e:
-        logging.warning(f"Could not reset locations sequence (this is usually fine): {e}")
+        logging.warning(
+            f"Could not reset locations sequence (this is usually fine): {e}"
+        )
 
 
 def upsert_locations(locations_df: pd.DataFrame, conn: Connection) -> dict[tuple, int]:
@@ -312,24 +321,29 @@ def upsert_locations(locations_df: pd.DataFrame, conn: Connection) -> dict[tuple
     location_mapping = {}
 
     for _, location in locations_df.iterrows():
-        building_code = location['building_code']
-        room = location['room'] if not safe_isna(location['room']) else None
+        building_code = location["building_code"]
+        room = location["room"] if not safe_isna(location["room"]) else None
 
         # Skip locations with invalid building_code (database constraint violation)
         if safe_isna(building_code) or building_code is None:
             continue
 
         # Use postgres UPSERT with ON CONFLICT UPDATE
-        result = conn.execute(text("""
+        result = conn.execute(
+            text(
+                """
             INSERT INTO locations (building_code, room, time_added, last_updated) 
             VALUES (:building_code, :room, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
             ON CONFLICT (building_code, room) 
             DO UPDATE SET last_updated = CURRENT_TIMESTAMP
             RETURNING location_id
-        """), {
-            'building_code': building_code,
-            'room': room,
-        }).fetchone()
+        """
+            ),
+            {
+                "building_code": building_code,
+                "room": room,
+            },
+        ).fetchone()
 
         if result is None:
             raise ValueError("Failed to upsert location and get location_id")
@@ -341,7 +355,9 @@ def upsert_locations(locations_df: pd.DataFrame, conn: Connection) -> dict[tuple
     return location_mapping
 
 
-def cleanup_dependencies_for_buildings(buildings_to_delete: pd.DataFrame, conn: Connection):
+def cleanup_dependencies_for_buildings(
+    buildings_to_delete: pd.DataFrame, conn: Connection
+):
     """
     Handle dependencies for buildings that are about to be deleted.
     course_meetings → locations → buildings
@@ -351,42 +367,56 @@ def cleanup_dependencies_for_buildings(buildings_to_delete: pd.DataFrame, conn: 
         return
 
     # Get list of building codes that will be deleted
-    building_codes_to_delete = buildings_to_delete['code'].tolist()
+    building_codes_to_delete = buildings_to_delete["code"].tolist()
     logging.info(
-        f"About to clean up dependencies for buildings: {building_codes_to_delete}")
-    
-    placeholders = ', '.join(
-        [f':code_{i}' for i in range(len(building_codes_to_delete))])
-    params = {f'code_{i}': code for i,
-              code in enumerate(building_codes_to_delete)}
-    
+        f"About to clean up dependencies for buildings: {building_codes_to_delete}"
+    )
+
+    placeholders = ", ".join(
+        [f":code_{i}" for i in range(len(building_codes_to_delete))]
+    )
+    params = {f"code_{i}": code for i, code in enumerate(building_codes_to_delete)}
+
     logging.info(
-        "Step 1: Deleting course_meetings referencing affected locations (will be recreated by UPSERT)")
-    meetings_result = conn.execute(text(f"""
+        "Step 1: Deleting course_meetings referencing affected locations (will be recreated by UPSERT)"
+    )
+    meetings_result = conn.execute(
+        text(
+            f"""
         DELETE FROM course_meetings 
         WHERE location_id IN (
             SELECT location_id FROM locations 
             WHERE building_code IN ({placeholders})
         )
-    """), params)
+    """
+        ),
+        params,
+    )
 
     meetings_deleted = meetings_result.rowcount
     logging.info(
-        f"Deleted {meetings_deleted} course_meeting(s) referencing affected locations (will be recreated by UPSERT)")
+        f"Deleted {meetings_deleted} course_meeting(s) referencing affected locations (will be recreated by UPSERT)"
+    )
 
-    logging.info(
-        "Step 2: Cleaning up locations referencing buildings to be deleted")
-    locations_result = conn.execute(text(f"""
+    logging.info("Step 2: Cleaning up locations referencing buildings to be deleted")
+    locations_result = conn.execute(
+        text(
+            f"""
         DELETE FROM locations 
         WHERE building_code IN ({placeholders})
-    """), params)
+    """
+        ),
+        params,
+    )
 
     locations_deleted = locations_result.rowcount
     logging.info(
-        f"Cleaned up {locations_deleted} location(s) referencing buildings to be deleted: {building_codes_to_delete}")
+        f"Cleaned up {locations_deleted} location(s) referencing buildings to be deleted: {building_codes_to_delete}"
+    )
 
     logging.info(
-        f"Total cleanup: {meetings_deleted} meetings deleted + {locations_deleted} locations deleted for {len(building_codes_to_delete)} buildings")
+        f"Total cleanup: {meetings_deleted} meetings deleted + {locations_deleted} locations deleted for {len(building_codes_to_delete)} buildings"
+    )
 
 
 def sync_course_meetings_incremental(
@@ -401,8 +431,8 @@ def sync_course_meetings_incremental(
     logging.info("Performing incremental sync of course_meetings...")
 
     # Group both old and new by course_id to compare meeting sets
-    old_grouped = old_course_meetings.groupby('course_id')
-    new_grouped = new_course_meetings.groupby('course_id')
+    old_grouped = old_course_meetings.groupby("course_id")
+    new_grouped = new_course_meetings.groupby("course_id")
 
     old_course_ids = set(old_grouped.groups.keys())
     new_course_ids = set(new_grouped.groups.keys())
@@ -411,19 +441,23 @@ def sync_course_meetings_incremental(
 
     # Check courses that exist in both old and new
     for course_id in old_course_ids & new_course_ids:
-        old_subset = old_grouped.get_group(
-            course_id).drop(columns=['course_id'])
-        new_subset = new_grouped.get_group(
-            course_id).drop(columns=['course_id'])
+        old_subset = old_grouped.get_group(course_id).drop(columns=["course_id"])
+        new_subset = new_grouped.get_group(course_id).drop(columns=["course_id"])
 
         # Sort both DFs for comparison
-        old_meetings = old_subset.iloc[:].sort_values(
-            ['start_time', 'end_time', 'location_id']).reset_index(drop=True)
-        new_meetings = new_subset.iloc[:].sort_values(
-            ['start_time', 'end_time', 'location_id']).reset_index(drop=True)
+        old_meetings = (
+            old_subset.iloc[:]
+            .sort_values(["start_time", "end_time", "location_id"])
+            .reset_index(drop=True)
+        )
+        new_meetings = (
+            new_subset.iloc[:]
+            .sort_values(["start_time", "end_time", "location_id"])
+            .reset_index(drop=True)
+        )
 
         # Check if any old meetings have missing location IDs - if so, treat as changed
-        if old_meetings['location_id'].apply(safe_isna).any():
+        if old_meetings["location_id"].apply(safe_isna).any():
             changed_course_ids.add(course_id)
             continue
 
@@ -447,56 +481,71 @@ def sync_course_meetings_incremental(
         logging.info("No course meetings changes detected")
         return
 
-    logging.info(
-        f"Detected {len(changed_course_ids)} courses with meeting changes")
+    logging.info(f"Detected {len(changed_course_ids)} courses with meeting changes")
 
     # Delete all meetings for changed courses
     course_ids_list = list(changed_course_ids)
     if course_ids_list:
-        course_ids_str = ','.join(str(cid) for cid in course_ids_list)
+        course_ids_str = ",".join(str(cid) for cid in course_ids_list)
 
-        delete_result = conn.execute(text(f"""
+        delete_result = conn.execute(
+            text(
+                f"""
             DELETE FROM course_meetings 
             WHERE course_id IN ({course_ids_str})
-        """))
+        """
+            )
+        )
 
         logging.info(
-            f"Deleted {delete_result.rowcount} existing course_meetings for {len(course_ids_list)} courses")
+            f"Deleted {delete_result.rowcount} existing course_meetings for {len(course_ids_list)} courses"
+        )
 
     # Insert new meetings for courses
-    courses_to_insert = [
-        cid for cid in changed_course_ids if cid in new_course_ids]
+    courses_to_insert = [cid for cid in changed_course_ids if cid in new_course_ids]
     if courses_to_insert:
         meetings_to_insert = new_course_meetings[
-            new_course_meetings['course_id'].isin(courses_to_insert)
+            new_course_meetings["course_id"].isin(courses_to_insert)
         ]
 
         if len(meetings_to_insert) > 0:
             # Remove null location duplicates based on database constraints:
             # - For null location: unique on (course_id, start_time, end_time) only
             # - For non-null location: unique on (course_id, start_time, end_time, location_id)
-            null_location_mask = meetings_to_insert['location_id'].apply(safe_isna)
-            
+            null_location_mask = meetings_to_insert["location_id"].apply(safe_isna)
+
             meetings_with_location = meetings_to_insert[~null_location_mask].copy()
             meetings_with_null_location = meetings_to_insert[null_location_mask].copy()
-            
+
             if len(meetings_with_null_location) > 0:
                 # (constraint allows only one null location per course_id, start_time, end_time)
-                meetings_with_null_location = meetings_with_null_location.drop_duplicates(
-                    subset=['course_id', 'start_time', 'end_time'], 
-                    keep='first'
+                meetings_with_null_location = (
+                    meetings_with_null_location.drop_duplicates(
+                        subset=["course_id", "start_time", "end_time"], keep="first"
+                    )
                 )
-                
+
                 # Then, remove null location meetings if there's any non-null location meeting
-                non_null_keys = set(meetings_with_location[['course_id', 'start_time', 'end_time']].apply(tuple, axis=1))
+                non_null_keys = set(
+                    meetings_with_location[
+                        ["course_id", "start_time", "end_time"]
+                    ].apply(tuple, axis=1)
+                )
                 meetings_with_null_location = meetings_with_null_location[
-                    ~meetings_with_null_location[['course_id', 'start_time', 'end_time']].apply(tuple, axis=1).isin(non_null_keys)
+                    ~meetings_with_null_location[
+                        ["course_id", "start_time", "end_time"]
+                    ]
+                    .apply(tuple, axis=1)
+                    .isin(non_null_keys)
                 ]
-            
-            meetings_to_insert = pd.concat([meetings_with_location, meetings_with_null_location], ignore_index=True)
+
+            meetings_to_insert = pd.concat(
+                [meetings_with_location, meetings_with_null_location], ignore_index=True
+            )
 
             logging.info(
-                f"After deduplication: {len(meetings_to_insert)} meetings to insert")
+                f"After deduplication: {len(meetings_to_insert)} meetings to insert"
+            )
 
             # Prepare batch data for insertion
             batch_data = []
@@ -506,24 +555,25 @@ def sync_course_meetings_incremental(
 
                 # Vectorized approach: create key column and group by it
                 old_meetings_df = old_course_meetings.copy()
-                old_meetings_df['_key'] = old_meetings_df.apply(
-                    lambda row: (row['course_id'], row['start_time'], row['end_time']), axis=1
+                old_meetings_df["_key"] = old_meetings_df.apply(
+                    lambda row: (row["course_id"], row["start_time"], row["end_time"]),
+                    axis=1,
                 )
-                
+
                 # Group by key and aggregate location_ids
                 old_lookup = {}
-                for key, group in old_meetings_df.groupby('_key'):
-                    location_ids = group['location_id'].dropna()
-                    has_null = group['location_id'].isna().any()
-                    
+                for key, group in old_meetings_df.groupby("_key"):
+                    location_ids = group["location_id"].dropna()
+                    has_null = group["location_id"].isna().any()
+
                     # Convert non-null location_ids to sorted list, then to deque
                     non_nulls = deque(sorted([int(loc_id) for loc_id in location_ids]))
-                    
+
                     old_lookup[key] = {
-                        'non_nulls': non_nulls,
-                        'has_null': bool(has_null)
+                        "non_nulls": non_nulls,
+                        "has_null": bool(has_null),
                     }
-                
+
                 # Track whether we've already assigned the single allowed NULL per key
                 null_assigned = {k: False for k in old_lookup.keys()}
 
@@ -531,20 +581,21 @@ def sync_course_meetings_incremental(
             if freeze_locations:
                 # Create key column for vectorized lookup
                 meetings_to_insert = meetings_to_insert.copy()
-                meetings_to_insert['_key'] = meetings_to_insert.apply(
-                    lambda row: (row['course_id'], row['start_time'], row['end_time']), axis=1
+                meetings_to_insert["_key"] = meetings_to_insert.apply(
+                    lambda row: (row["course_id"], row["start_time"], row["end_time"]),
+                    axis=1,
                 )
-                
+
                 # Process location_ids using vectorized operations where possible
                 location_ids_list = []
-                for key in meetings_to_insert['_key']:
+                for key in meetings_to_insert["_key"]:
                     location_id = None
                     if key in old_lookup:
                         info = old_lookup[key]
-                        if info['non_nulls']:
+                        if info["non_nulls"]:
                             # Assign one of the old non-null location_ids (deterministic)
-                            location_id = info['non_nulls'].popleft()
-                        elif info['has_null'] and not null_assigned.get(key, False):
+                            location_id = info["non_nulls"].popleft()
+                        elif info["has_null"] and not null_assigned.get(key, False):
                             # Preserve a single old NULL for this key
                             location_id = None
                             null_assigned[key] = True
@@ -553,34 +604,39 @@ def sync_course_meetings_incremental(
                     else:
                         location_id = None
                     location_ids_list.append(location_id)
-                
-                meetings_to_insert['location_id'] = location_ids_list
-                meetings_to_insert = meetings_to_insert.drop(columns=['_key'])
+
+                meetings_to_insert["location_id"] = location_ids_list
+                meetings_to_insert = meetings_to_insert.drop(columns=["_key"])
             else:
                 # For non-frozen case, just ensure location_id is None if it's NA
                 meetings_to_insert = meetings_to_insert.copy()
-                meetings_to_insert['location_id'] = meetings_to_insert['location_id'].apply(
-                    lambda x: None if safe_isna(x) else x
-                )
-            
+                meetings_to_insert["location_id"] = meetings_to_insert[
+                    "location_id"
+                ].apply(lambda x: None if safe_isna(x) else x)
+
             # Convert to list of dicts for batch insert
-            batch_data = meetings_to_insert[[
-                'course_id', 'start_time', 'end_time', 'days_of_week', 'location_id'
-            ]].to_dict('records')
-            
+            batch_data = meetings_to_insert[
+                ["course_id", "start_time", "end_time", "days_of_week", "location_id"]
+            ].to_dict("records")
+
             # Fix location_id types: ensure int (not float) and None (not nan)
             for record in batch_data:
-                loc_id = record['location_id']
+                loc_id = record["location_id"]
                 if pd.isna(loc_id) or loc_id is None:
-                    record['location_id'] = None
+                    record["location_id"] = None
                 else:
-                    record['location_id'] = int(loc_id)
+                    record["location_id"] = int(loc_id)
 
             if batch_data:
-                conn.execute(text("""
+                conn.execute(
+                    text(
+                        """
                     INSERT INTO course_meetings (course_id, start_time, end_time, days_of_week, location_id)
                     VALUES (:course_id, :start_time, :end_time, :days_of_week, :location_id)
-                """), batch_data)
+                """
+                    ),
+                    batch_data,
+                )
                 inserted_count = len(batch_data)
             else:
                 inserted_count = 0
@@ -591,7 +647,9 @@ def sync_course_meetings_incremental(
 
 
 def sync_db_courses(
-    tables: dict[str, pd.DataFrame], database_connect_string: str, data_dir: Path,
+    tables: dict[str, pd.DataFrame],
+    database_connect_string: str,
+    data_dir: Path,
     freeze_locations: bool = False,
 ):
     db = Database(database_connect_string)
@@ -614,10 +672,8 @@ def sync_db_courses(
     print("Generating diff...")
     tables_old = get_tables_from_db(database_connect_string)
     # Pandas would read JSON columns as real values, so we serialize them again
-    tables_old["courses"]["skills"] = tables_old["courses"]["skills"].apply(
-        ujson.dumps)
-    tables_old["courses"]["areas"] = tables_old["courses"]["areas"].apply(
-        ujson.dumps)
+    tables_old["courses"]["skills"] = tables_old["courses"]["skills"].apply(ujson.dumps)
+    tables_old["courses"]["areas"] = tables_old["courses"]["areas"].apply(ujson.dumps)
     tables_old["courses"]["primary_crn"] = tables_old["courses"]["primary_crn"].astype(
         pd.Int64Dtype()
     )
@@ -626,10 +682,10 @@ def sync_db_courses(
     ].astype(pd.Int64Dtype())
 
     # Exclude course_meetings from diff computation
-    tables_for_diff = {k: v for k, v in tables.items() if k not in [
-        "course_meetings"]}
-    tables_old_for_diff = {k: v for k, v in tables_old.items() if k not in [
-        "course_meetings"]}
+    tables_for_diff = {k: v for k, v in tables.items() if k not in ["course_meetings"]}
+    tables_old_for_diff = {
+        k: v for k, v in tables_old.items() if k not in ["course_meetings"]
+    }
 
     diff = generate_diff(tables_old_for_diff, tables_for_diff)
 
@@ -642,10 +698,8 @@ def sync_db_courses(
             if table_name in junction_tables:
                 continue
             columns = inspector.get_columns(table_name)
-            has_last_updated = any(
-                col["name"] == "last_updated" for col in columns)
-            has_time_added = any(
-                col["name"] == "time_added" for col in columns)
+            has_last_updated = any(col["name"] == "last_updated" for col in columns)
+            has_time_added = any(col["name"] == "time_added" for col in columns)
 
             if not has_time_added:
                 conn.execute(
@@ -684,32 +738,41 @@ def sync_db_courses(
             # First resolve location IDs for new course_meetings
             course_meetings_with_locations = tables["course_meetings"].copy()
             for i, meeting in course_meetings_with_locations.iterrows():
-                if pd.isna(meeting['location_id']) and '_building_code' in meeting.index and '_room' in meeting.index:
+                if (
+                    pd.isna(meeting["location_id"])
+                    and "_building_code" in meeting.index
+                    and "_room" in meeting.index
+                ):
                     # Only attempt to resolve if not freezing locations
                     if freeze_locations:
                         # do not populate location_id when freeze is enabled
                         continue
-                    building_code = meeting['_building_code']
-                    room = meeting['_room'] if not safe_isna(
-                        meeting['_room']) else None
+                    building_code = meeting["_building_code"]
+                    room = meeting["_room"] if not safe_isna(meeting["_room"]) else None
                     location_key = (building_code, room)
 
                     # Only update if the location exists in our mapping
                     # (locations with None building_code are skipped)
                     if location_key in location_mapping:
-                        course_meetings_with_locations.at[i,
-                                                          'location_id'] = location_mapping[location_key]
+                        course_meetings_with_locations.at[i, "location_id"] = (
+                            location_mapping[location_key]
+                        )
                     else:
-                        if (building_code is None or safe_isna(building_code)) and (room is not None and not safe_isna(room)):
+                        if (building_code is None or safe_isna(building_code)) and (
+                            room is not None and not safe_isna(room)
+                        ):
                             logging.warning(
-                                f"Cannot resolve location for course meeting due to None building_code: room='{room}'")
+                                f"Cannot resolve location for course meeting due to None building_code: room='{room}'"
+                            )
                         else:
                             logging.warning(
-                                f"Location not found in mapping: building_code='{building_code}', room='{room}'")
+                                f"Location not found in mapping: building_code='{building_code}', room='{room}'"
+                            )
 
             # Clean up temporary columns
             course_meetings_clean = course_meetings_with_locations.drop(
-                columns=["_building_code", "_room"], errors="ignore")
+                columns=["_building_code", "_room"], errors="ignore"
+            )
 
             sync_course_meetings_incremental(
                 tables_old["course_meetings"],
@@ -725,11 +788,13 @@ def sync_db_courses(
 
             deleted_rows = diff[table_name]["deleted_rows"]
             logging.info(
-                f"Processing deletions for table '{table_name}': {len(deleted_rows)} rows to delete")
+                f"Processing deletions for table '{table_name}': {len(deleted_rows)} rows to delete"
+            )
 
             if table_name == "buildings":
                 logging.info(
-                    f"About to clean up dependencies before deleting {len(deleted_rows)} buildings")
+                    f"About to clean up dependencies before deleting {len(deleted_rows)} buildings"
+                )
                 cleanup_dependencies_for_buildings(deleted_rows, conn)
 
             commit_deletions(table_name, deleted_rows, conn)

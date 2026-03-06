@@ -335,7 +335,9 @@ def parse_env_args(args: RawArgs):
     if args.openai_api_key is None:
         args.openai_api_key = os.environ.get("OPENAI_API_KEY")
         if args.openai_api_key is None and args.summarize_evals:
-            args.openai_api_key = input("Enter API key for LLM (OpenAI or compatible): ")
+            args.openai_api_key = input(
+                "Enter API key for LLM (OpenAI or compatible): "
+            )
 
     if args.llm_model is None:
         args.llm_model = os.environ.get("LLM_MODEL")

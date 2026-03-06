@@ -60,7 +60,7 @@ async def start_crawl(args: Args) -> list[str]:
             pers=ycs_pers,
             cookie_header=args.ycs_cookie,
         )
-        
+
         # Validate that locations were fetched if credentials were provided
         if args.ycs_cookie and args.ycs_pers:
             location_count = 0
@@ -69,9 +69,9 @@ async def start_crawl(args: Args) -> list[str]:
                     for meeting in course.get("meetings", []):
                         if meeting.get("location"):
                             location_count += 1
-            
+
             print(f"Found {location_count} meetings with locations")
-            
+
             if location_count == 0:
                 raise RuntimeError(
                     "YCS credentials were provided but no locations were fetched. "

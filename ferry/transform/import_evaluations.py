@@ -50,9 +50,7 @@ def match_evaluations_to_courses(
     return evals
 
 
-def import_evaluation_summaries(
-    data_dir: Path, listings: pd.DataFrame
-) -> pd.DataFrame:
+def import_evaluation_summaries(data_dir: Path, listings: pd.DataFrame) -> pd.DataFrame:
     """
     Import AI-generated narrative summaries from evaluation_summaries/*.json.
     Maps (season, crn) to course_id via listings. Returns empty DataFrame if no
@@ -336,16 +334,16 @@ def import_evaluations(data_dir: Path, listings: pd.DataFrame) -> EvalTables:
     print("\033[F", end="")
     print("Importing course evaluations... ✔")
 
-    evaluation_narrative_summaries = import_evaluation_summaries(
-        data_dir, listings
-    )
+    evaluation_narrative_summaries = import_evaluation_summaries(data_dir, listings)
     evaluation_narrative_summaries.drop_duplicates(
         subset=["course_id", "question_code"], inplace=True, keep="first"
     )
 
     print("[Summary]")
     print(f"Total evaluation narratives: {len(evaluation_narratives)}")
-    print(f"Total evaluation narrative summaries: {len(evaluation_narrative_summaries)}")
+    print(
+        f"Total evaluation narrative summaries: {len(evaluation_narrative_summaries)}"
+    )
     print(f"Total evaluation ratings: {len(evaluation_ratings)}")
     print(f"Total evaluation statistics: {len(evaluation_statistics)}")
     print(f"Total evaluation questions: {len(evaluation_questions)}")

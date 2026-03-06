@@ -449,7 +449,7 @@ course_meetings = Table(
     Index(
         "cm_3col_uniq_idx",
         "course_id",
-        "start_time", 
+        "start_time",
         "end_time",
         unique=True,
         postgresql_where=text("location_id IS NULL"),
@@ -458,7 +458,7 @@ course_meetings = Table(
         "cm_4col_uniq_idx",
         "course_id",
         "start_time",
-        "end_time", 
+        "end_time",
         "location_id",
         unique=True,
         postgresql_where=text("location_id IS NOT NULL"),
