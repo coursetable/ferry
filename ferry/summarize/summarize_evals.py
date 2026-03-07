@@ -15,6 +15,8 @@ from typing import Any, TypedDict
 
 from tqdm import tqdm
 
+from openai import RateLimitError
+
 from ferry.ai import DEFAULT_MODEL, LLMClient
 from ferry.crawler.cache import load_cache_json, save_cache_json
 
@@ -111,14 +113,24 @@ async def _summarize_course(
         return None
 
     for question_code, question_text, task in tasks:
-        summary_text = await task
-        summaries.append(
-            {
-                "question_code": question_code,
-                "question_text": question_text,
-                "summary": summary_text,
-            }
-        )
+        try:
+            summary_text = await task
+            summaries.append(
+                {
+                    "question_code": question_code,
+                    "question_text": question_text,
+                    "summary": summary_text,
+                }
+            )
+        except RateLimitError as exc:
+            logging.warning(
+                "Rate limit exceeded after retries for %s/%s crn=%s: %s. "
+                + "Skipping this narrative; partial results to be committed.",
+                course_eval.get("season"),
+                question_code,
+                course_eval.get("crn"),
+                exc,
+            )
 
     if not summaries:
         return None

@@ -5,11 +5,40 @@ Supports OpenAI, Anthropic, Gemini, Groq, OpenRouter, and
 other providers that expose an OpenAI-style API.
 """
 
+import asyncio
 import logging
+import re
 from typing import Any
 
 # Default model when none is specified (OpenAI).
 DEFAULT_MODEL = "gpt-4.1-mini"
+
+# Retry config for rate limits
+RATE_LIMIT_MAX_RETRIES = 5
+RATE_LIMIT_INITIAL_BACKOFF_SEC = 2
+
+
+def _retry_after_seconds(exc: BaseException) -> float | None:
+    """Extract retry-after from error response or message. Returns None if not found."""
+    response = getattr(exc, "response", None)
+    if response is not None:
+        retry_after = getattr(response, "headers", None)
+        if retry_after and hasattr(retry_after, "get"):
+            val = retry_after.get("retry-after")
+            if val is not None:
+                try:
+                    return float(val)
+                except (TypeError, ValueError):
+                    pass
+    # OpenAI error message often includes "Please try again in X.XXs"
+    msg = str(exc)
+    match = re.search(r"try again in (\d+(?:\.\d+)?)\s*s", msg, re.IGNORECASE)
+    if match:
+        try:
+            return float(match.group(1))
+        except (TypeError, ValueError):
+            pass
+    return None
 
 
 class LLMClient:
@@ -70,13 +99,39 @@ class LLMClient:
         ValueError
             If the API returns empty or None content.
         """
+        from openai import RateLimitError
+
         model_to_use = model or self.model
-        response = await self._client.chat.completions.create(
-            model=model_to_use,
-            messages=messages,
-            temperature=temperature,
-            max_tokens=max_tokens,
-        )
+        last_exc: BaseException | None = None
+
+        for attempt in range(RATE_LIMIT_MAX_RETRIES):
+            try:
+                response = await self._client.chat.completions.create(
+                    model=model_to_use,
+                    messages=messages,
+                    temperature=temperature,
+                    max_tokens=max_tokens,
+                )
+                break
+            except RateLimitError as exc:
+                last_exc = exc
+                if attempt == RATE_LIMIT_MAX_RETRIES - 1:
+                    raise
+                delay = _retry_after_seconds(exc)
+                if delay is None:
+                    delay = RATE_LIMIT_INITIAL_BACKOFF_SEC * (2**attempt)
+                delay = min(delay, 60.0)
+                logging.warning(
+                    "Rate limit hit (attempt %d/%d), retrying in %.1fs",
+                    attempt + 1,
+                    RATE_LIMIT_MAX_RETRIES,
+                    delay,
+                )
+                await asyncio.sleep(delay)
+        else:
+            if last_exc is not None:
+                raise last_exc
+            raise RuntimeError("Unexpected retry loop exit")
 
         content = response.choices[0].message.content
         if content is None:
