@@ -111,23 +111,14 @@ async def _summarize_course(
         return None
 
     for question_code, question_text, task in tasks:
-        try:
-            summary_text = await task
-            summaries.append(
-                {
-                    "question_code": question_code,
-                    "question_text": question_text,
-                    "summary": summary_text,
-                }
-            )
-        except Exception as exc:
-            logging.warning(
-                "Failed to summarize %s/%s crn=%s: %s",
-                course_eval.get("season"),
-                question_code,
-                course_eval.get("crn"),
-                exc,
-            )
+        summary_text = await task
+        summaries.append(
+            {
+                "question_code": question_code,
+                "question_text": question_text,
+                "summary": summary_text,
+            }
+        )
 
     if not summaries:
         return None
