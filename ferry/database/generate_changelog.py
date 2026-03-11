@@ -254,12 +254,13 @@ def register_junction_change(
     junction_old_grouped: dict[int, pd.DataFrame],
     junction_new_grouped: dict[int, pd.DataFrame],
     junction_name: str,
+    empty_old: pd.DataFrame,
+    empty_new: pd.DataFrame,
 ):
     if course_id not in course_id_to_changes:
         course_id_to_changes[course_id] = {}
-    # Use pre-grouped data instead of filtering
-    old_group = junction_old_grouped.get(course_id, pd.DataFrame())
-    new_group = junction_new_grouped.get(course_id, pd.DataFrame())
+    old_group = junction_old_grouped.get(course_id, empty_old)
+    new_group = junction_new_grouped.get(course_id, empty_new)
     course_id_to_changes[course_id][junction_name] = (old_group, new_group)
 
 
@@ -285,6 +286,10 @@ def register_junction_changes(
         for course_id, group in junction_new.groupby("course_id")
     }
     
+    # Schema-preserving empty DataFrames for missing course_id lookups
+    empty_old = junction_old.iloc[:0]
+    empty_new = junction_new.iloc[:0]
+    
     # Pre-index courses for O(1) lookups instead of O(n) filtering
     courses_old_indexed = set(tables_old["courses"]["course_id"].values)
     courses_new_indexed = set(tables_new["courses"]["course_id"].values)
@@ -295,7 +300,7 @@ def register_junction_changes(
             continue
         register_junction_change(
             course_id_to_changes, course_id, junction_old_grouped,
-            junction_new_grouped, junction_name
+            junction_new_grouped, junction_name, empty_old, empty_new
         )
     for course_id in junction_diff["deleted_rows"]["course_id"].values:
         # Course itself was removed
@@ -303,7 +308,7 @@ def register_junction_changes(
             continue
         register_junction_change(
             course_id_to_changes, course_id, junction_old_grouped,
-            junction_new_grouped, junction_name
+            junction_new_grouped, junction_name, empty_old, empty_new
         )
     for row in junction_diff["changed_rows"].itertuples():
         course_id = row.course_id
@@ -314,7 +319,7 @@ def register_junction_changes(
             continue
         register_junction_change(
             course_id_to_changes, course_id, junction_old_grouped,
-            junction_new_grouped, junction_name
+            junction_new_grouped, junction_name, empty_old, empty_new
         )
 
 
