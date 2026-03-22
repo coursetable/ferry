@@ -1,9 +1,9 @@
 # PROD CONFIG
-# This configuration is used for fetching the latest data for the last 3 seasons of course data (no evaluations).
+# This configuration is used for fetching the latest data for the listed seasons of course data (no evaluations).
 
 # Sentry URL & DB URL are passed through env
 release: true
-seasons: [ '202601', '202602' ]
+seasons: [ '202601', '202602', '202603' ]
 
 crawl_seasons: true
 crawl_classes: true
