@@ -444,15 +444,21 @@ def sync_course_meetings_incremental(
         old_subset = old_grouped.get_group(course_id).drop(columns=["course_id"])
         new_subset = new_grouped.get_group(course_id).drop(columns=["course_id"])
 
-        # Sort both DFs for comparison
+        # With freeze_locations, new rows have null location_id but DB rows have IDs; a
+        # full-frame equals() would mark every course changed. Compare times + days only.
+        sort_cols = (
+            ["start_time", "end_time", "days_of_week"]
+            if freeze_locations
+            else ["start_time", "end_time", "location_id"]
+        )
         old_meetings = (
             old_subset.iloc[:]
-            .sort_values(["start_time", "end_time", "location_id"])
+            .sort_values(sort_cols)
             .reset_index(drop=True)
         )
         new_meetings = (
             new_subset.iloc[:]
-            .sort_values(["start_time", "end_time", "location_id"])
+            .sort_values(sort_cols)
             .reset_index(drop=True)
         )
 
@@ -463,7 +469,13 @@ def sync_course_meetings_incremental(
 
         # Compare the meeting sets (excluding course_id)
         try:
-            if not old_meetings.equals(new_meetings):
+            if freeze_locations:
+                structural_cols = ["start_time", "end_time", "days_of_week"]
+                if not old_meetings[structural_cols].equals(
+                    new_meetings[structural_cols]
+                ):
+                    changed_course_ids.add(course_id)
+            elif not old_meetings.equals(new_meetings):
                 changed_course_ids.add(course_id)
         except (ValueError, TypeError):
             # If comparison fails due to type/structure differences, consider it changed
