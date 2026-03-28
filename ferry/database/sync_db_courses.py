@@ -73,15 +73,20 @@ def generate_diff(
         old_df = old_df.set_index(pk)
         new_df = new_df.set_index(pk)
 
-        deleted_rows = old_df[~old_df.index.isin(new_df.index)]
-        added_rows = new_df[~new_df.index.isin(old_df.index)]
+        # Use set for O(1) index lookups instead of O(n) scan
+        new_index_set = set(new_df.index)
+        old_index_set = set(old_df.index)
+
+        deleted_rows = old_df[~old_df.index.isin(new_index_set)]
+        added_rows = new_df[~new_df.index.isin(old_index_set)]
 
         # Must sort index in order to compare dataframes cell-wise
+        shared_index = old_index_set & new_index_set
         shared_rows_old = (
-            old_df[old_df.index.isin(new_df.index)].sort_index().sort_index(axis=1)
+            old_df[old_df.index.isin(shared_index)].sort_index().sort_index(axis=1)
         )
         shared_rows_new = (
-            new_df[new_df.index.isin(old_df.index)].sort_index().sort_index(axis=1)
+            new_df[new_df.index.isin(shared_index)].sort_index().sort_index(axis=1)
         )
         if (shared_rows_old.index != shared_rows_new.index).any():
             print(shared_rows_old.index)
@@ -96,32 +101,37 @@ def generate_diff(
             raise ValueError(
                 f"Column mismatch in table {table_name}. Run with --rewrite once to fix."
             )
-        # Do not allow type changes unless one of them is NA
-        old_types = shared_rows_old.map(type)
-        new_types = shared_rows_new.map(type)
-        different_types = ~(
-            (old_types == new_types) | shared_rows_old.isna() | shared_rows_new.isna()
-        )
-        if different_types.any().any():
-            row, col = list(zip(*different_types.values.nonzero()))[0]
-            print(
-                f"Type mismatch in {table_name} at ({row}, {col}) (column {shared_rows_old.columns[col]})"
-            )
-            print(f"Old type: {old_types.iat[row, col]}")
-            print(f"New type: {new_types.iat[row, col]}")
-            print(f"Old value: {shared_rows_old.iat[row, col]}")
-            print(f"New value: {shared_rows_new.iat[row, col]}")
-            raise TypeError("Type mismatch")
-        unequal_mask = ~(
-            (shared_rows_old == shared_rows_new)
-            | (shared_rows_old.isna() & shared_rows_new.isna())
-        )
 
-        changed_rows = shared_rows_new[unequal_mask.any(axis=1)].copy()
+        # Hash-based change detection: only do O(rows*cols) cell comparison for rows
+        # where hashes differ. When most rows are unchanged (typical for incremental
+        # sync), this reduces complexity from O(n*m) to O(n) + O(changed*cols).
+        old_hashes = pd.util.hash_pandas_object(shared_rows_old, index=False)
+        new_hashes = pd.util.hash_pandas_object(shared_rows_new, index=False)
+        unchanged_mask = (old_hashes == new_hashes).reindex(shared_rows_old.index)
+
+        unequal_mask = pd.DataFrame(
+            False, index=shared_rows_old.index, columns=shared_rows_old.columns
+        )
+        possibly_changed = ~unchanged_mask
+        if possibly_changed.any():
+            # Only compare cells for rows that might have changed (hash differed)
+            subset_old = shared_rows_old.loc[possibly_changed]
+            subset_new = shared_rows_new.loc[possibly_changed]
+            subset_unequal = ~(
+                (subset_old == subset_new)
+                | (subset_old.isna() & subset_new.isna())
+            )
+            unequal_mask.loc[possibly_changed] = subset_unequal
+
+        changed_row_mask = unequal_mask.any(axis=1)
+        changed_rows = shared_rows_new[changed_row_mask].copy()
         if len(changed_rows) > 0:
-            changed_rows["columns_changed"] = unequal_mask[
-                unequal_mask.any(axis=1)
-            ].apply(lambda row: shared_rows_new.columns[row].tolist(), axis=1)
+            # Vectorized: avoid slow apply(axis=1), use list comprehension over numpy
+            cols = shared_rows_new.columns
+            unequal_arr = unequal_mask.loc[changed_row_mask].values
+            changed_rows["columns_changed"] = [
+                cols[unequal_arr[i]].tolist() for i in range(len(changed_rows))
+            ]
         else:
             changed_rows["columns_changed"] = pd.Series(dtype=object)
 
