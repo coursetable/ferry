@@ -39,6 +39,58 @@ junction_tables = {
 }
 
 
+def _jsonable_scalar(v: Any) -> Any:
+    if v is None:
+        return None
+    if isinstance(v, (np.integer, np.int64, np.int32)):
+        return int(v)
+    if isinstance(v, (np.floating, np.float64, np.float32)):
+        if np.isnan(v):
+            return None
+        return float(v)
+    if isinstance(v, np.bool_):
+        return bool(v)
+    if isinstance(v, pd.Timestamp):
+        return v.isoformat()
+    if isinstance(v, (bytes, bytearray)):
+        return v.decode("utf-8", errors="replace")
+    if isinstance(v, np.ndarray):
+        return _jsonable_scalar(v.tolist())
+    if isinstance(v, (list, tuple)):
+        return [_jsonable_scalar(x) for x in v]
+    if isinstance(v, dict):
+        return {str(k): _jsonable_scalar(x) for k, x in v.items()}
+    try:
+        if pd.isna(v):
+            return None
+    except (TypeError, ValueError):
+        pass
+    return v
+
+
+def course_scalar_last_sync_diffs(
+    diff: dict[str, DiffRecord],
+    tables_old: dict[str, pd.DataFrame],
+    tables: dict[str, pd.DataFrame],
+) -> dict[int, dict[str, dict[str, Any]]]:
+    co = tables_old["courses"].set_index("course_id")
+    cn = tables["courses"].set_index("course_id")
+    out: dict[int, dict[str, dict[str, Any]]] = {}
+    for _, row in diff["courses"]["changed_rows"].iterrows():
+        cid = int(row["course_id"])
+        fields: dict[str, dict[str, Any]] = {}
+        for col in row["columns_changed"]:
+            if col in computed_columns["courses"]:
+                continue
+            fields[col] = {
+                "old": _jsonable_scalar(co.loc[cid, col]),
+                "new": _jsonable_scalar(cn.loc[cid, col]),
+            }
+        if fields:
+            out[cid] = fields
+    return out
+
+
 def get_tables_from_db(database_connect_string: str) -> dict[str, pd.DataFrame]:
     db = Database(database_connect_string)
     db_meta = MetaData()
@@ -47,7 +99,8 @@ def get_tables_from_db(database_connect_string: str) -> dict[str, pd.DataFrame]:
 
     return {
         table_name: pd.read_sql_table(table_name, con=conn).drop(
-            columns=["time_added", "last_updated"], errors="ignore"
+            columns=["time_added", "last_updated", "last_sync_diff"],
+            errors="ignore",
         )
         for table_name in primary_keys.keys()
     }
@@ -701,6 +754,8 @@ def sync_db_courses(
 
     diff = generate_diff(tables_old_for_diff, tables_for_diff)
 
+    course_sync_diff_by_id = course_scalar_last_sync_diffs(diff, tables_old, tables)
+
     print_diff(diff, tables_old, tables, data_dir / "change_log")
 
     inspector = inspect(db.Engine)
@@ -725,6 +780,10 @@ def sync_db_courses(
                         f"ALTER TABLE {table_name} ADD COLUMN last_updated TIMESTAMP DEFAULT NULL;"
                     )
                 )
+
+        course_col_names = {c["name"] for c in inspector.get_columns("courses")}
+        if "last_sync_diff" not in course_col_names:
+            conn.execute(text("ALTER TABLE courses ADD COLUMN last_sync_diff JSONB"))
 
         # Process tables in dependency order (buildings before locations)
         location_mapping = {}
@@ -811,6 +870,34 @@ def sync_db_courses(
 
             commit_deletions(table_name, deleted_rows, conn)
         print("\033[F", end="")
+
+        changed_course_ids = list(course_sync_diff_by_id.keys())
+        if changed_course_ids:
+            ids_sql = ",".join(str(int(cid)) for cid in changed_course_ids)
+            conn.execute(
+                text(
+                    f"UPDATE courses SET last_sync_diff = NULL "
+                    f"WHERE last_sync_diff IS NOT NULL AND course_id NOT IN ({ids_sql})"
+                )
+            )
+        else:
+            conn.execute(
+                text(
+                    "UPDATE courses SET last_sync_diff = NULL WHERE last_sync_diff IS NOT NULL"
+                )
+            )
+
+        upd = text(
+            "UPDATE courses SET last_sync_diff = CAST(:payload AS jsonb) WHERE course_id = :course_id"
+        )
+        for course_id, payload in course_sync_diff_by_id.items():
+            conn.execute(
+                upd,
+                {
+                    "course_id": int(course_id),
+                    "payload": ujson.dumps(payload),
+                },
+            )
 
     # Print row counts for each table.
     print("\n[Table Statistics]")

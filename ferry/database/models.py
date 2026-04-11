@@ -305,6 +305,12 @@ class Course(BaseModel):
         comment="[computed] Whether last enrollment offering is with same professor as current.",
     )
 
+    last_sync_diff = Column(
+        JSONB,
+        comment="Last sync: non-computed courses columns as {field: {old, new}}",
+        nullable=True,
+    )
+
 
 class Listing(BaseModel):
     """
