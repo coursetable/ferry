@@ -5,7 +5,7 @@ from pathlib import Path
 import logging
 from typing import Any, Dict, Union
 
-from sqlalchemy import MetaData, text, inspect, Connection
+from sqlalchemy import MetaData, text, inspect, Connection, bindparam
 from psycopg2.extensions import register_adapter, AsIs
 
 from ferry.database import Database
@@ -873,13 +873,10 @@ def sync_db_courses(
 
         changed_course_ids = list(course_sync_diff_by_id.keys())
         if changed_course_ids:
-            ids_sql = ",".join(str(int(cid)) for cid in changed_course_ids)
-            conn.execute(
-                text(
-                    f"UPDATE courses SET last_sync_diff = NULL "
-                    f"WHERE last_sync_diff IS NOT NULL AND course_id NOT IN ({ids_sql})"
-                )
-            )
+            clear_stmt = text(
+                "UPDATE courses SET last_sync_diff = NULL WHERE last_sync_diff IS NOT NULL AND course_id NOT IN :ids"
+            ).bindparams(bindparam("ids", expanding=True))
+            conn.execute(clear_stmt, {"ids": changed_course_ids})
         else:
             conn.execute(
                 text(

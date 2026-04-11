@@ -397,6 +397,14 @@ def print_courses_diff(
     # Process changed courses with indexed lookups
     course_updates = ""
     course_id_to_changes: dict[int, dict[str, tuple[Any, Any]]] = {}
+    for _, course in diff["courses"]["added_rows"].iterrows():
+        course_id = cast(int, course["course_id"])
+        course_id_to_changes[course_id] = {}
+        for column in courses_new_indexed.columns:
+            if column in computed_columns["courses"]:
+                continue
+            new_val = courses_new_indexed.loc[course_id, column]
+            course_id_to_changes[course_id][column] = (None, new_val)
     for _, course in diff["courses"]["changed_rows"].iterrows():
         course_id = cast(int, course["course_id"])
         if course_id not in course_id_to_changes:
