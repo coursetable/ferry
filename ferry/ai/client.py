@@ -104,13 +104,19 @@ class LLMClient:
         model_to_use = model or self.model
         last_exc: BaseException | None = None
 
+        # GPT-5 and o-series require max_completion_tokens; legacy providers use max_tokens.
+        uses_completion_tokens = model_to_use.startswith("gpt-5") or bool(
+            re.match(r"o\d", model_to_use) or re.search(r"-o\d", model_to_use)
+        )
+        token_param = "max_completion_tokens" if uses_completion_tokens else "max_tokens"
+
         for attempt in range(RATE_LIMIT_MAX_RETRIES):
             try:
                 response = await self._client.chat.completions.create(
                     model=model_to_use,
                     messages=messages,
                     temperature=temperature,
-                    max_tokens=max_tokens,
+                    **{token_param: max_tokens},
                 )
                 break
             except RateLimitError as exc:
