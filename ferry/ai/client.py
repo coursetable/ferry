@@ -11,7 +11,7 @@ import re
 from typing import Any
 
 # Default model when none is specified (OpenAI).
-DEFAULT_MODEL = "gpt-4.1-mini"
+DEFAULT_MODEL = "gpt-5.4-nano"
 
 # Retry config for rate limits
 RATE_LIMIT_MAX_RETRIES = 5
