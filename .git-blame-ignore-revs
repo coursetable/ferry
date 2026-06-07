@@ -1,0 +1,5 @@
+# Commits ignored by `git blame` (and GitHub blame on the default branch).
+# See: https://docs.github.com/en/repositories/working-with-files/using-files/viewing-a-file#ignore-commits-in-blame-view
+#
+# Black format of the entire codebase (squash merge #411)
+147bc6a850d8439854bd7f0ed8d7a3316778a46c
