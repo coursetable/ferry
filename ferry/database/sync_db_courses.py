@@ -451,16 +451,8 @@ def sync_course_meetings_incremental(
             if freeze_locations
             else ["start_time", "end_time", "location_id"]
         )
-        old_meetings = (
-            old_subset.iloc[:]
-            .sort_values(sort_cols)
-            .reset_index(drop=True)
-        )
-        new_meetings = (
-            new_subset.iloc[:]
-            .sort_values(sort_cols)
-            .reset_index(drop=True)
-        )
+        old_meetings = old_subset.iloc[:].sort_values(sort_cols).reset_index(drop=True)
+        new_meetings = new_subset.iloc[:].sort_values(sort_cols).reset_index(drop=True)
 
         # Check if any old meetings have missing location IDs - if so, treat as changed
         if old_meetings["location_id"].apply(safe_isna).any():
