@@ -170,7 +170,8 @@ python main.py --sync-db-evals
 ## Linting & formatting
 
 ```sh
-black .
+uv run ruff format .
+uv run ruff check .
 pyright
 ```
 

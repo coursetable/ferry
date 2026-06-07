@@ -1,6 +1,9 @@
 {
   // TODO: use strict
   "python.analysis.typeCheckingMode": "standard",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
   "gitlens.advanced.blame.customArguments": [
     "--ignore-revs-file",
     ".git-blame-ignore-revs"

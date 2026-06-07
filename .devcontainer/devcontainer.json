@@ -14,7 +14,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-python.black-formatter",
+        "charliermarsh.ruff",
         "ms-python.python",
         "ms-python.vscode-pylance"
       ]
