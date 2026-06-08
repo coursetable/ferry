@@ -6,3 +6,6 @@
 
 # Ruff format migration (squash merge #412)
 662db3e59a23c3fdbb77ed8fcf7ad01ad72bc4d5
+
+# Ruff lint auto-fixes
+e33da1533db65132430124ac5b222141f4bef708
