@@ -1,8 +1,10 @@
-import pandas as pd
+from collections.abc import Callable
 from pathlib import Path
 from time import gmtime, strftime
-from typing import cast, Any, TypedDict, Callable
+from typing import Any, TypedDict, cast
+
 import networkx as nx
+import pandas as pd
 
 
 class DiffRecord(TypedDict):
@@ -246,9 +248,9 @@ def print_table_diff(
         if update:
             updates += f"{identify_row(row)}{update}"
     changes = ""
-    changes += create_section(3, f"Additions", additions)
-    changes += create_section(3, f"Removals", removals)
-    changes += create_section(3, f"Updates", updates)
+    changes += create_section(3, "Additions", additions)
+    changes += create_section(3, "Removals", removals)
+    changes += create_section(3, "Updates", updates)
     return create_section(2, f"{table_name.capitalize()} changes", changes)
 
 

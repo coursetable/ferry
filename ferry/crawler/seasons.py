@@ -3,9 +3,10 @@ Fetches a list of all seasons from the Yale Courses API.
 """
 
 import re
+from pathlib import Path
 
 from httpx import AsyncClient
-from pathlib import Path
+
 from .cache import load_cache_json, save_cache_json
 
 # -----------------------------------------

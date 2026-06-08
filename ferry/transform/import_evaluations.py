@@ -1,12 +1,12 @@
 import logging
-from pathlib import Path
 import re
+from pathlib import Path
+from typing import TypedDict, cast
 
-from tqdm import tqdm
 import numpy as np
 import pandas as pd
 import ujson
-from typing import cast, TypedDict
+from tqdm import tqdm
 
 from ferry import database
 from ferry.crawler.cache import load_cache_json

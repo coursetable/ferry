@@ -1,9 +1,9 @@
+import logging
 import re
 import traceback
 import warnings
 from pathlib import Path
 from typing import Any, TypedDict, cast
-import logging
 
 import ujson
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning, ResultSet, Tag

@@ -1,6 +1,6 @@
-import sqlalchemy
 from contextlib import contextmanager
-from .models import Base
+
+import sqlalchemy
 
 
 class Database:

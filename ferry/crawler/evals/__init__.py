@@ -6,7 +6,7 @@ import httpx
 from tqdm import tqdm
 
 from ferry.crawler.cache import load_cache_json, save_cache_json
-from ferry.crawler.cas_request import CASClient, USER_AGENT
+from ferry.crawler.cas_request import USER_AGENT, CASClient
 from ferry.crawler.classes.parse import ParsedCourse
 
 from .fetch import FetchError, fetch_course_evals

@@ -369,7 +369,7 @@ def load_yaml(parser: argparse.ArgumentParser):
         # Load YAML config as default args
         import yaml
 
-        with open(p.config_file, "r") as f:
+        with open(p.config_file) as f:
             default_arg: dict[str, Any] = yaml.safe_load(f)
         key = vars(p).keys()
 
@@ -379,7 +379,7 @@ def load_yaml(parser: argparse.ArgumentParser):
             return
         for k in default_arg.keys():
             if k not in key:
-                print("WRONG ARG: {}".format(k))
+                print(f"WRONG ARG: {k}")
                 assert k in key
 
         # Set default args

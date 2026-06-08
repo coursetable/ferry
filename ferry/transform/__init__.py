@@ -2,22 +2,23 @@ import gc
 import os
 from pathlib import Path
 from typing import cast
-import ujson
 
 import pandas as pd
+import ujson
 
 from ferry import database
+
+from .cache_id import save_id_cache
+from .import_courses import import_courses
+from .import_evaluations import import_evaluations
+from .invariants import check_invariants
 from .transform_compute import (
     courses_computed,
     evaluation_statistics_computed,
+    narratives_computed,
     professors_computed,
     questions_computed,
-    narratives_computed,
 )
-from .import_courses import import_courses
-from .import_evaluations import import_evaluations
-from .cache_id import save_id_cache
-from .invariants import check_invariants
 
 
 def write_csvs(tables: dict[str, pd.DataFrame], data_dir: Path):

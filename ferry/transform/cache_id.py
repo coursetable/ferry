@@ -1,7 +1,9 @@
-import pandas as pd
 import logging
 from pathlib import Path
-from ferry.crawler.cache import save_cache_json, load_cache_json
+
+import pandas as pd
+
+from ferry.crawler.cache import load_cache_json, save_cache_json
 
 
 def merge_id_cache(

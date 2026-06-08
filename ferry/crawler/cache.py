@@ -21,7 +21,7 @@ def load_cache_json(path: Path):
     if not path.is_file():
         return None
 
-    with open(path, "r") as f:
+    with open(path) as f:
         return ujson.load(f)
 
 

@@ -1,8 +1,8 @@
 import asyncio
 import logging
 from pathlib import Path
-import pandas as pd
 
+import pandas as pd
 import uvloop
 from httpx import AsyncClient
 

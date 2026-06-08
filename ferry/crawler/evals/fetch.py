@@ -199,7 +199,7 @@ def fetch_eval_page(
     questions_index = data_dir / "rating_cache" / "questions_index"
     html_file = questions_index / f"{season_code}_{crn}.html"
     if html_file.is_file():
-        with open(html_file, "r") as file:
+        with open(html_file) as file:
             return ast.literal_eval(file.read())
 
     # OCE website for evaluations

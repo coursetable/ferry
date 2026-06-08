@@ -1,16 +1,16 @@
-import pandas as pd
-import numpy as np
-import ujson
-from pathlib import Path
 import logging
-from typing import Any, Dict, Union
+from pathlib import Path
+from typing import Any
 
-from sqlalchemy import MetaData, text, inspect, Connection
-from psycopg2.extensions import register_adapter, AsIs
+import numpy as np
+import pandas as pd
+import ujson
+from psycopg2.extensions import AsIs, register_adapter
+from sqlalchemy import Connection, MetaData, inspect, text
 
 from ferry.database import Database
-from .generate_changelog import print_diff, computed_columns, primary_keys, DiffRecord
 
+from .generate_changelog import DiffRecord, computed_columns, primary_keys, print_diff
 
 register_adapter(np.int64, AsIs)
 
@@ -219,7 +219,7 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
 
         if table_name == "course_meetings":
             where_conditions = []
-            where_params: Dict[str, Any] = {}
+            where_params: dict[str, Any] = {}
             for pk_col in pk:
                 old_col = f"old_{pk_col}"
                 if old_col in row.index:
@@ -238,7 +238,7 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
                 if not str(col).startswith("old_")
             )
 
-            update_params: Dict[str, Any] = {}
+            update_params: dict[str, Any] = {}
             for col in row.index:
                 if not str(col).startswith("old_"):
                     value = row[col] if not safe_isna(row[col]) else None
@@ -257,7 +257,7 @@ def commit_updates(table_name: str, to_update: pd.DataFrame, conn: Connection):
             ):
                 set_clause = f"{set_clause}, last_updated = CURRENT_TIMESTAMP"
 
-            params: Dict[str, Any] = {}
+            params: dict[str, Any] = {}
             for col in row.index:
                 value = row[col] if not safe_isna(row[col]) else None
                 params[str(col)] = value

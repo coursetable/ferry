@@ -1,14 +1,16 @@
 import logging
-from tqdm import tqdm
-from typing import TypedDict, cast, Callable
+from collections.abc import Callable
 from pathlib import Path
-from ..crawler.classes.parse import ParsedMeeting
+from typing import TypedDict
 
 import numpy as np
 import pandas as pd
 import ujson
+from tqdm import tqdm
+
 from ferry.crawler.cache import load_cache_json
 
+from ..crawler.classes.parse import ParsedMeeting
 
 # Mappings from past prof emails to their current ones
 prof_email_changes = {
@@ -170,7 +172,7 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
                         listings["crn"].eq(crn) & listings["season_code"].eq(season)
                     ]
                 )
-                raise ValueError(f"CRN not in CRNs")
+                raise ValueError("CRN not in CRNs")
             # Invariant: CRNs form a fully connected component by running DFS
             stack = [crn]
             component = []
@@ -283,7 +285,7 @@ def aggregate_professors(
                 logging.warning(f"Email: {email}\n{d}")
             if set.intersection(*[set(d["course_code"]) for _, d in email_data]):
                 logging.warning(
-                    f"Note: it looks like their course codes overlap, indicating there's a high chance that they are the same person (or the course data itself assigns the wrong professor to some courses)."
+                    "Note: it looks like their course codes overlap, indicating there's a high chance that they are the same person (or the course data itself assigns the wrong professor to some courses)."
                 )
         return group
 

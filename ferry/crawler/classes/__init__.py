@@ -1,13 +1,14 @@
 from pathlib import Path
+
 from httpx import AsyncClient
 from tqdm import tqdm
 
 from .fetch import (
-    fetch_season_course_list,
     fetch_all_season_courses_details,
     fetch_cws_api,
+    fetch_season_course_list,
 )
-from .parse import parse_courses, ParsedCourse
+from .parse import ParsedCourse, parse_courses
 
 
 async def crawl_classes(

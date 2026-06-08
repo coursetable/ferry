@@ -1,9 +1,10 @@
+import itertools
+from pathlib import Path
+from typing import Any
+
+import ujson
 from httpx import AsyncClient
 from tqdm.asyncio import tqdm_asyncio
-from pathlib import Path
-import ujson
-from typing import Any
-import itertools
 
 from ferry.crawler.cache import load_cache_json, save_cache_json
 from ferry.crawler.cas_request import request

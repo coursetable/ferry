@@ -1,10 +1,10 @@
+import logging
 import math
 import re
 from typing import cast
 
 import numpy as np
 import pandas as pd
-import logging
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 from ferry import database

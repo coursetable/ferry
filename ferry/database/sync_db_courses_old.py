@@ -1,14 +1,12 @@
-import pandas as pd
 import csv
 from io import StringIO
-import logging
 from pathlib import Path
 
-from sqlalchemy import MetaData, text, inspect
+import pandas as pd
+from sqlalchemy import MetaData, text
 
 from ferry import database
-from ferry.database import Database, Base
-
+from ferry.database import Base, Database
 
 queries_dir = Path(__file__).parent / "queries"
 

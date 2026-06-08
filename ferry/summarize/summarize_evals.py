@@ -13,9 +13,8 @@ import logging
 from pathlib import Path
 from typing import Any, TypedDict
 
-from tqdm import tqdm
-
 from openai import RateLimitError
+from tqdm import tqdm
 
 from ferry.ai import DEFAULT_MODEL, LLMClient
 from ferry.crawler.cache import load_cache_json, save_cache_json
