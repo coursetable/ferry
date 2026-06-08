@@ -51,7 +51,7 @@ async def fetch_season_course_list(
     r_json = ujson.loads(req.text)
 
     if "fatal" in r_json.keys():
-        raise FetchClassesError(f'Unsuccessful response: {r_json["fatal"]}')
+        raise FetchClassesError(f"Unsuccessful response: {r_json['fatal']}")
 
     if "results" not in r_json.keys():
         raise FetchClassesError("Unsuccessful response: no results")

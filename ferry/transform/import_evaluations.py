@@ -22,10 +22,12 @@ def match_evaluations_to_courses(
         listings[["season_code", "course_id", "crn"]]
         .groupby("season_code")
         .apply(
-            lambda x: x[["crn", "course_id"]]
-            .set_index("crn")["course_id"]
-            .astype(float)
-            .to_dict()
+            lambda x: (
+                x[["crn", "course_id"]]
+                .set_index("crn")["course_id"]
+                .astype(float)
+                .to_dict()
+            )
         )
         .to_dict()
     )
@@ -64,10 +66,12 @@ def import_evaluation_summaries(data_dir: Path, listings: pd.DataFrame) -> pd.Da
         listings[["season_code", "course_id", "crn"]]
         .groupby("season_code")
         .apply(
-            lambda x: x[["crn", "course_id"]]
-            .set_index("crn")["course_id"]
-            .astype(float)
-            .to_dict()
+            lambda x: (
+                x[["crn", "course_id"]]
+                .set_index("crn")["course_id"]
+                .astype(float)
+                .to_dict()
+            )
         )
         .to_dict()
     )

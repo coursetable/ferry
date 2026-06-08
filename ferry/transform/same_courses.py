@@ -412,10 +412,10 @@ def map_course_id_to_same_course_id(
         id_to_season_and_codes = cast(
             dict[int, set[str | tuple[str, str]]],
             subdata.apply(
-                lambda row: set(
-                    (code, row["season_code"]) for code in row["course_codes"]
-                )
-                | set(row["course_codes"]),
+                lambda row: (
+                    set((code, row["season_code"]) for code in row["course_codes"])
+                    | set(row["course_codes"])
+                ),
                 axis=1,
             ).to_dict(),
         )

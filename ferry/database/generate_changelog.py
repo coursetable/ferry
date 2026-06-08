@@ -182,7 +182,7 @@ def print_course_changes(
             )
             old_profs_info = prof_info.loc[old_profs]
             new_profs_info = prof_info.loc[new_profs]
-            res += f"  - Professors: {", ".join(old_profs_info['name']) or "N/A"} → {", ".join(new_profs_info['name']) or "N/A"}\n"
+            res += f"  - Professors: {', '.join(old_profs_info['name']) or 'N/A'} → {', '.join(new_profs_info['name']) or 'N/A'}\n"
         elif column == "course_flags":
             old_flags, new_flags = (
                 cast(pd.DataFrame, old)["flag_id"],
@@ -190,11 +190,13 @@ def print_course_changes(
             )
             old_flags_info = flag_info.loc[old_flags]
             new_flags_info = flag_info.loc[new_flags]
-            res += f"  - Flags: {", ".join(old_flags_info['flag_text']) or "N/A"} → {", ".join(new_flags_info['flag_text']) or "N/A"}\n"
+            res += f"  - Flags: {', '.join(old_flags_info['flag_text']) or 'N/A'} → {', '.join(new_flags_info['flag_text']) or 'N/A'}\n"
         elif column == "course_meetings":
             old_meetings = (
                 cast(pd.DataFrame, old).apply(
-                    lambda row: f"{print_days_of_week(row['days_of_week'])} {row['start_time']}–{row['end_time']} {location_info.loc[row['location_id']]['name'] if not pd.isna(row['location_id']) else ''}",
+                    lambda row: (
+                        f"{print_days_of_week(row['days_of_week'])} {row['start_time']}–{row['end_time']} {location_info.loc[row['location_id']]['name'] if not pd.isna(row['location_id']) else ''}"
+                    ),
                     axis=1,
                 )
                 if not old.empty
@@ -202,21 +204,23 @@ def print_course_changes(
             )
             new_meetings = (
                 cast(pd.DataFrame, new).apply(
-                    lambda row: f"{print_days_of_week(row['days_of_week'])} {row['start_time']}–{row['end_time']} {location_info.loc[row['location_id']]['name'] if not pd.isna(row['location_id']) else ''}",
+                    lambda row: (
+                        f"{print_days_of_week(row['days_of_week'])} {row['start_time']}–{row['end_time']} {location_info.loc[row['location_id']]['name'] if not pd.isna(row['location_id']) else ''}"
+                    ),
                     axis=1,
                 )
                 if not new.empty
                 else []
             )
-            res += f"  - Meetings: {", ".join(old_meetings) or "N/A"} → {", ".join(new_meetings) or "N/A"}\n"
+            res += f"  - Meetings: {', '.join(old_meetings) or 'N/A'} → {', '.join(new_meetings) or 'N/A'}\n"
         elif column == "listings":
             old_listings = cast(pd.DataFrame, old).apply(create_listing_link, axis=1)
             new_listings = cast(pd.DataFrame, new).apply(create_listing_link, axis=1)
             if old_listings.equals(new_listings):
                 continue
-            res += f"  - Listings: {" / ".join(old_listings) or "N/A"} → {" / ".join(new_listings) or "N/A"}\n"
+            res += f"  - Listings: {' / '.join(old_listings) or 'N/A'} → {' / '.join(new_listings) or 'N/A'}\n"
         else:
-            res += f"  - {column}: {old if not pd.isna(old) else "N/A"} → {new if not pd.isna(new) else "N/A"}\n"
+            res += f"  - {column}: {old if not pd.isna(old) else 'N/A'} → {new if not pd.isna(new) else 'N/A'}\n"
     return res
 
 
@@ -371,7 +375,7 @@ def print_courses_diff(
             listings.apply(create_listing_link, axis=1) if not listings.empty else []
         )
         course_additions_list.append(
-            f"- {course.season_code} {" / ".join(links)} {course.title}\n"
+            f"- {course.season_code} {' / '.join(links)} {course.title}\n"
         )
         if not listings_already_exist.empty:
             exists_text = "exists" if len(listings_already_exist) == 1 else "exist"
@@ -393,7 +397,7 @@ def print_courses_diff(
             listings.apply(create_listing_link, axis=1) if not listings.empty else []
         )
         course_removals_list.append(
-            f"- {course.season_code} {" / ".join(links)} {course.title}\n"
+            f"- {course.season_code} {' / '.join(links)} {course.title}\n"
         )
         if not listings_still_exist.empty:
             exists_text = "exists" if len(listings_still_exist) == 1 else "exist"
@@ -472,7 +476,7 @@ def print_courses_diff(
         # Use indexed lookup instead of filtering
         course = courses_new_indexed.loc[course_id]
         course_updates_list.append(
-            f"- {course["season_code"]} {" / ".join(links)} {course['title']}\n"
+            f"- {course['season_code']} {' / '.join(links)} {course['title']}\n"
         )
         course_updates_list.append(
             print_course_changes(changes, prof_info, flag_info, location_info)

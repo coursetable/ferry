@@ -39,7 +39,8 @@ def questions_computed(evaluation_questions: pd.DataFrame) -> pd.DataFrame:
             "Professor": bool(re.search(r"rating|assessment|evaluate", text))
             and "instructor" in text
             and row["question_code"] not in ["DR113", "DR316"],
-            "Overall": "overall assessment" in text and "instructor" not in text
+            "Overall": "overall assessment" in text
+            and "instructor" not in text
             # This one is used in rating average
             and not row["is_narrative"],
             # DR113, DR316: "I would recommend this instructor to other students."

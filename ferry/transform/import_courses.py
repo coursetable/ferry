@@ -316,8 +316,20 @@ def aggregate_professors(
             most_recent_name = names_by_season[-1]
             group["name"] = most_recent_name
             logging.warning(
-                f"Multiple names with email {group.name}: {names_by_season}; they will all be merged as {most_recent_name} because it seems to be the most recent.\nIf they are the same person, add the following entry to `prof_name_changes`: `\"{group.name}\": {{{", ".join([f"\"{old_name}\": \"{most_recent_name}\"" for old_name in names_by_season[
-                                                                                                                                                                                                                                                                                 :-1]])}}},` (adjust which name you are eventually mapping to depending on what the latest name is)."
+                f'Multiple names with email {group.name}: {
+                    names_by_season
+                }; they will all be merged as {
+                    most_recent_name
+                } because it seems to be the most recent.\nIf they are the same person, add the following entry to `prof_name_changes`: `"{
+                    group.name
+                }": {{{
+                    ", ".join(
+                        [
+                            f'"{old_name}": "{most_recent_name}"'
+                            for old_name in names_by_season[:-1]
+                        ]
+                    )
+                }}},` (adjust which name you are eventually mapping to depending on what the latest name is).'
             )
             # If you are fixing the warning above, you may find the below useful
             # for a local run:
@@ -516,9 +528,8 @@ def aggregate_locations(
             dropna=False,
         )
         # location_id is always None anyway
-        .agg(
-            {"days_of_week": reduce_days_of_week, "location_id": "first"}
-        ).reset_index()
+        .agg({"days_of_week": reduce_days_of_week, "location_id": "first"})
+        .reset_index()
     )
     course_meetings["days_of_week"] = course_meetings["days_of_week"].astype(int)
     course_meetings["location_id"] = course_meetings["location_id"].astype(

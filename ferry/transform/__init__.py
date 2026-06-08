@@ -130,7 +130,6 @@ async def transform(data_dir: Path) -> dict[str, pd.DataFrame]:
         ("evaluation_statistics", database.EvaluationStatistics.__table__),
         ("evaluation_ratings", database.EvaluationRating.__table__),
     ]:
-
         if table_name == "locations":
             current_table = all_tables[table_name].reset_index(drop=False)
             if "location_id" not in current_table.columns:
