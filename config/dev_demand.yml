@@ -1,0 +1,16 @@
+# DEV CONFIG
+# For testing course demand statistics crawler
+# crawls classes first since it needs course subject/number
+# Can combind with -s to specify exact seasons to fetch
+# Needs CAS cookie from ivy.yale.edu/course-stats (same process as getting cookie for evals)
+# and need CWS API key for crawling classes
+# For debug printing, use -d option.
+
+release: false
+seasons:
+  - LATEST_1
+use_cache: true
+
+crawl_seasons: true
+crawl_classes: true
+crawl_demand: true

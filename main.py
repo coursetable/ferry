@@ -10,6 +10,7 @@ from ferry.args_parser import Args, get_args, parse_seasons_arg
 from ferry.crawler.cache import load_cache_json
 from ferry.crawler.cas_request import USER_AGENT
 from ferry.crawler.classes import crawl_classes
+from ferry.crawler.demand import crawl_demand
 from ferry.crawler.evals import crawl_evals
 from ferry.crawler.seasons import fetch_seasons
 from ferry.database import sync_db_courses, sync_db_courses_old, sync_db_evals
@@ -84,6 +85,14 @@ async def start_crawl(args: Args) -> list[str]:
             data_dir=args.data_dir,
             courses=classes,
         )
+    if args.crawl_demand:
+        await crawl_demand(
+            cas_cookie=args.demand_cas_cookie,
+            seasons=seasons,
+            data_dir=args.data_dir,
+            courses=classes,
+            use_cache=args.use_cache,
+        )
 
     # Track seasons updated during crawl for catalog refresh endpoint
     if args.crawl_classes or args.crawl_evals:
@@ -97,7 +106,7 @@ async def start_crawl(args: Args) -> list[str]:
 
 
 async def main():
-    args = get_args()
+    args = get_hargs()
 
     if args.debug:
         logging.basicConfig(level=logging.DEBUG)
