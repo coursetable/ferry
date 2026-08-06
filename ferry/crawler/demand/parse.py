@@ -47,6 +47,8 @@ def parse_stat_table(
     counts: dict[tuple[str, str], int] = {}
     for row in cast(ResultSet[Tag], tbody.find_all("tr")):
         cells = cast(ResultSet[Tag], row.find_all("td"))
+        if not cells:
+            continue
         date = cells[0].get_text().strip()
         for listing, cell in zip(listing_labels, cells[1:-1]):
             counts[(listing, date)] = parse_int(cell.get_text())
