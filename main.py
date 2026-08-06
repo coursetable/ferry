@@ -106,7 +106,7 @@ async def start_crawl(args: Args) -> list[str]:
 
 
 async def main():
-    args = get_hargs()
+    args = get_args()
 
     if args.debug:
         logging.basicConfig(level=logging.DEBUG)
