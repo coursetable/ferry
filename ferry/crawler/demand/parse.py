@@ -36,7 +36,11 @@ def parse_stat_table(
     if type(thead) != Tag or type(tbody) != Tag:
         return None
 
-    header_cells = cast(ResultSet[Tag], thead.find("tr").find_all("th"))
+    header_row = thead.find("tr")
+    if type(header_row) != Tag:
+        return None
+
+    header_cells = cast(ResultSet[Tag], header_row.find_all("th"))
     # first column is Date, last column is Total
     listing_labels = [normalize_label(h.get_text()) for h in header_cells[1:-1]]
 
