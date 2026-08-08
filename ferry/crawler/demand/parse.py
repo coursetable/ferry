@@ -1,4 +1,5 @@
 import re
+from datetime import date, timedelta
 from typing import TypedDict, cast
 
 from bs4 import BeautifulSoup, ResultSet, Tag
@@ -18,6 +19,20 @@ def parse_int(text: str) -> int:
         return int(text.strip())
     except ValueError:
         return 0
+
+
+def resolve_date(month_day: str, reference_date: date) -> str:
+    """
+    The site's date columns are bare "MM/DD" with no year. Infer the year
+    from reference_date (the date the page was fetched), handling the
+    Dec/Jan wraparound where a trailing-week window fetched in early January
+    can include late-December dates from the previous year.
+    """
+    month, day = int(month_day[:2]), int(month_day[3:5])
+    candidate = date(reference_date.year, month, day)
+    if candidate > reference_date + timedelta(days=1):
+        candidate = date(reference_date.year - 1, month, day)
+    return candidate.isoformat()
 
 
 def parse_stat_table(
@@ -49,9 +64,9 @@ def parse_stat_table(
         cells = cast(ResultSet[Tag], row.find_all("td"))
         if not cells:
             continue
-        date = cells[0].get_text().strip()
+        date_str = cells[0].get_text().strip()
         for listing, cell in zip(listing_labels, cells[1:-1]):
-            counts[(listing, date)] = parse_int(cell.get_text())
+            counts[(listing, date_str)] = parse_int(cell.get_text())
 
     return counts
 
@@ -77,6 +92,7 @@ def parse_course_demand_page(
     season_code: str,
     subject_code: str,
     course_number: str,
+    reference_date: date,
 ) -> ParsedCourseDemand | None:
     if page is None:
         return None
@@ -105,12 +121,16 @@ def parse_course_demand_page(
     counts: list[DemandCount] = [
         {
             "listing": listing,
-            "date": date,
-            "registered": (stat_tables["REGISTERED"] or {}).get((listing, date), 0),
-            "waitlisted": (stat_tables["WAITLISTED"] or {}).get((listing, date), 0),
-            "visiting": (stat_tables["VISITING"] or {}).get((listing, date), 0),
+            "date": resolve_date(date_str, reference_date),
+            "registered": (stat_tables["REGISTERED"] or {}).get(
+                (listing, date_str), 0
+            ),
+            "waitlisted": (stat_tables["WAITLISTED"] or {}).get(
+                (listing, date_str), 0
+            ),
+            "visiting": (stat_tables["VISITING"] or {}).get((listing, date_str), 0),
         }
-        for listing, date in sorted(all_keys)
+        for listing, date_str in sorted(all_keys)
     ]
 
     return {

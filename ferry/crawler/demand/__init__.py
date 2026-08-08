@@ -1,3 +1,4 @@
+from datetime import date
 from pathlib import Path
 
 import httpx
@@ -19,6 +20,11 @@ async def crawl_demand(
     use_cache: bool = True,
 ):
     print(f"Fetching course demand statistics for seasons: {seasons}...")
+
+    # Captured once so an entire run uses a consistent "today" for resolving
+    # the site's bare MM/DD dates into real years, even if the crawl spans
+    # midnight.
+    reference_date = date.today()
 
     async with httpx.AsyncClient(
         headers={"Cookie": cas_cookie, "User-Agent": USER_AGENT},
@@ -56,7 +62,7 @@ async def crawl_demand(
             for subject_code, course_number, page in pages:
                 try:
                     parsed = parse_course_demand_page(
-                        page, season, subject_code, course_number
+                        page, season, subject_code, course_number, reference_date
                     )
                 except EmptyDemandError:
                     continue
