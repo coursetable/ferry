@@ -5,6 +5,12 @@
 # Needs CAS cookie from ivy.yale.edu/course-stats (same process as getting cookie for evals)
 # and need CWS API key for crawling classes
 # For debug printing, use -d option.
+#
+# use_cache applies to seasons/classes only - keep it true so course listings
+# don't get refetched every test run. demand_use_cache is intentionally left
+# unset (defaults false) so the demand crawler always hits the live site,
+# since demand data is time-sensitive and the cache would otherwise just
+# keep serving whatever snapshot was captured on the first run.
 
 release: false
 seasons:

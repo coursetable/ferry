@@ -12,6 +12,7 @@ class RawArgs:
     crawl_seasons: bool
     cws_api_key: str | None
     demand_cas_cookie: str | None
+    demand_use_cache: bool
     data_dir: str
     database_connect_string: str | None
     debug: bool
@@ -44,6 +45,7 @@ class Args:
     crawl_seasons: bool
     cws_api_key: str
     demand_cas_cookie: str
+    demand_use_cache: bool
     data_dir: Path
     database_connect_string: str
     debug: bool
@@ -252,6 +254,12 @@ def get_parser():
     parser.add_argument(
         "--use-cache",
         help="Whether to use cache for requests. Automatically set to false in release mode.",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "--demand-use-cache",
+        help="Whether to use cache for demand requests specifically, independent of --use-cache. Demand data is time-sensitive, so this defaults to false even when --use-cache is set.",
         action="store_true",
     )
 

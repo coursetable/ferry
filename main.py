@@ -91,7 +91,7 @@ async def start_crawl(args: Args) -> list[str]:
             seasons=seasons,
             data_dir=args.data_dir,
             courses=classes,
-            use_cache=args.use_cache,
+            use_cache=args.demand_use_cache,
         )
 
     # Track seasons updated during crawl for catalog refresh endpoint
