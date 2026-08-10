@@ -13,7 +13,12 @@ from ferry.crawler.classes import crawl_classes
 from ferry.crawler.demand import crawl_demand
 from ferry.crawler.evals import crawl_evals
 from ferry.crawler.seasons import fetch_seasons
-from ferry.database import sync_db_courses, sync_db_courses_old, sync_db_evals
+from ferry.database import (
+    sync_db_courses,
+    sync_db_courses_old,
+    sync_db_demand,
+    sync_db_evals,
+)
 from ferry.summarize import DEFAULT_MODEL, summarize_evals
 from ferry.transform import transform, write_csvs
 
@@ -147,6 +152,9 @@ async def main():
     if args.sync_db_evals:
         assert tables
         sync_db_evals(tables, args.database_connect_string)
+    if args.sync_db_demand:
+        assert tables
+        sync_db_demand(tables, args.database_connect_string)
     if args.summarize_evals:
         if not args.openai_api_key:
             raise ValueError("API key is required for --summarize-evals")

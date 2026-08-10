@@ -9,7 +9,6 @@ from ferry.crawler.cas_request import USER_AGENT
 from ferry.crawler.classes.parse import ParsedCourse
 
 from .fetch import FetchError, fetch_all_season_demand_pages
-from .parse import EmptyDemandError, parse_course_demand_page
 
 
 async def crawl_demand(
@@ -44,8 +43,7 @@ async def crawl_demand(
                     f"Season {season} not found in parsed_courses directory. Run --crawl-classes first."
                 )
 
-            # TODO: Handle cross-listed courses
-            # rn, it's fetching the same page for each course in a cross listing
+            # Dedup by (subject, number) for different sections of the same course
             seen: set[tuple[str, str]] = set()
             unique_courses: list[tuple[str, str]] = []
             for course in season_courses:
@@ -54,25 +52,14 @@ async def crawl_demand(
                     seen.add(key)
                     unique_courses.append(key)
 
-            pages = await fetch_all_season_demand_pages(
-                season, unique_courses, client, data_dir, use_cache=use_cache
+            season_demand = await fetch_all_season_demand_pages(
+                season,
+                unique_courses,
+                client,
+                data_dir,
+                reference_date,
+                use_cache=use_cache,
             )
-
-            season_demand = []
-            for subject_code, course_number, page in pages:
-                try:
-                    parsed = parse_course_demand_page(
-                        page, season, subject_code, course_number, reference_date
-                    )
-                except EmptyDemandError:
-                    continue
-                except Exception as error:
-                    tqdm.write(
-                        f"error parsing {season}-{subject_code}{course_number}: {error}"
-                    )
-                    continue
-                if parsed is not None:
-                    season_demand.append(parsed)
 
             save_cache_json(data_dir / "parsed_demand" / f"{season}.json", season_demand)
 

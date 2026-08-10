@@ -8,11 +8,19 @@
 # contains registered, waitlisted, visiting counts per day
 
 import asyncio
+from datetime import date
 from pathlib import Path
 
 import httpx
 from tqdm import tqdm
 from tqdm.asyncio import tqdm_asyncio
+
+from ferry.crawler.demand.parse import (
+    EmptyDemandError,
+    ParsedCourseDemand,
+    extract_listing_key,
+    parse_course_demand_page,
+)
 
 COURSE_DETAIL_URL = "https://ivy.yale.edu/course-stats/course/courseDetail"
 
@@ -86,20 +94,42 @@ async def fetch_course_demand_page(
     return page
 
 
-# fetch demand pages for all courses in a season, at bounded concurrency
+# fetch and parse demand pages for all courses in a season
+# Cross-listed courses share demand pages, so keep running list
+# of all the (subject, number) pairs already covered by earlier fetches
+# Cross-listed courses share one registrar-reported demand
+# page (fetching any one member returns every member's numbers as separate
+# table columns), so this keeps a running set of (subject, number) keys
+# already covered by an earlier fetch in this batch and skips re-fetching
+# them - no separate cross-listing lookup needed, the grouping is read
+# straight off of whatever page happens to get fetched first. Fetching and
+# parsing have to be done inline together (rather than as separate passes)
+# since later skip decisions depend on what earlier pages' parsed listing
+# columns reveal.
 async def fetch_all_season_demand_pages(
     season: str,
     unique_courses: list[tuple[str, str]],
     client: httpx.AsyncClient,
     data_dir: Path,
+    reference_date: date,
     use_cache: bool = True,
-) -> list[tuple[str, str, bytes | None]]:
+) -> list[ParsedCourseDemand]:
     semaphore = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
+    covered: set[tuple[str, str]] = set()
 
     async def fetch_one(
         subject_code: str, course_number: str
-    ) -> tuple[str, str, bytes | None]:
+    ) -> ParsedCourseDemand | None:
+        key = (subject_code, course_number)
+        if key in covered:
+            # Cheap pre-check: avoids waiting on the semaphore at all for
+            # work that's already known to be redundant.
+            return None
         async with semaphore:
+            if key in covered:
+                # Re-check: may have become covered by another task while
+                # this one was queued waiting for a semaphore slot.
+                return None
             try:
                 page = await fetch_course_demand_page(
                     term_code=season,
@@ -111,7 +141,7 @@ async def fetch_all_season_demand_pages(
                 )
             except FetchError as error:
                 tqdm.write(f"skipped {season}-{subject_code}{course_number}: {error}")
-                return subject_code, course_number, None
+                return None
             except AuthError:
                 # Let this propagate as a normal exception rather than
                 # SystemExit - asyncio's gather/as_completed only reliably
@@ -120,12 +150,30 @@ async def fetch_all_season_demand_pages(
                 # "Task exception was never retrieved" warning instead of a
                 # clean error when multiple tasks fail around the same time.
                 raise
-        return subject_code, course_number, page
+
+        try:
+            parsed = parse_course_demand_page(
+                page, season, subject_code, course_number, reference_date
+            )
+        except EmptyDemandError:
+            return None
+        except Exception as error:
+            tqdm.write(f"error parsing {season}-{subject_code}{course_number}: {error}")
+            return None
+        if parsed is None:
+            return None
+
+        for count in parsed["counts"]:
+            listing_key = extract_listing_key(count["listing"])
+            if listing_key is not None:
+                covered.add(listing_key)
+        return parsed
 
     futures = [
         fetch_one(subject_code, course_number)
         for subject_code, course_number in unique_courses
     ]
-    return await tqdm_asyncio.gather(
+    parsed_pages = await tqdm_asyncio.gather(
         *futures, leave=False, desc=f"Fetching demand for {season}"
     )
+    return [parsed for parsed in parsed_pages if parsed is not None]

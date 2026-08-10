@@ -30,6 +30,7 @@ class RawArgs:
     summarize_evals: bool
     sync_db_courses: bool
     sync_db_evals: bool
+    sync_db_demand: bool
     transform: bool
     use_cache: bool
     freeze_locations: bool
@@ -62,6 +63,7 @@ class Args:
     summarize_evals: bool
     sync_db_courses: bool
     sync_db_evals: bool
+    sync_db_demand: bool
     transform: bool
     use_cache: bool
     freeze_locations: bool
@@ -236,6 +238,11 @@ def get_parser():
     parser.add_argument(
         "--sync-db-evals",
         help="The evaluations are not synced by default. If you are crawling evals (once a semester), you can use this flag to sync them to the database.",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--sync-db-demand",
+        help="Demand statistics are not synced by default. Use this flag to upsert crawled demand data into the database.",
         action="store_true",
     )
 
@@ -459,7 +466,12 @@ def get_args() -> Args:
     if args.release:
         args.use_cache = False
 
-    if args.snapshot_tables or args.sync_db_courses or args.sync_db_evals:
+    if (
+        args.snapshot_tables
+        or args.sync_db_courses
+        or args.sync_db_evals
+        or args.sync_db_demand
+    ):
         args.transform = True
 
     if args.save_config:

@@ -14,6 +14,17 @@ def normalize_label(text: str) -> str:
     return re.sub(r"\s+", " ", text.replace("\xa0", " ")).strip()
 
 
+def extract_listing_key(listing: str) -> tuple[str, str] | None:
+    """
+    Splits a page's listing column label (e.g. "CENG 1200 01") into its
+    (subject_code, course_number) key.
+    """
+    parts = listing.split(" ")
+    if len(parts) < 3:
+        return None
+    return parts[0], " ".join(parts[1:-1])
+
+
 def parse_int(text: str) -> int:
     try:
         return int(text.strip())
