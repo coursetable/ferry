@@ -11,7 +11,7 @@ import re
 from typing import Any
 
 # Default model when none is specified (OpenAI).
-DEFAULT_MODEL = "gpt-5.4-nano"
+DEFAULT_MODEL = "gpt-5.6-luna"
 
 # Retry config for rate limits
 RATE_LIMIT_MAX_RETRIES = 5
@@ -109,6 +109,9 @@ class LLMClient:
             re.match(r"o\d", model_to_use) or re.search(r"-o\d", model_to_use)
         )
         token_param = "max_completion_tokens" if uses_completion_tokens else "max_tokens"
+        request_options: dict[str, Any] = {token_param: max_tokens}
+        if uses_completion_tokens:
+            request_options["reasoning_effort"] = "medium"
 
         for attempt in range(RATE_LIMIT_MAX_RETRIES):
             try:
@@ -116,7 +119,7 @@ class LLMClient:
                     model=model_to_use,
                     messages=messages,
                     temperature=temperature,
-                    **{token_param: max_tokens},
+                    **request_options,
                 )
                 break
             except RateLimitError as exc:
