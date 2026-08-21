@@ -118,7 +118,7 @@ class LLMClient:
         if _uses_reasoning_parameters(model_to_use):
             request_options = {
                 "max_completion_tokens": max_tokens,
-                "reasoning_effort": "medium",
+                "reasoning_effort": "low",
             }
         else:
             request_options = {

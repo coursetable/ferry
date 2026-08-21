@@ -67,7 +67,7 @@ class LLMClientTests(unittest.IsolatedAsyncioTestCase):
                         "model": model,
                         "messages": self.messages,
                         "max_completion_tokens": 900,
-                        "reasoning_effort": "medium",
+                        "reasoning_effort": "low",
                     },
                 )
 
@@ -98,7 +98,7 @@ class LLMClientTests(unittest.IsolatedAsyncioTestCase):
         )
 
         self.assertEqual(request["model"], "openai/gpt-5.6-luna")
-        self.assertEqual(request["reasoning_effort"], "medium")
+        self.assertEqual(request["reasoning_effort"], "low")
         self.assertEqual(request["max_completion_tokens"], 900)
         self.assertNotIn("temperature", request)
         self.assertNotIn("max_tokens", request)
