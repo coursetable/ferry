@@ -26,7 +26,7 @@ MIN_COMMENTS_FOR_SUMMARY = 3
 # Maximum concurrent API requests to avoid rate-limit pressure.
 MAX_CONCURRENT_REQUESTS = 10
 
-SYSTEM_PROMPT = """
+SYSTEM_PROMPT = f"""
 You are an expert at synthesizing student course evaluations for publication in a university course catalog. You will receive a set of student comments responding to a single evaluation question for one course.
 
 Your task
@@ -50,7 +50,7 @@ Output format
 Return only the summary text. No preamble, headers, labels, or meta-commentary (e.g., do not write "Summary:" or "Here is the summary:").
 
 Edge cases
-- Very few comments (1-3): Still summarize, but use appropriately tentative language ("The few responses received indicated…").
+- Minimum eligible sample ({MIN_COMMENTS_FOR_SUMMARY} comments): Summarize with appropriately tentative language ("The few responses received indicated…").
 - Contradictory comments: Present the split honestly rather than picking a side.
 - Off-topic comments: Ignore comments that don't address the evaluation question.
 - Offensive or inappropriate content: Omit it from the summary; do not reproduce or reference it.
@@ -95,7 +95,7 @@ async def _summarize_comments(
         return await llm.complete(
             messages,
             temperature=0.3,
-            max_tokens=300,
+            max_tokens=1024,
         )
 
 

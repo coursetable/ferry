@@ -18,6 +18,15 @@ RATE_LIMIT_MAX_RETRIES = 5
 RATE_LIMIT_INITIAL_BACKOFF_SEC = 2
 
 
+def _uses_reasoning_parameters(model: str) -> bool:
+    """Return whether a model uses the reasoning-model request parameters."""
+    model_name = model.rsplit("/", 1)[-1].lower()
+    return bool(
+        re.match(r"gpt-5(?:[.-]|$)", model_name)
+        or re.match(r"o\d+(?:[.-]|$)", model_name)
+    )
+
+
 def _retry_after_seconds(exc: BaseException) -> float | None:
     """Extract retry-after from error response or message. Returns None if not found."""
     response = getattr(exc, "response", None)
@@ -86,7 +95,8 @@ class LLMClient:
         model
             Override the default model for this request.
         temperature
-            Sampling temperature (0-2).
+            Sampling temperature (0-2) for non-reasoning models. Reasoning
+            models omit this parameter because they may reject it.
         max_tokens
             Maximum tokens in the response.
 
@@ -104,21 +114,23 @@ class LLMClient:
         model_to_use = model or self.model
         last_exc: BaseException | None = None
 
-        # GPT-5 and o-series require max_completion_tokens; legacy providers use max_tokens.
-        uses_completion_tokens = model_to_use.startswith("gpt-5") or bool(
-            re.match(r"o\d", model_to_use) or re.search(r"-o\d", model_to_use)
-        )
-        token_param = "max_completion_tokens" if uses_completion_tokens else "max_tokens"
-        request_options: dict[str, Any] = {token_param: max_tokens}
-        if uses_completion_tokens:
-            request_options["reasoning_effort"] = "medium"
+        request_options: dict[str, Any]
+        if _uses_reasoning_parameters(model_to_use):
+            request_options = {
+                "max_completion_tokens": max_tokens,
+                "reasoning_effort": "medium",
+            }
+        else:
+            request_options = {
+                "max_tokens": max_tokens,
+                "temperature": temperature,
+            }
 
         for attempt in range(RATE_LIMIT_MAX_RETRIES):
             try:
                 response = await self._client.chat.completions.create(
                     model=model_to_use,
                     messages=messages,
-                    temperature=temperature,
                     **request_options,
                 )
                 break
@@ -143,7 +155,7 @@ class LLMClient:
             raise RuntimeError("Unexpected retry loop exit")
 
         content = response.choices[0].message.content
-        if content is None:
-            logging.warning("LLM returned None content")
+        if content is None or not content.strip():
+            logging.warning("LLM returned empty content")
             raise ValueError("LLM API returned empty content")
         return content.strip()
