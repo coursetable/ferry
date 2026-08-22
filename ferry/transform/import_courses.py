@@ -104,6 +104,11 @@ exactly_identical_crns = [
     ("202601", (22785, 26528)),  # MUS 640
 ]
 
+# YCS occasionally publishes incomplete cross-list cliques
+incomplete_cross_listing_fixes = [
+    ("202701", (22008, 22010, 22011, 22828)),
+]
+
 
 def generate_course_id(row: pd.Series) -> int:
     season = int(row["season_code"]) - 200000
@@ -149,6 +154,25 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
             listings.loc[season_mask, "crns"] = listings.loc[season_mask, "crns"].apply(
                 lambda x: x - set(rest)
             )
+
+    for season, crns in incomplete_cross_listing_fixes:
+        if season not in listings["season_code"].values:
+            continue
+        crn_set = frozenset(crns)
+        season_mask = listings["season_code"] == season
+        present_crns = listings.loc[season_mask, "crn"].astype(int)
+        affected = present_crns[present_crns.isin(crn_set)]
+        if affected.empty:
+            continue
+        logging.warning(
+            "Applying cross-listing override for season %s CRNs %s",
+            season,
+            sorted(crn_set),
+        )
+        for crn in affected:
+            row_mask = season_mask & listings["crn"].eq(crn)
+            for idx in listings.index[row_mask]:
+                listings.at[idx, "crns"] = crn_set
 
     logging.debug("Aggregating cross-listings")
     # season -> CRN -> set of CRNs it's connected to
