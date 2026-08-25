@@ -11,11 +11,20 @@ import re
 from typing import Any
 
 # Default model when none is specified (OpenAI).
-DEFAULT_MODEL = "gpt-4.1-mini"
+DEFAULT_MODEL = "gpt-5.6-luna"
 
 # Retry config for rate limits
 RATE_LIMIT_MAX_RETRIES = 5
 RATE_LIMIT_INITIAL_BACKOFF_SEC = 2
+
+
+def _uses_reasoning_parameters(model: str) -> bool:
+    """Return whether a model uses the reasoning-model request parameters."""
+    model_name = model.rsplit("/", 1)[-1].lower()
+    return bool(
+        re.match(r"gpt-5(?:[.-]|$)", model_name)
+        or re.match(r"o\d+(?:[.-]|$)", model_name)
+    )
 
 
 def _retry_after_seconds(exc: BaseException) -> float | None:
@@ -86,7 +95,8 @@ class LLMClient:
         model
             Override the default model for this request.
         temperature
-            Sampling temperature (0-2).
+            Sampling temperature (0-2) for non-reasoning models. Reasoning
+            models omit this parameter because they may reject it.
         max_tokens
             Maximum tokens in the response.
 
@@ -104,13 +114,24 @@ class LLMClient:
         model_to_use = model or self.model
         last_exc: BaseException | None = None
 
+        request_options: dict[str, Any]
+        if _uses_reasoning_parameters(model_to_use):
+            request_options = {
+                "max_completion_tokens": max_tokens,
+                "reasoning_effort": "low",
+            }
+        else:
+            request_options = {
+                "max_tokens": max_tokens,
+                "temperature": temperature,
+            }
+
         for attempt in range(RATE_LIMIT_MAX_RETRIES):
             try:
                 response = await self._client.chat.completions.create(
                     model=model_to_use,
                     messages=messages,
-                    temperature=temperature,
-                    max_tokens=max_tokens,
+                    **request_options,
                 )
                 break
             except RateLimitError as exc:
@@ -134,7 +155,7 @@ class LLMClient:
             raise RuntimeError("Unexpected retry loop exit")
 
         content = response.choices[0].message.content
-        if content is None:
-            logging.warning("LLM returned None content")
+        if content is None or not content.strip():
+            logging.warning("LLM returned empty content")
             raise ValueError("LLM API returned empty content")
         return content.strip()
