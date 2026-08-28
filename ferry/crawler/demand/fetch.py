@@ -1,8 +1,6 @@
 # Fetches Yale course demand statistics detail pages from
 # ivy.yale.edu/course-stats/course/courseDetail.
-# Requires a CAS-authenticaed session cookie, sent as a plain Cookie header -
-# unlike evals' oce.app.yale.edu, this site works fine with a native
-# httpx.AsyncClient, no curl subprocess needed.
+# Requires a CAS-authenticaed session cookie, sent as a plain Cookie header
 #
 # One page per (term, subject, course number)
 # contains registered, waitlisted, visiting counts per day
@@ -26,8 +24,6 @@ COURSE_DETAIL_URL = "https://ivy.yale.edu/course-stats/course/courseDetail"
 
 # No clue what upper limit is on this. 1 is ~20 mins
 # ngl anything above 8 seems to be the same ~10 mins
-# Claude says to keep concurrency modest to avoid overloading
-# the session or tripping potential rate limits/firewall
 MAX_CONCURRENT_REQUESTS = 4
 
 class AuthError(Exception):
@@ -97,15 +93,6 @@ async def fetch_course_demand_page(
 # fetch and parse demand pages for all courses in a season
 # Cross-listed courses share demand pages, so keep running list
 # of all the (subject, number) pairs already covered by earlier fetches
-# Cross-listed courses share one registrar-reported demand
-# page (fetching any one member returns every member's numbers as separate
-# table columns), so this keeps a running set of (subject, number) keys
-# already covered by an earlier fetch in this batch and skips re-fetching
-# them - no separate cross-listing lookup needed, the grouping is read
-# straight off of whatever page happens to get fetched first. Fetching and
-# parsing have to be done inline together (rather than as separate passes)
-# since later skip decisions depend on what earlier pages' parsed listing
-# columns reveal.
 async def fetch_all_season_demand_pages(
     season: str,
     unique_courses: list[tuple[str, str]],
