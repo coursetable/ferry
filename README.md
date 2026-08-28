@@ -61,14 +61,16 @@ Note: because we use `argparse`, you can provide just the prefix of each argumen
 | CLI flag                    | Config option             | Env key        | Default                              | Description                                                                                           |
 | --------------------------- | ------------------------- | -------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------- |
 | `--cas-cookie`              | `cas_cookie`              | `CAS_COOKIE`   | `None`; prompt if `crawl_evals`      | Only used for fetching evals; see below                                                               |
+| `--demand-cas-cookie`       | `demand_cas_cookie`       | `DEMAND_CAS_COOKIE` | `None`; prompt if `crawl_demand` | CAS cookie for Yale course demand statistics (ivy.yale.edu); see below                                |
 | `-f`, `--config-file`       | N/A                       | N/A            | `None`                               | Path to YAML config file, relative to PWD; if unspecified, all options are read from command          |
 | `--data-dir`                | `data_dir`                | N/A            | `data`                               | Directory to load/store parsed data. This is usually where the `ferry-data` is cloned.                |
-| `--database-connect-string` | `database_connect_string` | `POSTGRES_URI` | `None`; prompt if `sync_db_courses` or `sync_db_evals`          | Postgres connection string; for dev, see `dev_sync_db_courses.yml`                                            |
+| `--database-connect-string` | `database_connect_string` | `POSTGRES_URI` | `None`; prompt if `sync_db_courses`, `sync_db_evals`, or `sync_db_demand` | Postgres connection string; for dev, see `dev_sync_db_courses.yml`                          |
 | `-d`, `--debug`             | `debug`                   | N/A            | `False`                              | Enable debug logging                                                                                  |
 | `-r`, `--release`           | `release`                 | N/A            | `False`                              | Run in release mode; see below                                                                        |
 | `-s`, `--seasons`           | `seasons`                 | N/A            | `None`                               | A list of seasons to fetch; see below                                                                 |
 | `--sentry-url`              | `sentry_url`              | `SENTRY_URL`   | `None`; prompt if `release`          | Sentry URL for error reporting; required in release mode, ignored in dev mode                         |
 | `--use-cache`               | `use_cache`               | N/A            | `False`; always `False` if `release` | Use cached data instead of fetching fresh data. Even if not using cache, cache will still be updated. |
+| `--demand-use-cache`        | `demand_use_cache`        | N/A            | `False`                              | Same as `--use-cache`, but for demand requests specifically. Demand data is time-sensitive, so this is independent of `--use-cache` and defaults to `False` even when that's set. |
 
 ### Stage switches
 
@@ -80,10 +82,12 @@ You can selectively run certain stages of Ferry. Options below are in the order 
 | `--crawl-seasons`    | `crawl_seasons`    | Run the seasons crawler. If `False` and no cached data is available, then `--seasons` must be provided and all be valid seasons.                                   |
 | `--crawl-classes`    | `crawl_classes`    | Run the class crawler.                                                                                                                                             |
 | `--crawl-evals`      | `crawl_evals`      | Run the eval crawler.                                                                                                                                              |
-| `--transform`        | `transform`        | Run the transformer. Always `True` if `sync_db_courses`, `sync_db_evals`, or `snapshot_tables`.                                                                               |
+| `--crawl-demand`     | `crawl_demand`     | Run the course demand statistics crawler. Requires `--crawl-classes` to have been run first (or cached `parsed_courses` data) to know which subject/number pairs to fetch. |
+| `--transform`        | `transform`        | Run the transformer. Always `True` if `sync_db_courses`, `sync_db_evals`, `sync_db_demand`, or `snapshot_tables`.                                                  |
 | `--snapshot-tables`  | `snapshot_tables`  | Generate CSV files capturing data that would be written to DB.                                                                                                     |
 | `--sync-db-courses`     | `sync_db_courses`     | Sync the transformed data to the database.                                                                                                                         |
 | `--sync-db-evals`     | `sync_db_evals`     | Sync the transformed data to the database.                                                                                                                         |
+| `--sync-db-demand`     | `sync_db_demand`     | Upsert crawled demand data to the database. Not run by default even if `crawl_demand` is set.                                                                     |
 | `--rewrite`          | `rewrite`          | Use old sync db function to write to database instead of incremental write. Use this during the first run to set up the database. Only has an effect if `sync_db_courses`. |
 | `--generate-diagram` | `generate_diagram` | Generate a DB visualization diagram to `docs/db_diagram.pdf`                                                                                                       |
 
@@ -166,6 +170,22 @@ python main.py -f config/dev_evals.yml
 python main.py --sync-db-evals
 # Enter the prod database URL when prompted
 ```
+
+## Crawling demand
+
+Demand data (registered/waitlisted/visiting counts per day) is fetched from `ivy.yale.edu/course-stats`, similar in spirit to evals: it requires its own CAS-authenticated cookie, and there's currently no automated GitHub Action for it, so it's run manually.
+
+To get a valid cookie, log into https://ivy.yale.edu/course-stats, refresh with the network inspector tab open, and copy the `Cookie` header from the first HTTP request, same process as the evals CAS cookie above. Pass it via the `--demand-cas-cookie` option or `DEMAND_CAS_COOKIE` env var.
+
+The demand crawler needs to know each season's subject/course-number pairs, so `--crawl-classes` must be run first (or cached `parsed_courses` data must already exist for the seasons you're fetching).
+
+```sh
+python main.py -f config/dev_demand.yml
+python main.py --sync-db-demand
+# Enter the prod database URL when prompted
+```
+
+Because demand data changes throughout the add/drop period, `--demand-use-cache` is independent of `--use-cache` and defaults to `False` even when `--use-cache` is set, so repeat runs always hit the live site rather than serving a stale snapshot.
 
 ## Linting & formatting
 
