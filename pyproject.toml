@@ -27,6 +27,7 @@ dependencies = [
   "uvloop==0.21.0",
   "vadersentiment==3.3.2",
   "openai>=2.0.0",
+  "bs4>=0.0.2",
 ]
 
 [dependency-groups]
