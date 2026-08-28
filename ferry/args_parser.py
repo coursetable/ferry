@@ -2,6 +2,8 @@ import argparse
 from pathlib import Path
 from typing import Any, cast
 
+from ferry.ai import DEFAULT_MODEL
+
 
 class RawArgs:
     cas_cookie: str | None
@@ -201,7 +203,11 @@ def get_parser():
 
     parser.add_argument(
         "--llm-model",
-        help="Model name for eval summarization (e.g. gpt-4.1-mini, groq/llama-3-70b). Defaults to gpt-4.1-mini.",
+        help=(
+            "Model name for eval summarization "
+            f"(e.g. {DEFAULT_MODEL}, groq/llama-3-70b). "
+            f"Defaults to {DEFAULT_MODEL}."
+        ),
         default=None,
     )
 
