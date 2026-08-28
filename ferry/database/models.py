@@ -1,6 +1,7 @@
 from sqlalchemy import (
     Boolean,
     Column,
+    Date,
     Float,
     ForeignKey,
     Index,
@@ -751,5 +752,99 @@ class EvaluationNarrativeSummary(BaseModel):
     summary = Column(
         Text,
         comment="AI-generated summary of student narrative comments",
+        nullable=False,
+    )
+
+
+class ListingDemandStatistics(BaseModel):
+    """
+    Listing-level demand statistics table (registered/waitlisted/visiting
+    counts per day, scraped from ivy.yale.edu/course-stats). This is
+    immutable time series data - once a date is in the past, its row should
+    never change; only "today" may get overwritten across multiple runs on
+    the same day. Keyed by listing (not course) since cross-listed sections
+    have distinct registration pools with genuinely different counts. See
+    also CourseDemandStatistics, which stores the course_id-level sum across
+    every listing in a cross-listing group.
+    """
+
+    __tablename__ = "listing_demand_statistics"
+
+    id = Column(Integer, primary_key=True)
+
+    listing_id = Column(
+        Integer,
+        ForeignKey("listings.listing_id"),
+        comment="The specific cross-listed section this demand snapshot is for",
+        index=True,
+        nullable=False,
+    )
+    listing = relationship("Listing", backref="demand_statistics", cascade="all")
+
+    date = Column(
+        Date,
+        comment="Calendar date of this demand snapshot",
+        nullable=False,
+    )
+
+    registered = Column(
+        Integer, comment="Number of students registered", nullable=False
+    )
+    waitlisted = Column(
+        Integer, comment="Number of students waitlisted", nullable=False
+    )
+    visiting = Column(
+        Integer, comment="Number of students visiting/shopping", nullable=False
+    )
+
+    __table_args__ = (
+        Index(
+            "idx_listing_date_unique",
+            "listing_id",
+            "date",
+            unique=True,
+        ),
+    )
+
+
+class CourseDemandStatistics(BaseModel):
+    """
+    Course-level demand statistics: registered/waitlisted/visiting summed
+    across every listing in a cross-listing group (course_id). Derived data,
+    always recomputed from ListingDemandStatistics at transform time - never
+    hand-edited. Mirrors EvaluationStatistics's course_id-keyed shape.
+    """
+
+    __tablename__ = "course_demand_statistics"
+
+    course_id = Column(
+        Integer,
+        ForeignKey("courses.course_id"),
+        primary_key=True,
+        comment="The cross-listing group this aggregate demand snapshot is for",
+        nullable=False,
+    )
+    course = relationship("Course", backref="demand_statistics", cascade="all")
+
+    date = Column(
+        Date,
+        primary_key=True,
+        comment="Calendar date of this demand snapshot",
+        nullable=False,
+    )
+
+    registered = Column(
+        Integer,
+        comment="Total number of students registered across every listing in the cross-listing group",
+        nullable=False,
+    )
+    waitlisted = Column(
+        Integer,
+        comment="Total number of students waitlisted across every listing in the cross-listing group",
+        nullable=False,
+    )
+    visiting = Column(
+        Integer,
+        comment="Total number of students visiting/shopping across every listing in the cross-listing group",
         nullable=False,
     )
