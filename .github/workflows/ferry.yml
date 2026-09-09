@@ -27,6 +27,9 @@ jobs:
       matrix:
         python-version: ["3.12"]
     steps:
+      - name: Signal start
+        run: curl -fsS -m 10 --retry 5 -o /dev/null "${{ secrets.HC_PING_FERRY_CRAWL }}/start"
+
       - uses: actions/checkout@v4
 
       - uses: actions/checkout@v4
@@ -169,3 +172,7 @@ jobs:
           subject: "[FERRY] Changelog - ${{ env.CHANGELOG_DATE_TIME }}"
           html_body: "file://${{ env.FILE }}"
           convert_markdown: true
+
+      - name: Signal result
+        if: always()
+        run: curl -fsS -m 10 --retry 5 -o /dev/null "${{ secrets.HC_PING_FERRY_CRAWL }}${{ job.status == 'success' && '' || '/fail' }}"
