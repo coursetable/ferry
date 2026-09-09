@@ -173,6 +173,10 @@ jobs:
           html_body: "file://${{ env.FILE }}"
           convert_markdown: true
 
-      - name: Signal result
-        if: always()
-        run: curl -fsS -m 10 --retry 5 -o /dev/null "${{ secrets.HC_PING_FERRY_CRAWL }}${{ job.status == 'success' && '' || '/fail' }}"
+      - name: Signal success
+        if: success()
+        run: curl -fsS -m 10 --retry 5 -o /dev/null "${{ secrets.HC_PING_FERRY_CRAWL }}"
+
+      - name: Signal failure
+        if: failure()
+        run: curl -fsS -m 10 --retry 5 -o /dev/null "${{ secrets.HC_PING_FERRY_CRAWL }}/fail"
