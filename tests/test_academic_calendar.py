@@ -9,6 +9,7 @@ from ferry.crawler.academic_calendar.parse import (
     CalendarParseError,
     parse_academic_calendar,
 )
+from ferry.transform.import_academic_calendar import split_and_classify
 
 
 def make_page(sections: dict[str, list[tuple[str, str, str]]]) -> str:
@@ -96,6 +97,53 @@ class AcademicCalendarParseTests(unittest.TestCase):
     def test_rejects_empty_calendar(self) -> None:
         with self.assertRaises(CalendarParseError):
             parse_academic_calendar(make_page({}), source_url="https://example.com")
+
+
+class AcademicCalendarEventTypeTests(unittest.TestCase):
+    def test_tags_wording_variants(self) -> None:
+        for description, season_code, expected in [
+            ("Fall-term classes begin, 8:20 a.m.", "201303", "classes_begin"),
+            ("Fall classes begin.", "202603", "classes_begin"),
+            ("Spring-term classes begin.", "202701", "classes_begin"),
+            ("Examinations end, 5:30 p.m.", "201401", "final_exams_end"),
+            (
+                "Final examinations end. Winter recess begins.",
+                "202603",
+                "final_exams_end",
+            ),
+            ("Martin Luther King Jr. Day.", "202201", "mlk_day"),
+            ("Fall second half-term classes begin.", "202203", None),
+            ("Graduate School classes end.", "202603", None),
+            # Stale fall row in a spring table
+            ("Fall term classes begin.", "202401", None),
+        ]:
+            self.assertEqual(
+                split_and_classify(description, season_code),
+                [(description, expected)],
+                description,
+            )
+
+    def test_splits_combined_milestones(self) -> None:
+        self.assertEqual(
+            split_and_classify(
+                "Classes end, 5:30 p.m.; reading period begins.", "201303"
+            ),
+            [
+                ("Classes end, 5:30 p.m.", "classes_end"),
+                ("Reading period begins.", "reading_period_begins"),
+            ],
+        )
+        self.assertEqual(
+            split_and_classify(
+                "Final examinations end; 5:30 p.m.; winter recess begins", "202503"
+            ),
+            [
+                (
+                    "Final examinations end; 5:30 p.m.; winter recess begins",
+                    "final_exams_end",
+                )
+            ],
+        )
 
 
 class FetchWithRetriesTests(unittest.TestCase):
