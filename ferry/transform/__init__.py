@@ -9,6 +9,7 @@ import ujson
 from ferry import database
 
 from .cache_id import save_id_cache
+from .import_academic_calendar import import_academic_calendar
 from .import_courses import import_courses
 from .import_evaluations import import_evaluations
 from .invariants import check_invariants

@@ -8,6 +8,8 @@ from ferry.ai import DEFAULT_MODEL
 class RawArgs:
     cas_cookie: str | None
     config_file: str | None
+    crawl_academic_calendar: bool
+    crawl_academic_calendar_archive: bool
     crawl_classes: bool
     crawl_evals: bool
     crawl_seasons: bool
@@ -27,6 +29,7 @@ class RawArgs:
     sentry_url: str | None
     snapshot_tables: bool
     summarize_evals: bool
+    sync_db_academic_calendar: bool
     sync_db_courses: bool
     sync_db_evals: bool
     transform: bool
@@ -38,6 +41,8 @@ class RawArgs:
 
 class Args:
     cas_cookie: str
+    crawl_academic_calendar: bool
+    crawl_academic_calendar_archive: bool
     crawl_classes: bool
     crawl_evals: bool
     crawl_seasons: bool
@@ -56,6 +61,7 @@ class Args:
     sentry_url: str
     snapshot_tables: bool
     summarize_evals: bool
+    sync_db_academic_calendar: bool
     sync_db_courses: bool
     sync_db_evals: bool
     transform: bool
@@ -91,6 +97,18 @@ def get_parser():
         "--config-file",
         help="Path to config YAML file. The config file will be loaded as default args.",
         default=None,
+    )
+
+    parser.add_argument(
+        "--crawl-academic-calendar",
+        help="Crawl the current Yale College academic calendar.",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "--crawl-academic-calendar-archive",
+        help="Crawl all archived Yale College academic calendars (2013-2014 onward).",
+        action="store_true",
     )
 
     parser.add_argument(
@@ -217,6 +235,12 @@ def get_parser():
     )
 
     parser.add_argument(
+        "--sync-db-academic-calendar",
+        help="Replace the academic calendar table in the database with all parsed academic calendars.",
+        action="store_true",
+    )
+
+    parser.add_argument(
         "--sync-db-courses",
         help="Sync the database. This is automatically set to true in release mode.",
         action="store_true",
@@ -319,7 +343,7 @@ def parse_env_args(args: RawArgs):
     if args.database_connect_string is None:
         args.database_connect_string = os.environ.get("POSTGRES_URI")
         if args.database_connect_string is None and (
-            args.sync_db_courses or args.sync_db_evals
+            args.sync_db_courses or args.sync_db_evals or args.sync_db_academic_calendar
         ):
             args.database_connect_string = input("Enter database connection string: ")
 

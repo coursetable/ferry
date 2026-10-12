@@ -7,14 +7,23 @@ import uvloop
 from httpx import AsyncClient
 
 from ferry.args_parser import Args, get_args, parse_seasons_arg
+from ferry.crawler.academic_calendar import (
+    crawl_academic_calendar,
+    crawl_academic_calendar_archive,
+)
 from ferry.crawler.cache import load_cache_json
 from ferry.crawler.cas_request import USER_AGENT
 from ferry.crawler.classes import crawl_classes
 from ferry.crawler.evals import crawl_evals
 from ferry.crawler.seasons import fetch_seasons
-from ferry.database import sync_db_courses, sync_db_courses_old, sync_db_evals
+from ferry.database import (
+    sync_db_academic_calendar,
+    sync_db_courses,
+    sync_db_courses_old,
+    sync_db_evals,
+)
 from ferry.summarize import DEFAULT_MODEL, summarize_evals
-from ferry.transform import transform, write_csvs
+from ferry.transform import import_academic_calendar, transform, write_csvs
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 # Limit pandas display to avoid memory issues with large DataFrames
@@ -85,6 +94,11 @@ async def start_crawl(args: Args) -> list[str]:
             courses=classes,
         )
 
+    if args.crawl_academic_calendar:
+        await crawl_academic_calendar(data_dir=args.data_dir, client=client)
+    if args.crawl_academic_calendar_archive:
+        await crawl_academic_calendar_archive(data_dir=args.data_dir, client=client)
+
     # Track seasons updated during crawl for catalog refresh endpoint
     if args.crawl_classes or args.crawl_evals:
         updated_seasons_path = args.data_dir / "ferry_updated_seasons.txt"
@@ -138,6 +152,10 @@ async def main():
     if args.sync_db_evals:
         assert tables
         sync_db_evals(tables, args.database_connect_string)
+    if args.sync_db_academic_calendar:
+        sync_db_academic_calendar(
+            import_academic_calendar(args.data_dir), args.database_connect_string
+        )
     if args.summarize_evals:
         if not args.openai_api_key:
             raise ValueError("API key is required for --summarize-evals")

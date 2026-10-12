@@ -1,6 +1,7 @@
 from sqlalchemy import (
     Boolean,
     Column,
+    Date,
     Float,
     ForeignKey,
     Index,
@@ -751,5 +752,52 @@ class EvaluationNarrativeSummary(BaseModel):
     summary = Column(
         Text,
         comment="AI-generated summary of student narrative comments",
+        nullable=False,
+    )
+
+
+class AcademicCalendarEvent(BaseModel):
+    """
+    Yale College academic calendar events (deadlines, breaks, term dates),
+    scraped from the YCPS "Calendar with Pertinent Deadlines" page once a year.
+    """
+
+    __tablename__ = "academic_calendar_events"
+    __table_args__ = (
+        Index("ix_academic_calendar_events_season_date", "season_code", "date"),
+    )
+
+    id = Column(Integer, primary_key=True)
+    academic_year = Column(
+        String(9),
+        comment="Academic year the calendar belongs to (e.g. '2026-2027')",
+        index=True,
+        nullable=False,
+    )
+    # Note: purposefully not a foreign key to seasons, because this table is
+    # synced independently and may reference seasons without course data yet.
+    season_code = Column(
+        String(10),
+        comment="The term this event belongs to (e.g. '202603')",
+        nullable=False,
+    )
+    date = Column(
+        Date,
+        comment="Date of the event, or the first day if it spans multiple days",
+        index=True,
+        nullable=False,
+    )
+    end_date = Column(
+        Date,
+        comment="Last day of the event if it spans multiple days; null for single-day events",
+    )
+    day_of_week = Column(
+        String(10),
+        comment="Day of week as listed on the calendar (e.g. 'M', 'Th', 'Su')",
+        nullable=False,
+    )
+    description = Column(
+        Text,
+        comment="Description of the event or deadline",
         nullable=False,
     )

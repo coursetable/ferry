@@ -84,6 +84,8 @@ You can selectively run certain stages of Ferry. Options below are in the order 
 | `--snapshot-tables`  | `snapshot_tables`  | Generate CSV files capturing data that would be written to DB.                                                                                                     |
 | `--sync-db-courses`     | `sync_db_courses`     | Sync the transformed data to the database.                                                                                                                         |
 | `--sync-db-evals`     | `sync_db_evals`     | Sync the transformed data to the database.                                                                                                                         |
+| `--crawl-academic-calendar` | `crawl_academic_calendar` | Fetch the current Yale College academic calendar into `academic_calendar/<academic_year>.json`.                                                     |
+| `--sync-db-academic-calendar` | `sync_db_academic_calendar` | Replace the `academic_calendar_events` table with all parsed academic calendars.                                                                |
 | `--rewrite`          | `rewrite`          | Use old sync db function to write to database instead of incremental write. Use this during the first run to set up the database. Only has an effect if `sync_db_courses`. |
 | `--generate-diagram` | `generate_diagram` | Generate a DB visualization diagram to `docs/db_diagram.pdf`                                                                                                       |
 
@@ -165,6 +167,16 @@ Eval data is fetched and committed using an entirely separate pipeline, because 
 python main.py -f config/dev_evals.yml
 python main.py --sync-db-evals
 # Enter the prod database URL when prompted
+```
+
+## Crawling the academic calendar
+
+The Yale College academic calendar (https://catalog.yale.edu/ycps/calendar/) is fetched once a year by the `Academic Calendar` workflow. Each academic year is saved to its own file in `academic_calendar/`, and the `academic_calendar_events` table is rebuilt from all of them. Running `--rewrite` drops this table, so rerun the academic calendar sync afterwards.
+
+```sh
+python main.py -f config/dev_academic_calendar.yml
+python main.py --sync-db-academic-calendar
+# Enter the database URL when prompted
 ```
 
 ## Linting & formatting

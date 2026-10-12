@@ -1,0 +1,8 @@
+# PROD CONFIG
+# This configuration is used for fetching the current Yale College academic calendar and syncing it to the production database.
+
+# Sentry URL & DB URL are passed through env
+release: true
+
+crawl_academic_calendar: true
+sync_db_academic_calendar: true
