@@ -38,10 +38,9 @@ jobs:
           echo "$PWD/.venv/bin" >> $GITHUB_PATH
           uv pip install -e .
 
-      - name: Fetch and Sync Academic Calendar
+      - name: Fetch Academic Calendar
         run: |
           python -u main.py -f config/release_academic_calendar.yml \
-            --database-connect-string "${{ secrets.DATABASE_CONNECT_STRING }}" \
             --sentry-url "${{ secrets.SENTRY_URL }}"
 
       - name: Commit Academic Calendar Data
@@ -54,3 +53,9 @@ jobs:
           repository: data
           file_pattern: "academic_calendar/*.json"
           skip_dirty_check: false
+
+      - name: Sync to Database
+        run: |
+          python -u main.py --release --sync-db-academic-calendar \
+            --database-connect-string "${{ secrets.DATABASE_CONNECT_STRING }}" \
+            --sentry-url "${{ secrets.SENTRY_URL }}"
