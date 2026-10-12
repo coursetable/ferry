@@ -44,12 +44,12 @@ class AcademicCalendarParseTests(unittest.TestCase):
 
         self.assertEqual(calendar["academic_year"], "2026-2027")
         self.assertEqual(
-            [(e["season_code"], e["date"], e["end_date"]) for e in calendar["events"]],
+            [(e["season_code"], e["date"]) for e in calendar["events"]],
             [
-                ("202603", "2026-09-02", None),
-                ("202603", "2027-01-04", None),
-                ("202701", "2027-01-19", None),
-                ("202701", "2027-03-13", "2027-03-28"),
+                ("202603", "2026-09-02"),
+                ("202603", "2027-01-04"),
+                ("202701", "2027-01-19"),
+                ("202701", "2027-03-13"),
             ],
         )
 

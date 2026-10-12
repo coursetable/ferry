@@ -783,13 +783,9 @@ class AcademicCalendarEvent(BaseModel):
     )
     date = Column(
         Date,
-        comment="Date of the event, or the first day if it spans multiple days",
+        comment="Date of the event (the first day, if it spans multiple days)",
         index=True,
         nullable=False,
-    )
-    end_date = Column(
-        Date,
-        comment="Last day of the event if it spans multiple days; null for single-day events",
     )
     day_of_week = Column(
         String(10),

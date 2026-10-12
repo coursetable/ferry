@@ -22,7 +22,6 @@ class ParsedCalendarEvent(TypedDict):
     season_code: str
     # ISO date strings (YYYY-MM-DD)
     date: str
-    end_date: str | None
     day_of_week: str
     description: str
 
@@ -65,10 +64,11 @@ term_heading_re = re.compile(
     r"^(fall|spring|summer)(?:\s+(?:term|session))?\s+(\d{4})$", re.I
 )
 academic_year_re = re.compile(r"(\d{4})\s*[–—-]\s*(\d{4})")
-# Matches "Sept. 15", "May 1", "Mar. 6–22", "Dec. 22–Jan. 11"
+# Matches "Sept. 15", "May 1", and ranges like "Mar. 6–22" or "Dec. 22–Jan. 11",
+# for which we only keep the first day
 date_re = re.compile(
     r"^(?P<month>[A-Za-z]+)\.?\s*(?P<day>\d{1,2})"
-    + r"(?:\s*[–—-]\s*(?:(?P<end_month>[A-Za-z]+)\.?\s*)?(?P<end_day>\d{1,2}))?$"
+    + r"(?:\s*[–—-]\s*(?:[A-Za-z]+\.?\s*)?\d{1,2})?$"
 )
 
 
@@ -89,25 +89,13 @@ def infer_year(term: str, term_year: int, month: int) -> int:
     return term_year
 
 
-def parse_date_range(
-    date_text: str, term: str, term_year: int
-) -> tuple[datetime.date, datetime.date | None]:
+def parse_date(date_text: str, term: str, term_year: int) -> datetime.date:
     match = date_re.match(date_text.strip())
     if not match:
         raise CalendarParseError(f"Unrecognized date: {date_text!r}")
 
     month = parse_month(match["month"])
-    start = datetime.date(infer_year(term, term_year, month), month, int(match["day"]))
-    if match["end_day"] is None:
-        return start, None
-
-    end_month = parse_month(match["end_month"]) if match["end_month"] else month
-    end = datetime.date(
-        infer_year(term, term_year, end_month), end_month, int(match["end_day"])
-    )
-    if end < start:
-        raise CalendarParseError(f"Date range ends before it starts: {date_text!r}")
-    return start, end
+    return datetime.date(infer_year(term, term_year, month), month, int(match["day"]))
 
 
 def normalize_day(day_text: str) -> str:
@@ -184,18 +172,17 @@ def parse_academic_calendar(html: str, source_url: str) -> ParsedAcademicCalenda
         if not date_text or not descriptions:
             continue
 
-        start, end = parse_date_range(date_text, term, term_year)
-        if not day_matches(day_text, start):
+        date = parse_date(date_text, term, term_year)
+        if not day_matches(day_text, date):
             day_mismatches.append(
                 f"{date_text!r}: page says {day_text}, "
-                + f"but inferred date {start.isoformat()} is a {start.strftime('%A')}"
+                + f"but inferred date {date.isoformat()} is a {date.strftime('%A')}"
             )
         for description in descriptions:
             events.append(
                 {
                     "season_code": season_code,
-                    "date": start.isoformat(),
-                    "end_date": end.isoformat() if end else None,
+                    "date": date.isoformat(),
                     "day_of_week": day_text,
                     "description": description,
                 }

@@ -9,7 +9,6 @@ ACADEMIC_CALENDAR_COLUMNS = [
     "academic_year",
     "season_code",
     "date",
-    "end_date",
     "day_of_week",
     "description",
 ]
