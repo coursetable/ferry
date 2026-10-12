@@ -22,6 +22,7 @@ class RawArgs:
     llm_model: str | None
     llm_base_url: str | None
     max_courses: int | None
+    max_retries: int
     release: bool
     rewrite: bool
     save_config: bool
@@ -55,6 +56,7 @@ class Args:
     llm_model: str | None
     llm_base_url: str | None
     max_courses: int | None
+    max_retries: int
     release: bool
     rewrite: bool
     seasons: list[str] | None
@@ -232,6 +234,13 @@ def get_parser():
         type=int,
         default=None,
         help="Max courses per season for eval summarization (omit for no limit).",
+    )
+
+    parser.add_argument(
+        "--max-retries",
+        type=int,
+        default=3,
+        help="Max retries for failed academic calendar requests (with exponential backoff).",
     )
 
     parser.add_argument(

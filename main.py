@@ -95,9 +95,13 @@ async def start_crawl(args: Args) -> list[str]:
         )
 
     if args.crawl_academic_calendar:
-        await crawl_academic_calendar(data_dir=args.data_dir, client=client)
+        await crawl_academic_calendar(
+            data_dir=args.data_dir, client=client, max_retries=args.max_retries
+        )
     if args.crawl_academic_calendar_archive:
-        await crawl_academic_calendar_archive(data_dir=args.data_dir, client=client)
+        await crawl_academic_calendar_archive(
+            data_dir=args.data_dir, client=client, max_retries=args.max_retries
+        )
 
     # Track seasons updated during crawl for catalog refresh endpoint
     if args.crawl_classes or args.crawl_evals:

@@ -1,5 +1,10 @@
+import asyncio
 import unittest
+from unittest import mock
 
+import httpx
+
+from ferry.crawler.academic_calendar import fetch_with_retries
 from ferry.crawler.academic_calendar.parse import (
     CalendarParseError,
     parse_academic_calendar,
@@ -91,6 +96,46 @@ class AcademicCalendarParseTests(unittest.TestCase):
     def test_rejects_empty_calendar(self) -> None:
         with self.assertRaises(CalendarParseError):
             parse_academic_calendar(make_page({}), source_url="https://example.com")
+
+
+class FetchWithRetriesTests(unittest.TestCase):
+    def fetch(self, responses: list, max_retries: int) -> httpx.Response:
+        calls = iter(responses)
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            result = next(calls)
+            if isinstance(result, Exception):
+                raise result
+            return httpx.Response(result)
+
+        async def run() -> httpx.Response:
+            async with httpx.AsyncClient(
+                transport=httpx.MockTransport(handler)
+            ) as client:
+                return await fetch_with_retries(
+                    client, "https://example.com", max_retries
+                )
+
+        with mock.patch("asyncio.sleep", new=mock.AsyncMock()):
+            return asyncio.run(run())
+
+    def test_retries_dropped_connection_and_server_error(self) -> None:
+        r = self.fetch(
+            [httpx.RemoteProtocolError("Server disconnected"), 503, 200],
+            max_retries=3,
+        )
+        self.assertEqual(r.status_code, 200)
+
+    def test_gives_up_after_max_retries(self) -> None:
+        with self.assertRaises(httpx.RemoteProtocolError):
+            self.fetch(
+                [httpx.RemoteProtocolError("Server disconnected")] * 2,
+                max_retries=1,
+            )
+
+    def test_does_not_retry_not_found(self) -> None:
+        r = self.fetch([404], max_retries=3)
+        self.assertEqual(r.status_code, 404)
 
 
 if __name__ == "__main__":
