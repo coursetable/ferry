@@ -112,6 +112,12 @@ class Course(BaseModel):
         comment="Course section. Note that the section number is the same for all cross-listings.",
         nullable=False,
     )
+    section_full = Column(
+        Boolean,
+        comment="Whether the section is full according to Yale Course Search",
+        nullable=False,
+        default=False,
+    )
 
     professors = relationship(
         "Professor",
