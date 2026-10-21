@@ -536,6 +536,7 @@ class ParsedCourse(TypedDict):
     fysem: bool
     sysem: bool
     colsem: bool
+    section_full: bool
 
 
 def extract_course_info(
@@ -594,6 +595,7 @@ def extract_course_info(
         "fysem": False,
         "sysem": False,
         "colsem": False,
+        "section_full": False,
     }
 
     course_info["fysem"] = course_json["crn"] in fysem or is_fysem(
@@ -609,6 +611,10 @@ def extract_course_info(
     )
 
     course_info["colsem"] = course_info["subject"] in COLLEGE_SEMINAR_CODES
+
+    # YCS reports full sections with stat "F". Keep "F" out of STAT_MAP so
+    # full sections retain extra_info "ACTIVE" and are not treated as cancelled.
+    course_info["section_full"] = course_json["stat"] == "F"
 
     return course_info
 
