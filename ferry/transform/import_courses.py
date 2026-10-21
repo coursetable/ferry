@@ -245,6 +245,22 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
         .transform(validate_primary_crn)
         .astype(pd.Int64Dtype())
     )
+
+    # Cross-listings of the same course may disagree on section_full. Warn and
+    # propagate the conservative value (full if any listing is full) so that
+    # whichever row drop_duplicates keeps carries the group's value.
+    mixed = listings.groupby("course_id")["section_full"].nunique()
+    for course_id, count in mixed.items():
+        if count > 1:
+            logging.warning(
+                "Conflicting section_full values for course %s:\n%s",
+                course_id,
+                listings[listings["course_id"] == course_id],
+            )
+    listings["section_full"] = listings.groupby("course_id")["section_full"].transform(
+        "any"
+    )
+
     courses = listings.drop_duplicates(subset="course_id").set_index("course_id")
     return listings, courses
 
@@ -589,6 +605,46 @@ def generate_listing_id(row: pd.Series) -> int:
     return season * 100000 + row["crn"]
 
 
+def _read_parsed_season(
+    parsed_courses_file: Path, season: str, updated_seasons: set[str]
+) -> pd.DataFrame:
+    """
+    Load a parsed season and normalize its section_full column.
+
+    Older parsed files predate section_full, so they default to False. A season
+    that was just parsed must have real values; otherwise the crawl or cache is
+    stale and the import should stop.
+    """
+    parsed_course_info = pd.read_json(
+        parsed_courses_file,
+        dtype={
+            "crn": int,
+            "primary_crn": pd.Int64Dtype(),
+            "colsem": bool,
+            "fysem": bool,
+            "sysem": bool,
+            # Nullable boolean preserves nulls; plain bool would turn them into True.
+            "section_full": "boolean",
+        },
+    )
+    if "section_full" not in parsed_course_info.columns:
+        if season in updated_seasons:
+            raise ValueError(f"{season}: section_full missing; re-parse without cache.")
+        parsed_course_info["section_full"] = False
+    else:
+        if season in updated_seasons and bool(
+            parsed_course_info["section_full"].isna().any()
+        ):
+            raise ValueError(
+                f"{season}: section_full has missing data; re-parse without cache."
+            )
+        parsed_course_info["section_full"] = (
+            parsed_course_info["section_full"].fillna(False).astype(bool)
+        )
+    parsed_course_info["season_code"] = season
+    return parsed_course_info
+
+
 def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     """
     Import courses from JSON files in `parsed_courses_dir`.
@@ -607,6 +663,15 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
     print("\nImporting courses...")
     parsed_courses_dir = data_dir / "parsed_courses"
 
+    # The crawl records the seasons it just parsed here. Only those seasons are
+    # guaranteed to include section_full; older parsed files predate the column.
+    updated_file = data_dir / "ferry_updated_seasons.txt"
+    updated_seasons = (
+        set(updated_file.read_text().strip().split(","))
+        if updated_file.is_file()
+        else set()
+    )
+
     all_imported_listings: list[pd.DataFrame] = []
 
     for season in tqdm(seasons, desc="Loading course JSONs", leave=False):
@@ -614,17 +679,9 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
         if not parsed_courses_file.is_file():
             print(f"Skipping season {season}: not found in parsed courses.")
             continue
-        parsed_course_info = pd.read_json(
-            parsed_courses_file,
-            dtype={
-                "crn": int,
-                "primary_crn": pd.Int64Dtype(),
-                "colsem": bool,
-                "fysem": bool,
-                "sysem": bool,
-            },
+        parsed_course_info = _read_parsed_season(
+            parsed_courses_file, season, updated_seasons
         )
-        parsed_course_info["season_code"] = season
         all_imported_listings.append(parsed_course_info)
 
     logging.debug("Creating listings table")
@@ -643,6 +700,11 @@ def import_courses(data_dir: Path, seasons: list[str]) -> CourseTables:
 
     # Clean up source data immediately after concat
     del all_imported_listings
+
+    if "section_full" not in listings.columns:
+        raise ValueError("section_full is missing from parsed listings.")
+    if bool(listings["section_full"].isna().any()):
+        raise ValueError("section_full has missing values in parsed listings.")
 
     # Force garbage collection after loading all data
     gc.collect()
