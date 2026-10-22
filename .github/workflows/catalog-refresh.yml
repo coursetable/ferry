@@ -5,7 +5,7 @@ on:
 
 jobs:
   refresh:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Regenerate static catalog on server
         run: |

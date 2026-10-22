@@ -21,7 +21,7 @@ on:
 
 jobs:
   ferry:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 240
     strategy:
       matrix:
@@ -133,7 +133,7 @@ jobs:
           fi
 
   send_mail:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: ferry
     steps:
       - uses: actions/checkout@v4
