@@ -16,8 +16,6 @@ def _listing(crn: int, crns: set[int]) -> dict:
 
 
 def test_incomplete_cross_listing_fix_ignores_missing_crns():
-    # The override for 202701 names CRN 22828, but it is absent from the data;
-    # linking to it would leave a dangling reference in the cross-list graph
     listings = pd.DataFrame(
         [
             _listing(22008, {22008, 22010}),
