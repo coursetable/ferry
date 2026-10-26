@@ -195,5 +195,5 @@ jobs:
         run: |
           if [ "$RESULT" = passed ]; then ICON=":white_check_mark:"; else ICON=":x:"; fi
           curl -fsS -m 10 --retry 3 -X POST -H 'Content-type: application/json' \
-            --data "{\"text\":\"$ICON Nightly ferry crawl $RESULT: $RUN_URL\"}" \
+            --data "{\"text\":\"$ICON Ferry crawl $RESULT: $RUN_URL\"}" \
             "$SLACK_WEBHOOK_URL"
