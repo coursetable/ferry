@@ -158,9 +158,11 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
     for season, crns in incomplete_cross_listing_fixes:
         if season not in listings["season_code"].values:
             continue
-        crn_set = frozenset(crns)
         season_mask = listings["season_code"] == season
         present_crns = listings.loc[season_mask, "crn"].astype(int)
+        # Only link CRNs that exist this season; a missing CRN would be a
+        # dangling reference in the cross-list graph
+        crn_set = frozenset(crns) & frozenset(present_crns)
         affected = present_crns[present_crns.isin(crn_set)]
         if affected.empty:
             continue
