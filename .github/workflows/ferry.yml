@@ -180,3 +180,20 @@ jobs:
       - name: Signal failure
         if: failure()
         run: curl -fsS -m 10 --retry 5 -o /dev/null "${{ secrets.HC_PING_FERRY_CRAWL }}/fail"
+
+  notify:
+    if: always() && github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    needs: [ferry, send_mail]
+    permissions: {}
+    steps:
+      - name: Post result to Slack
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          RESULT: ${{ needs.ferry.result == 'success' && needs.send_mail.result == 'success' && 'passed' || 'failed' }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ "$RESULT" = passed ]; then ICON=":white_check_mark:"; else ICON=":x:"; fi
+          curl -fsS -m 10 --retry 3 -X POST -H 'Content-type: application/json' \
+            --data "{\"text\":\"$ICON Nightly ferry crawl $RESULT: $RUN_URL\"}" \
+            "$SLACK_WEBHOOK_URL"
