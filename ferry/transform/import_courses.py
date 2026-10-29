@@ -107,6 +107,7 @@ exactly_identical_crns = [
 # YCS occasionally publishes incomplete cross-list cliques
 incomplete_cross_listing_fixes = [
     ("202701", (22008, 22010, 22011, 22828)),
+    ("202701", (24287, 24288, 24351, 24352)),
 ]
 
 
