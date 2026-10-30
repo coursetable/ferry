@@ -1,0 +1,91 @@
+name: Manual Demand Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      season:
+        description: "Season to fetch (e.g. 202603)"
+        required: true
+      skip_fetch:
+        description: "Skip fetching? (Use existing data in repo)"
+        type: boolean
+        required: true
+        default: false
+      sync_db:
+        description: "Sync to database?"
+        type: boolean
+        required: true
+        default: false
+
+jobs:
+  release_demand:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: coursetable/ferry-data
+          path: data
+          ssh-key: ${{ secrets.REPO_SSH_KEY }}
+          fetch-depth: 1
+
+      - name: Install Packages
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install gcc g++ musl-dev libffi-dev libpq-dev libhdf5-dev python3-tables graphviz libgraphviz-dev
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install uv and dependencies
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv venv .venv
+          echo "VIRTUAL_ENV=.venv" >> $GITHUB_ENV
+          echo "$PWD/.venv/bin" >> $GITHUB_PATH
+          uv pip install -e .
+
+      - name: Fetch Demand Statistics
+        if: ${{ !inputs.skip_fetch }}
+        env:
+          DEMAND_CAS_COOKIE: ${{ secrets.DEMAND_CAS_COOKIE }}
+        run: |
+          # Use --crawl-demand and explicit season
+          # Relies on cached parsed_courses data already present in ferry-data
+          # for subject/course-number pairs; run the classes crawler first if
+          # that cache is missing or stale for this season.
+          python main.py --crawl-demand --seasons ${{ inputs.season }} --demand-cas-cookie "$DEMAND_CAS_COOKIE"
+
+      - name: Validate Data (Transform)
+        run: |
+          # Running transform checks for InvariantError in questions
+          python main.py --transform --snapshot-tables
+
+      - name: Commit Demand Data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "feat: add ${{ inputs.season }} demand statistics"
+          commit_user_name: "Ferry Bot"
+          commit_user_email: "coursetable.at.yale@gmail.com"
+          commit_author: course-table <course-table@users.noreply.github.com>
+          repository: data
+          file_pattern: "parsed_demand/*.json"
+          skip_dirty_check: false
+
+      - name: Sync to Database
+        if: ${{ inputs.sync_db }}
+        env:
+          DATABASE_CONNECT_STRING: ${{ secrets.DATABASE_CONNECT_STRING }}
+        run: |
+          # Sync demand (this implicitly runs transform again)
+          python main.py --sync-db-demand --database-connect-string "$DATABASE_CONNECT_STRING"
+
+      - name: Regenerate static catalog on server
+        if: ${{ inputs.sync_db }}
+        run: |
+          curl --silent --show-error -H "X-FERRY-SECRET: ${{secrets.FERRY_SECRET}}" "https://api.coursetable.com/api/catalog/refresh?seasons=${{ inputs.season }}"
+          curl --silent --show-error -H "X-FERRY-SECRET: ${{secrets.FERRY_SECRET}}" "https://api-staging.coursetable.com/api/catalog/refresh?seasons=${{ inputs.season }}"
