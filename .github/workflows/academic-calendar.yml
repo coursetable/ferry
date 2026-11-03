@@ -1,9 +1,6 @@
 name: Academic Calendar
 
 on:
-  schedule:
-    # The next year's YCPS catalog is published over the summer
-    - cron: "0 7 15 8 *" # Aug 15, 3:00 AM EDT
   workflow_dispatch:
 
 jobs:
