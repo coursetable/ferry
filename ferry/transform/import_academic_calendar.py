@@ -182,7 +182,7 @@ def import_academic_calendar(data_dir: Path) -> pd.DataFrame:
     events = events.reset_index(drop=True)
     events.insert(0, "id", events.index + 1)
 
-    unique = events[events["event_type"].isin(UNIQUE_EVENT_TYPES)]
+    unique = events.loc[events["event_type"].isin(list(UNIQUE_EVENT_TYPES))]
     duplicates = unique.duplicated(subset=["season_code", "event_type"], keep=False)
     for _, event in unique.loc[duplicates].iterrows():
         print(
