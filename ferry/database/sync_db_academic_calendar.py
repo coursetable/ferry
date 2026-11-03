@@ -13,6 +13,14 @@ def sync_db_academic_calendar(events: pd.DataFrame, database_connect_string: str
     rebuilt from all parsed calendars every time, so dropping and recreating it
     within one transaction is simpler than diffing and never leaves it empty.
     """
+    # A missing or empty academic_calendar/ directory would otherwise wipe the
+    # existing table
+    if events.empty:
+        raise ValueError(
+            "No academic calendar events to sync; refusing to replace the table. "
+            + "Check that academic_calendar/*.json exists in the data directory."
+        )
+
     db = Database(database_connect_string)
     table = AcademicCalendarEvent.__table__
 
