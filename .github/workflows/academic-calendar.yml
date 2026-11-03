@@ -52,7 +52,9 @@ jobs:
           skip_dirty_check: false
 
       - name: Sync to Database
+        env:
+          DATABASE_CONNECT_STRING: ${{ secrets.DATABASE_CONNECT_STRING }}
         run: |
           python -u main.py --release --sync-db-academic-calendar \
-            --database-connect-string "${{ secrets.DATABASE_CONNECT_STRING }}" \
+            --database-connect-string "$DATABASE_CONNECT_STRING" \
             --sentry-url "${{ secrets.SENTRY_URL }}"
