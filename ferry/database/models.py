@@ -799,6 +799,7 @@ class AcademicCalendarEvent(BaseModel):
     )
     event_type = Column(
         String(32),
-        comment="[computed] Stable tag for key milestones, consistent across years: one of classes_begin, classes_end, reading_period_begins, reading_period_ends, final_exams_begin, final_exams_end, mlk_day. Null for other events. At most one event per type per season.",
+        comment="[computed] Stable tag for key milestones, consistent across years: one of classes_begin, classes_end, reading_period_begins, reading_period_ends, final_exams_begin, final_exams_end, mlk_day. Untagged events are not stored. At most one event per type per season.",
         index=True,
+        nullable=False,
     )

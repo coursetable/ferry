@@ -30,38 +30,29 @@ EVENT_TYPE_PATTERNS = {
     "final_exams_end": re.compile(r"^(online )?(final )?examination(s| period) end"),
     "mlk_day": re.compile(r"^martin luther king"),
 }
-SEASON_SUFFIX_TO_TERM = {"01": "spring", "02": "summer", "03": "fall"}
 
 
-def classify_clause(clause: str, season_code: str) -> str | None:
+def classify_clause(clause: str) -> str | None:
     clause = clause.strip().lower()
-    # Some pages carry over stale rows from other terms (e.g. the 2023-2024
-    # spring table lists "Fall term classes begin."), which we don't tag
-    if (term := re.match(r"(fall|spring)\b", clause)) and term[1] != (
-        SEASON_SUFFIX_TO_TERM[season_code[-2:]]
-    ):
-        return None
     for event_type, pattern in EVENT_TYPE_PATTERNS.items():
         if pattern.match(clause):
             return event_type
     return None
 
 
-def split_and_classify(
-    description: str, season_code: str
-) -> list[tuple[str, str | None]]:
+def split_and_classify(description: str) -> list[tuple[str, str | None]]:
     """
     Tag a description with an event type. Descriptions that combine several
     milestones (e.g. "Classes end; reading period begins.") are split into one
     event per milestone, so that each event type is a separate row.
     """
     clauses = description.split(";")
-    types = [classify_clause(clause, season_code) for clause in clauses]
+    types = [classify_clause(clause) for clause in clauses]
     if sum(t is not None for t in types) <= 1:
         return [(description, next((t for t in types if t), None))]
 
     events: list[tuple[list[str], str | None]] = []
-    for clause, event_type in zip(clauses, types):
+    for clause, event_type in zip(clauses, types, strict=True):
         if event_type is not None or not events:
             events.append(([clause.strip()], event_type))
         else:
@@ -82,9 +73,10 @@ def import_academic_calendar(data_dir: Path) -> pd.DataFrame:
         with open(path) as f:
             calendar: ParsedAcademicCalendar = ujson.load(f)
         for event in calendar["events"]:
-            for description, event_type in split_and_classify(
-                event["description"], event["season_code"]
-            ):
+            for description, event_type in split_and_classify(event["description"]):
+                # Only tagged milestones go to the database
+                if event_type is None:
+                    continue
                 rows.append(
                     {
                         **event,
@@ -101,9 +93,8 @@ def import_academic_calendar(data_dir: Path) -> pd.DataFrame:
     events.insert(0, "id", events.index + 1)
 
     # Queries rely on there being at most one event per type per season
-    tagged = events.dropna(subset=["event_type"])
-    duplicates = tagged.duplicated(subset=["season_code", "event_type"], keep=False)
-    for _, event in tagged.loc[duplicates].iterrows():
+    duplicates = events.duplicated(subset=["season_code", "event_type"], keep=False)
+    for _, event in events.loc[duplicates].iterrows():
         print(
             f"Warning: multiple {event['event_type']} events in "
             + f"{event['season_code']}: {event['date']} {event['description']!r}"
