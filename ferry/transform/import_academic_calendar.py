@@ -10,7 +10,7 @@ from ferry.crawler.academic_calendar.parse import (
     ParsedCalendarEvent,
 )
 
-ACADEMIC_CALENDAR_COLUMNS = [
+COLUMNS = [
     "season_code",
     "event_type",
     "start_date",
@@ -19,7 +19,7 @@ ACADEMIC_CALENDAR_COLUMNS = [
 ]
 
 # Event types that occur at most once per season
-UNIQUE_EVENT_TYPES = {
+EVENT_TYPES = {
     "classes",
     "reading_period",
     "final_exams",
@@ -87,9 +87,11 @@ def find_markers(description: str) -> list[tuple[str, str, str | None]]:
     for event_type, role, pattern in MARKERS:
         for match in pattern.finditer(description):
             group = match[1].lower() if pattern.groups else None
+
             if role == "recess_start":
                 assert group is not None
                 event_type = event_type.format(group)
+
             found.append((match.start(), event_type, role, group))
     return [(event_type, role, group) for _, event_type, role, group in sorted(found)]
 
@@ -132,29 +134,36 @@ def build_season_ranges(
                 if event_type in open_starts:
                     warn(f"{event_type} starts again on {date} before ending")
                 open_starts[event_type] = date
+
             elif role == "end":
                 if event_type not in open_starts:
                     warn(f"{event_type} ends on {date} without starting")
                     continue
                 add(event_type, open_starts.pop(event_type), date)
+
             elif role == "recess_start":
                 if open_recess is not None:
                     warn(f"{event_type} begins on {date} during {open_recess[0]}")
                 open_recess = (event_type, date + datetime.timedelta(days=1))
+
             elif role == "recess_end":
                 if open_recess is None:
                     warn(f"classes resume on {date} without a recess")
                     continue
+
                 add(open_recess[0], open_recess[1], date - datetime.timedelta(days=1))
                 open_recess = None
+
             elif role == "single":
                 add(event_type, date, date)
+
             elif role == "transfer":
                 assert group is not None
                 add(event_type, date, date, TRANSFER_DAYS[group])
 
     for event_type, start in open_starts.items():
         warn(f"{event_type} starts on {start} but never ends")
+
     if open_recess is not None:
         warn(f"{open_recess[0]} starts on {open_recess[1]} but classes never resume")
     return rows
@@ -167,23 +176,27 @@ def import_academic_calendar(data_dir: Path) -> pd.DataFrame:
     not stored.
     """
     rows: list[dict[str, str | int | None]] = []
+
     for path in sorted((data_dir / "academic_calendar").glob("*.json")):
         with open(path) as f:
             calendar: ParsedAcademicCalendar = ujson.load(f)
         seasons: dict[str, list[ParsedCalendarEvent]] = {}
+
         for event in calendar["events"]:
             seasons.setdefault(event["season_code"], []).append(event)
+
         for season_code, events in seasons.items():
             rows.extend(build_season_ranges(season_code, events))
 
-    events = pd.DataFrame(rows, columns=pd.Index(ACADEMIC_CALENDAR_COLUMNS))
+    events = pd.DataFrame(rows, columns=pd.Index(COLUMNS))
     events["transfer_day"] = events["transfer_day"].astype("Int64")
     events = events.sort_values(["start_date", "season_code"], kind="stable")
     events = events.reset_index(drop=True)
     events.insert(0, "id", events.index + 1)
 
-    unique = events.loc[events["event_type"].isin(list(UNIQUE_EVENT_TYPES))]
+    unique = events.loc[events["event_type"].isin(list(EVENT_TYPES))]
     duplicates = unique.duplicated(subset=["season_code", "event_type"], keep=False)
+    
     for _, event in unique.loc[duplicates].iterrows():
         print(
             f"Warning: multiple {event['event_type']} events in "
