@@ -13,8 +13,9 @@ ACADEMIC_CALENDAR_URL = "https://catalog.yale.edu/ycps/calendar/"
 ACADEMIC_CALENDAR_ARCHIVE_URL = (
     "https://catalog.yale.edu/archive/{academic_year}/ycps/calendar/"
 )
-# The catalog archive starts with the 2013-2014 edition
-ARCHIVE_FIRST_YEAR = 2013
+# The catalog archive goes back to 2013-2014, but calendars before 2020-2021
+# use a different page layout, so we only crawl the archive from 2020-2021 on
+ARCHIVE_FIRST_YEAR = 2020
 DEFAULT_MAX_RETRIES = 3
 
 
@@ -44,12 +45,17 @@ async def fetch_with_retries(
 
 async def crawl_academic_calendar(
     data_dir: Path, client: AsyncClient, max_retries: int = DEFAULT_MAX_RETRIES
-) -> ParsedAcademicCalendar:
+) -> ParsedAcademicCalendar | None:
     """
     Fetch the current Yale College academic calendar and save it to
     `academic_calendar/<academic_year>.json`. Previous years' files are kept, so
     the directory accumulates one file per academic year.
+
+    The page is assumed to be for the current academic year, which we take to
+    start in July (the next year's catalog is published over the summer).
     """
+    today = datetime.date.today()
+    first_year = today.year if today.month >= 7 else today.year - 1
     print("Fetching academic calendar...", end=" ")
     r = await fetch_with_retries(client, ACADEMIC_CALENDAR_URL, max_retries)
     if r.status_code != 200:
@@ -58,7 +64,12 @@ async def crawl_academic_calendar(
             f"Unsuccessful academic calendar response: code {r.status_code}"
         )
 
-    calendar = parse_academic_calendar(r.text, source_url=ACADEMIC_CALENDAR_URL)
+    calendar = parse_academic_calendar(
+        r.text, source_url=ACADEMIC_CALENDAR_URL, first_year=first_year
+    )
+    if calendar is None:
+        print("✘")
+        return None
     save_cache_json(
         data_dir / "academic_calendar" / f"{calendar['academic_year']}.json",
         calendar,
@@ -90,7 +101,9 @@ async def crawl_academic_calendar_archive(
                 f"Unsuccessful academic calendar response: code {r.status_code}"
             )
 
-        calendar = parse_academic_calendar(r.text, source_url=url)
+        calendar = parse_academic_calendar(r.text, source_url=url, first_year=year)
+        if calendar is None:
+            continue
         save_cache_json(
             data_dir / "academic_calendar" / f"{calendar['academic_year']}.json",
             calendar,

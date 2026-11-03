@@ -109,7 +109,7 @@ def get_parser():
 
     parser.add_argument(
         "--crawl-academic-calendar-archive",
-        help="Crawl all archived Yale College academic calendars (2013-2014 onward).",
+        help="Crawl all archived Yale College academic calendars (2020-2021 onward).",
         action="store_true",
     )
 
