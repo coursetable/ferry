@@ -171,7 +171,7 @@ python main.py --sync-db-evals
 
 ## Crawling the academic calendar
 
-The Yale College academic calendar (https://catalog.yale.edu/ycps/calendar/) is fetched by manually running the `Academic Calendar` workflow (e.g. once the next year's catalog is published over the summer). Archived calendars from 2020-2021 on can be fetched with the `Academic Calendar Archive` workflow. Each academic year is saved to its own file in `academic_calendar/`, and the `academic_calendar_events` table is rebuilt from all of them. Running `--rewrite` drops this table, so rerun the academic calendar sync afterwards.
+The Yale College academic calendar (https://catalog.yale.edu/ycps/calendar/) is fetched by manually running the `Academic Calendar` workflow (e.g. once the next year's catalog is published over the summer). Archived calendars from 2013-2014 on can be fetched with the `Academic Calendar Archive` workflow. Each academic year is saved to its own file in `academic_calendar/`, and the `academic_calendar_events` table is rebuilt from all of them. Running `--rewrite` drops this table, so rerun the academic calendar sync afterwards.
 
 ```sh
 python main.py -f config/dev_academic_calendar.yml

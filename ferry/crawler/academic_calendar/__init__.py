@@ -13,9 +13,8 @@ ACADEMIC_CALENDAR_URL = "https://catalog.yale.edu/ycps/calendar/"
 ACADEMIC_CALENDAR_ARCHIVE_URL = (
     "https://catalog.yale.edu/archive/{academic_year}/ycps/calendar/"
 )
-# The catalog archive goes back to 2013-2014, but calendars before 2020-2021
-# use a different page layout, so we only crawl the archive from 2020-2021 on
-ARCHIVE_FIRST_YEAR = 2020
+# The catalog archive starts with the 2013-2014 edition
+ARCHIVE_FIRST_YEAR = 2013
 DEFAULT_MAX_RETRIES = 3
 
 

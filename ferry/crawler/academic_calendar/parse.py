@@ -9,9 +9,10 @@ chronological order: the first date is in year Y, and the year increments when
 the month goes backwards. The listed day of the week is stored as-is but never
 used (it doesn't always agree with the dates, which we trust instead).
 
-Archived calendars before 2020-2021 use a different layout (a single
-`table.caltable` with a `<th>` row per term and several `<br>`-separated events
-per cell), so we don't bother parsing them.
+Before 2020-2021, the rows are the same but all terms share a single
+`table.caltable`, with a `<th>` row per term ("Fall Term 2019") instead of an
+`<h2>`. Some of those years also have a separate Summer Session table after it,
+which we ignore.
 """
 
 import datetime
@@ -84,14 +85,30 @@ def cell_lines(cell: Tag) -> list[str]:
     return [" ".join(line.split()) for line in lines if line.strip()]
 
 
+def normalize_heading(heading: Tag) -> str:
+    # "Fall Term 2019" (pre-2020-2021) and "FALL 2026" both become "FALL 2026"
+    words = heading.get_text(" ", strip=True).upper().split()
+    return " ".join(word for word in words if word != "TERM")
+
+
 def iter_term_rows(soup: BeautifulSoup) -> Iterator[tuple[str, Tag]]:
-    """Yield (term heading, row) pairs in page order."""
+    """Yield (normalized term heading, row) pairs in page order."""
     for table in soup.select("table.tbl_calterm"):
         heading = table.find_previous("h2")
         if not isinstance(heading, Tag):
             raise CalendarParseError("Calendar table has no term heading")
         for row in table.select("tbody tr"):
-            yield heading.get_text(" ", strip=True), row
+            yield normalize_heading(heading), row
+
+    for table in soup.select("table.caltable"):
+        heading_text = None
+        for row in table.select("tr"):
+            if th := row.select_one("th"):
+                heading_text = normalize_heading(th)
+            elif heading_text is None:
+                raise CalendarParseError("Calendar row has no term heading")
+            else:
+                yield heading_text, row
 
 
 def parse_academic_calendar(
@@ -105,10 +122,7 @@ def parse_academic_calendar(
     academic_year = f"{first_year}-{first_year + 1}"
 
     expected_headings = [f"FALL {first_year}", f"SPRING {first_year + 1}"]
-    headings = [
-        " ".join(heading.split()).upper()
-        for heading in dict.fromkeys(h for h, _ in iter_term_rows(soup))
-    ]
+    headings = list(dict.fromkeys(h for h, _ in iter_term_rows(soup)))
     if headings != expected_headings:
         print(
             f"Warning: skipping {academic_year} calendar, expected term headings "
@@ -120,7 +134,7 @@ def parse_academic_calendar(
     year = first_year
     prev_month = 0
     for heading_text, row in iter_term_rows(soup):
-        is_fall = heading_text.upper().startswith("FALL")
+        is_fall = heading_text.startswith("FALL")
         season_code = f"{first_year}03" if is_fall else f"{first_year + 1}01"
 
         cells = row.select("td")
