@@ -87,12 +87,13 @@ def find_markers(description: str) -> list[tuple[str, str, str | None]]:
     for event_type, role, pattern in MARKERS:
         for match in pattern.finditer(description):
             group = match[1].lower() if pattern.groups else None
+            name = event_type
 
             if role == "recess_start":
                 assert group is not None
-                event_type = event_type.format(group)
+                name = event_type.format(group)
 
-            found.append((match.start(), event_type, role, group))
+            found.append((match.start(), name, role, group))
     return [(event_type, role, group) for _, event_type, role, group in sorted(found)]
 
 
@@ -196,7 +197,7 @@ def import_academic_calendar(data_dir: Path) -> pd.DataFrame:
 
     unique = events.loc[events["event_type"].isin(list(EVENT_TYPES))]
     duplicates = unique.duplicated(subset=["season_code", "event_type"], keep=False)
-    
+
     for _, event in unique.loc[duplicates].iterrows():
         print(
             f"Warning: multiple {event['event_type']} events in "
