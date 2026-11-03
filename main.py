@@ -157,9 +157,9 @@ async def main():
         assert tables
         sync_db_evals(tables, args.database_connect_string)
     if args.sync_db_academic_calendar:
-        sync_db_academic_calendar(
-            import_academic_calendar(args.data_dir), args.database_connect_string
-        )
+        # Doesn't depend on course data, so it skips the (much slower) transform
+        calendar_events = import_academic_calendar(args.data_dir)
+        sync_db_academic_calendar(calendar_events, args.database_connect_string)
     if args.summarize_evals:
         if not args.openai_api_key:
             raise ValueError("API key is required for --summarize-evals")
