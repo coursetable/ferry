@@ -9,6 +9,7 @@ from .models import (
     Base,
     Building,
     Course,
+    CourseDemandStatistics,
     EvaluationNarrative,
     EvaluationNarrativeSummary,
     EvaluationQuestion,
@@ -16,6 +17,7 @@ from .models import (
     EvaluationStatistics,
     Flag,
     Listing,
+    ListingDemandStatistics,
     Location,
     Professor,
     Season,
@@ -26,4 +28,5 @@ from .models import (
 from .sync_db_academic_calendar import sync_db_academic_calendar
 from .sync_db_courses import sync_db_courses
 from .sync_db_courses_old import sync_db_courses_old
+from .sync_db_demand import sync_db_demand
 from .sync_db_evals import sync_db_evals

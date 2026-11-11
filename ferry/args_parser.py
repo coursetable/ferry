@@ -11,9 +11,12 @@ class RawArgs:
     crawl_academic_calendar: bool
     crawl_academic_calendar_archive: bool
     crawl_classes: bool
+    crawl_demand: bool
     crawl_evals: bool
     crawl_seasons: bool
     cws_api_key: str | None
+    demand_cas_cookie: str | None
+    demand_use_cache: bool
     data_dir: str
     database_connect_string: str | None
     debug: bool
@@ -33,6 +36,7 @@ class RawArgs:
     sync_db_academic_calendar: bool
     sync_db_courses: bool
     sync_db_evals: bool
+    sync_db_demand: bool
     transform: bool
     use_cache: bool
     freeze_locations: bool
@@ -45,9 +49,12 @@ class Args:
     crawl_academic_calendar: bool
     crawl_academic_calendar_archive: bool
     crawl_classes: bool
+    crawl_demand: bool
     crawl_evals: bool
     crawl_seasons: bool
     cws_api_key: str
+    demand_cas_cookie: str
+    demand_use_cache: bool
     data_dir: Path
     database_connect_string: str
     debug: bool
@@ -66,6 +73,7 @@ class Args:
     sync_db_academic_calendar: bool
     sync_db_courses: bool
     sync_db_evals: bool
+    sync_db_demand: bool
     transform: bool
     use_cache: bool
     freeze_locations: bool
@@ -120,6 +128,12 @@ def get_parser():
     )
 
     parser.add_argument(
+        "--crawl-demand",
+        help="Crawl course demand statistics.",
+        action="store_true",
+    )
+
+    parser.add_argument(
         "--crawl-evals",
         help="Crawl evaluations.",
         action="store_true",
@@ -141,6 +155,12 @@ def get_parser():
         "--data-dir",
         help="Directory to store data files.",
         default=DATA_DIR,
+    )
+
+    parser.add_argument(
+        "--demand-cas-cookie",
+        help="CAS cookie for Yale course demand statistics (ivy.yale.edu). If not specified, defaults to the value of the DEMAND_CAS_COOKIE environment variable before prompting user.",
+        default=None,
     )
 
     parser.add_argument(
@@ -259,6 +279,11 @@ def get_parser():
         help="The evaluations are not synced by default. If you are crawling evals (once a semester), you can use this flag to sync them to the database.",
         action="store_true",
     )
+    parser.add_argument(
+        "--sync-db-demand",
+        help="Demand statistics are not synced by default. Use this flag to upsert crawled demand data into the database.",
+        action="store_true",
+    )
 
     parser.add_argument(
         "--freeze-locations",
@@ -275,6 +300,12 @@ def get_parser():
     parser.add_argument(
         "--use-cache",
         help="Whether to use cache for requests. Automatically set to false in release mode.",
+        action="store_true",
+    )
+
+    parser.add_argument(
+        "--demand-use-cache",
+        help="Whether to use cache for demand requests specifically, independent of --use-cache. Demand data is time-sensitive, so this defaults to false even when --use-cache is set.",
         action="store_true",
     )
 
@@ -365,6 +396,13 @@ def parse_env_args(args: RawArgs):
         args.cas_cookie = os.environ.get("CAS_COOKIE")
         if args.cas_cookie is None and args.crawl_evals:
             args.cas_cookie = input("Enter CAS cookie: ")
+
+    if args.demand_cas_cookie is None:
+        args.demand_cas_cookie = os.environ.get("DEMAND_CAS_COOKIE")
+        if args.demand_cas_cookie is None and args.crawl_demand:
+            args.demand_cas_cookie = input(
+                "Enter CAS cookie for course demand statistics: "
+            )
 
     if args.cws_api_key is None:
         args.cws_api_key = os.environ.get("CWS_API_KEY")
@@ -467,7 +505,12 @@ def get_args() -> Args:
     if args.release:
         args.use_cache = False
 
-    if args.snapshot_tables or args.sync_db_courses or args.sync_db_evals:
+    if (
+        args.snapshot_tables
+        or args.sync_db_courses
+        or args.sync_db_evals
+        or args.sync_db_demand
+    ):
         args.transform = True
 
     if args.save_config:
