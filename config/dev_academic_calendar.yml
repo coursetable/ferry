@@ -1,0 +1,8 @@
+# DEV CONFIG
+# This configuration is used to fetch the current Yale College academic calendar in a dev environment.
+# To also write it to the local postgres database, add --sync-db-academic-calendar and
+# --database-connect-string "postgresql://postgres:postgres@db:5432/ferry".
+
+release: false
+
+crawl_academic_calendar: true
