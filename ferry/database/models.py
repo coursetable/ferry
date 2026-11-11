@@ -848,3 +848,45 @@ class CourseDemandStatistics(BaseModel):
         comment="Total number of students visiting/shopping across every listing in the cross-listing group",
         nullable=False,
     )
+
+
+class AcademicCalendarEvent(BaseModel):
+    """
+    Yale College academic calendar date ranges (term dates, breaks, and
+    schedule transfers), built from the YCPS "Calendar with Pertinent
+    Deadlines" page.
+    """
+
+    __tablename__ = "academic_calendar_events"
+    __table_args__ = (
+        Index("ix_academic_calendar_events_season_type", "season_code", "event_type"),
+    )
+
+    id = Column(Integer, primary_key=True)
+    # Note: purposefully not a foreign key to seasons, because this table is
+    # synced independently and may reference seasons without course data yet.
+    season_code = Column(
+        String(10),
+        comment="The term this event belongs to (e.g. '202603')",
+        index=True,
+        nullable=False,
+    )
+    event_type = Column(
+        String(32),
+        comment="One of: classes (first to last day of classes), reading_period, final_exams, october_recess, november_recess, spring_recess (first to last day without classes), labor_day, mlk_day, no_classes (single days without classes), transfer (a day that follows another weekday's schedule). At most one of each per season, except no_classes and transfer.",
+        nullable=False,
+    )
+    start_date = Column(
+        Date,
+        comment="First day of the event (inclusive)",
+        nullable=False,
+    )
+    end_date = Column(
+        Date,
+        comment="Last day of the event (inclusive); same as start_date for single days",
+        nullable=False,
+    )
+    transfer_day = Column(
+        Integer,
+        comment="For transfer events, the weekday whose classes meet that day, 1 (Monday) to 5 (Friday). Null otherwise.",
+    )

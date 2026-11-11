@@ -107,6 +107,7 @@ exactly_identical_crns = [
 # YCS occasionally publishes incomplete cross-list cliques
 incomplete_cross_listing_fixes = [
     ("202701", (22008, 22010, 22011, 22828)),
+    ("202701", (24287, 24288, 24351, 24352)),
 ]
 
 
@@ -158,9 +159,9 @@ def resolve_cross_listings(listings: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
     for season, crns in incomplete_cross_listing_fixes:
         if season not in listings["season_code"].values:
             continue
-        crn_set = frozenset(crns)
         season_mask = listings["season_code"] == season
         present_crns = listings.loc[season_mask, "crn"].astype(int)
+        crn_set = frozenset(crns) & frozenset(present_crns)
         affected = present_crns[present_crns.isin(crn_set)]
         if affected.empty:
             continue

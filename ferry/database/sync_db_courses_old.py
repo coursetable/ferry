@@ -32,6 +32,9 @@ def sync_db_courses_old(tables: dict[str, pd.DataFrame], database_connect_string
     conn = db.Engine.raw_connection()
     Base.metadata.create_all(db.Engine)
     for table in Base.metadata.sorted_tables:
+        # Synced separately by sync_db_academic_calendar; rerun that after a rewrite
+        if table.name.startswith("academic_calendar_"):
+            continue
         if table.name not in tables:
             raise ValueError(
                 f"{table.name} defined in Base metadata, but there is no data for it."

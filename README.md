@@ -88,6 +88,8 @@ You can selectively run certain stages of Ferry. Options below are in the order 
 | `--sync-db-courses`     | `sync_db_courses`     | Sync the transformed data to the database.                                                                                                                         |
 | `--sync-db-evals`     | `sync_db_evals`     | Sync the transformed data to the database.                                                                                                                         |
 | `--sync-db-demand`     | `sync_db_demand`     | Upsert crawled demand data to the database. Not run by default even if `crawl_demand` is set.                                                                     |
+| `--crawl-academic-calendar` | `crawl_academic_calendar` | Fetch the current Yale College academic calendar into `academic_calendar/<academic_year>.json`.                                                     |
+| `--sync-db-academic-calendar` | `sync_db_academic_calendar` | Replace the `academic_calendar_events` table with all parsed academic calendars.                                                                |
 | `--rewrite`          | `rewrite`          | Use old sync db function to write to database instead of incremental write. Use this during the first run to set up the database. Only has an effect if `sync_db_courses`. |
 | `--generate-diagram` | `generate_diagram` | Generate a DB visualization diagram to `docs/db_diagram.pdf`                                                                                                       |
 
@@ -186,6 +188,16 @@ python main.py --sync-db-demand
 ```
 
 Because demand data changes throughout the add/drop period, `--demand-use-cache` is independent of `--use-cache` and defaults to `False` even when `--use-cache` is set, so repeat runs always hit the live site rather than serving a stale snapshot.
+
+## Crawling the academic calendar
+
+The Yale College academic calendar (https://catalog.yale.edu/ycps/calendar/) is fetched by manually running the `Academic Calendar` workflow (e.g. once the next year's catalog is published over the summer). Archived calendars from 2013-2014 on can be fetched with the `Academic Calendar Archive` workflow. Each academic year is saved to its own file in `academic_calendar/`, and the `academic_calendar_events` table is rebuilt from all of them. Running `--rewrite` drops this table, so rerun the academic calendar sync afterwards.
+
+```sh
+python main.py -f config/dev_academic_calendar.yml
+python main.py --sync-db-academic-calendar
+# Enter the database URL when prompted
+```
 
 ## Linting & formatting
 
