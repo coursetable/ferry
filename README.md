@@ -173,7 +173,7 @@ python main.py --sync-db-evals
 
 ## Crawling demand
 
-Demand data (registered/waitlisted/visiting counts per day) is fetched from `ivy.yale.edu/course-stats`, similar in spirit to evals: it requires its own CAS-authenticated cookie, and there's currently no automated GitHub Action for it, so it's run manually.
+Demand data (registered/waitlisted/visiting counts per day) is fetched from `ivy.yale.edu/course-stats`, similar in spirit to evals: it requires its own CAS-authenticated cookie, and it only runs on manual dispatch: either alongside locations in the `Ferry Run` workflow when dispatched with `freeze_locations=false`, or on its own via `.github/workflows/demand.yml` to target specific seasons.
 
 To get a valid cookie, log into https://ivy.yale.edu/course-stats, refresh with the network inspector tab open, and copy the `Cookie` header from the first HTTP request, same process as the evals CAS cookie above. Pass it via the `--demand-cas-cookie` option or `DEMAND_CAS_COOKIE` env var.
 

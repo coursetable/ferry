@@ -75,7 +75,9 @@ jobs:
               --sentry-url "${{ secrets.SENTRY_URL }}" \
               --cws-api-key "${{ secrets.CWS_API_KEY }}" \
               --ycs-cookie "${{ secrets.YCS_COOKIE }}" \
-              --ycs-pers '${{ secrets.YCS_PERS }}'
+              --ycs-pers '${{ secrets.YCS_PERS }}' \
+              --crawl-demand \
+              --demand-cas-cookie "${{ secrets.DEMAND_CAS_COOKIE }}"
           else
             TQDM_DISABLE=1 python -u main.py -f config/release_fetch.yml \
               --database-connect-string "${{ secrets.DATABASE_CONNECT_STRING }}" \
@@ -88,7 +90,8 @@ jobs:
           if [ "${{ github.event_name }}" == "workflow_dispatch" ] && [ "${{ github.event.inputs.freeze_locations }}" == "false" ]; then
             TQDM_DISABLE=1 python -u main.py -f config/release_sync_db_courses.yml \
               --database-connect-string "${{ secrets.DATABASE_CONNECT_STRING }}" \
-              --sentry-url "${{ secrets.SENTRY_URL }}"
+              --sentry-url "${{ secrets.SENTRY_URL }}" \
+              --sync-db-demand
           else
             TQDM_DISABLE=1 python -u main.py -f config/release_sync_db_courses.yml \
               --database-connect-string "${{ secrets.DATABASE_CONNECT_STRING }}" \
