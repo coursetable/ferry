@@ -1,4 +1,5 @@
 import pandas as pd
+from sqlalchemy import func
 from sqlalchemy.dialects.postgresql import insert as pg_insert
 from sqlalchemy.orm import Session
 
@@ -27,6 +28,10 @@ def _upsert_batched(
         stmt = stmt.on_conflict_do_update(
             index_elements=conflict_columns,
             set_={col: getattr(stmt.excluded, col) for col in STAT_COLUMNS},
+            # Past rows are immutable: a degraded scrape (markup change, dropped
+            # request) parses as zeros, and without this it would overwrite good
+            # history that cannot be re-fetched.
+            where=table.c.date >= func.current_date(),
         )
         session.execute(stmt)
 

@@ -18,6 +18,12 @@ async def crawl_demand(
     courses: dict[str, list[ParsedCourse]] | None = None,
     use_cache: bool = True,
 ):
+    if not cas_cookie.strip():
+        raise SystemExit(
+            "Demand CAS cookie is empty; refusing to crawl demand statistics. "
+            "Set --demand-cas-cookie or the DEMAND_CAS_COOKIE env var."
+        )
+
     print(f"Fetching course demand statistics for seasons: {seasons}...")
 
     # Captured once so an entire run uses a consistent "today" for resolving
@@ -61,7 +67,9 @@ async def crawl_demand(
                 use_cache=use_cache,
             )
 
-            save_cache_json(data_dir / "parsed_demand" / f"{season}.json", season_demand)
+            save_cache_json(
+                data_dir / "parsed_demand" / f"{season}.json", season_demand
+            )
 
     print("\033[F", end="")
     print(f"Fetching course demand statistics for seasons: {seasons}... ✔")
